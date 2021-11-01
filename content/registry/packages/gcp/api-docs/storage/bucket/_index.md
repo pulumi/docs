@@ -530,7 +530,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's encryption configuration.
+    <dd>{{% md %}}The bucket's encryption configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_csharp">
@@ -577,7 +577,7 @@ bucket that contains objects, the provider will fail that run.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
+    <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -641,7 +641,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
+    <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="website_csharp">
@@ -689,7 +689,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's encryption configuration.
+    <dd>{{% md %}}The bucket's encryption configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_go">
@@ -736,7 +736,7 @@ bucket that contains objects, the provider will fail that run.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
+    <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -800,7 +800,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
+    <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="website_go">
@@ -848,7 +848,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's encryption configuration.
+    <dd>{{% md %}}The bucket's encryption configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_nodejs">
@@ -895,7 +895,7 @@ bucket that contains objects, the provider will fail that run.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
+    <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -959,7 +959,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
+    <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="website_nodejs">
@@ -1007,7 +1007,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's encryption configuration.
+    <dd>{{% md %}}The bucket's encryption configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_destroy_python">
@@ -1054,7 +1054,7 @@ bucket that contains objects, the provider will fail that run.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
+    <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -1118,7 +1118,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
+    <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="website_python">
@@ -1437,7 +1437,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's encryption configuration.
+    <dd>{{% md %}}The bucket's encryption configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_csharp">
@@ -1484,7 +1484,7 @@ bucket that contains objects, the provider will fail that run.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
+    <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1566,7 +1566,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
+    <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_website_csharp">
@@ -1614,7 +1614,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's encryption configuration.
+    <dd>{{% md %}}The bucket's encryption configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_go">
@@ -1661,7 +1661,7 @@ bucket that contains objects, the provider will fail that run.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
+    <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1743,7 +1743,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
+    <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_website_go">
@@ -1791,7 +1791,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's encryption configuration.
+    <dd>{{% md %}}The bucket's encryption configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_nodejs">
@@ -1838,7 +1838,7 @@ bucket that contains objects, the provider will fail that run.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
+    <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -1920,7 +1920,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
+    <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_website_nodejs">
@@ -1968,7 +1968,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's encryption configuration.
+    <dd>{{% md %}}The bucket's encryption configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_destroy_python">
@@ -2015,7 +2015,7 @@ bucket that contains objects, the provider will fail that run.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
+    <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -2097,7 +2097,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
+    <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_website_python">

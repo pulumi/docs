@@ -730,7 +730,7 @@ network and zone as the instance group.
         <span class="property-type"><a href="#instancegroupnamedport">List&lt;Instance<wbr>Group<wbr>Named<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
-for details on configuration.
+for details on configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_csharp">
@@ -805,7 +805,7 @@ network and zone as the instance group.
         <span class="property-type"><a href="#instancegroupnamedport">[]Instance<wbr>Group<wbr>Named<wbr>Port<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
-for details on configuration.
+for details on configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_go">
@@ -880,7 +880,7 @@ network and zone as the instance group.
         <span class="property-type"><a href="#instancegroupnamedport">Instance<wbr>Group<wbr>Named<wbr>Port<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
-for details on configuration.
+for details on configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_nodejs">
@@ -955,7 +955,7 @@ network and zone as the instance group.
         <span class="property-type"><a href="#instancegroupnamedport">Sequence[Instance<wbr>Group<wbr>Named<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
-for details on configuration.
+for details on configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_python">
@@ -1291,7 +1291,7 @@ network and zone as the instance group.
         <span class="property-type"><a href="#instancegroupnamedport">List&lt;Instance<wbr>Group<wbr>Named<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
-for details on configuration.
+for details on configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
@@ -1384,7 +1384,7 @@ network and zone as the instance group.
         <span class="property-type"><a href="#instancegroupnamedport">[]Instance<wbr>Group<wbr>Named<wbr>Port<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
-for details on configuration.
+for details on configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
@@ -1477,7 +1477,7 @@ network and zone as the instance group.
         <span class="property-type"><a href="#instancegroupnamedport">Instance<wbr>Group<wbr>Named<wbr>Port<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
-for details on configuration.
+for details on configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
@@ -1570,7 +1570,7 @@ network and zone as the instance group.
         <span class="property-type"><a href="#instancegroupnamedport">Sequence[Instance<wbr>Group<wbr>Named<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
-for details on configuration.
+for details on configuration. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_python">

@@ -824,7 +824,7 @@ documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canipforward_csharp">
@@ -843,7 +843,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -1073,7 +1073,7 @@ documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canipforward_go">
@@ -1092,7 +1092,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -1322,7 +1322,7 @@ documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canipforward_nodejs">
@@ -1341,7 +1341,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -1571,7 +1571,7 @@ documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_ip_forward_python">
@@ -1590,7 +1590,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -2115,7 +2115,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_canipforward_csharp">
@@ -2134,7 +2134,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -2391,7 +2391,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_canipforward_go">
@@ -2410,7 +2410,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -2667,7 +2667,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_canipforward_nodejs">
@@ -2686,7 +2686,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
@@ -2943,7 +2943,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_can_ip_forward_python">
@@ -2962,7 +2962,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">

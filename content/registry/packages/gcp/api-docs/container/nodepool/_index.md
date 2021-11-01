@@ -421,7 +421,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
+    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaling_csharp">
@@ -517,7 +517,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used in creating the default node pool. See
+    <dd>{{% md %}}Parameters used in creating the node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -561,7 +561,7 @@ the provider-configured project will be used.
     </dt>
     <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
 upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
-The maximum number of nodes upgraded simultaneously is limited to 20.
+The maximum number of nodes upgraded simultaneously is limited to 20. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
@@ -588,7 +588,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
+    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaling_go">
@@ -684,7 +684,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used in creating the default node pool. See
+    <dd>{{% md %}}Parameters used in creating the node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -728,7 +728,7 @@ the provider-configured project will be used.
     </dt>
     <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
 upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
-The maximum number of nodes upgraded simultaneously is limited to 20.
+The maximum number of nodes upgraded simultaneously is limited to 20. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
@@ -755,7 +755,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
+    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaling_nodejs">
@@ -851,7 +851,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used in creating the default node pool. See
+    <dd>{{% md %}}Parameters used in creating the node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -895,7 +895,7 @@ the provider-configured project will be used.
     </dt>
     <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
 upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
-The maximum number of nodes upgraded simultaneously is limited to 20.
+The maximum number of nodes upgraded simultaneously is limited to 20. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
@@ -922,7 +922,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
+    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaling_python">
@@ -1018,7 +1018,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used in creating the default node pool. See
+    <dd>{{% md %}}Parameters used in creating the node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1062,7 +1062,7 @@ the provider-configured project will be used.
     </dt>
     <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
 upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
-The maximum number of nodes upgraded simultaneously is limited to 20.
+The maximum number of nodes upgraded simultaneously is limited to 20. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
@@ -1364,7 +1364,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
+    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initialnodecount_csharp">
@@ -1459,7 +1459,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used in creating the default node pool. See
+    <dd>{{% md %}}Parameters used in creating the node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1511,7 +1511,7 @@ the provider-configured project will be used.
     </dt>
     <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
 upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
-The maximum number of nodes upgraded simultaneously is limited to 20.
+The maximum number of nodes upgraded simultaneously is limited to 20. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
@@ -1548,7 +1548,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
+    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initialnodecount_go">
@@ -1643,7 +1643,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used in creating the default node pool. See
+    <dd>{{% md %}}Parameters used in creating the node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1695,7 +1695,7 @@ the provider-configured project will be used.
     </dt>
     <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
 upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
-The maximum number of nodes upgraded simultaneously is limited to 20.
+The maximum number of nodes upgraded simultaneously is limited to 20. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
@@ -1732,7 +1732,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
+    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initialnodecount_nodejs">
@@ -1827,7 +1827,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used in creating the default node pool. See
+    <dd>{{% md %}}Parameters used in creating the node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1879,7 +1879,7 @@ the provider-configured project will be used.
     </dt>
     <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
 upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
-The maximum number of nodes upgraded simultaneously is limited to 20.
+The maximum number of nodes upgraded simultaneously is limited to 20. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
@@ -1916,7 +1916,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
+    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initial_node_count_python">
@@ -2011,7 +2011,7 @@ gcp.container.Cluster for schema.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters used in creating the default node pool. See
+    <dd>{{% md %}}Parameters used in creating the node pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2063,7 +2063,7 @@ the provider-configured project will be used.
     </dt>
     <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
 upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
-The maximum number of nodes upgraded simultaneously is limited to 20.
+The maximum number of nodes upgraded simultaneously is limited to 20. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
@@ -3147,6 +3147,14 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gpupartitionsize_csharp">
+<a href="#gpupartitionsize_csharp" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Partition<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3163,6 +3171,14 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gpupartitionsize_go">
+<a href="#gpupartitionsize_go" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Partition<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3187,6 +3203,14 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gpupartitionsize_nodejs">
+<a href="#gpupartitionsize_nodejs" style="color: inherit; text-decoration: inherit;">gpu<wbr>Partition<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3203,6 +3227,14 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gpu_partition_size_python">
+<a href="#gpu_partition_size_python" style="color: inherit; text-decoration: inherit;">gpu_<wbr>partition_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3810,14 +3842,14 @@ parallel. Can be set to 0 or greater.
 ## Import
 
 
-Node pools can be imported using the `project`, `zone`, `cluster` and `name`. If the project is omitted, the default provider value will be used. Examples
+Node pools can be imported using the `project`, `location`, `cluster` and `name`. If the project is omitted, the project value in the provider configuration will be used. Examples
 
 ```sh
  $ pulumi import gcp:container/nodePool:NodePool mainpool my-gcp-project/us-east1-a/my-cluster/main-pool
 ```
 
 ```sh
- $ pulumi import gcp:container/nodePool:NodePool mainpool us-east1-a/my-cluster/main-pool
+ $ pulumi import gcp:container/nodePool:NodePool mainpool us-east1/my-cluster/main-pool
 ```
 
 

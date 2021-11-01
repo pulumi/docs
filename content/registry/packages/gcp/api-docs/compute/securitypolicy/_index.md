@@ -16,6 +16,7 @@ A Security Policy defines an IP blacklist or whitelist that protects load balanc
 see the [official documentation](https://cloud.google.com/armor/docs/configure-security-policies)
 and the [API](https://cloud.google.com/compute/docs/reference/rest/beta/securityPolicies).
 
+
 {{% examples %}}
 
 ## Example Usage
@@ -374,7 +375,7 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+    <dd>{{% md %}}Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -426,7 +427,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+    <dd>{{% md %}}Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -478,7 +479,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+    <dd>{{% md %}}Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -530,7 +531,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+    <dd>{{% md %}}Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -606,7 +607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the created resource.
+    <dd>{{% md %}}The URI of the created resourc
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -636,7 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the created resource.
+    <dd>{{% md %}}The URI of the created resourc
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -666,7 +667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the created resource.
+    <dd>{{% md %}}The URI of the created resourc
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -696,7 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI of the created resource.
+    <dd>{{% md %}}The URI of the created resourc
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -841,7 +842,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+    <dd>{{% md %}}Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -898,7 +899,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the created resource.
+    <dd>{{% md %}}The URI of the created resourc
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -911,7 +912,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+    <dd>{{% md %}}Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -968,7 +969,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the created resource.
+    <dd>{{% md %}}The URI of the created resourc
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -981,7 +982,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+    <dd>{{% md %}}Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
@@ -1038,7 +1039,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the created resource.
+    <dd>{{% md %}}The URI of the created resourc
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1051,7 +1052,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+    <dd>{{% md %}}Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
@@ -1108,7 +1109,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI of the created resource.
+    <dd>{{% md %}}The URI of the created resourc
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1132,7 +1133,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+    <dd>{{% md %}}Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1145,7 +1146,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+    <dd>{{% md %}}Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1158,7 +1159,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+    <dd>{{% md %}}Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1171,7 +1172,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+    <dd>{{% md %}}Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1186,7 +1187,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}) If set to true, enables CAAP for L7 DDoS detection.
+    <dd>{{% md %}}If set to true, enables CAAP for L7 DDoS detection.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulevisibility_csharp">
@@ -1195,7 +1196,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}) Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
+    <dd>{{% md %}}Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1208,7 +1209,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}) If set to true, enables CAAP for L7 DDoS detection.
+    <dd>{{% md %}}If set to true, enables CAAP for L7 DDoS detection.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulevisibility_go">
@@ -1217,7 +1218,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}) Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
+    <dd>{{% md %}}Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1230,7 +1231,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}) If set to true, enables CAAP for L7 DDoS detection.
+    <dd>{{% md %}}If set to true, enables CAAP for L7 DDoS detection.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulevisibility_nodejs">
@@ -1239,7 +1240,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}) Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
+    <dd>{{% md %}}Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1252,7 +1253,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}) If set to true, enables CAAP for L7 DDoS detection.
+    <dd>{{% md %}}If set to true, enables CAAP for L7 DDoS detection.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rule_visibility_python">
@@ -1261,7 +1262,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}) Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
+    <dd>{{% md %}}Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1752,24 +1753,6 @@ The application context of the containing message determines which well-known fe
 The application context of the containing message determines which well-known feature set of CEL is supported.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
-## Import
-
-
-Security policies can be imported using any of the following formats
-
-```sh
- $ pulumi import gcp:compute/securityPolicy:SecurityPolicy policy projects/{{project}}/global/securityPolicies/{{name}}
-```
-
-```sh
- $ pulumi import gcp:compute/securityPolicy:SecurityPolicy policy {{project}}/{{name}}
-```
-
-```sh
- $ pulumi import gcp:compute/securityPolicy:SecurityPolicy policy {{name}}
-```
-
-
 
 
 <h2 id="package-details">Package Details</h2>

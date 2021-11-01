@@ -467,7 +467,7 @@ be specified multiple times. Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceadvancedmachinefeatures">Instance<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowstoppingforupdate_csharp">
@@ -506,7 +506,7 @@ This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceconfidentialinstanceconfig">Instance<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionprotection_csharp">
@@ -770,7 +770,7 @@ be specified multiple times. Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceadvancedmachinefeatures">Instance<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowstoppingforupdate_go">
@@ -809,7 +809,7 @@ This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceconfidentialinstanceconfig">Instance<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionprotection_go">
@@ -1073,7 +1073,7 @@ be specified multiple times. Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceadvancedmachinefeatures">Instance<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowstoppingforupdate_nodejs">
@@ -1112,7 +1112,7 @@ This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceconfidentialinstanceconfig">Instance<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionprotection_nodejs">
@@ -1376,7 +1376,7 @@ be specified multiple times. Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceadvancedmachinefeatures">Instance<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_stopping_for_update_python">
@@ -1415,7 +1415,7 @@ This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceconfidentialinstanceconfig">Instance<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletion_protection_python">
@@ -2118,7 +2118,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceadvancedmachinefeatures">Instance<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowstoppingforupdate_csharp">
@@ -2167,7 +2167,7 @@ This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceconfidentialinstanceconfig">Instance<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpuplatform_csharp">
@@ -2484,7 +2484,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceadvancedmachinefeatures">Instance<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowstoppingforupdate_go">
@@ -2533,7 +2533,7 @@ This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceconfidentialinstanceconfig">Instance<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpuplatform_go">
@@ -2850,7 +2850,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceadvancedmachinefeatures">Instance<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowstoppingforupdate_nodejs">
@@ -2899,7 +2899,7 @@ This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceconfidentialinstanceconfig">Instance<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpuplatform_nodejs">
@@ -3216,7 +3216,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceadvancedmachinefeatures">Instance<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_stopping_for_update_python">
@@ -3265,7 +3265,7 @@ This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceconfidentialinstanceconfig">Instance<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpu_platform_python">

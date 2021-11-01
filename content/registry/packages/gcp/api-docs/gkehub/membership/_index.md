@@ -177,7 +177,7 @@ class MyStack : Stack
             InitialNodeCount = 1,
             WorkloadIdentityConfig = new Gcp.Container.Inputs.ClusterWorkloadIdentityConfigArgs
             {
-                IdentityNamespace = "my-project-name.svc.id.goog",
+                WorkloadPool = "my-project-name.svc.id.goog",
             },
         });
         var membership = new Gcp.GkeHub.Membership("membership", new Gcp.GkeHub.MembershipArgs
@@ -223,7 +223,7 @@ func main() {
 			Location:         pulumi.String("us-central1-a"),
 			InitialNodeCount: pulumi.Int(1),
 			WorkloadIdentityConfig: &container.ClusterWorkloadIdentityConfigArgs{
-				IdentityNamespace: pulumi.String("my-project-name.svc.id.goog"),
+				WorkloadPool: pulumi.String("my-project-name.svc.id.goog"),
 			},
 		})
 		if err != nil {
@@ -264,7 +264,7 @@ primary = gcp.container.Cluster("primary",
     location="us-central1-a",
     initial_node_count=1,
     workload_identity_config=gcp.container.ClusterWorkloadIdentityConfigArgs(
-        identity_namespace="my-project-name.svc.id.goog",
+        workload_pool="my-project-name.svc.id.goog",
     ))
 membership = gcp.gkehub.Membership("membership",
     membership_id="basic",
@@ -293,7 +293,7 @@ const primary = new gcp.container.Cluster("primary", {
     location: "us-central1-a",
     initialNodeCount: 1,
     workloadIdentityConfig: {
-        identityNamespace: "my-project-name.svc.id.goog",
+        workloadPool: "my-project-name.svc.id.goog",
     },
 });
 const membership = new gcp.gkehub.Membership("membership", {

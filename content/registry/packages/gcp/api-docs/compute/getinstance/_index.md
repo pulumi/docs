@@ -586,7 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancescheduling">List&lt;Get<wbr>Instance<wbr>Scheduling&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The scheduling strategy being used by the instance.
+    <dd>{{% md %}}The scheduling strategy being used by the instance. Structure is documented below
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scratchdisks_csharp">
@@ -910,7 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancescheduling">[]Get<wbr>Instance<wbr>Scheduling</a></span>
     </dt>
-    <dd>{{% md %}}The scheduling strategy being used by the instance.
+    <dd>{{% md %}}The scheduling strategy being used by the instance. Structure is documented below
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scratchdisks_go">
@@ -1234,7 +1234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancescheduling">Get<wbr>Instance<wbr>Scheduling[]</a></span>
     </dt>
-    <dd>{{% md %}}The scheduling strategy being used by the instance.
+    <dd>{{% md %}}The scheduling strategy being used by the instance. Structure is documented below
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scratchdisks_nodejs">
@@ -1558,7 +1558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancescheduling">Sequence[Get<wbr>Instance<wbr>Scheduling]</a></span>
     </dt>
-    <dd>{{% md %}}The scheduling strategy being used by the instance.
+    <dd>{{% md %}}The scheduling strategy being used by the instance. Structure is documented below
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scratch_disks_python">

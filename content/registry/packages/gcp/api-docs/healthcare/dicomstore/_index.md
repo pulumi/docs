@@ -622,9 +622,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstorestreamconfig">List&lt;Dicom<wbr>Store<wbr>Stream<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store. streamConfigs is an array, so
-you can specify multiple BigQuery destinations. You can stream metadata from a single DICOM store to up to five BigQuery
-tables in a BigQuery dataset.
+    <dd>{{% md %}}To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store.
+streamConfigs is an array, so you can specify multiple BigQuery destinations. You can stream metadata from a single DICOM store to up to five BigQuery tables in a BigQuery dataset.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -683,9 +683,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstorestreamconfig">[]Dicom<wbr>Store<wbr>Stream<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store. streamConfigs is an array, so
-you can specify multiple BigQuery destinations. You can stream metadata from a single DICOM store to up to five BigQuery
-tables in a BigQuery dataset.
+    <dd>{{% md %}}To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store.
+streamConfigs is an array, so you can specify multiple BigQuery destinations. You can stream metadata from a single DICOM store to up to five BigQuery tables in a BigQuery dataset.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -744,9 +744,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstorestreamconfig">Dicom<wbr>Store<wbr>Stream<wbr>Config<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store. streamConfigs is an array, so
-you can specify multiple BigQuery destinations. You can stream metadata from a single DICOM store to up to five BigQuery
-tables in a BigQuery dataset.
+    <dd>{{% md %}}To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store.
+streamConfigs is an array, so you can specify multiple BigQuery destinations. You can stream metadata from a single DICOM store to up to five BigQuery tables in a BigQuery dataset.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -805,9 +805,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstorestreamconfig">Sequence[Dicom<wbr>Store<wbr>Stream<wbr>Config<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store. streamConfigs is an array, so
-you can specify multiple BigQuery destinations. You can stream metadata from a single DICOM store to up to five BigQuery
-tables in a BigQuery dataset.
+    <dd>{{% md %}}To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store.
+streamConfigs is an array, so you can specify multiple BigQuery destinations. You can stream metadata from a single DICOM store to up to five BigQuery tables in a BigQuery dataset.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1097,9 +1097,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstorestreamconfig">List&lt;Dicom<wbr>Store<wbr>Stream<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store. streamConfigs is an array, so
-you can specify multiple BigQuery destinations. You can stream metadata from a single DICOM store to up to five BigQuery
-tables in a BigQuery dataset.
+    <dd>{{% md %}}To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store.
+streamConfigs is an array, so you can specify multiple BigQuery destinations. You can stream metadata from a single DICOM store to up to five BigQuery tables in a BigQuery dataset.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1167,9 +1167,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstorestreamconfig">[]Dicom<wbr>Store<wbr>Stream<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store. streamConfigs is an array, so
-you can specify multiple BigQuery destinations. You can stream metadata from a single DICOM store to up to five BigQuery
-tables in a BigQuery dataset.
+    <dd>{{% md %}}To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store.
+streamConfigs is an array, so you can specify multiple BigQuery destinations. You can stream metadata from a single DICOM store to up to five BigQuery tables in a BigQuery dataset.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1237,9 +1237,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstorestreamconfig">Dicom<wbr>Store<wbr>Stream<wbr>Config<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store. streamConfigs is an array, so
-you can specify multiple BigQuery destinations. You can stream metadata from a single DICOM store to up to five BigQuery
-tables in a BigQuery dataset.
+    <dd>{{% md %}}To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store.
+streamConfigs is an array, so you can specify multiple BigQuery destinations. You can stream metadata from a single DICOM store to up to five BigQuery tables in a BigQuery dataset.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1307,9 +1307,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dicomstorestreamconfig">Sequence[Dicom<wbr>Store<wbr>Stream<wbr>Config<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store. streamConfigs is an array, so
-you can specify multiple BigQuery destinations. You can stream metadata from a single DICOM store to up to five BigQuery
-tables in a BigQuery dataset.
+    <dd>{{% md %}}To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store.
+streamConfigs is an array, so you can specify multiple BigQuery destinations. You can stream metadata from a single DICOM store to up to five BigQuery tables in a BigQuery dataset.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -1937,7 +1937,12 @@ instance is connected.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The network connect mode of the Filestore instance.
+If not provided, the connect mode defaults to
+DIRECT_PEERING.
+Default value is `DIRECT_PEERING`.
+Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_csharp">
 <a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -1990,7 +1995,12 @@ instance is connected.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The network connect mode of the Filestore instance.
+If not provided, the connect mode defaults to
+DIRECT_PEERING.
+Default value is `DIRECT_PEERING`.
+Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_go">
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -2043,7 +2053,12 @@ instance is connected.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The network connect mode of the Filestore instance.
+If not provided, the connect mode defaults to
+DIRECT_PEERING.
+Default value is `DIRECT_PEERING`.
+Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_nodejs">
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
@@ -2096,7 +2111,12 @@ instance is connected.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The network connect mode of the Filestore instance.
+If not provided, the connect mode defaults to
+DIRECT_PEERING.
+Default value is `DIRECT_PEERING`.
+Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>

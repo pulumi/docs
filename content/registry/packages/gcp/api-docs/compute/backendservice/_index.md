@@ -1375,9 +1375,11 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicesecuritysettings">Backend<wbr>Service<wbr>Security<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either a regional backend service
-with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED; or a global
-backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either
+a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
+load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
+load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionaffinity_csharp">
@@ -1663,9 +1665,11 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicesecuritysettings">Backend<wbr>Service<wbr>Security<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either a regional backend service
-with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED; or a global
-backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either
+a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
+load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
+load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionaffinity_go">
@@ -1951,9 +1955,11 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicesecuritysettings">Backend<wbr>Service<wbr>Security<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either a regional backend service
-with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED; or a global
-backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either
+a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
+load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
+load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionaffinity_nodejs">
@@ -2239,9 +2245,11 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicesecuritysettings">Backend<wbr>Service<wbr>Security<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either a regional backend service
-with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED; or a global
-backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either
+a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
+load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
+load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_affinity_python">
@@ -2860,9 +2868,11 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicesecuritysettings">Backend<wbr>Service<wbr>Security<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either a regional backend service
-with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED; or a global
-backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either
+a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
+load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
+load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
@@ -3175,9 +3185,11 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicesecuritysettings">Backend<wbr>Service<wbr>Security<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either a regional backend service
-with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED; or a global
-backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either
+a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
+load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
+load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
@@ -3490,9 +3502,11 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicesecuritysettings">Backend<wbr>Service<wbr>Security<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either a regional backend service
-with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED; or a global
-backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either
+a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
+load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
+load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
@@ -3805,9 +3819,11 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicesecuritysettings">Backend<wbr>Service<wbr>Security<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either a regional backend service
-with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED; or a global
-backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either
+a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
+load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
+load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">

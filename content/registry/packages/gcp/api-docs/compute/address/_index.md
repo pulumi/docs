@@ -896,6 +896,9 @@ internal load balancers.
 * IPSEC_INTERCONNECT for addresses created from a private IP range
 that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
 Interconnect configuration. These addresses are regional resources.
+* PRIVATE_SERVICE_CONNECT for a private network address that is used
+to configure Private Service Connect. Only global internal addresses
+can use this purpose.
 This should only be set when using an Internal address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1036,6 +1039,9 @@ internal load balancers.
 * IPSEC_INTERCONNECT for addresses created from a private IP range
 that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
 Interconnect configuration. These addresses are regional resources.
+* PRIVATE_SERVICE_CONNECT for a private network address that is used
+to configure Private Service Connect. Only global internal addresses
+can use this purpose.
 This should only be set when using an Internal address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1176,6 +1182,9 @@ internal load balancers.
 * IPSEC_INTERCONNECT for addresses created from a private IP range
 that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
 Interconnect configuration. These addresses are regional resources.
+* PRIVATE_SERVICE_CONNECT for a private network address that is used
+to configure Private Service Connect. Only global internal addresses
+can use this purpose.
 This should only be set when using an Internal address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1316,6 +1325,9 @@ internal load balancers.
 * IPSEC_INTERCONNECT for addresses created from a private IP range
 that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
 Interconnect configuration. These addresses are regional resources.
+* PRIVATE_SERVICE_CONNECT for a private network address that is used
+to configure Private Service Connect. Only global internal addresses
+can use this purpose.
 This should only be set when using an Internal address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1814,6 +1826,9 @@ internal load balancers.
 * IPSEC_INTERCONNECT for addresses created from a private IP range
 that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
 Interconnect configuration. These addresses are regional resources.
+* PRIVATE_SERVICE_CONNECT for a private network address that is used
+to configure Private Service Connect. Only global internal addresses
+can use this purpose.
 This should only be set when using an Internal address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1990,6 +2005,9 @@ internal load balancers.
 * IPSEC_INTERCONNECT for addresses created from a private IP range
 that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
 Interconnect configuration. These addresses are regional resources.
+* PRIVATE_SERVICE_CONNECT for a private network address that is used
+to configure Private Service Connect. Only global internal addresses
+can use this purpose.
 This should only be set when using an Internal address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2166,6 +2184,9 @@ internal load balancers.
 * IPSEC_INTERCONNECT for addresses created from a private IP range
 that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
 Interconnect configuration. These addresses are regional resources.
+* PRIVATE_SERVICE_CONNECT for a private network address that is used
+to configure Private Service Connect. Only global internal addresses
+can use this purpose.
 This should only be set when using an Internal address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2342,6 +2363,9 @@ internal load balancers.
 * IPSEC_INTERCONNECT for addresses created from a private IP range
 that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
 Interconnect configuration. These addresses are regional resources.
+* PRIVATE_SERVICE_CONNECT for a private network address that is used
+to configure Private Service Connect. Only global internal addresses
+can use this purpose.
 This should only be set when using an Internal address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">

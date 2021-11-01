@@ -201,7 +201,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerpoolnetworkconfig">Worker<wbr>Pool<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration for the `WorkerPool`.
+    <dd>{{% md %}}Network configuration for the `WorkerPool`. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
@@ -219,7 +219,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerpoolworkerconfig">Worker<wbr>Pool<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration to be used for a creating workers in the `WorkerPool`.
+    <dd>{{% md %}}Configuration to be used for a creating workers in the `WorkerPool`. Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -250,7 +250,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerpoolnetworkconfig">Worker<wbr>Pool<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration for the `WorkerPool`.
+    <dd>{{% md %}}Network configuration for the `WorkerPool`. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
@@ -268,7 +268,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerpoolworkerconfig">Worker<wbr>Pool<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration to be used for a creating workers in the `WorkerPool`.
+    <dd>{{% md %}}Configuration to be used for a creating workers in the `WorkerPool`. Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -299,7 +299,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerpoolnetworkconfig">Worker<wbr>Pool<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration for the `WorkerPool`.
+    <dd>{{% md %}}Network configuration for the `WorkerPool`. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
@@ -317,7 +317,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerpoolworkerconfig">Worker<wbr>Pool<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration to be used for a creating workers in the `WorkerPool`.
+    <dd>{{% md %}}Configuration to be used for a creating workers in the `WorkerPool`. Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -348,7 +348,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerpoolnetworkconfig">Worker<wbr>Pool<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration for the `WorkerPool`.
+    <dd>{{% md %}}Network configuration for the `WorkerPool`. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
@@ -366,7 +366,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerpoolworkerconfig">Worker<wbr>Pool<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration to be used for a creating workers in the `WorkerPool`.
+    <dd>{{% md %}}Configuration to be used for a creating workers in the `WorkerPool`. Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -748,7 +748,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerpoolnetworkconfig">Worker<wbr>Pool<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration for the `WorkerPool`.
+    <dd>{{% md %}}Network configuration for the `WorkerPool`. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
@@ -784,7 +784,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerpoolworkerconfig">Worker<wbr>Pool<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration to be used for a creating workers in the `WorkerPool`.
+    <dd>{{% md %}}Configuration to be used for a creating workers in the `WorkerPool`. Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -833,7 +833,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerpoolnetworkconfig">Worker<wbr>Pool<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration for the `WorkerPool`.
+    <dd>{{% md %}}Network configuration for the `WorkerPool`. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
@@ -869,7 +869,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerpoolworkerconfig">Worker<wbr>Pool<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration to be used for a creating workers in the `WorkerPool`.
+    <dd>{{% md %}}Configuration to be used for a creating workers in the `WorkerPool`. Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -918,7 +918,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerpoolnetworkconfig">Worker<wbr>Pool<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration for the `WorkerPool`.
+    <dd>{{% md %}}Network configuration for the `WorkerPool`. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
@@ -954,7 +954,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerpoolworkerconfig">Worker<wbr>Pool<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration to be used for a creating workers in the `WorkerPool`.
+    <dd>{{% md %}}Configuration to be used for a creating workers in the `WorkerPool`. Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1003,7 +1003,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerpoolnetworkconfig">Worker<wbr>Pool<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration for the `WorkerPool`.
+    <dd>{{% md %}}Network configuration for the `WorkerPool`. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
@@ -1039,7 +1039,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workerpoolworkerconfig">Worker<wbr>Pool<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration to be used for a creating workers in the `WorkerPool`.
+    <dd>{{% md %}}Configuration to be used for a creating workers in the `WorkerPool`. Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

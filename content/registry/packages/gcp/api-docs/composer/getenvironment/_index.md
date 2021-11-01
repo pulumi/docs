@@ -452,6 +452,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="environmentsize_csharp">
+<a href="#environmentsize_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="gkecluster_csharp">
 <a href="#gkecluster_csharp" style="color: inherit; text-decoration: inherit;">Gke<wbr>Cluster</a>
 </span>
@@ -557,6 +565,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getenvironmentconfigencryptionconfig">[]Get<wbr>Environment<wbr>Config<wbr>Encryption<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="environmentsize_go">
+<a href="#environmentsize_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -668,6 +684,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="environmentsize_nodejs">
+<a href="#environmentsize_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="gkecluster_nodejs">
 <a href="#gkecluster_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster</a>
 </span>
@@ -773,6 +797,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getenvironmentconfigencryptionconfig">Sequence[Get<wbr>Environment<wbr>Config<wbr>Encryption<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="environment_size_python">
+<a href="#environment_size_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">

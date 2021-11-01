@@ -183,7 +183,7 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagement">Feature<wbr>Membership<wbr>Configmanagement<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Config Management-specific spec.
+    <dd>{{% md %}}Config Management-specific spec. Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="feature_csharp">
@@ -232,7 +232,7 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagement">Feature<wbr>Membership<wbr>Configmanagement<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Config Management-specific spec.
+    <dd>{{% md %}}Config Management-specific spec. Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="feature_go">
@@ -281,7 +281,7 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagement">Feature<wbr>Membership<wbr>Configmanagement<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Config Management-specific spec.
+    <dd>{{% md %}}Config Management-specific spec. Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="feature_nodejs">
@@ -330,7 +330,7 @@ The FeatureMembership resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagement">Feature<wbr>Membership<wbr>Configmanagement<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Config Management-specific spec.
+    <dd>{{% md %}}Config Management-specific spec. Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="feature_python">
@@ -564,7 +564,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagement">Feature<wbr>Membership<wbr>Configmanagement<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Config Management-specific spec.
+    <dd>{{% md %}}Config Management-specific spec. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_feature_csharp">
@@ -613,7 +613,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagement">Feature<wbr>Membership<wbr>Configmanagement<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Config Management-specific spec.
+    <dd>{{% md %}}Config Management-specific spec. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_feature_go">
@@ -662,7 +662,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagement">Feature<wbr>Membership<wbr>Configmanagement<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Config Management-specific spec.
+    <dd>{{% md %}}Config Management-specific spec. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_feature_nodejs">
@@ -711,7 +711,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagement">Feature<wbr>Membership<wbr>Configmanagement<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Config Management-specific spec.
+    <dd>{{% md %}}Config Management-specific spec. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_feature_python">
@@ -771,7 +771,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagementbinauthz">Feature<wbr>Membership<wbr>Configmanagement<wbr>Binauthz</a></span>
     </dt>
-    <dd>{{% md %}}Binauthz configuration for the cluster.
+    <dd>{{% md %}}Binauthz configuration for the cluster. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configsync_csharp">
@@ -780,7 +780,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagementconfigsync">Feature<wbr>Membership<wbr>Configmanagement<wbr>Config<wbr>Sync</a></span>
     </dt>
-    <dd>{{% md %}}Config Sync configuration for the cluster.
+    <dd>{{% md %}}Config Sync configuration for the cluster. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hierarchycontroller_csharp">
@@ -789,7 +789,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagementhierarchycontroller">Feature<wbr>Membership<wbr>Configmanagement<wbr>Hierarchy<wbr>Controller</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy Controller configuration for the cluster.
+    <dd>{{% md %}}Hierarchy Controller configuration for the cluster. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policycontroller_csharp">
@@ -798,7 +798,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagementpolicycontroller">Feature<wbr>Membership<wbr>Configmanagement<wbr>Policy<wbr>Controller</a></span>
     </dt>
-    <dd>{{% md %}}Policy Controller configuration for the cluster.
+    <dd>{{% md %}}Policy Controller configuration for the cluster. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
@@ -820,7 +820,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagementbinauthz">Feature<wbr>Membership<wbr>Configmanagement<wbr>Binauthz</a></span>
     </dt>
-    <dd>{{% md %}}Binauthz configuration for the cluster.
+    <dd>{{% md %}}Binauthz configuration for the cluster. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configsync_go">
@@ -829,7 +829,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagementconfigsync">Feature<wbr>Membership<wbr>Configmanagement<wbr>Config<wbr>Sync</a></span>
     </dt>
-    <dd>{{% md %}}Config Sync configuration for the cluster.
+    <dd>{{% md %}}Config Sync configuration for the cluster. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hierarchycontroller_go">
@@ -838,7 +838,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagementhierarchycontroller">Feature<wbr>Membership<wbr>Configmanagement<wbr>Hierarchy<wbr>Controller</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy Controller configuration for the cluster.
+    <dd>{{% md %}}Hierarchy Controller configuration for the cluster. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policycontroller_go">
@@ -847,7 +847,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagementpolicycontroller">Feature<wbr>Membership<wbr>Configmanagement<wbr>Policy<wbr>Controller</a></span>
     </dt>
-    <dd>{{% md %}}Policy Controller configuration for the cluster.
+    <dd>{{% md %}}Policy Controller configuration for the cluster. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
@@ -869,7 +869,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagementbinauthz">Feature<wbr>Membership<wbr>Configmanagement<wbr>Binauthz</a></span>
     </dt>
-    <dd>{{% md %}}Binauthz configuration for the cluster.
+    <dd>{{% md %}}Binauthz configuration for the cluster. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configsync_nodejs">
@@ -878,7 +878,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagementconfigsync">Feature<wbr>Membership<wbr>Configmanagement<wbr>Config<wbr>Sync</a></span>
     </dt>
-    <dd>{{% md %}}Config Sync configuration for the cluster.
+    <dd>{{% md %}}Config Sync configuration for the cluster. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hierarchycontroller_nodejs">
@@ -887,7 +887,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagementhierarchycontroller">Feature<wbr>Membership<wbr>Configmanagement<wbr>Hierarchy<wbr>Controller</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy Controller configuration for the cluster.
+    <dd>{{% md %}}Hierarchy Controller configuration for the cluster. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policycontroller_nodejs">
@@ -896,7 +896,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagementpolicycontroller">Feature<wbr>Membership<wbr>Configmanagement<wbr>Policy<wbr>Controller</a></span>
     </dt>
-    <dd>{{% md %}}Policy Controller configuration for the cluster.
+    <dd>{{% md %}}Policy Controller configuration for the cluster. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
@@ -918,7 +918,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagementbinauthz">Feature<wbr>Membership<wbr>Configmanagement<wbr>Binauthz</a></span>
     </dt>
-    <dd>{{% md %}}Binauthz configuration for the cluster.
+    <dd>{{% md %}}Binauthz configuration for the cluster. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_sync_python">
@@ -927,7 +927,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagementconfigsync">Feature<wbr>Membership<wbr>Configmanagement<wbr>Config<wbr>Sync</a></span>
     </dt>
-    <dd>{{% md %}}Config Sync configuration for the cluster.
+    <dd>{{% md %}}Config Sync configuration for the cluster. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hierarchy_controller_python">
@@ -936,7 +936,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagementhierarchycontroller">Feature<wbr>Membership<wbr>Configmanagement<wbr>Hierarchy<wbr>Controller</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy Controller configuration for the cluster.
+    <dd>{{% md %}}Hierarchy Controller configuration for the cluster. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_controller_python">
@@ -945,7 +945,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagementpolicycontroller">Feature<wbr>Membership<wbr>Configmanagement<wbr>Policy<wbr>Controller</a></span>
     </dt>
-    <dd>{{% md %}}Policy Controller configuration for the cluster.
+    <dd>{{% md %}}Policy Controller configuration for the cluster. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
@@ -1024,7 +1024,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuremembershipconfigmanagementconfigsyncgit">Feature<wbr>Membership<wbr>Configmanagement<wbr>Config<wbr>Sync<wbr>Git</a></span>
     </dt>
     <dd>{{% md %}}-
-(Optional)
+(Optional) Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceformat_csharp">
@@ -1047,7 +1047,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuremembershipconfigmanagementconfigsyncgit">Feature<wbr>Membership<wbr>Configmanagement<wbr>Config<wbr>Sync<wbr>Git</a></span>
     </dt>
     <dd>{{% md %}}-
-(Optional)
+(Optional) Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceformat_go">
@@ -1070,7 +1070,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuremembershipconfigmanagementconfigsyncgit">Feature<wbr>Membership<wbr>Configmanagement<wbr>Config<wbr>Sync<wbr>Git</a></span>
     </dt>
     <dd>{{% md %}}-
-(Optional)
+(Optional) Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceformat_nodejs">
@@ -1093,7 +1093,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuremembershipconfigmanagementconfigsyncgit">Feature<wbr>Membership<wbr>Configmanagement<wbr>Config<wbr>Sync<wbr>Git</a></span>
     </dt>
     <dd>{{% md %}}-
-(Optional)
+(Optional) Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_format_python">

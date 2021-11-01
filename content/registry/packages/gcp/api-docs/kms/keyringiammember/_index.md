@@ -743,7 +743,7 @@ project setting will be used as a fallback.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyringiammembercondition">Key<wbr>Ring<wbr>IAMMember<wbr>Condition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+    <dd>{{% md %}}) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -788,7 +788,7 @@ project setting will be used as a fallback.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyringiammembercondition">Key<wbr>Ring<wbr>IAMMember<wbr>Condition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+    <dd>{{% md %}}) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -833,7 +833,7 @@ project setting will be used as a fallback.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyringiammembercondition">Key<wbr>Ring<wbr>IAMMember<wbr>Condition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+    <dd>{{% md %}}) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -878,7 +878,7 @@ project setting will be used as a fallback.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyringiammembercondition">Key<wbr>Ring<wbr>IAMMember<wbr>Condition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+    <dd>{{% md %}}) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1113,7 +1113,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyringiammembercondition">Key<wbr>Ring<wbr>IAMMember<wbr>Condition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+    <dd>{{% md %}}) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1167,7 +1167,7 @@ project setting will be used as a fallback.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyringiammembercondition">Key<wbr>Ring<wbr>IAMMember<wbr>Condition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+    <dd>{{% md %}}) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1221,7 +1221,7 @@ project setting will be used as a fallback.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyringiammembercondition">Key<wbr>Ring<wbr>IAMMember<wbr>Condition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+    <dd>{{% md %}}) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1275,7 +1275,7 @@ project setting will be used as a fallback.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyringiammembercondition">Key<wbr>Ring<wbr>IAMMember<wbr>Condition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+    <dd>{{% md %}}) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">

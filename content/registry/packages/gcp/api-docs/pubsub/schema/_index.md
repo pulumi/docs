@@ -163,6 +163,149 @@ const example = new gcp.pubsub.Schema("example", {
 
 
 
+### Pubsub Schema Protobuf
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleSchema = new Gcp.PubSub.Schema("exampleSchema", new Gcp.PubSub.SchemaArgs
+        {
+            Type = "PROTOCOL_BUFFER",
+            Definition = @"syntax = ""proto3"";
+message Results {
+string message_request = 1;
+string message_response = 2;
+string timestamp_request = 3;
+string timestamp_response = 4;
+}",
+        });
+        var exampleTopic = new Gcp.PubSub.Topic("exampleTopic", new Gcp.PubSub.TopicArgs
+        {
+            SchemaSettings = new Gcp.PubSub.Inputs.TopicSchemaSettingsArgs
+            {
+                Schema = "projects/my-project-name/schemas/example",
+                Encoding = "JSON",
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                exampleSchema,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleSchema, err := pubsub.NewSchema(ctx, "exampleSchema", &pubsub.SchemaArgs{
+			Type:       pulumi.String("PROTOCOL_BUFFER"),
+			Definition: pulumi.String("syntax = \"proto3\";\nmessage Results {\nstring message_request = 1;\nstring message_response = 2;\nstring timestamp_request = 3;\nstring timestamp_response = 4;\n}"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pubsub.NewTopic(ctx, "exampleTopic", &pubsub.TopicArgs{
+			SchemaSettings: &pubsub.TopicSchemaSettingsArgs{
+				Schema:   pulumi.String("projects/my-project-name/schemas/example"),
+				Encoding: pulumi.String("JSON"),
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			exampleSchema,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_schema = gcp.pubsub.Schema("exampleSchema",
+    type="PROTOCOL_BUFFER",
+    definition="""syntax = "proto3";
+message Results {
+string message_request = 1;
+string message_response = 2;
+string timestamp_request = 3;
+string timestamp_response = 4;
+}""")
+example_topic = gcp.pubsub.Topic("exampleTopic", schema_settings=gcp.pubsub.TopicSchemaSettingsArgs(
+    schema="projects/my-project-name/schemas/example",
+    encoding="JSON",
+),
+opts=pulumi.ResourceOptions(depends_on=[example_schema]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleSchema = new gcp.pubsub.Schema("exampleSchema", {
+    type: "PROTOCOL_BUFFER",
+    definition: `syntax = "proto3";
+message Results {
+string message_request = 1;
+string message_response = 2;
+string timestamp_request = 3;
+string timestamp_response = 4;
+}`,
+});
+const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {schemaSettings: {
+    schema: "projects/my-project-name/schemas/example",
+    encoding: "JSON",
+}}, {
+    dependsOn: [exampleSchema],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
