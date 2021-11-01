@@ -419,7 +419,7 @@ $ pulumi stack init my-stack \
     --secrets-provider="azurekeyvault://acmecorpsec.vault.azure.net/keys/payroll"
 ```
 
-By default, this provider will use [Azure Environment Authentication](https://docs.microsoft.com/en-us/azure/go/azure-sdk-go-authorization#use-environment-based-authentication). If you wish to login using the `az` command for authentication instead, set `AZURE_KEYVAULT_AUTH_VIA_CLI` to `true`.
+By default, this provider will use [Azure Environment Authentication](https://docs.microsoft.com/en-us/azure/go/azure-sdk-go-authorization#use-environment-based-authentication). If you wish to login using the `az` command for authentication instead, set `AZURE_KEYVAULT_AUTH_VIA_CLI` to `"true"` (using double quotes).
 
 #### Google Cloud Key Management Service (KMS)
 
