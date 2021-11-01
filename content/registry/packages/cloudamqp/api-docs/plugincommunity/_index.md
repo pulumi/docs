@@ -15,6 +15,8 @@ no_edit_this_page: true
 This resource allows you to install or uninstall community plugins. Once installed the plugin will be available in `cloudamqp.Plugin`.
 
 Only available for dedicated subscription plans.
+
+⚠️  From our go API wrapper [v1.5.0](https://github.com/84codes/go-api/releases/tag/v1.5.0) there is support for multiple retries when requesting information about community plugins. This was introduced to avoid `ReadPluginCommunity error 400: Timeout talking to backend`.
 ## Depedency
 
 This resource depends on CloudAMQP instance identifier, `cloudamqp_instance.instance.id`.
@@ -289,7 +291,7 @@ The PluginCommunity resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Rabbit MQ plugin.
+    <dd>{{% md %}}The name of the Rabbit MQ community plugin.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -320,7 +322,7 @@ The PluginCommunity resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Rabbit MQ plugin.
+    <dd>{{% md %}}The name of the Rabbit MQ community plugin.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -351,7 +353,7 @@ The PluginCommunity resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Rabbit MQ plugin.
+    <dd>{{% md %}}The name of the Rabbit MQ community plugin.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -382,7 +384,7 @@ The PluginCommunity resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Rabbit MQ plugin.
+    <dd>{{% md %}}The name of the Rabbit MQ community plugin.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -596,7 +598,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Rabbit MQ plugin.
+    <dd>{{% md %}}The name of the Rabbit MQ community plugin.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -627,7 +629,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Rabbit MQ plugin.
+    <dd>{{% md %}}The name of the Rabbit MQ community plugin.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -658,7 +660,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Rabbit MQ plugin.
+    <dd>{{% md %}}The name of the Rabbit MQ community plugin.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -689,7 +691,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Rabbit MQ plugin.
+    <dd>{{% md %}}The name of the Rabbit MQ community plugin.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

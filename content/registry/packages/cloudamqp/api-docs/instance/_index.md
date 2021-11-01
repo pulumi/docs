@@ -46,7 +46,6 @@ class MyStack : Stack
         var instance = new CloudAmqp.Instance("instance", new CloudAmqp.InstanceArgs
         {
             NoDefaultAlarms = true,
-            Nodes = 1,
             Plan = "bunny-1",
             Region = "amazon-web-services::us-west-1",
             RmqVersion = "3.8.3",
@@ -85,7 +84,6 @@ func main() {
 		}
 		_, err = cloudamqp.NewInstance(ctx, "instance", &cloudamqp.InstanceArgs{
 			NoDefaultAlarms: pulumi.Bool(true),
-			Nodes:           pulumi.Int(1),
 			Plan:            pulumi.String("bunny-1"),
 			Region:          pulumi.String("amazon-web-services::us-west-1"),
 			RmqVersion:      pulumi.String("3.8.3"),
@@ -118,7 +116,6 @@ lemur_instance = cloudamqp.Instance("lemurInstance",
 # New dedicated bunny instance
 instance = cloudamqp.Instance("instance",
     no_default_alarms=True,
-    nodes=1,
     plan="bunny-1",
     region="amazon-web-services::us-west-1",
     rmq_version="3.8.3",
@@ -144,7 +141,6 @@ const lemurInstance = new cloudamqp.Instance("lemur_instance", {
 // New dedicated bunny instance
 const instance = new cloudamqp.Instance("instance", {
     noDefaultAlarms: true,
-    nodes: 1,
     plan: "bunny-1",
     region: "amazon-web-services::us-west-1",
     rmqVersion: "3.8.3",
@@ -183,6 +179,7 @@ const instance = new cloudamqp.Instance("instance", {
              <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">rmq_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">vpc_subnet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -355,7 +352,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **DEPRECATED. In order to change number of nodes, the subscription `plan` needs to be updated.**
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5 depending on plan used. **DEPRECATED. Old subscriptions plan can still change this to scale up or down the instance. New subscriptions plans use the plan to determine number of nodes. In order to change number of nodes the `plan` needs to be updated.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rmqversion_csharp">
@@ -374,6 +371,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more tags for the CloudAMQP instance, makes it possible to categories multiple instances in console view. Default there is no tags assigned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpcid_csharp">
+<a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The VPC ID. Use this to create your instance in an existing VPC. See available example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcsubnet_csharp">
@@ -431,7 +437,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **DEPRECATED. In order to change number of nodes, the subscription `plan` needs to be updated.**
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5 depending on plan used. **DEPRECATED. Old subscriptions plan can still change this to scale up or down the instance. New subscriptions plans use the plan to determine number of nodes. In order to change number of nodes the `plan` needs to be updated.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rmqversion_go">
@@ -450,6 +456,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}One or more tags for the CloudAMQP instance, makes it possible to categories multiple instances in console view. Default there is no tags assigned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpcid_go">
+<a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The VPC ID. Use this to create your instance in an existing VPC. See available example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcsubnet_go">
@@ -507,7 +522,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **DEPRECATED. In order to change number of nodes, the subscription `plan` needs to be updated.**
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5 depending on plan used. **DEPRECATED. Old subscriptions plan can still change this to scale up or down the instance. New subscriptions plans use the plan to determine number of nodes. In order to change number of nodes the `plan` needs to be updated.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rmqversion_nodejs">
@@ -526,6 +541,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more tags for the CloudAMQP instance, makes it possible to categories multiple instances in console view. Default there is no tags assigned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpcid_nodejs">
+<a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The VPC ID. Use this to create your instance in an existing VPC. See available example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcsubnet_nodejs">
@@ -583,7 +607,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **DEPRECATED. In order to change number of nodes, the subscription `plan` needs to be updated.**
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5 depending on plan used. **DEPRECATED. Old subscriptions plan can still change this to scale up or down the instance. New subscriptions plans use the plan to determine number of nodes. In order to change number of nodes the `plan` needs to be updated.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rmq_version_python">
@@ -602,6 +626,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more tags for the CloudAMQP instance, makes it possible to categories multiple instances in console view. Default there is no tags assigned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpc_id_python">
+<a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The VPC ID. Use this to create your instance in an existing VPC. See available example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_subnet_python">
@@ -914,6 +947,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">vhost</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">vpc_subnet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
@@ -1078,7 +1112,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **DEPRECATED. In order to change number of nodes, the subscription `plan` needs to be updated.**
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5 depending on plan used. **DEPRECATED. Old subscriptions plan can still change this to scale up or down the instance. New subscriptions plans use the plan to determine number of nodes. In order to change number of nodes the `plan` needs to be updated.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_csharp">
@@ -1142,6 +1176,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual host used by Rabbit MQ.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vpcid_csharp">
+<a href="#state_vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The VPC ID. Use this to create your instance in an existing VPC. See available example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcsubnet_csharp">
@@ -1208,7 +1251,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **DEPRECATED. In order to change number of nodes, the subscription `plan` needs to be updated.**
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5 depending on plan used. **DEPRECATED. Old subscriptions plan can still change this to scale up or down the instance. New subscriptions plans use the plan to determine number of nodes. In order to change number of nodes the `plan` needs to be updated.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_go">
@@ -1272,6 +1315,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual host used by Rabbit MQ.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vpcid_go">
+<a href="#state_vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The VPC ID. Use this to create your instance in an existing VPC. See available example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcsubnet_go">
@@ -1338,7 +1390,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **DEPRECATED. In order to change number of nodes, the subscription `plan` needs to be updated.**
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5 depending on plan used. **DEPRECATED. Old subscriptions plan can still change this to scale up or down the instance. New subscriptions plans use the plan to determine number of nodes. In order to change number of nodes the `plan` needs to be updated.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_nodejs">
@@ -1402,6 +1454,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual host used by Rabbit MQ.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vpcid_nodejs">
+<a href="#state_vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The VPC ID. Use this to create your instance in an existing VPC. See available example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcsubnet_nodejs">
@@ -1468,7 +1529,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **DEPRECATED. In order to change number of nodes, the subscription `plan` needs to be updated.**
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5 depending on plan used. **DEPRECATED. Old subscriptions plan can still change this to scale up or down the instance. New subscriptions plans use the plan to determine number of nodes. In order to change number of nodes the `plan` needs to be updated.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_python">
@@ -1532,6 +1593,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The virtual host used by Rabbit MQ.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vpc_id_python">
+<a href="#state_vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The VPC ID. Use this to create your instance in an existing VPC. See available example.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_subnet_python">

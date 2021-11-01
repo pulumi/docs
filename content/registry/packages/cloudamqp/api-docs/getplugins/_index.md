@@ -13,6 +13,8 @@ no_edit_this_page: true
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this data source to retrieve information about installed and available plugins for the CloudAMQP instance.
+
+⚠️  From our go API wrapper [v1.4.0](https://github.com/84codes/go-api/releases/tag/v1.4.0) there is support for multiple retries when requesting information about plugins. This was introduced to avoid `ReadPlugin error 400: Timeout talking to backend`.
 ## Argument reference
 
 * `instance_id` - (Required) The CloudAMQP instance identifier.
