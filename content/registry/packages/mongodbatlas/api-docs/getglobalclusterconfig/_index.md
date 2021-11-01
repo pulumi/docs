@@ -415,6 +415,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) The name of the database containing the collection.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="iscustomshardkeyhashed_csharp">
+<a href="#iscustomshardkeyhashed_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Custom<wbr>Shard<wbr>Key<wbr>Hashed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the custom shard key for the collection is [hashed](https://docs.mongodb.com/manual/reference/method/sh.shardCollection/#hashed-shard-keys). If omitted, defaults to `false`. If `false`, Atlas uses [ranged sharding](https://docs.mongodb.com/manual/core/ranged-sharding/). This is only available for Atlas clusters with MongoDB v4.4 and later.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="isshardkeyunique_csharp">
+<a href="#isshardkeyunique_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Shard<wbr>Key<wbr>Unique</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the underlying index enforces a unique constraint. If omitted, defaults to false. You cannot specify true when using [hashed shard keys](https://docs.mongodb.com/manual/core/hashed-sharding/#std-label-sharding-hashed).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -446,6 +464,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) The name of the database containing the collection.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="iscustomshardkeyhashed_go">
+<a href="#iscustomshardkeyhashed_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Custom<wbr>Shard<wbr>Key<wbr>Hashed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the custom shard key for the collection is [hashed](https://docs.mongodb.com/manual/reference/method/sh.shardCollection/#hashed-shard-keys). If omitted, defaults to `false`. If `false`, Atlas uses [ranged sharding](https://docs.mongodb.com/manual/core/ranged-sharding/). This is only available for Atlas clusters with MongoDB v4.4 and later.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="isshardkeyunique_go">
+<a href="#isshardkeyunique_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Shard<wbr>Key<wbr>Unique</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the underlying index enforces a unique constraint. If omitted, defaults to false. You cannot specify true when using [hashed shard keys](https://docs.mongodb.com/manual/core/hashed-sharding/#std-label-sharding-hashed).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -477,6 +513,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) The name of the database containing the collection.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="iscustomshardkeyhashed_nodejs">
+<a href="#iscustomshardkeyhashed_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Custom<wbr>Shard<wbr>Key<wbr>Hashed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the custom shard key for the collection is [hashed](https://docs.mongodb.com/manual/reference/method/sh.shardCollection/#hashed-shard-keys). If omitted, defaults to `false`. If `false`, Atlas uses [ranged sharding](https://docs.mongodb.com/manual/core/ranged-sharding/). This is only available for Atlas clusters with MongoDB v4.4 and later.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="isshardkeyunique_nodejs">
+<a href="#isshardkeyunique_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Shard<wbr>Key<wbr>Unique</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the underlying index enforces a unique constraint. If omitted, defaults to false. You cannot specify true when using [hashed shard keys](https://docs.mongodb.com/manual/core/hashed-sharding/#std-label-sharding-hashed).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -508,6 +562,24 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required) The name of the database containing the collection.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="is_custom_shard_key_hashed_python">
+<a href="#is_custom_shard_key_hashed_python" style="color: inherit; text-decoration: inherit;">is_<wbr>custom_<wbr>shard_<wbr>key_<wbr>hashed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the custom shard key for the collection is [hashed](https://docs.mongodb.com/manual/reference/method/sh.shardCollection/#hashed-shard-keys). If omitted, defaults to `false`. If `false`, Atlas uses [ranged sharding](https://docs.mongodb.com/manual/core/ranged-sharding/). This is only available for Atlas clusters with MongoDB v4.4 and later.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="is_shard_key_unique_python">
+<a href="#is_shard_key_unique_python" style="color: inherit; text-decoration: inherit;">is_<wbr>shard_<wbr>key_<wbr>unique</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the underlying index enforces a unique constraint. If omitted, defaults to false. You cannot specify true when using [hashed shard keys](https://docs.mongodb.com/manual/core/hashed-sharding/#std-label-sharding-hashed).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

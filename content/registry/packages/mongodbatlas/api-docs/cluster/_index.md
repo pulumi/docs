@@ -211,8 +211,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
-**Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
+    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providername_csharp">
@@ -495,8 +494,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
-**Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
+    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providername_go">
@@ -779,8 +777,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
-**Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
+    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providername_nodejs">
@@ -1063,8 +1060,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
-**Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
+    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provider_name_python">
@@ -2316,8 +2312,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
-**Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
+    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providername_csharp">
@@ -2713,8 +2708,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
-**Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
+    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providername_go">
@@ -3110,8 +3104,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
-**Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
+    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providername_nodejs">
@@ -3507,8 +3500,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
-**Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
+    <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provider_name_python">
@@ -3605,6 +3597,24 @@ Do not specify this field when creating a multi-region cluster using the replica
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="defaultreadconcern_csharp">
+<a href="#defaultreadconcern_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Read<wbr>Concern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Default level of acknowledgment requested from MongoDB for read operations](https://docs.mongodb.com/manual/reference/read-concern/) set for this cluster. MongoDB 4.4 clusters default to [available](https://docs.mongodb.com/manual/reference/read-concern-available/).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="defaultwriteconcern_csharp">
+<a href="#defaultwriteconcern_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Write<wbr>Concern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Default level of acknowledgment requested from MongoDB for write operations](https://docs.mongodb.com/manual/reference/write-concern/) set for this cluster. MongoDB 4.4 clusters default to [1](https://docs.mongodb.com/manual/reference/write-concern/).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="failindexkeytoolong_csharp">
 <a href="#failindexkeytoolong_csharp" style="color: inherit; text-decoration: inherit;">Fail<wbr>Index<wbr>Key<wbr>Too<wbr>Long</a>
 </span>
@@ -3671,6 +3681,24 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultreadconcern_go">
+<a href="#defaultreadconcern_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Read<wbr>Concern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Default level of acknowledgment requested from MongoDB for read operations](https://docs.mongodb.com/manual/reference/read-concern/) set for this cluster. MongoDB 4.4 clusters default to [available](https://docs.mongodb.com/manual/reference/read-concern-available/).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="defaultwriteconcern_go">
+<a href="#defaultwriteconcern_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Write<wbr>Concern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Default level of acknowledgment requested from MongoDB for write operations](https://docs.mongodb.com/manual/reference/write-concern/) set for this cluster. MongoDB 4.4 clusters default to [1](https://docs.mongodb.com/manual/reference/write-concern/).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failindexkeytoolong_go">
 <a href="#failindexkeytoolong_go" style="color: inherit; text-decoration: inherit;">Fail<wbr>Index<wbr>Key<wbr>Too<wbr>Long</a>
@@ -3739,6 +3767,24 @@ Do not specify this field when creating a multi-region cluster using the replica
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="defaultreadconcern_nodejs">
+<a href="#defaultreadconcern_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Read<wbr>Concern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Default level of acknowledgment requested from MongoDB for read operations](https://docs.mongodb.com/manual/reference/read-concern/) set for this cluster. MongoDB 4.4 clusters default to [available](https://docs.mongodb.com/manual/reference/read-concern-available/).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="defaultwriteconcern_nodejs">
+<a href="#defaultwriteconcern_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Write<wbr>Concern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Default level of acknowledgment requested from MongoDB for write operations](https://docs.mongodb.com/manual/reference/write-concern/) set for this cluster. MongoDB 4.4 clusters default to [1](https://docs.mongodb.com/manual/reference/write-concern/).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="failindexkeytoolong_nodejs">
 <a href="#failindexkeytoolong_nodejs" style="color: inherit; text-decoration: inherit;">fail<wbr>Index<wbr>Key<wbr>Too<wbr>Long</a>
 </span>
@@ -3805,6 +3851,24 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="default_read_concern_python">
+<a href="#default_read_concern_python" style="color: inherit; text-decoration: inherit;">default_<wbr>read_<wbr>concern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Default level of acknowledgment requested from MongoDB for read operations](https://docs.mongodb.com/manual/reference/read-concern/) set for this cluster. MongoDB 4.4 clusters default to [available](https://docs.mongodb.com/manual/reference/read-concern-available/).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="default_write_concern_python">
+<a href="#default_write_concern_python" style="color: inherit; text-decoration: inherit;">default_<wbr>write_<wbr>concern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Default level of acknowledgment requested from MongoDB for write operations](https://docs.mongodb.com/manual/reference/write-concern/) set for this cluster. MongoDB 4.4 clusters default to [1](https://docs.mongodb.com/manual/reference/write-concern/).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fail_index_key_too_long_python">
 <a href="#fail_index_key_too_long_python" style="color: inherit; text-decoration: inherit;">fail_<wbr>index_<wbr>key_<wbr>too_<wbr>long</a>

@@ -118,6 +118,16 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="autodeferonceenabled_csharp">
+<a href="#autodeferonceenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Defer<wbr>Once<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicates whether you want to defer all maintenance windows one week they would be triggered.
+For more information see: [MongoDB Atlas API Reference.](https://docs.atlas.mongodb.com/reference/api/maintenance-windows/)
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="dayofweek_csharp">
 <a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
 </span>
@@ -174,6 +184,16 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="autodeferonceenabled_go">
+<a href="#autodeferonceenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Defer<wbr>Once<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicates whether you want to defer all maintenance windows one week they would be triggered.
+For more information see: [MongoDB Atlas API Reference.](https://docs.atlas.mongodb.com/reference/api/maintenance-windows/)
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dayofweek_go">
 <a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
@@ -232,6 +252,16 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="autodeferonceenabled_nodejs">
+<a href="#autodeferonceenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Defer<wbr>Once<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicates whether you want to defer all maintenance windows one week they would be triggered.
+For more information see: [MongoDB Atlas API Reference.](https://docs.atlas.mongodb.com/reference/api/maintenance-windows/)
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="dayofweek_nodejs">
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span>
@@ -288,6 +318,16 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="auto_defer_once_enabled_python">
+<a href="#auto_defer_once_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>defer_<wbr>once_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicates whether you want to defer all maintenance windows one week they would be triggered.
+For more information see: [MongoDB Atlas API Reference.](https://docs.atlas.mongodb.com/reference/api/maintenance-windows/)
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="day_of_week_python">
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>

@@ -284,7 +284,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}JSON-formatted audit filter used by the project
+    <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see [auditAuthorizationSuccess](https://docs.mongodb.com/manual/reference/parameters/#param.auditAuthorizationSuccess).  **Warning! Enabling Audit authorization successes can severely impact cluster performance. Enable this option with caution.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auditfilter_csharp">
@@ -293,7 +293,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see auditAuthorizationSuccess
+    <dd>{{% md %}}JSON-formatted audit filter. For complete documentation on custom auditing filters, see [Configure Audit Filters](https://docs.mongodb.com/manual/tutorial/configure-audit-filters/).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
@@ -302,7 +302,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.
+    <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.  Defaults to false.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -324,7 +324,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}JSON-formatted audit filter used by the project
+    <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see [auditAuthorizationSuccess](https://docs.mongodb.com/manual/reference/parameters/#param.auditAuthorizationSuccess).  **Warning! Enabling Audit authorization successes can severely impact cluster performance. Enable this option with caution.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auditfilter_go">
@@ -333,7 +333,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see auditAuthorizationSuccess
+    <dd>{{% md %}}JSON-formatted audit filter. For complete documentation on custom auditing filters, see [Configure Audit Filters](https://docs.mongodb.com/manual/tutorial/configure-audit-filters/).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
@@ -342,7 +342,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.
+    <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.  Defaults to false.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -364,7 +364,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}JSON-formatted audit filter used by the project
+    <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see [auditAuthorizationSuccess](https://docs.mongodb.com/manual/reference/parameters/#param.auditAuthorizationSuccess).  **Warning! Enabling Audit authorization successes can severely impact cluster performance. Enable this option with caution.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auditfilter_nodejs">
@@ -373,7 +373,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see auditAuthorizationSuccess
+    <dd>{{% md %}}JSON-formatted audit filter. For complete documentation on custom auditing filters, see [Configure Audit Filters](https://docs.mongodb.com/manual/tutorial/configure-audit-filters/).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
@@ -382,7 +382,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.
+    <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.  Defaults to false.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -404,7 +404,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}JSON-formatted audit filter used by the project
+    <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see [auditAuthorizationSuccess](https://docs.mongodb.com/manual/reference/parameters/#param.auditAuthorizationSuccess).  **Warning! Enabling Audit authorization successes can severely impact cluster performance. Enable this option with caution.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audit_filter_python">
@@ -413,7 +413,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see auditAuthorizationSuccess
+    <dd>{{% md %}}JSON-formatted audit filter. For complete documentation on custom auditing filters, see [Configure Audit Filters](https://docs.mongodb.com/manual/tutorial/configure-audit-filters/).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
@@ -422,7 +422,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.
+    <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.  Defaults to false.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -668,7 +668,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}JSON-formatted audit filter used by the project
+    <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see [auditAuthorizationSuccess](https://docs.mongodb.com/manual/reference/parameters/#param.auditAuthorizationSuccess).  **Warning! Enabling Audit authorization successes can severely impact cluster performance. Enable this option with caution.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auditfilter_csharp">
@@ -677,7 +677,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see auditAuthorizationSuccess
+    <dd>{{% md %}}JSON-formatted audit filter. For complete documentation on custom auditing filters, see [Configure Audit Filters](https://docs.mongodb.com/manual/tutorial/configure-audit-filters/).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configurationtype_csharp">
@@ -698,7 +698,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.
+    <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.  Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
@@ -720,7 +720,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}JSON-formatted audit filter used by the project
+    <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see [auditAuthorizationSuccess](https://docs.mongodb.com/manual/reference/parameters/#param.auditAuthorizationSuccess).  **Warning! Enabling Audit authorization successes can severely impact cluster performance. Enable this option with caution.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auditfilter_go">
@@ -729,7 +729,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see auditAuthorizationSuccess
+    <dd>{{% md %}}JSON-formatted audit filter. For complete documentation on custom auditing filters, see [Configure Audit Filters](https://docs.mongodb.com/manual/tutorial/configure-audit-filters/).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configurationtype_go">
@@ -750,7 +750,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.
+    <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.  Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
@@ -772,7 +772,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}JSON-formatted audit filter used by the project
+    <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see [auditAuthorizationSuccess](https://docs.mongodb.com/manual/reference/parameters/#param.auditAuthorizationSuccess).  **Warning! Enabling Audit authorization successes can severely impact cluster performance. Enable this option with caution.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auditfilter_nodejs">
@@ -781,7 +781,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see auditAuthorizationSuccess
+    <dd>{{% md %}}JSON-formatted audit filter. For complete documentation on custom auditing filters, see [Configure Audit Filters](https://docs.mongodb.com/manual/tutorial/configure-audit-filters/).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configurationtype_nodejs">
@@ -802,7 +802,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.
+    <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.  Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
@@ -824,7 +824,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}JSON-formatted audit filter used by the project
+    <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see [auditAuthorizationSuccess](https://docs.mongodb.com/manual/reference/parameters/#param.auditAuthorizationSuccess).  **Warning! Enabling Audit authorization successes can severely impact cluster performance. Enable this option with caution.**
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_audit_filter_python">
@@ -833,7 +833,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see auditAuthorizationSuccess
+    <dd>{{% md %}}JSON-formatted audit filter. For complete documentation on custom auditing filters, see [Configure Audit Filters](https://docs.mongodb.com/manual/tutorial/configure-audit-filters/).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configuration_type_python">
@@ -854,7 +854,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.
+    <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.  Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
