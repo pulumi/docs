@@ -26,21 +26,173 @@ Manages a Backup Instance Blob Storage.
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = azurerm_resource_group.Example.Name,
+            Location = azurerm_resource_group.Example.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var exampleBackupVault = new Azure.DataProtection.BackupVault("exampleBackupVault", new Azure.DataProtection.BackupVaultArgs
+        {
+            ResourceGroupName = rg.Name,
+            Location = rg.Location,
+            DatastoreType = "VaultStore",
+            Redundancy = "LocallyRedundant",
+        });
+        var exampleAssignment = new Azure.Authorization.Assignment("exampleAssignment", new Azure.Authorization.AssignmentArgs
+        {
+            Scope = exampleAccount.Id,
+            RoleDefinitionName = "Storage Account Backup Contributor Role",
+            PrincipalId = exampleBackupVault.Identity.Apply(identity => identity?.PrincipalId),
+        });
+        var exampleBackupPolicyBlobStorage = new Azure.DataProtection.BackupPolicyBlobStorage("exampleBackupPolicyBlobStorage", new Azure.DataProtection.BackupPolicyBlobStorageArgs
+        {
+            VaultId = exampleBackupVault.Id,
+            RetentionDuration = "P30D",
+        });
+        var exampleBackupInstanceBlogStorage = new Azure.DataProtection.BackupInstanceBlogStorage("exampleBackupInstanceBlogStorage", new Azure.DataProtection.BackupInstanceBlogStorageArgs
+        {
+            VaultId = exampleBackupVault.Id,
+            Location = rg.Location,
+            StorageAccountId = exampleAccount.Id,
+            BackupPolicyId = exampleBackupPolicyBlobStorage.Id,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                exampleAssignment,
+            },
+        });
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/authorization"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/dataprotection"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		rg, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAccount, err := storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      pulumi.Any(azurerm_resource_group.Example.Name),
+			Location:               pulumi.Any(azurerm_resource_group.Example.Location),
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("LRS"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleBackupVault, err := dataprotection.NewBackupVault(ctx, "exampleBackupVault", &dataprotection.BackupVaultArgs{
+			ResourceGroupName: rg.Name,
+			Location:          rg.Location,
+			DatastoreType:     pulumi.String("VaultStore"),
+			Redundancy:        pulumi.String("LocallyRedundant"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAssignment, err := authorization.NewAssignment(ctx, "exampleAssignment", &authorization.AssignmentArgs{
+			Scope:              exampleAccount.ID(),
+			RoleDefinitionName: pulumi.String("Storage Account Backup Contributor Role"),
+			PrincipalId: exampleBackupVault.Identity.ApplyT(func(identity dataprotection.BackupVaultIdentity) (string, error) {
+				return identity.PrincipalId, nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		exampleBackupPolicyBlobStorage, err := dataprotection.NewBackupPolicyBlobStorage(ctx, "exampleBackupPolicyBlobStorage", &dataprotection.BackupPolicyBlobStorageArgs{
+			VaultId:           exampleBackupVault.ID(),
+			RetentionDuration: pulumi.String("P30D"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = dataprotection.NewBackupInstanceBlogStorage(ctx, "exampleBackupInstanceBlogStorage", &dataprotection.BackupInstanceBlogStorageArgs{
+			VaultId:          exampleBackupVault.ID(),
+			Location:         rg.Location,
+			StorageAccountId: exampleAccount.ID(),
+			BackupPolicyId:   exampleBackupPolicyBlobStorage.ID(),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			exampleAssignment,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+rg = azure.core.ResourceGroup("rg", location="West Europe")
+example_account = azure.storage.Account("exampleAccount",
+    resource_group_name=azurerm_resource_group["example"]["name"],
+    location=azurerm_resource_group["example"]["location"],
+    account_tier="Standard",
+    account_replication_type="LRS")
+example_backup_vault = azure.dataprotection.BackupVault("exampleBackupVault",
+    resource_group_name=rg.name,
+    location=rg.location,
+    datastore_type="VaultStore",
+    redundancy="LocallyRedundant")
+example_assignment = azure.authorization.Assignment("exampleAssignment",
+    scope=example_account.id,
+    role_definition_name="Storage Account Backup Contributor Role",
+    principal_id=example_backup_vault.identity.principal_id)
+example_backup_policy_blob_storage = azure.dataprotection.BackupPolicyBlobStorage("exampleBackupPolicyBlobStorage",
+    vault_id=example_backup_vault.id,
+    retention_duration="P30D")
+example_backup_instance_blog_storage = azure.dataprotection.BackupInstanceBlogStorage("exampleBackupInstanceBlogStorage",
+    vault_id=example_backup_vault.id,
+    location=rg.location,
+    storage_account_id=example_account.id,
+    backup_policy_id=example_backup_policy_blob_storage.id,
+    opts=pulumi.ResourceOptions(depends_on=[example_assignment]))
+```
+
 
 {{< /example >}}
 
@@ -71,7 +223,6 @@ const exampleAssignment = new azure.authorization.Assignment("exampleAssignment"
     principalId: exampleBackupVault.identity.apply(identity => identity?.principalId),
 });
 const exampleBackupPolicyBlobStorage = new azure.dataprotection.BackupPolicyBlobStorage("exampleBackupPolicyBlobStorage", {
-    resourceGroupName: rg.name,
     vaultId: exampleBackupVault.id,
     retentionDuration: "P30D",
 });

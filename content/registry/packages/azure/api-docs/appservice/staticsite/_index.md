@@ -298,7 +298,7 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+    <dd>{{% md %}}Specifies the sku size of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skutier_csharp">
@@ -356,7 +356,7 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+    <dd>{{% md %}}Specifies the sku size of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skutier_go">
@@ -414,7 +414,7 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+    <dd>{{% md %}}Specifies the sku size of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skutier_nodejs">
@@ -472,7 +472,7 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+    <dd>{{% md %}}Specifies the sku size of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_tier_python">
@@ -808,7 +808,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+    <dd>{{% md %}}Specifies the sku size of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skutier_csharp">
@@ -884,7 +884,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+    <dd>{{% md %}}Specifies the sku size of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skutier_go">
@@ -960,7 +960,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+    <dd>{{% md %}}Specifies the sku size of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skutier_nodejs">
@@ -1036,7 +1036,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+    <dd>{{% md %}}Specifies the sku size of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_tier_python">

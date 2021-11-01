@@ -1412,7 +1412,7 @@ The following state arguments are supported:
 Machine Learning Synapse Sparks can be imported using the `resource id`, e.g.
 
 ```sh
- $ pulumi import azure:machinelearning/synapseSpark:SynapseSpark example C:/Program Files/Git/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resGroup1/providers/Microsoft.MachineLearningServices/workspaces/workspace1/computes/compute1
+ $ pulumi import azure:machinelearning/synapseSpark:SynapseSpark example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resGroup1/providers/Microsoft.MachineLearningServices/workspaces/workspace1/computes/compute1
 ```
 
 

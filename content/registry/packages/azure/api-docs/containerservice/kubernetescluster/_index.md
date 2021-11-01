@@ -495,7 +495,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is local account disabled for AAD integrated kubernetes cluster?
+    <dd>{{% md %}}- If `true` local accounts will be disabled. Defaults to `false`. See [the documentation](https://docs.microsoft.com/en-us/azure/aks/managed-aad#disable-local-accounts) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
@@ -758,7 +758,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is local account disabled for AAD integrated kubernetes cluster?
+    <dd>{{% md %}}- If `true` local accounts will be disabled. Defaults to `false`. See [the documentation](https://docs.microsoft.com/en-us/azure/aks/managed-aad#disable-local-accounts) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -1021,7 +1021,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is local account disabled for AAD integrated kubernetes cluster?
+    <dd>{{% md %}}- If `true` local accounts will be disabled. Defaults to `false`. See [the documentation](https://docs.microsoft.com/en-us/azure/aks/managed-aad#disable-local-accounts) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
@@ -1284,7 +1284,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is local account disabled for AAD integrated kubernetes cluster?
+    <dd>{{% md %}}- If `true` local accounts will be disabled. Defaults to `false`. See [the documentation](https://docs.microsoft.com/en-us/azure/aks/managed-aad#disable-local-accounts) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -1476,6 +1476,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A `kube_config` block as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="portalfqdn_csharp">
+<a href="#portalfqdn_csharp" style="color: inherit; text-decoration: inherit;">Portal<wbr>Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The FQDN for the Azure Portal resources when private link has been enabled, which is only resolvable inside the Virtual Network used by the Kubernetes Cluster.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="privatefqdn_csharp">
 <a href="#privatefqdn_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Fqdn</a>
 </span>
@@ -1540,6 +1549,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kubernetesclusterkubeconfig">[]Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `kube_config` block as defined below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="portalfqdn_go">
+<a href="#portalfqdn_go" style="color: inherit; text-decoration: inherit;">Portal<wbr>Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The FQDN for the Azure Portal resources when private link has been enabled, which is only resolvable inside the Virtual Network used by the Kubernetes Cluster.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatefqdn_go">
@@ -1608,6 +1626,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A `kube_config` block as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="portalfqdn_nodejs">
+<a href="#portalfqdn_nodejs" style="color: inherit; text-decoration: inherit;">portal<wbr>Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The FQDN for the Azure Portal resources when private link has been enabled, which is only resolvable inside the Virtual Network used by the Kubernetes Cluster.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="privatefqdn_nodejs">
 <a href="#privatefqdn_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Fqdn</a>
 </span>
@@ -1674,6 +1701,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A `kube_config` block as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="portal_fqdn_python">
+<a href="#portal_fqdn_python" style="color: inherit; text-decoration: inherit;">portal_<wbr>fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The FQDN for the Azure Portal resources when private link has been enabled, which is only resolvable inside the Virtual Network used by the Kubernetes Cluster.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="private_fqdn_python">
 <a href="#private_fqdn_python" style="color: inherit; text-decoration: inherit;">private_<wbr>fqdn</a>
 </span>
@@ -1724,6 +1760,7 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterNetworkProfileArgs]</span> = None<span class="p">,</span>
         <span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">portal_fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">private_cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">private_cluster_public_fqdn_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">private_dns_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2014,7 +2051,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is local account disabled for AAD integrated kubernetes cluster?
+    <dd>{{% md %}}- If `true` local accounts will be disabled. Defaults to `false`. See [the documentation](https://docs.microsoft.com/en-us/azure/aks/managed-aad#disable-local-accounts) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
@@ -2060,6 +2097,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Kubernetes Nodes should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_portalfqdn_csharp">
+<a href="#state_portalfqdn_csharp" style="color: inherit; text-decoration: inherit;">Portal<wbr>Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The FQDN for the Azure Portal resources when private link has been enabled, which is only resolvable inside the Virtual Network used by the Kubernetes Cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateclusterenabled_csharp">
@@ -2331,7 +2377,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is local account disabled for AAD integrated kubernetes cluster?
+    <dd>{{% md %}}- If `true` local accounts will be disabled. Defaults to `false`. See [the documentation](https://docs.microsoft.com/en-us/azure/aks/managed-aad#disable-local-accounts) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
@@ -2377,6 +2423,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Kubernetes Nodes should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_portalfqdn_go">
+<a href="#state_portalfqdn_go" style="color: inherit; text-decoration: inherit;">Portal<wbr>Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The FQDN for the Azure Portal resources when private link has been enabled, which is only resolvable inside the Virtual Network used by the Kubernetes Cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateclusterenabled_go">
@@ -2648,7 +2703,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is local account disabled for AAD integrated kubernetes cluster?
+    <dd>{{% md %}}- If `true` local accounts will be disabled. Defaults to `false`. See [the documentation](https://docs.microsoft.com/en-us/azure/aks/managed-aad#disable-local-accounts) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
@@ -2694,6 +2749,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Kubernetes Nodes should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_portalfqdn_nodejs">
+<a href="#state_portalfqdn_nodejs" style="color: inherit; text-decoration: inherit;">portal<wbr>Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The FQDN for the Azure Portal resources when private link has been enabled, which is only resolvable inside the Virtual Network used by the Kubernetes Cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateclusterenabled_nodejs">
@@ -2965,7 +3029,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is local account disabled for AAD integrated kubernetes cluster?
+    <dd>{{% md %}}- If `true` local accounts will be disabled. Defaults to `false`. See [the documentation](https://docs.microsoft.com/en-us/azure/aks/managed-aad#disable-local-accounts) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
@@ -3011,6 +3075,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Kubernetes Nodes should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_portal_fqdn_python">
+<a href="#state_portal_fqdn_python" style="color: inherit; text-decoration: inherit;">portal_<wbr>fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The FQDN for the Azure Portal resources when private link has been enabled, which is only resolvable inside the Virtual Network used by the Kubernetes Cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_cluster_enabled_python">

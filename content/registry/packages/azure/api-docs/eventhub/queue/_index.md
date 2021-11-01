@@ -193,6 +193,7 @@ const exampleQueue = new azure.servicebus.Queue("exampleQueue", {
           <span class="nx">forward_to</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">lock_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">max_delivery_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">max_message_size_in_kilobytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">max_size_in_megabytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -446,6 +447,17 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Integer value which controls when a message is automatically dead lettered. Defaults to `10`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maxmessagesizeinkilobytes_csharp">
+<a href="#maxmessagesizeinkilobytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Message<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Integer value which controls the maximum size of
+a message allowed on the queue for Premium SKU. For supported values see the "Large messages support"
+section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging#large-messages-support-preview).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxsizeinmegabytes_csharp">
 <a href="#maxsizeinmegabytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>In<wbr>Megabytes</a>
 </span>
@@ -610,6 +622,17 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer value which controls when a message is automatically dead lettered. Defaults to `10`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxmessagesizeinkilobytes_go">
+<a href="#maxmessagesizeinkilobytes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Message<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Integer value which controls the maximum size of
+a message allowed on the queue for Premium SKU. For supported values see the "Large messages support"
+section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging#large-messages-support-preview).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsizeinmegabytes_go">
@@ -778,6 +801,17 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Integer value which controls when a message is automatically dead lettered. Defaults to `10`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maxmessagesizeinkilobytes_nodejs">
+<a href="#maxmessagesizeinkilobytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Message<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Integer value which controls the maximum size of
+a message allowed on the queue for Premium SKU. For supported values see the "Large messages support"
+section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging#large-messages-support-preview).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxsizeinmegabytes_nodejs">
 <a href="#maxsizeinmegabytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>In<wbr>Megabytes</a>
 </span>
@@ -944,6 +978,17 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Integer value which controls when a message is automatically dead lettered. Defaults to `10`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="max_message_size_in_kilobytes_python">
+<a href="#max_message_size_in_kilobytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>message_<wbr>size_<wbr>in_<wbr>kilobytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Integer value which controls the maximum size of
+a message allowed on the queue for Premium SKU. For supported values see the "Large messages support"
+section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging#large-messages-support-preview).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_size_in_megabytes_python">
 <a href="#max_size_in_megabytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size_<wbr>in_<wbr>megabytes</a>
 </span>
@@ -1072,6 +1117,7 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
         <span class="nx">forward_to</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">lock_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">max_delivery_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">max_message_size_in_kilobytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">max_size_in_megabytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1290,6 +1336,17 @@ The following state arguments are supported:
     <dd>{{% md %}}Integer value which controls when a message is automatically dead lettered. Defaults to `10`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_maxmessagesizeinkilobytes_csharp">
+<a href="#state_maxmessagesizeinkilobytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Message<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Integer value which controls the maximum size of
+a message allowed on the queue for Premium SKU. For supported values see the "Large messages support"
+section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging#large-messages-support-preview).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_maxsizeinmegabytes_csharp">
 <a href="#state_maxsizeinmegabytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>In<wbr>Megabytes</a>
 </span>
@@ -1454,6 +1511,17 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer value which controls when a message is automatically dead lettered. Defaults to `10`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_maxmessagesizeinkilobytes_go">
+<a href="#state_maxmessagesizeinkilobytes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Message<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Integer value which controls the maximum size of
+a message allowed on the queue for Premium SKU. For supported values see the "Large messages support"
+section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging#large-messages-support-preview).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsizeinmegabytes_go">
@@ -1622,6 +1690,17 @@ The following state arguments are supported:
     <dd>{{% md %}}Integer value which controls when a message is automatically dead lettered. Defaults to `10`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_maxmessagesizeinkilobytes_nodejs">
+<a href="#state_maxmessagesizeinkilobytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Message<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Integer value which controls the maximum size of
+a message allowed on the queue for Premium SKU. For supported values see the "Large messages support"
+section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging#large-messages-support-preview).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_maxsizeinmegabytes_nodejs">
 <a href="#state_maxsizeinmegabytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>In<wbr>Megabytes</a>
 </span>
@@ -1786,6 +1865,17 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer value which controls when a message is automatically dead lettered. Defaults to `10`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_max_message_size_in_kilobytes_python">
+<a href="#state_max_message_size_in_kilobytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>message_<wbr>size_<wbr>in_<wbr>kilobytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Integer value which controls the maximum size of
+a message allowed on the queue for Premium SKU. For supported values see the "Large messages support"
+section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging#large-messages-support-preview).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_size_in_megabytes_python">

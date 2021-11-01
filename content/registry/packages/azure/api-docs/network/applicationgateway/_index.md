@@ -804,7 +804,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationgatewayredirectconfiguration">List&lt;Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A `redirect_configuration` block as defined below.
+    <dd>{{% md %}}One or more `redirect_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rewriterulesets_csharp">
@@ -1069,7 +1069,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationgatewayredirectconfiguration">[]Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `redirect_configuration` block as defined below.
+    <dd>{{% md %}}One or more `redirect_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rewriterulesets_go">
@@ -1334,7 +1334,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationgatewayredirectconfiguration">Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}A `redirect_configuration` block as defined below.
+    <dd>{{% md %}}One or more `redirect_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rewriterulesets_nodejs">
@@ -1599,7 +1599,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationgatewayredirectconfiguration">Sequence[Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A `redirect_configuration` block as defined below.
+    <dd>{{% md %}}One or more `redirect_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rewrite_rule_sets_python">
@@ -2046,7 +2046,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationgatewayredirectconfiguration">List&lt;Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A `redirect_configuration` block as defined below.
+    <dd>{{% md %}}One or more `redirect_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestroutingrules_csharp">
@@ -2311,7 +2311,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationgatewayredirectconfiguration">[]Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `redirect_configuration` block as defined below.
+    <dd>{{% md %}}One or more `redirect_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestroutingrules_go">
@@ -2576,7 +2576,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationgatewayredirectconfiguration">Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}A `redirect_configuration` block as defined below.
+    <dd>{{% md %}}One or more `redirect_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestroutingrules_nodejs">
@@ -2841,7 +2841,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationgatewayredirectconfiguration">Sequence[Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A `redirect_configuration` block as defined below.
+    <dd>{{% md %}}One or more `redirect_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_routing_rules_python">
@@ -6437,6 +6437,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="priority_csharp">
+<a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Rule evaluation order can be dictated by specifying an integer value from `1` to `20000` with `1` being the highest priority and `20000` being the lowest priority.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redirectconfigurationid_csharp">
 <a href="#redirectconfigurationid_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Configuration<wbr>Id</a>
 </span>
@@ -6574,6 +6583,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="priority_go">
+<a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Rule evaluation order can be dictated by specifying an integer value from `1` to `20000` with `1` being the highest priority and `20000` being the lowest priority.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectconfigurationid_go">
@@ -6715,6 +6733,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the Rewrite Rule Set
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="priority_nodejs">
+<a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Rule evaluation order can be dictated by specifying an integer value from `1` to `20000` with `1` being the highest priority and `20000` being the lowest priority.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redirectconfigurationid_nodejs">
 <a href="#redirectconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Configuration<wbr>Id</a>
 </span>
@@ -6852,6 +6879,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Rewrite Rule Set
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="priority_python">
+<a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Rule evaluation order can be dictated by specifying an integer value from `1` to `20000` with `1` being the highest priority and `20000` being the lowest priority.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_configuration_id_python">

@@ -525,7 +525,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">List&lt;Account<wbr>Capability<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsrule_csharp">
@@ -763,7 +763,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">[]Account<wbr>Capability<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsrule_go">
@@ -1001,7 +1001,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">Account<wbr>Capability<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsrule_nodejs">
@@ -1239,7 +1239,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">Sequence[Account<wbr>Capability<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cors_rule_python">
@@ -2075,7 +2075,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">List&lt;Account<wbr>Capability<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstrings_csharp">
@@ -2417,7 +2417,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">[]Account<wbr>Capability<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstrings_go">
@@ -2759,7 +2759,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">Account<wbr>Capability<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstrings_nodejs">
@@ -3101,7 +3101,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">Sequence[Account<wbr>Capability<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connection_strings_python">

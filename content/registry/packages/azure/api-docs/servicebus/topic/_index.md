@@ -189,6 +189,7 @@ const exampleTopic = new azure.servicebus.Topic("exampleTopic", {
           <span class="nx">enable_batched_operations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
           <span class="nx">enable_express</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
           <span class="nx">enable_partitioning</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">max_message_size_in_kilobytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">max_size_in_megabytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -407,6 +408,17 @@ the topic to be partitioned across multiple message brokers. Defaults to false.
 Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maxmessagesizeinkilobytes_csharp">
+<a href="#maxmessagesizeinkilobytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Message<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Integer value which controls the maximum size of
+a message allowed on the topic for Premium SKU. For supported values see the "Large messages support"
+section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging#large-messages-support-preview).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxsizeinmegabytes_csharp">
 <a href="#maxsizeinmegabytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>In<wbr>Megabytes</a>
 </span>
@@ -542,6 +554,17 @@ it to persistent storage. Defaults to false.
     <dd>{{% md %}}Boolean flag which controls whether to enable
 the topic to be partitioned across multiple message brokers. Defaults to false.
 Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxmessagesizeinkilobytes_go">
+<a href="#maxmessagesizeinkilobytes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Message<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Integer value which controls the maximum size of
+a message allowed on the topic for Premium SKU. For supported values see the "Large messages support"
+section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging#large-messages-support-preview).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsizeinmegabytes_go">
@@ -681,6 +704,17 @@ the topic to be partitioned across multiple message brokers. Defaults to false.
 Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maxmessagesizeinkilobytes_nodejs">
+<a href="#maxmessagesizeinkilobytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Message<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Integer value which controls the maximum size of
+a message allowed on the topic for Premium SKU. For supported values see the "Large messages support"
+section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging#large-messages-support-preview).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxsizeinmegabytes_nodejs">
 <a href="#maxsizeinmegabytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>In<wbr>Megabytes</a>
 </span>
@@ -818,6 +852,17 @@ the topic to be partitioned across multiple message brokers. Defaults to false.
 Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="max_message_size_in_kilobytes_python">
+<a href="#max_message_size_in_kilobytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>message_<wbr>size_<wbr>in_<wbr>kilobytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Integer value which controls the maximum size of
+a message allowed on the topic for Premium SKU. For supported values see the "Large messages support"
+section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging#large-messages-support-preview).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_size_in_megabytes_python">
 <a href="#max_size_in_megabytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size_<wbr>in_<wbr>megabytes</a>
 </span>
@@ -947,6 +992,7 @@ Get an existing Topic resource's state with the given name, ID, and optional ext
         <span class="nx">enable_batched_operations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">enable_express</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">enable_partitioning</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">max_message_size_in_kilobytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">max_size_in_megabytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1128,6 +1174,17 @@ the topic to be partitioned across multiple message brokers. Defaults to false.
 Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_maxmessagesizeinkilobytes_csharp">
+<a href="#state_maxmessagesizeinkilobytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Message<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Integer value which controls the maximum size of
+a message allowed on the topic for Premium SKU. For supported values see the "Large messages support"
+section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging#large-messages-support-preview).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_maxsizeinmegabytes_csharp">
 <a href="#state_maxsizeinmegabytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>In<wbr>Megabytes</a>
 </span>
@@ -1263,6 +1320,17 @@ it to persistent storage. Defaults to false.
     <dd>{{% md %}}Boolean flag which controls whether to enable
 the topic to be partitioned across multiple message brokers. Defaults to false.
 Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_maxmessagesizeinkilobytes_go">
+<a href="#state_maxmessagesizeinkilobytes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Message<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Integer value which controls the maximum size of
+a message allowed on the topic for Premium SKU. For supported values see the "Large messages support"
+section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging#large-messages-support-preview).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsizeinmegabytes_go">
@@ -1402,6 +1470,17 @@ the topic to be partitioned across multiple message brokers. Defaults to false.
 Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_maxmessagesizeinkilobytes_nodejs">
+<a href="#state_maxmessagesizeinkilobytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Message<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Integer value which controls the maximum size of
+a message allowed on the topic for Premium SKU. For supported values see the "Large messages support"
+section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging#large-messages-support-preview).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_maxsizeinmegabytes_nodejs">
 <a href="#state_maxsizeinmegabytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>In<wbr>Megabytes</a>
 </span>
@@ -1537,6 +1616,17 @@ it to persistent storage. Defaults to false.
     <dd>{{% md %}}Boolean flag which controls whether to enable
 the topic to be partitioned across multiple message brokers. Defaults to false.
 Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_max_message_size_in_kilobytes_python">
+<a href="#state_max_message_size_in_kilobytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>message_<wbr>size_<wbr>in_<wbr>kilobytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Integer value which controls the maximum size of
+a message allowed on the topic for Premium SKU. For supported values see the "Large messages support"
+section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging#large-messages-support-preview).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_size_in_megabytes_python">

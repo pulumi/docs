@@ -55,10 +55,13 @@ class MyStack : Stack
         var exampleSpringCloudJavaDeployment = new Azure.AppPlatform.SpringCloudJavaDeployment("exampleSpringCloudJavaDeployment", new Azure.AppPlatform.SpringCloudJavaDeploymentArgs
         {
             SpringCloudAppId = exampleSpringCloudApp.Id,
-            Cpu = 2,
             InstanceCount = 2,
             JvmOptions = "-XX:+PrintGC",
-            MemoryInGb = 4,
+            Quota = new Azure.AppPlatform.Inputs.SpringCloudJavaDeploymentQuotaArgs
+            {
+                Cpu = "2",
+                Memory = "4Gi",
+            },
             RuntimeVersion = "Java_11",
             EnvironmentVariables = 
             {
@@ -113,11 +116,13 @@ func main() {
 		}
 		_, err = appplatform.NewSpringCloudJavaDeployment(ctx, "exampleSpringCloudJavaDeployment", &appplatform.SpringCloudJavaDeploymentArgs{
 			SpringCloudAppId: exampleSpringCloudApp.ID(),
-			Cpu:              pulumi.Int(2),
 			InstanceCount:    pulumi.Int(2),
 			JvmOptions:       pulumi.String("-XX:+PrintGC"),
-			MemoryInGb:       pulumi.Int(4),
-			RuntimeVersion:   pulumi.String("Java_11"),
+			Quota: &appplatform.SpringCloudJavaDeploymentQuotaArgs{
+				Cpu:    pulumi.String("2"),
+				Memory: pulumi.String("4Gi"),
+			},
+			RuntimeVersion: pulumi.String("Java_11"),
 			EnvironmentVariables: pulumi.StringMap{
 				"Foo": pulumi.String("Bar"),
 				"Env": pulumi.String("Staging"),
@@ -153,10 +158,12 @@ example_spring_cloud_app = azure.appplatform.SpringCloudApp("exampleSpringCloudA
     ))
 example_spring_cloud_java_deployment = azure.appplatform.SpringCloudJavaDeployment("exampleSpringCloudJavaDeployment",
     spring_cloud_app_id=example_spring_cloud_app.id,
-    cpu=2,
     instance_count=2,
     jvm_options="-XX:+PrintGC",
-    memory_in_gb=4,
+    quota=azure.appplatform.SpringCloudJavaDeploymentQuotaArgs(
+        cpu="2",
+        memory="4Gi",
+    ),
     runtime_version="Java_11",
     environment_variables={
         "Foo": "Bar",
@@ -189,10 +196,12 @@ const exampleSpringCloudApp = new azure.appplatform.SpringCloudApp("exampleSprin
 });
 const exampleSpringCloudJavaDeployment = new azure.appplatform.SpringCloudJavaDeployment("exampleSpringCloudJavaDeployment", {
     springCloudAppId: exampleSpringCloudApp.id,
-    cpu: 2,
     instanceCount: 2,
     jvmOptions: "-XX:+PrintGC",
-    memoryInGb: 4,
+    quota: {
+        cpu: "2",
+        memory: "4Gi",
+    },
     runtimeVersion: "Java_11",
     environmentVariables: {
         Foo: "Bar",
@@ -231,6 +240,7 @@ const exampleSpringCloudJavaDeployment = new azure.appplatform.SpringCloudJavaDe
                               <span class="nx">jvm_options</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">memory_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">quota</span><span class="p">:</span> <span class="nx">Optional[SpringCloudJavaDeploymentQuotaArgs]</span> = None<span class="p">,</span>
                               <span class="nx">runtime_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                               <span class="nx">spring_cloud_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -369,16 +379,16 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the Spring Cloud Application in which to create the Deployment. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="cpu_csharp">
 <a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are between `1` and `4`. Defaults to `1` if not specified.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are `500m`, `1`, `2`, `3` and `4`. Defaults to `1` if not specified.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `cpu` within `quota` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="environmentvariables_csharp">
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
@@ -405,16 +415,15 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the jvm option of the Spring Cloud Deployment.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="memoryingb_csharp">
 <a href="#memoryingb_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>In<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the required memory size of the Spring Cloud Deployment. Possible Values are between `1` and `8`. Defaults to `1` if not specified.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `memory` within `quota` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -423,6 +432,15 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Deployment. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="quota_csharp">
+<a href="#quota_csharp" style="color: inherit; text-decoration: inherit;">Quota</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudjavadeploymentquota">Spring<wbr>Cloud<wbr>Java<wbr>Deployment<wbr>Quota<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `quota` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtimeversion_csharp">
@@ -445,16 +463,16 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the Spring Cloud Application in which to create the Deployment. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="cpu_go">
 <a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are between `1` and `4`. Defaults to `1` if not specified.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are `500m`, `1`, `2`, `3` and `4`. Defaults to `1` if not specified.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `cpu` within `quota` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="environmentvariables_go">
 <a href="#environmentvariables_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
@@ -481,16 +499,15 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the jvm option of the Spring Cloud Deployment.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="memoryingb_go">
 <a href="#memoryingb_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>In<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the required memory size of the Spring Cloud Deployment. Possible Values are between `1` and `8`. Defaults to `1` if not specified.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `memory` within `quota` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -499,6 +516,15 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Deployment. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="quota_go">
+<a href="#quota_go" style="color: inherit; text-decoration: inherit;">Quota</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudjavadeploymentquota">Spring<wbr>Cloud<wbr>Java<wbr>Deployment<wbr>Quota<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `quota` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtimeversion_go">
@@ -521,16 +547,16 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the Spring Cloud Application in which to create the Deployment. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="cpu_nodejs">
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are between `1` and `4`. Defaults to `1` if not specified.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are `500m`, `1`, `2`, `3` and `4`. Defaults to `1` if not specified.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `cpu` within `quota` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="environmentvariables_nodejs">
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
@@ -557,16 +583,15 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the jvm option of the Spring Cloud Deployment.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="memoryingb_nodejs">
 <a href="#memoryingb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>In<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the required memory size of the Spring Cloud Deployment. Possible Values are between `1` and `8`. Defaults to `1` if not specified.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `memory` within `quota` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -575,6 +600,15 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Deployment. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="quota_nodejs">
+<a href="#quota_nodejs" style="color: inherit; text-decoration: inherit;">quota</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudjavadeploymentquota">Spring<wbr>Cloud<wbr>Java<wbr>Deployment<wbr>Quota<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `quota` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtimeversion_nodejs">
@@ -597,16 +631,16 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the Spring Cloud Application in which to create the Deployment. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="cpu_python">
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are between `1` and `4`. Defaults to `1` if not specified.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are `500m`, `1`, `2`, `3` and `4`. Defaults to `1` if not specified.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `cpu` within `quota` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="environment_variables_python">
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
@@ -633,16 +667,15 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the jvm option of the Spring Cloud Deployment.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="memory_in_gb_python">
 <a href="#memory_in_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>in_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the required memory size of the Spring Cloud Deployment. Possible Values are between `1` and `8`. Defaults to `1` if not specified.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `memory` within `quota` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -651,6 +684,15 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Deployment. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="quota_python">
+<a href="#quota_python" style="color: inherit; text-decoration: inherit;">quota</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudjavadeploymentquota">Spring<wbr>Cloud<wbr>Java<wbr>Deployment<wbr>Quota<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `quota` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtime_version_python">
@@ -740,6 +782,7 @@ Get an existing SpringCloudJavaDeployment resource's state with the given name, 
         <span class="nx">jvm_options</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">memory_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">quota</span><span class="p">:</span> <span class="nx">Optional[SpringCloudJavaDeploymentQuotaArgs]</span> = None<span class="p">,</span>
         <span class="nx">runtime_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">spring_cloud_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SpringCloudJavaDeployment</code></pre></div>
 {{% /choosable %}}
@@ -852,16 +895,16 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_cpu_csharp">
 <a href="#state_cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are between `1` and `4`. Defaults to `1` if not specified.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are `500m`, `1`, `2`, `3` and `4`. Defaults to `1` if not specified.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `cpu` within `quota` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_environmentvariables_csharp">
 <a href="#state_environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
@@ -888,16 +931,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the jvm option of the Spring Cloud Deployment.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_memoryingb_csharp">
 <a href="#state_memoryingb_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>In<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the required memory size of the Spring Cloud Deployment. Possible Values are between `1` and `8`. Defaults to `1` if not specified.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `memory` within `quota` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -906,6 +948,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Deployment. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_quota_csharp">
+<a href="#state_quota_csharp" style="color: inherit; text-decoration: inherit;">Quota</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudjavadeploymentquota">Spring<wbr>Cloud<wbr>Java<wbr>Deployment<wbr>Quota<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `quota` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtimeversion_csharp">
@@ -928,16 +979,16 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_cpu_go">
 <a href="#state_cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are between `1` and `4`. Defaults to `1` if not specified.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are `500m`, `1`, `2`, `3` and `4`. Defaults to `1` if not specified.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `cpu` within `quota` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_environmentvariables_go">
 <a href="#state_environmentvariables_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
@@ -964,16 +1015,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the jvm option of the Spring Cloud Deployment.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_memoryingb_go">
 <a href="#state_memoryingb_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>In<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the required memory size of the Spring Cloud Deployment. Possible Values are between `1` and `8`. Defaults to `1` if not specified.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `memory` within `quota` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -982,6 +1032,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Deployment. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_quota_go">
+<a href="#state_quota_go" style="color: inherit; text-decoration: inherit;">Quota</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudjavadeploymentquota">Spring<wbr>Cloud<wbr>Java<wbr>Deployment<wbr>Quota<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `quota` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtimeversion_go">
@@ -1004,16 +1063,16 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_cpu_nodejs">
 <a href="#state_cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are between `1` and `4`. Defaults to `1` if not specified.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are `500m`, `1`, `2`, `3` and `4`. Defaults to `1` if not specified.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `cpu` within `quota` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_environmentvariables_nodejs">
 <a href="#state_environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
@@ -1040,16 +1099,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the jvm option of the Spring Cloud Deployment.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_memoryingb_nodejs">
 <a href="#state_memoryingb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>In<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the required memory size of the Spring Cloud Deployment. Possible Values are between `1` and `8`. Defaults to `1` if not specified.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `memory` within `quota` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1058,6 +1116,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Deployment. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_quota_nodejs">
+<a href="#state_quota_nodejs" style="color: inherit; text-decoration: inherit;">quota</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudjavadeploymentquota">Spring<wbr>Cloud<wbr>Java<wbr>Deployment<wbr>Quota<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `quota` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtimeversion_nodejs">
@@ -1080,16 +1147,16 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_cpu_python">
 <a href="#state_cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are between `1` and `4`. Defaults to `1` if not specified.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are `500m`, `1`, `2`, `3` and `4`. Defaults to `1` if not specified.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `cpu` within `quota` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_environment_variables_python">
 <a href="#state_environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
@@ -1116,16 +1183,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the jvm option of the Spring Cloud Deployment.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_memory_in_gb_python">
 <a href="#state_memory_in_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>in_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the required memory size of the Spring Cloud Deployment. Possible Values are between `1` and `8`. Defaults to `1` if not specified.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `memory` within `quota` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1134,6 +1200,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Deployment. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_quota_python">
+<a href="#state_quota_python" style="color: inherit; text-decoration: inherit;">quota</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudjavadeploymentquota">Spring<wbr>Cloud<wbr>Java<wbr>Deployment<wbr>Quota<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `quota` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtime_version_python">
@@ -1159,6 +1234,100 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="springcloudjavadeploymentquota">Spring<wbr>Cloud<wbr>Java<wbr>Deployment<wbr>Quota</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_csharp">
+<a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are `500m`, `1`, `2`, `3` and `4`. Defaults to `1` if not specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memory_csharp">
+<a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the required memory size of the Spring Cloud Deployment. Possible Values are `512Mi`, `1Gi`, `2Gi`, `3Gi`, `4Gi`, `5Gi`, `6Gi`, `7Gi`, and `8Gi`. Defaults to `1Gi` if not specified.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_go">
+<a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are `500m`, `1`, `2`, `3` and `4`. Defaults to `1` if not specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memory_go">
+<a href="#memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the required memory size of the Spring Cloud Deployment. Possible Values are `512Mi`, `1Gi`, `2Gi`, `3Gi`, `4Gi`, `5Gi`, `6Gi`, `7Gi`, and `8Gi`. Defaults to `1Gi` if not specified.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_nodejs">
+<a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are `500m`, `1`, `2`, `3` and `4`. Defaults to `1` if not specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memory_nodejs">
+<a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the required memory size of the Spring Cloud Deployment. Possible Values are `512Mi`, `1Gi`, `2Gi`, `3Gi`, `4Gi`, `5Gi`, `6Gi`, `7Gi`, and `8Gi`. Defaults to `1Gi` if not specified.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_python">
+<a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are `500m`, `1`, `2`, `3` and `4`. Defaults to `1` if not specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memory_python">
+<a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the required memory size of the Spring Cloud Deployment. Possible Values are `512Mi`, `1Gi`, `2Gi`, `3Gi`, `4Gi`, `5Gi`, `6Gi`, `7Gi`, and `8Gi`. Defaults to `1Gi` if not specified.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

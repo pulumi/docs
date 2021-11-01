@@ -17,6 +17,7 @@ Explore the resources and functions of the azure.sentinel module.
     <li><a href="alertrulemachinelearningbehavioranalytics" title="AlertRuleMachineLearningBehaviorAnalytics"><span class="api-symbol api-symbol--resource"></span>AlertRuleMachineLearningBehaviorAnalytics</a></li>
     <li><a href="alertrulemssecurityincident" title="AlertRuleMsSecurityIncident"><span class="api-symbol api-symbol--resource"></span>AlertRuleMsSecurityIncident</a></li>
     <li><a href="alertrulescheduled" title="AlertRuleScheduled"><span class="api-symbol api-symbol--resource"></span>AlertRuleScheduled</a></li>
+    <li><a href="authomationrule" title="AuthomationRule"><span class="api-symbol api-symbol--resource"></span>AuthomationRule</a></li>
     <li><a href="dataconnectorawscloudtrail" title="DataConnectorAwsCloudTrail"><span class="api-symbol api-symbol--resource"></span>DataConnectorAwsCloudTrail</a></li>
     <li><a href="dataconnectorazureactivedirectory" title="DataConnectorAzureActiveDirectory"><span class="api-symbol api-symbol--resource"></span>DataConnectorAzureActiveDirectory</a></li>
     <li><a href="dataconnectorazureadvancedthreadprotection" title="DataConnectorAzureAdvancedThreadProtection"><span class="api-symbol api-symbol--resource"></span>DataConnectorAzureAdvancedThreadProtection</a></li>
@@ -42,6 +43,6 @@ Explore the resources and functions of the azure.sentinel module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.0</dd>
+	<dd>4.25.0</dd>
 </dl>
 

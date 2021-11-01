@@ -20,7 +20,9 @@ Explore the resources and functions of the azure.streamanalytics module.
     <li><a href="outputmssql" title="OutputMssql"><span class="api-symbol api-symbol--resource"></span>OutputMssql</a></li>
     <li><a href="outputservicebusqueue" title="OutputServiceBusQueue"><span class="api-symbol api-symbol--resource"></span>OutputServiceBusQueue</a></li>
     <li><a href="outputservicebustopic" title="OutputServicebusTopic"><span class="api-symbol api-symbol--resource"></span>OutputServicebusTopic</a></li>
+    <li><a href="outputtable" title="OutputTable"><span class="api-symbol api-symbol--resource"></span>OutputTable</a></li>
     <li><a href="referenceinputblob" title="ReferenceInputBlob"><span class="api-symbol api-symbol--resource"></span>ReferenceInputBlob</a></li>
+    <li><a href="referenceinputmssql" title="ReferenceInputMssql"><span class="api-symbol api-symbol--resource"></span>ReferenceInputMssql</a></li>
     <li><a href="streaminputblob" title="StreamInputBlob"><span class="api-symbol api-symbol--resource"></span>StreamInputBlob</a></li>
     <li><a href="streaminputeventhub" title="StreamInputEventHub"><span class="api-symbol api-symbol--resource"></span>StreamInputEventHub</a></li>
     <li><a href="streaminputiothub" title="StreamInputIotHub"><span class="api-symbol api-symbol--resource"></span>StreamInputIotHub</a></li>
@@ -40,6 +42,6 @@ Explore the resources and functions of the azure.streamanalytics module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.0</dd>
+	<dd>4.25.0</dd>
 </dl>
 

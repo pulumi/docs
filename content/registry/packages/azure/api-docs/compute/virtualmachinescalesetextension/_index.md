@@ -175,6 +175,7 @@ const exampleVirtualMachineScaleSetExtension = new azure.compute.VirtualMachineS
 <span class="k">def </span><span class="nx">VirtualMachineScaleSetExtension</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                                     <span class="nx">auto_upgrade_minor_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                    <span class="nx">automatic_upgrade_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                                     <span class="nx">force_update_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                     <span class="nx">protected_settings</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -358,6 +359,15 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
     <dd>{{% md %}}Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="automaticupgradeenabled_csharp">
+<a href="#automaticupgradeenabled_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Upgrade<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the Extension be automatically updated whenever the Publisher releases a new version of this VM Extension? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="forceupdatetag_csharp">
 <a href="#forceupdatetag_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Update<wbr>Tag</a>
 </span>
@@ -450,6 +460,15 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="automaticupgradeenabled_go">
+<a href="#automaticupgradeenabled_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Upgrade<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the Extension be automatically updated whenever the Publisher releases a new version of this VM Extension? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceupdatetag_go">
@@ -546,6 +565,15 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
     <dd>{{% md %}}Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="automaticupgradeenabled_nodejs">
+<a href="#automaticupgradeenabled_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Upgrade<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should the Extension be automatically updated whenever the Publisher releases a new version of this VM Extension? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="forceupdatetag_nodejs">
 <a href="#forceupdatetag_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Update<wbr>Tag</a>
 </span>
@@ -638,6 +666,15 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="automatic_upgrade_enabled_python">
+<a href="#automatic_upgrade_enabled_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>upgrade_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the Extension be automatically updated whenever the Publisher releases a new version of this VM Extension? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_update_tag_python">
@@ -758,6 +795,7 @@ Get an existing VirtualMachineScaleSetExtension resource's state with the given 
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">auto_upgrade_minor_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">automatic_upgrade_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">force_update_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">protected_settings</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -888,6 +926,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_automaticupgradeenabled_csharp">
+<a href="#state_automaticupgradeenabled_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Upgrade<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the Extension be automatically updated whenever the Publisher releases a new version of this VM Extension? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_forceupdatetag_csharp">
 <a href="#state_forceupdatetag_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Update<wbr>Tag</a>
 </span>
@@ -980,6 +1027,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_automaticupgradeenabled_go">
+<a href="#state_automaticupgradeenabled_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Upgrade<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the Extension be automatically updated whenever the Publisher releases a new version of this VM Extension? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forceupdatetag_go">
@@ -1076,6 +1132,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_automaticupgradeenabled_nodejs">
+<a href="#state_automaticupgradeenabled_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Upgrade<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should the Extension be automatically updated whenever the Publisher releases a new version of this VM Extension? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_forceupdatetag_nodejs">
 <a href="#state_forceupdatetag_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Update<wbr>Tag</a>
 </span>
@@ -1168,6 +1233,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_automatic_upgrade_enabled_python">
+<a href="#state_automatic_upgrade_enabled_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>upgrade_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the Extension be automatically updated whenever the Publisher releases a new version of this VM Extension? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_update_tag_python">

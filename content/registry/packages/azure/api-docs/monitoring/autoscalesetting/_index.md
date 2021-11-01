@@ -3723,7 +3723,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of action that should occur. Possible values are `ChangeCount`, `ExactCount` and `PercentChangeCount`.
+    <dd>{{% md %}}The type of action that should occur. Possible values are `ChangeCount`, `ExactCount`, `PercentChangeCount` and `ServiceAllowedNextValue`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
@@ -3763,7 +3763,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of action that should occur. Possible values are `ChangeCount`, `ExactCount` and `PercentChangeCount`.
+    <dd>{{% md %}}The type of action that should occur. Possible values are `ChangeCount`, `ExactCount`, `PercentChangeCount` and `ServiceAllowedNextValue`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
@@ -3803,7 +3803,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of action that should occur. Possible values are `ChangeCount`, `ExactCount` and `PercentChangeCount`.
+    <dd>{{% md %}}The type of action that should occur. Possible values are `ChangeCount`, `ExactCount`, `PercentChangeCount` and `ServiceAllowedNextValue`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
@@ -3843,7 +3843,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of action that should occur. Possible values are `ChangeCount`, `ExactCount` and `PercentChangeCount`.
+    <dd>{{% md %}}The type of action that should occur. Possible values are `ChangeCount`, `ExactCount`, `PercentChangeCount` and `ServiceAllowedNextValue`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">

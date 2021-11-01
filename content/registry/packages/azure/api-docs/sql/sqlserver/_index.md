@@ -1826,7 +1826,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The State of the Policy. Possible values are `Enabled`, `Disabled` or `New`.
+    <dd>{{% md %}}The State of the Policy. Possible values are `Enabled` or `Disabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskey_csharp">
@@ -1893,7 +1893,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The State of the Policy. Possible values are `Enabled`, `Disabled` or `New`.
+    <dd>{{% md %}}The State of the Policy. Possible values are `Enabled` or `Disabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskey_go">
@@ -1960,7 +1960,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The State of the Policy. Possible values are `Enabled`, `Disabled` or `New`.
+    <dd>{{% md %}}The State of the Policy. Possible values are `Enabled` or `Disabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskey_nodejs">
@@ -2027,7 +2027,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The State of the Policy. Possible values are `Enabled`, `Disabled` or `New`.
+    <dd>{{% md %}}The State of the Policy. Possible values are `Enabled` or `Disabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_access_key_python">
