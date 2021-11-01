@@ -15,107 +15,6 @@ no_edit_this_page: true
 Provides an Equinix Metal facility datasource.
 
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using EquinixMetal = Pulumi.EquinixMetal;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var ny5 = Output.Create(EquinixMetal.GetFacility.InvokeAsync(new EquinixMetal.GetFacilityArgs
-        {
-            Code = "ny5",
-        }));
-        this.Id = ny5.Apply(ny5 => ny5.Id);
-    }
-
-    [Output("id")]
-    public Output<string> Id { get; set; }
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-equinix-metal/sdk/v3/go/equinix-metal"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		ny5, err := equinix - metal.GetFacility(ctx, &equinix-metal.GetFacilityArgs{
-			Code: "ny5",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		ctx.Export("id", ny5.Id)
-		return nil
-	})
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_equinix_metal as equinix_metal
-
-ny5 = equinix_metal.get_facility(code="ny5")
-pulumi.export("id", ny5.id)
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as equinix_metal from "@pulumi/equinix-metal";
-
-const ny5 = equinix_metal.getFacility({
-    code: "ny5",
-});
-export const id = ny5.then(ny5 => ny5.id);
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Using getFacility {#using}
@@ -129,7 +28,9 @@ export const id = ny5.then(ny5 => ny5.id);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_facility(</span><span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_facility(</span><span class="nx">capacities</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetFacilityCapacity]]</span> = None<span class="p">,</span>
+                 <span class="nx">code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">features_requireds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFacilityResult</code></pre></div>
 {{% /choosable %}}
 
@@ -163,6 +64,24 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility code
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacities_csharp">
+<a href="#capacities_csharp" style="color: inherit; text-decoration: inherit;">Capacities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfacilitycapacity">List&lt;Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Inputs.<wbr>Get<wbr>Facility<wbr>Capacity&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Ensure that queried facility has capacity for specified number of given plans
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="featuresrequireds_csharp">
+<a href="#featuresrequireds_csharp" style="color: inherit; text-decoration: inherit;">Features<wbr>Requireds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Set of feature strings that the facility must have
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -176,6 +95,24 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility code
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacities_go">
+<a href="#capacities_go" style="color: inherit; text-decoration: inherit;">Capacities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfacilitycapacity">[]Get<wbr>Facility<wbr>Capacity</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Ensure that queried facility has capacity for specified number of given plans
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="featuresrequireds_go">
+<a href="#featuresrequireds_go" style="color: inherit; text-decoration: inherit;">Features<wbr>Requireds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Set of feature strings that the facility must have
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -189,6 +126,24 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility code
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacities_nodejs">
+<a href="#capacities_nodejs" style="color: inherit; text-decoration: inherit;">capacities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfacilitycapacity">Get<wbr>Facility<wbr>Capacity[]</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Ensure that queried facility has capacity for specified number of given plans
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="featuresrequireds_nodejs">
+<a href="#featuresrequireds_nodejs" style="color: inherit; text-decoration: inherit;">features<wbr>Requireds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Set of feature strings that the facility must have
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -202,6 +157,24 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The facility code
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacities_python">
+<a href="#capacities_python" style="color: inherit; text-decoration: inherit;">capacities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfacilitycapacity">Sequence[Get<wbr>Facility<wbr>Capacity]</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Ensure that queried facility has capacity for specified number of given plans
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="features_requireds_python">
+<a href="#features_requireds_python" style="color: inherit; text-decoration: inherit;">features_<wbr>requireds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Set of feature strings that the facility must have
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -259,7 +232,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the facility
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="capacities_csharp">
+<a href="#capacities_csharp" style="color: inherit; text-decoration: inherit;">Capacities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfacilitycapacity">List&lt;Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Outputs.<wbr>Get<wbr>Facility<wbr>Capacity&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Ensure that queried facility has capacity for specified number of given plans
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="featuresrequireds_csharp">
+<a href="#featuresrequireds_csharp" style="color: inherit; text-decoration: inherit;">Features<wbr>Requireds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -307,7 +297,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the facility
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="capacities_go">
+<a href="#capacities_go" style="color: inherit; text-decoration: inherit;">Capacities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfacilitycapacity">[]Get<wbr>Facility<wbr>Capacity</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Ensure that queried facility has capacity for specified number of given plans
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="featuresrequireds_go">
+<a href="#featuresrequireds_go" style="color: inherit; text-decoration: inherit;">Features<wbr>Requireds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -355,7 +362,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the facility
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="capacities_nodejs">
+<a href="#capacities_nodejs" style="color: inherit; text-decoration: inherit;">capacities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfacilitycapacity">Get<wbr>Facility<wbr>Capacity[]</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Ensure that queried facility has capacity for specified number of given plans
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="featuresrequireds_nodejs">
+<a href="#featuresrequireds_nodejs" style="color: inherit; text-decoration: inherit;">features<wbr>Requireds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -403,6 +427,121 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the facility
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="capacities_python">
+<a href="#capacities_python" style="color: inherit; text-decoration: inherit;">capacities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfacilitycapacity">Sequence[Get<wbr>Facility<wbr>Capacity]</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Ensure that queried facility has capacity for specified number of given plans
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="features_requireds_python">
+<a href="#features_requireds_python" style="color: inherit; text-decoration: inherit;">features_<wbr>requireds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+
+
+
+## Supporting Types
+
+
+<h4 id="getfacilitycapacity">Get<wbr>Facility<wbr>Capacity</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="plan_csharp">
+<a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}device plan to check
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="quantity_csharp">
+<a href="#quantity_csharp" style="color: inherit; text-decoration: inherit;">Quantity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}number of device to check
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="plan_go">
+<a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}device plan to check
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="quantity_go">
+<a href="#quantity_go" style="color: inherit; text-decoration: inherit;">Quantity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}number of device to check
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="plan_nodejs">
+<a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}device plan to check
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="quantity_nodejs">
+<a href="#quantity_nodejs" style="color: inherit; text-decoration: inherit;">quantity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}number of device to check
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="plan_python">
+<a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}device plan to check
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="quantity_python">
+<a href="#quantity_python" style="color: inherit; text-decoration: inherit;">quantity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}number of device to check
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

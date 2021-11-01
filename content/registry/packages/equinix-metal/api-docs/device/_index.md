@@ -167,6 +167,7 @@ const web1 = new equinix_metal.Device("web1", {
            <span class="nx">reinstall</span><span class="p">:</span> <span class="nx">Optional[DeviceReinstallArgs]</span> = None<span class="p">,</span>
            <span class="nx">storage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+           <span class="nx">termination_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">wait_for_reservation_deprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -298,24 +299,6 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="billingcycle_csharp">
-<a href="#billingcycle_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#billingcycle">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Billing<wbr>Cycle</a></span>
-    </dt>
-    <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="hostname_csharp">
-<a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The device name
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="operatingsystem_csharp">
 <a href="#operatingsystem_csharp" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
 </span>
@@ -349,8 +332,16 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
-continue to boot via iPXE on reboots.
+    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will continue to boot via iPXE on reboots.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="billingcycle_csharp">
+<a href="#billingcycle_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#billingcycle">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Billing<wbr>Cycle</a></span>
+    </dt>
+    <dd>{{% md %}}monthly or hourly
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_csharp">
@@ -368,7 +359,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description string for the device
+    <dd>{{% md %}}The device description.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="facilities_csharp">
@@ -399,6 +390,15 @@ continue to boot via iPXE on reboots.
 next available reservation automatically
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hostname_csharp">
+<a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The device hostname used in deployments taking advantage of Layer3 DHCP or metadata service configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipaddresses_csharp">
 <a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
 </span>
@@ -414,10 +414,7 @@ next available reservation automatically
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL pointing to a hosted iPXE script. More
-information is in the
-[Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
-doc.
+    <dd>{{% md %}}URL pointing to a hosted iPXE script. More information is in the [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/) doc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metro_csharp">
@@ -453,8 +450,7 @@ doc.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc.
-* Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
+    <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc. Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -464,6 +460,15 @@ doc.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="terminationtime_csharp">
+<a href="#terminationtime_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp for device termination. For example `2021-09-03T16:32:00+03:00`. If you don't supply timezone info, timestamp is assumed to be in UTC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_csharp">
@@ -487,24 +492,6 @@ doc.
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="billingcycle_go">
-<a href="#billingcycle_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
-    </dt>
-    <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="hostname_go">
-<a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The device name
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operatingsystem_go">
 <a href="#operatingsystem_go" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
@@ -539,8 +526,16 @@ doc.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
-continue to boot via iPXE on reboots.
+    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will continue to boot via iPXE on reboots.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="billingcycle_go">
+<a href="#billingcycle_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
+    </dt>
+    <dd>{{% md %}}monthly or hourly
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_go">
@@ -558,7 +553,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description string for the device
+    <dd>{{% md %}}The device description.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="facilities_go">
@@ -589,6 +584,15 @@ continue to boot via iPXE on reboots.
 next available reservation automatically
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hostname_go">
+<a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The device hostname used in deployments taking advantage of Layer3 DHCP or metadata service configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipaddresses_go">
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
 </span>
@@ -604,10 +608,7 @@ next available reservation automatically
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL pointing to a hosted iPXE script. More
-information is in the
-[Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
-doc.
+    <dd>{{% md %}}URL pointing to a hosted iPXE script. More information is in the [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/) doc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metro_go">
@@ -643,8 +644,7 @@ doc.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc.
-* Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
+    <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc. Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -654,6 +654,15 @@ doc.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="terminationtime_go">
+<a href="#terminationtime_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp for device termination. For example `2021-09-03T16:32:00+03:00`. If you don't supply timezone info, timestamp is assumed to be in UTC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_go">
@@ -677,24 +686,6 @@ doc.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="billingcycle_nodejs">
-<a href="#billingcycle_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Cycle</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
-    </dt>
-    <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="hostname_nodejs">
-<a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The device name
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operatingsystem_nodejs">
 <a href="#operatingsystem_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
@@ -729,8 +720,16 @@ doc.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
-continue to boot via iPXE on reboots.
+    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will continue to boot via iPXE on reboots.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="billingcycle_nodejs">
+<a href="#billingcycle_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Cycle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
+    </dt>
+    <dd>{{% md %}}monthly or hourly
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_nodejs">
@@ -748,7 +747,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description string for the device
+    <dd>{{% md %}}The device description.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="facilities_nodejs">
@@ -779,6 +778,15 @@ continue to boot via iPXE on reboots.
 next available reservation automatically
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hostname_nodejs">
+<a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The device hostname used in deployments taking advantage of Layer3 DHCP or metadata service configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipaddresses_nodejs">
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
 </span>
@@ -794,10 +802,7 @@ next available reservation automatically
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL pointing to a hosted iPXE script. More
-information is in the
-[Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
-doc.
+    <dd>{{% md %}}URL pointing to a hosted iPXE script. More information is in the [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/) doc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metro_nodejs">
@@ -833,8 +838,7 @@ doc.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc.
-* Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
+    <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc. Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -844,6 +848,15 @@ doc.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="terminationtime_nodejs">
+<a href="#terminationtime_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp for device termination. For example `2021-09-03T16:32:00+03:00`. If you don't supply timezone info, timestamp is assumed to be in UTC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_nodejs">
@@ -867,24 +880,6 @@ doc.
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="billing_cycle_python">
-<a href="#billing_cycle_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>cycle</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
-    </dt>
-    <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="hostname_python">
-<a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The device name
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operating_system_python">
 <a href="#operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
@@ -919,8 +914,16 @@ doc.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
-continue to boot via iPXE on reboots.
+    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will continue to boot via iPXE on reboots.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="billing_cycle_python">
+<a href="#billing_cycle_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>cycle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
+    </dt>
+    <dd>{{% md %}}monthly or hourly
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_data_python">
@@ -938,7 +941,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description string for the device
+    <dd>{{% md %}}The device description.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="facilities_python">
@@ -969,6 +972,15 @@ continue to boot via iPXE on reboots.
 next available reservation automatically
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hostname_python">
+<a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The device hostname used in deployments taking advantage of Layer3 DHCP or metadata service configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span>
@@ -984,10 +996,7 @@ next available reservation automatically
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URL pointing to a hosted iPXE script. More
-information is in the
-[Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
-doc.
+    <dd>{{% md %}}URL pointing to a hosted iPXE script. More information is in the [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/) doc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metro_python">
@@ -1023,8 +1032,7 @@ doc.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc.
-* Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
+    <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc. Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -1034,6 +1042,15 @@ doc.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="termination_time_python">
+<a href="#termination_time_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Timestamp for device termination. For example `2021-09-03T16:32:00+03:00`. If you don't supply timezone info, timestamp is assumed to be in UTC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_data_python">
@@ -1685,6 +1702,7 @@ Get an existing Device resource's state with the given name, ID, and optional ex
         <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">storage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">termination_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">wait_for_reservation_deprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Device</code></pre></div>
@@ -1833,8 +1851,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
-continue to boot via iPXE on reboots.
+    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will continue to boot via iPXE on reboots.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingcycle_csharp">
@@ -1888,7 +1905,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description string for the device
+    <dd>{{% md %}}The device description.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_facilities_csharp">
@@ -1925,7 +1942,7 @@ next available reservation automatically
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name
+    <dd>{{% md %}}The device hostname used in deployments taking advantage of Layer3 DHCP or metadata service configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresses_csharp">
@@ -1943,10 +1960,7 @@ next available reservation automatically
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL pointing to a hosted iPXE script. More
-information is in the
-[Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
-doc.
+    <dd>{{% md %}}URL pointing to a hosted iPXE script. More information is in the [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/) doc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_csharp">
@@ -2078,8 +2092,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc.
-* Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
+    <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc. Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -2089,6 +2102,15 @@ The fields of the network attributes are:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_terminationtime_csharp">
+<a href="#state_terminationtime_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp for device termination. For example `2021-09-03T16:32:00+03:00`. If you don't supply timezone info, timestamp is assumed to be in UTC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_csharp">
@@ -2155,8 +2177,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
-continue to boot via iPXE on reboots.
+    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will continue to boot via iPXE on reboots.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingcycle_go">
@@ -2210,7 +2231,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description string for the device
+    <dd>{{% md %}}The device description.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_facilities_go">
@@ -2247,7 +2268,7 @@ next available reservation automatically
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name
+    <dd>{{% md %}}The device hostname used in deployments taking advantage of Layer3 DHCP or metadata service configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresses_go">
@@ -2265,10 +2286,7 @@ next available reservation automatically
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL pointing to a hosted iPXE script. More
-information is in the
-[Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
-doc.
+    <dd>{{% md %}}URL pointing to a hosted iPXE script. More information is in the [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/) doc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_go">
@@ -2400,8 +2418,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc.
-* Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
+    <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc. Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -2411,6 +2428,15 @@ The fields of the network attributes are:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_terminationtime_go">
+<a href="#state_terminationtime_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp for device termination. For example `2021-09-03T16:32:00+03:00`. If you don't supply timezone info, timestamp is assumed to be in UTC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_go">
@@ -2477,8 +2503,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
-continue to boot via iPXE on reboots.
+    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will continue to boot via iPXE on reboots.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingcycle_nodejs">
@@ -2532,7 +2557,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description string for the device
+    <dd>{{% md %}}The device description.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_facilities_nodejs">
@@ -2569,7 +2594,7 @@ next available reservation automatically
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name
+    <dd>{{% md %}}The device hostname used in deployments taking advantage of Layer3 DHCP or metadata service configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresses_nodejs">
@@ -2587,10 +2612,7 @@ next available reservation automatically
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL pointing to a hosted iPXE script. More
-information is in the
-[Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
-doc.
+    <dd>{{% md %}}URL pointing to a hosted iPXE script. More information is in the [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/) doc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_nodejs">
@@ -2722,8 +2744,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc.
-* Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
+    <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc. Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -2733,6 +2754,15 @@ The fields of the network attributes are:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_terminationtime_nodejs">
+<a href="#state_terminationtime_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp for device termination. For example `2021-09-03T16:32:00+03:00`. If you don't supply timezone info, timestamp is assumed to be in UTC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_nodejs">
@@ -2799,8 +2829,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
-continue to boot via iPXE on reboots.
+    <dd>{{% md %}}If true, a device with OS `custom_ipxe` will continue to boot via iPXE on reboots.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billing_cycle_python">
@@ -2854,7 +2883,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description string for the device
+    <dd>{{% md %}}The device description.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_facilities_python">
@@ -2891,7 +2920,7 @@ next available reservation automatically
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The device name
+    <dd>{{% md %}}The device hostname used in deployments taking advantage of Layer3 DHCP or metadata service configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_addresses_python">
@@ -2909,10 +2938,7 @@ next available reservation automatically
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URL pointing to a hosted iPXE script. More
-information is in the
-[Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
-doc.
+    <dd>{{% md %}}URL pointing to a hosted iPXE script. More information is in the [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/) doc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_python">
@@ -3044,8 +3070,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc.
-* Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
+    <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc. Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -3055,6 +3080,15 @@ The fields of the network attributes are:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_termination_time_python">
+<a href="#state_termination_time_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Timestamp for device termination. For example `2021-09-03T16:32:00+03:00`. If you don't supply timezone info, timestamp is assumed to be in UTC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_python">
@@ -3658,7 +3692,6 @@ The fields of the network attributes are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the OS disk should be filled with `00h` bytes before reinstall. Defaults to `false`.
-*
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
@@ -3690,7 +3723,6 @@ The fields of the network attributes are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the OS disk should be filled with `00h` bytes before reinstall. Defaults to `false`.
-*
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
@@ -3722,7 +3754,6 @@ The fields of the network attributes are:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the OS disk should be filled with `00h` bytes before reinstall. Defaults to `false`.
-*
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
@@ -3754,7 +3785,6 @@ The fields of the network attributes are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the OS disk should be filled with `00h` bytes before reinstall. Defaults to `false`.
-*
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">

@@ -165,16 +165,16 @@ const testPort = testDevice.id.apply(id => equinix_metal.getPort({
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_port(</span><span class="nx">device_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">port_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPortResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPort<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetPortArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPortResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPort<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPortArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPortResult</a></span>, error)</span></code></pre></div>
 
-> Note: This function is named `GetPort` in the Go SDK.
+> Note: This function is named `LookupPort` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -201,15 +201,6 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the port to read, conflicts with device_id.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -217,7 +208,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to look for public or private block.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="portid_csharp">
+<a href="#portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -231,15 +230,6 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the port to read, conflicts with device_id.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -247,7 +237,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to look for public or private block.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="portid_go">
+<a href="#portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -261,15 +259,6 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the port to read, conflicts with device_id.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -277,7 +266,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to look for public or private block.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="portid_nodejs">
+<a href="#portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -291,15 +288,6 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the port to read, conflicts with device_id.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -307,7 +295,15 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether to look for public or private block.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_id_python">
+<a href="#port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -357,6 +353,23 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Flag indicating whether the port can be removed from a bond
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="layer2_csharp">
+<a href="#layer2_csharp" style="color: inherit; text-decoration: inherit;">Layer2</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mac_csharp">
 <a href="#mac_csharp" style="color: inherit; text-decoration: inherit;">Mac</a>
@@ -411,6 +424,15 @@ The following output properties are available:
     <dd>{{% md %}}UUIDs of attached VLANs
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="vxlanids_csharp">
+<a href="#vxlanids_csharp" style="color: inherit; text-decoration: inherit;">Vxlan<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}VXLAN ids of attached VLANs
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="deviceid_csharp">
 <a href="#deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
 </span>
@@ -419,8 +441,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+        <span id="portid_csharp">
+<a href="#portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -466,6 +488,23 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Flag indicating whether the port can be removed from a bond
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="layer2_go">
+<a href="#layer2_go" style="color: inherit; text-decoration: inherit;">Layer2</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mac_go">
 <a href="#mac_go" style="color: inherit; text-decoration: inherit;">Mac</a>
@@ -520,6 +559,15 @@ The following output properties are available:
     <dd>{{% md %}}UUIDs of attached VLANs
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="vxlanids_go">
+<a href="#vxlanids_go" style="color: inherit; text-decoration: inherit;">Vxlan<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}VXLAN ids of attached VLANs
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="deviceid_go">
 <a href="#deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
 </span>
@@ -528,8 +576,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+        <span id="portid_go">
+<a href="#portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -575,6 +623,23 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Flag indicating whether the port can be removed from a bond
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="layer2_nodejs">
+<a href="#layer2_nodejs" style="color: inherit; text-decoration: inherit;">layer2</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mac_nodejs">
 <a href="#mac_nodejs" style="color: inherit; text-decoration: inherit;">mac</a>
@@ -629,6 +694,15 @@ The following output properties are available:
     <dd>{{% md %}}UUIDs of attached VLANs
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="vxlanids_nodejs">
+<a href="#vxlanids_nodejs" style="color: inherit; text-decoration: inherit;">vxlan<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}VXLAN ids of attached VLANs
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="deviceid_nodejs">
 <a href="#deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
 </span>
@@ -637,8 +711,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+        <span id="portid_nodejs">
+<a href="#portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -684,6 +758,23 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Flag indicating whether the port can be removed from a bond
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="layer2_python">
+<a href="#layer2_python" style="color: inherit; text-decoration: inherit;">layer2</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mac_python">
 <a href="#mac_python" style="color: inherit; text-decoration: inherit;">mac</a>
@@ -738,6 +829,15 @@ The following output properties are available:
     <dd>{{% md %}}UUIDs of attached VLANs
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="vxlan_ids_python">
+<a href="#vxlan_ids_python" style="color: inherit; text-decoration: inherit;">vxlan_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}VXLAN ids of attached VLANs
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="device_id_python">
 <a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
 </span>
@@ -746,8 +846,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+        <span id="port_id_python">
+<a href="#port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

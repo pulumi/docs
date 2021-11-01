@@ -20,6 +20,7 @@ A Pulumi package for creating and managing equinix-metal cloud resources.
     <li><a href="gateway" title="Gateway"><span class="api-symbol api-symbol--resource"></span>Gateway</a></li>
     <li><a href="ipattachment" title="IpAttachment"><span class="api-symbol api-symbol--resource"></span>IpAttachment</a></li>
     <li><a href="organization" title="Organization"><span class="api-symbol api-symbol--resource"></span>Organization</a></li>
+    <li><a href="port" title="Port"><span class="api-symbol api-symbol--resource"></span>Port</a></li>
     <li><a href="portvlanattachment" title="PortVlanAttachment"><span class="api-symbol api-symbol--resource"></span>PortVlanAttachment</a></li>
     <li><a href="project" title="Project"><span class="api-symbol api-symbol--resource"></span>Project</a></li>
     <li><a href="projectapikey" title="ProjectApiKey"><span class="api-symbol api-symbol--resource"></span>ProjectApiKey</a></li>
@@ -68,6 +69,6 @@ A Pulumi package for creating and managing equinix-metal cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`metal` Terraform Provider](https://github.com/equinix/terraform-provider-metal).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>3.1.0</dd>
 </dl>
 
