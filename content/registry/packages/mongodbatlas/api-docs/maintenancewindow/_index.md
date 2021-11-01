@@ -143,6 +143,7 @@ const test = new mongodbatlas.MaintenanceWindow("test", {
 <span class="k">def </span><span class="nx">MaintenanceWindow</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                       <span class="nx">auto_defer</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                      <span class="nx">auto_defer_once_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                       <span class="nx">day_of_week</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                       <span class="nx">defer</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                       <span class="nx">hour_of_day</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -292,7 +293,16 @@ The MaintenanceWindow resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Automatically defer any maintenance for the given project for one week.
+    <dd>{{% md %}}Defer any scheduled maintenance for the given project for one week.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="autodeferonceenabled_csharp">
+<a href="#autodeferonceenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Defer<wbr>Once<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicates whether you want to defer all maintenance windows one week they would be triggered.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dayofweek_csharp">
@@ -310,7 +320,7 @@ The MaintenanceWindow resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Defer maintenance for the given project for one week.
+    <dd>{{% md %}}Defer the next scheduled maintenance for the given project for one week.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hourofday_csharp">
@@ -350,7 +360,16 @@ The MaintenanceWindow resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Automatically defer any maintenance for the given project for one week.
+    <dd>{{% md %}}Defer any scheduled maintenance for the given project for one week.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="autodeferonceenabled_go">
+<a href="#autodeferonceenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Defer<wbr>Once<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicates whether you want to defer all maintenance windows one week they would be triggered.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dayofweek_go">
@@ -368,7 +387,7 @@ The MaintenanceWindow resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Defer maintenance for the given project for one week.
+    <dd>{{% md %}}Defer the next scheduled maintenance for the given project for one week.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hourofday_go">
@@ -408,7 +427,16 @@ The MaintenanceWindow resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Automatically defer any maintenance for the given project for one week.
+    <dd>{{% md %}}Defer any scheduled maintenance for the given project for one week.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="autodeferonceenabled_nodejs">
+<a href="#autodeferonceenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Defer<wbr>Once<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicates whether you want to defer all maintenance windows one week they would be triggered.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dayofweek_nodejs">
@@ -426,7 +454,7 @@ The MaintenanceWindow resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Defer maintenance for the given project for one week.
+    <dd>{{% md %}}Defer the next scheduled maintenance for the given project for one week.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hourofday_nodejs">
@@ -466,7 +494,16 @@ The MaintenanceWindow resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Automatically defer any maintenance for the given project for one week.
+    <dd>{{% md %}}Defer any scheduled maintenance for the given project for one week.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="auto_defer_once_enabled_python">
+<a href="#auto_defer_once_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>defer_<wbr>once_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicates whether you want to defer all maintenance windows one week they would be triggered.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="day_of_week_python">
@@ -484,7 +521,7 @@ The MaintenanceWindow resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Defer maintenance for the given project for one week.
+    <dd>{{% md %}}Defer the next scheduled maintenance for the given project for one week.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_of_day_python">
@@ -614,6 +651,7 @@ Get an existing MaintenanceWindow resource's state with the given name, ID, and 
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">auto_defer</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">auto_defer_once_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">day_of_week</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">defer</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">hour_of_day</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -738,7 +776,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Automatically defer any maintenance for the given project for one week.
+    <dd>{{% md %}}Defer any scheduled maintenance for the given project for one week.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_autodeferonceenabled_csharp">
+<a href="#state_autodeferonceenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Defer<wbr>Once<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicates whether you want to defer all maintenance windows one week they would be triggered.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dayofweek_csharp">
@@ -756,7 +803,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Defer maintenance for the given project for one week.
+    <dd>{{% md %}}Defer the next scheduled maintenance for the given project for one week.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hourofday_csharp">
@@ -805,7 +852,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Automatically defer any maintenance for the given project for one week.
+    <dd>{{% md %}}Defer any scheduled maintenance for the given project for one week.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_autodeferonceenabled_go">
+<a href="#state_autodeferonceenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Defer<wbr>Once<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicates whether you want to defer all maintenance windows one week they would be triggered.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dayofweek_go">
@@ -823,7 +879,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Defer maintenance for the given project for one week.
+    <dd>{{% md %}}Defer the next scheduled maintenance for the given project for one week.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hourofday_go">
@@ -872,7 +928,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Automatically defer any maintenance for the given project for one week.
+    <dd>{{% md %}}Defer any scheduled maintenance for the given project for one week.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_autodeferonceenabled_nodejs">
+<a href="#state_autodeferonceenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Defer<wbr>Once<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicates whether you want to defer all maintenance windows one week they would be triggered.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dayofweek_nodejs">
@@ -890,7 +955,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Defer maintenance for the given project for one week.
+    <dd>{{% md %}}Defer the next scheduled maintenance for the given project for one week.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hourofday_nodejs">
@@ -939,7 +1004,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Automatically defer any maintenance for the given project for one week.
+    <dd>{{% md %}}Defer any scheduled maintenance for the given project for one week.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_auto_defer_once_enabled_python">
+<a href="#state_auto_defer_once_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>defer_<wbr>once_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that indicates whether you want to defer all maintenance windows one week they would be triggered.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_day_of_week_python">
@@ -957,7 +1031,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Defer maintenance for the given project for one week.
+    <dd>{{% md %}}Defer the next scheduled maintenance for the given project for one week.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hour_of_day_python">

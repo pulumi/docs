@@ -39,6 +39,7 @@ Project must be imported using project ID, e.g.
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">org_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">project_owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">teams</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProjectTeamArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -187,6 +188,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The name of the project you want to create. (Cannot be changed via this Provider after creation.)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="projectownerid_csharp">
+<a href="#projectownerid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique 24-hexadecimal digit string that identifies the Atlas user account to be granted the [Project Owner](https://docs.atlas.mongodb.com/reference/user-roles/#mongodb-authrole-Project-Owner) role on the specified project. If you set this parameter, it overrides the default value of the oldest [Organization Owner](https://docs.atlas.mongodb.com/reference/user-roles/#mongodb-authrole-Organization-Owner).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="teams_csharp">
 <a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
 </span>
@@ -215,6 +225,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project you want to create. (Cannot be changed via this Provider after creation.)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projectownerid_go">
+<a href="#projectownerid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique 24-hexadecimal digit string that identifies the Atlas user account to be granted the [Project Owner](https://docs.atlas.mongodb.com/reference/user-roles/#mongodb-authrole-Project-Owner) role on the specified project. If you set this parameter, it overrides the default value of the oldest [Organization Owner](https://docs.atlas.mongodb.com/reference/user-roles/#mongodb-authrole-Organization-Owner).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_go">
@@ -247,6 +266,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The name of the project you want to create. (Cannot be changed via this Provider after creation.)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="projectownerid_nodejs">
+<a href="#projectownerid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique 24-hexadecimal digit string that identifies the Atlas user account to be granted the [Project Owner](https://docs.atlas.mongodb.com/reference/user-roles/#mongodb-authrole-Project-Owner) role on the specified project. If you set this parameter, it overrides the default value of the oldest [Organization Owner](https://docs.atlas.mongodb.com/reference/user-roles/#mongodb-authrole-Organization-Owner).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="teams_nodejs">
 <a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
@@ -275,6 +303,15 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the project you want to create. (Cannot be changed via this Provider after creation.)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_owner_id_python">
+<a href="#project_owner_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>owner_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Unique 24-hexadecimal digit string that identifies the Atlas user account to be granted the [Project Owner](https://docs.atlas.mongodb.com/reference/user-roles/#mongodb-authrole-Project-Owner) role on the specified project. If you set this parameter, it overrides the default value of the oldest [Organization Owner](https://docs.atlas.mongodb.com/reference/user-roles/#mongodb-authrole-Organization-Owner).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_python">
@@ -433,6 +470,7 @@ Get an existing Project resource's state with the given name, ID, and optional e
         <span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">org_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">project_owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">teams</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProjectTeamArgs]]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
 {{% /choosable %}}
 
@@ -582,6 +620,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the organization you want to create the project within.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_projectownerid_csharp">
+<a href="#state_projectownerid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique 24-hexadecimal digit string that identifies the Atlas user account to be granted the [Project Owner](https://docs.atlas.mongodb.com/reference/user-roles/#mongodb-authrole-Project-Owner) role on the specified project. If you set this parameter, it overrides the default value of the oldest [Organization Owner](https://docs.atlas.mongodb.com/reference/user-roles/#mongodb-authrole-Organization-Owner).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_teams_csharp">
 <a href="#state_teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
 </span>
@@ -628,6 +675,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the organization you want to create the project within.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_projectownerid_go">
+<a href="#state_projectownerid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique 24-hexadecimal digit string that identifies the Atlas user account to be granted the [Project Owner](https://docs.atlas.mongodb.com/reference/user-roles/#mongodb-authrole-Project-Owner) role on the specified project. If you set this parameter, it overrides the default value of the oldest [Organization Owner](https://docs.atlas.mongodb.com/reference/user-roles/#mongodb-authrole-Organization-Owner).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teams_go">
@@ -678,6 +734,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the organization you want to create the project within.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_projectownerid_nodejs">
+<a href="#state_projectownerid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique 24-hexadecimal digit string that identifies the Atlas user account to be granted the [Project Owner](https://docs.atlas.mongodb.com/reference/user-roles/#mongodb-authrole-Project-Owner) role on the specified project. If you set this parameter, it overrides the default value of the oldest [Organization Owner](https://docs.atlas.mongodb.com/reference/user-roles/#mongodb-authrole-Organization-Owner).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_teams_nodejs">
 <a href="#state_teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
@@ -724,6 +789,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the organization you want to create the project within.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_project_owner_id_python">
+<a href="#state_project_owner_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>owner_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Unique 24-hexadecimal digit string that identifies the Atlas user account to be granted the [Project Owner](https://docs.atlas.mongodb.com/reference/user-roles/#mongodb-authrole-Project-Owner) role on the specified project. If you set this parameter, it overrides the default value of the oldest [Organization Owner](https://docs.atlas.mongodb.com/reference/user-roles/#mongodb-authrole-Organization-Owner).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teams_python">
