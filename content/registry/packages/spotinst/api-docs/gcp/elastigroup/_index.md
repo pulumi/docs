@@ -105,6 +105,7 @@ const example = new spotinst.gcp.Elastigroup("example", {
         network: "spot-network",
     }],
     preemptiblePercentage: 50,
+    provisioningModel: "SPOT",
     scaling: [{
         up: [{
             action: [{
@@ -190,6 +191,7 @@ const example = new spotinst.gcp.Elastigroup("example", {
                 <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
                 <span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                 <span class="nx">preemptible_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                <span class="nx">provisioning_model</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">,</span>
                 <span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">,</span>
                 <span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">,</span>
@@ -549,6 +551,15 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Percentage of Preemptible VMs to spin up from the "desired_capacity".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="provisioningmodel_csharp">
+<a href="#provisioningmodel_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Model</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Valid values: "SPOT", "PREEMPTIBLE". Define the provisioning model of the launched instances. Default value is "PREEMPTIBLE".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="scalingdownpolicies_csharp">
 <a href="#scalingdownpolicies_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Down<wbr>Policies</a>
 </span>
@@ -852,6 +863,15 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of Preemptible VMs to spin up from the "desired_capacity".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioningmodel_go">
+<a href="#provisioningmodel_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Model</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Valid values: "SPOT", "PREEMPTIBLE". Define the provisioning model of the launched instances. Default value is "PREEMPTIBLE".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingdownpolicies_go">
@@ -1159,6 +1179,15 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Percentage of Preemptible VMs to spin up from the "desired_capacity".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="provisioningmodel_nodejs">
+<a href="#provisioningmodel_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Model</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Valid values: "SPOT", "PREEMPTIBLE". Define the provisioning model of the launched instances. Default value is "PREEMPTIBLE".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="scalingdownpolicies_nodejs">
 <a href="#scalingdownpolicies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Down<wbr>Policies</a>
 </span>
@@ -1464,6 +1493,15 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Percentage of Preemptible VMs to spin up from the "desired_capacity".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="provisioning_model_python">
+<a href="#provisioning_model_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>model</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Valid values: "SPOT", "PREEMPTIBLE". Define the provisioning model of the launched instances. Default value is "PREEMPTIBLE".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="scaling_down_policies_python">
 <a href="#scaling_down_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>down_<wbr>policies</a>
 </span>
@@ -1641,6 +1679,7 @@ Get an existing Elastigroup resource's state with the given name, ID, and option
         <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
         <span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">preemptible_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">provisioning_model</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">,</span>
         <span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">,</span>
         <span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">,</span>
@@ -1983,6 +2022,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Percentage of Preemptible VMs to spin up from the "desired_capacity".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_provisioningmodel_csharp">
+<a href="#state_provisioningmodel_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Model</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Valid values: "SPOT", "PREEMPTIBLE". Define the provisioning model of the launched instances. Default value is "PREEMPTIBLE".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_scalingdownpolicies_csharp">
 <a href="#state_scalingdownpolicies_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Down<wbr>Policies</a>
 </span>
@@ -2286,6 +2334,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of Preemptible VMs to spin up from the "desired_capacity".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_provisioningmodel_go">
+<a href="#state_provisioningmodel_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Model</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Valid values: "SPOT", "PREEMPTIBLE". Define the provisioning model of the launched instances. Default value is "PREEMPTIBLE".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingdownpolicies_go">
@@ -2593,6 +2650,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Percentage of Preemptible VMs to spin up from the "desired_capacity".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_provisioningmodel_nodejs">
+<a href="#state_provisioningmodel_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Model</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Valid values: "SPOT", "PREEMPTIBLE". Define the provisioning model of the launched instances. Default value is "PREEMPTIBLE".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_scalingdownpolicies_nodejs">
 <a href="#state_scalingdownpolicies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Down<wbr>Policies</a>
 </span>
@@ -2896,6 +2962,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of Preemptible VMs to spin up from the "desired_capacity".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_provisioning_model_python">
+<a href="#state_provisioning_model_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>model</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Valid values: "SPOT", "PREEMPTIBLE". Define the provisioning model of the launched instances. Default value is "PREEMPTIBLE".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scaling_down_policies_python">
