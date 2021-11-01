@@ -1507,6 +1507,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_csharp">
@@ -1574,6 +1575,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_go">
@@ -1641,6 +1643,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_nodejs">
@@ -1708,6 +1711,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_python">
@@ -1867,6 +1871,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_csharp">
@@ -1950,6 +1955,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_go">
@@ -2033,6 +2039,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_nodejs">
@@ -2116,6 +2123,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_python">
@@ -2291,6 +2299,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_csharp">
@@ -2377,6 +2386,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_go">
@@ -2463,6 +2473,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_nodejs">
@@ -2549,6 +2560,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_python">
@@ -2727,6 +2739,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_csharp">
@@ -2804,6 +2817,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_go">
@@ -2881,6 +2895,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_nodejs">
@@ -2958,6 +2973,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_python">
@@ -3127,6 +3143,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_csharp">
@@ -3194,6 +3211,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_go">
@@ -3261,6 +3279,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_nodejs">
@@ -3328,6 +3347,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_python">
@@ -3487,6 +3507,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_csharp">
@@ -3554,6 +3575,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_go">
@@ -3621,6 +3643,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_nodejs">
@@ -3688,6 +3711,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_python">
@@ -3847,6 +3871,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_csharp">
@@ -3914,6 +3939,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_go">
@@ -3981,6 +4007,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_nodejs">
@@ -4048,6 +4075,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_python">
@@ -4207,6 +4235,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_csharp">
@@ -4274,6 +4303,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_go">
@@ -4341,6 +4371,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_nodejs">
@@ -4408,6 +4439,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_python">
@@ -4567,6 +4599,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_csharp">
@@ -4634,6 +4667,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_go">
@@ -4701,6 +4735,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_nodejs">
@@ -4768,6 +4803,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_python">
@@ -5197,6 +5233,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_csharp">
@@ -5280,6 +5317,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_go">
@@ -5363,6 +5401,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_nodejs">
@@ -5446,6 +5485,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_python">
@@ -5621,6 +5661,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_csharp">
@@ -5688,6 +5729,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_go">
@@ -5755,6 +5797,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_nodejs">
@@ -5822,6 +5865,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_python">
@@ -5981,6 +6025,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_csharp">
@@ -6064,6 +6109,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_go">
@@ -6147,6 +6193,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_nodejs">
@@ -6230,6 +6277,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
+* `filter_current_dashboard`: (Optional) Use this item to filter the current dashboard.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_python">
