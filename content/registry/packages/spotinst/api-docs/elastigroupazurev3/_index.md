@@ -60,6 +60,14 @@ class MyStack : Stack
                 SshPublicKey = "33a2s1f3g5a1df5g1ad3f2g1adfg56dfg==",
                 UserName = "admin",
             },
+            ManagedServiceIdentities = 
+            {
+                new SpotInst.Inputs.ElastigroupAzureV3ManagedServiceIdentityArgs
+                {
+                    Name = "ocean-westus-dev-aks-agentpool",
+                    ResourceGroupName = "MC_ocean-westus-dev_ocean-westus-dev-aks_westus",
+                },
+            },
             MaxSize = 1,
             MinSize = 0,
             Network = new SpotInst.Inputs.ElastigroupAzureV3NetworkArgs
@@ -153,6 +161,12 @@ func main() {
 				SshPublicKey: pulumi.String("33a2s1f3g5a1df5g1ad3f2g1adfg56dfg=="),
 				UserName:     pulumi.String("admin"),
 			},
+			ManagedServiceIdentities: spotinst.ElastigroupAzureV3ManagedServiceIdentityArray{
+				&spotinst.ElastigroupAzureV3ManagedServiceIdentityArgs{
+					Name:              pulumi.String("ocean-westus-dev-aks-agentpool"),
+					ResourceGroupName: pulumi.String("MC_ocean-westus-dev_ocean-westus-dev-aks_westus"),
+				},
+			},
 			MaxSize: pulumi.Int(1),
 			MinSize: pulumi.Int(0),
 			Network: &spotinst.ElastigroupAzureV3NetworkArgs{
@@ -229,6 +243,10 @@ test_azure_group = spotinst.ElastigroupAzureV3("testAzureGroup",
         ssh_public_key="33a2s1f3g5a1df5g1ad3f2g1adfg56dfg==",
         user_name="admin",
     ),
+    managed_service_identities=[spotinst.ElastigroupAzureV3ManagedServiceIdentityArgs(
+        name="ocean-westus-dev-aks-agentpool",
+        resource_group_name="MC_ocean-westus-dev_ocean-westus-dev-aks_westus",
+    )],
     max_size=1,
     min_size=0,
     network=spotinst.ElastigroupAzureV3NetworkArgs(
@@ -296,6 +314,10 @@ const testAzureGroup = new spotinst.ElastigroupAzureV3("test_azure_group", {
         sshPublicKey: "33a2s1f3g5a1df5g1ad3f2g1adfg56dfg==",
         userName: "admin",
     },
+    managedServiceIdentities: [{
+        name: "ocean-westus-dev-aks-agentpool",
+        resourceGroupName: "MC_ocean-westus-dev_ocean-westus-dev-aks_westus",
+    }],
     maxSize: 1,
     // --- CAPACITY ------------------------------------------------------
     minSize: 0,
@@ -367,6 +389,7 @@ const testAzureGroup = new spotinst.ElastigroupAzureV3("test_azure_group", {
                        <span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                        <span class="nx">images</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupAzureV3ImageArgs]]</span> = None<span class="p">,</span>
                        <span class="nx">login</span><span class="p">:</span> <span class="nx">Optional[ElastigroupAzureV3LoginArgs]</span> = None<span class="p">,</span>
+                       <span class="nx">managed_service_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupAzureV3ManagedServiceIdentityArgs]]</span> = None<span class="p">,</span>
                        <span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                        <span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -605,6 +628,15 @@ The ElastigroupAzureV3 resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Describes the login configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="managedserviceidentities_csharp">
+<a href="#managedserviceidentities_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Service<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupazurev3managedserviceidentity">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Inputs.<wbr>Elastigroup<wbr>Azure<wbr>V3Managed<wbr>Service<wbr>Identity<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of Managed Service Identity objects.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxsize_csharp">
 <a href="#maxsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
 </span>
@@ -733,6 +765,15 @@ The ElastigroupAzureV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#elastigroupazurev3login">Elastigroup<wbr>Azure<wbr>V3Login<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the login configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="managedserviceidentities_go">
+<a href="#managedserviceidentities_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Service<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupazurev3managedserviceidentity">[]Elastigroup<wbr>Azure<wbr>V3Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}List of Managed Service Identity objects.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsize_go">
@@ -865,6 +906,15 @@ The ElastigroupAzureV3 resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Describes the login configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="managedserviceidentities_nodejs">
+<a href="#managedserviceidentities_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Service<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupazurev3managedserviceidentity">Elastigroup<wbr>Azure<wbr>V3Managed<wbr>Service<wbr>Identity<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Managed Service Identity objects.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxsize_nodejs">
 <a href="#maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
 </span>
@@ -995,6 +1045,15 @@ The ElastigroupAzureV3 resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Describes the login configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="managed_service_identities_python">
+<a href="#managed_service_identities_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>service_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupazurev3managedserviceidentity">Sequence[Elastigroup<wbr>Azure<wbr>V3Managed<wbr>Service<wbr>Identity<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Managed Service Identity objects.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_size_python">
 <a href="#max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
 </span>
@@ -1098,6 +1157,7 @@ Get an existing ElastigroupAzureV3 resource's state with the given name, ID, and
         <span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">images</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupAzureV3ImageArgs]]</span> = None<span class="p">,</span>
         <span class="nx">login</span><span class="p">:</span> <span class="nx">Optional[ElastigroupAzureV3LoginArgs]</span> = None<span class="p">,</span>
+        <span class="nx">managed_service_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupAzureV3ManagedServiceIdentityArgs]]</span> = None<span class="p">,</span>
         <span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1256,6 +1316,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Describes the login configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_managedserviceidentities_csharp">
+<a href="#state_managedserviceidentities_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Service<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupazurev3managedserviceidentity">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Inputs.<wbr>Elastigroup<wbr>Azure<wbr>V3Managed<wbr>Service<wbr>Identity<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of Managed Service Identity objects.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_maxsize_csharp">
 <a href="#state_maxsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
 </span>
@@ -1384,6 +1453,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#elastigroupazurev3login">Elastigroup<wbr>Azure<wbr>V3Login<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the login configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_managedserviceidentities_go">
+<a href="#state_managedserviceidentities_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Service<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupazurev3managedserviceidentity">[]Elastigroup<wbr>Azure<wbr>V3Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}List of Managed Service Identity objects.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsize_go">
@@ -1516,6 +1594,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Describes the login configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_managedserviceidentities_nodejs">
+<a href="#state_managedserviceidentities_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Service<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupazurev3managedserviceidentity">Elastigroup<wbr>Azure<wbr>V3Managed<wbr>Service<wbr>Identity<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Managed Service Identity objects.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_maxsize_nodejs">
 <a href="#state_maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
 </span>
@@ -1644,6 +1731,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#elastigroupazurev3login">Elastigroup<wbr>Azure<wbr>V3Login<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the login configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_managed_service_identities_python">
+<a href="#state_managed_service_identities_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>service_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupazurev3managedserviceidentity">Sequence[Elastigroup<wbr>Azure<wbr>V3Managed<wbr>Service<wbr>Identity<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Managed Service Identity objects.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_size_python">
@@ -2204,6 +2300,96 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}SSH for admin access to Linux VMs. Required for Linux OS types.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="elastigroupazurev3managedserviceidentity">Elastigroup<wbr>Azure<wbr>V3Managed<wbr>Service<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- The name of the Application Security group.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- The name of the Application Security group.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- The name of the Application Security group.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}- The name of the Application Security group.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}- The resource group of the Application Security Group.
+}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupazurev3network">Elastigroup<wbr>Azure<wbr>V3Network</h4>

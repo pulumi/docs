@@ -14226,6 +14226,15 @@ Usage:
     <dd>{{% md %}}A list of dimensions describing qualities of the metric.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="evaluationperiods_csharp">
+<a href="#evaluationperiods_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How many evaluation periods should accumulate before a scale down action takes place.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxcapacityperscale_csharp">
 <a href="#maxcapacityperscale_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity<wbr>Per<wbr>Scale</a>
 </span>
@@ -14233,6 +14242,15 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, restrict the maximal number of instances which can be added in each scale-up action.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="period_csharp">
+<a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictivemode_csharp">
@@ -14329,6 +14347,15 @@ Usage:
     <dd>{{% md %}}A list of dimensions describing qualities of the metric.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="evaluationperiods_go">
+<a href="#evaluationperiods_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How many evaluation periods should accumulate before a scale down action takes place.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxcapacityperscale_go">
 <a href="#maxcapacityperscale_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity<wbr>Per<wbr>Scale</a>
 </span>
@@ -14336,6 +14363,15 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, restrict the maximal number of instances which can be added in each scale-up action.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="period_go">
+<a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictivemode_go">
@@ -14432,6 +14468,15 @@ Usage:
     <dd>{{% md %}}A list of dimensions describing qualities of the metric.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="evaluationperiods_nodejs">
+<a href="#evaluationperiods_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}How many evaluation periods should accumulate before a scale down action takes place.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxcapacityperscale_nodejs">
 <a href="#maxcapacityperscale_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity<wbr>Per<wbr>Scale</a>
 </span>
@@ -14439,6 +14484,15 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, restrict the maximal number of instances which can be added in each scale-up action.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="period_nodejs">
+<a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictivemode_nodejs">
@@ -14535,6 +14589,15 @@ Usage:
     <dd>{{% md %}}A list of dimensions describing qualities of the metric.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="evaluation_periods_python">
+<a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How many evaluation periods should accumulate before a scale down action takes place.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="max_capacity_per_scale_python">
 <a href="#max_capacity_per_scale_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity_<wbr>per_<wbr>scale</a>
 </span>
@@ -14542,6 +14605,15 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String, restrict the maximal number of instances which can be added in each scale-up action.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="period_python">
+<a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictive_mode_python">
