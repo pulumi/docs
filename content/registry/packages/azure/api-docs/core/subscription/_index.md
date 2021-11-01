@@ -247,6 +247,114 @@ const exampleSubscription = new azure.core.Subscription("exampleSubscription", {
 
 
 
+### Creating A New Alias And Subscription For A Microsoft Partner Account
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleMpaAccountScope = Output.Create(Azure.Billing.GetMpaAccountScope.InvokeAsync(new Azure.Billing.GetMpaAccountScopeArgs
+        {
+            BillingAccountName = "e879cf0f-2b4d-5431-109a-f72fc9868693:024cabf4-7321-4cf9-be59-df0c77ca51de_2019-05-31",
+            CustomerName = "2281f543-7321-4cf9-1e23-edb4Oc31a31c",
+        }));
+        var exampleSubscription = new Azure.Core.Subscription("exampleSubscription", new Azure.Core.SubscriptionArgs
+        {
+            SubscriptionName = "My Example MPA Subscription",
+            BillingScopeId = exampleMpaAccountScope.Apply(exampleMpaAccountScope => exampleMpaAccountScope.Id),
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/billing"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleMpaAccountScope, err := billing.GetMpaAccountScope(ctx, &billing.GetMpaAccountScopeArgs{
+			BillingAccountName: "e879cf0f-2b4d-5431-109a-f72fc9868693:024cabf4-7321-4cf9-be59-df0c77ca51de_2019-05-31",
+			CustomerName:       "2281f543-7321-4cf9-1e23-edb4Oc31a31c",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = core.NewSubscription(ctx, "exampleSubscription", &core.SubscriptionArgs{
+			SubscriptionName: pulumi.String("My Example MPA Subscription"),
+			BillingScopeId:   pulumi.String(exampleMpaAccountScope.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_mpa_account_scope = azure.billing.get_mpa_account_scope(billing_account_name="e879cf0f-2b4d-5431-109a-f72fc9868693:024cabf4-7321-4cf9-be59-df0c77ca51de_2019-05-31",
+    customer_name="2281f543-7321-4cf9-1e23-edb4Oc31a31c")
+example_subscription = azure.core.Subscription("exampleSubscription",
+    subscription_name="My Example MPA Subscription",
+    billing_scope_id=example_mpa_account_scope.id)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleMpaAccountScope = azure.billing.getMpaAccountScope({
+    billingAccountName: "e879cf0f-2b4d-5431-109a-f72fc9868693:024cabf4-7321-4cf9-be59-df0c77ca51de_2019-05-31",
+    customerName: "2281f543-7321-4cf9-1e23-edb4Oc31a31c",
+});
+const exampleSubscription = new azure.core.Subscription("exampleSubscription", {
+    subscriptionName: "My Example MPA Subscription",
+    billingScopeId: exampleMpaAccountScope.then(exampleMpaAccountScope => exampleMpaAccountScope.id),
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Adding An Alias To An Existing Subscription
 
 
@@ -516,7 +624,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Billing Scope ID. Can be either a Microsoft Customer Account Billing Scope ID or an Enrollment Billing Scope ID.
+    <dd>{{% md %}}The Azure Billing Scope ID. Can be a Microsoft Customer Account Billing Scope ID, a Microsoft Partner Account Billing Scope ID or an Enrollment Billing Scope ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_csharp">
@@ -565,7 +673,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Billing Scope ID. Can be either a Microsoft Customer Account Billing Scope ID or an Enrollment Billing Scope ID.
+    <dd>{{% md %}}The Azure Billing Scope ID. Can be a Microsoft Customer Account Billing Scope ID, a Microsoft Partner Account Billing Scope ID or an Enrollment Billing Scope ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_go">
@@ -614,7 +722,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Billing Scope ID. Can be either a Microsoft Customer Account Billing Scope ID or an Enrollment Billing Scope ID.
+    <dd>{{% md %}}The Azure Billing Scope ID. Can be a Microsoft Customer Account Billing Scope ID, a Microsoft Partner Account Billing Scope ID or an Enrollment Billing Scope ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_nodejs">
@@ -663,7 +771,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure Billing Scope ID. Can be either a Microsoft Customer Account Billing Scope ID or an Enrollment Billing Scope ID.
+    <dd>{{% md %}}The Azure Billing Scope ID. Can be a Microsoft Customer Account Billing Scope ID, a Microsoft Partner Account Billing Scope ID or an Enrollment Billing Scope ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_id_python">
@@ -958,7 +1066,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Billing Scope ID. Can be either a Microsoft Customer Account Billing Scope ID or an Enrollment Billing Scope ID.
+    <dd>{{% md %}}The Azure Billing Scope ID. Can be a Microsoft Customer Account Billing Scope ID, a Microsoft Partner Account Billing Scope ID or an Enrollment Billing Scope ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptionid_csharp">
@@ -1024,7 +1132,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Billing Scope ID. Can be either a Microsoft Customer Account Billing Scope ID or an Enrollment Billing Scope ID.
+    <dd>{{% md %}}The Azure Billing Scope ID. Can be a Microsoft Customer Account Billing Scope ID, a Microsoft Partner Account Billing Scope ID or an Enrollment Billing Scope ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptionid_go">
@@ -1090,7 +1198,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Billing Scope ID. Can be either a Microsoft Customer Account Billing Scope ID or an Enrollment Billing Scope ID.
+    <dd>{{% md %}}The Azure Billing Scope ID. Can be a Microsoft Customer Account Billing Scope ID, a Microsoft Partner Account Billing Scope ID or an Enrollment Billing Scope ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptionid_nodejs">
@@ -1156,7 +1264,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure Billing Scope ID. Can be either a Microsoft Customer Account Billing Scope ID or an Enrollment Billing Scope ID.
+    <dd>{{% md %}}The Azure Billing Scope ID. Can be a Microsoft Customer Account Billing Scope ID, a Microsoft Partner Account Billing Scope ID or an Enrollment Billing Scope ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscription_id_python">
@@ -1217,7 +1325,7 @@ Subscriptions can be imported using the `resource id`, e.g.
  $ pulumi import azure:core/subscription:Subscription example "/providers/Microsoft.Subscription/aliases/subscription1"
 ```
 
- In this scenario, the `subscription_id` property can be completed and this provider will assume control of the existing subscription by creating an Alias. See the `adding an Alias to an existing Subscription` above. This provider requires an alias to correctly manage Subscription resources due to Azure Subscription API design.
+ In this scenario, the `subscription_id` property can be completed and the provider will assume control of the existing subscription by creating an Alias. See the `adding an Alias to an existing Subscription` above. This provider requires an alias to correctly manage Subscription resources due to Azure Subscription API design.
 
 
 

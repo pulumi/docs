@@ -290,7 +290,8 @@ const exampleNamespaceNetworkRuleSet = new azure.servicebus.NamespaceNetworkRule
                             <span class="nx">ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                             <span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                             <span class="nx">network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[NamespaceNetworkRuleSetNetworkRuleArgs]]</span> = None<span class="p">,</span>
-                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">trusted_services_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">NamespaceNetworkRuleSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NamespaceNetworkRuleSetArgs</a></span><span class="p">,</span>
@@ -463,6 +464,15 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-type"><a href="#namespacenetworkrulesetnetworkrule">List&lt;Namespace<wbr>Network<wbr>Rule<wbr>Set<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_rules` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustedservicesallowed_csharp">
+<a href="#trustedservicesallowed_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Services<wbr>Allowed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If True, then Azure Services that are known and trusted for this resource type are allowed to bypass firewall configuration. See [Trusted Microsoft Services](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/service-bus-messaging/includes/service-bus-trusted-services.md)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -512,6 +522,15 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-type"><a href="#namespacenetworkrulesetnetworkrule">[]Namespace<wbr>Network<wbr>Rule<wbr>Set<wbr>Network<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_rules` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustedservicesallowed_go">
+<a href="#trustedservicesallowed_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Services<wbr>Allowed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If True, then Azure Services that are known and trusted for this resource type are allowed to bypass firewall configuration. See [Trusted Microsoft Services](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/service-bus-messaging/includes/service-bus-trusted-services.md)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -561,6 +580,15 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-type"><a href="#namespacenetworkrulesetnetworkrule">Namespace<wbr>Network<wbr>Rule<wbr>Set<wbr>Network<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_rules` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustedservicesallowed_nodejs">
+<a href="#trustedservicesallowed_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Services<wbr>Allowed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If True, then Azure Services that are known and trusted for this resource type are allowed to bypass firewall configuration. See [Trusted Microsoft Services](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/service-bus-messaging/includes/service-bus-trusted-services.md)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -610,6 +638,15 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
         <span class="property-type"><a href="#namespacenetworkrulesetnetworkrule">Sequence[Namespace<wbr>Network<wbr>Rule<wbr>Set<wbr>Network<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_rules` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trusted_services_allowed_python">
+<a href="#trusted_services_allowed_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>services_<wbr>allowed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If True, then Azure Services that are known and trusted for this resource type are allowed to bypass firewall configuration. See [Trusted Microsoft Services](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/service-bus-messaging/includes/service-bus-trusted-services.md)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -688,7 +725,8 @@ Get an existing NamespaceNetworkRuleSet resource's state with the given name, ID
         <span class="nx">ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[NamespaceNetworkRuleSetNetworkRuleArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NamespaceNetworkRuleSet</code></pre></div>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">trusted_services_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> NamespaceNetworkRuleSet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -844,6 +882,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group where the ServiceBus Namespace Network Rule Set should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_trustedservicesallowed_csharp">
+<a href="#state_trustedservicesallowed_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Services<wbr>Allowed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If True, then Azure Services that are known and trusted for this resource type are allowed to bypass firewall configuration. See [Trusted Microsoft Services](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/service-bus-messaging/includes/service-bus-trusted-services.md)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -893,6 +940,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group where the ServiceBus Namespace Network Rule Set should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_trustedservicesallowed_go">
+<a href="#state_trustedservicesallowed_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Services<wbr>Allowed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If True, then Azure Services that are known and trusted for this resource type are allowed to bypass firewall configuration. See [Trusted Microsoft Services](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/service-bus-messaging/includes/service-bus-trusted-services.md)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -942,6 +998,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group where the ServiceBus Namespace Network Rule Set should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_trustedservicesallowed_nodejs">
+<a href="#state_trustedservicesallowed_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Services<wbr>Allowed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If True, then Azure Services that are known and trusted for this resource type are allowed to bypass firewall configuration. See [Trusted Microsoft Services](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/service-bus-messaging/includes/service-bus-trusted-services.md)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -991,6 +1056,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group where the ServiceBus Namespace Network Rule Set should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_trusted_services_allowed_python">
+<a href="#state_trusted_services_allowed_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>services_<wbr>allowed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If True, then Azure Services that are known and trusted for this resource type are allowed to bypass firewall configuration. See [Trusted Microsoft Services](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/service-bus-messaging/includes/service-bus-trusted-services.md)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

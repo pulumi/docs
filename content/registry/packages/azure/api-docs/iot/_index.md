@@ -29,6 +29,7 @@ Explore the resources and functions of the azure.iot module.
     <li><a href="securitysolution" title="SecuritySolution"><span class="api-symbol api-symbol--resource"></span>SecuritySolution</a></li>
     <li><a href="sharedaccesspolicy" title="SharedAccessPolicy"><span class="api-symbol api-symbol--resource"></span>SharedAccessPolicy</a></li>
     <li><a href="timeseriesinsightsaccesspolicy" title="TimeSeriesInsightsAccessPolicy"><span class="api-symbol api-symbol--resource"></span>TimeSeriesInsightsAccessPolicy</a></li>
+    <li><a href="timeseriesinsightseventsourceeventhub" title="TimeSeriesInsightsEventSourceEventhub"><span class="api-symbol api-symbol--resource"></span>TimeSeriesInsightsEventSourceEventhub</a></li>
     <li><a href="timeseriesinsightseventsourceiothub" title="TimeSeriesInsightsEventSourceIothub"><span class="api-symbol api-symbol--resource"></span>TimeSeriesInsightsEventSourceIothub</a></li>
     <li><a href="timeseriesinsightsgen2environment" title="TimeSeriesInsightsGen2Environment"><span class="api-symbol api-symbol--resource"></span>TimeSeriesInsightsGen2Environment</a></li>
     <li><a href="timeseriesinsightsreferencedataset" title="TimeSeriesInsightsReferenceDataSet"><span class="api-symbol api-symbol--resource"></span>TimeSeriesInsightsReferenceDataSet</a></li>
@@ -52,6 +53,6 @@ Explore the resources and functions of the azure.iot module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.0</dd>
+	<dd>4.25.0</dd>
 </dl>
 

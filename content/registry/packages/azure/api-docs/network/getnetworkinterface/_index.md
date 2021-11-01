@@ -873,6 +873,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="gatewayloadbalancerfrontendipconfigurationid_csharp">
+<a href="#gatewayloadbalancerfrontendipconfigurationid_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Frontend IP Configuration ID of a Gateway Sku Load Balancer the Network Interface is consuming.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="loadbalancerbackendaddresspoolsids_csharp">
 <a href="#loadbalancerbackendaddresspoolsids_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools<wbr>Ids</a>
 </span>
@@ -973,6 +982,15 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gatewayloadbalancerfrontendipconfigurationid_go">
+<a href="#gatewayloadbalancerfrontendipconfigurationid_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Frontend IP Configuration ID of a Gateway Sku Load Balancer the Network Interface is consuming.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loadbalancerbackendaddresspoolsids_go">
 <a href="#loadbalancerbackendaddresspoolsids_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools<wbr>Ids</a>
@@ -1075,6 +1093,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="gatewayloadbalancerfrontendipconfigurationid_nodejs">
+<a href="#gatewayloadbalancerfrontendipconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Frontend IP Configuration ID of a Gateway Sku Load Balancer the Network Interface is consuming.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="loadbalancerbackendaddresspoolsids_nodejs">
 <a href="#loadbalancerbackendaddresspoolsids_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools<wbr>Ids</a>
 </span>
@@ -1175,6 +1202,15 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gateway_load_balancer_frontend_ip_configuration_id_python">
+<a href="#gateway_load_balancer_frontend_ip_configuration_id_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>load_<wbr>balancer_<wbr>frontend_<wbr>ip_<wbr>configuration_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Frontend IP Configuration ID of a Gateway Sku Load Balancer the Network Interface is consuming.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="load_balancer_backend_address_pools_ids_python">
 <a href="#load_balancer_backend_address_pools_ids_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>address_<wbr>pools_<wbr>ids</a>

@@ -23,6 +23,7 @@ Explore the resources and functions of the azure.kusto module.
     <li><a href="eventgriddataconnection" title="EventGridDataConnection"><span class="api-symbol api-symbol--resource"></span>EventGridDataConnection</a></li>
     <li><a href="eventhubdataconnection" title="EventhubDataConnection"><span class="api-symbol api-symbol--resource"></span>EventhubDataConnection</a></li>
     <li><a href="iothubdataconnection" title="IotHubDataConnection"><span class="api-symbol api-symbol--resource"></span>IotHubDataConnection</a></li>
+    <li><a href="script" title="Script"><span class="api-symbol api-symbol--resource"></span>Script</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -39,6 +40,6 @@ Explore the resources and functions of the azure.kusto module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.0</dd>
+	<dd>4.25.0</dd>
 </dl>
 

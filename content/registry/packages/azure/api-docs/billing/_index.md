@@ -15,6 +15,7 @@ Explore the resources and functions of the azure.billing module.
 <ul class="api">
     <li><a href="getenrollmentaccountscope" title="GetEnrollmentAccountScope"><span class="api-symbol api-symbol--function"></span>GetEnrollmentAccountScope</a></li>
     <li><a href="getmcaaccountscope" title="GetMcaAccountScope"><span class="api-symbol api-symbol--function"></span>GetMcaAccountScope</a></li>
+    <li><a href="getmpaaccountscope" title="GetMpaAccountScope"><span class="api-symbol api-symbol--function"></span>GetMpaAccountScope</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -26,6 +27,6 @@ Explore the resources and functions of the azure.billing module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.24.0</dd>
+	<dd>4.25.0</dd>
 </dl>
 

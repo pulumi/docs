@@ -225,6 +225,15 @@ The following output properties are available:
     <dd>{{% md %}}The Address Prefix used for this Virtual Hub.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="defaultroutetableid_csharp">
+<a href="#defaultroutetableid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the default Route Table in the Virtual Hub.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -288,6 +297,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Address Prefix used for this Virtual Hub.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="defaultroutetableid_go">
+<a href="#defaultroutetableid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the default Route Table in the Virtual Hub.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -355,6 +373,15 @@ The following output properties are available:
     <dd>{{% md %}}The Address Prefix used for this Virtual Hub.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="defaultroutetableid_nodejs">
+<a href="#defaultroutetableid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the default Route Table in the Virtual Hub.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -418,6 +445,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Address Prefix used for this Virtual Hub.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="default_route_table_id_python">
+<a href="#default_route_table_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>table_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the default Route Table in the Virtual Hub.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">

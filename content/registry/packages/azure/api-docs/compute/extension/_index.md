@@ -483,6 +483,7 @@ const exampleExtension = new azure.compute.Extension("exampleExtension", {
 <span class="k">def </span><span class="nx">Extension</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
               <span class="nx">auto_upgrade_minor_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">automatic_upgrade_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">protected_settings</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">publisher</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -668,6 +669,15 @@ use, available versions can be found using the Azure CLI.
 the latest minor version update to the `type_handler_version` specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="automaticupgradeenabled_csharp">
+<a href="#automaticupgradeenabled_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Upgrade<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the Extension be automatically updated whenever the Publisher releases a new version of this VM Extension? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -757,6 +767,15 @@ use, available versions can be found using the Azure CLI.
     </dt>
     <dd>{{% md %}}Specifies if the platform deploys
 the latest minor version update to the `type_handler_version` specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="automaticupgradeenabled_go">
+<a href="#automaticupgradeenabled_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Upgrade<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the Extension be automatically updated whenever the Publisher releases a new version of this VM Extension? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -850,6 +869,15 @@ use, available versions can be found using the Azure CLI.
 the latest minor version update to the `type_handler_version` specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="automaticupgradeenabled_nodejs">
+<a href="#automaticupgradeenabled_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Upgrade<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should the Extension be automatically updated whenever the Publisher releases a new version of this VM Extension? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -939,6 +967,15 @@ use, available versions can be found using the Azure CLI.
     </dt>
     <dd>{{% md %}}Specifies if the platform deploys
 the latest minor version update to the `type_handler_version` specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="automatic_upgrade_enabled_python">
+<a href="#automatic_upgrade_enabled_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>upgrade_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the Extension be automatically updated whenever the Publisher releases a new version of this VM Extension? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -1053,6 +1090,7 @@ Get an existing Extension resource's state with the given name, ID, and optional
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">auto_upgrade_minor_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">automatic_upgrade_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">protected_settings</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">publisher</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1183,6 +1221,15 @@ The following state arguments are supported:
 the latest minor version update to the `type_handler_version` specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_automaticupgradeenabled_csharp">
+<a href="#state_automaticupgradeenabled_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Upgrade<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the Extension be automatically updated whenever the Publisher releases a new version of this VM Extension? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1272,6 +1319,15 @@ use, available versions can be found using the Azure CLI.
     </dt>
     <dd>{{% md %}}Specifies if the platform deploys
 the latest minor version update to the `type_handler_version` specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_automaticupgradeenabled_go">
+<a href="#state_automaticupgradeenabled_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Upgrade<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the Extension be automatically updated whenever the Publisher releases a new version of this VM Extension? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1365,6 +1421,15 @@ use, available versions can be found using the Azure CLI.
 the latest minor version update to the `type_handler_version` specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_automaticupgradeenabled_nodejs">
+<a href="#state_automaticupgradeenabled_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Upgrade<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should the Extension be automatically updated whenever the Publisher releases a new version of this VM Extension? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1454,6 +1519,15 @@ use, available versions can be found using the Azure CLI.
     </dt>
     <dd>{{% md %}}Specifies if the platform deploys
 the latest minor version update to the `type_handler_version` specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_automatic_upgrade_enabled_python">
+<a href="#state_automatic_upgrade_enabled_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>upgrade_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the Extension be automatically updated whenever the Publisher releases a new version of this VM Extension? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">

@@ -1775,6 +1775,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scaletozerobeforedeletion_csharp">
+<a href="#scaletozerobeforedeletion_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>To<wbr>Zero<wbr>Before<wbr>Deletion</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1791,6 +1799,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="forcedelete_go">
 <a href="#forcedelete_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scaletozerobeforedeletion_go">
+<a href="#scaletozerobeforedeletion_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>To<wbr>Zero<wbr>Before<wbr>Deletion</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -1815,6 +1831,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scaletozerobeforedeletion_nodejs">
+<a href="#scaletozerobeforedeletion_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>To<wbr>Zero<wbr>Before<wbr>Deletion</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1831,6 +1855,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="force_delete_python">
 <a href="#force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scale_to_zero_before_deletion_python">
+<a href="#scale_to_zero_before_deletion_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>to_<wbr>zero_<wbr>before_<wbr>deletion</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>

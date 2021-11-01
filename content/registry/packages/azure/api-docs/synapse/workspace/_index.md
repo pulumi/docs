@@ -237,13 +237,17 @@ const exampleWorkspace = new azure.synapse.Workspace("exampleWorkspace", {
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
               <span class="nx">aad_admin</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAadAdminArgs]</span> = None<span class="p">,</span>
               <span class="nx">azure_devops_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAzureDevopsRepoArgs]</span> = None<span class="p">,</span>
+              <span class="nx">compute_subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">customer_managed_key</span><span class="p">:</span> <span class="nx">Optional[WorkspaceCustomerManagedKeyArgs]</span> = None<span class="p">,</span>
               <span class="nx">data_exfiltration_protection_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">github_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceGithubRepoArgs]</span> = None<span class="p">,</span>
+              <span class="nx">linking_allowed_for_aad_tenant_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
               <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">managed_virtual_network_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">purview_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">sql_administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">sql_administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -433,6 +437,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="computesubnetid_csharp">
+<a href="#computesubnetid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subnet ID used for computes in workspace
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="customermanagedkey_csharp">
 <a href="#customermanagedkey_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key</a>
 </span>
@@ -458,6 +471,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `github_repo` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linkingallowedforaadtenantids_csharp">
+<a href="#linkingallowedforaadtenantids_csharp" style="color: inherit; text-decoration: inherit;">Linking<wbr>Allowed<wbr>For<wbr>Aad<wbr>Tenant<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Allowed Aad Tenant Ids For Linking.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
@@ -494,6 +516,24 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicnetworkaccessenabled_csharp">
+<a href="#publicnetworkaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether public network access is allowed for the Cognitive Account. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purviewid_csharp">
+<a href="#purviewid_csharp" style="color: inherit; text-decoration: inherit;">Purview<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of purview account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlidentitycontrolenabled_csharp">
@@ -572,6 +612,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="computesubnetid_go">
+<a href="#computesubnetid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subnet ID used for computes in workspace
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="customermanagedkey_go">
 <a href="#customermanagedkey_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key</a>
 </span>
@@ -597,6 +646,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `github_repo` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linkingallowedforaadtenantids_go">
+<a href="#linkingallowedforaadtenantids_go" style="color: inherit; text-decoration: inherit;">Linking<wbr>Allowed<wbr>For<wbr>Aad<wbr>Tenant<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Allowed Aad Tenant Ids For Linking.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -633,6 +691,24 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicnetworkaccessenabled_go">
+<a href="#publicnetworkaccessenabled_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether public network access is allowed for the Cognitive Account. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purviewid_go">
+<a href="#purviewid_go" style="color: inherit; text-decoration: inherit;">Purview<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of purview account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlidentitycontrolenabled_go">
@@ -711,6 +787,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="computesubnetid_nodejs">
+<a href="#computesubnetid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subnet ID used for computes in workspace
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="customermanagedkey_nodejs">
 <a href="#customermanagedkey_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Managed<wbr>Key</a>
 </span>
@@ -736,6 +821,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `github_repo` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linkingallowedforaadtenantids_nodejs">
+<a href="#linkingallowedforaadtenantids_nodejs" style="color: inherit; text-decoration: inherit;">linking<wbr>Allowed<wbr>For<wbr>Aad<wbr>Tenant<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Allowed Aad Tenant Ids For Linking.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
@@ -772,6 +866,24 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicnetworkaccessenabled_nodejs">
+<a href="#publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether public network access is allowed for the Cognitive Account. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purviewid_nodejs">
+<a href="#purviewid_nodejs" style="color: inherit; text-decoration: inherit;">purview<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of purview account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlidentitycontrolenabled_nodejs">
@@ -850,6 +962,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="compute_subnet_id_python">
+<a href="#compute_subnet_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>subnet_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Subnet ID used for computes in workspace
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="customer_managed_key_python">
 <a href="#customer_managed_key_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>managed_<wbr>key</a>
 </span>
@@ -875,6 +996,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `github_repo` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linking_allowed_for_aad_tenant_ids_python">
+<a href="#linking_allowed_for_aad_tenant_ids_python" style="color: inherit; text-decoration: inherit;">linking_<wbr>allowed_<wbr>for_<wbr>aad_<wbr>tenant_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Allowed Aad Tenant Ids For Linking.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -911,6 +1041,24 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="public_network_access_enabled_python">
+<a href="#public_network_access_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether public network access is allowed for the Cognitive Account. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="purview_id_python">
+<a href="#purview_id_python" style="color: inherit; text-decoration: inherit;">purview_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of purview account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_identity_control_enabled_python">
@@ -1077,15 +1225,19 @@ Get an existing Workspace resource's state with the given name, ID, and optional
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">aad_admin</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAadAdminArgs]</span> = None<span class="p">,</span>
         <span class="nx">azure_devops_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAzureDevopsRepoArgs]</span> = None<span class="p">,</span>
+        <span class="nx">compute_subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">connectivity_endpoints</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">customer_managed_key</span><span class="p">:</span> <span class="nx">Optional[WorkspaceCustomerManagedKeyArgs]</span> = None<span class="p">,</span>
         <span class="nx">data_exfiltration_protection_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">github_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceGithubRepoArgs]</span> = None<span class="p">,</span>
         <span class="nx">identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkspaceIdentityArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">linking_allowed_for_aad_tenant_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">managed_virtual_network_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">purview_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sql_administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sql_administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1222,6 +1374,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_computesubnetid_csharp">
+<a href="#state_computesubnetid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subnet ID used for computes in workspace
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_connectivityendpoints_csharp">
 <a href="#state_connectivityendpoints_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Endpoints</a>
 </span>
@@ -1267,6 +1428,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_linkingallowedforaadtenantids_csharp">
+<a href="#state_linkingallowedforaadtenantids_csharp" style="color: inherit; text-decoration: inherit;">Linking<wbr>Allowed<wbr>For<wbr>Aad<wbr>Tenant<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Allowed Aad Tenant Ids For Linking.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -1301,6 +1471,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_publicnetworkaccessenabled_csharp">
+<a href="#state_publicnetworkaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether public network access is allowed for the Cognitive Account. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_purviewid_csharp">
+<a href="#state_purviewid_csharp" style="color: inherit; text-decoration: inherit;">Purview<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of purview account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
@@ -1379,6 +1567,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_computesubnetid_go">
+<a href="#state_computesubnetid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subnet ID used for computes in workspace
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_connectivityendpoints_go">
 <a href="#state_connectivityendpoints_go" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Endpoints</a>
 </span>
@@ -1424,6 +1621,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_linkingallowedforaadtenantids_go">
+<a href="#state_linkingallowedforaadtenantids_go" style="color: inherit; text-decoration: inherit;">Linking<wbr>Allowed<wbr>For<wbr>Aad<wbr>Tenant<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Allowed Aad Tenant Ids For Linking.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -1458,6 +1664,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_publicnetworkaccessenabled_go">
+<a href="#state_publicnetworkaccessenabled_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether public network access is allowed for the Cognitive Account. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_purviewid_go">
+<a href="#state_purviewid_go" style="color: inherit; text-decoration: inherit;">Purview<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of purview account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
@@ -1536,6 +1760,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_computesubnetid_nodejs">
+<a href="#state_computesubnetid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subnet ID used for computes in workspace
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_connectivityendpoints_nodejs">
 <a href="#state_connectivityendpoints_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Endpoints</a>
 </span>
@@ -1581,6 +1814,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_linkingallowedforaadtenantids_nodejs">
+<a href="#state_linkingallowedforaadtenantids_nodejs" style="color: inherit; text-decoration: inherit;">linking<wbr>Allowed<wbr>For<wbr>Aad<wbr>Tenant<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Allowed Aad Tenant Ids For Linking.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -1615,6 +1857,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_publicnetworkaccessenabled_nodejs">
+<a href="#state_publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether public network access is allowed for the Cognitive Account. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_purviewid_nodejs">
+<a href="#state_purviewid_nodejs" style="color: inherit; text-decoration: inherit;">purview<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of purview account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
@@ -1693,6 +1953,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_compute_subnet_id_python">
+<a href="#state_compute_subnet_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>subnet_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Subnet ID used for computes in workspace
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_connectivity_endpoints_python">
 <a href="#state_connectivity_endpoints_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>endpoints</a>
 </span>
@@ -1738,6 +2007,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_linking_allowed_for_aad_tenant_ids_python">
+<a href="#state_linking_allowed_for_aad_tenant_ids_python" style="color: inherit; text-decoration: inherit;">linking_<wbr>allowed_<wbr>for_<wbr>aad_<wbr>tenant_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Allowed Aad Tenant Ids For Linking.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -1772,6 +2050,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_public_network_access_enabled_python">
+<a href="#state_public_network_access_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether public network access is allowed for the Cognitive Account. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_purview_id_python">
+<a href="#state_purview_id_python" style="color: inherit; text-decoration: inherit;">purview_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of purview account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
@@ -2014,6 +2310,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="lastcommitid_csharp">
+<a href="#lastcommitid_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Commit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last commit ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
 </span>
@@ -2070,6 +2375,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastcommitid_go">
+<a href="#lastcommitid_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Commit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last commit ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
@@ -2130,6 +2444,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="lastcommitid_nodejs">
+<a href="#lastcommitid_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Commit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last commit ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
@@ -2186,6 +2509,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_commit_id_python">
+<a href="#last_commit_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>commit_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The last commit ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
@@ -2336,6 +2668,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the GitHub Enterprise host name. For example: https://github.mydomain.com.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastcommitid_csharp">
+<a href="#lastcommitid_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Commit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last commit ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2385,6 +2726,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the GitHub Enterprise host name. For example: https://github.mydomain.com.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastcommitid_go">
+<a href="#lastcommitid_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Commit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last commit ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2434,6 +2784,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the GitHub Enterprise host name. For example: https://github.mydomain.com.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastcommitid_nodejs">
+<a href="#lastcommitid_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Commit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last commit ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2483,6 +2842,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the GitHub Enterprise host name. For example: https://github.mydomain.com.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_commit_id_python">
+<a href="#last_commit_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>commit_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The last commit ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
