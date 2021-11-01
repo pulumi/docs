@@ -1,0 +1,11 @@
+id = "daniel-bradley"
+name = "Daniel Bradley"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "danielrbradley"
+linkedin = "danielrbradley"
+twitter = "danielrbradley"
