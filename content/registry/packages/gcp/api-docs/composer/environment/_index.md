@@ -36,6 +36,7 @@ To get more information about Environments, see:
     deletion. [More about Composer's use of Cloud Storage](https://cloud.google.com/composer/docs/concepts/cloud-storage).
   * Please review the [known issues](https://cloud.google.com/composer/docs/known-issues) for Composer if you are having problems.
 
+
 {{% examples %}}
 
 ## Example Usage
@@ -1314,7 +1315,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally
 by Apache Airflow software. This field is supported for Cloud
-Composer environments in versions composer-1.*.*-airflow-*.*.*.
+Composer environments in versions composer-1.*.*-airflow-*.*.*. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionconfig_csharp">
@@ -1325,8 +1326,16 @@ Composer environments in versions composer-1.*.*-airflow-*.*.*.
     </dt>
     <dd>{{% md %}}The encryption options for the Cloud Composer environment and its
 dependencies. This field is supported for Cloud Composer environments in
-versions composer-1.*.*-airflow-*.*.*.
+versions composer-1.*.*-airflow-*.*.*. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="environmentsize_csharp">
+<a href="#environmentsize_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gkecluster_csharp">
 <a href="#gkecluster_csharp" style="color: inherit; text-decoration: inherit;">Gke<wbr>Cluster</a>
@@ -1342,7 +1351,7 @@ versions composer-1.*.*-airflow-*.*.*.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigmaintenancewindow">Environment<wbr>Config<wbr>Maintenance<wbr>Window</a></span>
     </dt>
-    <dd>{{% md %}}The configuration settings for Cloud Composer maintenance window.
+    <dd>{{% md %}}The configuration settings for Cloud Composer maintenance window. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeconfig_csharp">
@@ -1392,7 +1401,7 @@ composer-1.*.*-airflow-*.*.*.
     </dt>
     <dd>{{% md %}}The configuration settings for the Airflow web server App Engine instance.
 This field is supported for Cloud Composer environments in versions
-composer-1.*.*-airflow-*.*.*.
+composer-1.*.*-airflow-*.*.*. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webservernetworkaccesscontrol_csharp">
@@ -1401,7 +1410,11 @@ composer-1.*.*-airflow-*.*.*.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The network-level access control policy for the Airflow web server.
+If unspecified, no network-level access restrictions will be applied.
+This field is supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workloadsconfig_csharp">
 <a href="#workloadsconfig_csharp" style="color: inherit; text-decoration: inherit;">Workloads<wbr>Config</a>
@@ -1442,7 +1455,7 @@ versions composer-2.*.*-airflow-*.*.* and newer.
     </dt>
     <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally
 by Apache Airflow software. This field is supported for Cloud
-Composer environments in versions composer-1.*.*-airflow-*.*.*.
+Composer environments in versions composer-1.*.*-airflow-*.*.*. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionconfig_go">
@@ -1453,8 +1466,16 @@ Composer environments in versions composer-1.*.*-airflow-*.*.*.
     </dt>
     <dd>{{% md %}}The encryption options for the Cloud Composer environment and its
 dependencies. This field is supported for Cloud Composer environments in
-versions composer-1.*.*-airflow-*.*.*.
+versions composer-1.*.*-airflow-*.*.*. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="environmentsize_go">
+<a href="#environmentsize_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gkecluster_go">
 <a href="#gkecluster_go" style="color: inherit; text-decoration: inherit;">Gke<wbr>Cluster</a>
@@ -1470,7 +1491,7 @@ versions composer-1.*.*-airflow-*.*.*.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigmaintenancewindow">Environment<wbr>Config<wbr>Maintenance<wbr>Window</a></span>
     </dt>
-    <dd>{{% md %}}The configuration settings for Cloud Composer maintenance window.
+    <dd>{{% md %}}The configuration settings for Cloud Composer maintenance window. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeconfig_go">
@@ -1520,7 +1541,7 @@ composer-1.*.*-airflow-*.*.*.
     </dt>
     <dd>{{% md %}}The configuration settings for the Airflow web server App Engine instance.
 This field is supported for Cloud Composer environments in versions
-composer-1.*.*-airflow-*.*.*.
+composer-1.*.*-airflow-*.*.*. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webservernetworkaccesscontrol_go">
@@ -1529,7 +1550,11 @@ composer-1.*.*-airflow-*.*.*.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The network-level access control policy for the Airflow web server.
+If unspecified, no network-level access restrictions will be applied.
+This field is supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workloadsconfig_go">
 <a href="#workloadsconfig_go" style="color: inherit; text-decoration: inherit;">Workloads<wbr>Config</a>
@@ -1570,7 +1595,7 @@ versions composer-2.*.*-airflow-*.*.* and newer.
     </dt>
     <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally
 by Apache Airflow software. This field is supported for Cloud
-Composer environments in versions composer-1.*.*-airflow-*.*.*.
+Composer environments in versions composer-1.*.*-airflow-*.*.*. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionconfig_nodejs">
@@ -1581,8 +1606,16 @@ Composer environments in versions composer-1.*.*-airflow-*.*.*.
     </dt>
     <dd>{{% md %}}The encryption options for the Cloud Composer environment and its
 dependencies. This field is supported for Cloud Composer environments in
-versions composer-1.*.*-airflow-*.*.*.
+versions composer-1.*.*-airflow-*.*.*. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="environmentsize_nodejs">
+<a href="#environmentsize_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gkecluster_nodejs">
 <a href="#gkecluster_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster</a>
@@ -1598,7 +1631,7 @@ versions composer-1.*.*-airflow-*.*.*.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigmaintenancewindow">Environment<wbr>Config<wbr>Maintenance<wbr>Window</a></span>
     </dt>
-    <dd>{{% md %}}The configuration settings for Cloud Composer maintenance window.
+    <dd>{{% md %}}The configuration settings for Cloud Composer maintenance window. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeconfig_nodejs">
@@ -1648,7 +1681,7 @@ composer-1.*.*-airflow-*.*.*.
     </dt>
     <dd>{{% md %}}The configuration settings for the Airflow web server App Engine instance.
 This field is supported for Cloud Composer environments in versions
-composer-1.*.*-airflow-*.*.*.
+composer-1.*.*-airflow-*.*.*. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webservernetworkaccesscontrol_nodejs">
@@ -1657,7 +1690,11 @@ composer-1.*.*-airflow-*.*.*.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The network-level access control policy for the Airflow web server.
+If unspecified, no network-level access restrictions will be applied.
+This field is supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workloadsconfig_nodejs">
 <a href="#workloadsconfig_nodejs" style="color: inherit; text-decoration: inherit;">workloads<wbr>Config</a>
@@ -1698,7 +1735,7 @@ versions composer-2.*.*-airflow-*.*.* and newer.
     </dt>
     <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally
 by Apache Airflow software. This field is supported for Cloud
-Composer environments in versions composer-1.*.*-airflow-*.*.*.
+Composer environments in versions composer-1.*.*-airflow-*.*.*. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_config_python">
@@ -1709,8 +1746,16 @@ Composer environments in versions composer-1.*.*-airflow-*.*.*.
     </dt>
     <dd>{{% md %}}The encryption options for the Cloud Composer environment and its
 dependencies. This field is supported for Cloud Composer environments in
-versions composer-1.*.*-airflow-*.*.*.
+versions composer-1.*.*-airflow-*.*.*. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="environment_size_python">
+<a href="#environment_size_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gke_cluster_python">
 <a href="#gke_cluster_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>cluster</a>
@@ -1726,7 +1771,7 @@ versions composer-1.*.*-airflow-*.*.*.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigmaintenancewindow">Environment<wbr>Config<wbr>Maintenance<wbr>Window</a></span>
     </dt>
-    <dd>{{% md %}}The configuration settings for Cloud Composer maintenance window.
+    <dd>{{% md %}}The configuration settings for Cloud Composer maintenance window. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_config_python">
@@ -1776,7 +1821,7 @@ composer-1.*.*-airflow-*.*.*.
     </dt>
     <dd>{{% md %}}The configuration settings for the Airflow web server App Engine instance.
 This field is supported for Cloud Composer environments in versions
-composer-1.*.*-airflow-*.*.*.
+composer-1.*.*-airflow-*.*.*. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="web_server_network_access_control_python">
@@ -1785,7 +1830,11 @@ composer-1.*.*-airflow-*.*.*.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The network-level access control policy for the Airflow web server.
+If unspecified, no network-level access restrictions will be applied.
+This field is supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workloads_config_python">
 <a href="#workloads_config_python" style="color: inherit; text-decoration: inherit;">workloads_<wbr>config</a>
@@ -2068,21 +2117,7 @@ Example values: 'FREQ=WEEKLY;BYDAY=TU,WE', 'FREQ=DAILY'.
 <h4 id="environmentconfignodeconfig">Environment<wbr>Config<wbr>Node<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="zone_csharp">
-<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Compute Engine zone in which to deploy the VMs running the
-Apache Airflow software, specified as the zone name or
-relative resource name (e.g. "projects/{project}/zones/{zone}"). Must
-belong to the enclosing environment's project and region. This field is
-supported for Cloud Composer environments in versions
-composer-1.*.*-airflow-*.*.*.
-{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -2101,7 +2136,11 @@ for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Deploys 'ip-masq-agent' daemon set in the GKE cluster and defines
+nonMasqueradeCIDRs equals to pod IP range so IP masquerading is used for
+all destination addresses, except between pods traffic.
+See the [documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipallocationpolicy_csharp">
 <a href="#ipallocationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
@@ -2200,14 +2239,10 @@ used to identify valid sources or targets for network
 firewalls. Each tag within the list must comply with RFC1035.
 Cannot be updated. This field is supported for Cloud Composer
 environments in versions composer-1.*.*-airflow-*.*.*.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="zone_go">
-<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2218,7 +2253,11 @@ relative resource name (e.g. "projects/{project}/zones/{zone}"). Must
 belong to the enclosing environment's project and region. This field is
 supported for Cloud Composer environments in versions
 composer-1.*.*-airflow-*.*.*.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -2237,7 +2276,11 @@ for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Deploys 'ip-masq-agent' daemon set in the GKE cluster and defines
+nonMasqueradeCIDRs equals to pod IP range so IP masquerading is used for
+all destination addresses, except between pods traffic.
+See the [documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipallocationpolicy_go">
 <a href="#ipallocationpolicy_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
@@ -2336,14 +2379,10 @@ used to identify valid sources or targets for network
 firewalls. Each tag within the list must comply with RFC1035.
 Cannot be updated. This field is supported for Cloud Composer
 environments in versions composer-1.*.*-airflow-*.*.*.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="zone_nodejs">
-<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2354,7 +2393,11 @@ relative resource name (e.g. "projects/{project}/zones/{zone}"). Must
 belong to the enclosing environment's project and region. This field is
 supported for Cloud Composer environments in versions
 composer-1.*.*-airflow-*.*.*.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
@@ -2373,7 +2416,11 @@ for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Deploys 'ip-masq-agent' daemon set in the GKE cluster and defines
+nonMasqueradeCIDRs equals to pod IP range so IP masquerading is used for
+all destination addresses, except between pods traffic.
+See the [documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipallocationpolicy_nodejs">
 <a href="#ipallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policy</a>
@@ -2472,17 +2519,13 @@ used to identify valid sources or targets for network
 firewalls. Each tag within the list must comply with RFC1035.
 Cannot be updated. This field is supported for Cloud Composer
 environments in versions composer-1.*.*-airflow-*.*.*.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="zone_python">
-<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Compute Engine zone in which to deploy the VMs running the
 Apache Airflow software, specified as the zone name or
@@ -2490,7 +2533,11 @@ relative resource name (e.g. "projects/{project}/zones/{zone}"). Must
 belong to the enclosing environment's project and region. This field is
 supported for Cloud Composer environments in versions
 composer-1.*.*-airflow-*.*.*.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -2509,7 +2556,11 @@ for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Deploys 'ip-masq-agent' daemon set in the GKE cluster and defines
+nonMasqueradeCIDRs equals to pod IP range so IP masquerading is used for
+all destination addresses, except between pods traffic.
+See the [documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent).
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_allocation_policy_python">
 <a href="#ip_allocation_policy_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>policy</a>
@@ -2608,6 +2659,20 @@ used to identify valid sources or targets for network
 firewalls. Each tag within the list must comply with RFC1035.
 Cannot be updated. This field is supported for Cloud Composer
 environments in versions composer-1.*.*-airflow-*.*.*.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Compute Engine zone in which to deploy the VMs running the
+Apache Airflow software, specified as the zone name or
+relative resource name (e.g. "projects/{project}/zones/{zone}"). Must
+belong to the enclosing environment's project and region. This field is
+supported for Cloud Composer environments in versions
+composer-1.*.*-airflow-*.*.*.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2946,7 +3011,9 @@ composer-1.*.*-airflow-*.*.*.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}When enabled, IPs from public (non-RFC1918) ranges can be used for
+`ip_allocation_policy.cluster_ipv4_cidr_block` and `ip_allocation_policy.service_ipv4_cidr_block`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masteripv4cidrblock_csharp">
 <a href="#masteripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Ipv4Cidr<wbr>Block</a>
@@ -3010,7 +3077,9 @@ composer-1.*.*-airflow-*.*.*.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}When enabled, IPs from public (non-RFC1918) ranges can be used for
+`ip_allocation_policy.cluster_ipv4_cidr_block` and `ip_allocation_policy.service_ipv4_cidr_block`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masteripv4cidrblock_go">
 <a href="#masteripv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Ipv4Cidr<wbr>Block</a>
@@ -3074,7 +3143,9 @@ composer-1.*.*-airflow-*.*.*.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}When enabled, IPs from public (non-RFC1918) ranges can be used for
+`ip_allocation_policy.cluster_ipv4_cidr_block` and `ip_allocation_policy.service_ipv4_cidr_block`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masteripv4cidrblock_nodejs">
 <a href="#masteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Ipv4Cidr<wbr>Block</a>
@@ -3138,7 +3209,9 @@ composer-1.*.*-airflow-*.*.*.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}When enabled, IPs from public (non-RFC1918) ranges can be used for
+`ip_allocation_policy.cluster_ipv4_cidr_block` and `ip_allocation_policy.service_ipv4_cidr_block`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="master_ipv4_cidr_block_python">
 <a href="#master_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">master_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
@@ -4438,24 +4511,6 @@ IP range prefixes should be properly truncated. For example,
     <dd>{{% md %}}Storage (GB) request and limit for Airflow web server.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
-## Import
-
-
-Environment can be imported using any of these accepted formats
-
-```sh
- $ pulumi import gcp:composer/environment:Environment default projects/{{project}}/locations/{{region}}/environments/{{name}}
-```
-
-```sh
- $ pulumi import gcp:composer/environment:Environment default {{project}}/{{region}}/{{name}}
-```
-
-```sh
- $ pulumi import gcp:composer/environment:Environment default {{name}}
-```
-
-
 
 
 <h2 id="package-details">Package Details</h2>

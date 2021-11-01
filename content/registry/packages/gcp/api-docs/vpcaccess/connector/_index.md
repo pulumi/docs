@@ -486,7 +486,8 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource (Max 25 characters).
+    <dd>{{% md %}}Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
+https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_csharp">
@@ -524,6 +525,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#connectorsubnet">Connector<wbr>Subnet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The subnet in which to house the connector
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -590,7 +592,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource (Max 25 characters).
+    <dd>{{% md %}}Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
+https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_go">
@@ -628,6 +631,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#connectorsubnet">Connector<wbr>Subnet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The subnet in which to house the connector
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -694,7 +698,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource (Max 25 characters).
+    <dd>{{% md %}}Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
+https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_nodejs">
@@ -732,6 +737,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#connectorsubnet">Connector<wbr>Subnet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The subnet in which to house the connector
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -798,7 +804,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource (Max 25 characters).
+    <dd>{{% md %}}Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
+https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_python">
@@ -836,6 +843,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#connectorsubnet">Connector<wbr>Subnet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The subnet in which to house the connector
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1167,7 +1175,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource (Max 25 characters).
+    <dd>{{% md %}}Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
+https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
@@ -1223,6 +1232,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#connectorsubnet">Connector<wbr>Subnet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The subnet in which to house the connector
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1289,7 +1299,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource (Max 25 characters).
+    <dd>{{% md %}}Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
+https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
@@ -1345,6 +1356,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#connectorsubnet">Connector<wbr>Subnet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The subnet in which to house the connector
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1411,7 +1423,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource (Max 25 characters).
+    <dd>{{% md %}}Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
+https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
@@ -1467,6 +1480,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#connectorsubnet">Connector<wbr>Subnet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The subnet in which to house the connector
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1533,7 +1547,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource (Max 25 characters).
+    <dd>{{% md %}}Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
+https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
@@ -1589,6 +1604,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#connectorsubnet">Connector<wbr>Subnet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The subnet in which to house the connector
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1612,7 +1628,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
+https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1620,7 +1638,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1632,7 +1651,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
+https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1640,7 +1661,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1652,7 +1674,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
+https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1660,7 +1684,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1672,7 +1697,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
+https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1680,7 +1707,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

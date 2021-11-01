@@ -624,7 +624,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">List&lt;Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
+    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetpools_csharp">
@@ -773,7 +773,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">[]Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
+    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetpools_go">
@@ -922,7 +922,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
+    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetpools_nodejs">
@@ -1071,7 +1071,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">Sequence[Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
+    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_pools_python">
@@ -1619,7 +1619,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">List&lt;Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
+    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuses_csharp">
@@ -1812,7 +1812,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">[]Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
+    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuses_go">
@@ -2005,7 +2005,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
+    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuses_nodejs">
@@ -2198,7 +2198,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">Sequence[Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
+    <dd>{{% md %}}) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuses_python">

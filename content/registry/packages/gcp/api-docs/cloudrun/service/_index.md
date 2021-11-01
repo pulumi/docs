@@ -4020,7 +4020,9 @@ that the system will manipulate this based on routability and load.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespecvolume">List&lt;Service<wbr>Template<wbr>Spec<wbr>Volume&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Volume represents a named volume in a container.
+Structure is documented below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4090,7 +4092,9 @@ that the system will manipulate this based on routability and load.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespecvolume">[]Service<wbr>Template<wbr>Spec<wbr>Volume</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Volume represents a named volume in a container.
+Structure is documented below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4160,7 +4164,9 @@ that the system will manipulate this based on routability and load.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespecvolume">Service<wbr>Template<wbr>Spec<wbr>Volume[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Volume represents a named volume in a container.
+Structure is documented below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4230,7 +4236,9 @@ that the system will manipulate this based on routability and load.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespecvolume">Sequence[Service<wbr>Template<wbr>Spec<wbr>Volume]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Volume represents a named volume in a container.
+Structure is documented below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetemplatespeccontainer">Service<wbr>Template<wbr>Spec<wbr>Container</h4>
@@ -4339,7 +4347,10 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainervolumemount">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Volume<wbr>Mount&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}Volume to mount into the container's filesystem.
+Only supports SecretVolumeSources.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="workingdir_csharp">
 <a href="#workingdir_csharp" style="color: inherit; text-decoration: inherit;">Working<wbr>Dir</a>
@@ -4459,7 +4470,10 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainervolumemount">[]Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Volume<wbr>Mount</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}Volume to mount into the container's filesystem.
+Only supports SecretVolumeSources.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="workingdir_go">
 <a href="#workingdir_go" style="color: inherit; text-decoration: inherit;">Working<wbr>Dir</a>
@@ -4579,7 +4593,10 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainervolumemount">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Volume<wbr>Mount[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}Volume to mount into the container's filesystem.
+Only supports SecretVolumeSources.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="workingdir_nodejs">
 <a href="#workingdir_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Dir</a>
@@ -4699,7 +4716,10 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainervolumemount">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Volume<wbr>Mount]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}Volume to mount into the container's filesystem.
+Only supports SecretVolumeSources.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="working_dir_python">
 <a href="#working_dir_python" style="color: inherit; text-decoration: inherit;">working_<wbr>dir</a>
@@ -4751,7 +4771,9 @@ Defaults to "".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Source for the environment variable's value. Only supports secret_key_ref.
+Structure is documented below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4788,7 +4810,9 @@ Defaults to "".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Source for the environment variable's value. Only supports secret_key_ref.
+Structure is documented below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4825,7 +4849,9 @@ Defaults to "".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Source for the environment variable's value. Only supports secret_key_ref.
+Structure is documented below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4862,7 +4888,9 @@ Defaults to "".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Source for the environment variable's value. Only supports secret_key_ref.
+Structure is documented below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetemplatespeccontainerenvfrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From</h4>

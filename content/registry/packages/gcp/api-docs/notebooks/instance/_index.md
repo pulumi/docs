@@ -965,7 +965,8 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of vNIC driver. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
+    <dd>{{% md %}}The type of vNIC driver.
+Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noproxyaccess_csharp">
@@ -1023,6 +1024,7 @@ Format: projects/{project_id}
         <span class="property-type"><a href="#instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reservation Affinity for consuming Zonal reservation.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_csharp">
@@ -1294,7 +1296,8 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of vNIC driver. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
+    <dd>{{% md %}}The type of vNIC driver.
+Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noproxyaccess_go">
@@ -1352,6 +1355,7 @@ Format: projects/{project_id}
         <span class="property-type"><a href="#instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reservation Affinity for consuming Zonal reservation.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_go">
@@ -1623,7 +1627,8 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of vNIC driver. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
+    <dd>{{% md %}}The type of vNIC driver.
+Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noproxyaccess_nodejs">
@@ -1681,6 +1686,7 @@ Format: projects/{project_id}
         <span class="property-type"><a href="#instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reservation Affinity for consuming Zonal reservation.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_nodejs">
@@ -1952,7 +1958,8 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of vNIC driver. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
+    <dd>{{% md %}}The type of vNIC driver.
+Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="no_proxy_access_python">
@@ -2010,6 +2017,7 @@ Format: projects/{project_id}
         <span class="property-type"><a href="#instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reservation Affinity for consuming Zonal reservation.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_account_python">
@@ -2567,7 +2575,8 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of vNIC driver. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
+    <dd>{{% md %}}The type of vNIC driver.
+Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noproxyaccess_csharp">
@@ -2634,6 +2643,7 @@ Format: projects/{project_id}
         <span class="property-type"><a href="#instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reservation Affinity for consuming Zonal reservation.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccount_csharp">
@@ -2914,7 +2924,8 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of vNIC driver. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
+    <dd>{{% md %}}The type of vNIC driver.
+Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noproxyaccess_go">
@@ -2981,6 +2992,7 @@ Format: projects/{project_id}
         <span class="property-type"><a href="#instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reservation Affinity for consuming Zonal reservation.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccount_go">
@@ -3261,7 +3273,8 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of vNIC driver. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
+    <dd>{{% md %}}The type of vNIC driver.
+Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noproxyaccess_nodejs">
@@ -3328,6 +3341,7 @@ Format: projects/{project_id}
         <span class="property-type"><a href="#instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reservation Affinity for consuming Zonal reservation.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccount_nodejs">
@@ -3608,7 +3622,8 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of vNIC driver. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
+    <dd>{{% md %}}The type of vNIC driver.
+Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_no_proxy_access_python">
@@ -3675,6 +3690,7 @@ Format: projects/{project_id}
         <span class="property-type"><a href="#instancereservationaffinity">Instance<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reservation Affinity for consuming Zonal reservation.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_account_python">

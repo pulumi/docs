@@ -2914,7 +2914,7 @@ documented below.
     <dd>{{% md %}}When set, configures hive partitioning
 support. Not all storage formats support hive partitioning -- requesting hive
 partitioning on an unsupported format will lead to an error, as will providing
-an invalid specification.
+an invalid specification. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreunknownvalues_csharp">
@@ -3037,7 +3037,7 @@ documented below.
     <dd>{{% md %}}When set, configures hive partitioning
 support. Not all storage formats support hive partitioning -- requesting hive
 partitioning on an unsupported format will lead to an error, as will providing
-an invalid specification.
+an invalid specification. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreunknownvalues_go">
@@ -3160,7 +3160,7 @@ documented below.
     <dd>{{% md %}}When set, configures hive partitioning
 support. Not all storage formats support hive partitioning -- requesting hive
 partitioning on an unsupported format will lead to an error, as will providing
-an invalid specification.
+an invalid specification. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreunknownvalues_nodejs">
@@ -3283,7 +3283,7 @@ documented below.
     <dd>{{% md %}}When set, configures hive partitioning
 support. Not all storage formats support hive partitioning -- requesting hive
 partitioning on an unsupported format will lead to an error, as will providing
-an invalid specification.
+an invalid specification. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_unknown_values_python">

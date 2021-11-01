@@ -20,6 +20,7 @@ and [the API reference](https://cloud.google.com/kubernetes-engine/docs/referenc
 passwords as well as certificate outputs will be stored in the raw state as
 plaintext. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
+
 {{% examples %}}
 
 ## Example Usage
@@ -668,7 +669,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
+    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig). Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -686,8 +687,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdnsconfig">Cluster<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}})
-Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
+    <dd>{{% md %}}Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableautopilot_csharp">
@@ -738,8 +738,7 @@ and will be automatically deleted after 30 days.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}})
-Whether L4ILB Subsetting is enabled for this cluster.
+    <dd>{{% md %}}Whether L4ILB Subsetting is enabled for this cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelegacyabac_csharp">
@@ -842,8 +841,8 @@ write logs to. Available options include `logging.googleapis.com`(Legacy Stackdr
     </dt>
     <dd>{{% md %}}The maintenance policy to use for the cluster. Structure is
 documented below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="masterauth_csharp">
 <a href="#masterauth_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Auth</a>
 </span>
@@ -856,7 +855,7 @@ your service account has permission to get credentials for your GKE cluster. If
 you see an unexpected diff removing a username/password or unsetting your client
 cert, ensure you have the `container.clusters.getCredentials` permission.
 Structure is documented below. This has been deprecated as of GKE 1.19.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Basic authentication was removed for GKE cluster versions &gt;= 1.19.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="masterauthorizednetworksconfig_csharp">
 <a href="#masterauthorizednetworksconfig_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Authorized<wbr>Networks<wbr>Config</a>
@@ -864,9 +863,11 @@ Structure is documented below. This has been deprecated as of GKE 1.19.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The desired configuration options
-for master authorized networks. Omit the nested `cidr_blocks` attribute to disallow
-external access (except the cluster node IPs, which GKE automatically whitelists).
+    <dd>{{% md %}}The desired
+configuration options for master authorized networks. Omit the
+nested `cidr_blocks` attribute to disallow external access (except
+the cluster node IPs, which GKE automatically whitelists).
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minmasterversion_csharp">
@@ -1067,11 +1068,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
 feature, which provide more control over automatic upgrades of your GKE clusters.
 When updating this field, GKE imposes specific version requirements. See
-[Migrating between release channels](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#migrating_between_release_channels)
+[Selecting a new release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#selecting_a_new_release_channel)
 for more details; the `gcp.container.getEngineVersions` datasource can provide
 the default version for a channel. Note that removing the `release_channel`
 field from your config will cause the provider to stop managing your cluster's
-release channel, but will not un-enroll it. Instead, use the `"UNSPECIFIED"`
+release channel, but will not unenroll it. Instead, use the `"UNSPECIFIED"`
 channel. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1245,7 +1246,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
+    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig). Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -1263,8 +1264,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdnsconfig">Cluster<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}})
-Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
+    <dd>{{% md %}}Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableautopilot_go">
@@ -1315,8 +1315,7 @@ and will be automatically deleted after 30 days.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}})
-Whether L4ILB Subsetting is enabled for this cluster.
+    <dd>{{% md %}}Whether L4ILB Subsetting is enabled for this cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelegacyabac_go">
@@ -1419,8 +1418,8 @@ write logs to. Available options include `logging.googleapis.com`(Legacy Stackdr
     </dt>
     <dd>{{% md %}}The maintenance policy to use for the cluster. Structure is
 documented below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="masterauth_go">
 <a href="#masterauth_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Auth</a>
 </span>
@@ -1433,7 +1432,7 @@ your service account has permission to get credentials for your GKE cluster. If
 you see an unexpected diff removing a username/password or unsetting your client
 cert, ensure you have the `container.clusters.getCredentials` permission.
 Structure is documented below. This has been deprecated as of GKE 1.19.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Basic authentication was removed for GKE cluster versions &gt;= 1.19.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="masterauthorizednetworksconfig_go">
 <a href="#masterauthorizednetworksconfig_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Authorized<wbr>Networks<wbr>Config</a>
@@ -1441,9 +1440,11 @@ Structure is documented below. This has been deprecated as of GKE 1.19.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The desired configuration options
-for master authorized networks. Omit the nested `cidr_blocks` attribute to disallow
-external access (except the cluster node IPs, which GKE automatically whitelists).
+    <dd>{{% md %}}The desired
+configuration options for master authorized networks. Omit the
+nested `cidr_blocks` attribute to disallow external access (except
+the cluster node IPs, which GKE automatically whitelists).
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minmasterversion_go">
@@ -1644,11 +1645,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
 feature, which provide more control over automatic upgrades of your GKE clusters.
 When updating this field, GKE imposes specific version requirements. See
-[Migrating between release channels](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#migrating_between_release_channels)
+[Selecting a new release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#selecting_a_new_release_channel)
 for more details; the `gcp.container.getEngineVersions` datasource can provide
 the default version for a channel. Note that removing the `release_channel`
 field from your config will cause the provider to stop managing your cluster's
-release channel, but will not un-enroll it. Instead, use the `"UNSPECIFIED"`
+release channel, but will not unenroll it. Instead, use the `"UNSPECIFIED"`
 channel. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1822,7 +1823,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
+    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig). Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -1840,8 +1841,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdnsconfig">Cluster<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}})
-Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
+    <dd>{{% md %}}Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableautopilot_nodejs">
@@ -1892,8 +1892,7 @@ and will be automatically deleted after 30 days.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}})
-Whether L4ILB Subsetting is enabled for this cluster.
+    <dd>{{% md %}}Whether L4ILB Subsetting is enabled for this cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelegacyabac_nodejs">
@@ -1996,8 +1995,8 @@ write logs to. Available options include `logging.googleapis.com`(Legacy Stackdr
     </dt>
     <dd>{{% md %}}The maintenance policy to use for the cluster. Structure is
 documented below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="masterauth_nodejs">
 <a href="#masterauth_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Auth</a>
 </span>
@@ -2010,7 +2009,7 @@ your service account has permission to get credentials for your GKE cluster. If
 you see an unexpected diff removing a username/password or unsetting your client
 cert, ensure you have the `container.clusters.getCredentials` permission.
 Structure is documented below. This has been deprecated as of GKE 1.19.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Basic authentication was removed for GKE cluster versions &gt;= 1.19.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="masterauthorizednetworksconfig_nodejs">
 <a href="#masterauthorizednetworksconfig_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Authorized<wbr>Networks<wbr>Config</a>
@@ -2018,9 +2017,11 @@ Structure is documented below. This has been deprecated as of GKE 1.19.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The desired configuration options
-for master authorized networks. Omit the nested `cidr_blocks` attribute to disallow
-external access (except the cluster node IPs, which GKE automatically whitelists).
+    <dd>{{% md %}}The desired
+configuration options for master authorized networks. Omit the
+nested `cidr_blocks` attribute to disallow external access (except
+the cluster node IPs, which GKE automatically whitelists).
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minmasterversion_nodejs">
@@ -2221,11 +2222,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
 feature, which provide more control over automatic upgrades of your GKE clusters.
 When updating this field, GKE imposes specific version requirements. See
-[Migrating between release channels](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#migrating_between_release_channels)
+[Selecting a new release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#selecting_a_new_release_channel)
 for more details; the `gcp.container.getEngineVersions` datasource can provide
 the default version for a channel. Note that removing the `release_channel`
 field from your config will cause the provider to stop managing your cluster's
-release channel, but will not un-enroll it. Instead, use the `"UNSPECIFIED"`
+release channel, but will not unenroll it. Instead, use the `"UNSPECIFIED"`
 channel. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2399,7 +2400,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
+    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig). Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -2417,8 +2418,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdnsconfig">Cluster<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}})
-Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
+    <dd>{{% md %}}Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_autopilot_python">
@@ -2469,8 +2469,7 @@ and will be automatically deleted after 30 days.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}})
-Whether L4ILB Subsetting is enabled for this cluster.
+    <dd>{{% md %}}Whether L4ILB Subsetting is enabled for this cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_legacy_abac_python">
@@ -2573,8 +2572,8 @@ write logs to. Available options include `logging.googleapis.com`(Legacy Stackdr
     </dt>
     <dd>{{% md %}}The maintenance policy to use for the cluster. Structure is
 documented below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="master_auth_python">
 <a href="#master_auth_python" style="color: inherit; text-decoration: inherit;">master_<wbr>auth</a>
 </span>
@@ -2587,7 +2586,7 @@ your service account has permission to get credentials for your GKE cluster. If
 you see an unexpected diff removing a username/password or unsetting your client
 cert, ensure you have the `container.clusters.getCredentials` permission.
 Structure is documented below. This has been deprecated as of GKE 1.19.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Basic authentication was removed for GKE cluster versions &gt;= 1.19.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="master_authorized_networks_config_python">
 <a href="#master_authorized_networks_config_python" style="color: inherit; text-decoration: inherit;">master_<wbr>authorized_<wbr>networks_<wbr>config</a>
@@ -2595,9 +2594,11 @@ Structure is documented below. This has been deprecated as of GKE 1.19.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The desired configuration options
-for master authorized networks. Omit the nested `cidr_blocks` attribute to disallow
-external access (except the cluster node IPs, which GKE automatically whitelists).
+    <dd>{{% md %}}The desired
+configuration options for master authorized networks. Omit the
+nested `cidr_blocks` attribute to disallow external access (except
+the cluster node IPs, which GKE automatically whitelists).
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_master_version_python">
@@ -2798,11 +2799,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
 feature, which provide more control over automatic upgrades of your GKE clusters.
 When updating this field, GKE imposes specific version requirements. See
-[Migrating between release channels](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#migrating_between_release_channels)
+[Selecting a new release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#selecting_a_new_release_channel)
 for more details; the `gcp.container.getEngineVersions` datasource can provide
 the default version for a channel. Note that removing the `release_channel`
 field from your config will cause the provider to stop managing your cluster's
-release channel, but will not un-enroll it. Instead, use the `"UNSPECIFIED"`
+release channel, but will not unenroll it. Instead, use the `"UNSPECIFIED"`
 channel. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2895,17 +2896,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="instancegroupurls_csharp">
 <a href="#instancegroupurls_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of instance group URLs which have been assigned
-to the cluster.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}List of instance group URLs which have been assigned to the cluster.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use node_pool.instance_group_urls instead.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="labelfingerprint_csharp">
 <a href="#labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -2922,9 +2922,8 @@ to the cluster.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current version of the master in the cluster. This may
-be different than the `min_master_version` set in the config if the master
-has been updated by GKE.
+    <dd>{{% md %}}The current version of the master in the cluster. This may be different than the min_master_version set in the config if
+the master has been updated by GKE.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="operation_csharp">
@@ -2941,7 +2940,7 @@ has been updated by GKE.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The server-defined URL for the resource.
+    <dd>{{% md %}}Server-defined URL for the resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicesipv4cidr_csharp">
@@ -2950,10 +2949,8 @@ has been updated by GKE.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address range of the Kubernetes services in this
-cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last
-`/16` from the container CIDR.
+    <dd>{{% md %}}The IP address range of the Kubernetes services in this cluster, in CIDR notation (e.g. 1.2.3.4/29). Service addresses
+are typically put in the last /16 from the container CIDR.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tpuipv4cidrblock_csharp">
@@ -2962,9 +2959,7 @@ notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address range of the Cloud TPUs in this cluster, in
-[CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-notation (e.g. `1.2.3.4/29`).
+    <dd>{{% md %}}The IP address range of the Cloud TPUs in this cluster, in CIDR notation (e.g. 1.2.3.4/29).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2986,17 +2981,16 @@ notation (e.g. `1.2.3.4/29`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="instancegroupurls_go">
 <a href="#instancegroupurls_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of instance group URLs which have been assigned
-to the cluster.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}List of instance group URLs which have been assigned to the cluster.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use node_pool.instance_group_urls instead.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="labelfingerprint_go">
 <a href="#labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -3013,9 +3007,8 @@ to the cluster.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current version of the master in the cluster. This may
-be different than the `min_master_version` set in the config if the master
-has been updated by GKE.
+    <dd>{{% md %}}The current version of the master in the cluster. This may be different than the min_master_version set in the config if
+the master has been updated by GKE.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="operation_go">
@@ -3032,7 +3025,7 @@ has been updated by GKE.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The server-defined URL for the resource.
+    <dd>{{% md %}}Server-defined URL for the resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicesipv4cidr_go">
@@ -3041,10 +3034,8 @@ has been updated by GKE.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address range of the Kubernetes services in this
-cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last
-`/16` from the container CIDR.
+    <dd>{{% md %}}The IP address range of the Kubernetes services in this cluster, in CIDR notation (e.g. 1.2.3.4/29). Service addresses
+are typically put in the last /16 from the container CIDR.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tpuipv4cidrblock_go">
@@ -3053,9 +3044,7 @@ notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address range of the Cloud TPUs in this cluster, in
-[CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-notation (e.g. `1.2.3.4/29`).
+    <dd>{{% md %}}The IP address range of the Cloud TPUs in this cluster, in CIDR notation (e.g. 1.2.3.4/29).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3077,17 +3066,16 @@ notation (e.g. `1.2.3.4/29`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="instancegroupurls_nodejs">
 <a href="#instancegroupurls_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Group<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of instance group URLs which have been assigned
-to the cluster.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}List of instance group URLs which have been assigned to the cluster.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use node_pool.instance_group_urls instead.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="labelfingerprint_nodejs">
 <a href="#labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
@@ -3104,9 +3092,8 @@ to the cluster.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current version of the master in the cluster. This may
-be different than the `min_master_version` set in the config if the master
-has been updated by GKE.
+    <dd>{{% md %}}The current version of the master in the cluster. This may be different than the min_master_version set in the config if
+the master has been updated by GKE.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="operation_nodejs">
@@ -3123,7 +3110,7 @@ has been updated by GKE.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The server-defined URL for the resource.
+    <dd>{{% md %}}Server-defined URL for the resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicesipv4cidr_nodejs">
@@ -3132,10 +3119,8 @@ has been updated by GKE.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address range of the Kubernetes services in this
-cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last
-`/16` from the container CIDR.
+    <dd>{{% md %}}The IP address range of the Kubernetes services in this cluster, in CIDR notation (e.g. 1.2.3.4/29). Service addresses
+are typically put in the last /16 from the container CIDR.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tpuipv4cidrblock_nodejs">
@@ -3144,9 +3129,7 @@ notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address range of the Cloud TPUs in this cluster, in
-[CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-notation (e.g. `1.2.3.4/29`).
+    <dd>{{% md %}}The IP address range of the Cloud TPUs in this cluster, in CIDR notation (e.g. 1.2.3.4/29).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3168,17 +3151,16 @@ notation (e.g. `1.2.3.4/29`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="instance_group_urls_python">
 <a href="#instance_group_urls_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of instance group URLs which have been assigned
-to the cluster.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}List of instance group URLs which have been assigned to the cluster.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use node_pool.instance_group_urls instead.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="label_fingerprint_python">
 <a href="#label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
@@ -3195,9 +3177,8 @@ to the cluster.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current version of the master in the cluster. This may
-be different than the `min_master_version` set in the config if the master
-has been updated by GKE.
+    <dd>{{% md %}}The current version of the master in the cluster. This may be different than the min_master_version set in the config if
+the master has been updated by GKE.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="operation_python">
@@ -3214,7 +3195,7 @@ has been updated by GKE.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The server-defined URL for the resource.
+    <dd>{{% md %}}Server-defined URL for the resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="services_ipv4_cidr_python">
@@ -3223,10 +3204,8 @@ has been updated by GKE.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP address range of the Kubernetes services in this
-cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last
-`/16` from the container CIDR.
+    <dd>{{% md %}}The IP address range of the Kubernetes services in this cluster, in CIDR notation (e.g. 1.2.3.4/29). Service addresses
+are typically put in the last /16 from the container CIDR.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tpu_ipv4_cidr_block_python">
@@ -3235,9 +3214,7 @@ notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP address range of the Cloud TPUs in this cluster, in
-[CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-notation (e.g. `1.2.3.4/29`).
+    <dd>{{% md %}}The IP address range of the Cloud TPUs in this cluster, in CIDR notation (e.g. 1.2.3.4/29).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3531,7 +3508,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
+    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig). Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -3549,8 +3526,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdnsconfig">Cluster<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}})
-Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
+    <dd>{{% md %}}Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableautopilot_csharp">
@@ -3601,8 +3577,7 @@ and will be automatically deleted after 30 days.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}})
-Whether L4ILB Subsetting is enabled for this cluster.
+    <dd>{{% md %}}Whether L4ILB Subsetting is enabled for this cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablelegacyabac_csharp">
@@ -3657,17 +3632,16 @@ number of nodes per zone. Must be set if `node_pool` is not set. If you're using
 `gcp.container.NodePool` objects with no default node pool, you'll need to
 set this to a value of at least `1`, alongside setting
 `remove_default_node_pool` to `true`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_instancegroupurls_csharp">
 <a href="#state_instancegroupurls_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of instance group URLs which have been assigned
-to the cluster.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of instance group URLs which have been assigned to the cluster.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use node_pool.instance_group_urls instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipallocationpolicy_csharp">
 <a href="#state_ipallocationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
@@ -3733,8 +3707,8 @@ write logs to. Available options include `logging.googleapis.com`(Legacy Stackdr
     </dt>
     <dd>{{% md %}}The maintenance policy to use for the cluster. Structure is
 documented below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_masterauth_csharp">
 <a href="#state_masterauth_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Auth</a>
 </span>
@@ -3747,7 +3721,7 @@ your service account has permission to get credentials for your GKE cluster. If
 you see an unexpected diff removing a username/password or unsetting your client
 cert, ensure you have the `container.clusters.getCredentials` permission.
 Structure is documented below. This has been deprecated as of GKE 1.19.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Basic authentication was removed for GKE cluster versions &gt;= 1.19.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterauthorizednetworksconfig_csharp">
 <a href="#state_masterauthorizednetworksconfig_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Authorized<wbr>Networks<wbr>Config</a>
@@ -3755,9 +3729,11 @@ Structure is documented below. This has been deprecated as of GKE 1.19.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The desired configuration options
-for master authorized networks. Omit the nested `cidr_blocks` attribute to disallow
-external access (except the cluster node IPs, which GKE automatically whitelists).
+    <dd>{{% md %}}The desired
+configuration options for master authorized networks. Omit the
+nested `cidr_blocks` attribute to disallow external access (except
+the cluster node IPs, which GKE automatically whitelists).
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterversion_csharp">
@@ -3766,9 +3742,8 @@ external access (except the cluster node IPs, which GKE automatically whitelists
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current version of the master in the cluster. This may
-be different than the `min_master_version` set in the config if the master
-has been updated by GKE.
+    <dd>{{% md %}}The current version of the master in the cluster. This may be different than the min_master_version set in the config if
+the master has been updated by GKE.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minmasterversion_csharp">
@@ -3977,11 +3952,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
 feature, which provide more control over automatic upgrades of your GKE clusters.
 When updating this field, GKE imposes specific version requirements. See
-[Migrating between release channels](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#migrating_between_release_channels)
+[Selecting a new release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#selecting_a_new_release_channel)
 for more details; the `gcp.container.getEngineVersions` datasource can provide
 the default version for a channel. Note that removing the `release_channel`
 field from your config will cause the provider to stop managing your cluster's
-release channel, but will not un-enroll it. Instead, use the `"UNSPECIFIED"`
+release channel, but will not unenroll it. Instead, use the `"UNSPECIFIED"`
 channel. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4023,7 +3998,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The server-defined URL for the resource.
+    <dd>{{% md %}}Server-defined URL for the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicesipv4cidr_csharp">
@@ -4032,10 +4007,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address range of the Kubernetes services in this
-cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last
-`/16` from the container CIDR.
+    <dd>{{% md %}}The IP address range of the Kubernetes services in this cluster, in CIDR notation (e.g. 1.2.3.4/29). Service addresses
+are typically put in the last /16 from the container CIDR.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetwork_csharp">
@@ -4054,9 +4027,7 @@ subnetwork in which the cluster's instances are launched.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address range of the Cloud TPUs in this cluster, in
-[CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-notation (e.g. `1.2.3.4/29`).
+    <dd>{{% md %}}The IP address range of the Cloud TPUs in this cluster, in CIDR notation (e.g. 1.2.3.4/29).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verticalpodautoscaling_csharp">
@@ -4187,7 +4158,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
+    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig). Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -4205,8 +4176,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdnsconfig">Cluster<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}})
-Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
+    <dd>{{% md %}}Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableautopilot_go">
@@ -4257,8 +4227,7 @@ and will be automatically deleted after 30 days.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}})
-Whether L4ILB Subsetting is enabled for this cluster.
+    <dd>{{% md %}}Whether L4ILB Subsetting is enabled for this cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablelegacyabac_go">
@@ -4313,17 +4282,16 @@ number of nodes per zone. Must be set if `node_pool` is not set. If you're using
 `gcp.container.NodePool` objects with no default node pool, you'll need to
 set this to a value of at least `1`, alongside setting
 `remove_default_node_pool` to `true`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_instancegroupurls_go">
 <a href="#state_instancegroupurls_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of instance group URLs which have been assigned
-to the cluster.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of instance group URLs which have been assigned to the cluster.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use node_pool.instance_group_urls instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipallocationpolicy_go">
 <a href="#state_ipallocationpolicy_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
@@ -4389,8 +4357,8 @@ write logs to. Available options include `logging.googleapis.com`(Legacy Stackdr
     </dt>
     <dd>{{% md %}}The maintenance policy to use for the cluster. Structure is
 documented below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_masterauth_go">
 <a href="#state_masterauth_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Auth</a>
 </span>
@@ -4403,7 +4371,7 @@ your service account has permission to get credentials for your GKE cluster. If
 you see an unexpected diff removing a username/password or unsetting your client
 cert, ensure you have the `container.clusters.getCredentials` permission.
 Structure is documented below. This has been deprecated as of GKE 1.19.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Basic authentication was removed for GKE cluster versions &gt;= 1.19.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterauthorizednetworksconfig_go">
 <a href="#state_masterauthorizednetworksconfig_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Authorized<wbr>Networks<wbr>Config</a>
@@ -4411,9 +4379,11 @@ Structure is documented below. This has been deprecated as of GKE 1.19.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The desired configuration options
-for master authorized networks. Omit the nested `cidr_blocks` attribute to disallow
-external access (except the cluster node IPs, which GKE automatically whitelists).
+    <dd>{{% md %}}The desired
+configuration options for master authorized networks. Omit the
+nested `cidr_blocks` attribute to disallow external access (except
+the cluster node IPs, which GKE automatically whitelists).
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterversion_go">
@@ -4422,9 +4392,8 @@ external access (except the cluster node IPs, which GKE automatically whitelists
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current version of the master in the cluster. This may
-be different than the `min_master_version` set in the config if the master
-has been updated by GKE.
+    <dd>{{% md %}}The current version of the master in the cluster. This may be different than the min_master_version set in the config if
+the master has been updated by GKE.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minmasterversion_go">
@@ -4633,11 +4602,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
 feature, which provide more control over automatic upgrades of your GKE clusters.
 When updating this field, GKE imposes specific version requirements. See
-[Migrating between release channels](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#migrating_between_release_channels)
+[Selecting a new release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#selecting_a_new_release_channel)
 for more details; the `gcp.container.getEngineVersions` datasource can provide
 the default version for a channel. Note that removing the `release_channel`
 field from your config will cause the provider to stop managing your cluster's
-release channel, but will not un-enroll it. Instead, use the `"UNSPECIFIED"`
+release channel, but will not unenroll it. Instead, use the `"UNSPECIFIED"`
 channel. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4679,7 +4648,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The server-defined URL for the resource.
+    <dd>{{% md %}}Server-defined URL for the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicesipv4cidr_go">
@@ -4688,10 +4657,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address range of the Kubernetes services in this
-cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last
-`/16` from the container CIDR.
+    <dd>{{% md %}}The IP address range of the Kubernetes services in this cluster, in CIDR notation (e.g. 1.2.3.4/29). Service addresses
+are typically put in the last /16 from the container CIDR.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetwork_go">
@@ -4710,9 +4677,7 @@ subnetwork in which the cluster's instances are launched.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address range of the Cloud TPUs in this cluster, in
-[CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-notation (e.g. `1.2.3.4/29`).
+    <dd>{{% md %}}The IP address range of the Cloud TPUs in this cluster, in CIDR notation (e.g. 1.2.3.4/29).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verticalpodautoscaling_go">
@@ -4843,7 +4808,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
+    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig). Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
@@ -4861,8 +4826,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdnsconfig">Cluster<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}})
-Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
+    <dd>{{% md %}}Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableautopilot_nodejs">
@@ -4913,8 +4877,7 @@ and will be automatically deleted after 30 days.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}})
-Whether L4ILB Subsetting is enabled for this cluster.
+    <dd>{{% md %}}Whether L4ILB Subsetting is enabled for this cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablelegacyabac_nodejs">
@@ -4969,17 +4932,16 @@ number of nodes per zone. Must be set if `node_pool` is not set. If you're using
 `gcp.container.NodePool` objects with no default node pool, you'll need to
 set this to a value of at least `1`, alongside setting
 `remove_default_node_pool` to `true`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_instancegroupurls_nodejs">
 <a href="#state_instancegroupurls_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Group<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of instance group URLs which have been assigned
-to the cluster.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of instance group URLs which have been assigned to the cluster.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use node_pool.instance_group_urls instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipallocationpolicy_nodejs">
 <a href="#state_ipallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policy</a>
@@ -5045,8 +5007,8 @@ write logs to. Available options include `logging.googleapis.com`(Legacy Stackdr
     </dt>
     <dd>{{% md %}}The maintenance policy to use for the cluster. Structure is
 documented below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_masterauth_nodejs">
 <a href="#state_masterauth_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Auth</a>
 </span>
@@ -5059,7 +5021,7 @@ your service account has permission to get credentials for your GKE cluster. If
 you see an unexpected diff removing a username/password or unsetting your client
 cert, ensure you have the `container.clusters.getCredentials` permission.
 Structure is documented below. This has been deprecated as of GKE 1.19.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Basic authentication was removed for GKE cluster versions &gt;= 1.19.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterauthorizednetworksconfig_nodejs">
 <a href="#state_masterauthorizednetworksconfig_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Authorized<wbr>Networks<wbr>Config</a>
@@ -5067,9 +5029,11 @@ Structure is documented below. This has been deprecated as of GKE 1.19.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The desired configuration options
-for master authorized networks. Omit the nested `cidr_blocks` attribute to disallow
-external access (except the cluster node IPs, which GKE automatically whitelists).
+    <dd>{{% md %}}The desired
+configuration options for master authorized networks. Omit the
+nested `cidr_blocks` attribute to disallow external access (except
+the cluster node IPs, which GKE automatically whitelists).
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterversion_nodejs">
@@ -5078,9 +5042,8 @@ external access (except the cluster node IPs, which GKE automatically whitelists
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current version of the master in the cluster. This may
-be different than the `min_master_version` set in the config if the master
-has been updated by GKE.
+    <dd>{{% md %}}The current version of the master in the cluster. This may be different than the min_master_version set in the config if
+the master has been updated by GKE.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minmasterversion_nodejs">
@@ -5289,11 +5252,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
 feature, which provide more control over automatic upgrades of your GKE clusters.
 When updating this field, GKE imposes specific version requirements. See
-[Migrating between release channels](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#migrating_between_release_channels)
+[Selecting a new release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#selecting_a_new_release_channel)
 for more details; the `gcp.container.getEngineVersions` datasource can provide
 the default version for a channel. Note that removing the `release_channel`
 field from your config will cause the provider to stop managing your cluster's
-release channel, but will not un-enroll it. Instead, use the `"UNSPECIFIED"`
+release channel, but will not unenroll it. Instead, use the `"UNSPECIFIED"`
 channel. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5335,7 +5298,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The server-defined URL for the resource.
+    <dd>{{% md %}}Server-defined URL for the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicesipv4cidr_nodejs">
@@ -5344,10 +5307,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address range of the Kubernetes services in this
-cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last
-`/16` from the container CIDR.
+    <dd>{{% md %}}The IP address range of the Kubernetes services in this cluster, in CIDR notation (e.g. 1.2.3.4/29). Service addresses
+are typically put in the last /16 from the container CIDR.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetwork_nodejs">
@@ -5366,9 +5327,7 @@ subnetwork in which the cluster's instances are launched.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address range of the Cloud TPUs in this cluster, in
-[CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-notation (e.g. `1.2.3.4/29`).
+    <dd>{{% md %}}The IP address range of the Cloud TPUs in this cluster, in CIDR notation (e.g. 1.2.3.4/29).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verticalpodautoscaling_nodejs">
@@ -5499,7 +5458,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
+    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig). Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
@@ -5517,8 +5476,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdnsconfig">Cluster<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}})
-Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
+    <dd>{{% md %}}Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_autopilot_python">
@@ -5569,8 +5527,7 @@ and will be automatically deleted after 30 days.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}})
-Whether L4ILB Subsetting is enabled for this cluster.
+    <dd>{{% md %}}Whether L4ILB Subsetting is enabled for this cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_legacy_abac_python">
@@ -5625,17 +5582,16 @@ number of nodes per zone. Must be set if `node_pool` is not set. If you're using
 `gcp.container.NodePool` objects with no default node pool, you'll need to
 set this to a value of at least `1`, alongside setting
 `remove_default_node_pool` to `true`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_instance_group_urls_python">
 <a href="#state_instance_group_urls_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of instance group URLs which have been assigned
-to the cluster.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of instance group URLs which have been assigned to the cluster.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use node_pool.instance_group_urls instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_allocation_policy_python">
 <a href="#state_ip_allocation_policy_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>policy</a>
@@ -5701,8 +5657,8 @@ write logs to. Available options include `logging.googleapis.com`(Legacy Stackdr
     </dt>
     <dd>{{% md %}}The maintenance policy to use for the cluster. Structure is
 documented below.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_master_auth_python">
 <a href="#state_master_auth_python" style="color: inherit; text-decoration: inherit;">master_<wbr>auth</a>
 </span>
@@ -5715,7 +5671,7 @@ your service account has permission to get credentials for your GKE cluster. If
 you see an unexpected diff removing a username/password or unsetting your client
 cert, ensure you have the `container.clusters.getCredentials` permission.
 Structure is documented below. This has been deprecated as of GKE 1.19.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Basic authentication was removed for GKE cluster versions &gt;= 1.19.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_master_authorized_networks_config_python">
 <a href="#state_master_authorized_networks_config_python" style="color: inherit; text-decoration: inherit;">master_<wbr>authorized_<wbr>networks_<wbr>config</a>
@@ -5723,9 +5679,11 @@ Structure is documented below. This has been deprecated as of GKE 1.19.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The desired configuration options
-for master authorized networks. Omit the nested `cidr_blocks` attribute to disallow
-external access (except the cluster node IPs, which GKE automatically whitelists).
+    <dd>{{% md %}}The desired
+configuration options for master authorized networks. Omit the
+nested `cidr_blocks` attribute to disallow external access (except
+the cluster node IPs, which GKE automatically whitelists).
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_master_version_python">
@@ -5734,9 +5692,8 @@ external access (except the cluster node IPs, which GKE automatically whitelists
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current version of the master in the cluster. This may
-be different than the `min_master_version` set in the config if the master
-has been updated by GKE.
+    <dd>{{% md %}}The current version of the master in the cluster. This may be different than the min_master_version set in the config if
+the master has been updated by GKE.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_master_version_python">
@@ -5945,11 +5902,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
 feature, which provide more control over automatic upgrades of your GKE clusters.
 When updating this field, GKE imposes specific version requirements. See
-[Migrating between release channels](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#migrating_between_release_channels)
+[Selecting a new release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#selecting_a_new_release_channel)
 for more details; the `gcp.container.getEngineVersions` datasource can provide
 the default version for a channel. Note that removing the `release_channel`
 field from your config will cause the provider to stop managing your cluster's
-release channel, but will not un-enroll it. Instead, use the `"UNSPECIFIED"`
+release channel, but will not unenroll it. Instead, use the `"UNSPECIFIED"`
 channel. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5991,7 +5948,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The server-defined URL for the resource.
+    <dd>{{% md %}}Server-defined URL for the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_services_ipv4_cidr_python">
@@ -6000,10 +5957,8 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP address range of the Kubernetes services in this
-cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last
-`/16` from the container CIDR.
+    <dd>{{% md %}}The IP address range of the Kubernetes services in this cluster, in CIDR notation (e.g. 1.2.3.4/29). Service addresses
+are typically put in the last /16 from the container CIDR.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetwork_python">
@@ -6022,9 +5977,7 @@ subnetwork in which the cluster's instances are launched.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP address range of the Cloud TPUs in this cluster, in
-[CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-notation (e.g. `1.2.3.4/29`).
+    <dd>{{% md %}}The IP address range of the Cloud TPUs in this cluster, in CIDR notation (e.g. 1.2.3.4/29).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vertical_pod_autoscaling_python">
@@ -7873,7 +7826,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which in-cluster DNS provider should be used. `PROVIDER_UNSPECIFIED` (default) or `PLATFORM_DEFAULT` or `CLOUD_DNS`.
+    <dd>{{% md %}}Which in-cluster DNS provider shoul
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterdnsdomain_csharp">
@@ -7882,8 +7835,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The suffix used for all cluster service records.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterdnsscope_csharp">
 <a href="#clusterdnsscope_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Dns<wbr>Scope</a>
@@ -7891,8 +7843,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of access to cluster DNS records. `DNS_SCOPE_UNSPECIFIED` (default) or `CLUSTER_SCOPE` or `VPC_SCOPE`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -7904,7 +7855,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which in-cluster DNS provider should be used. `PROVIDER_UNSPECIFIED` (default) or `PLATFORM_DEFAULT` or `CLOUD_DNS`.
+    <dd>{{% md %}}Which in-cluster DNS provider shoul
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterdnsdomain_go">
@@ -7913,8 +7864,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The suffix used for all cluster service records.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterdnsscope_go">
 <a href="#clusterdnsscope_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Dns<wbr>Scope</a>
@@ -7922,8 +7872,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of access to cluster DNS records. `DNS_SCOPE_UNSPECIFIED` (default) or `CLUSTER_SCOPE` or `VPC_SCOPE`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -7935,7 +7884,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which in-cluster DNS provider should be used. `PROVIDER_UNSPECIFIED` (default) or `PLATFORM_DEFAULT` or `CLOUD_DNS`.
+    <dd>{{% md %}}Which in-cluster DNS provider shoul
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterdnsdomain_nodejs">
@@ -7944,8 +7893,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The suffix used for all cluster service records.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterdnsscope_nodejs">
 <a href="#clusterdnsscope_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Dns<wbr>Scope</a>
@@ -7953,8 +7901,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of access to cluster DNS records. `DNS_SCOPE_UNSPECIFIED` (default) or `CLUSTER_SCOPE` or `VPC_SCOPE`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -7966,7 +7913,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Which in-cluster DNS provider should be used. `PROVIDER_UNSPECIFIED` (default) or `PLATFORM_DEFAULT` or `CLOUD_DNS`.
+    <dd>{{% md %}}Which in-cluster DNS provider shoul
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_dns_domain_python">
@@ -7975,8 +7922,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The suffix used for all cluster service records.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_dns_scope_python">
 <a href="#cluster_dns_scope_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>dns_<wbr>scope</a>
@@ -7984,8 +7930,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scope of access to cluster DNS records. `DNS_SCOPE_UNSPECIFIED` (default) or `CLUSTER_SCOPE` or `VPC_SCOPE`.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clusteripallocationpolicy">Cluster<wbr>Ip<wbr>Allocation<wbr>Policy</h4>
@@ -8213,8 +8158,7 @@ GKE-managed one.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The GKE components exposing logs. Only `SYSTEM_COMPONENTS`
-is supported.
+    <dd>{{% md %}}The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8227,8 +8171,7 @@ is supported.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The GKE components exposing logs. Only `SYSTEM_COMPONENTS`
-is supported.
+    <dd>{{% md %}}The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8241,8 +8184,7 @@ is supported.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The GKE components exposing logs. Only `SYSTEM_COMPONENTS`
-is supported.
+    <dd>{{% md %}}The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -8255,8 +8197,7 @@ is supported.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The GKE components exposing logs. Only `SYSTEM_COMPONENTS`
-is supported.
+    <dd>{{% md %}}The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -9147,8 +9088,7 @@ Must be specified in CIDR notation.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The GKE components exposing logs. Only `SYSTEM_COMPONENTS`
-is supported.
+    <dd>{{% md %}}The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -9161,8 +9101,7 @@ is supported.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The GKE components exposing logs. Only `SYSTEM_COMPONENTS`
-is supported.
+    <dd>{{% md %}}The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -9175,8 +9114,7 @@ is supported.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The GKE components exposing logs. Only `SYSTEM_COMPONENTS`
-is supported.
+    <dd>{{% md %}}The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -9189,8 +9127,7 @@ is supported.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The GKE components exposing logs. Only `SYSTEM_COMPONENTS`
-is supported.
+    <dd>{{% md %}}The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -10269,6 +10206,15 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gpupartitionsize_csharp">
+<a href="#gpupartitionsize_csharp" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Partition<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -10291,6 +10237,15 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gpupartitionsize_go">
+<a href="#gpupartitionsize_go" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Partition<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -10313,6 +10268,15 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gpupartitionsize_nodejs">
+<a href="#gpupartitionsize_nodejs" style="color: inherit; text-decoration: inherit;">gpu<wbr>Partition<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -10335,6 +10299,15 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gpu_partition_size_python">
+<a href="#gpu_partition_size_python" style="color: inherit; text-decoration: inherit;">gpu_<wbr>partition_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -10983,9 +10956,7 @@ set this to a value of at least `1`, alongside setting
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of instance group URLs which have been assigned
-to the cluster.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="management_csharp">
 <a href="#management_csharp" style="color: inherit; text-decoration: inherit;">Management</a>
@@ -11027,8 +10998,8 @@ location.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodepoolnetworkconfig">Cluster<wbr>Node<wbr>Pool<wbr>Network<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for
-[Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool.
+    <dd>{{% md %}}Configuration for
+[Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeconfig_csharp">
@@ -11112,9 +11083,7 @@ set this to a value of at least `1`, alongside setting
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of instance group URLs which have been assigned
-to the cluster.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="management_go">
 <a href="#management_go" style="color: inherit; text-decoration: inherit;">Management</a>
@@ -11156,8 +11125,8 @@ location.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodepoolnetworkconfig">Cluster<wbr>Node<wbr>Pool<wbr>Network<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for
-[Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool.
+    <dd>{{% md %}}Configuration for
+[Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeconfig_go">
@@ -11241,9 +11210,7 @@ set this to a value of at least `1`, alongside setting
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of instance group URLs which have been assigned
-to the cluster.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="management_nodejs">
 <a href="#management_nodejs" style="color: inherit; text-decoration: inherit;">management</a>
@@ -11285,8 +11252,8 @@ location.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodepoolnetworkconfig">Cluster<wbr>Node<wbr>Pool<wbr>Network<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for
-[Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool.
+    <dd>{{% md %}}Configuration for
+[Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeconfig_nodejs">
@@ -11370,9 +11337,7 @@ set this to a value of at least `1`, alongside setting
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of instance group URLs which have been assigned
-to the cluster.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="management_python">
 <a href="#management_python" style="color: inherit; text-decoration: inherit;">management</a>
@@ -11414,8 +11379,8 @@ location.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodepoolnetworkconfig">Cluster<wbr>Node<wbr>Pool<wbr>Network<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for
-[Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool.
+    <dd>{{% md %}}Configuration for
+[Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool. Structure is documented below
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_config_python">
@@ -11643,7 +11608,7 @@ a zonal cluster, omit the cluster's zone.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}) The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.
+    <dd>{{% md %}}The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createpodrange_csharp">
@@ -11652,7 +11617,7 @@ a zonal cluster, omit the cluster's zone.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}) Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified.
+    <dd>{{% md %}}Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podipv4cidrblock_csharp">
@@ -11661,7 +11626,7 @@ a zonal cluster, omit the cluster's zone.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}) The IP address range for pod IPs in this node pool. Only applicable if createPodRange is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) to pick a specific range to use.
+    <dd>{{% md %}}The IP address range for pod IPs in this node pool. Only applicable if createPodRange is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) to pick a specific range to use.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -11674,7 +11639,7 @@ a zonal cluster, omit the cluster's zone.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}) The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.
+    <dd>{{% md %}}The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createpodrange_go">
@@ -11683,7 +11648,7 @@ a zonal cluster, omit the cluster's zone.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}) Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified.
+    <dd>{{% md %}}Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podipv4cidrblock_go">
@@ -11692,7 +11657,7 @@ a zonal cluster, omit the cluster's zone.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}) The IP address range for pod IPs in this node pool. Only applicable if createPodRange is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) to pick a specific range to use.
+    <dd>{{% md %}}The IP address range for pod IPs in this node pool. Only applicable if createPodRange is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) to pick a specific range to use.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -11705,7 +11670,7 @@ a zonal cluster, omit the cluster's zone.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}) The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.
+    <dd>{{% md %}}The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createpodrange_nodejs">
@@ -11714,7 +11679,7 @@ a zonal cluster, omit the cluster's zone.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}) Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified.
+    <dd>{{% md %}}Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podipv4cidrblock_nodejs">
@@ -11723,7 +11688,7 @@ a zonal cluster, omit the cluster's zone.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}) The IP address range for pod IPs in this node pool. Only applicable if createPodRange is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) to pick a specific range to use.
+    <dd>{{% md %}}The IP address range for pod IPs in this node pool. Only applicable if createPodRange is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) to pick a specific range to use.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -11736,7 +11701,7 @@ a zonal cluster, omit the cluster's zone.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}) The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.
+    <dd>{{% md %}}The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_pod_range_python">
@@ -11745,7 +11710,7 @@ a zonal cluster, omit the cluster's zone.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}) Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified.
+    <dd>{{% md %}}Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pod_ipv4_cidr_block_python">
@@ -11754,7 +11719,7 @@ a zonal cluster, omit the cluster's zone.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}) The IP address range for pod IPs in this node pool. Only applicable if createPodRange is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) to pick a specific range to use.
+    <dd>{{% md %}}The IP address range for pod IPs in this node pool. Only applicable if createPodRange is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) to pick a specific range to use.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -12739,6 +12704,15 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gpupartitionsize_csharp">
+<a href="#gpupartitionsize_csharp" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Partition<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -12761,6 +12735,15 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gpupartitionsize_go">
+<a href="#gpupartitionsize_go" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Partition<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -12783,6 +12766,15 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gpupartitionsize_nodejs">
+<a href="#gpupartitionsize_nodejs" style="color: inherit; text-decoration: inherit;">gpu<wbr>Partition<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -12805,6 +12797,15 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gpu_partition_size_python">
+<a href="#gpu_partition_size_python" style="color: inherit; text-decoration: inherit;">gpu_<wbr>partition_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -14423,76 +14424,92 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <h4 id="clusterworkloadidentityconfig">Cluster<wbr>Workload<wbr>Identity<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="identitynamespace_csharp">
 <a href="#identitynamespace_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Currently, the only supported identity namespace is the project's default.
+    <dd>{{% md %}}- Currently, the only supported identity namespace is the project's default.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will be removed in a future major release as it has been deprecated in the API. Use `workload_pool` instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="workloadpool_csharp">
+<a href="#workloadpool_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The workload pool to attach all Kubernetes service accounts to. Currently, the only supported identity namespace is the project of the cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="identitynamespace_go">
 <a href="#identitynamespace_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Currently, the only supported identity namespace is the project's default.
+    <dd>{{% md %}}- Currently, the only supported identity namespace is the project's default.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will be removed in a future major release as it has been deprecated in the API. Use `workload_pool` instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="workloadpool_go">
+<a href="#workloadpool_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The workload pool to attach all Kubernetes service accounts to. Currently, the only supported identity namespace is the project of the cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="identitynamespace_nodejs">
 <a href="#identitynamespace_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Currently, the only supported identity namespace is the project's default.
+    <dd>{{% md %}}- Currently, the only supported identity namespace is the project's default.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will be removed in a future major release as it has been deprecated in the API. Use `workload_pool` instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="workloadpool_nodejs">
+<a href="#workloadpool_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The workload pool to attach all Kubernetes service accounts to. Currently, the only supported identity namespace is the project of the cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="identity_namespace_python">
 <a href="#identity_namespace_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Currently, the only supported identity namespace is the project's default.
+    <dd>{{% md %}}- Currently, the only supported identity namespace is the project's default.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will be removed in a future major release as it has been deprecated in the API. Use `workload_pool` instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="workload_pool_python">
+<a href="#workload_pool_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The workload pool to attach all Kubernetes service accounts to. Currently, the only supported identity namespace is the project of the cluster.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
-## Import
-
-
-GKE clusters can be imported using the `project` , `location`, and `name`. If the project is omitted, the default provider value will be used. Examples
-
-```sh
- $ pulumi import gcp:container/cluster:Cluster mycluster projects/my-gcp-project/locations/us-east1-a/clusters/my-cluster
-```
-
-```sh
- $ pulumi import gcp:container/cluster:Cluster mycluster my-gcp-project/us-east1-a/my-cluster
-```
-
-```sh
- $ pulumi import gcp:container/cluster:Cluster mycluster us-east1-a/my-cluster
-```
-
- For example, the following fields will show diffs if set in config- `min_master_version` - `remove_default_node_pool`
-
-
 
 
 <h2 id="package-details">Package Details</h2>

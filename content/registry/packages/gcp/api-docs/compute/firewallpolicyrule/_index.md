@@ -398,7 +398,7 @@ The FirewallPolicyRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyrulematch">Firewall<wbr>Policy<wbr>Rule<wbr>Match<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
+    <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_csharp">
@@ -492,7 +492,7 @@ The FirewallPolicyRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyrulematch">Firewall<wbr>Policy<wbr>Rule<wbr>Match<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
+    <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_go">
@@ -586,7 +586,7 @@ The FirewallPolicyRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyrulematch">Firewall<wbr>Policy<wbr>Rule<wbr>Match<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
+    <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_nodejs">
@@ -680,7 +680,7 @@ The FirewallPolicyRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyrulematch">Firewall<wbr>Policy<wbr>Rule<wbr>Match<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
+    <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_python">
@@ -1074,7 +1074,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyrulematch">Firewall<wbr>Policy<wbr>Rule<wbr>Match<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
+    <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
@@ -1186,7 +1186,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyrulematch">Firewall<wbr>Policy<wbr>Rule<wbr>Match<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
+    <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
@@ -1298,7 +1298,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyrulematch">Firewall<wbr>Policy<wbr>Rule<wbr>Match<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
+    <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
@@ -1410,7 +1410,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyrulematch">Firewall<wbr>Policy<wbr>Rule<wbr>Match<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
+    <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
@@ -1470,7 +1470,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyrulematchlayer4config">List&lt;Firewall<wbr>Policy<wbr>Rule<wbr>Match<wbr>Layer4Config&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
+    <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destipranges_csharp">
@@ -1501,7 +1501,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyrulematchlayer4config">[]Firewall<wbr>Policy<wbr>Rule<wbr>Match<wbr>Layer4Config</a></span>
     </dt>
-    <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
+    <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destipranges_go">
@@ -1532,7 +1532,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyrulematchlayer4config">Firewall<wbr>Policy<wbr>Rule<wbr>Match<wbr>Layer4Config[]</a></span>
     </dt>
-    <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
+    <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destipranges_nodejs">
@@ -1563,7 +1563,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyrulematchlayer4config">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Match<wbr>Layer4Config]</a></span>
     </dt>
-    <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
+    <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dest_ip_ranges_python">

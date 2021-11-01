@@ -348,7 +348,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectcustomerencryption">Bucket<wbr>Object<wbr>Customer<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). [Google documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). Google [documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -503,7 +503,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectcustomerencryption">Bucket<wbr>Object<wbr>Customer<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). [Google documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). Google [documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -658,7 +658,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectcustomerencryption">Bucket<wbr>Object<wbr>Customer<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). [Google documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). Google [documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -813,7 +813,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectcustomerencryption">Bucket<wbr>Object<wbr>Customer<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). [Google documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). Google [documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1362,7 +1362,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectcustomerencryption">Bucket<wbr>Object<wbr>Customer<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). [Google documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). Google [documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1563,7 +1563,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectcustomerencryption">Bucket<wbr>Object<wbr>Customer<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). [Google documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). Google [documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1764,7 +1764,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectcustomerencryption">Bucket<wbr>Object<wbr>Customer<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). [Google documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). Google [documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1965,7 +1965,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectcustomerencryption">Bucket<wbr>Object<wbr>Customer<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). [Google documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). Google [documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">

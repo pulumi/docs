@@ -5836,6 +5836,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="gpupartitionsize_csharp">
+<a href="#gpupartitionsize_csharp" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Partition<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -5853,6 +5861,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gpupartitionsize_go">
+<a href="#gpupartitionsize_go" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Partition<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5876,6 +5892,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="gpupartitionsize_nodejs">
+<a href="#gpupartitionsize_nodejs" style="color: inherit; text-decoration: inherit;">gpu<wbr>Partition<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -5893,6 +5917,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gpu_partition_size_python">
+<a href="#gpu_partition_size_python" style="color: inherit; text-decoration: inherit;">gpu_<wbr>partition_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7892,6 +7924,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="gpupartitionsize_csharp">
+<a href="#gpupartitionsize_csharp" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Partition<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -7909,6 +7949,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gpupartitionsize_go">
+<a href="#gpupartitionsize_go" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Partition<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7932,6 +7980,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="gpupartitionsize_nodejs">
+<a href="#gpupartitionsize_nodejs" style="color: inherit; text-decoration: inherit;">gpu<wbr>Partition<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -7949,6 +8005,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gpu_partition_size_python">
+<a href="#gpu_partition_size_python" style="color: inherit; text-decoration: inherit;">gpu_<wbr>partition_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9318,6 +9382,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="workloadpool_csharp">
+<a href="#workloadpool_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -9326,6 +9398,14 @@ The following output properties are available:
             title="Required">
         <span id="identitynamespace_go">
 <a href="#identitynamespace_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="workloadpool_go">
+<a href="#workloadpool_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -9342,6 +9422,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="workloadpool_nodejs">
+<a href="#workloadpool_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -9350,6 +9438,14 @@ The following output properties are available:
             title="Required">
         <span id="identity_namespace_python">
 <a href="#identity_namespace_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="workload_pool_python">
+<a href="#workload_pool_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

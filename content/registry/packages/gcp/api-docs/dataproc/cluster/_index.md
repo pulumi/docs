@@ -1505,7 +1505,7 @@ Structure defined below.
         <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the master instances
-in a cluster.. Structure defined below.
+in a cluster. Structure defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metastoreconfig_csharp">
@@ -1584,7 +1584,7 @@ Note: If you don't explicitly specify a `temp_bucket` then GCP will auto create 
         <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the worker instances
-in a cluster.. Structure defined below.
+in a cluster. Structure defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1668,7 +1668,7 @@ Structure defined below.
         <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the master instances
-in a cluster.. Structure defined below.
+in a cluster. Structure defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metastoreconfig_go">
@@ -1747,7 +1747,7 @@ Note: If you don't explicitly specify a `temp_bucket` then GCP will auto create 
         <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the worker instances
-in a cluster.. Structure defined below.
+in a cluster. Structure defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1831,7 +1831,7 @@ Structure defined below.
         <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the master instances
-in a cluster.. Structure defined below.
+in a cluster. Structure defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metastoreconfig_nodejs">
@@ -1910,7 +1910,7 @@ Note: If you don't explicitly specify a `temp_bucket` then GCP will auto create 
         <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the worker instances
-in a cluster.. Structure defined below.
+in a cluster. Structure defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1994,7 +1994,7 @@ Structure defined below.
         <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the master instances
-in a cluster.. Structure defined below.
+in a cluster. Structure defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metastore_config_python">
@@ -2073,7 +2073,7 @@ Note: If you don't explicitly specify a `temp_bucket` then GCP will auto create 
         <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the worker instances
-in a cluster.. Structure defined below.
+in a cluster. Structure defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

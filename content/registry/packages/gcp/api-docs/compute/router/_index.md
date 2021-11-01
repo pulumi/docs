@@ -487,8 +487,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud
-Interconnect feature). Not currently available publicly.
+    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted
+Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature).
+Not currently available publicly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -562,8 +563,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud
-Interconnect feature). Not currently available publicly.
+    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted
+Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature).
+Not currently available publicly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -637,8 +639,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud
-Interconnect feature). Not currently available publicly.
+    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted
+Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature).
+Not currently available publicly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -712,8 +715,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud
-Interconnect feature). Not currently available publicly.
+    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted
+Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature).
+Not currently available publicly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -1048,8 +1052,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud
-Interconnect feature). Not currently available publicly.
+    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted
+Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature).
+Not currently available publicly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1141,8 +1146,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud
-Interconnect feature). Not currently available publicly.
+    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted
+Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature).
+Not currently available publicly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1234,8 +1240,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud
-Interconnect feature). Not currently available publicly.
+    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted
+Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature).
+Not currently available publicly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -1327,8 +1334,9 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud
-Interconnect feature). Not currently available publicly.
+    <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted
+Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature).
+Not currently available publicly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">

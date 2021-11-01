@@ -308,7 +308,8 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
+    <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented
+below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listpolicy_csharp">
@@ -366,7 +367,8 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
+    <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented
+below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listpolicy_go">
@@ -424,7 +426,8 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
+    <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented
+below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listpolicy_nodejs">
@@ -482,7 +485,8 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
+    <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented
+below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="list_policy_python">
@@ -782,7 +786,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
+    <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented
+below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_constraint_csharp">
@@ -858,7 +863,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
+    <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented
+below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_constraint_go">
@@ -934,7 +940,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
+    <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented
+below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_constraint_nodejs">
@@ -1010,7 +1017,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
+    <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented
+below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_constraint_python">

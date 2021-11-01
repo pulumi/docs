@@ -384,7 +384,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetemplateconfidentialinstanceconfig">List&lt;Get<wbr>Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
@@ -678,7 +678,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetemplateconfidentialinstanceconfig">[]Get<wbr>Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
@@ -972,7 +972,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetemplateconfidentialinstanceconfig">Get<wbr>Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
@@ -1266,7 +1266,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetemplateconfidentialinstanceconfig">Sequence[Get<wbr>Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
