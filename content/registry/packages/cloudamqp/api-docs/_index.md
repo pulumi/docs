@@ -14,6 +14,7 @@ A Pulumi package for creating and managing CloudAMQP resources.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="alarm" title="Alarm"><span class="api-symbol api-symbol--resource"></span>Alarm</a></li>
+    <li><a href="customdomain" title="CustomDomain"><span class="api-symbol api-symbol--resource"></span>CustomDomain</a></li>
     <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
     <li><a href="integrationlog" title="IntegrationLog"><span class="api-symbol api-symbol--resource"></span>IntegrationLog</a></li>
     <li><a href="integrationmetric" title="IntegrationMetric"><span class="api-symbol api-symbol--resource"></span>IntegrationMetric</a></li>
@@ -28,6 +29,7 @@ A Pulumi package for creating and managing CloudAMQP resources.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getaccount" title="GetAccount"><span class="api-symbol api-symbol--function"></span>GetAccount</a></li>
     <li><a href="getalarm" title="GetAlarm"><span class="api-symbol api-symbol--function"></span>GetAlarm</a></li>
     <li><a href="getcredentials" title="GetCredentials"><span class="api-symbol api-symbol--function"></span>GetCredentials</a></li>
     <li><a href="getinstance" title="GetInstance"><span class="api-symbol api-symbol--function"></span>GetInstance</a></li>
@@ -47,6 +49,6 @@ A Pulumi package for creating and managing CloudAMQP resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`cloudamqp` Terraform Provider](https://github.com/cloudamqp/terraform-provider-cloudamqp).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.2.0</dd>
+	<dd>3.3.0</dd>
 </dl>
 

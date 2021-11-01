@@ -25,7 +25,7 @@ Required arguments for all alarms: *instance_id*, *type* and *enabled*
 Optional argument for all alarms: *tags*, *queue_regex*, *vhost_regex*
 
 | Name | Type | Shared | Dedicated | Required arguments |
-| ---- | ---- | ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- | ---- | ---- |
 | CPU | cpu | - | &#10004; | time_threshold, value_threshold |
 | Memory | memory | - | &#10004;  | time_threshold, value_threshold |
 | Disk space | disk | - | &#10004;  | time_threshold, value_threshold |
