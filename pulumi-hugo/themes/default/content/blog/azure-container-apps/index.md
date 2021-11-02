@@ -218,17 +218,18 @@ registry = containerregistry.Registry("registry",
     sku=containerregistry.SkuArgs(name="Basic"),
     admin_user_enabled=True)
 
-credentials = pulumi.Output.all(resource_group.name, registry.name) \
-    .apply(lambda args: containerregistry.list_registry_credentials(
+credentials = pulumi.Output.all(resource_group.name, registry.name).apply(
+    lambda args: containerregistry.list_registry_credentials(
         resource_group_name=args[0],
         registry_name=args[1]))
-admin_username = credentials.Apply(lambda c: c.username)
-admin_password = credentials.Apply(lambda c: c.passwords[0])
+admin_username = credentials.username
+admin_password = credentials.passwords[0]["value"]
 
 custom_image = "node-app"
 my_image = docker.Image(custom_image,
-    image_name=Output.concat(registry.login_server, "/", custom_image, ":v1.0.0"),
-    build=docker.DockerBuild(context = Output.concat("./", custom_image)),
+    image_name=registry.login_server.apply(
+        lambda login_server: f"{login_server}/{custom_image}:v1.0.0"),
+    build=docker.DockerBuild(context=f"./{custom_image}"),
     registry=docker.ImageRegistry(
         server=registry.login_server,
         username=admin_username,
