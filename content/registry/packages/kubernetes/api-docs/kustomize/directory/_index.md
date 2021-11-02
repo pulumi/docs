@@ -54,8 +54,8 @@ class KustomizeStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/kustomize"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/kustomize"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -142,8 +142,8 @@ class KustomizeStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/kustomize"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/kustomize"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -281,9 +281,9 @@ class KustomizeStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/kustomize"
-	"github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/kustomize"
+	"github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/yaml"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
