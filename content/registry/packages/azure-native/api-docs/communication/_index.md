@@ -29,6 +29,6 @@ Explore the resources and functions of the azure-native.communication module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.43.0</dd>
+	<dd>1.44.0</dd>
 </dl>
 

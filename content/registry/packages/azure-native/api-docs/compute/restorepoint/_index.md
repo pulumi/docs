@@ -160,7 +160,8 @@ const restorePoint = new azure_native.compute.RestorePoint("restorePoint", {
                  <span class="nx">exclude_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiEntityReferenceArgs]]</span> = None<span class="p">,</span>
                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">restore_point_collection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">restore_point_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                 <span class="nx">restore_point_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">time_created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">RestorePoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RestorePointArgs</a></span><span class="p">,</span>
@@ -320,7 +321,15 @@ The RestorePoint resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the restore point.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the restore point.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timecreated_csharp">
+<a href="#timecreated_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Created</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets the creation time of the restore point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -356,7 +365,15 @@ The RestorePoint resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the restore point.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the restore point.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timecreated_go">
+<a href="#timecreated_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Created</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets the creation time of the restore point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -392,7 +409,15 @@ The RestorePoint resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the restore point.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the restore point.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timecreated_nodejs">
+<a href="#timecreated_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Created</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets the creation time of the restore point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -428,7 +453,15 @@ The RestorePoint resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the restore point.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the restore point.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="time_created_python">
+<a href="#time_created_python" style="color: inherit; text-decoration: inherit;">time_<wbr>created</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Gets the creation time of the restore point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -464,14 +497,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="provisioningdetails_csharp">
-<a href="#provisioningdetails_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepointprovisioningdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Restore<wbr>Point<wbr>Provisioning<wbr>Details<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets the provisioning details set by the server during Create restore point operation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -525,14 +550,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="provisioningdetails_go">
-<a href="#provisioningdetails_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepointprovisioningdetailsresponse">Restore<wbr>Point<wbr>Provisioning<wbr>Details<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets the provisioning details set by the server during Create restore point operation.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -585,14 +602,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="provisioningdetails_nodejs">
-<a href="#provisioningdetails_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepointprovisioningdetailsresponse">Restore<wbr>Point<wbr>Provisioning<wbr>Details<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets the provisioning details set by the server during Create restore point operation.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
@@ -644,14 +653,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="provisioning_details_python">
-<a href="#provisioning_details_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepointprovisioningdetailsresponse">Restore<wbr>Point<wbr>Provisioning<wbr>Details<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets the provisioning details set by the server during Create restore point operation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -2204,152 +2205,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> **AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="restorepointprovisioningdetailsresponse">Restore<wbr>Point<wbr>Provisioning<wbr>Details<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="creationtime_csharp">
-<a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets the creation time of the restore point.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statuscode_csharp">
-<a href="#statuscode_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Gets the status of the Create restore point operation.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statusmessage_csharp">
-<a href="#statusmessage_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets the status message of the Create restore point operation.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="totalusedsizeinbytes_csharp">
-<a href="#totalusedsizeinbytes_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Used<wbr>Size<wbr>In<wbr>Bytes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}Gets the total size of the data in all the disks which are part of the restore point.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="creationtime_go">
-<a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets the creation time of the restore point.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statuscode_go">
-<a href="#statuscode_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Gets the status of the Create restore point operation.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statusmessage_go">
-<a href="#statusmessage_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets the status message of the Create restore point operation.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="totalusedsizeinbytes_go">
-<a href="#totalusedsizeinbytes_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Used<wbr>Size<wbr>In<wbr>Bytes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}Gets the total size of the data in all the disks which are part of the restore point.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="creationtime_nodejs">
-<a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets the creation time of the restore point.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statuscode_nodejs">
-<a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Gets the status of the Create restore point operation.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="statusmessage_nodejs">
-<a href="#statusmessage_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets the status message of the Create restore point operation.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="totalusedsizeinbytes_nodejs">
-<a href="#totalusedsizeinbytes_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Used<wbr>Size<wbr>In<wbr>Bytes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Gets the total size of the data in all the disks which are part of the restore point.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="creation_time_python">
-<a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Gets the creation time of the restore point.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_code_python">
-<a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Gets the status of the Create restore point operation.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_message_python">
-<a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Gets the status message of the Create restore point operation.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="total_used_size_in_bytes_python">
-<a href="#total_used_size_in_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>used_<wbr>size_<wbr>in_<wbr>bytes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Gets the total size of the data in all the disks which are part of the restore point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="restorepointsourcemetadataresponse">Restore<wbr>Point<wbr>Source<wbr>Metadata<wbr>Response</h4>

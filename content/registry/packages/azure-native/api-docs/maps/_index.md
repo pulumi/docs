@@ -24,6 +24,7 @@ Explore the resources and functions of the azure-native.maps module.
     <li><a href="getcreator" title="GetCreator"><span class="api-symbol api-symbol--function"></span>GetCreator</a></li>
     <li><a href="getprivateatlase" title="GetPrivateAtlase"><span class="api-symbol api-symbol--function"></span>GetPrivateAtlase</a></li>
     <li><a href="listaccountkeys" title="ListAccountKeys"><span class="api-symbol api-symbol--function"></span>ListAccountKeys</a></li>
+    <li><a href="listaccountsas" title="ListAccountSas"><span class="api-symbol api-symbol--function"></span>ListAccountSas</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -33,6 +34,6 @@ Explore the resources and functions of the azure-native.maps module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.43.0</dd>
+	<dd>1.44.0</dd>
 </dl>
 
