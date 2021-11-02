@@ -1524,6 +1524,87 @@ EMPTY RESPONSE BODY
 
 <!-- ###################################################################### -->
 
+### Grant Stack Access to Team
+
+```
+PATCH /api/orgs/{organization}/teams/{team}
+```
+
+#### Parameters
+
+| Parameter | Type | In | Description |
+| --------- | ---------- | ---------- | ---------- |
+| `organization` | string | path | organization name |
+| `team` | string | path | team name |
+| `addStackPermission` | object | body | object specifying stack and permissions - see following parameters |
+| `addStackPermission .projectName` | string | object | project name |
+| `addStackPermission .stackName` | string | object | stack name |
+| `addStackPermission .permission` | integer | object | number representing stack permissions: 101 (read), 102 (edit), 103 (admin) |
+
+#### Example
+
+```bash
+curl \
+  -H 'Accept: application/vnd.pulumi+8' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  --request PATCH \
+  --data '{"addStackPermission":{"projectName":"{projectName}","stackName":"{stackName}","permission": {permission}}}' \
+  https://api.pulumi.com/api/orgs/{organization}/teams/{team}
+```
+
+#### Default response
+
+```
+Status: 204 OK
+```
+
+```
+EMPTY RESPONSE BODY
+```
+
+<!-- ###################################################################### -->
+
+### Remove Stack Access from Team
+
+```
+PATCH /api/orgs/{organization}/teams/{team}
+```
+
+#### Parameters
+
+| Parameter | Type | In | Description |
+| --------- | ---------- | ---------- | ---------- |
+| `organization` | string | path | organization name |
+| `team` | string | path | team name |
+| `removeStack` | object | body | object specifying stack and permissions - see following parameters |
+| `removeStack .projectName` | string | object | project name |
+| `removeStack .stackName` | string | object | stack name |
+
+#### Example
+
+```bash
+curl \
+  -H 'Accept: application/vnd.pulumi+8' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  --request PATCH \
+  --data '{"removeStack":{"projectName":"{projectName}","stackName":"{stackName}"}}' \
+  https://api.pulumi.com/api/orgs/{organization}/teams/{team}
+```
+
+#### Default response
+
+```
+Status: 204 OK
+```
+
+```
+EMPTY RESPONSE BODY
+```
+
+<!-- ###################################################################### -->
+
 ### Update User's Role
 
 ```
