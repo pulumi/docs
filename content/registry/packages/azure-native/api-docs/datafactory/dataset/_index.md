@@ -3381,7 +3381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the Amazon S3 object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3505,7 +3505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the Amazon S3 object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3629,7 +3629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the Amazon S3 object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3753,7 +3753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the Amazon S3 object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3879,7 +3879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the Amazon S3 object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4003,7 +4003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the Amazon S3 object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4127,7 +4127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the Amazon S3 object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4251,7 +4251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the Amazon S3 object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5501,7 +5501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5617,7 +5617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5733,7 +5733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5849,7 +5849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5967,7 +5967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6083,7 +6083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6199,7 +6199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6315,7 +6315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6433,7 +6433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6525,7 +6525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6617,7 +6617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6709,7 +6709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6803,7 +6803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6895,7 +6895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6987,7 +6987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7079,7 +7079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8177,7 +8177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the item(s) in the Azure Data Lake Store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8269,7 +8269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the item(s) in the Azure Data Lake Store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8361,7 +8361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the item(s) in the Azure Data Lake Store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8453,7 +8453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the item(s) in the Azure Data Lake Store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8547,7 +8547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the item(s) in the Azure Data Lake Store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8639,7 +8639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the item(s) in the Azure Data Lake Store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8731,7 +8731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the item(s) in the Azure Data Lake Store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8823,7 +8823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the item(s) in the Azure Data Lake Store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14569,7 +14569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the binary dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14645,7 +14645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the binary dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14721,7 +14721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the binary dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14797,7 +14797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the binary dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14875,7 +14875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the binary dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14951,7 +14951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the binary dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15027,7 +15027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the binary dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15103,7 +15103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the binary dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18984,46 +18984,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="datasetbzip2compression">Dataset<wbr>BZip2Compression</h4>
+<h4 id="datasetcompression">Dataset<wbr>Compression</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"></dl>
-{{% /choosable %}}
-
-<h4 id="datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"></dl>
-{{% /choosable %}}
-
-<h4 id="datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Type of dataset compression. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -19031,11 +19003,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The dataset compression level. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Type of dataset compression. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -19043,11 +19023,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The dataset compression level. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Type of dataset compression. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
@@ -19055,11 +19043,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The dataset compression level. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Type of dataset compression. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
@@ -19067,13 +19063,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The dataset compression level. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</h4>
+<h4 id="datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Type of dataset compression. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -19081,11 +19085,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The dataset compression level. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Type of dataset compression. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -19093,11 +19105,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The dataset compression level. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Type of dataset compression. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
@@ -19105,11 +19125,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The dataset compression level. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Type of dataset compression. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
@@ -19117,7 +19145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The Deflate compression level.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The dataset compression level. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasetfolder">Dataset<wbr>Folder</h4>
@@ -19170,106 +19198,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The name of the folder that this Dataset is in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_csharp">
-<a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_go">
-<a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_nodejs">
-<a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_python">
-<a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_csharp">
-<a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_go">
-<a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_nodejs">
-<a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_python">
-<a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}The GZip compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</h4>
 
 {{% choosable language csharp %}}
@@ -19318,242 +19246,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the folder that this Dataset is in.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="datasettarcompression">Dataset<wbr>Tar<wbr>Compression</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"></dl>
-{{% /choosable %}}
-
-<h4 id="datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"></dl>
-{{% /choosable %}}
-
-<h4 id="datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_csharp">
-<a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_go">
-<a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_nodejs">
-<a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_python">
-<a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_csharp">
-<a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_go">
-<a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_nodejs">
-<a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_python">
-<a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}The TarGZip compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_csharp">
-<a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_go">
-<a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_nodejs">
-<a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_python">
-<a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_csharp">
-<a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_go">
-<a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_nodejs">
-<a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_python">
-<a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}The ZipDeflate compression level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="db2tabledataset">Db2Table<wbr>Dataset</h4>
@@ -24677,7 +24369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24793,7 +24485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24909,7 +24601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25025,7 +24717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25143,7 +24835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25259,7 +24951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25375,7 +25067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25491,7 +25183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25765,7 +25457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the file system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25881,7 +25573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the file system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25997,7 +25689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the file system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26113,7 +25805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the file system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26231,7 +25923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the file system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26347,7 +26039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the file system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26463,7 +26155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the file system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26579,7 +26271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the file system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30323,7 +30015,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used on files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30433,7 +30125,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used on files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30543,7 +30235,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used on files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30653,7 +30345,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used on files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30765,7 +30457,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used on files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30875,7 +30567,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used on files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30985,7 +30677,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used on files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31095,7 +30787,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used on files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33689,7 +33381,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33773,7 +33465,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33857,7 +33549,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33941,7 +33633,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34027,7 +33719,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34111,7 +33803,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34195,7 +33887,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34279,7 +33971,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -62623,7 +62315,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -62715,7 +62407,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -62807,7 +62499,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -62899,7 +62591,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetcompression">Dataset<wbr>Compression</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -62993,7 +62685,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -63085,7 +62777,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -63177,7 +62869,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -63269,7 +62961,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetcompressionresponse">Dataset<wbr>Compression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

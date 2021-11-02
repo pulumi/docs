@@ -2524,8 +2524,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="excludedaccountid_csharp">
-<a href="#excludedaccountid_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Account<wbr>Id</a>
+        <span id="excludedaccountids_csharp">
+<a href="#excludedaccountids_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Account<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
@@ -2560,8 +2560,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="excludedaccountid_go">
-<a href="#excludedaccountid_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Account<wbr>Id</a>
+        <span id="excludedaccountids_go">
+<a href="#excludedaccountids_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Account<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -2596,8 +2596,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="excludedaccountid_nodejs">
-<a href="#excludedaccountid_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Account<wbr>Id</a>
+        <span id="excludedaccountids_nodejs">
+<a href="#excludedaccountids_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Account<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -2632,8 +2632,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="excluded_account_id_python">
-<a href="#excluded_account_id_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>account_<wbr>id</a>
+        <span id="excluded_account_ids_python">
+<a href="#excluded_account_ids_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>account_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
@@ -2670,8 +2670,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="excludedaccountid_csharp">
-<a href="#excludedaccountid_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Account<wbr>Id</a>
+        <span id="excludedaccountids_csharp">
+<a href="#excludedaccountids_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Account<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
@@ -2706,8 +2706,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="excludedaccountid_go">
-<a href="#excludedaccountid_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Account<wbr>Id</a>
+        <span id="excludedaccountids_go">
+<a href="#excludedaccountids_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Account<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -2742,8 +2742,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="excludedaccountid_nodejs">
-<a href="#excludedaccountid_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Account<wbr>Id</a>
+        <span id="excludedaccountids_nodejs">
+<a href="#excludedaccountids_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Account<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -2778,8 +2778,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="excluded_account_id_python">
-<a href="#excluded_account_id_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>account_<wbr>id</a>
+        <span id="excluded_account_ids_python">
+<a href="#excluded_account_ids_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>account_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
