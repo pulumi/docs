@@ -5,21 +5,169 @@
 {{ define "main" }}
     <section class="max-w-4xl container mx-auto py-8 px-4 text-center text-lg">
         <p>
-            Pulumi is a venture backed startup in Seattle whose mission is to enable every
-            person to harness the power of the cloud. Our team is a diverse and talented group from all
-            corners of our industry, and our products sit uniquely at the intersection of
-            developer tools and cloud operations.
-        </p>
-        <p>
-            Get your code to the cloud. Faster. Together.
+            We at Pulumi are reimagining how develolpers and infrastructure teams program the cloud.
+            We believe in empowering every builder to build modern cloud software, with more collaboration and fun.
         </p>
         <p class="text-3xl">
             <a href="{{ relref . "/careers" }}">We are hiring!</a>
         </p>
     </section>
 
+    <section id="values" class="px-4 pb-8">
+        <div class="container mx-auto">
+            <h2 class="mb-8 text-center">Our Values</h2>
+            <div class="lg:flex ml-16 mr-16">
+                <div class="lg:w-1/4 p-5">
+                    <div class="card bg-white max-w-md mx-auto">
+                        <div class="px-8 py-8">
+                            <div class="icon-section pb-4">
+                                <i class="fas fa-users text-violet-600 text-3xl"></i>
+                            </div>
+                            <div>
+                                <h6>Work as a Team</h6>
+                            </div>
+                            <div class="description">
+                                <p class="text-sm">
+                                    We work together and celebrate our successes
+                                    together early and often.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/4 p-5">
+                    <div class="card bg-white max-w-md mx-auto">
+                        <div class="px-8 py-8">
+                            <div class="icon-section pb-4">
+                                <i class="fas fa-heart text-salmon-600 text-3xl"></i>
+                            </div>
+                            <div>
+                                <h6>Be Inclusive</h6>
+                            </div>
+                            <div class="description">
+                                <p class="text-sm">
+                                    We are a global and inclusive team with a diverse
+                                    set of perspectives.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/4 p-5">
+                    <div class="card bg-white max-w-md mx-auto">
+                        <div class="px-8 py-8">
+                            <div class="icon-section pb-4">
+                                <i class="fas fa-shoe-prints text-yellow-600 text-3xl"></i>
+                            </div>
+                            <div>
+                                <h6>Be Customer Driven</h6>
+                            </div>
+                            <div class="description">
+                                <p class="text-sm">
+                                    We wear the customer's shoes.
+                                    When a customer is successful, we are too.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/4 p-5">
+                    <div class="card bg-white max-w-md mx-auto">
+                        <div class="px-8 py-8">
+                            <div class="icon-section pb-4">
+                                <i class="fas fa-balance-scale text-blue-600 text-3xl"></i>
+                            </div>
+                            <div>
+                                <h6>Lead with Openness</h6>
+                            </div>
+                            <div class="description">
+                                <p class="text-sm">
+                                    We are transparent, open,
+                                    and honest with ourselves and with our customers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:flex ml-16 mr-16">
+                <div class="lg:w-1/4 p-5">
+                    <div class="card bg-white max-w-md mx-auto">
+                        <div class="px-8 py-8">
+                            <div class="icon-section pb-4">
+                                <i class="fas fa-running text-blue-600 text-3xl"></i>
+                            </div>
+                            <div>
+                                <h6>Bias for Action</h6>
+                            </div>
+                            <div class="description">
+                                <p class="text-sm">
+                                    We say yes more than we say no. Good today is better than
+                                    perfect tomorrow. When in doubt, we experiment.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/4 p-5">
+                    <div class="card bg-white max-w-md mx-auto">
+                        <div class="px-8 py-8">
+                            <div class="icon-section pb-4">
+                                <i class="fas fa-graduation-cap text-yellow-600 text-3xl"></i>
+                            </div>
+                            <div>
+                                <h6>Always Be Learning</h6>
+                            </div>
+                            <div class="description">
+                                <p class="text-sm">
+                                    We are intellectually curious lifelong learners about
+                                    technology, our customers, and the world around us.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/4 p-5">
+                    <div class="card bg-white max-w-md mx-auto">
+                        <div class="px-8 py-8">
+                            <div class="icon-section pb-4">
+                                <i class="fas fa-seedling text-violet-600 text-3xl"></i>
+                            </div>
+                            <div>
+                                <h6>Think Big</h6>
+                            </div>
+                            <div class="description">
+                                <p class="text-sm">
+                                    We are big dreamers, a bit rebellious, and reject status quo. We
+                                    hire the best people and empower them to invent the future.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/4 p-5">
+                    <div class="max-w-md mx-auto">
+                        <div class="px-8 py-8">
+                            <div>
+                                <h6>Like what we stand for? Join us.</h6>
+                            </div>
+                            <div class="description">
+                                <p class="text-sm">
+                                    We are always looking for new teammates
+                                    who want to build the future together.
+                                    <a href="{{ relref . "/careers" }}">Learn more</a>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="team" class="px-4">
         <div class="container md:mx-auto max-w-5xl text-center">
+            <h2 class="mb-8 text-center">Meet the Team</h2>
             <!-- Hide the list initially, in order to avoid any visual flicker when shuffled. -->
             <ul class="invisible inline-flex flex-wrap list-none justify-center p-0" data-shuffle="true">
                 {{ range $.Site.Data.team.team }}
