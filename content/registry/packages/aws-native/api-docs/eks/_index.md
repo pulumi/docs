@@ -14,6 +14,7 @@ Explore the resources and functions of the aws-native.eks module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="addon" title="Addon"><span class="api-symbol api-symbol--resource"></span>Addon</a></li>
+    <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
     <li><a href="fargateprofile" title="FargateProfile"><span class="api-symbol api-symbol--resource"></span>FargateProfile</a></li>
 </ul>
 
@@ -24,6 +25,6 @@ Explore the resources and functions of the aws-native.eks module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

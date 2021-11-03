@@ -173,6 +173,14 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="sourceentity_csharp">
+<a href="#sourceentity_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#templatesourceentity">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Template<wbr>Source<wbr>Entity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="templateid_csharp">
 <a href="#templateid_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Id</a>
 </span>
@@ -196,14 +204,6 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#templateresourcepermission">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Template<wbr>Resource<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}<p>A list of resource permissions to be set on the template. </p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourceentity_csharp">
-<a href="#sourceentity_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatesourceentity">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Template<wbr>Source<wbr>Entity<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -236,6 +236,14 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="sourceentity_go">
+<a href="#sourceentity_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#templatesourceentity">Template<wbr>Source<wbr>Entity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="templateid_go">
 <a href="#templateid_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Id</a>
 </span>
@@ -259,14 +267,6 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#templateresourcepermission">[]Template<wbr>Resource<wbr>Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}<p>A list of resource permissions to be set on the template. </p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourceentity_go">
-<a href="#sourceentity_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatesourceentity">Template<wbr>Source<wbr>Entity<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -299,6 +299,14 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="sourceentity_nodejs">
+<a href="#sourceentity_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#templatesourceentity">Template<wbr>Source<wbr>Entity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="templateid_nodejs">
 <a href="#templateid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Id</a>
 </span>
@@ -322,14 +330,6 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#templateresourcepermission">Template<wbr>Resource<wbr>Permission<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}<p>A list of resource permissions to be set on the template. </p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourceentity_nodejs">
-<a href="#sourceentity_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Entity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatesourceentity">Template<wbr>Source<wbr>Entity<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -362,6 +362,14 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="source_entity_python">
+<a href="#source_entity_python" style="color: inherit; text-decoration: inherit;">source_<wbr>entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#templatesourceentity">Template<wbr>Source<wbr>Entity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="template_id_python">
 <a href="#template_id_python" style="color: inherit; text-decoration: inherit;">template_<wbr>id</a>
 </span>
@@ -385,14 +393,6 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#templateresourcepermission">Sequence[Template<wbr>Resource<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}<p>A list of resource permissions to be set on the template. </p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="source_entity_python">
-<a href="#source_entity_python" style="color: inherit; text-decoration: inherit;">source_<wbr>entity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatesourceentity">Template<wbr>Source<wbr>Entity<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

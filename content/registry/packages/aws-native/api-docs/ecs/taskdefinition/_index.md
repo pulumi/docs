@@ -659,6 +659,7 @@ const taskdefinition = new aws_native.ecs.TaskDefinition("taskdefinition", {
                    <span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionPlacementConstraintArgs]]</span> = None<span class="p">,</span>
                    <span class="nx">proxy_configuration</span><span class="p">:</span> <span class="nx">Optional[TaskDefinitionProxyConfigurationArgs]</span> = None<span class="p">,</span>
                    <span class="nx">requires_compatibilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">runtime_platform</span><span class="p">:</span> <span class="nx">Optional[TaskDefinitionRuntimePlatformArgs]</span> = None<span class="p">,</span>
                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionTagArgs]]</span> = None<span class="p">,</span>
                    <span class="nx">task_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionVolumeArgs]]</span> = None<span class="p">)</span>
@@ -895,6 +896,14 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="runtimeplatform_csharp">
+<a href="#runtimeplatform_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskdefinitionruntimeplatform">Pulumi.<wbr>Aws<wbr>Native.<wbr>ECS.<wbr>Inputs.<wbr>Task<wbr>Definition<wbr>Runtime<wbr>Platform<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -1024,6 +1033,14 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="runtimeplatform_go">
+<a href="#runtimeplatform_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskdefinitionruntimeplatform">Task<wbr>Definition<wbr>Runtime<wbr>Platform<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1159,6 +1176,14 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="runtimeplatform_nodejs">
+<a href="#runtimeplatform_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskdefinitionruntimeplatform">Task<wbr>Definition<wbr>Runtime<wbr>Platform<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1288,6 +1313,14 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="runtime_platform_python">
+<a href="#runtime_platform_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#taskdefinitionruntimeplatform">Task<wbr>Definition<wbr>Runtime<wbr>Platform<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5040,6 +5073,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="taskdefinitionruntimeplatform">Task<wbr>Definition<wbr>Runtime<wbr>Platform</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cpuarchitecture_csharp">
+<a href="#cpuarchitecture_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Architecture</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="operatingsystemfamily_csharp">
+<a href="#operatingsystemfamily_csharp" style="color: inherit; text-decoration: inherit;">Operating<wbr>System<wbr>Family</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cpuarchitecture_go">
+<a href="#cpuarchitecture_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Architecture</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="operatingsystemfamily_go">
+<a href="#operatingsystemfamily_go" style="color: inherit; text-decoration: inherit;">Operating<wbr>System<wbr>Family</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cpuarchitecture_nodejs">
+<a href="#cpuarchitecture_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Architecture</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="operatingsystemfamily_nodejs">
+<a href="#operatingsystemfamily_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System<wbr>Family</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_architecture_python">
+<a href="#cpu_architecture_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>architecture</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="operating_system_family_python">
+<a href="#operating_system_family_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system_<wbr>family</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

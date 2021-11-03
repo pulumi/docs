@@ -29,6 +29,7 @@ Resource Type definition for AWS::Backup::BackupSelection
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">BackupSelection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">backup_plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">backup_selection</span><span class="p">:</span> <span class="nx">Optional[BackupSelectionResourceTypeArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">BackupSelection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -159,6 +160,14 @@ The BackupSelection resource accepts the following [input]({{< relref "/docs/int
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="backupplanid_csharp">
+<a href="#backupplanid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Plan<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="backupselectionvalue_csharp">
 <a href="#backupselectionvalue_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Selection<wbr>Value</a>
 </span>
@@ -170,6 +179,14 @@ The BackupSelection resource accepts the following [input]({{< relref "/docs/int
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="backupplanid_go">
+<a href="#backupplanid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Plan<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backupselection_go">
 <a href="#backupselection_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Selection</a>
@@ -183,6 +200,14 @@ The BackupSelection resource accepts the following [input]({{< relref "/docs/int
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="backupplanid_nodejs">
+<a href="#backupplanid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Plan<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="backupselection_nodejs">
 <a href="#backupselection_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Selection</a>
 </span>
@@ -194,6 +219,14 @@ The BackupSelection resource accepts the following [input]({{< relref "/docs/int
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="backup_plan_id_python">
+<a href="#backup_plan_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>plan_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backup_selection_python">
 <a href="#backup_selection_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>selection</a>
@@ -213,14 +246,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="backupplanid_csharp">
-<a href="#backupplanid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Plan<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -242,14 +267,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="backupplanid_go">
-<a href="#backupplanid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Plan<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -270,14 +287,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="backupplanid_nodejs">
-<a href="#backupplanid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Plan<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -297,14 +306,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="backup_plan_id_python">
-<a href="#backup_plan_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>plan_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -332,6 +333,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="backupselectionconditionparameter">Backup<wbr>Selection<wbr>Condition<wbr>Parameter</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="conditionkey_csharp">
+<a href="#conditionkey_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conditionvalue_csharp">
+<a href="#conditionvalue_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="conditionkey_go">
+<a href="#conditionkey_go" style="color: inherit; text-decoration: inherit;">Condition<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conditionvalue_go">
+<a href="#conditionvalue_go" style="color: inherit; text-decoration: inherit;">Condition<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="conditionkey_nodejs">
+<a href="#conditionkey_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conditionvalue_nodejs">
+<a href="#conditionvalue_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="condition_key_python">
+<a href="#condition_key_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="condition_value_python">
+<a href="#condition_value_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="backupselectionconditionresourcetype">Backup<wbr>Selection<wbr>Condition<wbr>Resource<wbr>Type</h4>
 
@@ -468,11 +551,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="conditions_csharp">
+<a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupselectionresourcetypeconditionsproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>Backup.<wbr>Inputs.<wbr>Backup<wbr>Selection<wbr>Resource<wbr>Type<wbr>Conditions<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="listoftags_csharp">
 <a href="#listoftags_csharp" style="color: inherit; text-decoration: inherit;">List<wbr>Of<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backupselectionconditionresourcetype">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Backup.<wbr>Inputs.<wbr>Backup<wbr>Selection<wbr>Condition<wbr>Resource<wbr>Type&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notresources_csharp">
+<a href="#notresources_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -504,11 +603,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="conditions_go">
+<a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupselectionresourcetypeconditionsproperties">Backup<wbr>Selection<wbr>Resource<wbr>Type<wbr>Conditions<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="listoftags_go">
 <a href="#listoftags_go" style="color: inherit; text-decoration: inherit;">List<wbr>Of<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backupselectionconditionresourcetype">[]Backup<wbr>Selection<wbr>Condition<wbr>Resource<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notresources_go">
+<a href="#notresources_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -540,11 +655,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="conditions_nodejs">
+<a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupselectionresourcetypeconditionsproperties">Backup<wbr>Selection<wbr>Resource<wbr>Type<wbr>Conditions<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="listoftags_nodejs">
 <a href="#listoftags_nodejs" style="color: inherit; text-decoration: inherit;">list<wbr>Of<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backupselectionconditionresourcetype">Backup<wbr>Selection<wbr>Condition<wbr>Resource<wbr>Type[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notresources_nodejs">
+<a href="#notresources_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -576,6 +707,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="conditions_python">
+<a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupselectionresourcetypeconditionsproperties">Backup<wbr>Selection<wbr>Resource<wbr>Type<wbr>Conditions<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="list_of_tags_python">
 <a href="#list_of_tags_python" style="color: inherit; text-decoration: inherit;">list_<wbr>of_<wbr>tags</a>
 </span>
@@ -584,11 +723,165 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="not_resources_python">
+<a href="#not_resources_python" style="color: inherit; text-decoration: inherit;">not_<wbr>resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resources_python">
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="backupselectionresourcetypeconditionsproperties">Backup<wbr>Selection<wbr>Resource<wbr>Type<wbr>Conditions<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="stringequals_csharp">
+<a href="#stringequals_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Equals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupselectionconditionparameter">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Backup.<wbr>Inputs.<wbr>Backup<wbr>Selection<wbr>Condition<wbr>Parameter&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stringlike_csharp">
+<a href="#stringlike_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Like</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupselectionconditionparameter">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Backup.<wbr>Inputs.<wbr>Backup<wbr>Selection<wbr>Condition<wbr>Parameter&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stringnotequals_csharp">
+<a href="#stringnotequals_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Not<wbr>Equals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupselectionconditionparameter">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Backup.<wbr>Inputs.<wbr>Backup<wbr>Selection<wbr>Condition<wbr>Parameter&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stringnotlike_csharp">
+<a href="#stringnotlike_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Not<wbr>Like</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupselectionconditionparameter">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Backup.<wbr>Inputs.<wbr>Backup<wbr>Selection<wbr>Condition<wbr>Parameter&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="stringequals_go">
+<a href="#stringequals_go" style="color: inherit; text-decoration: inherit;">String<wbr>Equals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupselectionconditionparameter">[]Backup<wbr>Selection<wbr>Condition<wbr>Parameter</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stringlike_go">
+<a href="#stringlike_go" style="color: inherit; text-decoration: inherit;">String<wbr>Like</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupselectionconditionparameter">[]Backup<wbr>Selection<wbr>Condition<wbr>Parameter</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stringnotequals_go">
+<a href="#stringnotequals_go" style="color: inherit; text-decoration: inherit;">String<wbr>Not<wbr>Equals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupselectionconditionparameter">[]Backup<wbr>Selection<wbr>Condition<wbr>Parameter</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stringnotlike_go">
+<a href="#stringnotlike_go" style="color: inherit; text-decoration: inherit;">String<wbr>Not<wbr>Like</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupselectionconditionparameter">[]Backup<wbr>Selection<wbr>Condition<wbr>Parameter</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="stringequals_nodejs">
+<a href="#stringequals_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Equals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupselectionconditionparameter">Backup<wbr>Selection<wbr>Condition<wbr>Parameter[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stringlike_nodejs">
+<a href="#stringlike_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Like</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupselectionconditionparameter">Backup<wbr>Selection<wbr>Condition<wbr>Parameter[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stringnotequals_nodejs">
+<a href="#stringnotequals_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Not<wbr>Equals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupselectionconditionparameter">Backup<wbr>Selection<wbr>Condition<wbr>Parameter[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stringnotlike_nodejs">
+<a href="#stringnotlike_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Not<wbr>Like</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupselectionconditionparameter">Backup<wbr>Selection<wbr>Condition<wbr>Parameter[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="string_equals_python">
+<a href="#string_equals_python" style="color: inherit; text-decoration: inherit;">string_<wbr>equals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupselectionconditionparameter">Sequence[Backup<wbr>Selection<wbr>Condition<wbr>Parameter]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="string_like_python">
+<a href="#string_like_python" style="color: inherit; text-decoration: inherit;">string_<wbr>like</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupselectionconditionparameter">Sequence[Backup<wbr>Selection<wbr>Condition<wbr>Parameter]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="string_not_equals_python">
+<a href="#string_not_equals_python" style="color: inherit; text-decoration: inherit;">string_<wbr>not_<wbr>equals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupselectionconditionparameter">Sequence[Backup<wbr>Selection<wbr>Condition<wbr>Parameter]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="string_not_like_python">
+<a href="#string_not_like_python" style="color: inherit; text-decoration: inherit;">string_<wbr>not_<wbr>like</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backupselectionconditionparameter">Sequence[Backup<wbr>Selection<wbr>Condition<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

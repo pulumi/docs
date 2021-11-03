@@ -46,6 +46,7 @@ A native Pulumi package for creating and managing Amazon Web Services (AWS) reso
     <li><a href="databrew/" title="databrew"><span class="api-symbol api-symbol--module"></span>databrew</a></li>
     <li><a href="datasync/" title="datasync"><span class="api-symbol api-symbol--module"></span>datasync</a></li>
     <li><a href="detective/" title="detective"><span class="api-symbol api-symbol--module"></span>detective</a></li>
+    <li><a href="devicefarm/" title="devicefarm"><span class="api-symbol api-symbol--module"></span>devicefarm</a></li>
     <li><a href="devopsguru/" title="devopsguru"><span class="api-symbol api-symbol--module"></span>devopsguru</a></li>
     <li><a href="dynamodb/" title="dynamodb"><span class="api-symbol api-symbol--module"></span>dynamodb</a></li>
     <li><a href="ec2/" title="ec2"><span class="api-symbol api-symbol--module"></span>ec2</a></li>
@@ -92,16 +93,19 @@ A native Pulumi package for creating and managing Amazon Web Services (AWS) reso
     <li><a href="macie/" title="macie"><span class="api-symbol api-symbol--module"></span>macie</a></li>
     <li><a href="mediaconnect/" title="mediaconnect"><span class="api-symbol api-symbol--module"></span>mediaconnect</a></li>
     <li><a href="mediapackage/" title="mediapackage"><span class="api-symbol api-symbol--module"></span>mediapackage</a></li>
+    <li><a href="memorydb/" title="memorydb"><span class="api-symbol api-symbol--module"></span>memorydb</a></li>
     <li><a href="mwaa/" title="mwaa"><span class="api-symbol api-symbol--module"></span>mwaa</a></li>
     <li><a href="networkfirewall/" title="networkfirewall"><span class="api-symbol api-symbol--module"></span>networkfirewall</a></li>
     <li><a href="networkmanager/" title="networkmanager"><span class="api-symbol api-symbol--module"></span>networkmanager</a></li>
     <li><a href="nimblestudio/" title="nimblestudio"><span class="api-symbol api-symbol--module"></span>nimblestudio</a></li>
     <li><a href="opensearchservice/" title="opensearchservice"><span class="api-symbol api-symbol--module"></span>opensearchservice</a></li>
     <li><a href="opsworkscm/" title="opsworkscm"><span class="api-symbol api-symbol--module"></span>opsworkscm</a></li>
+    <li><a href="panorama/" title="panorama"><span class="api-symbol api-symbol--module"></span>panorama</a></li>
     <li><a href="qldb/" title="qldb"><span class="api-symbol api-symbol--module"></span>qldb</a></li>
     <li><a href="quicksight/" title="quicksight"><span class="api-symbol api-symbol--module"></span>quicksight</a></li>
     <li><a href="rds/" title="rds"><span class="api-symbol api-symbol--module"></span>rds</a></li>
     <li><a href="redshift/" title="redshift"><span class="api-symbol api-symbol--module"></span>redshift</a></li>
+    <li><a href="rekognition/" title="rekognition"><span class="api-symbol api-symbol--module"></span>rekognition</a></li>
     <li><a href="resourcegroups/" title="resourcegroups"><span class="api-symbol api-symbol--module"></span>resourcegroups</a></li>
     <li><a href="robomaker/" title="robomaker"><span class="api-symbol api-symbol--module"></span>robomaker</a></li>
     <li><a href="route53/" title="route53"><span class="api-symbol api-symbol--module"></span>route53</a></li>
@@ -124,6 +128,7 @@ A native Pulumi package for creating and managing Amazon Web Services (AWS) reso
     <li><a href="synthetics/" title="synthetics"><span class="api-symbol api-symbol--module"></span>synthetics</a></li>
     <li><a href="timestream/" title="timestream"><span class="api-symbol api-symbol--module"></span>timestream</a></li>
     <li><a href="wafv2/" title="wafv2"><span class="api-symbol api-symbol--module"></span>wafv2</a></li>
+    <li><a href="wisdom/" title="wisdom"><span class="api-symbol api-symbol--module"></span>wisdom</a></li>
     <li><a href="workspaces/" title="workspaces"><span class="api-symbol api-symbol--module"></span>workspaces</a></li>
     <li><a href="xray/" title="xray"><span class="api-symbol api-symbol--module"></span>xray</a></li>
 </ul>
@@ -154,6 +159,6 @@ A native Pulumi package for creating and managing Amazon Web Services (AWS) reso
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

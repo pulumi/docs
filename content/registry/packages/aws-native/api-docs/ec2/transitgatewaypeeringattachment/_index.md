@@ -29,6 +29,7 @@ The AWS::EC2::TransitGatewayPeeringAttachment type
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">TransitGatewayPeeringAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                    <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[TransitGatewayPeeringAttachmentOptionsArgs]</span> = None<span class="p">,</span>
                                     <span class="nx">peer_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                     <span class="nx">peer_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                     <span class="nx">peer_transit_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -195,6 +196,14 @@ The TransitGatewayPeeringAttachment resource accepts the following [input]({{< r
     </dt>
     <dd>{{% md %}}The ID of the transit gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="options_csharp">
+<a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transitgatewaypeeringattachmentoptions">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Transit<wbr>Gateway<wbr>Peering<wbr>Attachment<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Options for transit gateway peering attachment{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -238,6 +247,14 @@ The TransitGatewayPeeringAttachment resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the transit gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="options_go">
+<a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transitgatewaypeeringattachmentoptions">Transit<wbr>Gateway<wbr>Peering<wbr>Attachment<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Options for transit gateway peering attachment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -283,6 +300,14 @@ The TransitGatewayPeeringAttachment resource accepts the following [input]({{< r
     </dt>
     <dd>{{% md %}}The ID of the transit gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="options_nodejs">
+<a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transitgatewaypeeringattachmentoptions">Transit<wbr>Gateway<wbr>Peering<wbr>Attachment<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Options for transit gateway peering attachment{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -326,6 +351,14 @@ The TransitGatewayPeeringAttachment resource accepts the following [input]({{< r
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the transit gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="options_python">
+<a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transitgatewaypeeringattachmentoptions">Transit<wbr>Gateway<wbr>Peering<wbr>Attachment<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Options for transit gateway peering attachment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -528,6 +561,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="transitgatewaypeeringattachmentoptions">Transit<wbr>Gateway<wbr>Peering<wbr>Attachment<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dynamicrouting_csharp">
+<a href="#dynamicrouting_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Routing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable dynamic routing. (enable/disable){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dynamicrouting_go">
+<a href="#dynamicrouting_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Routing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable dynamic routing. (enable/disable){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dynamicrouting_nodejs">
+<a href="#dynamicrouting_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Routing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable dynamic routing. (enable/disable){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dynamic_routing_python">
+<a href="#dynamic_routing_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>routing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable dynamic routing. (enable/disable){{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="transitgatewaypeeringattachmentpeeringattachmentstatus">Transit<wbr>Gateway<wbr>Peering<wbr>Attachment<wbr>Peering<wbr>Attachment<wbr>Status</h4>
 

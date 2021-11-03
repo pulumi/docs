@@ -181,6 +181,14 @@ The Analysis resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sourceentity_csharp">
+<a href="#sourceentity_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analysissourceentity">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Analysis<wbr>Source<wbr>Entity<wbr>Args</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errors_csharp">
@@ -220,14 +228,6 @@ The Analysis resource accepts the following [input]({{< relref "/docs/intro/conc
 
         <p>To specify no permissions, omit <code>Permissions</code>.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="sourceentity_csharp">
-<a href="#sourceentity_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysissourceentity">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Analysis<wbr>Source<wbr>Entity<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -262,6 +262,14 @@ The Analysis resource accepts the following [input]({{< relref "/docs/intro/conc
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sourceentity_go">
+<a href="#sourceentity_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analysissourceentity">Analysis<wbr>Source<wbr>Entity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -302,14 +310,6 @@ The Analysis resource accepts the following [input]({{< relref "/docs/intro/conc
 
         <p>To specify no permissions, omit <code>Permissions</code>.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="sourceentity_go">
-<a href="#sourceentity_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysissourceentity">Analysis<wbr>Source<wbr>Entity<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -344,6 +344,14 @@ The Analysis resource accepts the following [input]({{< relref "/docs/intro/conc
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sourceentity_nodejs">
+<a href="#sourceentity_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analysissourceentity">Analysis<wbr>Source<wbr>Entity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -384,14 +392,6 @@ The Analysis resource accepts the following [input]({{< relref "/docs/intro/conc
 
         <p>To specify no permissions, omit <code>Permissions</code>.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="sourceentity_nodejs">
-<a href="#sourceentity_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Entity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysissourceentity">Analysis<wbr>Source<wbr>Entity<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -426,6 +426,14 @@ The Analysis resource accepts the following [input]({{< relref "/docs/intro/conc
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="source_entity_python">
+<a href="#source_entity_python" style="color: inherit; text-decoration: inherit;">source_<wbr>entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analysissourceentity">Analysis<wbr>Source<wbr>Entity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -465,14 +473,6 @@ The Analysis resource accepts the following [input]({{< relref "/docs/intro/conc
             principal listed by Amazon Resource Name (ARN). </p>
 
         <p>To specify no permissions, omit <code>Permissions</code>.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="source_entity_python">
-<a href="#source_entity_python" style="color: inherit; text-decoration: inherit;">source_<wbr>entity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analysissourceentity">Analysis<wbr>Source<wbr>Entity<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

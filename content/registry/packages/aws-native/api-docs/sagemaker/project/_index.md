@@ -1066,18 +1066,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningartifactid_csharp">
-<a href="#provisioningartifactid_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Artifact<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pathid_csharp">
+<a href="#pathid_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="pathid_csharp">
-<a href="#pathid_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Id</a>
+        <span id="provisioningartifactid_csharp">
+<a href="#provisioningartifactid_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1102,18 +1102,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningartifactid_go">
-<a href="#provisioningartifactid_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Artifact<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pathid_go">
+<a href="#pathid_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="pathid_go">
-<a href="#pathid_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Id</a>
+        <span id="provisioningartifactid_go">
+<a href="#provisioningartifactid_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1138,18 +1138,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningartifactid_nodejs">
-<a href="#provisioningartifactid_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Artifact<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pathid_nodejs">
+<a href="#pathid_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="pathid_nodejs">
-<a href="#pathid_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Id</a>
+        <span id="provisioningartifactid_nodejs">
+<a href="#provisioningartifactid_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1174,18 +1174,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioning_artifact_id_python">
-<a href="#provisioning_artifact_id_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>artifact_<wbr>id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_id_python">
+<a href="#path_id_python" style="color: inherit; text-decoration: inherit;">path_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="path_id_python">
-<a href="#path_id_python" style="color: inherit; text-decoration: inherit;">path_<wbr>id</a>
+        <span id="provisioning_artifact_id_python">
+<a href="#provisioning_artifact_id_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

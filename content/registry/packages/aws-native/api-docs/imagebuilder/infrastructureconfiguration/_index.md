@@ -30,6 +30,7 @@ Resource schema for AWS::ImageBuilder::InfrastructureConfiguration
 <span class="k">def </span><span class="nx">InfrastructureConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">instance_metadata_options</span><span class="p">:</span> <span class="nx">Optional[InfrastructureConfigurationInstanceMetadataOptionsArgs]</span> = None<span class="p">,</span>
                                 <span class="nx">instance_profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                 <span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                                 <span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -194,6 +195,14 @@ The InfrastructureConfiguration resource accepts the following [input]({{< relre
     </dt>
     <dd>{{% md %}}The description of the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instancemetadataoptions_csharp">
+<a href="#instancemetadataoptions_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#infrastructureconfigurationinstancemetadataoptions">Pulumi.<wbr>Aws<wbr>Native.<wbr>Image<wbr>Builder.<wbr>Inputs.<wbr>Infrastructure<wbr>Configuration<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The instance metadata option settings for the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancetypes_csharp">
 <a href="#instancetypes_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types</a>
 </span>
@@ -293,6 +302,14 @@ The InfrastructureConfiguration resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancemetadataoptions_go">
+<a href="#instancemetadataoptions_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#infrastructureconfigurationinstancemetadataoptions">Infrastructure<wbr>Configuration<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The instance metadata option settings for the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetypes_go">
 <a href="#instancetypes_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types</a>
@@ -394,6 +411,14 @@ The InfrastructureConfiguration resource accepts the following [input]({{< relre
     </dt>
     <dd>{{% md %}}The description of the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instancemetadataoptions_nodejs">
+<a href="#instancemetadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#infrastructureconfigurationinstancemetadataoptions">Infrastructure<wbr>Configuration<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The instance metadata option settings for the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancetypes_nodejs">
 <a href="#instancetypes_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types</a>
 </span>
@@ -493,6 +518,14 @@ The InfrastructureConfiguration resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instance_metadata_options_python">
+<a href="#instance_metadata_options_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>metadata_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#infrastructureconfigurationinstancemetadataoptions">Infrastructure<wbr>Configuration<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The instance metadata option settings for the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_types_python">
 <a href="#instance_types_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types</a>
@@ -663,6 +696,114 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="infrastructureconfigurationinstancemetadataoptions">Infrastructure<wbr>Configuration<wbr>Instance<wbr>Metadata<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="httpputresponsehoplimit_csharp">
+<a href="#httpputresponsehoplimit_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Limit the number of hops that an instance metadata request can traverse to reach its destination.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httptokens_csharp">
+<a href="#httptokens_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#infrastructureconfigurationinstancemetadataoptionshttptokens">Pulumi.<wbr>Aws<wbr>Native.<wbr>Image<wbr>Builder.<wbr>Infrastructure<wbr>Configuration<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Http<wbr>Tokens</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether a signed token header is required for instance metadata retrieval requests. The values affect the response as follows: {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="httpputresponsehoplimit_go">
+<a href="#httpputresponsehoplimit_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Limit the number of hops that an instance metadata request can traverse to reach its destination.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httptokens_go">
+<a href="#httptokens_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#infrastructureconfigurationinstancemetadataoptionshttptokens">Infrastructure<wbr>Configuration<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Http<wbr>Tokens</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether a signed token header is required for instance metadata retrieval requests. The values affect the response as follows: {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="httpputresponsehoplimit_nodejs">
+<a href="#httpputresponsehoplimit_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Limit the number of hops that an instance metadata request can traverse to reach its destination.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httptokens_nodejs">
+<a href="#httptokens_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#infrastructureconfigurationinstancemetadataoptionshttptokens">Infrastructure<wbr>Configuration<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Http<wbr>Tokens</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether a signed token header is required for instance metadata retrieval requests. The values affect the response as follows: {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="http_put_response_hop_limit_python">
+<a href="#http_put_response_hop_limit_python" style="color: inherit; text-decoration: inherit;">http_<wbr>put_<wbr>response_<wbr>hop_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Limit the number of hops that an instance metadata request can traverse to reach its destination.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="http_tokens_python">
+<a href="#http_tokens_python" style="color: inherit; text-decoration: inherit;">http_<wbr>tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#infrastructureconfigurationinstancemetadataoptionshttptokens">Infrastructure<wbr>Configuration<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Http<wbr>Tokens</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether a signed token header is required for instance metadata retrieval requests. The values affect the response as follows: {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="infrastructureconfigurationinstancemetadataoptionshttptokens">Infrastructure<wbr>Configuration<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Http<wbr>Tokens</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Required</dt>
+    <dd>required</dd><dt>Optional</dt>
+    <dd>optional</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Infrastructure<wbr>Configuration<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Http<wbr>Tokens<wbr>Required</dt>
+    <dd>required</dd><dt>Infrastructure<wbr>Configuration<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Http<wbr>Tokens<wbr>Optional</dt>
+    <dd>optional</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Required</dt>
+    <dd>required</dd><dt>Optional</dt>
+    <dd>optional</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>REQUIRED</dt>
+    <dd>required</dd><dt>OPTIONAL</dt>
+    <dd>optional</dd></dl>
+{{% /choosable %}}
 
 <h4 id="infrastructureconfigurationlogging">Infrastructure<wbr>Configuration<wbr>Logging</h4>
 

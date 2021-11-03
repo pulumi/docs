@@ -46,7 +46,7 @@ Resource schema for AWS::MWAA::Environment
                 <span class="nx">requirements_s3_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">schedulers</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                 <span class="nx">source_bucket_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[EnvironmentTagMapArgs]</span> = None<span class="p">,</span>
+                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
                 <span class="nx">webserver_access_mode</span><span class="p">:</span> <span class="nx">Optional[EnvironmentWebserverAccessMode]</span> = None<span class="p">,</span>
                 <span class="nx">weekly_maintenance_window_start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -326,9 +326,9 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmenttagmap">Pulumi.<wbr>Aws<wbr>Native.<wbr>MWAA.<wbr>Inputs.<wbr>Environment<wbr>Tag<wbr>Map<wbr>Args</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags for the environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webserveraccessmode_csharp">
 <a href="#webserveraccessmode_csharp" style="color: inherit; text-decoration: inherit;">Webserver<wbr>Access<wbr>Mode</a>
@@ -498,9 +498,9 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmenttagmap">Environment<wbr>Tag<wbr>Map<wbr>Args</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags for the environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webserveraccessmode_go">
 <a href="#webserveraccessmode_go" style="color: inherit; text-decoration: inherit;">Webserver<wbr>Access<wbr>Mode</a>
@@ -670,9 +670,9 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmenttagmap">Environment<wbr>Tag<wbr>Map<wbr>Args</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags for the environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webserveraccessmode_nodejs">
 <a href="#webserveraccessmode_nodejs" style="color: inherit; text-decoration: inherit;">webserver<wbr>Access<wbr>Mode</a>
@@ -842,9 +842,9 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmenttagmap">Environment<wbr>Tag<wbr>Map<wbr>Args</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A map of tags for the environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webserver_access_mode_python">
 <a href="#webserver_access_mode_python" style="color: inherit; text-decoration: inherit;">webserver_<wbr>access_<wbr>mode</a>

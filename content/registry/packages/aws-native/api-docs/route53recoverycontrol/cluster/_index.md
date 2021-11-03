@@ -29,7 +29,8 @@ AWS Route53 Recovery Control Cluster resource schema
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ClusterArgs]</a></span> = None<span class="p">,</span>
@@ -165,7 +166,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a Cluster. You can use any non-white space character in the name{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of a Cluster. You can use any non-white space character in the name{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustertag">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Route53Recovery<wbr>Control.<wbr>Inputs.<wbr>Cluster<wbr>Tag<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of tags associated with a resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -177,7 +186,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a Cluster. You can use any non-white space character in the name{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of a Cluster. You can use any non-white space character in the name{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustertag">[]Cluster<wbr>Tag<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of tags associated with a resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -189,7 +206,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a Cluster. You can use any non-white space character in the name{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of a Cluster. You can use any non-white space character in the name{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustertag">Cluster<wbr>Tag<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of tags associated with a resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -201,7 +226,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of a Cluster. You can use any non-white space character in the name{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of a Cluster. You can use any non-white space character in the name{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustertag">Sequence[Cluster<wbr>Tag<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of tags associated with a resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -475,6 +508,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>PENDING</dd><dt>DEPLOYED</dt>
     <dd>DEPLOYED</dd><dt>PENDING_DELETION</dt>
     <dd>PENDING_DELETION</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clustertag">Cluster<wbr>Tag</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

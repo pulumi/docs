@@ -16,9 +16,11 @@ Explore the resources and functions of the aws-native.route53resolver module.
     <li><a href="firewalldomainlist" title="FirewallDomainList"><span class="api-symbol api-symbol--resource"></span>FirewallDomainList</a></li>
     <li><a href="firewallrulegroup" title="FirewallRuleGroup"><span class="api-symbol api-symbol--resource"></span>FirewallRuleGroup</a></li>
     <li><a href="firewallrulegroupassociation" title="FirewallRuleGroupAssociation"><span class="api-symbol api-symbol--resource"></span>FirewallRuleGroupAssociation</a></li>
+    <li><a href="resolverconfig" title="ResolverConfig"><span class="api-symbol api-symbol--resource"></span>ResolverConfig</a></li>
     <li><a href="resolverdnssecconfig" title="ResolverDNSSECConfig"><span class="api-symbol api-symbol--resource"></span>ResolverDNSSECConfig</a></li>
     <li><a href="resolverqueryloggingconfig" title="ResolverQueryLoggingConfig"><span class="api-symbol api-symbol--resource"></span>ResolverQueryLoggingConfig</a></li>
     <li><a href="resolverqueryloggingconfigassociation" title="ResolverQueryLoggingConfigAssociation"><span class="api-symbol api-symbol--resource"></span>ResolverQueryLoggingConfigAssociation</a></li>
+    <li><a href="resolverrule" title="ResolverRule"><span class="api-symbol api-symbol--resource"></span>ResolverRule</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +30,6 @@ Explore the resources and functions of the aws-native.route53resolver module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

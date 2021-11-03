@@ -38,6 +38,7 @@ Creates an AWS Firewall Manager policy.
            <span class="nx">resource_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyResourceTagArgs]]</span> = None<span class="p">,</span>
            <span class="nx">resource_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">resource_type_list</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+           <span class="nx">resources_clean_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">security_service_policy_data</span><span class="p">:</span> <span class="nx">Optional[SecurityServicePolicyDataPropertiesArgs]</span> = None<span class="p">,</span>
            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -249,6 +250,14 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="resourcescleanup_csharp">
+<a href="#resourcescleanup_csharp" style="color: inherit; text-decoration: inherit;">Resources<wbr>Clean<wbr>Up</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -338,6 +347,14 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcescleanup_go">
+<a href="#resourcescleanup_go" style="color: inherit; text-decoration: inherit;">Resources<wbr>Clean<wbr>Up</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -433,6 +450,14 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="resourcescleanup_nodejs">
+<a href="#resourcescleanup_nodejs" style="color: inherit; text-decoration: inherit;">resources<wbr>Clean<wbr>Up</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -522,6 +547,14 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resources_clean_up_python">
+<a href="#resources_clean_up_python" style="color: inherit; text-decoration: inherit;">resources_<wbr>clean_<wbr>up</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

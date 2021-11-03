@@ -30,7 +30,8 @@ AWS Route53 Recovery Control Control Panel resource schema .
 <span class="k">def </span><span class="nx">ControlPanel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                  <span class="nx">cluster_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ControlPanelTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ControlPanel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ControlPanelArgs</a></span><span class="p">,</span>
@@ -174,7 +175,15 @@ The ControlPanel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cluster to associate with the Control Panel{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Cluster to associate with the Control Panel{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#controlpaneltag">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Route53Recovery<wbr>Control.<wbr>Inputs.<wbr>Control<wbr>Panel<wbr>Tag<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of tags associated with a resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -194,7 +203,15 @@ The ControlPanel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cluster to associate with the Control Panel{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Cluster to associate with the Control Panel{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#controlpaneltag">[]Control<wbr>Panel<wbr>Tag<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of tags associated with a resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -214,7 +231,15 @@ The ControlPanel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cluster to associate with the Control Panel{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Cluster to associate with the Control Panel{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#controlpaneltag">Control<wbr>Panel<wbr>Tag<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of tags associated with a resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -234,7 +259,15 @@ The ControlPanel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cluster to associate with the Control Panel{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Cluster to associate with the Control Panel{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#controlpaneltag">Sequence[Control<wbr>Panel<wbr>Tag<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of tags associated with a resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -458,6 +491,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>PENDING</dd><dt>DEPLOYED</dt>
     <dd>DEPLOYED</dd><dt>PENDING_DELETION</dt>
     <dd>PENDING_DELETION</dd></dl>
+{{% /choosable %}}
+
+<h4 id="controlpaneltag">Control<wbr>Panel<wbr>Tag</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

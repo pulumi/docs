@@ -13,6 +13,7 @@ Explore the resources and functions of the aws-native.ec2 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="capacityreservationfleet" title="CapacityReservationFleet"><span class="api-symbol api-symbol--resource"></span>CapacityReservationFleet</a></li>
     <li><a href="carriergateway" title="CarrierGateway"><span class="api-symbol api-symbol--resource"></span>CarrierGateway</a></li>
     <li><a href="dhcpoptions" title="DHCPOptions"><span class="api-symbol api-symbol--resource"></span>DHCPOptions</a></li>
     <li><a href="ec2fleet" title="EC2Fleet"><span class="api-symbol api-symbol--resource"></span>EC2Fleet</a></li>
@@ -21,14 +22,17 @@ Explore the resources and functions of the aws-native.ec2 module.
     <li><a href="flowlog" title="FlowLog"><span class="api-symbol api-symbol--resource"></span>FlowLog</a></li>
     <li><a href="gatewayroutetableassociation" title="GatewayRouteTableAssociation"><span class="api-symbol api-symbol--resource"></span>GatewayRouteTableAssociation</a></li>
     <li><a href="host" title="Host"><span class="api-symbol api-symbol--resource"></span>Host</a></li>
+    <li><a href="internetgateway" title="InternetGateway"><span class="api-symbol api-symbol--resource"></span>InternetGateway</a></li>
     <li><a href="localgatewayroute" title="LocalGatewayRoute"><span class="api-symbol api-symbol--resource"></span>LocalGatewayRoute</a></li>
     <li><a href="localgatewayroutetablevpcassociation" title="LocalGatewayRouteTableVPCAssociation"><span class="api-symbol api-symbol--resource"></span>LocalGatewayRouteTableVPCAssociation</a></li>
     <li><a href="networkacl" title="NetworkAcl"><span class="api-symbol api-symbol--resource"></span>NetworkAcl</a></li>
     <li><a href="networkinsightsanalysis" title="NetworkInsightsAnalysis"><span class="api-symbol api-symbol--resource"></span>NetworkInsightsAnalysis</a></li>
     <li><a href="networkinsightspath" title="NetworkInsightsPath"><span class="api-symbol api-symbol--resource"></span>NetworkInsightsPath</a></li>
+    <li><a href="networkinterface" title="NetworkInterface"><span class="api-symbol api-symbol--resource"></span>NetworkInterface</a></li>
     <li><a href="prefixlist" title="PrefixList"><span class="api-symbol api-symbol--resource"></span>PrefixList</a></li>
     <li><a href="routetable" title="RouteTable"><span class="api-symbol api-symbol--resource"></span>RouteTable</a></li>
     <li><a href="spotfleet" title="SpotFleet"><span class="api-symbol api-symbol--resource"></span>SpotFleet</a></li>
+    <li><a href="subnet" title="Subnet"><span class="api-symbol api-symbol--resource"></span>Subnet</a></li>
     <li><a href="subnetnetworkaclassociation" title="SubnetNetworkAclAssociation"><span class="api-symbol api-symbol--resource"></span>SubnetNetworkAclAssociation</a></li>
     <li><a href="subnetroutetableassociation" title="SubnetRouteTableAssociation"><span class="api-symbol api-symbol--resource"></span>SubnetRouteTableAssociation</a></li>
     <li><a href="transitgateway" title="TransitGateway"><span class="api-symbol api-symbol--resource"></span>TransitGateway</a></li>
@@ -49,6 +53,6 @@ Explore the resources and functions of the aws-native.ec2 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

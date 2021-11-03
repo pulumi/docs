@@ -453,6 +453,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="statefuldefaultactions_csharp">
+<a href="#statefuldefaultactions_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Default<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statefulengineoptions_csharp">
+<a href="#statefulengineoptions_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Engine<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicystatefulengineoptions">Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Stateful<wbr>Engine<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="statefulrulegroupreferences_csharp">
 <a href="#statefulrulegroupreferences_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Rule<wbr>Group<wbr>References</a>
 </span>
@@ -494,6 +510,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statefuldefaultactions_go">
+<a href="#statefuldefaultactions_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Default<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statefulengineoptions_go">
+<a href="#statefulengineoptions_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Engine<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicystatefulengineoptions">Firewall<wbr>Policy<wbr>Stateful<wbr>Engine<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -541,6 +573,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="statefuldefaultactions_nodejs">
+<a href="#statefuldefaultactions_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Default<wbr>Actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statefulengineoptions_nodejs">
+<a href="#statefulengineoptions_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Engine<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicystatefulengineoptions">Firewall<wbr>Policy<wbr>Stateful<wbr>Engine<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="statefulrulegroupreferences_nodejs">
 <a href="#statefulrulegroupreferences_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Rule<wbr>Group<wbr>References</a>
 </span>
@@ -582,6 +630,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stateful_default_actions_python">
+<a href="#stateful_default_actions_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>default_<wbr>actions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stateful_engine_options_python">
+<a href="#stateful_engine_options_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>engine_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicystatefulengineoptions">Firewall<wbr>Policy<wbr>Stateful<wbr>Engine<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -842,6 +906,82 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="firewallpolicyruleorder">Firewall<wbr>Policy<wbr>Rule<wbr>Order</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Default<wbr>Action<wbr>Order</dt>
+    <dd>DEFAULT_ACTION_ORDER</dd><dt>Strict<wbr>Order</dt>
+    <dd>STRICT_ORDER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Firewall<wbr>Policy<wbr>Rule<wbr>Order<wbr>Default<wbr>Action<wbr>Order</dt>
+    <dd>DEFAULT_ACTION_ORDER</dd><dt>Firewall<wbr>Policy<wbr>Rule<wbr>Order<wbr>Strict<wbr>Order</dt>
+    <dd>STRICT_ORDER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Default<wbr>Action<wbr>Order</dt>
+    <dd>DEFAULT_ACTION_ORDER</dd><dt>Strict<wbr>Order</dt>
+    <dd>STRICT_ORDER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DEFAULT_ACTION_ORDER</dt>
+    <dd>DEFAULT_ACTION_ORDER</dd><dt>STRICT_ORDER</dt>
+    <dd>STRICT_ORDER</dd></dl>
+{{% /choosable %}}
+
+<h4 id="firewallpolicystatefulengineoptions">Firewall<wbr>Policy<wbr>Stateful<wbr>Engine<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ruleorder_csharp">
+<a href="#ruleorder_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyruleorder">Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Order</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ruleorder_go">
+<a href="#ruleorder_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyruleorder">Firewall<wbr>Policy<wbr>Rule<wbr>Order</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ruleorder_nodejs">
+<a href="#ruleorder_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyruleorder">Firewall<wbr>Policy<wbr>Rule<wbr>Order</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="rule_order_python">
+<a href="#rule_order_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyruleorder">Firewall<wbr>Policy<wbr>Rule<wbr>Order</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="firewallpolicystatefulrulegroupreference">Firewall<wbr>Policy<wbr>Stateful<wbr>Rule<wbr>Group<wbr>Reference</h4>
 
 {{% choosable language csharp %}}
@@ -852,6 +992,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="priority_csharp">
+<a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -865,6 +1013,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="priority_go">
+<a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -877,6 +1033,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="priority_nodejs">
+<a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -888,6 +1052,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="priority_python">
+<a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -599,7 +599,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the source.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ARN of the source.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sourceingestport_csharp">
+<a href="#sourceingestport_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ingest<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The port that the flow will be listening on for incoming content.(ReadOnly){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -627,7 +635,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the source.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ARN of the source.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sourceingestport_go">
+<a href="#sourceingestport_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ingest<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The port that the flow will be listening on for incoming content.(ReadOnly){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -655,7 +671,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the source.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ARN of the source.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sourceingestport_nodejs">
+<a href="#sourceingestport_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ingest<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The port that the flow will be listening on for incoming content.(ReadOnly){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -683,7 +707,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the source.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The ARN of the source.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="source_ingest_port_python">
+<a href="#source_ingest_port_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ingest_<wbr>port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The port that the flow will be listening on for incoming content.(ReadOnly){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1065,7 +1097,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>zixi-push</dd><dt>Rtp<wbr>Fec</dt>
     <dd>rtp-fec</dd><dt>Rtp</dt>
     <dd>rtp</dd><dt>Rist</dt>
-    <dd>rist</dd></dl>
+    <dd>rist</dd><dt>Srt<wbr>Listener</dt>
+    <dd>srt-listener</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1073,7 +1106,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>zixi-push</dd><dt>Flow<wbr>Source<wbr>Protocol<wbr>Rtp<wbr>Fec</dt>
     <dd>rtp-fec</dd><dt>Flow<wbr>Source<wbr>Protocol<wbr>Rtp</dt>
     <dd>rtp</dd><dt>Flow<wbr>Source<wbr>Protocol<wbr>Rist</dt>
-    <dd>rist</dd></dl>
+    <dd>rist</dd><dt>Flow<wbr>Source<wbr>Protocol<wbr>Srt<wbr>Listener</dt>
+    <dd>srt-listener</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1081,7 +1115,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>zixi-push</dd><dt>Rtp<wbr>Fec</dt>
     <dd>rtp-fec</dd><dt>Rtp</dt>
     <dd>rtp</dd><dt>Rist</dt>
-    <dd>rist</dd></dl>
+    <dd>rist</dd><dt>Srt<wbr>Listener</dt>
+    <dd>srt-listener</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1089,7 +1124,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>zixi-push</dd><dt>RTP_FEC</dt>
     <dd>rtp-fec</dd><dt>RTP</dt>
     <dd>rtp</dd><dt>RIST</dt>
-    <dd>rist</dd></dl>
+    <dd>rist</dd><dt>SRT_LISTENER</dt>
+    <dd>srt-listener</dd></dl>
 {{% /choosable %}}
 
 

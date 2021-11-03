@@ -640,7 +640,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the report template for the report. Reports are built using a report template. The report templates are: `BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT`{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Identifies the report template for the report. Reports are built using a report template. The report templates are: `BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="frameworkarns_csharp">
+<a href="#frameworkarns_csharp" style="color: inherit; text-decoration: inherit;">Framework<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Names (ARNs) of the frameworks a report covers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -652,7 +660,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the report template for the report. Reports are built using a report template. The report templates are: `BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT`{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Identifies the report template for the report. Reports are built using a report template. The report templates are: `BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="frameworkarns_go">
+<a href="#frameworkarns_go" style="color: inherit; text-decoration: inherit;">Framework<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Names (ARNs) of the frameworks a report covers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -664,7 +680,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the report template for the report. Reports are built using a report template. The report templates are: `BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT`{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Identifies the report template for the report. Reports are built using a report template. The report templates are: `BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="frameworkarns_nodejs">
+<a href="#frameworkarns_nodejs" style="color: inherit; text-decoration: inherit;">framework<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Names (ARNs) of the frameworks a report covers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -676,7 +700,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifies the report template for the report. Reports are built using a report template. The report templates are: `BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT`{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Identifies the report template for the report. Reports are built using a report template. The report templates are: `BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="framework_arns_python">
+<a href="#framework_arns_python" style="color: inherit; text-decoration: inherit;">framework_<wbr>arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Names (ARNs) of the frameworks a report covers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

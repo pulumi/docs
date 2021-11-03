@@ -437,14 +437,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="algorithm_csharp">
-<a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowencryptionalgorithm">Pulumi.<wbr>Aws<wbr>Native.<wbr>Media<wbr>Connect.<wbr>Flow<wbr>Encryption<wbr>Algorithm</a></span>
-    </dt>
-    <dd>{{% md %}}The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
 </span>
@@ -452,6 +444,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the role that you created during setup (when you set up AWS Elemental MediaConnect as a trusted entity).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="algorithm_csharp">
+<a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowencryptionalgorithm">Pulumi.<wbr>Aws<wbr>Native.<wbr>Media<wbr>Connect.<wbr>Flow<wbr>Encryption<wbr>Algorithm</a></span>
+    </dt>
+    <dd>{{% md %}}The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="constantinitializationvector_csharp">
 <a href="#constantinitializationvector_csharp" style="color: inherit; text-decoration: inherit;">Constant<wbr>Initialization<wbr>Vector</a>
@@ -513,14 +513,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="algorithm_go">
-<a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowencryptionalgorithm">Flow<wbr>Encryption<wbr>Algorithm</a></span>
-    </dt>
-    <dd>{{% md %}}The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
 </span>
@@ -528,6 +520,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the role that you created during setup (when you set up AWS Elemental MediaConnect as a trusted entity).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="algorithm_go">
+<a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowencryptionalgorithm">Flow<wbr>Encryption<wbr>Algorithm</a></span>
+    </dt>
+    <dd>{{% md %}}The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="constantinitializationvector_go">
 <a href="#constantinitializationvector_go" style="color: inherit; text-decoration: inherit;">Constant<wbr>Initialization<wbr>Vector</a>
@@ -589,14 +589,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="algorithm_nodejs">
-<a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowencryptionalgorithm">Flow<wbr>Encryption<wbr>Algorithm</a></span>
-    </dt>
-    <dd>{{% md %}}The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
@@ -604,6 +596,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the role that you created during setup (when you set up AWS Elemental MediaConnect as a trusted entity).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="algorithm_nodejs">
+<a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowencryptionalgorithm">Flow<wbr>Encryption<wbr>Algorithm</a></span>
+    </dt>
+    <dd>{{% md %}}The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="constantinitializationvector_nodejs">
 <a href="#constantinitializationvector_nodejs" style="color: inherit; text-decoration: inherit;">constant<wbr>Initialization<wbr>Vector</a>
@@ -665,14 +665,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="algorithm_python">
-<a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowencryptionalgorithm">Flow<wbr>Encryption<wbr>Algorithm</a></span>
-    </dt>
-    <dd>{{% md %}}The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
@@ -680,6 +672,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the role that you created during setup (when you set up AWS Elemental MediaConnect as a trusted entity).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="algorithm_python">
+<a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowencryptionalgorithm">Flow<wbr>Encryption<wbr>Algorithm</a></span>
+    </dt>
+    <dd>{{% md %}}The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="constant_initialization_vector_python">
 <a href="#constant_initialization_vector_python" style="color: inherit; text-decoration: inherit;">constant_<wbr>initialization_<wbr>vector</a>
@@ -773,25 +773,29 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Speke</dt>
     <dd>speke</dd><dt>Static<wbr>Key</dt>
-    <dd>static-key</dd></dl>
+    <dd>static-key</dd><dt>Srt<wbr>Password</dt>
+    <dd>srt-password</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Flow<wbr>Encryption<wbr>Key<wbr>Type<wbr>Speke</dt>
     <dd>speke</dd><dt>Flow<wbr>Encryption<wbr>Key<wbr>Type<wbr>Static<wbr>Key</dt>
-    <dd>static-key</dd></dl>
+    <dd>static-key</dd><dt>Flow<wbr>Encryption<wbr>Key<wbr>Type<wbr>Srt<wbr>Password</dt>
+    <dd>srt-password</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Speke</dt>
     <dd>speke</dd><dt>Static<wbr>Key</dt>
-    <dd>static-key</dd></dl>
+    <dd>static-key</dd><dt>Srt<wbr>Password</dt>
+    <dd>srt-password</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>SPEKE</dt>
     <dd>speke</dd><dt>STATIC_KEY</dt>
-    <dd>static-key</dd></dl>
+    <dd>static-key</dd><dt>SRT_PASSWORD</dt>
+    <dd>srt-password</dd></dl>
 {{% /choosable %}}
 
 <h4 id="flowfailoverconfig">Flow<wbr>Failover<wbr>Config</h4>
@@ -913,7 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flowencryption">Pulumi.<wbr>Aws<wbr>Native.<wbr>Media<wbr>Connect.<wbr>Inputs.<wbr>Flow<wbr>Encryption</a></span>
     </dt>
-    <dd>{{% md %}}The type of encryption that is used on the content ingested from this source.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The type of decryption that is used on the content ingested from this source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -963,6 +967,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minlatency_csharp">
+<a href="#minlatency_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Latency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum latency in milliseconds.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -986,6 +998,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the source.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceingestport_csharp">
+<a href="#sourceingestport_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ingest<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The port that the flow will be listening on for incoming content.(ReadOnly){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streamid_csharp">
 <a href="#streamid_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Id</a>
@@ -1021,7 +1041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flowencryption">Flow<wbr>Encryption</a></span>
     </dt>
-    <dd>{{% md %}}The type of encryption that is used on the content ingested from this source.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The type of decryption that is used on the content ingested from this source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1071,6 +1091,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minlatency_go">
+<a href="#minlatency_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Latency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum latency in milliseconds.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1094,6 +1122,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the source.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceingestport_go">
+<a href="#sourceingestport_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ingest<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The port that the flow will be listening on for incoming content.(ReadOnly){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streamid_go">
 <a href="#streamid_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Id</a>
@@ -1129,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flowencryption">Flow<wbr>Encryption</a></span>
     </dt>
-    <dd>{{% md %}}The type of encryption that is used on the content ingested from this source.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The type of decryption that is used on the content ingested from this source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1179,6 +1215,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minlatency_nodejs">
+<a href="#minlatency_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Latency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The minimum latency in milliseconds.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1202,6 +1246,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the source.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceingestport_nodejs">
+<a href="#sourceingestport_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ingest<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The port that the flow will be listening on for incoming content.(ReadOnly){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streamid_nodejs">
 <a href="#streamid_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Id</a>
@@ -1237,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flowencryption">Flow<wbr>Encryption</a></span>
     </dt>
-    <dd>{{% md %}}The type of encryption that is used on the content ingested from this source.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The type of decryption that is used on the content ingested from this source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1287,6 +1339,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="min_latency_python">
+<a href="#min_latency_python" style="color: inherit; text-decoration: inherit;">min_<wbr>latency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum latency in milliseconds.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1310,6 +1370,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the source.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="source_ingest_port_python">
+<a href="#source_ingest_port_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ingest_<wbr>port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The port that the flow will be listening on for incoming content.(ReadOnly){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stream_id_python">
 <a href="#stream_id_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>id</a>
@@ -1343,7 +1411,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>zixi-push</dd><dt>Rtp<wbr>Fec</dt>
     <dd>rtp-fec</dd><dt>Rtp</dt>
     <dd>rtp</dd><dt>Rist</dt>
-    <dd>rist</dd></dl>
+    <dd>rist</dd><dt>Srt<wbr>Listener</dt>
+    <dd>srt-listener</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1351,7 +1420,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>zixi-push</dd><dt>Flow<wbr>Source<wbr>Protocol<wbr>Rtp<wbr>Fec</dt>
     <dd>rtp-fec</dd><dt>Flow<wbr>Source<wbr>Protocol<wbr>Rtp</dt>
     <dd>rtp</dd><dt>Flow<wbr>Source<wbr>Protocol<wbr>Rist</dt>
-    <dd>rist</dd></dl>
+    <dd>rist</dd><dt>Flow<wbr>Source<wbr>Protocol<wbr>Srt<wbr>Listener</dt>
+    <dd>srt-listener</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1359,7 +1429,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>zixi-push</dd><dt>Rtp<wbr>Fec</dt>
     <dd>rtp-fec</dd><dt>Rtp</dt>
     <dd>rtp</dd><dt>Rist</dt>
-    <dd>rist</dd></dl>
+    <dd>rist</dd><dt>Srt<wbr>Listener</dt>
+    <dd>srt-listener</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1367,7 +1438,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>zixi-push</dd><dt>RTP_FEC</dt>
     <dd>rtp-fec</dd><dt>RTP</dt>
     <dd>rtp</dd><dt>RIST</dt>
-    <dd>rist</dd></dl>
+    <dd>rist</dd><dt>SRT_LISTENER</dt>
+    <dd>srt-listener</dd></dl>
 {{% /choosable %}}
 
 
