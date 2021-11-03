@@ -212,6 +212,14 @@ The BudgetsAction resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetsactionnotificationtype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Budgets.<wbr>Budgets<wbr>Action<wbr>Notification<wbr>Type</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subscribers_csharp">
+<a href="#subscribers_csharp" style="color: inherit; text-decoration: inherit;">Subscribers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#budgetsactionsubscriber">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Budgets.<wbr>Inputs.<wbr>Budgets<wbr>Action<wbr>Subscriber<wbr>Args&gt;</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approvalmodel_csharp">
@@ -219,14 +227,6 @@ The BudgetsAction resource accepts the following [input]({{< relref "/docs/intro
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetsactionapprovalmodel">Pulumi.<wbr>Aws<wbr>Native.<wbr>Budgets.<wbr>Budgets<wbr>Action<wbr>Approval<wbr>Model</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="subscribers_csharp">
-<a href="#subscribers_csharp" style="color: inherit; text-decoration: inherit;">Subscribers</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsactionsubscriber">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Budgets.<wbr>Inputs.<wbr>Budgets<wbr>Action<wbr>Subscriber<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -280,6 +280,14 @@ The BudgetsAction resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetsactionnotificationtype">Budgets<wbr>Action<wbr>Notification<wbr>Type</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subscribers_go">
+<a href="#subscribers_go" style="color: inherit; text-decoration: inherit;">Subscribers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#budgetsactionsubscriber">[]Budgets<wbr>Action<wbr>Subscriber<wbr>Args</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approvalmodel_go">
@@ -287,14 +295,6 @@ The BudgetsAction resource accepts the following [input]({{< relref "/docs/intro
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetsactionapprovalmodel">Budgets<wbr>Action<wbr>Approval<wbr>Model</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="subscribers_go">
-<a href="#subscribers_go" style="color: inherit; text-decoration: inherit;">Subscribers</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsactionsubscriber">[]Budgets<wbr>Action<wbr>Subscriber<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -348,6 +348,14 @@ The BudgetsAction resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetsactionnotificationtype">Budgets<wbr>Action<wbr>Notification<wbr>Type</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subscribers_nodejs">
+<a href="#subscribers_nodejs" style="color: inherit; text-decoration: inherit;">subscribers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#budgetsactionsubscriber">Budgets<wbr>Action<wbr>Subscriber<wbr>Args[]</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approvalmodel_nodejs">
@@ -355,14 +363,6 @@ The BudgetsAction resource accepts the following [input]({{< relref "/docs/intro
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetsactionapprovalmodel">Budgets<wbr>Action<wbr>Approval<wbr>Model</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="subscribers_nodejs">
-<a href="#subscribers_nodejs" style="color: inherit; text-decoration: inherit;">subscribers</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsactionsubscriber">Budgets<wbr>Action<wbr>Subscriber<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -416,6 +416,14 @@ The BudgetsAction resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetsactionnotificationtype">Budgets<wbr>Action<wbr>Notification<wbr>Type</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subscribers_python">
+<a href="#subscribers_python" style="color: inherit; text-decoration: inherit;">subscribers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#budgetsactionsubscriber">Sequence[Budgets<wbr>Action<wbr>Subscriber<wbr>Args]</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approval_model_python">
@@ -423,14 +431,6 @@ The BudgetsAction resource accepts the following [input]({{< relref "/docs/intro
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetsactionapprovalmodel">Budgets<wbr>Action<wbr>Approval<wbr>Model</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="subscribers_python">
-<a href="#subscribers_python" style="color: inherit; text-decoration: inherit;">subscribers</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsactionsubscriber">Sequence[Budgets<wbr>Action<wbr>Subscriber<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

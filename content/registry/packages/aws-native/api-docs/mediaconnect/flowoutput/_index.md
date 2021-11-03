@@ -35,6 +35,7 @@ Resource schema for AWS::MediaConnect::FlowOutput
                <span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[FlowOutputEncryptionArgs]</span> = None<span class="p">,</span>
                <span class="nx">flow_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">max_latency</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+               <span class="nx">min_latency</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[FlowOutputProtocol]</span> = None<span class="p">,</span>
@@ -227,6 +228,14 @@ The FlowOutput resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minlatency_csharp">
+<a href="#minlatency_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Latency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum latency in milliseconds.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -334,6 +343,14 @@ The FlowOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minlatency_go">
+<a href="#minlatency_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Latency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum latency in milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -443,6 +460,14 @@ The FlowOutput resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minlatency_nodejs">
+<a href="#minlatency_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Latency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The minimum latency in milliseconds.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -550,6 +575,14 @@ The FlowOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_latency_python">
+<a href="#min_latency_python" style="color: inherit; text-decoration: inherit;">min_<wbr>latency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum latency in milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -702,14 +735,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="algorithm_csharp">
-<a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowoutputencryptionalgorithm">Pulumi.<wbr>Aws<wbr>Native.<wbr>Media<wbr>Connect.<wbr>Flow<wbr>Output<wbr>Encryption<wbr>Algorithm</a></span>
-    </dt>
-    <dd>{{% md %}}The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
 </span>
@@ -726,6 +751,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}} The ARN of the secret that you created in AWS Secrets Manager to store the encryption key. This parameter is required for static key encryption and is not valid for SPEKE encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="algorithm_csharp">
+<a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowoutputencryptionalgorithm">Pulumi.<wbr>Aws<wbr>Native.<wbr>Media<wbr>Connect.<wbr>Flow<wbr>Output<wbr>Encryption<wbr>Algorithm</a></span>
+    </dt>
+    <dd>{{% md %}}The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keytype_csharp">
 <a href="#keytype_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
 </span>
@@ -737,14 +770,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="algorithm_go">
-<a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowoutputencryptionalgorithm">Flow<wbr>Output<wbr>Encryption<wbr>Algorithm</a></span>
-    </dt>
-    <dd>{{% md %}}The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -762,6 +787,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}} The ARN of the secret that you created in AWS Secrets Manager to store the encryption key. This parameter is required for static key encryption and is not valid for SPEKE encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="algorithm_go">
+<a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowoutputencryptionalgorithm">Flow<wbr>Output<wbr>Encryption<wbr>Algorithm</a></span>
+    </dt>
+    <dd>{{% md %}}The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keytype_go">
 <a href="#keytype_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
 </span>
@@ -773,14 +806,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="algorithm_nodejs">
-<a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowoutputencryptionalgorithm">Flow<wbr>Output<wbr>Encryption<wbr>Algorithm</a></span>
-    </dt>
-    <dd>{{% md %}}The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
@@ -798,6 +823,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}} The ARN of the secret that you created in AWS Secrets Manager to store the encryption key. This parameter is required for static key encryption and is not valid for SPEKE encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="algorithm_nodejs">
+<a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowoutputencryptionalgorithm">Flow<wbr>Output<wbr>Encryption<wbr>Algorithm</a></span>
+    </dt>
+    <dd>{{% md %}}The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keytype_nodejs">
 <a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
 </span>
@@ -809,14 +842,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="algorithm_python">
-<a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowoutputencryptionalgorithm">Flow<wbr>Output<wbr>Encryption<wbr>Algorithm</a></span>
-    </dt>
-    <dd>{{% md %}}The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
@@ -833,6 +858,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}} The ARN of the secret that you created in AWS Secrets Manager to store the encryption key. This parameter is required for static key encryption and is not valid for SPEKE encryption.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="algorithm_python">
+<a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowoutputencryptionalgorithm">Flow<wbr>Output<wbr>Encryption<wbr>Algorithm</a></span>
+    </dt>
+    <dd>{{% md %}}The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_type_python">
 <a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
@@ -877,22 +910,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Static<wbr>Key</dt>
-    <dd>static-key</dd></dl>
+    <dd>static-key</dd><dt>Srt<wbr>Password</dt>
+    <dd>srt-password</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Flow<wbr>Output<wbr>Encryption<wbr>Key<wbr>Type<wbr>Static<wbr>Key</dt>
-    <dd>static-key</dd></dl>
+    <dd>static-key</dd><dt>Flow<wbr>Output<wbr>Encryption<wbr>Key<wbr>Type<wbr>Srt<wbr>Password</dt>
+    <dd>srt-password</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Static<wbr>Key</dt>
-    <dd>static-key</dd></dl>
+    <dd>static-key</dd><dt>Srt<wbr>Password</dt>
+    <dd>srt-password</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>STATIC_KEY</dt>
-    <dd>static-key</dd></dl>
+    <dd>static-key</dd><dt>SRT_PASSWORD</dt>
+    <dd>srt-password</dd></dl>
 {{% /choosable %}}
 
 <h4 id="flowoutputprotocol">Flow<wbr>Output<wbr>Protocol</h4>
@@ -903,7 +940,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>rtp-fec</dd><dt>Rtp</dt>
     <dd>rtp</dd><dt>Zixi<wbr>Pull</dt>
     <dd>zixi-pull</dd><dt>Rist</dt>
-    <dd>rist</dd></dl>
+    <dd>rist</dd><dt>Srt<wbr>Listener</dt>
+    <dd>srt-listener</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -912,7 +950,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>rtp-fec</dd><dt>Flow<wbr>Output<wbr>Protocol<wbr>Rtp</dt>
     <dd>rtp</dd><dt>Flow<wbr>Output<wbr>Protocol<wbr>Zixi<wbr>Pull</dt>
     <dd>zixi-pull</dd><dt>Flow<wbr>Output<wbr>Protocol<wbr>Rist</dt>
-    <dd>rist</dd></dl>
+    <dd>rist</dd><dt>Flow<wbr>Output<wbr>Protocol<wbr>Srt<wbr>Listener</dt>
+    <dd>srt-listener</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -921,7 +960,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>rtp-fec</dd><dt>Rtp</dt>
     <dd>rtp</dd><dt>Zixi<wbr>Pull</dt>
     <dd>zixi-pull</dd><dt>Rist</dt>
-    <dd>rist</dd></dl>
+    <dd>rist</dd><dt>Srt<wbr>Listener</dt>
+    <dd>srt-listener</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -930,7 +970,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>rtp-fec</dd><dt>RTP</dt>
     <dd>rtp</dd><dt>ZIXI_PULL</dt>
     <dd>zixi-pull</dd><dt>RIST</dt>
-    <dd>rist</dd></dl>
+    <dd>rist</dd><dt>SRT_LISTENER</dt>
+    <dd>srt-listener</dd></dl>
 {{% /choosable %}}
 
 <h4 id="flowoutputvpcinterfaceattachment">Flow<wbr>Output<wbr>Vpc<wbr>Interface<wbr>Attachment</h4>

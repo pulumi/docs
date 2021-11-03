@@ -23,6 +23,7 @@ Explore the resources and functions of the aws-native.iot module.
     <li><a href="jobtemplate" title="JobTemplate"><span class="api-symbol api-symbol--resource"></span>JobTemplate</a></li>
     <li><a href="mitigationaction" title="MitigationAction"><span class="api-symbol api-symbol--resource"></span>MitigationAction</a></li>
     <li><a href="provisioningtemplate" title="ProvisioningTemplate"><span class="api-symbol api-symbol--resource"></span>ProvisioningTemplate</a></li>
+    <li><a href="resourcespecificlogging" title="ResourceSpecificLogging"><span class="api-symbol api-symbol--resource"></span>ResourceSpecificLogging</a></li>
     <li><a href="scheduledaudit" title="ScheduledAudit"><span class="api-symbol api-symbol--resource"></span>ScheduledAudit</a></li>
     <li><a href="securityprofile" title="SecurityProfile"><span class="api-symbol api-symbol--resource"></span>SecurityProfile</a></li>
     <li><a href="topicrule" title="TopicRule"><span class="api-symbol api-symbol--resource"></span>TopicRule</a></li>
@@ -36,6 +37,6 @@ Explore the resources and functions of the aws-native.iot module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

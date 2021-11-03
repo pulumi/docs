@@ -842,6 +842,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}<p>The Amazon Elasticsearch Service domain.</p>{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="datasourceamazonopensearchparameters">Data<wbr>Source<wbr>Amazon<wbr>Open<wbr>Search<wbr>Parameters</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domain_csharp">
+<a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon OpenSearch Service domain.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domain_go">
+<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon OpenSearch Service domain.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domain_nodejs">
+<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon OpenSearch Service domain.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domain_python">
+<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>The Amazon OpenSearch Service domain.</p>{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="datasourceathenaparameters">Data<wbr>Source<wbr>Athena<wbr>Parameters</h4>
 
 {{% choosable language csharp %}}
@@ -1929,6 +1979,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="amazonopensearchparameters_csharp">
+<a href="#amazonopensearchparameters_csharp" style="color: inherit; text-decoration: inherit;">Amazon<wbr>Open<wbr>Search<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceamazonopensearchparameters">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Amazon<wbr>Open<wbr>Search<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="athenaparameters_csharp">
 <a href="#athenaparameters_csharp" style="color: inherit; text-decoration: inherit;">Athena<wbr>Parameters</a>
 </span>
@@ -2058,6 +2116,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasourceamazonelasticsearchparameters">Data<wbr>Source<wbr>Amazon<wbr>Elasticsearch<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="amazonopensearchparameters_go">
+<a href="#amazonopensearchparameters_go" style="color: inherit; text-decoration: inherit;">Amazon<wbr>Open<wbr>Search<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceamazonopensearchparameters">Data<wbr>Source<wbr>Amazon<wbr>Open<wbr>Search<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2193,6 +2259,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="amazonopensearchparameters_nodejs">
+<a href="#amazonopensearchparameters_nodejs" style="color: inherit; text-decoration: inherit;">amazon<wbr>Open<wbr>Search<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceamazonopensearchparameters">Data<wbr>Source<wbr>Amazon<wbr>Open<wbr>Search<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="athenaparameters_nodejs">
 <a href="#athenaparameters_nodejs" style="color: inherit; text-decoration: inherit;">athena<wbr>Parameters</a>
 </span>
@@ -2322,6 +2396,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasourceamazonelasticsearchparameters">Data<wbr>Source<wbr>Amazon<wbr>Elasticsearch<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="amazon_open_search_parameters_python">
+<a href="#amazon_open_search_parameters_python" style="color: inherit; text-decoration: inherit;">amazon_<wbr>open_<wbr>search_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceamazonopensearchparameters">Data<wbr>Source<wbr>Amazon<wbr>Open<wbr>Search<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3701,7 +3783,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Adobe<wbr>Analytics</dt>
     <dd>ADOBE_ANALYTICS</dd><dt>Amazon<wbr>Elasticsearch</dt>
-    <dd>AMAZON_ELASTICSEARCH</dd><dt>Athena</dt>
+    <dd>AMAZON_ELASTICSEARCH</dd><dt>Amazon<wbr>Opensearch</dt>
+    <dd>AMAZON_OPENSEARCH</dd><dt>Athena</dt>
     <dd>ATHENA</dd><dt>Aurora</dt>
     <dd>AURORA</dd><dt>Aurora<wbr>Postgresql</dt>
     <dd>AURORA_POSTGRESQL</dd><dt>Aws<wbr>Iot<wbr>Analytics</dt>
@@ -3728,7 +3811,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="tabular"><dt>Data<wbr>Source<wbr>Type<wbr>Adobe<wbr>Analytics</dt>
     <dd>ADOBE_ANALYTICS</dd><dt>Data<wbr>Source<wbr>Type<wbr>Amazon<wbr>Elasticsearch</dt>
-    <dd>AMAZON_ELASTICSEARCH</dd><dt>Data<wbr>Source<wbr>Type<wbr>Athena</dt>
+    <dd>AMAZON_ELASTICSEARCH</dd><dt>Data<wbr>Source<wbr>Type<wbr>Amazon<wbr>Opensearch</dt>
+    <dd>AMAZON_OPENSEARCH</dd><dt>Data<wbr>Source<wbr>Type<wbr>Athena</dt>
     <dd>ATHENA</dd><dt>Data<wbr>Source<wbr>Type<wbr>Aurora</dt>
     <dd>AURORA</dd><dt>Data<wbr>Source<wbr>Type<wbr>Aurora<wbr>Postgresql</dt>
     <dd>AURORA_POSTGRESQL</dd><dt>Data<wbr>Source<wbr>Type<wbr>Aws<wbr>Iot<wbr>Analytics</dt>
@@ -3755,7 +3839,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Adobe<wbr>Analytics</dt>
     <dd>ADOBE_ANALYTICS</dd><dt>Amazon<wbr>Elasticsearch</dt>
-    <dd>AMAZON_ELASTICSEARCH</dd><dt>Athena</dt>
+    <dd>AMAZON_ELASTICSEARCH</dd><dt>Amazon<wbr>Opensearch</dt>
+    <dd>AMAZON_OPENSEARCH</dd><dt>Athena</dt>
     <dd>ATHENA</dd><dt>Aurora</dt>
     <dd>AURORA</dd><dt>Aurora<wbr>Postgresql</dt>
     <dd>AURORA_POSTGRESQL</dd><dt>Aws<wbr>Iot<wbr>Analytics</dt>
@@ -3782,7 +3867,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="tabular"><dt>ADOBE_ANALYTICS</dt>
     <dd>ADOBE_ANALYTICS</dd><dt>AMAZON_ELASTICSEARCH</dt>
-    <dd>AMAZON_ELASTICSEARCH</dd><dt>ATHENA</dt>
+    <dd>AMAZON_ELASTICSEARCH</dd><dt>AMAZON_OPENSEARCH</dt>
+    <dd>AMAZON_OPENSEARCH</dd><dt>ATHENA</dt>
     <dd>ATHENA</dd><dt>AURORA</dt>
     <dd>AURORA</dd><dt>AURORA_POSTGRESQL</dt>
     <dd>AURORA_POSTGRESQL</dd><dt>AWS_IOT_ANALYTICS</dt>

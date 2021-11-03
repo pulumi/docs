@@ -31,6 +31,7 @@ Definition of AWS::Location::Tracker Resource Type
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">position_filtering</span><span class="p">:</span> <span class="nx">Optional[TrackerPositionFiltering]</span> = None<span class="p">,</span>
             <span class="nx">pricing_plan</span><span class="p">:</span> <span class="nx">Optional[TrackerPricingPlan]</span> = None<span class="p">,</span>
             <span class="nx">pricing_plan_data_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">tracker_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -195,6 +196,14 @@ The Tracker resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="positionfiltering_csharp">
+<a href="#positionfiltering_csharp" style="color: inherit; text-decoration: inherit;">Position<wbr>Filtering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trackerpositionfiltering">Pulumi.<wbr>Aws<wbr>Native.<wbr>Location.<wbr>Tracker<wbr>Position<wbr>Filtering</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="pricingplandatasource_csharp">
 <a href="#pricingplandatasource_csharp" style="color: inherit; text-decoration: inherit;">Pricing<wbr>Plan<wbr>Data<wbr>Source</a>
 </span>
@@ -236,6 +245,14 @@ The Tracker resource accepts the following [input]({{< relref "/docs/intro/conce
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="positionfiltering_go">
+<a href="#positionfiltering_go" style="color: inherit; text-decoration: inherit;">Position<wbr>Filtering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trackerpositionfiltering">Tracker<wbr>Position<wbr>Filtering</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -283,6 +300,14 @@ The Tracker resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="positionfiltering_nodejs">
+<a href="#positionfiltering_nodejs" style="color: inherit; text-decoration: inherit;">position<wbr>Filtering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trackerpositionfiltering">Tracker<wbr>Position<wbr>Filtering</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="pricingplandatasource_nodejs">
 <a href="#pricingplandatasource_nodejs" style="color: inherit; text-decoration: inherit;">pricing<wbr>Plan<wbr>Data<wbr>Source</a>
 </span>
@@ -324,6 +349,14 @@ The Tracker resource accepts the following [input]({{< relref "/docs/intro/conce
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="position_filtering_python">
+<a href="#position_filtering_python" style="color: inherit; text-decoration: inherit;">position_<wbr>filtering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#trackerpositionfiltering">Tracker<wbr>Position<wbr>Filtering</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -528,6 +561,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="trackerpositionfiltering">Tracker<wbr>Position<wbr>Filtering</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Time<wbr>Based</dt>
+    <dd>TimeBased</dd><dt>Distance<wbr>Based</dt>
+    <dd>DistanceBased</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Tracker<wbr>Position<wbr>Filtering<wbr>Time<wbr>Based</dt>
+    <dd>TimeBased</dd><dt>Tracker<wbr>Position<wbr>Filtering<wbr>Distance<wbr>Based</dt>
+    <dd>DistanceBased</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Time<wbr>Based</dt>
+    <dd>TimeBased</dd><dt>Distance<wbr>Based</dt>
+    <dd>DistanceBased</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TIME_BASED</dt>
+    <dd>TimeBased</dd><dt>DISTANCE_BASED</dt>
+    <dd>DistanceBased</dd></dl>
+{{% /choosable %}}
 
 <h4 id="trackerpricingplan">Tracker<wbr>Pricing<wbr>Plan</h4>
 

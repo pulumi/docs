@@ -752,7 +752,8 @@ granted.{{% /md %}}</dd></dl>
     <dd>Marketo</dd><dt>Googleanalytics</dt>
     <dd>Googleanalytics</dd><dt>Zendesk</dt>
     <dd>Zendesk</dd><dt>Servicenow</dt>
-    <dd>Servicenow</dd><dt>Datadog</dt>
+    <dd>Servicenow</dd><dt>SAPOData</dt>
+    <dd>SAPOData</dd><dt>Datadog</dt>
     <dd>Datadog</dd><dt>Trendmicro</dt>
     <dd>Trendmicro</dd><dt>Snowflake</dt>
     <dd>Snowflake</dd><dt>Dynatrace</dt>
@@ -771,7 +772,8 @@ granted.{{% /md %}}</dd></dl>
     <dd>Marketo</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Googleanalytics</dt>
     <dd>Googleanalytics</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Zendesk</dt>
     <dd>Zendesk</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Servicenow</dt>
-    <dd>Servicenow</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Datadog</dt>
+    <dd>Servicenow</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>SAPOData</dt>
+    <dd>SAPOData</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Datadog</dt>
     <dd>Datadog</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Trendmicro</dt>
     <dd>Trendmicro</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Snowflake</dt>
     <dd>Snowflake</dd><dt>Connector<wbr>Profile<wbr>Connector<wbr>Type<wbr>Dynatrace</dt>
@@ -790,7 +792,8 @@ granted.{{% /md %}}</dd></dl>
     <dd>Marketo</dd><dt>Googleanalytics</dt>
     <dd>Googleanalytics</dd><dt>Zendesk</dt>
     <dd>Zendesk</dd><dt>Servicenow</dt>
-    <dd>Servicenow</dd><dt>Datadog</dt>
+    <dd>Servicenow</dd><dt>SAPOData</dt>
+    <dd>SAPOData</dd><dt>Datadog</dt>
     <dd>Datadog</dd><dt>Trendmicro</dt>
     <dd>Trendmicro</dd><dt>Snowflake</dt>
     <dd>Snowflake</dd><dt>Dynatrace</dt>
@@ -809,7 +812,8 @@ granted.{{% /md %}}</dd></dl>
     <dd>Marketo</dd><dt>GOOGLEANALYTICS</dt>
     <dd>Googleanalytics</dd><dt>ZENDESK</dt>
     <dd>Zendesk</dd><dt>SERVICENOW</dt>
-    <dd>Servicenow</dd><dt>DATADOG</dt>
+    <dd>Servicenow</dd><dt>SAPO_DATA</dt>
+    <dd>SAPOData</dd><dt>DATADOG</dt>
     <dd>Datadog</dd><dt>TRENDMICRO</dt>
     <dd>Trendmicro</dd><dt>SNOWFLAKE</dt>
     <dd>Snowflake</dd><dt>DYNATRACE</dt>
@@ -877,6 +881,14 @@ granted.{{% /md %}}</dd></dl>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectorprofileredshiftconnectorprofilecredentials">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Redshift<wbr>Connector<wbr>Profile<wbr>Credentials</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sapodata_csharp">
+<a href="#sapodata_csharp" style="color: inherit; text-decoration: inherit;">SAPOData</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesapodataconnectorprofilecredentials">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>SAPOData<wbr>Connector<wbr>Profile<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1004,6 +1016,14 @@ granted.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sapodata_go">
+<a href="#sapodata_go" style="color: inherit; text-decoration: inherit;">SAPOData</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesapodataconnectorprofilecredentials">Connector<wbr>Profile<wbr>SAPOData<wbr>Connector<wbr>Profile<wbr>Credentials</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="salesforce_go">
 <a href="#salesforce_go" style="color: inherit; text-decoration: inherit;">Salesforce</a>
 </span>
@@ -1128,6 +1148,14 @@ granted.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sapodata_nodejs">
+<a href="#sapodata_nodejs" style="color: inherit; text-decoration: inherit;">s<wbr>APOData</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesapodataconnectorprofilecredentials">Connector<wbr>Profile<wbr>SAPOData<wbr>Connector<wbr>Profile<wbr>Credentials</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="salesforce_nodejs">
 <a href="#salesforce_nodejs" style="color: inherit; text-decoration: inherit;">salesforce</a>
 </span>
@@ -1249,6 +1277,14 @@ granted.{{% /md %}}</dd></dl>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectorprofileredshiftconnectorprofilecredentials">Connector<wbr>Profile<wbr>Redshift<wbr>Connector<wbr>Profile<wbr>Credentials</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s_apo_data_python">
+<a href="#s_apo_data_python" style="color: inherit; text-decoration: inherit;">s_<wbr>apo_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesapodataconnectorprofilecredentials">Connector<wbr>Profile<wbr>SAPOData<wbr>Connector<wbr>Profile<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2119,6 +2155,120 @@ granted.{{% /md %}}</dd></dl>
     <dd>{{% md %}}The location of the Marketo resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="connectorprofileoauthproperties">Connector<wbr>Profile<wbr>OAuth<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="authcodeurl_csharp">
+<a href="#authcodeurl_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Code<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauthscopes_csharp">
+<a href="#oauthscopes_csharp" style="color: inherit; text-decoration: inherit;">OAuth<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tokenurl_csharp">
+<a href="#tokenurl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="authcodeurl_go">
+<a href="#authcodeurl_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Code<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauthscopes_go">
+<a href="#oauthscopes_go" style="color: inherit; text-decoration: inherit;">OAuth<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tokenurl_go">
+<a href="#tokenurl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="authcodeurl_nodejs">
+<a href="#authcodeurl_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Code<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauthscopes_nodejs">
+<a href="#oauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">o<wbr>Auth<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tokenurl_nodejs">
+<a href="#tokenurl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="auth_code_url_python">
+<a href="#auth_code_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>code_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="o_auth_scopes_python">
+<a href="#o_auth_scopes_python" style="color: inherit; text-decoration: inherit;">o_<wbr>auth_<wbr>scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="token_url_python">
+<a href="#token_url_python" style="color: inherit; text-decoration: inherit;">token_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="connectorprofileproperties">Connector<wbr>Profile<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
@@ -2161,6 +2311,14 @@ granted.{{% /md %}}</dd></dl>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectorprofileredshiftconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Redshift<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sapodata_csharp">
+<a href="#sapodata_csharp" style="color: inherit; text-decoration: inherit;">SAPOData</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesapodataconnectorprofileproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>SAPOData<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2256,6 +2414,14 @@ granted.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sapodata_go">
+<a href="#sapodata_go" style="color: inherit; text-decoration: inherit;">SAPOData</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesapodataconnectorprofileproperties">Connector<wbr>Profile<wbr>SAPOData<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="salesforce_go">
 <a href="#salesforce_go" style="color: inherit; text-decoration: inherit;">Salesforce</a>
 </span>
@@ -2348,6 +2514,14 @@ granted.{{% /md %}}</dd></dl>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sapodata_nodejs">
+<a href="#sapodata_nodejs" style="color: inherit; text-decoration: inherit;">s<wbr>APOData</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesapodataconnectorprofileproperties">Connector<wbr>Profile<wbr>SAPOData<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="salesforce_nodejs">
 <a href="#salesforce_nodejs" style="color: inherit; text-decoration: inherit;">salesforce</a>
 </span>
@@ -2437,6 +2611,14 @@ granted.{{% /md %}}</dd></dl>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectorprofileredshiftconnectorprofileproperties">Connector<wbr>Profile<wbr>Redshift<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s_apo_data_python">
+<a href="#s_apo_data_python" style="color: inherit; text-decoration: inherit;">s_<wbr>apo_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesapodataconnectorprofileproperties">Connector<wbr>Profile<wbr>SAPOData<wbr>Connector<wbr>Profile<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2715,6 +2897,590 @@ granted.{{% /md %}}</dd></dl>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object key for the destination bucket in which Amazon AppFlow will place the ﬁles.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="connectorprofilesapodataconnectorprofilecredentials">Connector<wbr>Profile<wbr>SAPOData<wbr>Connector<wbr>Profile<wbr>Credentials</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="basicauthcredentials_csharp">
+<a href="#basicauthcredentials_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesapodataconnectorprofilecredentialsbasicauthcredentialsproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>SAPOData<wbr>Connector<wbr>Profile<wbr>Credentials<wbr>Basic<wbr>Auth<wbr>Credentials<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauthcredentials_csharp">
+<a href="#oauthcredentials_csharp" style="color: inherit; text-decoration: inherit;">OAuth<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesapodataconnectorprofilecredentialsoauthcredentialsproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>SAPOData<wbr>Connector<wbr>Profile<wbr>Credentials<wbr>OAuth<wbr>Credentials<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="basicauthcredentials_go">
+<a href="#basicauthcredentials_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesapodataconnectorprofilecredentialsbasicauthcredentialsproperties">Connector<wbr>Profile<wbr>SAPOData<wbr>Connector<wbr>Profile<wbr>Credentials<wbr>Basic<wbr>Auth<wbr>Credentials<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauthcredentials_go">
+<a href="#oauthcredentials_go" style="color: inherit; text-decoration: inherit;">OAuth<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesapodataconnectorprofilecredentialsoauthcredentialsproperties">Connector<wbr>Profile<wbr>SAPOData<wbr>Connector<wbr>Profile<wbr>Credentials<wbr>OAuth<wbr>Credentials<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="basicauthcredentials_nodejs">
+<a href="#basicauthcredentials_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesapodataconnectorprofilecredentialsbasicauthcredentialsproperties">Connector<wbr>Profile<wbr>SAPOData<wbr>Connector<wbr>Profile<wbr>Credentials<wbr>Basic<wbr>Auth<wbr>Credentials<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauthcredentials_nodejs">
+<a href="#oauthcredentials_nodejs" style="color: inherit; text-decoration: inherit;">o<wbr>Auth<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesapodataconnectorprofilecredentialsoauthcredentialsproperties">Connector<wbr>Profile<wbr>SAPOData<wbr>Connector<wbr>Profile<wbr>Credentials<wbr>OAuth<wbr>Credentials<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="basic_auth_credentials_python">
+<a href="#basic_auth_credentials_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesapodataconnectorprofilecredentialsbasicauthcredentialsproperties">Connector<wbr>Profile<wbr>SAPOData<wbr>Connector<wbr>Profile<wbr>Credentials<wbr>Basic<wbr>Auth<wbr>Credentials<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="o_auth_credentials_python">
+<a href="#o_auth_credentials_python" style="color: inherit; text-decoration: inherit;">o_<wbr>auth_<wbr>credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofilesapodataconnectorprofilecredentialsoauthcredentialsproperties">Connector<wbr>Profile<wbr>SAPOData<wbr>Connector<wbr>Profile<wbr>Credentials<wbr>OAuth<wbr>Credentials<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="connectorprofilesapodataconnectorprofilecredentialsbasicauthcredentialsproperties">Connector<wbr>Profile<wbr>SAPOData<wbr>Connector<wbr>Profile<wbr>Credentials<wbr>Basic<wbr>Auth<wbr>Credentials<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password that corresponds to the username.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password that corresponds to the username.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password that corresponds to the username.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The password that corresponds to the username.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="connectorprofilesapodataconnectorprofilecredentialsoauthcredentialsproperties">Connector<wbr>Profile<wbr>SAPOData<wbr>Connector<wbr>Profile<wbr>Credentials<wbr>OAuth<wbr>Credentials<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="accesstoken_csharp">
+<a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_csharp">
+<a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectoroauthrequest_csharp">
+<a href="#connectoroauthrequest_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>OAuth<wbr>Request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileconnectoroauthrequest">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Connector<wbr>OAuth<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="refreshtoken_csharp">
+<a href="#refreshtoken_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="accesstoken_go">
+<a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_go">
+<a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectoroauthrequest_go">
+<a href="#connectoroauthrequest_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>OAuth<wbr>Request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileconnectoroauthrequest">Connector<wbr>Profile<wbr>Connector<wbr>OAuth<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="refreshtoken_go">
+<a href="#refreshtoken_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="accesstoken_nodejs">
+<a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_nodejs">
+<a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectoroauthrequest_nodejs">
+<a href="#connectoroauthrequest_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>OAuth<wbr>Request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileconnectoroauthrequest">Connector<wbr>Profile<wbr>Connector<wbr>OAuth<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="refreshtoken_nodejs">
+<a href="#refreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="access_token_python">
+<a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="client_secret_python">
+<a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connector_o_auth_request_python">
+<a href="#connector_o_auth_request_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>o_<wbr>auth_<wbr>request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileconnectoroauthrequest">Connector<wbr>Profile<wbr>Connector<wbr>OAuth<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="refresh_token_python">
+<a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="connectorprofilesapodataconnectorprofileproperties">Connector<wbr>Profile<wbr>SAPOData<wbr>Connector<wbr>Profile<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="applicationhosturl_csharp">
+<a href="#applicationhosturl_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Host<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applicationservicepath_csharp">
+<a href="#applicationservicepath_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Service<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientnumber_csharp">
+<a href="#clientnumber_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logonlanguage_csharp">
+<a href="#logonlanguage_csharp" style="color: inherit; text-decoration: inherit;">Logon<wbr>Language</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauthproperties_csharp">
+<a href="#oauthproperties_csharp" style="color: inherit; text-decoration: inherit;">OAuth<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileoauthproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>OAuth<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="portnumber_csharp">
+<a href="#portnumber_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkservicename_csharp">
+<a href="#privatelinkservicename_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="applicationhosturl_go">
+<a href="#applicationhosturl_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Host<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applicationservicepath_go">
+<a href="#applicationservicepath_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Service<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientnumber_go">
+<a href="#clientnumber_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logonlanguage_go">
+<a href="#logonlanguage_go" style="color: inherit; text-decoration: inherit;">Logon<wbr>Language</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauthproperties_go">
+<a href="#oauthproperties_go" style="color: inherit; text-decoration: inherit;">OAuth<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileoauthproperties">Connector<wbr>Profile<wbr>OAuth<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="portnumber_go">
+<a href="#portnumber_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkservicename_go">
+<a href="#privatelinkservicename_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="applicationhosturl_nodejs">
+<a href="#applicationhosturl_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Host<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="applicationservicepath_nodejs">
+<a href="#applicationservicepath_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Service<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientnumber_nodejs">
+<a href="#clientnumber_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logonlanguage_nodejs">
+<a href="#logonlanguage_nodejs" style="color: inherit; text-decoration: inherit;">logon<wbr>Language</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oauthproperties_nodejs">
+<a href="#oauthproperties_nodejs" style="color: inherit; text-decoration: inherit;">o<wbr>Auth<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileoauthproperties">Connector<wbr>Profile<wbr>OAuth<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="portnumber_nodejs">
+<a href="#portnumber_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkservicename_nodejs">
+<a href="#privatelinkservicename_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="application_host_url_python">
+<a href="#application_host_url_python" style="color: inherit; text-decoration: inherit;">application_<wbr>host_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="application_service_path_python">
+<a href="#application_service_path_python" style="color: inherit; text-decoration: inherit;">application_<wbr>service_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="client_number_python">
+<a href="#client_number_python" style="color: inherit; text-decoration: inherit;">client_<wbr>number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logon_language_python">
+<a href="#logon_language_python" style="color: inherit; text-decoration: inherit;">logon_<wbr>language</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="o_auth_properties_python">
+<a href="#o_auth_properties_python" style="color: inherit; text-decoration: inherit;">o_<wbr>auth_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorprofileoauthproperties">Connector<wbr>Profile<wbr>OAuth<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_number_python">
+<a href="#port_number_python" style="color: inherit; text-decoration: inherit;">port_<wbr>number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_link_service_name_python">
+<a href="#private_link_service_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectorprofilesalesforceconnectorprofilecredentials">Connector<wbr>Profile<wbr>Salesforce<wbr>Connector<wbr>Profile<wbr>Credentials</h4>

@@ -35,10 +35,12 @@ Resource Type definition for AWS::Lightsail::Instance
              <span class="nx">bundle_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">hardware</span><span class="p">:</span> <span class="nx">Optional[InstanceHardwareArgs]</span> = None<span class="p">,</span>
              <span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">key_pair_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[InstanceLocationArgs]</span> = None<span class="p">,</span>
              <span class="nx">networking</span><span class="p">:</span> <span class="nx">Optional[InstanceNetworkingArgs]</span> = None<span class="p">,</span>
              <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[InstanceStateArgs]</span> = None<span class="p">,</span>
-             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceTagArgs]]</span> = None<span class="p">)</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceTagArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span>
@@ -216,6 +218,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keypairname_csharp">
+<a href="#keypairname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of your key pair.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -246,7 +256,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetag">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Lightsail.<wbr>Inputs.<wbr>Instance<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of key-value pairs to apply to this resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}An array of key-value pairs to apply to this resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userdata_csharp">
+<a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A launch script you can create that configures a server with additional user data. For example, you might want to run apt-get -y update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -300,6 +318,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keypairname_go">
+<a href="#keypairname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of your key pair.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -330,7 +356,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetag">[]Instance<wbr>Tag<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An array of key-value pairs to apply to this resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}An array of key-value pairs to apply to this resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userdata_go">
+<a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A launch script you can create that configures a server with additional user data. For example, you might want to run apt-get -y update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -384,6 +418,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="keypairname_nodejs">
+<a href="#keypairname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Pair<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of your key pair.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -414,7 +456,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetag">Instance<wbr>Tag<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of key-value pairs to apply to this resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}An array of key-value pairs to apply to this resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userdata_nodejs">
+<a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A launch script you can create that configures a server with additional user data. For example, you might want to run apt-get -y update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -468,6 +518,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="key_pair_name_python">
+<a href="#key_pair_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>pair_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of your key pair.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -498,7 +556,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetag">Sequence[Instance<wbr>Tag<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}An array of key-value pairs to apply to this resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}An array of key-value pairs to apply to this resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_data_python">
+<a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A launch script you can create that configures a server with additional user data. For example, you might want to run apt-get -y update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -534,14 +600,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the IP Address of the Instance is the static IP{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="keypairname_csharp">
-<a href="#keypairname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of your key pair.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateipaddress_csharp">
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
@@ -583,14 +641,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Support code to help identify any issues{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="userdata_csharp">
-<a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A launch script you can create that configures a server with additional user data. For example, you might want to run apt-get -y update.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
 </span>
@@ -626,14 +676,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the IP Address of the Instance is the static IP{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="keypairname_go">
-<a href="#keypairname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of your key pair.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateipaddress_go">
 <a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
@@ -675,14 +717,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Support code to help identify any issues{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="userdata_go">
-<a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A launch script you can create that configures a server with additional user data. For example, you might want to run apt-get -y update.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
 </span>
@@ -718,14 +752,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the IP Address of the Instance is the static IP{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="keypairname_nodejs">
-<a href="#keypairname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Pair<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of your key pair.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateipaddress_nodejs">
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
@@ -767,14 +793,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Support code to help identify any issues{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="userdata_nodejs">
-<a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A launch script you can create that configures a server with additional user data. For example, you might want to run apt-get -y update.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
@@ -810,14 +828,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the IP Address of the Instance is the static IP{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="key_pair_name_python">
-<a href="#key_pair_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>pair_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of your key pair.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
@@ -858,14 +868,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Support code to help identify any issues{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="user_data_python">
-<a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A launch script you can create that configures a server with additional user data. For example, you might want to run apt-get -y update.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>

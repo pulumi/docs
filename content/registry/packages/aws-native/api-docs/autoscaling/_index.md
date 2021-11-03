@@ -14,6 +14,7 @@ Explore the resources and functions of the aws-native.autoscaling module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="launchconfiguration" title="LaunchConfiguration"><span class="api-symbol api-symbol--resource"></span>LaunchConfiguration</a></li>
+    <li><a href="lifecyclehook" title="LifecycleHook"><span class="api-symbol api-symbol--resource"></span>LifecycleHook</a></li>
     <li><a href="warmpool" title="WarmPool"><span class="api-symbol api-symbol--resource"></span>WarmPool</a></li>
 </ul>
 
@@ -24,6 +25,6 @@ Explore the resources and functions of the aws-native.autoscaling module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

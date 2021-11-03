@@ -517,6 +517,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulevariables">Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statefulruleoptions_csharp">
+<a href="#statefulruleoptions_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Rule<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupstatefulruleoptions">Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Inputs.<wbr>Rule<wbr>Group<wbr>Stateful<wbr>Rule<wbr>Options</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -536,6 +544,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statefulruleoptions_go">
+<a href="#statefulruleoptions_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Rule<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupstatefulruleoptions">Rule<wbr>Group<wbr>Stateful<wbr>Rule<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -557,6 +573,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statefulruleoptions_nodejs">
+<a href="#statefulruleoptions_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Rule<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupstatefulruleoptions">Rule<wbr>Group<wbr>Stateful<wbr>Rule<wbr>Options</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -576,6 +600,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stateful_rule_options_python">
+<a href="#stateful_rule_options_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>rule_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupstatefulruleoptions">Rule<wbr>Group<wbr>Stateful<wbr>Rule<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1674,6 +1706,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="rulegroupruleorder">Rule<wbr>Group<wbr>Rule<wbr>Order</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Default<wbr>Action<wbr>Order</dt>
+    <dd>DEFAULT_ACTION_ORDER</dd><dt>Strict<wbr>Order</dt>
+    <dd>STRICT_ORDER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Rule<wbr>Group<wbr>Rule<wbr>Order<wbr>Default<wbr>Action<wbr>Order</dt>
+    <dd>DEFAULT_ACTION_ORDER</dd><dt>Rule<wbr>Group<wbr>Rule<wbr>Order<wbr>Strict<wbr>Order</dt>
+    <dd>STRICT_ORDER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Default<wbr>Action<wbr>Order</dt>
+    <dd>DEFAULT_ACTION_ORDER</dd><dt>Strict<wbr>Order</dt>
+    <dd>STRICT_ORDER</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DEFAULT_ACTION_ORDER</dt>
+    <dd>DEFAULT_ACTION_ORDER</dd><dt>STRICT_ORDER</dt>
+    <dd>STRICT_ORDER</dd></dl>
+{{% /choosable %}}
+
 <h4 id="rulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Variables</h4>
 
 {{% choosable language csharp %}}
@@ -2158,6 +2216,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>PASS</dd><dt>DROP</dt>
     <dd>DROP</dd><dt>ALERT</dt>
     <dd>ALERT</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rulegroupstatefulruleoptions">Rule<wbr>Group<wbr>Stateful<wbr>Rule<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ruleorder_csharp">
+<a href="#ruleorder_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleorder">Pulumi.<wbr>Aws<wbr>Native.<wbr>Network<wbr>Firewall.<wbr>Rule<wbr>Group<wbr>Rule<wbr>Order</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ruleorder_go">
+<a href="#ruleorder_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleorder">Rule<wbr>Group<wbr>Rule<wbr>Order</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ruleorder_nodejs">
+<a href="#ruleorder_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleorder">Rule<wbr>Group<wbr>Rule<wbr>Order</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="rule_order_python">
+<a href="#rule_order_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegroupruleorder">Rule<wbr>Group<wbr>Rule<wbr>Order</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rulegroupstatelessrule">Rule<wbr>Group<wbr>Stateless<wbr>Rule</h4>

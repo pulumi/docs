@@ -182,6 +182,14 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sourceentity_csharp">
+<a href="#sourceentity_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardsourceentity">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Dashboard<wbr>Source<wbr>Entity<wbr>Args</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dashboardpublishoptions_csharp">
@@ -219,14 +227,6 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
             principal ARN. </p>
 
         <p>To specify no permissions, omit the permissions list.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourceentity_csharp">
-<a href="#sourceentity_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsourceentity">Pulumi.<wbr>Aws<wbr>Native.<wbr>Quick<wbr>Sight.<wbr>Inputs.<wbr>Dashboard<wbr>Source<wbr>Entity<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -274,6 +274,14 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sourceentity_go">
+<a href="#sourceentity_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardsourceentity">Dashboard<wbr>Source<wbr>Entity<wbr>Args</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dashboardpublishoptions_go">
@@ -311,14 +319,6 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
             principal ARN. </p>
 
         <p>To specify no permissions, omit the permissions list.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourceentity_go">
-<a href="#sourceentity_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Entity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsourceentity">Dashboard<wbr>Source<wbr>Entity<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -366,6 +366,14 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sourceentity_nodejs">
+<a href="#sourceentity_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardsourceentity">Dashboard<wbr>Source<wbr>Entity<wbr>Args</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dashboardpublishoptions_nodejs">
@@ -403,14 +411,6 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
             principal ARN. </p>
 
         <p>To specify no permissions, omit the permissions list.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourceentity_nodejs">
-<a href="#sourceentity_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Entity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsourceentity">Dashboard<wbr>Source<wbr>Entity<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -458,6 +458,14 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="source_entity_python">
+<a href="#source_entity_python" style="color: inherit; text-decoration: inherit;">source_<wbr>entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardsourceentity">Dashboard<wbr>Source<wbr>Entity<wbr>Args</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dashboard_publish_options_python">
@@ -495,14 +503,6 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
             principal ARN. </p>
 
         <p>To specify no permissions, omit the permissions list.</p>{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="source_entity_python">
-<a href="#source_entity_python" style="color: inherit; text-decoration: inherit;">source_<wbr>entity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardsourceentity">Dashboard<wbr>Source<wbr>Entity<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

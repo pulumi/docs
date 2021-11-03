@@ -1211,6 +1211,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sapodata_csharp">
+<a href="#sapodata_csharp" style="color: inherit; text-decoration: inherit;">SAPOData</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowsapodataconnectoroperator">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="salesforce_csharp">
 <a href="#salesforce_csharp" style="color: inherit; text-decoration: inherit;">Salesforce</a>
 </span>
@@ -1324,6 +1332,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flows3connectoroperator">Flow<wbr>S3Connector<wbr>Operator</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sapodata_go">
+<a href="#sapodata_go" style="color: inherit; text-decoration: inherit;">SAPOData</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowsapodataconnectoroperator">Flow<wbr>SAPOData<wbr>Connector<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1443,6 +1459,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sapodata_nodejs">
+<a href="#sapodata_nodejs" style="color: inherit; text-decoration: inherit;">s<wbr>APOData</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowsapodataconnectoroperator">Flow<wbr>SAPOData<wbr>Connector<wbr>Operator</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="salesforce_nodejs">
 <a href="#salesforce_nodejs" style="color: inherit; text-decoration: inherit;">salesforce</a>
 </span>
@@ -1559,6 +1583,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="s_apo_data_python">
+<a href="#s_apo_data_python" style="color: inherit; text-decoration: inherit;">s_<wbr>apo_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowsapodataconnectoroperator">Flow<wbr>SAPOData<wbr>Connector<wbr>Operator</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="salesforce_python">
 <a href="#salesforce_python" style="color: inherit; text-decoration: inherit;">salesforce</a>
 </span>
@@ -1619,7 +1651,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="flowconnectortype">Flow<wbr>Connector<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular"><dt>Salesforce</dt>
+<dl class="tabular"><dt>SAPOData</dt>
+    <dd>SAPOData</dd><dt>Salesforce</dt>
     <dd>Salesforce</dd><dt>Singular</dt>
     <dd>Singular</dd><dt>Slack</dt>
     <dd>Slack</dd><dt>Redshift</dt>
@@ -1642,7 +1675,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Flow<wbr>Connector<wbr>Type<wbr>Salesforce</dt>
+<dl class="tabular"><dt>Flow<wbr>Connector<wbr>Type<wbr>SAPOData</dt>
+    <dd>SAPOData</dd><dt>Flow<wbr>Connector<wbr>Type<wbr>Salesforce</dt>
     <dd>Salesforce</dd><dt>Flow<wbr>Connector<wbr>Type<wbr>Singular</dt>
     <dd>Singular</dd><dt>Flow<wbr>Connector<wbr>Type<wbr>Slack</dt>
     <dd>Slack</dd><dt>Flow<wbr>Connector<wbr>Type<wbr>Redshift</dt>
@@ -1665,7 +1699,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular"><dt>Salesforce</dt>
+<dl class="tabular"><dt>SAPOData</dt>
+    <dd>SAPOData</dd><dt>Salesforce</dt>
     <dd>Salesforce</dd><dt>Singular</dt>
     <dd>Singular</dd><dt>Slack</dt>
     <dd>Slack</dd><dt>Redshift</dt>
@@ -1688,7 +1723,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular"><dt>SALESFORCE</dt>
+<dl class="tabular"><dt>SAPO_DATA</dt>
+    <dd>SAPOData</dd><dt>SALESFORCE</dt>
     <dd>Salesforce</dd><dt>SINGULAR</dt>
     <dd>Singular</dd><dt>SLACK</dt>
     <dd>Slack</dd><dt>REDSHIFT</dt>
@@ -3602,6 +3638,82 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="flows3inputformatconfig">Flow<wbr>S3Input<wbr>Format<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="s3inputfiletype_csharp">
+<a href="#s3inputfiletype_csharp" style="color: inherit; text-decoration: inherit;">S3Input<wbr>File<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flows3inputformatconfigs3inputfiletype">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Flow<wbr>S3Input<wbr>Format<wbr>Config<wbr>S3Input<wbr>File<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="s3inputfiletype_go">
+<a href="#s3inputfiletype_go" style="color: inherit; text-decoration: inherit;">S3Input<wbr>File<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flows3inputformatconfigs3inputfiletype">Flow<wbr>S3Input<wbr>Format<wbr>Config<wbr>S3Input<wbr>File<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="s3inputfiletype_nodejs">
+<a href="#s3inputfiletype_nodejs" style="color: inherit; text-decoration: inherit;">s3Input<wbr>File<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flows3inputformatconfigs3inputfiletype">Flow<wbr>S3Input<wbr>Format<wbr>Config<wbr>S3Input<wbr>File<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="s3_input_file_type_python">
+<a href="#s3_input_file_type_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>input_<wbr>file_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flows3inputformatconfigs3inputfiletype">Flow<wbr>S3Input<wbr>Format<wbr>Config<wbr>S3Input<wbr>File<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="flows3inputformatconfigs3inputfiletype">Flow<wbr>S3Input<wbr>Format<wbr>Config<wbr>S3Input<wbr>File<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Csv</dt>
+    <dd>CSV</dd><dt>Json</dt>
+    <dd>JSON</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Flow<wbr>S3Input<wbr>Format<wbr>Config<wbr>S3Input<wbr>File<wbr>Type<wbr>Csv</dt>
+    <dd>CSV</dd><dt>Flow<wbr>S3Input<wbr>Format<wbr>Config<wbr>S3Input<wbr>File<wbr>Type<wbr>Json</dt>
+    <dd>JSON</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Csv</dt>
+    <dd>CSV</dd><dt>Json</dt>
+    <dd>JSON</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CSV</dt>
+    <dd>CSV</dd><dt>JSON</dt>
+    <dd>JSON</dd></dl>
+{{% /choosable %}}
+
 <h4 id="flows3outputformatconfig">Flow<wbr>S3Output<wbr>Format<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -3735,6 +3847,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3inputformatconfig_csharp">
+<a href="#s3inputformatconfig_csharp" style="color: inherit; text-decoration: inherit;">S3Input<wbr>Format<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flows3inputformatconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Flow<wbr>S3Input<wbr>Format<wbr>Config</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3754,6 +3874,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3inputformatconfig_go">
+<a href="#s3inputformatconfig_go" style="color: inherit; text-decoration: inherit;">S3Input<wbr>Format<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flows3inputformatconfig">Flow<wbr>S3Input<wbr>Format<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3775,6 +3903,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3inputformatconfig_nodejs">
+<a href="#s3inputformatconfig_nodejs" style="color: inherit; text-decoration: inherit;">s3Input<wbr>Format<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flows3inputformatconfig">Flow<wbr>S3Input<wbr>Format<wbr>Config</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3791,6 +3927,166 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="bucket_prefix_python">
 <a href="#bucket_prefix_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s3_input_format_config_python">
+<a href="#s3_input_format_config_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>input_<wbr>format_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flows3inputformatconfig">Flow<wbr>S3Input<wbr>Format<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="flowsapodataconnectoroperator">Flow<wbr>SAPOData<wbr>Connector<wbr>Operator</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Projection</dt>
+    <dd>PROJECTION</dd><dt>Less<wbr>Than</dt>
+    <dd>LESS_THAN</dd><dt>Contains</dt>
+    <dd>CONTAINS</dd><dt>Greater<wbr>Than</dt>
+    <dd>GREATER_THAN</dd><dt>Between</dt>
+    <dd>BETWEEN</dd><dt>Less<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
+    <dd>LESS_THAN_OR_EQUAL_TO</dd><dt>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
+    <dd>GREATER_THAN_OR_EQUAL_TO</dd><dt>Equal<wbr>To</dt>
+    <dd>EQUAL_TO</dd><dt>Not<wbr>Equal<wbr>To</dt>
+    <dd>NOT_EQUAL_TO</dd><dt>Addition</dt>
+    <dd>ADDITION</dd><dt>Multiplication</dt>
+    <dd>MULTIPLICATION</dd><dt>Division</dt>
+    <dd>DIVISION</dd><dt>Subtraction</dt>
+    <dd>SUBTRACTION</dd><dt>Mask<wbr>All</dt>
+    <dd>MASK_ALL</dd><dt>Mask<wbr>First<wbr>N</dt>
+    <dd>MASK_FIRST_N</dd><dt>Mask<wbr>Last<wbr>N</dt>
+    <dd>MASK_LAST_N</dd><dt>Validate<wbr>Non<wbr>Null</dt>
+    <dd>VALIDATE_NON_NULL</dd><dt>Validate<wbr>Non<wbr>Zero</dt>
+    <dd>VALIDATE_NON_ZERO</dd><dt>Validate<wbr>Non<wbr>Negative</dt>
+    <dd>VALIDATE_NON_NEGATIVE</dd><dt>Validate<wbr>Numeric</dt>
+    <dd>VALIDATE_NUMERIC</dd><dt>No<wbr>Op</dt>
+    <dd>NO_OP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>Projection</dt>
+    <dd>PROJECTION</dd><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>Less<wbr>Than</dt>
+    <dd>LESS_THAN</dd><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>Contains</dt>
+    <dd>CONTAINS</dd><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>Greater<wbr>Than</dt>
+    <dd>GREATER_THAN</dd><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>Between</dt>
+    <dd>BETWEEN</dd><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>Less<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
+    <dd>LESS_THAN_OR_EQUAL_TO</dd><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
+    <dd>GREATER_THAN_OR_EQUAL_TO</dd><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>Equal<wbr>To</dt>
+    <dd>EQUAL_TO</dd><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>Not<wbr>Equal<wbr>To</dt>
+    <dd>NOT_EQUAL_TO</dd><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>Addition</dt>
+    <dd>ADDITION</dd><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>Multiplication</dt>
+    <dd>MULTIPLICATION</dd><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>Division</dt>
+    <dd>DIVISION</dd><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>Subtraction</dt>
+    <dd>SUBTRACTION</dd><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>Mask<wbr>All</dt>
+    <dd>MASK_ALL</dd><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>Mask<wbr>First<wbr>N</dt>
+    <dd>MASK_FIRST_N</dd><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>Mask<wbr>Last<wbr>N</dt>
+    <dd>MASK_LAST_N</dd><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>Validate<wbr>Non<wbr>Null</dt>
+    <dd>VALIDATE_NON_NULL</dd><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>Validate<wbr>Non<wbr>Zero</dt>
+    <dd>VALIDATE_NON_ZERO</dd><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>Validate<wbr>Non<wbr>Negative</dt>
+    <dd>VALIDATE_NON_NEGATIVE</dd><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>Validate<wbr>Numeric</dt>
+    <dd>VALIDATE_NUMERIC</dd><dt>Flow<wbr>SAPOData<wbr>Connector<wbr>Operator<wbr>No<wbr>Op</dt>
+    <dd>NO_OP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Projection</dt>
+    <dd>PROJECTION</dd><dt>Less<wbr>Than</dt>
+    <dd>LESS_THAN</dd><dt>Contains</dt>
+    <dd>CONTAINS</dd><dt>Greater<wbr>Than</dt>
+    <dd>GREATER_THAN</dd><dt>Between</dt>
+    <dd>BETWEEN</dd><dt>Less<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
+    <dd>LESS_THAN_OR_EQUAL_TO</dd><dt>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
+    <dd>GREATER_THAN_OR_EQUAL_TO</dd><dt>Equal<wbr>To</dt>
+    <dd>EQUAL_TO</dd><dt>Not<wbr>Equal<wbr>To</dt>
+    <dd>NOT_EQUAL_TO</dd><dt>Addition</dt>
+    <dd>ADDITION</dd><dt>Multiplication</dt>
+    <dd>MULTIPLICATION</dd><dt>Division</dt>
+    <dd>DIVISION</dd><dt>Subtraction</dt>
+    <dd>SUBTRACTION</dd><dt>Mask<wbr>All</dt>
+    <dd>MASK_ALL</dd><dt>Mask<wbr>First<wbr>N</dt>
+    <dd>MASK_FIRST_N</dd><dt>Mask<wbr>Last<wbr>N</dt>
+    <dd>MASK_LAST_N</dd><dt>Validate<wbr>Non<wbr>Null</dt>
+    <dd>VALIDATE_NON_NULL</dd><dt>Validate<wbr>Non<wbr>Zero</dt>
+    <dd>VALIDATE_NON_ZERO</dd><dt>Validate<wbr>Non<wbr>Negative</dt>
+    <dd>VALIDATE_NON_NEGATIVE</dd><dt>Validate<wbr>Numeric</dt>
+    <dd>VALIDATE_NUMERIC</dd><dt>No<wbr>Op</dt>
+    <dd>NO_OP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>PROJECTION</dt>
+    <dd>PROJECTION</dd><dt>LESS_THAN</dt>
+    <dd>LESS_THAN</dd><dt>CONTAINS</dt>
+    <dd>CONTAINS</dd><dt>GREATER_THAN</dt>
+    <dd>GREATER_THAN</dd><dt>BETWEEN</dt>
+    <dd>BETWEEN</dd><dt>LESS_THAN_OR_EQUAL_TO</dt>
+    <dd>LESS_THAN_OR_EQUAL_TO</dd><dt>GREATER_THAN_OR_EQUAL_TO</dt>
+    <dd>GREATER_THAN_OR_EQUAL_TO</dd><dt>EQUAL_TO</dt>
+    <dd>EQUAL_TO</dd><dt>NOT_EQUAL_TO</dt>
+    <dd>NOT_EQUAL_TO</dd><dt>ADDITION</dt>
+    <dd>ADDITION</dd><dt>MULTIPLICATION</dt>
+    <dd>MULTIPLICATION</dd><dt>DIVISION</dt>
+    <dd>DIVISION</dd><dt>SUBTRACTION</dt>
+    <dd>SUBTRACTION</dd><dt>MASK_ALL</dt>
+    <dd>MASK_ALL</dd><dt>MASK_FIRST_N</dt>
+    <dd>MASK_FIRST_N</dd><dt>MASK_LAST_N</dt>
+    <dd>MASK_LAST_N</dd><dt>VALIDATE_NON_NULL</dt>
+    <dd>VALIDATE_NON_NULL</dd><dt>VALIDATE_NON_ZERO</dt>
+    <dd>VALIDATE_NON_ZERO</dd><dt>VALIDATE_NON_NEGATIVE</dt>
+    <dd>VALIDATE_NON_NEGATIVE</dd><dt>VALIDATE_NUMERIC</dt>
+    <dd>VALIDATE_NUMERIC</dd><dt>NO_OP</dt>
+    <dd>NO_OP</dd></dl>
+{{% /choosable %}}
+
+<h4 id="flowsapodatasourceproperties">Flow<wbr>SAPOData<wbr>Source<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="objectpath_csharp">
+<a href="#objectpath_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="objectpath_go">
+<a href="#objectpath_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="objectpath_nodejs">
+<a href="#objectpath_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="object_path_python">
+<a href="#object_path_python" style="color: inherit; text-decoration: inherit;">object_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -5007,6 +5303,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sapodata_csharp">
+<a href="#sapodata_csharp" style="color: inherit; text-decoration: inherit;">SAPOData</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowsapodatasourceproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Flow<wbr>SAPOData<wbr>Source<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="salesforce_csharp">
 <a href="#salesforce_csharp" style="color: inherit; text-decoration: inherit;">Salesforce</a>
 </span>
@@ -5120,6 +5424,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flows3sourceproperties">Flow<wbr>S3Source<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sapodata_go">
+<a href="#sapodata_go" style="color: inherit; text-decoration: inherit;">SAPOData</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowsapodatasourceproperties">Flow<wbr>SAPOData<wbr>Source<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5239,6 +5551,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sapodata_nodejs">
+<a href="#sapodata_nodejs" style="color: inherit; text-decoration: inherit;">s<wbr>APOData</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowsapodatasourceproperties">Flow<wbr>SAPOData<wbr>Source<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="salesforce_nodejs">
 <a href="#salesforce_nodejs" style="color: inherit; text-decoration: inherit;">salesforce</a>
 </span>
@@ -5352,6 +5672,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flows3sourceproperties">Flow<wbr>S3Source<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="s_apo_data_python">
+<a href="#s_apo_data_python" style="color: inherit; text-decoration: inherit;">s_<wbr>apo_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowsapodatasourceproperties">Flow<wbr>SAPOData<wbr>Source<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

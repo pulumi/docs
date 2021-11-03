@@ -13,7 +13,10 @@ Explore the resources and functions of the aws-native.connect module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="hoursofoperation" title="HoursOfOperation"><span class="api-symbol api-symbol--resource"></span>HoursOfOperation</a></li>
     <li><a href="quickconnect" title="QuickConnect"><span class="api-symbol api-symbol--resource"></span>QuickConnect</a></li>
+    <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
+    <li><a href="userhierarchygroup" title="UserHierarchyGroup"><span class="api-symbol api-symbol--resource"></span>UserHierarchyGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -23,6 +26,6 @@ Explore the resources and functions of the aws-native.connect module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

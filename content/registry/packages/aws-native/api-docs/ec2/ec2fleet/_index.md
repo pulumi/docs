@@ -664,6 +664,360 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="ec2fleetacceleratorcountrequest">EC2Fleet<wbr>Accelerator<wbr>Count<wbr>Request</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_csharp">
+<a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_csharp">
+<a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_go">
+<a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_go">
+<a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_nodejs">
+<a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_nodejs">
+<a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_python">
+<a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_python">
+<a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleetacceleratortotalmemorymibrequest">EC2Fleet<wbr>Accelerator<wbr>Total<wbr>Memory<wbr>Mi<wbr>BRequest</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_csharp">
+<a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_csharp">
+<a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_go">
+<a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_go">
+<a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_nodejs">
+<a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_nodejs">
+<a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_python">
+<a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_python">
+<a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleetbaselineebsbandwidthmbpsrequest">EC2Fleet<wbr>Baseline<wbr>Ebs<wbr>Bandwidth<wbr>Mbps<wbr>Request</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_csharp">
+<a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_csharp">
+<a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_go">
+<a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_go">
+<a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_nodejs">
+<a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_nodejs">
+<a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_python">
+<a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_python">
+<a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleetcapacityrebalance">EC2Fleet<wbr>Capacity<wbr>Rebalance</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="replacementstrategy_csharp">
+<a href="#replacementstrategy_csharp" style="color: inherit; text-decoration: inherit;">Replacement<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetcapacityrebalancereplacementstrategy">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>EC2Fleet<wbr>Capacity<wbr>Rebalance<wbr>Replacement<wbr>Strategy</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="terminationdelay_csharp">
+<a href="#terminationdelay_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="replacementstrategy_go">
+<a href="#replacementstrategy_go" style="color: inherit; text-decoration: inherit;">Replacement<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetcapacityrebalancereplacementstrategy">EC2Fleet<wbr>Capacity<wbr>Rebalance<wbr>Replacement<wbr>Strategy</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="terminationdelay_go">
+<a href="#terminationdelay_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="replacementstrategy_nodejs">
+<a href="#replacementstrategy_nodejs" style="color: inherit; text-decoration: inherit;">replacement<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetcapacityrebalancereplacementstrategy">EC2Fleet<wbr>Capacity<wbr>Rebalance<wbr>Replacement<wbr>Strategy</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="terminationdelay_nodejs">
+<a href="#terminationdelay_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="replacement_strategy_python">
+<a href="#replacement_strategy_python" style="color: inherit; text-decoration: inherit;">replacement_<wbr>strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetcapacityrebalancereplacementstrategy">EC2Fleet<wbr>Capacity<wbr>Rebalance<wbr>Replacement<wbr>Strategy</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="termination_delay_python">
+<a href="#termination_delay_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleetcapacityrebalancereplacementstrategy">EC2Fleet<wbr>Capacity<wbr>Rebalance<wbr>Replacement<wbr>Strategy</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Launch</dt>
+    <dd>launch</dd><dt>Launch<wbr>Before<wbr>Terminate</dt>
+    <dd>launch-before-terminate</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>EC2Fleet<wbr>Capacity<wbr>Rebalance<wbr>Replacement<wbr>Strategy<wbr>Launch</dt>
+    <dd>launch</dd><dt>EC2Fleet<wbr>Capacity<wbr>Rebalance<wbr>Replacement<wbr>Strategy<wbr>Launch<wbr>Before<wbr>Terminate</dt>
+    <dd>launch-before-terminate</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Launch</dt>
+    <dd>launch</dd><dt>Launch<wbr>Before<wbr>Terminate</dt>
+    <dd>launch-before-terminate</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LAUNCH</dt>
+    <dd>launch</dd><dt>LAUNCH_BEFORE_TERMINATE</dt>
+    <dd>launch-before-terminate</dd></dl>
+{{% /choosable %}}
+
 <h4 id="ec2fleetcapacityreservationoptionsrequest">EC2Fleet<wbr>Capacity<wbr>Reservation<wbr>Options<wbr>Request</h4>
 
 {{% choosable language csharp %}}
@@ -857,6 +1211,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instancerequirements_csharp">
+<a href="#instancerequirements_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Requirements</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequest">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
 </span>
@@ -914,6 +1276,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancerequirements_go">
+<a href="#instancerequirements_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Requirements</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequest">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -977,6 +1347,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instancerequirements_nodejs">
+<a href="#instancerequirements_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Requirements</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequest">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
@@ -1034,6 +1412,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instance_requirements_python">
+<a href="#instance_requirements_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>requirements</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequest">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1196,6 +1582,1232 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleetinstancerequirementsrequest">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="acceleratorcount_csharp">
+<a href="#acceleratorcount_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetacceleratorcountrequest">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>EC2Fleet<wbr>Accelerator<wbr>Count<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acceleratormanufacturers_csharp">
+<a href="#acceleratormanufacturers_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Manufacturers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestacceleratormanufacturersitem">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Manufacturers<wbr>Item&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acceleratornames_csharp">
+<a href="#acceleratornames_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestacceleratornamesitem">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Names<wbr>Item&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acceleratortotalmemorymib_csharp">
+<a href="#acceleratortotalmemorymib_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Total<wbr>Memory<wbr>Mi<wbr>B</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetacceleratortotalmemorymibrequest">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>EC2Fleet<wbr>Accelerator<wbr>Total<wbr>Memory<wbr>Mi<wbr>BRequest</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acceleratortypes_csharp">
+<a href="#acceleratortypes_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestacceleratortypesitem">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Types<wbr>Item&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="baremetal_csharp">
+<a href="#baremetal_csharp" style="color: inherit; text-decoration: inherit;">Bare<wbr>Metal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestbaremetal">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Bare<wbr>Metal</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="baselineebsbandwidthmbps_csharp">
+<a href="#baselineebsbandwidthmbps_csharp" style="color: inherit; text-decoration: inherit;">Baseline<wbr>Ebs<wbr>Bandwidth<wbr>Mbps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetbaselineebsbandwidthmbpsrequest">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>EC2Fleet<wbr>Baseline<wbr>Ebs<wbr>Bandwidth<wbr>Mbps<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="burstableperformance_csharp">
+<a href="#burstableperformance_csharp" style="color: inherit; text-decoration: inherit;">Burstable<wbr>Performance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestburstableperformance">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Burstable<wbr>Performance</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpumanufacturers_csharp">
+<a href="#cpumanufacturers_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Manufacturers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestcpumanufacturersitem">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Cpu<wbr>Manufacturers<wbr>Item&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="excludedinstancetypes_csharp">
+<a href="#excludedinstancetypes_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Instance<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancegenerations_csharp">
+<a href="#instancegenerations_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Generations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestinstancegenerationsitem">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Instance<wbr>Generations<wbr>Item&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="localstorage_csharp">
+<a href="#localstorage_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestlocalstorage">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Local<wbr>Storage</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="localstoragetypes_csharp">
+<a href="#localstoragetypes_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Storage<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestlocalstoragetypesitem">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Local<wbr>Storage<wbr>Types<wbr>Item&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memorygibpervcpu_csharp">
+<a href="#memorygibpervcpu_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Gi<wbr>BPer<wbr>VCpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetmemorygibpervcpurequest">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>EC2Fleet<wbr>Memory<wbr>Gi<wbr>BPer<wbr>VCpu<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memorymib_csharp">
+<a href="#memorymib_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Mi<wbr>B</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetmemorymibrequest">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>EC2Fleet<wbr>Memory<wbr>Mi<wbr>BRequest</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkinterfacecount_csharp">
+<a href="#networkinterfacecount_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetnetworkinterfacecountrequest">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>EC2Fleet<wbr>Network<wbr>Interface<wbr>Count<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ondemandmaxpricepercentageoverlowestprice_csharp">
+<a href="#ondemandmaxpricepercentageoverlowestprice_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Max<wbr>Price<wbr>Percentage<wbr>Over<wbr>Lowest<wbr>Price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requirehibernatesupport_csharp">
+<a href="#requirehibernatesupport_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Hibernate<wbr>Support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spotmaxpricepercentageoverlowestprice_csharp">
+<a href="#spotmaxpricepercentageoverlowestprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Max<wbr>Price<wbr>Percentage<wbr>Over<wbr>Lowest<wbr>Price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="totallocalstoragegb_csharp">
+<a href="#totallocalstoragegb_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Local<wbr>Storage<wbr>GB</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleettotallocalstoragegbrequest">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>EC2Fleet<wbr>Total<wbr>Local<wbr>Storage<wbr>GBRequest</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vcpucount_csharp">
+<a href="#vcpucount_csharp" style="color: inherit; text-decoration: inherit;">VCpu<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetvcpucountrangerequest">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>EC2Fleet<wbr>VCpu<wbr>Count<wbr>Range<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="acceleratorcount_go">
+<a href="#acceleratorcount_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetacceleratorcountrequest">EC2Fleet<wbr>Accelerator<wbr>Count<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acceleratormanufacturers_go">
+<a href="#acceleratormanufacturers_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Manufacturers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestacceleratormanufacturersitem">[]EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Manufacturers<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acceleratornames_go">
+<a href="#acceleratornames_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestacceleratornamesitem">[]EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Names<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acceleratortotalmemorymib_go">
+<a href="#acceleratortotalmemorymib_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Total<wbr>Memory<wbr>Mi<wbr>B</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetacceleratortotalmemorymibrequest">EC2Fleet<wbr>Accelerator<wbr>Total<wbr>Memory<wbr>Mi<wbr>BRequest</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acceleratortypes_go">
+<a href="#acceleratortypes_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestacceleratortypesitem">[]EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Types<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="baremetal_go">
+<a href="#baremetal_go" style="color: inherit; text-decoration: inherit;">Bare<wbr>Metal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestbaremetal">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Bare<wbr>Metal</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="baselineebsbandwidthmbps_go">
+<a href="#baselineebsbandwidthmbps_go" style="color: inherit; text-decoration: inherit;">Baseline<wbr>Ebs<wbr>Bandwidth<wbr>Mbps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetbaselineebsbandwidthmbpsrequest">EC2Fleet<wbr>Baseline<wbr>Ebs<wbr>Bandwidth<wbr>Mbps<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="burstableperformance_go">
+<a href="#burstableperformance_go" style="color: inherit; text-decoration: inherit;">Burstable<wbr>Performance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestburstableperformance">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Burstable<wbr>Performance</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpumanufacturers_go">
+<a href="#cpumanufacturers_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Manufacturers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestcpumanufacturersitem">[]EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Cpu<wbr>Manufacturers<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="excludedinstancetypes_go">
+<a href="#excludedinstancetypes_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Instance<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancegenerations_go">
+<a href="#instancegenerations_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Generations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestinstancegenerationsitem">[]EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Instance<wbr>Generations<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="localstorage_go">
+<a href="#localstorage_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestlocalstorage">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Local<wbr>Storage</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="localstoragetypes_go">
+<a href="#localstoragetypes_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Storage<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestlocalstoragetypesitem">[]EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Local<wbr>Storage<wbr>Types<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memorygibpervcpu_go">
+<a href="#memorygibpervcpu_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Gi<wbr>BPer<wbr>VCpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetmemorygibpervcpurequest">EC2Fleet<wbr>Memory<wbr>Gi<wbr>BPer<wbr>VCpu<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memorymib_go">
+<a href="#memorymib_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Mi<wbr>B</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetmemorymibrequest">EC2Fleet<wbr>Memory<wbr>Mi<wbr>BRequest</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkinterfacecount_go">
+<a href="#networkinterfacecount_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetnetworkinterfacecountrequest">EC2Fleet<wbr>Network<wbr>Interface<wbr>Count<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ondemandmaxpricepercentageoverlowestprice_go">
+<a href="#ondemandmaxpricepercentageoverlowestprice_go" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Max<wbr>Price<wbr>Percentage<wbr>Over<wbr>Lowest<wbr>Price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requirehibernatesupport_go">
+<a href="#requirehibernatesupport_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Hibernate<wbr>Support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spotmaxpricepercentageoverlowestprice_go">
+<a href="#spotmaxpricepercentageoverlowestprice_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Max<wbr>Price<wbr>Percentage<wbr>Over<wbr>Lowest<wbr>Price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="totallocalstoragegb_go">
+<a href="#totallocalstoragegb_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Local<wbr>Storage<wbr>GB</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleettotallocalstoragegbrequest">EC2Fleet<wbr>Total<wbr>Local<wbr>Storage<wbr>GBRequest</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vcpucount_go">
+<a href="#vcpucount_go" style="color: inherit; text-decoration: inherit;">VCpu<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetvcpucountrangerequest">EC2Fleet<wbr>VCpu<wbr>Count<wbr>Range<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="acceleratorcount_nodejs">
+<a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetacceleratorcountrequest">EC2Fleet<wbr>Accelerator<wbr>Count<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acceleratormanufacturers_nodejs">
+<a href="#acceleratormanufacturers_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Manufacturers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestacceleratormanufacturersitem">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Manufacturers<wbr>Item[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acceleratornames_nodejs">
+<a href="#acceleratornames_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestacceleratornamesitem">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Names<wbr>Item[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acceleratortotalmemorymib_nodejs">
+<a href="#acceleratortotalmemorymib_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Total<wbr>Memory<wbr>Mi<wbr>B</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetacceleratortotalmemorymibrequest">EC2Fleet<wbr>Accelerator<wbr>Total<wbr>Memory<wbr>Mi<wbr>BRequest</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="acceleratortypes_nodejs">
+<a href="#acceleratortypes_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestacceleratortypesitem">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Types<wbr>Item[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="baremetal_nodejs">
+<a href="#baremetal_nodejs" style="color: inherit; text-decoration: inherit;">bare<wbr>Metal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestbaremetal">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Bare<wbr>Metal</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="baselineebsbandwidthmbps_nodejs">
+<a href="#baselineebsbandwidthmbps_nodejs" style="color: inherit; text-decoration: inherit;">baseline<wbr>Ebs<wbr>Bandwidth<wbr>Mbps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetbaselineebsbandwidthmbpsrequest">EC2Fleet<wbr>Baseline<wbr>Ebs<wbr>Bandwidth<wbr>Mbps<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="burstableperformance_nodejs">
+<a href="#burstableperformance_nodejs" style="color: inherit; text-decoration: inherit;">burstable<wbr>Performance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestburstableperformance">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Burstable<wbr>Performance</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpumanufacturers_nodejs">
+<a href="#cpumanufacturers_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Manufacturers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestcpumanufacturersitem">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Cpu<wbr>Manufacturers<wbr>Item[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="excludedinstancetypes_nodejs">
+<a href="#excludedinstancetypes_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Instance<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancegenerations_nodejs">
+<a href="#instancegenerations_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Generations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestinstancegenerationsitem">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Instance<wbr>Generations<wbr>Item[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="localstorage_nodejs">
+<a href="#localstorage_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestlocalstorage">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Local<wbr>Storage</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="localstoragetypes_nodejs">
+<a href="#localstoragetypes_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Storage<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestlocalstoragetypesitem">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Local<wbr>Storage<wbr>Types<wbr>Item[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memorygibpervcpu_nodejs">
+<a href="#memorygibpervcpu_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Gi<wbr>BPer<wbr>VCpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetmemorygibpervcpurequest">EC2Fleet<wbr>Memory<wbr>Gi<wbr>BPer<wbr>VCpu<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memorymib_nodejs">
+<a href="#memorymib_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Mi<wbr>B</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetmemorymibrequest">EC2Fleet<wbr>Memory<wbr>Mi<wbr>BRequest</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkinterfacecount_nodejs">
+<a href="#networkinterfacecount_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetnetworkinterfacecountrequest">EC2Fleet<wbr>Network<wbr>Interface<wbr>Count<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ondemandmaxpricepercentageoverlowestprice_nodejs">
+<a href="#ondemandmaxpricepercentageoverlowestprice_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Max<wbr>Price<wbr>Percentage<wbr>Over<wbr>Lowest<wbr>Price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requirehibernatesupport_nodejs">
+<a href="#requirehibernatesupport_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Hibernate<wbr>Support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spotmaxpricepercentageoverlowestprice_nodejs">
+<a href="#spotmaxpricepercentageoverlowestprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Max<wbr>Price<wbr>Percentage<wbr>Over<wbr>Lowest<wbr>Price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="totallocalstoragegb_nodejs">
+<a href="#totallocalstoragegb_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Local<wbr>Storage<wbr>GB</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleettotallocalstoragegbrequest">EC2Fleet<wbr>Total<wbr>Local<wbr>Storage<wbr>GBRequest</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vcpucount_nodejs">
+<a href="#vcpucount_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>Cpu<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetvcpucountrangerequest">EC2Fleet<wbr>VCpu<wbr>Count<wbr>Range<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="accelerator_count_python">
+<a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetacceleratorcountrequest">EC2Fleet<wbr>Accelerator<wbr>Count<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accelerator_manufacturers_python">
+<a href="#accelerator_manufacturers_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>manufacturers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestacceleratormanufacturersitem">Sequence[EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Manufacturers<wbr>Item]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accelerator_names_python">
+<a href="#accelerator_names_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestacceleratornamesitem">Sequence[EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Names<wbr>Item]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accelerator_total_memory_mi_b_python">
+<a href="#accelerator_total_memory_mi_b_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>total_<wbr>memory_<wbr>mi_<wbr>b</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetacceleratortotalmemorymibrequest">EC2Fleet<wbr>Accelerator<wbr>Total<wbr>Memory<wbr>Mi<wbr>BRequest</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="accelerator_types_python">
+<a href="#accelerator_types_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestacceleratortypesitem">Sequence[EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Types<wbr>Item]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bare_metal_python">
+<a href="#bare_metal_python" style="color: inherit; text-decoration: inherit;">bare_<wbr>metal</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestbaremetal">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Bare<wbr>Metal</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="baseline_ebs_bandwidth_mbps_python">
+<a href="#baseline_ebs_bandwidth_mbps_python" style="color: inherit; text-decoration: inherit;">baseline_<wbr>ebs_<wbr>bandwidth_<wbr>mbps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetbaselineebsbandwidthmbpsrequest">EC2Fleet<wbr>Baseline<wbr>Ebs<wbr>Bandwidth<wbr>Mbps<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="burstable_performance_python">
+<a href="#burstable_performance_python" style="color: inherit; text-decoration: inherit;">burstable_<wbr>performance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestburstableperformance">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Burstable<wbr>Performance</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_manufacturers_python">
+<a href="#cpu_manufacturers_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>manufacturers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestcpumanufacturersitem">Sequence[EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Cpu<wbr>Manufacturers<wbr>Item]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="excluded_instance_types_python">
+<a href="#excluded_instance_types_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>instance_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instance_generations_python">
+<a href="#instance_generations_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>generations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestinstancegenerationsitem">Sequence[EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Instance<wbr>Generations<wbr>Item]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="local_storage_python">
+<a href="#local_storage_python" style="color: inherit; text-decoration: inherit;">local_<wbr>storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestlocalstorage">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Local<wbr>Storage</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="local_storage_types_python">
+<a href="#local_storage_types_python" style="color: inherit; text-decoration: inherit;">local_<wbr>storage_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetinstancerequirementsrequestlocalstoragetypesitem">Sequence[EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Local<wbr>Storage<wbr>Types<wbr>Item]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memory_gi_b_per_v_cpu_python">
+<a href="#memory_gi_b_per_v_cpu_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>gi_<wbr>b_<wbr>per_<wbr>v_<wbr>cpu</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetmemorygibpervcpurequest">EC2Fleet<wbr>Memory<wbr>Gi<wbr>BPer<wbr>VCpu<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memory_mi_b_python">
+<a href="#memory_mi_b_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>mi_<wbr>b</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetmemorymibrequest">EC2Fleet<wbr>Memory<wbr>Mi<wbr>BRequest</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_interface_count_python">
+<a href="#network_interface_count_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetnetworkinterfacecountrequest">EC2Fleet<wbr>Network<wbr>Interface<wbr>Count<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="on_demand_max_price_percentage_over_lowest_price_python">
+<a href="#on_demand_max_price_percentage_over_lowest_price_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>max_<wbr>price_<wbr>percentage_<wbr>over_<wbr>lowest_<wbr>price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="require_hibernate_support_python">
+<a href="#require_hibernate_support_python" style="color: inherit; text-decoration: inherit;">require_<wbr>hibernate_<wbr>support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spot_max_price_percentage_over_lowest_price_python">
+<a href="#spot_max_price_percentage_over_lowest_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>max_<wbr>price_<wbr>percentage_<wbr>over_<wbr>lowest_<wbr>price</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="total_local_storage_gb_python">
+<a href="#total_local_storage_gb_python" style="color: inherit; text-decoration: inherit;">total_<wbr>local_<wbr>storage_<wbr>gb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleettotallocalstoragegbrequest">EC2Fleet<wbr>Total<wbr>Local<wbr>Storage<wbr>GBRequest</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="v_cpu_count_python">
+<a href="#v_cpu_count_python" style="color: inherit; text-decoration: inherit;">v_<wbr>cpu_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetvcpucountrangerequest">EC2Fleet<wbr>VCpu<wbr>Count<wbr>Range<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleetinstancerequirementsrequestacceleratormanufacturersitem">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Manufacturers<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Nvidia</dt>
+    <dd>nvidia</dd><dt>Amd</dt>
+    <dd>amd</dd><dt>Amazon<wbr>Web<wbr>Services</dt>
+    <dd>amazon-web-services</dd><dt>Xilinx</dt>
+    <dd>xilinx</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Manufacturers<wbr>Item<wbr>Nvidia</dt>
+    <dd>nvidia</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Manufacturers<wbr>Item<wbr>Amd</dt>
+    <dd>amd</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Manufacturers<wbr>Item<wbr>Amazon<wbr>Web<wbr>Services</dt>
+    <dd>amazon-web-services</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Manufacturers<wbr>Item<wbr>Xilinx</dt>
+    <dd>xilinx</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Nvidia</dt>
+    <dd>nvidia</dd><dt>Amd</dt>
+    <dd>amd</dd><dt>Amazon<wbr>Web<wbr>Services</dt>
+    <dd>amazon-web-services</dd><dt>Xilinx</dt>
+    <dd>xilinx</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NVIDIA</dt>
+    <dd>nvidia</dd><dt>AMD</dt>
+    <dd>amd</dd><dt>AMAZON_WEB_SERVICES</dt>
+    <dd>amazon-web-services</dd><dt>XILINX</dt>
+    <dd>xilinx</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleetinstancerequirementsrequestacceleratornamesitem">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Names<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>A100</dt>
+    <dd>a100</dd><dt>V100</dt>
+    <dd>v100</dd><dt>K80</dt>
+    <dd>k80</dd><dt>T4</dt>
+    <dd>t4</dd><dt>M60</dt>
+    <dd>m60</dd><dt>Radeon<wbr>Pro<wbr>V520</dt>
+    <dd>radeon-pro-v520</dd><dt>Vu9p</dt>
+    <dd>vu9p</dd><dt>Inferentia</dt>
+    <dd>inferentia</dd><dt>K520</dt>
+    <dd>k520</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Names<wbr>Item<wbr>A100</dt>
+    <dd>a100</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Names<wbr>Item<wbr>V100</dt>
+    <dd>v100</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Names<wbr>Item<wbr>K80</dt>
+    <dd>k80</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Names<wbr>Item<wbr>T4</dt>
+    <dd>t4</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Names<wbr>Item<wbr>M60</dt>
+    <dd>m60</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Names<wbr>Item<wbr>Radeon<wbr>Pro<wbr>V520</dt>
+    <dd>radeon-pro-v520</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Names<wbr>Item<wbr>Vu9p</dt>
+    <dd>vu9p</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Names<wbr>Item<wbr>Inferentia</dt>
+    <dd>inferentia</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Names<wbr>Item<wbr>K520</dt>
+    <dd>k520</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>A100</dt>
+    <dd>a100</dd><dt>V100</dt>
+    <dd>v100</dd><dt>K80</dt>
+    <dd>k80</dd><dt>T4</dt>
+    <dd>t4</dd><dt>M60</dt>
+    <dd>m60</dd><dt>Radeon<wbr>Pro<wbr>V520</dt>
+    <dd>radeon-pro-v520</dd><dt>Vu9p</dt>
+    <dd>vu9p</dd><dt>Inferentia</dt>
+    <dd>inferentia</dd><dt>K520</dt>
+    <dd>k520</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>A100</dt>
+    <dd>a100</dd><dt>V100</dt>
+    <dd>v100</dd><dt>K80</dt>
+    <dd>k80</dd><dt>T4</dt>
+    <dd>t4</dd><dt>M60</dt>
+    <dd>m60</dd><dt>RADEON_PRO_V520</dt>
+    <dd>radeon-pro-v520</dd><dt>VU9P</dt>
+    <dd>vu9p</dd><dt>INFERENTIA</dt>
+    <dd>inferentia</dd><dt>K520</dt>
+    <dd>k520</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleetinstancerequirementsrequestacceleratortypesitem">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Types<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Gpu</dt>
+    <dd>gpu</dd><dt>Fpga</dt>
+    <dd>fpga</dd><dt>Inference</dt>
+    <dd>inference</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Types<wbr>Item<wbr>Gpu</dt>
+    <dd>gpu</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Types<wbr>Item<wbr>Fpga</dt>
+    <dd>fpga</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Accelerator<wbr>Types<wbr>Item<wbr>Inference</dt>
+    <dd>inference</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Gpu</dt>
+    <dd>gpu</dd><dt>Fpga</dt>
+    <dd>fpga</dd><dt>Inference</dt>
+    <dd>inference</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>GPU</dt>
+    <dd>gpu</dd><dt>FPGA</dt>
+    <dd>fpga</dd><dt>INFERENCE</dt>
+    <dd>inference</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleetinstancerequirementsrequestbaremetal">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Bare<wbr>Metal</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Included</dt>
+    <dd>included</dd><dt>Required</dt>
+    <dd>required</dd><dt>Excluded</dt>
+    <dd>excluded</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Bare<wbr>Metal<wbr>Included</dt>
+    <dd>included</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Bare<wbr>Metal<wbr>Required</dt>
+    <dd>required</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Bare<wbr>Metal<wbr>Excluded</dt>
+    <dd>excluded</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Included</dt>
+    <dd>included</dd><dt>Required</dt>
+    <dd>required</dd><dt>Excluded</dt>
+    <dd>excluded</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>INCLUDED</dt>
+    <dd>included</dd><dt>REQUIRED</dt>
+    <dd>required</dd><dt>EXCLUDED</dt>
+    <dd>excluded</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleetinstancerequirementsrequestburstableperformance">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Burstable<wbr>Performance</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Included</dt>
+    <dd>included</dd><dt>Required</dt>
+    <dd>required</dd><dt>Excluded</dt>
+    <dd>excluded</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Burstable<wbr>Performance<wbr>Included</dt>
+    <dd>included</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Burstable<wbr>Performance<wbr>Required</dt>
+    <dd>required</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Burstable<wbr>Performance<wbr>Excluded</dt>
+    <dd>excluded</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Included</dt>
+    <dd>included</dd><dt>Required</dt>
+    <dd>required</dd><dt>Excluded</dt>
+    <dd>excluded</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>INCLUDED</dt>
+    <dd>included</dd><dt>REQUIRED</dt>
+    <dd>required</dd><dt>EXCLUDED</dt>
+    <dd>excluded</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleetinstancerequirementsrequestcpumanufacturersitem">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Cpu<wbr>Manufacturers<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Intel</dt>
+    <dd>intel</dd><dt>Amd</dt>
+    <dd>amd</dd><dt>Amazon<wbr>Web<wbr>Services</dt>
+    <dd>amazon-web-services</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Cpu<wbr>Manufacturers<wbr>Item<wbr>Intel</dt>
+    <dd>intel</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Cpu<wbr>Manufacturers<wbr>Item<wbr>Amd</dt>
+    <dd>amd</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Cpu<wbr>Manufacturers<wbr>Item<wbr>Amazon<wbr>Web<wbr>Services</dt>
+    <dd>amazon-web-services</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Intel</dt>
+    <dd>intel</dd><dt>Amd</dt>
+    <dd>amd</dd><dt>Amazon<wbr>Web<wbr>Services</dt>
+    <dd>amazon-web-services</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>INTEL</dt>
+    <dd>intel</dd><dt>AMD</dt>
+    <dd>amd</dd><dt>AMAZON_WEB_SERVICES</dt>
+    <dd>amazon-web-services</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleetinstancerequirementsrequestinstancegenerationsitem">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Instance<wbr>Generations<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Current</dt>
+    <dd>current</dd><dt>Previous</dt>
+    <dd>previous</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Instance<wbr>Generations<wbr>Item<wbr>Current</dt>
+    <dd>current</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Instance<wbr>Generations<wbr>Item<wbr>Previous</dt>
+    <dd>previous</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Current</dt>
+    <dd>current</dd><dt>Previous</dt>
+    <dd>previous</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CURRENT</dt>
+    <dd>current</dd><dt>PREVIOUS</dt>
+    <dd>previous</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleetinstancerequirementsrequestlocalstorage">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Local<wbr>Storage</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Included</dt>
+    <dd>included</dd><dt>Required</dt>
+    <dd>required</dd><dt>Excluded</dt>
+    <dd>excluded</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Local<wbr>Storage<wbr>Included</dt>
+    <dd>included</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Local<wbr>Storage<wbr>Required</dt>
+    <dd>required</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Local<wbr>Storage<wbr>Excluded</dt>
+    <dd>excluded</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Included</dt>
+    <dd>included</dd><dt>Required</dt>
+    <dd>required</dd><dt>Excluded</dt>
+    <dd>excluded</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>INCLUDED</dt>
+    <dd>included</dd><dt>REQUIRED</dt>
+    <dd>required</dd><dt>EXCLUDED</dt>
+    <dd>excluded</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleetinstancerequirementsrequestlocalstoragetypesitem">EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Local<wbr>Storage<wbr>Types<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Hdd</dt>
+    <dd>hdd</dd><dt>Ssd</dt>
+    <dd>ssd</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Local<wbr>Storage<wbr>Types<wbr>Item<wbr>Hdd</dt>
+    <dd>hdd</dd><dt>EC2Fleet<wbr>Instance<wbr>Requirements<wbr>Request<wbr>Local<wbr>Storage<wbr>Types<wbr>Item<wbr>Ssd</dt>
+    <dd>ssd</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Hdd</dt>
+    <dd>hdd</dd><dt>Ssd</dt>
+    <dd>ssd</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>HDD</dt>
+    <dd>hdd</dd><dt>SSD</dt>
+    <dd>ssd</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleetmemorygibpervcpurequest">EC2Fleet<wbr>Memory<wbr>Gi<wbr>BPer<wbr>VCpu<wbr>Request</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_csharp">
+<a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_csharp">
+<a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_go">
+<a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_go">
+<a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_nodejs">
+<a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_nodejs">
+<a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_python">
+<a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_python">
+<a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleetmemorymibrequest">EC2Fleet<wbr>Memory<wbr>Mi<wbr>BRequest</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_csharp">
+<a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_csharp">
+<a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_go">
+<a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_go">
+<a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_nodejs">
+<a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_nodejs">
+<a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_python">
+<a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_python">
+<a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleetnetworkinterfacecountrequest">EC2Fleet<wbr>Network<wbr>Interface<wbr>Count<wbr>Request</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_csharp">
+<a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_csharp">
+<a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_go">
+<a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_go">
+<a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_nodejs">
+<a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_nodejs">
+<a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_python">
+<a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_python">
+<a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1713,6 +3325,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maintenancestrategies_csharp">
+<a href="#maintenancestrategies_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Strategies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetspotoptionsrequestmaintenancestrategiesproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>EC2Fleet<wbr>Spot<wbr>Options<wbr>Request<wbr>Maintenance<wbr>Strategies<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxtotalprice_csharp">
 <a href="#maxtotalprice_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Total<wbr>Price</a>
 </span>
@@ -1770,6 +3390,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maintenancestrategies_go">
+<a href="#maintenancestrategies_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Strategies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetspotoptionsrequestmaintenancestrategiesproperties">EC2Fleet<wbr>Spot<wbr>Options<wbr>Request<wbr>Maintenance<wbr>Strategies<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1833,6 +3461,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maintenancestrategies_nodejs">
+<a href="#maintenancestrategies_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Strategies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetspotoptionsrequestmaintenancestrategiesproperties">EC2Fleet<wbr>Spot<wbr>Options<wbr>Request<wbr>Maintenance<wbr>Strategies<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxtotalprice_nodejs">
 <a href="#maxtotalprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Total<wbr>Price</a>
 </span>
@@ -1890,6 +3526,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maintenance_strategies_python">
+<a href="#maintenance_strategies_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>strategies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetspotoptionsrequestmaintenancestrategiesproperties">EC2Fleet<wbr>Spot<wbr>Options<wbr>Request<wbr>Maintenance<wbr>Strategies<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1988,6 +3632,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>hibernate</dd><dt>STOP</dt>
     <dd>stop</dd><dt>TERMINATE</dt>
     <dd>terminate</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleetspotoptionsrequestmaintenancestrategiesproperties">EC2Fleet<wbr>Spot<wbr>Options<wbr>Request<wbr>Maintenance<wbr>Strategies<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityrebalance_csharp">
+<a href="#capacityrebalance_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Rebalance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetcapacityrebalance">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>EC2Fleet<wbr>Capacity<wbr>Rebalance</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityrebalance_go">
+<a href="#capacityrebalance_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Rebalance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetcapacityrebalance">EC2Fleet<wbr>Capacity<wbr>Rebalance</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityrebalance_nodejs">
+<a href="#capacityrebalance_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Rebalance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetcapacityrebalance">EC2Fleet<wbr>Capacity<wbr>Rebalance</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_rebalance_python">
+<a href="#capacity_rebalance_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>rebalance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetcapacityrebalance">EC2Fleet<wbr>Capacity<wbr>Rebalance</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ec2fleettag">EC2Fleet<wbr>Tag</h4>
@@ -2395,6 +4089,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetcapacityunittype_csharp">
+<a href="#targetcapacityunittype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Capacity<wbr>Unit<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleettargetcapacityspecificationrequesttargetcapacityunittype">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>EC2Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Request<wbr>Target<wbr>Capacity<wbr>Unit<wbr>Type</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2430,6 +4132,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetcapacityunittype_go">
+<a href="#targetcapacityunittype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Capacity<wbr>Unit<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleettargetcapacityspecificationrequesttargetcapacityunittype">EC2Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Request<wbr>Target<wbr>Capacity<wbr>Unit<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2467,6 +4177,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetcapacityunittype_nodejs">
+<a href="#targetcapacityunittype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Capacity<wbr>Unit<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleettargetcapacityspecificationrequesttargetcapacityunittype">EC2Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Request<wbr>Target<wbr>Capacity<wbr>Unit<wbr>Type</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2503,6 +4221,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_capacity_unit_type_python">
+<a href="#target_capacity_unit_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>capacity_<wbr>unit_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleettargetcapacityspecificationrequesttargetcapacityunittype">EC2Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Request<wbr>Target<wbr>Capacity<wbr>Unit<wbr>Type</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2530,6 +4256,118 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>ON_DEMAND</dt>
     <dd>on-demand</dd><dt>SPOT</dt>
     <dd>spot</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleettargetcapacityspecificationrequesttargetcapacityunittype">EC2Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Request<wbr>Target<wbr>Capacity<wbr>Unit<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Vcpu</dt>
+    <dd>vcpu</dd><dt>Memory<wbr>Mib</dt>
+    <dd>memory-mib</dd><dt>Units</dt>
+    <dd>units</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>EC2Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Request<wbr>Target<wbr>Capacity<wbr>Unit<wbr>Type<wbr>Vcpu</dt>
+    <dd>vcpu</dd><dt>EC2Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Request<wbr>Target<wbr>Capacity<wbr>Unit<wbr>Type<wbr>Memory<wbr>Mib</dt>
+    <dd>memory-mib</dd><dt>EC2Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Request<wbr>Target<wbr>Capacity<wbr>Unit<wbr>Type<wbr>Units</dt>
+    <dd>units</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Vcpu</dt>
+    <dd>vcpu</dd><dt>Memory<wbr>Mib</dt>
+    <dd>memory-mib</dd><dt>Units</dt>
+    <dd>units</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>VCPU</dt>
+    <dd>vcpu</dd><dt>MEMORY_MIB</dt>
+    <dd>memory-mib</dd><dt>UNITS</dt>
+    <dd>units</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleettotallocalstoragegbrequest">EC2Fleet<wbr>Total<wbr>Local<wbr>Storage<wbr>GBRequest</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_csharp">
+<a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_csharp">
+<a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_go">
+<a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_go">
+<a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_nodejs">
+<a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_nodejs">
+<a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_python">
+<a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_python">
+<a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ec2fleettype">EC2Fleet<wbr>Type</h4>
@@ -2560,6 +4398,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>maintain</dd><dt>REQUEST</dt>
     <dd>request</dd><dt>INSTANT</dt>
     <dd>instant</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ec2fleetvcpucountrangerequest">EC2Fleet<wbr>VCpu<wbr>Count<wbr>Range<wbr>Request</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_csharp">
+<a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_csharp">
+<a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_go">
+<a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_go">
+<a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_nodejs">
+<a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_nodejs">
+<a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_python">
+<a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_python">
+<a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

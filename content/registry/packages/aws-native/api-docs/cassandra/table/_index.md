@@ -1810,6 +1810,7 @@ const my_table = new aws_native.cassandra.Table("my_table", {
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
           <span class="nx">billing_mode</span><span class="p">:</span> <span class="nx">Optional[TableBillingModeArgs]</span> = None<span class="p">,</span>
           <span class="nx">clustering_key_columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[TableClusteringKeyColumnArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">default_time_to_live</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">encryption_specification</span><span class="p">:</span> <span class="nx">Optional[TableEncryptionSpecificationArgs]</span> = None<span class="p">,</span>
           <span class="nx">keyspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">partition_key_columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[TableColumnArgs]]</span> = None<span class="p">,</span>
@@ -1978,6 +1979,14 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}Clustering key columns of the table{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="defaulttimetolive_csharp">
+<a href="#defaulttimetolive_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Time<wbr>To<wbr>Live</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="encryptionspecification_csharp">
 <a href="#encryptionspecification_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Specification</a>
 </span>
@@ -2053,6 +2062,14 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#tableclusteringkeycolumn">[]Table<wbr>Clustering<wbr>Key<wbr>Column<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Clustering key columns of the table{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="defaulttimetolive_go">
+<a href="#defaulttimetolive_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Time<wbr>To<wbr>Live</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionspecification_go">
 <a href="#encryptionspecification_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Specification</a>
@@ -2130,6 +2147,14 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}Clustering key columns of the table{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="defaulttimetolive_nodejs">
+<a href="#defaulttimetolive_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Time<wbr>To<wbr>Live</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="encryptionspecification_nodejs">
 <a href="#encryptionspecification_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Specification</a>
 </span>
@@ -2205,6 +2230,14 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#tableclusteringkeycolumn">Sequence[Table<wbr>Clustering<wbr>Key<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Clustering key columns of the table{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="default_time_to_live_python">
+<a href="#default_time_to_live_python" style="color: inherit; text-decoration: inherit;">default_<wbr>time_<wbr>to_<wbr>live</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_specification_python">
 <a href="#encryption_specification_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>specification</a>
