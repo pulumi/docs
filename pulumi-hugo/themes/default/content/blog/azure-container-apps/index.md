@@ -74,7 +74,7 @@ Comparing to other vendors: Azure Container Apps are in the same space as **Goog
 
 ## Example: Run an HTTP API with Azure Container Apps and Pulumi
 
-Let's walk through the steps to build an example application with Azure Container Apps using infrastructure as code in familiar languages. In this scenario, we create an HTTP application that is available via a public domain name. We'll use Pulumi to provision the necessary resources. In this example, we will use TypeScript however you could also use JavaScript, Python, Go, and C#. You can check out the complete source code in the Pulumi Examples: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-containerapps), [C#](https://github.com/pulumi/examples/tree/master/azure-cs-containerapps), [Python](https://github.com/pulumi/examples/tree/master/azure-py-containerapps).
+Let's walk through the steps to build an example application with Azure Container Apps using infrastructure as code in familiar languages. In this scenario, we create an HTTP application that is available via a public domain name. We'll use Pulumi to provision the necessary resources. In this example, we will use TypeScript however you could also use JavaScript, Python, Go, and C#. You can check out the complete source code in the Pulumi Examples: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-containerapps), [C#](https://github.com/pulumi/examples/tree/master/azure-cs-containerapps), [Python](https://github.com/pulumi/examples/tree/master/azure-py-containerapps), [Go](https://github.com/pulumi/examples/tree/master/azure-go-containerapps).
 
 ### Define a Dockerfile and app
 
@@ -90,12 +90,12 @@ You can find the full Dockerfile [here](https://github.com/pulumi/examples/tree/
 
 The resource `KubeEnvironment` defines a cluster that can host multiple Container Apps. Behind the scenes, it creates an AKS cluster in a subscription managed internally by Microsoft and deploys the Apps control plane.
 
-{{< chooser language "typescript,csharp,python" / >}}
+{{< chooser language "typescript,csharp,python,go" / >}}
 
 {{% choosable language typescript %}}
 
 ```ts
-import * as web from "@pulumi/azure-native/web";
+import * as web from "@pulumi/azure-native/web/v20210301";
 
 const env = new web.KubeEnvironment("env", {
    resourceGroupName: resourceGroup.name,
@@ -107,7 +107,7 @@ const env = new web.KubeEnvironment("env", {
 {{% choosable language csharp %}}
 
 ```cs
-using Pulumi.AzureNative.Web;
+using Pulumi.AzureNative.Web.V20210301;
 
 var kubeEnv = new KubeEnvironment("env", new KubeEnvironmentArgs
 {
@@ -120,11 +120,23 @@ var kubeEnv = new KubeEnvironment("env", new KubeEnvironmentArgs
 {{% choosable language python %}}
 
 ```py
-from pulumi_azure_native import web
+import pulumi_azure_native.web.v20210301 as web
 
 kube_env = web.KubeEnvironment("env",
     resource_group_name=resource_group.name,
     type="Managed")
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+import web "github.com/pulumi/pulumi-azure-native/sdk/go/azure/web/v20210301"
+
+kubeEnvironment, err := web.NewKubeEnvironment(ctx, "kubeEnvironment", &web.KubeEnvironmentArgs{
+    ResourceGroupName: resourceGroup.Name,
+    Type:              pulumi.String("Managed"),
+})
 ```
 
 {{% /choosable %}}
@@ -133,7 +145,7 @@ kube_env = web.KubeEnvironment("env",
 
 We can build the Docker image and publish it to a new Azure Container Registry (ACR) repository. The code below assumes
 
-{{< chooser language "typescript,csharp,python" / >}}
+{{< chooser language "typescript,csharp,python,go" / >}}
 
 {{% choosable language typescript %}}
 
@@ -237,12 +249,68 @@ my_image = docker.Image(custom_image,
 ```
 
 {{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+import (
+	"github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
+	"github.com/pulumi/pulumi-docker/sdk/v3/go/docker"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+registry, err := containerregistry.NewRegistry(ctx, "registry", &containerregistry.RegistryArgs{
+    ResourceGroupName: resourceGroup.Name,
+    Sku: containerregistry.SkuArgs{
+        Name: pulumi.String("Basic"),
+    },
+    AdminUserEnabled: pulumi.Bool(true),
+})
+if err != nil {
+    return err
+}
+credentials := pulumi.All(resourceGroup.Name, registry.Name).ApplyT(
+    func(args []interface{}) (*containerregistry.ListRegistryCredentialsResult, error) {
+        resourceGroupName := args[0].(string)
+        registryName := args[1].(string)
+        return containerregistry.ListRegistryCredentials(ctx, &containerregistry.ListRegistryCredentialsArgs{
+            ResourceGroupName: resourceGroupName,
+            RegistryName:      registryName,
+        })
+    },
+)
+
+adminUsername := credentials.ApplyT(func(result interface{}) (string, error) {
+    credentials := result.(*containerregistry.ListRegistryCredentialsResult)
+    return *credentials.Username, nil
+}).(pulumi.StringOutput)
+adminPassword := credentials.ApplyT(func(result interface{}) (string, error) {
+    credentials := result.(*containerregistry.ListRegistryCredentialsResult)
+    return *credentials.Passwords[0].Value, nil
+}).(pulumi.StringOutput)
+
+newImage, err := docker.NewImage(ctx, "node-app", &docker.ImageArgs{
+    ImageName: pulumi.Sprintf("https://%s/node-app:v1.0.0", registry.LoginServer),
+    Build: docker.DockerBuildArgs{
+        Context: pulumi.String("/node-app"),
+    },
+    Registry: docker.ImageRegistryArgs{
+        Server:   registry.LoginServer,
+        Username: adminUsername,
+        Password: adminPassword,
+    },
+})
+if err != nil {
+    return err
+}
+```
+
+{{% /choosable %}}
 
 ## Deploy the container app
 
 Finally, we can define the Container App itself. We point the App to the environment resource and instruct it to run our custom image. Image container credentials are specified in the `configuration` block, with the password marked as a secret. We've also enabled external ingress to publish the app on the web.
 
-{{< chooser language "typescript,csharp,python" / >}}
+{{< chooser language "typescript,csharp,python,go" / >}}
 
 {{% choosable language typescript %}}
 
@@ -350,6 +418,47 @@ pulumi.export("url", container_app.configuration.apply(lambda c: c.ingress).appl
 ```
 
 {{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+containerApp, err := web.NewContainerApp(ctx, "app", &web.ContainerAppArgs{
+    ResourceGroupName: resourceGroup.Name,
+    KubeEnvironmentId: kubeEnvironment.ID(),
+    Configuration: web.ConfigurationArgs{
+        Ingress: web.IngressArgs{
+            External:   pulumi.Bool(true),
+            TargetPort: pulumi.IntPtr(80),
+        },
+        Registries: web.RegistryCredentialsArray{
+            web.RegistryCredentialsArgs{
+                Server:            registry.LoginServer,
+                Username:          adminUsername,
+                PasswordSecretRef: pulumi.String("pwd")},
+        },
+        Secrets: web.SecretArray{
+            web.SecretArgs{
+                Name:  pulumi.String("pwd"),
+                Value: adminPassword,
+            },
+        },
+    },
+    Template: web.TemplateArgs{
+        Containers: web.ContainerArray{
+            web.ContainerArgs{
+                Name:  pulumi.String("myapp"),
+                Image: newImage.ImageName,
+            },
+        },
+    },
+})
+if err != nil {
+    return err
+}
+
+ctx.Export("url", pulumi.Sprintf("https://%s", containerApp.LatestRevisionFqdn))
+```
+
+{{% /choosable %}}
 
 ### Test the app
 
@@ -374,4 +483,4 @@ Further steps:
 
 - [Get Started with Pulumi for Azure today.]({{<relref "/docs/get-started/azure">}})
 - [Read about Azure Container Apps announcement.](https://aka.ms/containerapps/ignite-blog)
-- Check out the complete Azure Container Apps example: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-containerapps), [C#](https://github.com/pulumi/examples/tree/master/azure-cs-containerapps), [Python](https://github.com/pulumi/examples/tree/master/azure-py-containerapps).
+- Check out the complete Azure Container Apps example: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-containerapps), [C#](https://github.com/pulumi/examples/tree/master/azure-cs-containerapps), [Python](https://github.com/pulumi/examples/tree/master/azure-py-containerapps), [Go](https://github.com/pulumi/examples/tree/master/azure-go-containerapps).
