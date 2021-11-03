@@ -1,0 +1,12 @@
+id = "guinevere-saenger"
+name = "Guinevere Saenger"
+title = "Software Engineer"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "guineveresaenger"
+linkedin = "guinevere-saenger"
+twitter = "guincodes"
