@@ -134,7 +134,7 @@
     {{- end }}
 
     <!-- Apply anchor links to headings in the docs, blog and taxonomy pages. -->
-    {{ if and (not .IsHome) (.Section) (in "docs blog authors tags" .Section) }}
+    {{ if and (not .IsHome) (.Section) (in "docs blog authors tags registry" .Section) }}
         <script async defer src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
         <script>
             // Wait for the window's `load` event to ensure the deferred anchor.js script has finished loading as well.
