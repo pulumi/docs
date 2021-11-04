@@ -306,7 +306,7 @@ The SamlIdp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name of idp
+    <dd>{{% md %}}Name of the IdP
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameformat_csharp">
@@ -564,7 +564,7 @@ The SamlIdp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name of idp
+    <dd>{{% md %}}Name of the IdP
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameformat_go">
@@ -822,7 +822,7 @@ The SamlIdp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name of idp
+    <dd>{{% md %}}Name of the IdP
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameformat_nodejs">
@@ -1080,7 +1080,7 @@ The SamlIdp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}name of idp
+    <dd>{{% md %}}Name of the IdP
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_format_python">
@@ -1615,7 +1615,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name of idp
+    <dd>{{% md %}}Name of the IdP
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameformat_csharp">
@@ -1889,7 +1889,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name of idp
+    <dd>{{% md %}}Name of the IdP
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameformat_go">
@@ -2163,7 +2163,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name of idp
+    <dd>{{% md %}}Name of the IdP
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameformat_nodejs">
@@ -2437,7 +2437,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}name of idp
+    <dd>{{% md %}}Name of the IdP
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_format_python">

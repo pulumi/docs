@@ -311,7 +311,7 @@ The SocialIdp resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name of idp
+    <dd>{{% md %}}Name of the IdP
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilemaster_csharp">
@@ -545,7 +545,7 @@ The SocialIdp resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name of idp
+    <dd>{{% md %}}Name of the IdP
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilemaster_go">
@@ -779,7 +779,7 @@ The SocialIdp resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name of idp
+    <dd>{{% md %}}Name of the IdP
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilemaster_nodejs">
@@ -1013,7 +1013,7 @@ The SocialIdp resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}name of idp
+    <dd>{{% md %}}Name of the IdP
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_master_python">
@@ -1587,7 +1587,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name of idp
+    <dd>{{% md %}}Name of the IdP
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profilemaster_csharp">
@@ -1853,7 +1853,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name of idp
+    <dd>{{% md %}}Name of the IdP
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profilemaster_go">
@@ -2119,7 +2119,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name of idp
+    <dd>{{% md %}}Name of the IdP
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profilemaster_nodejs">
@@ -2385,7 +2385,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}name of idp
+    <dd>{{% md %}}Name of the IdP
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profile_master_python">

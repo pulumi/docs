@@ -173,7 +173,7 @@ The UserGroupMemberships resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta User.
+    <dd>{{% md %}}Okta user ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -195,7 +195,7 @@ The UserGroupMemberships resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta User.
+    <dd>{{% md %}}Okta user ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -217,7 +217,7 @@ The UserGroupMemberships resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta User.
+    <dd>{{% md %}}Okta user ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -239,7 +239,7 @@ The UserGroupMemberships resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta User.
+    <dd>{{% md %}}Okta user ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -443,7 +443,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta User.
+    <dd>{{% md %}}Okta user ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -465,7 +465,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta User.
+    <dd>{{% md %}}Okta user ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -487,7 +487,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta User.
+    <dd>{{% md %}}Okta user ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -509,7 +509,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta User.
+    <dd>{{% md %}}Okta user ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

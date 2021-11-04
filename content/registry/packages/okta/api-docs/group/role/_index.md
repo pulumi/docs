@@ -131,6 +131,7 @@ const example = new okta.group.Role("example", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Role</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">disable_notifications</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
          <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">role_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">target_app_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -284,6 +285,16 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
 , `"MOBILE_ADMIN"`, `"API_ACCESS_MANAGEMENT_ADMIN"`, `"REPORT_ADMIN"`, `"GROUP_MEMBERSHIP_ADMIN"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablenotifications_csharp">
+<a href="#disablenotifications_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Notifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When this setting is enabled, the admins won't receive any of the default Okta
+administrator emails. These admins also won't have access to contact Okta Support and open support cases on behalf of your org.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="targetapplists_csharp">
 <a href="#targetapplists_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>App<wbr>Lists</a>
 </span>
@@ -328,6 +339,16 @@ the targets of the admin role.
     <dd>{{% md %}}Admin role assigned to the group. It can be any one of the following values `"SUPER_ADMIN"`
 , `"ORG_ADMIN"`, `"APP_ADMIN"`, `"USER_ADMIN"`, `"HELP_DESK_ADMIN"`, `"READ_ONLY_ADMIN"`
 , `"MOBILE_ADMIN"`, `"API_ACCESS_MANAGEMENT_ADMIN"`, `"REPORT_ADMIN"`, `"GROUP_MEMBERSHIP_ADMIN"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablenotifications_go">
+<a href="#disablenotifications_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Notifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When this setting is enabled, the admins won't receive any of the default Okta
+administrator emails. These admins also won't have access to contact Okta Support and open support cases on behalf of your org.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetapplists_go">
@@ -376,6 +397,16 @@ the targets of the admin role.
 , `"MOBILE_ADMIN"`, `"API_ACCESS_MANAGEMENT_ADMIN"`, `"REPORT_ADMIN"`, `"GROUP_MEMBERSHIP_ADMIN"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablenotifications_nodejs">
+<a href="#disablenotifications_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Notifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When this setting is enabled, the admins won't receive any of the default Okta
+administrator emails. These admins also won't have access to contact Okta Support and open support cases on behalf of your org.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="targetapplists_nodejs">
 <a href="#targetapplists_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>App<wbr>Lists</a>
 </span>
@@ -420,6 +451,16 @@ the targets of the admin role.
     <dd>{{% md %}}Admin role assigned to the group. It can be any one of the following values `"SUPER_ADMIN"`
 , `"ORG_ADMIN"`, `"APP_ADMIN"`, `"USER_ADMIN"`, `"HELP_DESK_ADMIN"`, `"READ_ONLY_ADMIN"`
 , `"MOBILE_ADMIN"`, `"API_ACCESS_MANAGEMENT_ADMIN"`, `"REPORT_ADMIN"`, `"GROUP_MEMBERSHIP_ADMIN"`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_notifications_python">
+<a href="#disable_notifications_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>notifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When this setting is enabled, the admins won't receive any of the default Okta
+administrator emails. These admins also won't have access to contact Okta Support and open support cases on behalf of your org.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_app_lists_python">
@@ -516,6 +557,7 @@ Get an existing Role resource's state with the given name, ID, and optional extr
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">disable_notifications</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">role_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">target_app_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -632,6 +674,16 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_disablenotifications_csharp">
+<a href="#state_disablenotifications_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Notifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When this setting is enabled, the admins won't receive any of the default Okta
+administrator emails. These admins also won't have access to contact Okta Support and open support cases on behalf of your org.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_groupid_csharp">
 <a href="#state_groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
 </span>
@@ -677,6 +729,16 @@ the targets of the admin role.
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_disablenotifications_go">
+<a href="#state_disablenotifications_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Notifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When this setting is enabled, the admins won't receive any of the default Okta
+administrator emails. These admins also won't have access to contact Okta Support and open support cases on behalf of your org.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupid_go">
 <a href="#state_groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -724,6 +786,16 @@ the targets of the admin role.
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_disablenotifications_nodejs">
+<a href="#state_disablenotifications_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Notifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When this setting is enabled, the admins won't receive any of the default Okta
+administrator emails. These admins also won't have access to contact Okta Support and open support cases on behalf of your org.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_groupid_nodejs">
 <a href="#state_groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
 </span>
@@ -769,6 +841,16 @@ the targets of the admin role.
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_disable_notifications_python">
+<a href="#state_disable_notifications_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>notifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When this setting is enabled, the admins won't receive any of the default Okta
+administrator emails. These admins also won't have access to contact Okta Support and open support cases on behalf of your org.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_id_python">
 <a href="#state_group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>

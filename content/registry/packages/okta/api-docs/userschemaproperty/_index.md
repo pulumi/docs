@@ -459,7 +459,7 @@ The UserSchemaProperty resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is required for this application's users.
+    <dd>{{% md %}}Whether the property is required for these users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
@@ -652,7 +652,7 @@ The UserSchemaProperty resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is required for this application's users.
+    <dd>{{% md %}}Whether the property is required for these users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
@@ -845,7 +845,7 @@ The UserSchemaProperty resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the property is required for this application's users.
+    <dd>{{% md %}}Whether the property is required for these users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
@@ -1038,7 +1038,7 @@ The UserSchemaProperty resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is required for this application's users.
+    <dd>{{% md %}}Whether the property is required for these users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
@@ -1414,7 +1414,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is required for this application's users.
+    <dd>{{% md %}}Whether the property is required for these users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scope_csharp">
@@ -1607,7 +1607,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is required for this application's users.
+    <dd>{{% md %}}Whether the property is required for these users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scope_go">
@@ -1800,7 +1800,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the property is required for this application's users.
+    <dd>{{% md %}}Whether the property is required for these users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scope_nodejs">
@@ -1993,7 +1993,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the property is required for this application's users.
+    <dd>{{% md %}}Whether the property is required for these users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scope_python">

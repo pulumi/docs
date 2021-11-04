@@ -49,6 +49,7 @@ no_edit_this_page: true
             <span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">honor_force_authn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">idp_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">implicit_assignment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">inline_hook_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">key_years_valid</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -71,6 +72,7 @@ no_edit_this_page: true
             <span class="nx">subject_name_id_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">subject_name_id_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">user_name_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">user_name_template_push_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">user_name_template_suffix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">user_name_template_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[SamlAppUserArgs]]</span> = None<span class="p">)</span>
@@ -409,6 +411,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}SAML issuer ID
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="implicitassignment_csharp">
+<a href="#implicitassignment_csharp" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enable Federation Broker Mode.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="inlinehookid_csharp">
 <a href="#inlinehookid_csharp" style="color: inherit; text-decoration: inherit;">Inline<wbr>Hook<wbr>Id</a>
 </span>
@@ -596,6 +607,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplatepushstatus_csharp">
+<a href="#usernametemplatepushstatus_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplatesuffix_csharp">
@@ -835,6 +855,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}SAML issuer ID
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="implicitassignment_go">
+<a href="#implicitassignment_go" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enable Federation Broker Mode.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="inlinehookid_go">
 <a href="#inlinehookid_go" style="color: inherit; text-decoration: inherit;">Inline<wbr>Hook<wbr>Id</a>
 </span>
@@ -1022,6 +1051,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplatepushstatus_go">
+<a href="#usernametemplatepushstatus_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplatesuffix_go">
@@ -1261,6 +1299,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}SAML issuer ID
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="implicitassignment_nodejs">
+<a href="#implicitassignment_nodejs" style="color: inherit; text-decoration: inherit;">implicit<wbr>Assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enable Federation Broker Mode.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="inlinehookid_nodejs">
 <a href="#inlinehookid_nodejs" style="color: inherit; text-decoration: inherit;">inline<wbr>Hook<wbr>Id</a>
 </span>
@@ -1448,6 +1495,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplatepushstatus_nodejs">
+<a href="#usernametemplatepushstatus_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplatesuffix_nodejs">
@@ -1687,6 +1743,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}SAML issuer ID
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="implicit_assignment_python">
+<a href="#implicit_assignment_python" style="color: inherit; text-decoration: inherit;">implicit_<wbr>assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enable Federation Broker Mode.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="inline_hook_id_python">
 <a href="#inline_hook_id_python" style="color: inherit; text-decoration: inherit;">inline_<wbr>hook_<wbr>id</a>
 </span>
@@ -1874,6 +1939,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username template
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_name_template_push_status_python">
+<a href="#user_name_template_push_status_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>push_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_name_template_suffix_python">
@@ -2398,6 +2472,7 @@ Get an existing SamlApp resource's state with the given name, ID, and optional e
         <span class="nx">http_post_binding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">http_redirect_binding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">idp_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">implicit_assignment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">inline_hook_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2426,6 +2501,7 @@ Get an existing SamlApp resource's state with the given name, ID, and optional e
         <span class="nx">subject_name_id_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">subject_name_id_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">user_name_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">user_name_template_push_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">user_name_template_suffix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">user_name_template_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[SamlAppUserArgs]]</span> = None<span class="p">) -&gt;</span> SamlApp</code></pre></div>
@@ -2783,6 +2859,15 @@ The following state arguments are supported:
     <dd>{{% md %}}SAML issuer ID
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_implicitassignment_csharp">
+<a href="#state_implicitassignment_csharp" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enable Federation Broker Mode.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_inlinehookid_csharp">
 <a href="#state_inlinehookid_csharp" style="color: inherit; text-decoration: inherit;">Inline<wbr>Hook<wbr>Id</a>
 </span>
@@ -3033,6 +3118,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usernametemplatepushstatus_csharp">
+<a href="#state_usernametemplatepushstatus_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplatesuffix_csharp">
@@ -3308,6 +3402,15 @@ The following state arguments are supported:
     <dd>{{% md %}}SAML issuer ID
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_implicitassignment_go">
+<a href="#state_implicitassignment_go" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enable Federation Broker Mode.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_inlinehookid_go">
 <a href="#state_inlinehookid_go" style="color: inherit; text-decoration: inherit;">Inline<wbr>Hook<wbr>Id</a>
 </span>
@@ -3558,6 +3661,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usernametemplatepushstatus_go">
+<a href="#state_usernametemplatepushstatus_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplatesuffix_go">
@@ -3833,6 +3945,15 @@ The following state arguments are supported:
     <dd>{{% md %}}SAML issuer ID
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_implicitassignment_nodejs">
+<a href="#state_implicitassignment_nodejs" style="color: inherit; text-decoration: inherit;">implicit<wbr>Assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enable Federation Broker Mode.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_inlinehookid_nodejs">
 <a href="#state_inlinehookid_nodejs" style="color: inherit; text-decoration: inherit;">inline<wbr>Hook<wbr>Id</a>
 </span>
@@ -4083,6 +4204,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usernametemplatepushstatus_nodejs">
+<a href="#state_usernametemplatepushstatus_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplatesuffix_nodejs">
@@ -4358,6 +4488,15 @@ The following state arguments are supported:
     <dd>{{% md %}}SAML issuer ID
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_implicit_assignment_python">
+<a href="#state_implicit_assignment_python" style="color: inherit; text-decoration: inherit;">implicit_<wbr>assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enable Federation Broker Mode.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_inline_hook_id_python">
 <a href="#state_inline_hook_id_python" style="color: inherit; text-decoration: inherit;">inline_<wbr>hook_<wbr>id</a>
 </span>
@@ -4608,6 +4747,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username template
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_user_name_template_push_status_python">
+<a href="#state_user_name_template_push_status_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>push_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_name_template_suffix_python">

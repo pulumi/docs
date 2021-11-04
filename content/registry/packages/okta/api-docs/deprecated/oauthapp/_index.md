@@ -69,6 +69,10 @@ no_edit_this_page: true
              <span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">tos_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">user_name_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">user_name_template_push_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">user_name_template_suffix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">user_name_template_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[OauthAppUserArgs]]</span> = None<span class="p">,</span>
              <span class="nx">wildcard_redirect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -582,6 +586,42 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client tos (terms of service).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_csharp">
+<a href="#usernametemplate_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username template
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplatepushstatus_csharp">
+<a href="#usernametemplatepushstatus_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplatesuffix_csharp">
+<a href="#usernametemplatesuffix_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username template suffix
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplatetype_csharp">
+<a href="#usernametemplatetype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username template type
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="users_csharp">
@@ -988,6 +1028,42 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client tos (terms of service).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_go">
+<a href="#usernametemplate_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username template
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplatepushstatus_go">
+<a href="#usernametemplatepushstatus_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplatesuffix_go">
+<a href="#usernametemplatesuffix_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username template suffix
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplatetype_go">
+<a href="#usernametemplatetype_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username template type
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="users_go">
@@ -1394,6 +1470,42 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client tos (terms of service).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplate_nodejs">
+<a href="#usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username template
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplatepushstatus_nodejs">
+<a href="#usernametemplatepushstatus_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplatesuffix_nodejs">
+<a href="#usernametemplatesuffix_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username template suffix
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplatetype_nodejs">
+<a href="#usernametemplatetype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username template type
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="users_nodejs">
@@ -1800,6 +1912,42 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client tos (terms of service).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_name_template_python">
+<a href="#user_name_template_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Username template
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_name_template_push_status_python">
+<a href="#user_name_template_push_status_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>push_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_name_template_suffix_python">
+<a href="#user_name_template_suffix_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Username template suffix
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_name_template_type_python">
+<a href="#user_name_template_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Username template type
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="users_python">
@@ -2082,6 +2230,10 @@ Get an existing OauthApp resource's state with the given name, ID, and optional 
         <span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tos_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">user_name_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">user_name_template_push_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">user_name_template_suffix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">user_name_template_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[OauthAppUserArgs]]</span> = None<span class="p">,</span>
         <span class="nx">wildcard_redirect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> OauthApp</code></pre></div>
 {{% /choosable %}}
@@ -2614,6 +2766,42 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of client application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usernametemplate_csharp">
+<a href="#state_usernametemplate_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username template
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usernametemplatepushstatus_csharp">
+<a href="#state_usernametemplatepushstatus_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usernametemplatesuffix_csharp">
+<a href="#state_usernametemplatesuffix_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username template suffix
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usernametemplatetype_csharp">
+<a href="#state_usernametemplatetype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username template type
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_users_csharp">
@@ -3056,6 +3244,42 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of client application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usernametemplate_go">
+<a href="#state_usernametemplate_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username template
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usernametemplatepushstatus_go">
+<a href="#state_usernametemplatepushstatus_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usernametemplatesuffix_go">
+<a href="#state_usernametemplatesuffix_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username template suffix
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usernametemplatetype_go">
+<a href="#state_usernametemplatetype_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username template type
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_users_go">
@@ -3498,6 +3722,42 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of client application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usernametemplate_nodejs">
+<a href="#state_usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username template
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usernametemplatepushstatus_nodejs">
+<a href="#state_usernametemplatepushstatus_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usernametemplatesuffix_nodejs">
+<a href="#state_usernametemplatesuffix_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username template suffix
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usernametemplatetype_nodejs">
+<a href="#state_usernametemplatetype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username template type
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_users_nodejs">
@@ -3940,6 +4200,42 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of client application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_user_name_template_python">
+<a href="#state_user_name_template_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Username template
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_user_name_template_push_status_python">
+<a href="#state_user_name_template_push_status_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>push_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_user_name_template_suffix_python">
+<a href="#state_user_name_template_suffix_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Username template suffix
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_user_name_template_type_python">
+<a href="#state_user_name_template_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Username template type
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_users_python">

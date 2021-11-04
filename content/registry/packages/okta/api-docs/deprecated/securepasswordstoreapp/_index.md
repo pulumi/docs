@@ -55,6 +55,7 @@ no_edit_this_page: true
                            <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">user_name_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">user_name_template_push_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">user_name_template_suffix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">user_name_template_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">username_field</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -449,6 +450,15 @@ The SecurePasswordStoreApp resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}Username template
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="usernametemplatepushstatus_csharp">
+<a href="#usernametemplatepushstatus_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usernametemplatesuffix_csharp">
 <a href="#usernametemplatesuffix_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Suffix</a>
 </span>
@@ -739,6 +749,15 @@ The SecurePasswordStoreApp resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usernametemplatepushstatus_go">
+<a href="#usernametemplatepushstatus_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplatesuffix_go">
@@ -1033,6 +1052,15 @@ The SecurePasswordStoreApp resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}Username template
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="usernametemplatepushstatus_nodejs">
+<a href="#usernametemplatepushstatus_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usernametemplatesuffix_nodejs">
 <a href="#usernametemplatesuffix_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Suffix</a>
 </span>
@@ -1325,6 +1353,15 @@ The SecurePasswordStoreApp resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}Username template
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="user_name_template_push_status_python">
+<a href="#user_name_template_push_status_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>push_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="user_name_template_suffix_python">
 <a href="#user_name_template_suffix_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>suffix</a>
 </span>
@@ -1563,6 +1600,7 @@ Get an existing SecurePasswordStoreApp resource's state with the given name, ID,
         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">user_name_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">user_name_template_push_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">user_name_template_suffix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">user_name_template_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">username_field</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1958,6 +1996,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Username template
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_usernametemplatepushstatus_csharp">
+<a href="#state_usernametemplatepushstatus_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_usernametemplatesuffix_csharp">
 <a href="#state_usernametemplatesuffix_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Suffix</a>
 </span>
@@ -2275,6 +2322,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usernametemplatepushstatus_go">
+<a href="#state_usernametemplatepushstatus_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplatesuffix_go">
@@ -2596,6 +2652,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Username template
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_usernametemplatepushstatus_nodejs">
+<a href="#state_usernametemplatepushstatus_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_usernametemplatesuffix_nodejs">
 <a href="#state_usernametemplatesuffix_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Suffix</a>
 </span>
@@ -2913,6 +2978,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username template
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_user_name_template_push_status_python">
+<a href="#state_user_name_template_push_status_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>push_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Push username on update
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_name_template_suffix_python">

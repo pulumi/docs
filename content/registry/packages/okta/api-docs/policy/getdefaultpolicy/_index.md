@@ -157,6 +157,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of policy to retrieve.  Valid values: `OKTA_SIGN_ON`, `PASSWORD`, `MFA_ENROLL`, `IDP_DISCOVERY`
+`"IDP_DISCOVERY"`, `"ACCESS_POLICY"` (**only available as a part of the Identity Engine**), `"PROFILE_ENROLLMENT"` (**only available as a part of the Identity Engine**)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -170,6 +171,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of policy to retrieve.  Valid values: `OKTA_SIGN_ON`, `PASSWORD`, `MFA_ENROLL`, `IDP_DISCOVERY`
+`"IDP_DISCOVERY"`, `"ACCESS_POLICY"` (**only available as a part of the Identity Engine**), `"PROFILE_ENROLLMENT"` (**only available as a part of the Identity Engine**)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -183,6 +185,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of policy to retrieve.  Valid values: `OKTA_SIGN_ON`, `PASSWORD`, `MFA_ENROLL`, `IDP_DISCOVERY`
+`"IDP_DISCOVERY"`, `"ACCESS_POLICY"` (**only available as a part of the Identity Engine**), `"PROFILE_ENROLLMENT"` (**only available as a part of the Identity Engine**)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -196,6 +199,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of policy to retrieve.  Valid values: `OKTA_SIGN_ON`, `PASSWORD`, `MFA_ENROLL`, `IDP_DISCOVERY`
+`"IDP_DISCOVERY"`, `"ACCESS_POLICY"` (**only available as a part of the Identity Engine**), `"PROFILE_ENROLLMENT"` (**only available as a part of the Identity Engine**)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

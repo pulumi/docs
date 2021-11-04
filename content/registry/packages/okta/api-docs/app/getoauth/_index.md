@@ -129,6 +129,8 @@ const test = pulumi.output(okta.app.getOauth({
               <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">label_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">skip_groups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">skip_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetOauthResult</code></pre></div>
 {{% /choosable %}}
@@ -203,6 +205,24 @@ and `label`. This is used to avoid paginating through all applications.
     </dt>
     <dd>{{% md %}}Label prefix of the app to retrieve, conflicts with `label` and `id`. This will tell the
 provider to do a `starts with` query as opposed to an `equals` query.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipgroups_csharp">
+<a href="#skipgroups_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_csharp">
+<a href="#skipusers_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="users_csharp">
@@ -266,6 +286,24 @@ and `label`. This is used to avoid paginating through all applications.
     </dt>
     <dd>{{% md %}}Label prefix of the app to retrieve, conflicts with `label` and `id`. This will tell the
 provider to do a `starts with` query as opposed to an `equals` query.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipgroups_go">
+<a href="#skipgroups_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_go">
+<a href="#skipusers_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="users_go">
@@ -329,6 +367,24 @@ and `label`. This is used to avoid paginating through all applications.
     </dt>
     <dd>{{% md %}}Label prefix of the app to retrieve, conflicts with `label` and `id`. This will tell the
 provider to do a `starts with` query as opposed to an `equals` query.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipgroups_nodejs">
+<a href="#skipgroups_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_nodejs">
+<a href="#skipusers_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="users_nodejs">
@@ -392,6 +448,24 @@ and `label`. This is used to avoid paginating through all applications.
     </dt>
     <dd>{{% md %}}Label prefix of the app to retrieve, conflicts with `label` and `id`. This will tell the
 provider to do a `starts with` query as opposed to an `equals` query.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skip_groups_python">
+<a href="#skip_groups_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skip_users_python">
+<a href="#skip_users_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="users_python">
@@ -629,6 +703,22 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="skipgroups_csharp">
+<a href="#skipgroups_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="skipusers_csharp">
+<a href="#skipusers_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="users_csharp">
@@ -856,6 +946,22 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="skipgroups_go">
+<a href="#skipgroups_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="skipusers_go">
+<a href="#skipusers_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
@@ -1085,6 +1191,22 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="skipgroups_nodejs">
+<a href="#skipgroups_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="skipusers_nodejs">
+<a href="#skipusers_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="users_nodejs">
@@ -1312,6 +1434,22 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="skip_groups_python">
+<a href="#skip_groups_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="skip_users_python">
+<a href="#skip_users_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
