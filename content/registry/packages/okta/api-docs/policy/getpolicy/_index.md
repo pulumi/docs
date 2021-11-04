@@ -170,7 +170,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of policy to retrieve. Valid values: `OKTA_SIGN_ON`, `PASSWORD`, `MFA_ENROLL`, `IDP_DISCOVERY`
+    <dd>{{% md %}}Type of policy to retrieve. Valid values: `"OKTA_SIGN_ON"`, `"PASSWORD"`, `"MFA_ENROLL"`, 
+`"IDP_DISCOVERY"`, `"ACCESS_POLICY"` (**only available as a part of the Identity Engine**), `"PROFILE_ENROLLMENT"` (**only available as a part of the Identity Engine**)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -192,7 +193,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of policy to retrieve. Valid values: `OKTA_SIGN_ON`, `PASSWORD`, `MFA_ENROLL`, `IDP_DISCOVERY`
+    <dd>{{% md %}}Type of policy to retrieve. Valid values: `"OKTA_SIGN_ON"`, `"PASSWORD"`, `"MFA_ENROLL"`, 
+`"IDP_DISCOVERY"`, `"ACCESS_POLICY"` (**only available as a part of the Identity Engine**), `"PROFILE_ENROLLMENT"` (**only available as a part of the Identity Engine**)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -214,7 +216,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of policy to retrieve. Valid values: `OKTA_SIGN_ON`, `PASSWORD`, `MFA_ENROLL`, `IDP_DISCOVERY`
+    <dd>{{% md %}}Type of policy to retrieve. Valid values: `"OKTA_SIGN_ON"`, `"PASSWORD"`, `"MFA_ENROLL"`, 
+`"IDP_DISCOVERY"`, `"ACCESS_POLICY"` (**only available as a part of the Identity Engine**), `"PROFILE_ENROLLMENT"` (**only available as a part of the Identity Engine**)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -236,7 +239,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of policy to retrieve. Valid values: `OKTA_SIGN_ON`, `PASSWORD`, `MFA_ENROLL`, `IDP_DISCOVERY`
+    <dd>{{% md %}}Type of policy to retrieve. Valid values: `"OKTA_SIGN_ON"`, `"PASSWORD"`, `"MFA_ENROLL"`, 
+`"IDP_DISCOVERY"`, `"ACCESS_POLICY"` (**only available as a part of the Identity Engine**), `"PROFILE_ENROLLMENT"` (**only available as a part of the Identity Engine**)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -270,6 +274,14 @@ The following output properties are available:
     <dd>{{% md %}}name of policy.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -300,6 +312,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}name of policy.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -332,6 +352,14 @@ The following output properties are available:
     <dd>{{% md %}}name of policy.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -362,6 +390,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}name of policy.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>

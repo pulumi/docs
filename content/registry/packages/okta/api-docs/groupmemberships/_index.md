@@ -14,7 +14,7 @@ no_edit_this_page: true
 
 Resource to manage a set of memberships for a specific group.
 
-This resource will allow you to bulk manage group membership in Okta for a given group. This offers an interface to pass multiple users into a single resource call, for better API resource usage. Effectively this is the same as using the `okta.group.Membership` resource several times with a single group and many different users. If you need a relationship of a single user to many groups, please use the `okta.UserGroupMemberships` resource.
+This resource will allow you to bulk manage group membership in Okta for a given group. This offers an interface to pass multiple users into a single resource call, for better API resource usage. Effectively this is the same as using the `okta.group.Membership` resource several times with a single group and different users. If you need a relationship of a single user to many groups, please use the `okta.UserGroupMemberships` resource.
 
 When using this with a `okta.user.User` resource, you should add a lifecycle ignore for group memberships to avoid conflicts in desired state.
 
@@ -296,7 +296,7 @@ The GroupMemberships resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta group.
+    <dd>{{% md %}}Okta group ID.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="users_csharp">
@@ -318,7 +318,7 @@ The GroupMemberships resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta group.
+    <dd>{{% md %}}Okta group ID.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="users_go">
@@ -340,7 +340,7 @@ The GroupMemberships resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta group.
+    <dd>{{% md %}}Okta group ID.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="users_nodejs">
@@ -362,7 +362,7 @@ The GroupMemberships resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta group.
+    <dd>{{% md %}}Okta group ID.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="users_python">
@@ -566,7 +566,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta group.
+    <dd>{{% md %}}Okta group ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_csharp">
@@ -588,7 +588,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta group.
+    <dd>{{% md %}}Okta group ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_go">
@@ -610,7 +610,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta group.
+    <dd>{{% md %}}Okta group ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_nodejs">
@@ -632,7 +632,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta group.
+    <dd>{{% md %}}Okta group ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_python">

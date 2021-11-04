@@ -317,7 +317,9 @@ The ServerPolicyClaim resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"` or `"client_credentials"`. For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
+    <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"`, `"client_credentials"`, 
+`"urn:ietf:params:oauth:grant-type:saml2-bearer"` (*Early Access Property*), `"urn:ietf:params:oauth:grant-type:token-exchange"` (*Early Access Property*),
+`"urn:ietf:params:oauth:grant-type:device_code"` (*Early Access Property*). For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyid_csharp">
@@ -466,7 +468,9 @@ The ServerPolicyClaim resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"` or `"client_credentials"`. For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
+    <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"`, `"client_credentials"`, 
+`"urn:ietf:params:oauth:grant-type:saml2-bearer"` (*Early Access Property*), `"urn:ietf:params:oauth:grant-type:token-exchange"` (*Early Access Property*),
+`"urn:ietf:params:oauth:grant-type:device_code"` (*Early Access Property*). For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyid_go">
@@ -615,7 +619,9 @@ The ServerPolicyClaim resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"` or `"client_credentials"`. For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
+    <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"`, `"client_credentials"`, 
+`"urn:ietf:params:oauth:grant-type:saml2-bearer"` (*Early Access Property*), `"urn:ietf:params:oauth:grant-type:token-exchange"` (*Early Access Property*),
+`"urn:ietf:params:oauth:grant-type:device_code"` (*Early Access Property*). For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyid_nodejs">
@@ -764,7 +770,9 @@ The ServerPolicyClaim resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"` or `"client_credentials"`. For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
+    <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"`, `"client_credentials"`, 
+`"urn:ietf:params:oauth:grant-type:saml2-bearer"` (*Early Access Property*), `"urn:ietf:params:oauth:grant-type:token-exchange"` (*Early Access Property*),
+`"urn:ietf:params:oauth:grant-type:device_code"` (*Early Access Property*). For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_id_python">
@@ -1118,7 +1126,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"` or `"client_credentials"`. For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
+    <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"`, `"client_credentials"`, 
+`"urn:ietf:params:oauth:grant-type:saml2-bearer"` (*Early Access Property*), `"urn:ietf:params:oauth:grant-type:token-exchange"` (*Early Access Property*),
+`"urn:ietf:params:oauth:grant-type:device_code"` (*Early Access Property*). For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupblacklists_csharp">
@@ -1267,7 +1277,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"` or `"client_credentials"`. For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
+    <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"`, `"client_credentials"`, 
+`"urn:ietf:params:oauth:grant-type:saml2-bearer"` (*Early Access Property*), `"urn:ietf:params:oauth:grant-type:token-exchange"` (*Early Access Property*),
+`"urn:ietf:params:oauth:grant-type:device_code"` (*Early Access Property*). For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupblacklists_go">
@@ -1416,7 +1428,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"` or `"client_credentials"`. For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
+    <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"`, `"client_credentials"`, 
+`"urn:ietf:params:oauth:grant-type:saml2-bearer"` (*Early Access Property*), `"urn:ietf:params:oauth:grant-type:token-exchange"` (*Early Access Property*),
+`"urn:ietf:params:oauth:grant-type:device_code"` (*Early Access Property*). For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupblacklists_nodejs">
@@ -1565,7 +1579,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"` or `"client_credentials"`. For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
+    <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"`, `"client_credentials"`, 
+`"urn:ietf:params:oauth:grant-type:saml2-bearer"` (*Early Access Property*), `"urn:ietf:params:oauth:grant-type:token-exchange"` (*Early Access Property*),
+`"urn:ietf:params:oauth:grant-type:device_code"` (*Early Access Property*). For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_blacklists_python">

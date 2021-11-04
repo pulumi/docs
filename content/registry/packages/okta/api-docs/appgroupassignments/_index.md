@@ -16,6 +16,168 @@ Assigns groups to an application.
 
 This resource allows you to create multiple App Group assignments.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Okta.AppGroupAssignments("example", new Okta.AppGroupAssignmentsArgs
+        {
+            AppId = "<app id>",
+            Groups = 
+            {
+                new Okta.Inputs.AppGroupAssignmentsGroupArgs
+                {
+                    Id = "<group id>",
+                    Priority = 1,
+                },
+                new Okta.Inputs.AppGroupAssignmentsGroupArgs
+                {
+                    Id = "<another group id>",
+                    Priority = 2,
+                    Profile = JsonSerializer.Serialize(new Dictionary<string, object?>
+                    {
+                        { "application profile field", "application profile value" },
+                    }),
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"encoding/json"
+
+	"github.com/pulumi/pulumi-okta/sdk/v3/go/okta"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		tmpJSON0, err := json.Marshal(map[string]interface{}{
+			"application profile field": "application profile value",
+		})
+		if err != nil {
+			return err
+		}
+		json0 := string(tmpJSON0)
+		_, err := okta.NewAppGroupAssignments(ctx, "example", &okta.AppGroupAssignmentsArgs{
+			AppId: pulumi.String("<app id>"),
+			Groups: AppGroupAssignmentsGroupArray{
+				&AppGroupAssignmentsGroupArgs{
+					Id:       pulumi.String("<group id>"),
+					Priority: pulumi.Int(1),
+				},
+				&AppGroupAssignmentsGroupArgs{
+					Id:       pulumi.String("<another group id>"),
+					Priority: pulumi.Int(2),
+					Profile:  pulumi.String(json0),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import json
+import pulumi_okta as okta
+
+example = okta.AppGroupAssignments("example",
+    app_id="<app id>",
+    groups=[
+        okta.AppGroupAssignmentsGroupArgs(
+            id="<group id>",
+            priority=1,
+        ),
+        okta.AppGroupAssignmentsGroupArgs(
+            id="<another group id>",
+            priority=2,
+            profile=json.dumps({
+                "application profile field": "application profile value",
+            }),
+        ),
+    ])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.AppGroupAssignments("example", {
+    appId: "<app id>",
+    groups: [
+        {
+            id: "<group id>",
+            priority: 1,
+        },
+        {
+            id: "<another group id>",
+            priority: 2,
+            profile: JSON.stringify({
+                "application profile field": "application profile value",
+            }),
+        },
+    ],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a AppGroupAssignments Resource {#create}

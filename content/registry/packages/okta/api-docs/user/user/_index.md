@@ -61,7 +61,7 @@ class MyStack : Stack
             PostalAddress = "1234 Testing St.",
             PreferredLanguage = "en-us",
             PrimaryPhone = "4445556666",
-            ProfileUrl = "http://www.example.com/profile",
+            ProfileUrl = "https://www.example.com/profile",
             SecondEmail = "john.smith.fun@example.com",
             State = "NY",
             StreetAddress = "5678 Testing Ave.",
@@ -115,7 +115,7 @@ func main() {
 			PostalAddress:     pulumi.String("1234 Testing St."),
 			PreferredLanguage: pulumi.String("en-us"),
 			PrimaryPhone:      pulumi.String("4445556666"),
-			ProfileUrl:        pulumi.String("http://www.example.com/profile"),
+			ProfileUrl:        pulumi.String("https://www.example.com/profile"),
 			SecondEmail:       pulumi.String("john.smith.fun@example.com"),
 			State:             pulumi.String("NY"),
 			StreetAddress:     pulumi.String("5678 Testing Ave."),
@@ -166,7 +166,7 @@ example = okta.user.User("example",
     postal_address="1234 Testing St.",
     preferred_language="en-us",
     primary_phone="4445556666",
-    profile_url="http://www.example.com/profile",
+    profile_url="https://www.example.com/profile",
     second_email="john.smith.fun@example.com",
     state="NY",
     street_address="5678 Testing Ave.",
@@ -211,7 +211,7 @@ const example = new okta.user.User("example", {
     postalAddress: "1234 Testing St.",
     preferredLanguage: "en-us",
     primaryPhone: "4445556666",
-    profileUrl: "http://www.example.com/profile",
+    profileUrl: "https://www.example.com/profile",
     secondEmail: "john.smith.fun@example.com",
     state: "NY",
     streetAddress: "5678 Testing Ave.",
@@ -268,6 +268,7 @@ const example = new okta.user.User("example", {
          <span class="nx">middle_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">mobile_phone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">nick_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">old_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">organization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">password_hash</span><span class="p">:</span> <span class="nx">Optional[UserPasswordHashArgs]</span> = None<span class="p">,</span>
@@ -611,6 +612,17 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oldpassword_csharp">
+<a href="#oldpassword_csharp" style="color: inherit; text-decoration: inherit;">Old<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Old user password. **IMPORTANT**: Should be ONLY set in case the password was changed 
+outside the provider. After successful password change this field should be removed and `password` field should be used
+for further changes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_csharp">
@@ -969,6 +981,17 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="oldpassword_go">
+<a href="#oldpassword_go" style="color: inherit; text-decoration: inherit;">Old<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Old user password. **IMPORTANT**: Should be ONLY set in case the password was changed 
+outside the provider. After successful password change this field should be removed and `password` field should be used
+for further changes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="organization_go">
 <a href="#organization_go" style="color: inherit; text-decoration: inherit;">Organization</a>
 </span>
@@ -1323,6 +1346,17 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="oldpassword_nodejs">
+<a href="#oldpassword_nodejs" style="color: inherit; text-decoration: inherit;">old<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Old user password. **IMPORTANT**: Should be ONLY set in case the password was changed 
+outside the provider. After successful password change this field should be removed and `password` field should be used
+for further changes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_nodejs">
@@ -1681,6 +1715,17 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="old_password_python">
+<a href="#old_password_python" style="color: inherit; text-decoration: inherit;">old_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Old user password. **IMPORTANT**: Should be ONLY set in case the password was changed 
+outside the provider. After successful password change this field should be removed and `password` field should be used
+for further changes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="organization_python">
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
@@ -1964,6 +2009,7 @@ Get an existing User resource's state with the given name, ID, and optional extr
         <span class="nx">middle_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">mobile_phone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">nick_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">old_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">organization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">password_hash</span><span class="p">:</span> <span class="nx">Optional[UserPasswordHashArgs]</span> = None<span class="p">,</span>
@@ -2291,6 +2337,17 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_oldpassword_csharp">
+<a href="#state_oldpassword_csharp" style="color: inherit; text-decoration: inherit;">Old<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Old user password. **IMPORTANT**: Should be ONLY set in case the password was changed 
+outside the provider. After successful password change this field should be removed and `password` field should be used
+for further changes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_organization_csharp">
@@ -2658,6 +2715,17 @@ The following state arguments are supported:
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_oldpassword_go">
+<a href="#state_oldpassword_go" style="color: inherit; text-decoration: inherit;">Old<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Old user password. **IMPORTANT**: Should be ONLY set in case the password was changed 
+outside the provider. After successful password change this field should be removed and `password` field should be used
+for further changes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_organization_go">
 <a href="#state_organization_go" style="color: inherit; text-decoration: inherit;">Organization</a>
 </span>
@@ -3021,6 +3089,17 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_oldpassword_nodejs">
+<a href="#state_oldpassword_nodejs" style="color: inherit; text-decoration: inherit;">old<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Old user password. **IMPORTANT**: Should be ONLY set in case the password was changed 
+outside the provider. After successful password change this field should be removed and `password` field should be used
+for further changes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_organization_nodejs">
@@ -3388,6 +3467,17 @@ The following state arguments are supported:
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_old_password_python">
+<a href="#state_old_password_python" style="color: inherit; text-decoration: inherit;">old_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Old user password. **IMPORTANT**: Should be ONLY set in case the password was changed 
+outside the provider. After successful password change this field should be removed and `password` field should be used
+for further changes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_organization_python">
 <a href="#state_organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
@@ -3579,7 +3669,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}. 
+    <dd>{{% md %}}For SHA-512, SHA-256, SHA-1, MD5, this is the actual base64-encoded hash of the password (and salt, if used). 
 This is the Base64 encoded value of the SHA-512/SHA-256/SHA-1/MD5 digest that was computed by either pre-fixing or post-fixing
 the salt to the password, depending on the saltOrder. If a salt was not used in the source system, then this should just be
 the Base64 encoded value of the password's SHA-512/SHA-256/SHA-1/MD5 digest. For BCRYPT, This is the actual radix64-encoded hashed password.
@@ -3631,7 +3721,7 @@ the hash, which must be 22 characters long. For other salted hashes, this specif
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}. 
+    <dd>{{% md %}}For SHA-512, SHA-256, SHA-1, MD5, this is the actual base64-encoded hash of the password (and salt, if used). 
 This is the Base64 encoded value of the SHA-512/SHA-256/SHA-1/MD5 digest that was computed by either pre-fixing or post-fixing
 the salt to the password, depending on the saltOrder. If a salt was not used in the source system, then this should just be
 the Base64 encoded value of the password's SHA-512/SHA-256/SHA-1/MD5 digest. For BCRYPT, This is the actual radix64-encoded hashed password.
@@ -3683,7 +3773,7 @@ the hash, which must be 22 characters long. For other salted hashes, this specif
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}. 
+    <dd>{{% md %}}For SHA-512, SHA-256, SHA-1, MD5, this is the actual base64-encoded hash of the password (and salt, if used). 
 This is the Base64 encoded value of the SHA-512/SHA-256/SHA-1/MD5 digest that was computed by either pre-fixing or post-fixing
 the salt to the password, depending on the saltOrder. If a salt was not used in the source system, then this should just be
 the Base64 encoded value of the password's SHA-512/SHA-256/SHA-1/MD5 digest. For BCRYPT, This is the actual radix64-encoded hashed password.
@@ -3735,7 +3825,7 @@ the hash, which must be 22 characters long. For other salted hashes, this specif
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}. 
+    <dd>{{% md %}}For SHA-512, SHA-256, SHA-1, MD5, this is the actual base64-encoded hash of the password (and salt, if used). 
 This is the Base64 encoded value of the SHA-512/SHA-256/SHA-1/MD5 digest that was computed by either pre-fixing or post-fixing
 the salt to the password, depending on the saltOrder. If a salt was not used in the source system, then this should just be
 the Base64 encoded value of the password's SHA-512/SHA-256/SHA-1/MD5 digest. For BCRYPT, This is the actual radix64-encoded hashed password.

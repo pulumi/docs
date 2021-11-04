@@ -27,6 +27,8 @@ no_edit_this_page: true
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">MfaPolicyRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                  <span class="nx">app_excludes</span><span class="p">:</span> <span class="nx">Optional[Sequence[MfaPolicyRuleAppExcludeArgs]]</span> = None<span class="p">,</span>
+                  <span class="nx">app_includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[MfaPolicyRuleAppIncludeArgs]]</span> = None<span class="p">,</span>
                   <span class="nx">enroll</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">network_connection</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -166,6 +168,24 @@ The MfaPolicyRule resource accepts the following [input]({{< relref "/docs/intro
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="appexcludes_csharp">
+<a href="#appexcludes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mfapolicyruleappexclude">List&lt;Mfa<wbr>Policy<wbr>Rule<wbr>App<wbr>Exclude<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Applications to exclude
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="appincludes_csharp">
+<a href="#appincludes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mfapolicyruleappinclude">List&lt;Mfa<wbr>Policy<wbr>Rule<wbr>App<wbr>Include<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Applications to include
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enroll_csharp">
 <a href="#enroll_csharp" style="color: inherit; text-decoration: inherit;">Enroll</a>
 </span>
@@ -260,6 +280,24 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="appexcludes_go">
+<a href="#appexcludes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mfapolicyruleappexclude">[]Mfa<wbr>Policy<wbr>Rule<wbr>App<wbr>Exclude<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Applications to exclude
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="appincludes_go">
+<a href="#appincludes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mfapolicyruleappinclude">[]Mfa<wbr>Policy<wbr>Rule<wbr>App<wbr>Include<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Applications to include
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enroll_go">
 <a href="#enroll_go" style="color: inherit; text-decoration: inherit;">Enroll</a>
@@ -356,6 +394,24 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="appexcludes_nodejs">
+<a href="#appexcludes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mfapolicyruleappexclude">Mfa<wbr>Policy<wbr>Rule<wbr>App<wbr>Exclude<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Applications to exclude
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="appincludes_nodejs">
+<a href="#appincludes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mfapolicyruleappinclude">Mfa<wbr>Policy<wbr>Rule<wbr>App<wbr>Include<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Applications to include
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enroll_nodejs">
 <a href="#enroll_nodejs" style="color: inherit; text-decoration: inherit;">enroll</a>
 </span>
@@ -450,6 +506,24 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="app_excludes_python">
+<a href="#app_excludes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mfapolicyruleappexclude">Sequence[Mfa<wbr>Policy<wbr>Rule<wbr>App<wbr>Exclude<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Applications to exclude
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="app_includes_python">
+<a href="#app_includes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mfapolicyruleappinclude">Sequence[Mfa<wbr>Policy<wbr>Rule<wbr>App<wbr>Include<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Applications to include
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enroll_python">
 <a href="#enroll_python" style="color: inherit; text-decoration: inherit;">enroll</a>
@@ -614,6 +688,8 @@ Get an existing MfaPolicyRule resource's state with the given name, ID, and opti
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">app_excludes</span><span class="p">:</span> <span class="nx">Optional[Sequence[MfaPolicyRuleAppExcludeArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">app_includes</span><span class="p">:</span> <span class="nx">Optional[Sequence[MfaPolicyRuleAppIncludeArgs]]</span> = None<span class="p">,</span>
         <span class="nx">enroll</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_connection</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -736,6 +812,24 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_appexcludes_csharp">
+<a href="#state_appexcludes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mfapolicyruleappexclude">List&lt;Mfa<wbr>Policy<wbr>Rule<wbr>App<wbr>Exclude<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Applications to exclude
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_appincludes_csharp">
+<a href="#state_appincludes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mfapolicyruleappinclude">List&lt;Mfa<wbr>Policy<wbr>Rule<wbr>App<wbr>Include<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Applications to include
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enroll_csharp">
 <a href="#state_enroll_csharp" style="color: inherit; text-decoration: inherit;">Enroll</a>
 </span>
@@ -830,6 +924,24 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_appexcludes_go">
+<a href="#state_appexcludes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mfapolicyruleappexclude">[]Mfa<wbr>Policy<wbr>Rule<wbr>App<wbr>Exclude<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Applications to exclude
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_appincludes_go">
+<a href="#state_appincludes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mfapolicyruleappinclude">[]Mfa<wbr>Policy<wbr>Rule<wbr>App<wbr>Include<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Applications to include
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enroll_go">
 <a href="#state_enroll_go" style="color: inherit; text-decoration: inherit;">Enroll</a>
@@ -926,6 +1038,24 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_appexcludes_nodejs">
+<a href="#state_appexcludes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mfapolicyruleappexclude">Mfa<wbr>Policy<wbr>Rule<wbr>App<wbr>Exclude<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Applications to exclude
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_appincludes_nodejs">
+<a href="#state_appincludes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mfapolicyruleappinclude">Mfa<wbr>Policy<wbr>Rule<wbr>App<wbr>Include<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Applications to include
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enroll_nodejs">
 <a href="#state_enroll_nodejs" style="color: inherit; text-decoration: inherit;">enroll</a>
 </span>
@@ -1020,6 +1150,24 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_app_excludes_python">
+<a href="#state_app_excludes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>excludes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mfapolicyruleappexclude">Sequence[Mfa<wbr>Policy<wbr>Rule<wbr>App<wbr>Exclude<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Applications to exclude
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_app_includes_python">
+<a href="#state_app_includes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>includes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mfapolicyruleappinclude">Sequence[Mfa<wbr>Policy<wbr>Rule<wbr>App<wbr>Include<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Applications to include
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enroll_python">
 <a href="#state_enroll_python" style="color: inherit; text-decoration: inherit;">enroll</a>
@@ -1117,6 +1265,238 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="mfapolicyruleappexclude">Mfa<wbr>Policy<wbr>Rule<wbr>App<wbr>Exclude</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="mfapolicyruleappinclude">Mfa<wbr>Policy<wbr>Rule<wbr>App<wbr>Include</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

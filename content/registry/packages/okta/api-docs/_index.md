@@ -33,20 +33,36 @@ A Pulumi package for creating and managing okta resources.
     <li><a href="adminroletargets" title="AdminRoleTargets"><span class="api-symbol api-symbol--resource"></span>AdminRoleTargets</a></li>
     <li><a href="appgroupassignments" title="AppGroupAssignments"><span class="api-symbol api-symbol--resource"></span>AppGroupAssignments</a></li>
     <li><a href="appoauthapiscope" title="AppOauthApiScope"><span class="api-symbol api-symbol--resource"></span>AppOauthApiScope</a></li>
+    <li><a href="appsamlappsettings" title="AppSamlAppSettings"><span class="api-symbol api-symbol--resource"></span>AppSamlAppSettings</a></li>
     <li><a href="appsharedcredentials" title="AppSharedCredentials"><span class="api-symbol api-symbol--resource"></span>AppSharedCredentials</a></li>
+    <li><a href="appsignonpolicyrule" title="AppSignonPolicyRule"><span class="api-symbol api-symbol--resource"></span>AppSignonPolicyRule</a></li>
     <li><a href="appuserbaseschemaproperty" title="AppUserBaseSchemaProperty"><span class="api-symbol api-symbol--resource"></span>AppUserBaseSchemaProperty</a></li>
     <li><a href="appuserschemaproperty" title="AppUserSchemaProperty"><span class="api-symbol api-symbol--resource"></span>AppUserSchemaProperty</a></li>
     <li><a href="authserverclaimdefault" title="AuthServerClaimDefault"><span class="api-symbol api-symbol--resource"></span>AuthServerClaimDefault</a></li>
     <li><a href="authserverdefault" title="AuthServerDefault"><span class="api-symbol api-symbol--resource"></span>AuthServerDefault</a></li>
+    <li><a href="authenticator" title="Authenticator"><span class="api-symbol api-symbol--resource"></span>Authenticator</a></li>
     <li><a href="behaviour" title="Behaviour"><span class="api-symbol api-symbol--resource"></span>Behaviour</a></li>
     <li><a href="domain" title="Domain"><span class="api-symbol api-symbol--resource"></span>Domain</a></li>
+    <li><a href="domaincertificate" title="DomainCertificate"><span class="api-symbol api-symbol--resource"></span>DomainCertificate</a></li>
+    <li><a href="domainverification" title="DomainVerification"><span class="api-symbol api-symbol--resource"></span>DomainVerification</a></li>
+    <li><a href="emailsender" title="EmailSender"><span class="api-symbol api-symbol--resource"></span>EmailSender</a></li>
+    <li><a href="emailsenderverification" title="EmailSenderVerification"><span class="api-symbol api-symbol--resource"></span>EmailSenderVerification</a></li>
     <li><a href="eventhook" title="EventHook"><span class="api-symbol api-symbol--resource"></span>EventHook</a></li>
+    <li><a href="eventhookverification" title="EventHookVerification"><span class="api-symbol api-symbol--resource"></span>EventHookVerification</a></li>
     <li><a href="factortotp" title="FactorTotp"><span class="api-symbol api-symbol--resource"></span>FactorTotp</a></li>
     <li><a href="groupmemberships" title="GroupMemberships"><span class="api-symbol api-symbol--resource"></span>GroupMemberships</a></li>
+    <li><a href="groupschemaproperty" title="GroupSchemaProperty"><span class="api-symbol api-symbol--resource"></span>GroupSchemaProperty</a></li>
+    <li><a href="orgconfiguration" title="OrgConfiguration"><span class="api-symbol api-symbol--resource"></span>OrgConfiguration</a></li>
+    <li><a href="orgsupport" title="OrgSupport"><span class="api-symbol api-symbol--resource"></span>OrgSupport</a></li>
     <li><a href="policymfadefault" title="PolicyMfaDefault"><span class="api-symbol api-symbol--resource"></span>PolicyMfaDefault</a></li>
     <li><a href="policypassworddefault" title="PolicyPasswordDefault"><span class="api-symbol api-symbol--resource"></span>PolicyPasswordDefault</a></li>
+    <li><a href="policyprofileenrollment" title="PolicyProfileEnrollment"><span class="api-symbol api-symbol--resource"></span>PolicyProfileEnrollment</a></li>
+    <li><a href="policyruleprofileenrollment" title="PolicyRuleProfileEnrollment"><span class="api-symbol api-symbol--resource"></span>PolicyRuleProfileEnrollment</a></li>
     <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
+    <li><a href="rolesubscription" title="RoleSubscription"><span class="api-symbol api-symbol--resource"></span>RoleSubscription</a></li>
+    <li><a href="securitynotificationemails" title="SecurityNotificationEmails"><span class="api-symbol api-symbol--resource"></span>SecurityNotificationEmails</a></li>
     <li><a href="templatesms" title="TemplateSms"><span class="api-symbol api-symbol--resource"></span>TemplateSms</a></li>
+    <li><a href="threatinsightsettings" title="ThreatInsightSettings"><span class="api-symbol api-symbol--resource"></span>ThreatInsightSettings</a></li>
     <li><a href="useradminroles" title="UserAdminRoles"><span class="api-symbol api-symbol--resource"></span>UserAdminRoles</a></li>
     <li><a href="userbaseschemaproperty" title="UserBaseSchemaProperty"><span class="api-symbol api-symbol--resource"></span>UserBaseSchemaProperty</a></li>
     <li><a href="userfactorquestion" title="UserFactorQuestion"><span class="api-symbol api-symbol--resource"></span>UserFactorQuestion</a></li>
@@ -57,10 +73,17 @@ A Pulumi package for creating and managing okta resources.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getappgroupassignments" title="GetAppGroupAssignments"><span class="api-symbol api-symbol--function"></span>GetAppGroupAssignments</a></li>
+    <li><a href="getappsignonpolicy" title="GetAppSignonPolicy"><span class="api-symbol api-symbol--function"></span>GetAppSignonPolicy</a></li>
     <li><a href="getappuserassignments" title="GetAppUserAssignments"><span class="api-symbol api-symbol--function"></span>GetAppUserAssignments</a></li>
+    <li><a href="getauthserverclaim" title="GetAuthServerClaim"><span class="api-symbol api-symbol--function"></span>GetAuthServerClaim</a></li>
+    <li><a href="getauthserverclaims" title="GetAuthServerClaims"><span class="api-symbol api-symbol--function"></span>GetAuthServerClaims</a></li>
+    <li><a href="getauthenticator" title="GetAuthenticator"><span class="api-symbol api-symbol--function"></span>GetAuthenticator</a></li>
     <li><a href="getbehaviour" title="GetBehaviour"><span class="api-symbol api-symbol--function"></span>GetBehaviour</a></li>
     <li><a href="getbehaviours" title="GetBehaviours"><span class="api-symbol api-symbol--function"></span>GetBehaviours</a></li>
     <li><a href="getgroups" title="GetGroups"><span class="api-symbol api-symbol--function"></span>GetGroups</a></li>
+    <li><a href="getnetworkzone" title="GetNetworkZone"><span class="api-symbol api-symbol--function"></span>GetNetworkZone</a></li>
+    <li><a href="getrolesubscription" title="GetRoleSubscription"><span class="api-symbol api-symbol--function"></span>GetRoleSubscription</a></li>
+    <li><a href="gettrustedorigins" title="GetTrustedOrigins"><span class="api-symbol api-symbol--function"></span>GetTrustedOrigins</a></li>
     <li><a href="getusersecurityquestions" title="GetUserSecurityQuestions"><span class="api-symbol api-symbol--function"></span>GetUserSecurityQuestions</a></li>
 </ul>
 
@@ -73,6 +96,6 @@ A Pulumi package for creating and managing okta resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/okta/terraform-provider-okta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.2.2</dd>
+	<dd>3.3.0</dd>
 </dl>
 

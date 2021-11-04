@@ -193,7 +193,8 @@ The GroupAssignment resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Priority of group assignment.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_csharp">
 <a href="#profile_csharp" style="color: inherit; text-decoration: inherit;">Profile</a>
@@ -241,7 +242,8 @@ The GroupAssignment resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Priority of group assignment.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_go">
 <a href="#profile_go" style="color: inherit; text-decoration: inherit;">Profile</a>
@@ -289,7 +291,8 @@ The GroupAssignment resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Priority of group assignment.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_nodejs">
 <a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
@@ -337,7 +340,8 @@ The GroupAssignment resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Priority of group assignment.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_python">
 <a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
@@ -570,7 +574,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Priority of group assignment.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profile_csharp">
 <a href="#state_profile_csharp" style="color: inherit; text-decoration: inherit;">Profile</a>
@@ -618,7 +623,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Priority of group assignment.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profile_go">
 <a href="#state_profile_go" style="color: inherit; text-decoration: inherit;">Profile</a>
@@ -666,7 +672,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Priority of group assignment.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profile_nodejs">
 <a href="#state_profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
@@ -714,7 +721,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Priority of group assignment.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profile_python">
 <a href="#state_profile_python" style="color: inherit; text-decoration: inherit;">profile</a>

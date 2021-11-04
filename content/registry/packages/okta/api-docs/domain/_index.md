@@ -36,7 +36,6 @@ class MyStack : Stack
     {
         var example = new Okta.Domain("example", new Okta.DomainArgs
         {
-            Verify = true,
         });
     }
 
@@ -59,9 +58,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := okta.NewDomain(ctx, "example", &okta.DomainArgs{
-			Verify: pulumi.Bool(true),
-		})
+		_, err := okta.NewDomain(ctx, "example", nil)
 		if err != nil {
 			return err
 		}
@@ -80,7 +77,7 @@ func main() {
 import pulumi
 import pulumi_okta as okta
 
-example = okta.Domain("example", verify=True)
+example = okta.Domain("example")
 ```
 
 
@@ -94,9 +91,7 @@ example = okta.Domain("example", verify=True)
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = new okta.Domain("example", {
-    verify: true,
-});
+const example = new okta.Domain("example", {});
 ```
 
 
@@ -261,16 +256,17 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom Domain name.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="verify_csharp">
 <a href="#verify_csharp" style="color: inherit; text-decoration: inherit;">Verify</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the domain should be verified.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Indicates whether the domain should be verified. 
+- `DEPRECATED`: Please use `okta.DomainVerification` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The direct validation for the domain resource is deprecated, please use the `okta_domain_verification` resource for this functionality.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -283,16 +279,17 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom Domain name.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="verify_go">
 <a href="#verify_go" style="color: inherit; text-decoration: inherit;">Verify</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the domain should be verified.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Indicates whether the domain should be verified. 
+- `DEPRECATED`: Please use `okta.DomainVerification` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The direct validation for the domain resource is deprecated, please use the `okta_domain_verification` resource for this functionality.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -305,16 +302,17 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom Domain name.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="verify_nodejs">
 <a href="#verify_nodejs" style="color: inherit; text-decoration: inherit;">verify</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the domain should be verified.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Indicates whether the domain should be verified. 
+- `DEPRECATED`: Please use `okta.DomainVerification` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The direct validation for the domain resource is deprecated, please use the `okta_domain_verification` resource for this functionality.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -327,16 +325,17 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom Domain name.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="verify_python">
 <a href="#verify_python" style="color: inherit; text-decoration: inherit;">verify</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the domain should be verified.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Indicates whether the domain should be verified. 
+- `DEPRECATED`: Please use `okta.DomainVerification` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The direct validation for the domain resource is deprecated, please use the `okta_domain_verification` resource for this functionality.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -623,16 +622,17 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the domain.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_verify_csharp">
 <a href="#state_verify_csharp" style="color: inherit; text-decoration: inherit;">Verify</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the domain should be verified.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Indicates whether the domain should be verified. 
+- `DEPRECATED`: Please use `okta.DomainVerification` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The direct validation for the domain resource is deprecated, please use the `okta_domain_verification` resource for this functionality.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -663,16 +663,17 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the domain.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_verify_go">
 <a href="#state_verify_go" style="color: inherit; text-decoration: inherit;">Verify</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the domain should be verified.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Indicates whether the domain should be verified. 
+- `DEPRECATED`: Please use `okta.DomainVerification` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The direct validation for the domain resource is deprecated, please use the `okta_domain_verification` resource for this functionality.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -703,16 +704,17 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the domain.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_verify_nodejs">
 <a href="#state_verify_nodejs" style="color: inherit; text-decoration: inherit;">verify</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the domain should be verified.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Indicates whether the domain should be verified. 
+- `DEPRECATED`: Please use `okta.DomainVerification` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The direct validation for the domain resource is deprecated, please use the `okta_domain_verification` resource for this functionality.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -743,16 +745,17 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the domain.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_verify_python">
 <a href="#state_verify_python" style="color: inherit; text-decoration: inherit;">verify</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the domain should be verified.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Indicates whether the domain should be verified. 
+- `DEPRECATED`: Please use `okta.DomainVerification` resource instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The direct validation for the domain resource is deprecated, please use the `okta_domain_verification` resource for this functionality.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 

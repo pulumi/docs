@@ -151,6 +151,8 @@ const example = pulumi.output(okta.app.getSaml({
              <span class="nx">request_compressed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">response_signed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">skip_groups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">skip_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">sp_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">sso_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">subject_name_id_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -433,6 +435,24 @@ provider to do a `starts with` query as opposed to an `equals` query.
     <dd>{{% md %}}Signature algorithm used ot digitally sign the assertion and response.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="skipgroups_csharp">
+<a href="#skipgroups_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_csharp">
+<a href="#skipusers_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="spissuer_csharp">
 <a href="#spissuer_csharp" style="color: inherit; text-decoration: inherit;">Sp<wbr>Issuer</a>
 </span>
@@ -756,6 +776,24 @@ provider to do a `starts with` query as opposed to an `equals` query.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signature algorithm used ot digitally sign the assertion and response.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipgroups_go">
+<a href="#skipgroups_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_go">
+<a href="#skipusers_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spissuer_go">
@@ -1083,6 +1121,24 @@ provider to do a `starts with` query as opposed to an `equals` query.
     <dd>{{% md %}}Signature algorithm used ot digitally sign the assertion and response.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="skipgroups_nodejs">
+<a href="#skipgroups_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skipusers_nodejs">
+<a href="#skipusers_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="spissuer_nodejs">
 <a href="#spissuer_nodejs" style="color: inherit; text-decoration: inherit;">sp<wbr>Issuer</a>
 </span>
@@ -1408,6 +1464,24 @@ provider to do a `starts with` query as opposed to an `equals` query.
     <dd>{{% md %}}Signature algorithm used ot digitally sign the assertion and response.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="skip_groups_python">
+<a href="#skip_groups_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `groups` sync. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skip_users_python">
+<a href="#skip_users_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicator that allows the app to skip `users` sync. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sp_issuer_python">
 <a href="#sp_issuer_python" style="color: inherit; text-decoration: inherit;">sp_<wbr>issuer</a>
 </span>
@@ -1564,6 +1638,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}status of application.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="usernametemplatepushstatus_csharp">
+<a href="#usernametemplatepushstatus_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accessibilityerrorredirecturl_csharp">
@@ -1809,6 +1892,22 @@ statement.
     <dd>{{% md %}}Signature algorithm used ot digitally sign the assertion and response.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="skipgroups_csharp">
+<a href="#skipgroups_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="skipusers_csharp">
+<a href="#skipusers_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="spissuer_csharp">
 <a href="#spissuer_csharp" style="color: inherit; text-decoration: inherit;">Sp<wbr>Issuer</a>
 </span>
@@ -1956,6 +2055,15 @@ statement.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}status of application.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="usernametemplatepushstatus_go">
+<a href="#usernametemplatepushstatus_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accessibilityerrorredirecturl_go">
@@ -2201,6 +2309,22 @@ statement.
     <dd>{{% md %}}Signature algorithm used ot digitally sign the assertion and response.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="skipgroups_go">
+<a href="#skipgroups_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="skipusers_go">
+<a href="#skipusers_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="spissuer_go">
 <a href="#spissuer_go" style="color: inherit; text-decoration: inherit;">Sp<wbr>Issuer</a>
 </span>
@@ -2348,6 +2472,15 @@ statement.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}status of application.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="usernametemplatepushstatus_nodejs">
+<a href="#usernametemplatepushstatus_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Push<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Push username on update.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accessibilityerrorredirecturl_nodejs">
@@ -2593,6 +2726,22 @@ statement.
     <dd>{{% md %}}Signature algorithm used ot digitally sign the assertion and response.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="skipgroups_nodejs">
+<a href="#skipgroups_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="skipusers_nodejs">
+<a href="#skipusers_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="spissuer_nodejs">
 <a href="#spissuer_nodejs" style="color: inherit; text-decoration: inherit;">sp<wbr>Issuer</a>
 </span>
@@ -2740,6 +2889,15 @@ statement.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}status of application.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="user_name_template_push_status_python">
+<a href="#user_name_template_push_status_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>push_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Push username on update.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accessibility_error_redirect_url_python">
@@ -2984,6 +3142,22 @@ statement.
     </dt>
     <dd>{{% md %}}Signature algorithm used ot digitally sign the assertion and response.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="skip_groups_python">
+<a href="#skip_groups_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="skip_users_python">
+<a href="#skip_users_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>users</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sp_issuer_python">
 <a href="#sp_issuer_python" style="color: inherit; text-decoration: inherit;">sp_<wbr>issuer</a>

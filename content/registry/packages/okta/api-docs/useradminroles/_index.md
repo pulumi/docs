@@ -167,6 +167,7 @@ const testUserAdminRoles = new okta.UserAdminRoles("testUserAdminRoles", {
 <span class="k">def </span><span class="nx">UserAdminRoles</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                    <span class="nx">admin_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">disable_notifications</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                    <span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">UserAdminRoles</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -312,7 +313,17 @@ The UserAdminRoles resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta User.
+    <dd>{{% md %}}Okta user ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablenotifications_csharp">
+<a href="#disablenotifications_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Notifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When this setting is enabled, the admins won't receive any of the default Okta 
+administrator emails. These admins also won't have access to contact Okta Support and open support cases on behalf of your org.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -334,7 +345,17 @@ The UserAdminRoles resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta User.
+    <dd>{{% md %}}Okta user ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablenotifications_go">
+<a href="#disablenotifications_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Notifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When this setting is enabled, the admins won't receive any of the default Okta 
+administrator emails. These admins also won't have access to contact Okta Support and open support cases on behalf of your org.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -356,7 +377,17 @@ The UserAdminRoles resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta User.
+    <dd>{{% md %}}Okta user ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablenotifications_nodejs">
+<a href="#disablenotifications_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Notifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When this setting is enabled, the admins won't receive any of the default Okta 
+administrator emails. These admins also won't have access to contact Okta Support and open support cases on behalf of your org.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -378,7 +409,17 @@ The UserAdminRoles resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta User.
+    <dd>{{% md %}}Okta user ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_notifications_python">
+<a href="#disable_notifications_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>notifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When this setting is enabled, the admins won't receive any of the default Okta 
+administrator emails. These admins also won't have access to contact Okta Support and open support cases on behalf of your org.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -454,6 +495,7 @@ Get an existing UserAdminRoles resource's state with the given name, ID, and opt
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">admin_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">disable_notifications</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> UserAdminRoles</code></pre></div>
 {{% /choosable %}}
 
@@ -576,13 +618,23 @@ The following state arguments are supported:
     <dd>{{% md %}}The list of Okta user admin roles, e.g. `["APP_ADMIN", "USER_ADMIN"]`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_disablenotifications_csharp">
+<a href="#state_disablenotifications_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Notifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When this setting is enabled, the admins won't receive any of the default Okta 
+administrator emails. These admins also won't have access to contact Okta Support and open support cases on behalf of your org.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_userid_csharp">
 <a href="#state_userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta User.
+    <dd>{{% md %}}Okta user ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -598,13 +650,23 @@ The following state arguments are supported:
     <dd>{{% md %}}The list of Okta user admin roles, e.g. `["APP_ADMIN", "USER_ADMIN"]`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_disablenotifications_go">
+<a href="#state_disablenotifications_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Notifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When this setting is enabled, the admins won't receive any of the default Okta 
+administrator emails. These admins also won't have access to contact Okta Support and open support cases on behalf of your org.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_userid_go">
 <a href="#state_userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta User.
+    <dd>{{% md %}}Okta user ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -620,13 +682,23 @@ The following state arguments are supported:
     <dd>{{% md %}}The list of Okta user admin roles, e.g. `["APP_ADMIN", "USER_ADMIN"]`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_disablenotifications_nodejs">
+<a href="#state_disablenotifications_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Notifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When this setting is enabled, the admins won't receive any of the default Okta 
+administrator emails. These admins also won't have access to contact Okta Support and open support cases on behalf of your org.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_userid_nodejs">
 <a href="#state_userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta User.
+    <dd>{{% md %}}Okta user ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -642,13 +714,23 @@ The following state arguments are supported:
     <dd>{{% md %}}The list of Okta user admin roles, e.g. `["APP_ADMIN", "USER_ADMIN"]`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_disable_notifications_python">
+<a href="#state_disable_notifications_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>notifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When this setting is enabled, the admins won't receive any of the default Okta 
+administrator emails. These admins also won't have access to contact Okta Support and open support cases on behalf of your org.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_user_id_python">
 <a href="#state_user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of a Okta User.
+    <dd>{{% md %}}Okta user ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
