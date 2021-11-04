@@ -89,7 +89,14 @@
         {{ else }}
             <meta class="swiftype" name="title" data-type="string" content="{{ .Title }}" />
         {{ end }}
-        <title>{{ .Title }} | Pulumi</title>
+
+        <!-- The blog tags, specifically the tag lists, end up clashing with other page titles on the website. We
+             add "Blog" to the title so that the titles no longer clash. -->
+        {{ if and (eq .Type "blog") .IsPage}}
+            <title>{{ .Title }} | Pulumi Blog</title>
+        {{ else }}
+            <title>{{ .Title }} | Pulumi</title>
+        {{ end }}
     {{ else if not (or .Params.redirect_to .Params.private) }}
         <!--
             TODO[pulumi/docs#1127]: can't enable this until Python docs are fixed.
