@@ -233,7 +233,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remoteprivateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Device<wbr>Update.<wbr>Outputs.<wbr>Remote<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Remote private endpoint details.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Remote private endpoint details.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Operation status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -293,7 +301,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remoteprivateendpointresponse">Remote<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Remote private endpoint details.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Remote private endpoint details.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Operation status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -353,7 +369,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remoteprivateendpointresponse">Remote<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Remote private endpoint details.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Remote private endpoint details.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Operation status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -413,7 +437,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remoteprivateendpointresponse">Remote<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Remote private endpoint details.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Remote private endpoint details.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Operation status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -639,7 +671,23 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkservicearmregion_csharp">
+<a href="#privatelinkservicearmregion_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Arm<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}PrivateLinkService ARM region.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirectmapid_csharp">
+<a href="#redirectmapid_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Map<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Redirect map ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -675,7 +723,23 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkservicearmregion_go">
+<a href="#privatelinkservicearmregion_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Arm<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}PrivateLinkService ARM region.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirectmapid_go">
+<a href="#redirectmapid_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Map<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Redirect map ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -711,7 +775,23 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkservicearmregion_nodejs">
+<a href="#privatelinkservicearmregion_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Arm<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}PrivateLinkService ARM region.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirectmapid_nodejs">
+<a href="#redirectmapid_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Map<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Redirect map ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -747,7 +827,23 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_link_service_arm_region_python">
+<a href="#private_link_service_arm_region_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>arm_<wbr>region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}PrivateLinkService ARM region.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirect_map_id_python">
+<a href="#redirect_map_id_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>map_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Redirect map ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privatelinkserviceconnectionresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response</h4>
