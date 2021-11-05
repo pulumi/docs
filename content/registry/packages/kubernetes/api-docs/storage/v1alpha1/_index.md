@@ -26,6 +26,6 @@ Explore the resources and functions of the kubernetes.storage/v1alpha1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>3.8.3</dd>
+	<dd>3.9.0</dd>
 </dl>
 
