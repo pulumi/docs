@@ -25,6 +25,6 @@ no_edit_this_page: true
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>3.8.3</dd>
+	<dd>3.9.0</dd>
 </dl>
 
