@@ -141,7 +141,7 @@ It's often acceptable to provide your passwords, API keys, or other sensitive in
 
 ![a code snippet of a Pulumi program that generates and uses a random password](images/password.svg)
 
-In this code, we generate a password using the API [`RandomPassword`]({{< relref "/docs/reference/pkg/random/randompassword" >}}). As you would expect because we're using Pulumi's API, Pulumi already knows that the property `dbPassword.result` is a secret and encrypts it by default.
+In this code, we generate a password using the API [`RandomPassword`]({{< relref "/registry/packages/random/api-docs/randompassword" >}}). As you would expect because we're using Pulumi's API, Pulumi already knows that the property `dbPassword.result` is a secret and encrypts it by default.
 
 #### From plain text to secret
 
