@@ -208,7 +208,8 @@ const privateEndpointConnectionProxy = new azure_native.deviceupdate.PrivateEndp
                                    <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                    <span class="nx">private_endpoint_connection_proxy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                    <span class="nx">remote_private_endpoint</span><span class="p">:</span> <span class="nx">Optional[RemotePrivateEndpointArgs]</span> = None<span class="p">,</span>
-                                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">PrivateEndpointConnectionProxy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PrivateEndpointConnectionProxyArgs</a></span><span class="p">,</span>
@@ -368,7 +369,15 @@ The PrivateEndpointConnectionProxy resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remoteprivateendpoint">Pulumi.<wbr>Azure<wbr>Native.<wbr>Device<wbr>Update.<wbr>Inputs.<wbr>Remote<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Remote private endpoint details.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Remote private endpoint details.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Operation status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -404,7 +413,15 @@ The PrivateEndpointConnectionProxy resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remoteprivateendpoint">Remote<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Remote private endpoint details.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Remote private endpoint details.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Operation status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -440,7 +457,15 @@ The PrivateEndpointConnectionProxy resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remoteprivateendpoint">Remote<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Remote private endpoint details.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Remote private endpoint details.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Operation status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -476,7 +501,15 @@ The PrivateEndpointConnectionProxy resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remoteprivateendpoint">Remote<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Remote private endpoint details.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Remote private endpoint details.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Operation status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -893,7 +926,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkservicearmregion_csharp">
+<a href="#privatelinkservicearmregion_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Arm<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}PrivateLinkService ARM region.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirectmapid_csharp">
+<a href="#redirectmapid_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Map<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Redirect map ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -905,7 +954,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkservicearmregion_go">
+<a href="#privatelinkservicearmregion_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Arm<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}PrivateLinkService ARM region.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirectmapid_go">
+<a href="#redirectmapid_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Map<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Redirect map ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -917,7 +982,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkservicearmregion_nodejs">
+<a href="#privatelinkservicearmregion_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Arm<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}PrivateLinkService ARM region.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirectmapid_nodejs">
+<a href="#redirectmapid_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Map<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Redirect map ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -929,7 +1010,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_link_service_arm_region_python">
+<a href="#private_link_service_arm_region_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>arm_<wbr>region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}PrivateLinkService ARM region.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirect_map_id_python">
+<a href="#redirect_map_id_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>map_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Redirect map ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="groupconnectivityinformationresponse">Group<wbr>Connectivity<wbr>Information<wbr>Response</h4>
@@ -967,7 +1064,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkservicearmregion_csharp">
+<a href="#privatelinkservicearmregion_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Arm<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}PrivateLinkService ARM region.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirectmapid_csharp">
+<a href="#redirectmapid_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Map<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Redirect map ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1003,7 +1116,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkservicearmregion_go">
+<a href="#privatelinkservicearmregion_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Arm<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}PrivateLinkService ARM region.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirectmapid_go">
+<a href="#redirectmapid_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Map<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Redirect map ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1039,7 +1168,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkservicearmregion_nodejs">
+<a href="#privatelinkservicearmregion_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Arm<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}PrivateLinkService ARM region.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirectmapid_nodejs">
+<a href="#redirectmapid_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Map<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Redirect map ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1075,7 +1220,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}List of customer visible FQDNs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_link_service_arm_region_python">
+<a href="#private_link_service_arm_region_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>arm_<wbr>region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}PrivateLinkService ARM region.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redirect_map_id_python">
+<a href="#redirect_map_id_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>map_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Redirect map ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointserviceconnectionstatus">Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</h4>

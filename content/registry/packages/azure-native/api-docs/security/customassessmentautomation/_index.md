@@ -37,15 +37,14 @@ class MyStack : Stack
     {
         var customAssessmentAutomation = new AzureNative.Security.CustomAssessmentAutomation("customAssessmentAutomation", new AzureNative.Security.CustomAssessmentAutomationArgs
         {
-            CompressedQuery = "H4sIAAAAAAAAAwtILC4uzy9KCcjPyUyu5OWqUShJzE5VMAQAlMJzABgAAAA=",
+            CompressedQuery = "DQAKAEkAYQBtAF8ARwByAG8AdQBwAA0ACgB8ACAAZQB4AHQAZQBuAGQAIABIAGUAYQBsAHQAaABTAHQAYQB0AHUAcwAgAD0AIABpAGYAZgAoAHQAbwBzAHQAcgBpAG4AZwAoAFIAZQBjAG8AcgBkAC4AVQBzAGUAcgBOAGEAbQBlACkAIABjAG8AbgB0AGEAaQBuAHMAIAAnAHUAcwBlAHIAJwAsACAAJwBVAE4ASABFAEEATABUAEgAWQAnACwAIAAnAEgARQBBAEwAVABIAFkAJwApAA0ACgA=",
             CustomAssessmentAutomationName = "MyCustomAssessmentAutomation",
             Description = "Data should be encrypted",
-            ImplementationEffort = "High",
+            DisplayName = "Password Policy",
             RemediationDescription = "Encrypt store by...",
             ResourceGroupName = "TestResourceGroup",
             Severity = "Medium",
             SupportedCloud = "AWS",
-            UserImpact = "Moderate",
         });
     }
 
@@ -71,15 +70,14 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := security.NewCustomAssessmentAutomation(ctx, "customAssessmentAutomation", &security.CustomAssessmentAutomationArgs{
-			CompressedQuery:                pulumi.String("H4sIAAAAAAAAAwtILC4uzy9KCcjPyUyu5OWqUShJzE5VMAQAlMJzABgAAAA="),
+			CompressedQuery:                pulumi.String("DQAKAEkAYQBtAF8ARwByAG8AdQBwAA0ACgB8ACAAZQB4AHQAZQBuAGQAIABIAGUAYQBsAHQAaABTAHQAYQB0AHUAcwAgAD0AIABpAGYAZgAoAHQAbwBzAHQAcgBpAG4AZwAoAFIAZQBjAG8AcgBkAC4AVQBzAGUAcgBOAGEAbQBlACkAIABjAG8AbgB0AGEAaQBuAHMAIAAnAHUAcwBlAHIAJwAsACAAJwBVAE4ASABFAEEATABUAEgAWQAnACwAIAAnAEgARQBBAEwAVABIAFkAJwApAA0ACgA="),
 			CustomAssessmentAutomationName: pulumi.String("MyCustomAssessmentAutomation"),
 			Description:                    pulumi.String("Data should be encrypted"),
-			ImplementationEffort:           pulumi.String("High"),
+			DisplayName:                    pulumi.String("Password Policy"),
 			RemediationDescription:         pulumi.String("Encrypt store by..."),
 			ResourceGroupName:              pulumi.String("TestResourceGroup"),
 			Severity:                       pulumi.String("Medium"),
 			SupportedCloud:                 pulumi.String("AWS"),
-			UserImpact:                     pulumi.String("Moderate"),
 		})
 		if err != nil {
 			return err
@@ -102,15 +100,14 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 custom_assessment_automation = azure_native.security.CustomAssessmentAutomation("customAssessmentAutomation",
-    compressed_query="H4sIAAAAAAAAAwtILC4uzy9KCcjPyUyu5OWqUShJzE5VMAQAlMJzABgAAAA=",
+    compressed_query="DQAKAEkAYQBtAF8ARwByAG8AdQBwAA0ACgB8ACAAZQB4AHQAZQBuAGQAIABIAGUAYQBsAHQAaABTAHQAYQB0AHUAcwAgAD0AIABpAGYAZgAoAHQAbwBzAHQAcgBpAG4AZwAoAFIAZQBjAG8AcgBkAC4AVQBzAGUAcgBOAGEAbQBlACkAIABjAG8AbgB0AGEAaQBuAHMAIAAnAHUAcwBlAHIAJwAsACAAJwBVAE4ASABFAEEATABUAEgAWQAnACwAIAAnAEgARQBBAEwAVABIAFkAJwApAA0ACgA=",
     custom_assessment_automation_name="MyCustomAssessmentAutomation",
     description="Data should be encrypted",
-    implementation_effort="High",
+    display_name="Password Policy",
     remediation_description="Encrypt store by...",
     resource_group_name="TestResourceGroup",
     severity="Medium",
-    supported_cloud="AWS",
-    user_impact="Moderate")
+    supported_cloud="AWS")
 
 ```
 
@@ -126,15 +123,14 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_native from "@pulumi/azure-native";
 
 const customAssessmentAutomation = new azure_native.security.CustomAssessmentAutomation("customAssessmentAutomation", {
-    compressedQuery: "H4sIAAAAAAAAAwtILC4uzy9KCcjPyUyu5OWqUShJzE5VMAQAlMJzABgAAAA=",
+    compressedQuery: "DQAKAEkAYQBtAF8ARwByAG8AdQBwAA0ACgB8ACAAZQB4AHQAZQBuAGQAIABIAGUAYQBsAHQAaABTAHQAYQB0AHUAcwAgAD0AIABpAGYAZgAoAHQAbwBzAHQAcgBpAG4AZwAoAFIAZQBjAG8AcgBkAC4AVQBzAGUAcgBOAGEAbQBlACkAIABjAG8AbgB0AGEAaQBuAHMAIAAnAHUAcwBlAHIAJwAsACAAJwBVAE4ASABFAEEATABUAEgAWQAnACwAIAAnAEgARQBBAEwAVABIAFkAJwApAA0ACgA=",
     customAssessmentAutomationName: "MyCustomAssessmentAutomation",
     description: "Data should be encrypted",
-    implementationEffort: "High",
+    displayName: "Password Policy",
     remediationDescription: "Encrypt store by...",
     resourceGroupName: "TestResourceGroup",
     severity: "Medium",
     supportedCloud: "AWS",
-    userImpact: "Moderate",
 });
 
 ```
@@ -166,12 +162,11 @@ const customAssessmentAutomation = new azure_native.security.CustomAssessmentAut
                                <span class="nx">compressed_query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">custom_assessment_automation_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                               <span class="nx">implementation_effort</span><span class="p">:</span> <span class="nx">Optional[Union[str, ImplementationEffortEnum]]</span> = None<span class="p">,</span>
+                               <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">remediation_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                <span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[Union[str, SeverityEnum]]</span> = None<span class="p">,</span>
-                               <span class="nx">supported_cloud</span><span class="p">:</span> <span class="nx">Optional[Union[str, SupportedCloudEnum]]</span> = None<span class="p">,</span>
-                               <span class="nx">user_impact</span><span class="p">:</span> <span class="nx">Optional[Union[str, UserImpactEnum]]</span> = None<span class="p">)</span>
+                               <span class="nx">supported_cloud</span><span class="p">:</span> <span class="nx">Optional[Union[str, SupportedCloudEnum]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">CustomAssessmentAutomation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CustomAssessmentAutomationArgs</a></span><span class="p">,</span>
@@ -333,13 +328,13 @@ The CustomAssessmentAutomation resource accepts the following [input]({{< relref
     </dt>
     <dd>{{% md %}}The description to relate to the assessments generated by this assessment automation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="implementationeffort_csharp">
-<a href="#implementationeffort_csharp" style="color: inherit; text-decoration: inherit;">Implementation<wbr>Effort</a>
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#implementationeffortenum">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Implementation<wbr>Effort<wbr>Enum</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The implementation effort to relate to the assessments generated by this assessment automation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The display name of the assessments generated by this assessment automation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remediationdescription_csharp">
 <a href="#remediationdescription_csharp" style="color: inherit; text-decoration: inherit;">Remediation<wbr>Description</a>
@@ -363,15 +358,7 @@ The CustomAssessmentAutomation resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#supportedcloudenum">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Supported<wbr>Cloud<wbr>Enum</a></span>
     </dt>
-    <dd>{{% md %}}Relevant cloud for the custom assessment automation.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="userimpact_csharp">
-<a href="#userimpact_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Impact</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#userimpactenum">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>User<wbr>Impact<wbr>Enum</a></span>
-    </dt>
-    <dd>{{% md %}}The user impact to relate to the assessments generated by this assessment automation.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Relevant cloud for the custom assessment automation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -409,13 +396,13 @@ The CustomAssessmentAutomation resource accepts the following [input]({{< relref
     </dt>
     <dd>{{% md %}}The description to relate to the assessments generated by this assessment automation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="implementationeffort_go">
-<a href="#implementationeffort_go" style="color: inherit; text-decoration: inherit;">Implementation<wbr>Effort</a>
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#implementationeffortenum">Implementation<wbr>Effort<wbr>Enum</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The implementation effort to relate to the assessments generated by this assessment automation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The display name of the assessments generated by this assessment automation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remediationdescription_go">
 <a href="#remediationdescription_go" style="color: inherit; text-decoration: inherit;">Remediation<wbr>Description</a>
@@ -439,15 +426,7 @@ The CustomAssessmentAutomation resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#supportedcloudenum">Supported<wbr>Cloud<wbr>Enum</a></span>
     </dt>
-    <dd>{{% md %}}Relevant cloud for the custom assessment automation.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="userimpact_go">
-<a href="#userimpact_go" style="color: inherit; text-decoration: inherit;">User<wbr>Impact</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#userimpactenum">User<wbr>Impact<wbr>Enum</a></span>
-    </dt>
-    <dd>{{% md %}}The user impact to relate to the assessments generated by this assessment automation.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Relevant cloud for the custom assessment automation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -485,13 +464,13 @@ The CustomAssessmentAutomation resource accepts the following [input]({{< relref
     </dt>
     <dd>{{% md %}}The description to relate to the assessments generated by this assessment automation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="implementationeffort_nodejs">
-<a href="#implementationeffort_nodejs" style="color: inherit; text-decoration: inherit;">implementation<wbr>Effort</a>
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#implementationeffortenum">Implementation<wbr>Effort<wbr>Enum</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The implementation effort to relate to the assessments generated by this assessment automation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The display name of the assessments generated by this assessment automation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remediationdescription_nodejs">
 <a href="#remediationdescription_nodejs" style="color: inherit; text-decoration: inherit;">remediation<wbr>Description</a>
@@ -515,15 +494,7 @@ The CustomAssessmentAutomation resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#supportedcloudenum">Supported<wbr>Cloud<wbr>Enum</a></span>
     </dt>
-    <dd>{{% md %}}Relevant cloud for the custom assessment automation.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="userimpact_nodejs">
-<a href="#userimpact_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Impact</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#userimpactenum">User<wbr>Impact<wbr>Enum</a></span>
-    </dt>
-    <dd>{{% md %}}The user impact to relate to the assessments generated by this assessment automation.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Relevant cloud for the custom assessment automation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -561,13 +532,13 @@ The CustomAssessmentAutomation resource accepts the following [input]({{< relref
     </dt>
     <dd>{{% md %}}The description to relate to the assessments generated by this assessment automation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="implementation_effort_python">
-<a href="#implementation_effort_python" style="color: inherit; text-decoration: inherit;">implementation_<wbr>effort</a>
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#implementationeffortenum">Implementation<wbr>Effort<wbr>Enum</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The implementation effort to relate to the assessments generated by this assessment automation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The display name of the assessments generated by this assessment automation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remediation_description_python">
 <a href="#remediation_description_python" style="color: inherit; text-decoration: inherit;">remediation_<wbr>description</a>
@@ -591,15 +562,7 @@ The CustomAssessmentAutomation resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#supportedcloudenum">Supported<wbr>Cloud<wbr>Enum</a></span>
     </dt>
-    <dd>{{% md %}}Relevant cloud for the custom assessment automation.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="user_impact_python">
-<a href="#user_impact_python" style="color: inherit; text-decoration: inherit;">user_<wbr>impact</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#userimpactenum">User<wbr>Impact<wbr>Enum</a></span>
-    </dt>
-    <dd>{{% md %}}The user impact to relate to the assessments generated by this assessment automation.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Relevant cloud for the custom assessment automation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -794,36 +757,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
-
-<h4 id="implementationeffortenum">Implementation<wbr>Effort<wbr>Enum</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>High</dt>
-    <dd>High</dd><dt>Moderate</dt>
-    <dd>Moderate</dd><dt>Low</dt>
-    <dd>Low</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Implementation<wbr>Effort<wbr>Enum<wbr>High</dt>
-    <dd>High</dd><dt>Implementation<wbr>Effort<wbr>Enum<wbr>Moderate</dt>
-    <dd>Moderate</dd><dt>Implementation<wbr>Effort<wbr>Enum<wbr>Low</dt>
-    <dd>Low</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>High</dt>
-    <dd>High</dd><dt>Moderate</dt>
-    <dd>Moderate</dd><dt>Low</dt>
-    <dd>Low</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>HIGH</dt>
-    <dd>High</dd><dt>MODERATE</dt>
-    <dd>Moderate</dd><dt>LOW</dt>
-    <dd>Low</dd></dl>
-{{% /choosable %}}
 
 <h4 id="severityenum">Severity<wbr>Enum</h4>
 
@@ -1085,36 +1018,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="userimpactenum">User<wbr>Impact<wbr>Enum</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>High</dt>
-    <dd>High</dd><dt>Moderate</dt>
-    <dd>Moderate</dd><dt>Low</dt>
-    <dd>Low</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>User<wbr>Impact<wbr>Enum<wbr>High</dt>
-    <dd>High</dd><dt>User<wbr>Impact<wbr>Enum<wbr>Moderate</dt>
-    <dd>Moderate</dd><dt>User<wbr>Impact<wbr>Enum<wbr>Low</dt>
-    <dd>Low</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>High</dt>
-    <dd>High</dd><dt>Moderate</dt>
-    <dd>Moderate</dd><dt>Low</dt>
-    <dd>Low</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>HIGH</dt>
-    <dd>High</dd><dt>MODERATE</dt>
-    <dd>Moderate</dd><dt>LOW</dt>
-    <dd>Low</dd></dl>
 {{% /choosable %}}
 ## Import
 

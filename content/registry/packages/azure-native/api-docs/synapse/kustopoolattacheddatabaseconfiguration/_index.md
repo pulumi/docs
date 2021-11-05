@@ -406,7 +406,7 @@ The KustoPoolAttachedDatabaseConfiguration resource accepts the following [input
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attacheddatabaseconfigurationname_csharp">
 <a href="#attacheddatabaseconfigurationname_csharp" style="color: inherit; text-decoration: inherit;">Attached<wbr>Database<wbr>Configuration<wbr>Name</a>
@@ -482,7 +482,7 @@ The KustoPoolAttachedDatabaseConfiguration resource accepts the following [input
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attacheddatabaseconfigurationname_go">
 <a href="#attacheddatabaseconfigurationname_go" style="color: inherit; text-decoration: inherit;">Attached<wbr>Database<wbr>Configuration<wbr>Name</a>
@@ -558,7 +558,7 @@ The KustoPoolAttachedDatabaseConfiguration resource accepts the following [input
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attacheddatabaseconfigurationname_nodejs">
 <a href="#attacheddatabaseconfigurationname_nodejs" style="color: inherit; text-decoration: inherit;">attached<wbr>Database<wbr>Configuration<wbr>Name</a>
@@ -634,7 +634,7 @@ The KustoPoolAttachedDatabaseConfiguration resource accepts the following [input
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attached_database_configuration_name_python">
 <a href="#attached_database_configuration_name_python" style="color: inherit; text-decoration: inherit;">attached_<wbr>database_<wbr>configuration_<wbr>name</a>

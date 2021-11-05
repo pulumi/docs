@@ -1719,7 +1719,106 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewLoadBalancer(ctx, "loadBalancer", &network.LoadBalancerArgs{
+			BackendAddressPools: []network.BackendAddressPoolArgs{
+				&network.BackendAddressPoolArgs{
+					Name: pulumi.String("be-lb"),
+				},
+			},
+			FrontendIPConfigurations: []network.FrontendIPConfigurationArgs{
+				&network.FrontendIPConfigurationArgs{
+					Name: pulumi.String("fe-lb"),
+					PublicIPAddress: &network.PublicIPAddressArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pip"),
+					},
+				},
+			},
+			InboundNatPools: network.InboundNatPoolArray{},
+			InboundNatRules: []network.InboundNatRuleArgs{
+				&network.InboundNatRuleArgs{
+					BackendPort:      pulumi.Int(3389),
+					EnableFloatingIP: pulumi.Bool(true),
+					FrontendIPConfiguration: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb"),
+					},
+					FrontendPort:         pulumi.Int(3389),
+					IdleTimeoutInMinutes: pulumi.Int(15),
+					Name:                 pulumi.String("in-nat-rule"),
+					Protocol:             pulumi.String("Tcp"),
+				},
+			},
+			LoadBalancerName: pulumi.String("lb"),
+			LoadBalancingRules: []network.LoadBalancingRuleArgs{
+				&network.LoadBalancingRuleArgs{
+					BackendAddressPool: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb"),
+					},
+					BackendPort:         pulumi.Int(80),
+					DisableOutboundSnat: pulumi.Bool(true),
+					EnableFloatingIP:    pulumi.Bool(true),
+					FrontendIPConfiguration: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb"),
+					},
+					FrontendPort:         pulumi.Int(80),
+					IdleTimeoutInMinutes: pulumi.Int(15),
+					LoadDistribution:     pulumi.String("Default"),
+					Name:                 pulumi.String("rulelb"),
+					Probe: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb"),
+					},
+					Protocol: pulumi.String("Tcp"),
+				},
+			},
+			Location: pulumi.String("eastus"),
+			OutboundRules: []network.OutboundRuleArgs{
+				&network.OutboundRuleArgs{
+					BackendAddressPool: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb"),
+					},
+					FrontendIPConfigurations: []network.SubResourceArgs{
+						&network.SubResourceArgs{
+							Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb"),
+						},
+					},
+					Name:     pulumi.String("rule1"),
+					Protocol: pulumi.String("All"),
+				},
+			},
+			Probes: []network.ProbeArgs{
+				&network.ProbeArgs{
+					IntervalInSeconds: pulumi.Int(15),
+					Name:              pulumi.String("probe-lb"),
+					NumberOfProbes:    pulumi.Int(2),
+					Port:              pulumi.Int(80),
+					Protocol:          pulumi.String("Http"),
+					RequestPath:       pulumi.String("healthcheck.aspx"),
+				},
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			Sku: &network.LoadBalancerSkuArgs{
+				Name: pulumi.String("Standard"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -1735,12 +1834,12 @@ load_balancer = azure_native.network.LoadBalancer("loadBalancer",
     backend_address_pools=[azure_native.network.BackendAddressPoolArgs(
         name="be-lb",
     )],
-    frontend_ip_configurations=[{
-        "name": "fe-lb",
-        "publicIPAddress": azure_native.network.PublicIPAddressArgs(
+    frontend_ip_configurations=[azure_native.network.FrontendIPConfigurationArgs(
+        name="fe-lb",
+        public_ip_address=azure_native.network.PublicIPAddressArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pip",
         ),
-    }],
+    )],
     inbound_nat_pools=[],
     inbound_nat_rules=[azure_native.network.InboundNatRuleArgs(
         backend_port=3389,
