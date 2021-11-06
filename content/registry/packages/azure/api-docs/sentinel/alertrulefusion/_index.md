@@ -44,9 +44,22 @@ class MyStack : Stack
             ResourceGroupName = exampleResourceGroup.Name,
             Sku = "pergb2018",
         });
+        var exampleAnalyticsSolution = new Azure.OperationalInsights.AnalyticsSolution("exampleAnalyticsSolution", new Azure.OperationalInsights.AnalyticsSolutionArgs
+        {
+            SolutionName = "SecurityInsights",
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            WorkspaceResourceId = exampleAnalyticsWorkspace.Id,
+            WorkspaceName = exampleAnalyticsWorkspace.Name,
+            Plan = new Azure.OperationalInsights.Inputs.AnalyticsSolutionPlanArgs
+            {
+                Publisher = "Microsoft",
+                Product = "OMSGallery/SecurityInsights",
+            },
+        });
         var exampleAlertRuleFusion = new Azure.Sentinel.AlertRuleFusion("exampleAlertRuleFusion", new Azure.Sentinel.AlertRuleFusionArgs
         {
-            LogAnalyticsWorkspaceId = exampleAnalyticsWorkspace.Id,
+            LogAnalyticsWorkspaceId = exampleAnalyticsSolution.WorkspaceResourceId,
             AlertRuleTemplateGuid = "f71aba3d-28fb-450b-b192-4e76a83015c8",
         });
     }
@@ -86,8 +99,22 @@ func main() {
 		if err != nil {
 			return err
 		}
+		exampleAnalyticsSolution, err := operationalinsights.NewAnalyticsSolution(ctx, "exampleAnalyticsSolution", &operationalinsights.AnalyticsSolutionArgs{
+			SolutionName:        pulumi.String("SecurityInsights"),
+			Location:            exampleResourceGroup.Location,
+			ResourceGroupName:   exampleResourceGroup.Name,
+			WorkspaceResourceId: exampleAnalyticsWorkspace.ID(),
+			WorkspaceName:       exampleAnalyticsWorkspace.Name,
+			Plan: &operationalinsights.AnalyticsSolutionPlanArgs{
+				Publisher: pulumi.String("Microsoft"),
+				Product:   pulumi.String("OMSGallery/SecurityInsights"),
+			},
+		})
+		if err != nil {
+			return err
+		}
 		_, err = sentinel.NewAlertRuleFusion(ctx, "exampleAlertRuleFusion", &sentinel.AlertRuleFusionArgs{
-			LogAnalyticsWorkspaceId: exampleAnalyticsWorkspace.ID(),
+			LogAnalyticsWorkspaceId: exampleAnalyticsSolution.WorkspaceResourceId,
 			AlertRuleTemplateGuid:   pulumi.String("f71aba3d-28fb-450b-b192-4e76a83015c8"),
 		})
 		if err != nil {
@@ -113,8 +140,18 @@ example_analytics_workspace = azure.operationalinsights.AnalyticsWorkspace("exam
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
     sku="pergb2018")
+example_analytics_solution = azure.operationalinsights.AnalyticsSolution("exampleAnalyticsSolution",
+    solution_name="SecurityInsights",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    workspace_resource_id=example_analytics_workspace.id,
+    workspace_name=example_analytics_workspace.name,
+    plan=azure.operationalinsights.AnalyticsSolutionPlanArgs(
+        publisher="Microsoft",
+        product="OMSGallery/SecurityInsights",
+    ))
 example_alert_rule_fusion = azure.sentinel.AlertRuleFusion("exampleAlertRuleFusion",
-    log_analytics_workspace_id=example_analytics_workspace.id,
+    log_analytics_workspace_id=example_analytics_solution.workspace_resource_id,
     alert_rule_template_guid="f71aba3d-28fb-450b-b192-4e76a83015c8")
 ```
 
@@ -135,8 +172,19 @@ const exampleAnalyticsWorkspace = new azure.operationalinsights.AnalyticsWorkspa
     resourceGroupName: exampleResourceGroup.name,
     sku: "pergb2018",
 });
+const exampleAnalyticsSolution = new azure.operationalinsights.AnalyticsSolution("exampleAnalyticsSolution", {
+    solutionName: "SecurityInsights",
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    workspaceResourceId: exampleAnalyticsWorkspace.id,
+    workspaceName: exampleAnalyticsWorkspace.name,
+    plan: {
+        publisher: "Microsoft",
+        product: "OMSGallery/SecurityInsights",
+    },
+});
 const exampleAlertRuleFusion = new azure.sentinel.AlertRuleFusion("exampleAlertRuleFusion", {
-    logAnalyticsWorkspaceId: exampleAnalyticsWorkspace.id,
+    logAnalyticsWorkspaceId: exampleAnalyticsSolution.workspaceResourceId,
     alertRuleTemplateGuid: "f71aba3d-28fb-450b-b192-4e76a83015c8",
 });
 ```

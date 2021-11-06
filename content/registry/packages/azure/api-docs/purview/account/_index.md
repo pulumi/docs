@@ -42,7 +42,6 @@ class MyStack : Stack
         {
             ResourceGroupName = exampleResourceGroup.Name,
             Location = exampleResourceGroup.Location,
-            SkuName = "Standard_4",
         });
     }
 
@@ -75,7 +74,6 @@ func main() {
 		_, err = purview.NewAccount(ctx, "exampleAccount", &purview.AccountArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			Location:          exampleResourceGroup.Location,
-			SkuName:           pulumi.String("Standard_4"),
 		})
 		if err != nil {
 			return err
@@ -98,8 +96,7 @@ import pulumi_azure as azure
 example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_account = azure.purview.Account("exampleAccount",
     resource_group_name=example_resource_group.name,
-    location=example_resource_group.location,
-    sku_name="Standard_4")
+    location=example_resource_group.location)
 ```
 
 
@@ -117,7 +114,6 @@ const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup"
 const exampleAccount = new azure.purview.Account("exampleAccount", {
     resourceGroupName: exampleResourceGroup.name,
     location: exampleResourceGroup.location,
-    skuName: "Standard_4",
 });
 ```
 
@@ -287,15 +283,6 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Purview Account should exist. Changing this forces a new Purview Account to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="skuname_csharp">
-<a href="#skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SKU's capacity for platform size and catalog capabilities. Accepted values are `Standard_1`, `Standard_4` and `Standard_16`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
@@ -323,7 +310,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Purview Account be visible to the public network? Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="skuname_csharp">
+<a href="#skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property can no longer be specified on create/update, it can only be updated by creating a support ticket at Azure{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -345,15 +340,6 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Purview Account should exist. Changing this forces a new Purview Account to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="skuname_go">
-<a href="#skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SKU's capacity for platform size and catalog capabilities. Accepted values are `Standard_1`, `Standard_4` and `Standard_16`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -381,7 +367,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Purview Account be visible to the public network? Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="skuname_go">
+<a href="#skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property can no longer be specified on create/update, it can only be updated by creating a support ticket at Azure{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -403,15 +397,6 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Purview Account should exist. Changing this forces a new Purview Account to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="skuname_nodejs">
-<a href="#skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SKU's capacity for platform size and catalog capabilities. Accepted values are `Standard_1`, `Standard_4` and `Standard_16`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
@@ -439,7 +424,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the Purview Account be visible to the public network? Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="skuname_nodejs">
+<a href="#skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property can no longer be specified on create/update, it can only be updated by creating a support ticket at Azure{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -461,15 +454,6 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Purview Account should exist. Changing this forces a new Purview Account to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sku_name_python">
-<a href="#sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The SKU's capacity for platform size and catalog capabilities. Accepted values are `Standard_1`, `Standard_4` and `Standard_16`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -497,7 +481,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Purview Account be visible to the public network? Defaults to `true`.
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="sku_name_python">
+<a href="#sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property can no longer be specified on create/update, it can only be updated by creating a support ticket at Azure{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1008,16 +1000,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scan endpoint.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_skuname_csharp">
 <a href="#state_skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU's capacity for platform size and catalog capabilities. Accepted values are `Standard_1`, `Standard_4` and `Standard_16`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property can no longer be specified on create/update, it can only be updated by creating a support ticket at Azure{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1120,16 +1111,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scan endpoint.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_skuname_go">
 <a href="#state_skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU's capacity for platform size and catalog capabilities. Accepted values are `Standard_1`, `Standard_4` and `Standard_16`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property can no longer be specified on create/update, it can only be updated by creating a support ticket at Azure{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1232,16 +1222,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scan endpoint.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_skuname_nodejs">
 <a href="#state_skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU's capacity for platform size and catalog capabilities. Accepted values are `Standard_1`, `Standard_4` and `Standard_16`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property can no longer be specified on create/update, it can only be updated by creating a support ticket at Azure{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1344,16 +1333,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Scan endpoint.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_sku_name_python">
 <a href="#state_sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SKU's capacity for platform size and catalog capabilities. Accepted values are `Standard_1`, `Standard_4` and `Standard_16`.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property can no longer be specified on create/update, it can only be updated by creating a support ticket at Azure{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

@@ -44,9 +44,22 @@ class MyStack : Stack
             ResourceGroupName = exampleResourceGroup.Name,
             Sku = "pergb2018",
         });
+        var exampleAnalyticsSolution = new Azure.OperationalInsights.AnalyticsSolution("exampleAnalyticsSolution", new Azure.OperationalInsights.AnalyticsSolutionArgs
+        {
+            SolutionName = "SecurityInsights",
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            WorkspaceResourceId = exampleAnalyticsWorkspace.Id,
+            WorkspaceName = exampleAnalyticsWorkspace.Name,
+            Plan = new Azure.OperationalInsights.Inputs.AnalyticsSolutionPlanArgs
+            {
+                Publisher = "Microsoft",
+                Product = "OMSGallery/SecurityInsights",
+            },
+        });
         var exampleAlertRuleMachineLearningBehaviorAnalytics = new Azure.Sentinel.AlertRuleMachineLearningBehaviorAnalytics("exampleAlertRuleMachineLearningBehaviorAnalytics", new Azure.Sentinel.AlertRuleMachineLearningBehaviorAnalyticsArgs
         {
-            LogAnalyticsWorkspaceId = exampleAnalyticsWorkspace.Id,
+            LogAnalyticsWorkspaceId = exampleAnalyticsSolution.WorkspaceResourceId,
             AlertRuleTemplateGuid = "737a2ce1-70a3-4968-9e90-3e6aca836abf",
         });
     }
@@ -86,8 +99,22 @@ func main() {
 		if err != nil {
 			return err
 		}
+		exampleAnalyticsSolution, err := operationalinsights.NewAnalyticsSolution(ctx, "exampleAnalyticsSolution", &operationalinsights.AnalyticsSolutionArgs{
+			SolutionName:        pulumi.String("SecurityInsights"),
+			Location:            exampleResourceGroup.Location,
+			ResourceGroupName:   exampleResourceGroup.Name,
+			WorkspaceResourceId: exampleAnalyticsWorkspace.ID(),
+			WorkspaceName:       exampleAnalyticsWorkspace.Name,
+			Plan: &operationalinsights.AnalyticsSolutionPlanArgs{
+				Publisher: pulumi.String("Microsoft"),
+				Product:   pulumi.String("OMSGallery/SecurityInsights"),
+			},
+		})
+		if err != nil {
+			return err
+		}
 		_, err = sentinel.NewAlertRuleMachineLearningBehaviorAnalytics(ctx, "exampleAlertRuleMachineLearningBehaviorAnalytics", &sentinel.AlertRuleMachineLearningBehaviorAnalyticsArgs{
-			LogAnalyticsWorkspaceId: exampleAnalyticsWorkspace.ID(),
+			LogAnalyticsWorkspaceId: exampleAnalyticsSolution.WorkspaceResourceId,
 			AlertRuleTemplateGuid:   pulumi.String("737a2ce1-70a3-4968-9e90-3e6aca836abf"),
 		})
 		if err != nil {
@@ -113,8 +140,18 @@ example_analytics_workspace = azure.operationalinsights.AnalyticsWorkspace("exam
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
     sku="pergb2018")
+example_analytics_solution = azure.operationalinsights.AnalyticsSolution("exampleAnalyticsSolution",
+    solution_name="SecurityInsights",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    workspace_resource_id=example_analytics_workspace.id,
+    workspace_name=example_analytics_workspace.name,
+    plan=azure.operationalinsights.AnalyticsSolutionPlanArgs(
+        publisher="Microsoft",
+        product="OMSGallery/SecurityInsights",
+    ))
 example_alert_rule_machine_learning_behavior_analytics = azure.sentinel.AlertRuleMachineLearningBehaviorAnalytics("exampleAlertRuleMachineLearningBehaviorAnalytics",
-    log_analytics_workspace_id=example_analytics_workspace.id,
+    log_analytics_workspace_id=example_analytics_solution.workspace_resource_id,
     alert_rule_template_guid="737a2ce1-70a3-4968-9e90-3e6aca836abf")
 ```
 
@@ -135,8 +172,19 @@ const exampleAnalyticsWorkspace = new azure.operationalinsights.AnalyticsWorkspa
     resourceGroupName: exampleResourceGroup.name,
     sku: "pergb2018",
 });
+const exampleAnalyticsSolution = new azure.operationalinsights.AnalyticsSolution("exampleAnalyticsSolution", {
+    solutionName: "SecurityInsights",
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    workspaceResourceId: exampleAnalyticsWorkspace.id,
+    workspaceName: exampleAnalyticsWorkspace.name,
+    plan: {
+        publisher: "Microsoft",
+        product: "OMSGallery/SecurityInsights",
+    },
+});
 const exampleAlertRuleMachineLearningBehaviorAnalytics = new azure.sentinel.AlertRuleMachineLearningBehaviorAnalytics("exampleAlertRuleMachineLearningBehaviorAnalytics", {
-    logAnalyticsWorkspaceId: exampleAnalyticsWorkspace.id,
+    logAnalyticsWorkspaceId: exampleAnalyticsSolution.workspaceResourceId,
     alertRuleTemplateGuid: "737a2ce1-70a3-4968-9e90-3e6aca836abf",
 });
 ```

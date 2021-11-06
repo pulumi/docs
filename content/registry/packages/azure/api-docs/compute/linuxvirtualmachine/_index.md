@@ -369,6 +369,7 @@ const exampleLinuxVirtualMachine = new azure.compute.LinuxVirtualMachine("exampl
                         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">network_interface_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                         <span class="nx">os_disk</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineOsDiskArgs]</span> = None<span class="p">,</span>
+                        <span class="nx">patch_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachinePlanArgs]</span> = None<span class="p">,</span>
                         <span class="nx">platform_fault_domain</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                         <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -718,6 +719,15 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}The name of the Linux Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="patchmode_csharp">
+<a href="#patchmode_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of in-guest patching to this Linux Virtual Machine. Possible values are `AutomaticByPlatform` and `ImageDefault`. Defaults to `ImageDefault`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="plan_csharp">
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
@@ -1026,6 +1036,15 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Linux Virtual Machine. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="patchmode_go">
+<a href="#patchmode_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of in-guest patching to this Linux Virtual Machine. Possible values are `AutomaticByPlatform` and `ImageDefault`. Defaults to `ImageDefault`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_go">
@@ -1338,6 +1357,15 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}The name of the Linux Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="patchmode_nodejs">
+<a href="#patchmode_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of in-guest patching to this Linux Virtual Machine. Possible values are `AutomaticByPlatform` and `ImageDefault`. Defaults to `ImageDefault`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="plan_nodejs">
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
@@ -1646,6 +1674,15 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Linux Virtual Machine. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="patch_mode_python">
+<a href="#patch_mode_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of in-guest patching to this Linux Virtual Machine. Possible values are `AutomaticByPlatform` and `ImageDefault`. Defaults to `ImageDefault`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_python">
@@ -2020,6 +2057,7 @@ Get an existing LinuxVirtualMachine resource's state with the given name, ID, an
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_interface_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">os_disk</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineOsDiskArgs]</span> = None<span class="p">,</span>
+        <span class="nx">patch_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachinePlanArgs]</span> = None<span class="p">,</span>
         <span class="nx">platform_fault_domain</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2337,6 +2375,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#linuxvirtualmachineosdisk">Linux<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_disk` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_patchmode_csharp">
+<a href="#state_patchmode_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of in-guest patching to this Linux Virtual Machine. Possible values are `AutomaticByPlatform` and `ImageDefault`. Defaults to `ImageDefault`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_csharp">
@@ -2694,6 +2741,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `os_disk` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_patchmode_go">
+<a href="#state_patchmode_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of in-guest patching to this Linux Virtual Machine. Possible values are `AutomaticByPlatform` and `ImageDefault`. Defaults to `ImageDefault`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_plan_go">
 <a href="#state_plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
@@ -3049,6 +3105,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `os_disk` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_patchmode_nodejs">
+<a href="#state_patchmode_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of in-guest patching to this Linux Virtual Machine. Possible values are `AutomaticByPlatform` and `ImageDefault`. Defaults to `ImageDefault`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_plan_nodejs">
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
@@ -3402,6 +3467,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#linuxvirtualmachineosdisk">Linux<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_disk` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_patch_mode_python">
+<a href="#state_patch_mode_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of in-guest patching to this Linux Virtual Machine. Possible values are `AutomaticByPlatform` and `ImageDefault`. Defaults to `ImageDefault`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_python">

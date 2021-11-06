@@ -44,9 +44,22 @@ class MyStack : Stack
             ResourceGroupName = exampleResourceGroup.Name,
             Sku = "pergb2018",
         });
+        var exampleAnalyticsSolution = new Azure.OperationalInsights.AnalyticsSolution("exampleAnalyticsSolution", new Azure.OperationalInsights.AnalyticsSolutionArgs
+        {
+            SolutionName = "SecurityInsights",
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            WorkspaceResourceId = exampleAnalyticsWorkspace.Id,
+            WorkspaceName = exampleAnalyticsWorkspace.Name,
+            Plan = new Azure.OperationalInsights.Inputs.AnalyticsSolutionPlanArgs
+            {
+                Publisher = "Microsoft",
+                Product = "OMSGallery/SecurityInsights",
+            },
+        });
         var exampleAlertRuleScheduled = new Azure.Sentinel.AlertRuleScheduled("exampleAlertRuleScheduled", new Azure.Sentinel.AlertRuleScheduledArgs
         {
-            LogAnalyticsWorkspaceId = exampleAnalyticsWorkspace.Id,
+            LogAnalyticsWorkspaceId = exampleAnalyticsSolution.WorkspaceResourceId,
             DisplayName = "example",
             Severity = "High",
             Query = @"AzureActivity |
@@ -94,8 +107,22 @@ func main() {
 		if err != nil {
 			return err
 		}
+		exampleAnalyticsSolution, err := operationalinsights.NewAnalyticsSolution(ctx, "exampleAnalyticsSolution", &operationalinsights.AnalyticsSolutionArgs{
+			SolutionName:        pulumi.String("SecurityInsights"),
+			Location:            exampleResourceGroup.Location,
+			ResourceGroupName:   exampleResourceGroup.Name,
+			WorkspaceResourceId: exampleAnalyticsWorkspace.ID(),
+			WorkspaceName:       exampleAnalyticsWorkspace.Name,
+			Plan: &operationalinsights.AnalyticsSolutionPlanArgs{
+				Publisher: pulumi.String("Microsoft"),
+				Product:   pulumi.String("OMSGallery/SecurityInsights"),
+			},
+		})
+		if err != nil {
+			return err
+		}
 		_, err = sentinel.NewAlertRuleScheduled(ctx, "exampleAlertRuleScheduled", &sentinel.AlertRuleScheduledArgs{
-			LogAnalyticsWorkspaceId: exampleAnalyticsWorkspace.ID(),
+			LogAnalyticsWorkspaceId: exampleAnalyticsSolution.WorkspaceResourceId,
 			DisplayName:             pulumi.String("example"),
 			Severity:                pulumi.String("High"),
 			Query:                   pulumi.String(fmt.Sprintf("%v%v%v%v", "AzureActivity |\n", "  where OperationName == \"Create or Update Virtual Machine\" or OperationName ==\"Create Deployment\" |\n", "  where ActivityStatus == \"Succeeded\" |\n", "  make-series dcount(ResourceId) default=0 on EventSubmissionTimestamp in range(ago(7d), now(), 1d) by Caller\n")),
@@ -123,8 +150,18 @@ example_analytics_workspace = azure.operationalinsights.AnalyticsWorkspace("exam
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
     sku="pergb2018")
+example_analytics_solution = azure.operationalinsights.AnalyticsSolution("exampleAnalyticsSolution",
+    solution_name="SecurityInsights",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    workspace_resource_id=example_analytics_workspace.id,
+    workspace_name=example_analytics_workspace.name,
+    plan=azure.operationalinsights.AnalyticsSolutionPlanArgs(
+        publisher="Microsoft",
+        product="OMSGallery/SecurityInsights",
+    ))
 example_alert_rule_scheduled = azure.sentinel.AlertRuleScheduled("exampleAlertRuleScheduled",
-    log_analytics_workspace_id=example_analytics_workspace.id,
+    log_analytics_workspace_id=example_analytics_solution.workspace_resource_id,
     display_name="example",
     severity="High",
     query="""AzureActivity |
@@ -151,8 +188,19 @@ const exampleAnalyticsWorkspace = new azure.operationalinsights.AnalyticsWorkspa
     resourceGroupName: exampleResourceGroup.name,
     sku: "pergb2018",
 });
+const exampleAnalyticsSolution = new azure.operationalinsights.AnalyticsSolution("exampleAnalyticsSolution", {
+    solutionName: "SecurityInsights",
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    workspaceResourceId: exampleAnalyticsWorkspace.id,
+    workspaceName: exampleAnalyticsWorkspace.name,
+    plan: {
+        publisher: "Microsoft",
+        product: "OMSGallery/SecurityInsights",
+    },
+});
 const exampleAlertRuleScheduled = new azure.sentinel.AlertRuleScheduled("exampleAlertRuleScheduled", {
-    logAnalyticsWorkspaceId: exampleAnalyticsWorkspace.id,
+    logAnalyticsWorkspaceId: exampleAnalyticsSolution.workspaceResourceId,
     displayName: "example",
     severity: "High",
     query: `AzureActivity |

@@ -2118,15 +2118,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies a list of network protocols this rule applies to. Possible values are `TCP`, `UDP`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="translatedaddress_csharp">
-<a href="#translatedaddress_csharp" style="color: inherit; text-decoration: inherit;">Translated<wbr>Address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the translated address.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="translatedport_csharp">
 <a href="#translatedport_csharp" style="color: inherit; text-decoration: inherit;">Translated<wbr>Port</a>
 </span>
@@ -2170,6 +2161,24 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a list of source IP groups.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="translatedaddress_csharp">
+<a href="#translatedaddress_csharp" style="color: inherit; text-decoration: inherit;">Translated<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the translated address.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="translatedfqdn_csharp">
+<a href="#translatedfqdn_csharp" style="color: inherit; text-decoration: inherit;">Translated<wbr>Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the translated FQDN.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2192,15 +2201,6 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a list of network protocols this rule applies to. Possible values are `TCP`, `UDP`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="translatedaddress_go">
-<a href="#translatedaddress_go" style="color: inherit; text-decoration: inherit;">Translated<wbr>Address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the translated address.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="translatedport_go">
@@ -2246,6 +2246,24 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a list of source IP groups.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="translatedaddress_go">
+<a href="#translatedaddress_go" style="color: inherit; text-decoration: inherit;">Translated<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the translated address.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="translatedfqdn_go">
+<a href="#translatedfqdn_go" style="color: inherit; text-decoration: inherit;">Translated<wbr>Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the translated FQDN.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2268,15 +2286,6 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of network protocols this rule applies to. Possible values are `TCP`, `UDP`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="translatedaddress_nodejs">
-<a href="#translatedaddress_nodejs" style="color: inherit; text-decoration: inherit;">translated<wbr>Address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the translated address.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="translatedport_nodejs">
@@ -2322,6 +2331,24 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of source IP groups.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="translatedaddress_nodejs">
+<a href="#translatedaddress_nodejs" style="color: inherit; text-decoration: inherit;">translated<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the translated address.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="translatedfqdn_nodejs">
+<a href="#translatedfqdn_nodejs" style="color: inherit; text-decoration: inherit;">translated<wbr>Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the translated FQDN.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2344,15 +2371,6 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of network protocols this rule applies to. Possible values are `TCP`, `UDP`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="translated_address_python">
-<a href="#translated_address_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the translated address.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="translated_port_python">
@@ -2398,6 +2416,24 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of source IP groups.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="translated_address_python">
+<a href="#translated_address_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the translated address.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="translated_fqdn_python">
+<a href="#translated_fqdn_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the translated FQDN.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -29,6 +29,7 @@ no_edit_this_page: true
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                  <span class="nx">active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">cusomter_managed_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">customer_managed_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">customer_managed_key_versionless_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">synapse_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -168,16 +169,24 @@ The WorkspaceKey resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="synapseworkspaceid_csharp">
+<a href="#synapseworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Synapse<wbr>Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="cusomtermanagedkeyname_csharp">
 <a href="#cusomtermanagedkeyname_csharp" style="color: inherit; text-decoration: inherit;">Cusomter<wbr>Managed<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="synapseworkspaceid_csharp">
-<a href="#synapseworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Synapse<wbr>Workspace<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}As this property name contained a typo originally, please switch to using &#39;customer_managed_key_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="customermanagedkeyname_csharp">
+<a href="#customermanagedkeyname_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -204,16 +213,24 @@ The WorkspaceKey resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="synapseworkspaceid_go">
+<a href="#synapseworkspaceid_go" style="color: inherit; text-decoration: inherit;">Synapse<wbr>Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="cusomtermanagedkeyname_go">
 <a href="#cusomtermanagedkeyname_go" style="color: inherit; text-decoration: inherit;">Cusomter<wbr>Managed<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="synapseworkspaceid_go">
-<a href="#synapseworkspaceid_go" style="color: inherit; text-decoration: inherit;">Synapse<wbr>Workspace<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}As this property name contained a typo originally, please switch to using &#39;customer_managed_key_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="customermanagedkeyname_go">
+<a href="#customermanagedkeyname_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -240,16 +257,24 @@ The WorkspaceKey resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="synapseworkspaceid_nodejs">
+<a href="#synapseworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">synapse<wbr>Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="cusomtermanagedkeyname_nodejs">
 <a href="#cusomtermanagedkeyname_nodejs" style="color: inherit; text-decoration: inherit;">cusomter<wbr>Managed<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="synapseworkspaceid_nodejs">
-<a href="#synapseworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">synapse<wbr>Workspace<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}As this property name contained a typo originally, please switch to using &#39;customer_managed_key_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="customermanagedkeyname_nodejs">
+<a href="#customermanagedkeyname_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Managed<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -276,16 +301,24 @@ The WorkspaceKey resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="synapse_workspace_id_python">
+<a href="#synapse_workspace_id_python" style="color: inherit; text-decoration: inherit;">synapse_<wbr>workspace_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="cusomter_managed_key_name_python">
 <a href="#cusomter_managed_key_name_python" style="color: inherit; text-decoration: inherit;">cusomter_<wbr>managed_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="synapse_workspace_id_python">
-<a href="#synapse_workspace_id_python" style="color: inherit; text-decoration: inherit;">synapse_<wbr>workspace_<wbr>id</a>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}As this property name contained a typo originally, please switch to using &#39;customer_managed_key_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="customer_managed_key_name_python">
+<a href="#customer_managed_key_name_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>managed_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -374,6 +407,7 @@ Get an existing WorkspaceKey resource's state with the given name, ID, and optio
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">cusomter_managed_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">customer_managed_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">customer_managed_key_versionless_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">synapse_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> WorkspaceKey</code></pre></div>
 {{% /choosable %}}
@@ -494,10 +528,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_cusomtermanagedkeyname_csharp">
 <a href="#state_cusomtermanagedkeyname_csharp" style="color: inherit; text-decoration: inherit;">Cusomter<wbr>Managed<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}As this property name contained a typo originally, please switch to using &#39;customer_managed_key_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_customermanagedkeyname_csharp">
+<a href="#state_customermanagedkeyname_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -530,10 +572,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_cusomtermanagedkeyname_go">
 <a href="#state_cusomtermanagedkeyname_go" style="color: inherit; text-decoration: inherit;">Cusomter<wbr>Managed<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}As this property name contained a typo originally, please switch to using &#39;customer_managed_key_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_customermanagedkeyname_go">
+<a href="#state_customermanagedkeyname_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Managed<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -566,10 +616,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_cusomtermanagedkeyname_nodejs">
 <a href="#state_cusomtermanagedkeyname_nodejs" style="color: inherit; text-decoration: inherit;">cusomter<wbr>Managed<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}As this property name contained a typo originally, please switch to using &#39;customer_managed_key_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_customermanagedkeyname_nodejs">
+<a href="#state_customermanagedkeyname_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Managed<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -602,10 +660,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_cusomter_managed_key_name_python">
 <a href="#state_cusomter_managed_key_name_python" style="color: inherit; text-decoration: inherit;">cusomter_<wbr>managed_<wbr>key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}As this property name contained a typo originally, please switch to using &#39;customer_managed_key_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_customer_managed_key_name_python">
+<a href="#state_customer_managed_key_name_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>managed_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

@@ -158,6 +158,7 @@ const exampleIntegrationAccount = new azure.logicapps.IntegrationAccount("exampl
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">IntegrationAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                       <span class="nx">integration_service_environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -310,6 +311,15 @@ The IntegrationAccount resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The sku name of the Logic App Integration Account. Possible Values are `Basic`, `Free` and `Standard`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="integrationserviceenvironmentid_csharp">
+<a href="#integrationserviceenvironmentid_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Service<wbr>Environment<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the Integration Service Environment. Changing this forces a new Logic App Integration Account to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -357,6 +367,15 @@ The IntegrationAccount resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name of the Logic App Integration Account. Possible Values are `Basic`, `Free` and `Standard`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="integrationserviceenvironmentid_go">
+<a href="#integrationserviceenvironmentid_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Service<wbr>Environment<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the Integration Service Environment. Changing this forces a new Logic App Integration Account to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -408,6 +427,15 @@ The IntegrationAccount resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The sku name of the Logic App Integration Account. Possible Values are `Basic`, `Free` and `Standard`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="integrationserviceenvironmentid_nodejs">
+<a href="#integrationserviceenvironmentid_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Service<wbr>Environment<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the Integration Service Environment. Changing this forces a new Logic App Integration Account to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -455,6 +483,15 @@ The IntegrationAccount resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sku name of the Logic App Integration Account. Possible Values are `Basic`, `Free` and `Standard`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="integration_service_environment_id_python">
+<a href="#integration_service_environment_id_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>service_<wbr>environment_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the Integration Service Environment. Changing this forces a new Logic App Integration Account to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -556,6 +593,7 @@ Get an existing IntegrationAccount resource's state with the given name, ID, and
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">integration_service_environment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -673,6 +711,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_integrationserviceenvironmentid_csharp">
+<a href="#state_integrationserviceenvironmentid_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Service<wbr>Environment<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the Integration Service Environment. Changing this forces a new Logic App Integration Account to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -721,6 +768,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_integrationserviceenvironmentid_go">
+<a href="#state_integrationserviceenvironmentid_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Service<wbr>Environment<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the Integration Service Environment. Changing this forces a new Logic App Integration Account to be created.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -771,6 +827,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_integrationserviceenvironmentid_nodejs">
+<a href="#state_integrationserviceenvironmentid_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Service<wbr>Environment<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the Integration Service Environment. Changing this forces a new Logic App Integration Account to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -819,6 +884,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_integration_service_environment_id_python">
+<a href="#state_integration_service_environment_id_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>service_<wbr>environment_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the Integration Service Environment. Changing this forces a new Logic App Integration Account to be created.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>

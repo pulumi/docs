@@ -258,6 +258,15 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="curve_csharp">
+<a href="#curve_csharp" style="color: inherit; text-decoration: inherit;">Curve</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EC Curve name of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="e_csharp">
 <a href="#e_csharp" style="color: inherit; text-decoration: inherit;">E</a>
 </span>
@@ -328,6 +337,24 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="publickeyopenssh_csharp">
+<a href="#publickeyopenssh_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Openssh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The OpenSSH encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="publickeypem_csharp">
+<a href="#publickeypem_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Pem</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PEM encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -353,11 +380,38 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base ID of the Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="x_csharp">
+<a href="#x_csharp" style="color: inherit; text-decoration: inherit;">X</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EC X component of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="y_csharp">
+<a href="#y_csharp" style="color: inherit; text-decoration: inherit;">Y</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EC Y component of this Key Vault Key.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="curve_go">
+<a href="#curve_go" style="color: inherit; text-decoration: inherit;">Curve</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EC Curve name of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="e_go">
 <a href="#e_go" style="color: inherit; text-decoration: inherit;">E</a>
@@ -429,6 +483,24 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="publickeyopenssh_go">
+<a href="#publickeyopenssh_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Openssh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The OpenSSH encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="publickeypem_go">
+<a href="#publickeypem_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Pem</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PEM encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -454,11 +526,38 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base ID of the Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="x_go">
+<a href="#x_go" style="color: inherit; text-decoration: inherit;">X</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EC X component of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="y_go">
+<a href="#y_go" style="color: inherit; text-decoration: inherit;">Y</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EC Y component of this Key Vault Key.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="curve_nodejs">
+<a href="#curve_nodejs" style="color: inherit; text-decoration: inherit;">curve</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EC Curve name of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="e_nodejs">
 <a href="#e_nodejs" style="color: inherit; text-decoration: inherit;">e</a>
@@ -530,6 +629,24 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="publickeyopenssh_nodejs">
+<a href="#publickeyopenssh_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Openssh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The OpenSSH encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="publickeypem_nodejs">
+<a href="#publickeypem_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Pem</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PEM encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -555,11 +672,38 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base ID of the Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="x_nodejs">
+<a href="#x_nodejs" style="color: inherit; text-decoration: inherit;">x</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EC X component of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="y_nodejs">
+<a href="#y_nodejs" style="color: inherit; text-decoration: inherit;">y</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EC Y component of this Key Vault Key.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="curve_python">
+<a href="#curve_python" style="color: inherit; text-decoration: inherit;">curve</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The EC Curve name of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="e_python">
 <a href="#e_python" style="color: inherit; text-decoration: inherit;">e</a>
@@ -631,6 +775,24 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="public_key_openssh_python">
+<a href="#public_key_openssh_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>openssh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The OpenSSH encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="public_key_pem_python">
+<a href="#public_key_pem_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>pem</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The PEM encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -656,6 +818,24 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base ID of the Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="x_python">
+<a href="#x_python" style="color: inherit; text-decoration: inherit;">x</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The EC X component of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="y_python">
+<a href="#y_python" style="color: inherit; text-decoration: inherit;">y</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The EC Y component of this Key Vault Key.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

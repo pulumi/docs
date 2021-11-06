@@ -382,6 +382,7 @@ const exampleSynapseSpark = new azure.machinelearning.SynapseSpark("exampleSynap
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                  <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[SynapseSparkIdentityArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">local_auth_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">machine_learning_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -552,6 +553,15 @@ The SynapseSpark resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Synapse Spark to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="localauthenabled_csharp">
+<a href="#localauthenabled_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Auth<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether local authentication methods is enabled. Defaults to `true`. Changing this forces a new Machine Learning Synapse Spark to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -617,6 +627,15 @@ The SynapseSpark resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#synapsesparkidentity">Synapse<wbr>Spark<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Synapse Spark to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="localauthenabled_go">
+<a href="#localauthenabled_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Auth<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether local authentication methods is enabled. Defaults to `true`. Changing this forces a new Machine Learning Synapse Spark to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -686,6 +705,15 @@ The SynapseSpark resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Synapse Spark to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="localauthenabled_nodejs">
+<a href="#localauthenabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Auth<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether local authentication methods is enabled. Defaults to `true`. Changing this forces a new Machine Learning Synapse Spark to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -751,6 +779,15 @@ The SynapseSpark resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#synapsesparkidentity">Synapse<wbr>Spark<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Synapse Spark to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="local_auth_enabled_python">
+<a href="#local_auth_enabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>auth_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether local authentication methods is enabled. Defaults to `true`. Changing this forces a new Machine Learning Synapse Spark to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -854,6 +891,7 @@ Get an existing SynapseSpark resource's state with the given name, ID, and optio
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[SynapseSparkIdentityArgs]</span> = None<span class="p">,</span>
+        <span class="nx">local_auth_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">machine_learning_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -989,6 +1027,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Synapse Spark to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_localauthenabled_csharp">
+<a href="#state_localauthenabled_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Auth<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether local authentication methods is enabled. Defaults to `true`. Changing this forces a new Machine Learning Synapse Spark to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -1054,6 +1101,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#synapsesparkidentity">Synapse<wbr>Spark<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Synapse Spark to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_localauthenabled_go">
+<a href="#state_localauthenabled_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Auth<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether local authentication methods is enabled. Defaults to `true`. Changing this forces a new Machine Learning Synapse Spark to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
@@ -1123,6 +1179,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Synapse Spark to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_localauthenabled_nodejs">
+<a href="#state_localauthenabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Auth<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether local authentication methods is enabled. Defaults to `true`. Changing this forces a new Machine Learning Synapse Spark to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -1188,6 +1253,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#synapsesparkidentity">Synapse<wbr>Spark<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Machine Learning Synapse Spark to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_local_auth_enabled_python">
+<a href="#state_local_auth_enabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>auth_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether local authentication methods is enabled. Defaults to `true`. Changing this forces a new Machine Learning Synapse Spark to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">

@@ -44,9 +44,22 @@ class MyStack : Stack
             ResourceGroupName = exampleResourceGroup.Name,
             Sku = "PerGB2018",
         });
+        var exampleAnalyticsSolution = new Azure.OperationalInsights.AnalyticsSolution("exampleAnalyticsSolution", new Azure.OperationalInsights.AnalyticsSolutionArgs
+        {
+            SolutionName = "SecurityInsights",
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            WorkspaceResourceId = exampleAnalyticsWorkspace.Id,
+            WorkspaceName = exampleAnalyticsWorkspace.Name,
+            Plan = new Azure.OperationalInsights.Inputs.AnalyticsSolutionPlanArgs
+            {
+                Publisher = "Microsoft",
+                Product = "OMSGallery/SecurityInsights",
+            },
+        });
         var exampleDataConnectorMicrosoftDefenderAdvancedThreatProtection = new Azure.Sentinel.DataConnectorMicrosoftDefenderAdvancedThreatProtection("exampleDataConnectorMicrosoftDefenderAdvancedThreatProtection", new Azure.Sentinel.DataConnectorMicrosoftDefenderAdvancedThreatProtectionArgs
         {
-            LogAnalyticsWorkspaceId = exampleAnalyticsWorkspace.Id,
+            LogAnalyticsWorkspaceId = exampleAnalyticsSolution.WorkspaceResourceId,
         });
     }
 
@@ -85,8 +98,22 @@ func main() {
 		if err != nil {
 			return err
 		}
+		exampleAnalyticsSolution, err := operationalinsights.NewAnalyticsSolution(ctx, "exampleAnalyticsSolution", &operationalinsights.AnalyticsSolutionArgs{
+			SolutionName:        pulumi.String("SecurityInsights"),
+			Location:            exampleResourceGroup.Location,
+			ResourceGroupName:   exampleResourceGroup.Name,
+			WorkspaceResourceId: exampleAnalyticsWorkspace.ID(),
+			WorkspaceName:       exampleAnalyticsWorkspace.Name,
+			Plan: &operationalinsights.AnalyticsSolutionPlanArgs{
+				Publisher: pulumi.String("Microsoft"),
+				Product:   pulumi.String("OMSGallery/SecurityInsights"),
+			},
+		})
+		if err != nil {
+			return err
+		}
 		_, err = sentinel.NewDataConnectorMicrosoftDefenderAdvancedThreatProtection(ctx, "exampleDataConnectorMicrosoftDefenderAdvancedThreatProtection", &sentinel.DataConnectorMicrosoftDefenderAdvancedThreatProtectionArgs{
-			LogAnalyticsWorkspaceId: exampleAnalyticsWorkspace.ID(),
+			LogAnalyticsWorkspaceId: exampleAnalyticsSolution.WorkspaceResourceId,
 		})
 		if err != nil {
 			return err
@@ -111,7 +138,17 @@ example_analytics_workspace = azure.operationalinsights.AnalyticsWorkspace("exam
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
     sku="PerGB2018")
-example_data_connector_microsoft_defender_advanced_threat_protection = azure.sentinel.DataConnectorMicrosoftDefenderAdvancedThreatProtection("exampleDataConnectorMicrosoftDefenderAdvancedThreatProtection", log_analytics_workspace_id=example_analytics_workspace.id)
+example_analytics_solution = azure.operationalinsights.AnalyticsSolution("exampleAnalyticsSolution",
+    solution_name="SecurityInsights",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    workspace_resource_id=example_analytics_workspace.id,
+    workspace_name=example_analytics_workspace.name,
+    plan=azure.operationalinsights.AnalyticsSolutionPlanArgs(
+        publisher="Microsoft",
+        product="OMSGallery/SecurityInsights",
+    ))
+example_data_connector_microsoft_defender_advanced_threat_protection = azure.sentinel.DataConnectorMicrosoftDefenderAdvancedThreatProtection("exampleDataConnectorMicrosoftDefenderAdvancedThreatProtection", log_analytics_workspace_id=example_analytics_solution.workspace_resource_id)
 ```
 
 
@@ -131,7 +168,18 @@ const exampleAnalyticsWorkspace = new azure.operationalinsights.AnalyticsWorkspa
     resourceGroupName: exampleResourceGroup.name,
     sku: "PerGB2018",
 });
-const exampleDataConnectorMicrosoftDefenderAdvancedThreatProtection = new azure.sentinel.DataConnectorMicrosoftDefenderAdvancedThreatProtection("exampleDataConnectorMicrosoftDefenderAdvancedThreatProtection", {logAnalyticsWorkspaceId: exampleAnalyticsWorkspace.id});
+const exampleAnalyticsSolution = new azure.operationalinsights.AnalyticsSolution("exampleAnalyticsSolution", {
+    solutionName: "SecurityInsights",
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    workspaceResourceId: exampleAnalyticsWorkspace.id,
+    workspaceName: exampleAnalyticsWorkspace.name,
+    plan: {
+        publisher: "Microsoft",
+        product: "OMSGallery/SecurityInsights",
+    },
+});
+const exampleDataConnectorMicrosoftDefenderAdvancedThreatProtection = new azure.sentinel.DataConnectorMicrosoftDefenderAdvancedThreatProtection("exampleDataConnectorMicrosoftDefenderAdvancedThreatProtection", {logAnalyticsWorkspaceId: exampleAnalyticsSolution.workspaceResourceId});
 ```
 
 

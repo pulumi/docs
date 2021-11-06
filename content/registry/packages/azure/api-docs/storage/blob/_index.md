@@ -196,6 +196,7 @@ const exampleBlob = new azure.storage.Blob("exampleBlob", {
 <span class="k">def </span><span class="nx">Blob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
          <span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">cache_control</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">content_md5</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -374,6 +375,15 @@ Changing this forces a new resource to be created.
     <dd>{{% md %}}The access tier of the storage blob. Possible values are `Archive`, `Cool` and `Hot`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cachecontrol_csharp">
+<a href="#cachecontrol_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Controls the [cache control header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) content of the response when blob is requested .
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="contentmd5_csharp">
 <a href="#contentmd5_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Md5</a>
 </span>
@@ -495,6 +505,15 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access tier of the storage blob. Possible values are `Archive`, `Cool` and `Hot`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cachecontrol_go">
+<a href="#cachecontrol_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Controls the [cache control header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) content of the response when blob is requested .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentmd5_go">
@@ -620,6 +639,15 @@ Changing this forces a new resource to be created.
     <dd>{{% md %}}The access tier of the storage blob. Possible values are `Archive`, `Cool` and `Hot`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cachecontrol_nodejs">
+<a href="#cachecontrol_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Controls the [cache control header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) content of the response when blob is requested .
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="contentmd5_nodejs">
 <a href="#contentmd5_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Md5</a>
 </span>
@@ -741,6 +769,15 @@ Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access tier of the storage blob. Possible values are `Archive`, `Cool` and `Hot`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cache_control_python">
+<a href="#cache_control_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Controls the [cache control header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) content of the response when blob is requested .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_md5_python">
@@ -934,6 +971,7 @@ Get an existing Blob resource's state with the given name, ID, and optional extr
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">cache_control</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">content_md5</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -1068,6 +1106,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The access tier of the storage blob. Possible values are `Archive`, `Cool` and `Hot`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_cachecontrol_csharp">
+<a href="#state_cachecontrol_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Controls the [cache control header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) content of the response when blob is requested .
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_contentmd5_csharp">
 <a href="#state_contentmd5_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Md5</a>
 </span>
@@ -1198,6 +1245,15 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access tier of the storage blob. Possible values are `Archive`, `Cool` and `Hot`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_cachecontrol_go">
+<a href="#state_cachecontrol_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Controls the [cache control header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) content of the response when blob is requested .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentmd5_go">
@@ -1332,6 +1388,15 @@ Changing this forces a new resource to be created.
     <dd>{{% md %}}The access tier of the storage blob. Possible values are `Archive`, `Cool` and `Hot`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_cachecontrol_nodejs">
+<a href="#state_cachecontrol_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Controls the [cache control header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) content of the response when blob is requested .
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_contentmd5_nodejs">
 <a href="#state_contentmd5_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Md5</a>
 </span>
@@ -1462,6 +1527,15 @@ Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access tier of the storage blob. Possible values are `Archive`, `Cool` and `Hot`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_cache_control_python">
+<a href="#state_cache_control_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Controls the [cache control header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) content of the response when blob is requested .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_md5_python">

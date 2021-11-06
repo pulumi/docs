@@ -47,13 +47,13 @@ class MyStack : Stack
                     Priority = 1,
                     Action = new Azure.FrontDoor.Inputs.RulesEngineRuleActionArgs
                     {
-                        ResponseHeaderActions = 
+                        ResponseHeaders = 
                         {
-                            
+                            new Azure.FrontDoor.Inputs.RulesEngineRuleActionResponseHeaderArgs
                             {
-                                { "headerActionType", "Append" },
-                                { "headerName", "X-TEST-HEADER" },
-                                { "value", "Append Header Rule" },
+                                HeaderActionType = "Append",
+                                HeaderName = "X-TEST-HEADER",
+                                Value = "Append Header Rule",
                             },
                         },
                     },
@@ -125,11 +125,11 @@ func main() {
 					Name:     pulumi.String("debuggingoutput"),
 					Priority: pulumi.Int(1),
 					Action: &frontdoor.RulesEngineRuleActionArgs{
-						ResponseHeaderActions: []map[string]interface{}{
-							map[string]interface{}{
-								"headerActionType": "Append",
-								"headerName":       "X-TEST-HEADER",
-								"value":            "Append Header Rule",
+						ResponseHeaders: frontdoor.RulesEngineRuleActionResponseHeaderArray{
+							&frontdoor.RulesEngineRuleActionResponseHeaderArgs{
+								HeaderActionType: pulumi.String("Append"),
+								HeaderName:       pulumi.String("X-TEST-HEADER"),
+								Value:            pulumi.String("Append Header Rule"),
 							},
 						},
 					},
@@ -190,11 +190,11 @@ example_rules_engine = azure.frontdoor.RulesEngine("exampleRulesEngine",
             name="debuggingoutput",
             priority=1,
             action=azure.frontdoor.RulesEngineRuleActionArgs(
-                response_header_actions=[{
-                    "headerActionType": "Append",
-                    "headerName": "X-TEST-HEADER",
-                    "value": "Append Header Rule",
-                }],
+                response_headers=[azure.frontdoor.RulesEngineRuleActionResponseHeaderArgs(
+                    header_action_type="Append",
+                    header_name="X-TEST-HEADER",
+                    value="Append Header Rule",
+                )],
             ),
         ),
         azure.frontdoor.RulesEngineRuleArgs(
@@ -245,7 +245,7 @@ const exampleRulesEngine = new azure.frontdoor.RulesEngine("exampleRulesEngine",
             name: "debuggingoutput",
             priority: 1,
             action: {
-                responseHeaderActions: [{
+                responseHeaders: [{
                     headerActionType: "Append",
                     headerName: "X-TEST-HEADER",
                     value: "Append Header Rule",
@@ -1604,7 +1604,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}can be set to `true` or `false` to negate the given condition.
+    <dd>{{% md %}}can be set to `true` or `false` to negate the given condition. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_csharp">
@@ -1613,7 +1613,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}match against a specific key when `variable` is set to `PostArgs` or `RequestHeader`. It cannot be used with `QueryString` and `RequestMethod`. Defaults to `null`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_csharp">
 <a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -1661,7 +1662,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}can be set to `true` or `false` to negate the given condition.
+    <dd>{{% md %}}can be set to `true` or `false` to negate the given condition. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_go">
@@ -1670,7 +1671,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}match against a specific key when `variable` is set to `PostArgs` or `RequestHeader`. It cannot be used with `QueryString` and `RequestMethod`. Defaults to `null`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_go">
 <a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -1718,7 +1720,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}can be set to `true` or `false` to negate the given condition.
+    <dd>{{% md %}}can be set to `true` or `false` to negate the given condition. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_nodejs">
@@ -1727,7 +1729,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}match against a specific key when `variable` is set to `PostArgs` or `RequestHeader`. It cannot be used with `QueryString` and `RequestMethod`. Defaults to `null`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_nodejs">
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -1775,7 +1778,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}can be set to `true` or `false` to negate the given condition.
+    <dd>{{% md %}}can be set to `true` or `false` to negate the given condition. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_python">
@@ -1784,7 +1787,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}match against a specific key when `variable` is set to `PostArgs` or `RequestHeader`. It cannot be used with `QueryString` and `RequestMethod`. Defaults to `null`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_python">
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
