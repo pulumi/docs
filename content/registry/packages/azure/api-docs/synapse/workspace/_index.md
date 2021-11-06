@@ -249,6 +249,7 @@ const exampleWorkspace = new azure.synapse.Workspace("exampleWorkspace", {
               <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">purview_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">sql_aad_admin</span><span class="p">:</span> <span class="nx">Optional[WorkspaceSqlAadAdminArgs]</span> = None<span class="p">,</span>
               <span class="nx">sql_administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">sql_administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">sql_identity_control_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -536,6 +537,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The ID of purview account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sqlaadadmin_csharp">
+<a href="#sqlaadadmin_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Aad<wbr>Admin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workspacesqlaadadmin">Workspace<wbr>Sql<wbr>Aad<wbr>Admin<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `sql_aad_admin` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sqlidentitycontrolenabled_csharp">
 <a href="#sqlidentitycontrolenabled_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Identity<wbr>Control<wbr>Enabled</a>
 </span>
@@ -709,6 +719,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of purview account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sqlaadadmin_go">
+<a href="#sqlaadadmin_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Aad<wbr>Admin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workspacesqlaadadmin">Workspace<wbr>Sql<wbr>Aad<wbr>Admin<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `sql_aad_admin` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlidentitycontrolenabled_go">
@@ -886,6 +905,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The ID of purview account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sqlaadadmin_nodejs">
+<a href="#sqlaadadmin_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Aad<wbr>Admin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workspacesqlaadadmin">Workspace<wbr>Sql<wbr>Aad<wbr>Admin<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `sql_aad_admin` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sqlidentitycontrolenabled_nodejs">
 <a href="#sqlidentitycontrolenabled_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Identity<wbr>Control<wbr>Enabled</a>
 </span>
@@ -1059,6 +1087,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of purview account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sql_aad_admin_python">
+<a href="#sql_aad_admin_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>aad_<wbr>admin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workspacesqlaadadmin">Workspace<wbr>Sql<wbr>Aad<wbr>Admin<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `sql_aad_admin` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_identity_control_enabled_python">
@@ -1239,6 +1276,7 @@ Get an existing Workspace resource's state with the given name, ID, and optional
         <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">purview_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">sql_aad_admin</span><span class="p">:</span> <span class="nx">Optional[WorkspaceSqlAadAdminArgs]</span> = None<span class="p">,</span>
         <span class="nx">sql_administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sql_administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sql_identity_control_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -1500,6 +1538,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the Resource Group where the synapse Workspace should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_sqlaadadmin_csharp">
+<a href="#state_sqlaadadmin_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Aad<wbr>Admin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workspacesqlaadadmin">Workspace<wbr>Sql<wbr>Aad<wbr>Admin<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `sql_aad_admin` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_sqladministratorlogin_csharp">
 <a href="#state_sqladministratorlogin_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Administrator<wbr>Login</a>
 </span>
@@ -1691,6 +1738,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group where the synapse Workspace should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sqlaadadmin_go">
+<a href="#state_sqlaadadmin_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Aad<wbr>Admin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workspacesqlaadadmin">Workspace<wbr>Sql<wbr>Aad<wbr>Admin<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `sql_aad_admin` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqladministratorlogin_go">
@@ -1886,6 +1942,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the Resource Group where the synapse Workspace should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_sqlaadadmin_nodejs">
+<a href="#state_sqlaadadmin_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Aad<wbr>Admin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workspacesqlaadadmin">Workspace<wbr>Sql<wbr>Aad<wbr>Admin<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `sql_aad_admin` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_sqladministratorlogin_nodejs">
 <a href="#state_sqladministratorlogin_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Administrator<wbr>Login</a>
 </span>
@@ -2077,6 +2142,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group where the synapse Workspace should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sql_aad_admin_python">
+<a href="#state_sql_aad_admin_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>aad_<wbr>admin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workspacesqlaadadmin">Workspace<wbr>Sql<wbr>Aad<wbr>Admin<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `sql_aad_admin` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sql_administrator_login_python">
@@ -2977,6 +3051,132 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Identity Type for the Service Principal associated with the Managed Service Identity of this Synapse Workspace.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="workspacesqlaadadmin">Workspace<wbr>Sql<wbr>Aad<wbr>Admin</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="login_csharp">
+<a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The login name of the Azure AD Administrator of this Synapse Workspace SQL.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="objectid_csharp">
+<a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The object id of the Azure AD Administrator of this Synapse Workspace SQL.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id of the Azure AD Administrator of this Synapse Workspace SQL.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="login_go">
+<a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The login name of the Azure AD Administrator of this Synapse Workspace SQL.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="objectid_go">
+<a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The object id of the Azure AD Administrator of this Synapse Workspace SQL.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id of the Azure AD Administrator of this Synapse Workspace SQL.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="login_nodejs">
+<a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The login name of the Azure AD Administrator of this Synapse Workspace SQL.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="objectid_nodejs">
+<a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The object id of the Azure AD Administrator of this Synapse Workspace SQL.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id of the Azure AD Administrator of this Synapse Workspace SQL.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="login_python">
+<a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The login name of the Azure AD Administrator of this Synapse Workspace SQL.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="object_id_python">
+<a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The object id of the Azure AD Administrator of this Synapse Workspace SQL.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The tenant id of the Azure AD Administrator of this Synapse Workspace SQL.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

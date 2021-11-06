@@ -3427,7 +3427,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the `backup`. Possible values are `Continuous` and `Periodic`. Defaults to `Periodic`.
+    <dd>{{% md %}}The type of the `backup`. Possible values are `Continuous` and `Periodic`. Defaults to `Periodic`. Migration of `Periodic` to `Continuous` is one-way, changing `Continuous` to `Periodic` forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intervalinminutes_csharp">
@@ -3458,7 +3458,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the `backup`. Possible values are `Continuous` and `Periodic`. Defaults to `Periodic`.
+    <dd>{{% md %}}The type of the `backup`. Possible values are `Continuous` and `Periodic`. Defaults to `Periodic`. Migration of `Periodic` to `Continuous` is one-way, changing `Continuous` to `Periodic` forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intervalinminutes_go">
@@ -3489,7 +3489,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the `backup`. Possible values are `Continuous` and `Periodic`. Defaults to `Periodic`.
+    <dd>{{% md %}}The type of the `backup`. Possible values are `Continuous` and `Periodic`. Defaults to `Periodic`. Migration of `Periodic` to `Continuous` is one-way, changing `Continuous` to `Periodic` forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intervalinminutes_nodejs">
@@ -3520,7 +3520,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the `backup`. Possible values are `Continuous` and `Periodic`. Defaults to `Periodic`.
+    <dd>{{% md %}}The type of the `backup`. Possible values are `Continuous` and `Periodic`. Defaults to `Periodic`. Migration of `Periodic` to `Continuous` is one-way, changing `Continuous` to `Periodic` forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_in_minutes_python">

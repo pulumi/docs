@@ -29,6 +29,7 @@ no_edit_this_page: true
 <span class="k">def </span><span class="nx">ZipBlob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">cache_control</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[pulumi.Archive]</span> = None<span class="p">,</span>
             <span class="nx">content_md5</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -202,6 +203,14 @@ The ZipBlob resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cachecontrol_csharp">
+<a href="#cachecontrol_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
 </span>
@@ -304,6 +313,14 @@ The ZipBlob resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Optional">
         <span id="accesstier_go">
 <a href="#accesstier_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cachecontrol_go">
+<a href="#cachecontrol_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -418,6 +435,14 @@ The ZipBlob resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cachecontrol_nodejs">
+<a href="#cachecontrol_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
@@ -520,6 +545,14 @@ The ZipBlob resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Optional">
         <span id="access_tier_python">
 <a href="#access_tier_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cache_control_python">
+<a href="#cache_control_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -703,6 +736,7 @@ Get an existing ZipBlob resource's state with the given name, ID, and optional e
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">cache_control</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[pulumi.Archive]</span> = None<span class="p">,</span>
         <span class="nx">content_md5</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -836,6 +870,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_cachecontrol_csharp">
+<a href="#state_cachecontrol_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_content_csharp">
 <a href="#state_content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
 </span>
@@ -946,6 +988,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_accesstier_go">
 <a href="#state_accesstier_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_cachecontrol_go">
+<a href="#state_cachecontrol_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1068,6 +1118,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_cachecontrol_nodejs">
+<a href="#state_cachecontrol_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Control</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_content_nodejs">
 <a href="#state_content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
@@ -1178,6 +1236,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_access_tier_python">
 <a href="#state_access_tier_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_cache_control_python">
+<a href="#state_cache_control_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

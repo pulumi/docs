@@ -131,6 +131,7 @@ const example = new azure.network.FirewallPolicy("example", {
                    <span class="nx">base_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyDnsArgs]</span> = None<span class="p">,</span>
                    <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyIdentityArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">insights</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyInsightsArgs]</span> = None<span class="p">,</span>
                    <span class="nx">intrusion_detection</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyIntrusionDetectionArgs]</span> = None<span class="p">,</span>
                    <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -306,6 +307,15 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="insights_csharp">
+<a href="#insights_csharp" style="color: inherit; text-decoration: inherit;">Insights</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyinsights">Firewall<wbr>Policy<wbr>Insights<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `insights` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="intrusiondetection_csharp">
 <a href="#intrusiondetection_csharp" style="color: inherit; text-decoration: inherit;">Intrusion<wbr>Detection</a>
 </span>
@@ -425,6 +435,15 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#firewallpolicyidentity">Firewall<wbr>Policy<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new Firewall Policy to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="insights_go">
+<a href="#insights_go" style="color: inherit; text-decoration: inherit;">Insights</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyinsights">Firewall<wbr>Policy<wbr>Insights<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `insights` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intrusiondetection_go">
@@ -548,6 +567,15 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="insights_nodejs">
+<a href="#insights_nodejs" style="color: inherit; text-decoration: inherit;">insights</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyinsights">Firewall<wbr>Policy<wbr>Insights<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `insights` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="intrusiondetection_nodejs">
 <a href="#intrusiondetection_nodejs" style="color: inherit; text-decoration: inherit;">intrusion<wbr>Detection</a>
 </span>
@@ -667,6 +695,15 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#firewallpolicyidentity">Firewall<wbr>Policy<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new Firewall Policy to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="insights_python">
+<a href="#insights_python" style="color: inherit; text-decoration: inherit;">insights</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyinsights">Firewall<wbr>Policy<wbr>Insights<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `insights` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intrusion_detection_python">
@@ -935,6 +972,7 @@ Get an existing FirewallPolicy resource's state with the given name, ID, and opt
         <span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyDnsArgs]</span> = None<span class="p">,</span>
         <span class="nx">firewalls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyIdentityArgs]</span> = None<span class="p">,</span>
+        <span class="nx">insights</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyInsightsArgs]</span> = None<span class="p">,</span>
         <span class="nx">intrusion_detection</span><span class="p">:</span> <span class="nx">Optional[FirewallPolicyIntrusionDetectionArgs]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1103,6 +1141,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_insights_csharp">
+<a href="#state_insights_csharp" style="color: inherit; text-decoration: inherit;">Insights</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyinsights">Firewall<wbr>Policy<wbr>Insights<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `insights` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_intrusiondetection_csharp">
 <a href="#state_intrusiondetection_csharp" style="color: inherit; text-decoration: inherit;">Intrusion<wbr>Detection</a>
 </span>
@@ -1249,6 +1296,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallpolicyidentity">Firewall<wbr>Policy<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new Firewall Policy to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_insights_go">
+<a href="#state_insights_go" style="color: inherit; text-decoration: inherit;">Insights</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyinsights">Firewall<wbr>Policy<wbr>Insights<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `insights` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_intrusiondetection_go">
@@ -1399,6 +1455,15 @@ The following state arguments are supported:
     <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new Firewall Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_insights_nodejs">
+<a href="#state_insights_nodejs" style="color: inherit; text-decoration: inherit;">insights</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyinsights">Firewall<wbr>Policy<wbr>Insights<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `insights` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_intrusiondetection_nodejs">
 <a href="#state_intrusiondetection_nodejs" style="color: inherit; text-decoration: inherit;">intrusion<wbr>Detection</a>
 </span>
@@ -1545,6 +1610,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallpolicyidentity">Firewall<wbr>Policy<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new Firewall Policy to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_insights_python">
+<a href="#state_insights_python" style="color: inherit; text-decoration: inherit;">insights</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyinsights">Firewall<wbr>Policy<wbr>Insights<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `insights` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_intrusion_detection_python">
@@ -1933,6 +2007,258 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user assigned managed identities.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="firewallpolicyinsights">Firewall<wbr>Policy<wbr>Insights</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="defaultloganalyticsworkspaceid_csharp">
+<a href="#defaultloganalyticsworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the default Log Analytics Workspace that the Firewalls associated with this Firewall Policy will send their logs to, when there is no location matches in the `log_analytics_workspace`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the insights functionality is enabled for this Firewall Policy.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loganalyticsworkspaces_csharp">
+<a href="#loganalyticsworkspaces_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyinsightsloganalyticsworkspace">List&lt;Firewall<wbr>Policy<wbr>Insights<wbr>Log<wbr>Analytics<wbr>Workspace&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `log_analytics_workspace` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentionindays_csharp">
+<a href="#retentionindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The log retention period in days.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="defaultloganalyticsworkspaceid_go">
+<a href="#defaultloganalyticsworkspaceid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the default Log Analytics Workspace that the Firewalls associated with this Firewall Policy will send their logs to, when there is no location matches in the `log_analytics_workspace`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the insights functionality is enabled for this Firewall Policy.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loganalyticsworkspaces_go">
+<a href="#loganalyticsworkspaces_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyinsightsloganalyticsworkspace">[]Firewall<wbr>Policy<wbr>Insights<wbr>Log<wbr>Analytics<wbr>Workspace</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `log_analytics_workspace` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentionindays_go">
+<a href="#retentionindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The log retention period in days.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="defaultloganalyticsworkspaceid_nodejs">
+<a href="#defaultloganalyticsworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the default Log Analytics Workspace that the Firewalls associated with this Firewall Policy will send their logs to, when there is no location matches in the `log_analytics_workspace`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the insights functionality is enabled for this Firewall Policy.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loganalyticsworkspaces_nodejs">
+<a href="#loganalyticsworkspaces_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyinsightsloganalyticsworkspace">Firewall<wbr>Policy<wbr>Insights<wbr>Log<wbr>Analytics<wbr>Workspace[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `log_analytics_workspace` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentionindays_nodejs">
+<a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The log retention period in days.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="default_log_analytics_workspace_id_python">
+<a href="#default_log_analytics_workspace_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>log_<wbr>analytics_<wbr>workspace_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the default Log Analytics Workspace that the Firewalls associated with this Firewall Policy will send their logs to, when there is no location matches in the `log_analytics_workspace`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the insights functionality is enabled for this Firewall Policy.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="log_analytics_workspaces_python">
+<a href="#log_analytics_workspaces_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspaces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallpolicyinsightsloganalyticsworkspace">Sequence[Firewall<wbr>Policy<wbr>Insights<wbr>Log<wbr>Analytics<wbr>Workspace]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `log_analytics_workspace` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retention_in_days_python">
+<a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The log retention period in days.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="firewallpolicyinsightsloganalyticsworkspace">Firewall<wbr>Policy<wbr>Insights<wbr>Log<wbr>Analytics<wbr>Workspace</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="firewalllocation_csharp">
+<a href="#firewalllocation_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the Firewalls, that when matches this Log Analytics Workspace will be used to consume their logs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Log Analytics Workspace that the Firewalls associated with this Firewall Policy will send their logs to when their locations match the `firewall_location`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="firewalllocation_go">
+<a href="#firewalllocation_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the Firewalls, that when matches this Log Analytics Workspace will be used to consume their logs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Log Analytics Workspace that the Firewalls associated with this Firewall Policy will send their logs to when their locations match the `firewall_location`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="firewalllocation_nodejs">
+<a href="#firewalllocation_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the Firewalls, that when matches this Log Analytics Workspace will be used to consume their logs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Log Analytics Workspace that the Firewalls associated with this Firewall Policy will send their logs to when their locations match the `firewall_location`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="firewall_location_python">
+<a href="#firewall_location_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of the Firewalls, that when matches this Log Analytics Workspace will be used to consume their logs.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Log Analytics Workspace that the Firewalls associated with this Firewall Policy will send their logs to when their locations match the `firewall_location`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

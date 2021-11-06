@@ -21,6 +21,7 @@ Explore the resources and functions of the azure.monitoring module.
     <li><a href="autoscalesetting" title="AutoscaleSetting"><span class="api-symbol api-symbol--resource"></span>AutoscaleSetting</a></li>
     <li><a href="diagnosticsetting" title="DiagnosticSetting"><span class="api-symbol api-symbol--resource"></span>DiagnosticSetting</a></li>
     <li><a href="logprofile" title="LogProfile"><span class="api-symbol api-symbol--resource"></span>LogProfile</a></li>
+    <li><a href="logzmonitor" title="LogzMonitor"><span class="api-symbol api-symbol--resource"></span>LogzMonitor</a></li>
     <li><a href="metricalert" title="MetricAlert"><span class="api-symbol api-symbol--resource"></span>MetricAlert</a></li>
     <li><a href="scheduledqueryrulesalert" title="ScheduledQueryRulesAlert"><span class="api-symbol api-symbol--resource"></span>ScheduledQueryRulesAlert</a></li>
     <li><a href="scheduledqueryruleslog" title="ScheduledQueryRulesLog"><span class="api-symbol api-symbol--resource"></span>ScheduledQueryRulesLog</a></li>
@@ -45,6 +46,6 @@ Explore the resources and functions of the azure.monitoring module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.25.0</dd>
+	<dd>4.26.0</dd>
 </dl>
 

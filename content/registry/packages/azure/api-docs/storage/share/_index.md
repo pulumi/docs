@@ -215,6 +215,7 @@ const exampleShare = new azure.storage.Share("exampleShare", {
 <span class="k">def </span><span class="nx">Share</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
           <span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[Sequence[ShareAclArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">enabled_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">quota</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -367,6 +368,15 @@ Changing this forces a new resource to be created.
     <dd>{{% md %}}One or more `acl` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enabledprotocol_csharp">
+<a href="#enabledprotocol_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol used for the share. Possible values are `SMB` and `NFS`. The `SBM` indicates the share can be accessed by SMBv3.0, SMBv2.1 and REST. The `NFS` indicates the share can be accessed by NFSv4.1. Defaults to `SMB`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
@@ -415,6 +425,15 @@ Changing this forces a new resource to be created.
         <span class="property-type"><a href="#shareacl">[]Share<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `acl` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabledprotocol_go">
+<a href="#enabledprotocol_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol used for the share. Possible values are `SMB` and `NFS`. The `SBM` indicates the share can be accessed by SMBv3.0, SMBv2.1 and REST. The `NFS` indicates the share can be accessed by NFSv4.1. Defaults to `SMB`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
@@ -467,6 +486,15 @@ Changing this forces a new resource to be created.
     <dd>{{% md %}}One or more `acl` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enabledprotocol_nodejs">
+<a href="#enabledprotocol_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol used for the share. Possible values are `SMB` and `NFS`. The `SBM` indicates the share can be accessed by SMBv3.0, SMBv2.1 and REST. The `NFS` indicates the share can be accessed by NFSv4.1. Defaults to `SMB`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
@@ -515,6 +543,15 @@ Changing this forces a new resource to be created.
         <span class="property-type"><a href="#shareacl">Sequence[Share<wbr>Acl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `acl` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_protocol_python">
+<a href="#enabled_protocol_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The protocol used for the share. Possible values are `SMB` and `NFS`. The `SBM` indicates the share can be accessed by SMBv3.0, SMBv2.1 and REST. The `NFS` indicates the share can be accessed by NFSv4.1. Defaults to `SMB`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
@@ -689,6 +726,7 @@ Get an existing Share resource's state with the given name, ID, and optional ext
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[Sequence[ShareAclArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">enabled_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">quota</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -816,6 +854,15 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more `acl` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_enabledprotocol_csharp">
+<a href="#state_enabledprotocol_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol used for the share. Possible values are `SMB` and `NFS`. The `SBM` indicates the share can be accessed by SMBv3.0, SMBv2.1 and REST. The `NFS` indicates the share can be accessed by NFSv4.1. Defaults to `SMB`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
@@ -882,6 +929,15 @@ Changing this forces a new resource to be created.
         <span class="property-type"><a href="#shareacl">[]Share<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `acl` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enabledprotocol_go">
+<a href="#state_enabledprotocol_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol used for the share. Possible values are `SMB` and `NFS`. The `SBM` indicates the share can be accessed by SMBv3.0, SMBv2.1 and REST. The `NFS` indicates the share can be accessed by NFSv4.1. Defaults to `SMB`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
@@ -952,6 +1008,15 @@ Changing this forces a new resource to be created.
     <dd>{{% md %}}One or more `acl` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_enabledprotocol_nodejs">
+<a href="#state_enabledprotocol_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol used for the share. Possible values are `SMB` and `NFS`. The `SBM` indicates the share can be accessed by SMBv3.0, SMBv2.1 and REST. The `NFS` indicates the share can be accessed by NFSv4.1. Defaults to `SMB`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
@@ -1018,6 +1083,15 @@ Changing this forces a new resource to be created.
         <span class="property-type"><a href="#shareacl">Sequence[Share<wbr>Acl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `acl` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enabled_protocol_python">
+<a href="#state_enabled_protocol_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The protocol used for the share. Possible values are `SMB` and `NFS`. The `SBM` indicates the share can be accessed by SMBv3.0, SMBv2.1 and REST. The `NFS` indicates the share can be accessed by NFSv4.1. Defaults to `SMB`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">

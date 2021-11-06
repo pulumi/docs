@@ -14,6 +14,8 @@ Explore the resources and functions of the azure.cosmosdb module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="account" title="Account"><span class="api-symbol api-symbol--resource"></span>Account</a></li>
+    <li><a href="cassandracluster" title="CassandraCluster"><span class="api-symbol api-symbol--resource"></span>CassandraCluster</a></li>
+    <li><a href="cassandradatacenter" title="CassandraDatacenter"><span class="api-symbol api-symbol--resource"></span>CassandraDatacenter</a></li>
     <li><a href="cassandrakeyspace" title="CassandraKeyspace"><span class="api-symbol api-symbol--resource"></span>CassandraKeyspace</a></li>
     <li><a href="cassandratable" title="CassandraTable"><span class="api-symbol api-symbol--resource"></span>CassandraTable</a></li>
     <li><a href="gremlindatabase" title="GremlinDatabase"><span class="api-symbol api-symbol--resource"></span>GremlinDatabase</a></li>
@@ -44,6 +46,6 @@ Explore the resources and functions of the azure.cosmosdb module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.25.0</dd>
+	<dd>4.26.0</dd>
 </dl>
 

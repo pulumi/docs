@@ -783,6 +783,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The RSA modulus of this Key Vault Key.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="publickeyopenssh_csharp">
+<a href="#publickeyopenssh_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Openssh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The OpenSSH encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="publickeypem_csharp">
+<a href="#publickeypem_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Pem</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PEM encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
@@ -847,6 +865,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RSA modulus of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="publickeyopenssh_go">
+<a href="#publickeyopenssh_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Openssh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The OpenSSH encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="publickeypem_go">
+<a href="#publickeypem_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Pem</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PEM encoded public key of this Key Vault Key.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_go">
@@ -915,6 +951,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The RSA modulus of this Key Vault Key.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="publickeyopenssh_nodejs">
+<a href="#publickeyopenssh_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Openssh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The OpenSSH encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="publickeypem_nodejs">
+<a href="#publickeypem_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Pem</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PEM encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
@@ -981,6 +1035,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The RSA modulus of this Key Vault Key.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="public_key_openssh_python">
+<a href="#public_key_openssh_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>openssh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The OpenSSH encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="public_key_pem_python">
+<a href="#public_key_pem_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>pem</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The PEM encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
@@ -1044,6 +1116,8 @@ Get an existing Key resource's state with the given name, ID, and optional extra
         <span class="nx">n</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">not_before_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">public_key_openssh</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">public_key_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">versionless_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1251,6 +1325,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Key not usable before the provided UTC datetime (Y-m-d'T'H:M:S'Z').
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_publickeyopenssh_csharp">
+<a href="#state_publickeyopenssh_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Openssh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The OpenSSH encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_publickeypem_csharp">
+<a href="#state_publickeypem_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Pem</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PEM encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -1388,6 +1480,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key not usable before the provided UTC datetime (Y-m-d'T'H:M:S'Z').
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_publickeyopenssh_go">
+<a href="#state_publickeyopenssh_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Openssh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The OpenSSH encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_publickeypem_go">
+<a href="#state_publickeypem_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Pem</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PEM encoded public key of this Key Vault Key.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -1529,6 +1639,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Key not usable before the provided UTC datetime (Y-m-d'T'H:M:S'Z').
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_publickeyopenssh_nodejs">
+<a href="#state_publickeyopenssh_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Openssh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The OpenSSH encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_publickeypem_nodejs">
+<a href="#state_publickeypem_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Pem</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PEM encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1666,6 +1794,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key not usable before the provided UTC datetime (Y-m-d'T'H:M:S'Z').
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_public_key_openssh_python">
+<a href="#state_public_key_openssh_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>openssh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The OpenSSH encoded public key of this Key Vault Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_public_key_pem_python">
+<a href="#state_public_key_pem_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>pem</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The PEM encoded public key of this Key Vault Key.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">

@@ -335,16 +335,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of this Container Registry, such as `Basic`.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="storageaccountid_csharp">
 <a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Storage Account used for this Container Registry. This is only returned for `Classic` SKU's.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer recognized by the API and is not functional anymore, thus this property will be removed in v3.0{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -436,16 +435,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of this Container Registry, such as `Basic`.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="storageaccountid_go">
 <a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Storage Account used for this Container Registry. This is only returned for `Classic` SKU's.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer recognized by the API and is not functional anymore, thus this property will be removed in v3.0{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -537,16 +535,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of this Container Registry, such as `Basic`.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="storageaccountid_nodejs">
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Storage Account used for this Container Registry. This is only returned for `Classic` SKU's.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer recognized by the API and is not functional anymore, thus this property will be removed in v3.0{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -638,16 +635,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU of this Container Registry, such as `Basic`.
-{{% /md %}}</dd><dt class="property-"
-            title="">
+{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="storage_account_id_python">
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the Storage Account used for this Container Registry. This is only returned for `Classic` SKU's.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer recognized by the API and is not functional anymore, thus this property will be removed in v3.0{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

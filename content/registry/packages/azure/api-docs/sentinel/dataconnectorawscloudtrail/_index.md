@@ -44,9 +44,22 @@ class MyStack : Stack
             ResourceGroupName = exampleResourceGroup.Name,
             Sku = "PerGB2018",
         });
+        var exampleAnalyticsSolution = new Azure.OperationalInsights.AnalyticsSolution("exampleAnalyticsSolution", new Azure.OperationalInsights.AnalyticsSolutionArgs
+        {
+            SolutionName = "SecurityInsights",
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            WorkspaceResourceId = exampleAnalyticsWorkspace.Id,
+            WorkspaceName = exampleAnalyticsWorkspace.Name,
+            Plan = new Azure.OperationalInsights.Inputs.AnalyticsSolutionPlanArgs
+            {
+                Publisher = "Microsoft",
+                Product = "OMSGallery/SecurityInsights",
+            },
+        });
         var exampleDataConnectorAwsCloudTrail = new Azure.Sentinel.DataConnectorAwsCloudTrail("exampleDataConnectorAwsCloudTrail", new Azure.Sentinel.DataConnectorAwsCloudTrailArgs
         {
-            LogAnalyticsWorkspaceId = exampleAnalyticsWorkspace.Id,
+            LogAnalyticsWorkspaceId = exampleAnalyticsSolution.WorkspaceResourceId,
             AwsRoleArn = "arn:aws:iam::000000000000:role/role1",
         });
     }
@@ -86,8 +99,22 @@ func main() {
 		if err != nil {
 			return err
 		}
+		exampleAnalyticsSolution, err := operationalinsights.NewAnalyticsSolution(ctx, "exampleAnalyticsSolution", &operationalinsights.AnalyticsSolutionArgs{
+			SolutionName:        pulumi.String("SecurityInsights"),
+			Location:            exampleResourceGroup.Location,
+			ResourceGroupName:   exampleResourceGroup.Name,
+			WorkspaceResourceId: exampleAnalyticsWorkspace.ID(),
+			WorkspaceName:       exampleAnalyticsWorkspace.Name,
+			Plan: &operationalinsights.AnalyticsSolutionPlanArgs{
+				Publisher: pulumi.String("Microsoft"),
+				Product:   pulumi.String("OMSGallery/SecurityInsights"),
+			},
+		})
+		if err != nil {
+			return err
+		}
 		_, err = sentinel.NewDataConnectorAwsCloudTrail(ctx, "exampleDataConnectorAwsCloudTrail", &sentinel.DataConnectorAwsCloudTrailArgs{
-			LogAnalyticsWorkspaceId: exampleAnalyticsWorkspace.ID(),
+			LogAnalyticsWorkspaceId: exampleAnalyticsSolution.WorkspaceResourceId,
 			AwsRoleArn:              pulumi.String("arn:aws:iam::000000000000:role/role1"),
 		})
 		if err != nil {
@@ -113,8 +140,18 @@ example_analytics_workspace = azure.operationalinsights.AnalyticsWorkspace("exam
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
     sku="PerGB2018")
+example_analytics_solution = azure.operationalinsights.AnalyticsSolution("exampleAnalyticsSolution",
+    solution_name="SecurityInsights",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    workspace_resource_id=example_analytics_workspace.id,
+    workspace_name=example_analytics_workspace.name,
+    plan=azure.operationalinsights.AnalyticsSolutionPlanArgs(
+        publisher="Microsoft",
+        product="OMSGallery/SecurityInsights",
+    ))
 example_data_connector_aws_cloud_trail = azure.sentinel.DataConnectorAwsCloudTrail("exampleDataConnectorAwsCloudTrail",
-    log_analytics_workspace_id=example_analytics_workspace.id,
+    log_analytics_workspace_id=example_analytics_solution.workspace_resource_id,
     aws_role_arn="arn:aws:iam::000000000000:role/role1")
 ```
 
@@ -135,8 +172,19 @@ const exampleAnalyticsWorkspace = new azure.operationalinsights.AnalyticsWorkspa
     resourceGroupName: exampleResourceGroup.name,
     sku: "PerGB2018",
 });
+const exampleAnalyticsSolution = new azure.operationalinsights.AnalyticsSolution("exampleAnalyticsSolution", {
+    solutionName: "SecurityInsights",
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    workspaceResourceId: exampleAnalyticsWorkspace.id,
+    workspaceName: exampleAnalyticsWorkspace.name,
+    plan: {
+        publisher: "Microsoft",
+        product: "OMSGallery/SecurityInsights",
+    },
+});
 const exampleDataConnectorAwsCloudTrail = new azure.sentinel.DataConnectorAwsCloudTrail("exampleDataConnectorAwsCloudTrail", {
-    logAnalyticsWorkspaceId: exampleAnalyticsWorkspace.id,
+    logAnalyticsWorkspaceId: exampleAnalyticsSolution.workspaceResourceId,
     awsRoleArn: "arn:aws:iam::000000000000:role/role1",
 });
 ```
