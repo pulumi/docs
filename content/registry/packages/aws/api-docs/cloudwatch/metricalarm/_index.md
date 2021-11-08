@@ -3460,7 +3460,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 ## Import
 
 
-CloudWatch Metric Alarm can be imported using the `alarm_name`, e.g.
+CloudWatch Metric Alarm can be imported using the `alarm_name`, e.g.,
 
 ```sh
  $ pulumi import aws:cloudwatch/metricAlarm:MetricAlarm test alarm-12345
@@ -3476,6 +3476,6 @@ CloudWatch Metric Alarm can be imported using the `alarm_name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

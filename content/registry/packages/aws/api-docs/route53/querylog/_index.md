@@ -868,7 +868,7 @@ The following state arguments are supported:
 ## Import
 
 
-Route53 query logging configurations can be imported using their ID, e.g.
+Route53 query logging configurations can be imported using their ID, e.g.,
 
 ```sh
  $ pulumi import aws:route53/queryLog:QueryLog example_com xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
@@ -884,6 +884,6 @@ Route53 query logging configurations can be imported using their ID, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -706,7 +706,7 @@ The following state arguments are supported:
 ## Import
 
 
-License configurations can be imported in the form `resource_arn,license_configuration_arn`, e.g.
+License configurations can be imported in the form `resource_arn,license_configuration_arn`, e.g.,
 
 ```sh
  $ pulumi import aws:licensemanager/association:Association example arn:aws:ec2:eu-west-1:123456789012:image/ami-123456789abcdef01,arn:aws:license-manager:eu-west-1:123456789012:license-configuration:lic-0123456789abcdef0123456789abcdef
@@ -722,6 +722,6 @@ License configurations can be imported in the form `resource_arn,license_configu
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

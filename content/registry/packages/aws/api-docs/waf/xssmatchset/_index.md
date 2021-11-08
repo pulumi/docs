@@ -770,7 +770,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
 If you specify a transformation, AWS WAF performs the transformation on `target_string` before inspecting a request for a match.
-e.g. `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
+e.g., `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_XssMatchTuple.html#WAF-Type-XssMatchTuple-TextTransformation)
 for all supported values.
 {{% /md %}}</dd></dl>
@@ -796,7 +796,7 @@ for all supported values.
     </dt>
     <dd>{{% md %}}Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
 If you specify a transformation, AWS WAF performs the transformation on `target_string` before inspecting a request for a match.
-e.g. `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
+e.g., `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_XssMatchTuple.html#WAF-Type-XssMatchTuple-TextTransformation)
 for all supported values.
 {{% /md %}}</dd></dl>
@@ -822,7 +822,7 @@ for all supported values.
     </dt>
     <dd>{{% md %}}Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
 If you specify a transformation, AWS WAF performs the transformation on `target_string` before inspecting a request for a match.
-e.g. `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
+e.g., `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_XssMatchTuple.html#WAF-Type-XssMatchTuple-TextTransformation)
 for all supported values.
 {{% /md %}}</dd></dl>
@@ -848,7 +848,7 @@ for all supported values.
     </dt>
     <dd>{{% md %}}Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
 If you specify a transformation, AWS WAF performs the transformation on `target_string` before inspecting a request for a match.
-e.g. `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
+e.g., `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_XssMatchTuple.html#WAF-Type-XssMatchTuple-TextTransformation)
 for all supported values.
 {{% /md %}}</dd></dl>
@@ -866,7 +866,7 @@ for all supported values.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The part of the web request that you want AWS WAF to search for a specified string.
-e.g. `HEADER`, `METHOD` or `BODY`.
+e.g., `HEADER`, `METHOD` or `BODY`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html)
 for all supported values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -877,7 +877,7 @@ for all supported values.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g. `User-Agent` or `Referer`.
+    <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g., `User-Agent` or `Referer`.
 If `type` is any other value, omit this field.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -892,7 +892,7 @@ If `type` is any other value, omit this field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The part of the web request that you want AWS WAF to search for a specified string.
-e.g. `HEADER`, `METHOD` or `BODY`.
+e.g., `HEADER`, `METHOD` or `BODY`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html)
 for all supported values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -903,7 +903,7 @@ for all supported values.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g. `User-Agent` or `Referer`.
+    <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g., `User-Agent` or `Referer`.
 If `type` is any other value, omit this field.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -918,7 +918,7 @@ If `type` is any other value, omit this field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The part of the web request that you want AWS WAF to search for a specified string.
-e.g. `HEADER`, `METHOD` or `BODY`.
+e.g., `HEADER`, `METHOD` or `BODY`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html)
 for all supported values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -929,7 +929,7 @@ for all supported values.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g. `User-Agent` or `Referer`.
+    <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g., `User-Agent` or `Referer`.
 If `type` is any other value, omit this field.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -944,7 +944,7 @@ If `type` is any other value, omit this field.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The part of the web request that you want AWS WAF to search for a specified string.
-e.g. `HEADER`, `METHOD` or `BODY`.
+e.g., `HEADER`, `METHOD` or `BODY`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html)
 for all supported values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -955,14 +955,14 @@ for all supported values.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g. `User-Agent` or `Referer`.
+    <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g., `User-Agent` or `Referer`.
 If `type` is any other value, omit this field.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
 
-WAF XSS Match Set can be imported using their ID, e.g.
+WAF XSS Match Set can be imported using their ID, e.g.,
 
 ```sh
  $ pulumi import aws:waf/xssMatchSet:XssMatchSet example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
@@ -978,6 +978,6 @@ WAF XSS Match Set can be imported using their ID, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

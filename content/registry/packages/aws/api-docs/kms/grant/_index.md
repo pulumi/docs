@@ -1424,7 +1424,7 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 ## Import
 
 
-KMS Grants can be imported using the Key ID and Grant ID separated by a colon (`:`), e.g.
+KMS Grants can be imported using the Key ID and Grant ID separated by a colon (`:`), e.g.,
 
 ```sh
  $ pulumi import aws:kms/grant:Grant test 1234abcd-12ab-34cd-56ef-1234567890ababcde1237f76e4ba7987489ac329fbfba6ad343d6f7075dbd1ef191f0120514
@@ -1440,6 +1440,6 @@ KMS Grants can be imported using the Key ID and Grant ID separated by a colon (`
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

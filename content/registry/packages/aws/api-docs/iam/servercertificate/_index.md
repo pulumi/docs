@@ -1368,7 +1368,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 ## Import
 
 
-IAM Server Certificates can be imported using the `name`, e.g.
+IAM Server Certificates can be imported using the `name`, e.g.,
 
 ```sh
  $ pulumi import aws:iam/serverCertificate:ServerCertificate certificate example.com-certificate-until-2018
@@ -1386,6 +1386,6 @@ IAM Server Certificates can be imported using the `name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

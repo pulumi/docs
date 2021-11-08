@@ -583,7 +583,7 @@ The following state arguments are supported:
 ## Import
 
 
-Security Hub standards subscriptions can be imported using the standards subscription ARN, e.g.
+Security Hub standards subscriptions can be imported using the standards subscription ARN, e.g.,
 
 ```sh
  $ pulumi import aws:securityhub/standardsSubscription:StandardsSubscription cis arn:aws:securityhub:eu-west-1:123456789012:subscription/cis-aws-foundations-benchmark/v/1.2.0
@@ -603,6 +603,6 @@ Security Hub standards subscriptions can be imported using the standards subscri
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -1008,7 +1008,7 @@ The following state arguments are supported:
 ## Import
 
 
-CodeArtifact Repository Permissions Policies can be imported using the CodeArtifact Repository ARN, e.g.
+CodeArtifact Repository Permissions Policies can be imported using the CodeArtifact Repository ARN, e.g.,
 
 ```sh
  $ pulumi import aws:codeartifact/repositoryPermissionsPolicy:RepositoryPermissionsPolicy example arn:aws:codeartifact:us-west-2:012345678912:repository/tf-acc-test-6968272603913957763/tf-acc-test-6968272603913957763
@@ -1024,6 +1024,6 @@ CodeArtifact Repository Permissions Policies can be imported using the CodeArtif
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

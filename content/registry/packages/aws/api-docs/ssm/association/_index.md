@@ -1922,7 +1922,7 @@ The following state arguments are supported:
 ## Import
 
 
-SSM associations can be imported using the `association_id`, e.g.
+SSM associations can be imported using the `association_id`, e.g.,
 
 ```sh
  $ pulumi import aws:ssm/association:Association test-association 10abcdef-0abc-1234-5678-90abcdef123456
@@ -1938,6 +1938,6 @@ SSM associations can be imported using the `association_id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

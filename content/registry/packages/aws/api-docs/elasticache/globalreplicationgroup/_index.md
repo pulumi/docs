@@ -1485,7 +1485,7 @@ The following state arguments are supported:
 ## Import
 
 
-ElastiCache Global Replication Groups can be imported using the `global_replication_group_id`, e.g.
+ElastiCache Global Replication Groups can be imported using the `global_replication_group_id`, e.g.,
 
 ```sh
  $ pulumi import aws:elasticache/globalReplicationGroup:GlobalReplicationGroup my_global_replication_group okuqm-global-replication-group-1
@@ -1501,6 +1501,6 @@ ElastiCache Global Replication Groups can be imported using the `global_replicat
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

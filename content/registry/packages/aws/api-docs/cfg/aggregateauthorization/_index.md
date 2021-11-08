@@ -841,7 +841,7 @@ The following state arguments are supported:
 ## Import
 
 
-Config aggregate authorizations can be imported using `account_id:region`, e.g.
+Config aggregate authorizations can be imported using `account_id:region`, e.g.,
 
 ```sh
  $ pulumi import aws:cfg/aggregateAuthorization:AggregateAuthorization example 123456789012:us-east-1
@@ -857,6 +857,6 @@ Config aggregate authorizations can be imported using `account_id:region`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

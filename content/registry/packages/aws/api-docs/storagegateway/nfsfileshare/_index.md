@@ -141,6 +141,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">NfsFileShare</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">audit_destination_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">cache_attributes</span><span class="p">:</span> <span class="nx">Optional[NfsFileShareCacheAttributesArgs]</span> = None<span class="p">,</span>
                  <span class="nx">client_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                  <span class="nx">default_storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -323,6 +324,15 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="auditdestinationarn_csharp">
+<a href="#auditdestinationarn_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Destination<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the storage used for audit logs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cacheattributes_csharp">
 <a href="#cacheattributes_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Attributes</a>
 </span>
@@ -478,6 +488,15 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="auditdestinationarn_go">
+<a href="#auditdestinationarn_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Destination<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the storage used for audit logs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheattributes_go">
@@ -637,6 +656,15 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="auditdestinationarn_nodejs">
+<a href="#auditdestinationarn_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Destination<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the storage used for audit logs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cacheattributes_nodejs">
 <a href="#cacheattributes_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Attributes</a>
 </span>
@@ -792,6 +820,15 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="audit_destination_arn_python">
+<a href="#audit_destination_arn_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>destination_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the storage used for audit logs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_attributes_python">
@@ -1128,6 +1165,7 @@ Get an existing NfsFileShare resource's state with the given name, ID, and optio
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">audit_destination_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">cache_attributes</span><span class="p">:</span> <span class="nx">Optional[NfsFileShareCacheAttributesArgs]</span> = None<span class="p">,</span>
         <span class="nx">client_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">default_storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1267,6 +1305,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the NFS File Share.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_auditdestinationarn_csharp">
+<a href="#state_auditdestinationarn_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Destination<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the storage used for audit logs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cacheattributes_csharp">
@@ -1462,6 +1509,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Amazon Resource Name (ARN) of the NFS File Share.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_auditdestinationarn_go">
+<a href="#state_auditdestinationarn_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Destination<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the storage used for audit logs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_cacheattributes_go">
 <a href="#state_cacheattributes_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Attributes</a>
 </span>
@@ -1655,6 +1711,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Amazon Resource Name (ARN) of the NFS File Share.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_auditdestinationarn_nodejs">
+<a href="#state_auditdestinationarn_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Destination<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the storage used for audit logs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_cacheattributes_nodejs">
 <a href="#state_cacheattributes_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Attributes</a>
 </span>
@@ -1846,6 +1911,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the NFS File Share.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_audit_destination_arn_python">
+<a href="#state_audit_destination_arn_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>destination_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the storage used for audit logs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cache_attributes_python">
@@ -2264,7 +2338,7 @@ to first refresh that directory's contents from the Amazon S3 bucket. Valid Valu
 ## Import
 
 
-`aws_storagegateway_nfs_file_share` can be imported by using the NFS File Share Amazon Resource Name (ARN), e.g.
+`aws_storagegateway_nfs_file_share` can be imported by using the NFS File Share Amazon Resource Name (ARN), e.g.,
 
 ```sh
  $ pulumi import aws:storagegateway/nfsFileShare:NfsFileShare example arn:aws:storagegateway:us-east-1:123456789012:share/share-12345678
@@ -2280,6 +2354,6 @@ to first refresh that directory's contents from the Amazon S3 bucket. Valid Valu
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

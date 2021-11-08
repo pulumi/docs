@@ -924,7 +924,7 @@ The following state arguments are supported:
 ## Import
 
 
-VPN Gateways can be imported using the `vpn gateway id`, e.g.
+VPN Gateways can be imported using the `vpn gateway id`, e.g.,
 
 ```sh
  $ pulumi import aws:ec2/vpnGateway:VpnGateway testvpngateway vgw-9a4cacf3
@@ -940,6 +940,6 @@ VPN Gateways can be imported using the `vpn gateway id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

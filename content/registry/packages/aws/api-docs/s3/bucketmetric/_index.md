@@ -915,7 +915,7 @@ The following state arguments are supported:
 ## Import
 
 
-S3 bucket metric configurations can be imported using `bucket:metric`, e.g.
+S3 bucket metric configurations can be imported using `bucket:metric`, e.g.,
 
 ```sh
  $ pulumi import aws:s3/bucketMetric:BucketMetric my-bucket-entire-bucket my-bucket:EntireBucket
@@ -931,6 +931,6 @@ S3 bucket metric configurations can be imported using `bucket:metric`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

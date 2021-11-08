@@ -379,7 +379,7 @@ The NetworkAclRule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocol. e.g. -1
+    <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocolE.g., -1
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icmptype_csharp">
@@ -388,7 +388,7 @@ The NetworkAclRule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocol. e.g. -1
+    <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocolE.g., -1
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6cidrblock_csharp">
@@ -482,7 +482,7 @@ The NetworkAclRule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocol. e.g. -1
+    <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocolE.g., -1
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icmptype_go">
@@ -491,7 +491,7 @@ The NetworkAclRule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocol. e.g. -1
+    <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocolE.g., -1
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6cidrblock_go">
@@ -585,7 +585,7 @@ The NetworkAclRule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocol. e.g. -1
+    <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocolE.g., -1
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icmptype_nodejs">
@@ -594,7 +594,7 @@ The NetworkAclRule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocol. e.g. -1
+    <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocolE.g., -1
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6cidrblock_nodejs">
@@ -688,7 +688,7 @@ The NetworkAclRule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocol. e.g. -1
+    <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocolE.g., -1
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icmp_type_python">
@@ -697,7 +697,7 @@ The NetworkAclRule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocol. e.g. -1
+    <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocolE.g., -1
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_cidr_block_python">
@@ -946,7 +946,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocol. e.g. -1
+    <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocolE.g., -1
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_icmptype_csharp">
@@ -955,7 +955,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocol. e.g. -1
+    <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocolE.g., -1
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6cidrblock_csharp">
@@ -1049,7 +1049,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocol. e.g. -1
+    <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocolE.g., -1
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_icmptype_go">
@@ -1058,7 +1058,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocol. e.g. -1
+    <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocolE.g., -1
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6cidrblock_go">
@@ -1152,7 +1152,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocol. e.g. -1
+    <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocolE.g., -1
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_icmptype_nodejs">
@@ -1161,7 +1161,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocol. e.g. -1
+    <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocolE.g., -1
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6cidrblock_nodejs">
@@ -1255,7 +1255,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocol. e.g. -1
+    <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocolE.g., -1
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_icmp_type_python">
@@ -1264,7 +1264,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocol. e.g. -1
+    <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocolE.g., -1
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_cidr_block_python">
@@ -1351,6 +1351,6 @@ Individual rules can be imported using `NETWORK_ACL_ID:RULE_NUMBER:PROTOCOL:EGRE
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

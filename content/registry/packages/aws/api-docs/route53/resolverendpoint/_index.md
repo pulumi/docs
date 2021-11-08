@@ -1277,7 +1277,7 @@ to your network (for outbound endpoints) or on the way from your network to your
 ## Import
 
 
- Route 53 Resolver endpoints can be imported using the Route 53 Resolver endpoint ID, e.g.
+ Route 53 Resolver endpoints can be imported using the Route 53 Resolver endpoint ID, e.g.,
 
 ```sh
  $ pulumi import aws:route53/resolverEndpoint:ResolverEndpoint foo rslvr-in-abcdef01234567890
@@ -1293,6 +1293,6 @@ to your network (for outbound endpoints) or on the way from your network to your
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

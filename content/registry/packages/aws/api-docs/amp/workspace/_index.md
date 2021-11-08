@@ -690,7 +690,7 @@ The following state arguments are supported:
 ## Import
 
 
-AMP Workspaces can be imported using the identifier, e.g.
+AMP Workspaces can be imported using the identifier, e.g.,
 
 ```sh
  $ pulumi import aws:amp/workspace:Workspace demo ws-C6DCB907-F2D7-4D96-957B-66691F865D8B
@@ -706,6 +706,6 @@ AMP Workspaces can be imported using the identifier, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

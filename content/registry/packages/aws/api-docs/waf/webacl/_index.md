@@ -1953,7 +1953,7 @@ Rules with a lower value are evaluated before rules with a higher value.
 ## Import
 
 
-WAF Web ACL can be imported using the `id`, e.g.
+WAF Web ACL can be imported using the `id`, e.g.,
 
 ```sh
  $ pulumi import aws:waf/webAcl:WebAcl main 0c8e583e-18f3-4c13-9e2a-67c4805d2f94
@@ -1969,6 +1969,6 @@ WAF Web ACL can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

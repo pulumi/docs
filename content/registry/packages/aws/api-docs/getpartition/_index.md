@@ -201,7 +201,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base DNS domain name for the current partition (e.g. `amazonaws.com` in AWS Commercial, `amazonaws.com.cn` in AWS China).
+    <dd>{{% md %}}Base DNS domain name for the current partition (e.g., `amazonaws.com` in AWS Commercial, `amazonaws.com.cn` in AWS China).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -219,7 +219,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier of the current partition (e.g. `aws` in AWS Commercial, `aws-cn` in AWS China).
+    <dd>{{% md %}}Identifier of the current partition (e.g., `aws` in AWS Commercial, `aws-cn` in AWS China).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reversednsprefix_csharp">
@@ -228,7 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Prefix of service names (e.g. `com.amazonaws` in AWS Commercial, `cn.com.amazonaws` in AWS China).
+    <dd>{{% md %}}Prefix of service names (e.g., `com.amazonaws` in AWS Commercial, `cn.com.amazonaws` in AWS China).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -241,7 +241,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base DNS domain name for the current partition (e.g. `amazonaws.com` in AWS Commercial, `amazonaws.com.cn` in AWS China).
+    <dd>{{% md %}}Base DNS domain name for the current partition (e.g., `amazonaws.com` in AWS Commercial, `amazonaws.com.cn` in AWS China).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -259,7 +259,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier of the current partition (e.g. `aws` in AWS Commercial, `aws-cn` in AWS China).
+    <dd>{{% md %}}Identifier of the current partition (e.g., `aws` in AWS Commercial, `aws-cn` in AWS China).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reversednsprefix_go">
@@ -268,7 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Prefix of service names (e.g. `com.amazonaws` in AWS Commercial, `cn.com.amazonaws` in AWS China).
+    <dd>{{% md %}}Prefix of service names (e.g., `com.amazonaws` in AWS Commercial, `cn.com.amazonaws` in AWS China).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -281,7 +281,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base DNS domain name for the current partition (e.g. `amazonaws.com` in AWS Commercial, `amazonaws.com.cn` in AWS China).
+    <dd>{{% md %}}Base DNS domain name for the current partition (e.g., `amazonaws.com` in AWS Commercial, `amazonaws.com.cn` in AWS China).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -299,7 +299,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier of the current partition (e.g. `aws` in AWS Commercial, `aws-cn` in AWS China).
+    <dd>{{% md %}}Identifier of the current partition (e.g., `aws` in AWS Commercial, `aws-cn` in AWS China).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reversednsprefix_nodejs">
@@ -308,7 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Prefix of service names (e.g. `com.amazonaws` in AWS Commercial, `cn.com.amazonaws` in AWS China).
+    <dd>{{% md %}}Prefix of service names (e.g., `com.amazonaws` in AWS Commercial, `cn.com.amazonaws` in AWS China).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -321,7 +321,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Base DNS domain name for the current partition (e.g. `amazonaws.com` in AWS Commercial, `amazonaws.com.cn` in AWS China).
+    <dd>{{% md %}}Base DNS domain name for the current partition (e.g., `amazonaws.com` in AWS Commercial, `amazonaws.com.cn` in AWS China).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -339,7 +339,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifier of the current partition (e.g. `aws` in AWS Commercial, `aws-cn` in AWS China).
+    <dd>{{% md %}}Identifier of the current partition (e.g., `aws` in AWS Commercial, `aws-cn` in AWS China).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reverse_dns_prefix_python">
@@ -348,7 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Prefix of service names (e.g. `com.amazonaws` in AWS Commercial, `cn.com.amazonaws` in AWS China).
+    <dd>{{% md %}}Prefix of service names (e.g., `com.amazonaws` in AWS Commercial, `cn.com.amazonaws` in AWS China).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -363,6 +363,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

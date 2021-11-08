@@ -296,7 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The disk identifier. e.g. `pci-0000:03:00.0-scsi-0:0:0:0`
+    <dd>{{% md %}}The disk identifierE.g., `pci-0000:03:00.0-scsi-0:0:0:0`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disknode_csharp">
@@ -342,7 +342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The disk identifier. e.g. `pci-0000:03:00.0-scsi-0:0:0:0`
+    <dd>{{% md %}}The disk identifierE.g., `pci-0000:03:00.0-scsi-0:0:0:0`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disknode_go">
@@ -388,7 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The disk identifier. e.g. `pci-0000:03:00.0-scsi-0:0:0:0`
+    <dd>{{% md %}}The disk identifierE.g., `pci-0000:03:00.0-scsi-0:0:0:0`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disknode_nodejs">
@@ -434,7 +434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The disk identifier. e.g. `pci-0000:03:00.0-scsi-0:0:0:0`
+    <dd>{{% md %}}The disk identifierE.g., `pci-0000:03:00.0-scsi-0:0:0:0`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disk_node_python">
@@ -482,6 +482,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

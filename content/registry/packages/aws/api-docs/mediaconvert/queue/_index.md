@@ -1183,7 +1183,7 @@ The following state arguments are supported:
 ## Import
 
 
-Media Convert Queue can be imported via the queue name, e.g.
+Media Convert Queue can be imported via the queue name, e.g.,
 
 ```sh
  $ pulumi import aws:mediaconvert/queue:Queue test tf-test-queue
@@ -1199,6 +1199,6 @@ Media Convert Queue can be imported via the queue name, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

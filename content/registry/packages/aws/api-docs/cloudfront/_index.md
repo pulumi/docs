@@ -22,6 +22,7 @@ Explore the resources and functions of the aws.cloudfront module.
     <li><a href="originrequestpolicy" title="OriginRequestPolicy"><span class="api-symbol api-symbol--resource"></span>OriginRequestPolicy</a></li>
     <li><a href="publickey" title="PublicKey"><span class="api-symbol api-symbol--resource"></span>PublicKey</a></li>
     <li><a href="realtimelogconfig" title="RealtimeLogConfig"><span class="api-symbol api-symbol--resource"></span>RealtimeLogConfig</a></li>
+    <li><a href="responseheaderspolicy" title="ResponseHeadersPolicy"><span class="api-symbol api-symbol--resource"></span>ResponseHeadersPolicy</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -30,6 +31,7 @@ Explore the resources and functions of the aws.cloudfront module.
     <li><a href="getdistribution" title="GetDistribution"><span class="api-symbol api-symbol--function"></span>GetDistribution</a></li>
     <li><a href="getlogdeliverycanonicaluserid" title="GetLogDeliveryCanonicalUserId"><span class="api-symbol api-symbol--function"></span>GetLogDeliveryCanonicalUserId</a></li>
     <li><a href="getoriginrequestpolicy" title="GetOriginRequestPolicy"><span class="api-symbol api-symbol--function"></span>GetOriginRequestPolicy</a></li>
+    <li><a href="getresponseheaderspolicy" title="GetResponseHeadersPolicy"><span class="api-symbol api-symbol--function"></span>GetResponseHeadersPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -39,8 +41,8 @@ Explore the resources and functions of the aws.cloudfront module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.26.0</dd>
+	<dd>4.27.0</dd>
 </dl>
 

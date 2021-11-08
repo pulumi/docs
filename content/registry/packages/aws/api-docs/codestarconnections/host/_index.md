@@ -1083,7 +1083,7 @@ The following state arguments are supported:
 ## Import
 
 
-CodeStar Host can be imported using the ARN, e.g.
+CodeStar Host can be imported using the ARN, e.g.,
 
 ```sh
  $ pulumi import aws:codestarconnections/host:Host example-host arn:aws:codestar-connections:us-west-1:0123456789:host/79d4d357-a2ee-41e4-b350-2fe39ae59448
@@ -1099,6 +1099,6 @@ CodeStar Host can be imported using the ARN, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

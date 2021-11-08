@@ -71,9 +71,9 @@ of Instances to be `"InService"` in all attached ELBs on both creation and
 updates.
 
 These parameters can be used to ensure that service is being provided before
-this provider moves on. If new instances don't pass the ELB's health checks for any
-reason, the deployment will time out, and the ASG will be marked as
-tainted (i.e. marked to be destroyed in a follow up run).
+the provider moves on. If new instances don't pass the ELB's health checks for any
+reason, the apply will time out, and the ASG will be marked as
+tainted (i.e., marked to be destroyed in a follow up run).
 
 As with ASG Capacity, this provider will wait for up to `wait_for_capacity_timeout`
 for the proper number of instances to be healthy.
@@ -4871,6 +4871,24 @@ to the specified Auto Scaling group. Defined below
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="checkpointdelay_csharp">
+<a href="#checkpointdelay_csharp" style="color: inherit; text-decoration: inherit;">Checkpoint<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds to wait after a checkpoint. Defaults to `3600`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="checkpointpercentages_csharp">
+<a href="#checkpointpercentages_csharp" style="color: inherit; text-decoration: inherit;">Checkpoint<wbr>Percentages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of percentages for each checkpoint. Values must be unique and in ascending order. To replace all instances, the final number must be `100`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancewarmup_csharp">
 <a href="#instancewarmup_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Warmup</a>
 </span>
@@ -4892,6 +4910,24 @@ to the specified Auto Scaling group. Defined below
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="checkpointdelay_go">
+<a href="#checkpointdelay_go" style="color: inherit; text-decoration: inherit;">Checkpoint<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds to wait after a checkpoint. Defaults to `3600`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="checkpointpercentages_go">
+<a href="#checkpointpercentages_go" style="color: inherit; text-decoration: inherit;">Checkpoint<wbr>Percentages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}List of percentages for each checkpoint. Values must be unique and in ascending order. To replace all instances, the final number must be `100`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancewarmup_go">
 <a href="#instancewarmup_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Warmup</a>
@@ -4915,6 +4951,24 @@ to the specified Auto Scaling group. Defined below
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="checkpointdelay_nodejs">
+<a href="#checkpointdelay_nodejs" style="color: inherit; text-decoration: inherit;">checkpoint<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds to wait after a checkpoint. Defaults to `3600`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="checkpointpercentages_nodejs">
+<a href="#checkpointpercentages_nodejs" style="color: inherit; text-decoration: inherit;">checkpoint<wbr>Percentages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}List of percentages for each checkpoint. Values must be unique and in ascending order. To replace all instances, the final number must be `100`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancewarmup_nodejs">
 <a href="#instancewarmup_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Warmup</a>
 </span>
@@ -4936,6 +4990,24 @@ to the specified Auto Scaling group. Defined below
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="checkpoint_delay_python">
+<a href="#checkpoint_delay_python" style="color: inherit; text-decoration: inherit;">checkpoint_<wbr>delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds to wait after a checkpoint. Defaults to `3600`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="checkpoint_percentages_python">
+<a href="#checkpoint_percentages_python" style="color: inherit; text-decoration: inherit;">checkpoint_<wbr>percentages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}List of percentages for each checkpoint. Values must be unique and in ascending order. To replace all instances, the final number must be `100`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_warmup_python">
 <a href="#instance_warmup_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>warmup</a>
@@ -5219,7 +5291,7 @@ to the specified Auto Scaling group. Defined below
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of Spot pools per availability zone to allocate capacity. EC2 Auto Scaling selects the cheapest Spot pools and evenly allocates Spot capacity across the number of Spot pools that you specify. Default: `2`.
+    <dd>{{% md %}}Number of Spot pools per availability zone to allocate capacity. EC2 Auto Scaling selects the cheapest Spot pools and evenly allocates Spot capacity across the number of Spot pools that you specify. Only available with `spot_allocation_strategy` set to `lowest-price`. Otherwise it must be set to `0`, if it has been defined before. Default: `2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotmaxprice_csharp">
@@ -5277,7 +5349,7 @@ to the specified Auto Scaling group. Defined below
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of Spot pools per availability zone to allocate capacity. EC2 Auto Scaling selects the cheapest Spot pools and evenly allocates Spot capacity across the number of Spot pools that you specify. Default: `2`.
+    <dd>{{% md %}}Number of Spot pools per availability zone to allocate capacity. EC2 Auto Scaling selects the cheapest Spot pools and evenly allocates Spot capacity across the number of Spot pools that you specify. Only available with `spot_allocation_strategy` set to `lowest-price`. Otherwise it must be set to `0`, if it has been defined before. Default: `2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotmaxprice_go">
@@ -5335,7 +5407,7 @@ to the specified Auto Scaling group. Defined below
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of Spot pools per availability zone to allocate capacity. EC2 Auto Scaling selects the cheapest Spot pools and evenly allocates Spot capacity across the number of Spot pools that you specify. Default: `2`.
+    <dd>{{% md %}}Number of Spot pools per availability zone to allocate capacity. EC2 Auto Scaling selects the cheapest Spot pools and evenly allocates Spot capacity across the number of Spot pools that you specify. Only available with `spot_allocation_strategy` set to `lowest-price`. Otherwise it must be set to `0`, if it has been defined before. Default: `2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotmaxprice_nodejs">
@@ -5393,7 +5465,7 @@ to the specified Auto Scaling group. Defined below
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of Spot pools per availability zone to allocate capacity. EC2 Auto Scaling selects the cheapest Spot pools and evenly allocates Spot capacity across the number of Spot pools that you specify. Default: `2`.
+    <dd>{{% md %}}Number of Spot pools per availability zone to allocate capacity. EC2 Auto Scaling selects the cheapest Spot pools and evenly allocates Spot capacity across the number of Spot pools that you specify. Only available with `spot_allocation_strategy` set to `lowest-price`. Otherwise it must be set to `0`, if it has been defined before. Default: `2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spot_max_price_python">
@@ -6154,7 +6226,7 @@ Amazon EC2 instances launched via this ASG
 ## Import
 
 
-Auto Scaling Groups can be imported using the `name`, e.g.
+Auto Scaling Groups can be imported using the `name`, e.g.,
 
 ```sh
  $ pulumi import aws:autoscaling/group:Group web web-asg
@@ -6170,6 +6242,6 @@ Auto Scaling Groups can be imported using the `name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

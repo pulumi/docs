@@ -266,7 +266,7 @@ The EnvironmentEC2 resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of instance to connect to the environment, e.g. `t2.micro`.
+    <dd>{{% md %}}The type of instance to connect to the environment, e.g., `t2.micro`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automaticstoptimeminutes_csharp">
@@ -333,7 +333,7 @@ The EnvironmentEC2 resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of instance to connect to the environment, e.g. `t2.micro`.
+    <dd>{{% md %}}The type of instance to connect to the environment, e.g., `t2.micro`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automaticstoptimeminutes_go">
@@ -400,7 +400,7 @@ The EnvironmentEC2 resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of instance to connect to the environment, e.g. `t2.micro`.
+    <dd>{{% md %}}The type of instance to connect to the environment, e.g., `t2.micro`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automaticstoptimeminutes_nodejs">
@@ -467,7 +467,7 @@ The EnvironmentEC2 resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of instance to connect to the environment, e.g. `t2.micro`.
+    <dd>{{% md %}}The type of instance to connect to the environment, e.g., `t2.micro`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automatic_stop_time_minutes_python">
@@ -558,7 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
@@ -567,7 +567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the environment (e.g. `ssh` or `ec2`)
+    <dd>{{% md %}}The type of the environment (e.g., `ssh` or `ec2`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -597,7 +597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
@@ -606,7 +606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the environment (e.g. `ssh` or `ec2`)
+    <dd>{{% md %}}The type of the environment (e.g., `ssh` or `ec2`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -636,7 +636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
@@ -645,7 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the environment (e.g. `ssh` or `ec2`)
+    <dd>{{% md %}}The type of the environment (e.g., `ssh` or `ec2`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -675,7 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
@@ -684,7 +684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the environment (e.g. `ssh` or `ec2`)
+    <dd>{{% md %}}The type of the environment (e.g., `ssh` or `ec2`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -859,7 +859,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of instance to connect to the environment, e.g. `t2.micro`.
+    <dd>{{% md %}}The type of instance to connect to the environment, e.g., `t2.micro`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -904,7 +904,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
@@ -913,7 +913,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the environment (e.g. `ssh` or `ec2`)
+    <dd>{{% md %}}The type of the environment (e.g., `ssh` or `ec2`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -953,7 +953,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of instance to connect to the environment, e.g. `t2.micro`.
+    <dd>{{% md %}}The type of instance to connect to the environment, e.g., `t2.micro`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -998,7 +998,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
@@ -1007,7 +1007,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the environment (e.g. `ssh` or `ec2`)
+    <dd>{{% md %}}The type of the environment (e.g., `ssh` or `ec2`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1047,7 +1047,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of instance to connect to the environment, e.g. `t2.micro`.
+    <dd>{{% md %}}The type of instance to connect to the environment, e.g., `t2.micro`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -1092,7 +1092,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
@@ -1101,7 +1101,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the environment (e.g. `ssh` or `ec2`)
+    <dd>{{% md %}}The type of the environment (e.g., `ssh` or `ec2`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1141,7 +1141,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of instance to connect to the environment, e.g. `t2.micro`.
+    <dd>{{% md %}}The type of instance to connect to the environment, e.g., `t2.micro`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -1186,7 +1186,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
@@ -1195,7 +1195,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the environment (e.g. `ssh` or `ec2`)
+    <dd>{{% md %}}The type of the environment (e.g., `ssh` or `ec2`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1212,6 +1212,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

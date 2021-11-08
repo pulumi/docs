@@ -911,7 +911,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address range, in CIDR notation, e.g. `10.0.0.0/16`
+    <dd>{{% md %}}The IP address range, in CIDR notation, e.g., `10.0.0.0/16`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -933,7 +933,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address range, in CIDR notation, e.g. `10.0.0.0/16`
+    <dd>{{% md %}}The IP address range, in CIDR notation, e.g., `10.0.0.0/16`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -955,7 +955,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address range, in CIDR notation, e.g. `10.0.0.0/16`
+    <dd>{{% md %}}The IP address range, in CIDR notation, e.g., `10.0.0.0/16`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -977,7 +977,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP address range, in CIDR notation, e.g. `10.0.0.0/16`
+    <dd>{{% md %}}The IP address range, in CIDR notation, e.g., `10.0.0.0/16`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -992,7 +992,7 @@ The following state arguments are supported:
 ## Import
 
 
-WorkSpaces IP groups can be imported using their GroupID, e.g.
+WorkSpaces IP groups can be imported using their GroupID, e.g.,
 
 ```sh
  $ pulumi import aws:workspaces/ipGroup:IpGroup example wsipg-488lrtl3k
@@ -1008,6 +1008,6 @@ WorkSpaces IP groups can be imported using their GroupID, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

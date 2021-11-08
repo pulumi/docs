@@ -896,7 +896,7 @@ The following state arguments are supported:
 ## Import
 
 
-`aws_s3_bucket_public_access_block` can be imported by using the bucket name, e.g.
+`aws_s3_bucket_public_access_block` can be imported by using the bucket name, e.g.,
 
 ```sh
  $ pulumi import aws:s3/bucketPublicAccessBlock:BucketPublicAccessBlock example my-bucket
@@ -912,6 +912,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

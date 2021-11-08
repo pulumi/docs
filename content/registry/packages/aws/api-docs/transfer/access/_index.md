@@ -397,7 +397,7 @@ The Access resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SID of a group in the directory connected to the Transfer Server (e.g. `S-1-1-12-1234567890-123456789-1234567890-1234`)
+    <dd>{{% md %}}The SID of a group in the directory connected to the Transfer Server (e.g., `S-1-1-12-1234567890-123456789-1234567890-1234`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serverid_csharp">
@@ -406,7 +406,7 @@ The Access resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Server ID of the Transfer Server (e.g. `s-12345678`)
+    <dd>{{% md %}}The Server ID of the Transfer Server (e.g., `s-12345678`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="homedirectory_csharp">
@@ -472,7 +472,7 @@ The Access resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SID of a group in the directory connected to the Transfer Server (e.g. `S-1-1-12-1234567890-123456789-1234567890-1234`)
+    <dd>{{% md %}}The SID of a group in the directory connected to the Transfer Server (e.g., `S-1-1-12-1234567890-123456789-1234567890-1234`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serverid_go">
@@ -481,7 +481,7 @@ The Access resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Server ID of the Transfer Server (e.g. `s-12345678`)
+    <dd>{{% md %}}The Server ID of the Transfer Server (e.g., `s-12345678`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="homedirectory_go">
@@ -547,7 +547,7 @@ The Access resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SID of a group in the directory connected to the Transfer Server (e.g. `S-1-1-12-1234567890-123456789-1234567890-1234`)
+    <dd>{{% md %}}The SID of a group in the directory connected to the Transfer Server (e.g., `S-1-1-12-1234567890-123456789-1234567890-1234`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serverid_nodejs">
@@ -556,7 +556,7 @@ The Access resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Server ID of the Transfer Server (e.g. `s-12345678`)
+    <dd>{{% md %}}The Server ID of the Transfer Server (e.g., `s-12345678`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="homedirectory_nodejs">
@@ -622,7 +622,7 @@ The Access resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SID of a group in the directory connected to the Transfer Server (e.g. `S-1-1-12-1234567890-123456789-1234567890-1234`)
+    <dd>{{% md %}}The SID of a group in the directory connected to the Transfer Server (e.g., `S-1-1-12-1234567890-123456789-1234567890-1234`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="server_id_python">
@@ -631,7 +631,7 @@ The Access resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Server ID of the Transfer Server (e.g. `s-12345678`)
+    <dd>{{% md %}}The Server ID of the Transfer Server (e.g., `s-12345678`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="home_directory_python">
@@ -885,7 +885,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SID of a group in the directory connected to the Transfer Server (e.g. `S-1-1-12-1234567890-123456789-1234567890-1234`)
+    <dd>{{% md %}}The SID of a group in the directory connected to the Transfer Server (e.g., `S-1-1-12-1234567890-123456789-1234567890-1234`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homedirectory_csharp">
@@ -947,7 +947,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Server ID of the Transfer Server (e.g. `s-12345678`)
+    <dd>{{% md %}}The Server ID of the Transfer Server (e.g., `s-12345678`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -960,7 +960,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SID of a group in the directory connected to the Transfer Server (e.g. `S-1-1-12-1234567890-123456789-1234567890-1234`)
+    <dd>{{% md %}}The SID of a group in the directory connected to the Transfer Server (e.g., `S-1-1-12-1234567890-123456789-1234567890-1234`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homedirectory_go">
@@ -1022,7 +1022,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Server ID of the Transfer Server (e.g. `s-12345678`)
+    <dd>{{% md %}}The Server ID of the Transfer Server (e.g., `s-12345678`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1035,7 +1035,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SID of a group in the directory connected to the Transfer Server (e.g. `S-1-1-12-1234567890-123456789-1234567890-1234`)
+    <dd>{{% md %}}The SID of a group in the directory connected to the Transfer Server (e.g., `S-1-1-12-1234567890-123456789-1234567890-1234`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homedirectory_nodejs">
@@ -1097,7 +1097,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Server ID of the Transfer Server (e.g. `s-12345678`)
+    <dd>{{% md %}}The Server ID of the Transfer Server (e.g., `s-12345678`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1110,7 +1110,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SID of a group in the directory connected to the Transfer Server (e.g. `S-1-1-12-1234567890-123456789-1234567890-1234`)
+    <dd>{{% md %}}The SID of a group in the directory connected to the Transfer Server (e.g., `S-1-1-12-1234567890-123456789-1234567890-1234`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_home_directory_python">
@@ -1172,7 +1172,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Server ID of the Transfer Server (e.g. `s-12345678`)
+    <dd>{{% md %}}The Server ID of the Transfer Server (e.g., `s-12345678`)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1403,7 +1403,7 @@ The following state arguments are supported:
 ## Import
 
 
-Transfer Accesses can be imported using the `server_id` and `external_id`, e.g.
+Transfer Accesses can be imported using the `server_id` and `external_id`, e.g.,
 
 ```sh
  $ pulumi import aws:transfer/access:Access example s-12345678/S-1-1-12-1234567890-123456789-1234567890-1234
@@ -1419,6 +1419,6 @@ Transfer Accesses can be imported using the `server_id` and `external_id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -6783,7 +6783,7 @@ You can specify one or more targets and their relative weights with which to dis
 ## Import
 
 
-App Mesh virtual routes can be imported using `mesh_name` and `virtual_router_name` together with the route's `name`, e.g.
+App Mesh virtual routes can be imported using `mesh_name` and `virtual_router_name` together with the route's `name`, e.g.,
 
 ```sh
  $ pulumi import aws:appmesh/route:Route serviceb simpleapp/serviceB/serviceB-route
@@ -6801,6 +6801,6 @@ App Mesh virtual routes can be imported using `mesh_name` and `virtual_router_na
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

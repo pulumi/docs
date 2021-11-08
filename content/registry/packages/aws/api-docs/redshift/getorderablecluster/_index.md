@@ -177,7 +177,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reshift Cluster type. e.g. `multi-node` or `single-node`
+    <dd>{{% md %}}Reshift Cluster typeE.g., `multi-node` or `single-node`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterversion_csharp">
@@ -186,7 +186,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Redshift Cluster version. e.g. `1.0`
+    <dd>{{% md %}}Redshift Cluster versionE.g., `1.0`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetype_csharp">
@@ -195,7 +195,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Redshift Cluster node type. e.g. `dc2.8xlarge`
+    <dd>{{% md %}}Redshift Cluster node typeE.g., `dc2.8xlarge`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferrednodetypes_csharp">
@@ -217,7 +217,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reshift Cluster type. e.g. `multi-node` or `single-node`
+    <dd>{{% md %}}Reshift Cluster typeE.g., `multi-node` or `single-node`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterversion_go">
@@ -226,7 +226,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Redshift Cluster version. e.g. `1.0`
+    <dd>{{% md %}}Redshift Cluster versionE.g., `1.0`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetype_go">
@@ -235,7 +235,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Redshift Cluster node type. e.g. `dc2.8xlarge`
+    <dd>{{% md %}}Redshift Cluster node typeE.g., `dc2.8xlarge`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferrednodetypes_go">
@@ -257,7 +257,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reshift Cluster type. e.g. `multi-node` or `single-node`
+    <dd>{{% md %}}Reshift Cluster typeE.g., `multi-node` or `single-node`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterversion_nodejs">
@@ -266,7 +266,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Redshift Cluster version. e.g. `1.0`
+    <dd>{{% md %}}Redshift Cluster versionE.g., `1.0`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetype_nodejs">
@@ -275,7 +275,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Redshift Cluster node type. e.g. `dc2.8xlarge`
+    <dd>{{% md %}}Redshift Cluster node typeE.g., `dc2.8xlarge`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferrednodetypes_nodejs">
@@ -297,7 +297,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Reshift Cluster type. e.g. `multi-node` or `single-node`
+    <dd>{{% md %}}Reshift Cluster typeE.g., `multi-node` or `single-node`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_version_python">
@@ -306,7 +306,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Redshift Cluster version. e.g. `1.0`
+    <dd>{{% md %}}Redshift Cluster versionE.g., `1.0`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_type_python">
@@ -315,7 +315,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Redshift Cluster node type. e.g. `dc2.8xlarge`
+    <dd>{{% md %}}Redshift Cluster node typeE.g., `dc2.8xlarge`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_node_types_python">
@@ -564,6 +564,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

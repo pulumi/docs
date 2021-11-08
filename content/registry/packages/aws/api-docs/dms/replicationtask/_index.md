@@ -1401,7 +1401,7 @@ The following state arguments are supported:
 ## Import
 
 
-Replication tasks can be imported using the `replication_task_id`, e.g.
+Replication tasks can be imported using the `replication_task_id`, e.g.,
 
 ```sh
  $ pulumi import aws:dms/replicationTask:ReplicationTask test test-dms-replication-task-tf
@@ -1417,6 +1417,6 @@ Replication tasks can be imported using the `replication_task_id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

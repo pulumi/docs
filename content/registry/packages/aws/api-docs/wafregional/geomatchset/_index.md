@@ -678,7 +678,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country that you want AWS WAF to search for.
-This is the two-letter country code, e.g. `US`, `CA`, `RU`, `CN`, etc.
+This is the two-letter country code, e.g., `US`, `CA`, `RU`, `CN`, etc.
 See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchConstraint.html) for all supported values.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -702,7 +702,7 @@ See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchConst
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country that you want AWS WAF to search for.
-This is the two-letter country code, e.g. `US`, `CA`, `RU`, `CN`, etc.
+This is the two-letter country code, e.g., `US`, `CA`, `RU`, `CN`, etc.
 See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchConstraint.html) for all supported values.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -726,7 +726,7 @@ See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchConst
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country that you want AWS WAF to search for.
-This is the two-letter country code, e.g. `US`, `CA`, `RU`, `CN`, etc.
+This is the two-letter country code, e.g., `US`, `CA`, `RU`, `CN`, etc.
 See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchConstraint.html) for all supported values.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -750,14 +750,14 @@ See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchConst
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The country that you want AWS WAF to search for.
-This is the two-letter country code, e.g. `US`, `CA`, `RU`, `CN`, etc.
+This is the two-letter country code, e.g., `US`, `CA`, `RU`, `CN`, etc.
 See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchConstraint.html) for all supported values.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
 
-WAF Regional Geo Match Set can be imported using the id, e.g.
+WAF Regional Geo Match Set can be imported using the id, e.g.,
 
 ```sh
  $ pulumi import aws:wafregional/geoMatchSet:GeoMatchSet geo_match_set a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
@@ -773,6 +773,6 @@ WAF Regional Geo Match Set can be imported using the id, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

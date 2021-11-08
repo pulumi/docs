@@ -477,7 +477,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
-Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredmaintenancewindow_csharp">
@@ -486,7 +486,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipfinalsnapshot_csharp">
@@ -706,7 +706,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
-Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredmaintenancewindow_go">
@@ -715,7 +715,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipfinalsnapshot_go">
@@ -935,7 +935,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
-Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredmaintenancewindow_nodejs">
@@ -944,7 +944,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipfinalsnapshot_nodejs">
@@ -1164,7 +1164,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
-Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_maintenance_window_python">
@@ -1173,7 +1173,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skip_final_snapshot_python">
@@ -1855,7 +1855,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
-Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredmaintenancewindow_csharp">
@@ -1864,7 +1864,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readerendpoint_csharp">
@@ -2138,7 +2138,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
-Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredmaintenancewindow_go">
@@ -2147,7 +2147,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readerendpoint_go">
@@ -2421,7 +2421,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
-Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredmaintenancewindow_nodejs">
@@ -2430,7 +2430,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readerendpoint_nodejs">
@@ -2704,7 +2704,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
-Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferred_maintenance_window_python">
@@ -2713,7 +2713,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reader_endpoint_python">
@@ -2788,7 +2788,7 @@ with the Cluster
 ## Import
 
 
-DocDB Clusters can be imported using the `cluster_identifier`, e.g.
+DocDB Clusters can be imported using the `cluster_identifier`, e.g.,
 
 ```sh
  $ pulumi import aws:docdb/cluster:Cluster docdb_cluster docdb-prod-cluster
@@ -2804,6 +2804,6 @@ DocDB Clusters can be imported using the `cluster_identifier`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -352,7 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ElasticSearch version for the domain.
+    <dd>{{% md %}}Elasticsearch version for the domain.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionatrests_csharp">
@@ -553,7 +553,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ElasticSearch version for the domain.
+    <dd>{{% md %}}Elasticsearch version for the domain.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionatrests_go">
@@ -754,7 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ElasticSearch version for the domain.
+    <dd>{{% md %}}Elasticsearch version for the domain.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionatrests_nodejs">
@@ -955,7 +955,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ElasticSearch version for the domain.
+    <dd>{{% md %}}Elasticsearch version for the domain.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_at_rests_python">
@@ -2418,6 +2418,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

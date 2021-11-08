@@ -3272,7 +3272,7 @@ This attribute should only be specified if the key is different from the default
 ## Import
 
 
-DynamoDB tables can be imported using the `name`, e.g.
+DynamoDB tables can be imported using the `name`, e.g.,
 
 ```sh
  $ pulumi import aws:dynamodb/table:Table basic-dynamodb-table GameScores
@@ -3288,6 +3288,6 @@ DynamoDB tables can be imported using the `name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

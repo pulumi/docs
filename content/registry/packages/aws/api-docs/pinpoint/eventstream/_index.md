@@ -833,7 +833,7 @@ The following state arguments are supported:
 ## Import
 
 
-Pinpoint Event Stream can be imported using the `application-id`, e.g.
+Pinpoint Event Stream can be imported using the `application-id`, e.g.,
 
 ```sh
  $ pulumi import aws:pinpoint/eventStream:EventStream stream application-id
@@ -849,6 +849,6 @@ Pinpoint Event Stream can be imported using the `application-id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

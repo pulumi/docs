@@ -799,7 +799,7 @@ The following state arguments are supported:
 ## Import
 
 
-`aws_organizations_policy_attachment` can be imported by using the target ID and policy ID, e.g. with an account target
+`aws_organizations_policy_attachment` can be imported by using the target ID and policy ID, e.g., with an account target
 
 ```sh
  $ pulumi import aws:organizations/policyAttachment:PolicyAttachment account 123456789012:p-12345678
@@ -815,6 +815,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

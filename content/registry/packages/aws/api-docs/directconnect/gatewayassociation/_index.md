@@ -1464,7 +1464,7 @@ Used for cross-account Direct Connect gateway associations.
 ## Import
 
 
-Direct Connect gateway associations can be imported using `dx_gateway_id` together with `associated_gateway_id`, e.g.
+Direct Connect gateway associations can be imported using `dx_gateway_id` together with `associated_gateway_id`, e.g.,
 
 ```sh
  $ pulumi import aws:directconnect/gatewayAssociation:GatewayAssociation example 345508c3-7215-4aef-9832-07c125d5bd0f/vgw-98765432
@@ -1480,6 +1480,6 @@ Direct Connect gateway associations can be imported using `dx_gateway_id` togeth
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

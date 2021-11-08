@@ -2636,7 +2636,7 @@ security groups apply to created instances.
 ## Import
 
 
-OpsWorks stacks can be imported using the `id`, e.g.
+OpsWorks stacks can be imported using the `id`, e.g.,
 
 ```sh
  $ pulumi import aws:opsworks/stack:Stack bar 00000000-0000-0000-0000-000000000000
@@ -2652,6 +2652,6 @@ OpsWorks stacks can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

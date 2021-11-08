@@ -1004,7 +1004,7 @@ The following state arguments are supported:
 ## Import
 
 
-EventBridge API Destinations can be imported using the `name`, e.g. console
+EventBridge API Destinations can be imported using the `name`, e.g., console
 
 ```sh
  $ pulumi import aws:cloudwatch/eventApiDestination:EventApiDestination test api-destination
@@ -1020,6 +1020,6 @@ EventBridge API Destinations can be imported using the `name`, e.g. console
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

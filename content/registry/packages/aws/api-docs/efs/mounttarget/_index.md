@@ -1332,7 +1332,7 @@ be for the same VPC as subnet specified) in effect for the mount target.
 ## Import
 
 
-The EFS mount targets can be imported using the `id`, e.g.
+The EFS mount targets can be imported using the `id`, e.g.,
 
 ```sh
  $ pulumi import aws:efs/mountTarget:MountTarget alpha fsmt-52a643fb
@@ -1348,6 +1348,6 @@ The EFS mount targets can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

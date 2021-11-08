@@ -1585,7 +1585,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 ## Import
 
 
-CodeDeploy Deployment Configurations can be imported using the `deployment_config_name`, e.g.
+CodeDeploy Deployment Configurations can be imported using the `deployment_config_name`, e.g.,
 
 ```sh
  $ pulumi import aws:codedeploy/deploymentConfig:DeploymentConfig example my-deployment-config
@@ -1601,6 +1601,6 @@ CodeDeploy Deployment Configurations can be imported using the `deployment_confi
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

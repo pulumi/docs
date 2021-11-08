@@ -551,7 +551,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the request's content type
-where key is the content type (e.g. `application/json`)
+where key is the content type (e.g., `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -657,7 +657,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the request's content type
-where key is the content type (e.g. `application/json`)
+where key is the content type (e.g., `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -763,7 +763,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the request's content type
-where key is the content type (e.g. `application/json`)
+where key is the content type (e.g., `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -869,7 +869,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the request's content type
-where key is the content type (e.g. `application/json`)
+where key is the content type (e.g., `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1148,7 +1148,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the request's content type
-where key is the content type (e.g. `application/json`)
+where key is the content type (e.g., `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1254,7 +1254,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the request's content type
-where key is the content type (e.g. `application/json`)
+where key is the content type (e.g., `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1360,7 +1360,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the request's content type
-where key is the content type (e.g. `application/json`)
+where key is the content type (e.g., `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1466,7 +1466,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the request's content type
-where key is the content type (e.g. `application/json`)
+where key is the content type (e.g., `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1515,7 +1515,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
 ## Import
 
 
-`aws_api_gateway_method` can be imported using `REST-API-ID/RESOURCE-ID/HTTP-METHOD`, e.g.
+`aws_api_gateway_method` can be imported using `REST-API-ID/RESOURCE-ID/HTTP-METHOD`, e.g.,
 
 ```sh
  $ pulumi import aws:apigateway/method:Method example 12345abcde/67890fghij/GET
@@ -1531,6 +1531,6 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

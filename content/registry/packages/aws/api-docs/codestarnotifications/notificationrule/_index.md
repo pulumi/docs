@@ -1393,7 +1393,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 ## Import
 
 
-CodeStar notification rule can be imported using the ARN, e.g.
+CodeStar notification rule can be imported using the ARN, e.g.,
 
 ```sh
  $ pulumi import aws:codestarnotifications/notificationRule:NotificationRule foo arn:aws:codestar-notifications:us-west-1:0123456789:notificationrule/2cdc68a3-8f7c-4893-b6a5-45b362bd4f2b
@@ -1409,6 +1409,6 @@ CodeStar notification rule can be imported using the ARN, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

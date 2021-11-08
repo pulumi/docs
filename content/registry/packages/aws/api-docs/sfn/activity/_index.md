@@ -757,7 +757,7 @@ The following state arguments are supported:
 ## Import
 
 
-Activities can be imported using the `arn`, e.g.
+Activities can be imported using the `arn`, e.g.,
 
 ```sh
  $ pulumi import aws:sfn/activity:Activity foo arn:aws:states:eu-west-1:123456789098:activity:bar
@@ -773,6 +773,6 @@ Activities can be imported using the `arn`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

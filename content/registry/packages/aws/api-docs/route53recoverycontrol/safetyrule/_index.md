@@ -1297,7 +1297,7 @@ The following state arguments are supported:
 ## Import
 
 
-Route53 Recovery Control Config Safety Rule can be imported via the safety rule ARN, e.g.
+Route53 Recovery Control Config Safety Rule can be imported via the safety rule ARN, e.g.,
 
 ```sh
  $ pulumi import aws:route53recoverycontrol/safetyRule:SafetyRule myrule arn:aws:route53-recovery-control::313517334327:controlpanel/1bfba17df8684f5dab0467b71424f7e8/safetyrule/3bacc77003364c0f
@@ -1313,6 +1313,6 @@ Route53 Recovery Control Config Safety Rule can be imported via the safety rule 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

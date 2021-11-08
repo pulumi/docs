@@ -716,7 +716,7 @@ authorized for ingress to the cache security group
 ## Import
 
 
-ElastiCache Security Groups can be imported by name, e.g.
+ElastiCache Security Groups can be imported by name, e.g.,
 
 ```sh
  $ pulumi import aws:elasticache/securityGroup:SecurityGroup my_ec_security_group ec-security-group-1
@@ -732,6 +732,6 @@ ElastiCache Security Groups can be imported by name, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

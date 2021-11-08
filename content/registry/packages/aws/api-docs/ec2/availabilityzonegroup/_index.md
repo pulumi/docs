@@ -623,7 +623,7 @@ The following state arguments are supported:
 ## Import
 
 
-EC2 Availability Zone Groups can be imported using the group name, e.g.
+EC2 Availability Zone Groups can be imported using the group name, e.g.,
 
 ```sh
  $ pulumi import aws:ec2/availabilityZoneGroup:AvailabilityZoneGroup example us-west-2-lax-1
@@ -639,6 +639,6 @@ EC2 Availability Zone Groups can be imported using the group name, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

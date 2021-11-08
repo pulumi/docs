@@ -820,7 +820,7 @@ for extracting metric data out of ingested log events.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the CloudWatch metric to which the monitored log information should be published (e.g. `ErrorCount`)
+    <dd>{{% md %}}The name of the CloudWatch metric to which the monitored log information should be published (e.g., `ErrorCount`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
@@ -878,7 +878,7 @@ for extracting metric data out of ingested log events.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the CloudWatch metric to which the monitored log information should be published (e.g. `ErrorCount`)
+    <dd>{{% md %}}The name of the CloudWatch metric to which the monitored log information should be published (e.g., `ErrorCount`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_go">
@@ -936,7 +936,7 @@ for extracting metric data out of ingested log events.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the CloudWatch metric to which the monitored log information should be published (e.g. `ErrorCount`)
+    <dd>{{% md %}}The name of the CloudWatch metric to which the monitored log information should be published (e.g., `ErrorCount`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
@@ -994,7 +994,7 @@ for extracting metric data out of ingested log events.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the CloudWatch metric to which the monitored log information should be published (e.g. `ErrorCount`)
+    <dd>{{% md %}}The name of the CloudWatch metric to which the monitored log information should be published (e.g., `ErrorCount`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_python">
@@ -1045,7 +1045,7 @@ for extracting metric data out of ingested log events.
 ## Import
 
 
-CloudWatch Log Metric Filter can be imported using the `log_group_name:name`, e.g.
+CloudWatch Log Metric Filter can be imported using the `log_group_name:name`, e.g.,
 
 ```sh
  $ pulumi import aws:cloudwatch/logMetricFilter:LogMetricFilter test /aws/lambda/function:test
@@ -1061,6 +1061,6 @@ CloudWatch Log Metric Filter can be imported using the `log_group_name:name`, e.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

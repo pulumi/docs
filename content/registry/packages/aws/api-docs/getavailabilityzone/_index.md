@@ -17,7 +17,7 @@ in the current region.
 
 This can be used both to validate an availability zone given in a variable
 and to split the AZ name into its component parts of an AWS region and an
-AZ identifier letter. The latter may be useful e.g. for implementing a
+AZ identifier letter. The latter may be useful e.g., for implementing a
 consistent subnet numbering scheme across several regions by mapping both
 the region and the subnet letter to network numbers.
 
@@ -888,6 +888,6 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

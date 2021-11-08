@@ -1120,7 +1120,7 @@ If set to `true`, AWS WAF will allow, block, or count requests based on all IP a
 ## Import
 
 
-WAF rules can be imported using the id, e.g.
+WAF rules can be imported using the id, e.g.,
 
 ```sh
  $ pulumi import aws:waf/rule:Rule example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
@@ -1136,6 +1136,6 @@ WAF rules can be imported using the id, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

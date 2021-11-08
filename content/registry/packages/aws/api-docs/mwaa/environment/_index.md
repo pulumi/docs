@@ -3861,7 +3861,7 @@ The following state arguments are supported:
 ## Import
 
 
-MWAA Environment can be imported using `Name` e.g.
+MWAA Environment can be imported using `Name` e.g.,
 
 ```sh
  $ pulumi import aws:mwaa/environment:Environment example MyAirflowEnvironment
@@ -3877,6 +3877,6 @@ MWAA Environment can be imported using `Name` e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

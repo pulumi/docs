@@ -1120,7 +1120,7 @@ The following state arguments are supported:
 ## Import
 
 
-GuardDuty detectors can be imported using the detector ID, e.g.
+GuardDuty detectors can be imported using the detector ID, e.g.,
 
 ```sh
  $ pulumi import aws:guardduty/detector:Detector MyDetector 00b00fd5aecc0ab60a708659477e9617
@@ -1136,6 +1136,6 @@ GuardDuty detectors can be imported using the detector ID, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

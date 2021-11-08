@@ -1098,7 +1098,7 @@ The following state arguments are supported:
 ## Import
 
 
-Media Package Channels can be imported via the channel ID, e.g.
+Media Package Channels can be imported via the channel ID, e.g.,
 
 ```sh
  $ pulumi import aws:mediapackage/channel:Channel kittens kittens-channel
@@ -1114,6 +1114,6 @@ Media Package Channels can be imported via the channel ID, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

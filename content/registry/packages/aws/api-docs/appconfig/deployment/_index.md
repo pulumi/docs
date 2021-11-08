@@ -1312,7 +1312,7 @@ The following state arguments are supported:
 ## Import
 
 
-AppConfig Deployments can be imported by using the application ID, environment ID, and deployment number separated by a slash (`/`), e.g.
+AppConfig Deployments can be imported by using the application ID, environment ID, and deployment number separated by a slash (`/`), e.g.,
 
 ```sh
  $ pulumi import aws:appconfig/deployment:Deployment example 71abcde/11xxxxx/1
@@ -1328,6 +1328,6 @@ AppConfig Deployments can be imported by using the application ID, environment I
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

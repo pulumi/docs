@@ -286,6 +286,15 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the network interface.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="associations_csharp">
 <a href="#associations_csharp" style="color: inherit; text-decoration: inherit;">Associations</a>
 </span>
@@ -457,6 +466,15 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the network interface.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="associations_go">
 <a href="#associations_go" style="color: inherit; text-decoration: inherit;">Associations</a>
@@ -630,6 +648,15 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the network interface.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="associations_nodejs">
 <a href="#associations_nodejs" style="color: inherit; text-decoration: inherit;">associations</a>
 </span>
@@ -801,6 +828,15 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the network interface.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="associations_python">
 <a href="#associations_python" style="color: inherit; text-decoration: inherit;">associations</a>
@@ -1492,6 +1528,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

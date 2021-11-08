@@ -946,7 +946,7 @@ The following state arguments are supported:
 ## Import
 
 
-CodeBuild Source Credential can be imported using the CodeBuild Source Credential arn, e.g.
+CodeBuild Source Credential can be imported using the CodeBuild Source Credential arn, e.g.,
 
 ```sh
  $ pulumi import aws:codebuild/sourceCredential:SourceCredential example arn:aws:codebuild:us-west-2:123456789:token:github
@@ -962,6 +962,6 @@ CodeBuild Source Credential can be imported using the CodeBuild Source Credentia
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

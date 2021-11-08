@@ -1038,7 +1038,7 @@ are evaluated first when associated with the same compute environment.
 ## Import
 
 
-Batch Job Queue can be imported using the `arn`, e.g.
+Batch Job Queue can be imported using the `arn`, e.g.,
 
 ```sh
  $ pulumi import aws:batch/jobQueue:JobQueue test_queue arn:aws:batch:us-east-1:123456789012:job-queue/sample
@@ -1054,6 +1054,6 @@ Batch Job Queue can be imported using the `arn`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

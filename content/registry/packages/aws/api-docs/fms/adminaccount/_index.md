@@ -537,7 +537,7 @@ The following state arguments are supported:
 ## Import
 
 
-Firewall Manager administrator account association can be imported using the account ID, e.g.
+Firewall Manager administrator account association can be imported using the account ID, e.g.,
 
 ```sh
  $ pulumi import aws:fms/adminAccount:AdminAccount example 123456789012
@@ -553,6 +553,6 @@ Firewall Manager administrator account association can be imported using the acc
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

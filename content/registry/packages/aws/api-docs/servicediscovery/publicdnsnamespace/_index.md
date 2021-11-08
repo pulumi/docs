@@ -909,7 +909,7 @@ The following state arguments are supported:
 ## Import
 
 
-Service Discovery Public DNS Namespace can be imported using the namespace ID, e.g.
+Service Discovery Public DNS Namespace can be imported using the namespace ID, e.g.,
 
 ```sh
  $ pulumi import aws:servicediscovery/publicDnsNamespace:PublicDnsNamespace example 0123456789
@@ -925,6 +925,6 @@ Service Discovery Public DNS Namespace can be imported using the namespace ID, e
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

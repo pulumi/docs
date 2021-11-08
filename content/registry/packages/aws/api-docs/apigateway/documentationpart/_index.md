@@ -738,7 +738,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of API entity to which the documentation content applies. e.g. `API`, `METHOD` or `REQUEST_BODY`
+    <dd>{{% md %}}The type of API entity to which the documentation content appliesE.g., `API`, `METHOD` or `REQUEST_BODY`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_csharp">
@@ -787,7 +787,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of API entity to which the documentation content applies. e.g. `API`, `METHOD` or `REQUEST_BODY`
+    <dd>{{% md %}}The type of API entity to which the documentation content appliesE.g., `API`, `METHOD` or `REQUEST_BODY`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_go">
@@ -836,7 +836,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of API entity to which the documentation content applies. e.g. `API`, `METHOD` or `REQUEST_BODY`
+    <dd>{{% md %}}The type of API entity to which the documentation content appliesE.g., `API`, `METHOD` or `REQUEST_BODY`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_nodejs">
@@ -885,7 +885,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of API entity to which the documentation content applies. e.g. `API`, `METHOD` or `REQUEST_BODY`
+    <dd>{{% md %}}The type of API entity to which the documentation content appliesE.g., `API`, `METHOD` or `REQUEST_BODY`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_python">
@@ -927,7 +927,7 @@ The following state arguments are supported:
 ## Import
 
 
-API Gateway documentation_parts can be imported using `REST-API-ID/DOC-PART-ID`, e.g.
+API Gateway documentation_parts can be imported using `REST-API-ID/DOC-PART-ID`, e.g.,
 
 ```sh
  $ pulumi import aws:apigateway/documentationPart:DocumentationPart example 5i4e1ko720/3oyy3t
@@ -943,6 +943,6 @@ API Gateway documentation_parts can be imported using `REST-API-ID/DOC-PART-ID`,
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 
