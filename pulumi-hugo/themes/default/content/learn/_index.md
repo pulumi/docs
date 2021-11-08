@@ -1,26 +1,41 @@
 ---
 title: Learn Pulumi
-description: Courses, tutorials, examples, and more to help you get the most out of Pulumi.
-meta_desc: Courses, tutorials, examples, and more to help you get the most out of Pulumi.
+description: |
+    Courses, tutorials, examples, and more to help you get the most out of
+    Pulumi.
+meta_desc: |
+    Courses, tutorials, examples, and more to help you get the most out of
+    Pulumi.
 menu:
     header:
         weight: 0 # Change this to 4 to have LEARN appear in the header bar.
         identifier: learn
         name: Learn
 modules:
-    title: Modules
+    title: Pathways
     description: |
-        Here's a bit of text that'll go at the top of the page. It's intended to give you some
-        information, as text generally is, and to introduce you to what you're looking at, and uh,
-        you know, such as.
+        Pathways are learning progressions that you can follow to learn more
+        about using Pulumi.
 tutorials:
     title: Tutorials
     description: |
-        Here's a bit of text that'll go along with this section. It'll have a little info, etc.
-        You get the idea.
+        Tutorials are series of hands-on activities that help you along your
+        learning journey with Pulumi.
+
+overview: |
+    <h1>Welcome to Learn Pulumi!</h1>
+    
+    These learning pathways will help you learn all of the concepts of Pulumi,
+    along with best practices and architectural patterns, through real-life
+    examples.
+    
+    In each tutorial, you'll complete a series of steps while exploring Pulumi
+    to complete a project or build a system. Start with Pulumi Fundamentals to
+    get comfortable with the vocabulary, and then head to another pathway to
+    explore further.
 
 # Exclude from search-engine indexing for now.
-block_external_search_index: true
+block_external_search_index: false
 ---
 
-This is some content that goes with the page as a whole. You know, if we need it. Or something.
+Ipsum lorem

@@ -1,10 +1,17 @@
-{{ if and (.context.Params.links) (gt (len .context.Params.links) 0) }}
-    <div class="hidden mt-16">
-        <h5 class="uppercase text-sm mt-2 mb-4 pb-4 text-gray-600">See Also</h5>
-        <ul class="p-0 list-none">
-            {{ range .context.Params.links }}
-                <li><a href="{{ .url }}">{{ .text }}</a></li>
-            {{ end }}
-        </ul>
-    </div>
+{{ if .context.Params.links }} <!-- Note: These if-statements must be separate for the build to succeed. -->
+    {{ if gt (len .context.Params.links) 0 }}
+    {{ $links := sort .context.Params.links }}
+        <div class="mt-16">
+            <h5 class="uppercase text-sm mt-2 mb-4 pb-4 text-gray-600">See Also</h5>
+            <ul class="p-0 list-none">
+                {{ range $index, $link := .context.Params.links }}
+                    <li class="flex items-center list-none border-gray-200
+                    {{- if lt (add $index 1) (len $links) }} pb-4 mb-4 border-b border-gray-100 {{ end -}}
+                    "><a href="{{ .url }}">{{ .text }}</a></li>
+                {{ end }}
+            </ul>
+        </div>
+    {{ end }}
+{{ else }}
+    <div></div>
 {{ end }}

@@ -20,7 +20,7 @@
             <section class="container mx-auto px-4">
                 <div class="md:flex">
                     <div class="md:w-2/3">
-                        <h4 class="mb-4">In this module, you'll learn:</h4>
+                        <h4 class="mb-4">In this pathway, you'll learn:</h4>
                         <ul class="list-none p-0">
                             {{ range .Params.youll_learn }}
                                 <li>
@@ -38,7 +38,7 @@
                 </div>
             </section>
             <section class="container mx-auto py-8 px-4">
-                <h4 class="mb-4">Topics</h4>
+                <h4 class="mb-4">Tutorials</h4>
                 <div class="p-0 mb-12">
                     {{ partial "learn/topics" (dict "context" . "module" .) }}
                 </div>

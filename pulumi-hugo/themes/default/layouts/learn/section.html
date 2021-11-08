@@ -7,12 +7,27 @@
 
     <div class="p-0">
         <div class="pt-8 pb-64 mx-4 md:mx-0">
+            <section id="overview" class="container mx-auto">
+                <div class="flex flex-wrap">
+                    <!-- <div class="w-full lg:w-1/2 p-6 text-center"> -->
+                    <div class="w-full p-6 text-center">
+                        <p class="text-2xl text-left pt-8 text-gray-600">{{ .Params.overview | markdownify }}</p>
+                    </div>
+
+                    <!-- <div class="w-full lg:w-1/2 p-6"> -->
+                        <!-- <img src="/images/learn/learn-progression.svg" alt="Pulumi Learn Progression" /> -->
+                    <!-- </div> -->
+                </div>
+            </section>
+
             <section id="modules">
                 <div class="container mx-auto lg:pt-4">
-                    <div class="md:flex md:flex-wrap">
+                    <h2>Pathways</h2>
+
+                    <div class="md:flex md:flex-wrap pt-8">
                         {{ range sort $modules ".Params.index" }}
                             <div class="md:px-4 md:w-1/2 lg:w-1/3 xl:w-1/4">
-                                <div class="flex flex-col rounded-xl shadow-xl mb-8 border border-gray-200">
+                                <div class="flex flex-col rounded-xl mb-8 border border-gray-200 card">
                                     <div>
                                         {{ if .Params.meta_image }}
                                             <a class="block" href="{{ .RelPermalink }}">

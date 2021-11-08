@@ -7,7 +7,7 @@
         <div class="flex">
             {{ if ne (add $index 1) (len $topics) }}
                 {{ $next := index $topics (add $index 1) }}
-                <a href="{{ $next.RelPermalink }}" class="btn">Next Topic: {{ $next.Title }} &rarr;</a>
+                <a href="{{ $next.RelPermalink }}" class="btn">Next Tutorial: {{ $next.Title }} &rarr;</a>
             {{ else }}
                 <a href="{{ $currentModule.RelPermalink }}" class="btn btn-secondary">Return to {{ $currentModule.Title }} &rarr;</a>
             {{ end }}

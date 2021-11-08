@@ -18,10 +18,16 @@
                 {{ .Content }}
             </section>
             {{ partial "learn/topics-next-prev" (dict "context" . "topic" . "module" $module) }}
+            <div>
+                {{ partial "docs/feedback.html" . }}
+            </div>
         </div>
 
         <div class="md:w-2/12 md:ml-8 m8-8 ">
-
+            <!-- TODO: Move feedback here once wiring is complete -->
+            <!-- <div>
+                {{ partial "docs/feedback.html" . }}
+            </div> -->
         </div>
     </div>
 {{ end }}
