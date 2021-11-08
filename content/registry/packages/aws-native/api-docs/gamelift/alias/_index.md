@@ -396,14 +396,6 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A descriptive label that is associated with an alias. Alias names do not need to be unique.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="routingstrategy_csharp">
 <a href="#routingstrategy_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Strategy</a>
 </span>
@@ -418,19 +410,19 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A human-readable description of the alias.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+    <dd>{{% md %}}A human-readable description of the alias.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A descriptive label that is associated with an alias. Alias names do not need to be unique.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}A descriptive label that is associated with an alias. Alias names do not need to be unique.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="routingstrategy_go">
 <a href="#routingstrategy_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Strategy</a>
@@ -446,19 +438,19 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A human-readable description of the alias.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+    <dd>{{% md %}}A human-readable description of the alias.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A descriptive label that is associated with an alias. Alias names do not need to be unique.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}A descriptive label that is associated with an alias. Alias names do not need to be unique.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="routingstrategy_nodejs">
 <a href="#routingstrategy_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Strategy</a>
@@ -474,19 +466,19 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A human-readable description of the alias.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A human-readable description of the alias.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A descriptive label that is associated with an alias. Alias names do not need to be unique.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A descriptive label that is associated with an alias. Alias names do not need to be unique.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routing_strategy_python">
 <a href="#routing_strategy_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>strategy</a>
@@ -502,7 +494,15 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A human-readable description of the alias.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A human-readable description of the alias.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A descriptive label that is associated with an alias. Alias names do not need to be unique.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

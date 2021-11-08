@@ -15,6 +15,205 @@ no_edit_this_page: true
 Resource Type definition for AWS::EC2::CapacityReservationFleet
 
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Example
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AwsNative = Pulumi.AwsNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ec2CapacityReservationFleetCanary = new AwsNative.EC2.CapacityReservationFleet("ec2CapacityReservationFleetCanary", new AwsNative.EC2.CapacityReservationFleetArgs
+        {
+            AllocationStrategy = "prioritized",
+            InstanceTypeSpecifications = 
+            {
+                new AwsNative.EC2.Inputs.CapacityReservationFleetInstanceTypeSpecificationArgs
+                {
+                    InstanceTypeSpecification = 
+                    {
+                        { "instanceType", "c4.large" },
+                        { "instancePlatform", "Linux/UNIX" },
+                        { "availabilityZone", "us-east-1a" },
+                        { "weight", 1 },
+                        { "priority", 1 },
+                    },
+                },
+                new AwsNative.EC2.Inputs.CapacityReservationFleetInstanceTypeSpecificationArgs
+                {
+                    InstanceTypeSpecification = 
+                    {
+                        { "instanceType", "c5.large" },
+                        { "instancePlatform", "Linux/UNIX" },
+                        { "availabilityZone", "us-east-1a" },
+                        { "weight", 1 },
+                        { "priority", 2 },
+                    },
+                },
+            },
+            Tenancy = "default",
+            TotalTargetCapacity = 2,
+            InstanceMatchCriteria = "open",
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ec2.NewCapacityReservationFleet(ctx, "ec2CapacityReservationFleetCanary", &ec2.CapacityReservationFleetArgs{
+			AllocationStrategy: pulumi.String("prioritized"),
+			InstanceTypeSpecifications: []ec2.CapacityReservationFleetInstanceTypeSpecificationArgs{
+				&ec2.CapacityReservationFleetInstanceTypeSpecificationArgs{
+					InstanceTypeSpecification: map[string]interface{}{
+						"instanceType":     "c4.large",
+						"instancePlatform": "Linux/UNIX",
+						"availabilityZone": "us-east-1a",
+						"weight":           1,
+						"priority":         1,
+					},
+				},
+				&ec2.CapacityReservationFleetInstanceTypeSpecificationArgs{
+					InstanceTypeSpecification: map[string]interface{}{
+						"instanceType":     "c5.large",
+						"instancePlatform": "Linux/UNIX",
+						"availabilityZone": "us-east-1a",
+						"weight":           1,
+						"priority":         2,
+					},
+				},
+			},
+			Tenancy:               "default",
+			TotalTargetCapacity:   pulumi.Int(2),
+			InstanceMatchCriteria: "open",
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_aws_native as aws_native
+
+ec2_capacity_reservation_fleet_canary = aws_native.ec2.CapacityReservationFleet("ec2CapacityReservationFleetCanary",
+    allocation_strategy="prioritized",
+    instance_type_specifications=[
+        aws_native.ec2.CapacityReservationFleetInstanceTypeSpecificationArgs(
+            instance_type_specification={
+                "instanceType": "c4.large",
+                "instancePlatform": "Linux/UNIX",
+                "availabilityZone": "us-east-1a",
+                "weight": 1,
+                "priority": 1,
+            },
+        ),
+        aws_native.ec2.CapacityReservationFleetInstanceTypeSpecificationArgs(
+            instance_type_specification={
+                "instanceType": "c5.large",
+                "instancePlatform": "Linux/UNIX",
+                "availabilityZone": "us-east-1a",
+                "weight": 1,
+                "priority": 2,
+            },
+        ),
+    ],
+    tenancy="default",
+    total_target_capacity=2,
+    instance_match_criteria="open")
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws_native from "@pulumi/aws-native";
+
+const ec2CapacityReservationFleetCanary = new aws_native.ec2.CapacityReservationFleet("ec2CapacityReservationFleetCanary", {
+    allocationStrategy: "prioritized",
+    instanceTypeSpecifications: [
+        {
+            instanceTypeSpecification: {
+                instanceType: "c4.large",
+                instancePlatform: "Linux/UNIX",
+                availabilityZone: "us-east-1a",
+                weight: 1,
+                priority: 1,
+            },
+        },
+        {
+            instanceTypeSpecification: {
+                instanceType: "c5.large",
+                instancePlatform: "Linux/UNIX",
+                availabilityZone: "us-east-1a",
+                weight: 1,
+                priority: 2,
+            },
+        },
+    ],
+    tenancy: "default",
+    totalTargetCapacity: 2,
+    instanceMatchCriteria: "open",
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a CapacityReservationFleet Resource {#create}

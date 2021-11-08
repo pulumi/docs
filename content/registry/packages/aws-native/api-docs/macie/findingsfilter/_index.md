@@ -169,15 +169,7 @@ The FindingsFilter resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#findingsfilterfindingcriteria">Pulumi.<wbr>Aws<wbr>Native.<wbr>Macie.<wbr>Inputs.<wbr>Findings<wbr>Filter<wbr>Finding<wbr>Criteria<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Findings filter criteria.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Findings filter name{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Findings filter criteria.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -194,6 +186,14 @@ The FindingsFilter resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Findings filter description{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Findings filter name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="position_csharp">
 <a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -213,15 +213,7 @@ The FindingsFilter resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#findingsfilterfindingcriteria">Findings<wbr>Filter<wbr>Finding<wbr>Criteria<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Findings filter criteria.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Findings filter name{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Findings filter criteria.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -238,6 +230,14 @@ The FindingsFilter resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Findings filter description{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Findings filter name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="position_go">
 <a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -257,15 +257,7 @@ The FindingsFilter resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#findingsfilterfindingcriteria">Findings<wbr>Filter<wbr>Finding<wbr>Criteria<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Findings filter criteria.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Findings filter name{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Findings filter criteria.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -282,6 +274,14 @@ The FindingsFilter resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Findings filter description{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Findings filter name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="position_nodejs">
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
@@ -301,15 +301,7 @@ The FindingsFilter resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#findingsfilterfindingcriteria">Findings<wbr>Filter<wbr>Finding<wbr>Criteria<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Findings filter criteria.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Findings filter name{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Findings filter criteria.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -326,6 +318,14 @@ The FindingsFilter resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Findings filter description{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Findings filter name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="position_python">
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>

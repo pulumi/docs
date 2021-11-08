@@ -176,14 +176,6 @@ The DBProxy resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The authorization mechanism that the proxy uses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="dbproxyname_csharp">
-<a href="#dbproxyname_csharp" style="color: inherit; text-decoration: inherit;">DBProxy<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="enginefamily_csharp">
 <a href="#enginefamily_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Family</a>
 </span>
@@ -207,6 +199,14 @@ The DBProxy resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}VPC subnet IDs to associate with the new proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dbproxyname_csharp">
+<a href="#dbproxyname_csharp" style="color: inherit; text-decoration: inherit;">DBProxy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="debuglogging_csharp">
 <a href="#debuglogging_csharp" style="color: inherit; text-decoration: inherit;">Debug<wbr>Logging</a>
@@ -260,14 +260,6 @@ The DBProxy resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The authorization mechanism that the proxy uses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="dbproxyname_go">
-<a href="#dbproxyname_go" style="color: inherit; text-decoration: inherit;">DBProxy<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="enginefamily_go">
 <a href="#enginefamily_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Family</a>
 </span>
@@ -291,6 +283,14 @@ The DBProxy resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}VPC subnet IDs to associate with the new proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dbproxyname_go">
+<a href="#dbproxyname_go" style="color: inherit; text-decoration: inherit;">DBProxy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="debuglogging_go">
 <a href="#debuglogging_go" style="color: inherit; text-decoration: inherit;">Debug<wbr>Logging</a>
@@ -344,14 +344,6 @@ The DBProxy resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The authorization mechanism that the proxy uses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="dbproxyname_nodejs">
-<a href="#dbproxyname_nodejs" style="color: inherit; text-decoration: inherit;">d<wbr>BProxy<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="enginefamily_nodejs">
 <a href="#enginefamily_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Family</a>
 </span>
@@ -375,6 +367,14 @@ The DBProxy resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}VPC subnet IDs to associate with the new proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dbproxyname_nodejs">
+<a href="#dbproxyname_nodejs" style="color: inherit; text-decoration: inherit;">d<wbr>BProxy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="debuglogging_nodejs">
 <a href="#debuglogging_nodejs" style="color: inherit; text-decoration: inherit;">debug<wbr>Logging</a>
@@ -428,14 +428,6 @@ The DBProxy resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The authorization mechanism that the proxy uses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="d_b_proxy_name_python">
-<a href="#d_b_proxy_name_python" style="color: inherit; text-decoration: inherit;">d_<wbr>b_<wbr>proxy_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="engine_family_python">
 <a href="#engine_family_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>family</a>
 </span>
@@ -459,6 +451,14 @@ The DBProxy resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}VPC subnet IDs to associate with the new proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="d_b_proxy_name_python">
+<a href="#d_b_proxy_name_python" style="color: inherit; text-decoration: inherit;">d_<wbr>b_<wbr>proxy_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="debug_logging_python">
 <a href="#debug_logging_python" style="color: inherit; text-decoration: inherit;">debug_<wbr>logging</a>

@@ -164,14 +164,6 @@ The Addon resource accepts the following [input]({{< relref "/docs/intro/concept
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="addonname_csharp">
-<a href="#addonname_csharp" style="color: inherit; text-decoration: inherit;">Addon<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of Addon{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
 </span>
@@ -179,6 +171,14 @@ The Addon resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Cluster{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="addonname_csharp">
+<a href="#addonname_csharp" style="color: inherit; text-decoration: inherit;">Addon<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of Addon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addonversion_csharp">
 <a href="#addonversion_csharp" style="color: inherit; text-decoration: inherit;">Addon<wbr>Version</a>
@@ -216,14 +216,6 @@ The Addon resource accepts the following [input]({{< relref "/docs/intro/concept
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="addonname_go">
-<a href="#addonname_go" style="color: inherit; text-decoration: inherit;">Addon<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of Addon{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
 </span>
@@ -231,6 +223,14 @@ The Addon resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Cluster{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="addonname_go">
+<a href="#addonname_go" style="color: inherit; text-decoration: inherit;">Addon<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of Addon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addonversion_go">
 <a href="#addonversion_go" style="color: inherit; text-decoration: inherit;">Addon<wbr>Version</a>
@@ -268,14 +268,6 @@ The Addon resource accepts the following [input]({{< relref "/docs/intro/concept
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="addonname_nodejs">
-<a href="#addonname_nodejs" style="color: inherit; text-decoration: inherit;">addon<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of Addon{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
@@ -283,6 +275,14 @@ The Addon resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Cluster{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="addonname_nodejs">
+<a href="#addonname_nodejs" style="color: inherit; text-decoration: inherit;">addon<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of Addon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addonversion_nodejs">
 <a href="#addonversion_nodejs" style="color: inherit; text-decoration: inherit;">addon<wbr>Version</a>
@@ -320,14 +320,6 @@ The Addon resource accepts the following [input]({{< relref "/docs/intro/concept
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="addon_name_python">
-<a href="#addon_name_python" style="color: inherit; text-decoration: inherit;">addon_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of Addon{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
@@ -335,6 +327,14 @@ The Addon resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Cluster{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="addon_name_python">
+<a href="#addon_name_python" style="color: inherit; text-decoration: inherit;">addon_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of Addon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addon_version_python">
 <a href="#addon_version_python" style="color: inherit; text-decoration: inherit;">addon_<wbr>version</a>

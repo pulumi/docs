@@ -171,14 +171,6 @@ The QuickConnect resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The identifier of the Amazon Connect instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the quick connect.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="quickconnectconfig_csharp">
 <a href="#quickconnectconfig_csharp" style="color: inherit; text-decoration: inherit;">Quick<wbr>Connect<wbr>Config</a>
 </span>
@@ -194,6 +186,14 @@ The QuickConnect resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the quick connect.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the quick connect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -215,14 +215,6 @@ The QuickConnect resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The identifier of the Amazon Connect instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the quick connect.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="quickconnectconfig_go">
 <a href="#quickconnectconfig_go" style="color: inherit; text-decoration: inherit;">Quick<wbr>Connect<wbr>Config</a>
 </span>
@@ -238,6 +230,14 @@ The QuickConnect resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the quick connect.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the quick connect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -259,14 +259,6 @@ The QuickConnect resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The identifier of the Amazon Connect instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the quick connect.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="quickconnectconfig_nodejs">
 <a href="#quickconnectconfig_nodejs" style="color: inherit; text-decoration: inherit;">quick<wbr>Connect<wbr>Config</a>
 </span>
@@ -282,6 +274,14 @@ The QuickConnect resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the quick connect.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the quick connect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -303,14 +303,6 @@ The QuickConnect resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The identifier of the Amazon Connect instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the quick connect.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="quick_connect_config_python">
 <a href="#quick_connect_config_python" style="color: inherit; text-decoration: inherit;">quick_<wbr>connect_<wbr>config</a>
 </span>
@@ -326,6 +318,14 @@ The QuickConnect resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the quick connect.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the quick connect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

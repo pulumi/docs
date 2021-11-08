@@ -645,14 +645,6 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Lambda Execution role used to run your canaries{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the canary.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="runtimeversion_csharp">
 <a href="#runtimeversion_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
 </span>
@@ -692,6 +684,14 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention period of failed canary runs represented in number of days{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the canary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runconfig_csharp">
 <a href="#runconfig_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Config</a>
@@ -761,14 +761,6 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Lambda Execution role used to run your canaries{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the canary.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="runtimeversion_go">
 <a href="#runtimeversion_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
 </span>
@@ -808,6 +800,14 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention period of failed canary runs represented in number of days{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the canary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runconfig_go">
 <a href="#runconfig_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Config</a>
@@ -877,14 +877,6 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Lambda Execution role used to run your canaries{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the canary.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="runtimeversion_nodejs">
 <a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
 </span>
@@ -924,6 +916,14 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Retention period of failed canary runs represented in number of days{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the canary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runconfig_nodejs">
 <a href="#runconfig_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Config</a>
@@ -993,14 +993,6 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Lambda Execution role used to run your canaries{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the canary.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="runtime_version_python">
 <a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
 </span>
@@ -1040,6 +1032,14 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention period of failed canary runs represented in number of days{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the canary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_config_python">
 <a href="#run_config_python" style="color: inherit; text-decoration: inherit;">run_<wbr>config</a>

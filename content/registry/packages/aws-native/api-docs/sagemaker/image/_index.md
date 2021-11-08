@@ -163,14 +163,6 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="imagename_csharp">
-<a href="#imagename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="imagerolearn_csharp">
 <a href="#imagerolearn_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Role<wbr>Arn</a>
 </span>
@@ -195,6 +187,14 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="imagename_csharp">
+<a href="#imagename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -206,14 +206,6 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="imagename_go">
-<a href="#imagename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagerolearn_go">
 <a href="#imagerolearn_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Role<wbr>Arn</a>
@@ -239,6 +231,14 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="imagename_go">
+<a href="#imagename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -250,14 +250,6 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="imagename_nodejs">
-<a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagerolearn_nodejs">
 <a href="#imagerolearn_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Role<wbr>Arn</a>
@@ -283,6 +275,14 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="imagename_nodejs">
+<a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -294,14 +294,6 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="image_name_python">
-<a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_role_arn_python">
 <a href="#image_role_arn_python" style="color: inherit; text-decoration: inherit;">image_<wbr>role_<wbr>arn</a>
@@ -321,6 +313,14 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
             title="Optional">
         <span id="image_display_name_python">
 <a href="#image_display_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="image_name_python">
+<a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

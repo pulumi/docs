@@ -162,14 +162,6 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="bucketname_csharp">
-<a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the bucket.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="outpostid_csharp">
 <a href="#outpostid_csharp" style="color: inherit; text-decoration: inherit;">Outpost<wbr>Id</a>
 </span>
@@ -177,6 +169,14 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the customer outpost on which the bucket resides.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bucketname_csharp">
+<a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecycleconfiguration_csharp">
 <a href="#lifecycleconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Configuration</a>
@@ -198,14 +198,6 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="bucketname_go">
-<a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the bucket.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="outpostid_go">
 <a href="#outpostid_go" style="color: inherit; text-decoration: inherit;">Outpost<wbr>Id</a>
 </span>
@@ -213,6 +205,14 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the customer outpost on which the bucket resides.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bucketname_go">
+<a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecycleconfiguration_go">
 <a href="#lifecycleconfiguration_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Configuration</a>
@@ -234,14 +234,6 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="bucketname_nodejs">
-<a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the bucket.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="outpostid_nodejs">
 <a href="#outpostid_nodejs" style="color: inherit; text-decoration: inherit;">outpost<wbr>Id</a>
 </span>
@@ -249,6 +241,14 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the customer outpost on which the bucket resides.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bucketname_nodejs">
+<a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecycleconfiguration_nodejs">
 <a href="#lifecycleconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Configuration</a>
@@ -270,14 +270,6 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="bucket_name_python">
-<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A name for the bucket.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="outpost_id_python">
 <a href="#outpost_id_python" style="color: inherit; text-decoration: inherit;">outpost_<wbr>id</a>
 </span>
@@ -285,6 +277,14 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the customer outpost on which the bucket resides.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bucket_name_python">
+<a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A name for the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecycle_configuration_python">
 <a href="#lifecycle_configuration_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>configuration</a>

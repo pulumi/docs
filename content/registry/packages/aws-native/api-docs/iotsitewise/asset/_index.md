@@ -169,15 +169,7 @@ The Asset resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the asset model from which to create the asset.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="assetname_csharp">
-<a href="#assetname_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique, friendly name for the asset.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the asset model from which to create the asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assethierarchies_csharp">
 <a href="#assethierarchies_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Hierarchies</a>
@@ -186,6 +178,14 @@ The Asset resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#assethierarchy">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Io<wbr>TSite<wbr>Wise.<wbr>Inputs.<wbr>Asset<wbr>Hierarchy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="assetname_csharp">
+<a href="#assetname_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique, friendly name for the asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assetproperties_csharp">
 <a href="#assetproperties_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Properties</a>
@@ -213,15 +213,7 @@ The Asset resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the asset model from which to create the asset.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="assetname_go">
-<a href="#assetname_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique, friendly name for the asset.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the asset model from which to create the asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assethierarchies_go">
 <a href="#assethierarchies_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Hierarchies</a>
@@ -230,6 +222,14 @@ The Asset resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#assethierarchy">[]Asset<wbr>Hierarchy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="assetname_go">
+<a href="#assetname_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique, friendly name for the asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assetproperties_go">
 <a href="#assetproperties_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Properties</a>
@@ -257,15 +257,7 @@ The Asset resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the asset model from which to create the asset.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="assetname_nodejs">
-<a href="#assetname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique, friendly name for the asset.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the asset model from which to create the asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assethierarchies_nodejs">
 <a href="#assethierarchies_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Hierarchies</a>
@@ -274,6 +266,14 @@ The Asset resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#assethierarchy">Asset<wbr>Hierarchy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="assetname_nodejs">
+<a href="#assetname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique, friendly name for the asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assetproperties_nodejs">
 <a href="#assetproperties_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Properties</a>
@@ -301,15 +301,7 @@ The Asset resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the asset model from which to create the asset.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="asset_name_python">
-<a href="#asset_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique, friendly name for the asset.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the asset model from which to create the asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="asset_hierarchies_python">
 <a href="#asset_hierarchies_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>hierarchies</a>
@@ -318,6 +310,14 @@ The Asset resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#assethierarchy">Sequence[Asset<wbr>Hierarchy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="asset_name_python">
+<a href="#asset_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A unique, friendly name for the asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="asset_properties_python">
 <a href="#asset_properties_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>properties</a>

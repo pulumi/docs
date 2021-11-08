@@ -231,7 +231,7 @@ const organizationConformancePack = new aws_native.configuration.OrganizationCon
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationConformancePack</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationConformancePackArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationConformancePack</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">OrganizationConformancePackArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -247,16 +247,16 @@ const organizationConformancePack = new aws_native.configuration.OrganizationCon
                                 <span class="nx">template_s3_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">OrganizationConformancePack</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationConformancePackArgs</a></span><span class="p">,</span>
+                                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[OrganizationConformancePackArgs]</a></span> = None<span class="p">,</span>
                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationConformancePack</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationConformancePackArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationConformancePack</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationConformancePack</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">OrganizationConformancePackArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationConformancePack</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationConformancePack</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OrganizationConformancePackArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationConformancePack</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OrganizationConformancePackArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -268,7 +268,7 @@ const organizationConformancePack = new aws_native.configuration.OrganizationCon
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OrganizationConformancePackArgs</a></span>
@@ -292,7 +292,7 @@ const organizationConformancePack = new aws_native.configuration.OrganizationCon
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OrganizationConformancePackArgs</a></span>
@@ -322,7 +322,7 @@ const organizationConformancePack = new aws_native.configuration.OrganizationCon
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OrganizationConformancePackArgs</a></span>
@@ -346,7 +346,7 @@ const organizationConformancePack = new aws_native.configuration.OrganizationCon
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">OrganizationConformancePackArgs</a></span>
@@ -372,15 +372,7 @@ The OrganizationConformancePack resource accepts the following [input]({{< relre
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="organizationconformancepackname_csharp">
-<a href="#organizationconformancepackname_csharp" style="color: inherit; text-decoration: inherit;">Organization<wbr>Conformance<wbr>Pack<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the organization conformance pack.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="conformancepackinputparameters_csharp">
 <a href="#conformancepackinputparameters_csharp" style="color: inherit; text-decoration: inherit;">Conformance<wbr>Pack<wbr>Input<wbr>Parameters</a>
@@ -414,6 +406,14 @@ The OrganizationConformancePack resource accepts the following [input]({{< relre
     </dt>
     <dd>{{% md %}}A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="organizationconformancepackname_csharp">
+<a href="#organizationconformancepackname_csharp" style="color: inherit; text-decoration: inherit;">Organization<wbr>Conformance<wbr>Pack<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the organization conformance pack.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="templatebody_csharp">
 <a href="#templatebody_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Body</a>
 </span>
@@ -432,15 +432,7 @@ The OrganizationConformancePack resource accepts the following [input]({{< relre
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="organizationconformancepackname_go">
-<a href="#organizationconformancepackname_go" style="color: inherit; text-decoration: inherit;">Organization<wbr>Conformance<wbr>Pack<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the organization conformance pack.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="conformancepackinputparameters_go">
 <a href="#conformancepackinputparameters_go" style="color: inherit; text-decoration: inherit;">Conformance<wbr>Pack<wbr>Input<wbr>Parameters</a>
@@ -474,6 +466,14 @@ The OrganizationConformancePack resource accepts the following [input]({{< relre
     </dt>
     <dd>{{% md %}}A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="organizationconformancepackname_go">
+<a href="#organizationconformancepackname_go" style="color: inherit; text-decoration: inherit;">Organization<wbr>Conformance<wbr>Pack<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the organization conformance pack.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="templatebody_go">
 <a href="#templatebody_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Body</a>
 </span>
@@ -492,15 +492,7 @@ The OrganizationConformancePack resource accepts the following [input]({{< relre
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="organizationconformancepackname_nodejs">
-<a href="#organizationconformancepackname_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Conformance<wbr>Pack<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the organization conformance pack.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="conformancepackinputparameters_nodejs">
 <a href="#conformancepackinputparameters_nodejs" style="color: inherit; text-decoration: inherit;">conformance<wbr>Pack<wbr>Input<wbr>Parameters</a>
@@ -534,6 +526,14 @@ The OrganizationConformancePack resource accepts the following [input]({{< relre
     </dt>
     <dd>{{% md %}}A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="organizationconformancepackname_nodejs">
+<a href="#organizationconformancepackname_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Conformance<wbr>Pack<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the organization conformance pack.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="templatebody_nodejs">
 <a href="#templatebody_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Body</a>
 </span>
@@ -552,15 +552,7 @@ The OrganizationConformancePack resource accepts the following [input]({{< relre
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="organization_conformance_pack_name_python">
-<a href="#organization_conformance_pack_name_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>conformance_<wbr>pack_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the organization conformance pack.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="conformance_pack_input_parameters_python">
 <a href="#conformance_pack_input_parameters_python" style="color: inherit; text-decoration: inherit;">conformance_<wbr>pack_<wbr>input_<wbr>parameters</a>
@@ -593,6 +585,14 @@ The OrganizationConformancePack resource accepts the following [input]({{< relre
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="organization_conformance_pack_name_python">
+<a href="#organization_conformance_pack_name_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>conformance_<wbr>pack_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the organization conformance pack.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_body_python">
 <a href="#template_body_python" style="color: inherit; text-decoration: inherit;">template_<wbr>body</a>

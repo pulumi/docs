@@ -181,14 +181,6 @@ The FlowEntitlement resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The ARN of the flow.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the entitlement.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="subscribers_csharp">
 <a href="#subscribers_csharp" style="color: inherit; text-decoration: inherit;">Subscribers</a>
 </span>
@@ -219,7 +211,15 @@ The FlowEntitlement resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flowentitlemententitlementstatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Media<wbr>Connect.<wbr>Flow<wbr>Entitlement<wbr>Entitlement<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}} An indication of whether the entitlement is enabled.{{% /md %}}</dd></dl>
+    <dd>{{% md %}} An indication of whether the entitlement is enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the entitlement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -240,14 +240,6 @@ The FlowEntitlement resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the flow.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the entitlement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subscribers_go">
 <a href="#subscribers_go" style="color: inherit; text-decoration: inherit;">Subscribers</a>
@@ -279,7 +271,15 @@ The FlowEntitlement resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flowentitlemententitlementstatus">Flow<wbr>Entitlement<wbr>Entitlement<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}} An indication of whether the entitlement is enabled.{{% /md %}}</dd></dl>
+    <dd>{{% md %}} An indication of whether the entitlement is enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the entitlement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -300,14 +300,6 @@ The FlowEntitlement resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the flow.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the entitlement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subscribers_nodejs">
 <a href="#subscribers_nodejs" style="color: inherit; text-decoration: inherit;">subscribers</a>
@@ -339,7 +331,15 @@ The FlowEntitlement resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flowentitlemententitlementstatus">Flow<wbr>Entitlement<wbr>Entitlement<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}} An indication of whether the entitlement is enabled.{{% /md %}}</dd></dl>
+    <dd>{{% md %}} An indication of whether the entitlement is enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the entitlement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -360,14 +360,6 @@ The FlowEntitlement resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the flow.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the entitlement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subscribers_python">
 <a href="#subscribers_python" style="color: inherit; text-decoration: inherit;">subscribers</a>
@@ -399,7 +391,15 @@ The FlowEntitlement resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flowentitlemententitlementstatus">Flow<wbr>Entitlement<wbr>Entitlement<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}} An indication of whether the entitlement is enabled.{{% /md %}}</dd></dl>
+    <dd>{{% md %}} An indication of whether the entitlement is enabled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the entitlement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

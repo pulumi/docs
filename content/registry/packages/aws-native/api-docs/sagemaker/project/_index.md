@@ -397,14 +397,6 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projectname_csharp">
-<a href="#projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="servicecatalogprovisioningdetails_csharp">
 <a href="#servicecatalogprovisioningdetails_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Catalog<wbr>Provisioning<wbr>Details</a>
 </span>
@@ -415,6 +407,14 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Optional">
         <span id="projectdescription_csharp">
 <a href="#projectdescription_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projectname_csharp">
+<a href="#projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -433,14 +433,6 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projectname_go">
-<a href="#projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="servicecatalogprovisioningdetails_go">
 <a href="#servicecatalogprovisioningdetails_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Catalog<wbr>Provisioning<wbr>Details</a>
 </span>
@@ -451,6 +443,14 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Optional">
         <span id="projectdescription_go">
 <a href="#projectdescription_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projectname_go">
+<a href="#projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -469,14 +469,6 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projectname_nodejs">
-<a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="servicecatalogprovisioningdetails_nodejs">
 <a href="#servicecatalogprovisioningdetails_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Catalog<wbr>Provisioning<wbr>Details</a>
 </span>
@@ -487,6 +479,14 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Optional">
         <span id="projectdescription_nodejs">
 <a href="#projectdescription_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projectname_nodejs">
+<a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -505,14 +505,6 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="project_name_python">
-<a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="service_catalog_provisioning_details_python">
 <a href="#service_catalog_provisioning_details_python" style="color: inherit; text-decoration: inherit;">service_<wbr>catalog_<wbr>provisioning_<wbr>details</a>
 </span>
@@ -523,6 +515,14 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Optional">
         <span id="project_description_python">
 <a href="#project_description_python" style="color: inherit; text-decoration: inherit;">project_<wbr>description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_name_python">
+<a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

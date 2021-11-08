@@ -183,14 +183,6 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}An Array of Feature Definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="featuregroupname_csharp">
-<a href="#featuregroupname_csharp" style="color: inherit; text-decoration: inherit;">Feature<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Name of the FeatureGroup.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="recordidentifierfeaturename_csharp">
 <a href="#recordidentifierfeaturename_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Identifier<wbr>Feature<wbr>Name</a>
 </span>
@@ -206,6 +198,14 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description about the FeatureGroup.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="featuregroupname_csharp">
+<a href="#featuregroupname_csharp" style="color: inherit; text-decoration: inherit;">Feature<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Name of the FeatureGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinestoreconfig_csharp">
 <a href="#offlinestoreconfig_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Store<wbr>Config</a>
@@ -259,14 +259,6 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}An Array of Feature Definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="featuregroupname_go">
-<a href="#featuregroupname_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Name of the FeatureGroup.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="recordidentifierfeaturename_go">
 <a href="#recordidentifierfeaturename_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Identifier<wbr>Feature<wbr>Name</a>
 </span>
@@ -282,6 +274,14 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description about the FeatureGroup.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="featuregroupname_go">
+<a href="#featuregroupname_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Name of the FeatureGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinestoreconfig_go">
 <a href="#offlinestoreconfig_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Store<wbr>Config</a>
@@ -335,14 +335,6 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}An Array of Feature Definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="featuregroupname_nodejs">
-<a href="#featuregroupname_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Name of the FeatureGroup.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="recordidentifierfeaturename_nodejs">
 <a href="#recordidentifierfeaturename_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Identifier<wbr>Feature<wbr>Name</a>
 </span>
@@ -358,6 +350,14 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description about the FeatureGroup.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="featuregroupname_nodejs">
+<a href="#featuregroupname_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Name of the FeatureGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinestoreconfig_nodejs">
 <a href="#offlinestoreconfig_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Store<wbr>Config</a>
@@ -411,14 +411,6 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}An Array of Feature Definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="feature_group_name_python">
-<a href="#feature_group_name_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>group_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Name of the FeatureGroup.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="record_identifier_feature_name_python">
 <a href="#record_identifier_feature_name_python" style="color: inherit; text-decoration: inherit;">record_<wbr>identifier_<wbr>feature_<wbr>name</a>
 </span>
@@ -434,6 +426,14 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description about the FeatureGroup.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="feature_group_name_python">
+<a href="#feature_group_name_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Name of the FeatureGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offline_store_config_python">
 <a href="#offline_store_config_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>store_<wbr>config</a>

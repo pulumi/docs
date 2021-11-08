@@ -169,15 +169,7 @@ The ParameterGroup resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the parameter group family that this parameter group is compatible with.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="parametergroupname_csharp">
-<a href="#parametergroupname_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the parameter group.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the parameter group family that this parameter group is compatible with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -186,6 +178,14 @@ The ParameterGroup resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the parameter group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parametergroupname_csharp">
+<a href="#parametergroupname_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the parameter group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -213,15 +213,7 @@ The ParameterGroup resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the parameter group family that this parameter group is compatible with.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="parametergroupname_go">
-<a href="#parametergroupname_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the parameter group.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the parameter group family that this parameter group is compatible with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -230,6 +222,14 @@ The ParameterGroup resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the parameter group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parametergroupname_go">
+<a href="#parametergroupname_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the parameter group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -257,15 +257,7 @@ The ParameterGroup resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the parameter group family that this parameter group is compatible with.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="parametergroupname_nodejs">
-<a href="#parametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the parameter group.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the parameter group family that this parameter group is compatible with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -274,6 +266,14 @@ The ParameterGroup resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the parameter group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parametergroupname_nodejs">
+<a href="#parametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the parameter group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -301,15 +301,7 @@ The ParameterGroup resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the parameter group family that this parameter group is compatible with.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="parameter_group_name_python">
-<a href="#parameter_group_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>group_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the parameter group.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the parameter group family that this parameter group is compatible with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -318,6 +310,14 @@ The ParameterGroup resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the parameter group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameter_group_name_python">
+<a href="#parameter_group_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the parameter group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>

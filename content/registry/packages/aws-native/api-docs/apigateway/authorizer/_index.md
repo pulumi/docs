@@ -168,14 +168,6 @@ The Authorizer resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the authorizer.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="restapiid_csharp">
 <a href="#restapiid_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api<wbr>Id</a>
 </span>
@@ -240,6 +232,14 @@ The Authorizer resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}A validation expression for the incoming identity token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the authorizer.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="providerarns_csharp">
 <a href="#providerarns_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>ARNs</a>
 </span>
@@ -251,14 +251,6 @@ The Authorizer resource accepts the following [input]({{< relref "/docs/intro/co
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the authorizer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restapiid_go">
 <a href="#restapiid_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api<wbr>Id</a>
@@ -324,6 +316,14 @@ The Authorizer resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}A validation expression for the incoming identity token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the authorizer.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="providerarns_go">
 <a href="#providerarns_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>ARNs</a>
 </span>
@@ -335,14 +335,6 @@ The Authorizer resource accepts the following [input]({{< relref "/docs/intro/co
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the authorizer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restapiid_nodejs">
 <a href="#restapiid_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Api<wbr>Id</a>
@@ -408,6 +400,14 @@ The Authorizer resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}A validation expression for the incoming identity token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the authorizer.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="providerarns_nodejs">
 <a href="#providerarns_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>ARNs</a>
 </span>
@@ -419,14 +419,6 @@ The Authorizer resource accepts the following [input]({{< relref "/docs/intro/co
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the authorizer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rest_api_id_python">
 <a href="#rest_api_id_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api_<wbr>id</a>
@@ -491,6 +483,14 @@ The Authorizer resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A validation expression for the incoming identity token.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the authorizer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_arns_python">
 <a href="#provider_arns_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>arns</a>

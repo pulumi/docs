@@ -14,6 +14,10 @@ Explore the resources and functions of the aws-native.redshift module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="cluster" title="Cluster"><span class="api-symbol api-symbol--resource"></span>Cluster</a></li>
+    <li><a href="endpointaccess" title="EndpointAccess"><span class="api-symbol api-symbol--resource"></span>EndpointAccess</a></li>
+    <li><a href="endpointauthorization" title="EndpointAuthorization"><span class="api-symbol api-symbol--resource"></span>EndpointAuthorization</a></li>
+    <li><a href="eventsubscription" title="EventSubscription"><span class="api-symbol api-symbol--resource"></span>EventSubscription</a></li>
+    <li><a href="scheduledaction" title="ScheduledAction"><span class="api-symbol api-symbol--resource"></span>ScheduledAction</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -23,6 +27,6 @@ Explore the resources and functions of the aws-native.redshift module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

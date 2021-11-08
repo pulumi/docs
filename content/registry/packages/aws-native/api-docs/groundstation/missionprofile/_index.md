@@ -492,14 +492,6 @@ The MissionProfile resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name used to identify a mission profile.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="trackingconfigarn_csharp">
 <a href="#trackingconfigarn_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Config<wbr>Arn</a>
 </span>
@@ -523,6 +515,14 @@ The MissionProfile resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Pre-pass time needed before the contact.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name used to identify a mission profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -552,14 +552,6 @@ The MissionProfile resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name used to identify a mission profile.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="trackingconfigarn_go">
 <a href="#trackingconfigarn_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Config<wbr>Arn</a>
 </span>
@@ -583,6 +575,14 @@ The MissionProfile resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Pre-pass time needed before the contact.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name used to identify a mission profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -612,14 +612,6 @@ The MissionProfile resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name used to identify a mission profile.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="trackingconfigarn_nodejs">
 <a href="#trackingconfigarn_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Config<wbr>Arn</a>
 </span>
@@ -643,6 +635,14 @@ The MissionProfile resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Pre-pass time needed before the contact.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name used to identify a mission profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -672,14 +672,6 @@ The MissionProfile resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A name used to identify a mission profile.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="tracking_config_arn_python">
 <a href="#tracking_config_arn_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>config_<wbr>arn</a>
 </span>
@@ -703,6 +695,14 @@ The MissionProfile resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Pre-pass time needed before the contact.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A name used to identify a mission profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

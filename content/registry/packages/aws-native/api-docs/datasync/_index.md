@@ -16,6 +16,7 @@ Explore the resources and functions of the aws-native.datasync module.
     <li><a href="agent" title="Agent"><span class="api-symbol api-symbol--resource"></span>Agent</a></li>
     <li><a href="locationefs" title="LocationEFS"><span class="api-symbol api-symbol--resource"></span>LocationEFS</a></li>
     <li><a href="locationfsxwindows" title="LocationFSxWindows"><span class="api-symbol api-symbol--resource"></span>LocationFSxWindows</a></li>
+    <li><a href="locationhdfs" title="LocationHDFS"><span class="api-symbol api-symbol--resource"></span>LocationHDFS</a></li>
     <li><a href="locationnfs" title="LocationNFS"><span class="api-symbol api-symbol--resource"></span>LocationNFS</a></li>
     <li><a href="locationobjectstorage" title="LocationObjectStorage"><span class="api-symbol api-symbol--resource"></span>LocationObjectStorage</a></li>
     <li><a href="locations3" title="LocationS3"><span class="api-symbol api-symbol--resource"></span>LocationS3</a></li>
@@ -30,6 +31,6 @@ Explore the resources and functions of the aws-native.datasync module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

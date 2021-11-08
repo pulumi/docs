@@ -178,21 +178,21 @@ The KeySigningKey resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}The Amazon resource name (ARN) for a customer managed key (CMK) in AWS Key Management Service (KMS). The KeyManagementServiceArn must be unique for each key signing key (KSK) in a single hosted zone.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keysigningkeystatus">Pulumi.<wbr>Aws<wbr>Native.<wbr>Route53.<wbr>Key<wbr>Signing<wbr>Key<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -214,21 +214,21 @@ The KeySigningKey resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}The Amazon resource name (ARN) for a customer managed key (CMK) in AWS Key Management Service (KMS). The KeyManagementServiceArn must be unique for each key signing key (KSK) in a single hosted zone.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keysigningkeystatus">Key<wbr>Signing<wbr>Key<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -250,21 +250,21 @@ The KeySigningKey resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}The Amazon resource name (ARN) for a customer managed key (CMK) in AWS Key Management Service (KMS). The KeyManagementServiceArn must be unique for each key signing key (KSK) in a single hosted zone.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keysigningkeystatus">Key<wbr>Signing<wbr>Key<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -286,21 +286,21 @@ The KeySigningKey resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}The Amazon resource name (ARN) for a customer managed key (CMK) in AWS Key Management Service (KMS). The KeyManagementServiceArn must be unique for each key signing key (KSK) in a single hosted zone.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keysigningkeystatus">Key<wbr>Signing<wbr>Key<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

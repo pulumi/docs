@@ -178,15 +178,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the user.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="username_csharp">
-<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The username of the user.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessstring_csharp">
 <a href="#accessstring_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>String</a>
@@ -210,7 +202,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Passwords used for this user account. You can create up to two passwords for each user.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Passwords used for this user account. You can create up to two passwords for each user.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -230,15 +230,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the user.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="username_go">
-<a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The username of the user.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessstring_go">
 <a href="#accessstring_go" style="color: inherit; text-decoration: inherit;">Access<wbr>String</a>
@@ -262,7 +254,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Passwords used for this user account. You can create up to two passwords for each user.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Passwords used for this user account. You can create up to two passwords for each user.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -282,15 +282,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the user.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="username_nodejs">
-<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The username of the user.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessstring_nodejs">
 <a href="#accessstring_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>String</a>
@@ -314,7 +306,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Passwords used for this user account. You can create up to two passwords for each user.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Passwords used for this user account. You can create up to two passwords for each user.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -334,15 +334,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the user.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="user_name_python">
-<a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The username of the user.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_string_python">
 <a href="#access_string_python" style="color: inherit; text-decoration: inherit;">access_<wbr>string</a>
@@ -366,7 +358,15 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Passwords used for this user account. You can create up to two passwords for each user.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Passwords used for this user account. You can create up to two passwords for each user.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_name_python">
+<a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The username of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

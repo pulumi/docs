@@ -168,14 +168,6 @@ The StudioComponent resource accepts the following [input]({{< relref "/docs/int
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The name for the studio component.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="studioid_csharp">
 <a href="#studioid_csharp" style="color: inherit; text-decoration: inherit;">Studio<wbr>Id</a>
 </span>
@@ -224,6 +216,14 @@ The StudioComponent resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}<p>Initialization scripts for studio components.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The name for the studio component.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="scriptparameters_csharp">
 <a href="#scriptparameters_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Parameters</a>
 </span>
@@ -251,14 +251,6 @@ The StudioComponent resource accepts the following [input]({{< relref "/docs/int
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The name for the studio component.</p>{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="studioid_go">
 <a href="#studioid_go" style="color: inherit; text-decoration: inherit;">Studio<wbr>Id</a>
@@ -308,6 +300,14 @@ The StudioComponent resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}<p>Initialization scripts for studio components.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The name for the studio component.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="scriptparameters_go">
 <a href="#scriptparameters_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Parameters</a>
 </span>
@@ -335,14 +335,6 @@ The StudioComponent resource accepts the following [input]({{< relref "/docs/int
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The name for the studio component.</p>{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="studioid_nodejs">
 <a href="#studioid_nodejs" style="color: inherit; text-decoration: inherit;">studio<wbr>Id</a>
@@ -392,6 +384,14 @@ The StudioComponent resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}<p>Initialization scripts for studio components.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The name for the studio component.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="scriptparameters_nodejs">
 <a href="#scriptparameters_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Parameters</a>
 </span>
@@ -419,14 +419,6 @@ The StudioComponent resource accepts the following [input]({{< relref "/docs/int
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>The name for the studio component.</p>{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="studio_id_python">
 <a href="#studio_id_python" style="color: inherit; text-decoration: inherit;">studio_<wbr>id</a>
@@ -475,6 +467,14 @@ The StudioComponent resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#studiocomponentinitializationscript">Sequence[Studio<wbr>Component<wbr>Initialization<wbr>Script<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}<p>Initialization scripts for studio components.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>The name for the studio component.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_parameters_python">
 <a href="#script_parameters_python" style="color: inherit; text-decoration: inherit;">script_<wbr>parameters</a>

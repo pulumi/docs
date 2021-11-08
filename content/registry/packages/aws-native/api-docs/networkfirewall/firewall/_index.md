@@ -167,14 +167,6 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="firewallname_csharp">
-<a href="#firewallname_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="firewallpolicyarn_csharp">
 <a href="#firewallpolicyarn_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Arn</a>
 </span>
@@ -215,6 +207,14 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="firewallname_csharp">
+<a href="#firewallname_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="firewallpolicychangeprotection_csharp">
 <a href="#firewallpolicychangeprotection_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Change<wbr>Protection</a>
 </span>
@@ -242,14 +242,6 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="firewallname_go">
-<a href="#firewallname_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="firewallpolicyarn_go">
 <a href="#firewallpolicyarn_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Arn</a>
@@ -291,6 +283,14 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="firewallname_go">
+<a href="#firewallname_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="firewallpolicychangeprotection_go">
 <a href="#firewallpolicychangeprotection_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Change<wbr>Protection</a>
 </span>
@@ -318,14 +318,6 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="firewallname_nodejs">
-<a href="#firewallname_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="firewallpolicyarn_nodejs">
 <a href="#firewallpolicyarn_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy<wbr>Arn</a>
@@ -367,6 +359,14 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="firewallname_nodejs">
+<a href="#firewallname_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="firewallpolicychangeprotection_nodejs">
 <a href="#firewallpolicychangeprotection_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy<wbr>Change<wbr>Protection</a>
 </span>
@@ -394,14 +394,6 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="firewall_name_python">
-<a href="#firewall_name_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="firewall_policy_arn_python">
 <a href="#firewall_policy_arn_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy_<wbr>arn</a>
@@ -437,6 +429,14 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="firewall_name_python">
+<a href="#firewall_name_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

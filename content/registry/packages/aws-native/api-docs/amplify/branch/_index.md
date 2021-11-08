@@ -176,14 +176,6 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="branchname_csharp">
-<a href="#branchname_csharp" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicauthconfig_csharp">
@@ -191,6 +183,14 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchbasicauthconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Amplify.<wbr>Inputs.<wbr>Branch<wbr>Basic<wbr>Auth<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="branchname_csharp">
+<a href="#branchname_csharp" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -276,14 +276,6 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="branchname_go">
-<a href="#branchname_go" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicauthconfig_go">
@@ -291,6 +283,14 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchbasicauthconfig">Branch<wbr>Basic<wbr>Auth<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="branchname_go">
+<a href="#branchname_go" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -376,14 +376,6 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="branchname_nodejs">
-<a href="#branchname_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicauthconfig_nodejs">
@@ -391,6 +383,14 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchbasicauthconfig">Branch<wbr>Basic<wbr>Auth<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="branchname_nodejs">
+<a href="#branchname_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -476,14 +476,6 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="branch_name_python">
-<a href="#branch_name_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basic_auth_config_python">
@@ -491,6 +483,14 @@ The Branch resource accepts the following [input]({{< relref "/docs/intro/concep
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#branchbasicauthconfig">Branch<wbr>Basic<wbr>Auth<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="branch_name_python">
+<a href="#branch_name_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

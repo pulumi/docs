@@ -162,14 +162,6 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="applicationname_csharp">
-<a href="#applicationname_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Application Name, should be between 1 and 256 characters.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
 </span>
@@ -186,6 +178,14 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Application Description, should be between 1 and 2048 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="applicationname_csharp">
+<a href="#applicationname_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application Name, should be between 1 and 256 characters.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -197,14 +197,6 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="applicationname_go">
-<a href="#applicationname_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Application Name, should be between 1 and 256 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -222,6 +214,14 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Application Description, should be between 1 and 2048 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="applicationname_go">
+<a href="#applicationname_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application Name, should be between 1 and 256 characters.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -233,14 +233,6 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="applicationname_nodejs">
-<a href="#applicationname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Application Name, should be between 1 and 256 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
@@ -258,6 +250,14 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Application Description, should be between 1 and 2048 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="applicationname_nodejs">
+<a href="#applicationname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application Name, should be between 1 and 256 characters.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -269,14 +269,6 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="application_name_python">
-<a href="#application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Application Name, should be between 1 and 256 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
@@ -293,6 +285,14 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Description, should be between 1 and 2048 characters.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="application_name_python">
+<a href="#application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Application Name, should be between 1 and 256 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

@@ -170,14 +170,6 @@ The Tracker resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackerpricingplan">Pulumi.<wbr>Aws<wbr>Native.<wbr>Location.<wbr>Tracker<wbr>Pricing<wbr>Plan</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="trackername_csharp">
-<a href="#trackername_csharp" style="color: inherit; text-decoration: inherit;">Tracker<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -210,6 +202,14 @@ The Tracker resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trackername_csharp">
+<a href="#trackername_csharp" style="color: inherit; text-decoration: inherit;">Tracker<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -221,14 +221,6 @@ The Tracker resource accepts the following [input]({{< relref "/docs/intro/conce
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackerpricingplan">Tracker<wbr>Pricing<wbr>Plan</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="trackername_go">
-<a href="#trackername_go" style="color: inherit; text-decoration: inherit;">Tracker<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -262,6 +254,14 @@ The Tracker resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trackername_go">
+<a href="#trackername_go" style="color: inherit; text-decoration: inherit;">Tracker<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -273,14 +273,6 @@ The Tracker resource accepts the following [input]({{< relref "/docs/intro/conce
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackerpricingplan">Tracker<wbr>Pricing<wbr>Plan</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="trackername_nodejs">
-<a href="#trackername_nodejs" style="color: inherit; text-decoration: inherit;">tracker<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -314,6 +306,14 @@ The Tracker resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trackername_nodejs">
+<a href="#trackername_nodejs" style="color: inherit; text-decoration: inherit;">tracker<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -325,14 +325,6 @@ The Tracker resource accepts the following [input]({{< relref "/docs/intro/conce
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackerpricingplan">Tracker<wbr>Pricing<wbr>Plan</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="tracker_name_python">
-<a href="#tracker_name_python" style="color: inherit; text-decoration: inherit;">tracker_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,6 +354,14 @@ The Tracker resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Optional">
         <span id="pricing_plan_data_source_python">
 <a href="#pricing_plan_data_source_python" style="color: inherit; text-decoration: inherit;">pricing_<wbr>plan_<wbr>data_<wbr>source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tracker_name_python">
+<a href="#tracker_name_python" style="color: inherit; text-decoration: inherit;">tracker_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

@@ -182,14 +182,6 @@ The LaunchProfile resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}<p>The version number of the protocol that is used by the launch profile. The only valid version is "2021-03-31".</p>{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The name for the launch profile.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="streamconfiguration_csharp">
 <a href="#streamconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Configuration</a>
 </span>
@@ -222,6 +214,14 @@ The LaunchProfile resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}<p>The description.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The name for the launch profile.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -249,14 +249,6 @@ The LaunchProfile resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}<p>The version number of the protocol that is used by the launch profile. The only valid version is "2021-03-31".</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The name for the launch profile.</p>{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamconfiguration_go">
 <a href="#streamconfiguration_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Configuration</a>
@@ -290,6 +282,14 @@ The LaunchProfile resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}<p>The description.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The name for the launch profile.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -317,14 +317,6 @@ The LaunchProfile resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}<p>The version number of the protocol that is used by the launch profile. The only valid version is "2021-03-31".</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The name for the launch profile.</p>{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamconfiguration_nodejs">
 <a href="#streamconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Configuration</a>
@@ -358,6 +350,14 @@ The LaunchProfile resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}<p>The description.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The name for the launch profile.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -385,14 +385,6 @@ The LaunchProfile resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}<p>The version number of the protocol that is used by the launch profile. The only valid version is "2021-03-31".</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>The name for the launch profile.</p>{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stream_configuration_python">
 <a href="#stream_configuration_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>configuration</a>
@@ -425,6 +417,14 @@ The LaunchProfile resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}<p>The description.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>The name for the launch profile.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

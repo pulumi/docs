@@ -171,14 +171,6 @@ The MonitoringSchedule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitoringscheduleconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Inputs.<wbr>Monitoring<wbr>Schedule<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="monitoringschedulename_csharp">
-<a href="#monitoringschedulename_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Schedule<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointname_csharp">
@@ -204,6 +196,14 @@ The MonitoringSchedule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#monitoringschedulemonitoringexecutionsummary">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Inputs.<wbr>Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Execution<wbr>Summary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes metadata on the last execution to run, if there was one.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoringschedulename_csharp">
+<a href="#monitoringschedulename_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Schedule<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringschedulestatus_csharp">
 <a href="#monitoringschedulestatus_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Schedule<wbr>Status</a>
@@ -231,14 +231,6 @@ The MonitoringSchedule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitoringscheduleconfig">Monitoring<wbr>Schedule<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="monitoringschedulename_go">
-<a href="#monitoringschedulename_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Schedule<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointname_go">
@@ -264,6 +256,14 @@ The MonitoringSchedule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#monitoringschedulemonitoringexecutionsummary">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Execution<wbr>Summary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes metadata on the last execution to run, if there was one.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoringschedulename_go">
+<a href="#monitoringschedulename_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Schedule<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringschedulestatus_go">
 <a href="#monitoringschedulestatus_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Schedule<wbr>Status</a>
@@ -291,14 +291,6 @@ The MonitoringSchedule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitoringscheduleconfig">Monitoring<wbr>Schedule<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="monitoringschedulename_nodejs">
-<a href="#monitoringschedulename_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Schedule<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointname_nodejs">
@@ -324,6 +316,14 @@ The MonitoringSchedule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#monitoringschedulemonitoringexecutionsummary">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Execution<wbr>Summary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes metadata on the last execution to run, if there was one.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoringschedulename_nodejs">
+<a href="#monitoringschedulename_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Schedule<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringschedulestatus_nodejs">
 <a href="#monitoringschedulestatus_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Schedule<wbr>Status</a>
@@ -351,14 +351,6 @@ The MonitoringSchedule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitoringscheduleconfig">Monitoring<wbr>Schedule<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="monitoring_schedule_name_python">
-<a href="#monitoring_schedule_name_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>schedule_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_name_python">
@@ -384,6 +376,14 @@ The MonitoringSchedule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#monitoringschedulemonitoringexecutionsummary">Monitoring<wbr>Schedule<wbr>Monitoring<wbr>Execution<wbr>Summary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes metadata on the last execution to run, if there was one.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitoring_schedule_name_python">
+<a href="#monitoring_schedule_name_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>schedule_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_schedule_status_python">
 <a href="#monitoring_schedule_status_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>schedule_<wbr>status</a>

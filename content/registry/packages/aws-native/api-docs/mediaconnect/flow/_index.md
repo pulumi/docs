@@ -162,14 +162,6 @@ The Flow resource accepts the following [input]({{< relref "/docs/intro/concepts
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the flow.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
@@ -186,6 +178,14 @@ The Flow resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sourcefailoverconfig_csharp">
 <a href="#sourcefailoverconfig_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Failover<wbr>Config</a>
 </span>
@@ -197,14 +197,6 @@ The Flow resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the flow.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -222,6 +214,14 @@ The Flow resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sourcefailoverconfig_go">
 <a href="#sourcefailoverconfig_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Failover<wbr>Config</a>
 </span>
@@ -233,14 +233,6 @@ The Flow resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the flow.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -258,6 +250,14 @@ The Flow resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sourcefailoverconfig_nodejs">
 <a href="#sourcefailoverconfig_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Failover<wbr>Config</a>
 </span>
@@ -269,14 +269,6 @@ The Flow resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the flow.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -293,6 +285,14 @@ The Flow resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_failover_config_python">
 <a href="#source_failover_config_python" style="color: inherit; text-decoration: inherit;">source_<wbr>failover_<wbr>config</a>

@@ -170,15 +170,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the associated Domain.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="userprofilename_csharp">
-<a href="#userprofilename_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Profile<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the UserProfile.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the associated Domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlesignonuseridentifier_csharp">
 <a href="#singlesignonuseridentifier_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Sign<wbr>On<wbr>User<wbr>Identifier</a>
@@ -204,6 +196,14 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}A list of tags to apply to the user profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="userprofilename_csharp">
+<a href="#userprofilename_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Profile<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the UserProfile.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usersettings_csharp">
 <a href="#usersettings_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Settings</a>
 </span>
@@ -222,15 +222,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the associated Domain.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="userprofilename_go">
-<a href="#userprofilename_go" style="color: inherit; text-decoration: inherit;">User<wbr>Profile<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the UserProfile.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the associated Domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlesignonuseridentifier_go">
 <a href="#singlesignonuseridentifier_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Sign<wbr>On<wbr>User<wbr>Identifier</a>
@@ -256,6 +248,14 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}A list of tags to apply to the user profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="userprofilename_go">
+<a href="#userprofilename_go" style="color: inherit; text-decoration: inherit;">User<wbr>Profile<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the UserProfile.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usersettings_go">
 <a href="#usersettings_go" style="color: inherit; text-decoration: inherit;">User<wbr>Settings</a>
 </span>
@@ -274,15 +274,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the associated Domain.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="userprofilename_nodejs">
-<a href="#userprofilename_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Profile<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the UserProfile.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the associated Domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlesignonuseridentifier_nodejs">
 <a href="#singlesignonuseridentifier_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Sign<wbr>On<wbr>User<wbr>Identifier</a>
@@ -308,6 +300,14 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}A list of tags to apply to the user profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="userprofilename_nodejs">
+<a href="#userprofilename_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Profile<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the UserProfile.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usersettings_nodejs">
 <a href="#usersettings_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Settings</a>
 </span>
@@ -326,15 +326,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the associated Domain.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="user_profile_name_python">
-<a href="#user_profile_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>profile_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A name for the UserProfile.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the associated Domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="single_sign_on_user_identifier_python">
 <a href="#single_sign_on_user_identifier_python" style="color: inherit; text-decoration: inherit;">single_<wbr>sign_<wbr>on_<wbr>user_<wbr>identifier</a>
@@ -359,6 +351,14 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#userprofiletag">Sequence[User<wbr>Profile<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to apply to the user profile.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_profile_name_python">
+<a href="#user_profile_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>profile_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A name for the UserProfile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_settings_python">
 <a href="#user_settings_python" style="color: inherit; text-decoration: inherit;">user_<wbr>settings</a>

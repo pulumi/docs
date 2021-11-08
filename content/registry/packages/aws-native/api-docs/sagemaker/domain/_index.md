@@ -182,14 +182,6 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The default user settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="domainname_csharp">
-<a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the domain.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="subnetids_csharp">
 <a href="#subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
 </span>
@@ -213,6 +205,14 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#domainappnetworkaccesstype">Pulumi.<wbr>Aws<wbr>Native.<wbr>Sage<wbr>Maker.<wbr>Domain<wbr>App<wbr>Network<wbr>Access<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="domainname_csharp">
+<a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -250,14 +250,6 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The default user settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="domainname_go">
-<a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the domain.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="subnetids_go">
 <a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
 </span>
@@ -281,6 +273,14 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#domainappnetworkaccesstype">Domain<wbr>App<wbr>Network<wbr>Access<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="domainname_go">
+<a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -318,14 +318,6 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The default user settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="domainname_nodejs">
-<a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the domain.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="subnetids_nodejs">
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
 </span>
@@ -349,6 +341,14 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#domainappnetworkaccesstype">Domain<wbr>App<wbr>Network<wbr>Access<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="domainname_nodejs">
+<a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -386,14 +386,6 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The default user settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="domain_name_python">
-<a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A name for the domain.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="subnet_ids_python">
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span>
@@ -417,6 +409,14 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#domainappnetworkaccesstype">Domain<wbr>App<wbr>Network<wbr>Access<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="domain_name_python">
+<a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A name for the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>

@@ -231,7 +231,7 @@ const cloudFormationCanaryPack = new aws_native.configuration.ConformancePack("c
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConformancePack</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConformancePackArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConformancePack</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ConformancePackArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -246,16 +246,16 @@ const cloudFormationCanaryPack = new aws_native.configuration.ConformancePack("c
                     <span class="nx">template_s3_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ConformancePack</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConformancePackArgs</a></span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ConformancePackArgs]</a></span> = None<span class="p">,</span>
                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConformancePack</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConformancePackArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConformancePack</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConformancePack</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ConformancePackArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConformancePack</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConformancePack</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ConformancePackArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConformancePack</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ConformancePackArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -267,7 +267,7 @@ const cloudFormationCanaryPack = new aws_native.configuration.ConformancePack("c
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConformancePackArgs</a></span>
@@ -291,7 +291,7 @@ const cloudFormationCanaryPack = new aws_native.configuration.ConformancePack("c
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConformancePackArgs</a></span>
@@ -321,7 +321,7 @@ const cloudFormationCanaryPack = new aws_native.configuration.ConformancePack("c
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConformancePackArgs</a></span>
@@ -345,7 +345,7 @@ const cloudFormationCanaryPack = new aws_native.configuration.ConformancePack("c
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ConformancePackArgs</a></span>
@@ -371,15 +371,7 @@ The ConformancePack resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="conformancepackname_csharp">
-<a href="#conformancepackname_csharp" style="color: inherit; text-decoration: inherit;">Conformance<wbr>Pack<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the conformance pack which will be assigned as the unique identifier.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="conformancepackinputparameters_csharp">
 <a href="#conformancepackinputparameters_csharp" style="color: inherit; text-decoration: inherit;">Conformance<wbr>Pack<wbr>Input<wbr>Parameters</a>
@@ -388,6 +380,14 @@ The ConformancePack resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#conformancepackinputparameter">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Configuration.<wbr>Inputs.<wbr>Conformance<wbr>Pack<wbr>Input<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of ConformancePackInputParameter objects.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conformancepackname_csharp">
+<a href="#conformancepackname_csharp" style="color: inherit; text-decoration: inherit;">Conformance<wbr>Pack<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the conformance pack which will be assigned as the unique identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliverys3bucket_csharp">
 <a href="#deliverys3bucket_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>S3Bucket</a>
@@ -423,15 +423,7 @@ The ConformancePack resource accepts the following [input]({{< relref "/docs/int
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="conformancepackname_go">
-<a href="#conformancepackname_go" style="color: inherit; text-decoration: inherit;">Conformance<wbr>Pack<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the conformance pack which will be assigned as the unique identifier.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="conformancepackinputparameters_go">
 <a href="#conformancepackinputparameters_go" style="color: inherit; text-decoration: inherit;">Conformance<wbr>Pack<wbr>Input<wbr>Parameters</a>
@@ -440,6 +432,14 @@ The ConformancePack resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#conformancepackinputparameter">[]Conformance<wbr>Pack<wbr>Input<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of ConformancePackInputParameter objects.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conformancepackname_go">
+<a href="#conformancepackname_go" style="color: inherit; text-decoration: inherit;">Conformance<wbr>Pack<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the conformance pack which will be assigned as the unique identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliverys3bucket_go">
 <a href="#deliverys3bucket_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>S3Bucket</a>
@@ -475,15 +475,7 @@ The ConformancePack resource accepts the following [input]({{< relref "/docs/int
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="conformancepackname_nodejs">
-<a href="#conformancepackname_nodejs" style="color: inherit; text-decoration: inherit;">conformance<wbr>Pack<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the conformance pack which will be assigned as the unique identifier.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="conformancepackinputparameters_nodejs">
 <a href="#conformancepackinputparameters_nodejs" style="color: inherit; text-decoration: inherit;">conformance<wbr>Pack<wbr>Input<wbr>Parameters</a>
@@ -492,6 +484,14 @@ The ConformancePack resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#conformancepackinputparameter">Conformance<wbr>Pack<wbr>Input<wbr>Parameter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of ConformancePackInputParameter objects.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conformancepackname_nodejs">
+<a href="#conformancepackname_nodejs" style="color: inherit; text-decoration: inherit;">conformance<wbr>Pack<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the conformance pack which will be assigned as the unique identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliverys3bucket_nodejs">
 <a href="#deliverys3bucket_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>S3Bucket</a>
@@ -527,15 +527,7 @@ The ConformancePack resource accepts the following [input]({{< relref "/docs/int
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="conformance_pack_name_python">
-<a href="#conformance_pack_name_python" style="color: inherit; text-decoration: inherit;">conformance_<wbr>pack_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the conformance pack which will be assigned as the unique identifier.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="conformance_pack_input_parameters_python">
 <a href="#conformance_pack_input_parameters_python" style="color: inherit; text-decoration: inherit;">conformance_<wbr>pack_<wbr>input_<wbr>parameters</a>
@@ -544,6 +536,14 @@ The ConformancePack resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#conformancepackinputparameter">Sequence[Conformance<wbr>Pack<wbr>Input<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ConformancePackInputParameter objects.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conformance_pack_name_python">
+<a href="#conformance_pack_name_python" style="color: inherit; text-decoration: inherit;">conformance_<wbr>pack_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the conformance pack which will be assigned as the unique identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delivery_s3_bucket_python">
 <a href="#delivery_s3_bucket_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>s3_<wbr>bucket</a>

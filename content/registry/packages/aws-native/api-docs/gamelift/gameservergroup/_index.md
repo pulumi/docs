@@ -170,14 +170,6 @@ The GameServerGroup resource accepts the following [input]({{< relref "/docs/int
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="gameservergroupname_csharp">
-<a href="#gameservergroupname_csharp" style="color: inherit; text-decoration: inherit;">Game<wbr>Server<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An identifier for the new game server group.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="instancedefinitions_csharp">
 <a href="#instancedefinitions_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Definitions</a>
 </span>
@@ -226,6 +218,14 @@ The GameServerGroup resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The type of delete to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="gameservergroupname_csharp">
+<a href="#gameservergroupname_csharp" style="color: inherit; text-decoration: inherit;">Game<wbr>Server<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the new game server group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="gameserverprotectionpolicy_csharp">
 <a href="#gameserverprotectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Game<wbr>Server<wbr>Protection<wbr>Policy</a>
 </span>
@@ -269,14 +269,6 @@ The GameServerGroup resource accepts the following [input]({{< relref "/docs/int
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="gameservergroupname_go">
-<a href="#gameservergroupname_go" style="color: inherit; text-decoration: inherit;">Game<wbr>Server<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An identifier for the new game server group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancedefinitions_go">
 <a href="#instancedefinitions_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Definitions</a>
@@ -326,6 +318,14 @@ The GameServerGroup resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The type of delete to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="gameservergroupname_go">
+<a href="#gameservergroupname_go" style="color: inherit; text-decoration: inherit;">Game<wbr>Server<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the new game server group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="gameserverprotectionpolicy_go">
 <a href="#gameserverprotectionpolicy_go" style="color: inherit; text-decoration: inherit;">Game<wbr>Server<wbr>Protection<wbr>Policy</a>
 </span>
@@ -369,14 +369,6 @@ The GameServerGroup resource accepts the following [input]({{< relref "/docs/int
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="gameservergroupname_nodejs">
-<a href="#gameservergroupname_nodejs" style="color: inherit; text-decoration: inherit;">game<wbr>Server<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An identifier for the new game server group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancedefinitions_nodejs">
 <a href="#instancedefinitions_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Definitions</a>
@@ -426,6 +418,14 @@ The GameServerGroup resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The type of delete to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="gameservergroupname_nodejs">
+<a href="#gameservergroupname_nodejs" style="color: inherit; text-decoration: inherit;">game<wbr>Server<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the new game server group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="gameserverprotectionpolicy_nodejs">
 <a href="#gameserverprotectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">game<wbr>Server<wbr>Protection<wbr>Policy</a>
 </span>
@@ -469,14 +469,6 @@ The GameServerGroup resource accepts the following [input]({{< relref "/docs/int
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="game_server_group_name_python">
-<a href="#game_server_group_name_python" style="color: inherit; text-decoration: inherit;">game_<wbr>server_<wbr>group_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An identifier for the new game server group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_definitions_python">
 <a href="#instance_definitions_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>definitions</a>
@@ -525,6 +517,14 @@ The GameServerGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#gameservergroupdeleteoption">Game<wbr>Server<wbr>Group<wbr>Delete<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}The type of delete to perform.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="game_server_group_name_python">
+<a href="#game_server_group_name_python" style="color: inherit; text-decoration: inherit;">game_<wbr>server_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the new game server group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="game_server_protection_policy_python">
 <a href="#game_server_protection_policy_python" style="color: inherit; text-decoration: inherit;">game_<wbr>server_<wbr>protection_<wbr>policy</a>

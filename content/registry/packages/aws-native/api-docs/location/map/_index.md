@@ -170,14 +170,6 @@ The Map resource accepts the following [input]({{< relref "/docs/intro/concepts/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="mapname_csharp">
-<a href="#mapname_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="pricingplan_csharp">
 <a href="#pricingplan_csharp" style="color: inherit; text-decoration: inherit;">Pricing<wbr>Plan</a>
 </span>
@@ -188,6 +180,14 @@ The Map resource accepts the following [input]({{< relref "/docs/intro/concepts/
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mapname_csharp">
+<a href="#mapname_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -206,14 +206,6 @@ The Map resource accepts the following [input]({{< relref "/docs/intro/concepts/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="mapname_go">
-<a href="#mapname_go" style="color: inherit; text-decoration: inherit;">Map<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="pricingplan_go">
 <a href="#pricingplan_go" style="color: inherit; text-decoration: inherit;">Pricing<wbr>Plan</a>
 </span>
@@ -224,6 +216,14 @@ The Map resource accepts the following [input]({{< relref "/docs/intro/concepts/
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mapname_go">
+<a href="#mapname_go" style="color: inherit; text-decoration: inherit;">Map<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -242,14 +242,6 @@ The Map resource accepts the following [input]({{< relref "/docs/intro/concepts/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="mapname_nodejs">
-<a href="#mapname_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="pricingplan_nodejs">
 <a href="#pricingplan_nodejs" style="color: inherit; text-decoration: inherit;">pricing<wbr>Plan</a>
 </span>
@@ -260,6 +252,14 @@ The Map resource accepts the following [input]({{< relref "/docs/intro/concepts/
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mapname_nodejs">
+<a href="#mapname_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -278,14 +278,6 @@ The Map resource accepts the following [input]({{< relref "/docs/intro/concepts/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="map_name_python">
-<a href="#map_name_python" style="color: inherit; text-decoration: inherit;">map_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="pricing_plan_python">
 <a href="#pricing_plan_python" style="color: inherit; text-decoration: inherit;">pricing_<wbr>plan</a>
 </span>
@@ -296,6 +288,14 @@ The Map resource accepts the following [input]({{< relref "/docs/intro/concepts/
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="map_name_python">
+<a href="#map_name_python" style="color: inherit; text-decoration: inherit;">map_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

@@ -177,15 +177,7 @@ The InfrastructureConfiguration resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance profile of the infrastructure configuration.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The instance profile of the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -226,6 +218,14 @@ The InfrastructureConfiguration resource accepts the following [input]({{< relre
         <span class="property-type"><a href="#infrastructureconfigurationlogging">Pulumi.<wbr>Aws<wbr>Native.<wbr>Image<wbr>Builder.<wbr>Inputs.<wbr>Infrastructure<wbr>Configuration<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logging configuration of the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetags_csharp">
 <a href="#resourcetags_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Tags</a>
@@ -285,15 +285,7 @@ The InfrastructureConfiguration resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance profile of the infrastructure configuration.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The instance profile of the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -334,6 +326,14 @@ The InfrastructureConfiguration resource accepts the following [input]({{< relre
         <span class="property-type"><a href="#infrastructureconfigurationlogging">Infrastructure<wbr>Configuration<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logging configuration of the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetags_go">
 <a href="#resourcetags_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Tags</a>
@@ -393,15 +393,7 @@ The InfrastructureConfiguration resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance profile of the infrastructure configuration.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The instance profile of the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -442,6 +434,14 @@ The InfrastructureConfiguration resource accepts the following [input]({{< relre
         <span class="property-type"><a href="#infrastructureconfigurationlogging">Infrastructure<wbr>Configuration<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logging configuration of the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetags_nodejs">
 <a href="#resourcetags_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Tags</a>
@@ -501,15 +501,7 @@ The InfrastructureConfiguration resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The instance profile of the infrastructure configuration.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The instance profile of the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -550,6 +542,14 @@ The InfrastructureConfiguration resource accepts the following [input]({{< relre
         <span class="property-type"><a href="#infrastructureconfigurationlogging">Infrastructure<wbr>Configuration<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logging configuration of the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the infrastructure configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_tags_python">
 <a href="#resource_tags_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>tags</a>

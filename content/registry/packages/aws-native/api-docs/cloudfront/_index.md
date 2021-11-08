@@ -21,6 +21,7 @@ Explore the resources and functions of the aws-native.cloudfront module.
     <li><a href="originrequestpolicy" title="OriginRequestPolicy"><span class="api-symbol api-symbol--resource"></span>OriginRequestPolicy</a></li>
     <li><a href="publickey" title="PublicKey"><span class="api-symbol api-symbol--resource"></span>PublicKey</a></li>
     <li><a href="realtimelogconfig" title="RealtimeLogConfig"><span class="api-symbol api-symbol--resource"></span>RealtimeLogConfig</a></li>
+    <li><a href="responseheaderspolicy" title="ResponseHeadersPolicy"><span class="api-symbol api-symbol--resource"></span>ResponseHeadersPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +31,6 @@ Explore the resources and functions of the aws-native.cloudfront module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 
