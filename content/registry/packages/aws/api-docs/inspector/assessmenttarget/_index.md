@@ -712,7 +712,7 @@ The following state arguments are supported:
 ## Import
 
 
-Inspector Assessment Targets can be imported via their Amazon Resource Name (ARN), e.g.
+Inspector Assessment Targets can be imported via their Amazon Resource Name (ARN), e.g.,
 
 ```sh
  $ pulumi import aws:inspector/assessmentTarget:AssessmentTarget example arn:aws:inspector:us-east-1:123456789012:target/0-xxxxxxx
@@ -728,6 +728,6 @@ Inspector Assessment Targets can be imported via their Amazon Resource Name (ARN
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

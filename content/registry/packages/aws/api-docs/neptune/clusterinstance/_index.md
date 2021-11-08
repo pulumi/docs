@@ -2396,7 +2396,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 ## Import
 
 
-`aws_neptune_cluster_instance` can be imported by using the instance identifier, e.g.
+`aws_neptune_cluster_instance` can be imported by using the instance identifier, e.g.,
 
 ```sh
  $ pulumi import aws:neptune/clusterInstance:ClusterInstance example my-instance
@@ -2412,6 +2412,6 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

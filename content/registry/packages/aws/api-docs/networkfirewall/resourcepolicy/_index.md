@@ -860,7 +860,7 @@ The following state arguments are supported:
 ## Import
 
 
-Network Firewall Resource Policies can be imported using the `resource_arn` e.g.
+Network Firewall Resource Policies can be imported using the `resource_arn` e.g.,
 
 ```sh
  $ pulumi import aws:networkfirewall/resourcePolicy:ResourcePolicy example aws_networkfirewall_rule_group.example arn:aws:network-firewall:us-west-1:123456789012:stateful-rulegroup/example
@@ -876,6 +876,6 @@ Network Firewall Resource Policies can be imported using the `resource_arn` e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -930,7 +930,7 @@ The following state arguments are supported:
 ## Import
 
 
-MSK configurations can be imported using the configuration ARN, e.g.
+MSK configurations can be imported using the configuration ARN, e.g.,
 
 ```sh
  $ pulumi import aws:msk/configuration:Configuration example arn:aws:kafka:us-west-2:123456789012:configuration/example/279c0212-d057-4dba-9aa9-1c4e5a25bfc7-3
@@ -946,6 +946,6 @@ MSK configurations can be imported using the configuration ARN, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

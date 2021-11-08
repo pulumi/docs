@@ -937,7 +937,7 @@ The following state arguments are supported:
 ## Import
 
 
-ElastiCache user groups can be imported using the `user_group_id`, e.g.
+ElastiCache user groups can be imported using the `user_group_id`, e.g.,
 
 ```sh
  $ pulumi import aws:elasticache/userGroup:UserGroup my_user_group userGoupId1
@@ -953,6 +953,6 @@ ElastiCache user groups can be imported using the `user_group_id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

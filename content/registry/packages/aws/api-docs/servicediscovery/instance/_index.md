@@ -818,7 +818,7 @@ The following state arguments are supported:
 ## Import
 
 
-Service Discovery Instance can be imported using the service ID and instance ID, e.g.
+Service Discovery Instance can be imported using the service ID and instance ID, e.g.,
 
 ```sh
  $ pulumi import aws:servicediscovery/instance:Instance example 0123456789/i-0123
@@ -834,6 +834,6 @@ Service Discovery Instance can be imported using the service ID and instance ID,
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

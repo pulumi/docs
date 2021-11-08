@@ -675,7 +675,7 @@ The following state arguments are supported:
 ## Import
 
 
-Security Hub invite acceptance can be imported using the account ID, e.g.
+Security Hub invite acceptance can be imported using the account ID, e.g.,
 
 ```sh
  $ pulumi import aws:securityhub/inviteAccepter:InviteAccepter example 123456789012
@@ -691,6 +691,6 @@ Security Hub invite acceptance can be imported using the account ID, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

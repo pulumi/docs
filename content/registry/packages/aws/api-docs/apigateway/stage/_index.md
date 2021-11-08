@@ -1078,7 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The execution ARN to be used in `lambda_permission`'s `source_arn`
 when allowing API Gateway to invoke a Lambda function,
-e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
+e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1096,7 +1096,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
-e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
+e.g., `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tagsall_csharp">
@@ -1105,7 +1105,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1129,7 +1129,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
     </dt>
     <dd>{{% md %}}The execution ARN to be used in `lambda_permission`'s `source_arn`
 when allowing API Gateway to invoke a Lambda function,
-e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
+e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -1147,7 +1147,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
-e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
+e.g., `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tagsall_go">
@@ -1156,7 +1156,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1180,7 +1180,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
     </dt>
     <dd>{{% md %}}The execution ARN to be used in `lambda_permission`'s `source_arn`
 when allowing API Gateway to invoke a Lambda function,
-e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
+e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1198,7 +1198,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
-e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
+e.g., `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tagsall_nodejs">
@@ -1207,7 +1207,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1231,7 +1231,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
     </dt>
     <dd>{{% md %}}The execution ARN to be used in `lambda_permission`'s `source_arn`
 when allowing API Gateway to invoke a Lambda function,
-e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
+e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -1249,7 +1249,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
-e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
+e.g., `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_all_python">
@@ -1258,7 +1258,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1486,7 +1486,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The execution ARN to be used in `lambda_permission`'s `source_arn`
 when allowing API Gateway to invoke a Lambda function,
-e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
+e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_invokeurl_csharp">
@@ -1496,7 +1496,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
-e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
+e.g., `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restapi_csharp">
@@ -1532,7 +1532,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_variables_csharp">
@@ -1637,7 +1637,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
     </dt>
     <dd>{{% md %}}The execution ARN to be used in `lambda_permission`'s `source_arn`
 when allowing API Gateway to invoke a Lambda function,
-e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
+e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_invokeurl_go">
@@ -1647,7 +1647,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
-e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
+e.g., `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restapi_go">
@@ -1683,7 +1683,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_variables_go">
@@ -1788,7 +1788,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
     </dt>
     <dd>{{% md %}}The execution ARN to be used in `lambda_permission`'s `source_arn`
 when allowing API Gateway to invoke a Lambda function,
-e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
+e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_invokeurl_nodejs">
@@ -1798,7 +1798,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
-e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
+e.g., `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restapi_nodejs">
@@ -1834,7 +1834,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_variables_nodejs">
@@ -1939,7 +1939,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
     </dt>
     <dd>{{% md %}}The execution ARN to be used in `lambda_permission`'s `source_arn`
 when allowing API Gateway to invoke a Lambda function,
-e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
+e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_invoke_url_python">
@@ -1949,7 +1949,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
-e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
+e.g., `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rest_api_python">
@@ -1985,7 +1985,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_variables_python">
@@ -2112,7 +2112,7 @@ For more information on configuring the log format rules visit the AWS [document
 ## Import
 
 
-`aws_api_gateway_stage` can be imported using `REST-API-ID/STAGE-NAME`, e.g.
+`aws_api_gateway_stage` can be imported using `REST-API-ID/STAGE-NAME`, e.g.,
 
 ```sh
  $ pulumi import aws:apigateway/stage:Stage example 12345abcde/example
@@ -2128,6 +2128,6 @@ For more information on configuring the log format rules visit the AWS [document
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -3550,7 +3550,7 @@ Interfaces below for more details.
     </dt>
     <dd>{{% md %}}The [Instance Store Device
 Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
-(e.g. `"ephemeral0"`).
+(e.g., `"ephemeral0"`).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3592,7 +3592,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
     </dt>
     <dd>{{% md %}}The [Instance Store Device
 Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
-(e.g. `"ephemeral0"`).
+(e.g., `"ephemeral0"`).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3634,7 +3634,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
     </dt>
     <dd>{{% md %}}The [Instance Store Device
 Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
-(e.g. `"ephemeral0"`).
+(e.g., `"ephemeral0"`).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3676,7 +3676,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
     </dt>
     <dd>{{% md %}}The [Instance Store Device
 Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
-(e.g. `"ephemeral0"`).
+(e.g., `"ephemeral0"`).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3740,7 +3740,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g. 500), with a maximum of 1,000 MiB/s.
+    <dd>{{% md %}}The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g., 500), with a maximum of 1,000 MiB/s.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_csharp">
@@ -3820,7 +3820,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g. 500), with a maximum of 1,000 MiB/s.
+    <dd>{{% md %}}The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g., 500), with a maximum of 1,000 MiB/s.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_go">
@@ -3900,7 +3900,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g. 500), with a maximum of 1,000 MiB/s.
+    <dd>{{% md %}}The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g., 500), with a maximum of 1,000 MiB/s.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_nodejs">
@@ -3980,7 +3980,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g. 500), with a maximum of 1,000 MiB/s.
+    <dd>{{% md %}}The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g., 500), with a maximum of 1,000 MiB/s.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_size_python">
@@ -5257,6 +5257,15 @@ Otherwise, specify the default value of 2.
     <dd>{{% md %}}One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Conflicts with `ipv6_address_count`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="networkcardindex_csharp">
+<a href="#networkcardindex_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Card<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The index of the network card. Some instance types support multiple network cards. The primary network interface must be assigned to network card index 0. The default is network card index 0.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="networkinterfaceid_csharp">
 <a href="#networkinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
 </span>
@@ -5385,6 +5394,15 @@ Otherwise, specify the default value of 2.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Conflicts with `ipv6_address_count`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkcardindex_go">
+<a href="#networkcardindex_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Card<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The index of the network card. Some instance types support multiple network cards. The primary network interface must be assigned to network card index 0. The default is network card index 0.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfaceid_go">
@@ -5517,6 +5535,15 @@ Otherwise, specify the default value of 2.
     <dd>{{% md %}}One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Conflicts with `ipv6_address_count`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="networkcardindex_nodejs">
+<a href="#networkcardindex_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Card<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The index of the network card. Some instance types support multiple network cards. The primary network interface must be assigned to network card index 0. The default is network card index 0.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="networkinterfaceid_nodejs">
 <a href="#networkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Id</a>
 </span>
@@ -5645,6 +5672,15 @@ Otherwise, specify the default value of 2.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Conflicts with `ipv6_address_count`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_card_index_python">
+<a href="#network_card_index_python" style="color: inherit; text-decoration: inherit;">network_<wbr>card_<wbr>index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The index of the network card. Some instance types support multiple network cards. The primary network interface must be assigned to network card index 0. The default is network card index 0.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_interface_id_python">
@@ -6082,7 +6118,7 @@ Otherwise, specify the default value of 2.
 ## Import
 
 
-Launch Templates can be imported using the `id`, e.g.
+Launch Templates can be imported using the `id`, e.g.,
 
 ```sh
  $ pulumi import aws:ec2/launchTemplate:LaunchTemplate web lt-12345678
@@ -6098,6 +6134,6 @@ Launch Templates can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

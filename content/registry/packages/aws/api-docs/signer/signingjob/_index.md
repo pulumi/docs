@@ -2445,7 +2445,7 @@ The following state arguments are supported:
 ## Import
 
 
-Signer signing jobs can be imported using the `job_id`, e.g.
+Signer signing jobs can be imported using the `job_id`, e.g.,
 
 ```sh
  $ pulumi import aws:signer/signingJob:SigningJob test_signer_signing_job 9ed7e5c3-b8d4-4da0-8459-44e0b068f7ee
@@ -2461,6 +2461,6 @@ Signer signing jobs can be imported using the `job_id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

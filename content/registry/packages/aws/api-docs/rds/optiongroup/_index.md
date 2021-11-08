@@ -1251,7 +1251,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Name of the Option (e.g. MEMCACHED).
+    <dd>{{% md %}}The Name of the Option (e.g., MEMCACHED).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dbsecuritygroupmemberships_csharp">
@@ -1278,7 +1278,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Port number when connecting to the Option (e.g. 11211).
+    <dd>{{% md %}}The Port number when connecting to the Option (e.g., 11211).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
@@ -1287,7 +1287,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the option (e.g. 13.1.0.0).
+    <dd>{{% md %}}The version of the option (e.g., 13.1.0.0).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcsecuritygroupmemberships_csharp">
@@ -1309,7 +1309,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Name of the Option (e.g. MEMCACHED).
+    <dd>{{% md %}}The Name of the Option (e.g., MEMCACHED).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dbsecuritygroupmemberships_go">
@@ -1336,7 +1336,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Port number when connecting to the Option (e.g. 11211).
+    <dd>{{% md %}}The Port number when connecting to the Option (e.g., 11211).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
@@ -1345,7 +1345,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the option (e.g. 13.1.0.0).
+    <dd>{{% md %}}The version of the option (e.g., 13.1.0.0).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcsecuritygroupmemberships_go">
@@ -1367,7 +1367,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Name of the Option (e.g. MEMCACHED).
+    <dd>{{% md %}}The Name of the Option (e.g., MEMCACHED).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dbsecuritygroupmemberships_nodejs">
@@ -1394,7 +1394,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The Port number when connecting to the Option (e.g. 11211).
+    <dd>{{% md %}}The Port number when connecting to the Option (e.g., 11211).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
@@ -1403,7 +1403,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the option (e.g. 13.1.0.0).
+    <dd>{{% md %}}The version of the option (e.g., 13.1.0.0).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcsecuritygroupmemberships_nodejs">
@@ -1425,7 +1425,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Name of the Option (e.g. MEMCACHED).
+    <dd>{{% md %}}The Name of the Option (e.g., MEMCACHED).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="db_security_group_memberships_python">
@@ -1452,7 +1452,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Port number when connecting to the Option (e.g. 11211).
+    <dd>{{% md %}}The Port number when connecting to the Option (e.g., 11211).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
@@ -1461,7 +1461,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of the option (e.g. 13.1.0.0).
+    <dd>{{% md %}}The version of the option (e.g., 13.1.0.0).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_security_group_memberships_python">
@@ -1566,7 +1566,7 @@ The following state arguments are supported:
 ## Import
 
 
-DB Option groups can be imported using the `name`, e.g.
+DB Option groups can be imported using the `name`, e.g.,
 
 ```sh
  $ pulumi import aws:rds/optionGroup:OptionGroup example mysql-option-group
@@ -1582,6 +1582,6 @@ DB Option groups can be imported using the `name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -14,7 +14,7 @@ no_edit_this_page: true
 
 ## Import
 
-Service Discovery HTTP Namespace can be imported using the namespace ID, e.g.
+Service Discovery HTTP Namespace can be imported using the namespace ID, e.g.,
 
 ```sh
  $ pulumi import aws:servicediscovery/httpNamespace:HttpNamespace example ns-1234567890
@@ -849,6 +849,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

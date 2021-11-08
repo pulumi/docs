@@ -3851,6 +3851,15 @@ that is attached to the behavior.
 that is attached to this cache behavior.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="responseheaderspolicyid_csharp">
+<a href="#responseheaderspolicyid_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for a response headers policy.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="smoothstreaming_csharp">
 <a href="#smoothstreaming_csharp" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
 </span>
@@ -4042,6 +4051,15 @@ that is attached to the behavior.
     </dt>
     <dd>{{% md %}}The ARN of the real-time log configuration
 that is attached to this cache behavior.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="responseheaderspolicyid_go">
+<a href="#responseheaderspolicyid_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for a response headers policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_go">
@@ -4237,6 +4255,15 @@ that is attached to the behavior.
 that is attached to this cache behavior.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="responseheaderspolicyid_nodejs">
+<a href="#responseheaderspolicyid_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for a response headers policy.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="smoothstreaming_nodejs">
 <a href="#smoothstreaming_nodejs" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
 </span>
@@ -4428,6 +4455,15 @@ that is attached to the behavior.
     </dt>
     <dd>{{% md %}}The ARN of the real-time log configuration
 that is attached to this cache behavior.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="response_headers_policy_id_python">
+<a href="#response_headers_policy_id_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>policy_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identifier for a response headers policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smooth_streaming_python">
@@ -5297,6 +5333,15 @@ that is attached to the behavior.
 that is attached to this cache behavior.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="responseheaderspolicyid_csharp">
+<a href="#responseheaderspolicyid_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for a response headers policy.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="smoothstreaming_csharp">
 <a href="#smoothstreaming_csharp" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
 </span>
@@ -5498,6 +5543,15 @@ that is attached to the behavior.
     </dt>
     <dd>{{% md %}}The ARN of the real-time log configuration
 that is attached to this cache behavior.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="responseheaderspolicyid_go">
+<a href="#responseheaderspolicyid_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for a response headers policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_go">
@@ -5703,6 +5757,15 @@ that is attached to the behavior.
 that is attached to this cache behavior.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="responseheaderspolicyid_nodejs">
+<a href="#responseheaderspolicyid_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for a response headers policy.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="smoothstreaming_nodejs">
 <a href="#smoothstreaming_nodejs" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
 </span>
@@ -5904,6 +5967,15 @@ that is attached to the behavior.
     </dt>
     <dd>{{% md %}}The ARN of the real-time log configuration
 that is attached to this cache behavior.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="response_headers_policy_id_python">
+<a href="#response_headers_policy_id_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>policy_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identifier for a response headers policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smooth_streaming_python">
@@ -8338,7 +8410,7 @@ must be specified.
 ## Import
 
 
-Cloudfront Distributions can be imported using the `id`, e.g.
+Cloudfront Distributions can be imported using the `id`, e.g.,
 
 ```sh
  $ pulumi import aws:cloudfront/distribution:Distribution distribution E74FTE3EXAMPLE
@@ -8354,6 +8426,6 @@ Cloudfront Distributions can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

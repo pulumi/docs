@@ -1401,7 +1401,7 @@ The following state arguments are supported:
 ## Import
 
 
-S3 bucket analytics configurations can be imported using `bucket:analytics`, e.g.
+S3 bucket analytics configurations can be imported using `bucket:analytics`, e.g.,
 
 ```sh
  $ pulumi import aws:s3/analyticsConfiguration:AnalyticsConfiguration my-bucket-entire-bucket my-bucket:EntireBucket
@@ -1417,6 +1417,6 @@ S3 bucket analytics configurations can be imported using `bucket:analytics`, e.g
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

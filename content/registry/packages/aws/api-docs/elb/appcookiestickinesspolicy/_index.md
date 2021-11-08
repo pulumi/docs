@@ -847,7 +847,7 @@ should be attached.
 ## Import
 
 
-Application cookie stickiness policies can be imported using the ELB name, port, and policy name separated by colons (`:`), e.g.
+Application cookie stickiness policies can be imported using the ELB name, port, and policy name separated by colons (`:`), e.g.,
 
 ```sh
  $ pulumi import aws:elb/appCookieStickinessPolicy:AppCookieStickinessPolicy example my-elb:80:my-policy
@@ -863,6 +863,6 @@ Application cookie stickiness policies can be imported using the ELB name, port,
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

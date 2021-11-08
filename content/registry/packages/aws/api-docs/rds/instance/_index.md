@@ -726,7 +726,7 @@ encrypted replica, set this to the destination KMS ARN.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional, but required for some DB engines, i.e. Oracle
+    <dd>{{% md %}}(Optional, but required for some DB engines, i.e., Oracle
 SE1) License model information for this DB instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1306,7 +1306,7 @@ encrypted replica, set this to the destination KMS ARN.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional, but required for some DB engines, i.e. Oracle
+    <dd>{{% md %}}(Optional, but required for some DB engines, i.e., Oracle
 SE1) License model information for this DB instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1886,7 +1886,7 @@ encrypted replica, set this to the destination KMS ARN.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional, but required for some DB engines, i.e. Oracle
+    <dd>{{% md %}}(Optional, but required for some DB engines, i.e., Oracle
 SE1) License model information for this DB instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2466,7 +2466,7 @@ encrypted replica, set this to the destination KMS ARN.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Optional, but required for some DB engines, i.e. Oracle
+    <dd>{{% md %}}(Optional, but required for some DB engines, i.e., Oracle
 SE1) License model information for this DB instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3706,7 +3706,7 @@ encrypted replica, set this to the destination KMS ARN.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional, but required for some DB engines, i.e. Oracle
+    <dd>{{% md %}}(Optional, but required for some DB engines, i.e., Oracle
 SE1) License model information for this DB instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4376,7 +4376,7 @@ encrypted replica, set this to the destination KMS ARN.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional, but required for some DB engines, i.e. Oracle
+    <dd>{{% md %}}(Optional, but required for some DB engines, i.e., Oracle
 SE1) License model information for this DB instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5046,7 +5046,7 @@ encrypted replica, set this to the destination KMS ARN.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional, but required for some DB engines, i.e. Oracle
+    <dd>{{% md %}}(Optional, but required for some DB engines, i.e., Oracle
 SE1) License model information for this DB instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5716,7 +5716,7 @@ encrypted replica, set this to the destination KMS ARN.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Optional, but required for some DB engines, i.e. Oracle
+    <dd>{{% md %}}(Optional, but required for some DB engines, i.e., Oracle
 SE1) License model information for this DB instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6707,7 +6707,7 @@ associate.
 ## Import
 
 
-DB Instances can be imported using the `identifier`, e.g.
+DB Instances can be imported using the `identifier`, e.g.,
 
 ```sh
  $ pulumi import aws:rds/instance:Instance default mydb-rds-instance
@@ -6723,6 +6723,6 @@ DB Instances can be imported using the `identifier`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

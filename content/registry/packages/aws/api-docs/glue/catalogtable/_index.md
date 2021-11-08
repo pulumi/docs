@@ -3469,7 +3469,7 @@ The following state arguments are supported:
 ## Import
 
 
-Glue Tables can be imported with their catalog ID (usually AWS account ID), database name, and table name, e.g.
+Glue Tables can be imported with their catalog ID (usually AWS account ID), database name, and table name, e.g.,
 
 ```sh
  $ pulumi import aws:glue/catalogTable:CatalogTable MyTable 123456789012:MyDatabase:MyTable
@@ -3485,6 +3485,6 @@ Glue Tables can be imported with their catalog ID (usually AWS account ID), data
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

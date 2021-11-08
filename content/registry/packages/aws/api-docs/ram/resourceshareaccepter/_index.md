@@ -1134,7 +1134,7 @@ The following state arguments are supported:
 ## Import
 
 
-Resource share accepters can be imported using the resource share ARN, e.g.
+Resource share accepters can be imported using the resource share ARN, e.g.,
 
 ```sh
  $ pulumi import aws:ram/resourceShareAccepter:ResourceShareAccepter example arn:aws:ram:us-east-1:123456789012:resource-share/c4b56393-e8d9-89d9-6dc9-883752de4767
@@ -1150,6 +1150,6 @@ Resource share accepters can be imported using the resource share ARN, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

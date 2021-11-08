@@ -1735,7 +1735,7 @@ The following state arguments are supported:
 ## Import
 
 
-Firewall Manager policies can be imported using the policy ID, e.g.
+Firewall Manager policies can be imported using the policy ID, e.g.,
 
 ```sh
  $ pulumi import aws:fms/policy:Policy example 5be49585-a7e3-4c49-dde1-a179fe4a619a
@@ -1751,6 +1751,6 @@ Firewall Manager policies can be imported using the policy ID, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

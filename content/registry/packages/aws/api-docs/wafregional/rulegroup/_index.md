@@ -1178,7 +1178,7 @@ The following state arguments are supported:
 ## Import
 
 
-WAF Regional Rule Group can be imported using the id, e.g.
+WAF Regional Rule Group can be imported using the id, e.g.,
 
 ```sh
  $ pulumi import aws:wafregional/ruleGroup:RuleGroup example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
@@ -1194,6 +1194,6 @@ WAF Regional Rule Group can be imported using the id, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -959,7 +959,7 @@ The following state arguments are supported:
 ## Import
 
 
-Chime Voice Connector Termination can be imported using the `voice_connector_id`, e.g.
+Chime Voice Connector Termination can be imported using the `voice_connector_id`, e.g.,
 
 ```sh
  $ pulumi import aws:chime/voiceConnectorTermination:VoiceConnectorTermination default abcdef1ghij2klmno3pqr4
@@ -975,6 +975,6 @@ Chime Voice Connector Termination can be imported using the `voice_connector_id`
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

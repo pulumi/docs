@@ -1161,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The execution ARN part to be used in `lambda_permission`'s `source_arn`
 when allowing API Gateway to invoke a Lambda function,
-e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
+e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1220,7 +1220,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
     </dt>
     <dd>{{% md %}}The execution ARN part to be used in `lambda_permission`'s `source_arn`
 when allowing API Gateway to invoke a Lambda function,
-e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
+e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -1279,7 +1279,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
     </dt>
     <dd>{{% md %}}The execution ARN part to be used in `lambda_permission`'s `source_arn`
 when allowing API Gateway to invoke a Lambda function,
-e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
+e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1338,7 +1338,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
     </dt>
     <dd>{{% md %}}The execution ARN part to be used in `lambda_permission`'s `source_arn`
 when allowing API Gateway to invoke a Lambda function,
-e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
+e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -1592,7 +1592,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The execution ARN part to be used in `lambda_permission`'s `source_arn`
 when allowing API Gateway to invoke a Lambda function,
-e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
+e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimumcompressionsize_csharp">
@@ -1742,7 +1742,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
     </dt>
     <dd>{{% md %}}The execution ARN part to be used in `lambda_permission`'s `source_arn`
 when allowing API Gateway to invoke a Lambda function,
-e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
+e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimumcompressionsize_go">
@@ -1892,7 +1892,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
     </dt>
     <dd>{{% md %}}The execution ARN part to be used in `lambda_permission`'s `source_arn`
 when allowing API Gateway to invoke a Lambda function,
-e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
+e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimumcompressionsize_nodejs">
@@ -2042,7 +2042,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
     </dt>
     <dd>{{% md %}}The execution ARN part to be used in `lambda_permission`'s `source_arn`
 when allowing API Gateway to invoke a Lambda function,
-e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
+e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimum_compression_size_python">
@@ -2210,7 +2210,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
 ## Import
 
 
-`aws_api_gateway_rest_api` can be imported by using the REST API ID, e.g.
+`aws_api_gateway_rest_api` can be imported by using the REST API ID, e.g.,
 
 ```sh
  $ pulumi import aws:apigateway/restApi:RestApi example 12345abcde
@@ -2226,6 +2226,6 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

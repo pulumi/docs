@@ -14,7 +14,7 @@ no_edit_this_page: true
 
 ## Import
 
-DB Parameter groups can be imported using the `name`, e.g.
+DB Parameter groups can be imported using the `name`, e.g.,
 
 ```sh
  $ pulumi import aws:rds/parameterGroup:ParameterGroup rds_pg rds-pg
@@ -1114,6 +1114,6 @@ specify "pending-reboot" here.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -850,7 +850,7 @@ The following state arguments are supported:
 ## Import
 
 
-Route53 Recovery Control Config cluster can be imported via the cluster ARN, e.g.
+Route53 Recovery Control Config cluster can be imported via the cluster ARN, e.g.,
 
 ```sh
  $ pulumi import aws:route53recoverycontrol/cluster:Cluster mycluster arn:aws:route53-recovery-control::313517334327:cluster/f9ae13be-a11e-4ec7-8522-94a70468e6ea
@@ -866,6 +866,6 @@ Route53 Recovery Control Config cluster can be imported via the cluster ARN, e.g
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

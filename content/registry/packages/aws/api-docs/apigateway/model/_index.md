@@ -874,7 +874,7 @@ The following state arguments are supported:
 ## Import
 
 
-`aws_api_gateway_model` can be imported using `REST-API-ID/NAME`, e.g.
+`aws_api_gateway_model` can be imported using `REST-API-ID/NAME`, e.g.,
 
 ```sh
  $ pulumi import aws:apigateway/model:Model example 12345abcde/example
@@ -890,6 +890,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

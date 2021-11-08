@@ -776,7 +776,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The part of the web request that you want AWS WAF to search for a specified string. e.g. `HEADER` or `METHOD`
+    <dd>{{% md %}}The part of the web request that you want AWS WAF to search for a specified stringE.g., `HEADER` or `METHOD`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_csharp">
@@ -798,7 +798,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The part of the web request that you want AWS WAF to search for a specified string. e.g. `HEADER` or `METHOD`
+    <dd>{{% md %}}The part of the web request that you want AWS WAF to search for a specified stringE.g., `HEADER` or `METHOD`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_go">
@@ -820,7 +820,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The part of the web request that you want AWS WAF to search for a specified string. e.g. `HEADER` or `METHOD`
+    <dd>{{% md %}}The part of the web request that you want AWS WAF to search for a specified stringE.g., `HEADER` or `METHOD`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_nodejs">
@@ -842,7 +842,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The part of the web request that you want AWS WAF to search for a specified string. e.g. `HEADER` or `METHOD`
+    <dd>{{% md %}}The part of the web request that you want AWS WAF to search for a specified stringE.g., `HEADER` or `METHOD`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_python">
@@ -857,7 +857,7 @@ The following state arguments are supported:
 ## Import
 
 
-AWS WAF Regional XSS Match can be imported using the `id`, e.g.
+AWS WAF Regional XSS Match can be imported using the `id`, e.g.,
 
 ```sh
  $ pulumi import aws:wafregional/xssMatchSet:XssMatchSet example 12345abcde
@@ -873,6 +873,6 @@ AWS WAF Regional XSS Match can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -1623,7 +1623,7 @@ The following state arguments are supported:
 ## Import
 
 
-SES event destinations can be imported using `configuration_set_name` together with the event destination's `name`, e.g.
+SES event destinations can be imported using `configuration_set_name` together with the event destination's `name`, e.g.,
 
 ```sh
  $ pulumi import aws:ses/eventDestination:EventDestination sns some-configuration-set-test/event-destination-sns
@@ -1639,6 +1639,6 @@ SES event destinations can be imported using `configuration_set_name` together w
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

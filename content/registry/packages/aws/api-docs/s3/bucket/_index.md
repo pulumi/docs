@@ -1021,12 +1021,25 @@ class MyStack : Stack
                     new Aws.S3.Inputs.BucketReplicationConfigurationRuleArgs
                     {
                         Id = "foobar",
-                        Prefix = "foo",
                         Status = "Enabled",
+                        Filter = new Aws.S3.Inputs.BucketReplicationConfigurationRuleFilterArgs
+                        {
+                            Tags = ,
+                        },
                         Destination = new Aws.S3.Inputs.BucketReplicationConfigurationRuleDestinationArgs
                         {
                             Bucket = destination.Arn,
                             StorageClass = "STANDARD",
+                            ReplicationTime = new Aws.S3.Inputs.BucketReplicationConfigurationRuleDestinationReplicationTimeArgs
+                            {
+                                Status = "Enabled",
+                                Minutes = 15,
+                            },
+                            Metrics = new Aws.S3.Inputs.BucketReplicationConfigurationRuleDestinationMetricsArgs
+                            {
+                                Status = "Enabled",
+                                Minutes = 15,
+                            },
                         },
                     },
                 },
@@ -1141,11 +1154,21 @@ func main() {
 				Rules: s3.BucketReplicationConfigurationRuleArray{
 					&s3.BucketReplicationConfigurationRuleArgs{
 						Id:     pulumi.String("foobar"),
-						Prefix: pulumi.String("foo"),
 						Status: pulumi.String("Enabled"),
+						Filter: &s3.BucketReplicationConfigurationRuleFilterArgs{
+							Tags: nil,
+						},
 						Destination: &s3.BucketReplicationConfigurationRuleDestinationArgs{
 							Bucket:       destination.Arn,
 							StorageClass: pulumi.String("STANDARD"),
+							ReplicationTime: &s3.BucketReplicationConfigurationRuleDestinationReplicationTimeArgs{
+								Status:  pulumi.String("Enabled"),
+								Minutes: pulumi.Int(15),
+							},
+							Metrics: &s3.BucketReplicationConfigurationRuleDestinationMetricsArgs{
+								Status:  pulumi.String("Enabled"),
+								Minutes: pulumi.Int(15),
+							},
 						},
 					},
 				},
@@ -1215,11 +1238,21 @@ source = aws.s3.Bucket("source",
         role=replication_role.arn,
         rules=[aws.s3.BucketReplicationConfigurationRuleArgs(
             id="foobar",
-            prefix="foo",
             status="Enabled",
+            filter=aws.s3.BucketReplicationConfigurationRuleFilterArgs(
+                tags={},
+            ),
             destination=aws.s3.BucketReplicationConfigurationRuleDestinationArgs(
                 bucket=destination.arn,
                 storage_class="STANDARD",
+                replication_time=aws.s3.BucketReplicationConfigurationRuleDestinationReplicationTimeArgs(
+                    status="Enabled",
+                    minutes=15,
+                ),
+                metrics=aws.s3.BucketReplicationConfigurationRuleDestinationMetricsArgs(
+                    status="Enabled",
+                    minutes=15,
+                ),
             ),
         )],
     ),
@@ -1303,11 +1336,21 @@ const source = new aws.s3.Bucket("source", {
         role: replicationRole.arn,
         rules: [{
             id: "foobar",
-            prefix: "foo",
             status: "Enabled",
+            filter: {
+                tags: {},
+            },
             destination: {
                 bucket: destination.arn,
                 storageClass: "STANDARD",
+                replicationTime: {
+                    status: "Enabled",
+                    minutes: 15,
+                },
+                metrics: {
+                    status: "Enabled",
+                    minutes: 15,
+                },
             },
         }],
     },
@@ -5770,6 +5813,15 @@ developer guide for more information.
     <dd>{{% md %}}The Account ID to use for overriding the object owner on replication. Must be used in conjunction with `access_control_translation` override configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="metrics_csharp">
+<a href="#metrics_csharp" style="color: inherit; text-decoration: inherit;">Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationruledestinationmetrics">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Metrics</a></span>
+    </dt>
+    <dd>{{% md %}}Enables replication metrics (required for S3 RTC) (documented below).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="replicakmskeyid_csharp">
 <a href="#replicakmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Kms<wbr>Key<wbr>Id</a>
 </span>
@@ -5778,6 +5830,15 @@ developer guide for more information.
     </dt>
     <dd>{{% md %}}Destination KMS encryption key ARN for SSE-KMS replication. Must be used in conjunction with
 `sse_kms_encrypted_objects` source selection criteria.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicationtime_csharp">
+<a href="#replicationtime_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationruledestinationreplicationtime">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Replication<wbr>Time</a></span>
+    </dt>
+    <dd>{{% md %}}Enables S3 Replication Time Control (S3 RTC) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageclass_csharp">
@@ -5820,6 +5881,15 @@ developer guide for more information.
     <dd>{{% md %}}The Account ID to use for overriding the object owner on replication. Must be used in conjunction with `access_control_translation` override configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="metrics_go">
+<a href="#metrics_go" style="color: inherit; text-decoration: inherit;">Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationruledestinationmetrics">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Metrics</a></span>
+    </dt>
+    <dd>{{% md %}}Enables replication metrics (required for S3 RTC) (documented below).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="replicakmskeyid_go">
 <a href="#replicakmskeyid_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Kms<wbr>Key<wbr>Id</a>
 </span>
@@ -5828,6 +5898,15 @@ developer guide for more information.
     </dt>
     <dd>{{% md %}}Destination KMS encryption key ARN for SSE-KMS replication. Must be used in conjunction with
 `sse_kms_encrypted_objects` source selection criteria.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicationtime_go">
+<a href="#replicationtime_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationruledestinationreplicationtime">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Replication<wbr>Time</a></span>
+    </dt>
+    <dd>{{% md %}}Enables S3 Replication Time Control (S3 RTC) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageclass_go">
@@ -5870,6 +5949,15 @@ developer guide for more information.
     <dd>{{% md %}}The Account ID to use for overriding the object owner on replication. Must be used in conjunction with `access_control_translation` override configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="metrics_nodejs">
+<a href="#metrics_nodejs" style="color: inherit; text-decoration: inherit;">metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationruledestinationmetrics">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Metrics</a></span>
+    </dt>
+    <dd>{{% md %}}Enables replication metrics (required for S3 RTC) (documented below).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="replicakmskeyid_nodejs">
 <a href="#replicakmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Kms<wbr>Key<wbr>Id</a>
 </span>
@@ -5878,6 +5966,15 @@ developer guide for more information.
     </dt>
     <dd>{{% md %}}Destination KMS encryption key ARN for SSE-KMS replication. Must be used in conjunction with
 `sse_kms_encrypted_objects` source selection criteria.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicationtime_nodejs">
+<a href="#replicationtime_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationruledestinationreplicationtime">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Replication<wbr>Time</a></span>
+    </dt>
+    <dd>{{% md %}}Enables S3 Replication Time Control (S3 RTC) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageclass_nodejs">
@@ -5920,6 +6017,15 @@ developer guide for more information.
     <dd>{{% md %}}The Account ID to use for overriding the object owner on replication. Must be used in conjunction with `access_control_translation` override configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="metrics_python">
+<a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationruledestinationmetrics">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Metrics</a></span>
+    </dt>
+    <dd>{{% md %}}Enables replication metrics (required for S3 RTC) (documented below).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="replica_kms_key_id_python">
 <a href="#replica_kms_key_id_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>kms_<wbr>key_<wbr>id</a>
 </span>
@@ -5928,6 +6034,15 @@ developer guide for more information.
     </dt>
     <dd>{{% md %}}Destination KMS encryption key ARN for SSE-KMS replication. Must be used in conjunction with
 `sse_kms_encrypted_objects` source selection criteria.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replication_time_python">
+<a href="#replication_time_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationruledestinationreplicationtime">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Replication<wbr>Time</a></span>
+    </dt>
+    <dd>{{% md %}}Enables S3 Replication Time Control (S3 RTC) (documented below).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_class_python">
@@ -5991,6 +6106,186 @@ developer guide for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The override value for the owner on replicated objects. Currently only `Destination` is supported.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketreplicationconfigurationruledestinationmetrics">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Metrics</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="minutes_csharp">
+<a href="#minutes_csharp" style="color: inherit; text-decoration: inherit;">Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Threshold within which objects are to be replicated. The only valid value is `15`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of replication metrics. Either `Enabled` or `Disabled`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="minutes_go">
+<a href="#minutes_go" style="color: inherit; text-decoration: inherit;">Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Threshold within which objects are to be replicated. The only valid value is `15`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of replication metrics. Either `Enabled` or `Disabled`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="minutes_nodejs">
+<a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Threshold within which objects are to be replicated. The only valid value is `15`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of replication metrics. Either `Enabled` or `Disabled`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="minutes_python">
+<a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Threshold within which objects are to be replicated. The only valid value is `15`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of replication metrics. Either `Enabled` or `Disabled`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketreplicationconfigurationruledestinationreplicationtime">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Replication<wbr>Time</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="minutes_csharp">
+<a href="#minutes_csharp" style="color: inherit; text-decoration: inherit;">Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Threshold within which objects are to be replicated. The only valid value is `15`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of RTC. Either `Enabled` or `Disabled`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="minutes_go">
+<a href="#minutes_go" style="color: inherit; text-decoration: inherit;">Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Threshold within which objects are to be replicated. The only valid value is `15`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of RTC. Either `Enabled` or `Disabled`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="minutes_nodejs">
+<a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Threshold within which objects are to be replicated. The only valid value is `15`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of RTC. Either `Enabled` or `Disabled`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="minutes_python">
+<a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Threshold within which objects are to be replicated. The only valid value is `15`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of RTC. Either `Enabled` or `Disabled`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6742,7 +7037,7 @@ describing redirect behavior and when redirects are applied.
 ## Import
 
 
-S3 bucket can be imported using the `bucket`, e.g.
+S3 bucket can be imported using the `bucket`, e.g.,
 
 ```sh
  $ pulumi import aws:s3/bucket:Bucket bucket bucket-name
@@ -6760,6 +7055,6 @@ S3 bucket can be imported using the `bucket`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -973,7 +973,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date the object is to be deleted. Should be in `YYYY-MM-DD` date format, e.g. `2020-09-30`.
+    <dd>{{% md %}}Date the object is to be deleted. Should be in `YYYY-MM-DD` date format, e.g., `2020-09-30`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="days_csharp">
@@ -1004,7 +1004,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date the object is to be deleted. Should be in `YYYY-MM-DD` date format, e.g. `2020-09-30`.
+    <dd>{{% md %}}Date the object is to be deleted. Should be in `YYYY-MM-DD` date format, e.g., `2020-09-30`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="days_go">
@@ -1035,7 +1035,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date the object is to be deleted. Should be in `YYYY-MM-DD` date format, e.g. `2020-09-30`.
+    <dd>{{% md %}}Date the object is to be deleted. Should be in `YYYY-MM-DD` date format, e.g., `2020-09-30`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="days_nodejs">
@@ -1066,7 +1066,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Date the object is to be deleted. Should be in `YYYY-MM-DD` date format, e.g. `2020-09-30`.
+    <dd>{{% md %}}Date the object is to be deleted. Should be in `YYYY-MM-DD` date format, e.g., `2020-09-30`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="days_python">
@@ -1180,7 +1180,7 @@ The following state arguments are supported:
 ## Import
 
 
-S3 Control Bucket Lifecycle Configurations can be imported using the Amazon Resource Name (ARN), e.g.
+S3 Control Bucket Lifecycle Configurations can be imported using the Amazon Resource Name (ARN), e.g.,
 
 ```sh
  $ pulumi import aws:s3control/bucketLifecycleConfiguration:BucketLifecycleConfiguration example arn:aws:s3-outposts:us-east-1:123456789012:outpost/op-12345678/bucket/example
@@ -1196,6 +1196,6 @@ S3 Control Bucket Lifecycle Configurations can be imported using the Amazon Reso
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

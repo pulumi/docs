@@ -941,7 +941,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of routing strategy. e.g. `SIMPLE` or `TERMINAL`
+    <dd>{{% md %}}Type of routing strategyE.g., `SIMPLE` or `TERMINAL`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fleetid_csharp">
@@ -972,7 +972,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of routing strategy. e.g. `SIMPLE` or `TERMINAL`
+    <dd>{{% md %}}Type of routing strategyE.g., `SIMPLE` or `TERMINAL`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fleetid_go">
@@ -1003,7 +1003,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of routing strategy. e.g. `SIMPLE` or `TERMINAL`
+    <dd>{{% md %}}Type of routing strategyE.g., `SIMPLE` or `TERMINAL`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fleetid_nodejs">
@@ -1034,7 +1034,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of routing strategy. e.g. `SIMPLE` or `TERMINAL`
+    <dd>{{% md %}}Type of routing strategyE.g., `SIMPLE` or `TERMINAL`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fleet_id_python">
@@ -1058,7 +1058,7 @@ The following state arguments are supported:
 ## Import
 
 
-Gamelift Aliases can be imported using the ID, e.g.
+Gamelift Aliases can be imported using the ID, e.g.,
 
 ```sh
  $ pulumi import aws:gamelift/alias:Alias example <alias-id>
@@ -1074,6 +1074,6 @@ Gamelift Aliases can be imported using the ID, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

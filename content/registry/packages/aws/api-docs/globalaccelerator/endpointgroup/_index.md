@@ -1536,7 +1536,7 @@ the provider will only perform drift detection of its value when present in a co
 ## Import
 
 
-Global Accelerator endpoint groups can be imported using the `id`, e.g.
+Global Accelerator endpoint groups can be imported using the `id`, e.g.,
 
 ```sh
  $ pulumi import aws:globalaccelerator/endpointGroup:EndpointGroup example arn:aws:globalaccelerator::111111111111:accelerator/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/listener/xxxxxxx/endpoint-group/xxxxxxxx
@@ -1552,6 +1552,6 @@ Global Accelerator endpoint groups can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

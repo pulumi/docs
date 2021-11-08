@@ -25,7 +25,6 @@ To initialize cluster, you have to add an HSM instance to the cluster, then sign
 
 
 
-
 ## Create a Cluster Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1336,6 +1335,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
+## Import
+
+
+CloudHSM v2 Clusters can be imported using the `cluster id`, e.g.,
+
+```sh
+ $ pulumi import aws:cloudhsmv2/cluster:Cluster test_cluster cluster-aeb282a201
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>
@@ -1345,6 +1354,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

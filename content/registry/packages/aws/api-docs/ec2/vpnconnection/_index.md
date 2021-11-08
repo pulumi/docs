@@ -5657,7 +5657,7 @@ The following state arguments are supported:
 ## Import
 
 
-VPN Connections can be imported using the `vpn connection id`, e.g.
+VPN Connections can be imported using the `vpn connection id`, e.g.,
 
 ```sh
  $ pulumi import aws:ec2/vpnConnection:VpnConnection testvpnconnection vpn-40f41529
@@ -5673,6 +5673,6 @@ VPN Connections can be imported using the `vpn connection id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -319,7 +319,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
+    <dd>{{% md %}}Name of an EC2 instance typeE.g., `t2.micro`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -382,7 +382,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
+    <dd>{{% md %}}Game session protection policy to apply to all instances in this fleetE.g., `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcecreationlimitpolicy_csharp">
@@ -431,7 +431,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
+    <dd>{{% md %}}Name of an EC2 instance typeE.g., `t2.micro`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -494,7 +494,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
+    <dd>{{% md %}}Game session protection policy to apply to all instances in this fleetE.g., `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcecreationlimitpolicy_go">
@@ -543,7 +543,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
+    <dd>{{% md %}}Name of an EC2 instance typeE.g., `t2.micro`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -606,7 +606,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
+    <dd>{{% md %}}Game session protection policy to apply to all instances in this fleetE.g., `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcecreationlimitpolicy_nodejs">
@@ -655,7 +655,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
+    <dd>{{% md %}}Name of an EC2 instance typeE.g., `t2.micro`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -718,7 +718,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
+    <dd>{{% md %}}Game session protection policy to apply to all instances in this fleetE.g., `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_creation_limit_policy_python">
@@ -1130,7 +1130,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
+    <dd>{{% md %}}Name of an EC2 instance typeE.g., `t2.micro`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fleettype_csharp">
@@ -1183,7 +1183,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
+    <dd>{{% md %}}Game session protection policy to apply to all instances in this fleetE.g., `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operatingsystem_csharp">
@@ -1277,7 +1277,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
+    <dd>{{% md %}}Name of an EC2 instance typeE.g., `t2.micro`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fleettype_go">
@@ -1330,7 +1330,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
+    <dd>{{% md %}}Game session protection policy to apply to all instances in this fleetE.g., `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operatingsystem_go">
@@ -1424,7 +1424,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
+    <dd>{{% md %}}Name of an EC2 instance typeE.g., `t2.micro`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fleettype_nodejs">
@@ -1477,7 +1477,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
+    <dd>{{% md %}}Game session protection policy to apply to all instances in this fleetE.g., `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operatingsystem_nodejs">
@@ -1571,7 +1571,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
+    <dd>{{% md %}}Name of an EC2 instance typeE.g., `t2.micro`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fleet_type_python">
@@ -1624,7 +1624,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
+    <dd>{{% md %}}Game session protection policy to apply to all instances in this fleetE.g., `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operating_system_python">
@@ -1702,7 +1702,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Range of allowed IP addresses expressed in CIDR notation. e.g. `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
+    <dd>{{% md %}}Range of allowed IP addresses expressed in CIDR notationE.g., `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
@@ -1711,7 +1711,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network communication protocol used by the fleet. e.g. `TCP` or `UDP`
+    <dd>{{% md %}}Network communication protocol used by the fleetE.g., `TCP` or `UDP`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_csharp">
@@ -1742,7 +1742,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Range of allowed IP addresses expressed in CIDR notation. e.g. `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
+    <dd>{{% md %}}Range of allowed IP addresses expressed in CIDR notationE.g., `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
@@ -1751,7 +1751,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network communication protocol used by the fleet. e.g. `TCP` or `UDP`
+    <dd>{{% md %}}Network communication protocol used by the fleetE.g., `TCP` or `UDP`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_go">
@@ -1782,7 +1782,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Range of allowed IP addresses expressed in CIDR notation. e.g. `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
+    <dd>{{% md %}}Range of allowed IP addresses expressed in CIDR notationE.g., `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
@@ -1791,7 +1791,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network communication protocol used by the fleet. e.g. `TCP` or `UDP`
+    <dd>{{% md %}}Network communication protocol used by the fleetE.g., `TCP` or `UDP`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_nodejs">
@@ -1822,7 +1822,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Range of allowed IP addresses expressed in CIDR notation. e.g. `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
+    <dd>{{% md %}}Range of allowed IP addresses expressed in CIDR notationE.g., `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
@@ -1831,7 +1831,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Network communication protocol used by the fleet. e.g. `TCP` or `UDP`
+    <dd>{{% md %}}Network communication protocol used by the fleetE.g., `TCP` or `UDP`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_port_python">
@@ -2200,6 +2200,6 @@ Gamelift Fleets cannot be imported at this time.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -18,6 +18,8 @@ Explore the resources and functions of the aws.kms module.
     <li><a href="externalkey" title="ExternalKey"><span class="api-symbol api-symbol--resource"></span>ExternalKey</a></li>
     <li><a href="grant" title="Grant"><span class="api-symbol api-symbol--resource"></span>Grant</a></li>
     <li><a href="key" title="Key"><span class="api-symbol api-symbol--resource"></span>Key</a></li>
+    <li><a href="replicaexternalkey" title="ReplicaExternalKey"><span class="api-symbol api-symbol--resource"></span>ReplicaExternalKey</a></li>
+    <li><a href="replicakey" title="ReplicaKey"><span class="api-symbol api-symbol--resource"></span>ReplicaKey</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -37,8 +39,8 @@ Explore the resources and functions of the aws.kms module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.26.0</dd>
+	<dd>4.27.0</dd>
 </dl>
 

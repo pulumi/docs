@@ -3224,6 +3224,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the connection to use to connect to the Amazon DocumentDB or MongoDB target.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dlqeventqueuearn_csharp">
+<a href="#dlqeventqueuearn_csharp" style="color: inherit; text-decoration: inherit;">Dlq<wbr>Event<wbr>Queue<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the dead-letter SQS queue.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="eventqueuearn_csharp">
+<a href="#eventqueuearn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Queue<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the SQS queue to receive S3 notifications from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="exclusions_csharp">
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span>
@@ -3262,6 +3280,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the connection to use to connect to the Amazon DocumentDB or MongoDB target.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dlqeventqueuearn_go">
+<a href="#dlqeventqueuearn_go" style="color: inherit; text-decoration: inherit;">Dlq<wbr>Event<wbr>Queue<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the dead-letter SQS queue.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="eventqueuearn_go">
+<a href="#eventqueuearn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Queue<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the SQS queue to receive S3 notifications from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusions_go">
@@ -3304,6 +3340,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the connection to use to connect to the Amazon DocumentDB or MongoDB target.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dlqeventqueuearn_nodejs">
+<a href="#dlqeventqueuearn_nodejs" style="color: inherit; text-decoration: inherit;">dlq<wbr>Event<wbr>Queue<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the dead-letter SQS queue.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="eventqueuearn_nodejs">
+<a href="#eventqueuearn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Queue<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the SQS queue to receive S3 notifications from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="exclusions_nodejs">
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
@@ -3342,6 +3396,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the connection to use to connect to the Amazon DocumentDB or MongoDB target.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dlq_event_queue_arn_python">
+<a href="#dlq_event_queue_arn_python" style="color: inherit; text-decoration: inherit;">dlq_<wbr>event_<wbr>queue_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the dead-letter SQS queue.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="event_queue_arn_python">
+<a href="#event_queue_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>queue_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the SQS queue to receive S3 notifications from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusions_python">
@@ -3455,7 +3527,7 @@ The following state arguments are supported:
 ## Import
 
 
-Glue Crawlers can be imported using `name`, e.g.
+Glue Crawlers can be imported using `name`, e.g.,
 
 ```sh
  $ pulumi import aws:glue/crawler:Crawler MyJob MyJob
@@ -3471,6 +3543,6 @@ Glue Crawlers can be imported using `name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

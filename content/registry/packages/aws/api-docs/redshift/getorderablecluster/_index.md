@@ -132,34 +132,58 @@ const test = pulumi.output(aws.redshift.getOrderableCluster({
 
 ## Using getOrderableCluster {#using}
 
+Two invocation forms are available. The direct form accepts plain
+arguments and either blocks until the result value is available, or
+returns a Promise-wrapped result. The output form accepts
+Input-wrapped arguments and returns an Output-wrapped result.
+
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getOrderableCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetOrderableClusterArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetOrderableClusterResult</a></span>></span></code></pre></div>
+<div class="highlight"
+><pre class="chroma"><code class="language-typescript" data-lang="typescript"
+><span class="k">function </span>getOrderableCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetOrderableClusterArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetOrderableClusterResult</a></span>></span
+><span class="k">
+function </span>getOrderableClusterOutput<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetOrderableClusterOutputArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Output&lt;<span class="nx"><a href="#result">GetOrderableClusterResult</a></span>></span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_orderable_cluster(</span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"
+><span class="k">def </span>get_orderable_cluster<span class="p">(</span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">node_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">preferred_node_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetOrderableClusterResult</code></pre></div>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>GetOrderableClusterResult</span
+><span class="k">
+def </span>get_orderable_cluster_output<span class="p">(</span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">node_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">preferred_node_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>Output[GetOrderableClusterResult]</span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrderableCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetOrderableClusterArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetOrderableClusterResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"
+><span class="k">func </span>GetOrderableCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetOrderableClusterArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetOrderableClusterResult</a></span>, error)</span
+><span class="k">
+func </span>GetOrderableClusterOutput<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetOrderableClusterOutputArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) GetOrderableClusterResultOutput</span
+></code></pre></div>
 
-> Note: This function is named `GetOrderableCluster` in the Go SDK.
+&gt; Note: This function is named `GetOrderableCluster` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetOrderableCluster </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetOrderableClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetOrderableClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetOrderableCluster </span><span class="p">
+{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetOrderableClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetOrderableClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="k">
+    public static </span>Output&lt;<span class="nx"><a href="#result">GetOrderableClusterResult</a></span>> <span class="p">Invoke(</span><span class="nx">GetOrderableClusterInvokeArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -177,7 +201,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reshift Cluster type. e.g. `multi-node` or `single-node`
+    <dd>{{% md %}}Reshift Cluster typeE.g., `multi-node` or `single-node`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterversion_csharp">
@@ -186,7 +210,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Redshift Cluster version. e.g. `1.0`
+    <dd>{{% md %}}Redshift Cluster versionE.g., `1.0`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetype_csharp">
@@ -195,7 +219,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Redshift Cluster node type. e.g. `dc2.8xlarge`
+    <dd>{{% md %}}Redshift Cluster node typeE.g., `dc2.8xlarge`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferrednodetypes_csharp">
@@ -217,7 +241,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reshift Cluster type. e.g. `multi-node` or `single-node`
+    <dd>{{% md %}}Reshift Cluster typeE.g., `multi-node` or `single-node`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterversion_go">
@@ -226,7 +250,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Redshift Cluster version. e.g. `1.0`
+    <dd>{{% md %}}Redshift Cluster versionE.g., `1.0`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetype_go">
@@ -235,7 +259,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Redshift Cluster node type. e.g. `dc2.8xlarge`
+    <dd>{{% md %}}Redshift Cluster node typeE.g., `dc2.8xlarge`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferrednodetypes_go">
@@ -257,7 +281,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reshift Cluster type. e.g. `multi-node` or `single-node`
+    <dd>{{% md %}}Reshift Cluster typeE.g., `multi-node` or `single-node`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterversion_nodejs">
@@ -266,7 +290,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Redshift Cluster version. e.g. `1.0`
+    <dd>{{% md %}}Redshift Cluster versionE.g., `1.0`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetype_nodejs">
@@ -275,7 +299,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Redshift Cluster node type. e.g. `dc2.8xlarge`
+    <dd>{{% md %}}Redshift Cluster node typeE.g., `dc2.8xlarge`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferrednodetypes_nodejs">
@@ -297,7 +321,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Reshift Cluster type. e.g. `multi-node` or `single-node`
+    <dd>{{% md %}}Reshift Cluster typeE.g., `multi-node` or `single-node`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_version_python">
@@ -306,7 +330,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Redshift Cluster version. e.g. `1.0`
+    <dd>{{% md %}}Redshift Cluster versionE.g., `1.0`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_type_python">
@@ -315,7 +339,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Redshift Cluster node type. e.g. `dc2.8xlarge`
+    <dd>{{% md %}}Redshift Cluster node typeE.g., `dc2.8xlarge`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_node_types_python">
@@ -564,6 +588,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

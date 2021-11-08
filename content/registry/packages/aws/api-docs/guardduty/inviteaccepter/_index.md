@@ -716,7 +716,7 @@ The following state arguments are supported:
 ## Import
 
 
-`aws_guardduty_invite_accepter` can be imported using the the member GuardDuty detector ID, e.g.
+`aws_guardduty_invite_accepter` can be imported using the the member GuardDuty detector ID, e.g.,
 
 ```sh
  $ pulumi import aws:guardduty/inviteAccepter:InviteAccepter member 00b00fd5aecc0ab60a708659477e9617
@@ -732,6 +732,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

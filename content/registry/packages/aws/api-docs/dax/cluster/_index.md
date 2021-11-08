@@ -872,7 +872,7 @@ consisting of a DNS name and a port number
         <span class="property-type"><a href="#clusternode">List&lt;Cluster<wbr>Node&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and
-`availability_zone`. Referenceable e.g. as
+`availability_zone`. Referenceable e.g., as
 `${aws_dax_cluster.test.nodes.0.address}`
 {{% /md %}}</dd><dt class="property-"
             title="">
@@ -941,7 +941,7 @@ consisting of a DNS name and a port number
         <span class="property-type"><a href="#clusternode">[]Cluster<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and
-`availability_zone`. Referenceable e.g. as
+`availability_zone`. Referenceable e.g., as
 `${aws_dax_cluster.test.nodes.0.address}`
 {{% /md %}}</dd><dt class="property-"
             title="">
@@ -1010,7 +1010,7 @@ consisting of a DNS name and a port number
         <span class="property-type"><a href="#clusternode">Cluster<wbr>Node[]</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and
-`availability_zone`. Referenceable e.g. as
+`availability_zone`. Referenceable e.g., as
 `${aws_dax_cluster.test.nodes.0.address}`
 {{% /md %}}</dd><dt class="property-"
             title="">
@@ -1079,7 +1079,7 @@ consisting of a DNS name and a port number
         <span class="property-type"><a href="#clusternode">Sequence[Cluster<wbr>Node]</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and
-`availability_zone`. Referenceable e.g. as
+`availability_zone`. Referenceable e.g., as
 `${aws_dax_cluster.test.nodes.0.address}`
 {{% /md %}}</dd><dt class="property-"
             title="">
@@ -1346,7 +1346,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
         <span class="property-type"><a href="#clusternode">List&lt;Cluster<wbr>Node<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and
-`availability_zone`. Referenceable e.g. as
+`availability_zone`. Referenceable e.g., as
 `${aws_dax_cluster.test.nodes.0.address}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1539,7 +1539,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
         <span class="property-type"><a href="#clusternode">[]Cluster<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and
-`availability_zone`. Referenceable e.g. as
+`availability_zone`. Referenceable e.g., as
 `${aws_dax_cluster.test.nodes.0.address}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1732,7 +1732,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
         <span class="property-type"><a href="#clusternode">Cluster<wbr>Node<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and
-`availability_zone`. Referenceable e.g. as
+`availability_zone`. Referenceable e.g., as
 `${aws_dax_cluster.test.nodes.0.address}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1925,7 +1925,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
         <span class="property-type"><a href="#clusternode">Sequence[Cluster<wbr>Node<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and
-`availability_zone`. Referenceable e.g. as
+`availability_zone`. Referenceable e.g., as
 `${aws_dax_cluster.test.nodes.0.address}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2233,7 +2233,7 @@ cluster
 ## Import
 
 
-DAX Clusters can be imported using the `cluster_name`, e.g.
+DAX Clusters can be imported using the `cluster_name`, e.g.,
 
 ```sh
  $ pulumi import aws:dax/cluster:Cluster my_cluster my_cluster
@@ -2251,6 +2251,6 @@ DAX Clusters can be imported using the `cluster_name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

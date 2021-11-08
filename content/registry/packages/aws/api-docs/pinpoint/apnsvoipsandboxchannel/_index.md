@@ -1188,7 +1188,7 @@ If your default authentication type fails, Amazon Pinpoint doesn't attempt to us
 ## Import
 
 
-Pinpoint APNs VoIP Sandbox Channel can be imported using the `application-id`, e.g.
+Pinpoint APNs VoIP Sandbox Channel can be imported using the `application-id`, e.g.,
 
 ```sh
  $ pulumi import aws:pinpoint/apnsVoipSandboxChannel:ApnsVoipSandboxChannel apns_voip_sandbox application-id
@@ -1204,6 +1204,6 @@ Pinpoint APNs VoIP Sandbox Channel can be imported using the `application-id`, e
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

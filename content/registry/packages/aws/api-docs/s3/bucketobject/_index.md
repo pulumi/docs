@@ -767,7 +767,7 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g., en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_csharp">
@@ -776,7 +776,7 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g., application/octet-stream. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
@@ -987,7 +987,7 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g., en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_go">
@@ -996,7 +996,7 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g., application/octet-stream. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
@@ -1207,7 +1207,7 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g., en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_nodejs">
@@ -1216,7 +1216,7 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g., application/octet-stream. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
@@ -1427,7 +1427,7 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g., en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_type_python">
@@ -1436,7 +1436,7 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g., application/octet-stream. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_python">
@@ -1925,7 +1925,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g., en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_csharp">
@@ -1934,7 +1934,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g., application/octet-stream. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
@@ -2163,7 +2163,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g., en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_go">
@@ -2172,7 +2172,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g., application/octet-stream. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
@@ -2401,7 +2401,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g., en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_nodejs">
@@ -2410,7 +2410,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g., application/octet-stream. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
@@ -2639,7 +2639,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g., en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_type_python">
@@ -2648,7 +2648,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g., application/octet-stream. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
@@ -2803,13 +2803,13 @@ The following state arguments are supported:
 ## Import
 
 
-Objects can be imported using the `id`. The `id` is the bucket name and the key together e.g.
+Objects can be imported using the `id`. The `id` is the bucket name and the key together e.g.,
 
 ```sh
  $ pulumi import aws:s3/bucketObject:BucketObject object some-bucket-name/some/key.txt
 ```
 
- Additionally, s3 url syntax can be used, e.g.
+ Additionally, s3 url syntax can be used, e.g.,
 
 ```sh
  $ pulumi import aws:s3/bucketObject:BucketObject object s3://some-bucket-name/some/key.txt
@@ -2825,6 +2825,6 @@ Objects can be imported using the `id`. The `id` is the bucket name and the key 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

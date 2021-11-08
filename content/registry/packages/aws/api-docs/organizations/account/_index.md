@@ -1257,7 +1257,7 @@ The following state arguments are supported:
 ## Import
 
 
-The AWS member account can be imported by using the `account_id`, e.g.
+The AWS member account can be imported by using the `account_id`, e.g.,
 
 ```sh
  $ pulumi import aws:organizations/account:Account my_org 111111111111
@@ -1293,6 +1293,6 @@ The AWS member account can be imported by using the `account_id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

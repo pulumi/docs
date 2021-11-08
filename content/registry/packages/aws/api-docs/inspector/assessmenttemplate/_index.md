@@ -1014,7 +1014,7 @@ The following state arguments are supported:
 ## Import
 
 
-`aws_inspector_assessment_template` can be imported by using the template assessment ARN, e.g.
+`aws_inspector_assessment_template` can be imported by using the template assessment ARN, e.g.,
 
 ```sh
  $ pulumi import aws:inspector/assessmentTemplate:AssessmentTemplate example arn:aws:inspector:us-west-2:123456789012:target/0-9IaAzhGR/template/0-WEcjR8CH
@@ -1030,6 +1030,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

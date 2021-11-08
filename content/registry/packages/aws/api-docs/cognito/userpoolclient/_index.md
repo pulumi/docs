@@ -801,7 +801,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
+    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client. Uses the `provider_name` attribute of `aws.cognito.IdentityProvider` resource(s), or the equivalent string(s).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenvalidityunits_csharp">
@@ -985,7 +985,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
+    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client. Uses the `provider_name` attribute of `aws.cognito.IdentityProvider` resource(s), or the equivalent string(s).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenvalidityunits_go">
@@ -1169,7 +1169,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
+    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client. Uses the `provider_name` attribute of `aws.cognito.IdentityProvider` resource(s), or the equivalent string(s).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenvalidityunits_nodejs">
@@ -1353,7 +1353,7 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
+    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client. Uses the `provider_name` attribute of `aws.cognito.IdentityProvider` resource(s), or the equivalent string(s).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_validity_units_python">
@@ -1774,7 +1774,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
+    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client. Uses the `provider_name` attribute of `aws.cognito.IdentityProvider` resource(s), or the equivalent string(s).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenvalidityunits_csharp">
@@ -1967,7 +1967,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
+    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client. Uses the `provider_name` attribute of `aws.cognito.IdentityProvider` resource(s), or the equivalent string(s).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenvalidityunits_go">
@@ -2160,7 +2160,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
+    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client. Uses the `provider_name` attribute of `aws.cognito.IdentityProvider` resource(s), or the equivalent string(s).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenvalidityunits_nodejs">
@@ -2353,7 +2353,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
+    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client. Uses the `provider_name` attribute of `aws.cognito.IdentityProvider` resource(s), or the equivalent string(s).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_validity_units_python">
@@ -2719,7 +2719,7 @@ The following state arguments are supported:
 ## Import
 
 
-Cognito User Pool Clients can be imported using the `id` of the Cognito User Pool, and the `id` of the Cognito User Pool Client, e.g.
+Cognito User Pool Clients can be imported using the `id` of the Cognito User Pool, and the `id` of the Cognito User Pool Client, e.g.,
 
 ```sh
  $ pulumi import aws:cognito/userPoolClient:UserPoolClient client <user_pool_id>/<user_pool_client_id>
@@ -2735,6 +2735,6 @@ Cognito User Pool Clients can be imported using the `id` of the Cognito User Poo
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

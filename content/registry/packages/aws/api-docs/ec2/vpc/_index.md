@@ -1846,7 +1846,7 @@ this VPC. Note that you can change a VPC's main route table by using an
 ## Import
 
 
-VPCs can be imported using the `vpc id`, e.g.
+VPCs can be imported using the `vpc id`, e.g.,
 
 ```sh
  $ pulumi import aws:ec2/vpc:Vpc test_vpc vpc-a01106c2
@@ -1862,6 +1862,6 @@ VPCs can be imported using the `vpc id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

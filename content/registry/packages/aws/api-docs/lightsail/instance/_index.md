@@ -19,7 +19,7 @@ for more information.
 > **Note:** Lightsail is currently only supported in a limited number of AWS Regions, please see ["Regions and Availability Zones in Amazon Lightsail"](https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail) for more details
 ## Availability Zones
 
-Lightsail currently supports the following Availability Zones (e.g. `us-east-1a`):
+Lightsail currently supports the following Availability Zones (e.g., `us-east-1a`):
 
 - `ap-northeast-1{a,c,d}`
 - `ap-northeast-2{a,c}`
@@ -37,7 +37,7 @@ Lightsail currently supports the following Availability Zones (e.g. `us-east-1a`
 
 ## Bundles
 
-Lightsail currently supports the following Bundle IDs (e.g. an instance in `ap-northeast-1` would use `small_2_0`):
+Lightsail currently supports the following Bundle IDs (e.g., an instance in `ap-northeast-1` would use `small_2_0`):
 
 ### Prefix
 
@@ -1841,7 +1841,7 @@ Lightsail console (cannot use `aws.ec2.KeyPair` at this time)
 ## Import
 
 
-Lightsail Instances can be imported using their name, e.g.
+Lightsail Instances can be imported using their name, e.g.,
 
 ```sh
  $ pulumi import aws:lightsail/instance:Instance gitlab_test 'custom gitlab'
@@ -1857,6 +1857,6 @@ Lightsail Instances can be imported using their name, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

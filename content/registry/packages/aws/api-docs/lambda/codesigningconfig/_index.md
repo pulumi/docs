@@ -1063,7 +1063,7 @@ The following state arguments are supported:
 ## Import
 
 
-Code Signing Configs can be imported using their ARN, e.g.
+Code Signing Configs can be imported using their ARN, e.g.,
 
 ```sh
  $ pulumi import aws:lambda/codeSigningConfig:CodeSigningConfig imported_csc arn:aws:lambda:us-west-2:123456789012:code-signing-config:csc-0f6c334abcdea4d8b
@@ -1079,6 +1079,6 @@ Code Signing Configs can be imported using their ARN, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

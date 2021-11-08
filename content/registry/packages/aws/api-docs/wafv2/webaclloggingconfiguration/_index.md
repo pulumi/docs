@@ -1831,7 +1831,7 @@ The following state arguments are supported:
 ## Import
 
 
-WAFv2 Web ACL Logging Configurations can be imported using the WAFv2 Web ACL ARN e.g.
+WAFv2 Web ACL Logging Configurations can be imported using the WAFv2 Web ACL ARN e.g.,
 
 ```sh
  $ pulumi import aws:wafv2/webAclLoggingConfiguration:WebAclLoggingConfiguration example arn:aws:wafv2:us-west-2:123456789012:regional/webacl/test-logs/a1b2c3d4-5678-90ab-cdef
@@ -1847,6 +1847,6 @@ WAFv2 Web ACL Logging Configurations can be imported using the WAFv2 Web ACL ARN
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -1528,7 +1528,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
 ## Import
 
 
-Route53 Zones can be imported using the `zone id`, e.g.
+Route53 Zones can be imported using the `zone id`, e.g.,
 
 ```sh
  $ pulumi import aws:route53/zone:Zone myzone Z1D633PJN98FT9
@@ -1544,6 +1544,6 @@ Route53 Zones can be imported using the `zone id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

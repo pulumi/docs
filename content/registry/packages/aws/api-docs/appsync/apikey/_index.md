@@ -780,7 +780,7 @@ The following state arguments are supported:
 ## Import
 
 
-`aws_appsync_api_key` can be imported using the AppSync API ID and key separated by `:`, e.g.
+`aws_appsync_api_key` can be imported using the AppSync API ID and key separated by `:`, e.g.,
 
 ```sh
  $ pulumi import aws:appsync/apiKey:ApiKey example xxxxx:yyyyy
@@ -796,6 +796,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

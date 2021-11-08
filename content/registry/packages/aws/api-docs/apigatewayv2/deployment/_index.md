@@ -771,7 +771,7 @@ The following state arguments are supported:
 ## Import
 
 
-`aws_apigatewayv2_deployment` can be imported by using the API identifier and deployment identifier, e.g.
+`aws_apigatewayv2_deployment` can be imported by using the API identifier and deployment identifier, e.g.,
 
 ```sh
  $ pulumi import aws:apigatewayv2/deployment:Deployment example aabbccddee/1122334
@@ -789,6 +789,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -1005,7 +1005,7 @@ The following state arguments are supported:
 ## Import
 
 
-Replication subnet groups can be imported using the `replication_subnet_group_id`, e.g.
+Replication subnet groups can be imported using the `replication_subnet_group_id`, e.g.,
 
 ```sh
  $ pulumi import aws:dms/replicationSubnetGroup:ReplicationSubnetGroup test test-dms-replication-subnet-group-tf
@@ -1021,6 +1021,6 @@ Replication subnet groups can be imported using the `replication_subnet_group_id
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

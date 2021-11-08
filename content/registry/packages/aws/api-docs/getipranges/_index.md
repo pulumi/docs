@@ -199,33 +199,56 @@ const fromEurope = new aws.ec2.SecurityGroup("fromEurope", {
 
 ## Using getIpRanges {#using}
 
+Two invocation forms are available. The direct form accepts plain
+arguments and either blocks until the result value is available, or
+returns a Promise-wrapped result. The output form accepts
+Input-wrapped arguments and returns an Output-wrapped result.
+
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIpRanges<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIpRangesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIpRangesResult</a></span>></span></code></pre></div>
+<div class="highlight"
+><pre class="chroma"><code class="language-typescript" data-lang="typescript"
+><span class="k">function </span>getIpRanges<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIpRangesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIpRangesResult</a></span>></span
+><span class="k">
+function </span>getIpRangesOutput<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIpRangesOutputArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Output&lt;<span class="nx"><a href="#result">GetIpRangesResult</a></span>></span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_ip_ranges(</span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"
+><span class="k">def </span>get_ip_ranges<span class="p">(</span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                   <span class="nx">services</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                   <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIpRangesResult</code></pre></div>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>GetIpRangesResult</span
+><span class="k">
+def </span>get_ip_ranges_output<span class="p">(</span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">services</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>Output[GetIpRangesResult]</span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIpRanges<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetIpRangesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetIpRangesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"
+><span class="k">func </span>GetIpRanges<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetIpRangesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetIpRangesResult</a></span>, error)</span
+><span class="k">
+func </span>GetIpRangesOutput<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetIpRangesOutputArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) GetIpRangesResultOutput</span
+></code></pre></div>
 
-> Note: This function is named `GetIpRanges` in the Go SDK.
+&gt; Note: This function is named `GetIpRanges` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIpRanges </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetIpRangesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIpRangesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIpRanges </span><span class="p">
+{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetIpRangesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIpRangesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="k">
+    public static </span>Output&lt;<span class="nx"><a href="#result">GetIpRangesResult</a></span>> <span class="p">Invoke(</span><span class="nx">GetIpRangesInvokeArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -258,7 +281,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}Filter IP ranges by regions (or include all regions, if
 omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
-(e.g. `eu-central-1`)
+(e.g., `eu-central-1`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_csharp">
@@ -295,7 +318,7 @@ omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
     </dt>
     <dd>{{% md %}}Filter IP ranges by regions (or include all regions, if
 omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
-(e.g. `eu-central-1`)
+(e.g., `eu-central-1`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_go">
@@ -332,7 +355,7 @@ omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
     </dt>
     <dd>{{% md %}}Filter IP ranges by regions (or include all regions, if
 omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
-(e.g. `eu-central-1`)
+(e.g., `eu-central-1`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_nodejs">
@@ -369,7 +392,7 @@ omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
     </dt>
     <dd>{{% md %}}Filter IP ranges by regions (or include all regions, if
 omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
-(e.g. `eu-central-1`)
+(e.g., `eu-central-1`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_python">
@@ -409,7 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publication time of the IP ranges (e.g. `2016-08-03-23-46-05`).
+    <dd>{{% md %}}The publication time of the IP ranges (e.g., `2016-08-03-23-46-05`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -445,7 +468,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The publication time of the IP ranges, in Unix epoch time format
-(e.g. `1470267965`).
+(e.g., `1470267965`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="regions_csharp">
@@ -483,7 +506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publication time of the IP ranges (e.g. `2016-08-03-23-46-05`).
+    <dd>{{% md %}}The publication time of the IP ranges (e.g., `2016-08-03-23-46-05`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -519,7 +542,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The publication time of the IP ranges, in Unix epoch time format
-(e.g. `1470267965`).
+(e.g., `1470267965`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="regions_go">
@@ -557,7 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publication time of the IP ranges (e.g. `2016-08-03-23-46-05`).
+    <dd>{{% md %}}The publication time of the IP ranges (e.g., `2016-08-03-23-46-05`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -593,7 +616,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The publication time of the IP ranges, in Unix epoch time format
-(e.g. `1470267965`).
+(e.g., `1470267965`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="regions_nodejs">
@@ -631,7 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The publication time of the IP ranges (e.g. `2016-08-03-23-46-05`).
+    <dd>{{% md %}}The publication time of the IP ranges (e.g., `2016-08-03-23-46-05`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -667,7 +690,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The publication time of the IP ranges, in Unix epoch time format
-(e.g. `1470267965`).
+(e.g., `1470267965`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="regions_python">
@@ -698,6 +721,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

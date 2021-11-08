@@ -2100,7 +2100,7 @@ The following state arguments are supported:
 ## Import
 
 
-SQS Queues can be imported using the `queue url`, e.g.
+SQS Queues can be imported using the `queue url`, e.g.,
 
 ```sh
  $ pulumi import aws:sqs/queue:Queue public_queue https://queue.amazonaws.com/80398EXAMPLE/MyQueue
@@ -2116,6 +2116,6 @@ SQS Queues can be imported using the `queue url`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

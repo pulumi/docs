@@ -301,7 +301,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
+    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e., require administrator reset)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpasswordage_csharp">
@@ -386,7 +386,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
+    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e., require administrator reset)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpasswordage_go">
@@ -471,7 +471,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
+    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e., require administrator reset)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpasswordage_nodejs">
@@ -556,7 +556,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
+    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e., require administrator reset)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_password_age_python">
@@ -876,7 +876,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
+    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e., require administrator reset)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxpasswordage_csharp">
@@ -970,7 +970,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
+    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e., require administrator reset)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxpasswordage_go">
@@ -1064,7 +1064,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
+    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e., require administrator reset)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxpasswordage_nodejs">
@@ -1158,7 +1158,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
+    <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e., require administrator reset)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_password_age_python">
@@ -1232,7 +1232,7 @@ The following state arguments are supported:
 ## Import
 
 
-IAM Account Password Policy can be imported using the word `iam-account-password-policy`, e.g.
+IAM Account Password Policy can be imported using the word `iam-account-password-policy`, e.g.,
 
 ```sh
  $ pulumi import aws:iam/accountPasswordPolicy:AccountPasswordPolicy strict iam-account-password-policy
@@ -1248,6 +1248,6 @@ IAM Account Password Policy can be imported using the word `iam-account-password
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

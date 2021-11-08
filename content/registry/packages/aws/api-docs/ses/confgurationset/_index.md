@@ -1057,7 +1057,7 @@ The following state arguments are supported:
 ## Import
 
 
-SES Configuration Sets can be imported using their `name`, e.g.
+SES Configuration Sets can be imported using their `name`, e.g.,
 
 ```sh
  $ pulumi import aws:ses/confgurationSet:ConfgurationSet test some-configuration-set-test
@@ -1073,6 +1073,6 @@ SES Configuration Sets can be imported using their `name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

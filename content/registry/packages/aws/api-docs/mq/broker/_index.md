@@ -1220,7 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of information about allocated brokers (both active & standby).
 * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
 * `instances.0.ip_address` - IP Address of the broker.
-* `instances.0.endpoints` - Broker's wire-level protocol endpoints in the following order & format referenceable e.g. as `instances.0.endpoints.0` (SSL):
+* `instances.0.endpoints` - Broker's wire-level protocol endpoints in the following order & format referenceable e.g., as `instances.0.endpoints.0` (SSL):
 * For `ActiveMQ`:
 * `ssl://broker-id.mq.us-west-2.amazonaws.com:61617`
 * `amqp+ssl://broker-id.mq.us-west-2.amazonaws.com:5671`
@@ -1270,7 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of information about allocated brokers (both active & standby).
 * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
 * `instances.0.ip_address` - IP Address of the broker.
-* `instances.0.endpoints` - Broker's wire-level protocol endpoints in the following order & format referenceable e.g. as `instances.0.endpoints.0` (SSL):
+* `instances.0.endpoints` - Broker's wire-level protocol endpoints in the following order & format referenceable e.g., as `instances.0.endpoints.0` (SSL):
 * For `ActiveMQ`:
 * `ssl://broker-id.mq.us-west-2.amazonaws.com:61617`
 * `amqp+ssl://broker-id.mq.us-west-2.amazonaws.com:5671`
@@ -1320,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of information about allocated brokers (both active & standby).
 * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
 * `instances.0.ip_address` - IP Address of the broker.
-* `instances.0.endpoints` - Broker's wire-level protocol endpoints in the following order & format referenceable e.g. as `instances.0.endpoints.0` (SSL):
+* `instances.0.endpoints` - Broker's wire-level protocol endpoints in the following order & format referenceable e.g., as `instances.0.endpoints.0` (SSL):
 * For `ActiveMQ`:
 * `ssl://broker-id.mq.us-west-2.amazonaws.com:61617`
 * `amqp+ssl://broker-id.mq.us-west-2.amazonaws.com:5671`
@@ -1370,7 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of information about allocated brokers (both active & standby).
 * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
 * `instances.0.ip_address` - IP Address of the broker.
-* `instances.0.endpoints` - Broker's wire-level protocol endpoints in the following order & format referenceable e.g. as `instances.0.endpoints.0` (SSL):
+* `instances.0.endpoints` - Broker's wire-level protocol endpoints in the following order & format referenceable e.g., as `instances.0.endpoints.0` (SSL):
 * For `ActiveMQ`:
 * `ssl://broker-id.mq.us-west-2.amazonaws.com:61617`
 * `amqp+ssl://broker-id.mq.us-west-2.amazonaws.com:5671`
@@ -1649,7 +1649,7 @@ The following state arguments are supported:
     <dd>{{% md %}}List of information about allocated brokers (both active & standby).
 * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
 * `instances.0.ip_address` - IP Address of the broker.
-* `instances.0.endpoints` - Broker's wire-level protocol endpoints in the following order & format referenceable e.g. as `instances.0.endpoints.0` (SSL):
+* `instances.0.endpoints` - Broker's wire-level protocol endpoints in the following order & format referenceable e.g., as `instances.0.endpoints.0` (SSL):
 * For `ActiveMQ`:
 * `ssl://broker-id.mq.us-west-2.amazonaws.com:61617`
 * `amqp+ssl://broker-id.mq.us-west-2.amazonaws.com:5671`
@@ -1862,7 +1862,7 @@ The following state arguments are supported:
     <dd>{{% md %}}List of information about allocated brokers (both active & standby).
 * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
 * `instances.0.ip_address` - IP Address of the broker.
-* `instances.0.endpoints` - Broker's wire-level protocol endpoints in the following order & format referenceable e.g. as `instances.0.endpoints.0` (SSL):
+* `instances.0.endpoints` - Broker's wire-level protocol endpoints in the following order & format referenceable e.g., as `instances.0.endpoints.0` (SSL):
 * For `ActiveMQ`:
 * `ssl://broker-id.mq.us-west-2.amazonaws.com:61617`
 * `amqp+ssl://broker-id.mq.us-west-2.amazonaws.com:5671`
@@ -2075,7 +2075,7 @@ The following state arguments are supported:
     <dd>{{% md %}}List of information about allocated brokers (both active & standby).
 * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
 * `instances.0.ip_address` - IP Address of the broker.
-* `instances.0.endpoints` - Broker's wire-level protocol endpoints in the following order & format referenceable e.g. as `instances.0.endpoints.0` (SSL):
+* `instances.0.endpoints` - Broker's wire-level protocol endpoints in the following order & format referenceable e.g., as `instances.0.endpoints.0` (SSL):
 * For `ActiveMQ`:
 * `ssl://broker-id.mq.us-west-2.amazonaws.com:61617`
 * `amqp+ssl://broker-id.mq.us-west-2.amazonaws.com:5671`
@@ -2288,7 +2288,7 @@ The following state arguments are supported:
     <dd>{{% md %}}List of information about allocated brokers (both active & standby).
 * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
 * `instances.0.ip_address` - IP Address of the broker.
-* `instances.0.endpoints` - Broker's wire-level protocol endpoints in the following order & format referenceable e.g. as `instances.0.endpoints.0` (SSL):
+* `instances.0.endpoints` - Broker's wire-level protocol endpoints in the following order & format referenceable e.g., as `instances.0.endpoints.0` (SSL):
 * For `ActiveMQ`:
 * `ssl://broker-id.mq.us-west-2.amazonaws.com:61617`
 * `amqp+ssl://broker-id.mq.us-west-2.amazonaws.com:5671`
@@ -3208,7 +3208,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Day of the week, e.g. `MONDAY`, `TUESDAY`, or `WEDNESDAY`.
+    <dd>{{% md %}}Day of the week, e.g., `MONDAY`, `TUESDAY`, or `WEDNESDAY`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeofday_csharp">
@@ -3217,7 +3217,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time, in 24-hour format, e.g. `02:00`.
+    <dd>{{% md %}}Time, in 24-hour format, e.g., `02:00`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timezone_csharp">
@@ -3226,7 +3226,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time zone in either the Country/City format or the UTC offset format, e.g. `CET`.
+    <dd>{{% md %}}Time zone in either the Country/City format or the UTC offset format, e.g., `CET`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3239,7 +3239,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Day of the week, e.g. `MONDAY`, `TUESDAY`, or `WEDNESDAY`.
+    <dd>{{% md %}}Day of the week, e.g., `MONDAY`, `TUESDAY`, or `WEDNESDAY`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeofday_go">
@@ -3248,7 +3248,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time, in 24-hour format, e.g. `02:00`.
+    <dd>{{% md %}}Time, in 24-hour format, e.g., `02:00`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timezone_go">
@@ -3257,7 +3257,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time zone in either the Country/City format or the UTC offset format, e.g. `CET`.
+    <dd>{{% md %}}Time zone in either the Country/City format or the UTC offset format, e.g., `CET`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3270,7 +3270,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Day of the week, e.g. `MONDAY`, `TUESDAY`, or `WEDNESDAY`.
+    <dd>{{% md %}}Day of the week, e.g., `MONDAY`, `TUESDAY`, or `WEDNESDAY`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeofday_nodejs">
@@ -3279,7 +3279,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time, in 24-hour format, e.g. `02:00`.
+    <dd>{{% md %}}Time, in 24-hour format, e.g., `02:00`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timezone_nodejs">
@@ -3288,7 +3288,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time zone in either the Country/City format or the UTC offset format, e.g. `CET`.
+    <dd>{{% md %}}Time zone in either the Country/City format or the UTC offset format, e.g., `CET`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3301,7 +3301,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Day of the week, e.g. `MONDAY`, `TUESDAY`, or `WEDNESDAY`.
+    <dd>{{% md %}}Day of the week, e.g., `MONDAY`, `TUESDAY`, or `WEDNESDAY`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_of_day_python">
@@ -3310,7 +3310,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time, in 24-hour format, e.g. `02:00`.
+    <dd>{{% md %}}Time, in 24-hour format, e.g., `02:00`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_zone_python">
@@ -3319,7 +3319,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time zone in either the Country/City format or the UTC offset format, e.g. `CET`.
+    <dd>{{% md %}}Time zone in either the Country/City format or the UTC offset format, e.g., `CET`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3487,7 +3487,7 @@ The following state arguments are supported:
 ## Import
 
 
-MQ Brokers can be imported using their broker id, e.g.
+MQ Brokers can be imported using their broker id, e.g.,
 
 ```sh
  $ pulumi import aws:mq/broker:Broker example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
@@ -3503,6 +3503,6 @@ MQ Brokers can be imported using their broker id, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

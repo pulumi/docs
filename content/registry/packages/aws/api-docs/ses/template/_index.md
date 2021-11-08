@@ -853,7 +853,7 @@ The following state arguments are supported:
 ## Import
 
 
-SES templates can be imported using the template name, e.g.
+SES templates can be imported using the template name, e.g.,
 
 ```sh
  $ pulumi import aws:ses/template:Template MyTemplate MyTemplate
@@ -869,6 +869,6 @@ SES templates can be imported using the template name, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 
