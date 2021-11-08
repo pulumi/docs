@@ -9,7 +9,6 @@ require (
 	github.com/pulumi/pulumi/pkg/v3 v3.7.1
 	github.com/pulumi/pulumi/sdk/v3 v3.17.1
 	github.com/spf13/cobra v1.2.1
-	gopkg.in/yaml.v2 v2.4.0
 )
 
 replace (

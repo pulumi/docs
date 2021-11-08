@@ -27,24 +27,28 @@ const (
 // on the website.
 type PackageMeta struct {
 	// Name is the package's common name.
-	Name string `yaml:"name"`
+	Name string `json:"name"`
 	// Title is the package's display-friendly name.
-	Title       string `yaml:"title"`
-	Description string `yaml:"description"`
-	LogoURL     string `yaml:"logo_url"`
+	Title       string `json:"title"`
+	Description string `json:"description"`
+	LogoURL     string `json:"logo_url"`
+	RepoURL     string `json:"repo_url"`
+	// SchemaFilePath is the path to the package's schema file (json or yaml)
+	// relative to the root of that package's repo.
+	SchemaFilePath string `json:"schema_file_path"`
 
-	UpdatedOn     int64           `yaml:"updated_on"`
-	Publisher     string          `yaml:"publisher"`
-	Category      PackageCategory `yaml:"category"`
-	PackageStatus PackageStatus   `yaml:"package_status"`
-	Version       string          `yaml:"version"`
+	UpdatedOn     int64           `json:"updated_on"`
+	Publisher     string          `json:"publisher"`
+	Category      PackageCategory `json:"category"`
+	PackageStatus PackageStatus   `json:"package_status"`
+	Version       string          `json:"version"`
 
 	// Featured indicates whether or not a package is highlighted as
 	// a featured package.
-	Featured bool `yaml:"featured"`
+	Featured bool `json:"featured"`
 	// Native is true if the package does not use the TF bridge.
-	Native bool `yaml:"native"`
+	Native bool `json:"native"`
 	// Component indicates if the package is a component and not
 	// a provider.
-	Component bool `yaml:"component"`
+	Component bool `json:"component"`
 }
