@@ -20,18 +20,16 @@ A Pulumi package for creating and managing Civo cloud resources.
     <li><a href="instance" title="Instance"><span class="api-symbol api-symbol--resource"></span>Instance</a></li>
     <li><a href="kubernetescluster" title="KubernetesCluster"><span class="api-symbol api-symbol--resource"></span>KubernetesCluster</a></li>
     <li><a href="kubernetesnodepool" title="KubernetesNodePool"><span class="api-symbol api-symbol--resource"></span>KubernetesNodePool</a></li>
-    <li><a href="loadbalancer" title="LoadBalancer"><span class="api-symbol api-symbol--resource"></span>LoadBalancer</a></li>
     <li><a href="network" title="Network"><span class="api-symbol api-symbol--resource"></span>Network</a></li>
     <li><a href="provider" title="Provider"><span class="api-symbol api-symbol--resource"></span>Provider</a></li>
-    <li><a href="snapshot" title="Snapshot"><span class="api-symbol api-symbol--resource"></span>Snapshot</a></li>
     <li><a href="sshkey" title="SshKey"><span class="api-symbol api-symbol--resource"></span>SshKey</a></li>
-    <li><a href="template" title="Template"><span class="api-symbol api-symbol--resource"></span>Template</a></li>
     <li><a href="volume" title="Volume"><span class="api-symbol api-symbol--resource"></span>Volume</a></li>
     <li><a href="volumeattachment" title="VolumeAttachment"><span class="api-symbol api-symbol--resource"></span>VolumeAttachment</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getdiskimage" title="GetDiskImage"><span class="api-symbol api-symbol--function"></span>GetDiskImage</a></li>
     <li><a href="getdnsdomainname" title="GetDnsDomainName"><span class="api-symbol api-symbol--function"></span>GetDnsDomainName</a></li>
     <li><a href="getdnsdomainrecord" title="GetDnsDomainRecord"><span class="api-symbol api-symbol--function"></span>GetDnsDomainRecord</a></li>
     <li><a href="getinstance" title="GetInstance"><span class="api-symbol api-symbol--function"></span>GetInstance</a></li>
@@ -39,10 +37,8 @@ A Pulumi package for creating and managing Civo cloud resources.
     <li><a href="getinstancessize" title="GetInstancesSize"><span class="api-symbol api-symbol--function"></span>GetInstancesSize</a></li>
     <li><a href="getkubernetescluster" title="GetKubernetesCluster"><span class="api-symbol api-symbol--function"></span>GetKubernetesCluster</a></li>
     <li><a href="getkubernetesversion" title="GetKubernetesVersion"><span class="api-symbol api-symbol--function"></span>GetKubernetesVersion</a></li>
-    <li><a href="getloadbalancer" title="GetLoadBalancer"><span class="api-symbol api-symbol--function"></span>GetLoadBalancer</a></li>
     <li><a href="getnetwork" title="GetNetwork"><span class="api-symbol api-symbol--function"></span>GetNetwork</a></li>
     <li><a href="getregion" title="GetRegion"><span class="api-symbol api-symbol--function"></span>GetRegion</a></li>
-    <li><a href="getsnapshot" title="GetSnapshot"><span class="api-symbol api-symbol--function"></span>GetSnapshot</a></li>
     <li><a href="getsshkey" title="GetSshKey"><span class="api-symbol api-symbol--function"></span>GetSshKey</a></li>
     <li><a href="gettemplate" title="GetTemplate"><span class="api-symbol api-symbol--function"></span>GetTemplate</a></li>
     <li><a href="getvolume" title="GetVolume"><span class="api-symbol api-symbol--function"></span>GetVolume</a></li>
@@ -57,6 +53,6 @@ A Pulumi package for creating and managing Civo cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`civo` Terraform Provider](https://github.com/civo/terraform-provider-civo).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>1.0.7</dd>
+	<dd>2.0.0</dd>
 </dl>
 
