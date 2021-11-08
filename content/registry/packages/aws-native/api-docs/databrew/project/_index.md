@@ -445,14 +445,6 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Dataset name{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Project name{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="recipename_csharp">
 <a href="#recipename_csharp" style="color: inherit; text-decoration: inherit;">Recipe<wbr>Name</a>
 </span>
@@ -468,6 +460,14 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role arn{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Project name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sample_csharp">
 <a href="#sample_csharp" style="color: inherit; text-decoration: inherit;">Sample</a>
@@ -497,14 +497,6 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Dataset name{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Project name{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="recipename_go">
 <a href="#recipename_go" style="color: inherit; text-decoration: inherit;">Recipe<wbr>Name</a>
 </span>
@@ -520,6 +512,14 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role arn{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Project name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sample_go">
 <a href="#sample_go" style="color: inherit; text-decoration: inherit;">Sample</a>
@@ -549,14 +549,6 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Dataset name{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Project name{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="recipename_nodejs">
 <a href="#recipename_nodejs" style="color: inherit; text-decoration: inherit;">recipe<wbr>Name</a>
 </span>
@@ -572,6 +564,14 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role arn{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Project name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sample_nodejs">
 <a href="#sample_nodejs" style="color: inherit; text-decoration: inherit;">sample</a>
@@ -601,14 +601,6 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Dataset name{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Project name{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="recipe_name_python">
 <a href="#recipe_name_python" style="color: inherit; text-decoration: inherit;">recipe_<wbr>name</a>
 </span>
@@ -624,6 +616,14 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Role arn{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Project name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sample_python">
 <a href="#sample_python" style="color: inherit; text-decoration: inherit;">sample</a>

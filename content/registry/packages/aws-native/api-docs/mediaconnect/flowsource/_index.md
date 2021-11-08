@@ -176,15 +176,7 @@ The FlowSource resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the source.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="decryption_csharp">
 <a href="#decryption_csharp" style="color: inherit; text-decoration: inherit;">Decryption</a>
@@ -234,6 +226,14 @@ The FlowSource resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the source.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
@@ -276,15 +276,7 @@ The FlowSource resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the source.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="decryption_go">
 <a href="#decryption_go" style="color: inherit; text-decoration: inherit;">Decryption</a>
@@ -334,6 +326,14 @@ The FlowSource resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the source.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
@@ -376,15 +376,7 @@ The FlowSource resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the source.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="decryption_nodejs">
 <a href="#decryption_nodejs" style="color: inherit; text-decoration: inherit;">decryption</a>
@@ -434,6 +426,14 @@ The FlowSource resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the source.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
@@ -476,15 +476,7 @@ The FlowSource resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the source.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="decryption_python">
 <a href="#decryption_python" style="color: inherit; text-decoration: inherit;">decryption</a>
@@ -533,6 +525,14 @@ The FlowSource resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>

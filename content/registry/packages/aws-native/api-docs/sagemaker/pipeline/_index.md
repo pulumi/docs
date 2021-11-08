@@ -673,14 +673,6 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="pipelinename_csharp">
-<a href="#pipelinename_csharp" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Pipeline.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
 </span>
@@ -705,6 +697,14 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The display name of the Pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="pipelinename_csharp">
+<a href="#pipelinename_csharp" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Pipeline.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -724,14 +724,6 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="pipelinename_go">
-<a href="#pipelinename_go" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Pipeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -757,6 +749,14 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The display name of the Pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="pipelinename_go">
+<a href="#pipelinename_go" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Pipeline.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -776,14 +776,6 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="pipelinename_nodejs">
-<a href="#pipelinename_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Pipeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
@@ -809,6 +801,14 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The display name of the Pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="pipelinename_nodejs">
+<a href="#pipelinename_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Pipeline.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -828,14 +828,6 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="pipeline_name_python">
-<a href="#pipeline_name_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Pipeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
@@ -860,6 +852,14 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the Pipeline.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pipeline_name_python">
+<a href="#pipeline_name_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the Pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

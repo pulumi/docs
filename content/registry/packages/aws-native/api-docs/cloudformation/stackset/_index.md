@@ -178,15 +178,7 @@ The StackSet resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stacksetpermissionmodel">Pulumi.<wbr>Aws<wbr>Native.<wbr>Cloud<wbr>Formation.<wbr>Stack<wbr>Set<wbr>Permission<wbr>Model</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the IAM roles required for stack set operations are created. By default, SELF-MANAGED is specified.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="stacksetname_csharp">
-<a href="#stacksetname_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Set<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name to associate with the stack set. The name must be unique in the Region where you create your stack set.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Describes how the IAM roles required for stack set operations are created. By default, SELF-MANAGED is specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administrationrolearn_csharp">
 <a href="#administrationrolearn_csharp" style="color: inherit; text-decoration: inherit;">Administration<wbr>Role<wbr>ARN</a>
@@ -260,6 +252,14 @@ The StackSet resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}A group of stack instances with parameters in some specific accounts and regions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="stacksetname_csharp">
+<a href="#stacksetname_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name to associate with the stack set. The name must be unique in the Region where you create your stack set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -294,15 +294,7 @@ The StackSet resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stacksetpermissionmodel">Stack<wbr>Set<wbr>Permission<wbr>Model</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the IAM roles required for stack set operations are created. By default, SELF-MANAGED is specified.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="stacksetname_go">
-<a href="#stacksetname_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Set<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name to associate with the stack set. The name must be unique in the Region where you create your stack set.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Describes how the IAM roles required for stack set operations are created. By default, SELF-MANAGED is specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administrationrolearn_go">
 <a href="#administrationrolearn_go" style="color: inherit; text-decoration: inherit;">Administration<wbr>Role<wbr>ARN</a>
@@ -376,6 +368,14 @@ The StackSet resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}A group of stack instances with parameters in some specific accounts and regions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="stacksetname_go">
+<a href="#stacksetname_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name to associate with the stack set. The name must be unique in the Region where you create your stack set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -410,15 +410,7 @@ The StackSet resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stacksetpermissionmodel">Stack<wbr>Set<wbr>Permission<wbr>Model</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the IAM roles required for stack set operations are created. By default, SELF-MANAGED is specified.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="stacksetname_nodejs">
-<a href="#stacksetname_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Set<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name to associate with the stack set. The name must be unique in the Region where you create your stack set.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Describes how the IAM roles required for stack set operations are created. By default, SELF-MANAGED is specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administrationrolearn_nodejs">
 <a href="#administrationrolearn_nodejs" style="color: inherit; text-decoration: inherit;">administration<wbr>Role<wbr>ARN</a>
@@ -492,6 +484,14 @@ The StackSet resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}A group of stack instances with parameters in some specific accounts and regions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="stacksetname_nodejs">
+<a href="#stacksetname_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name to associate with the stack set. The name must be unique in the Region where you create your stack set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -526,15 +526,7 @@ The StackSet resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stacksetpermissionmodel">Stack<wbr>Set<wbr>Permission<wbr>Model</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the IAM roles required for stack set operations are created. By default, SELF-MANAGED is specified.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="stack_set_name_python">
-<a href="#stack_set_name_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>set_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name to associate with the stack set. The name must be unique in the Region where you create your stack set.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Describes how the IAM roles required for stack set operations are created. By default, SELF-MANAGED is specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administration_role_arn_python">
 <a href="#administration_role_arn_python" style="color: inherit; text-decoration: inherit;">administration_<wbr>role_<wbr>arn</a>
@@ -607,6 +599,14 @@ The StackSet resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#stacksetstackinstances">Sequence[Stack<wbr>Set<wbr>Stack<wbr>Instances<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A group of stack instances with parameters in some specific accounts and regions.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stack_set_name_python">
+<a href="#stack_set_name_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>set_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name to associate with the stack set. The name must be unique in the Region where you create your stack set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

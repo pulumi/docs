@@ -915,14 +915,6 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the component.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="platform_csharp">
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
@@ -971,6 +963,14 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The KMS key identifier used to encrypt the component.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the component.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="supportedosversions_csharp">
 <a href="#supportedosversions_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Os<wbr>Versions</a>
 </span>
@@ -998,14 +998,6 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the component.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="platform_go">
 <a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -1055,6 +1047,14 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The KMS key identifier used to encrypt the component.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the component.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="supportedosversions_go">
 <a href="#supportedosversions_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Os<wbr>Versions</a>
 </span>
@@ -1082,14 +1082,6 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the component.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="platform_nodejs">
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -1139,6 +1131,14 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The KMS key identifier used to encrypt the component.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the component.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="supportedosversions_nodejs">
 <a href="#supportedosversions_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Os<wbr>Versions</a>
 </span>
@@ -1166,14 +1166,6 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the component.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="platform_python">
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -1222,6 +1214,14 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The KMS key identifier used to encrypt the component.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the component.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supported_os_versions_python">
 <a href="#supported_os_versions_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>os_<wbr>versions</a>

@@ -496,15 +496,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetinput">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Dataset<wbr>Input<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Input{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Dataset name{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Input{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -521,6 +513,14 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#datasetformatoptions">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Dataset<wbr>Format<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Format options for dataset{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Dataset name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathoptions_csharp">
 <a href="#pathoptions_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Options</a>
@@ -548,15 +548,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetinput">Dataset<wbr>Input<wbr>Type<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Input{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Dataset name{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Input{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -573,6 +565,14 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#datasetformatoptions">Dataset<wbr>Format<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Format options for dataset{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Dataset name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathoptions_go">
 <a href="#pathoptions_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Options</a>
@@ -600,15 +600,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetinput">Dataset<wbr>Input<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Input{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Dataset name{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Input{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
@@ -625,6 +617,14 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#datasetformatoptions">Dataset<wbr>Format<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Format options for dataset{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Dataset name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathoptions_nodejs">
 <a href="#pathoptions_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Options</a>
@@ -652,15 +652,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetinput">Dataset<wbr>Input<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Input{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Dataset name{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Input{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
@@ -677,6 +669,14 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#datasetformatoptions">Dataset<wbr>Format<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Format options for dataset{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Dataset name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_options_python">
 <a href="#path_options_python" style="color: inherit; text-decoration: inherit;">path_<wbr>options</a>

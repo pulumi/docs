@@ -498,18 +498,18 @@ The Stream resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="streamname_csharp">
-<a href="#streamname_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Name</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusiveendtime_csharp">
+<a href="#exclusiveendtime_csharp" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>End<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="exclusiveendtime_csharp">
-<a href="#exclusiveendtime_csharp" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>End<wbr>Time</a>
+        <span id="streamname_csharp">
+<a href="#streamname_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -558,18 +558,18 @@ The Stream resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="streamname_go">
-<a href="#streamname_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Name</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusiveendtime_go">
+<a href="#exclusiveendtime_go" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>End<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="exclusiveendtime_go">
-<a href="#exclusiveendtime_go" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>End<wbr>Time</a>
+        <span id="streamname_go">
+<a href="#streamname_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -618,18 +618,18 @@ The Stream resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="streamname_nodejs">
-<a href="#streamname_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Name</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusiveendtime_nodejs">
+<a href="#exclusiveendtime_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>End<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="exclusiveendtime_nodejs">
-<a href="#exclusiveendtime_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>End<wbr>Time</a>
+        <span id="streamname_nodejs">
+<a href="#streamname_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -678,18 +678,18 @@ The Stream resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="stream_name_python">
-<a href="#stream_name_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>name</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exclusive_end_time_python">
+<a href="#exclusive_end_time_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="exclusive_end_time_python">
-<a href="#exclusive_end_time_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>end_<wbr>time</a>
+        <span id="stream_name_python">
+<a href="#stream_name_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

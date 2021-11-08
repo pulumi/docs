@@ -516,15 +516,7 @@ The PrefixList resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Max Entries of Prefix List.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="prefixlistname_csharp">
-<a href="#prefixlistname_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>List<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of Prefix List.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Max Entries of Prefix List.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entries_csharp">
 <a href="#entries_csharp" style="color: inherit; text-decoration: inherit;">Entries</a>
@@ -533,6 +525,14 @@ The PrefixList resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#prefixlistentry">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>Prefix<wbr>List<wbr>Entry<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Entries of Prefix List.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefixlistname_csharp">
+<a href="#prefixlistname_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>List<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of Prefix List.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -560,15 +560,7 @@ The PrefixList resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Max Entries of Prefix List.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="prefixlistname_go">
-<a href="#prefixlistname_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>List<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of Prefix List.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Max Entries of Prefix List.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entries_go">
 <a href="#entries_go" style="color: inherit; text-decoration: inherit;">Entries</a>
@@ -577,6 +569,14 @@ The PrefixList resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#prefixlistentry">[]Prefix<wbr>List<wbr>Entry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Entries of Prefix List.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefixlistname_go">
+<a href="#prefixlistname_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>List<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of Prefix List.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -604,15 +604,7 @@ The PrefixList resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Max Entries of Prefix List.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="prefixlistname_nodejs">
-<a href="#prefixlistname_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>List<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of Prefix List.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Max Entries of Prefix List.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entries_nodejs">
 <a href="#entries_nodejs" style="color: inherit; text-decoration: inherit;">entries</a>
@@ -621,6 +613,14 @@ The PrefixList resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#prefixlistentry">Prefix<wbr>List<wbr>Entry<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Entries of Prefix List.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefixlistname_nodejs">
+<a href="#prefixlistname_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>List<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of Prefix List.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -648,15 +648,7 @@ The PrefixList resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Max Entries of Prefix List.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="prefix_list_name_python">
-<a href="#prefix_list_name_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>list_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of Prefix List.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Max Entries of Prefix List.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entries_python">
 <a href="#entries_python" style="color: inherit; text-decoration: inherit;">entries</a>
@@ -665,6 +657,14 @@ The PrefixList resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#prefixlistentry">Sequence[Prefix<wbr>List<wbr>Entry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Entries of Prefix List.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="prefix_list_name_python">
+<a href="#prefix_list_name_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>list_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of Prefix List.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

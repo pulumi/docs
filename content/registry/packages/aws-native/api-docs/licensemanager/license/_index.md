@@ -201,14 +201,6 @@ The License resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="licensename_csharp">
-<a href="#licensename_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name for the created license.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="productname_csharp">
 <a href="#productname_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Name</a>
 </span>
@@ -240,6 +232,14 @@ The License resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#licensemetadata">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>License<wbr>Manager.<wbr>Inputs.<wbr>License<wbr>Metadata<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="licensename_csharp">
+<a href="#licensename_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name for the created license.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productsku_csharp">
 <a href="#productsku_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>SKU</a>
@@ -293,14 +293,6 @@ The License resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="licensename_go">
-<a href="#licensename_go" style="color: inherit; text-decoration: inherit;">License<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name for the created license.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="productname_go">
 <a href="#productname_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Name</a>
 </span>
@@ -332,6 +324,14 @@ The License resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#licensemetadata">[]License<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="licensename_go">
+<a href="#licensename_go" style="color: inherit; text-decoration: inherit;">License<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name for the created license.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productsku_go">
 <a href="#productsku_go" style="color: inherit; text-decoration: inherit;">Product<wbr>SKU</a>
@@ -385,14 +385,6 @@ The License resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="licensename_nodejs">
-<a href="#licensename_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name for the created license.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="productname_nodejs">
 <a href="#productname_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Name</a>
 </span>
@@ -424,6 +416,14 @@ The License resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#licensemetadata">License<wbr>Metadata<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="licensename_nodejs">
+<a href="#licensename_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name for the created license.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productsku_nodejs">
 <a href="#productsku_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>SKU</a>
@@ -477,14 +477,6 @@ The License resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="license_name_python">
-<a href="#license_name_python" style="color: inherit; text-decoration: inherit;">license_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name for the created license.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="product_name_python">
 <a href="#product_name_python" style="color: inherit; text-decoration: inherit;">product_<wbr>name</a>
 </span>
@@ -516,6 +508,14 @@ The License resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#licensemetadata">Sequence[License<wbr>Metadata<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="license_name_python">
+<a href="#license_name_python" style="color: inherit; text-decoration: inherit;">license_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name for the created license.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="product_sku_python">
 <a href="#product_sku_python" style="color: inherit; text-decoration: inherit;">product_<wbr>sku</a>

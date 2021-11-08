@@ -184,15 +184,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bundle of specification information for your virtual private server (or instance ), including the pricing plan (e.g., micro_1_0 ).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="instancename_csharp">
-<a href="#instancename_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The names to use for your new Lightsail instance.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The bundle of specification information for your virtual private server (or instance ), including the pricing plan (e.g., micro_1_0 ).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addons_csharp">
 <a href="#addons_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>Ons</a>
@@ -217,6 +209,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#instancehardware">Pulumi.<wbr>Aws<wbr>Native.<wbr>Lightsail.<wbr>Inputs.<wbr>Instance<wbr>Hardware<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancename_csharp">
+<a href="#instancename_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The names to use for your new Lightsail instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keypairname_csharp">
 <a href="#keypairname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair<wbr>Name</a>
@@ -284,15 +284,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bundle of specification information for your virtual private server (or instance ), including the pricing plan (e.g., micro_1_0 ).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="instancename_go">
-<a href="#instancename_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The names to use for your new Lightsail instance.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The bundle of specification information for your virtual private server (or instance ), including the pricing plan (e.g., micro_1_0 ).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addons_go">
 <a href="#addons_go" style="color: inherit; text-decoration: inherit;">Add<wbr>Ons</a>
@@ -317,6 +309,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#instancehardware">Instance<wbr>Hardware<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancename_go">
+<a href="#instancename_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The names to use for your new Lightsail instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keypairname_go">
 <a href="#keypairname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair<wbr>Name</a>
@@ -384,15 +384,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bundle of specification information for your virtual private server (or instance ), including the pricing plan (e.g., micro_1_0 ).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="instancename_nodejs">
-<a href="#instancename_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The names to use for your new Lightsail instance.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The bundle of specification information for your virtual private server (or instance ), including the pricing plan (e.g., micro_1_0 ).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addons_nodejs">
 <a href="#addons_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Ons</a>
@@ -417,6 +409,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#instancehardware">Instance<wbr>Hardware<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancename_nodejs">
+<a href="#instancename_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The names to use for your new Lightsail instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keypairname_nodejs">
 <a href="#keypairname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Pair<wbr>Name</a>
@@ -484,15 +484,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The bundle of specification information for your virtual private server (or instance ), including the pricing plan (e.g., micro_1_0 ).{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="instance_name_python">
-<a href="#instance_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The names to use for your new Lightsail instance.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The bundle of specification information for your virtual private server (or instance ), including the pricing plan (e.g., micro_1_0 ).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="add_ons_python">
 <a href="#add_ons_python" style="color: inherit; text-decoration: inherit;">add_<wbr>ons</a>
@@ -517,6 +509,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#instancehardware">Instance<wbr>Hardware<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instance_name_python">
+<a href="#instance_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The names to use for your new Lightsail instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_pair_name_python">
 <a href="#key_pair_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>pair_<wbr>name</a>

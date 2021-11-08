@@ -161,14 +161,6 @@ The QueryDefinition resource accepts the following [input]({{< relref "/docs/int
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the saved query definition{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="querystring_csharp">
 <a href="#querystring_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
 </span>
@@ -183,19 +175,19 @@ The QueryDefinition resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Optionally define specific log groups as part of your query definition{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+    <dd>{{% md %}}Optionally define specific log groups as part of your query definition{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A name for the saved query definition{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}A name for the saved query definition{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="querystring_go">
 <a href="#querystring_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
@@ -211,19 +203,19 @@ The QueryDefinition resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Optionally define specific log groups as part of your query definition{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+    <dd>{{% md %}}Optionally define specific log groups as part of your query definition{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A name for the saved query definition{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}A name for the saved query definition{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="querystring_nodejs">
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
@@ -239,19 +231,19 @@ The QueryDefinition resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Optionally define specific log groups as part of your query definition{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optionally define specific log groups as part of your query definition{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the saved query definition{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A name for the saved query definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_string_python">
 <a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
@@ -267,7 +259,15 @@ The QueryDefinition resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Optionally define specific log groups as part of your query definition{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optionally define specific log groups as part of your query definition{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A name for the saved query definition{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

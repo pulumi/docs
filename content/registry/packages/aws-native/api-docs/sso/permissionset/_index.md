@@ -172,15 +172,7 @@ The PermissionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sso instance arn that the permission set is owned.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name you want to assign to this permission set.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The sso instance arn that the permission set is owned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -205,6 +197,14 @@ The PermissionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name you want to assign to this permission set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relaystatetype_csharp">
 <a href="#relaystatetype_csharp" style="color: inherit; text-decoration: inherit;">Relay<wbr>State<wbr>Type</a>
@@ -240,15 +240,7 @@ The PermissionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sso instance arn that the permission set is owned.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name you want to assign to this permission set.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The sso instance arn that the permission set is owned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -273,6 +265,14 @@ The PermissionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name you want to assign to this permission set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relaystatetype_go">
 <a href="#relaystatetype_go" style="color: inherit; text-decoration: inherit;">Relay<wbr>State<wbr>Type</a>
@@ -308,15 +308,7 @@ The PermissionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sso instance arn that the permission set is owned.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name you want to assign to this permission set.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The sso instance arn that the permission set is owned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -341,6 +333,14 @@ The PermissionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name you want to assign to this permission set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relaystatetype_nodejs">
 <a href="#relaystatetype_nodejs" style="color: inherit; text-decoration: inherit;">relay<wbr>State<wbr>Type</a>
@@ -376,15 +376,7 @@ The PermissionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sso instance arn that the permission set is owned.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name you want to assign to this permission set.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The sso instance arn that the permission set is owned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -409,6 +401,14 @@ The PermissionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name you want to assign to this permission set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relay_state_type_python">
 <a href="#relay_state_type_python" style="color: inherit; text-decoration: inherit;">relay_<wbr>state_<wbr>type</a>

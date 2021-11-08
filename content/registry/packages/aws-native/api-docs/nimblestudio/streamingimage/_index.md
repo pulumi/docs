@@ -171,14 +171,6 @@ The StreamingImage resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}<p>The ID of an EC2 machine image with which to create this streaming image.</p>{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>A friendly name for a streaming image resource.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="studioid_csharp">
 <a href="#studioid_csharp" style="color: inherit; text-decoration: inherit;">Studio<wbr>Id</a>
 </span>
@@ -194,6 +186,14 @@ The StreamingImage resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}<p>A human-readable description of the streaming image.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>A friendly name for a streaming image resource.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -215,14 +215,6 @@ The StreamingImage resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}<p>The ID of an EC2 machine image with which to create this streaming image.</p>{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>A friendly name for a streaming image resource.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="studioid_go">
 <a href="#studioid_go" style="color: inherit; text-decoration: inherit;">Studio<wbr>Id</a>
 </span>
@@ -238,6 +230,14 @@ The StreamingImage resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}<p>A human-readable description of the streaming image.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>A friendly name for a streaming image resource.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -259,14 +259,6 @@ The StreamingImage resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}<p>The ID of an EC2 machine image with which to create this streaming image.</p>{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>A friendly name for a streaming image resource.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="studioid_nodejs">
 <a href="#studioid_nodejs" style="color: inherit; text-decoration: inherit;">studio<wbr>Id</a>
 </span>
@@ -282,6 +274,14 @@ The StreamingImage resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}<p>A human-readable description of the streaming image.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>A friendly name for a streaming image resource.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -303,14 +303,6 @@ The StreamingImage resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}<p>The ID of an EC2 machine image with which to create this streaming image.</p>{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>A friendly name for a streaming image resource.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="studio_id_python">
 <a href="#studio_id_python" style="color: inherit; text-decoration: inherit;">studio_<wbr>id</a>
 </span>
@@ -326,6 +318,14 @@ The StreamingImage resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}<p>A human-readable description of the streaming image.</p>{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>A friendly name for a streaming image resource.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

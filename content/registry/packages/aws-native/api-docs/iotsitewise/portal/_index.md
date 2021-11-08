@@ -174,14 +174,6 @@ The Portal resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The AWS administrator's contact email address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="portalname_csharp">
-<a href="#portalname_csharp" style="color: inherit; text-decoration: inherit;">Portal<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A friendly name for the portal.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
 </span>
@@ -222,6 +214,14 @@ The Portal resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}A description for the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="portalname_csharp">
+<a href="#portalname_csharp" style="color: inherit; text-decoration: inherit;">Portal<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A friendly name for the portal.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -241,14 +241,6 @@ The Portal resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS administrator's contact email address.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="portalname_go">
-<a href="#portalname_go" style="color: inherit; text-decoration: inherit;">Portal<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A friendly name for the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -290,6 +282,14 @@ The Portal resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}A description for the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="portalname_go">
+<a href="#portalname_go" style="color: inherit; text-decoration: inherit;">Portal<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A friendly name for the portal.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -309,14 +309,6 @@ The Portal resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS administrator's contact email address.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="portalname_nodejs">
-<a href="#portalname_nodejs" style="color: inherit; text-decoration: inherit;">portal<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A friendly name for the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
@@ -358,6 +350,14 @@ The Portal resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}A description for the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="portalname_nodejs">
+<a href="#portalname_nodejs" style="color: inherit; text-decoration: inherit;">portal<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A friendly name for the portal.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -377,14 +377,6 @@ The Portal resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS administrator's contact email address.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="portal_name_python">
-<a href="#portal_name_python" style="color: inherit; text-decoration: inherit;">portal_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A friendly name for the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
@@ -425,6 +417,14 @@ The Portal resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the portal.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="portal_name_python">
+<a href="#portal_name_python" style="color: inherit; text-decoration: inherit;">portal_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A friendly name for the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

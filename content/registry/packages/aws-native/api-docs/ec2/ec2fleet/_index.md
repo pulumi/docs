@@ -2566,6 +2566,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>ssd</dd></dl>
 {{% /choosable %}}
 
+<h4 id="ec2fleetmaintenancestrategies">EC2Fleet<wbr>Maintenance<wbr>Strategies</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityrebalance_csharp">
+<a href="#capacityrebalance_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Rebalance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetcapacityrebalance">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>EC2Fleet<wbr>Capacity<wbr>Rebalance</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityrebalance_go">
+<a href="#capacityrebalance_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Rebalance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetcapacityrebalance">EC2Fleet<wbr>Capacity<wbr>Rebalance</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacityrebalance_nodejs">
+<a href="#capacityrebalance_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Rebalance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetcapacityrebalance">EC2Fleet<wbr>Capacity<wbr>Rebalance</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_rebalance_python">
+<a href="#capacity_rebalance_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>rebalance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ec2fleetcapacityrebalance">EC2Fleet<wbr>Capacity<wbr>Rebalance</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="ec2fleetmemorygibpervcpurequest">EC2Fleet<wbr>Memory<wbr>Gi<wbr>BPer<wbr>VCpu<wbr>Request</h4>
 
 {{% choosable language csharp %}}
@@ -3329,7 +3379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenancestrategies_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ec2fleetspotoptionsrequestmaintenancestrategiesproperties">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>EC2Fleet<wbr>Spot<wbr>Options<wbr>Request<wbr>Maintenance<wbr>Strategies<wbr>Properties</a></span>
+        <span class="property-type"><a href="#ec2fleetmaintenancestrategies">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>EC2Fleet<wbr>Maintenance<wbr>Strategies</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3397,7 +3447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenancestrategies_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ec2fleetspotoptionsrequestmaintenancestrategiesproperties">EC2Fleet<wbr>Spot<wbr>Options<wbr>Request<wbr>Maintenance<wbr>Strategies<wbr>Properties</a></span>
+        <span class="property-type"><a href="#ec2fleetmaintenancestrategies">EC2Fleet<wbr>Maintenance<wbr>Strategies</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3465,7 +3515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenancestrategies_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ec2fleetspotoptionsrequestmaintenancestrategiesproperties">EC2Fleet<wbr>Spot<wbr>Options<wbr>Request<wbr>Maintenance<wbr>Strategies<wbr>Properties</a></span>
+        <span class="property-type"><a href="#ec2fleetmaintenancestrategies">EC2Fleet<wbr>Maintenance<wbr>Strategies</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3533,7 +3583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenance_strategies_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ec2fleetspotoptionsrequestmaintenancestrategiesproperties">EC2Fleet<wbr>Spot<wbr>Options<wbr>Request<wbr>Maintenance<wbr>Strategies<wbr>Properties</a></span>
+        <span class="property-type"><a href="#ec2fleetmaintenancestrategies">EC2Fleet<wbr>Maintenance<wbr>Strategies</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3632,56 +3682,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>hibernate</dd><dt>STOP</dt>
     <dd>stop</dd><dt>TERMINATE</dt>
     <dd>terminate</dd></dl>
-{{% /choosable %}}
-
-<h4 id="ec2fleetspotoptionsrequestmaintenancestrategiesproperties">EC2Fleet<wbr>Spot<wbr>Options<wbr>Request<wbr>Maintenance<wbr>Strategies<wbr>Properties</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="capacityrebalance_csharp">
-<a href="#capacityrebalance_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Rebalance</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ec2fleetcapacityrebalance">Pulumi.<wbr>Aws<wbr>Native.<wbr>EC2.<wbr>Inputs.<wbr>EC2Fleet<wbr>Capacity<wbr>Rebalance</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="capacityrebalance_go">
-<a href="#capacityrebalance_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Rebalance</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ec2fleetcapacityrebalance">EC2Fleet<wbr>Capacity<wbr>Rebalance</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="capacityrebalance_nodejs">
-<a href="#capacityrebalance_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Rebalance</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ec2fleetcapacityrebalance">EC2Fleet<wbr>Capacity<wbr>Rebalance</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="capacity_rebalance_python">
-<a href="#capacity_rebalance_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>rebalance</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ec2fleetcapacityrebalance">EC2Fleet<wbr>Capacity<wbr>Rebalance</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ec2fleettag">EC2Fleet<wbr>Tag</h4>

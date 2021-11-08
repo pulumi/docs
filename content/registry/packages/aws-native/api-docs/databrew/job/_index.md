@@ -508,14 +508,6 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Job name{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
 </span>
@@ -604,6 +596,14 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
     </dt>
     <dd>{{% md %}}Max retries{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Job name{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="outputlocation_csharp">
 <a href="#outputlocation_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Location</a>
 </span>
@@ -663,14 +663,6 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Job name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -760,6 +752,14 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
     </dt>
     <dd>{{% md %}}Max retries{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Job name{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="outputlocation_go">
 <a href="#outputlocation_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Location</a>
 </span>
@@ -819,14 +819,6 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Job name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
@@ -916,6 +908,14 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
     </dt>
     <dd>{{% md %}}Max retries{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Job name{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="outputlocation_nodejs">
 <a href="#outputlocation_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Location</a>
 </span>
@@ -975,14 +975,6 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Job name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
@@ -1071,6 +1063,14 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max retries{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Job name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_location_python">
 <a href="#output_location_python" style="color: inherit; text-decoration: inherit;">output_<wbr>location</a>

@@ -172,14 +172,6 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="rulegroupname_csharp">
-<a href="#rulegroupname_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -190,6 +182,14 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rulegroupname_csharp">
+<a href="#rulegroupname_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -224,14 +224,6 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="rulegroupname_go">
-<a href="#rulegroupname_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -256,6 +248,14 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="rulegroupname_go">
+<a href="#rulegroupname_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -273,14 +273,6 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rulegroupname_nodejs">
-<a href="#rulegroupname_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -308,6 +300,14 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="rulegroupname_nodejs">
+<a href="#rulegroupname_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -325,14 +325,6 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="rule_group_name_python">
-<a href="#rule_group_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -357,6 +349,14 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegroup">Rule<wbr>Group<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rule_group_name_python">
+<a href="#rule_group_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

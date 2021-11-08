@@ -180,14 +180,6 @@ The Studio resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}<p>A friendly name for the studio.</p>{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="studioname_csharp">
-<a href="#studioname_csharp" style="color: inherit; text-decoration: inherit;">Studio<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The studio name that is used in the URL of the Nimble Studio portal when accessed by Nimble Studio users.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="userrolearn_csharp">
 <a href="#userrolearn_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Role<wbr>Arn</a>
 </span>
@@ -203,6 +195,14 @@ The Studio resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#studioencryptionconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>Nimble<wbr>Studio.<wbr>Inputs.<wbr>Studio<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="studioname_csharp">
+<a href="#studioname_csharp" style="color: inherit; text-decoration: inherit;">Studio<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The studio name that is used in the URL of the Nimble Studio portal when accessed by Nimble Studio users.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -232,14 +232,6 @@ The Studio resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}<p>A friendly name for the studio.</p>{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="studioname_go">
-<a href="#studioname_go" style="color: inherit; text-decoration: inherit;">Studio<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The studio name that is used in the URL of the Nimble Studio portal when accessed by Nimble Studio users.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="userrolearn_go">
 <a href="#userrolearn_go" style="color: inherit; text-decoration: inherit;">User<wbr>Role<wbr>Arn</a>
 </span>
@@ -255,6 +247,14 @@ The Studio resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#studioencryptionconfiguration">Studio<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="studioname_go">
+<a href="#studioname_go" style="color: inherit; text-decoration: inherit;">Studio<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The studio name that is used in the URL of the Nimble Studio portal when accessed by Nimble Studio users.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -284,14 +284,6 @@ The Studio resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}<p>A friendly name for the studio.</p>{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="studioname_nodejs">
-<a href="#studioname_nodejs" style="color: inherit; text-decoration: inherit;">studio<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}<p>The studio name that is used in the URL of the Nimble Studio portal when accessed by Nimble Studio users.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="userrolearn_nodejs">
 <a href="#userrolearn_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Role<wbr>Arn</a>
 </span>
@@ -307,6 +299,14 @@ The Studio resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#studioencryptionconfiguration">Studio<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="studioname_nodejs">
+<a href="#studioname_nodejs" style="color: inherit; text-decoration: inherit;">studio<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}<p>The studio name that is used in the URL of the Nimble Studio portal when accessed by Nimble Studio users.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -336,14 +336,6 @@ The Studio resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}<p>A friendly name for the studio.</p>{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="studio_name_python">
-<a href="#studio_name_python" style="color: inherit; text-decoration: inherit;">studio_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}<p>The studio name that is used in the URL of the Nimble Studio portal when accessed by Nimble Studio users.</p>{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="user_role_arn_python">
 <a href="#user_role_arn_python" style="color: inherit; text-decoration: inherit;">user_<wbr>role_<wbr>arn</a>
 </span>
@@ -359,6 +351,14 @@ The Studio resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#studioencryptionconfiguration">Studio<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="studio_name_python">
+<a href="#studio_name_python" style="color: inherit; text-decoration: inherit;">studio_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}<p>The studio name that is used in the URL of the Nimble Studio portal when accessed by Nimble Studio users.</p>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

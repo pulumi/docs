@@ -162,14 +162,6 @@ The ResourceSet resource accepts the following [input]({{< relref "/docs/intro/c
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="resourcesetname_csharp">
-<a href="#resourcesetname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Set<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource set to create.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="resourcesettype_csharp">
 <a href="#resourcesettype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Set<wbr>Type</a>
 </span>
@@ -188,6 +180,14 @@ AWS: :AutoScaling: :AutoScalingGroup, AWS: :CloudWatch: :Alarm, AWS: :EC2: :Cust
     </dt>
     <dd>{{% md %}}A list of resource objects in the resource set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="resourcesetname_csharp">
+<a href="#resourcesetname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource set to create.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -199,14 +199,6 @@ AWS: :AutoScaling: :AutoScalingGroup, AWS: :CloudWatch: :Alarm, AWS: :EC2: :Cust
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="resourcesetname_go">
-<a href="#resourcesetname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Set<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource set to create.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcesettype_go">
 <a href="#resourcesettype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Set<wbr>Type</a>
@@ -226,6 +218,14 @@ AWS: :AutoScaling: :AutoScalingGroup, AWS: :CloudWatch: :Alarm, AWS: :EC2: :Cust
     </dt>
     <dd>{{% md %}}A list of resource objects in the resource set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="resourcesetname_go">
+<a href="#resourcesetname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource set to create.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -237,14 +237,6 @@ AWS: :AutoScaling: :AutoScalingGroup, AWS: :CloudWatch: :Alarm, AWS: :EC2: :Cust
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="resourcesetname_nodejs">
-<a href="#resourcesetname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Set<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource set to create.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcesettype_nodejs">
 <a href="#resourcesettype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Set<wbr>Type</a>
@@ -264,6 +256,14 @@ AWS: :AutoScaling: :AutoScalingGroup, AWS: :CloudWatch: :Alarm, AWS: :EC2: :Cust
     </dt>
     <dd>{{% md %}}A list of resource objects in the resource set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="resourcesetname_nodejs">
+<a href="#resourcesetname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource set to create.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -275,14 +275,6 @@ AWS: :AutoScaling: :AutoScalingGroup, AWS: :CloudWatch: :Alarm, AWS: :EC2: :Cust
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="resource_set_name_python">
-<a href="#resource_set_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>set_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource set to create.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_set_type_python">
 <a href="#resource_set_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>set_<wbr>type</a>
@@ -301,6 +293,14 @@ AWS: :AutoScaling: :AutoScalingGroup, AWS: :CloudWatch: :Alarm, AWS: :EC2: :Cust
         <span class="property-type"><a href="#resourcesetresource">Sequence[Resource<wbr>Set<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of resource objects in the resource set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_set_name_python">
+<a href="#resource_set_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>set_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource set to create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

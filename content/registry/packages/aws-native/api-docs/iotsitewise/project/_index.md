@@ -168,15 +168,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the portal in which to create the project.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectname_csharp">
-<a href="#projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A friendly name for the project.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the portal in which to create the project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectdescription_csharp">
 <a href="#projectdescription_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Description</a>
@@ -185,6 +177,14 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the project.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projectname_csharp">
+<a href="#projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A friendly name for the project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -204,15 +204,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the portal in which to create the project.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectname_go">
-<a href="#projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A friendly name for the project.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the portal in which to create the project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectdescription_go">
 <a href="#projectdescription_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Description</a>
@@ -221,6 +213,14 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the project.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projectname_go">
+<a href="#projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A friendly name for the project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -240,15 +240,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the portal in which to create the project.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectname_nodejs">
-<a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A friendly name for the project.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the portal in which to create the project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectdescription_nodejs">
 <a href="#projectdescription_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Description</a>
@@ -257,6 +249,14 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the project.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projectname_nodejs">
+<a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A friendly name for the project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -276,15 +276,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the portal in which to create the project.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_name_python">
-<a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A friendly name for the project.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ID of the portal in which to create the project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_description_python">
 <a href="#project_description_python" style="color: inherit; text-decoration: inherit;">project_<wbr>description</a>
@@ -293,6 +285,14 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the project.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_name_python">
+<a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A friendly name for the project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

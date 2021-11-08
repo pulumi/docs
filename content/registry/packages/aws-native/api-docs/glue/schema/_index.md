@@ -182,14 +182,6 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Data format name to use for the schema. Accepted values: 'AVRO', 'JSON'{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the schema.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="schemadefinition_csharp">
 <a href="#schemadefinition_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Definition</a>
 </span>
@@ -213,6 +205,14 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the schema. If description is not provided, there will not be any default value for this.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registry_csharp">
 <a href="#registry_csharp" style="color: inherit; text-decoration: inherit;">Registry</a>
@@ -250,14 +250,6 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Data format name to use for the schema. Accepted values: 'AVRO', 'JSON'{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the schema.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="schemadefinition_go">
 <a href="#schemadefinition_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Definition</a>
 </span>
@@ -281,6 +273,14 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the schema. If description is not provided, there will not be any default value for this.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registry_go">
 <a href="#registry_go" style="color: inherit; text-decoration: inherit;">Registry</a>
@@ -318,14 +318,6 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Data format name to use for the schema. Accepted values: 'AVRO', 'JSON'{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the schema.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="schemadefinition_nodejs">
 <a href="#schemadefinition_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Definition</a>
 </span>
@@ -349,6 +341,14 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the schema. If description is not provided, there will not be any default value for this.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registry_nodejs">
 <a href="#registry_nodejs" style="color: inherit; text-decoration: inherit;">registry</a>
@@ -386,14 +386,6 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Data format name to use for the schema. Accepted values: 'AVRO', 'JSON'{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the schema.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="schema_definition_python">
 <a href="#schema_definition_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>definition</a>
 </span>
@@ -417,6 +409,14 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the schema. If description is not provided, there will not be any default value for this.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registry_python">
 <a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>

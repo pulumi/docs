@@ -176,14 +176,6 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
 </span>
@@ -215,6 +207,14 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#indexdocumentmetadataconfiguration">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Kendra.<wbr>Inputs.<wbr>Index<wbr>Document<wbr>Metadata<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Document metadata configurations{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideencryptionconfiguration_csharp">
 <a href="#serversideencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption<wbr>Configuration</a>
@@ -260,14 +260,6 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
 </span>
@@ -299,6 +291,14 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#indexdocumentmetadataconfiguration">[]Index<wbr>Document<wbr>Metadata<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Document metadata configurations{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideencryptionconfiguration_go">
 <a href="#serversideencryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption<wbr>Configuration</a>
@@ -344,14 +344,6 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
@@ -383,6 +375,14 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#indexdocumentmetadataconfiguration">Index<wbr>Document<wbr>Metadata<wbr>Configuration<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Document metadata configurations{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideencryptionconfiguration_nodejs">
 <a href="#serversideencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption<wbr>Configuration</a>
@@ -428,14 +428,6 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
@@ -467,6 +459,14 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#indexdocumentmetadataconfiguration">Sequence[Index<wbr>Document<wbr>Metadata<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Document metadata configurations{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_side_encryption_configuration_python">
 <a href="#server_side_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption_<wbr>configuration</a>

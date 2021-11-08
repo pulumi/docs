@@ -15,6 +15,194 @@ no_edit_this_page: true
 Resource Type definition for AWS::Connect::HoursOfOperation
 
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Example
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using AwsNative = Pulumi.AwsNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hoursOfOperation = new AwsNative.Connect.HoursOfOperation("hoursOfOperation", new AwsNative.Connect.HoursOfOperationArgs
+        {
+            Name = "ExampleHoursOfOperation",
+            Description = "hours of operation created using cfn",
+            InstanceArn = "arn:aws:connect:us-west-2:111222333444:instance/instance-ed42-41ec-8b6a-489f6a87b923",
+            TimeZone = "Pacific/Midway",
+            Config = 
+            {
+                new AwsNative.Connect.Inputs.HoursOfOperationConfigArgs
+                {
+                    Day = "SUNDAY",
+                    EndTime = new AwsNative.Connect.Inputs.HoursOfOperationTimeSliceArgs
+                    {
+                        Hours = 11,
+                        Minutes = 59,
+                    },
+                    StartTime = new AwsNative.Connect.Inputs.HoursOfOperationTimeSliceArgs
+                    {
+                        Hours = 10,
+                        Minutes = 1,
+                    },
+                },
+            },
+            Tags = 
+            {
+                new AwsNative.Connect.Inputs.HoursOfOperationTagArgs
+                {
+                    Key = "tagKey",
+                    Value = "tagValue",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/connect"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := connect.NewHoursOfOperation(ctx, "hoursOfOperation", &connect.HoursOfOperationArgs{
+			Name:        pulumi.String("ExampleHoursOfOperation"),
+			Description: pulumi.String("hours of operation created using cfn"),
+			InstanceArn: pulumi.String("arn:aws:connect:us-west-2:111222333444:instance/instance-ed42-41ec-8b6a-489f6a87b923"),
+			TimeZone:    pulumi.String("Pacific/Midway"),
+			Config: connect.HoursOfOperationConfigArray{
+				&connect.HoursOfOperationConfigArgs{
+					Day: "SUNDAY",
+					EndTime: &connect.HoursOfOperationTimeSliceArgs{
+						Hours:   pulumi.Int(11),
+						Minutes: pulumi.Int(59),
+					},
+					StartTime: &connect.HoursOfOperationTimeSliceArgs{
+						Hours:   pulumi.Int(10),
+						Minutes: pulumi.Int(1),
+					},
+				},
+			},
+			Tags: []connect.HoursOfOperationTagArgs{
+				&connect.HoursOfOperationTagArgs{
+					Key:   pulumi.String("tagKey"),
+					Value: pulumi.String("tagValue"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+
+```python
+import pulumi
+import pulumi_aws_native as aws_native
+
+hours_of_operation = aws_native.connect.HoursOfOperation("hoursOfOperation",
+    name="ExampleHoursOfOperation",
+    description="hours of operation created using cfn",
+    instance_arn="arn:aws:connect:us-west-2:111222333444:instance/instance-ed42-41ec-8b6a-489f6a87b923",
+    time_zone="Pacific/Midway",
+    config=[aws_native.connect.HoursOfOperationConfigArgs(
+        day="SUNDAY",
+        end_time=aws_native.connect.HoursOfOperationTimeSliceArgs(
+            hours=11,
+            minutes=59,
+        ),
+        start_time=aws_native.connect.HoursOfOperationTimeSliceArgs(
+            hours=10,
+            minutes=1,
+        ),
+    )],
+    tags=[aws_native.connect.HoursOfOperationTagArgs(
+        key="tagKey",
+        value="tagValue",
+    )])
+
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws_native from "@pulumi/aws-native";
+
+const hoursOfOperation = new aws_native.connect.HoursOfOperation("hoursOfOperation", {
+    name: "ExampleHoursOfOperation",
+    description: "hours of operation created using cfn",
+    instanceArn: "arn:aws:connect:us-west-2:111222333444:instance/instance-ed42-41ec-8b6a-489f6a87b923",
+    timeZone: "Pacific/Midway",
+    config: [{
+        day: "SUNDAY",
+        endTime: {
+            hours: 11,
+            minutes: 59,
+        },
+        startTime: {
+            hours: 10,
+            minutes: 1,
+        },
+    }],
+    tags: [{
+        key: "tagKey",
+        value: "tagValue",
+    }],
+});
+
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a HoursOfOperation Resource {#create}
@@ -180,14 +368,6 @@ The HoursOfOperation resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}The identifier of the Amazon Connect instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the hours of operation.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
 </span>
@@ -203,6 +383,14 @@ The HoursOfOperation resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the hours of operation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the hours of operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -232,14 +420,6 @@ The HoursOfOperation resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}The identifier of the Amazon Connect instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the hours of operation.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
 </span>
@@ -255,6 +435,14 @@ The HoursOfOperation resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the hours of operation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the hours of operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -284,14 +472,6 @@ The HoursOfOperation resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}The identifier of the Amazon Connect instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the hours of operation.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
@@ -307,6 +487,14 @@ The HoursOfOperation resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the hours of operation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the hours of operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -336,14 +524,6 @@ The HoursOfOperation resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}The identifier of the Amazon Connect instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the hours of operation.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
@@ -359,6 +539,14 @@ The HoursOfOperation resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the hours of operation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the hours of operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

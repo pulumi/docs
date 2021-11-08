@@ -164,14 +164,6 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="appname_csharp">
-<a href="#appname_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the app.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="apptype_csharp">
 <a href="#apptype_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Type</a>
 </span>
@@ -196,6 +188,14 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
     </dt>
     <dd>{{% md %}}The user profile name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="appname_csharp">
+<a href="#appname_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the app.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resourcespec_csharp">
 <a href="#resourcespec_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Spec</a>
 </span>
@@ -215,14 +215,6 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="appname_go">
-<a href="#appname_go" style="color: inherit; text-decoration: inherit;">App<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="apptype_go">
 <a href="#apptype_go" style="color: inherit; text-decoration: inherit;">App<wbr>Type</a>
@@ -248,6 +240,14 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
     </dt>
     <dd>{{% md %}}The user profile name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="appname_go">
+<a href="#appname_go" style="color: inherit; text-decoration: inherit;">App<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the app.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resourcespec_go">
 <a href="#resourcespec_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Spec</a>
 </span>
@@ -267,14 +267,6 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="appname_nodejs">
-<a href="#appname_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="apptype_nodejs">
 <a href="#apptype_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Type</a>
@@ -300,6 +292,14 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
     </dt>
     <dd>{{% md %}}The user profile name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="appname_nodejs">
+<a href="#appname_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the app.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resourcespec_nodejs">
 <a href="#resourcespec_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Spec</a>
 </span>
@@ -319,14 +319,6 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="app_name_python">
-<a href="#app_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="app_type_python">
 <a href="#app_type_python" style="color: inherit; text-decoration: inherit;">app_<wbr>type</a>
@@ -351,6 +343,14 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user profile name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="app_name_python">
+<a href="#app_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_spec_python">
 <a href="#resource_spec_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>spec</a>

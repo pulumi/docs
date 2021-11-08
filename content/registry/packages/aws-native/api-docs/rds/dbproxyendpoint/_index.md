@@ -164,14 +164,6 @@ The DBProxyEndpoint resource accepts the following [input]({{< relref "/docs/int
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="dbproxyendpointname_csharp">
-<a href="#dbproxyendpointname_csharp" style="color: inherit; text-decoration: inherit;">DBProxy<wbr>Endpoint<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identifier for the DB proxy endpoint. This name must be unique for all DB proxy endpoints owned by your AWS account in the specified AWS Region.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="dbproxyname_csharp">
 <a href="#dbproxyname_csharp" style="color: inherit; text-decoration: inherit;">DBProxy<wbr>Name</a>
 </span>
@@ -187,6 +179,14 @@ The DBProxyEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}VPC subnet IDs to associate with the new DB proxy endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dbproxyendpointname_csharp">
+<a href="#dbproxyendpointname_csharp" style="color: inherit; text-decoration: inherit;">DBProxy<wbr>Endpoint<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for the DB proxy endpoint. This name must be unique for all DB proxy endpoints owned by your AWS account in the specified AWS Region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -216,14 +216,6 @@ The DBProxyEndpoint resource accepts the following [input]({{< relref "/docs/int
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="dbproxyendpointname_go">
-<a href="#dbproxyendpointname_go" style="color: inherit; text-decoration: inherit;">DBProxy<wbr>Endpoint<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identifier for the DB proxy endpoint. This name must be unique for all DB proxy endpoints owned by your AWS account in the specified AWS Region.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="dbproxyname_go">
 <a href="#dbproxyname_go" style="color: inherit; text-decoration: inherit;">DBProxy<wbr>Name</a>
 </span>
@@ -239,6 +231,14 @@ The DBProxyEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}VPC subnet IDs to associate with the new DB proxy endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dbproxyendpointname_go">
+<a href="#dbproxyendpointname_go" style="color: inherit; text-decoration: inherit;">DBProxy<wbr>Endpoint<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for the DB proxy endpoint. This name must be unique for all DB proxy endpoints owned by your AWS account in the specified AWS Region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -268,14 +268,6 @@ The DBProxyEndpoint resource accepts the following [input]({{< relref "/docs/int
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="dbproxyendpointname_nodejs">
-<a href="#dbproxyendpointname_nodejs" style="color: inherit; text-decoration: inherit;">d<wbr>BProxy<wbr>Endpoint<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identifier for the DB proxy endpoint. This name must be unique for all DB proxy endpoints owned by your AWS account in the specified AWS Region.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="dbproxyname_nodejs">
 <a href="#dbproxyname_nodejs" style="color: inherit; text-decoration: inherit;">d<wbr>BProxy<wbr>Name</a>
 </span>
@@ -291,6 +283,14 @@ The DBProxyEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}VPC subnet IDs to associate with the new DB proxy endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dbproxyendpointname_nodejs">
+<a href="#dbproxyendpointname_nodejs" style="color: inherit; text-decoration: inherit;">d<wbr>BProxy<wbr>Endpoint<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for the DB proxy endpoint. This name must be unique for all DB proxy endpoints owned by your AWS account in the specified AWS Region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -320,14 +320,6 @@ The DBProxyEndpoint resource accepts the following [input]({{< relref "/docs/int
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="d_b_proxy_endpoint_name_python">
-<a href="#d_b_proxy_endpoint_name_python" style="color: inherit; text-decoration: inherit;">d_<wbr>b_<wbr>proxy_<wbr>endpoint_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The identifier for the DB proxy endpoint. This name must be unique for all DB proxy endpoints owned by your AWS account in the specified AWS Region.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="d_b_proxy_name_python">
 <a href="#d_b_proxy_name_python" style="color: inherit; text-decoration: inherit;">d_<wbr>b_<wbr>proxy_<wbr>name</a>
 </span>
@@ -343,6 +335,14 @@ The DBProxyEndpoint resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}VPC subnet IDs to associate with the new DB proxy endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="d_b_proxy_endpoint_name_python">
+<a href="#d_b_proxy_endpoint_name_python" style="color: inherit; text-decoration: inherit;">d_<wbr>b_<wbr>proxy_<wbr>endpoint_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identifier for the DB proxy endpoint. This name must be unique for all DB proxy endpoints owned by your AWS account in the specified AWS Region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

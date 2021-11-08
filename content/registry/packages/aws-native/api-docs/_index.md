@@ -101,6 +101,7 @@ A native Pulumi package for creating and managing Amazon Web Services (AWS) reso
     <li><a href="opensearchservice/" title="opensearchservice"><span class="api-symbol api-symbol--module"></span>opensearchservice</a></li>
     <li><a href="opsworkscm/" title="opsworkscm"><span class="api-symbol api-symbol--module"></span>opsworkscm</a></li>
     <li><a href="panorama/" title="panorama"><span class="api-symbol api-symbol--module"></span>panorama</a></li>
+    <li><a href="pinpoint/" title="pinpoint"><span class="api-symbol api-symbol--module"></span>pinpoint</a></li>
     <li><a href="qldb/" title="qldb"><span class="api-symbol api-symbol--module"></span>qldb</a></li>
     <li><a href="quicksight/" title="quicksight"><span class="api-symbol api-symbol--module"></span>quicksight</a></li>
     <li><a href="rds/" title="rds"><span class="api-symbol api-symbol--module"></span>rds</a></li>
@@ -159,6 +160,6 @@ A native Pulumi package for creating and managing Amazon Web Services (AWS) reso
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 

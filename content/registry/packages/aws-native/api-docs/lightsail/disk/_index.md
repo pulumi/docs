@@ -163,14 +163,6 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="diskname_csharp">
-<a href="#diskname_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The names to use for your new Lightsail disk.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="sizeingb_csharp">
 <a href="#sizeingb_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Gb</a>
 </span>
@@ -195,6 +187,14 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="diskname_csharp">
+<a href="#diskname_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The names to use for your new Lightsail disk.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -206,14 +206,6 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="diskname_go">
-<a href="#diskname_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The names to use for your new Lightsail disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sizeingb_go">
 <a href="#sizeingb_go" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Gb</a>
@@ -239,6 +231,14 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="diskname_go">
+<a href="#diskname_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The names to use for your new Lightsail disk.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -250,14 +250,6 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="diskname_nodejs">
-<a href="#diskname_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The names to use for your new Lightsail disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sizeingb_nodejs">
 <a href="#sizeingb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>Gb</a>
@@ -283,6 +275,14 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="diskname_nodejs">
+<a href="#diskname_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The names to use for your new Lightsail disk.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -294,14 +294,6 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="disk_name_python">
-<a href="#disk_name_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The names to use for your new Lightsail disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_in_gb_python">
 <a href="#size_in_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gb</a>
@@ -326,6 +318,14 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disk_name_python">
+<a href="#disk_name_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The names to use for your new Lightsail disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

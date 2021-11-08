@@ -177,8 +177,8 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description for the dashboard.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}A description for the dashboard.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dashboardname_csharp">
 <a href="#dashboardname_csharp" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>Name</a>
 </span>
@@ -221,8 +221,8 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description for the dashboard.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}A description for the dashboard.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dashboardname_go">
 <a href="#dashboardname_go" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>Name</a>
 </span>
@@ -265,8 +265,8 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description for the dashboard.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}A description for the dashboard.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dashboardname_nodejs">
 <a href="#dashboardname_nodejs" style="color: inherit; text-decoration: inherit;">dashboard<wbr>Name</a>
 </span>
@@ -309,8 +309,8 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A description for the dashboard.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}A description for the dashboard.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dashboard_name_python">
 <a href="#dashboard_name_python" style="color: inherit; text-decoration: inherit;">dashboard_<wbr>name</a>
 </span>

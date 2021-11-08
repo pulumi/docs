@@ -22,7 +22,7 @@ Resource schema for AWS::IoTSiteWise::AssetModel
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AssetModel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AssetModelArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AssetModel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">AssetModelArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -37,16 +37,16 @@ Resource schema for AWS::IoTSiteWise::AssetModel
                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[AssetModelTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">AssetModel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AssetModelArgs</a></span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[AssetModelArgs]</a></span> = None<span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAssetModel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AssetModelArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AssetModel</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAssetModel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">AssetModelArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AssetModel</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AssetModel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AssetModelArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AssetModel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AssetModelArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -58,7 +58,7 @@ Resource schema for AWS::IoTSiteWise::AssetModel
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AssetModelArgs</a></span>
@@ -82,7 +82,7 @@ Resource schema for AWS::IoTSiteWise::AssetModel
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AssetModelArgs</a></span>
@@ -112,7 +112,7 @@ Resource schema for AWS::IoTSiteWise::AssetModel
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AssetModelArgs</a></span>
@@ -136,7 +136,7 @@ Resource schema for AWS::IoTSiteWise::AssetModel
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">AssetModelArgs</a></span>
@@ -162,15 +162,7 @@ The AssetModel resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="assetmodelname_csharp">
-<a href="#assetmodelname_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Model<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique, friendly name for the asset model.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="assetmodelcompositemodels_csharp">
 <a href="#assetmodelcompositemodels_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Model<wbr>Composite<wbr>Models</a>
@@ -196,6 +188,14 @@ The AssetModel resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="assetmodelname_csharp">
+<a href="#assetmodelname_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Model<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique, friendly name for the asset model.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="assetmodelproperties_csharp">
 <a href="#assetmodelproperties_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Model<wbr>Properties</a>
 </span>
@@ -214,15 +214,7 @@ The AssetModel resource accepts the following [input]({{< relref "/docs/intro/co
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="assetmodelname_go">
-<a href="#assetmodelname_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Model<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique, friendly name for the asset model.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="assetmodelcompositemodels_go">
 <a href="#assetmodelcompositemodels_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Model<wbr>Composite<wbr>Models</a>
@@ -248,6 +240,14 @@ The AssetModel resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="assetmodelname_go">
+<a href="#assetmodelname_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Model<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique, friendly name for the asset model.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="assetmodelproperties_go">
 <a href="#assetmodelproperties_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Model<wbr>Properties</a>
 </span>
@@ -266,15 +266,7 @@ The AssetModel resource accepts the following [input]({{< relref "/docs/intro/co
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="assetmodelname_nodejs">
-<a href="#assetmodelname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Model<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique, friendly name for the asset model.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="assetmodelcompositemodels_nodejs">
 <a href="#assetmodelcompositemodels_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Model<wbr>Composite<wbr>Models</a>
@@ -300,6 +292,14 @@ The AssetModel resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="assetmodelname_nodejs">
+<a href="#assetmodelname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Model<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique, friendly name for the asset model.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="assetmodelproperties_nodejs">
 <a href="#assetmodelproperties_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Model<wbr>Properties</a>
 </span>
@@ -318,15 +318,7 @@ The AssetModel resource accepts the following [input]({{< relref "/docs/intro/co
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="asset_model_name_python">
-<a href="#asset_model_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>model_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique, friendly name for the asset model.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="asset_model_composite_models_python">
 <a href="#asset_model_composite_models_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>model_<wbr>composite_<wbr>models</a>
@@ -351,6 +343,14 @@ The AssetModel resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#assetmodelhierarchy">Sequence[Asset<wbr>Model<wbr>Hierarchy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="asset_model_name_python">
+<a href="#asset_model_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>model_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A unique, friendly name for the asset model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="asset_model_properties_python">
 <a href="#asset_model_properties_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>model_<wbr>properties</a>

@@ -162,14 +162,6 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="gatewayname_csharp">
-<a href="#gatewayname_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique, friendly name for the gateway.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="gatewayplatform_csharp">
 <a href="#gatewayplatform_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Platform</a>
 </span>
@@ -186,6 +178,14 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}A list of gateway capability summaries that each contain a namespace and status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="gatewayname_csharp">
+<a href="#gatewayname_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique, friendly name for the gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -197,14 +197,6 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="gatewayname_go">
-<a href="#gatewayname_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique, friendly name for the gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gatewayplatform_go">
 <a href="#gatewayplatform_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Platform</a>
@@ -222,6 +214,14 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}A list of gateway capability summaries that each contain a namespace and status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="gatewayname_go">
+<a href="#gatewayname_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique, friendly name for the gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -233,14 +233,6 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="gatewayname_nodejs">
-<a href="#gatewayname_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique, friendly name for the gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gatewayplatform_nodejs">
 <a href="#gatewayplatform_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Platform</a>
@@ -258,6 +250,14 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}A list of gateway capability summaries that each contain a namespace and status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="gatewayname_nodejs">
+<a href="#gatewayname_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique, friendly name for the gateway.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -269,14 +269,6 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="gateway_name_python">
-<a href="#gateway_name_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique, friendly name for the gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gateway_platform_python">
 <a href="#gateway_platform_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>platform</a>
@@ -293,6 +285,14 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#gatewaycapabilitysummary">Sequence[Gateway<wbr>Capability<wbr>Summary<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of gateway capability summaries that each contain a namespace and status.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gateway_name_python">
+<a href="#gateway_name_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A unique, friendly name for the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

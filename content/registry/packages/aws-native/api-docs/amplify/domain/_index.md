@@ -172,14 +172,6 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="domainname_csharp">
-<a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="subdomainsettings_csharp">
 <a href="#subdomainsettings_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Domain<wbr>Settings</a>
 </span>
@@ -204,6 +196,14 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="domainname_csharp">
+<a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enableautosubdomain_csharp">
 <a href="#enableautosubdomain_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Auto<wbr>Sub<wbr>Domain</a>
 </span>
@@ -218,14 +218,6 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="appid_go">
 <a href="#appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="domainname_go">
-<a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -256,6 +248,14 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="domainname_go">
+<a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enableautosubdomain_go">
 <a href="#enableautosubdomain_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Auto<wbr>Sub<wbr>Domain</a>
 </span>
@@ -270,14 +270,6 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="appid_nodejs">
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="domainname_nodejs">
-<a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -308,6 +300,14 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="domainname_nodejs">
+<a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enableautosubdomain_nodejs">
 <a href="#enableautosubdomain_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Auto<wbr>Sub<wbr>Domain</a>
 </span>
@@ -322,14 +322,6 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="app_id_python">
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="domain_name_python">
-<a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -354,6 +346,14 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Optional">
         <span id="auto_sub_domain_iam_role_python">
 <a href="#auto_sub_domain_iam_role_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>sub_<wbr>domain_<wbr>iam_<wbr>role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="domain_name_python">
+<a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

@@ -190,14 +190,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The name of the Access Control List to associate with the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="clustername_csharp">
-<a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the cluster. This value must be unique as it also serves as the cluster identifier.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="nodetype_csharp">
 <a href="#nodetype_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
 </span>
@@ -223,6 +215,14 @@ You cannot modify the value of AutoMinorVersionUpgrade after the cluster is crea
         <span class="property-type"><a href="#clusterendpoint">Pulumi.<wbr>Aws<wbr>Native.<wbr>Memory<wbr>DB.<wbr>Inputs.<wbr>Cluster<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clustername_csharp">
+<a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the cluster. This value must be unique as it also serves as the cluster identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -390,14 +390,6 @@ You cannot modify the value of TransitEncryptionEnabled after the cluster is cre
     </dt>
     <dd>{{% md %}}The name of the Access Control List to associate with the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="clustername_go">
-<a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the cluster. This value must be unique as it also serves as the cluster identifier.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="nodetype_go">
 <a href="#nodetype_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
 </span>
@@ -423,6 +415,14 @@ You cannot modify the value of AutoMinorVersionUpgrade after the cluster is crea
         <span class="property-type"><a href="#clusterendpoint">Cluster<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clustername_go">
+<a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the cluster. This value must be unique as it also serves as the cluster identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -590,14 +590,6 @@ You cannot modify the value of TransitEncryptionEnabled after the cluster is cre
     </dt>
     <dd>{{% md %}}The name of the Access Control List to associate with the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="clustername_nodejs">
-<a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the cluster. This value must be unique as it also serves as the cluster identifier.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="nodetype_nodejs">
 <a href="#nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
 </span>
@@ -623,6 +615,14 @@ You cannot modify the value of AutoMinorVersionUpgrade after the cluster is crea
         <span class="property-type"><a href="#clusterendpoint">Cluster<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clustername_nodejs">
+<a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the cluster. This value must be unique as it also serves as the cluster identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -790,14 +790,6 @@ You cannot modify the value of TransitEncryptionEnabled after the cluster is cre
     </dt>
     <dd>{{% md %}}The name of the Access Control List to associate with the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="cluster_name_python">
-<a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the cluster. This value must be unique as it also serves as the cluster identifier.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="node_type_python">
 <a href="#node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
 </span>
@@ -823,6 +815,14 @@ You cannot modify the value of AutoMinorVersionUpgrade after the cluster is crea
         <span class="property-type"><a href="#clusterendpoint">Cluster<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cluster_name_python">
+<a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the cluster. This value must be unique as it also serves as the cluster identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>

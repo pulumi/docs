@@ -22,7 +22,7 @@ Resource Type definition for AWS::SageMaker::ModelPackageGroup
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ModelPackageGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ModelPackageGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ModelPackageGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ModelPackageGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -35,16 +35,16 @@ Resource Type definition for AWS::SageMaker::ModelPackageGroup
                       <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ModelPackageGroupTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ModelPackageGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ModelPackageGroupArgs</a></span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ModelPackageGroupArgs]</a></span> = None<span class="p">,</span>
                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewModelPackageGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ModelPackageGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ModelPackageGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewModelPackageGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ModelPackageGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ModelPackageGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ModelPackageGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ModelPackageGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ModelPackageGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ModelPackageGroupArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -56,7 +56,7 @@ Resource Type definition for AWS::SageMaker::ModelPackageGroup
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ModelPackageGroupArgs</a></span>
@@ -80,7 +80,7 @@ Resource Type definition for AWS::SageMaker::ModelPackageGroup
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ModelPackageGroupArgs</a></span>
@@ -110,7 +110,7 @@ Resource Type definition for AWS::SageMaker::ModelPackageGroup
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ModelPackageGroupArgs</a></span>
@@ -134,7 +134,7 @@ Resource Type definition for AWS::SageMaker::ModelPackageGroup
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ModelPackageGroupArgs</a></span>
@@ -160,18 +160,18 @@ The ModelPackageGroup resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="modelpackagegroupname_csharp">
-<a href="#modelpackagegroupname_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Package<wbr>Group<wbr>Name</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="modelpackagegroupdescription_csharp">
+<a href="#modelpackagegroupdescription_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Package<wbr>Group<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="modelpackagegroupdescription_csharp">
-<a href="#modelpackagegroupdescription_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Package<wbr>Group<wbr>Description</a>
+        <span id="modelpackagegroupname_csharp">
+<a href="#modelpackagegroupname_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Package<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -196,18 +196,18 @@ The ModelPackageGroup resource accepts the following [input]({{< relref "/docs/i
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="modelpackagegroupname_go">
-<a href="#modelpackagegroupname_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Package<wbr>Group<wbr>Name</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="modelpackagegroupdescription_go">
+<a href="#modelpackagegroupdescription_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Package<wbr>Group<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="modelpackagegroupdescription_go">
-<a href="#modelpackagegroupdescription_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Package<wbr>Group<wbr>Description</a>
+        <span id="modelpackagegroupname_go">
+<a href="#modelpackagegroupname_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Package<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -232,18 +232,18 @@ The ModelPackageGroup resource accepts the following [input]({{< relref "/docs/i
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="modelpackagegroupname_nodejs">
-<a href="#modelpackagegroupname_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Package<wbr>Group<wbr>Name</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="modelpackagegroupdescription_nodejs">
+<a href="#modelpackagegroupdescription_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Package<wbr>Group<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="modelpackagegroupdescription_nodejs">
-<a href="#modelpackagegroupdescription_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Package<wbr>Group<wbr>Description</a>
+        <span id="modelpackagegroupname_nodejs">
+<a href="#modelpackagegroupname_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Package<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -268,18 +268,18 @@ The ModelPackageGroup resource accepts the following [input]({{< relref "/docs/i
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="model_package_group_name_python">
-<a href="#model_package_group_name_python" style="color: inherit; text-decoration: inherit;">model_<wbr>package_<wbr>group_<wbr>name</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="model_package_group_description_python">
+<a href="#model_package_group_description_python" style="color: inherit; text-decoration: inherit;">model_<wbr>package_<wbr>group_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="model_package_group_description_python">
-<a href="#model_package_group_description_python" style="color: inherit; text-decoration: inherit;">model_<wbr>package_<wbr>group_<wbr>description</a>
+        <span id="model_package_group_name_python">
+<a href="#model_package_group_name_python" style="color: inherit; text-decoration: inherit;">model_<wbr>package_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

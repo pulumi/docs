@@ -162,14 +162,6 @@ The SubnetGroup resource accepts the following [input]({{< relref "/docs/intro/c
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="subnetgroupname_csharp">
-<a href="#subnetgroupname_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="subnetids_csharp">
 <a href="#subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
 </span>
@@ -186,6 +178,14 @@ The SubnetGroup resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}An optional description of the subnet group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subnetgroupname_csharp">
+<a href="#subnetgroupname_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -197,14 +197,6 @@ The SubnetGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="subnetgroupname_go">
-<a href="#subnetgroupname_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetids_go">
 <a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -222,6 +214,14 @@ The SubnetGroup resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}An optional description of the subnet group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subnetgroupname_go">
+<a href="#subnetgroupname_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -233,14 +233,6 @@ The SubnetGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="subnetgroupname_nodejs">
-<a href="#subnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetids_nodejs">
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
@@ -258,6 +250,14 @@ The SubnetGroup resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}An optional description of the subnet group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subnetgroupname_nodejs">
+<a href="#subnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -269,14 +269,6 @@ The SubnetGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="subnet_group_name_python">
-<a href="#subnet_group_name_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>group_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnet_ids_python">
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
@@ -293,6 +285,14 @@ The SubnetGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of the subnet group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_group_name_python">
+<a href="#subnet_group_name_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

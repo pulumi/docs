@@ -170,14 +170,6 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the bucket you want to associate this AccessPoint with.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the AccessPoint.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="vpcconfiguration_csharp">
 <a href="#vpcconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Configuration</a>
 </span>
@@ -185,6 +177,14 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#accesspointvpcconfiguration">Pulumi.<wbr>Aws<wbr>Native.<wbr>S3Outposts.<wbr>Inputs.<wbr>Access<wbr>Point<wbr>Vpc<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Private Cloud (VPC) from which requests can be made to the AccessPoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the AccessPoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_csharp">
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -206,14 +206,6 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the bucket you want to associate this AccessPoint with.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the AccessPoint.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="vpcconfiguration_go">
 <a href="#vpcconfiguration_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Configuration</a>
 </span>
@@ -221,6 +213,14 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#accesspointvpcconfiguration">Access<wbr>Point<wbr>Vpc<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Private Cloud (VPC) from which requests can be made to the AccessPoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the AccessPoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_go">
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -242,14 +242,6 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the bucket you want to associate this AccessPoint with.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the AccessPoint.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="vpcconfiguration_nodejs">
 <a href="#vpcconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Configuration</a>
 </span>
@@ -257,6 +249,14 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#accesspointvpcconfiguration">Access<wbr>Point<wbr>Vpc<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Private Cloud (VPC) from which requests can be made to the AccessPoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the AccessPoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_nodejs">
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -278,14 +278,6 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the bucket you want to associate this AccessPoint with.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A name for the AccessPoint.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="vpc_configuration_python">
 <a href="#vpc_configuration_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>configuration</a>
 </span>
@@ -293,6 +285,14 @@ The AccessPoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#accesspointvpcconfiguration">Access<wbr>Point<wbr>Vpc<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Private Cloud (VPC) from which requests can be made to the AccessPoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A name for the AccessPoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_python">
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>

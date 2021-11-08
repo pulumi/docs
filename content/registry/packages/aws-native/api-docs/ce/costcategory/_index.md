@@ -163,14 +163,6 @@ The CostCategory resource accepts the following [input]({{< relref "/docs/intro/
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="ruleversion_csharp">
 <a href="#ruleversion_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Version</a>
 </span>
@@ -195,6 +187,14 @@ The CostCategory resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The default value for the cost category{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="splitchargerules_csharp">
 <a href="#splitchargerules_csharp" style="color: inherit; text-decoration: inherit;">Split<wbr>Charge<wbr>Rules</a>
 </span>
@@ -206,14 +206,6 @@ The CostCategory resource accepts the following [input]({{< relref "/docs/intro/
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ruleversion_go">
 <a href="#ruleversion_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Version</a>
@@ -239,6 +231,14 @@ The CostCategory resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The default value for the cost category{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="splitchargerules_go">
 <a href="#splitchargerules_go" style="color: inherit; text-decoration: inherit;">Split<wbr>Charge<wbr>Rules</a>
 </span>
@@ -250,14 +250,6 @@ The CostCategory resource accepts the following [input]({{< relref "/docs/intro/
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ruleversion_nodejs">
 <a href="#ruleversion_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Version</a>
@@ -283,6 +275,14 @@ The CostCategory resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The default value for the cost category{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="splitchargerules_nodejs">
 <a href="#splitchargerules_nodejs" style="color: inherit; text-decoration: inherit;">split<wbr>Charge<wbr>Rules</a>
 </span>
@@ -294,14 +294,6 @@ The CostCategory resource accepts the following [input]({{< relref "/docs/intro/
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rule_version_python">
 <a href="#rule_version_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>version</a>
@@ -326,6 +318,14 @@ The CostCategory resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default value for the cost category{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="split_charge_rules_python">
 <a href="#split_charge_rules_python" style="color: inherit; text-decoration: inherit;">split_<wbr>charge_<wbr>rules</a>

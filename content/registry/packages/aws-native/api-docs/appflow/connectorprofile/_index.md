@@ -171,14 +171,6 @@ The ConnectorProfile resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Mode in which data transfer should be enabled. Private connection mode is currently enabled for Salesforce, Snowflake, Trendmicro and Singular{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="connectorprofilename_csharp">
-<a href="#connectorprofilename_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Profile<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of items to retrieve in a single batch.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="connectortype_csharp">
 <a href="#connectortype_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Type</a>
 </span>
@@ -194,6 +186,14 @@ The ConnectorProfile resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#connectorprofileconfig">Pulumi.<wbr>Aws<wbr>Native.<wbr>App<wbr>Flow.<wbr>Inputs.<wbr>Connector<wbr>Profile<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connector specific configurations needed to create connector profile{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectorprofilename_csharp">
+<a href="#connectorprofilename_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Profile<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of items to retrieve in a single batch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmsarn_csharp">
 <a href="#kmsarn_csharp" style="color: inherit; text-decoration: inherit;">KMSArn</a>
@@ -215,14 +215,6 @@ The ConnectorProfile resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Mode in which data transfer should be enabled. Private connection mode is currently enabled for Salesforce, Snowflake, Trendmicro and Singular{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="connectorprofilename_go">
-<a href="#connectorprofilename_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Profile<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of items to retrieve in a single batch.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="connectortype_go">
 <a href="#connectortype_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Type</a>
 </span>
@@ -238,6 +230,14 @@ The ConnectorProfile resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#connectorprofileconfig">Connector<wbr>Profile<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connector specific configurations needed to create connector profile{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectorprofilename_go">
+<a href="#connectorprofilename_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Profile<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of items to retrieve in a single batch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmsarn_go">
 <a href="#kmsarn_go" style="color: inherit; text-decoration: inherit;">KMSArn</a>
@@ -259,14 +259,6 @@ The ConnectorProfile resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Mode in which data transfer should be enabled. Private connection mode is currently enabled for Salesforce, Snowflake, Trendmicro and Singular{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="connectorprofilename_nodejs">
-<a href="#connectorprofilename_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Profile<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of items to retrieve in a single batch.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="connectortype_nodejs">
 <a href="#connectortype_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Type</a>
 </span>
@@ -282,6 +274,14 @@ The ConnectorProfile resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#connectorprofileconfig">Connector<wbr>Profile<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connector specific configurations needed to create connector profile{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectorprofilename_nodejs">
+<a href="#connectorprofilename_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Profile<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of items to retrieve in a single batch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmsarn_nodejs">
 <a href="#kmsarn_nodejs" style="color: inherit; text-decoration: inherit;">k<wbr>MSArn</a>
@@ -303,14 +303,6 @@ The ConnectorProfile resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Mode in which data transfer should be enabled. Private connection mode is currently enabled for Salesforce, Snowflake, Trendmicro and Singular{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="connector_profile_name_python">
-<a href="#connector_profile_name_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>profile_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of items to retrieve in a single batch.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="connector_type_python">
 <a href="#connector_type_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>type</a>
 </span>
@@ -326,6 +318,14 @@ The ConnectorProfile resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#connectorprofileconfig">Connector<wbr>Profile<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connector specific configurations needed to create connector profile{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connector_profile_name_python">
+<a href="#connector_profile_name_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>profile_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of items to retrieve in a single batch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="k_ms_arn_python">
 <a href="#k_ms_arn_python" style="color: inherit; text-decoration: inherit;">k_<wbr>ms_<wbr>arn</a>

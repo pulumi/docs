@@ -163,14 +163,6 @@ The DeviceFleet resource accepts the following [input]({{< relref "/docs/intro/c
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="devicefleetname_csharp">
-<a href="#devicefleetname_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Fleet<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the edge device fleet{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="outputconfig_csharp">
 <a href="#outputconfig_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Config</a>
 </span>
@@ -195,6 +187,14 @@ The DeviceFleet resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Description for the edge device fleet{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="devicefleetname_csharp">
+<a href="#devicefleetname_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Fleet<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the edge device fleet{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -206,14 +206,6 @@ The DeviceFleet resource accepts the following [input]({{< relref "/docs/intro/c
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="devicefleetname_go">
-<a href="#devicefleetname_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Fleet<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the edge device fleet{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="outputconfig_go">
 <a href="#outputconfig_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Config</a>
@@ -239,6 +231,14 @@ The DeviceFleet resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Description for the edge device fleet{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="devicefleetname_go">
+<a href="#devicefleetname_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Fleet<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the edge device fleet{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -250,14 +250,6 @@ The DeviceFleet resource accepts the following [input]({{< relref "/docs/intro/c
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="devicefleetname_nodejs">
-<a href="#devicefleetname_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Fleet<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the edge device fleet{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="outputconfig_nodejs">
 <a href="#outputconfig_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Config</a>
@@ -283,6 +275,14 @@ The DeviceFleet resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Description for the edge device fleet{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="devicefleetname_nodejs">
+<a href="#devicefleetname_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Fleet<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the edge device fleet{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -294,14 +294,6 @@ The DeviceFleet resource accepts the following [input]({{< relref "/docs/intro/c
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="device_fleet_name_python">
-<a href="#device_fleet_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>fleet_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the edge device fleet{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="output_config_python">
 <a href="#output_config_python" style="color: inherit; text-decoration: inherit;">output_<wbr>config</a>
@@ -326,6 +318,14 @@ The DeviceFleet resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description for the edge device fleet{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="device_fleet_name_python">
+<a href="#device_fleet_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>fleet_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the edge device fleet{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
