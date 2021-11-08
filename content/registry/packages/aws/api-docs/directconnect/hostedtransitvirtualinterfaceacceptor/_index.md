@@ -951,7 +951,7 @@ The following state arguments are supported:
 ## Import
 
 
-Direct Connect hosted transit virtual interfaces can be imported using the `vif id`, e.g.
+Direct Connect hosted transit virtual interfaces can be imported using the `vif id`, e.g.,
 
 ```sh
  $ pulumi import aws:directconnect/hostedTransitVirtualInterfaceAcceptor:HostedTransitVirtualInterfaceAcceptor test dxvif-33cc44dd
@@ -967,6 +967,6 @@ Direct Connect hosted transit virtual interfaces can be imported using the `vif 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

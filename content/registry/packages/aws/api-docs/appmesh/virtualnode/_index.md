@@ -7921,7 +7921,7 @@ Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map n
 ## Import
 
 
-App Mesh virtual nodes can be imported using `mesh_name` together with the virtual node's `name`, e.g.
+App Mesh virtual nodes can be imported using `mesh_name` together with the virtual node's `name`, e.g.,
 
 ```sh
  $ pulumi import aws:appmesh/virtualNode:VirtualNode serviceb1 simpleapp/serviceBv1
@@ -7939,6 +7939,6 @@ App Mesh virtual nodes can be imported using `mesh_name` together with the virtu
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

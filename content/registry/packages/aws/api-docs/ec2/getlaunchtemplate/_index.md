@@ -3011,6 +3011,14 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkcardindex_csharp">
+<a href="#networkcardindex_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Card<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3127,6 +3135,14 @@ Interfaces below for more details.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkcardindex_go">
+<a href="#networkcardindex_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Card<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3245,6 +3261,14 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkcardindex_nodejs">
+<a href="#networkcardindex_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Card<wbr>Index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3361,6 +3385,14 @@ Interfaces below for more details.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_card_index_python">
+<a href="#network_card_index_python" style="color: inherit; text-decoration: inherit;">network_<wbr>card_<wbr>index</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3740,6 +3772,6 @@ Interfaces below for more details.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

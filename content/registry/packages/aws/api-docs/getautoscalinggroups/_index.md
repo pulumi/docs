@@ -251,7 +251,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getautoscalinggroupsfilter">List&lt;Get<wbr>Autoscaling<wbr>Groups<wbr>Filter&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A filter used to scope the list e.g. by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
+    <dd>{{% md %}}A filter used to scope the list e.g., by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -264,7 +264,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getautoscalinggroupsfilter">[]Get<wbr>Autoscaling<wbr>Groups<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}A filter used to scope the list e.g. by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
+    <dd>{{% md %}}A filter used to scope the list e.g., by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -277,7 +277,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getautoscalinggroupsfilter">Get<wbr>Autoscaling<wbr>Groups<wbr>Filter[]</a></span>
     </dt>
-    <dd>{{% md %}}A filter used to scope the list e.g. by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
+    <dd>{{% md %}}A filter used to scope the list e.g., by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -290,7 +290,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getautoscalinggroupsfilter">Sequence[Get<wbr>Autoscaling<wbr>Groups<wbr>Filter]</a></span>
     </dt>
-    <dd>{{% md %}}A filter used to scope the list e.g. by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
+    <dd>{{% md %}}A filter used to scope the list e.g., by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -568,6 +568,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

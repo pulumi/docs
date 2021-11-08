@@ -4412,7 +4412,7 @@ The following state arguments are supported:
 ## Import
 
 
-App Mesh virtual gateway can be imported using `mesh_name` together with the virtual gateway's `name`, e.g.
+App Mesh virtual gateway can be imported using `mesh_name` together with the virtual gateway's `name`, e.g.,
 
 ```sh
  $ pulumi import aws:appmesh/virtualGateway:VirtualGateway example mesh/gw1
@@ -4430,6 +4430,6 @@ App Mesh virtual gateway can be imported using `mesh_name` together with the vir
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

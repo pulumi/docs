@@ -1648,7 +1648,7 @@ The following state arguments are supported:
 ## Import
 
 
-Connect instances can be imported using the `id`, e.g.
+Connect instances can be imported using the `id`, e.g.,
 
 ```sh
  $ pulumi import aws:connect/instance:Instance example f1288a1f-6193-445a-b47e-af739b2
@@ -1664,6 +1664,6 @@ Connect instances can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

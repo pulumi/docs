@@ -2916,6 +2916,51 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="includecontroldetails_csharp">
+<a href="#includecontroldetails_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Control<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includenullandempty_csharp">
+<a href="#includenullandempty_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Null<wbr>And<wbr>Empty</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Include NULL and empty columns in the target. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includepartitionvalue_csharp">
+<a href="#includepartitionvalue_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Partition<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includetablealteroperations_csharp">
+<a href="#includetablealteroperations_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Table<wbr>Alter<wbr>Operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Includes any data definition language (DDL) operations that change the table in the control data. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includetransactiondetails_csharp">
+<a href="#includetransactiondetails_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Transaction<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Provides detailed transaction information from the source database. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="messageformat_csharp">
 <a href="#messageformat_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Format</a>
 </span>
@@ -2923,6 +2968,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="partitionincludeschematable_csharp">
+<a href="#partitionincludeschematable_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Include<wbr>Schema<wbr>Table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Prefixes schema and table names to partition values, when the partition type is primary-key-type. The default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccessrolearn_csharp">
@@ -2947,6 +3001,51 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="includecontroldetails_go">
+<a href="#includecontroldetails_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Control<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includenullandempty_go">
+<a href="#includenullandempty_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Null<wbr>And<wbr>Empty</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Include NULL and empty columns in the target. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includepartitionvalue_go">
+<a href="#includepartitionvalue_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Partition<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includetablealteroperations_go">
+<a href="#includetablealteroperations_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Table<wbr>Alter<wbr>Operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Includes any data definition language (DDL) operations that change the table in the control data. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includetransactiondetails_go">
+<a href="#includetransactiondetails_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Transaction<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Provides detailed transaction information from the source database. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="messageformat_go">
 <a href="#messageformat_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Format</a>
 </span>
@@ -2954,6 +3053,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="partitionincludeschematable_go">
+<a href="#partitionincludeschematable_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Include<wbr>Schema<wbr>Table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Prefixes schema and table names to partition values, when the partition type is primary-key-type. The default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccessrolearn_go">
@@ -2978,6 +3086,51 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="includecontroldetails_nodejs">
+<a href="#includecontroldetails_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Control<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includenullandempty_nodejs">
+<a href="#includenullandempty_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Null<wbr>And<wbr>Empty</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Include NULL and empty columns in the target. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includepartitionvalue_nodejs">
+<a href="#includepartitionvalue_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Partition<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includetablealteroperations_nodejs">
+<a href="#includetablealteroperations_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Table<wbr>Alter<wbr>Operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Includes any data definition language (DDL) operations that change the table in the control data. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="includetransactiondetails_nodejs">
+<a href="#includetransactiondetails_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Transaction<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Provides detailed transaction information from the source database. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="messageformat_nodejs">
 <a href="#messageformat_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Format</a>
 </span>
@@ -2985,6 +3138,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="partitionincludeschematable_nodejs">
+<a href="#partitionincludeschematable_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Include<wbr>Schema<wbr>Table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Prefixes schema and table names to partition values, when the partition type is primary-key-type. The default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccessrolearn_nodejs">
@@ -3009,6 +3171,51 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="include_control_details_python">
+<a href="#include_control_details_python" style="color: inherit; text-decoration: inherit;">include_<wbr>control_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="include_null_and_empty_python">
+<a href="#include_null_and_empty_python" style="color: inherit; text-decoration: inherit;">include_<wbr>null_<wbr>and_<wbr>empty</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Include NULL and empty columns in the target. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="include_partition_value_python">
+<a href="#include_partition_value_python" style="color: inherit; text-decoration: inherit;">include_<wbr>partition_<wbr>value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="include_table_alter_operations_python">
+<a href="#include_table_alter_operations_python" style="color: inherit; text-decoration: inherit;">include_<wbr>table_<wbr>alter_<wbr>operations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Includes any data definition language (DDL) operations that change the table in the control data. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="include_transaction_details_python">
+<a href="#include_transaction_details_python" style="color: inherit; text-decoration: inherit;">include_<wbr>transaction_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Provides detailed transaction information from the source database. The default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="message_format_python">
 <a href="#message_format_python" style="color: inherit; text-decoration: inherit;">message_<wbr>format</a>
 </span>
@@ -3016,6 +3223,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="partition_include_schema_table_python">
+<a href="#partition_include_schema_table_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>include_<wbr>schema_<wbr>table</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Prefixes schema and table names to partition values, when the partition type is primary-key-type. The default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_access_role_arn_python">
@@ -3759,7 +3975,7 @@ The following state arguments are supported:
 ## Import
 
 
-Endpoints can be imported using the `endpoint_id`, e.g.
+Endpoints can be imported using the `endpoint_id`, e.g.,
 
 ```sh
  $ pulumi import aws:dms/endpoint:Endpoint test test-dms-endpoint-tf
@@ -3775,6 +3991,6 @@ Endpoints can be imported using the `endpoint_id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

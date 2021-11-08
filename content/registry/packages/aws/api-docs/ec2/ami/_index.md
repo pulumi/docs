@@ -365,7 +365,7 @@ should be attached to created instances. The structure of this block is describe
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
+    <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g., created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +494,7 @@ should be attached to created instances. The structure of this block is describe
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
+    <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g., created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -623,7 +623,7 @@ should be attached to created instances. The structure of this block is describe
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
+    <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g., created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -752,7 +752,7 @@ should be attached to created instances. The structure of this block is describe
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
+    <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g., created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1532,7 +1532,7 @@ should be attached to created instances. The structure of this block is describe
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
+    <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g., created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1768,7 +1768,7 @@ should be attached to created instances. The structure of this block is describe
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
+    <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g., created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2004,7 +2004,7 @@ should be attached to created instances. The structure of this block is describe
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
+    <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g., created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2240,7 +2240,7 @@ should be attached to created instances. The structure of this block is describe
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
+    <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g., created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2837,7 +2837,7 @@ as the selected snapshot.
 ## Import
 
 
-`aws_ami` can be imported using the ID of the AMI, e.g.
+`aws_ami` can be imported using the ID of the AMI, e.g.,
 
 ```sh
  $ pulumi import aws:ec2/ami:Ami example ami-12345678
@@ -2853,6 +2853,6 @@ as the selected snapshot.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

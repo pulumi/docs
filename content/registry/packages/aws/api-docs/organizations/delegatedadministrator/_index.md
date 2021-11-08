@@ -1132,7 +1132,7 @@ The following state arguments are supported:
 ## Import
 
 
-`aws_organizations_delegated_administrator` can be imported by using the account ID and its service principal, e.g.
+`aws_organizations_delegated_administrator` can be imported by using the account ID and its service principal, e.g.,
 
 ```sh
  $ pulumi import aws:organizations/delegatedAdministrator:DelegatedAdministrator example 123456789012/config.amazonaws.com
@@ -1148,6 +1148,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

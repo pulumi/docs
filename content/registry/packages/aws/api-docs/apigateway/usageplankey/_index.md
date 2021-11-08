@@ -896,7 +896,7 @@ The following state arguments are supported:
 ## Import
 
 
-AWS API Gateway Usage Plan Key can be imported using the `USAGE-PLAN-ID/USAGE-PLAN-KEY-ID`, e.g.
+AWS API Gateway Usage Plan Key can be imported using the `USAGE-PLAN-ID/USAGE-PLAN-KEY-ID`, e.g.,
 
 ```sh
  $ pulumi import aws:apigateway/usagePlanKey:UsagePlanKey key 12345abcde/zzz
@@ -912,6 +912,6 @@ AWS API Gateway Usage Plan Key can be imported using the `USAGE-PLAN-ID/USAGE-PL
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

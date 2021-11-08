@@ -3349,7 +3349,7 @@ The following state arguments are supported:
 ## Import
 
 
-Lambda event source mappings can be imported using the `UUID` (event source mapping identifier), e.g.
+Lambda event source mappings can be imported using the `UUID` (event source mapping identifier), e.g.,
 
 ```sh
  $ pulumi import aws:lambda/eventSourceMapping:EventSourceMapping event_source_mapping 12345kxodurf3443
@@ -3365,6 +3365,6 @@ Lambda event source mappings can be imported using the `UUID` (event source mapp
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

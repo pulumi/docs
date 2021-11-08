@@ -1195,7 +1195,7 @@ The following state arguments are supported:
 ## Import
 
 
-EventBridge permissions can be imported using the `event_bus_name`, e.g.
+EventBridge permissions can be imported using the `event_bus_name`, e.g.,
 
 ```sh
  $ pulumi import aws:cloudwatch/eventBusPolicy:EventBusPolicy DevAccountAccess example-event-bus
@@ -1211,6 +1211,6 @@ EventBridge permissions can be imported using the `event_bus_name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

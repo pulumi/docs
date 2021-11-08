@@ -415,7 +415,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
+    <dd>{{% md %}}Specifies whether or not mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamroles_csharp">
@@ -469,7 +469,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredmaintenancewindow_csharp">
@@ -478,7 +478,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationsourceidentifier_csharp">
@@ -644,7 +644,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
+    <dd>{{% md %}}Specifies whether or not mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamroles_go">
@@ -698,7 +698,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredmaintenancewindow_go">
@@ -707,7 +707,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationsourceidentifier_go">
@@ -873,7 +873,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
+    <dd>{{% md %}}Specifies whether or not mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamroles_nodejs">
@@ -927,7 +927,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredmaintenancewindow_nodejs">
@@ -936,7 +936,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationsourceidentifier_nodejs">
@@ -1102,7 +1102,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
+    <dd>{{% md %}}Specifies whether or not mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_roles_python">
@@ -1156,7 +1156,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_maintenance_window_python">
@@ -1165,7 +1165,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_source_identifier_python">
@@ -1840,7 +1840,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
+    <dd>{{% md %}}Specifies whether or not mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamroles_csharp">
@@ -1894,7 +1894,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredmaintenancewindow_csharp">
@@ -1903,7 +1903,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readerendpoint_csharp">
@@ -2132,7 +2132,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
+    <dd>{{% md %}}Specifies whether or not mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamroles_go">
@@ -2186,7 +2186,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredmaintenancewindow_go">
@@ -2195,7 +2195,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readerendpoint_go">
@@ -2424,7 +2424,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
+    <dd>{{% md %}}Specifies whether or not mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamroles_nodejs">
@@ -2478,7 +2478,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredmaintenancewindow_nodejs">
@@ -2487,7 +2487,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readerendpoint_nodejs">
@@ -2716,7 +2716,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
+    <dd>{{% md %}}Specifies whether or not mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iam_roles_python">
@@ -2770,7 +2770,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferred_maintenance_window_python">
@@ -2779,7 +2779,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
+    <dd>{{% md %}}The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reader_endpoint_python">
@@ -2862,7 +2862,7 @@ The following state arguments are supported:
 ## Import
 
 
-`aws_neptune_cluster` can be imported by using the cluster identifier, e.g.
+`aws_neptune_cluster` can be imported by using the cluster identifier, e.g.,
 
 ```sh
  $ pulumi import aws:neptune/cluster:Cluster example my-cluster
@@ -2878,6 +2878,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

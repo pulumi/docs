@@ -1734,7 +1734,7 @@ The MTU of a virtual private interface can be either `1500` or `9001` (jumbo fra
 ## Import
 
 
-Direct Connect private virtual interfaces can be imported using the `vif id`, e.g.
+Direct Connect private virtual interfaces can be imported using the `vif id`, e.g.,
 
 ```sh
  $ pulumi import aws:directconnect/privateVirtualInterface:PrivateVirtualInterface test dxvif-33cc44dd
@@ -1750,6 +1750,6 @@ Direct Connect private virtual interfaces can be imported using the `vif id`, e.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

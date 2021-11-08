@@ -3022,7 +3022,7 @@ image name format, see Pulling an image in the Amazon ECR User Guide.
 ## Import
 
 
-App Runner Services can be imported by using the `arn`, e.g.
+App Runner Services can be imported by using the `arn`, e.g.,
 
 ```sh
  $ pulumi import aws:apprunner/service:Service example arn:aws:apprunner:us-east-1:1234567890:service/example/0a03292a89764e5882c41d8f991c82fe
@@ -3038,6 +3038,6 @@ App Runner Services can be imported by using the `arn`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

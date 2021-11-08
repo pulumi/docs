@@ -1003,7 +1003,7 @@ The following state arguments are supported:
 ## Import
 
 
-Timestream databases can be imported using the `database_name`, e.g.
+Timestream databases can be imported using the `database_name`, e.g.,
 
 ```sh
  $ pulumi import aws:timestreamwrite/database:Database example example
@@ -1019,6 +1019,6 @@ Timestream databases can be imported using the `database_name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

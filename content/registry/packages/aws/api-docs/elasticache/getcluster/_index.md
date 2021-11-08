@@ -272,7 +272,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getclustercachenode">List&lt;Get<wbr>Cluster<wbr>Cache<wbr>Node&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and `availability_zone`.
-Referenceable e.g. as `${data.aws_elasticache_cluster.bar.cache_nodes.0.address}`
+Referenceable e.g., as `${data.aws_elasticache_cluster.bar.cache_nodes.0.address}`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusteraddress_csharp">
@@ -478,7 +478,7 @@ begin taking a daily snapshot of the cache cluster.
         <span class="property-type"><a href="#getclustercachenode">[]Get<wbr>Cluster<wbr>Cache<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and `availability_zone`.
-Referenceable e.g. as `${data.aws_elasticache_cluster.bar.cache_nodes.0.address}`
+Referenceable e.g., as `${data.aws_elasticache_cluster.bar.cache_nodes.0.address}`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusteraddress_go">
@@ -684,7 +684,7 @@ begin taking a daily snapshot of the cache cluster.
         <span class="property-type"><a href="#getclustercachenode">Get<wbr>Cluster<wbr>Cache<wbr>Node[]</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and `availability_zone`.
-Referenceable e.g. as `${data.aws_elasticache_cluster.bar.cache_nodes.0.address}`
+Referenceable e.g., as `${data.aws_elasticache_cluster.bar.cache_nodes.0.address}`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusteraddress_nodejs">
@@ -890,7 +890,7 @@ begin taking a daily snapshot of the cache cluster.
         <span class="property-type"><a href="#getclustercachenode">Sequence[Get<wbr>Cluster<wbr>Cache<wbr>Node]</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and `availability_zone`.
-Referenceable e.g. as `${data.aws_elasticache_cluster.bar.cache_nodes.0.address}`
+Referenceable e.g., as `${data.aws_elasticache_cluster.bar.cache_nodes.0.address}`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cluster_address_python">
@@ -1246,6 +1246,6 @@ accept connections.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -1283,7 +1283,7 @@ The following state arguments are supported:
 ## Import
 
 
-AWS SSM Activation can be imported using the `id`, e.g.
+AWS SSM Activation can be imported using the `id`, e.g.,
 
 ```sh
  $ pulumi import aws:ssm/activation:Activation example e488f2f6-e686-4afb-8a04-ef6dfEXAMPLE
@@ -1299,6 +1299,6 @@ AWS SSM Activation can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

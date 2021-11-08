@@ -845,7 +845,7 @@ The following state arguments are supported:
 ## Import
 
 
-IAM User Policies can be imported using the `user_name:user_policy_name`, e.g.
+IAM User Policies can be imported using the `user_name:user_policy_name`, e.g.,
 
 ```sh
  $ pulumi import aws:iam/userPolicy:UserPolicy mypolicy user_of_mypolicy_name:mypolicy_name
@@ -861,6 +861,6 @@ IAM User Policies can be imported using the `user_name:user_policy_name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

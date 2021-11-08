@@ -4995,7 +4995,7 @@ Valid options are `full-copy` (default) and `copy-on-write`.
 ## Import
 
 
-RDS Clusters can be imported using the `cluster_identifier`, e.g.
+RDS Clusters can be imported using the `cluster_identifier`, e.g.,
 
 ```sh
  $ pulumi import aws:rds/cluster:Cluster aurora_cluster aurora-prod-cluster
@@ -5011,6 +5011,6 @@ RDS Clusters can be imported using the `cluster_identifier`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

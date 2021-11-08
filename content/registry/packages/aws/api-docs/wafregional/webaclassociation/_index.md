@@ -1259,7 +1259,7 @@ The following state arguments are supported:
 ## Import
 
 
-WAF Regional Web ACL Association can be imported using their `web_acl_id:resource_arn`, e.g.
+WAF Regional Web ACL Association can be imported using their `web_acl_id:resource_arn`, e.g.,
 
 ```sh
  $ pulumi import aws:wafregional/webAclAssociation:WebAclAssociation foo web_acl_id:resource_arn
@@ -1275,6 +1275,6 @@ WAF Regional Web ACL Association can be imported using their `web_acl_id:resourc
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

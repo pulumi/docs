@@ -14,7 +14,7 @@ no_edit_this_page: true
 
 ## Import
 
-Redshift Snapshot Schedule can be imported using the `identifier`, e.g.
+Redshift Snapshot Schedule can be imported using the `identifier`, e.g.,
 
 ```sh
  $ pulumi import aws:redshift/snapshotSchedule:SnapshotSchedule default tf-redshift-snapshot-schedule
@@ -1089,6 +1089,6 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

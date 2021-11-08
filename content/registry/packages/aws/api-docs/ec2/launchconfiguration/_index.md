@@ -393,7 +393,7 @@ Each `ephemeral_block_device` supports the following:
 * `device_name` - The name of the block device to mount on the instance.
 * `virtual_name` - The [Instance Store Device
   Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
-  (e.g. `"ephemeral0"`)
+  (e.g., `"ephemeral0"`)
 
 Each AWS Instance type has a different set of Instance Store block devices
 available for attachment. AWS [publishes a
@@ -3287,7 +3287,7 @@ device of the instance. See Block Devices below for details.
 ## Import
 
 
-Launch configurations can be imported using the `name`, e.g.
+Launch configurations can be imported using the `name`, e.g.,
 
 ```sh
  $ pulumi import aws:ec2/launchConfiguration:LaunchConfiguration as_conf lg-123456
@@ -3303,6 +3303,6 @@ Launch configurations can be imported using the `name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

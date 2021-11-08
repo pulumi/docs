@@ -859,7 +859,7 @@ The following state arguments are supported:
 ## Import
 
 
-Amplify backend environment can be imported using `app_id` and `environment_name`, e.g.
+Amplify backend environment can be imported using `app_id` and `environment_name`, e.g.,
 
 ```sh
  $ pulumi import aws:amplify/backendEnvironment:BackendEnvironment example d2ypk4k47z8u6/example
@@ -875,6 +875,6 @@ Amplify backend environment can be imported using `app_id` and `environment_name
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

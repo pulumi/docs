@@ -1079,7 +1079,7 @@ The following state arguments are supported:
 ## Import
 
 
-Glue Catalog Databases can be imported using the `catalog_id:name`. If you have not set a Catalog ID specify the AWS Account ID that the database is in, e.g.
+Glue Catalog Databases can be imported using the `catalog_id:name`. If you have not set a Catalog ID specify the AWS Account ID that the database is in, e.g.,
 
 ```sh
  $ pulumi import aws:glue/catalogDatabase:CatalogDatabase database 123456789012:my_database
@@ -1095,6 +1095,6 @@ Glue Catalog Databases can be imported using the `catalog_id:name`. If you have 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

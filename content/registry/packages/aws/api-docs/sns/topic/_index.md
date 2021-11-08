@@ -2680,7 +2680,7 @@ The following state arguments are supported:
 ## Import
 
 
-SNS Topics can be imported using the `topic arn`, e.g.
+SNS Topics can be imported using the `topic arn`, e.g.,
 
 ```sh
  $ pulumi import aws:sns/topic:Topic user_updates arn:aws:sns:us-west-2:0123456789012:my-topic
@@ -2696,6 +2696,6 @@ SNS Topics can be imported using the `topic arn`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

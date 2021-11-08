@@ -623,7 +623,7 @@ The following state arguments are supported:
 ## Import
 
 
-`aws_servicecatalog_budget_resource_association` can be imported using the budget name and resource ID, e.g.
+`aws_servicecatalog_budget_resource_association` can be imported using the budget name and resource ID, e.g.,
 
 ```sh
  $ pulumi import aws:servicecatalog/budgetResourceAssociation:BudgetResourceAssociation example budget-pjtvyakdlyo3m:prod-dnigbtea24ste
@@ -639,6 +639,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

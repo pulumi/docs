@@ -776,7 +776,7 @@ The following state arguments are supported:
 ## Import
 
 
-Kinesis Stream Consumers can be imported using the Amazon Resource Name (ARN) e.g.
+Kinesis Stream Consumers can be imported using the Amazon Resource Name (ARN) e.g.,
 
 ```sh
  $ pulumi import aws:kinesis/streamConsumer:StreamConsumer example arn:aws:kinesis:us-west-2:123456789012:stream/example/consumer/example:1616044553
@@ -794,6 +794,6 @@ Kinesis Stream Consumers can be imported using the Amazon Resource Name (ARN) e.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

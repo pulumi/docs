@@ -14,7 +14,7 @@ no_edit_this_page: true
 
 ## Import
 
-Prefix List Entries can be imported using the `prefix_list_id` and `cidr` separated by a `,`, e.g.
+Prefix List Entries can be imported using the `prefix_list_id` and `cidr` separated by a `,`, e.g.,
 
 ```sh
  $ pulumi import aws:ec2/managedPrefixListEntry:ManagedPrefixListEntry default pl-0570a1d2d725c16be,10.0.3.0/24
@@ -608,6 +608,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

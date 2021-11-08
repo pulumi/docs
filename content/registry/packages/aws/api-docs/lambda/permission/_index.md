@@ -747,7 +747,7 @@ The Permission resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
+    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g., `lambda:InvokeFunction`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="function_csharp">
@@ -765,7 +765,7 @@ The Permission resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
+    <dd>{{% md %}}The principal who is getting this permissionE.g., `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventsourcetoken_csharp">
@@ -783,7 +783,7 @@ The Permission resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARNE.g., `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceaccount_csharp">
@@ -836,7 +836,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
+    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g., `lambda:InvokeFunction`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="function_go">
@@ -854,7 +854,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
+    <dd>{{% md %}}The principal who is getting this permissionE.g., `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventsourcetoken_go">
@@ -872,7 +872,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARNE.g., `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceaccount_go">
@@ -925,7 +925,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
+    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g., `lambda:InvokeFunction`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="function_nodejs">
@@ -943,7 +943,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
+    <dd>{{% md %}}The principal who is getting this permissionE.g., `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventsourcetoken_nodejs">
@@ -961,7 +961,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARNE.g., `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceaccount_nodejs">
@@ -1014,7 +1014,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
+    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g., `lambda:InvokeFunction`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="function_python">
@@ -1032,7 +1032,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
+    <dd>{{% md %}}The principal who is getting this permissionE.g., `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_source_token_python">
@@ -1050,7 +1050,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARNE.g., `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_account_python">
@@ -1292,7 +1292,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
+    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g., `lambda:InvokeFunction`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventsourcetoken_csharp">
@@ -1319,7 +1319,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
+    <dd>{{% md %}}The principal who is getting this permissionE.g., `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qualifier_csharp">
@@ -1328,7 +1328,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARNE.g., `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceaccount_csharp">
@@ -1381,7 +1381,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
+    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g., `lambda:InvokeFunction`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventsourcetoken_go">
@@ -1408,7 +1408,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
+    <dd>{{% md %}}The principal who is getting this permissionE.g., `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qualifier_go">
@@ -1417,7 +1417,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARNE.g., `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceaccount_go">
@@ -1470,7 +1470,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
+    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g., `lambda:InvokeFunction`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventsourcetoken_nodejs">
@@ -1497,7 +1497,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
+    <dd>{{% md %}}The principal who is getting this permissionE.g., `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qualifier_nodejs">
@@ -1506,7 +1506,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARNE.g., `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceaccount_nodejs">
@@ -1559,7 +1559,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
+    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g., `lambda:InvokeFunction`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_source_token_python">
@@ -1586,7 +1586,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
+    <dd>{{% md %}}The principal who is getting this permissionE.g., `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qualifier_python">
@@ -1595,7 +1595,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+    <dd>{{% md %}}Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARNE.g., `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_account_python">
@@ -1646,7 +1646,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
 ## Import
 
 
-Lambda permission statements can be imported using function_name/statement_id, with an optional qualifier, e.g.
+Lambda permission statements can be imported using function_name/statement_id, with an optional qualifier, e.g.,
 
 ```sh
  $ pulumi import aws:lambda/permission:Permission test_lambda_permission my_test_lambda_function/AllowExecutionFromCloudWatch
@@ -1666,6 +1666,6 @@ Lambda permission statements can be imported using function_name/statement_id, w
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

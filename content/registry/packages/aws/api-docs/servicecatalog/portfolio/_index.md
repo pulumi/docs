@@ -972,7 +972,7 @@ The following state arguments are supported:
 ## Import
 
 
-Service Catalog Portfolios can be imported using the `service catalog portfolio id`, e.g.
+Service Catalog Portfolios can be imported using the `service catalog portfolio id`, e.g.,
 
 ```sh
  $ pulumi import aws:servicecatalog/portfolio:Portfolio testfolio port-12344321
@@ -988,6 +988,6 @@ Service Catalog Portfolios can be imported using the `service catalog portfolio 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -1115,7 +1115,7 @@ The following state arguments are supported:
 ## Import
 
 
-VPC DHCP Options can be imported using the `dhcp options id`, e.g.
+VPC DHCP Options can be imported using the `dhcp options id`, e.g.,
 
 ```sh
  $ pulumi import aws:ec2/defaultVpcDhcpOptions:DefaultVpcDhcpOptions default_options dopt-d9070ebb
@@ -1131,6 +1131,6 @@ VPC DHCP Options can be imported using the `dhcp options id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

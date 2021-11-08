@@ -258,7 +258,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}Filter IP ranges by regions (or include all regions, if
 omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
-(e.g. `eu-central-1`)
+(e.g., `eu-central-1`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_csharp">
@@ -295,7 +295,7 @@ omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
     </dt>
     <dd>{{% md %}}Filter IP ranges by regions (or include all regions, if
 omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
-(e.g. `eu-central-1`)
+(e.g., `eu-central-1`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_go">
@@ -332,7 +332,7 @@ omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
     </dt>
     <dd>{{% md %}}Filter IP ranges by regions (or include all regions, if
 omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
-(e.g. `eu-central-1`)
+(e.g., `eu-central-1`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_nodejs">
@@ -369,7 +369,7 @@ omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
     </dt>
     <dd>{{% md %}}Filter IP ranges by regions (or include all regions, if
 omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
-(e.g. `eu-central-1`)
+(e.g., `eu-central-1`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_python">
@@ -409,7 +409,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publication time of the IP ranges (e.g. `2016-08-03-23-46-05`).
+    <dd>{{% md %}}The publication time of the IP ranges (e.g., `2016-08-03-23-46-05`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -445,7 +445,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The publication time of the IP ranges, in Unix epoch time format
-(e.g. `1470267965`).
+(e.g., `1470267965`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="regions_csharp">
@@ -483,7 +483,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publication time of the IP ranges (e.g. `2016-08-03-23-46-05`).
+    <dd>{{% md %}}The publication time of the IP ranges (e.g., `2016-08-03-23-46-05`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -519,7 +519,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The publication time of the IP ranges, in Unix epoch time format
-(e.g. `1470267965`).
+(e.g., `1470267965`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="regions_go">
@@ -557,7 +557,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publication time of the IP ranges (e.g. `2016-08-03-23-46-05`).
+    <dd>{{% md %}}The publication time of the IP ranges (e.g., `2016-08-03-23-46-05`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -593,7 +593,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The publication time of the IP ranges, in Unix epoch time format
-(e.g. `1470267965`).
+(e.g., `1470267965`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="regions_nodejs">
@@ -631,7 +631,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The publication time of the IP ranges (e.g. `2016-08-03-23-46-05`).
+    <dd>{{% md %}}The publication time of the IP ranges (e.g., `2016-08-03-23-46-05`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -667,7 +667,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The publication time of the IP ranges, in Unix epoch time format
-(e.g. `1470267965`).
+(e.g., `1470267965`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="regions_python">
@@ -698,6 +698,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

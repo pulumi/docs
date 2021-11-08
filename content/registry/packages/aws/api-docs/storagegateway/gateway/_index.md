@@ -3053,7 +3053,7 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
 ## Import
 
 
-`aws_storagegateway_gateway` can be imported by using the gateway Amazon Resource Name (ARN), e.g.
+`aws_storagegateway_gateway` can be imported by using the gateway Amazon Resource Name (ARN), e.g.,
 
 ```sh
  $ pulumi import aws:storagegateway/gateway:Gateway example arn:aws:storagegateway:us-east-1:123456789012:gateway/sgw-12345678
@@ -3071,6 +3071,6 @@ computers, and other OUs and this parameter specifies the OU that the gateway wi
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

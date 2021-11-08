@@ -898,7 +898,7 @@ The following state arguments are supported:
 ## Import
 
 
-Shield protection resources can be imported by specifying their ID e.g.
+Shield protection resources can be imported by specifying their ID e.g.,
 
 ```sh
  $ pulumi import aws:shield/protection:Protection example ff9592dc-22f3-4e88-afa1-7b29fde9669a
@@ -914,6 +914,6 @@ Shield protection resources can be imported by specifying their ID e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

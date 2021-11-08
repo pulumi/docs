@@ -1199,7 +1199,7 @@ See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/
 ## Import
 
 
-CloudFront real-time log configurations can be imported using the ARN, e.g.
+CloudFront real-time log configurations can be imported using the ARN, e.g.,
 
 ```sh
  $ pulumi import aws:cloudfront/realtimeLogConfig:RealtimeLogConfig example arn:aws:cloudfront::111122223333:realtime-log-config/ExampleNameForRealtimeLogConfig
@@ -1215,6 +1215,6 @@ CloudFront real-time log configurations can be imported using the ARN, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

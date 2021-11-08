@@ -1392,7 +1392,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 ## Import
 
 
-Global Accelerator accelerators can be imported using the `id`, e.g.
+Global Accelerator accelerators can be imported using the `id`, e.g.,
 
 ```sh
  $ pulumi import aws:globalaccelerator/accelerator:Accelerator example arn:aws:globalaccelerator::111111111111:accelerator/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
@@ -1408,6 +1408,6 @@ Global Accelerator accelerators can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

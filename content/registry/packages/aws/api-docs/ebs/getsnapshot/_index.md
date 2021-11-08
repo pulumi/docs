@@ -545,7 +545,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The snapshot ID (e.g. snap-59fcb34e).
+    <dd>{{% md %}}The snapshot ID (e.g., snap-59fcb34e).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
@@ -572,7 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The volume ID (e.g. vol-59fcb34e).
+    <dd>{{% md %}}The volume ID (e.g., vol-59fcb34e).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumesize_csharp">
@@ -706,7 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The snapshot ID (e.g. snap-59fcb34e).
+    <dd>{{% md %}}The snapshot ID (e.g., snap-59fcb34e).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
@@ -733,7 +733,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The volume ID (e.g. vol-59fcb34e).
+    <dd>{{% md %}}The volume ID (e.g., vol-59fcb34e).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumesize_go">
@@ -867,7 +867,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The snapshot ID (e.g. snap-59fcb34e).
+    <dd>{{% md %}}The snapshot ID (e.g., snap-59fcb34e).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
@@ -894,7 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The volume ID (e.g. vol-59fcb34e).
+    <dd>{{% md %}}The volume ID (e.g., vol-59fcb34e).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumesize_nodejs">
@@ -1028,7 +1028,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The snapshot ID (e.g. snap-59fcb34e).
+    <dd>{{% md %}}The snapshot ID (e.g., snap-59fcb34e).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
@@ -1055,7 +1055,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The volume ID (e.g. vol-59fcb34e).
+    <dd>{{% md %}}The volume ID (e.g., vol-59fcb34e).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volume_size_python">
@@ -1209,6 +1209,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

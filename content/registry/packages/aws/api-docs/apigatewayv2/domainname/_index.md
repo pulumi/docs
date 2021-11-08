@@ -1469,7 +1469,7 @@ The truststore can contain certificates from public or private certificate autho
 ## Import
 
 
-`aws_apigatewayv2_domain_name` can be imported by using the domain name, e.g.
+`aws_apigatewayv2_domain_name` can be imported by using the domain name, e.g.,
 
 ```sh
  $ pulumi import aws:apigatewayv2/domainName:DomainName example ws-api.example.com
@@ -1485,6 +1485,6 @@ The truststore can contain certificates from public or private certificate autho
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

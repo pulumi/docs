@@ -1538,7 +1538,7 @@ backend and the Cognito service to communicate about the developer provider.
 ## Import
 
 
-Cognito Identity Pool can be imported using the name, e.g.
+Cognito Identity Pool can be imported using the name, e.g.,
 
 ```sh
  $ pulumi import aws:cognito/identityPool:IdentityPool mypool <identity-pool-id>
@@ -1554,6 +1554,6 @@ Cognito Identity Pool can be imported using the name, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

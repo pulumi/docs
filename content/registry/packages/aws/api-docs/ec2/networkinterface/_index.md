@@ -167,8 +167,12 @@ const test = new aws.ec2.NetworkInterface("test", {
                      <span class="nx">attachments</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkInterfaceAttachmentArgs]]</span> = None<span class="p">,</span>
                      <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">interface_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">ipv4_prefix_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                     <span class="nx">ipv4_prefixes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                      <span class="nx">ipv6_address_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                      <span class="nx">ipv6_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">ipv6_prefix_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                     <span class="nx">ipv6_prefixes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                      <span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                      <span class="nx">private_ips_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -341,6 +345,24 @@ The NetworkInterface resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Type of network interface to create. Set to `efa` for Elastic Fabric Adapter.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ipv4prefixcount_csharp">
+<a href="#ipv4prefixcount_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Prefix<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of IPv4 prefixes that AWS automatically assigns to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv4prefixes_csharp">
+<a href="#ipv4prefixes_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Prefixes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}One or more IPv4 prefixes assigned to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipv6addresscount_csharp">
 <a href="#ipv6addresscount_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Count</a>
 </span>
@@ -357,6 +379,24 @@ The NetworkInterface resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. You can't use this option if you're specifying `ipv6_address_count`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6prefixcount_csharp">
+<a href="#ipv6prefixcount_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Prefix<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of IPv6 prefixes that AWS automatically assigns to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6prefixes_csharp">
+<a href="#ipv6prefixes_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Prefixes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}One or more IPv6 prefixes assigned to the network interface.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateip_csharp">
@@ -452,6 +492,24 @@ The NetworkInterface resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Type of network interface to create. Set to `efa` for Elastic Fabric Adapter.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ipv4prefixcount_go">
+<a href="#ipv4prefixcount_go" style="color: inherit; text-decoration: inherit;">Ipv4Prefix<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of IPv4 prefixes that AWS automatically assigns to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv4prefixes_go">
+<a href="#ipv4prefixes_go" style="color: inherit; text-decoration: inherit;">Ipv4Prefixes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}One or more IPv4 prefixes assigned to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipv6addresscount_go">
 <a href="#ipv6addresscount_go" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Count</a>
 </span>
@@ -468,6 +526,24 @@ The NetworkInterface resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. You can't use this option if you're specifying `ipv6_address_count`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6prefixcount_go">
+<a href="#ipv6prefixcount_go" style="color: inherit; text-decoration: inherit;">Ipv6Prefix<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of IPv6 prefixes that AWS automatically assigns to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6prefixes_go">
+<a href="#ipv6prefixes_go" style="color: inherit; text-decoration: inherit;">Ipv6Prefixes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}One or more IPv6 prefixes assigned to the network interface.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateip_go">
@@ -563,6 +639,24 @@ The NetworkInterface resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Type of network interface to create. Set to `efa` for Elastic Fabric Adapter.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ipv4prefixcount_nodejs">
+<a href="#ipv4prefixcount_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Prefix<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of IPv4 prefixes that AWS automatically assigns to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv4prefixes_nodejs">
+<a href="#ipv4prefixes_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Prefixes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}One or more IPv4 prefixes assigned to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipv6addresscount_nodejs">
 <a href="#ipv6addresscount_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Count</a>
 </span>
@@ -579,6 +673,24 @@ The NetworkInterface resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. You can't use this option if you're specifying `ipv6_address_count`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6prefixcount_nodejs">
+<a href="#ipv6prefixcount_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Prefix<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of IPv6 prefixes that AWS automatically assigns to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6prefixes_nodejs">
+<a href="#ipv6prefixes_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Prefixes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}One or more IPv6 prefixes assigned to the network interface.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateip_nodejs">
@@ -674,6 +786,24 @@ The NetworkInterface resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Type of network interface to create. Set to `efa` for Elastic Fabric Adapter.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ipv4_prefix_count_python">
+<a href="#ipv4_prefix_count_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>prefix_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of IPv4 prefixes that AWS automatically assigns to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv4_prefixes_python">
+<a href="#ipv4_prefixes_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>prefixes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}One or more IPv4 prefixes assigned to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipv6_address_count_python">
 <a href="#ipv6_address_count_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address_<wbr>count</a>
 </span>
@@ -690,6 +820,24 @@ The NetworkInterface resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. You can't use this option if you're specifying `ipv6_address_count`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6_prefix_count_python">
+<a href="#ipv6_prefix_count_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>prefix_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of IPv6 prefixes that AWS automatically assigns to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipv6_prefixes_python">
+<a href="#ipv6_prefixes_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>prefixes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}One or more IPv6 prefixes assigned to the network interface.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_ip_python">
@@ -756,6 +904,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the network interface.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -781,6 +938,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ownerid_csharp">
+<a href="#ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the owner of the network interface.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="privatednsname_csharp">
 <a href="#privatednsname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name</a>
 </span>
@@ -802,6 +968,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the network interface.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -828,6 +1003,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ownerid_go">
+<a href="#ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the owner of the network interface.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="privatednsname_go">
 <a href="#privatednsname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name</a>
 </span>
@@ -849,6 +1033,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the network interface.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -875,6 +1068,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ownerid_nodejs">
+<a href="#ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the owner of the network interface.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="privatednsname_nodejs">
 <a href="#privatednsname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Name</a>
 </span>
@@ -896,6 +1098,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the network interface.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -921,6 +1132,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="owner_id_python">
+<a href="#owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the owner of the network interface.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_dns_name_python">
 <a href="#private_dns_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>name</a>
@@ -957,13 +1177,19 @@ Get an existing NetworkInterface resource's state with the given name, ID, and o
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">attachments</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkInterfaceAttachmentArgs]]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">interface_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ipv4_prefix_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">ipv4_prefixes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">ipv6_address_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">ipv6_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ipv6_prefix_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">ipv6_prefixes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">mac_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">outpost_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">private_dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -1085,6 +1311,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_attachments_csharp">
 <a href="#state_attachments_csharp" style="color: inherit; text-decoration: inherit;">Attachments</a>
 </span>
@@ -1112,6 +1347,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Type of network interface to create. Set to `efa` for Elastic Fabric Adapter.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ipv4prefixcount_csharp">
+<a href="#state_ipv4prefixcount_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Prefix<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of IPv4 prefixes that AWS automatically assigns to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ipv4prefixes_csharp">
+<a href="#state_ipv4prefixes_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Prefixes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}One or more IPv4 prefixes assigned to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ipv6addresscount_csharp">
 <a href="#state_ipv6addresscount_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Count</a>
 </span>
@@ -1130,6 +1383,24 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. You can't use this option if you're specifying `ipv6_address_count`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ipv6prefixcount_csharp">
+<a href="#state_ipv6prefixcount_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Prefix<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of IPv6 prefixes that AWS automatically assigns to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ipv6prefixes_csharp">
+<a href="#state_ipv6prefixes_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Prefixes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}One or more IPv6 prefixes assigned to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_macaddress_csharp">
 <a href="#state_macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
 </span>
@@ -1146,6 +1417,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ownerid_csharp">
+<a href="#state_ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the owner of the network interface.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatednsname_csharp">
 <a href="#state_privatednsname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name</a>
@@ -1231,6 +1511,15 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_attachments_go">
 <a href="#state_attachments_go" style="color: inherit; text-decoration: inherit;">Attachments</a>
 </span>
@@ -1258,6 +1547,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Type of network interface to create. Set to `efa` for Elastic Fabric Adapter.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ipv4prefixcount_go">
+<a href="#state_ipv4prefixcount_go" style="color: inherit; text-decoration: inherit;">Ipv4Prefix<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of IPv4 prefixes that AWS automatically assigns to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ipv4prefixes_go">
+<a href="#state_ipv4prefixes_go" style="color: inherit; text-decoration: inherit;">Ipv4Prefixes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}One or more IPv4 prefixes assigned to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ipv6addresscount_go">
 <a href="#state_ipv6addresscount_go" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Count</a>
 </span>
@@ -1276,6 +1583,24 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. You can't use this option if you're specifying `ipv6_address_count`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ipv6prefixcount_go">
+<a href="#state_ipv6prefixcount_go" style="color: inherit; text-decoration: inherit;">Ipv6Prefix<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of IPv6 prefixes that AWS automatically assigns to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ipv6prefixes_go">
+<a href="#state_ipv6prefixes_go" style="color: inherit; text-decoration: inherit;">Ipv6Prefixes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}One or more IPv6 prefixes assigned to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_macaddress_go">
 <a href="#state_macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
 </span>
@@ -1292,6 +1617,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ownerid_go">
+<a href="#state_ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the owner of the network interface.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatednsname_go">
 <a href="#state_privatednsname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name</a>
@@ -1377,6 +1711,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_attachments_nodejs">
 <a href="#state_attachments_nodejs" style="color: inherit; text-decoration: inherit;">attachments</a>
 </span>
@@ -1404,6 +1747,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Type of network interface to create. Set to `efa` for Elastic Fabric Adapter.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ipv4prefixcount_nodejs">
+<a href="#state_ipv4prefixcount_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Prefix<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of IPv4 prefixes that AWS automatically assigns to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ipv4prefixes_nodejs">
+<a href="#state_ipv4prefixes_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Prefixes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}One or more IPv4 prefixes assigned to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ipv6addresscount_nodejs">
 <a href="#state_ipv6addresscount_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Count</a>
 </span>
@@ -1422,6 +1783,24 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. You can't use this option if you're specifying `ipv6_address_count`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ipv6prefixcount_nodejs">
+<a href="#state_ipv6prefixcount_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Prefix<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of IPv6 prefixes that AWS automatically assigns to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ipv6prefixes_nodejs">
+<a href="#state_ipv6prefixes_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Prefixes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}One or more IPv6 prefixes assigned to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_macaddress_nodejs">
 <a href="#state_macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
 </span>
@@ -1438,6 +1817,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ownerid_nodejs">
+<a href="#state_ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the owner of the network interface.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatednsname_nodejs">
 <a href="#state_privatednsname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Name</a>
@@ -1523,6 +1911,15 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_attachments_python">
 <a href="#state_attachments_python" style="color: inherit; text-decoration: inherit;">attachments</a>
 </span>
@@ -1550,6 +1947,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Type of network interface to create. Set to `efa` for Elastic Fabric Adapter.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ipv4_prefix_count_python">
+<a href="#state_ipv4_prefix_count_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>prefix_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of IPv4 prefixes that AWS automatically assigns to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ipv4_prefixes_python">
+<a href="#state_ipv4_prefixes_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>prefixes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}One or more IPv4 prefixes assigned to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_ipv6_address_count_python">
 <a href="#state_ipv6_address_count_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address_<wbr>count</a>
 </span>
@@ -1568,6 +1983,24 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. You can't use this option if you're specifying `ipv6_address_count`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ipv6_prefix_count_python">
+<a href="#state_ipv6_prefix_count_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>prefix_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of IPv6 prefixes that AWS automatically assigns to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ipv6_prefixes_python">
+<a href="#state_ipv6_prefixes_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>prefixes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}One or more IPv6 prefixes assigned to the network interface.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_mac_address_python">
 <a href="#state_mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
 </span>
@@ -1584,6 +2017,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_owner_id_python">
+<a href="#state_owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the owner of the network interface.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_dns_name_python">
 <a href="#state_private_dns_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>name</a>
@@ -1799,7 +2241,7 @@ The following state arguments are supported:
 ## Import
 
 
-Network Interfaces can be imported using the `id`, e.g.
+Network Interfaces can be imported using the `id`, e.g.,
 
 ```sh
  $ pulumi import aws:ec2/networkInterface:NetworkInterface test eni-e5aa89a3
@@ -1815,6 +2257,6 @@ Network Interfaces can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

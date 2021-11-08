@@ -1956,7 +1956,7 @@ These can be either the names of Git repositories stored as resources in your ac
 ## Import
 
 
-Sagemaker Notebook Instances can be imported using the `name`, e.g.
+Sagemaker Notebook Instances can be imported using the `name`, e.g.,
 
 ```sh
  $ pulumi import aws:sagemaker/notebookInstance:NotebookInstance test_notebook_instance my-notebook-instance
@@ -1972,6 +1972,6 @@ Sagemaker Notebook Instances can be imported using the `name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

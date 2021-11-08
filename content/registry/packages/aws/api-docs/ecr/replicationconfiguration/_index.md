@@ -988,7 +988,7 @@ The following state arguments are supported:
 ## Import
 
 
-ECR Replication Configuration can be imported using the `registry_id`, e.g.
+ECR Replication Configuration can be imported using the `registry_id`, e.g.,
 
 ```sh
  $ pulumi import aws:ecr/replicationConfiguration:ReplicationConfiguration service 012345678912
@@ -1004,6 +1004,6 @@ ECR Replication Configuration can be imported using the `registry_id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

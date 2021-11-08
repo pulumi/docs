@@ -849,7 +849,7 @@ prefix. Conflicts with `name`.
 ## Import
 
 
-IAM Group Policies can be imported using the `group_name:group_policy_name`, e.g.
+IAM Group Policies can be imported using the `group_name:group_policy_name`, e.g.,
 
 ```sh
  $ pulumi import aws:iam/groupPolicy:GroupPolicy mypolicy group_of_mypolicy_name:mypolicy_name
@@ -865,6 +865,6 @@ IAM Group Policies can be imported using the `group_name:group_policy_name`, e.g
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

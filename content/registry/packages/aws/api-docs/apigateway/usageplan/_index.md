@@ -1442,6 +1442,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API stage name of the associated API stage in a usage plan.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="throttles_csharp">
+<a href="#throttles_csharp" style="color: inherit; text-decoration: inherit;">Throttles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#usageplanapistagethrottle">List&lt;Usage<wbr>Plan<wbr>Api<wbr>Stage<wbr>Throttle&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The throttling limits of the usage plan.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1464,6 +1473,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API stage name of the associated API stage in a usage plan.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="throttles_go">
+<a href="#throttles_go" style="color: inherit; text-decoration: inherit;">Throttles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#usageplanapistagethrottle">[]Usage<wbr>Plan<wbr>Api<wbr>Stage<wbr>Throttle</a></span>
+    </dt>
+    <dd>{{% md %}}The throttling limits of the usage plan.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1486,6 +1504,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API stage name of the associated API stage in a usage plan.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="throttles_nodejs">
+<a href="#throttles_nodejs" style="color: inherit; text-decoration: inherit;">throttles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#usageplanapistagethrottle">Usage<wbr>Plan<wbr>Api<wbr>Stage<wbr>Throttle[]</a></span>
+    </dt>
+    <dd>{{% md %}}The throttling limits of the usage plan.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1508,6 +1535,141 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API stage name of the associated API stage in a usage plan.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="throttles_python">
+<a href="#throttles_python" style="color: inherit; text-decoration: inherit;">throttles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#usageplanapistagethrottle">Sequence[Usage<wbr>Plan<wbr>Api<wbr>Stage<wbr>Throttle]</a></span>
+    </dt>
+    <dd>{{% md %}}The throttling limits of the usage plan.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="usageplanapistagethrottle">Usage<wbr>Plan<wbr>Api<wbr>Stage<wbr>Throttle</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method to apply the throttle settings for. Specfiy the path and method, for example `/test/GET`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="burstlimit_csharp">
+<a href="#burstlimit_csharp" style="color: inherit; text-decoration: inherit;">Burst<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ratelimit_csharp">
+<a href="#ratelimit_csharp" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The API request steady-state rate limit.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method to apply the throttle settings for. Specfiy the path and method, for example `/test/GET`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="burstlimit_go">
+<a href="#burstlimit_go" style="color: inherit; text-decoration: inherit;">Burst<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ratelimit_go">
+<a href="#ratelimit_go" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The API request steady-state rate limit.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method to apply the throttle settings for. Specfiy the path and method, for example `/test/GET`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="burstlimit_nodejs">
+<a href="#burstlimit_nodejs" style="color: inherit; text-decoration: inherit;">burst<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ratelimit_nodejs">
+<a href="#ratelimit_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The API request steady-state rate limit.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The method to apply the throttle settings for. Specfiy the path and method, for example `/test/GET`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="burst_limit_python">
+<a href="#burst_limit_python" style="color: inherit; text-decoration: inherit;">burst_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rate_limit_python">
+<a href="#rate_limit_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The API request steady-state rate limit.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1729,7 +1891,7 @@ The following state arguments are supported:
 ## Import
 
 
-AWS API Gateway Usage Plan can be imported using the `id`, e.g.
+AWS API Gateway Usage Plan can be imported using the `id`, e.g.,
 
 ```sh
  $ pulumi import aws:apigateway/usagePlan:UsagePlan myusageplan <usage_plan_id>
@@ -1745,6 +1907,6 @@ AWS API Gateway Usage Plan can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

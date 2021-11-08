@@ -1457,7 +1457,7 @@ Currently only one listener is supported per virtual router.
 ## Import
 
 
-App Mesh virtual routers can be imported using `mesh_name` together with the virtual router's `name`, e.g.
+App Mesh virtual routers can be imported using `mesh_name` together with the virtual router's `name`, e.g.,
 
 ```sh
  $ pulumi import aws:appmesh/virtualRouter:VirtualRouter serviceb simpleapp/serviceB
@@ -1475,6 +1475,6 @@ App Mesh virtual routers can be imported using `mesh_name` together with the vir
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -2874,7 +2874,7 @@ The following state arguments are supported:
 ## Import
 
 
-Workspaces directory can be imported using the directory ID, e.g.
+Workspaces directory can be imported using the directory ID, e.g.,
 
 ```sh
  $ pulumi import aws:workspaces/directory:Directory main d-4444444444
@@ -2890,6 +2890,6 @@ Workspaces directory can be imported using the directory ID, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

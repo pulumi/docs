@@ -1032,7 +1032,7 @@ The following state arguments are supported:
 ## Import
 
 
-Signer signing profile permission statements can be imported using profile_name/statement_id, e.g.
+Signer signing profile permission statements can be imported using profile_name/statement_id, e.g.,
 
 ```sh
  $ pulumi import aws:signer/signingProfilePermission:SigningProfilePermission test_signer_signing_profile_permission prod_profile_DdW3Mk1foYL88fajut4mTVFGpuwfd4ACO6ANL0D1uIj7lrn8adK/ProdAccountStartSigningJobStatementId
@@ -1048,6 +1048,6 @@ Signer signing profile permission statements can be imported using profile_name/
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

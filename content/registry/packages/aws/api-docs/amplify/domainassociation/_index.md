@@ -1177,7 +1177,7 @@ The following state arguments are supported:
 ## Import
 
 
-Amplify domain association can be imported using `app_id` and `domain_name`, e.g.
+Amplify domain association can be imported using `app_id` and `domain_name`, e.g.,
 
 ```sh
  $ pulumi import aws:amplify/domainAssociation:DomainAssociation app d2ypk4k47z8u6/example.com
@@ -1193,6 +1193,6 @@ Amplify domain association can be imported using `app_id` and `domain_name`, e.g
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

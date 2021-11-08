@@ -2261,7 +2261,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
 ## Import
 
 
-Auto Scaling scaling plans can be imported using the `name`, e.g.
+Auto Scaling scaling plans can be imported using the `name`, e.g.,
 
 ```sh
  $ pulumi import aws:autoscalingplans/scalingPlan:ScalingPlan example MyScale1
@@ -2277,6 +2277,6 @@ Auto Scaling scaling plans can be imported using the `name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

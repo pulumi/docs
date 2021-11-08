@@ -128,6 +128,7 @@ const example = new aws.kms.ExternalKey("example", {
                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                 <span class="nx">key_material_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">multi_region</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                 <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                 <span class="nx">valid_to</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -305,6 +306,15 @@ The ExternalKey resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Base64 encoded 256-bit symmetric encryption key material to import. The CMK is permanently associated with this key material. The same key material can be reimported, but you cannot import different key material.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="multiregion_csharp">
+<a href="#multiregion_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the KMS key is a multi-Region (`true`) or regional (`false`) key. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="policy_csharp">
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
@@ -379,6 +389,15 @@ The ExternalKey resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded 256-bit symmetric encryption key material to import. The CMK is permanently associated with this key material. The same key material can be reimported, but you cannot import different key material.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="multiregion_go">
+<a href="#multiregion_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the KMS key is a multi-Region (`true`) or regional (`false`) key. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_go">
@@ -457,6 +476,15 @@ The ExternalKey resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Base64 encoded 256-bit symmetric encryption key material to import. The CMK is permanently associated with this key material. The same key material can be reimported, but you cannot import different key material.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="multiregion_nodejs">
+<a href="#multiregion_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the KMS key is a multi-Region (`true`) or regional (`false`) key. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="policy_nodejs">
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
@@ -531,6 +559,15 @@ The ExternalKey resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64 encoded 256-bit symmetric encryption key material to import. The CMK is permanently associated with this key material. The same key material can be reimported, but you cannot import different key material.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="multi_region_python">
+<a href="#multi_region_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the KMS key is a multi-Region (`true`) or regional (`false`) key. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_python">
@@ -821,6 +858,7 @@ Get an existing ExternalKey resource's state with the given name, ID, and option
         <span class="nx">key_material_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">key_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">key_usage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">multi_region</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -1018,6 +1056,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The cryptographic operations for which you can use the CMK.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_multiregion_csharp">
+<a href="#state_multiregion_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the KMS key is a multi-Region (`true`) or regional (`false`) key. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_policy_csharp">
 <a href="#state_policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
@@ -1137,6 +1184,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cryptographic operations for which you can use the CMK.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_multiregion_go">
+<a href="#state_multiregion_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the KMS key is a multi-Region (`true`) or regional (`false`) key. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_go">
@@ -1260,6 +1316,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The cryptographic operations for which you can use the CMK.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_multiregion_nodejs">
+<a href="#state_multiregion_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the KMS key is a multi-Region (`true`) or regional (`false`) key. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_policy_nodejs">
 <a href="#state_policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
@@ -1381,6 +1446,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The cryptographic operations for which you can use the CMK.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_multi_region_python">
+<a href="#state_multi_region_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the KMS key is a multi-Region (`true`) or regional (`false`) key. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_policy_python">
 <a href="#state_policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
@@ -1425,7 +1499,7 @@ The following state arguments are supported:
 ## Import
 
 
-KMS External Keys can be imported using the `id`, e.g.
+KMS External Keys can be imported using the `id`, e.g.,
 
 ```sh
  $ pulumi import aws:kms/externalKey:ExternalKey a arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab
@@ -1441,6 +1515,6 @@ KMS External Keys can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

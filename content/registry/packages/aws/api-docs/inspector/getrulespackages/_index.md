@@ -38,7 +38,7 @@ class MyStack : Stack
     public MyStack()
     {
         var rules = Output.Create(Aws.Inspector.GetRulesPackages.InvokeAsync());
-        // e.g. Use in aws_inspector_assessment_template
+        // e.g., Use in aws_inspector_assessment_template
         var @group = new Aws.Inspector.ResourceGroup("group", new Aws.Inspector.ResourceGroupArgs
         {
             Tags = 
@@ -119,7 +119,7 @@ import pulumi
 import pulumi_aws as aws
 
 rules = aws.inspector.get_rules_packages()
-# e.g. Use in aws_inspector_assessment_template
+# e.g., Use in aws_inspector_assessment_template
 group = aws.inspector.ResourceGroup("group", tags={
     "test": "test",
 })
@@ -142,7 +142,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const rules = aws.inspector.getRulesPackages({});
-// e.g. Use in aws_inspector_assessment_template
+// e.g., Use in aws_inspector_assessment_template
 const group = new aws.inspector.ResourceGroup("group", {tags: {
     test: "test",
 }});
@@ -303,6 +303,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

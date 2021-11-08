@@ -408,7 +408,7 @@ The ObjectCopy resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g., en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_csharp">
@@ -417,7 +417,7 @@ The ObjectCopy resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. `application/octet-stream`. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g., `application/octet-stream`. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copyifmatch_csharp">
@@ -754,7 +754,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g., en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_go">
@@ -763,7 +763,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. `application/octet-stream`. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g., `application/octet-stream`. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copyifmatch_go">
@@ -1100,7 +1100,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g., en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_nodejs">
@@ -1109,7 +1109,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. `application/octet-stream`. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g., `application/octet-stream`. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copyifmatch_nodejs">
@@ -1446,7 +1446,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g., en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_type_python">
@@ -1455,7 +1455,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. `application/octet-stream`. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g., `application/octet-stream`. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copy_if_match_python">
@@ -2251,7 +2251,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g., en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_csharp">
@@ -2260,7 +2260,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. `application/octet-stream`. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g., `application/octet-stream`. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_copyifmatch_csharp">
@@ -2660,7 +2660,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g., en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_go">
@@ -2669,7 +2669,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. `application/octet-stream`. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g., `application/octet-stream`. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_copyifmatch_go">
@@ -3069,7 +3069,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g., en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_nodejs">
@@ -3078,7 +3078,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. `application/octet-stream`. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g., `application/octet-stream`. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_copyifmatch_nodejs">
@@ -3478,7 +3478,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g., en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_type_python">
@@ -3487,7 +3487,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. `application/octet-stream`. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g., `application/octet-stream`. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_copy_if_match_python">
@@ -4040,6 +4040,6 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

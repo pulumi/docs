@@ -1032,7 +1032,7 @@ The following state arguments are supported:
 ## Import
 
 
-GuardDuty members can be imported using the the primary GuardDuty detector ID and member AWS account ID, e.g.
+GuardDuty members can be imported using the the primary GuardDuty detector ID and member AWS account ID, e.g.,
 
 ```sh
  $ pulumi import aws:guardduty/member:Member MyMember 00b00fd5aecc0ab60a708659477e9617:123456789012
@@ -1048,6 +1048,6 @@ GuardDuty members can be imported using the the primary GuardDuty detector ID an
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

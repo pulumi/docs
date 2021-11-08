@@ -2525,7 +2525,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 ## Import
 
 
-`aws_apigatewayv2_integration` can be imported by using the API identifier and integration identifier, e.g.
+`aws_apigatewayv2_integration` can be imported by using the API identifier and integration identifier, e.g.,
 
 ```sh
  $ pulumi import aws:apigatewayv2/integration:Integration example aabbccddee/1122334
@@ -2541,6 +2541,6 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -452,7 +452,7 @@ The SshKey resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Server ID of the Transfer Server (e.g. `s-12345678`)
+    <dd>{{% md %}}The Server ID of the Transfer Server (e.g., `s-12345678`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
@@ -483,7 +483,7 @@ The SshKey resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Server ID of the Transfer Server (e.g. `s-12345678`)
+    <dd>{{% md %}}The Server ID of the Transfer Server (e.g., `s-12345678`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
@@ -514,7 +514,7 @@ The SshKey resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Server ID of the Transfer Server (e.g. `s-12345678`)
+    <dd>{{% md %}}The Server ID of the Transfer Server (e.g., `s-12345678`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
@@ -545,7 +545,7 @@ The SshKey resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Server ID of the Transfer Server (e.g. `s-12345678`)
+    <dd>{{% md %}}The Server ID of the Transfer Server (e.g., `s-12345678`)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_name_python">
@@ -759,7 +759,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Server ID of the Transfer Server (e.g. `s-12345678`)
+    <dd>{{% md %}}The Server ID of the Transfer Server (e.g., `s-12345678`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
@@ -790,7 +790,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Server ID of the Transfer Server (e.g. `s-12345678`)
+    <dd>{{% md %}}The Server ID of the Transfer Server (e.g., `s-12345678`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
@@ -821,7 +821,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Server ID of the Transfer Server (e.g. `s-12345678`)
+    <dd>{{% md %}}The Server ID of the Transfer Server (e.g., `s-12345678`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_nodejs">
@@ -852,7 +852,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Server ID of the Transfer Server (e.g. `s-12345678`)
+    <dd>{{% md %}}The Server ID of the Transfer Server (e.g., `s-12345678`)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_name_python">
@@ -888,6 +888,6 @@ Transfer SSH Public Key can be imported using the `server_id` and `user_name` an
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

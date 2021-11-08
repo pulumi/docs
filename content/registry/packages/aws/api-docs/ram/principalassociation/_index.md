@@ -732,7 +732,7 @@ The following state arguments are supported:
 ## Import
 
 
-RAM Principal Associations can be imported using their Resource Share ARN and the `principal` separated by a comma, e.g.
+RAM Principal Associations can be imported using their Resource Share ARN and the `principal` separated by a comma, e.g.,
 
 ```sh
  $ pulumi import aws:ram/principalAssociation:PrincipalAssociation example arn:aws:ram:eu-west-1:123456789012:resource-share/73da1ab9-b94a-4ba3-8eb4-45917f7f4b12,123456789012
@@ -748,6 +748,6 @@ RAM Principal Associations can be imported using their Resource Share ARN and th
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

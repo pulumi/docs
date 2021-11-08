@@ -50,6 +50,7 @@ Explore the resources and functions of the aws.iam module.
     <li><a href="getservercertificate" title="GetServerCertificate"><span class="api-symbol api-symbol--function"></span>GetServerCertificate</a></li>
     <li><a href="getsessioncontext" title="GetSessionContext"><span class="api-symbol api-symbol--function"></span>GetSessionContext</a></li>
     <li><a href="getuser" title="GetUser"><span class="api-symbol api-symbol--function"></span>GetUser</a></li>
+    <li><a href="getusersshkey" title="GetUserSshKey"><span class="api-symbol api-symbol--function"></span>GetUserSshKey</a></li>
     <li><a href="getusers" title="GetUsers"><span class="api-symbol api-symbol--function"></span>GetUsers</a></li>
 </ul>
 
@@ -60,8 +61,8 @@ Explore the resources and functions of the aws.iam module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.26.0</dd>
+	<dd>4.27.0</dd>
 </dl>
 

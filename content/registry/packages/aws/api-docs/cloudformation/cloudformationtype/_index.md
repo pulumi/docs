@@ -14,7 +14,7 @@ no_edit_this_page: true
 
 ## Import
 
-`aws_cloudformation_type` can be imported with their type version Amazon Resource Name (ARN), e.g.
+`aws_cloudformation_type` can be imported with their type version Amazon Resource Name (ARN), e.g.,
 
 ```sh
  $ pulumi import aws:cloudformation/cloudFormationType:CloudFormationType example arn:aws:cloudformation:us-east-1:123456789012:type/resource/ExampleCompany-ExampleService-ExampleType/1
@@ -1726,6 +1726,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -358,7 +358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The volume ARN (e.g. arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
+    <dd>{{% md %}}The volume ARN (e.g., arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzone_csharp">
@@ -466,7 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The volume ID (e.g. vol-59fcb34e).
+    <dd>{{% md %}}The volume ID (e.g., vol-59fcb34e).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumetype_csharp">
@@ -504,7 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The volume ARN (e.g. arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
+    <dd>{{% md %}}The volume ARN (e.g., arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzone_go">
@@ -612,7 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The volume ID (e.g. vol-59fcb34e).
+    <dd>{{% md %}}The volume ID (e.g., vol-59fcb34e).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumetype_go">
@@ -650,7 +650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The volume ARN (e.g. arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
+    <dd>{{% md %}}The volume ARN (e.g., arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzone_nodejs">
@@ -758,7 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The volume ID (e.g. vol-59fcb34e).
+    <dd>{{% md %}}The volume ID (e.g., vol-59fcb34e).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumetype_nodejs">
@@ -796,7 +796,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The volume ARN (e.g. arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
+    <dd>{{% md %}}The volume ARN (e.g., arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availability_zone_python">
@@ -904,7 +904,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The volume ID (e.g. vol-59fcb34e).
+    <dd>{{% md %}}The volume ID (e.g., vol-59fcb34e).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volume_type_python">
@@ -1034,6 +1034,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

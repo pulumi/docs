@@ -484,7 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description provided by the service that created the Hosted Zone (e.g. `arn:aws:servicediscovery:us-east-1:1234567890:namespace/ns-xxxxxxxxxxxxxxxx`).
+    <dd>{{% md %}}The description provided by the service that created the Hosted Zone (e.g., `arn:aws:servicediscovery:us-east-1:1234567890:namespace/ns-xxxxxxxxxxxxxxxx`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linkedserviceprincipal_csharp">
@@ -493,7 +493,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service that created the Hosted Zone (e.g. `servicediscovery.amazonaws.com`).
+    <dd>{{% md %}}The service that created the Hosted Zone (e.g., `servicediscovery.amazonaws.com`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
@@ -600,7 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description provided by the service that created the Hosted Zone (e.g. `arn:aws:servicediscovery:us-east-1:1234567890:namespace/ns-xxxxxxxxxxxxxxxx`).
+    <dd>{{% md %}}The description provided by the service that created the Hosted Zone (e.g., `arn:aws:servicediscovery:us-east-1:1234567890:namespace/ns-xxxxxxxxxxxxxxxx`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linkedserviceprincipal_go">
@@ -609,7 +609,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service that created the Hosted Zone (e.g. `servicediscovery.amazonaws.com`).
+    <dd>{{% md %}}The service that created the Hosted Zone (e.g., `servicediscovery.amazonaws.com`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
@@ -716,7 +716,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description provided by the service that created the Hosted Zone (e.g. `arn:aws:servicediscovery:us-east-1:1234567890:namespace/ns-xxxxxxxxxxxxxxxx`).
+    <dd>{{% md %}}The description provided by the service that created the Hosted Zone (e.g., `arn:aws:servicediscovery:us-east-1:1234567890:namespace/ns-xxxxxxxxxxxxxxxx`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linkedserviceprincipal_nodejs">
@@ -725,7 +725,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service that created the Hosted Zone (e.g. `servicediscovery.amazonaws.com`).
+    <dd>{{% md %}}The service that created the Hosted Zone (e.g., `servicediscovery.amazonaws.com`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
@@ -832,7 +832,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description provided by the service that created the Hosted Zone (e.g. `arn:aws:servicediscovery:us-east-1:1234567890:namespace/ns-xxxxxxxxxxxxxxxx`).
+    <dd>{{% md %}}The description provided by the service that created the Hosted Zone (e.g., `arn:aws:servicediscovery:us-east-1:1234567890:namespace/ns-xxxxxxxxxxxxxxxx`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linked_service_principal_python">
@@ -841,7 +841,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service that created the Hosted Zone (e.g. `servicediscovery.amazonaws.com`).
+    <dd>{{% md %}}The service that created the Hosted Zone (e.g., `servicediscovery.amazonaws.com`).
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
@@ -914,6 +914,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -37,7 +37,7 @@ class MyStack : Stack
     {
         var example = Output.Create(Aws.CloudWatch.GetLogGroups.InvokeAsync(new Aws.CloudWatch.GetLogGroupsArgs
         {
-            LogGroupPrefix = "/MyImportantLogs",
+            LogGroupNamePrefix = "/MyImportantLogs",
         }));
     }
 
@@ -61,7 +61,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := cloudwatch.GetLogGroups(ctx, &cloudwatch.GetLogGroupsArgs{
-			LogGroupPrefix: "/MyImportantLogs",
+			LogGroupNamePrefix: "/MyImportantLogs",
 		}, nil)
 		if err != nil {
 			return err
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.cloudwatch.get_log_groups(log_group_prefix="/MyImportantLogs")
+example = aws.cloudwatch.get_log_groups(log_group_name_prefix="/MyImportantLogs")
 ```
 
 
@@ -96,7 +96,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.cloudwatch.getLogGroups({
-    logGroupPrefix: "/MyImportantLogs",
+    logGroupNamePrefix: "/MyImportantLogs",
 }));
 ```
 
@@ -375,6 +375,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -2294,7 +2294,7 @@ The following state arguments are supported:
 ## Import
 
 
-S3 bucket notification can be imported using the `bucket`, e.g.
+S3 bucket notification can be imported using the `bucket`, e.g.,
 
 ```sh
  $ pulumi import aws:s3/bucketNotification:BucketNotification bucket_notification bucket-name
@@ -2310,6 +2310,6 @@ S3 bucket notification can be imported using the `bucket`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

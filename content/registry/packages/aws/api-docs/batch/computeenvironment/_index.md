@@ -1870,6 +1870,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The desired number of EC2 vCPUS in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ec2configuration_csharp">
+<a href="#ec2configuration_csharp" style="color: inherit; text-decoration: inherit;">Ec2Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeenvironmentcomputeresourcesec2configuration">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Ec2Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Provides information used to select Amazon Machine Images (AMIs) for EC2 instances in the compute environment. If Ec2Configuration isn't specified, the default is ECS_AL2. This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ec2keypair_csharp">
 <a href="#ec2keypair_csharp" style="color: inherit; text-decoration: inherit;">Ec2Key<wbr>Pair</a>
 </span>
@@ -1885,7 +1894,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Machine Image (AMI) ID used for instances launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+    <dd>{{% md %}}The Amazon Machine Image (AMI) ID used for instances launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified. (Deprecated, use `image_id_override` instead)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancerole_csharp">
@@ -2009,6 +2018,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The desired number of EC2 vCPUS in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ec2configuration_go">
+<a href="#ec2configuration_go" style="color: inherit; text-decoration: inherit;">Ec2Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeenvironmentcomputeresourcesec2configuration">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Ec2Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Provides information used to select Amazon Machine Images (AMIs) for EC2 instances in the compute environment. If Ec2Configuration isn't specified, the default is ECS_AL2. This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ec2keypair_go">
 <a href="#ec2keypair_go" style="color: inherit; text-decoration: inherit;">Ec2Key<wbr>Pair</a>
 </span>
@@ -2024,7 +2042,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Machine Image (AMI) ID used for instances launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+    <dd>{{% md %}}The Amazon Machine Image (AMI) ID used for instances launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified. (Deprecated, use `image_id_override` instead)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancerole_go">
@@ -2148,6 +2166,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The desired number of EC2 vCPUS in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ec2configuration_nodejs">
+<a href="#ec2configuration_nodejs" style="color: inherit; text-decoration: inherit;">ec2Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeenvironmentcomputeresourcesec2configuration">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Ec2Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Provides information used to select Amazon Machine Images (AMIs) for EC2 instances in the compute environment. If Ec2Configuration isn't specified, the default is ECS_AL2. This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ec2keypair_nodejs">
 <a href="#ec2keypair_nodejs" style="color: inherit; text-decoration: inherit;">ec2Key<wbr>Pair</a>
 </span>
@@ -2163,7 +2190,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Machine Image (AMI) ID used for instances launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+    <dd>{{% md %}}The Amazon Machine Image (AMI) ID used for instances launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified. (Deprecated, use `image_id_override` instead)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancerole_nodejs">
@@ -2287,6 +2314,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The desired number of EC2 vCPUS in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ec2_configuration_python">
+<a href="#ec2_configuration_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#computeenvironmentcomputeresourcesec2configuration">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Ec2Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Provides information used to select Amazon Machine Images (AMIs) for EC2 instances in the compute environment. If Ec2Configuration isn't specified, the default is ECS_AL2. This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ec2_key_pair_python">
 <a href="#ec2_key_pair_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>key_<wbr>pair</a>
 </span>
@@ -2302,7 +2338,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Machine Image (AMI) ID used for instances launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+    <dd>{{% md %}}The Amazon Machine Image (AMI) ID used for instances launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified. (Deprecated, use `image_id_override` instead)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_role_python">
@@ -2357,6 +2393,96 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="computeenvironmentcomputeresourcesec2configuration">Compute<wbr>Environment<wbr>Compute<wbr>Resources<wbr>Ec2Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="imageidoverride_csharp">
+<a href="#imageidoverride_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AMI ID used for instances launched in the compute environment that match the image type. This setting overrides the `image_id` argument in the `compute_resourcess block.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="imagetype_csharp">
+<a href="#imagetype_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The image type to match with the instance type to select an AMI. If the `image_id_override` parameter isn't specified, then a recent [Amazon ECS-optimized Amazon Linux 2 AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami) (`ECS_AL2`) is used.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="imageidoverride_go">
+<a href="#imageidoverride_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AMI ID used for instances launched in the compute environment that match the image type. This setting overrides the `image_id` argument in the `compute_resourcess block.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="imagetype_go">
+<a href="#imagetype_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The image type to match with the instance type to select an AMI. If the `image_id_override` parameter isn't specified, then a recent [Amazon ECS-optimized Amazon Linux 2 AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami) (`ECS_AL2`) is used.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="imageidoverride_nodejs">
+<a href="#imageidoverride_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AMI ID used for instances launched in the compute environment that match the image type. This setting overrides the `image_id` argument in the `compute_resourcess block.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="imagetype_nodejs">
+<a href="#imagetype_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The image type to match with the instance type to select an AMI. If the `image_id_override` parameter isn't specified, then a recent [Amazon ECS-optimized Amazon Linux 2 AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami) (`ECS_AL2`) is used.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="image_id_override_python">
+<a href="#image_id_override_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id_<wbr>override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AMI ID used for instances launched in the compute environment that match the image type. This setting overrides the `image_id` argument in the `compute_resourcess block.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="image_type_python">
+<a href="#image_type_python" style="color: inherit; text-decoration: inherit;">image_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The image type to match with the instance type to select an AMI. If the `image_id_override` parameter isn't specified, then a recent [Amazon ECS-optimized Amazon Linux 2 AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami) (`ECS_AL2`) is used.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2488,7 +2614,7 @@ The following state arguments are supported:
 ## Import
 
 
-AWS Batch compute can be imported using the `compute_environment_name`, e.g.
+AWS Batch compute can be imported using the `compute_environment_name`, e.g.,
 
 ```sh
  $ pulumi import aws:batch/computeEnvironment:ComputeEnvironment sample sample
@@ -2506,6 +2632,6 @@ AWS Batch compute can be imported using the `compute_environment_name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

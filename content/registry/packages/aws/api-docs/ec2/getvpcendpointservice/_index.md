@@ -405,7 +405,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The common name of an AWS service (e.g. `s3`).
+    <dd>{{% md %}}The common name of an AWS service (e.g., `s3`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicename_csharp">
@@ -454,7 +454,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The common name of an AWS service (e.g. `s3`).
+    <dd>{{% md %}}The common name of an AWS service (e.g., `s3`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicename_go">
@@ -503,7 +503,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The common name of an AWS service (e.g. `s3`).
+    <dd>{{% md %}}The common name of an AWS service (e.g., `s3`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicename_nodejs">
@@ -552,7 +552,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The common name of an AWS service (e.g. `s3`).
+    <dd>{{% md %}}The common name of an AWS service (e.g., `s3`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_name_python">
@@ -1241,6 +1241,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

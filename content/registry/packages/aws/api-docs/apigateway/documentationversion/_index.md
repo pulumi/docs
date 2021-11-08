@@ -751,7 +751,7 @@ The following state arguments are supported:
 ## Import
 
 
-API Gateway documentation versions can be imported using `REST-API-ID/VERSION`, e.g.
+API Gateway documentation versions can be imported using `REST-API-ID/VERSION`, e.g.,
 
 ```sh
  $ pulumi import aws:apigateway/documentationVersion:DocumentationVersion example 5i4e1ko720/example-version
@@ -767,6 +767,6 @@ API Gateway documentation versions can be imported using `REST-API-ID/VERSION`, 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

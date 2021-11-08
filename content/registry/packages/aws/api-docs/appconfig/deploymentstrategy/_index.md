@@ -1240,7 +1240,7 @@ The following state arguments are supported:
 ## Import
 
 
-AppConfig Deployment Strategies can be imported by using their deployment strategy ID, e.g.
+AppConfig Deployment Strategies can be imported by using their deployment strategy ID, e.g.,
 
 ```sh
  $ pulumi import aws:appconfig/deploymentStrategy:DeploymentStrategy example 11xxxxx
@@ -1256,6 +1256,6 @@ AppConfig Deployment Strategies can be imported by using their deployment strate
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

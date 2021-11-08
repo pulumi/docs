@@ -813,7 +813,7 @@ The following state arguments are supported:
 ## Import
 
 
-SNS Topic Policy can be imported using the topic ARN, e.g.
+SNS Topic Policy can be imported using the topic ARN, e.g.,
 
 ```sh
  $ pulumi import aws:sns/topicPolicy:TopicPolicy user_updates arn:aws:sns:us-west-2:0123456789012:my-topic
@@ -829,6 +829,6 @@ SNS Topic Policy can be imported using the topic ARN, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

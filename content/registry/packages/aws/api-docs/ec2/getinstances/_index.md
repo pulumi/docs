@@ -13,11 +13,11 @@ no_edit_this_page: true
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this data source to get IDs or IPs of Amazon EC2 instances to be referenced elsewhere,
-e.g. to allow easier migration from another management solution
+e.g., to allow easier migration from another management solution
 or to make it easier for an operator to connect through bastion host(s).
 
 > **Note:** It's strongly discouraged to use this data source for querying ephemeral
-instances (e.g. managed via autoscaling group), as the output may change at any time
+instances (e.g., managed via autoscaling group), as the output may change at any time
 and you'd need to re-run `apply` every time an instance comes up or dies.
 
 
@@ -562,6 +562,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 
