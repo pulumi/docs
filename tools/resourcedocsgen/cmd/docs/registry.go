@@ -85,7 +85,10 @@ func genResourceDocsForPackageFromRegistryMetadata(metadata pkg.PackageMeta, doc
 	_, err = os.Stat(overlaysSchemaFilePath)
 	if err != nil {
 		pathErr := err.(*os.PathError)
-		if pathErr.Err == os.ErrNotExist {
+		// Ideally we would compare the error code with ErrNotExist but
+		// the error message (even when un-wrapped) does not match the
+		// ErrNotExist.
+		if strings.Contains(pathErr.Error(), "no such file or directory") {
 			glog.Infoln("Didn't find an overlay schema for the package in the overlays folder...")
 			overlaysSchemaFilePath = ""
 		} else {
@@ -147,7 +150,7 @@ func genResourceDocsForAllRegistryPackages(registryRepoPath, baseDocsOutDir, bas
 			return errors.Wrapf(err, "generating resource docs using metadata file info %s", f.Name())
 		}
 
-		glog.Infoln("=== completed %s ===")
+		glog.Infof("=== completed %s ===", f.Name())
 	}
 
 	return nil

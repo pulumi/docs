@@ -23,6 +23,12 @@ export REPO_THEME_PATH="themes/default/"
 printf "Copying prebuilt docs...\n\n"
 make copy_static_prebuilt
 
+printf "Generating API docs...\n\n"
+pushd tools/resourcedocsgen
+go build -o "${GOPATH}/bin/resourcedocsgen" .
+resourcedocsgen docs registry -b "praneetloke/regen-metadata" --logtostderr
+popd
+
 printf "Running Hugo...\n\n"
 if [ "$1" == "preview" ]; then
     export HUGO_BASEURL="http://$(origin_bucket_prefix)-$(build_identifier).s3-website.$(aws_region).amazonaws.com"
