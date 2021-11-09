@@ -22,6 +22,8 @@ import (
 
 const defaultPackageCategory = pkg.PackageCategoryCloud
 
+var mainSpec *pschema.PackageSpec
+
 var categoryNameMap = map[string]pkg.PackageCategory{
 	"cloud":          pkg.PackageCategoryCloud,
 	"database":       pkg.PackageCategoryDatabase,
@@ -333,7 +335,7 @@ func packageMetadataCmd() *cobra.Command {
 			}
 
 			metadataFileName := fmt.Sprintf("%s.yaml", mainSpec.Name)
-			if err := emitFile(metadataOutDir, metadataFileName, b); err != nil {
+			if err := pkg.EmitFile(metadataOutDir, metadataFileName, b); err != nil {
 				return errors.Wrap(err, "writing metadata file")
 			}
 

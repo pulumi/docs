@@ -3,10 +3,9 @@ package docs
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/pulumi/docs/tools/resourcedocsgen/pkg"
 	"io/ioutil"
 	"os"
-	"path"
-	"path/filepath"
 	"strings"
 
 	"github.com/pkg/errors"
@@ -22,8 +21,6 @@ import (
 	go_gen "github.com/pulumi/pulumi/pkg/v3/codegen/go"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/nodejs"
 	pschema "github.com/pulumi/pulumi/pkg/v3/codegen/schema"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/tools"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
 )
 
 const (
@@ -33,10 +30,6 @@ const (
 )
 
 var mainSpec *pschema.PackageSpec
-
-func getRegistryPackagesPath(repoPath string) string {
-	return filepath.Join(repoPath, "themes", "default", "data", "registry", "packages")
-}
 
 func getPulumiPackageFromSchema(docsOutDir, overlaysSchemaFile string) (*pschema.Package, error) {
 	if overlaysSchemaFile != "" {
@@ -242,7 +235,7 @@ func generateDocsFromSchema(outDir string, pulPkg *pschema.Package) error {
 	}
 
 	for f, contents := range files {
-		if err := emitFile(outDir, f, contents); err != nil {
+		if err := pkg.EmitFile(outDir, f, contents); err != nil {
 			return errors.Wrapf(err, "emitting file %v", f)
 		}
 	}
@@ -261,25 +254,9 @@ func generatePackageTree(outDir string, pkgName string) error {
 	}
 
 	filename := fmt.Sprintf("%s.json", pkgName)
-	if err := emitFile(outDir, filename, b); err != nil {
+	if err := pkg.EmitFile(outDir, filename, b); err != nil {
 		return errors.Wrap(err, "writing the package tree")
 	}
 
 	return nil
-}
-
-func emitFile(outDir, relPath string, contents []byte) error {
-	p := path.Join(outDir, relPath)
-	if err := tools.EnsureDir(path.Dir(p)); err != nil {
-		return errors.Wrap(err, "creating directory")
-	}
-
-	f, err := os.Create(p)
-	if err != nil {
-		return errors.Wrap(err, "creating file")
-	}
-	defer contract.IgnoreClose(f)
-
-	_, err = f.Write(contents)
-	return err
 }

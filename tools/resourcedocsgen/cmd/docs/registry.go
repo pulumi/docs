@@ -115,6 +115,10 @@ func genResourceDocsForPackageFromRegistryMetadata(metadata pkg.PackageMeta, doc
 	return nil
 }
 
+func getRegistryPackagesPath(repoPath string) string {
+	return filepath.Join(repoPath, "themes", "default", "data", "registry", "packages")
+}
+
 func genResourceDocsForAllRegistryPackages(registryRepoPath, baseDocsOutDir, basePackageTreeJSONOutDir string) error {
 	registryPackagesPath := getRegistryPackagesPath(registryRepoPath)
 	metadataFiles, err := os.ReadDir(registryPackagesPath)
