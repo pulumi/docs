@@ -154,6 +154,7 @@ func genResourceDocsForAllRegistryPackages(registryRepoPath, baseDocsOutDir, bas
 }
 
 func resourceDocsFromRegistryCmd() *cobra.Command {
+	var branch string
 	var baseDocsOutDir string
 	var basePackageTreeJSONOutDir string
 
@@ -170,7 +171,6 @@ func resourceDocsFromRegistryCmd() *cobra.Command {
 
 			defer os.RemoveAll(tempDir)
 
-			branch := "praneetloke/regen-metadata"
 			glog.Infoln("Cloning the registry repo @", branch)
 			gitCmd := exec.Command("git", "clone", "-b", branch, registryRepo, tempDir)
 			gitCmd.Stdout = os.Stdout
@@ -215,6 +215,7 @@ func resourceDocsFromRegistryCmd() *cobra.Command {
 	}
 
 	cmd.Flags().StringVar(&baseDocsOutDir, "baseDocsOutDir", "../../content/registry/packages", "The directory path to where the docs will be written to")
+	cmd.Flags().StringVarP(&branch, "branch", "b", "master", "The branch at which the registry repo will be checked out.")
 	cmd.Flags().StringVar(&basePackageTreeJSONOutDir, "basePackageTreeJSONOutDir", "../../static/registry/packages/navs", "The directory path to write the package tree JSON file to")
 
 	return cmd
