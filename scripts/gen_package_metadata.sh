@@ -146,7 +146,6 @@ generate_metadata() {
     fi
 
     resourcedocsgen metadata \
-      --repoUrl "https://github.com/pulumi/pulumi-${provider}" \
       --metadataOutDir "${METADATA_OUT_DIR}" \
       --schemaFile "${SCHEMA_FILE}" \
       --version "${plugin_version}" \

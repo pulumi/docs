@@ -84,6 +84,7 @@ func getRepoSlug(repoURL string) (string, error) {
 }
 
 func genResourceDocsForPackageFromRegistryMetadata(metadata pkg.PackageMeta, docsOutDir, packageTreeJSONOutDir string) error {
+	glog.Infoln("Generating docs for", metadata.Name)
 	if metadata.RepoURL == "" {
 		return errors.Errorf("metadata for package %q does not contain the repo_url", metadata.Name)
 	}
@@ -99,6 +100,7 @@ func genResourceDocsForPackageFromRegistryMetadata(metadata pkg.PackageMeta, doc
 
 	repoSlug, err := getRepoSlug(metadata.RepoURL)
 
+	glog.Infoln("Reading remote schema file from VCS")
 	// TODO: Support raw URLs for other VCS too.
 	schemaFileURL := fmt.Sprintf("https://raw.githubusercontent.com/%s/%s/%s", repoSlug, metadata.Version, schemaFilePath)
 	resp, err := http.Get(schemaFileURL)
@@ -132,14 +134,14 @@ func genResourceDocsForPackageFromRegistryMetadata(metadata pkg.PackageMeta, doc
 		return errors.Wrap(err, "generating package from schema file")
 	}
 
+	glog.Infoln("Running docs generator now")
 	if err := generateDocsFromSchema(docsOutDir, pulPkg); err != nil {
 		return errors.Wrap(err, "generating docs from schema")
 	}
 
-	if packageTreeJSONOutDir != "" {
-		if err := generatePackageTree(packageTreeJSONOutDir, pulPkg.Name); err != nil {
-			return errors.Wrap(err, "generating package tree")
-		}
+	glog.Infoln("Generating the package tree JSON file")
+	if err := generatePackageTree(packageTreeJSONOutDir, pulPkg.Name); err != nil {
+		return errors.Wrap(err, "generating package tree")
 	}
 
 	return nil
@@ -153,6 +155,7 @@ func genResourceDocsForAllRegistryPackages(registryRepoPath, baseDocsOutDir, bas
 	}
 
 	for _, f := range metadataFiles {
+		glog.Infoln("Processing metadata file", f.Name())
 		metadataFilePath := filepath.Join(registryPackagesPath, f.Name())
 
 		b, err := os.ReadFile(metadataFilePath)
@@ -166,8 +169,7 @@ func genResourceDocsForAllRegistryPackages(registryRepoPath, baseDocsOutDir, bas
 		}
 
 		docsOutDir := filepath.Join(baseDocsOutDir, metadata.Name, "api-docs")
-		packageTreeJSONOutDir := filepath.Join(basePackageTreeJSONOutDir, fmt.Sprintf("%s.json", metadata.Name))
-		err = genResourceDocsForPackageFromRegistryMetadata(metadata, docsOutDir, packageTreeJSONOutDir)
+		err = genResourceDocsForPackageFromRegistryMetadata(metadata, docsOutDir, basePackageTreeJSONOutDir)
 		if err != nil {
 			return errors.Wrapf(err, "generating resource docs using metadata file info %s", f.Name())
 		}
@@ -186,8 +188,6 @@ func genResourceDocsFromRegistry() *cobra.Command {
 		Long: "Generate resource docs for all packages in the registry or specific packages. " +
 			"Pass a package name in the registry as an optional arg to generate docs only for that package.",
 		RunE: func(cmd *cobra.Command, args []string) error {
-			glog.Infoln("Cloning the registry repo")
-
 			tempDir, err := ioutil.TempDir("", "")
 			if err != nil {
 				return errors.Wrap(err, "creating temp dir for registry repo")
@@ -195,13 +195,18 @@ func genResourceDocsFromRegistry() *cobra.Command {
 
 			defer os.RemoveAll(tempDir)
 
-			gitCmd := exec.Command("git", "clone", "-b", "praneetloke/regen-metadata", registryRepo, tempDir)
+			branch := "praneetloke/regen-metadata"
+			glog.Infoln("Cloning the registry repo @", branch)
+			gitCmd := exec.Command("git", "clone", "-b", branch, registryRepo, tempDir)
 			gitCmd.Stdout = os.Stdout
 			if err := gitCmd.Run(); err != nil {
 				return errors.Wrap(err, "cloning the registry repo")
 			}
 
+			glog.Infoln("Cloned the repo successfully!")
+
 			if len(args) > 0 {
+				glog.Infoln("Generating docs for a single package:", args[0])
 				registryPackagesPath := getRegistryPackagesPath(tempDir)
 				pkgName := args[0]
 				metadataFilePath := filepath.Join(registryPackagesPath, fmt.Sprintf("%s.yaml", pkgName))
@@ -216,25 +221,26 @@ func genResourceDocsFromRegistry() *cobra.Command {
 				}
 
 				docsOutDir := filepath.Join(baseDocsOutDir, metadata.Name, "api-docs")
-				packageTreeJSONOutDir := filepath.Join(basePackageTreeJSONOutDir, fmt.Sprintf("%s.json", metadata.Name))
 
-				err = genResourceDocsForPackageFromRegistryMetadata(metadata, docsOutDir, packageTreeJSONOutDir)
+				err = genResourceDocsForPackageFromRegistryMetadata(metadata, docsOutDir, basePackageTreeJSONOutDir)
 				if err != nil {
 					return errors.Wrapf(err, "generating docs for package %q from registry metadata", pkgName)
 				}
 			} else {
+				glog.Infoln("Generating docs for all packages in the registry...")
 				err := genResourceDocsForAllRegistryPackages(tempDir, baseDocsOutDir, basePackageTreeJSONOutDir)
 				if err != nil {
 					return errors.Wrap(err, "generating docs for all packages from registry metadata")
 				}
 			}
 
+			glog.Infoln("Done!")
 			return nil
 		},
 	}
 
-	cmd.Flags().StringVar(&baseDocsOutDir, "baseDocsOutDir", "../content/registry/packages", "The directory path to where the docs will be written to")
-	cmd.Flags().StringVar(&basePackageTreeJSONOutDir, "basePackageTreeJSONOutDir", "../static/registry/packages/navs", "The directory path to write the package tree JSON file to")
+	cmd.Flags().StringVar(&baseDocsOutDir, "baseDocsOutDir", "../../content/registry/packages", "The directory path to where the docs will be written to")
+	cmd.Flags().StringVar(&basePackageTreeJSONOutDir, "basePackageTreeJSONOutDir", "../../static/registry/packages/navs", "The directory path to write the package tree JSON file to")
 
 	return cmd
 }

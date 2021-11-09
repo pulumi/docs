@@ -223,7 +223,6 @@ func packageMetadataCmd() *cobra.Command {
 	var component bool
 	var featured bool
 	var publisher string
-	var repoURL string
 	var schemaFile string
 	var title string
 	var updatedOn int64
@@ -316,7 +315,7 @@ func packageMetadataCmd() *cobra.Command {
 				Publisher:   publisher,
 				Title:       title,
 
-				RepoURL:        repoURL,
+				RepoURL:        mainSpec.Repository,
 				SchemaFilePath: cleanSchemaFilePath(schemaFile),
 
 				PackageStatus: status,
@@ -342,7 +341,6 @@ func packageMetadataCmd() *cobra.Command {
 		},
 	}
 
-	cmd.Flags().StringVar(&repoURL, "repoUrl", "", "The HTTPS repo URL of the package. For example, https://github.com/pulumi/pulumi-aws.")
 	cmd.Flags().StringVarP(&schemaFile, "schemaFile", "s", "", "Relative path to the schema.json file")
 	cmd.Flags().StringVar(&version, "version", "", "The version of the package")
 	cmd.Flags().StringVar(&metadataOutDir, "metadataOutDir", "", "The directory path to where the docs will be written to")
