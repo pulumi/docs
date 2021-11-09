@@ -58,6 +58,23 @@ class MyStack : Stack
             When = "foo AND bar",
             Enabled = true,
         });
+        var serverlessTask = new Snowflake.Task("serverlessTask", new Snowflake.TaskArgs
+        {
+            Comment = "my serverless task",
+            Database = "db",
+            Schema = "schema",
+            Schedule = "10",
+            SqlStatement = "select * from foo;",
+            SessionParameters = 
+            {
+                { "foo", "bar" },
+            },
+            UserTaskTimeoutMs = 10000,
+            UserTaskManagedInitialWarehouseSize = "XSMALL",
+            After = "preceding_task",
+            When = "foo AND bar",
+            Enabled = true,
+        });
     }
 
 }
@@ -97,6 +114,24 @@ func main() {
 		if err != nil {
 			return err
 		}
+		_, err = snowflake.NewTask(ctx, "serverlessTask", &snowflake.TaskArgs{
+			Comment:      pulumi.String("my serverless task"),
+			Database:     pulumi.String("db"),
+			Schema:       pulumi.String("schema"),
+			Schedule:     pulumi.String("10"),
+			SqlStatement: pulumi.String("select * from foo;"),
+			SessionParameters: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
+			UserTaskTimeoutMs:                   pulumi.Int(10000),
+			UserTaskManagedInitialWarehouseSize: pulumi.String("XSMALL"),
+			After:                               pulumi.String("preceding_task"),
+			When:                                pulumi.String("foo AND bar"),
+			Enabled:                             pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
 		return nil
 	})
 }
@@ -126,6 +161,20 @@ task = snowflake.Task("task",
     after="preceding_task",
     when="foo AND bar",
     enabled=True)
+serverless_task = snowflake.Task("serverlessTask",
+    comment="my serverless task",
+    database="db",
+    schema="schema",
+    schedule="10",
+    sql_statement="select * from foo;",
+    session_parameters={
+        "foo": "bar",
+    },
+    user_task_timeout_ms=10000,
+    user_task_managed_initial_warehouse_size="XSMALL",
+    after="preceding_task",
+    when="foo AND bar",
+    enabled=True)
 ```
 
 
@@ -150,6 +199,21 @@ const task = new snowflake.Task("task", {
         foo: "bar",
     },
     userTaskTimeoutMs: 10000,
+    after: "preceding_task",
+    when: "foo AND bar",
+    enabled: true,
+});
+const serverlessTask = new snowflake.Task("serverlessTask", {
+    comment: "my serverless task",
+    database: "db",
+    schema: "schema",
+    schedule: "10",
+    sqlStatement: "select * from foo;",
+    sessionParameters: {
+        foo: "bar",
+    },
+    userTaskTimeoutMs: 10000,
+    userTaskManagedInitialWarehouseSize: "XSMALL",
     after: "preceding_task",
     when: "foo AND bar",
     enabled: true,
@@ -189,6 +253,7 @@ const task = new snowflake.Task("task", {
          <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">session_parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
          <span class="nx">sql_statement</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">user_task_managed_initial_warehouse_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">user_task_timeout_ms</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
          <span class="nx">warehouse</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">when</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -346,15 +411,6 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Any single SQL statement, or a call to a stored procedure, executed when the task runs.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="warehouse_csharp">
-<a href="#warehouse_csharp" style="color: inherit; text-decoration: inherit;">Warehouse</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The warehouse the task will use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="after_csharp">
@@ -363,7 +419,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the predecessor task in the same database and schema of the current task. When a run of the predecessor task finishes successfully, it triggers this task (after a brief lag).
+    <dd>{{% md %}}Specifies the predecessor task in the same database and schema of the current task. When a run of the predecessor task finishes successfully, it triggers this task (after a brief lag). (Conflict with schedule)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_csharp">
@@ -399,7 +455,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schedule for periodically running the task. This can be a cron or interval in minutes.
+    <dd>{{% md %}}The schedule for periodically running the task. This can be a cron or interval in minutes. (Conflict with after)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionparameters_csharp">
@@ -411,6 +467,15 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Specifies session parameters to set for the session when the task runs. A task supports all session parameters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="usertaskmanagedinitialwarehousesize_csharp">
+<a href="#usertaskmanagedinitialwarehousesize_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Task<wbr>Managed<wbr>Initial<wbr>Warehouse<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of the compute resources to provision for the first run of the task, before a task history is available for Snowflake to determine an ideal size. Once a task has successfully completed a few runs, Snowflake ignores this parameter setting. (Conflicts with warehouse)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usertasktimeoutms_csharp">
 <a href="#usertasktimeoutms_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Task<wbr>Timeout<wbr>Ms</a>
 </span>
@@ -418,6 +483,15 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the time limit on a single run of the task before it times out (in milliseconds).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warehouse_csharp">
+<a href="#warehouse_csharp" style="color: inherit; text-decoration: inherit;">Warehouse</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The warehouse the task will use. Omit this parameter to use Snowflake-managed compute resources for runs of this task. (Conflicts with user*task*managed*initial*warehouse_size)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="when_csharp">
@@ -458,15 +532,6 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Any single SQL statement, or a call to a stored procedure, executed when the task runs.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="warehouse_go">
-<a href="#warehouse_go" style="color: inherit; text-decoration: inherit;">Warehouse</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The warehouse the task will use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="after_go">
@@ -475,7 +540,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the predecessor task in the same database and schema of the current task. When a run of the predecessor task finishes successfully, it triggers this task (after a brief lag).
+    <dd>{{% md %}}Specifies the predecessor task in the same database and schema of the current task. When a run of the predecessor task finishes successfully, it triggers this task (after a brief lag). (Conflict with schedule)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_go">
@@ -511,7 +576,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schedule for periodically running the task. This can be a cron or interval in minutes.
+    <dd>{{% md %}}The schedule for periodically running the task. This can be a cron or interval in minutes. (Conflict with after)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionparameters_go">
@@ -523,6 +588,15 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Specifies session parameters to set for the session when the task runs. A task supports all session parameters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="usertaskmanagedinitialwarehousesize_go">
+<a href="#usertaskmanagedinitialwarehousesize_go" style="color: inherit; text-decoration: inherit;">User<wbr>Task<wbr>Managed<wbr>Initial<wbr>Warehouse<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of the compute resources to provision for the first run of the task, before a task history is available for Snowflake to determine an ideal size. Once a task has successfully completed a few runs, Snowflake ignores this parameter setting. (Conflicts with warehouse)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usertasktimeoutms_go">
 <a href="#usertasktimeoutms_go" style="color: inherit; text-decoration: inherit;">User<wbr>Task<wbr>Timeout<wbr>Ms</a>
 </span>
@@ -530,6 +604,15 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the time limit on a single run of the task before it times out (in milliseconds).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warehouse_go">
+<a href="#warehouse_go" style="color: inherit; text-decoration: inherit;">Warehouse</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The warehouse the task will use. Omit this parameter to use Snowflake-managed compute resources for runs of this task. (Conflicts with user*task*managed*initial*warehouse_size)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="when_go">
@@ -570,15 +653,6 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Any single SQL statement, or a call to a stored procedure, executed when the task runs.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="warehouse_nodejs">
-<a href="#warehouse_nodejs" style="color: inherit; text-decoration: inherit;">warehouse</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The warehouse the task will use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="after_nodejs">
@@ -587,7 +661,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the predecessor task in the same database and schema of the current task. When a run of the predecessor task finishes successfully, it triggers this task (after a brief lag).
+    <dd>{{% md %}}Specifies the predecessor task in the same database and schema of the current task. When a run of the predecessor task finishes successfully, it triggers this task (after a brief lag). (Conflict with schedule)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_nodejs">
@@ -623,7 +697,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schedule for periodically running the task. This can be a cron or interval in minutes.
+    <dd>{{% md %}}The schedule for periodically running the task. This can be a cron or interval in minutes. (Conflict with after)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionparameters_nodejs">
@@ -635,6 +709,15 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Specifies session parameters to set for the session when the task runs. A task supports all session parameters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="usertaskmanagedinitialwarehousesize_nodejs">
+<a href="#usertaskmanagedinitialwarehousesize_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Task<wbr>Managed<wbr>Initial<wbr>Warehouse<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of the compute resources to provision for the first run of the task, before a task history is available for Snowflake to determine an ideal size. Once a task has successfully completed a few runs, Snowflake ignores this parameter setting. (Conflicts with warehouse)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usertasktimeoutms_nodejs">
 <a href="#usertasktimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Task<wbr>Timeout<wbr>Ms</a>
 </span>
@@ -642,6 +725,15 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the time limit on a single run of the task before it times out (in milliseconds).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warehouse_nodejs">
+<a href="#warehouse_nodejs" style="color: inherit; text-decoration: inherit;">warehouse</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The warehouse the task will use. Omit this parameter to use Snowflake-managed compute resources for runs of this task. (Conflicts with user*task*managed*initial*warehouse_size)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="when_nodejs">
@@ -682,15 +774,6 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Any single SQL statement, or a call to a stored procedure, executed when the task runs.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="warehouse_python">
-<a href="#warehouse_python" style="color: inherit; text-decoration: inherit;">warehouse</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The warehouse the task will use.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="after_python">
@@ -699,7 +782,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the predecessor task in the same database and schema of the current task. When a run of the predecessor task finishes successfully, it triggers this task (after a brief lag).
+    <dd>{{% md %}}Specifies the predecessor task in the same database and schema of the current task. When a run of the predecessor task finishes successfully, it triggers this task (after a brief lag). (Conflict with schedule)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_python">
@@ -735,7 +818,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The schedule for periodically running the task. This can be a cron or interval in minutes.
+    <dd>{{% md %}}The schedule for periodically running the task. This can be a cron or interval in minutes. (Conflict with after)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_parameters_python">
@@ -747,6 +830,15 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Specifies session parameters to set for the session when the task runs. A task supports all session parameters.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="user_task_managed_initial_warehouse_size_python">
+<a href="#user_task_managed_initial_warehouse_size_python" style="color: inherit; text-decoration: inherit;">user_<wbr>task_<wbr>managed_<wbr>initial_<wbr>warehouse_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of the compute resources to provision for the first run of the task, before a task history is available for Snowflake to determine an ideal size. Once a task has successfully completed a few runs, Snowflake ignores this parameter setting. (Conflicts with warehouse)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="user_task_timeout_ms_python">
 <a href="#user_task_timeout_ms_python" style="color: inherit; text-decoration: inherit;">user_<wbr>task_<wbr>timeout_<wbr>ms</a>
 </span>
@@ -754,6 +846,15 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the time limit on a single run of the task before it times out (in milliseconds).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warehouse_python">
+<a href="#warehouse_python" style="color: inherit; text-decoration: inherit;">warehouse</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The warehouse the task will use. Omit this parameter to use Snowflake-managed compute resources for runs of this task. (Conflicts with user*task*managed*initial*warehouse_size)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="when_python">
@@ -846,6 +947,7 @@ Get an existing Task resource's state with the given name, ID, and optional extr
         <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">session_parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">sql_statement</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">user_task_managed_initial_warehouse_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">user_task_timeout_ms</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">warehouse</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">when</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Task</code></pre></div>
@@ -967,7 +1069,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the predecessor task in the same database and schema of the current task. When a run of the predecessor task finishes successfully, it triggers this task (after a brief lag).
+    <dd>{{% md %}}Specifies the predecessor task in the same database and schema of the current task. When a run of the predecessor task finishes successfully, it triggers this task (after a brief lag). (Conflict with schedule)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comment_csharp">
@@ -1012,7 +1114,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schedule for periodically running the task. This can be a cron or interval in minutes.
+    <dd>{{% md %}}The schedule for periodically running the task. This can be a cron or interval in minutes. (Conflict with after)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_csharp">
@@ -1042,6 +1144,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Any single SQL statement, or a call to a stored procedure, executed when the task runs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_usertaskmanagedinitialwarehousesize_csharp">
+<a href="#state_usertaskmanagedinitialwarehousesize_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Task<wbr>Managed<wbr>Initial<wbr>Warehouse<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of the compute resources to provision for the first run of the task, before a task history is available for Snowflake to determine an ideal size. Once a task has successfully completed a few runs, Snowflake ignores this parameter setting. (Conflicts with warehouse)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_usertasktimeoutms_csharp">
 <a href="#state_usertasktimeoutms_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Task<wbr>Timeout<wbr>Ms</a>
 </span>
@@ -1057,7 +1168,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The warehouse the task will use.
+    <dd>{{% md %}}The warehouse the task will use. Omit this parameter to use Snowflake-managed compute resources for runs of this task. (Conflicts with user*task*managed*initial*warehouse_size)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_when_csharp">
@@ -1079,7 +1190,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the predecessor task in the same database and schema of the current task. When a run of the predecessor task finishes successfully, it triggers this task (after a brief lag).
+    <dd>{{% md %}}Specifies the predecessor task in the same database and schema of the current task. When a run of the predecessor task finishes successfully, it triggers this task (after a brief lag). (Conflict with schedule)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comment_go">
@@ -1124,7 +1235,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schedule for periodically running the task. This can be a cron or interval in minutes.
+    <dd>{{% md %}}The schedule for periodically running the task. This can be a cron or interval in minutes. (Conflict with after)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_go">
@@ -1154,6 +1265,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Any single SQL statement, or a call to a stored procedure, executed when the task runs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_usertaskmanagedinitialwarehousesize_go">
+<a href="#state_usertaskmanagedinitialwarehousesize_go" style="color: inherit; text-decoration: inherit;">User<wbr>Task<wbr>Managed<wbr>Initial<wbr>Warehouse<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of the compute resources to provision for the first run of the task, before a task history is available for Snowflake to determine an ideal size. Once a task has successfully completed a few runs, Snowflake ignores this parameter setting. (Conflicts with warehouse)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_usertasktimeoutms_go">
 <a href="#state_usertasktimeoutms_go" style="color: inherit; text-decoration: inherit;">User<wbr>Task<wbr>Timeout<wbr>Ms</a>
 </span>
@@ -1169,7 +1289,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The warehouse the task will use.
+    <dd>{{% md %}}The warehouse the task will use. Omit this parameter to use Snowflake-managed compute resources for runs of this task. (Conflicts with user*task*managed*initial*warehouse_size)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_when_go">
@@ -1191,7 +1311,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the predecessor task in the same database and schema of the current task. When a run of the predecessor task finishes successfully, it triggers this task (after a brief lag).
+    <dd>{{% md %}}Specifies the predecessor task in the same database and schema of the current task. When a run of the predecessor task finishes successfully, it triggers this task (after a brief lag). (Conflict with schedule)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comment_nodejs">
@@ -1236,7 +1356,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schedule for periodically running the task. This can be a cron or interval in minutes.
+    <dd>{{% md %}}The schedule for periodically running the task. This can be a cron or interval in minutes. (Conflict with after)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_nodejs">
@@ -1266,6 +1386,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Any single SQL statement, or a call to a stored procedure, executed when the task runs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_usertaskmanagedinitialwarehousesize_nodejs">
+<a href="#state_usertaskmanagedinitialwarehousesize_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Task<wbr>Managed<wbr>Initial<wbr>Warehouse<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of the compute resources to provision for the first run of the task, before a task history is available for Snowflake to determine an ideal size. Once a task has successfully completed a few runs, Snowflake ignores this parameter setting. (Conflicts with warehouse)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_usertasktimeoutms_nodejs">
 <a href="#state_usertasktimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Task<wbr>Timeout<wbr>Ms</a>
 </span>
@@ -1281,7 +1410,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The warehouse the task will use.
+    <dd>{{% md %}}The warehouse the task will use. Omit this parameter to use Snowflake-managed compute resources for runs of this task. (Conflicts with user*task*managed*initial*warehouse_size)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_when_nodejs">
@@ -1303,7 +1432,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the predecessor task in the same database and schema of the current task. When a run of the predecessor task finishes successfully, it triggers this task (after a brief lag).
+    <dd>{{% md %}}Specifies the predecessor task in the same database and schema of the current task. When a run of the predecessor task finishes successfully, it triggers this task (after a brief lag). (Conflict with schedule)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comment_python">
@@ -1348,7 +1477,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The schedule for periodically running the task. This can be a cron or interval in minutes.
+    <dd>{{% md %}}The schedule for periodically running the task. This can be a cron or interval in minutes. (Conflict with after)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_python">
@@ -1378,6 +1507,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Any single SQL statement, or a call to a stored procedure, executed when the task runs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_user_task_managed_initial_warehouse_size_python">
+<a href="#state_user_task_managed_initial_warehouse_size_python" style="color: inherit; text-decoration: inherit;">user_<wbr>task_<wbr>managed_<wbr>initial_<wbr>warehouse_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of the compute resources to provision for the first run of the task, before a task history is available for Snowflake to determine an ideal size. Once a task has successfully completed a few runs, Snowflake ignores this parameter setting. (Conflicts with warehouse)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_user_task_timeout_ms_python">
 <a href="#state_user_task_timeout_ms_python" style="color: inherit; text-decoration: inherit;">user_<wbr>task_<wbr>timeout_<wbr>ms</a>
 </span>
@@ -1393,7 +1531,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The warehouse the task will use.
+    <dd>{{% md %}}The warehouse the task will use. Omit this parameter to use Snowflake-managed compute resources for runs of this task. (Conflicts with user*task*managed*initial*warehouse_size)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_when_python">

@@ -14,10 +14,10 @@ no_edit_this_page: true
 
 ## Import
 
-# format is database name | schema name | on table name
+# format is database name | schema name | stream name
 
 ```sh
- $ pulumi import snowflake:index/stream:Stream example 'dbName|schemaName|tableName'
+ $ pulumi import snowflake:index/stream:Stream example 'dbName|schemaName|streamName'
 ```
 
 

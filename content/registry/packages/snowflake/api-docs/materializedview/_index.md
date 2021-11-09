@@ -163,6 +163,7 @@ const view = new snowflake.MaterializedView("view", {
                      <span class="nx">or_replace</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                      <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">statement</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[MaterializedViewTagArgs]]</span> = None<span class="p">,</span>
                      <span class="nx">warehouse</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">MaterializedView</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -363,6 +364,15 @@ The MaterializedView resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Overwrites the View if it exists.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#materializedviewtag">List&lt;Materialized<wbr>View<wbr>Tag<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -439,6 +449,15 @@ The MaterializedView resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Overwrites the View if it exists.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#materializedviewtag">[]Materialized<wbr>View<wbr>Tag<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -515,6 +534,15 @@ The MaterializedView resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Overwrites the View if it exists.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#materializedviewtag">Materialized<wbr>View<wbr>Tag<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -591,6 +619,15 @@ The MaterializedView resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Overwrites the View if it exists.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#materializedviewtag">Sequence[Materialized<wbr>View<wbr>Tag<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -672,6 +709,7 @@ Get an existing MaterializedView resource's state with the given name, ID, and o
         <span class="nx">or_replace</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">statement</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[MaterializedViewTagArgs]]</span> = None<span class="p">,</span>
         <span class="nx">warehouse</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> MaterializedView</code></pre></div>
 {{% /choosable %}}
 
@@ -848,6 +886,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the query used to create the view.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#materializedviewtag">List&lt;Materialized<wbr>View<wbr>Tag<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_warehouse_csharp">
 <a href="#state_warehouse_csharp" style="color: inherit; text-decoration: inherit;">Warehouse</a>
 </span>
@@ -922,6 +969,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the query used to create the view.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#materializedviewtag">[]Materialized<wbr>View<wbr>Tag<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warehouse_go">
@@ -1000,6 +1056,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the query used to create the view.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#materializedviewtag">Materialized<wbr>View<wbr>Tag<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_warehouse_nodejs">
 <a href="#state_warehouse_nodejs" style="color: inherit; text-decoration: inherit;">warehouse</a>
 </span>
@@ -1076,6 +1141,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the query used to create the view.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#materializedviewtag">Sequence[Materialized<wbr>View<wbr>Tag<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_warehouse_python">
 <a href="#state_warehouse_python" style="color: inherit; text-decoration: inherit;">warehouse</a>
 </span>
@@ -1090,6 +1164,172 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="materializedviewtag">Materialized<wbr>View<wbr>Tag</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tag name, e.g. department.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tag value, e.g. marketing_info.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="database_csharp">
+<a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the database that the tag was created in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_csharp">
+<a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the schema that the tag was created in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tag name, e.g. department.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tag value, e.g. marketing_info.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="database_go">
+<a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the database that the tag was created in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_go">
+<a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the schema that the tag was created in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tag name, e.g. department.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tag value, e.g. marketing_info.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="database_nodejs">
+<a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the database that the tag was created in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_nodejs">
+<a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the schema that the tag was created in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Tag name, e.g. department.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Tag value, e.g. marketing_info.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="database_python">
+<a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the database that the tag was created in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_python">
+<a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the schema that the tag was created in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>
