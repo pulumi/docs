@@ -1,9 +1,12 @@
 package cmd
 
 import (
-	"github.com/golang/glog"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
 	"github.com/spf13/cobra"
+
+	"github.com/golang/glog"
+
+	"github.com/pulumi/docs/tools/resourcedocsgen/cmd/docs"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
 )
 
 var (
@@ -29,7 +32,7 @@ func RootCmd() *cobra.Command {
 	rootCmd.PersistentFlags().BoolVar(&logToStderr, "logtostderr", false, "Log to stderr instead of to files")
 	rootCmd.PersistentFlags().IntVarP(&verbose, "verbose", "v", 0, "Enable verbose logging (e.g., v=3); anything >3 is very verbose")
 
-	rootCmd.AddCommand(resourceDocsCmd())
+	rootCmd.AddCommand(docs.ResourceDocsCmd())
 	rootCmd.AddCommand(packageMetadataCmd())
 
 	return rootCmd
