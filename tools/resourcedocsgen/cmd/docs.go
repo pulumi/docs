@@ -85,8 +85,7 @@ func getRepoSlug(repoURL string) (string, error) {
 
 func genResourceDocsForPackageFromRegistryMetadata(metadata pkg.PackageMeta, docsOutDir, packageTreeJSONOutDir string) error {
 	if metadata.RepoURL == "" {
-		return errors.Errorf("Metadata for package %q does not contain the repo information. "+
-			"Cannot generate docs for it. Please update the metadata file and re-run the docs generator for it.", metadata.Name)
+		return errors.Errorf("metadata for package %q does not contain the repo_url", metadata.Name)
 	}
 
 	schemaFilePath := fmt.Sprintf(defaultSchemaFilePathFormat, metadata.Name)
@@ -196,7 +195,7 @@ func genResourceDocsFromRegistry() *cobra.Command {
 
 			defer os.RemoveAll(tempDir)
 
-			gitCmd := exec.Command("git", "clone", registryRepo, tempDir)
+			gitCmd := exec.Command("git", "clone", "-b", "praneetloke/regen-metadata", registryRepo, tempDir)
 			gitCmd.Stdout = os.Stdout
 			if err := gitCmd.Run(); err != nil {
 				return errors.Wrap(err, "cloning the registry repo")
