@@ -76,6 +76,17 @@ class MyStack : Stack
                 },
                 new Snowflake.Inputs.TableColumnArgs
                 {
+                    Name = "identity",
+                    Type = "NUMBER(38,0)",
+                    Nullable = true,
+                    Identity = new Snowflake.Inputs.TableColumnIdentityArgs
+                    {
+                        StartNum = 1,
+                        StepNum = 3,
+                    },
+                },
+                new Snowflake.Inputs.TableColumnArgs
+                {
                     Name = "data",
                     Type = "text",
                     Nullable = false,
@@ -155,6 +166,15 @@ func main() {
 					},
 				},
 				&TableColumnArgs{
+					Name:     pulumi.String("identity"),
+					Type:     pulumi.String("NUMBER(38,0)"),
+					Nullable: pulumi.Bool(true),
+					Identity: &TableColumnIdentityArgs{
+						StartNum: pulumi.Int(1),
+						StepNum:  pulumi.Int(3),
+					},
+				},
+				&TableColumnArgs{
 					Name:     pulumi.String("data"),
 					Type:     pulumi.String("text"),
 					Nullable: pulumi.Bool(false),
@@ -217,6 +237,15 @@ table = snowflake.Table("table",
             ),
         ),
         snowflake.TableColumnArgs(
+            name="identity",
+            type="NUMBER(38,0)",
+            nullable=True,
+            identity=snowflake.TableColumnIdentityArgs(
+                start_num=1,
+                step_num=3,
+            ),
+        ),
+        snowflake.TableColumnArgs(
             name="data",
             type="text",
             nullable=False,
@@ -273,6 +302,15 @@ const table = new snowflake.Table("table", {
             },
         },
         {
+            name: "identity",
+            type: "NUMBER(38,0)",
+            nullable: true,
+            identity: {
+                startNum: 1,
+                stepNum: 3,
+            },
+        },
+        {
             name: "data",
             type: "text",
             nullable: false,
@@ -326,7 +364,8 @@ const table = new snowflake.Table("table", {
           <span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">primary_key</span><span class="p">:</span> <span class="nx">Optional[TablePrimaryKeyArgs]</span> = None<span class="p">,</span>
-          <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+          <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[TableTagArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Table</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TableArgs</a></span><span class="p">,</span>
@@ -535,6 +574,15 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#tableprimarykey">Table<wbr>Primary<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definitions of primary key constraint to create on table
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabletag">List&lt;Table<wbr>Tag<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -620,6 +668,15 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#tableprimarykey">Table<wbr>Primary<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definitions of primary key constraint to create on table
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabletag">[]Table<wbr>Tag<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -705,6 +762,15 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#tableprimarykey">Table<wbr>Primary<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definitions of primary key constraint to create on table
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabletag">Table<wbr>Tag<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -790,6 +856,15 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#tableprimarykey">Table<wbr>Primary<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definitions of primary key constraint to create on table
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabletag">Sequence[Table<wbr>Tag<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -909,7 +984,8 @@ Get an existing Table resource's state with the given name, ID, and optional ext
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">primary_key</span><span class="p">:</span> <span class="nx">Optional[TablePrimaryKeyArgs]</span> = None<span class="p">,</span>
-        <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Table</code></pre></div>
+        <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[TableTagArgs]]</span> = None<span class="p">) -&gt;</span> Table</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1110,6 +1186,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schema in which to create the table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabletag">List&lt;Table<wbr>Tag<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1204,6 +1289,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schema in which to create the table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabletag">[]Table<wbr>Tag<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1298,6 +1392,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schema in which to create the table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabletag">Table<wbr>Tag<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1392,6 +1495,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The schema in which to create the table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tabletag">Sequence[Table<wbr>Tag<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1445,6 +1557,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Defines the column default value; note due to limitations of Snowflake's ALTER TABLE ADD/MODIFY COLUMN updates to default will not be applied
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablecolumnidentity">Table<wbr>Column<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the identity start/step values for a column. **Note** Identity/default are mutually exclusive.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nullable_csharp">
 <a href="#nullable_csharp" style="color: inherit; text-decoration: inherit;">Nullable</a>
 </span>
@@ -1492,6 +1613,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tablecolumndefault">Table<wbr>Column<wbr>Default</a></span>
     </dt>
     <dd>{{% md %}}Defines the column default value; note due to limitations of Snowflake's ALTER TABLE ADD/MODIFY COLUMN updates to default will not be applied
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablecolumnidentity">Table<wbr>Column<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the identity start/step values for a column. **Note** Identity/default are mutually exclusive.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nullable_go">
@@ -1543,6 +1673,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Defines the column default value; note due to limitations of Snowflake's ALTER TABLE ADD/MODIFY COLUMN updates to default will not be applied
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablecolumnidentity">Table<wbr>Column<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the identity start/step values for a column. **Note** Identity/default are mutually exclusive.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nullable_nodejs">
 <a href="#nullable_nodejs" style="color: inherit; text-decoration: inherit;">nullable</a>
 </span>
@@ -1590,6 +1729,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tablecolumndefault">Table<wbr>Column<wbr>Default</a></span>
     </dt>
     <dd>{{% md %}}Defines the column default value; note due to limitations of Snowflake's ALTER TABLE ADD/MODIFY COLUMN updates to default will not be applied
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablecolumnidentity">Table<wbr>Column<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the identity start/step values for a column. **Note** Identity/default are mutually exclusive.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nullable_python">
@@ -1716,6 +1864,88 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="tablecolumnidentity">Table<wbr>Column<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="startnum_csharp">
+<a href="#startnum_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Num</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stepnum_csharp">
+<a href="#stepnum_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Num</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="startnum_go">
+<a href="#startnum_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Num</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stepnum_go">
+<a href="#stepnum_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Num</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="startnum_nodejs">
+<a href="#startnum_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Num</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stepnum_nodejs">
+<a href="#stepnum_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Num</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="start_num_python">
+<a href="#start_num_python" style="color: inherit; text-decoration: inherit;">start_<wbr>num</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="step_num_python">
+<a href="#step_num_python" style="color: inherit; text-decoration: inherit;">step_<wbr>num</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="tableprimarykey">Table<wbr>Primary<wbr>Key</h4>
 
 {{% choosable language csharp %}}
@@ -1803,6 +2033,168 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of constraint
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tabletag">Table<wbr>Tag</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tag name, e.g. department.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tag value, e.g. marketing_info.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="database_csharp">
+<a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the database that the tag was created in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_csharp">
+<a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the schema that the tag was created in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tag name, e.g. department.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tag value, e.g. marketing_info.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="database_go">
+<a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the database that the tag was created in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_go">
+<a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the schema that the tag was created in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tag name, e.g. department.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tag value, e.g. marketing_info.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="database_nodejs">
+<a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the database that the tag was created in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_nodejs">
+<a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the schema that the tag was created in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Tag name, e.g. department.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Tag value, e.g. marketing_info.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="database_python">
+<a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the database that the tag was created in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_python">
+<a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the schema that the tag was created in.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

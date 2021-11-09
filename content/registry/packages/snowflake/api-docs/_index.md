@@ -57,6 +57,7 @@ A Pulumi package for creating and managing snowflake cloud resources.
     <li><a href="streamgrant" title="StreamGrant"><span class="api-symbol api-symbol--resource"></span>StreamGrant</a></li>
     <li><a href="table" title="Table"><span class="api-symbol api-symbol--resource"></span>Table</a></li>
     <li><a href="tablegrant" title="TableGrant"><span class="api-symbol api-symbol--resource"></span>TableGrant</a></li>
+    <li><a href="tag" title="Tag"><span class="api-symbol api-symbol--resource"></span>Tag</a></li>
     <li><a href="task" title="Task"><span class="api-symbol api-symbol--resource"></span>Task</a></li>
     <li><a href="taskgrant" title="TaskGrant"><span class="api-symbol api-symbol--resource"></span>TaskGrant</a></li>
     <li><a href="user" title="User"><span class="api-symbol api-symbol--resource"></span>User</a></li>
@@ -104,6 +105,6 @@ A Pulumi package for creating and managing snowflake cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`snowflake` Terraform Provider](https://github.com/chanzuckerberg/terraform-provider-snowflake).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.2.1</dd>
+	<dd>0.3.0</dd>
 </dl>
 

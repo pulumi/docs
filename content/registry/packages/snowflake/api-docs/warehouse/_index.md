@@ -145,6 +145,7 @@ const warehouse = new snowflake.Warehouse("w", {
               <span class="nx">scaling_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">statement_queued_timeout_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
               <span class="nx">statement_timeout_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[WarehouseTagArgs]]</span> = None<span class="p">,</span>
               <span class="nx">wait_for_provisioning</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">warehouse_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -383,6 +384,15 @@ The Warehouse resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Specifies the time, in seconds, after which a running SQL statement (query, DDL, DML, etc.) is canceled by the system
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#warehousetag">List&lt;Warehouse<wbr>Tag<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="waitforprovisioning_csharp">
 <a href="#waitforprovisioning_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Provisioning</a>
 </span>
@@ -510,6 +520,15 @@ The Warehouse resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the time, in seconds, after which a running SQL statement (query, DDL, DML, etc.) is canceled by the system
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#warehousetag">[]Warehouse<wbr>Tag<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforprovisioning_go">
@@ -641,6 +660,15 @@ The Warehouse resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Specifies the time, in seconds, after which a running SQL statement (query, DDL, DML, etc.) is canceled by the system
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#warehousetag">Warehouse<wbr>Tag<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="waitforprovisioning_nodejs">
 <a href="#waitforprovisioning_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Provisioning</a>
 </span>
@@ -770,6 +798,15 @@ The Warehouse resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Specifies the time, in seconds, after which a running SQL statement (query, DDL, DML, etc.) is canceled by the system
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#warehousetag">Sequence[Warehouse<wbr>Tag<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="wait_for_provisioning_python">
 <a href="#wait_for_provisioning_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>provisioning</a>
 </span>
@@ -872,6 +909,7 @@ Get an existing Warehouse resource's state with the given name, ID, and optional
         <span class="nx">scaling_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">statement_queued_timeout_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">statement_timeout_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[WarehouseTagArgs]]</span> = None<span class="p">,</span>
         <span class="nx">wait_for_provisioning</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">warehouse_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Warehouse</code></pre></div>
 {{% /choosable %}}
@@ -1093,6 +1131,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the time, in seconds, after which a running SQL statement (query, DDL, DML, etc.) is canceled by the system
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#warehousetag">List&lt;Warehouse<wbr>Tag<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_waitforprovisioning_csharp">
 <a href="#state_waitforprovisioning_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Provisioning</a>
 </span>
@@ -1220,6 +1267,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the time, in seconds, after which a running SQL statement (query, DDL, DML, etc.) is canceled by the system
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#warehousetag">[]Warehouse<wbr>Tag<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforprovisioning_go">
@@ -1351,6 +1407,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the time, in seconds, after which a running SQL statement (query, DDL, DML, etc.) is canceled by the system
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#warehousetag">Warehouse<wbr>Tag<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_waitforprovisioning_nodejs">
 <a href="#state_waitforprovisioning_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Provisioning</a>
 </span>
@@ -1480,6 +1545,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the time, in seconds, after which a running SQL statement (query, DDL, DML, etc.) is canceled by the system
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#warehousetag">Sequence[Warehouse<wbr>Tag<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of a tag to associate with the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_wait_for_provisioning_python">
 <a href="#state_wait_for_provisioning_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>provisioning</a>
 </span>
@@ -1503,6 +1577,172 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="warehousetag">Warehouse<wbr>Tag</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tag name, e.g. department.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tag value, e.g. marketing_info.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="database_csharp">
+<a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the database that the tag was created in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_csharp">
+<a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the schema that the tag was created in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tag name, e.g. department.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tag value, e.g. marketing_info.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="database_go">
+<a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the database that the tag was created in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_go">
+<a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the schema that the tag was created in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tag name, e.g. department.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tag value, e.g. marketing_info.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="database_nodejs">
+<a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the database that the tag was created in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_nodejs">
+<a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the schema that the tag was created in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Tag name, e.g. department.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Tag value, e.g. marketing_info.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="database_python">
+<a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the database that the tag was created in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_python">
+<a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the schema that the tag was created in.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>
