@@ -157,7 +157,7 @@ some of those outputs are provided by the provider after everything has loaded,
 booted, or otherwise has come online. More on outputs later.
 
 In our case here, the Docker
-[`Image`](https://www.pulumi.com/docs/reference/pkg/docker/image/) resource
+[`Image`]({{< relref "/registry/packages/docker/api-docs/image" >}}) resource
 takes the following inputs:
 
 - `name`: a name for the resource we are creating
@@ -191,7 +191,7 @@ frontend = docker.Image("frontend",
 
 We build the frontend client the same way we built the backend. However, we are
 going to use the official MongoDB image from Docker Hub, so we use the
-[`RemoteImage`](https://www.pulumi.com/docs/reference/pkg/docker/remoteimage/)
+[`RemoteImage`]({{< relref "/registry/packages/docker/api-docs/remoteimage" >}})
 resource.
 
 {{< chooser language "python" / >}}

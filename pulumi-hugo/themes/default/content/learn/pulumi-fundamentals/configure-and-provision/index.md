@@ -49,7 +49,7 @@ mongo_port = config.require_int("mongo_port")
 
 {{% /choosable %}}
 
-Your Pulumi program should now look like this:
+Your Pulumi program should now match this code:
 
 {{< chooser language "python" / >}}
 
@@ -90,7 +90,7 @@ mongo_image = docker.RemoteImage("mongo", name="mongo:bionic")
 
 {{% /choosable %}}
 
-Try and run your `pulumi up` again at this point. You should see an error like
+Try and run your `pulumi up` again at this point. You should get an error like
 this:
 
 {{< chooser language "python" / >}}
@@ -132,8 +132,8 @@ that use the ports; we only have image resources.
 In the last topic, we built Docker images. Now we want to create Docker
 containers and pass our configuration to them. Our containers will need to
 connect to each other, so we will need to create a
-[`Network`]({{< relref "docs/reference/pkg/docker/network" >}}), which is
-another resource. Add the following code at the bottom of your program:
+[`Network`]({{< relref "registry/packages/docker/api-docs/network" >}}), which
+is another resource. Add the following code at the bottom of your program:
 
 {{< chooser language "python" / >}}
 
@@ -147,7 +147,7 @@ network = docker.Network("network", name=f"services-{stack}")
 {{% /choosable %}}
 
 Define a new
-[`Container`]({{< relref "docs/reference/pkg/docker/container" >}})
+[`Container`]({{< relref "registry/packages/docker/api-docs/container" >}})
 resource in your Pulumi program below the `Network` resource, like this:
 
 {{< chooser language "python" / >}}
