@@ -84,12 +84,6 @@ generate_docs() {
     # This path should be relative to the tools/resourcedocsgen tool.
     SCHEMA_FILE="../../${EXISTING_SCHEMA_FILE}"
 
-    OVERLAY_SCHEMA_FILE=""
-    if [ -d "${TOOL_RESDOCGEN}/overlays/${provider}" ] && [ -f "${TOOL_RESDOCGEN}/overlays/${provider}/overlays.json" ]; then
-        echo "Found an overlay file for ${provider}..."
-        OVERLAY_SCHEMA_FILE="./overlays/${provider}/overlays.json"
-    fi
-
     echo "Running docs generator from schema for ${provider}..."
 
     pushd ${TOOL_RESDOCGEN}
@@ -107,8 +101,7 @@ generate_docs() {
       --schemaFile "${SCHEMA_FILE}" \
       --version "${plugin_version}" \
       --logtostderr \
-      --packageTreeJSONOutDir "${PACKAGE_TREE_OUT_DIR}" \
-      --overlaysSchemaFile "${OVERLAY_SCHEMA_FILE}" || exit 3
+      --packageTreeJSONOutDir "${PACKAGE_TREE_OUT_DIR}" || exit 3
 
     popd
 
