@@ -1,11 +1,13 @@
 package docs
 
 import (
+	"embed"
 	"encoding/json"
 	"fmt"
-	"github.com/pulumi/docs/tools/resourcedocsgen/pkg"
+	"io/fs"
 	"io/ioutil"
 	"os"
+	"path/filepath"
 	"strings"
 
 	"github.com/pkg/errors"
@@ -15,6 +17,8 @@ import (
 	"github.com/ghodss/yaml"
 
 	"github.com/golang/glog"
+
+	"github.com/pulumi/docs/tools/resourcedocsgen/pkg"
 
 	docsgen "github.com/pulumi/pulumi/pkg/v3/codegen/docs"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/dotnet"
@@ -29,16 +33,25 @@ const (
 	defaultSchemaFilePathFormat = "/provider/cmd/pulumi-resource-%s/schema.json"
 )
 
-var mainSpec *pschema.PackageSpec
+var (
+	// mainSpec represents a package's original schema. It's called "main" because a package
+	// could have a hand-authored overlays schema spec in the overlays folder that could be
+	// merged into it.
+	mainSpec *pschema.PackageSpec
+	//go:embed overlays/**/*.json
+	overlays embed.FS
+)
 
-func getPulumiPackageFromSchema(docsOutDir, overlaysSchemaFile string) (*pschema.Package, error) {
-	if overlaysSchemaFile != "" {
+func getPulumiPackageFromSchema(docsOutDir string) (*pschema.Package, error) {
+	overlaysSchemaFile, err := getOverlaySchema()
+	if err != nil {
+		return nil, errors.Wrap(err, "getting overlays schema")
+	}
+
+	if overlaysSchemaFile != nil {
 		overlaySpec := &pschema.PackageSpec{}
-		overlaysSchema, err := ioutil.ReadFile(overlaysSchemaFile)
-		if err != nil {
-			return nil, errors.Wrap(err, "reading overlay schema file from path")
-		}
-		if err := json.Unmarshal(overlaysSchema, overlaySpec); err != nil {
+
+		if err := json.Unmarshal(overlaysSchemaFile, overlaySpec); err != nil {
 			return nil, errors.Wrap(err, "unmarshalling overlay schema into a PackageSpec")
 		}
 
@@ -62,11 +75,42 @@ func getPulumiPackageFromSchema(docsOutDir, overlaysSchemaFile string) (*pschema
 	return pulPkg, nil
 }
 
+// getOverlaySchema returns the overlay file contents for the package.
+// Returns nil if there is no overlay file for the package.
+func getOverlaySchema() ([]byte, error) {
+	glog.Infoln("Checking if the package has an overlays schema...")
+	// Test the expected path for an overlays file. If there is no such file, assume
+	// that the package has no overlays.
+	overlayFilePath := filepath.Join("overlays", mainSpec.Name, "overlays.json")
+	f, err := overlays.Open(overlayFilePath)
+	if err != nil {
+		pathErr := err.(*fs.PathError)
+		if pathErr.Err == fs.ErrNotExist {
+			glog.Infoln("Didn't find an overlays schema...")
+			overlayFilePath = ""
+		} else {
+			return nil, errors.Wrap(err, "checking embedded overlays fs for overlay file")
+		}
+	}
+
+	if overlayFilePath == "" {
+		return nil, nil
+	}
+
+	glog.Infoln("Using the overlays schema file from", overlayFilePath)
+
+	b, err := ioutil.ReadAll(f)
+	if err != nil {
+		return nil, errors.Wrap(err, "reading overlay file from embedded fs")
+	}
+
+	return b, nil
+}
+
 func ResourceDocsCmd() *cobra.Command {
 	var schemaFile string
 	var version string
 	var docsOutDir string
-	var overlaysSchemaFile string
 	var packageTreeJSONOutDir string
 
 	cmd := &cobra.Command{
@@ -93,7 +137,7 @@ func ResourceDocsCmd() *cobra.Command {
 			}
 			mainSpec.Version = version
 
-			pulPkg, err := getPulumiPackageFromSchema(docsOutDir, overlaysSchemaFile)
+			pulPkg, err := getPulumiPackageFromSchema(docsOutDir)
 			if err != nil {
 				return errors.Wrap(err, "generating package from schema file")
 			}
@@ -114,7 +158,6 @@ func ResourceDocsCmd() *cobra.Command {
 	cmd.Flags().StringVar(&version, "version", "", "The version of the package")
 	cmd.Flags().StringVar(&docsOutDir, "docsOutDir", "", "The directory path to where the docs will be written to")
 	cmd.Flags().StringVar(&packageTreeJSONOutDir, "packageTreeJSONOutDir", "", "The directory path to write the package tree JSON file to")
-	cmd.Flags().StringVar(&overlaysSchemaFile, "overlaysSchemaFile", "", "(Optional) Overlays that should be merged with the main schema")
 
 	cmd.MarkFlagRequired("docsOutDir")
 	cmd.MarkFlagRequired("packageTreeJSONOutDir")

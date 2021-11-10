@@ -77,30 +77,7 @@ func genResourceDocsForPackageFromRegistryMetadata(metadata pkg.PackageMeta, doc
 		return errors.Wrap(err, "unmarshalling schema into a PackageSpec")
 	}
 
-	// Check the overlays folder for the current package to see if it
-	// there any overlays available that need to be merged with the regular
-	// schema.
-	glog.Infoln("Checking if the package has an overlay schema file to be merged...")
-	overlaysSchemaFilePath := filepath.Join("overlays", mainSpec.Name, "overlays.json")
-	_, err = os.Stat(overlaysSchemaFilePath)
-	if err != nil {
-		pathErr := err.(*os.PathError)
-		// Ideally we would compare the error code with ErrNotExist but
-		// the error message (even when un-wrapped) does not match the
-		// ErrNotExist.
-		if strings.Contains(pathErr.Error(), "no such file or directory") {
-			glog.Infoln("Didn't find an overlay schema for the package in the overlays folder...")
-			overlaysSchemaFilePath = ""
-		} else {
-			return errors.Wrap(err, "checking if package has an overlays schema file")
-		}
-	}
-
-	if overlaysSchemaFilePath != "" {
-		glog.Infoln("Using the overlay schema file from", overlaysSchemaFilePath)
-	}
-
-	pulPkg, err := getPulumiPackageFromSchema(docsOutDir, overlaysSchemaFilePath)
+	pulPkg, err := getPulumiPackageFromSchema(docsOutDir)
 	if err != nil {
 		return errors.Wrap(err, "generating package from schema file")
 	}
