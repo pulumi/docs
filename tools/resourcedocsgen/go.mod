@@ -10,5 +10,3 @@ require (
 	github.com/pulumi/pulumi/sdk/v3 v3.17.1
 	github.com/spf13/cobra v1.2.1
 )
-
-replace github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.5.0
