@@ -31,6 +31,6 @@ Explore the resources and functions of the aws.mq module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/hashicorp/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.27.0</dd>
+	<dd>4.27.1</dd>
 </dl>
 
