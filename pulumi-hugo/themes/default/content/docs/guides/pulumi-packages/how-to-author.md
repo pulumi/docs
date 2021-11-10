@@ -40,7 +40,7 @@ You should name your repository (and thus, your Pulumi Package) using the follow
 - The name should start with `pulumi-`, like our [`pulumi-aws-native`]({{<relref "/registry/packages/aws-native">}}) AWS Native Provider and our [`pulumi-eks`]({{<relref "/registry/packages/eks">}}) Component for AWS Elastic Kubernetes Service (EKS)
 - If you're naming a **native provider**, use the cloud provider's name and the suffix `-native`, like our [`pulumi-azure-native`]({{<relref "/registry/packages/azure-native">}}) Azure Native Provider
 - If you're naming a **bridged provider**, re-use the Terraform provider's name but replace the `terraform-provider-` prefix with `pulumi-`
-- If you're naming a **component**, name your package using both the cloud provider whose resources you're building on top of and the resources, like our [`pulumi-aws-apigateway`]({{<relref "/registry/packages/pulumi-aws-apigateway">}}) Component for AWS API Gateway
+- If you're naming a **component**, name your package using both the cloud provider whose resources you're building on top of and the resources, like our [`pulumi-aws-apigateway`]({{<relref "/registry/packages/aws-apigateway">}}) Component for AWS API Gateway
 
 ## Author your resources or components
 
