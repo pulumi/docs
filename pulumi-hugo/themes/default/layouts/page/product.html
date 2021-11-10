@@ -106,7 +106,9 @@
         <div class="container mx-auto">
             <div class="mx-6 lg:mx-2 rounded-xl">
                 <h2>{{ .Params.stats.title }}</h2>
-                <p class="max-w-3xl mx-auto">{{ .Params.stats.description }}</p>
+                <p class="max-w-3xl mx-auto key-feature-description">
+                    {{ .Params.stats.description | markdownify }}
+                </p>
 
                 <div class="flex flex-col lg:flex-row justify-center items-stretch mt-8 lg:mt-16 relative">
                     <div class="absolute top-0 bottom-0 bg-white h-full w-full"></div>
@@ -129,7 +131,7 @@
                 <div class="max-w-5xl bg-white mx-auto pt-8 pt-16 pb-32">
                     <div class="max-w-2xl mx-auto">
                         <h2 class="mt-16">{{ .Params.stats.cta.title }}</h2>
-                        <p>{{ .Params.stats.cta.description }}<p>
+                        <p>{{ .Params.stats.cta.description | markdownify }}<p>
                     </div>
                 </div>
             </div>

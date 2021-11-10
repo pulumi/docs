@@ -17,85 +17,85 @@ key_features:
     items:
         - description: Build [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) in familiar languages
           features:
-            - title: Languages you love
-              icon: code
-              icon_color: yellow
-              description: |
-                Use TypeScript, JavaScript, Python, Go, and .NET to model cloud infrastructure
-                by leveraging the features of each language.
+              - title: Languages you love
+                icon: code
+                icon_color: yellow
+                description: |
+                    Use TypeScript, JavaScript, Python, Go, and .NET to model cloud infrastructure
+                    by leveraging the features of each language.
 
-            - title: Build on any cloud
-              icon: global
-              icon_color: yellow
-              description: |
-                Access the full breadth of services in AWS, Azure, GCP, and [60+ providers](/registry/) through
-                a complete and consistent SDK interface.
+              - title: Build on any cloud
+                icon: global
+                icon_color: yellow
+                description: |
+                    Access the full breadth of services in AWS, Azure, GCP, and [60+ providers](/registry/) through
+                    a complete and consistent SDK interface.
 
-            - title: Create reusable infrastructure
-              icon: puzzle
-              icon_color: yellow
-              description:
-                Build and share cloud infrastructure with reusable [Pulumi Packages](/product/packages), which
-                encapsulate your cloud architectures and best practices. 
+              - title: Create reusable infrastructure
+                icon: puzzle
+                icon_color: yellow
+                description:
+                    Build and share cloud infrastructure with reusable [Pulumi Packages](/product/packages), which
+                    encapsulate your cloud architectures and best practices.
 
         - description: Deploy cloud infrastructure and applications together
           features:
-            - title: Multiple deployment options
-              icon: rocketship
-              icon_color: salmon
-              description: |
-                Deploy infrastructure interactively with a CLI, programmatically with Pulumi’s
-                [Automation API](/automation/), or through your [CI/CD process](/docs/guides/continuous-delivery/).
+              - title: Multiple deployment options
+                icon: rocketship
+                icon_color: salmon
+                description: |
+                    Deploy infrastructure interactively with a CLI, programmatically with Pulumi’s
+                    [Automation API](/automation/), or through your [CI/CD process](/docs/guides/continuous-delivery/).
 
-            - title: Deployments as Code
-              icon: gear
-              icon_color: salmon
-              description: |
-                Run deployments from your application code at runtime with [Automation API](/automation/). Create infrastructure APIs, custom platforms, and CLIs.
+              - title: Deployments as Code
+                icon: gear
+                icon_color: salmon
+                description: |
+                    Run deployments from your application code at runtime with [Automation API](/automation/). Create infrastructure APIs, custom platforms, and CLIs.
 
-            - title: Preview and test changes
-              icon: eye
-              icon_color: salmon
-              description: |
-                Test and validate infrastructure with standard [unit test frameworks](/docs/guides/testing/#unit-testing) and
-                [integration tests](/docs/guides/testing/integration/). Preview changes before deploying.
+              - title: Preview and test changes
+                icon: eye
+                icon_color: salmon
+                description: |
+                    Test and validate infrastructure with standard [unit test frameworks](/docs/guides/testing/#unit-testing) and
+                    [integration tests](/docs/guides/testing/integration/). Preview changes before deploying.
 
         - description: Manage cloud applications with visibility and controls
           features:
-            - title: Policy as Code
-              icon: shield
-              icon_color: purple
-              description: |
-                [Enforce compliance and detect drift](/crossguard/) by checking infrastructure against rules for
-                security, cost, and best practices.
+              - title: Policy as Code
+                icon: shield
+                icon_color: purple
+                description: |
+                    [Enforce compliance and detect drift](/crossguard/) by checking infrastructure against rules for
+                    security, cost, and best practices.
 
-            - title: State and secrets management
-              icon: security
-              icon_color: purple
-              description: |
-                Pulumi’s secure [cloud backend](/docs/intro/concepts/state/) manages your infrastructure state and automatically
-                encrypts sensitive values in transit and at rest.
+              - title: State and secrets management
+                icon: security
+                icon_color: purple
+                description: |
+                    Pulumi’s secure [cloud backend](/docs/intro/concepts/state/) manages your infrastructure state and automatically
+                    encrypts sensitive values in transit and at rest.
 
-            - title: Administer teams and stacks
-              icon: monitor
-              icon_color: purple
-              description: |
-                Secure access to infrastructure with role-based permissions and [single sign-on](/docs/guides/saml/). View deployed resources, review audit logs, and set tags.
+              - title: Administer teams and stacks
+                icon: monitor
+                icon_color: purple
+                description: |
+                    Secure access to infrastructure with role-based permissions and [single sign-on](/docs/guides/saml/). View deployed resources, review audit logs, and set tags.
 
 stats:
     title: Open source. Enterprise ready.
     description: |
         Pulumi’s modern Infrastructure as Code SDK is an open-source project that’s supported
-        by an active and enthusiastic community. We welcome feedback and contributions from anyone.
+        by an active community. We maintain a [public roadmap](/blog/relaunching-pulumis-public-roadmap/) and welcome feedback and contributions from anyone.
     community:
-      number: "10,000s"
-      description: of community members
+        number: "10,000s"
+        description: of community members
     company:
-      number: "1,000s"
-      description: of companies
+        number: "1,000s"
+        description: of companies
     integration:
-      number: "70+"
-      description: Cloud and service integrations
+        number: "70+"
+        description: Cloud and service integrations
     cta:
         title: Managed infrastructure state, encryption, and more
         description: |
