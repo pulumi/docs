@@ -25,7 +25,7 @@ make copy_static_prebuilt
 
 REGISTRY_COMMIT="$(go mod graph | grep pulumi/registry/themes/default | sed 's/.*-//')"
 
-printf "Generating API docs from registry commit ${REGISTRY_COMMIT}...\n\n"
+printf "Generating API docs from registry commit %s...\n\n" "${REGISTRY_COMMIT}"
 pushd tools/resourcedocsgen
 go build -o "${GOPATH}/bin/resourcedocsgen" .
 resourcedocsgen docs registry --commitSha "${REGISTRY_COMMIT}" --logtostderr
