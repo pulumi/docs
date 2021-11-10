@@ -137,6 +137,7 @@ func resourceDocsFromRegistryCmd() *cobra.Command {
 	var branch string
 	var baseDocsOutDir string
 	var basePackageTreeJSONOutDir string
+	var commitSha string
 
 	cmd := &cobra.Command{
 		Use:   "registry [pkgName]",
@@ -159,6 +160,16 @@ func resourceDocsFromRegistryCmd() *cobra.Command {
 			}
 
 			glog.Infoln("Cloned the repo successfully!")
+
+			if commitSha != "" {
+				glog.Infoln("Resetting registry repo HEAD to", commitSha)
+				gitCmd = exec.Command("git", "reset", "--hard", commitSha)
+				gitCmd.Dir = tempDir
+				gitCmd.Stdout = os.Stdout
+				if err := gitCmd.Run(); err != nil {
+					return errors.Wrap(err, "resetting the registry repo HEAD")
+				}
+			}
 
 			if len(args) > 0 {
 				glog.Infoln("Generating docs for a single package:", args[0])
@@ -195,7 +206,8 @@ func resourceDocsFromRegistryCmd() *cobra.Command {
 	}
 
 	cmd.Flags().StringVar(&baseDocsOutDir, "baseDocsOutDir", "../../content/registry/packages", "The directory path to where the docs will be written to")
-	cmd.Flags().StringVarP(&branch, "branch", "b", "master", "The branch at which the registry repo will be checked out.")
+	cmd.Flags().StringVarP(&branch, "branch", "b", "master", "The branch at which the registry repo will be checked out. If the commitSha flag is also passed, the commit must be valid for the specified branch.")
+	cmd.Flags().StringVar(&commitSha, "commitSha", "", "The commit SHA to point the registry repo to. If the branch is also specified, this hash should be vaild for that branch.")
 	cmd.Flags().StringVar(&basePackageTreeJSONOutDir, "basePackageTreeJSONOutDir", "../../static/registry/packages/navs", "The directory path to write the package tree JSON file to")
 
 	return cmd
