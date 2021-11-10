@@ -5,7 +5,7 @@ meta_desc: This page describes the schema for a Pulumi Package, describing the r
 menu:
     userguides:
         parent: pulumi-packages
-        weight: 3
+        weight: 2
 ---
 
 Pulumi Packages are described by a package schema, which is used to drive code generation for SDKs in each supported Pulumi language, as well as generation of langauge-agnostic package documentation.  This schema can be manually authored (for component packages) or generated from some other source (such as a cloud provider's API specifications for a native Pulumi resource provider).  Packages can expose resources and functions, define types used by these resources and functions, and provide packaging metadata for language-specific SDKs.
@@ -103,6 +103,7 @@ Complete schema examples that include a much wider range of schema configuration
 | Property            | Type                                       | Required | Description                                                                                                                       |
 |---------------------|--------------------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------|
 | `name`              | `string`                                   | Yes      | Name is the unqualified name of the package (e.g. "aws", "azure", "gcp", "kubernetes", "random")                                  |
+| `displayName`       | `string`                                   | No       | The human-friendly name of the package.                                                                                           |
 | `version`           | `string`                                   | Yes      | Version is the version of the package. The version must be valid semver.                                                          |
 | `description`       | `string`                                   | No       | Description is the description of the package.                                                                                    |
 | `keywords`          | `array[string]`                            | No       | Keywords is the list of keywords that are associated with the package, if any.                                                    |
@@ -112,6 +113,7 @@ Complete schema examples that include a much wider range of schema configuration
 | `repository`        | `string`                                   | No       | Repository is the URL at which the source for the package can be found.                                                           |
 | `logoUrl`           | `string`                                   | No       | LogoURL is the URL for the package's logo, if any.                                                                                |
 | `pluginDownloadURL` | `string`                                   | No       | PluginDownloadURL is the URL to use to acquire the provider plugin binary, if any.                                                |
+| `publisher`         | `string`                                   | No       | The name of the person or organization that authored and published the package.                                                   |
 | `meta`              | [`Metadata`](#metadata)                    | No       | Meta contains information for the importer about this package.                                                                    |
 | `config`            | [`Config`](#config)                        | No       | Config describes the set of configuration variables defined by this package.                                                      |
 | `types`             | [`map[ComplexType]`](#complextype)         | No       | Types is a map from type token to ComplexType that describes the set of complex types (ie. object, enum) defined by this package. |

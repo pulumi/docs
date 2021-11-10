@@ -11,19 +11,19 @@ Pulumi Packages are the core technology that enables cloud infrastructure resour
 
 ![A diagram showing how Pulumi Package code can be authored in one language and made available in all other languages supported by Pulumi](img/pulumi-package-overview.png)
 
-## Find Pulumi Packages on Pulumi Registry
+## Types of Pulumi Packages
 
-[Pulumi Registry]({{<relref "/registry">}}) is the central location where you can find all of the Pulumi Packages you can use. Visit [Pulumi Registry]({{<relref "/registry">}}) to get started!
+There are currently 3 different types of Pulumi Packages:
 
-## Author a Pulumi Package
+1. **Native Pulumi Provider Package:** Use the full features of the Pulumi resource model to create a provider for a new cloud platform. Examples: the [`kubernetes`]({{<relref "/registry/packages/kubernetes/api-docs">}}), [`azure-native`]({{<relref "/registry/packages/azure-native/api-docs">}}), [`aws-native`]({{<relref "/registry/packages/aws-native/api-docs">}}), and [`google-native`]({{<relref "/registry/packages/google-native/api-docs">}}) packages.
+2. **Bridged Provider Package:** Take an existing resource provider from another supported ecosystem (like a Terraform provider), and bridge it to be exposed as a Pulumi Package. Examples: the [`aws`]({{<relref "/registry/packages/aws">}}), [`tls`]({{<relref "/registry/packages/tls/api-docs">}}), and [`cloudflare`]({{<relref "/registry/packages/cloudflare/api-docs">}}) packages.
+3. **Component Package:** Write a Pulumi Component in your language of choice and expose it to users in all Pulumi languages. Example: the [`eks`]({{<relref "/registry/packages/eks/api-docs">}}) package.
 
-To create your own Pulumi Package, use the [guide]({{<relref "/docs/guides/pulumi-packages/how-to-author">}}).
-
-### Overview of authoring a package
+## Process of authoring a Pulumi Package
 
 Regardless of the type of Pulumi Package you want to author, there are a few key steps in the process of authoring a Pulumi package.
 
-1. Decide the [type](#types-of-pulumi-packages) of package you want to create and create a repository for it using one of the template repos provided by Pulumi
+1. Decide the type of package you want to create and create a repository for it using one of the template repos provided by Pulumi
 1. Create the [Resources or Components]({{<relref "/docs/intro/concepts/resources">}}) you want to include in the package, either by authoring them manually (in the case of a Component Package) or generating them from a cloud provider's API or via a provider bridge
 1. Build the resource provider plugin: the binary file that contains all of the components or resources you defined in your source code
 1. Generate the SDK code for all languages supported by Pulumi and packs the SDK packages–the npm, NuGet, and Python packages–that the Pulumi Package’s users will reference in their own programs
@@ -33,10 +33,14 @@ Regardless of the type of Pulumi Package you want to author, there are a few key
 
 All Pulumi Packages must include a [schema]({{<relref "/docs/guides/pulumi-packages/schema">}}), which defines the resources and functions exposed by the package, and is used to drive the generation of language-specific SDKs and documentation.
 
-### Types of Pulumi Packages
+## Get started
 
-There are currently 3 different types of Pulumi Packages:
+To get started, create a repository from your component from the appropriate template repository:
 
-1. **Native Pulumi Provider Package:** Use the full features of the Pulumi resource model to create a provider for a new cloud platform. Examples: the [`kubernetes`]({{<relref "/docs/reference/pkg/kubernetes">}}), [`azure-native`]({{<relref "/docs/reference/pkg/azure-native">}}), and [`google-native`]({{<relref "/docs/reference/pkg/google-native">}}) packages.
-2. **Bridged Provider Package:** Take an existing resource provider from another supported ecosystem (like a Terraform provider), and bridge it to be exposed as a Pulumi Package. Examples: the [`aws`]({{<relref "/docs/reference/pkg/aws">}}), [`tls`]({{<relref "/docs/reference/pkg/tls">}}), and [`cloudflare`]({{<relref "/docs/reference/pkg/cloudflare">}}) packages.
-3. **Component Package:** Write a Pulumi Component in your language of choice and expose it to users in all Pulumi languages. Example: the [`eks`]({{<relref "/docs/reference/pkg/eks">}}) package.
+- Author a **Native Pulumi Provider Package** with [`pulumi/pulumi-provider-boilerplate`](https://github.com/pulumi/pulumi-provider-boilerplate)
+- Author a **Bridged Provider Package** with [`pulumi/pulumi-tf-provider-boilerplate`](https://github.com/pulumi/pulumi-tf-provider-boilerplate)
+- Author a **Component Package** with:
+  - **Go:** [`pulumi/pulumi-component-provider-go-boilerplate`](https://github.com/pulumi/pulumi-component-provider-go-boilerplate)
+  - **Python:** [`pulumi/pulumi-component-provider-py-boilerplate`](https://github.com/pulumi/pulumi-component-provider-py-boilerplate)
+  - **TypeScript:** [`pulumi/pulumi-component-provider-ts-boilerplate`](https://github.com/pulumi/pulumi-component-provider-ts-boilerplate)
+  - **C#:** a template repository is coming soon
