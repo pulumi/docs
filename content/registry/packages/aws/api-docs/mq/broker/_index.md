@@ -42,7 +42,6 @@ class MyStack : Stack
     {
         var example = new Aws.Mq.Broker("example", new Aws.Mq.BrokerArgs
         {
-            BrokerName = "example",
             Configuration = new Aws.Mq.Inputs.BrokerConfigurationArgs
             {
                 Id = aws_mq_configuration.Test.Id,
@@ -86,7 +85,6 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := mq.NewBroker(ctx, "example", &mq.BrokerArgs{
-			BrokerName: pulumi.String("example"),
 			Configuration: &mq.BrokerConfigurationArgs{
 				Id:       pulumi.Any(aws_mq_configuration.Test.Id),
 				Revision: pulumi.Any(aws_mq_configuration.Test.Latest_revision),
@@ -123,7 +121,6 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.mq.Broker("example",
-    broker_name="example",
     configuration=aws.mq.BrokerConfigurationArgs(
         id=aws_mq_configuration["test"]["id"],
         revision=aws_mq_configuration["test"]["latest_revision"],
@@ -150,7 +147,6 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.mq.Broker("example", {
-    brokerName: "example",
     configuration: {
         id: aws_mq_configuration.test.id,
         revision: aws_mq_configuration.test.latest_revision,
@@ -187,7 +183,6 @@ class MyStack : Stack
     {
         var example = new Aws.Mq.Broker("example", new Aws.Mq.BrokerArgs
         {
-            BrokerName = "example",
             Configuration = new Aws.Mq.Inputs.BrokerConfigurationArgs
             {
                 Id = aws_mq_configuration.Test.Id,
@@ -232,7 +227,6 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := mq.NewBroker(ctx, "example", &mq.BrokerArgs{
-			BrokerName: pulumi.String("example"),
 			Configuration: &mq.BrokerConfigurationArgs{
 				Id:       pulumi.Any(aws_mq_configuration.Test.Id),
 				Revision: pulumi.Any(aws_mq_configuration.Test.Latest_revision),
@@ -270,7 +264,6 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.mq.Broker("example",
-    broker_name="example",
     configuration=aws.mq.BrokerConfigurationArgs(
         id=aws_mq_configuration["test"]["id"],
         revision=aws_mq_configuration["test"]["latest_revision"],
@@ -298,7 +291,6 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.mq.Broker("example", {
-    brokerName: "example",
     configuration: {
         id: aws_mq_configuration.test.id,
         revision: aws_mq_configuration.test.latest_revision,
@@ -487,15 +479,6 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="brokername_csharp">
-<a href="#brokername_csharp" style="color: inherit; text-decoration: inherit;">Broker<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the broker.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="enginetype_csharp">
 <a href="#enginetype_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Type</a>
 </span>
@@ -557,6 +540,15 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically upgrade to new minor versions of brokers as Amazon MQ makes releases available.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="brokername_csharp">
+<a href="#brokername_csharp" style="color: inherit; text-decoration: inherit;">Broker<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the broker.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_csharp">
@@ -662,15 +654,6 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="brokername_go">
-<a href="#brokername_go" style="color: inherit; text-decoration: inherit;">Broker<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the broker.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="enginetype_go">
 <a href="#enginetype_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Type</a>
 </span>
@@ -732,6 +715,15 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically upgrade to new minor versions of brokers as Amazon MQ makes releases available.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="brokername_go">
+<a href="#brokername_go" style="color: inherit; text-decoration: inherit;">Broker<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the broker.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_go">
@@ -837,15 +829,6 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="brokername_nodejs">
-<a href="#brokername_nodejs" style="color: inherit; text-decoration: inherit;">broker<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the broker.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="enginetype_nodejs">
 <a href="#enginetype_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Type</a>
 </span>
@@ -907,6 +890,15 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to automatically upgrade to new minor versions of brokers as Amazon MQ makes releases available.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="brokername_nodejs">
+<a href="#brokername_nodejs" style="color: inherit; text-decoration: inherit;">broker<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the broker.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_nodejs">
@@ -1012,15 +1004,6 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="broker_name_python">
-<a href="#broker_name_python" style="color: inherit; text-decoration: inherit;">broker_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the broker.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="engine_type_python">
 <a href="#engine_type_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>type</a>
 </span>
@@ -1082,6 +1065,15 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically upgrade to new minor versions of brokers as Amazon MQ makes releases available.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="broker_name_python">
+<a href="#broker_name_python" style="color: inherit; text-decoration: inherit;">broker_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the broker.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_python">
