@@ -100,7 +100,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "APPLICATION"
 		opt1 := "APM"
-		app, err := newrelic.GetEntity(ctx, &newrelic.GetEntityArgs{
+		app, err := newrelic.GetEntity(ctx, &GetEntityArgs{
 			Name:   "my-app",
 			Type:   &opt0,
 			Domain: &opt1,
@@ -121,8 +121,8 @@ func main() {
 			Metric:         pulumi.String("apdex"),
 			RunbookUrl:     pulumi.String("https://www.example.com"),
 			ConditionScope: pulumi.String("application"),
-			Terms: newrelic.AlertConditionTermArray{
-				&newrelic.AlertConditionTermArgs{
+			Terms: AlertConditionTermArray{
+				&AlertConditionTermArgs{
 					Duration:     pulumi.Int(5),
 					Operator:     pulumi.String("below"),
 					Priority:     pulumi.String("critical"),

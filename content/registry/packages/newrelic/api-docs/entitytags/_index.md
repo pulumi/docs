@@ -87,7 +87,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "APPLICATION"
 		opt1 := "APM"
-		fooEntity, err := newrelic.GetEntity(ctx, &newrelic.GetEntityArgs{
+		fooEntity, err := newrelic.GetEntity(ctx, &GetEntityArgs{
 			Name:   "Example application",
 			Type:   &opt0,
 			Domain: &opt1,
@@ -97,15 +97,15 @@ func main() {
 		}
 		_, err = newrelic.NewEntityTags(ctx, "fooEntityTags", &newrelic.EntityTagsArgs{
 			Guid: pulumi.String(fooEntity.Guid),
-			Tags: newrelic.EntityTagsTagArray{
-				&newrelic.EntityTagsTagArgs{
+			Tags: EntityTagsTagArray{
+				&EntityTagsTagArgs{
 					Key: pulumi.String("my-key"),
 					Values: pulumi.StringArray{
 						pulumi.String("my-value"),
 						pulumi.String("my-other-value"),
 					},
 				},
-				&newrelic.EntityTagsTagArgs{
+				&EntityTagsTagArgs{
 					Key: pulumi.String("my-key-2"),
 					Values: pulumi.StringArray{
 						pulumi.String("my-value-2"),

@@ -159,7 +159,51 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v4/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		slackChannel, err := newrelic.NewAlertChannel(ctx, "slackChannel", &newrelic.AlertChannelArgs{
+			Type: pulumi.String("slack"),
+			Config: &AlertChannelConfigArgs{
+				Url:     pulumi.String("https://hooks.slack.com/services/xxxxxxx/yyyyyyyy"),
+				Channel: pulumi.String("example-alerts-channel"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		emailChannel, err := newrelic.NewAlertChannel(ctx, "emailChannel", &newrelic.AlertChannelArgs{
+			Type: pulumi.String("email"),
+			Config: &AlertChannelConfigArgs{
+				Recipients:            pulumi.String("example@testing.com"),
+				IncludeJsonAttachment: pulumi.String("1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = newrelic.NewAlertPolicy(ctx, "policyWithChannels", &newrelic.AlertPolicyArgs{
+			IncidentPreference: pulumi.String("PER_CONDITION"),
+			ChannelIds: pulumi.IntArray{
+				slackChannel.ID(),
+				emailChannel.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
@@ -278,7 +322,43 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v4/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		slackChannel, err := newrelic.LookupAlertChannel(ctx, &GetAlertChannelArgs{
+			Name: "slack-channel-notification",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		emailChannel, err := newrelic.LookupAlertChannel(ctx, &GetAlertChannelArgs{
+			Name: "test@example.com",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = newrelic.NewAlertPolicy(ctx, "policyWithChannels", &newrelic.AlertPolicyArgs{
+			IncidentPreference: pulumi.String("PER_CONDITION"),
+			ChannelIds: pulumi.IntArray{
+				pulumi.String(slackChannel.Id),
+				pulumi.String(emailChannel.Id),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
