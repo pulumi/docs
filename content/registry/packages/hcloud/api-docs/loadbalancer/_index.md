@@ -83,8 +83,8 @@ func main() {
 		_, err = hcloud.NewLoadBalancer(ctx, "loadBalancer", &hcloud.LoadBalancerArgs{
 			LoadBalancerType: pulumi.String("lb11"),
 			Location:         pulumi.String("nbg1"),
-			Targets: hcloud.LoadBalancerTargetArray{
-				&hcloud.LoadBalancerTargetArgs{
+			Targets: LoadBalancerTargetArray{
+				&LoadBalancerTargetArgs{
 					Type:     pulumi.String("server"),
 					ServerId: myserver.ID(),
 				},

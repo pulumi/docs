@@ -69,21 +69,21 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "my-load-balancer"
-		_, err := hcloud.LookupLoadBalancer(ctx, &hcloud.LookupLoadBalancerArgs{
+		_, err := hcloud.LookupLoadBalancer(ctx, &GetLoadBalancerArgs{
 			Name: &opt0,
 		}, nil)
 		if err != nil {
 			return err
 		}
 		opt1 := 123
-		_, err = hcloud.LookupLoadBalancer(ctx, &hcloud.LookupLoadBalancerArgs{
+		_, err = hcloud.LookupLoadBalancer(ctx, &GetLoadBalancerArgs{
 			Id: &opt1,
 		}, nil)
 		if err != nil {
 			return err
 		}
 		opt2 := "key=value"
-		_, err = hcloud.LookupLoadBalancer(ctx, &hcloud.LookupLoadBalancerArgs{
+		_, err = hcloud.LookupLoadBalancer(ctx, &GetLoadBalancerArgs{
 			WithSelector: &opt2,
 		}, nil)
 		if err != nil {
@@ -122,13 +122,13 @@ import * as hcloud from "@pulumi/hcloud";
 
 const lb1 = pulumi.output(hcloud.getLoadBalancer({
     name: "my-load-balancer",
-}, { async: true }));
+}));
 const lb2 = pulumi.output(hcloud.getLoadBalancer({
     id: 123,
-}, { async: true }));
+}));
 const lb3 = pulumi.output(hcloud.getLoadBalancer({
     withSelector: "key=value",
-}, { async: true }));
+}));
 ```
 
 
@@ -145,33 +145,56 @@ const lb3 = pulumi.output(hcloud.getLoadBalancer({
 
 ## Using getLoadBalancer {#using}
 
+Two invocation forms are available. The direct form accepts plain
+arguments and either blocks until the result value is available, or
+returns a Promise-wrapped result. The output form accepts
+Input-wrapped arguments and returns an Output-wrapped result.
+
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLoadBalancer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLoadBalancerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLoadBalancerResult</a></span>></span></code></pre></div>
+<div class="highlight"
+><pre class="chroma"><code class="language-typescript" data-lang="typescript"
+><span class="k">function </span>getLoadBalancer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLoadBalancerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLoadBalancerResult</a></span>></span
+><span class="k">
+function </span>getLoadBalancerOutput<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLoadBalancerOutputArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Output&lt;<span class="nx"><a href="#result">GetLoadBalancerResult</a></span>></span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_load_balancer(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"
+><span class="k">def </span>get_load_balancer<span class="p">(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                       <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">with_selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLoadBalancerResult</code></pre></div>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>GetLoadBalancerResult</span
+><span class="k">
+def </span>get_load_balancer_output<span class="p">(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">with_selector</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>Output[GetLoadBalancerResult]</span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLoadBalancerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupLoadBalancerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"
+><span class="k">func </span>LookupLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLoadBalancerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupLoadBalancerResult</a></span>, error)</span
+><span class="k">
+func </span>LookupLoadBalancerOutput<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLoadBalancerOutputArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) LookupLoadBalancerResultOutput</span
+></code></pre></div>
 
-> Note: This function is named `LookupLoadBalancer` in the Go SDK.
+&gt; Note: This function is named `LookupLoadBalancer` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLoadBalancer </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetLoadBalancerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLoadBalancerArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLoadBalancer </span><span class="p">
+{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetLoadBalancerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLoadBalancerArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="k">
+    public static </span>Output&lt;<span class="nx"><a href="#result">GetLoadBalancerResult</a></span>> <span class="p">Invoke(</span><span class="nx">GetLoadBalancerInvokeArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 

@@ -16,131 +16,56 @@ Provides a list of available Hetzner Cloud Locations.
 This resource may be useful to create highly available infrastructure, distributed across several locations.
 
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using System.Collections.Generic;
-using Pulumi;
-using HCloud = Pulumi.HCloud;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var ds = Output.Create(HCloud.GetLocations.InvokeAsync());
-        var workers = new List<HCloud.Server>();
-        for (var rangeIndex = 0; rangeIndex < 3; rangeIndex++)
-        {
-            var range = new { Value = rangeIndex };
-            workers.Add(new HCloud.Server($"workers-{range.Value}", new HCloud.ServerArgs
-            {
-                Image = "debian-9",
-                ServerType = "cx31",
-                Location = ds.Apply(ds => ds.Names)[range.Value],
-            }));
-        }
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_hcloud as hcloud
-
-ds = hcloud.get_locations()
-workers = []
-for range in [{"value": i} for i in range(0, 3)]:
-    workers.append(hcloud.Server(f"workers-{range['value']}",
-        image="debian-9",
-        server_type="cx31",
-        location=ds.names[range["value"]]))
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as hcloud from "@pulumi/hcloud";
-
-const ds = hcloud.getLocations({});
-const workers: hcloud.Server[];
-for (const range = {value: 0}; range.value < 3; range.value++) {
-    workers.push(new hcloud.Server(`workers-${range.value}`, {
-        image: "debian-9",
-        serverType: "cx31",
-        location: ds.then(ds => ds.names)[range.value],
-    }));
-}
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Using getLocations {#using}
+
+Two invocation forms are available. The direct form accepts plain
+arguments and either blocks until the result value is available, or
+returns a Promise-wrapped result. The output form accepts
+Input-wrapped arguments and returns an Output-wrapped result.
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLocations<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLocationsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLocationsResult</a></span>></span></code></pre></div>
+<div class="highlight"
+><pre class="chroma"><code class="language-typescript" data-lang="typescript"
+><span class="k">function </span>getLocations<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLocationsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLocationsResult</a></span>></span
+><span class="k">
+function </span>getLocationsOutput<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLocationsOutputArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Output&lt;<span class="nx"><a href="#result">GetLocationsResult</a></span>></span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_locations(</span><span class="nx">location_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLocationsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"
+><span class="k">def </span>get_locations<span class="p">(</span><span class="nx">location_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>GetLocationsResult</span
+><span class="k">
+def </span>get_locations_output<span class="p">(</span><span class="nx">location_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>Output[GetLocationsResult]</span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLocations<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetLocationsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetLocationsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"
+><span class="k">func </span>GetLocations<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetLocationsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetLocationsResult</a></span>, error)</span
+><span class="k">
+func </span>GetLocationsOutput<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetLocationsOutputArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) GetLocationsResultOutput</span
+></code></pre></div>
 
-> Note: This function is named `GetLocations` in the Go SDK.
+&gt; Note: This function is named `GetLocations` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLocations </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetLocationsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLocationsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLocations </span><span class="p">
+{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetLocationsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLocationsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="k">
+    public static </span>Output&lt;<span class="nx"><a href="#result">GetLocationsResult</a></span>> <span class="p">Invoke(</span><span class="nx">GetLocationsInvokeArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
