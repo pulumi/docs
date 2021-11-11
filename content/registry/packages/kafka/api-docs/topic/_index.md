@@ -66,9 +66,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := kafka.NewTopic(ctx, "logs", &kafka.TopicArgs{
-			Config: pulumi.StringMap{
-				"cleanup.policy": pulumi.String("compact"),
-				"segment.ms":     pulumi.String("20000"),
+			Config: pulumi.AnyMap{
+				"cleanup.policy": pulumi.Any("compact"),
+				"segment.ms":     pulumi.Any("20000"),
 			},
 			Partitions:        pulumi.Int(100),
 			ReplicationFactor: pulumi.Int(2),
