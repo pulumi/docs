@@ -144,7 +144,100 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-kong/sdk/v4/go/kong"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		certificate, err := kong.NewCertificate(ctx, "certificate", &kong.CertificateArgs{
+			Certificate: pulumi.String(fmt.Sprintf("%v%v%v", "    -----BEGIN CERTIFICATE-----\n", "    ......\n", "    -----END CERTIFICATE-----\n")),
+			PrivateKey:  pulumi.String(fmt.Sprintf("%v%v%v", "    -----BEGIN PRIVATE KEY-----\n", "    .....\n", "    -----END PRIVATE KEY-----\n")),
+			Snis: pulumi.StringArray{
+				pulumi.String("foo.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = kong.NewUpstream(ctx, "upstream", &kong.UpstreamArgs{
+			Slots:              pulumi.Int(10),
+			HashOn:             pulumi.String("header"),
+			HashFallback:       pulumi.String("cookie"),
+			HashOnHeader:       pulumi.String("HeaderName"),
+			HashFallbackHeader: pulumi.String("FallbackHeaderName"),
+			HashOnCookie:       pulumi.String("CookieName"),
+			HashOnCookiePath:   pulumi.String("/path"),
+			HostHeader:         pulumi.String("x-host"),
+			Tags: pulumi.StringArray{
+				pulumi.String("a"),
+				pulumi.String("b"),
+			},
+			ClientCertificateId: certificate.ID(),
+			Healthchecks: &UpstreamHealthchecksArgs{
+				Active: &UpstreamHealthchecksActiveArgs{
+					Type:                   pulumi.String("https"),
+					HttpPath:               pulumi.String("/status"),
+					Timeout:                pulumi.Int(10),
+					Concurrency:            pulumi.Int(20),
+					HttpsVerifyCertificate: pulumi.Bool(false),
+					HttpsSni:               pulumi.String("some.domain.com"),
+					Healthy: &UpstreamHealthchecksActiveHealthyArgs{
+						Successes: pulumi.Int(1),
+						Interval:  pulumi.Int(5),
+						HttpStatuses: pulumi.IntArray{
+							pulumi.Int(200),
+							pulumi.Int(201),
+						},
+					},
+					Unhealthy: &UpstreamHealthchecksActiveUnhealthyArgs{
+						Timeouts:     pulumi.Int(7),
+						Interval:     pulumi.Int(3),
+						TcpFailures:  pulumi.Int(1),
+						HttpFailures: pulumi.Int(2),
+						HttpStatuses: pulumi.IntArray{
+							pulumi.Int(500),
+							pulumi.Int(501),
+						},
+					},
+				},
+				Passive: &UpstreamHealthchecksPassiveArgs{
+					Type: pulumi.String("https"),
+					Healthy: &UpstreamHealthchecksPassiveHealthyArgs{
+						Successes: pulumi.Int(1),
+						HttpStatuses: pulumi.IntArray{
+							pulumi.Int(200),
+							pulumi.Int(201),
+							pulumi.Int(202),
+						},
+					},
+					Unhealthy: &UpstreamHealthchecksPassiveUnhealthyArgs{
+						Timeouts:     pulumi.Int(3),
+						TcpFailures:  pulumi.Int(5),
+						HttpFailures: pulumi.Int(6),
+						HttpStatuses: pulumi.IntArray{
+							pulumi.Int(500),
+							pulumi.Int(501),
+							pulumi.Int(502),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
