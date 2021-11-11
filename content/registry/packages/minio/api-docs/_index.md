@@ -40,6 +40,6 @@ A Pulumi package for creating and managing minio cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`minio` Terraform Provider](https://github.com/aminueza/terraform-provider-minio).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 
