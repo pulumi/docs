@@ -71,12 +71,12 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ns1.NewApplication(ctx, "ns1App", &ns1.ApplicationArgs{
-			DefaultConfig: &ns1.ApplicationDefaultConfigArgs{
+			DefaultConfig: &ApplicationDefaultConfigArgs{
 				Http:                   pulumi.Bool(true),
 				Https:                  pulumi.Bool(false),
-				Job_timeout_millis:     pulumi.Float64(100),
-				Request_timeout_millis: pulumi.Float64(100),
-				Static_values:          pulumi.Bool(true),
+				Job_timeout_millis:     100,
+				Request_timeout_millis: 100,
+				Static_values:          true,
 			},
 		})
 		if err != nil {

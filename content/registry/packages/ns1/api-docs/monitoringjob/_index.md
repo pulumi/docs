@@ -97,11 +97,11 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ns1.NewMonitoringJob(ctx, "uswestMonitor", &ns1.MonitoringJobArgs{
 			Active: pulumi.Bool(true),
-			Config: pulumi.Map{
-				"host": pulumi.String("example-elb-uswest.aws.amazon.com"),
-				"port": pulumi.Float64(443),
-				"send": pulumi.String(fmt.Sprintf("%v%v%v", "HEAD / HTTP/1.0\n", "\n", "\n")),
-				"ssl": pulumi.Float64(1),
+			Config: pulumi.AnyMap{
+				"host": pulumi.Any("example-elb-uswest.aws.amazon.com"),
+				"port": pulumi.Any(443),
+				"send": pulumi.Any(fmt.Sprintf("%v%v%v", "HEAD / HTTP/1.0\n", "\n", "\n")),
+				"ssl": pulumi.Any(1),
 			},
 			Frequency:    pulumi.Int(60),
 			JobType:      pulumi.String("tcp"),
@@ -113,8 +113,8 @@ func main() {
 				pulumi.String("sin"),
 				pulumi.String("lga"),
 			},
-			Rules: ns1.MonitoringJobRuleArray{
-				&ns1.MonitoringJobRuleArgs{
+			Rules: MonitoringJobRuleArray{
+				&MonitoringJobRuleArgs{
 					Comparison: pulumi.String("contains"),
 					Key:        pulumi.String("output"),
 					Value:      pulumi.String("200 OK"),

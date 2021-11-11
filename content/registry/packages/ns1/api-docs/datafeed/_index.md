@@ -104,8 +104,8 @@ func main() {
 			return err
 		}
 		_, err = ns1.NewDataFeed(ctx, "uswestFeed", &ns1.DataFeedArgs{
-			Config: pulumi.StringMap{
-				"label": pulumi.String("uswest"),
+			Config: pulumi.AnyMap{
+				"label": pulumi.Any("uswest"),
 			},
 			SourceId: example.ID(),
 		})
@@ -113,8 +113,8 @@ func main() {
 			return err
 		}
 		_, err = ns1.NewDataFeed(ctx, "useastFeed", &ns1.DataFeedArgs{
-			Config: pulumi.StringMap{
-				"label": pulumi.String("useast"),
+			Config: pulumi.AnyMap{
+				"label": pulumi.Any("useast"),
 			},
 			SourceId: example.ID(),
 		})
