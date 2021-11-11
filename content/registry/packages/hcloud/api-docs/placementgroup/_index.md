@@ -71,8 +71,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := hcloud.NewPlacementGroup(ctx, "my_placement_group", &hcloud.PlacementGroupArgs{
 			Type: pulumi.String("spread"),
-			Labels: pulumi.StringMap{
-				"key": pulumi.String("value"),
+			Labels: pulumi.AnyMap{
+				"key": pulumi.Any("value"),
 			},
 		})
 		if err != nil {
