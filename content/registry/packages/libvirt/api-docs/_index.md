@@ -26,6 +26,7 @@ A Pulumi package for creating and managing libvirt cloud resources.
 <ul class="api">
     <li><a href="getnetworkdnshosttemplate" title="GetNetworkDnsHostTemplate"><span class="api-symbol api-symbol--function"></span>GetNetworkDnsHostTemplate</a></li>
     <li><a href="getnetworkdnssrvtemplate" title="GetNetworkDnsSrvTemplate"><span class="api-symbol api-symbol--function"></span>GetNetworkDnsSrvTemplate</a></li>
+    <li><a href="getnetworkdnsmasqoptionstemplate" title="GetNetworkDnsmasqOptionsTemplate"><span class="api-symbol api-symbol--function"></span>GetNetworkDnsmasqOptionsTemplate</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -37,6 +38,6 @@ A Pulumi package for creating and managing libvirt cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`libvirt` Terraform Provider](https://github.com/dmacvicar/terraform-provider-libvirt).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 
