@@ -14,38 +14,316 @@ no_edit_this_page: true
 
 
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Minio = Pulumi.Minio;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Minio.GetIamPolicyDocument.InvokeAsync(new Minio.GetIamPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Minio.Inputs.GetIamPolicyDocumentStatementArgs
+                {
+                    Sid = "1",
+                    Actions = 
+                    {
+                        "s3:ListAllMyBuckets",
+                        "s3:GetBucketLocation",
+                    },
+                    Resources = 
+                    {
+                        "arn:aws:s3:::*",
+                    },
+                },
+                new Minio.Inputs.GetIamPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "s3:ListBucket",
+                    },
+                    Resources = 
+                    {
+                        "arn:aws:s3:::state-terraform-s3",
+                    },
+                    Conditions = 
+                    {
+                        new Minio.Inputs.GetIamPolicyDocumentStatementConditionArgs
+                        {
+                            Test = "StringLike",
+                            Variable = "s3:prefix",
+                            Values = 
+                            {
+                                "",
+                                "home/",
+                            },
+                        },
+                    },
+                },
+                new Minio.Inputs.GetIamPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "s3:PutObject",
+                    },
+                    Resources = 
+                    {
+                        "arn:aws:s3:::state-terraform-s3",
+                        "arn:aws:s3:::state-terraform-s3/*",
+                    },
+                },
+            },
+        }));
+        var testPolicy = new Minio.IamPolicy("testPolicy", new Minio.IamPolicyArgs
+        {
+            Policy = example.Apply(example => example.Json),
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-minio/sdk/go/minio"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := minio.GetIamPolicyDocument(ctx, &GetIamPolicyDocumentArgs{
+			Statements: []GetIamPolicyDocumentStatement{
+				GetIamPolicyDocumentStatement{
+					Sid: "1",
+					Actions: []string{
+						"s3:ListAllMyBuckets",
+						"s3:GetBucketLocation",
+					},
+					Resources: []string{
+						"arn:aws:s3:::*",
+					},
+				},
+				GetIamPolicyDocumentStatement{
+					Actions: []string{
+						"s3:ListBucket",
+					},
+					Resources: []string{
+						"arn:aws:s3:::state-terraform-s3",
+					},
+					Conditions: []GetIamPolicyDocumentStatementCondition{
+						GetIamPolicyDocumentStatementCondition{
+							Test:     "StringLike",
+							Variable: "s3:prefix",
+							Values: []string{
+								"",
+								"home/",
+							},
+						},
+					},
+				},
+				GetIamPolicyDocumentStatement{
+					Actions: []string{
+						"s3:PutObject",
+					},
+					Resources: []string{
+						"arn:aws:s3:::state-terraform-s3",
+						"arn:aws:s3:::state-terraform-s3/*",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = minio.NewIamPolicy(ctx, "testPolicy", &minio.IamPolicyArgs{
+			Policy: pulumi.String(example.Json),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_minio as minio
+
+example = minio.get_iam_policy_document(statements=[
+    minio.GetIamPolicyDocumentStatementArgs(
+        sid="1",
+        actions=[
+            "s3:ListAllMyBuckets",
+            "s3:GetBucketLocation",
+        ],
+        resources=["arn:aws:s3:::*"],
+    ),
+    minio.GetIamPolicyDocumentStatementArgs(
+        actions=["s3:ListBucket"],
+        resources=["arn:aws:s3:::state-terraform-s3"],
+        conditions=[minio.GetIamPolicyDocumentStatementConditionArgs(
+            test="StringLike",
+            variable="s3:prefix",
+            values=[
+                "",
+                "home/",
+            ],
+        )],
+    ),
+    minio.GetIamPolicyDocumentStatementArgs(
+        actions=["s3:PutObject"],
+        resources=[
+            "arn:aws:s3:::state-terraform-s3",
+            "arn:aws:s3:::state-terraform-s3/*",
+        ],
+    ),
+])
+test_policy = minio.IamPolicy("testPolicy", policy=example.json)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as minio from "@pulumi/minio";
+
+const example = minio.getIamPolicyDocument({
+    statements: [
+        {
+            sid: "1",
+            actions: [
+                "s3:ListAllMyBuckets",
+                "s3:GetBucketLocation",
+            ],
+            resources: ["arn:aws:s3:::*"],
+        },
+        {
+            actions: ["s3:ListBucket"],
+            resources: ["arn:aws:s3:::state-terraform-s3"],
+            conditions: [{
+                test: "StringLike",
+                variable: "s3:prefix",
+                values: [
+                    "",
+                    "home/",
+                ],
+            }],
+        },
+        {
+            actions: ["s3:PutObject"],
+            resources: [
+                "arn:aws:s3:::state-terraform-s3",
+                "arn:aws:s3:::state-terraform-s3/*",
+            ],
+        },
+    ],
+});
+const testPolicy = new minio.IamPolicy("testPolicy", {policy: example.then(example => example.json)});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
+
 
 ## Using getIamPolicyDocument {#using}
+
+Two invocation forms are available. The direct form accepts plain
+arguments and either blocks until the result value is available, or
+returns a Promise-wrapped result. The output form accepts
+Input-wrapped arguments and returns an Output-wrapped result.
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIamPolicyDocument<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIamPolicyDocumentArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIamPolicyDocumentResult</a></span>></span></code></pre></div>
+<div class="highlight"
+><pre class="chroma"><code class="language-typescript" data-lang="typescript"
+><span class="k">function </span>getIamPolicyDocument<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIamPolicyDocumentArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIamPolicyDocumentResult</a></span>></span
+><span class="k">
+function </span>getIamPolicyDocumentOutput<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIamPolicyDocumentOutputArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Output&lt;<span class="nx"><a href="#result">GetIamPolicyDocumentResult</a></span>></span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_iam_policy_document(</span><span class="nx">override_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"
+><span class="k">def </span>get_iam_policy_document<span class="p">(</span><span class="nx">override_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                             <span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                             <span class="nx">source_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                             <span class="nx">statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetIamPolicyDocumentStatement]]</span> = None<span class="p">,</span>
                             <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIamPolicyDocumentResult</code></pre></div>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>GetIamPolicyDocumentResult</span
+><span class="k">
+def </span>get_iam_policy_document_output<span class="p">(</span><span class="nx">override_json</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">source_json</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">statements</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GetIamPolicyDocumentStatementArgs]]]]</span> = None<span class="p">,</span>
+                            <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>Output[GetIamPolicyDocumentResult]</span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIamPolicyDocument<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetIamPolicyDocumentArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetIamPolicyDocumentResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"
+><span class="k">func </span>GetIamPolicyDocument<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetIamPolicyDocumentArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetIamPolicyDocumentResult</a></span>, error)</span
+><span class="k">
+func </span>GetIamPolicyDocumentOutput<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetIamPolicyDocumentOutputArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) GetIamPolicyDocumentResultOutput</span
+></code></pre></div>
 
-> Note: This function is named `GetIamPolicyDocument` in the Go SDK.
+&gt; Note: This function is named `GetIamPolicyDocument` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIamPolicyDocument </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetIamPolicyDocumentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIamPolicyDocumentArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIamPolicyDocument </span><span class="p">
+{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetIamPolicyDocumentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIamPolicyDocumentArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="k">
+    public static </span>Output&lt;<span class="nx"><a href="#result">GetIamPolicyDocumentResult</a></span>> <span class="p">Invoke(</span><span class="nx">GetIamPolicyDocumentInvokeArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 

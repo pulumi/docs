@@ -74,8 +74,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		testIamUser, err := minio.NewIamUser(ctx, "testIamUser", &minio.IamUserArgs{
 			ForceDestroy: pulumi.Bool(true),
-			Tags: pulumi.StringMap{
-				"tag-key": pulumi.String("tag-value"),
+			Tags: pulumi.AnyMap{
+				"tag-key": pulumi.Any("tag-value"),
 			},
 		})
 		if err != nil {
