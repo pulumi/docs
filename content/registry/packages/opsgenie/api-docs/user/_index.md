@@ -95,8 +95,8 @@ func main() {
 				pulumi.String("opsgenie"),
 			},
 			Timezone: pulumi.String("America/New_York"),
-			UserAddresses: opsgenie.UserUserAddressArray{
-				&opsgenie.UserUserAddressArgs{
+			UserAddresses: UserUserAddressArray{
+				&UserUserAddressArgs{
 					City:    pulumi.String("City"),
 					Country: pulumi.String("Country"),
 					Line:    pulumi.String("Line"),

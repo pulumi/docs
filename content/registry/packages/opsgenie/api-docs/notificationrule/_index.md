@@ -100,10 +100,10 @@ func main() {
 				pulumi.String("just-before"),
 				pulumi.String("15-minutes-ago"),
 			},
-			Steps: opsgenie.NotificationRuleStepArray{
-				&opsgenie.NotificationRuleStepArgs{
-					Contacts: opsgenie.NotificationRuleStepContactArray{
-						&opsgenie.NotificationRuleStepContactArgs{
+			Steps: NotificationRuleStepArray{
+				&NotificationRuleStepArgs{
+					Contacts: NotificationRuleStepContactArray{
+						&NotificationRuleStepContactArgs{
 							Method: pulumi.String("email"),
 							To:     pulumi.String("example@user.com"),
 						},

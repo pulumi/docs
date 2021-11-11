@@ -107,14 +107,14 @@ func main() {
 			TeamId:            testTeam.ID(),
 			PolicyDescription: pulumi.String("This is sample policy"),
 			Message:           pulumi.String("{{message}}"),
-			Filters: opsgenie.AlertPolicyFilterArray{
+			Filters: AlertPolicyFilterArray{
 				nil,
 			},
-			TimeRestrictions: opsgenie.AlertPolicyTimeRestrictionArray{
-				&opsgenie.AlertPolicyTimeRestrictionArgs{
+			TimeRestrictions: AlertPolicyTimeRestrictionArray{
+				&AlertPolicyTimeRestrictionArgs{
 					Type: pulumi.String("weekday-and-time-of-day"),
-					Restrictions: opsgenie.AlertPolicyTimeRestrictionRestrictionArray{
-						&opsgenie.AlertPolicyTimeRestrictionRestrictionArgs{
+					Restrictions: AlertPolicyTimeRestrictionRestrictionArray{
+						&AlertPolicyTimeRestrictionRestrictionArgs{
 							EndDay:    pulumi.String("monday"),
 							EndHour:   pulumi.Int(7),
 							EndMin:    pulumi.Int(0),
@@ -122,7 +122,7 @@ func main() {
 							StartHour: pulumi.Int(21),
 							StartMin:  pulumi.Int(0),
 						},
-						&opsgenie.AlertPolicyTimeRestrictionRestrictionArgs{
+						&AlertPolicyTimeRestrictionRestrictionArgs{
 							EndDay:    pulumi.String("tuesday"),
 							EndHour:   pulumi.Int(7),
 							EndMin:    pulumi.Int(0),

@@ -130,10 +130,10 @@ func main() {
 			return err
 		}
 		_, err = opsgenie.NewTeamRoutingRule(ctx, "testTeamRoutingRule", &opsgenie.TeamRoutingRuleArgs{
-			Criterias: opsgenie.TeamRoutingRuleCriteriaArray{
-				&opsgenie.TeamRoutingRuleCriteriaArgs{
-					Conditions: opsgenie.TeamRoutingRuleCriteriaConditionArray{
-						&opsgenie.TeamRoutingRuleCriteriaConditionArgs{
+			Criterias: TeamRoutingRuleCriteriaArray{
+				&TeamRoutingRuleCriteriaArgs{
+					Conditions: TeamRoutingRuleCriteriaConditionArray{
+						&TeamRoutingRuleCriteriaConditionArgs{
 							ExpectedValue: pulumi.String("expected1"),
 							Field:         pulumi.String("message"),
 							Not:           pulumi.Bool(false),
@@ -143,18 +143,18 @@ func main() {
 					Type: pulumi.String("match-any-condition"),
 				},
 			},
-			Notifies: opsgenie.TeamRoutingRuleNotifyArray{
-				&opsgenie.TeamRoutingRuleNotifyArgs{
+			Notifies: TeamRoutingRuleNotifyArray{
+				&TeamRoutingRuleNotifyArgs{
 					Name: testSchedule.Name,
 					Type: pulumi.String("schedule"),
 				},
 			},
 			Order:  pulumi.Int(0),
 			TeamId: testTeam.ID(),
-			TimeRestrictions: opsgenie.TeamRoutingRuleTimeRestrictionArray{
-				&opsgenie.TeamRoutingRuleTimeRestrictionArgs{
-					Restrictions: opsgenie.TeamRoutingRuleTimeRestrictionRestrictionArray{
-						&opsgenie.TeamRoutingRuleTimeRestrictionRestrictionArgs{
+			TimeRestrictions: TeamRoutingRuleTimeRestrictionArray{
+				&TeamRoutingRuleTimeRestrictionArgs{
+					Restrictions: TeamRoutingRuleTimeRestrictionRestrictionArray{
+						&TeamRoutingRuleTimeRestrictionRestrictionArgs{
 							EndDay:    pulumi.String("tuesday"),
 							EndHour:   pulumi.Int(18),
 							EndMin:    pulumi.Int(30),

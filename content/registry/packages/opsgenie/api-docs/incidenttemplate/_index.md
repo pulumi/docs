@@ -107,8 +107,8 @@ func main() {
 		_, err = opsgenie.NewIncidentTemplate(ctx, "testIncidentTemplate", &opsgenie.IncidentTemplateArgs{
 			Message:  pulumi.String("Incident Message"),
 			Priority: pulumi.String("P2"),
-			StakeholderProperties: opsgenie.IncidentTemplateStakeholderPropertyArray{
-				&opsgenie.IncidentTemplateStakeholderPropertyArgs{
+			StakeholderProperties: IncidentTemplateStakeholderPropertyArray{
+				&IncidentTemplateStakeholderPropertyArgs{
 					Enable:      pulumi.Bool(true),
 					Message:     pulumi.String("Stakeholder Message"),
 					Description: pulumi.String("Stakeholder Description"),
