@@ -76,7 +76,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := splunk.NewDataUiViews(ctx, "dashboard", &splunk.DataUiViewsArgs{
-			Acl: &splunk.DataUiViewsAclArgs{
+			Acl: &DataUiViewsAclArgs{
 				App:   pulumi.String("search"),
 				Owner: pulumi.String("admin"),
 			},

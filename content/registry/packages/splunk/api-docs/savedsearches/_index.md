@@ -82,7 +82,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := splunk.NewSavedSearches(ctx, "savedSearch", &splunk.SavedSearchesArgs{
-			Acl: &splunk.SavedSearchesAclArgs{
+			Acl: &SavedSearchesAclArgs{
 				App:     pulumi.String("launcher"),
 				Owner:   pulumi.String("admin"),
 				Sharing: pulumi.String("app"),
