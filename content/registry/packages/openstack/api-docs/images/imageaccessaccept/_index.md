@@ -123,7 +123,7 @@ const rancheros = pulumi.output(openstack.images.getImage({
     memberStatus: "all",
     name: "RancherOS",
     visibility: "shared",
-}, { async: true }));
+}));
 const rancherosMember = new openstack.images.ImageAccessAccept("rancheros_member", {
     imageId: rancheros.id,
     status: "accepted",

@@ -84,8 +84,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		container1, err := objectstorage.NewContainer(ctx, "container1", &objectstorage.ContainerArgs{
 			ContentType: pulumi.String("application/json"),
-			Metadata: pulumi.StringMap{
-				"test": pulumi.String("true"),
+			Metadata: pulumi.AnyMap{
+				"test": pulumi.Any("true"),
 			},
 			Region: pulumi.String("RegionOne"),
 		})
@@ -96,8 +96,8 @@ func main() {
 			ContainerName: container1.Name,
 			Content:       pulumi.String(fmt.Sprintf("%v%v%v%v", "               {\n", "                 \"foo\" : \"bar\"\n", "               }\n", "\n")),
 			ContentType:   pulumi.String("application/json"),
-			Metadata: pulumi.StringMap{
-				"test": pulumi.String("true"),
+			Metadata: pulumi.AnyMap{
+				"test": pulumi.Any("true"),
 			},
 			Region: pulumi.String("RegionOne"),
 		})
@@ -233,8 +233,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		container1, err := objectstorage.NewContainer(ctx, "container1", &objectstorage.ContainerArgs{
 			ContentType: pulumi.String("application/json"),
-			Metadata: pulumi.StringMap{
-				"test": pulumi.String("true"),
+			Metadata: pulumi.AnyMap{
+				"test": pulumi.Any("true"),
 			},
 			Region: pulumi.String("RegionOne"),
 		})
@@ -244,8 +244,8 @@ func main() {
 		_, err = objectstorage.NewContainerObject(ctx, "doc1", &objectstorage.ContainerObjectArgs{
 			ContainerName: container1.Name,
 			ContentType:   pulumi.String("application/json"),
-			Metadata: pulumi.StringMap{
-				"test": pulumi.String("true"),
+			Metadata: pulumi.AnyMap{
+				"test": pulumi.Any("true"),
 			},
 			Region: pulumi.String("RegionOne"),
 			Source: pulumi.String("./default.json"),

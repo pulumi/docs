@@ -123,7 +123,7 @@ func main() {
 			NextHop:         pulumi.String("192.168.199.254"),
 			RouterId:        router1.ID(),
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"openstack_networking_router_interface_v2.int_1",
+			pulumi.Resource("openstack_networking_router_interface_v2.int_1"),
 		}))
 		if err != nil {
 			return err

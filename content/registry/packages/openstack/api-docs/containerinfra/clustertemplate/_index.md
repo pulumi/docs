@@ -241,11 +241,11 @@ func main() {
 			Flavor:              pulumi.String("m1.small"),
 			FloatingIpEnabled:   pulumi.Bool(false),
 			Image:               pulumi.String("Fedora-Atomic-27"),
-			Labels: pulumi.StringMap{
-				"influx_grafana_dashboard_enabled": pulumi.String("true"),
-				"kube_dashboard_enabled":           pulumi.String("true"),
-				"kube_tag":                         pulumi.String("1.11.1"),
-				"prometheus_monitoring":            pulumi.String("true"),
+			Labels: pulumi.AnyMap{
+				"influx_grafana_dashboard_enabled": pulumi.Any("true"),
+				"kube_dashboard_enabled":           pulumi.Any("true"),
+				"kube_tag":                         pulumi.Any("1.11.1"),
+				"prometheus_monitoring":            pulumi.Any("true"),
 			},
 			MasterFlavor:    pulumi.String("m1.medium"),
 			MasterLbEnabled: pulumi.Bool(true),

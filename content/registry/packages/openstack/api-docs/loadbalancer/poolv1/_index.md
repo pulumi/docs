@@ -299,9 +299,9 @@ func main() {
 			Rules: compute.SecGroupRuleArray{
 				&compute.SecGroupRuleArgs{
 					Cidr:       pulumi.String("0.0.0.0/0"),
-					FromPort:   pulumi.Int(-1),
+					FromPort:   -1,
 					IpProtocol: pulumi.String("icmp"),
-					ToPort:     pulumi.Int(-1),
+					ToPort:     -1,
 				},
 				&compute.SecGroupRuleArgs{
 					Cidr:       pulumi.String("0.0.0.0/0"),
@@ -320,7 +320,7 @@ func main() {
 					Uuid: network1.ID(),
 				},
 			},
-			SecurityGroups: pulumi.Array{
+			SecurityGroups: pulumi.StringArray{
 				pulumi.String("default"),
 				secgroup1.Name,
 			},
@@ -334,7 +334,7 @@ func main() {
 					Uuid: network1.ID(),
 				},
 			},
-			SecurityGroups: pulumi.Array{
+			SecurityGroups: pulumi.StringArray{
 				pulumi.String("default"),
 				secgroup1.Name,
 			},

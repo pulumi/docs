@@ -101,7 +101,99 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-openstack/sdk/v3/go/openstack/keymanager"
+	"github.com/pulumi/pulumi-openstack/sdk/v3/go/openstack/loadbalancer"
+	"github.com/pulumi/pulumi-openstack/sdk/v3/go/openstack/networking"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		certificate1, err := keymanager.NewSecretV1(ctx, "certificate1", &keymanager.SecretV1Args{
+			Payload:            readFileOrPanic("cert.pem"),
+			PayloadContentType: pulumi.String("text/plain"),
+			SecretType:         pulumi.String("certificate"),
+		})
+		if err != nil {
+			return err
+		}
+		privateKey1, err := keymanager.NewSecretV1(ctx, "privateKey1", &keymanager.SecretV1Args{
+			Payload:            readFileOrPanic("cert-key.pem"),
+			PayloadContentType: pulumi.String("text/plain"),
+			SecretType:         pulumi.String("private"),
+		})
+		if err != nil {
+			return err
+		}
+		intermediate1, err := keymanager.NewSecretV1(ctx, "intermediate1", &keymanager.SecretV1Args{
+			Payload:            readFileOrPanic("intermediate-ca.pem"),
+			PayloadContentType: pulumi.String("text/plain"),
+			SecretType:         pulumi.String("certificate"),
+		})
+		if err != nil {
+			return err
+		}
+		tls1, err := keymanager.NewContainerV1(ctx, "tls1", &keymanager.ContainerV1Args{
+			SecretRefs: keymanager.ContainerV1SecretRefArray{
+				&keymanager.ContainerV1SecretRefArgs{
+					Name:      pulumi.String("certificate"),
+					SecretRef: certificate1.SecretRef,
+				},
+				&keymanager.ContainerV1SecretRefArgs{
+					Name:      pulumi.String("private_key"),
+					SecretRef: privateKey1.SecretRef,
+				},
+				&keymanager.ContainerV1SecretRefArgs{
+					Name:      pulumi.String("intermediates"),
+					SecretRef: intermediate1.SecretRef,
+				},
+			},
+			Type: pulumi.String("certificate"),
+		})
+		if err != nil {
+			return err
+		}
+		opt0 := "my-subnet"
+		subnet1, err := networking.LookupSubnet(ctx, &networking.LookupSubnetArgs{
+			Name: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		lb1, err := loadbalancer.NewLoadBalancer(ctx, "lb1", &loadbalancer.LoadBalancerArgs{
+			VipSubnetId: pulumi.String(subnet1.Id),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = loadbalancer.NewListener(ctx, "listener1", &loadbalancer.ListenerArgs{
+			DefaultTlsContainerRef: tls1.ContainerRef,
+			LoadbalancerId:         lb1.ID(),
+			Protocol:               pulumi.String("TERMINATED_HTTPS"),
+			ProtocolPort:           pulumi.Int(443),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
@@ -195,7 +287,7 @@ const tls1 = new openstack.keymanager.ContainerV1("tls_1", {
 });
 const subnet1 = pulumi.output(openstack.networking.getSubnet({
     name: "my-subnet",
-}, { async: true }));
+}));
 const lb1 = new openstack.loadbalancer.LoadBalancer("lb_1", {
     vipSubnetId: subnet1.id,
 });
