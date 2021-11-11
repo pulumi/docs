@@ -114,31 +114,52 @@ const my_cluster = pulumi.output(linode.getLkeCluster({
 
 ## Using getLkeCluster {#using}
 
+Two invocation forms are available. The direct form accepts plain
+arguments and either blocks until the result value is available, or
+returns a Promise-wrapped result. The output form accepts
+Input-wrapped arguments and returns an Output-wrapped result.
+
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLkeCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLkeClusterArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLkeClusterResult</a></span>></span></code></pre></div>
+<div class="highlight"
+><pre class="chroma"><code class="language-typescript" data-lang="typescript"
+><span class="k">function </span>getLkeCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLkeClusterArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLkeClusterResult</a></span>></span
+><span class="k">
+function </span>getLkeClusterOutput<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLkeClusterOutputArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Output&lt;<span class="nx"><a href="#result">GetLkeClusterResult</a></span>></span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_lke_cluster(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLkeClusterResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"
+><span class="k">def </span>get_lke_cluster<span class="p">(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>GetLkeClusterResult</span
+><span class="k">
+def </span>get_lke_cluster_output<span class="p">(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>Output[GetLkeClusterResult]</span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLkeCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLkeClusterArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupLkeClusterResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"
+><span class="k">func </span>LookupLkeCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLkeClusterArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupLkeClusterResult</a></span>, error)</span
+><span class="k">
+func </span>LookupLkeClusterOutput<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLkeClusterOutputArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) LookupLkeClusterResultOutput</span
+></code></pre></div>
 
-> Note: This function is named `LookupLkeCluster` in the Go SDK.
+&gt; Note: This function is named `LookupLkeCluster` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLkeCluster </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetLkeClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLkeClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLkeCluster </span><span class="p">
+{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetLkeClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLkeClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="k">
+    public static </span>Output&lt;<span class="nx"><a href="#result">GetLkeClusterResult</a></span>> <span class="p">Invoke(</span><span class="nx">GetLkeClusterInvokeArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
