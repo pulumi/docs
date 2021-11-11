@@ -329,8 +329,8 @@ func main() {
 			RealmId:              realm.ID(),
 			LdapUserFederationId: ldapUserFederation.ID(),
 			Role: pulumi.All(realmManagement, createClient).ApplyT(func(_args []interface{}) (string, error) {
-				realmManagement := _args[0].(openid.LookupClientResult)
-				createClient := _args[1].(keycloak.LookupRoleResult)
+				realmManagement := _args[0].(openid.GetClientResult)
+				createClient := _args[1].(GetRoleResult)
 				return fmt.Sprintf("%v%v%v", realmManagement.ClientId, ".", createClient.Name), nil
 			}).(pulumi.StringOutput),
 		})
@@ -420,7 +420,7 @@ const createClient = pulumi.all([realm.id, realmManagement]).apply(([id, realmMa
 const assignAdminRoleToAllUsers = new keycloak.ldap.HardcodedRoleMapper("assignAdminRoleToAllUsers", {
     realmId: realm.id,
     ldapUserFederationId: ldapUserFederation.id,
-    role: pulumi.interpolate`${realmManagement.clientId}.${createClient.name}`,
+    role: pulumi.all([realmManagement, createClient]).apply(([realmManagement, createClient]) => `${realmManagement.clientId}.${createClient.name}`),
 });
 ```
 

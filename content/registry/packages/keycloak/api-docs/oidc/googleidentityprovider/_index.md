@@ -90,8 +90,8 @@ func main() {
 			TrustEmail:   pulumi.Bool(true),
 			HostedDomain: pulumi.String("example.com"),
 			SyncMode:     pulumi.String("IMPORT"),
-			ExtraConfig: pulumi.StringMap{
-				"myCustomConfigKey": pulumi.String("myValue"),
+			ExtraConfig: pulumi.AnyMap{
+				"myCustomConfigKey": pulumi.Any("myValue"),
 			},
 		})
 		if err != nil {

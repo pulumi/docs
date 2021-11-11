@@ -110,9 +110,9 @@ func main() {
 		_, err = keycloak.NewGroup(ctx, "childGroupWithOptionalAttributes", &keycloak.GroupArgs{
 			RealmId:  realm.ID(),
 			ParentId: parentGroup.ID(),
-			Attributes: pulumi.StringMap{
-				"foo":        pulumi.String("bar"),
-				"multivalue": pulumi.String("value1##value2"),
+			Attributes: pulumi.AnyMap{
+				"foo":        pulumi.Any("bar"),
+				"multivalue": pulumi.Any("value1##value2"),
 			},
 		})
 		if err != nil {

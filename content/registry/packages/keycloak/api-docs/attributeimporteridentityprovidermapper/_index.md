@@ -113,8 +113,8 @@ func main() {
 			ClaimName:             pulumi.String("my-email-claim"),
 			IdentityProviderAlias: oidcIdentityProvider.Alias,
 			UserAttribute:         pulumi.String("email"),
-			ExtraConfig: pulumi.StringMap{
-				"syncMode": pulumi.String("INHERIT"),
+			ExtraConfig: pulumi.AnyMap{
+				"syncMode": pulumi.Any("INHERIT"),
 			},
 		})
 		if err != nil {
@@ -152,7 +152,7 @@ oidc_attribute_importer_identity_provider_mapper = keycloak.AttributeImporterIde
     identity_provider_alias=oidc_identity_provider.alias,
     user_attribute="email",
     extra_config={
-        "sync_mode": "INHERIT",
+        "syncMode": "INHERIT",
     })
 ```
 

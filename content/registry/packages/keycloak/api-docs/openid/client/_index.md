@@ -98,9 +98,9 @@ func main() {
 				pulumi.String("http://localhost:8080/openid-callback"),
 			},
 			LoginTheme: pulumi.String("keycloak"),
-			ExtraConfig: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-				"key2": pulumi.String("value2"),
+			ExtraConfig: pulumi.AnyMap{
+				"key1": pulumi.Any("value1"),
+				"key2": pulumi.Any("value2"),
 			},
 		})
 		if err != nil {
