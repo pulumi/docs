@@ -71,7 +71,51 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-signalfx/sdk/v5/go/signalfx/gcp"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := gcp.NewIntegration(ctx, "gcpMyteam", &gcp.IntegrationArgs{
+			Enabled:  pulumi.Bool(true),
+			PollRate: pulumi.Int(300000),
+			ProjectServiceKeys: gcp.IntegrationProjectServiceKeyArray{
+				&gcp.IntegrationProjectServiceKeyArgs{
+					ProjectId:  pulumi.String("gcp_project_id_1"),
+					ProjectKey: readFileOrPanic("/path/to/gcp_credentials_1.json"),
+				},
+				&gcp.IntegrationProjectServiceKeyArgs{
+					ProjectId:  pulumi.String("gcp_project_id_2"),
+					ProjectKey: readFileOrPanic("/path/to/gcp_credentials_2.json"),
+				},
+			},
+			Services: pulumi.StringArray{
+				pulumi.String("compute"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

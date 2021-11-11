@@ -77,7 +77,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := signalfx.NewOrgToken(ctx, "myteamkey0", &signalfx.OrgTokenArgs{
 			Description: pulumi.String("My team's rad key"),
-			HostOrUsageLimits: &signalfx.OrgTokenHostOrUsageLimitsArgs{
+			HostOrUsageLimits: &OrgTokenHostOrUsageLimitsArgs{
 				ContainerLimit:                      pulumi.Int(200),
 				ContainerNotificationThreshold:      pulumi.Int(180),
 				CustomMetricsLimit:                  pulumi.Int(1000),

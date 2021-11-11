@@ -101,22 +101,22 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := signalfx.NewHeatmapChart(ctx, "myheatmapchart0", &signalfx.HeatmapChartArgs{
-			ColorRange: &signalfx.HeatmapChartColorRangeArgs{
+			ColorRange: &HeatmapChartColorRangeArgs{
 				Color:    pulumi.String("#ff0000"),
 				MaxValue: pulumi.Float64(100),
 				MinValue: pulumi.Float64(0),
 			},
-			ColorScales: signalfx.HeatmapChartColorScaleArray{
-				&signalfx.HeatmapChartColorScaleArgs{
+			ColorScales: HeatmapChartColorScaleArray{
+				&HeatmapChartColorScaleArgs{
 					Color: pulumi.String("green"),
 					Gte:   pulumi.Float64(99),
 				},
-				&signalfx.HeatmapChartColorScaleArgs{
+				&HeatmapChartColorScaleArgs{
 					Color: pulumi.String("yellow"),
 					Gte:   pulumi.Float64(95),
 					Lt:    pulumi.Float64(99),
 				},
-				&signalfx.HeatmapChartColorScaleArgs{
+				&HeatmapChartColorScaleArgs{
 					Color: pulumi.String("red"),
 					Lt:    pulumi.Float64(95),
 				},
