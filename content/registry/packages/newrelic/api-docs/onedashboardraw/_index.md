@@ -133,7 +133,81 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+
+	"github.com/pulumi/pulumi-newrelic/sdk/v4/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		tmpJSON0, err := json.Marshal(map[string]interface{}{
+			"facet": map[string]interface{}{
+				"showOtherSeries": false,
+			},
+			"nrqlQueries": []map[string]interface{}{
+				map[string]interface{}{
+					"accountId": local.AccountID,
+					"query":     "SELECT average(cpuPercent) FROM SystemSample since 3 hours ago facet hostname limit 400",
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		json0 := string(tmpJSON0)
+		_, err := newrelic.NewOneDashboardRaw(ctx, "exampledash", &newrelic.OneDashboardRawArgs{
+			Pages: OneDashboardRawPageArray{
+				&OneDashboardRawPageArgs{
+					Name: pulumi.String("Page Name"),
+					Widgets: OneDashboardRawPageWidgetArray{
+						&OneDashboardRawPageWidgetArgs{
+							Title:           pulumi.String("Custom widget"),
+							Row:             pulumi.Int(1),
+							Column:          pulumi.Int(1),
+							Width:           pulumi.Int(1),
+							Height:          pulumi.Int(1),
+							VisualizationId: pulumi.String("viz.custom"),
+							Configuration:   pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "      {\n", "        \"legend\": {\n", "          \"enabled\": false\n", "        },\n", "        \"nrqlQueries\": [\n", "          {\n", "            \"accountId\": ` + accountID + `,\n", "            \"query\": \"SELECT average(loadAverageOneMinute), average(loadAverageFiveMinute), average(loadAverageFifteenMinute) from SystemSample SINCE 60 minutes ago    TIMESERIES\"\n", "          }\n", "        ],\n", "        \"yAxisLeft\": {\n", "          \"max\": 100,\n", "          \"min\": 50,\n", "          \"zero\": false\n", "        }\n", "      }\n")),
+						},
+						&OneDashboardRawPageWidgetArgs{
+							Title:           pulumi.String("Server CPU"),
+							Row:             pulumi.Int(1),
+							Column:          pulumi.Int(2),
+							Width:           pulumi.Int(1),
+							Height:          pulumi.Int(1),
+							VisualizationId: pulumi.String("viz.testing"),
+							Configuration:   pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v", "      {\n", "        \"nrqlQueries\": [\n", "          {\n", "            \"accountId\": ` + accountID + `,\n", "            \"query\": \"SELECT average(cpuPercent) FROM SystemSample since 3 hours ago facet hostname limit 400\"\n", "          }\n", "        ]\n", "      }\n")),
+						},
+						&OneDashboardRawPageWidgetArgs{
+							Title:           pulumi.String("Docker Server CPU"),
+							Row:             pulumi.Int(1),
+							Column:          pulumi.Int(3),
+							Height:          pulumi.Int(1),
+							Width:           pulumi.Int(1),
+							VisualizationId: pulumi.String("viz.bar"),
+							Configuration:   pulumi.String(json0),
+							LinkedEntityGuids: pulumi.StringArray{
+								pulumi.String("MzI5ODAxNnxWSVp8REFTSEJPQVJEfDI2MTcxNDc"),
+							},
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

@@ -104,25 +104,25 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := newrelic.NewServiceLevel(ctx, "foo", &newrelic.ServiceLevelArgs{
 			Description: pulumi.String("SLI that measures the availability of the service."),
-			Events: &newrelic.ServiceLevelEventsArgs{
+			Events: &ServiceLevelEventsArgs{
 				AccountId: pulumi.Int(12345678),
-				BadEvents: &newrelic.ServiceLevelEventsBadEventsArgs{
+				BadEvents: &ServiceLevelEventsBadEventsArgs{
 					From:  pulumi.String("TransactionError"),
 					Where: pulumi.String("appName = 'Example application' AND error.expected is false"),
 				},
-				ValidEvents: &newrelic.ServiceLevelEventsValidEventsArgs{
+				ValidEvents: &ServiceLevelEventsValidEventsArgs{
 					From:  pulumi.String("Transaction"),
 					Where: pulumi.String("appName = 'Example application'"),
 				},
 			},
 			Guid: pulumi.String("MXxBUE18QVBQTElDQVRJT058MQ"),
-			Objectives: newrelic.ServiceLevelObjectiveArray{
-				&newrelic.ServiceLevelObjectiveArgs{
+			Objectives: ServiceLevelObjectiveArray{
+				&ServiceLevelObjectiveArgs{
 					Description: pulumi.String("A realistic objective."),
 					Name:        pulumi.String("Realistic"),
 					Target:      pulumi.Float64(99),
-					TimeWindow: &newrelic.ServiceLevelObjectiveTimeWindowArgs{
-						Rolling: &newrelic.ServiceLevelObjectiveTimeWindowRollingArgs{
+					TimeWindow: &ServiceLevelObjectiveTimeWindowArgs{
+						Rolling: &ServiceLevelObjectiveTimeWindowRollingArgs{
 							Count: pulumi.Int(7),
 							Unit:  pulumi.String("DAY"),
 						},

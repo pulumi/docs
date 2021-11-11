@@ -90,7 +90,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := newrelic.LookupAlertPolicy(ctx, &newrelic.LookupAlertPolicyArgs{
+		_, err := newrelic.LookupAlertPolicy(ctx, &GetAlertPolicyArgs{
 			Name: "my-alert-policy",
 		}, nil)
 		if err != nil {
@@ -98,7 +98,7 @@ func main() {
 		}
 		emailChannel, err := newrelic.NewAlertChannel(ctx, "emailChannel", &newrelic.AlertChannelArgs{
 			Type: pulumi.String("email"),
-			Config: &newrelic.AlertChannelConfigArgs{
+			Config: &AlertChannelConfigArgs{
 				Recipients:            pulumi.String("foo@example.com"),
 				IncludeJsonAttachment: pulumi.String("1"),
 			},
@@ -108,7 +108,7 @@ func main() {
 		}
 		slackChannel, err := newrelic.NewAlertChannel(ctx, "slackChannel", &newrelic.AlertChannelArgs{
 			Type: pulumi.String("slack"),
-			Config: &newrelic.AlertChannelConfigArgs{
+			Config: &AlertChannelConfigArgs{
 				Channel: pulumi.String("#example-channel"),
 				Url:     pulumi.String("http://example-org.slack.com"),
 			},

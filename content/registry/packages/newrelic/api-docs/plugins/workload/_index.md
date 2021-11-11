@@ -68,7 +68,38 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v4/go/newrelic/plugins"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := plugins.NewWorkload(ctx, "foo", &plugins.WorkloadArgs{
+			AccountId: pulumi.Int(12345678),
+			EntityGuids: pulumi.StringArray{
+				pulumi.String("MjUyMDUyOHxBUE18QVBQTElDQVRJT058MjE1MDM3Nzk1"),
+			},
+			EntitySearchQueries: plugins.WorkloadEntitySearchQueryArray{
+				&plugins.WorkloadEntitySearchQueryArgs{
+					Query: pulumi.String("name like 'Example application'"),
+				},
+			},
+			ScopeAccountIds: pulumi.IntArray{
+				pulumi.Int(12345678),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

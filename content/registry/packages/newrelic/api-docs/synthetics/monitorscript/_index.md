@@ -69,7 +69,56 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-newrelic/sdk/v4/go/newrelic/synthetics"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		foo, err := synthetics.NewMonitor(ctx, "foo", &synthetics.MonitorArgs{
+			Type:      pulumi.String("SCRIPT_BROWSER"),
+			Frequency: pulumi.Int(5),
+			Status:    pulumi.String("ENABLED"),
+			Locations: pulumi.StringArray{
+				pulumi.String("AWS_US_EAST_1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = synthetics.NewMonitorScript(ctx, "fooScript", &synthetics.MonitorScriptArgs{
+			MonitorId: foo.ID(),
+			Text:      readFileOrPanic(fmt.Sprintf("%v%v", path.Module, "/foo_script.js")),
+			Locations: synthetics.MonitorScriptLocationArray{
+				&synthetics.MonitorScriptLocationArgs{
+					Name: pulumi.String("YWJjZAo="),
+					Hmac: pulumi.String("ZmFrZWxvY2F0aW9uc2NyaXB0ZmFrZQ=="),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

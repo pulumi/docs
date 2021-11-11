@@ -145,12 +145,12 @@ func main() {
 			Select:      pulumi.String("diskUsedPercent"),
 			Comparison:  pulumi.String("above"),
 			Where:       pulumi.String(fmt.Sprintf("%v%v%v%v%v", "(hostname LIKE '", "%", "frontend", "%", "')")),
-			Critical: &newrelic.InfraAlertConditionCriticalArgs{
+			Critical: &InfraAlertConditionCriticalArgs{
 				Duration:     pulumi.Int(25),
 				Value:        pulumi.Float64(90),
 				TimeFunction: pulumi.String("all"),
 			},
-			Warning: &newrelic.InfraAlertConditionWarningArgs{
+			Warning: &InfraAlertConditionWarningArgs{
 				Duration:     pulumi.Int(10),
 				Value:        pulumi.Float64(80),
 				TimeFunction: pulumi.String("all"),
@@ -168,7 +168,7 @@ func main() {
 			Comparison:          pulumi.String("above"),
 			Where:               pulumi.String(fmt.Sprintf("%v%v%v%v%v", "(hostname LIKE '", "%", "db", "%", "')")),
 			IntegrationProvider: pulumi.String("RdsDbInstance"),
-			Critical: &newrelic.InfraAlertConditionCriticalArgs{
+			Critical: &InfraAlertConditionCriticalArgs{
 				Duration:     pulumi.Int(25),
 				Value:        pulumi.Float64(90),
 				TimeFunction: pulumi.String("all"),
@@ -184,7 +184,7 @@ func main() {
 			Comparison:   pulumi.String("equal"),
 			Where:        pulumi.String("hostname = 'web01'"),
 			ProcessWhere: pulumi.String("commandName = '/usr/bin/ruby'"),
-			Critical: &newrelic.InfraAlertConditionCriticalArgs{
+			Critical: &InfraAlertConditionCriticalArgs{
 				Duration: pulumi.Int(5),
 				Value:    pulumi.Float64(0),
 			},
@@ -197,7 +197,7 @@ func main() {
 			Description: pulumi.String("Critical alert when the host is not reporting"),
 			Type:        pulumi.String("infra_host_not_reporting"),
 			Where:       pulumi.String(fmt.Sprintf("%v%v%v%v%v", "(hostname LIKE '", "%", "frontend", "%", "')")),
-			Critical: &newrelic.InfraAlertConditionCriticalArgs{
+			Critical: &InfraAlertConditionCriticalArgs{
 				Duration: pulumi.Int(5),
 			},
 		})

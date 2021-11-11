@@ -144,13 +144,13 @@ func main() {
 			Enabled:            pulumi.Bool(true),
 			ValueFunction:      pulumi.String("sum"),
 			ViolationTimeLimit: pulumi.String("TWENTY_FOUR_HOURS"),
-			Critical: &newrelic.NrqlAlertConditionCriticalArgs{
+			Critical: &NrqlAlertConditionCriticalArgs{
 				Operator:             pulumi.String("above"),
 				ThresholdDuration:    pulumi.Int(120),
 				Threshold:            pulumi.Float64(3),
 				ThresholdOccurrences: pulumi.String("AT_LEAST_ONCE"),
 			},
-			Nrql: &newrelic.NrqlAlertConditionNrqlArgs{
+			Nrql: &NrqlAlertConditionNrqlArgs{
 				Query: pulumi.String(fmt.Sprintf("%v%v%v%v%v", "SELECT count(*) FROM TransactionError WHERE appName like '", "%", "Dummy App", "%", "' FACET appName")),
 			},
 		})
@@ -265,8 +265,8 @@ func main() {
 			Enabled:                   pulumi.Bool(true),
 			ValueFunction:             pulumi.String("sum"),
 			ViolationTimeLimitSeconds: pulumi.Int(86400),
-			Terms: newrelic.NrqlAlertConditionTermArray{
-				&newrelic.NrqlAlertConditionTermArgs{
+			Terms: NrqlAlertConditionTermArray{
+				&NrqlAlertConditionTermArgs{
 					Priority:     pulumi.String("critical"),
 					Operator:     pulumi.String("above"),
 					Threshold:    pulumi.Float64(3),
@@ -274,7 +274,7 @@ func main() {
 					TimeFunction: pulumi.String("any"),
 				},
 			},
-			Nrql: &newrelic.NrqlAlertConditionNrqlArgs{
+			Nrql: &NrqlAlertConditionNrqlArgs{
 				Query: pulumi.String(fmt.Sprintf("%v%v%v%v%v", "SELECT count(*) FROM TransactionError WHERE appName like '", "%", "Dummy App", "%", "' FACET appName")),
 			},
 		})
