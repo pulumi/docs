@@ -145,10 +145,10 @@ func main() {
 		_, err := spotinst.NewElastigroupAzureV3(ctx, "testAzureGroup", &spotinst.ElastigroupAzureV3Args{
 			CustomData:      pulumi.String("IyEvYmluL2Jhc2gKZWNobyAidGVzdCI="),
 			DesiredCapacity: pulumi.Int(1),
-			Images: spotinst.ElastigroupAzureV3ImageArray{
-				&spotinst.ElastigroupAzureV3ImageArgs{
-					Marketplaces: spotinst.ElastigroupAzureV3ImageMarketplaceArray{
-						&spotinst.ElastigroupAzureV3ImageMarketplaceArgs{
+			Images: ElastigroupAzureV3ImageArray{
+				&ElastigroupAzureV3ImageArgs{
+					Marketplaces: ElastigroupAzureV3ImageMarketplaceArray{
+						&ElastigroupAzureV3ImageMarketplaceArgs{
 							Offer:     pulumi.String("UbuntuServer"),
 							Publisher: pulumi.String("Canonical"),
 							Sku:       pulumi.String("18.04-LTS"),
@@ -157,31 +157,31 @@ func main() {
 					},
 				},
 			},
-			Login: &spotinst.ElastigroupAzureV3LoginArgs{
+			Login: &ElastigroupAzureV3LoginArgs{
 				SshPublicKey: pulumi.String("33a2s1f3g5a1df5g1ad3f2g1adfg56dfg=="),
 				UserName:     pulumi.String("admin"),
 			},
-			ManagedServiceIdentities: spotinst.ElastigroupAzureV3ManagedServiceIdentityArray{
-				&spotinst.ElastigroupAzureV3ManagedServiceIdentityArgs{
+			ManagedServiceIdentities: ElastigroupAzureV3ManagedServiceIdentityArray{
+				&ElastigroupAzureV3ManagedServiceIdentityArgs{
 					Name:              pulumi.String("ocean-westus-dev-aks-agentpool"),
 					ResourceGroupName: pulumi.String("MC_ocean-westus-dev_ocean-westus-dev-aks_westus"),
 				},
 			},
 			MaxSize: pulumi.Int(1),
 			MinSize: pulumi.Int(0),
-			Network: &spotinst.ElastigroupAzureV3NetworkArgs{
-				NetworkInterfaces: spotinst.ElastigroupAzureV3NetworkNetworkInterfaceArray{
-					&spotinst.ElastigroupAzureV3NetworkNetworkInterfaceArgs{
-						AdditionalIpConfigs: spotinst.ElastigroupAzureV3NetworkNetworkInterfaceAdditionalIpConfigArray{
-							&spotinst.ElastigroupAzureV3NetworkNetworkInterfaceAdditionalIpConfigArgs{
-								PrivateIPVersion: pulumi.String("IPv4"),
+			Network: &ElastigroupAzureV3NetworkArgs{
+				NetworkInterfaces: ElastigroupAzureV3NetworkNetworkInterfaceArray{
+					&ElastigroupAzureV3NetworkNetworkInterfaceArgs{
+						AdditionalIpConfigs: ElastigroupAzureV3NetworkNetworkInterfaceAdditionalIpConfigArray{
+							&ElastigroupAzureV3NetworkNetworkInterfaceAdditionalIpConfigArgs{
+								PrivateIPVersion: "IPv4",
 								Name:             pulumi.String("SecondaryIPConfig"),
 							},
 						},
-						ApplicationSecurityGroup: pulumi.StringMapArray{
-							pulumi.StringMap{
-								"name":              pulumi.String("ApplicationSecurityGroupName"),
-								"resourceGroupName": pulumi.String("ResourceGroup"),
+						ApplicationSecurityGroup: []map[string]interface{}{
+							map[string]interface{}{
+								"name":              "ApplicationSecurityGroupName",
+								"resourceGroupName": "ResourceGroup",
 							},
 						},
 						AssignPublicIp: pulumi.Bool(false),
@@ -203,7 +203,7 @@ func main() {
 				pulumi.String("standard_a1_v1"),
 				pulumi.String("standard_a1_v2"),
 			},
-			Strategy: &spotinst.ElastigroupAzureV3StrategyArgs{
+			Strategy: &ElastigroupAzureV3StrategyArgs{
 				DrainingTimeout:    pulumi.Int(300),
 				FallbackToOnDemand: pulumi.Bool(true),
 				OdCount:            pulumi.Int(1),
@@ -250,19 +250,19 @@ test_azure_group = spotinst.ElastigroupAzureV3("testAzureGroup",
     max_size=1,
     min_size=0,
     network=spotinst.ElastigroupAzureV3NetworkArgs(
-        network_interfaces=[{
-            "additionalIpConfigs": [{
-                "PrivateIPVersion": "IPv4",
-                "name": "SecondaryIPConfig",
-            }],
-            "applicationSecurityGroup": [{
+        network_interfaces=[spotinst.ElastigroupAzureV3NetworkNetworkInterfaceArgs(
+            additional_ip_configs=[spotinst.ElastigroupAzureV3NetworkNetworkInterfaceAdditionalIpConfigArgs(
+                private_ip_version="IPv4",
+                name="SecondaryIPConfig",
+            )],
+            application_security_group=[{
                 "name": "ApplicationSecurityGroupName",
-                "resource_group_name": "ResourceGroup",
+                "resourceGroupName": "ResourceGroup",
             }],
-            "assignPublicIp": False,
-            "isPrimary": True,
-            "subnetName": "default",
-        }],
+            assign_public_ip=False,
+            is_primary=True,
+            subnet_name="default",
+        )],
         resource_group_name="ResourceGroup",
         virtual_network_name="VirtualNetworkName",
     ),
