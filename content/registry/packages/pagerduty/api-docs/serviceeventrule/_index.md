@@ -175,13 +175,13 @@ func main() {
 			Service:  example.ID(),
 			Position: pulumi.Int(0),
 			Disabled: pulumi.Bool(true),
-			Conditions: &pagerduty.ServiceEventRuleConditionsArgs{
+			Conditions: &ServiceEventRuleConditionsArgs{
 				Operator: pulumi.String("and"),
-				Subconditions: pagerduty.ServiceEventRuleConditionsSubconditionArray{
-					&pagerduty.ServiceEventRuleConditionsSubconditionArgs{
+				Subconditions: ServiceEventRuleConditionsSubconditionArray{
+					&ServiceEventRuleConditionsSubconditionArgs{
 						Operator: pulumi.String("contains"),
-						Parameters: pagerduty.ServiceEventRuleConditionsSubconditionParameterArray{
-							&pagerduty.ServiceEventRuleConditionsSubconditionParameterArgs{
+						Parameters: ServiceEventRuleConditionsSubconditionParameterArray{
+							&ServiceEventRuleConditionsSubconditionParameterArgs{
 								Value: pulumi.String("disk space"),
 								Path:  pulumi.String("summary"),
 							},
@@ -189,31 +189,31 @@ func main() {
 					},
 				},
 			},
-			Variables: pagerduty.ServiceEventRuleVariableArray{
-				&pagerduty.ServiceEventRuleVariableArgs{
+			Variables: ServiceEventRuleVariableArray{
+				&ServiceEventRuleVariableArgs{
 					Type: pulumi.String("regex"),
 					Name: pulumi.String("Src"),
-					Parameters: pagerduty.ServiceEventRuleVariableParameterArray{
-						&pagerduty.ServiceEventRuleVariableParameterArgs{
+					Parameters: ServiceEventRuleVariableParameterArray{
+						&ServiceEventRuleVariableParameterArgs{
 							Value: pulumi.String("(.*)"),
 							Path:  pulumi.String("source"),
 						},
 					},
 				},
 			},
-			Actions: &pagerduty.ServiceEventRuleActionsArgs{
-				Annotates: pagerduty.ServiceEventRuleActionsAnnotateArray{
-					&pagerduty.ServiceEventRuleActionsAnnotateArgs{
+			Actions: &ServiceEventRuleActionsArgs{
+				Annotates: ServiceEventRuleActionsAnnotateArray{
+					&ServiceEventRuleActionsAnnotateArgs{
 						Value: pulumi.String("From Terraform"),
 					},
 				},
-				Extractions: pagerduty.ServiceEventRuleActionsExtractionArray{
-					&pagerduty.ServiceEventRuleActionsExtractionArgs{
+				Extractions: ServiceEventRuleActionsExtractionArray{
+					&ServiceEventRuleActionsExtractionArgs{
 						Target: pulumi.String("dedup_key"),
 						Source: pulumi.String("source"),
 						Regex:  pulumi.String("(.*)"),
 					},
-					&pagerduty.ServiceEventRuleActionsExtractionArgs{
+					&ServiceEventRuleActionsExtractionArgs{
 						Target:   pulumi.String("summary"),
 						Template: pulumi.String("Warning: Disk Space Low on {{Src}}"),
 					},
@@ -227,13 +227,13 @@ func main() {
 			Service:  pulumi.Any(pagerduty_service.Foo.Id),
 			Position: pulumi.Int(1),
 			Disabled: pulumi.Bool(true),
-			Conditions: &pagerduty.ServiceEventRuleConditionsArgs{
+			Conditions: &ServiceEventRuleConditionsArgs{
 				Operator: pulumi.String("and"),
-				Subconditions: pagerduty.ServiceEventRuleConditionsSubconditionArray{
-					&pagerduty.ServiceEventRuleConditionsSubconditionArgs{
+				Subconditions: ServiceEventRuleConditionsSubconditionArray{
+					&ServiceEventRuleConditionsSubconditionArgs{
 						Operator: pulumi.String("contains"),
-						Parameters: pagerduty.ServiceEventRuleConditionsSubconditionParameterArray{
-							&pagerduty.ServiceEventRuleConditionsSubconditionParameterArgs{
+						Parameters: ServiceEventRuleConditionsSubconditionParameterArray{
+							&ServiceEventRuleConditionsSubconditionParameterArgs{
 								Value: pulumi.String("cpu spike"),
 								Path:  pulumi.String("summary"),
 							},
@@ -241,9 +241,9 @@ func main() {
 					},
 				},
 			},
-			Actions: &pagerduty.ServiceEventRuleActionsArgs{
-				Annotates: pagerduty.ServiceEventRuleActionsAnnotateArray{
-					&pagerduty.ServiceEventRuleActionsAnnotateArgs{
+			Actions: &ServiceEventRuleActionsArgs{
+				Annotates: ServiceEventRuleActionsAnnotateArray{
+					&ServiceEventRuleActionsAnnotateArgs{
 						Value: pulumi.String("From Terraform"),
 					},
 				},

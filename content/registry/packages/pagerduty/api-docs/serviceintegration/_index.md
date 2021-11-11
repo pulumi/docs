@@ -113,7 +113,104 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-pagerduty/sdk/v3/go/pagerduty"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleUser, err := pagerduty.NewUser(ctx, "exampleUser", &pagerduty.UserArgs{
+			Email: pulumi.String("125.greenholt.earline@graham.name"),
+			Teams: pulumi.StringArray{
+				pulumi.Any(pagerduty_team.Example.Id),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewEscalationPolicy(ctx, "foo", &pagerduty.EscalationPolicyArgs{
+			NumLoops: pulumi.Int(2),
+			Rules: EscalationPolicyRuleArray{
+				&EscalationPolicyRuleArgs{
+					EscalationDelayInMinutes: pulumi.Int(10),
+					Targets: EscalationPolicyRuleTargetArray{
+						&EscalationPolicyRuleTargetArgs{
+							Type: pulumi.String("user"),
+							Id:   exampleUser.ID(),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleService, err := pagerduty.NewService(ctx, "exampleService", &pagerduty.ServiceArgs{
+			AutoResolveTimeout:     pulumi.String("14400"),
+			AcknowledgementTimeout: pulumi.String("600"),
+			EscalationPolicy:       pulumi.Any(pagerduty_escalation_policy.Example.Id),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewServiceIntegration(ctx, "exampleServiceIntegration", &pagerduty.ServiceIntegrationArgs{
+			Type:    pulumi.String("generic_events_api_inbound_integration"),
+			Service: exampleService.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewServiceIntegration(ctx, "apiv2", &pagerduty.ServiceIntegrationArgs{
+			Type:           pulumi.String("events_api_v2_inbound_integration"),
+			IntegrationKey: pulumi.String("12345678910testtesttesttesttes"),
+			Service:        exampleService.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewServiceIntegration(ctx, "emailX", &pagerduty.ServiceIntegrationArgs{
+			Type:             pulumi.String("generic_email_inbound_integration"),
+			IntegrationEmail: pulumi.String("ecommerce@subdomain.pagerduty.com"),
+			Service:          exampleService.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		datadogVendor, err := pagerduty.GetVendor(ctx, &GetVendorArgs{
+			Name: "Datadog",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewServiceIntegration(ctx, "datadogServiceIntegration", &pagerduty.ServiceIntegrationArgs{
+			Service: exampleService.ID(),
+			Vendor:  pulumi.String(datadogVendor.Id),
+		})
+		if err != nil {
+			return err
+		}
+		cloudwatchVendor, err := pagerduty.GetVendor(ctx, &GetVendorArgs{
+			Name: "Cloudwatch",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewServiceIntegration(ctx, "cloudwatchServiceIntegration", &pagerduty.ServiceIntegrationArgs{
+			Service: exampleService.ID(),
+			Vendor:  pulumi.String(cloudwatchVendor.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

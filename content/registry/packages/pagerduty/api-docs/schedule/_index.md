@@ -105,8 +105,8 @@ func main() {
 		}
 		_, err = pagerduty.NewSchedule(ctx, "foo", &pagerduty.ScheduleArgs{
 			TimeZone: pulumi.String("America/New_York"),
-			Layers: pagerduty.ScheduleLayerArray{
-				&pagerduty.ScheduleLayerArgs{
+			Layers: ScheduleLayerArray{
+				&ScheduleLayerArgs{
 					Name:                      pulumi.String("Night Shift"),
 					Start:                     pulumi.String("2015-11-06T20:00:00-05:00"),
 					RotationVirtualStart:      pulumi.String("2015-11-06T20:00:00-05:00"),
@@ -114,8 +114,8 @@ func main() {
 					Users: pulumi.StringArray{
 						exampleUser.ID(),
 					},
-					Restrictions: pagerduty.ScheduleLayerRestrictionArray{
-						&pagerduty.ScheduleLayerRestrictionArgs{
+					Restrictions: ScheduleLayerRestrictionArray{
+						&ScheduleLayerRestrictionArgs{
 							Type:            pulumi.String("daily_restriction"),
 							StartTimeOfDay:  pulumi.String("08:00:00"),
 							DurationSeconds: pulumi.Int(32400),

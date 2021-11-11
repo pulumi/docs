@@ -76,7 +76,59 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-pagerduty/sdk/v3/go/pagerduty"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := pagerduty.NewUser(ctx, "example", &pagerduty.UserArgs{
+			Email: pulumi.String("125.greenholt.earline@graham.name"),
+			Teams: pulumi.StringArray{
+				pulumi.Any(pagerduty_team.Example.Id),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewUserContactMethod(ctx, "email", &pagerduty.UserContactMethodArgs{
+			UserId:  example.ID(),
+			Type:    pulumi.String("email_contact_method"),
+			Address: pulumi.String("foo@bar.com"),
+			Label:   pulumi.String("Work"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewUserContactMethod(ctx, "phone", &pagerduty.UserContactMethodArgs{
+			UserId:      example.ID(),
+			Type:        pulumi.String("phone_contact_method"),
+			CountryCode: pulumi.Int(1),
+			Address:     pulumi.String("2025550199"),
+			Label:       pulumi.String("Work"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewUserContactMethod(ctx, "sms", &pagerduty.UserContactMethodArgs{
+			UserId:      example.ID(),
+			Type:        pulumi.String("sms_contact_method"),
+			CountryCode: pulumi.Int(1),
+			Address:     pulumi.String("2025550199"),
+			Label:       pulumi.String("Work"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

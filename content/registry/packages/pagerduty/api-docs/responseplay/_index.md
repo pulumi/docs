@@ -93,7 +93,66 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-pagerduty/sdk/v3/go/pagerduty"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleUser, err := pagerduty.NewUser(ctx, "exampleUser", &pagerduty.UserArgs{
+			Email: pulumi.String("125.greenholt.earline@graham.name"),
+			Teams: pulumi.StringArray{
+				pulumi.Any(pagerduty_team.Example.Id),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleEscalationPolicy, err := pagerduty.NewEscalationPolicy(ctx, "exampleEscalationPolicy", &pagerduty.EscalationPolicyArgs{
+			NumLoops: pulumi.Int(2),
+			Rules: EscalationPolicyRuleArray{
+				&EscalationPolicyRuleArgs{
+					EscalationDelayInMinutes: pulumi.Int(10),
+					Targets: EscalationPolicyRuleTargetArray{
+						&EscalationPolicyRuleTargetArgs{
+							Type: pulumi.String("user"),
+							Id:   exampleUser.ID(),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewResponsePlay(ctx, "exampleResponsePlay", &pagerduty.ResponsePlayArgs{
+			From: exampleUser.Email,
+			Responders: ResponsePlayResponderArray{
+				&ResponsePlayResponderArgs{
+					Type: pulumi.String("escalation_policy_reference"),
+					Id:   exampleEscalationPolicy.ID(),
+				},
+			},
+			Subscribers: ResponsePlaySubscriberArray{
+				&ResponsePlaySubscriberArgs{
+					Type: pulumi.String("user_reference"),
+					Id:   exampleUser.ID(),
+				},
+			},
+			Runnability: pulumi.String("services"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

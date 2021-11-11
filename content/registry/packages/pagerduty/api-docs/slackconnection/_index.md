@@ -104,7 +104,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		p1, err := pagerduty.GetPriority(ctx, &pagerduty.GetPriorityArgs{
+		p1, err := pagerduty.GetPriority(ctx, &GetPriorityArgs{
 			Name: "P1",
 		}, nil)
 		if err != nil {
@@ -116,8 +116,8 @@ func main() {
 			WorkspaceId:      pulumi.String("T02A123LV1A"),
 			ChannelId:        pulumi.String("C02CABCDAC9"),
 			NotificationType: pulumi.String("responder"),
-			Configs: pagerduty.SlackConnectionConfigArray{
-				&pagerduty.SlackConnectionConfigArgs{
+			Configs: SlackConnectionConfigArray{
+				&SlackConnectionConfigArgs{
 					Events: pulumi.StringArray{
 						pulumi.String("incident.triggered"),
 						pulumi.String("incident.acknowledged"),
