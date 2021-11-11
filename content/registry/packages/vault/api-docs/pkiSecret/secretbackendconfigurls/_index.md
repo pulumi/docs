@@ -122,12 +122,12 @@ config_urls = vault.pki_secret.SecretBackendConfigUrls("configUrls",
 import * as pulumi from "@pulumi/pulumi";
 import * as vault from "@pulumi/vault";
 
-const pki = new vault.pkiSecret.SecretBackend("pki", {
+const pki = new vault.pkisecret.SecretBackend("pki", {
     path: "pki",
     defaultLeaseTtlSeconds: 3600,
     maxLeaseTtlSeconds: 86400,
 });
-const configUrls = new vault.pkiSecret.SecretBackendConfigUrls("configUrls", {
+const configUrls = new vault.pkisecret.SecretBackendConfigUrls("configUrls", {
     backend: pki.path,
     issuingCertificates: ["http://127.0.0.1:8200/v1/pki/ca"],
 });

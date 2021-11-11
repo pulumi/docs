@@ -163,7 +163,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as vault from "@pulumi/vault";
 
 const approle = new vault.AuthBackend("approle", {type: "approle"});
-const example = new vault.appRole.AuthBackendRole("example", {
+const example = new vault.approle.AuthBackendRole("example", {
     backend: approle.path,
     roleName: "test-role",
     policies: [
@@ -172,11 +172,11 @@ const example = new vault.appRole.AuthBackendRole("example", {
         "prod",
     ],
 });
-const id = new vault.appRole.AuthBackendRoleSecretID("id", {
+const id = new vault.approle.AuthBackendRoleSecretID("id", {
     backend: approle.path,
     roleName: example.roleName,
 });
-const login = new vault.appRole.AuthBackendLogin("login", {
+const login = new vault.approle.AuthBackendLogin("login", {
     backend: approle.path,
     roleId: example.roleId,
     secretId: id.secretId,

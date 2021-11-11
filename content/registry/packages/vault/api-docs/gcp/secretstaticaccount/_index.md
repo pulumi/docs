@@ -17,6 +17,200 @@ Creates a Static Account in the [GCP Secrets Engine](https://www.vaultproject.io
 Each [static account](https://www.vaultproject.io/docs/secrets/gcp/index.html#static-accounts) is tied to a separately managed
 Service Account, and can have one or more [bindings](https://www.vaultproject.io/docs/secrets/gcp/index.html#bindings) associated with it.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @this = new Gcp.ServiceAccount.Account("this", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "my-awesome-account",
+        });
+        var gcp = new Vault.Gcp.SecretBackend("gcp", new Vault.Gcp.SecretBackendArgs
+        {
+            Path = "gcp",
+            Credentials = File.ReadAllText("credentials.json"),
+        });
+        var staticAccount = new Vault.Gcp.SecretStaticAccount("staticAccount", new Vault.Gcp.SecretStaticAccountArgs
+        {
+            Backend = gcp.Path,
+            StaticAccount = "project_viewer",
+            SecretType = "access_token",
+            TokenScopes = 
+            {
+                "https://www.googleapis.com/auth/cloud-platform",
+            },
+            ServiceAccountEmail = @this.Email,
+            Bindings = 
+            {
+                new Vault.Gcp.Inputs.SecretStaticAccountBindingArgs
+                {
+                    Resource = @this.Project.Apply(project => $"//cloudresourcemanager.googleapis.com/projects/{project}"),
+                    Roles = 
+                    {
+                        "roles/viewer",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/serviceAccount"
+	"github.com/pulumi/pulumi-vault/sdk/v4/go/vault/gcp"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		this, err := serviceAccount.NewAccount(ctx, "this", &serviceAccount.AccountArgs{
+			AccountId: pulumi.String("my-awesome-account"),
+		})
+		if err != nil {
+			return err
+		}
+		gcp, err := gcp.NewSecretBackend(ctx, "gcp", &gcp.SecretBackendArgs{
+			Path:        pulumi.String("gcp"),
+			Credentials: readFileOrPanic("credentials.json"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = gcp.NewSecretStaticAccount(ctx, "staticAccount", &gcp.SecretStaticAccountArgs{
+			Backend:       gcp.Path,
+			StaticAccount: pulumi.String("project_viewer"),
+			SecretType:    pulumi.String("access_token"),
+			TokenScopes: pulumi.StringArray{
+				pulumi.String("https://www.googleapis.com/auth/cloud-platform"),
+			},
+			ServiceAccountEmail: this.Email,
+			Bindings: gcp.SecretStaticAccountBindingArray{
+				&gcp.SecretStaticAccountBindingArgs{
+					Resource: this.Project.ApplyT(func(project string) (string, error) {
+						return fmt.Sprintf("%v%v", "//cloudresourcemanager.googleapis.com/projects/", project), nil
+					}).(pulumi.StringOutput),
+					Roles: pulumi.StringArray{
+						pulumi.String("roles/viewer"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+import pulumi_vault as vault
+
+this = gcp.service_account.Account("this", account_id="my-awesome-account")
+gcp = vault.gcp.SecretBackend("gcp",
+    path="gcp",
+    credentials=(lambda path: open(path).read())("credentials.json"))
+static_account = vault.gcp.SecretStaticAccount("staticAccount",
+    backend=gcp.path,
+    static_account="project_viewer",
+    secret_type="access_token",
+    token_scopes=["https://www.googleapis.com/auth/cloud-platform"],
+    service_account_email=this.email,
+    bindings=[vault.gcp.SecretStaticAccountBindingArgs(
+        resource=this.project.apply(lambda project: f"//cloudresourcemanager.googleapis.com/projects/{project}"),
+        roles=["roles/viewer"],
+    )])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * as vault from "@pulumi/vault";
+import * from "fs";
+
+const _this = new gcp.serviceaccount.Account("this", {accountId: "my-awesome-account"});
+const gcp = new vault.gcp.SecretBackend("gcp", {
+    path: "gcp",
+    credentials: fs.readFileSync("credentials.json"),
+});
+const staticAccount = new vault.gcp.SecretStaticAccount("staticAccount", {
+    backend: gcp.path,
+    staticAccount: "project_viewer",
+    secretType: "access_token",
+    tokenScopes: ["https://www.googleapis.com/auth/cloud-platform"],
+    serviceAccountEmail: _this.email,
+    bindings: [{
+        resource: pulumi.interpolate`//cloudresourcemanager.googleapis.com/projects/${_this.project}`,
+        roles: ["roles/viewer"],
+    }],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a SecretStaticAccount Resource {#create}

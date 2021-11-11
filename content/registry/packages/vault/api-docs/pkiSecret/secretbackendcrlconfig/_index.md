@@ -132,7 +132,7 @@ const pki = new vault.Mount("pki", {
     defaultLeaseTtlSeconds: 3600,
     maxLeaseTtlSeconds: 86400,
 });
-const crlConfig = new vault.pkiSecret.SecretBackendCrlConfig("crlConfig", {
+const crlConfig = new vault.pkisecret.SecretBackendCrlConfig("crlConfig", {
     backend: pki.path,
     expiry: "72h",
     disable: false,

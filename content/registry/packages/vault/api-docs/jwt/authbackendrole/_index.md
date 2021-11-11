@@ -99,8 +99,8 @@ func main() {
 			BoundAudiences: pulumi.StringArray{
 				pulumi.String("https://myco.test"),
 			},
-			BoundClaims: pulumi.StringMap{
-				"color": pulumi.String("red,green,blue"),
+			BoundClaims: pulumi.AnyMap{
+				"color": pulumi.Any("red,green,blue"),
 			},
 			UserClaim: pulumi.String("https://vault/user"),
 			RoleType:  pulumi.String("jwt"),

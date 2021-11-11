@@ -72,7 +72,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := vault.NewAuthBackend(ctx, "example", &vault.AuthBackendArgs{
-			Tune: &vault.AuthBackendTuneArgs{
+			Tune: &AuthBackendTuneArgs{
 				ListingVisibility: pulumi.String("unauth"),
 				MaxLeaseTtl:       pulumi.String("90000s"),
 			},

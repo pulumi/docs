@@ -129,7 +129,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as vault from "@pulumi/vault";
 
 const approle = new vault.AuthBackend("approle", {type: "approle"});
-const example = new vault.appRole.AuthBackendRole("example", {
+const example = new vault.approle.AuthBackendRole("example", {
     backend: approle.path,
     roleName: "test-role",
     tokenPolicies: [

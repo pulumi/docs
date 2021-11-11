@@ -120,7 +120,7 @@ root = vault.pki_secret.SecretBackendRootSignIntermediate("root",
 import * as pulumi from "@pulumi/pulumi";
 import * as vault from "@pulumi/vault";
 
-const root = new vault.pkiSecret.SecretBackendRootSignIntermediate("root", {
+const root = new vault.pkisecret.SecretBackendRootSignIntermediate("root", {
     backend: vault_pki_secret_backend.root.path,
     csr: vault_pki_secret_backend_intermediate_cert_request.intermediate.csr,
     commonName: "Intermediate CA",

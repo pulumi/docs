@@ -68,7 +68,54 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-vault/sdk/v4/go/vault"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		certAuthBackend, err := vault.NewAuthBackend(ctx, "certAuthBackend", &vault.AuthBackendArgs{
+			Path: pulumi.String("cert"),
+			Type: pulumi.String("cert"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = vault.NewCertAuthBackendRole(ctx, "certCertAuthBackendRole", &vault.CertAuthBackendRoleArgs{
+			Certificate: readFileOrPanic("/path/to/certs/ca-cert.pem"),
+			Backend:     certAuthBackend.Path,
+			AllowedNames: pulumi.StringArray{
+				pulumi.String("foo.example.org"),
+				pulumi.String("baz.example.org"),
+			},
+			TokenTtl:    pulumi.Int(300),
+			TokenMaxTtl: pulumi.Int(600),
+			TokenPolicies: pulumi.StringArray{
+				pulumi.String("foo"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

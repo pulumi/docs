@@ -76,7 +76,60 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-vault/sdk/v4/go/vault/gcp"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		project := "my-awesome-project"
+		gcp, err := gcp.NewSecretBackend(ctx, "gcp", &gcp.SecretBackendArgs{
+			Path:        pulumi.String("gcp"),
+			Credentials: readFileOrPanic("credentials.json"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = gcp.NewSecretRoleset(ctx, "roleset", &gcp.SecretRolesetArgs{
+			Backend:    gcp.Path,
+			Roleset:    pulumi.String("project_viewer"),
+			SecretType: pulumi.String("access_token"),
+			Project:    pulumi.String(project),
+			TokenScopes: pulumi.StringArray{
+				pulumi.String("https://www.googleapis.com/auth/cloud-platform"),
+			},
+			Bindings: gcp.SecretRolesetBindingArray{
+				&gcp.SecretRolesetBindingArgs{
+					Resource: pulumi.String(fmt.Sprintf("%v%v", "//cloudresourcemanager.googleapis.com/projects/", project)),
+					Roles: pulumi.StringArray{
+						pulumi.String("roles/viewer"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
