@@ -815,9 +815,9 @@ func main() {
 					ActionType: pulumi.String(""),
 					Adjustment: pulumi.String("1"),
 					Cooldown:   pulumi.Int(60),
-					Dimensions: pulumi.StringMap{
-						"name":  pulumi.String("name-1"),
-						"value": pulumi.String("value-1"),
+					Dimensions: pulumi.AnyMap{
+						"name":  pulumi.Any("name-1"),
+						"value": pulumi.Any("value-1"),
 					},
 					EvaluationPeriods: pulumi.Int(10),
 					MaxTargetCapacity: pulumi.String("1"),

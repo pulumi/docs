@@ -77,12 +77,12 @@ func main() {
 		_, err := spotinst.NewSubscription(ctx, "default_subscription", &spotinst.SubscriptionArgs{
 			Endpoint:  pulumi.String("http://endpoint.com"),
 			EventType: pulumi.String("AWS_EC2_INSTANCE_LAUNCH"),
-			Format: pulumi.StringMap{
-				"event":         pulumi.String(fmt.Sprintf("%v%v%v", "%", "event", "%")),
-				"instance_id":   pulumi.String(fmt.Sprintf("%v%v%v", "%", "instance-id", "%")),
-				"resource_id":   pulumi.String(fmt.Sprintf("%v%v%v", "%", "resource-id", "%")),
-				"resource_name": pulumi.String(fmt.Sprintf("%v%v%v", "%", "resource-name", "%")),
-				"tags":          pulumi.String("foo,baz,baz"),
+			Format: pulumi.AnyMap{
+				"event":         pulumi.Any(fmt.Sprintf("%v%v%v", "%", "event", "%")),
+				"instance_id":   pulumi.Any(fmt.Sprintf("%v%v%v", "%", "instance-id", "%")),
+				"resource_id":   pulumi.Any(fmt.Sprintf("%v%v%v", "%", "resource-id", "%")),
+				"resource_name": pulumi.Any(fmt.Sprintf("%v%v%v", "%", "resource-name", "%")),
+				"tags":          pulumi.Any("foo,baz,baz"),
 			},
 			Protocol:   pulumi.String("http"),
 			ResourceId: pulumi.Any(spotinst_elastigroup_aws.My - eg.Id),
