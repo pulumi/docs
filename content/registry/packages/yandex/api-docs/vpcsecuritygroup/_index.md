@@ -115,8 +115,8 @@ func main() {
 		}
 		_, err = yandex.NewVpcSecurityGroup(ctx, "group1", &yandex.VpcSecurityGroupArgs{
 			Description: pulumi.String("description for my security group"),
-			Egresses: yandex.VpcSecurityGroupEgressArray{
-				&yandex.VpcSecurityGroupEgressArgs{
+			Egresses: VpcSecurityGroupEgressArray{
+				&VpcSecurityGroupEgressArgs{
 					Description: pulumi.String("rule2 description"),
 					FromPort:    pulumi.Int(8090),
 					Protocol:    pulumi.String("ANY"),
@@ -126,7 +126,7 @@ func main() {
 						pulumi.String("10.0.2.0/24"),
 					},
 				},
-				&yandex.VpcSecurityGroupEgressArgs{
+				&VpcSecurityGroupEgressArgs{
 					Description: pulumi.String("rule3 description"),
 					FromPort:    pulumi.Int(8090),
 					Protocol:    pulumi.String("UDP"),
@@ -136,8 +136,8 @@ func main() {
 					},
 				},
 			},
-			Ingresses: yandex.VpcSecurityGroupIngressArray{
-				&yandex.VpcSecurityGroupIngressArgs{
+			Ingresses: VpcSecurityGroupIngressArray{
+				&VpcSecurityGroupIngressArgs{
 					Description: pulumi.String("rule1 description"),
 					Port:        pulumi.Int(8080),
 					Protocol:    pulumi.String("TCP"),

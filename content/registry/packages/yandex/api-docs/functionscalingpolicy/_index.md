@@ -79,13 +79,13 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := yandex.NewFunctionScalingPolicy(ctx, "myScalingPolicy", &yandex.FunctionScalingPolicyArgs{
 			FunctionId: pulumi.String("are1samplefunction11"),
-			Policies: yandex.FunctionScalingPolicyPolicyArray{
-				&yandex.FunctionScalingPolicyPolicyArgs{
+			Policies: FunctionScalingPolicyPolicyArray{
+				&FunctionScalingPolicyPolicyArgs{
 					Tag:                pulumi.String(fmt.Sprintf("%v%v", "$", "latest")),
 					ZoneInstancesLimit: pulumi.Int(3),
 					ZoneRequestsLimit:  pulumi.Int(100),
 				},
-				&yandex.FunctionScalingPolicyPolicyArgs{
+				&FunctionScalingPolicyPolicyArgs{
 					Tag:                pulumi.String("my_tag"),
 					ZoneInstancesLimit: pulumi.Int(4),
 					ZoneRequestsLimit:  pulumi.Int(150),

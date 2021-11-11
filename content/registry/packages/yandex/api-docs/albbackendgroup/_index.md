@@ -80,7 +80,50 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-yandex/sdk/go/yandex"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yandex.NewAlbBackendGroup(ctx, "test_backend_group", &yandex.AlbBackendGroupArgs{
+			HttpBackends: AlbBackendGroupHttpBackendArray{
+				&AlbBackendGroupHttpBackendArgs{
+					Healthcheck: &AlbBackendGroupHttpBackendHealthcheckArgs{
+						HttpHealthcheck: &AlbBackendGroupHttpBackendHealthcheckHttpHealthcheckArgs{
+							Path: pulumi.String("/"),
+						},
+						Interval: pulumi.String("1s"),
+						Timeout:  pulumi.String("1s"),
+					},
+					Http2: pulumi.Bool(true),
+					LoadBalancingConfig: &AlbBackendGroupHttpBackendLoadBalancingConfigArgs{
+						PanicThreshold: pulumi.Int(50),
+					},
+					Name: pulumi.String("test-http-backend"),
+					Port: pulumi.Int(8080),
+					TargetGroupIds: pulumi.StringArray{
+						pulumi.Any(yandex_alb_target_group.Test - target - group.Id),
+					},
+					Tls: &AlbBackendGroupHttpBackendTlsArgs{
+						Sni: pulumi.String("backend-domain.internal"),
+					},
+					Weight: pulumi.Int(1),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

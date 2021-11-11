@@ -91,11 +91,11 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := yandex.NewLbNetworkLoadBalancer(ctx, "foo", &yandex.LbNetworkLoadBalancerArgs{
-			AttachedTargetGroups: yandex.LbNetworkLoadBalancerAttachedTargetGroupArray{
-				&yandex.LbNetworkLoadBalancerAttachedTargetGroupArgs{
-					Healthchecks: yandex.LbNetworkLoadBalancerAttachedTargetGroupHealthcheckArray{
-						&yandex.LbNetworkLoadBalancerAttachedTargetGroupHealthcheckArgs{
-							HttpOptions: &yandex.LbNetworkLoadBalancerAttachedTargetGroupHealthcheckHttpOptionsArgs{
+			AttachedTargetGroups: LbNetworkLoadBalancerAttachedTargetGroupArray{
+				&LbNetworkLoadBalancerAttachedTargetGroupArgs{
+					Healthchecks: LbNetworkLoadBalancerAttachedTargetGroupHealthcheckArray{
+						&LbNetworkLoadBalancerAttachedTargetGroupHealthcheckArgs{
+							HttpOptions: &LbNetworkLoadBalancerAttachedTargetGroupHealthcheckHttpOptionsArgs{
 								Path: pulumi.String("/ping"),
 								Port: pulumi.Int(8080),
 							},
@@ -105,9 +105,9 @@ func main() {
 					TargetGroupId: pulumi.Any(yandex_lb_target_group.My - target - group.Id),
 				},
 			},
-			Listeners: yandex.LbNetworkLoadBalancerListenerArray{
-				&yandex.LbNetworkLoadBalancerListenerArgs{
-					ExternalAddressSpec: &yandex.LbNetworkLoadBalancerListenerExternalAddressSpecArgs{
+			Listeners: LbNetworkLoadBalancerListenerArray{
+				&LbNetworkLoadBalancerListenerArgs{
+					ExternalAddressSpec: &LbNetworkLoadBalancerListenerExternalAddressSpecArgs{
 						IpVersion: pulumi.String("ipv4"),
 					},
 					Name: pulumi.String("my-listener"),

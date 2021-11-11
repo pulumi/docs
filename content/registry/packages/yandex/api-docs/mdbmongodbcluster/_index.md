@@ -136,17 +136,17 @@ func main() {
 			return err
 		}
 		_, err = yandex.NewMdbMongodbCluster(ctx, "fooMdbMongodbCluster", &yandex.MdbMongodbClusterArgs{
-			ClusterConfig: &yandex.MdbMongodbClusterClusterConfigArgs{
+			ClusterConfig: &MdbMongodbClusterClusterConfigArgs{
 				Version: pulumi.String("4.2"),
 			},
-			Databases: yandex.MdbMongodbClusterDatabaseArray{
-				&yandex.MdbMongodbClusterDatabaseArgs{
+			Databases: MdbMongodbClusterDatabaseArray{
+				&MdbMongodbClusterDatabaseArgs{
 					Name: pulumi.String("testdb"),
 				},
 			},
 			Environment: pulumi.String("PRESTABLE"),
-			Hosts: yandex.MdbMongodbClusterHostArray{
-				&yandex.MdbMongodbClusterHostArgs{
+			Hosts: MdbMongodbClusterHostArray{
+				&MdbMongodbClusterHostArgs{
 					SubnetId: fooVpcSubnet.ID(),
 					ZoneId:   pulumi.String("ru-central1-a"),
 				},
@@ -154,21 +154,21 @@ func main() {
 			Labels: pulumi.StringMap{
 				"test_key": pulumi.String("test_value"),
 			},
-			MaintenanceWindow: &yandex.MdbMongodbClusterMaintenanceWindowArgs{
+			MaintenanceWindow: &MdbMongodbClusterMaintenanceWindowArgs{
 				Type: pulumi.String("ANYTIME"),
 			},
 			NetworkId: fooVpcNetwork.ID(),
-			Resources: &yandex.MdbMongodbClusterResourcesArgs{
+			Resources: &MdbMongodbClusterResourcesArgs{
 				DiskSize:         pulumi.Int(16),
 				DiskTypeId:       pulumi.String("network-hdd"),
 				ResourcePresetId: pulumi.String("b1.nano"),
 			},
-			Users: yandex.MdbMongodbClusterUserArray{
-				&yandex.MdbMongodbClusterUserArgs{
+			Users: MdbMongodbClusterUserArray{
+				&MdbMongodbClusterUserArgs{
 					Name:     pulumi.String("john"),
 					Password: pulumi.String("password"),
-					Permissions: yandex.MdbMongodbClusterUserPermissionArray{
-						&yandex.MdbMongodbClusterUserPermissionArgs{
+					Permissions: MdbMongodbClusterUserPermissionArray{
+						&MdbMongodbClusterUserPermissionArgs{
 							DatabaseName: pulumi.String("testdb"),
 						},
 					},

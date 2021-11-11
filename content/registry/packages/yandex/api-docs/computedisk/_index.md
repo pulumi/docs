@@ -194,7 +194,7 @@ func main() {
 			Size: pulumi.Int(93),
 			Type: pulumi.String("network-ssd-nonreplicated"),
 			Zone: pulumi.String("ru-central1-b"),
-			DiskPlacementPolicy: &yandex.ComputeDiskDiskPlacementPolicyArgs{
+			DiskPlacementPolicy: &ComputeDiskDiskPlacementPolicyArgs{
 				DiskPlacementGroupId: this.ID(),
 			},
 		})

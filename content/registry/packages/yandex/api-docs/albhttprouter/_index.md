@@ -58,7 +58,33 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-yandex/sdk/go/yandex"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yandex.NewAlbHttpRouter(ctx, "tf_router", &yandex.AlbHttpRouterArgs{
+			Labels: pulumi.StringMap{
+				"empty-label": pulumi.String(""),
+				"s": pulumi.String{
+					nil,
+				},
+				"tf-label": pulumi.String("tf-label-value"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

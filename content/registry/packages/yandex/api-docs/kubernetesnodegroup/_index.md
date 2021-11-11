@@ -121,7 +121,82 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-yandex/sdk/go/yandex"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yandex.NewKubernetesNodeGroup(ctx, "myNodeGroup", &yandex.KubernetesNodeGroupArgs{
+			AllocationPolicy: &KubernetesNodeGroupAllocationPolicyArgs{
+				Locations: KubernetesNodeGroupAllocationPolicyLocationArray{
+					&KubernetesNodeGroupAllocationPolicyLocationArgs{
+						Zone: pulumi.String("ru-central1-a"),
+					},
+				},
+			},
+			ClusterId:   pulumi.Any(yandex_kubernetes_cluster.My_cluster.Id),
+			Description: pulumi.String("description"),
+			InstanceTemplate: &KubernetesNodeGroupInstanceTemplateArgs{
+				BootDisk: &KubernetesNodeGroupInstanceTemplateBootDiskArgs{
+					Size: pulumi.Int(64),
+					Type: pulumi.String("network-hdd"),
+				},
+				NetworkInterfaces: KubernetesNodeGroupInstanceTemplateNetworkInterfaceArray{
+					&KubernetesNodeGroupInstanceTemplateNetworkInterfaceArgs{
+						Nat: pulumi.Bool(true),
+						SubnetIds: pulumi.StringArray{
+							pulumi.Any(yandex_vpc_subnet.My_subnet.Id),
+						},
+					},
+				},
+				PlatformId: pulumi.String("standard-v2"),
+				Resources: &KubernetesNodeGroupInstanceTemplateResourcesArgs{
+					Cores:  pulumi.Int(2),
+					Memory: pulumi.Float64(2),
+				},
+				SchedulingPolicy: &KubernetesNodeGroupInstanceTemplateSchedulingPolicyArgs{
+					Preemptible: pulumi.Bool(false),
+				},
+			},
+			Labels: pulumi.StringMap{
+				"key": pulumi.String("value"),
+			},
+			MaintenancePolicy: &KubernetesNodeGroupMaintenancePolicyArgs{
+				AutoRepair:  pulumi.Bool(true),
+				AutoUpgrade: pulumi.Bool(true),
+				MaintenanceWindows: KubernetesNodeGroupMaintenancePolicyMaintenanceWindowArray{
+					&KubernetesNodeGroupMaintenancePolicyMaintenanceWindowArgs{
+						Day:       pulumi.String("monday"),
+						Duration:  pulumi.String("3h"),
+						StartTime: pulumi.String("15:00"),
+					},
+					&KubernetesNodeGroupMaintenancePolicyMaintenanceWindowArgs{
+						Day:       pulumi.String("friday"),
+						Duration:  pulumi.String("4h30m"),
+						StartTime: pulumi.String("10:00"),
+					},
+				},
+			},
+			ScalePolicy: &KubernetesNodeGroupScalePolicyArgs{
+				FixedScale: &KubernetesNodeGroupScalePolicyFixedScaleArgs{
+					Size: pulumi.Int(1),
+				},
+			},
+			Version: pulumi.String("1.17"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
@@ -141,22 +216,22 @@ my_node_group = yandex.KubernetesNodeGroup("myNodeGroup",
     cluster_id=yandex_kubernetes_cluster["my_cluster"]["id"],
     description="description",
     instance_template=yandex.KubernetesNodeGroupInstanceTemplateArgs(
-        boot_disk={
-            "size": 64,
-            "type": "network-hdd",
-        },
-        network_interfaces=[{
-            "nat": True,
-            "subnet_ids": [yandex_vpc_subnet["my_subnet"]["id"]],
-        }],
+        boot_disk=yandex.KubernetesNodeGroupInstanceTemplateBootDiskArgs(
+            size=64,
+            type="network-hdd",
+        ),
+        network_interfaces=[yandex.KubernetesNodeGroupInstanceTemplateNetworkInterfaceArgs(
+            nat=True,
+            subnet_ids=[yandex_vpc_subnet["my_subnet"]["id"]],
+        )],
         platform_id="standard-v2",
         resources=yandex.KubernetesNodeGroupInstanceTemplateResourcesArgs(
             cores=2,
             memory=2,
         ),
-        scheduling_policy={
-            "preemptible": False,
-        },
+        scheduling_policy=yandex.KubernetesNodeGroupInstanceTemplateSchedulingPolicyArgs(
+            preemptible=False,
+        ),
     ),
     labels={
         "key": "value",

@@ -99,52 +99,40 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := yandex.NewKubernetesCluster(ctx, "regionalClusterResourceName", &yandex.KubernetesClusterArgs{
+		_, err := yandex.NewKubernetesCluster(ctx, "zonalClusterResourceName", &yandex.KubernetesClusterArgs{
 			Description: pulumi.String("description"),
+			KmsProvider: &KubernetesClusterKmsProviderArgs{
+				KeyId: pulumi.Any(yandex_kms_symmetric_key.Kms_key_resource_name.Id),
+			},
 			Labels: pulumi.StringMap{
 				"my_key":       pulumi.String("my_value"),
 				"my_other_key": pulumi.String("my_other_value"),
 			},
-			Master: &yandex.KubernetesClusterMasterArgs{
-				MaintenancePolicy: &yandex.KubernetesClusterMasterMaintenancePolicyArgs{
+			Master: &KubernetesClusterMasterArgs{
+				MaintenancePolicy: &KubernetesClusterMasterMaintenancePolicyArgs{
 					AutoUpgrade: pulumi.Bool(true),
-					MaintenanceWindow: pulumi.StringMapArray{
-						pulumi.StringMap{
-							"day":       pulumi.String("monday"),
-							"duration":  pulumi.String("3h"),
-							"startTime": pulumi.String("15:00"),
-						},
-						pulumi.StringMap{
-							"day":       pulumi.String("friday"),
-							"duration":  pulumi.String("4h30m"),
-							"startTime": pulumi.String("10:00"),
+					MaintenanceWindow: []map[string]interface{}{
+						map[string]interface{}{
+							"duration":  "3h",
+							"startTime": "15:00",
 						},
 					},
 				},
 				PublicIp: pulumi.Bool(true),
-				Regional: &yandex.KubernetesClusterMasterRegionalArgs{
-					Location: pulumi.AnyMapArray{
-						pulumi.AnyMap{
-							"subnetId": pulumi.Any(yandex_vpc_subnet.Subnet_a_resource_name.Id),
-							"zone":     pulumi.Any(yandex_vpc_subnet.Subnet_a_resource_name.Zone),
-						},
-						pulumi.AnyMap{
-							"subnetId": pulumi.Any(yandex_vpc_subnet.Subnet_b_resource_name.Id),
-							"zone":     pulumi.Any(yandex_vpc_subnet.Subnet_b_resource_name.Zone),
-						},
-						pulumi.AnyMap{
-							"subnetId": pulumi.Any(yandex_vpc_subnet.Subnet_c_resource_name.Id),
-							"zone":     pulumi.Any(yandex_vpc_subnet.Subnet_c_resource_name.Zone),
-						},
-					},
-					Region: pulumi.String("ru-central1"),
+				SecurityGroupIds: pulumi.StringArray{
+					pulumi.Any(yandex_vpc_security_group.Security_group_name.Id),
 				},
-				Version: pulumi.String("1.14"),
+				Version: pulumi.String("1.17"),
+				Zonal: &KubernetesClusterMasterZonalArgs{
+					SubnetId: pulumi.Any(yandex_vpc_subnet.Subnet_resource_name.Id),
+					Zone:     pulumi.Any(yandex_vpc_subnet.Subnet_resource_name.Zone),
+				},
 			},
-			NetworkId:            pulumi.Any(yandex_vpc_network.Network_resource_name.Id),
-			NodeServiceAccountId: pulumi.Any(yandex_iam_service_account.Node_service_account_resource_name.Id),
-			ReleaseChannel:       pulumi.String("STABLE"),
-			ServiceAccountId:     pulumi.Any(yandex_iam_service_account.Service_account_resource_name.Id),
+			NetworkId:             pulumi.Any(yandex_vpc_network.Network_resource_name.Id),
+			NetworkPolicyProvider: pulumi.String("CALICO"),
+			NodeServiceAccountId:  pulumi.Any(yandex_iam_service_account.Node_service_account_resource_name.Id),
+			ReleaseChannel:        pulumi.String("RAPID"),
+			ServiceAccountId:      pulumi.Any(yandex_iam_service_account.Service_account_resource_name.Id),
 		})
 		if err != nil {
 			return err
@@ -174,13 +162,13 @@ zonal_cluster_resource_name = yandex.KubernetesCluster("zonalClusterResourceName
         "my_other_key": "my_other_value",
     },
     master=yandex.KubernetesClusterMasterArgs(
-        maintenance_policy={
-            "autoUpgrade": True,
-            "maintenance_window": [{
+        maintenance_policy=yandex.KubernetesClusterMasterMaintenancePolicyArgs(
+            auto_upgrade=True,
+            maintenance_window=[{
                 "duration": "3h",
                 "startTime": "15:00",
             }],
-        },
+        ),
         public_ip=True,
         security_group_ids=[yandex_vpc_security_group["security_group_name"]["id"]],
         version="1.17",

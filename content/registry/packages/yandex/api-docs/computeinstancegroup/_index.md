@@ -126,7 +126,95 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-yandex/sdk/go/yandex"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yandex.NewComputeInstanceGroup(ctx, "group1", &yandex.ComputeInstanceGroupArgs{
+			AllocationPolicy: &ComputeInstanceGroupAllocationPolicyArgs{
+				Zones: pulumi.StringArray{
+					pulumi.String("ru-central1-a"),
+				},
+			},
+			DeletionProtection: pulumi.Bool(true),
+			DeployPolicy: &ComputeInstanceGroupDeployPolicyArgs{
+				MaxCreating:    pulumi.Int(2),
+				MaxDeleting:    pulumi.Int(2),
+				MaxExpansion:   pulumi.Int(2),
+				MaxUnavailable: pulumi.Int(2),
+			},
+			FolderId: pulumi.Any(data.Yandex_resourcemanager_folder.Test_folder.Id),
+			InstanceTemplate: &ComputeInstanceGroupInstanceTemplateArgs{
+				BootDisk: &ComputeInstanceGroupInstanceTemplateBootDiskArgs{
+					InitializeParams: &ComputeInstanceGroupInstanceTemplateBootDiskInitializeParamsArgs{
+						ImageId: pulumi.Any(data.Yandex_compute_image.Ubuntu.Id),
+						Size:    pulumi.Int(4),
+					},
+					Mode: pulumi.String("READ_WRITE"),
+				},
+				Labels: pulumi.StringMap{
+					"label1": pulumi.String("label1-value"),
+					"label2": pulumi.String("label2-value"),
+				},
+				Metadata: pulumi.StringMap{
+					"foo":      pulumi.String("bar"),
+					"ssh-keys": pulumi.String(fmt.Sprintf("%v%v", "ubuntu:", readFileOrPanic("~/.ssh/id_rsa.pub"))),
+				},
+				NetworkInterfaces: ComputeInstanceGroupInstanceTemplateNetworkInterfaceArray{
+					&ComputeInstanceGroupInstanceTemplateNetworkInterfaceArgs{
+						NetworkId: pulumi.Any(yandex_vpc_network.My - inst - group - network.Id),
+						SubnetIds: pulumi.StringArray{
+							pulumi.Any(yandex_vpc_subnet.My - inst - group - subnet.Id),
+						},
+					},
+				},
+				NetworkSettings: ComputeInstanceGroupInstanceTemplateNetworkSettingArray{
+					&ComputeInstanceGroupInstanceTemplateNetworkSettingArgs{
+						Type: pulumi.String("STANDARD"),
+					},
+				},
+				PlatformId: pulumi.String("standard-v1"),
+				Resources: &ComputeInstanceGroupInstanceTemplateResourcesArgs{
+					Cores:  pulumi.Int(2),
+					Memory: pulumi.Float64(1),
+				},
+			},
+			ScalePolicy: &ComputeInstanceGroupScalePolicyArgs{
+				FixedScale: &ComputeInstanceGroupScalePolicyFixedScaleArgs{
+					Size: pulumi.Int(3),
+				},
+			},
+			ServiceAccountId: pulumi.Any(yandex_iam_service_account.Test_account.Id),
+			Variables: pulumi.StringMap{
+				"test_key1": pulumi.String("test_value1"),
+				"test_key2": pulumi.String("test_value2"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
@@ -150,13 +238,13 @@ group1 = yandex.ComputeInstanceGroup("group1",
     ),
     folder_id=data["yandex_resourcemanager_folder"]["test_folder"]["id"],
     instance_template=yandex.ComputeInstanceGroupInstanceTemplateArgs(
-        boot_disk={
-            "initializeParams": {
-                "image_id": data["yandex_compute_image"]["ubuntu"]["id"],
-                "size": 4,
-            },
-            "mode": "READ_WRITE",
-        },
+        boot_disk=yandex.ComputeInstanceGroupInstanceTemplateBootDiskArgs(
+            initialize_params=yandex.ComputeInstanceGroupInstanceTemplateBootDiskInitializeParamsArgs(
+                image_id=data["yandex_compute_image"]["ubuntu"]["id"],
+                size=4,
+            ),
+            mode="READ_WRITE",
+        ),
         labels={
             "label1": "label1-value",
             "label2": "label2-value",
@@ -165,10 +253,10 @@ group1 = yandex.ComputeInstanceGroup("group1",
             "foo": "bar",
             "ssh-keys": f"ubuntu:{(lambda path: open(path).read())('~/.ssh/id_rsa.pub')}",
         },
-        network_interfaces=[{
-            "network_id": yandex_vpc_network["my-inst-group-network"]["id"],
-            "subnet_ids": [yandex_vpc_subnet["my-inst-group-subnet"]["id"]],
-        }],
+        network_interfaces=[yandex.ComputeInstanceGroupInstanceTemplateNetworkInterfaceArgs(
+            network_id=yandex_vpc_network["my-inst-group-network"]["id"],
+            subnet_ids=[yandex_vpc_subnet["my-inst-group-subnet"]["id"]],
+        )],
         network_settings=[yandex.ComputeInstanceGroupInstanceTemplateNetworkSettingArgs(
             type="STANDARD",
         )],

@@ -75,7 +75,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := yandex.NewFunction(ctx, "test_function", &yandex.FunctionArgs{
-			Content: &yandex.FunctionContentArgs{
+			Content: &FunctionContentArgs{
 				ZipFilename: pulumi.String("function.zip"),
 			},
 			Description:      pulumi.String("any description"),

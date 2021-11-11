@@ -149,6 +149,6 @@ A Pulumi package for creating and managing yandex cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`yandex` Terraform Provider](https://github.com/yandex-cloud/terraform-provider-yandex).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.8.0</dd>
+	<dd>0.9.0</dd>
 </dl>
 

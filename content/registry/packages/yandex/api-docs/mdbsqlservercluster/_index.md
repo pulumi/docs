@@ -246,8 +246,8 @@ func main() {
 		}
 		_, err = yandex.NewVpcSecurityGroup(ctx, "test_sg_x", &yandex.VpcSecurityGroupArgs{
 			NetworkId: fooVpcNetwork.ID(),
-			Ingresses: yandex.VpcSecurityGroupIngressArray{
-				&yandex.VpcSecurityGroupIngressArgs{
+			Ingresses: VpcSecurityGroupIngressArray{
+				&VpcSecurityGroupIngressArgs{
 					Protocol:    pulumi.String("ANY"),
 					Description: pulumi.String("Allow incoming traffic from members of the same security group"),
 					FromPort:    pulumi.Int(0),
@@ -257,8 +257,8 @@ func main() {
 					},
 				},
 			},
-			Egresses: yandex.VpcSecurityGroupEgressArray{
-				&yandex.VpcSecurityGroupEgressArgs{
+			Egresses: VpcSecurityGroupEgressArray{
+				&VpcSecurityGroupEgressArgs{
 					Protocol:    pulumi.String("ANY"),
 					Description: pulumi.String("Allow outgoing traffic to members of the same security group"),
 					FromPort:    pulumi.Int(0),
@@ -276,7 +276,7 @@ func main() {
 			Environment: pulumi.String("PRESTABLE"),
 			NetworkId:   fooVpcNetwork.ID(),
 			Version:     pulumi.String("2016sp2std"),
-			Resources: &yandex.MdbSqlServerClusterResourcesArgs{
+			Resources: &MdbSqlServerClusterResourcesArgs{
 				ResourcePresetId: pulumi.String("s2.small"),
 				DiskTypeId:       pulumi.String("network-ssd"),
 				DiskSize:         pulumi.Int(20),
@@ -284,7 +284,7 @@ func main() {
 			Labels: pulumi.StringMap{
 				"test_key": pulumi.String("test_value"),
 			},
-			BackupWindowStart: &yandex.MdbSqlServerClusterBackupWindowStartArgs{
+			BackupWindowStart: &MdbSqlServerClusterBackupWindowStartArgs{
 				Hours:   pulumi.Int(20),
 				Minutes: pulumi.Int(30),
 			},
@@ -292,27 +292,27 @@ func main() {
 				"fill_factor_percent":           pulumi.String("49"),
 				"optimize_for_ad_hoc_workloads": pulumi.String("true"),
 			},
-			Databases: yandex.MdbSqlServerClusterDatabaseArray{
-				&yandex.MdbSqlServerClusterDatabaseArgs{
+			Databases: MdbSqlServerClusterDatabaseArray{
+				&MdbSqlServerClusterDatabaseArgs{
 					Name: pulumi.String("db_name_a"),
 				},
-				&yandex.MdbSqlServerClusterDatabaseArgs{
+				&MdbSqlServerClusterDatabaseArgs{
 					Name: pulumi.String("db_name"),
 				},
-				&yandex.MdbSqlServerClusterDatabaseArgs{
+				&MdbSqlServerClusterDatabaseArgs{
 					Name: pulumi.String("db_name_b"),
 				},
 			},
-			Users: yandex.MdbSqlServerClusterUserArray{
-				&yandex.MdbSqlServerClusterUserArgs{
+			Users: MdbSqlServerClusterUserArray{
+				&MdbSqlServerClusterUserArgs{
 					Name:     pulumi.String("bob"),
 					Password: pulumi.String("mysecurepassword"),
 				},
-				&yandex.MdbSqlServerClusterUserArgs{
+				&MdbSqlServerClusterUserArgs{
 					Name:     pulumi.String("alice"),
 					Password: pulumi.String("mysecurepassword"),
-					Permissions: yandex.MdbSqlServerClusterUserPermissionArray{
-						&yandex.MdbSqlServerClusterUserPermissionArgs{
+					Permissions: MdbSqlServerClusterUserPermissionArray{
+						&MdbSqlServerClusterUserPermissionArgs{
 							DatabaseName: pulumi.String("db_name"),
 							Roles: pulumi.StringArray{
 								pulumi.String("DDLADMIN"),
@@ -320,24 +320,24 @@ func main() {
 						},
 					},
 				},
-				&yandex.MdbSqlServerClusterUserArgs{
+				&MdbSqlServerClusterUserArgs{
 					Name:     pulumi.String("chuck"),
 					Password: pulumi.String("mysecurepassword"),
-					Permissions: yandex.MdbSqlServerClusterUserPermissionArray{
-						&yandex.MdbSqlServerClusterUserPermissionArgs{
+					Permissions: MdbSqlServerClusterUserPermissionArray{
+						&MdbSqlServerClusterUserPermissionArgs{
 							DatabaseName: pulumi.String("db_name_a"),
 							Roles: pulumi.StringArray{
 								pulumi.String("OWNER"),
 							},
 						},
-						&yandex.MdbSqlServerClusterUserPermissionArgs{
+						&MdbSqlServerClusterUserPermissionArgs{
 							DatabaseName: pulumi.String("db_name"),
 							Roles: pulumi.StringArray{
 								pulumi.String("OWNER"),
 								pulumi.String("DDLADMIN"),
 							},
 						},
-						&yandex.MdbSqlServerClusterUserPermissionArgs{
+						&MdbSqlServerClusterUserPermissionArgs{
 							DatabaseName: pulumi.String("db_name_b"),
 							Roles: pulumi.StringArray{
 								pulumi.String("OWNER"),
@@ -347,8 +347,8 @@ func main() {
 					},
 				},
 			},
-			Hosts: yandex.MdbSqlServerClusterHostArray{
-				&yandex.MdbSqlServerClusterHostArgs{
+			Hosts: MdbSqlServerClusterHostArray{
+				&MdbSqlServerClusterHostArgs{
 					Zone:     pulumi.String("ru-central1-a"),
 					SubnetId: fooVpcSubnet.ID(),
 				},

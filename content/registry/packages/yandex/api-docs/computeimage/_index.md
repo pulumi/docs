@@ -77,8 +77,8 @@ func main() {
 			return err
 		}
 		_, err = yandex.NewComputeInstance(ctx, "vm", &yandex.ComputeInstanceArgs{
-			BootDisk: &yandex.ComputeInstanceBootDiskArgs{
-				InitializeParams: &yandex.ComputeInstanceBootDiskInitializeParamsArgs{
+			BootDisk: &ComputeInstanceBootDiskArgs{
+				InitializeParams: &ComputeInstanceBootDiskInitializeParamsArgs{
 					ImageId: foo_image.ID(),
 				},
 			},
