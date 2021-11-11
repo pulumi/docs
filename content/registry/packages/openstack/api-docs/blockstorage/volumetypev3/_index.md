@@ -68,9 +68,9 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := blockstorage.NewVolumeTypeV3(ctx, "volumeType1", &blockstorage.VolumeTypeV3Args{
 			Description: pulumi.String("Volume type 1"),
-			ExtraSpecs: pulumi.StringMap{
-				"capabilities":        pulumi.String("gpu"),
-				"volume_backend_name": pulumi.String("ssd"),
+			ExtraSpecs: pulumi.AnyMap{
+				"capabilities":        pulumi.Any("gpu"),
+				"volume_backend_name": pulumi.Any("ssd"),
 			},
 		})
 		if err != nil {

@@ -69,8 +69,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := loadbalancer.NewListener(ctx, "listener1", &loadbalancer.ListenerArgs{
-			InsertHeaders: pulumi.StringMap{
-				"X-Forwarded-For": pulumi.String("true"),
+			InsertHeaders: pulumi.AnyMap{
+				"X-Forwarded-For": pulumi.Any("true"),
 			},
 			LoadbalancerId: pulumi.String("d9415786-5f1a-428b-b35f-2f1523e146d2"),
 			Protocol:       pulumi.String("HTTP"),

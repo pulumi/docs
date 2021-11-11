@@ -105,6 +105,31 @@ class MyStack : Stack
 
 }
 ```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v3/go/openstack/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewInstance(ctx, "test_server", &compute.InstanceArgs{
+			FlavorId: pulumi.String("3"),
+			ImageId:  pulumi.String("ad091b52-742f-469e-8f3c-fd81cadf0743"),
+			KeyPair:  pulumi.String("my_key_pair_name"),
+			SecurityGroups: pulumi.StringArray{
+				pulumi.Any(openstack_compute_secgroup_v2.Secgroup_1.Name),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 {{% examples %}}
 

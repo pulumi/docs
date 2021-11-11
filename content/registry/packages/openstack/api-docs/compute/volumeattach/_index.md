@@ -310,7 +310,7 @@ func main() {
 			Multiattach: pulumi.Bool(true),
 			VolumeId:    pulumi.Any(openstack_blockstorage_volume_v2.Volume_1.Id),
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"openstack_compute_volume_attach_v2.va_1",
+			pulumi.Resource("openstack_compute_volume_attach_v2.va_1"),
 		}))
 		if err != nil {
 			return err

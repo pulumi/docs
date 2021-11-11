@@ -90,14 +90,14 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := orchestration.NewStackV1(ctx, "stack1", &orchestration.StackV1Args{
 			DisableRollback: pulumi.Bool(true),
-			EnvironmentOpts: pulumi.StringMap{
-				"Bin": pulumi.String(fmt.Sprintf("%v%v", "\n", "\n")),
+			EnvironmentOpts: pulumi.AnyMap{
+				"Bin": pulumi.Any(fmt.Sprintf("%v%v", "\n", "\n")),
 			},
-			Parameters: pulumi.Float64Map{
-				"length": pulumi.Float64(4),
+			Parameters: pulumi.AnyMap{
+				"length": pulumi.Any(4),
 			},
-			TemplateOpts: pulumi.StringMap{
-				"Bin": pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "heat_template_version: 2013-05-23\n", "parameters:\n", "  length:\n", "    type: number\n", "resources:\n", "  test_res:\n", "    type: OS::Heat::TestResource\n", "  random:\n", "    type: OS::Heat::RandomString\n", "    properties:\n", "      length: {get_param: length}\n", "\n")),
+			TemplateOpts: pulumi.AnyMap{
+				"Bin": pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "heat_template_version: 2013-05-23\n", "parameters:\n", "  length:\n", "    type: number\n", "resources:\n", "  test_res:\n", "    type: OS::Heat::TestResource\n", "  random:\n", "    type: OS::Heat::RandomString\n", "    properties:\n", "      length: {get_param: length}\n", "\n")),
 			},
 			Timeout: pulumi.Int(30),
 		})

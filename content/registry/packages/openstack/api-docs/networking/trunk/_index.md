@@ -139,7 +139,7 @@ func main() {
 			AdminStateUp: pulumi.Bool(true),
 			NetworkId:    network1.ID(),
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"openstack_networking_subnet_v2.subnet_1",
+			pulumi.Resource("openstack_networking_subnet_v2.subnet_1"),
 		}))
 		if err != nil {
 			return err
@@ -148,7 +148,7 @@ func main() {
 			AdminStateUp: pulumi.Bool(true),
 			NetworkId:    network1.ID(),
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"openstack_networking_subnet_v2.subnet_1",
+			pulumi.Resource("openstack_networking_subnet_v2.subnet_1"),
 		}))
 		if err != nil {
 			return err

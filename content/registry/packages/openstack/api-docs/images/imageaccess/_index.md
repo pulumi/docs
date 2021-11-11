@@ -76,8 +76,8 @@ func main() {
 			ContainerFormat: pulumi.String("bare"),
 			DiskFormat:      pulumi.String("qcow2"),
 			ImageSourceUrl:  pulumi.String("https://releases.rancher.com/os/latest/rancheros-openstack.img"),
-			Properties: pulumi.StringMap{
-				"key": pulumi.String("value"),
+			Properties: pulumi.AnyMap{
+				"key": pulumi.Any("value"),
 			},
 			Visibility: pulumi.String("shared"),
 		})
@@ -206,8 +206,8 @@ func main() {
 			ContainerFormat: pulumi.String("bare"),
 			DiskFormat:      pulumi.String("qcow2"),
 			ImageSourceUrl:  pulumi.String("https://releases.rancher.com/os/latest/rancheros-openstack.img"),
-			Properties: pulumi.StringMap{
-				"key": pulumi.String("value"),
+			Properties: pulumi.AnyMap{
+				"key": pulumi.Any("value"),
 			},
 			Visibility: pulumi.String("shared"),
 		})

@@ -68,9 +68,9 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := compute.NewFlavor(ctx, "test_flavor", &compute.FlavorArgs{
 			Disk: pulumi.Int(20),
-			ExtraSpecs: pulumi.StringMap{
-				"hw:cpu_policy":        pulumi.String("CPU-POLICY"),
-				"hw:cpu_thread_policy": pulumi.String("CPU-THREAD-POLICY"),
+			ExtraSpecs: pulumi.AnyMap{
+				"hw:cpu_policy":        pulumi.Any("CPU-POLICY"),
+				"hw:cpu_thread_policy": pulumi.Any("CPU-THREAD-POLICY"),
 			},
 			Ram:   pulumi.Int(8096),
 			Vcpus: pulumi.Int(2),

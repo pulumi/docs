@@ -97,10 +97,10 @@ func main() {
 			Backups:            pulumi.Int(4),
 			BackupGigabytes:    pulumi.Int(10),
 			Groups:             pulumi.Int(100),
-			VolumeTypeQuota: pulumi.Float64Map{
-				"volumes_ssd":   pulumi.Float64(30),
-				"gigabytes_ssd": pulumi.Float64(500),
-				"snapshots_ssd": pulumi.Float64(10),
+			VolumeTypeQuota: pulumi.AnyMap{
+				"volumes_ssd":   pulumi.Any(30),
+				"gigabytes_ssd": pulumi.Any(500),
+				"snapshots_ssd": pulumi.Any(10),
 			},
 		})
 		if err != nil {

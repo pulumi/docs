@@ -71,8 +71,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := objectstorage.NewContainer(ctx, "container1", &objectstorage.ContainerArgs{
 			ContentType: pulumi.String("application/json"),
-			Metadata: pulumi.StringMap{
-				"test": pulumi.String("true"),
+			Metadata: pulumi.AnyMap{
+				"test": pulumi.Any("true"),
 			},
 			Region: pulumi.String("RegionOne"),
 			Versioning: &objectstorage.ContainerVersioningArgs{
@@ -414,7 +414,7 @@ import * as openstack from "@pulumi/openstack";
 
 const current = pulumi.output(openstack.identity.getAuthScope({
     name: "current",
-}, { async: true }));
+}));
 const container1 = new openstack.objectstorage.Container("container_1", {
     containerRead: `.r:-${var_username}`,
     containerWrite: pulumi.interpolate`${current.projectId}:${var_username}`,
