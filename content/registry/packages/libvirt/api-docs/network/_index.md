@@ -35,6 +35,7 @@ Manages a VM network resource within libvirt. For more information see
             <span class="nx">bridge</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">dhcp</span><span class="p">:</span> <span class="nx">Optional[NetworkDhcpArgs]</span> = None<span class="p">,</span>
             <span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[NetworkDnsArgs]</span> = None<span class="p">,</span>
+            <span class="nx">dnsmasq_options</span><span class="p">:</span> <span class="nx">Optional[NetworkDnsmasqOptionsArgs]</span> = None<span class="p">,</span>
             <span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -224,6 +225,16 @@ You need to use it in conjuction with the adresses variable.
     <dd>{{% md %}}configuration of DNS specific settings for the network
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsmasqoptions_csharp">
+<a href="#dnsmasqoptions_csharp" style="color: inherit; text-decoration: inherit;">Dnsmasq<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkdnsmasqoptions">Network<wbr>Dnsmasq<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}configuration of Dnsmasq options for the network
+You need to provide a list of option name and value pairs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
 </span>
@@ -353,6 +364,16 @@ You need to use it in conjuction with the adresses variable.
         <span class="property-type"><a href="#networkdns">Network<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}configuration of DNS specific settings for the network
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsmasqoptions_go">
+<a href="#dnsmasqoptions_go" style="color: inherit; text-decoration: inherit;">Dnsmasq<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkdnsmasqoptions">Network<wbr>Dnsmasq<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}configuration of Dnsmasq options for the network
+You need to provide a list of option name and value pairs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_go">
@@ -486,6 +507,16 @@ You need to use it in conjuction with the adresses variable.
     <dd>{{% md %}}configuration of DNS specific settings for the network
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dnsmasqoptions_nodejs">
+<a href="#dnsmasqoptions_nodejs" style="color: inherit; text-decoration: inherit;">dnsmasq<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkdnsmasqoptions">Network<wbr>Dnsmasq<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}configuration of Dnsmasq options for the network
+You need to provide a list of option name and value pairs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
@@ -615,6 +646,16 @@ You need to use it in conjuction with the adresses variable.
         <span class="property-type"><a href="#networkdns">Network<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}configuration of DNS specific settings for the network
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsmasq_options_python">
+<a href="#dnsmasq_options_python" style="color: inherit; text-decoration: inherit;">dnsmasq_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkdnsmasqoptions">Network<wbr>Dnsmasq<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}configuration of Dnsmasq options for the network
+You need to provide a list of option name and value pairs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_python">
@@ -767,6 +808,7 @@ Get an existing Network resource's state with the given name, ID, and optional e
         <span class="nx">bridge</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">dhcp</span><span class="p">:</span> <span class="nx">Optional[NetworkDhcpArgs]</span> = None<span class="p">,</span>
         <span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[NetworkDnsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">dnsmasq_options</span><span class="p">:</span> <span class="nx">Optional[NetworkDnsmasqOptionsArgs]</span> = None<span class="p">,</span>
         <span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -939,6 +981,16 @@ You need to use it in conjuction with the adresses variable.
     <dd>{{% md %}}configuration of DNS specific settings for the network
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dnsmasqoptions_csharp">
+<a href="#state_dnsmasqoptions_csharp" style="color: inherit; text-decoration: inherit;">Dnsmasq<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkdnsmasqoptions">Network<wbr>Dnsmasq<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}configuration of Dnsmasq options for the network
+You need to provide a list of option name and value pairs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_domain_csharp">
 <a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
 </span>
@@ -1068,6 +1120,16 @@ You need to use it in conjuction with the adresses variable.
         <span class="property-type"><a href="#networkdns">Network<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}configuration of DNS specific settings for the network
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dnsmasqoptions_go">
+<a href="#state_dnsmasqoptions_go" style="color: inherit; text-decoration: inherit;">Dnsmasq<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkdnsmasqoptions">Network<wbr>Dnsmasq<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}configuration of Dnsmasq options for the network
+You need to provide a list of option name and value pairs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_go">
@@ -1201,6 +1263,16 @@ You need to use it in conjuction with the adresses variable.
     <dd>{{% md %}}configuration of DNS specific settings for the network
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dnsmasqoptions_nodejs">
+<a href="#state_dnsmasqoptions_nodejs" style="color: inherit; text-decoration: inherit;">dnsmasq<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkdnsmasqoptions">Network<wbr>Dnsmasq<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}configuration of Dnsmasq options for the network
+You need to provide a list of option name and value pairs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_domain_nodejs">
 <a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
@@ -1330,6 +1402,16 @@ You need to use it in conjuction with the adresses variable.
         <span class="property-type"><a href="#networkdns">Network<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}configuration of DNS specific settings for the network
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dnsmasq_options_python">
+<a href="#state_dnsmasq_options_python" style="color: inherit; text-decoration: inherit;">dnsmasq_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkdnsmasqoptions">Network<wbr>Dnsmasq<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}configuration of Dnsmasq options for the network
+You need to provide a list of option name and value pairs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_python">
@@ -2082,6 +2164,146 @@ in your DNS definition. You must specify `service` and `protocol`.
             title="Optional">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="networkdnsmasqoptions">Network<wbr>Dnsmasq<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="options_csharp">
+<a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkdnsmasqoptionsoption">List&lt;Network<wbr>Dnsmasq<wbr>Options<wbr>Option&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}a Dnsmasq option entry block. You can have one or more of these
+blocks in your definition. You must specify both `option_name` and `option_value`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="options_go">
+<a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkdnsmasqoptionsoption">[]Network<wbr>Dnsmasq<wbr>Options<wbr>Option</a></span>
+    </dt>
+    <dd>{{% md %}}a Dnsmasq option entry block. You can have one or more of these
+blocks in your definition. You must specify both `option_name` and `option_value`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="options_nodejs">
+<a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkdnsmasqoptionsoption">Network<wbr>Dnsmasq<wbr>Options<wbr>Option[]</a></span>
+    </dt>
+    <dd>{{% md %}}a Dnsmasq option entry block. You can have one or more of these
+blocks in your definition. You must specify both `option_name` and `option_value`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="options_python">
+<a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkdnsmasqoptionsoption">Sequence[Network<wbr>Dnsmasq<wbr>Options<wbr>Option]</a></span>
+    </dt>
+    <dd>{{% md %}}a Dnsmasq option entry block. You can have one or more of these
+blocks in your definition. You must specify both `option_name` and `option_value`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="networkdnsmasqoptionsoption">Network<wbr>Dnsmasq<wbr>Options<wbr>Option</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="optionname_csharp">
+<a href="#optionname_csharp" style="color: inherit; text-decoration: inherit;">Option<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="optionvalue_csharp">
+<a href="#optionvalue_csharp" style="color: inherit; text-decoration: inherit;">Option<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="optionname_go">
+<a href="#optionname_go" style="color: inherit; text-decoration: inherit;">Option<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="optionvalue_go">
+<a href="#optionvalue_go" style="color: inherit; text-decoration: inherit;">Option<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="optionname_nodejs">
+<a href="#optionname_nodejs" style="color: inherit; text-decoration: inherit;">option<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="optionvalue_nodejs">
+<a href="#optionvalue_nodejs" style="color: inherit; text-decoration: inherit;">option<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="option_name_python">
+<a href="#option_name_python" style="color: inherit; text-decoration: inherit;">option_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="option_value_python">
+<a href="#option_value_python" style="color: inherit; text-decoration: inherit;">option_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
