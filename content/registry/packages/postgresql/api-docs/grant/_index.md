@@ -170,7 +170,7 @@ func main() {
 		_, err := postgresql.NewGrant(ctx, "revokePublic", &postgresql.GrantArgs{
 			Database:   pulumi.String("test_db"),
 			ObjectType: pulumi.String("schema"),
-			Privileges: []interface{}{},
+			Privileges: pulumi.StringArray{},
 			Role:       pulumi.String("public"),
 			Schema:     pulumi.String("public"),
 		})
