@@ -99,7 +99,73 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := opsgenie.NewApiIntegration(ctx, "example_api_integrationApiIntegration", &opsgenie.ApiIntegrationArgs{
+			Type: pulumi.String("API"),
+			Responders: ApiIntegrationResponderArray{
+				&ApiIntegrationResponderArgs{
+					Type: pulumi.String("user"),
+					Id:   pulumi.Any(opsgenie_user.User.Id),
+				},
+				&ApiIntegrationResponderArgs{
+					Type: pulumi.String("user"),
+					Id:   pulumi.Any(opsgenie_user.Fahri.Id),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = opsgenie.NewApiIntegration(ctx, "example_api_integrationIndex_apiIntegrationApiIntegration", &opsgenie.ApiIntegrationArgs{
+			Type: pulumi.String("Prometheus"),
+			Responders: ApiIntegrationResponderArray{
+				&ApiIntegrationResponderArgs{
+					Type: pulumi.String("user"),
+					Id:   pulumi.Any(opsgenie_user.User.Id),
+				},
+			},
+			Enabled:                     pulumi.Bool(false),
+			AllowWriteAccess:            pulumi.Bool(false),
+			IgnoreRespondersFromPayload: pulumi.Bool(true),
+			SuppressNotifications:       pulumi.Bool(true),
+			OwnerTeamId:                 pulumi.Any(opsgenie_team.Team.Id),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = opsgenie.NewApiIntegration(ctx, "test3", &opsgenie.ApiIntegrationArgs{
+			Type: pulumi.String("Webhook"),
+			Responders: ApiIntegrationResponderArray{
+				&ApiIntegrationResponderArgs{
+					Type: pulumi.String("user"),
+					Id:   pulumi.Any(opsgenie_user.User.Id),
+				},
+			},
+			Enabled:               pulumi.Bool(false),
+			AllowWriteAccess:      pulumi.Bool(false),
+			SuppressNotifications: pulumi.Bool(true),
+			WebhookUrl:            pulumi.String("https://api.example.com/v1"),
+			Headers: pulumi.StringMap{
+				"header1": pulumi.Any(value1),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

@@ -108,12 +108,12 @@ func main() {
 		}
 		_, err = opsgenie.NewTeam(ctx, "test", &opsgenie.TeamArgs{
 			Description: pulumi.String("This team deals with all the things"),
-			Members: opsgenie.TeamMemberArray{
-				&opsgenie.TeamMemberArgs{
+			Members: TeamMemberArray{
+				&TeamMemberArgs{
 					Id:   first.ID(),
 					Role: pulumi.String("admin"),
 				},
-				&opsgenie.TeamMemberArgs{
+				&TeamMemberArgs{
 					Id:   second.ID(),
 					Role: pulumi.String("user"),
 				},

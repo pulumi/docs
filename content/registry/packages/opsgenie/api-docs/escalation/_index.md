@@ -100,29 +100,29 @@ func main() {
 		_, err := opsgenie.NewEscalation(ctx, "test", &opsgenie.EscalationArgs{
 			Description: pulumi.String("test"),
 			OwnerTeamId: pulumi.Any(opsgenie_team.Test.Id),
-			Repeats: opsgenie.EscalationRepeatArray{
-				&opsgenie.EscalationRepeatArgs{
+			Repeats: EscalationRepeatArray{
+				&EscalationRepeatArgs{
 					CloseAlertAfterAll:   pulumi.Bool(false),
 					Count:                pulumi.Int(1),
 					ResetRecipientStates: pulumi.Bool(true),
 					WaitInterval:         pulumi.Int(10),
 				},
 			},
-			Rules: opsgenie.EscalationRuleArray{
-				&opsgenie.EscalationRuleArgs{
+			Rules: EscalationRuleArray{
+				&EscalationRuleArgs{
 					Condition:  pulumi.String("if-not-acked"),
 					Delay:      pulumi.Int(1),
 					NotifyType: pulumi.String("default"),
-					Recipients: opsgenie.EscalationRuleRecipientArray{
-						&opsgenie.EscalationRuleRecipientArgs{
+					Recipients: EscalationRuleRecipientArray{
+						&EscalationRuleRecipientArgs{
 							Id:   pulumi.Any(opsgenie_user.Test.Id),
 							Type: pulumi.String("user"),
 						},
-						&opsgenie.EscalationRuleRecipientArgs{
+						&EscalationRuleRecipientArgs{
 							Id:   pulumi.Any(opsgenie_team.Test.Id),
 							Type: pulumi.String("team"),
 						},
-						&opsgenie.EscalationRuleRecipientArgs{
+						&EscalationRuleRecipientArgs{
 							Id:   pulumi.Any(opsgenie_schedule.Test.Id),
 							Type: pulumi.String("schedule"),
 						},

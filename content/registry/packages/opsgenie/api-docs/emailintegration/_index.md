@@ -112,20 +112,20 @@ func main() {
 			return err
 		}
 		_, err = opsgenie.NewEmailIntegration(ctx, "testIndex_emailIntegrationEmailIntegration", &opsgenie.EmailIntegrationArgs{
-			Responders: opsgenie.EmailIntegrationResponderArray{
-				&opsgenie.EmailIntegrationResponderArgs{
+			Responders: EmailIntegrationResponderArray{
+				&EmailIntegrationResponderArgs{
 					Type: pulumi.String("user"),
 					Id:   pulumi.Any(opsgenie_user.Test.Id),
 				},
-				&opsgenie.EmailIntegrationResponderArgs{
+				&EmailIntegrationResponderArgs{
 					Type: pulumi.String("schedule"),
 					Id:   pulumi.Any(opsgenie_schedule.Test.Id),
 				},
-				&opsgenie.EmailIntegrationResponderArgs{
+				&EmailIntegrationResponderArgs{
 					Type: pulumi.String("escalation"),
 					Id:   pulumi.Any(opsgenie_escalation.Test.Id),
 				},
-				&opsgenie.EmailIntegrationResponderArgs{
+				&EmailIntegrationResponderArgs{
 					Type: pulumi.String("team"),
 					Id:   pulumi.Any(opsgenie_team.Test2.Id),
 				},
@@ -139,8 +139,8 @@ func main() {
 			return err
 		}
 		_, err = opsgenie.NewEmailIntegration(ctx, "testOpsgenieIndex_emailIntegrationEmailIntegration", &opsgenie.EmailIntegrationArgs{
-			Responders: opsgenie.EmailIntegrationResponderArray{
-				&opsgenie.EmailIntegrationResponderArgs{
+			Responders: EmailIntegrationResponderArray{
+				&EmailIntegrationResponderArgs{
 					Type: pulumi.String("user"),
 					Id:   pulumi.Any(opsgenie_user.Test.Id),
 				},

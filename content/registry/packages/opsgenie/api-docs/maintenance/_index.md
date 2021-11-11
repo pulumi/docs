@@ -87,10 +87,10 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := opsgenie.NewMaintenance(ctx, "test", &opsgenie.MaintenanceArgs{
 			Description: pulumi.String(fmt.Sprintf("%v%v%v", "geniemaintenance-", "%", "s")),
-			Rules: opsgenie.MaintenanceRuleArray{
-				&opsgenie.MaintenanceRuleArgs{
-					Entities: opsgenie.MaintenanceRuleEntityArray{
-						&opsgenie.MaintenanceRuleEntityArgs{
+			Rules: MaintenanceRuleArray{
+				&MaintenanceRuleArgs{
+					Entities: MaintenanceRuleEntityArray{
+						&MaintenanceRuleEntityArgs{
 							Id:   pulumi.Any(opsgenie_email_integration.Test.Id),
 							Type: pulumi.String("integration"),
 						},
@@ -98,8 +98,8 @@ func main() {
 					State: pulumi.String("enabled"),
 				},
 			},
-			Times: opsgenie.MaintenanceTimeArray{
-				&opsgenie.MaintenanceTimeArgs{
+			Times: MaintenanceTimeArray{
+				&MaintenanceTimeArgs{
 					EndDate:   pulumi.String(fmt.Sprintf("%v%v%v", "2019-06-", "%", "dT17:50:00Z")),
 					StartDate: pulumi.String("2019-06-20T17:45:00Z"),
 					Type:      pulumi.String("schedule"),

@@ -60,7 +60,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := opsgenie.LookupHeartbeat(ctx, &opsgenie.LookupHeartbeatArgs{
+		_, err := opsgenie.LookupHeartbeat(ctx, &GetHeartbeatArgs{
 			Name: "genieheartbeat-existing",
 		}, nil)
 		if err != nil {
@@ -97,7 +97,7 @@ import * as opsgenie from "@pulumi/opsgenie";
 
 const test = pulumi.output(opsgenie.getHeartbeat({
     name: "genieheartbeat-existing",
-}, { async: true }));
+}));
 ```
 
 
@@ -114,16 +114,27 @@ const test = pulumi.output(opsgenie.getHeartbeat({
 
 ## Using getHeartbeat {#using}
 
+Two invocation forms are available. The direct form accepts plain
+arguments and either blocks until the result value is available, or
+returns a Promise-wrapped result. The output form accepts
+Input-wrapped arguments and returns an Output-wrapped result.
+
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getHeartbeat<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetHeartbeatArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetHeartbeatResult</a></span>></span></code></pre></div>
+<div class="highlight"
+><pre class="chroma"><code class="language-typescript" data-lang="typescript"
+><span class="k">function </span>getHeartbeat<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetHeartbeatArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetHeartbeatResult</a></span>></span
+><span class="k">
+function </span>getHeartbeatOutput<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetHeartbeatOutputArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Output&lt;<span class="nx"><a href="#result">GetHeartbeatResult</a></span>></span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_heartbeat(</span><span class="nx">alert_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"
+><span class="k">def </span>get_heartbeat<span class="p">(</span><span class="nx">alert_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">alert_priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">alert_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                   <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -132,21 +143,39 @@ const test = pulumi.output(opsgenie.getHeartbeat({
                   <span class="nx">interval_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">owner_team_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetHeartbeatResult</code></pre></div>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>GetHeartbeatResult</span
+><span class="k">
+def </span>get_heartbeat_output<span class="p">(</span><span class="nx">alert_message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">alert_priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">alert_tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                  <span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">interval_unit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">owner_team_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>Output[GetHeartbeatResult]</span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupHeartbeat<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupHeartbeatArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupHeartbeatResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"
+><span class="k">func </span>LookupHeartbeat<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupHeartbeatArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupHeartbeatResult</a></span>, error)</span
+><span class="k">
+func </span>LookupHeartbeatOutput<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupHeartbeatOutputArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) LookupHeartbeatResultOutput</span
+></code></pre></div>
 
-> Note: This function is named `LookupHeartbeat` in the Go SDK.
+&gt; Note: This function is named `LookupHeartbeat` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetHeartbeat </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetHeartbeatResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetHeartbeatArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetHeartbeat </span><span class="p">
+{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetHeartbeatResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetHeartbeatArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="k">
+    public static </span>Output&lt;<span class="nx"><a href="#result">GetHeartbeatResult</a></span>> <span class="p">Invoke(</span><span class="nx">GetHeartbeatInvokeArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
