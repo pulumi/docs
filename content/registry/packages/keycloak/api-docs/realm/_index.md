@@ -132,13 +132,13 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := keycloak.NewRealm(ctx, "realm", &keycloak.RealmArgs{
 			AccessCodeLifespan: pulumi.String("1h"),
-			Attributes: pulumi.StringMap{
-				"mycustomAttribute": pulumi.String("myCustomValue"),
+			Attributes: pulumi.AnyMap{
+				"mycustomAttribute": pulumi.Any("myCustomValue"),
 			},
 			DisplayName:     pulumi.String("my realm"),
 			DisplayNameHtml: pulumi.String("<b>my realm</b>"),
 			Enabled:         pulumi.Bool(true),
-			Internationalization: &keycloak.RealmInternationalizationArgs{
+			Internationalization: &RealmInternationalizationArgs{
 				DefaultLocale: pulumi.String("en"),
 				SupportedLocales: pulumi.StringArray{
 					pulumi.String("en"),
@@ -149,8 +149,8 @@ func main() {
 			LoginTheme:     pulumi.String("base"),
 			PasswordPolicy: pulumi.String("upperCase(1) and length(8) and forceExpiredPasswordChange(365) and notUsername"),
 			Realm:          pulumi.String("my-realm"),
-			SecurityDefenses: &keycloak.RealmSecurityDefensesArgs{
-				BruteForceDetection: &keycloak.RealmSecurityDefensesBruteForceDetectionArgs{
+			SecurityDefenses: &RealmSecurityDefensesArgs{
+				BruteForceDetection: &RealmSecurityDefensesBruteForceDetectionArgs{
 					FailureResetTimeSeconds:      pulumi.Int(43200),
 					MaxFailureWaitSeconds:        pulumi.Int(900),
 					MaxLoginFailures:             pulumi.Int(30),
@@ -159,7 +159,7 @@ func main() {
 					QuickLoginCheckMilliSeconds:  pulumi.Int(1000),
 					WaitIncrementSeconds:         pulumi.Int(60),
 				},
-				Headers: &keycloak.RealmSecurityDefensesHeadersArgs{
+				Headers: &RealmSecurityDefensesHeadersArgs{
 					ContentSecurityPolicy:           pulumi.String("frame-src 'self'; frame-ancestors 'self'; object-src 'none';"),
 					ContentSecurityPolicyReportOnly: pulumi.String(""),
 					StrictTransportSecurity:         pulumi.String("max-age=31536000; includeSubDomains"),
@@ -169,8 +169,8 @@ func main() {
 					XXssProtection:                  pulumi.String("1; mode=block"),
 				},
 			},
-			SmtpServer: &keycloak.RealmSmtpServerArgs{
-				Auth: &keycloak.RealmSmtpServerAuthArgs{
+			SmtpServer: &RealmSmtpServerArgs{
+				Auth: &RealmSmtpServerAuthArgs{
 					Password: pulumi.String("password"),
 					Username: pulumi.String("tom"),
 				},
@@ -178,7 +178,7 @@ func main() {
 				Host: pulumi.String("smtp.example.com"),
 			},
 			SslRequired: pulumi.String("external"),
-			WebAuthnPolicy: &keycloak.RealmWebAuthnPolicyArgs{
+			WebAuthnPolicy: &RealmWebAuthnPolicyArgs{
 				RelyingPartyEntityName: pulumi.String("Example"),
 				RelyingPartyId:         pulumi.String("keycloak.example.com"),
 				SignatureAlgorithms: pulumi.StringArray{

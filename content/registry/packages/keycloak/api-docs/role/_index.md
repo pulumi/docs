@@ -82,9 +82,9 @@ func main() {
 		_, err = keycloak.NewRole(ctx, "realmRole", &keycloak.RoleArgs{
 			RealmId:     realm.ID(),
 			Description: pulumi.String("My Realm Role"),
-			Attributes: pulumi.StringMap{
-				"key":        pulumi.String("value"),
-				"multivalue": pulumi.String("value1##value2"),
+			Attributes: pulumi.AnyMap{
+				"key":        pulumi.Any("value"),
+				"multivalue": pulumi.Any("value1##value2"),
 			},
 		})
 		if err != nil {
@@ -232,8 +232,8 @@ func main() {
 			RealmId:     realm.ID(),
 			ClientId:    pulumi.Any(keycloak_client.Openid_client.Id),
 			Description: pulumi.String("My Client Role"),
-			Attributes: pulumi.StringMap{
-				"key": pulumi.String("value"),
+			Attributes: pulumi.AnyMap{
+				"key": pulumi.Any("value"),
 			},
 		})
 		if err != nil {
@@ -430,8 +430,8 @@ func main() {
 		}
 		createRole, err := keycloak.NewRole(ctx, "createRole", &keycloak.RoleArgs{
 			RealmId: realm.ID(),
-			Attributes: pulumi.StringMap{
-				"key": pulumi.String("value"),
+			Attributes: pulumi.AnyMap{
+				"key": pulumi.Any("value"),
 			},
 		})
 		if err != nil {
@@ -439,8 +439,8 @@ func main() {
 		}
 		readRole, err := keycloak.NewRole(ctx, "readRole", &keycloak.RoleArgs{
 			RealmId: realm.ID(),
-			Attributes: pulumi.StringMap{
-				"key": pulumi.String("value"),
+			Attributes: pulumi.AnyMap{
+				"key": pulumi.Any("value"),
 			},
 		})
 		if err != nil {
@@ -448,8 +448,8 @@ func main() {
 		}
 		updateRole, err := keycloak.NewRole(ctx, "updateRole", &keycloak.RoleArgs{
 			RealmId: realm.ID(),
-			Attributes: pulumi.StringMap{
-				"key": pulumi.String("value"),
+			Attributes: pulumi.AnyMap{
+				"key": pulumi.Any("value"),
 			},
 		})
 		if err != nil {
@@ -457,8 +457,8 @@ func main() {
 		}
 		deleteRole, err := keycloak.NewRole(ctx, "deleteRole", &keycloak.RoleArgs{
 			RealmId: realm.ID(),
-			Attributes: pulumi.StringMap{
-				"key": pulumi.String("value"),
+			Attributes: pulumi.AnyMap{
+				"key": pulumi.Any("value"),
 			},
 		})
 		if err != nil {
@@ -480,8 +480,8 @@ func main() {
 			RealmId:     realm.ID(),
 			ClientId:    pulumi.Any(keycloak_client.Openid_client.Id),
 			Description: pulumi.String("My Client Role"),
-			Attributes: pulumi.StringMap{
-				"key": pulumi.String("value"),
+			Attributes: pulumi.AnyMap{
+				"key": pulumi.Any("value"),
 			},
 		})
 		if err != nil {
@@ -496,8 +496,8 @@ func main() {
 				deleteRole.ID(),
 				clientRole.ID(),
 			},
-			Attributes: pulumi.StringMap{
-				"key": pulumi.String("value"),
+			Attributes: pulumi.AnyMap{
+				"key": pulumi.Any("value"),
 			},
 		})
 		if err != nil {

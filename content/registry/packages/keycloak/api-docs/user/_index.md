@@ -117,11 +117,11 @@ func main() {
 			Email:     pulumi.String("alice@domain.com"),
 			FirstName: pulumi.String("Alice"),
 			LastName:  pulumi.String("Aliceberg"),
-			Attributes: pulumi.StringMap{
-				"foo":        pulumi.String("bar"),
-				"multivalue": pulumi.String("value1##value2"),
+			Attributes: pulumi.AnyMap{
+				"foo":        pulumi.Any("bar"),
+				"multivalue": pulumi.Any("value1##value2"),
 			},
-			InitialPassword: &keycloak.UserInitialPasswordArgs{
+			InitialPassword: &UserInitialPasswordArgs{
 				Value:     pulumi.String("some password"),
 				Temporary: pulumi.Bool(true),
 			},

@@ -90,8 +90,8 @@ func main() {
 			ClientId:         pulumi.String("clientID"),
 			ClientSecret:     pulumi.String("clientSecret"),
 			TokenUrl:         pulumi.String("https://tokenurl.com"),
-			ExtraConfig: pulumi.StringMap{
-				"clientAuthMethod": pulumi.String("client_secret_post"),
+			ExtraConfig: pulumi.AnyMap{
+				"clientAuthMethod": pulumi.Any("client_secret_post"),
 			},
 		})
 		if err != nil {

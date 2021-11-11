@@ -106,11 +106,11 @@ func main() {
 			ClientId:       samlClient.ID(),
 			Protocol:       pulumi.String("saml"),
 			ProtocolMapper: pulumi.String("saml-hardcode-attribute-mapper"),
-			Config: pulumi.StringMap{
-				"attribute.name":       pulumi.String("name"),
-				"attribute.nameformat": pulumi.String("Basic"),
-				"attribute.value":      pulumi.String("value"),
-				"friendly.name":        pulumi.String("display name"),
+			Config: pulumi.AnyMap{
+				"attribute.name":       pulumi.Any("name"),
+				"attribute.nameformat": pulumi.Any("Basic"),
+				"attribute.value":      pulumi.Any("value"),
+				"friendly.name":        pulumi.Any("display name"),
 			},
 		})
 		if err != nil {
