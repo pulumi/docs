@@ -109,7 +109,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		webhook, err := pagerduty.GetExtensionSchema(ctx, &pagerduty.GetExtensionSchemaArgs{
+		webhook, err := pagerduty.GetExtensionSchema(ctx, &GetExtensionSchemaArgs{
 			Name: "Generic V2 Webhook",
 		}, nil)
 		if err != nil {
@@ -123,11 +123,11 @@ func main() {
 		}
 		exampleEscalationPolicy, err := pagerduty.NewEscalationPolicy(ctx, "exampleEscalationPolicy", &pagerduty.EscalationPolicyArgs{
 			NumLoops: pulumi.Int(2),
-			Rules: pagerduty.EscalationPolicyRuleArray{
-				&pagerduty.EscalationPolicyRuleArgs{
+			Rules: EscalationPolicyRuleArray{
+				&EscalationPolicyRuleArgs{
 					EscalationDelayInMinutes: pulumi.Int(10),
-					Targets: pagerduty.EscalationPolicyRuleTargetArray{
-						&pagerduty.EscalationPolicyRuleTargetArgs{
+					Targets: EscalationPolicyRuleTargetArray{
+						&EscalationPolicyRuleTargetArgs{
 							Type: pulumi.String("user"),
 							Id:   exampleUser.ID(),
 						},

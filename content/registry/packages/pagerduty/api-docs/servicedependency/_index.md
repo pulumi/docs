@@ -100,15 +100,15 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := pagerduty.NewServiceDependency(ctx, "foo", &pagerduty.ServiceDependencyArgs{
-			Dependency: &pagerduty.ServiceDependencyDependencyArgs{
-				DependentServices: pagerduty.ServiceDependencyDependencyDependentServiceArray{
-					&pagerduty.ServiceDependencyDependencyDependentServiceArgs{
+			Dependency: &ServiceDependencyDependencyArgs{
+				DependentServices: ServiceDependencyDependencyDependentServiceArray{
+					&ServiceDependencyDependencyDependentServiceArgs{
 						Id:   pulumi.Any(pagerduty_business_service.Foo.Id),
 						Type: pulumi.String("business_service"),
 					},
 				},
-				SupportingServices: pagerduty.ServiceDependencyDependencySupportingServiceArray{
-					&pagerduty.ServiceDependencyDependencySupportingServiceArgs{
+				SupportingServices: ServiceDependencyDependencySupportingServiceArray{
+					&ServiceDependencyDependencySupportingServiceArgs{
 						Id:   pulumi.Any(pagerduty_service.Foo.Id),
 						Type: pulumi.String("service"),
 					},
@@ -119,15 +119,15 @@ func main() {
 			return err
 		}
 		_, err = pagerduty.NewServiceDependency(ctx, "bar", &pagerduty.ServiceDependencyArgs{
-			Dependency: &pagerduty.ServiceDependencyDependencyArgs{
-				DependentServices: pagerduty.ServiceDependencyDependencyDependentServiceArray{
-					&pagerduty.ServiceDependencyDependencyDependentServiceArgs{
+			Dependency: &ServiceDependencyDependencyArgs{
+				DependentServices: ServiceDependencyDependencyDependentServiceArray{
+					&ServiceDependencyDependencyDependentServiceArgs{
 						Id:   pulumi.Any(pagerduty_business_service.Foo.Id),
 						Type: pulumi.String("business_service"),
 					},
 				},
-				SupportingServices: pagerduty.ServiceDependencyDependencySupportingServiceArray{
-					&pagerduty.ServiceDependencyDependencySupportingServiceArgs{
+				SupportingServices: ServiceDependencyDependencySupportingServiceArray{
+					&ServiceDependencyDependencySupportingServiceArgs{
 						Id:   pulumi.Any(pagerduty_service.Two.Id),
 						Type: pulumi.String("service"),
 					},

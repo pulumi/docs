@@ -112,18 +112,18 @@ func main() {
 		}
 		_, err = pagerduty.NewEscalationPolicy(ctx, "exampleEscalationPolicy", &pagerduty.EscalationPolicyArgs{
 			NumLoops: pulumi.Int(2),
-			Teams: pulumi.String(pulumi.String{
+			Teams: pulumi.String{
 				exampleTeam.ID(),
-			}),
-			Rules: pagerduty.EscalationPolicyRuleArray{
-				&pagerduty.EscalationPolicyRuleArgs{
+			},
+			Rules: EscalationPolicyRuleArray{
+				&EscalationPolicyRuleArgs{
 					EscalationDelayInMinutes: pulumi.Int(10),
-					Targets: pagerduty.EscalationPolicyRuleTargetArray{
-						&pagerduty.EscalationPolicyRuleTargetArgs{
+					Targets: EscalationPolicyRuleTargetArray{
+						&EscalationPolicyRuleTargetArgs{
 							Type: pulumi.String("user"),
 							Id:   exampleUser.ID(),
 						},
-						&pagerduty.EscalationPolicyRuleTargetArgs{
+						&EscalationPolicyRuleTargetArgs{
 							Type: pulumi.String("user"),
 							Id:   pulumi.Any(pagerduty_user.Example2.Id),
 						},

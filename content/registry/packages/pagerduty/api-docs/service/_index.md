@@ -79,7 +79,56 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-pagerduty/sdk/v3/go/pagerduty"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleUser, err := pagerduty.NewUser(ctx, "exampleUser", &pagerduty.UserArgs{
+			Email: pulumi.String("125.greenholt.earline@graham.name"),
+			Teams: pulumi.StringArray{
+				pulumi.Any(pagerduty_team.Example.Id),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewEscalationPolicy(ctx, "foo", &pagerduty.EscalationPolicyArgs{
+			NumLoops: pulumi.Int(2),
+			Rules: EscalationPolicyRuleArray{
+				&EscalationPolicyRuleArgs{
+					EscalationDelayInMinutes: pulumi.Int(10),
+					Targets: EscalationPolicyRuleTargetArray{
+						&EscalationPolicyRuleTargetArgs{
+							Type: pulumi.String("user"),
+							Id:   exampleUser.ID(),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewService(ctx, "exampleService", &pagerduty.ServiceArgs{
+			AutoResolveTimeout:     pulumi.String("14400"),
+			AcknowledgementTimeout: pulumi.String("600"),
+			EscalationPolicy:       pulumi.Any(pagerduty_escalation_policy.Example.Id),
+			AlertCreation:          pulumi.String("create_alerts_and_incidents"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

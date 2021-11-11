@@ -107,7 +107,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		example, err := pagerduty.LookupRuleset(ctx, &pagerduty.LookupRulesetArgs{
+		example, err := pagerduty.LookupRuleset(ctx, &GetRulesetArgs{
 			Name: "My Ruleset",
 		}, nil)
 		if err != nil {
@@ -117,22 +117,22 @@ func main() {
 			Ruleset:  pulumi.String(example.Id),
 			Position: pulumi.Int(0),
 			Disabled: pulumi.Bool(false),
-			Conditions: &pagerduty.RulesetRuleConditionsArgs{
+			Conditions: &RulesetRuleConditionsArgs{
 				Operator: pulumi.String("and"),
-				Subconditions: pagerduty.RulesetRuleConditionsSubconditionArray{
-					&pagerduty.RulesetRuleConditionsSubconditionArgs{
+				Subconditions: RulesetRuleConditionsSubconditionArray{
+					&RulesetRuleConditionsSubconditionArgs{
 						Operator: pulumi.String("contains"),
-						Parameters: pagerduty.RulesetRuleConditionsSubconditionParameterArray{
-							&pagerduty.RulesetRuleConditionsSubconditionParameterArgs{
+						Parameters: RulesetRuleConditionsSubconditionParameterArray{
+							&RulesetRuleConditionsSubconditionParameterArgs{
 								Value: pulumi.String("disk space"),
 								Path:  pulumi.String("payload.summary"),
 							},
 						},
 					},
-					&pagerduty.RulesetRuleConditionsSubconditionArgs{
+					&RulesetRuleConditionsSubconditionArgs{
 						Operator: pulumi.String("contains"),
-						Parameters: pagerduty.RulesetRuleConditionsSubconditionParameterArray{
-							&pagerduty.RulesetRuleConditionsSubconditionParameterArgs{
+						Parameters: RulesetRuleConditionsSubconditionParameterArray{
+							&RulesetRuleConditionsSubconditionParameterArgs{
 								Value: pulumi.String("db"),
 								Path:  pulumi.String("payload.source"),
 							},
@@ -140,9 +140,9 @@ func main() {
 					},
 				},
 			},
-			Actions: &pagerduty.RulesetRuleActionsArgs{
-				Routes: pagerduty.RulesetRuleActionsRouteArray{
-					&pagerduty.RulesetRuleActionsRouteArgs{
+			Actions: &RulesetRuleActionsArgs{
+				Routes: RulesetRuleActionsRouteArray{
+					&RulesetRuleActionsRouteArgs{
 						Value: pulumi.String("P5DTL0K"),
 					},
 				},
@@ -286,7 +286,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := pagerduty.LookupRuleset(ctx, &pagerduty.LookupRulesetArgs{
+		_, err := pagerduty.LookupRuleset(ctx, &GetRulesetArgs{
 			Name: "Default Global",
 		}, nil)
 		if err != nil {
@@ -323,7 +323,7 @@ import * as pagerduty from "@pulumi/pagerduty";
 
 const defaultGlobal = pulumi.output(pagerduty.getRuleset({
     name: "Default Global",
-}, { async: true }));
+}));
 ```
 
 
@@ -340,31 +340,52 @@ const defaultGlobal = pulumi.output(pagerduty.getRuleset({
 
 ## Using getRuleset {#using}
 
+Two invocation forms are available. The direct form accepts plain
+arguments and either blocks until the result value is available, or
+returns a Promise-wrapped result. The output form accepts
+Input-wrapped arguments and returns an Output-wrapped result.
+
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRuleset<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRulesetArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRulesetResult</a></span>></span></code></pre></div>
+<div class="highlight"
+><pre class="chroma"><code class="language-typescript" data-lang="typescript"
+><span class="k">function </span>getRuleset<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRulesetArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRulesetResult</a></span>></span
+><span class="k">
+function </span>getRulesetOutput<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRulesetOutputArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Output&lt;<span class="nx"><a href="#result">GetRulesetResult</a></span>></span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_ruleset(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRulesetResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"
+><span class="k">def </span>get_ruleset<span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>GetRulesetResult</span
+><span class="k">
+def </span>get_ruleset_output<span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>Output[GetRulesetResult]</span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRuleset<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRulesetArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupRulesetResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"
+><span class="k">func </span>LookupRuleset<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRulesetArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupRulesetResult</a></span>, error)</span
+><span class="k">
+func </span>LookupRulesetOutput<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRulesetOutputArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) LookupRulesetResultOutput</span
+></code></pre></div>
 
-> Note: This function is named `LookupRuleset` in the Go SDK.
+&gt; Note: This function is named `LookupRuleset` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRuleset </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetRulesetResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRulesetArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRuleset </span><span class="p">
+{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetRulesetResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRulesetArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="k">
+    public static </span>Output&lt;<span class="nx"><a href="#result">GetRulesetResult</a></span>> <span class="p">Invoke(</span><span class="nx">GetRulesetInvokeArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 

@@ -70,7 +70,7 @@ func main() {
 			return err
 		}
 		_, err = pagerduty.NewRuleset(ctx, "fooRuleset", &pagerduty.RulesetArgs{
-			Team: &pagerduty.RulesetTeamArgs{
+			Team: &RulesetTeamArgs{
 				Id: fooTeam.ID(),
 			},
 		})
