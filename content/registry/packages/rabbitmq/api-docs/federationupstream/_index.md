@@ -116,7 +116,7 @@ func main() {
 		guest, err := rabbitmq.NewPermissions(ctx, "guest", &rabbitmq.PermissionsArgs{
 			User:  pulumi.String("guest"),
 			Vhost: test.Name,
-			Permissions: &rabbitmq.PermissionsPermissionsArgs{
+			Permissions: &PermissionsPermissionsArgs{
 				Configure: pulumi.String(".*"),
 				Write:     pulumi.String(".*"),
 				Read:      pulumi.String(".*"),
@@ -127,7 +127,7 @@ func main() {
 		}
 		fooExchange, err := rabbitmq.NewExchange(ctx, "fooExchange", &rabbitmq.ExchangeArgs{
 			Vhost: guest.Vhost,
-			Settings: &rabbitmq.ExchangeSettingsArgs{
+			Settings: &ExchangeSettingsArgs{
 				Type:    pulumi.String("topic"),
 				Durable: pulumi.Bool(true),
 			},
@@ -137,7 +137,7 @@ func main() {
 		}
 		fooFederationUpstream, err := rabbitmq.NewFederationUpstream(ctx, "fooFederationUpstream", &rabbitmq.FederationUpstreamArgs{
 			Vhost: guest.Vhost,
-			Definition: &rabbitmq.FederationUpstreamDefinitionArgs{
+			Definition: &FederationUpstreamDefinitionArgs{
 				Uri:            pulumi.String(fmt.Sprintf("%v%v%v", "amqp://guest:guest@upstream-server-name:5672/", "%", "2f")),
 				PrefetchCount:  pulumi.Int(1000),
 				ReconnectDelay: pulumi.Int(5),
@@ -151,13 +151,13 @@ func main() {
 		}
 		_, err = rabbitmq.NewPolicy(ctx, "fooPolicy", &rabbitmq.PolicyArgs{
 			Vhost: guest.Vhost,
-			Policy: &rabbitmq.PolicyPolicyArgs{
+			Policy: &PolicyPolicyArgs{
 				Pattern: fooExchange.Name.ApplyT(func(name string) (string, error) {
 					return fmt.Sprintf("%v%v%v%v", "(^", name, "$", ")"), nil
 				}).(pulumi.StringOutput),
 				Priority: pulumi.Int(1),
 				ApplyTo:  pulumi.String("exchanges"),
-				Definition: pulumi.StringMap{
+				Definition: pulumi.AnyMap{
 					"federation-upstream": fooFederationUpstream.Name,
 				},
 			},

@@ -94,7 +94,7 @@ func main() {
 			return err
 		}
 		testExchange, err := rabbitmq.NewExchange(ctx, "testExchange", &rabbitmq.ExchangeArgs{
-			Settings: &rabbitmq.ExchangeSettingsArgs{
+			Settings: &ExchangeSettingsArgs{
 				AutoDelete: pulumi.Bool(true),
 				Durable:    pulumi.Bool(false),
 				Type:       pulumi.String("fanout"),
@@ -105,7 +105,7 @@ func main() {
 			return err
 		}
 		testQueue, err := rabbitmq.NewQueue(ctx, "testQueue", &rabbitmq.QueueArgs{
-			Settings: &rabbitmq.QueueSettingsArgs{
+			Settings: &QueueSettingsArgs{
 				AutoDelete: pulumi.Bool(true),
 				Durable:    pulumi.Bool(false),
 			},
@@ -115,7 +115,7 @@ func main() {
 			return err
 		}
 		_, err = rabbitmq.NewShovel(ctx, "shovelTest", &rabbitmq.ShovelArgs{
-			Info: &rabbitmq.ShovelInfoArgs{
+			Info: &ShovelInfoArgs{
 				DestinationQueue:  testQueue.Name,
 				DestinationUri:    pulumi.String("amqp:///test"),
 				SourceExchange:    testExchange.Name,

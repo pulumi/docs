@@ -95,8 +95,8 @@ func main() {
 			return err
 		}
 		_, err = rabbitmq.NewTopicPermissions(ctx, "testTopicPermissions", &rabbitmq.TopicPermissionsArgs{
-			Permissions: rabbitmq.TopicPermissionsPermissionArray{
-				&rabbitmq.TopicPermissionsPermissionArgs{
+			Permissions: TopicPermissionsPermissionArray{
+				&TopicPermissionsPermissionArgs{
 					Exchange: pulumi.String("amq.topic"),
 					Read:     pulumi.String(".*"),
 					Write:    pulumi.String(".*"),

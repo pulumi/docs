@@ -84,7 +84,7 @@ func main() {
 			return err
 		}
 		guest, err := rabbitmq.NewPermissions(ctx, "guest", &rabbitmq.PermissionsArgs{
-			Permissions: &rabbitmq.PermissionsPermissionsArgs{
+			Permissions: &PermissionsPermissionsArgs{
 				Configure: pulumi.String(".*"),
 				Read:      pulumi.String(".*"),
 				Write:     pulumi.String(".*"),
@@ -96,7 +96,7 @@ func main() {
 			return err
 		}
 		_, err = rabbitmq.NewExchange(ctx, "testExchange", &rabbitmq.ExchangeArgs{
-			Settings: &rabbitmq.ExchangeSettingsArgs{
+			Settings: &ExchangeSettingsArgs{
 				AutoDelete: pulumi.Bool(true),
 				Durable:    pulumi.Bool(false),
 				Type:       pulumi.String("fanout"),
