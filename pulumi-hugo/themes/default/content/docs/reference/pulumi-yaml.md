@@ -35,6 +35,9 @@ It contains the following required and optional attributes:
 - `backend`: (optional) configuration for project state [backend]({{< relref "/docs/intro/concepts/state" >}}). Supports these options:
     - `url`: explicitly specify backend URL like `https://pulumi.acmecorp.com`, `file:///app/data`, etc.
 
+- `options`: (optional) optional set of project options.
+    - `refresh`: (optional) (`string`) set to `always` to refresh the state of the stack's resources before the deployment operations (e.g. `up`, `pre`, `destroy`, etc.). This is equivalent to passing the `--refresh=true` command-line flag. Passing `--refresh=false` will override the option set in `Pulumi.yaml`.
+
 - `template`: (optional) provides configuration settings that will be used when initializing a new stack from a project file using `pulumi new`. Currently these values are *only- used by `pulumi new`, and not by `pulumi stack init` or as default configuration for existing stacks.
     - `description`: (optional) a description for the template itself.
     - `config`: (required) the map of configuration values keyed by the name of the config setting - such as `aws:region`.  The value of each key includes:
