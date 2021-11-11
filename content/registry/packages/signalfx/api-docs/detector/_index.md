@@ -15,7 +15,6 @@ no_edit_this_page: true
 Provides a SignalFx detector resource. This can be used to create and manage detectors.
 
 > **NOTE** If you're interested in using SignalFx detector features such as Historical Anomaly, Resource Running Out, or others then consider building them in the UI first then using the "Show SignalFlow" feature to extract the value for `program_text`. You may also consult the [documentation for detector functions in signalflow-library](https://github.com/signalfx/signalflow-library/tree/master/library/signalfx/detectors).
-
 ## Notification Format
 
 As SignalFx supports different notification mechanisms a comma-delimited string is used to provide inputs. If you'd like to specify multiple notifications, then each should be a member in the list, like so:
@@ -394,6 +393,202 @@ func main() {
 	})
 }
 ```
+
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+using SignalFx = Pulumi.SignalFx;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var clusters = config.GetObject<dynamic>("clusters") ?? 
+        {
+            "clusterA",
+            "clusterB",
+        };
+        var applicationDelay = new List<SignalFx.Detector>();
+        for (var rangeIndex = 0; rangeIndex < clusters.Length; rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            applicationDelay.Add(new SignalFx.Detector($"applicationDelay-{range.Value}", new SignalFx.DetectorArgs
+            {
+                Description = $"your application is slow - {clusters[range.Value]}",
+                MaxDelay = 30,
+                Tags = 
+                {
+                    "app-backend",
+                    "staging",
+                },
+                AuthorizedWriterTeams = 
+                {
+                    signalfx_team.Mycoolteam.Id,
+                },
+                AuthorizedWriterUsers = 
+                {
+                    "abc123",
+                },
+                ProgramText = @$"signal = data('app.delay', filter('cluster','{clusters[range.Value]}'), extrapolation='last_value', maxExtrapolations=5).max()
+detect(when(signal > 60, '5m')).publish('Processing old messages 5m')
+detect(when(signal > 60, '30m')).publish('Processing old messages 30m')
+",
+                Rules = 
+                {
+                    new SignalFx.Inputs.DetectorRuleArgs
+                    {
+                        Description = "maximum > 60 for 5m",
+                        Severity = "Warning",
+                        DetectLabel = "Processing old messages 5m",
+                        Notifications = 
+                        {
+                            "Email,foo-alerts@bar.com",
+                        },
+                    },
+                    new SignalFx.Inputs.DetectorRuleArgs
+                    {
+                        Description = "maximum > 60 for 30m",
+                        Severity = "Critical",
+                        DetectLabel = "Processing old messages 30m",
+                        Notifications = 
+                        {
+                            "Email,foo-alerts@bar.com",
+                        },
+                    },
+                },
+            }));
+        }
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_signalfx as signalfx
+
+config = pulumi.Config()
+clusters = config.get_object("clusters")
+if clusters is None:
+    clusters = [
+        "clusterA",
+        "clusterB",
+    ]
+application_delay = []
+for range in [{"value": i} for i in range(0, len(clusters))]:
+    application_delay.append(signalfx.Detector(f"applicationDelay-{range['value']}",
+        description=f"your application is slow - {clusters[range['value']]}",
+        max_delay=30,
+        tags=[
+            "app-backend",
+            "staging",
+        ],
+        authorized_writer_teams=[signalfx_team["mycoolteam"]["id"]],
+        authorized_writer_users=["abc123"],
+        program_text=f"""signal = data('app.delay', filter('cluster','{clusters[range["value"]]}'), extrapolation='last_value', maxExtrapolations=5).max()
+detect(when(signal > 60, '5m')).publish('Processing old messages 5m')
+detect(when(signal > 60, '30m')).publish('Processing old messages 30m')
+""",
+        rules=[
+            signalfx.DetectorRuleArgs(
+                description="maximum > 60 for 5m",
+                severity="Warning",
+                detect_label="Processing old messages 5m",
+                notifications=["Email,foo-alerts@bar.com"],
+            ),
+            signalfx.DetectorRuleArgs(
+                description="maximum > 60 for 30m",
+                severity="Critical",
+                detect_label="Processing old messages 30m",
+                notifications=["Email,foo-alerts@bar.com"],
+            ),
+        ]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as signalfx from "@pulumi/signalfx";
+
+const config = new pulumi.Config();
+const clusters = config.getObject("clusters") || [
+    "clusterA",
+    "clusterB",
+];
+const applicationDelay: signalfx.Detector[];
+for (const range = {value: 0}; range.value < clusters.length; range.value++) {
+    applicationDelay.push(new signalfx.Detector(`applicationDelay-${range.value}`, {
+        description: `your application is slow - ${clusters[range.value]}`,
+        maxDelay: 30,
+        tags: [
+            "app-backend",
+            "staging",
+        ],
+        authorizedWriterTeams: [signalfx_team.mycoolteam.id],
+        authorizedWriterUsers: ["abc123"],
+        programText: `signal = data('app.delay', filter('cluster','${clusters[range.value]}'), extrapolation='last_value', maxExtrapolations=5).max()
+detect(when(signal > 60, '5m')).publish('Processing old messages 5m')
+detect(when(signal > 60, '30m')).publish('Processing old messages 30m')
+`,
+        rules: [
+            {
+                description: "maximum > 60 for 5m",
+                severity: "Warning",
+                detectLabel: "Processing old messages 5m",
+                notifications: ["Email,foo-alerts@bar.com"],
+            },
+            {
+                description: "maximum > 60 for 30m",
+                severity: "Critical",
+                detectLabel: "Processing old messages 30m",
+                notifications: ["Email,foo-alerts@bar.com"],
+            },
+        ],
+    }));
+}
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
 
 
 

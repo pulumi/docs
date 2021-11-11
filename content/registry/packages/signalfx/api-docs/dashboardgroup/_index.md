@@ -60,7 +60,33 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-signalfx/sdk/v5/go/signalfx"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := signalfx.NewDashboardGroup(ctx, "mydashboardgroup0", &signalfx.DashboardGroupArgs{
+			Description: pulumi.String("Cool dashboard group"),
+			AuthorizedWriterTeams: pulumi.StringArray{
+				pulumi.Any(signalfx_team.Mycoolteam.Id),
+			},
+			AuthorizedWriterUsers: pulumi.StringArray{
+				pulumi.String("abc123"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
@@ -178,13 +204,13 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := signalfx.NewDashboardGroup(ctx, "mydashboardgroupWithmirrors", &signalfx.DashboardGroupArgs{
 			Description: pulumi.String("Cool dashboard group"),
-			Dashboards: signalfx.DashboardGroupDashboardArray{
-				&signalfx.DashboardGroupDashboardArgs{
+			Dashboards: DashboardGroupDashboardArray{
+				&DashboardGroupDashboardArgs{
 					DashboardId:         pulumi.Any(signalfx_dashboard.Gc_dashboard.Id),
 					NameOverride:        pulumi.String("GC For My Service"),
 					DescriptionOverride: pulumi.String("Garbage Collection dashboard maintained by JVM team"),
-					FilterOverrides: signalfx.DashboardGroupDashboardFilterOverrideArray{
-						&signalfx.DashboardGroupDashboardFilterOverrideArgs{
+					FilterOverrides: DashboardGroupDashboardFilterOverrideArray{
+						&DashboardGroupDashboardFilterOverrideArgs{
 							Property: pulumi.String("service"),
 							Values: pulumi.StringArray{
 								pulumi.String("myservice"),
@@ -192,8 +218,8 @@ func main() {
 							Negated: pulumi.Bool(false),
 						},
 					},
-					VariableOverrides: signalfx.DashboardGroupDashboardVariableOverrideArray{
-						&signalfx.DashboardGroupDashboardVariableOverrideArgs{
+					VariableOverrides: DashboardGroupDashboardVariableOverrideArray{
+						&DashboardGroupDashboardVariableOverrideArgs{
 							Property: pulumi.String("region"),
 							Values: pulumi.StringArray{
 								pulumi.String("us-west1"),

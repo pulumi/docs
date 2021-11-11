@@ -109,24 +109,24 @@ func main() {
 			Description:       pulumi.String("Very cool List Chart"),
 			DisableSampling:   pulumi.Bool(true),
 			HideMissingValues: pulumi.Bool(true),
-			LegendOptionsFields: signalfx.ListChartLegendOptionsFieldArray{
-				&signalfx.ListChartLegendOptionsFieldArgs{
+			LegendOptionsFields: ListChartLegendOptionsFieldArray{
+				&ListChartLegendOptionsFieldArgs{
 					Enabled:  pulumi.Bool(false),
 					Property: pulumi.String("collector"),
 				},
-				&signalfx.ListChartLegendOptionsFieldArgs{
+				&ListChartLegendOptionsFieldArgs{
 					Enabled:  pulumi.Bool(true),
 					Property: pulumi.String("cluster_name"),
 				},
-				&signalfx.ListChartLegendOptionsFieldArgs{
+				&ListChartLegendOptionsFieldArgs{
 					Enabled:  pulumi.Bool(true),
 					Property: pulumi.String("role"),
 				},
-				&signalfx.ListChartLegendOptionsFieldArgs{
+				&ListChartLegendOptionsFieldArgs{
 					Enabled:  pulumi.Bool(false),
 					Property: pulumi.String("collector"),
 				},
-				&signalfx.ListChartLegendOptionsFieldArgs{
+				&ListChartLegendOptionsFieldArgs{
 					Enabled:  pulumi.Bool(false),
 					Property: pulumi.String("host"),
 				},

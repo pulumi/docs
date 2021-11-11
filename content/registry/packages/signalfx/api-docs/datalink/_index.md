@@ -95,8 +95,8 @@ func main() {
 		_, err := signalfx.NewDataLink(ctx, "myDataLink", &signalfx.DataLinkArgs{
 			PropertyName:  pulumi.String("pname"),
 			PropertyValue: pulumi.String("pvalue"),
-			TargetSignalfxDashboards: signalfx.DataLinkTargetSignalfxDashboardArray{
-				&signalfx.DataLinkTargetSignalfxDashboardArgs{
+			TargetSignalfxDashboards: DataLinkTargetSignalfxDashboardArray{
+				&DataLinkTargetSignalfxDashboardArgs{
 					IsDefault:        pulumi.Bool(true),
 					Name:             pulumi.String("sfx_dash"),
 					DashboardGroupId: pulumi.Any(signalfx_dashboard_group.Mydashboardgroup0.Id),
@@ -111,8 +111,8 @@ func main() {
 			ContextDashboardId: pulumi.Any(signalfx_dashboard.Mydashboard0.Id),
 			PropertyName:       pulumi.String("pname2"),
 			PropertyValue:      pulumi.String("pvalue"),
-			TargetExternalUrls: signalfx.DataLinkTargetExternalUrlArray{
-				&signalfx.DataLinkTargetExternalUrlArgs{
+			TargetExternalUrls: DataLinkTargetExternalUrlArray{
+				&DataLinkTargetExternalUrlArgs{
 					Name:       pulumi.String("ex_url"),
 					TimeFormat: pulumi.String("ISO8601"),
 					Url:        pulumi.String("https://www.example.com"),

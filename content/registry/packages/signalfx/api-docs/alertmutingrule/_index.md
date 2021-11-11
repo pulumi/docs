@@ -66,7 +66,38 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-signalfx/sdk/v5/go/signalfx"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := signalfx.NewAlertMutingRule(ctx, "roolMooterOne", &signalfx.AlertMutingRuleArgs{
+			Description: pulumi.String("mooted it NEW"),
+			StartTime:   pulumi.Int(1573063243),
+			StopTime:    pulumi.Int(0),
+			Detectors: pulumi.StringArray{
+				pulumi.Any(signalfx_detector.Some_detector_id),
+			},
+			Filters: AlertMutingRuleFilterArray{
+				&AlertMutingRuleFilterArgs{
+					Property:      pulumi.String("foo"),
+					PropertyValue: pulumi.String("bar"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
