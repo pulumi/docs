@@ -83,7 +83,7 @@ func main() {
 			return err
 		}
 		guest, err := rabbitmq.NewPermissions(ctx, "guest", &rabbitmq.PermissionsArgs{
-			Permissions: &rabbitmq.PermissionsPermissionsArgs{
+			Permissions: &PermissionsPermissionsArgs{
 				Configure: pulumi.String(".*"),
 				Read:      pulumi.String(".*"),
 				Write:     pulumi.String(".*"),
@@ -95,7 +95,7 @@ func main() {
 			return err
 		}
 		_, err = rabbitmq.NewQueue(ctx, "testQueue", &rabbitmq.QueueArgs{
-			Settings: &rabbitmq.QueueSettingsArgs{
+			Settings: &QueueSettingsArgs{
 				AutoDelete: pulumi.Bool(true),
 				Durable:    pulumi.Bool(false),
 			},
@@ -249,7 +249,7 @@ func main() {
 			return err
 		}
 		guest, err := rabbitmq.NewPermissions(ctx, "guest", &rabbitmq.PermissionsArgs{
-			Permissions: &rabbitmq.PermissionsPermissionsArgs{
+			Permissions: &PermissionsPermissionsArgs{
 				Configure: pulumi.String(".*"),
 				Read:      pulumi.String(".*"),
 				Write:     pulumi.String(".*"),
@@ -261,7 +261,7 @@ func main() {
 			return err
 		}
 		_, err = rabbitmq.NewQueue(ctx, "testQueue", &rabbitmq.QueueArgs{
-			Settings: &rabbitmq.QueueSettingsArgs{
+			Settings: &QueueSettingsArgs{
 				ArgumentsJson: pulumi.String(arguments),
 				AutoDelete:    pulumi.Bool(true),
 				Durable:       pulumi.Bool(false),

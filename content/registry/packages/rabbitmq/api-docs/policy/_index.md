@@ -89,7 +89,7 @@ func main() {
 			return err
 		}
 		guest, err := rabbitmq.NewPermissions(ctx, "guest", &rabbitmq.PermissionsArgs{
-			Permissions: &rabbitmq.PermissionsPermissionsArgs{
+			Permissions: &PermissionsPermissionsArgs{
 				Configure: pulumi.String(".*"),
 				Read:      pulumi.String(".*"),
 				Write:     pulumi.String(".*"),
@@ -101,10 +101,10 @@ func main() {
 			return err
 		}
 		_, err = rabbitmq.NewPolicy(ctx, "testPolicy", &rabbitmq.PolicyArgs{
-			Policy: &rabbitmq.PolicyPolicyArgs{
+			Policy: &PolicyPolicyArgs{
 				ApplyTo: pulumi.String("all"),
-				Definition: pulumi.StringMap{
-					"ha-mode": pulumi.String("all"),
+				Definition: pulumi.AnyMap{
+					"ha-mode": pulumi.Any("all"),
 				},
 				Pattern:  pulumi.String(".*"),
 				Priority: pulumi.Int(0),

@@ -92,7 +92,7 @@ func main() {
 			return err
 		}
 		_, err = rabbitmq.NewPermissions(ctx, "testPermissions", &rabbitmq.PermissionsArgs{
-			Permissions: &rabbitmq.PermissionsPermissionsArgs{
+			Permissions: &PermissionsPermissionsArgs{
 				Configure: pulumi.String(".*"),
 				Read:      pulumi.String(".*"),
 				Write:     pulumi.String(".*"),
