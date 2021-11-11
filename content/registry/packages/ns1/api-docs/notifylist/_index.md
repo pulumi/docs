@@ -82,16 +82,16 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ns1.NewNotifyList(ctx, "nl", &ns1.NotifyListArgs{
-			Notifications: ns1.NotifyListNotificationArray{
-				&ns1.NotifyListNotificationArgs{
-					Config: pulumi.StringMap{
-						"url": pulumi.String("http://www.mywebhook.com"),
+			Notifications: NotifyListNotificationArray{
+				&NotifyListNotificationArgs{
+					Config: pulumi.AnyMap{
+						"url": pulumi.Any("http://www.mywebhook.com"),
 					},
 					Type: pulumi.String("webhook"),
 				},
-				&ns1.NotifyListNotificationArgs{
-					Config: pulumi.StringMap{
-						"email": pulumi.String("test@test.com"),
+				&NotifyListNotificationArgs{
+					Config: pulumi.AnyMap{
+						"email": pulumi.Any("test@test.com"),
 					},
 					Type: pulumi.String("email"),
 				},

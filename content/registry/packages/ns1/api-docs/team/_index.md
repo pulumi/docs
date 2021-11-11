@@ -115,15 +115,15 @@ func main() {
 		_, err := ns1.NewTeam(ctx, "example", &ns1.TeamArgs{
 			AccountManageUsers: pulumi.Bool(false),
 			DnsViewZones:       pulumi.Bool(false),
-			IpWhitelists: ns1.TeamIpWhitelistArray{
-				&ns1.TeamIpWhitelistArgs{
+			IpWhitelists: TeamIpWhitelistArray{
+				&TeamIpWhitelistArgs{
 					Name: pulumi.String("whitelist-1"),
 					Values: pulumi.StringArray{
 						pulumi.String("1.1.1.1"),
 						pulumi.String("2.2.2.2"),
 					},
 				},
-				&ns1.TeamIpWhitelistArgs{
+				&TeamIpWhitelistArgs{
 					Name: pulumi.String("whitelist-2"),
 					Values: pulumi.StringArray{
 						pulumi.String("3.3.3.3"),
@@ -137,8 +137,8 @@ func main() {
 		}
 		_, err = ns1.NewTeam(ctx, "example2", &ns1.TeamArgs{
 			DataManageDatasources: pulumi.Bool(true),
-			DnsRecordsAllows: ns1.TeamDnsRecordsAllowArray{
-				&ns1.TeamDnsRecordsAllowArgs{
+			DnsRecordsAllows: TeamDnsRecordsAllowArray{
+				&TeamDnsRecordsAllowArgs{
 					Domain:            pulumi.String("terraform.example.io"),
 					IncludeSubdomains: pulumi.Bool(false),
 					Type:              pulumi.String("A"),
