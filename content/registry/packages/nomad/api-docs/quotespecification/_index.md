@@ -74,10 +74,10 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := nomad.NewQuoteSpecification(ctx, "prodApi", &nomad.QuoteSpecificationArgs{
 			Description: pulumi.String("Production instances of backend API servers"),
-			Limits: nomad.QuoteSpecificationLimitArray{
-				&nomad.QuoteSpecificationLimitArgs{
+			Limits: QuoteSpecificationLimitArray{
+				&QuoteSpecificationLimitArgs{
 					Region: pulumi.String("global"),
-					RegionLimit: &nomad.QuoteSpecificationLimitRegionLimitArgs{
+					RegionLimit: &QuoteSpecificationLimitRegionLimitArgs{
 						Cpu:      pulumi.Int(2400),
 						MemoryMb: pulumi.Int(1200),
 					},

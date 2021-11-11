@@ -15,120 +15,6 @@ no_edit_this_page: true
 Retrieve a list of namespaces available in Nomad.
 
 
-{{% examples %}}
-
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-
-
-
-
-{{< example csharp >}}
-
-```csharp
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Pulumi;
-using Nomad = Pulumi.Nomad;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var dict = Output.Create(Initialize());
-    }
-
-    private async Task<IDictionary<string, Output<string>>> Initialize()
-    {
-        var namespaces = await Nomad.GetNamespaces.InvokeAsync();
-        var @namespace = new List<Nomad.AclPolicy>();
-        for (var rangeIndex = 0; rangeIndex < namespaces.Namespaces.Length; rangeIndex++)
-        {
-            var range = new { Value = rangeIndex };
-            @namespace.Add(new Nomad.AclPolicy($"namespace-{range.Value}", new Nomad.AclPolicyArgs
-            {
-                Description = $"Write to the namespace {namespaces[range.Value]}",
-                RulesHcl = @$"namespace ""{namespaces[range.Value]}"" {{
-  policy = ""write""
-}}
-",
-            }));
-        }
-
-        return new Dictionary<string, Output<string>>
-        {
-        };
-    }
-
-}
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-Coming soon!
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-```python
-import pulumi
-import pulumi_nomad as nomad
-
-namespaces = nomad.get_namespaces()
-namespace = []
-for range in [{"value": i} for i in range(0, len(namespaces.namespaces))]:
-    namespace.append(nomad.AclPolicy(f"namespace-{range['value']}",
-        description=f"Write to the namespace {namespaces[range['value']]}",
-        rules_hcl=f"""namespace "{namespaces[range["value"]]}" {{
-  policy = "write"
-}}
-"""))
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as nomad from "@pulumi/nomad";
-
-export = async () => {
-    const namespaces = await nomad.getNamespaces({});
-    const namespace: nomad.AclPolicy[];
-    for (const range = {value: 0}; range.value < namespaces.namespaces.length; range.value++) {
-        namespace.push(new nomad.AclPolicy(`namespace-${range.value}`, {
-            description: `Write to the namespace ${namespaces[range.value]}`,
-            rulesHcl: `namespace "${namespaces[range.value]}" {
-  policy = "write"
-}
-`,
-        }));
-    }
-}
-```
-
-
-{{< /example >}}
-
-
-
-
-
-{{% /examples %}}
-
-
 
 
 ## Using getNamespaces {#using}
@@ -137,25 +23,33 @@ export = async () => {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getNamespaces<span class="p">(</span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetNamespacesResult</a></span>></span></code></pre></div>
+<div class="highlight"
+><pre class="chroma"><code class="language-typescript" data-lang="typescript"
+><span class="k">function </span>getNamespaces<span class="p">(</span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetNamespacesResult</a></span>></span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_namespaces(</span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNamespacesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"
+><span class="k">def </span>get_namespaces<span class="p">(</span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>GetNamespacesResult</span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNamespaces<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetNamespacesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"
+><span class="k">func </span>GetNamespaces<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetNamespacesResult</a></span>, error)</span
+></code></pre></div>
 
-> Note: This function is named `GetNamespaces` in the Go SDK.
+&gt; Note: This function is named `GetNamespaces` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetNamespaces </span><span class="p">{</span><span class="k">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetNamespaces </span><span class="p">
+{</span><span class="k">
     public static </span>Task&lt;<span class="nx"><a href="#result">GetNamespacesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}

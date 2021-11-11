@@ -55,6 +55,6 @@ A Pulumi package for creating and managing nomad cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`nomad` Terraform Provider](https://github.com/hashicorp/terraform-provider-nomad).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 

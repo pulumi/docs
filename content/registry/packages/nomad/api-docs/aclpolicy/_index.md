@@ -57,16 +57,25 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 
 	"github.com/pulumi/pulumi-nomad/sdk/go/nomad"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := nomad.NewAclPolicy(ctx, "dev", &nomad.AclPolicyArgs{
 			Description: pulumi.String("Submit jobs to the dev environment."),
-			RulesHcl:    pulumi.String(fmt.Sprintf("%v%v%v%v", "namespace \"dev\" {\n", "  policy = \"write\"\n", "}\n", "\n")),
+			RulesHcl:    readFileOrPanic(fmt.Sprintf("%v%v", path.Module, "/dev.hcl")),
 		})
 		if err != nil {
 			return err
