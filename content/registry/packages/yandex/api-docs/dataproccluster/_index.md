@@ -205,7 +205,185 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-yandex/sdk/go/yandex"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		fooVpcNetwork, err := yandex.NewVpcNetwork(ctx, "fooVpcNetwork", nil)
+		if err != nil {
+			return err
+		}
+		fooVpcSubnet, err := yandex.NewVpcSubnet(ctx, "fooVpcSubnet", &yandex.VpcSubnetArgs{
+			Zone:      pulumi.String("ru-central1-b"),
+			NetworkId: fooVpcNetwork.ID(),
+			V4CidrBlocks: pulumi.StringArray{
+				pulumi.String("10.1.0.0/24"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		dataprocIamServiceAccount, err := yandex.NewIamServiceAccount(ctx, "dataprocIamServiceAccount", &yandex.IamServiceAccountArgs{
+			Description: pulumi.String("service account to manage Dataproc Cluster"),
+		})
+		if err != nil {
+			return err
+		}
+		opt0 := "some_folder_id"
+		fooResourcemanagerFolder, err := yandex.LookupResourcemanagerFolder(ctx, &GetResourcemanagerFolderArgs{
+			FolderId: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		dataprocResourcemanagerFolderIamBinding, err := yandex.NewResourcemanagerFolderIamBinding(ctx, "dataprocResourcemanagerFolderIamBinding", &yandex.ResourcemanagerFolderIamBindingArgs{
+			FolderId: pulumi.String(fooResourcemanagerFolder.Id),
+			Role:     pulumi.String("mdb.dataproc.agent"),
+			Members: pulumi.StringArray{
+				dataprocIamServiceAccount.ID().ApplyT(func(id string) (string, error) {
+					return fmt.Sprintf("%v%v", "serviceAccount:", id), nil
+				}).(pulumi.StringOutput),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = yandex.NewResourcemanagerFolderIamBinding(ctx, "bucket_creator", &yandex.ResourcemanagerFolderIamBindingArgs{
+			FolderId: pulumi.String(fooResourcemanagerFolder.Id),
+			Role:     pulumi.String("editor"),
+			Members: pulumi.StringArray{
+				dataprocIamServiceAccount.ID().ApplyT(func(id string) (string, error) {
+					return fmt.Sprintf("%v%v", "serviceAccount:", id), nil
+				}).(pulumi.StringOutput),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		fooIamServiceAccountStaticAccessKey, err := yandex.NewIamServiceAccountStaticAccessKey(ctx, "fooIamServiceAccountStaticAccessKey", &yandex.IamServiceAccountStaticAccessKeyArgs{
+			ServiceAccountId: dataprocIamServiceAccount.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		fooStorageBucket, err := yandex.NewStorageBucket(ctx, "fooStorageBucket", &yandex.StorageBucketArgs{
+			Bucket:    pulumi.String("foo"),
+			AccessKey: fooIamServiceAccountStaticAccessKey.AccessKey,
+			SecretKey: fooIamServiceAccountStaticAccessKey.SecretKey,
+		}, pulumi.DependsOn([]pulumi.Resource{
+			bucket_creator,
+		}))
+		if err != nil {
+			return err
+		}
+		_, err = yandex.NewDataprocCluster(ctx, "fooDataprocCluster", &yandex.DataprocClusterArgs{
+			Bucket:      fooStorageBucket.Bucket,
+			Description: pulumi.String("Dataproc Cluster created by Terraform"),
+			Labels: pulumi.StringMap{
+				"created_by": pulumi.String("terraform"),
+			},
+			ServiceAccountId: dataprocIamServiceAccount.ID(),
+			ZoneId:           pulumi.String("ru-central1-b"),
+			ClusterConfig: &DataprocClusterClusterConfigArgs{
+				Hadoop: &DataprocClusterClusterConfigHadoopArgs{
+					Services: pulumi.StringArray{
+						pulumi.String("HDFS"),
+						pulumi.String("YARN"),
+						pulumi.String("SPARK"),
+						pulumi.String("TEZ"),
+						pulumi.String("MAPREDUCE"),
+						pulumi.String("HIVE"),
+					},
+					Properties: pulumi.StringMap{
+						"yarn:yarn.resourcemanager.am.max-attempts": pulumi.String("5"),
+					},
+					SshPublicKeys: pulumi.StringArray{
+						readFileOrPanic("~/.ssh/id_rsa.pub"),
+					},
+				},
+				SubclusterSpecs: DataprocClusterClusterConfigSubclusterSpecArray{
+					&DataprocClusterClusterConfigSubclusterSpecArgs{
+						Name: pulumi.String("main"),
+						Role: pulumi.String("MASTERNODE"),
+						Resources: &DataprocClusterClusterConfigSubclusterSpecResourcesArgs{
+							ResourcePresetId: pulumi.String("s2.small"),
+							DiskTypeId:       pulumi.String("network-hdd"),
+							DiskSize:         pulumi.Int(20),
+						},
+						SubnetId:   fooVpcSubnet.ID(),
+						HostsCount: pulumi.Int(1),
+					},
+					&DataprocClusterClusterConfigSubclusterSpecArgs{
+						Name: pulumi.String("data"),
+						Role: pulumi.String("DATANODE"),
+						Resources: &DataprocClusterClusterConfigSubclusterSpecResourcesArgs{
+							ResourcePresetId: pulumi.String("s2.small"),
+							DiskTypeId:       pulumi.String("network-hdd"),
+							DiskSize:         pulumi.Int(20),
+						},
+						SubnetId:   fooVpcSubnet.ID(),
+						HostsCount: pulumi.Int(2),
+					},
+					&DataprocClusterClusterConfigSubclusterSpecArgs{
+						Name: pulumi.String("compute"),
+						Role: pulumi.String("COMPUTENODE"),
+						Resources: &DataprocClusterClusterConfigSubclusterSpecResourcesArgs{
+							ResourcePresetId: pulumi.String("s2.small"),
+							DiskTypeId:       pulumi.String("network-hdd"),
+							DiskSize:         pulumi.Int(20),
+						},
+						SubnetId:   fooVpcSubnet.ID(),
+						HostsCount: pulumi.Int(2),
+					},
+					&DataprocClusterClusterConfigSubclusterSpecArgs{
+						Name: pulumi.String("compute_autoscaling"),
+						Role: pulumi.String("COMPUTENODE"),
+						Resources: &DataprocClusterClusterConfigSubclusterSpecResourcesArgs{
+							ResourcePresetId: pulumi.String("s2.small"),
+							DiskTypeId:       pulumi.String("network-hdd"),
+							DiskSize:         pulumi.Int(20),
+						},
+						SubnetId:   fooVpcSubnet.ID(),
+						HostsCount: pulumi.Int(2),
+						AutoscalingConfig: &DataprocClusterClusterConfigSubclusterSpecAutoscalingConfigArgs{
+							MaxHostsCount:         pulumi.Int(10),
+							MeasurementDuration:   pulumi.Int(60),
+							WarmupDuration:        pulumi.Int(60),
+							StabilizationDuration: pulumi.Int(120),
+							Preemptible:           pulumi.Bool(false),
+							DecommissionTimeout:   pulumi.Int(60),
+						},
+					},
+				},
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			dataprocResourcemanagerFolderIamBinding,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

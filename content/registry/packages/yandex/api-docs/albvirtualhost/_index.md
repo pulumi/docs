@@ -77,11 +77,11 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := yandex.NewAlbVirtualHost(ctx, "my_virtual_host", &yandex.AlbVirtualHostArgs{
 			HttpRouterId: pulumi.Any(yandex_alb_http_router.My - router.Id),
-			Routes: yandex.AlbVirtualHostRouteArray{
-				&yandex.AlbVirtualHostRouteArgs{
+			Routes: AlbVirtualHostRouteArray{
+				&AlbVirtualHostRouteArgs{
 					Name: pulumi.String("my-route"),
-					HttpRoute: &yandex.AlbVirtualHostRouteHttpRouteArgs{
-						HttpRouteAction: &yandex.AlbVirtualHostRouteHttpRouteHttpRouteActionArgs{
+					HttpRoute: &AlbVirtualHostRouteHttpRouteArgs{
+						HttpRouteAction: &AlbVirtualHostRouteHttpRouteHttpRouteActionArgs{
 							BackendGroupId: pulumi.Any(yandex_alb_backend_group.My - bg.Id),
 							Timeout:        pulumi.String("3s"),
 						},

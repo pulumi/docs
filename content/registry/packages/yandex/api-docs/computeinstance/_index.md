@@ -84,7 +84,68 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-yandex/sdk/go/yandex"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		fooVpcNetwork, err := yandex.NewVpcNetwork(ctx, "fooVpcNetwork", nil)
+		if err != nil {
+			return err
+		}
+		fooVpcSubnet, err := yandex.NewVpcSubnet(ctx, "fooVpcSubnet", &yandex.VpcSubnetArgs{
+			NetworkId: fooVpcNetwork.ID(),
+			Zone:      pulumi.String("ru-central1-a"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = yandex.NewComputeInstance(ctx, "_default", &yandex.ComputeInstanceArgs{
+			BootDisk: &ComputeInstanceBootDiskArgs{
+				InitializeParams: &ComputeInstanceBootDiskInitializeParamsArgs{
+					ImageId: pulumi.String("image_id"),
+				},
+			},
+			Metadata: pulumi.StringMap{
+				"foo":      pulumi.String("bar"),
+				"ssh-keys": pulumi.String(fmt.Sprintf("%v%v", "ubuntu:", readFileOrPanic("~/.ssh/id_rsa.pub"))),
+			},
+			NetworkInterfaces: ComputeInstanceNetworkInterfaceArray{
+				&ComputeInstanceNetworkInterfaceArgs{
+					SubnetId: fooVpcSubnet.ID(),
+				},
+			},
+			PlatformId: pulumi.String("standard-v1"),
+			Resources: &ComputeInstanceResourcesArgs{
+				Cores:  pulumi.Int(2),
+				Memory: pulumi.Float64(4),
+			},
+			Zone: pulumi.String("ru-central1-a"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

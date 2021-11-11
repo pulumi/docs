@@ -81,15 +81,15 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "my_folder_id"
-		_, err := yandex.LookupResourcemanagerFolder(ctx, &yandex.LookupResourcemanagerFolderArgs{
+		_, err := yandex.LookupResourcemanagerFolder(ctx, &GetResourcemanagerFolderArgs{
 			FolderId: &opt0,
 		}, nil)
 		if err != nil {
 			return err
 		}
-		admin, err := yandex.GetIamPolicy(ctx, &yandex.GetIamPolicyArgs{
-			Bindings: []yandex.GetIamPolicyBinding{
-				yandex.GetIamPolicyBinding{
+		admin, err := yandex.GetIamPolicy(ctx, &GetIamPolicyArgs{
+			Bindings: []GetIamPolicyBinding{
+				GetIamPolicyBinding{
 					Members: []string{
 						"userAccount:some_user_id",
 					},
@@ -145,13 +145,13 @@ import * as yandex from "@pulumi/yandex";
 
 const project1 = pulumi.output(yandex.getResourcemanagerFolder({
     folderId: "my_folder_id",
-}, { async: true }));
+}));
 const admin = pulumi.output(yandex.getIamPolicy({
     bindings: [{
         members: ["userAccount:some_user_id"],
         role: "editor",
     }],
-}, { async: true }));
+}));
 const folderAdminPolicy = new yandex.ResourcemanagerFolderIamPolicy("folder_admin_policy", {
     folderId: yandex_folder_project1.id,
     policyData: admin.policyData,

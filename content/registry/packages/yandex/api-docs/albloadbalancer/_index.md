@@ -93,7 +93,57 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-yandex/sdk/go/yandex"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yandex.NewAlbLoadBalancer(ctx, "test_balancer", &yandex.AlbLoadBalancerArgs{
+			NetworkId: pulumi.Any(yandex_vpc_network.Test - network.Id),
+			AllocationPolicy: &AlbLoadBalancerAllocationPolicyArgs{
+				Locations: AlbLoadBalancerAllocationPolicyLocationArray{
+					&AlbLoadBalancerAllocationPolicyLocationArgs{
+						ZoneId:   pulumi.String("ru-central1-a"),
+						SubnetId: pulumi.Any(yandex_vpc_subnet.Test - subnet.Id),
+					},
+				},
+			},
+			Listeners: AlbLoadBalancerListenerArray{
+				&AlbLoadBalancerListenerArgs{
+					Name: pulumi.String("my-listener"),
+					Endpoints: AlbLoadBalancerListenerEndpointArray{
+						&AlbLoadBalancerListenerEndpointArgs{
+							Addresses: AlbLoadBalancerListenerEndpointAddressArray{
+								&AlbLoadBalancerListenerEndpointAddressArgs{
+									ExternalIpv4Address: nil,
+								},
+							},
+							Ports: pulumi.IntArray{
+								pulumi.Int(8080),
+							},
+						},
+					},
+					Http: &AlbLoadBalancerListenerHttpArgs{
+						Handler: &AlbLoadBalancerListenerHttpHandlerArgs{
+							HttpRouterId: pulumi.Any(yandex_alb_http_router.Test - router.Id),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
@@ -116,7 +166,7 @@ test_balancer = yandex.AlbLoadBalancer("test-balancer",
         name="my-listener",
         endpoints=[yandex.AlbLoadBalancerListenerEndpointArgs(
             addresses=[yandex.AlbLoadBalancerListenerEndpointAddressArgs(
-                external_ipv4_address={},
+                external_ipv4_address=yandex.AlbLoadBalancerListenerEndpointAddressExternalIpv4AddressArgs(),
             )],
             ports=[8080],
         )],

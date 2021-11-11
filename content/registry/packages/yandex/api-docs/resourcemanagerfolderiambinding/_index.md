@@ -77,7 +77,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "some_folder_id"
-		project1, err := yandex.LookupResourcemanagerFolder(ctx, &yandex.LookupResourcemanagerFolderArgs{
+		project1, err := yandex.LookupResourcemanagerFolder(ctx, &GetResourcemanagerFolderArgs{
 			FolderId: &opt0,
 		}, nil)
 		if err != nil {
@@ -128,7 +128,7 @@ import * as yandex from "@pulumi/yandex";
 
 const project1 = pulumi.output(yandex.getResourcemanagerFolder({
     folderId: "some_folder_id",
-}, { async: true }));
+}));
 const admin = new yandex.ResourcemanagerFolderIamBinding("admin", {
     folderId: project1.id,
     members: ["userAccount:some_user_id"],

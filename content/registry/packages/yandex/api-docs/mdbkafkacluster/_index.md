@@ -198,11 +198,11 @@ func main() {
 			return err
 		}
 		_, err = yandex.NewMdbKafkaCluster(ctx, "fooMdbKafkaCluster", &yandex.MdbKafkaClusterArgs{
-			Config: &yandex.MdbKafkaClusterConfigArgs{
+			Config: &MdbKafkaClusterConfigArgs{
 				AssignPublicIp: pulumi.Bool(false),
 				BrokersCount:   pulumi.Int(1),
-				Kafka: &yandex.MdbKafkaClusterConfigKafkaArgs{
-					KafkaConfig: &yandex.MdbKafkaClusterConfigKafkaKafkaConfigArgs{
+				Kafka: &MdbKafkaClusterConfigKafkaArgs{
+					KafkaConfig: &MdbKafkaClusterConfigKafkaKafkaConfigArgs{
 						CompressionType:             pulumi.String("COMPRESSION_TYPE_ZSTD"),
 						DefaultReplicationFactor:    pulumi.String("1"),
 						LogFlushIntervalMessages:    pulumi.String("1024"),
@@ -216,7 +216,7 @@ func main() {
 						LogSegmentBytes:             pulumi.String("134217728"),
 						NumPartitions:               pulumi.String("10"),
 					},
-					Resources: &yandex.MdbKafkaClusterConfigKafkaResourcesArgs{
+					Resources: &MdbKafkaClusterConfigKafkaResourcesArgs{
 						DiskSize:         pulumi.Int(32),
 						DiskTypeId:       pulumi.String("network-ssd"),
 						ResourcePresetId: pulumi.String("s2.micro"),
@@ -233,12 +233,12 @@ func main() {
 			SubnetIds: pulumi.StringArray{
 				fooVpcSubnet.ID(),
 			},
-			Topics: yandex.MdbKafkaClusterTopicArray{
-				&yandex.MdbKafkaClusterTopicArgs{
+			Topics: MdbKafkaClusterTopicArray{
+				&MdbKafkaClusterTopicArgs{
 					Name:              pulumi.String("input"),
 					Partitions:        pulumi.Int(2),
 					ReplicationFactor: pulumi.Int(1),
-					TopicConfig: &yandex.MdbKafkaClusterTopicTopicConfigArgs{
+					TopicConfig: &MdbKafkaClusterTopicTopicConfigArgs{
 						CompressionType:    pulumi.String("COMPRESSION_TYPE_LZ4"),
 						DeleteRetentionMs:  pulumi.String("86400000"),
 						FileDeleteDelayMs:  pulumi.String("60000"),
@@ -253,11 +253,11 @@ func main() {
 						SegmentBytes:       pulumi.String("268435456"),
 					},
 				},
-				&yandex.MdbKafkaClusterTopicArgs{
+				&MdbKafkaClusterTopicArgs{
 					Name:              pulumi.String("output"),
 					Partitions:        pulumi.Int(6),
 					ReplicationFactor: pulumi.Int(1),
-					TopicConfig: &yandex.MdbKafkaClusterTopicTopicConfigArgs{
+					TopicConfig: &MdbKafkaClusterTopicTopicConfigArgs{
 						CompressionType: pulumi.String("COMPRESSION_TYPE_GZIP"),
 						MaxMessageBytes: pulumi.String("1048588"),
 						Preallocate:     pulumi.Bool(false),
@@ -265,26 +265,26 @@ func main() {
 					},
 				},
 			},
-			Users: yandex.MdbKafkaClusterUserArray{
-				&yandex.MdbKafkaClusterUserArgs{
+			Users: MdbKafkaClusterUserArray{
+				&MdbKafkaClusterUserArgs{
 					Name:     pulumi.String("producer-application"),
 					Password: pulumi.String("password"),
-					Permissions: yandex.MdbKafkaClusterUserPermissionArray{
-						&yandex.MdbKafkaClusterUserPermissionArgs{
+					Permissions: MdbKafkaClusterUserPermissionArray{
+						&MdbKafkaClusterUserPermissionArgs{
 							Role:      pulumi.String("ACCESS_ROLE_PRODUCER"),
 							TopicName: pulumi.String("input"),
 						},
 					},
 				},
-				&yandex.MdbKafkaClusterUserArgs{
+				&MdbKafkaClusterUserArgs{
 					Name:     pulumi.String("worker"),
 					Password: pulumi.String("password"),
-					Permissions: yandex.MdbKafkaClusterUserPermissionArray{
-						&yandex.MdbKafkaClusterUserPermissionArgs{
+					Permissions: MdbKafkaClusterUserPermissionArray{
+						&MdbKafkaClusterUserPermissionArgs{
 							Role:      pulumi.String("ACCESS_ROLE_CONSUMER"),
 							TopicName: pulumi.String("input"),
 						},
-						&yandex.MdbKafkaClusterUserPermissionArgs{
+						&MdbKafkaClusterUserPermissionArgs{
 							Role:      pulumi.String("ACCESS_ROLE_PRODUCER"),
 							TopicName: pulumi.String("output"),
 						},

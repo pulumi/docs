@@ -67,7 +67,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := yandex.NewVpcAddress(ctx, "addr", &yandex.VpcAddressArgs{
-			ExternalIpv4Address: &yandex.VpcAddressExternalIpv4AddressArgs{
+			ExternalIpv4Address: &VpcAddressExternalIpv4AddressArgs{
 				ZoneId: pulumi.String("ru-central1-a"),
 			},
 		})
@@ -161,7 +161,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := yandex.NewVpcAddress(ctx, "vpnaddr", &yandex.VpcAddressArgs{
-			ExternalIpv4Address: &yandex.VpcAddressExternalIpv4AddressArgs{
+			ExternalIpv4Address: &VpcAddressExternalIpv4AddressArgs{
 				DdosProtectionProvider: pulumi.String("qrator"),
 				ZoneId:                 pulumi.String("ru-central1-a"),
 			},

@@ -38,7 +38,7 @@ const admin = pulumi.output(yandex.getIamPolicy({
         members: ["userAccount:foobar_user_id"],
         role: "admin",
     }],
-}, { async: true }));
+}));
 const admin_account_iam = new yandex.IamServiceAccountIamPolicy("admin-account-iam", {
     policyData: admin.policyData,
     serviceAccountId: "your-service-account-id",
@@ -97,9 +97,9 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		admin, err := yandex.GetIamPolicy(ctx, &yandex.GetIamPolicyArgs{
-			Bindings: []yandex.GetIamPolicyBinding{
-				yandex.GetIamPolicyBinding{
+		admin, err := yandex.GetIamPolicy(ctx, &GetIamPolicyArgs{
+			Bindings: []GetIamPolicyBinding{
+				GetIamPolicyBinding{
 					Members: []string{
 						"userAccount:foobar_user_id",
 					},

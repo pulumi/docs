@@ -399,7 +399,7 @@ func main() {
 			Environment: pulumi.String("PRESTABLE"),
 			NetworkId:   fooVpcNetwork.ID(),
 			Version:     pulumi.String("8.0"),
-			Resources: &yandex.MdbMysqlClusterResourcesArgs{
+			Resources: &MdbMysqlClusterResourcesArgs{
 				ResourcePresetId: pulumi.String("s2.micro"),
 				DiskTypeId:       pulumi.String("network-ssd"),
 				DiskSize:         pulumi.Int(16),
@@ -410,20 +410,20 @@ func main() {
 				"default_authentication_plugin": pulumi.String("MYSQL_NATIVE_PASSWORD"),
 				"innodb_print_all_deadlocks":    pulumi.String("true"),
 			},
-			Access: &yandex.MdbMysqlClusterAccessArgs{
+			Access: &MdbMysqlClusterAccessArgs{
 				WebSql: pulumi.Bool(true),
 			},
-			Databases: yandex.MdbMysqlClusterDatabaseArray{
-				&yandex.MdbMysqlClusterDatabaseArgs{
+			Databases: MdbMysqlClusterDatabaseArray{
+				&MdbMysqlClusterDatabaseArgs{
 					Name: pulumi.String("db_name"),
 				},
 			},
-			Users: yandex.MdbMysqlClusterUserArray{
-				&yandex.MdbMysqlClusterUserArgs{
+			Users: MdbMysqlClusterUserArray{
+				&MdbMysqlClusterUserArgs{
 					Name:     pulumi.String("user_name"),
 					Password: pulumi.String("your_password"),
-					Permissions: yandex.MdbMysqlClusterUserPermissionArray{
-						&yandex.MdbMysqlClusterUserPermissionArgs{
+					Permissions: MdbMysqlClusterUserPermissionArray{
+						&MdbMysqlClusterUserPermissionArgs{
 							DatabaseName: pulumi.String("db_name"),
 							Roles: pulumi.StringArray{
 								pulumi.String("ALL"),
@@ -432,8 +432,8 @@ func main() {
 					},
 				},
 			},
-			Hosts: yandex.MdbMysqlClusterHostArray{
-				&yandex.MdbMysqlClusterHostArgs{
+			Hosts: MdbMysqlClusterHostArray{
+				&MdbMysqlClusterHostArgs{
 					Zone:     pulumi.String("ru-central1-a"),
 					SubnetId: fooVpcSubnet.ID(),
 				},

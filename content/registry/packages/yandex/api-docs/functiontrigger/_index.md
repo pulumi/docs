@@ -70,10 +70,10 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := yandex.NewFunctionTrigger(ctx, "myTrigger", &yandex.FunctionTriggerArgs{
 			Description: pulumi.String("any description"),
-			Function: &yandex.FunctionTriggerFunctionArgs{
+			Function: &FunctionTriggerFunctionArgs{
 				Id: pulumi.String("tf-test"),
 			},
-			Timer: &yandex.FunctionTriggerTimerArgs{
+			Timer: &FunctionTriggerTimerArgs{
 				CronExpression: pulumi.String("* * * * ? *"),
 			},
 		})

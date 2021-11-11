@@ -88,19 +88,19 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := yandex.NewYdbDatabaseDedicated(ctx, "database1", &yandex.YdbDatabaseDedicatedArgs{
 			FolderId: pulumi.Any(data.Yandex_resourcemanager_folder.Test_folder.Id),
-			Location: &yandex.YdbDatabaseDedicatedLocationArgs{
-				Region: &yandex.YdbDatabaseDedicatedLocationRegionArgs{
+			Location: &YdbDatabaseDedicatedLocationArgs{
+				Region: &YdbDatabaseDedicatedLocationRegionArgs{
 					Id: pulumi.String("ru-central1"),
 				},
 			},
 			NetworkId:        pulumi.Any(yandex_vpc_network.My - inst - group - network.Id),
 			ResourcePresetId: pulumi.String("medium"),
-			ScalePolicy: &yandex.YdbDatabaseDedicatedScalePolicyArgs{
-				FixedScale: &yandex.YdbDatabaseDedicatedScalePolicyFixedScaleArgs{
+			ScalePolicy: &YdbDatabaseDedicatedScalePolicyArgs{
+				FixedScale: &YdbDatabaseDedicatedScalePolicyFixedScaleArgs{
 					Size: pulumi.Int(1),
 				},
 			},
-			StorageConfig: &yandex.YdbDatabaseDedicatedStorageConfigArgs{
+			StorageConfig: &YdbDatabaseDedicatedStorageConfigArgs{
 				GroupCount:    pulumi.Int(1),
 				StorageTypeId: pulumi.String("ssd"),
 			},

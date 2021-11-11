@@ -70,7 +70,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "Project 1"
-		project1, err := yandex.GetResourcemanagerCloud(ctx, &yandex.GetResourcemanagerCloudArgs{
+		project1, err := yandex.GetResourcemanagerCloud(ctx, &GetResourcemanagerCloudArgs{
 			Name: &opt0,
 		}, nil)
 		if err != nil {
@@ -121,7 +121,7 @@ import * as yandex from "@pulumi/yandex";
 
 const project1 = pulumi.output(yandex.getResourcemanagerCloud({
     name: "Project 1",
-}, { async: true }));
+}));
 const admin = new yandex.ResourcemanagerCloudIamBinding("admin", {
     cloudId: project1.id,
     members: ["userAccount:some_user_id"],

@@ -80,8 +80,8 @@ func main() {
 		}
 		_, err = yandex.NewVpcRouteTable(ctx, "lab_rt_a", &yandex.VpcRouteTableArgs{
 			NetworkId: lab_net.ID(),
-			StaticRoutes: yandex.VpcRouteTableStaticRouteArray{
-				&yandex.VpcRouteTableStaticRouteArgs{
+			StaticRoutes: VpcRouteTableStaticRouteArray{
+				&VpcRouteTableStaticRouteArgs{
 					DestinationPrefix: pulumi.String("10.2.0.0/16"),
 					NextHopAddress:    pulumi.String("172.16.10.10"),
 				},

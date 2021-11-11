@@ -110,22 +110,22 @@ func main() {
 			return err
 		}
 		_, err = yandex.NewMdbRedisCluster(ctx, "fooMdbRedisCluster", &yandex.MdbRedisClusterArgs{
-			Config: &yandex.MdbRedisClusterConfigArgs{
+			Config: &MdbRedisClusterConfigArgs{
 				Password: pulumi.String("your_password"),
 				Version:  pulumi.String("6.0"),
 			},
 			Environment: pulumi.String("PRESTABLE"),
-			Hosts: yandex.MdbRedisClusterHostArray{
-				&yandex.MdbRedisClusterHostArgs{
+			Hosts: MdbRedisClusterHostArray{
+				&MdbRedisClusterHostArgs{
 					SubnetId: fooVpcSubnet.ID(),
 					Zone:     pulumi.String("ru-central1-a"),
 				},
 			},
-			MaintenanceWindow: &yandex.MdbRedisClusterMaintenanceWindowArgs{
+			MaintenanceWindow: &MdbRedisClusterMaintenanceWindowArgs{
 				Type: pulumi.String("ANYTIME"),
 			},
 			NetworkId: fooVpcNetwork.ID(),
-			Resources: &yandex.MdbRedisClusterResourcesArgs{
+			Resources: &MdbRedisClusterResourcesArgs{
 				DiskSize:         pulumi.Int(16),
 				ResourcePresetId: pulumi.String("hm1.nano"),
 			},

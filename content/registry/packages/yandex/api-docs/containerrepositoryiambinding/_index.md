@@ -108,7 +108,7 @@ func main() {
 			return err
 		}
 		opt0 := "some_repository_name"
-		repo_2, err := yandex.LookupContainerRepository(ctx, &yandex.LookupContainerRepositoryArgs{
+		repo_2, err := yandex.LookupContainerRepository(ctx, &GetContainerRepositoryArgs{
 			Name: &opt0,
 		}, nil)
 		if err != nil {
