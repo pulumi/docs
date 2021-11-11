@@ -115,8 +115,8 @@ func main() {
 			PreserveHost:  pulumi.Bool(true),
 			RegexPriority: pulumi.Int(1),
 			ServiceId:     pulumi.Any(kong_service.Service.Id),
-			Headers: kong.RouteHeaderArray{
-				&kong.RouteHeaderArgs{
+			Headers: RouteHeaderArray{
+				&RouteHeaderArgs{
 					Name: pulumi.String("x-test-1"),
 					Values: pulumi.StringArray{
 						pulumi.String("a"),
