@@ -2857,15 +2857,15 @@ repo = aws.ecr.Repository('my-repo')
 image_name = repo.repository_url
 
 # ...2) Get registry info (creds and endpoint).
-def get_registry_info(rid):
+def get_registry_info(creds):
     """Get registry info (creds and endpoint)."""
-    creds = aws.ecr.get_credentails(registry_id=rid)
     decoded = base64.b64decode(creds.authorization_token).decode()
     parts = decoded.split(':')
     if len(parts) != 2:
         raise Exception('Invalid credentials')
     return docker.ImageRegistry(creds.proxy_endpoint, parts[0], parts[1])
-registry_info = repo.registry_id.apply(get_registry_info)
+
+registry_info = aws.ecr.get_credentials_output(registry_id=repo.registry_id)
 
 # ...3) Build and publish the container image.
 image = docker.Image('my-app-image',
@@ -2963,25 +2963,22 @@ func main() {
 
 		// ...2) Get registry info (creds and endpoint).
 		imageName := repo.RepositoryUrl
-		registryInfo := repo.RegistryId.ApplyT(func(id string) (docker.ImageRegistry, error) {
-			creds, err := ecr.GetCredentials(ctx, &ecr.GetCredentialsArgs{RegistryId: id})
-			if err != nil {
-				return docker.ImageRegistry{}, err
-			}
-			decoded, err := base64.StdEncoding.DecodeString(creds.AuthorizationToken)
-			if err != nil {
-				return docker.ImageRegistry{}, err
-			}
-			parts := strings.Split(string(decoded), ":")
-			if len(parts) != 2 {
-				return docker.ImageRegistry{}, errors.New("Invalid credentials")
-			}
-			return docker.ImageRegistry{
-				Server:   creds.ProxyEndpoint,
-				Username: parts[0],
-				Password: parts[1],
-			}, nil
-		}).(docker.ImageRegistryOutput)
+		registryInfo := ecr.GetCredentialsOutput(ctx, ecr.GetCredentialsOutputArgs{RegistryId: repo.RegistryId}).
+			ApplyT(func(creds ecr.GetCredentialsResult) (docker.ImageRegistry, error) {
+				decoded, err := base64.StdEncoding.DecodeString(creds.AuthorizationToken)
+				if err != nil {
+					return docker.ImageRegistry{}, err
+				}
+				parts := strings.Split(string(decoded), ":")
+				if len(parts) != 2 {
+					return docker.ImageRegistry{}, errors.New("Invalid credentials")
+				}
+				return docker.ImageRegistry{
+					Server:   creds.ProxyEndpoint,
+					Username: parts[0],
+					Password: parts[1],
+				}, nil
+			}).(docker.ImageRegistryOutput)
 
 		// ...3) Build and publish the container image.
 		image, err := docker.NewImage(ctx, "my-app-image", &docker.ImageArgs{
@@ -3084,9 +3081,11 @@ class MyStack : Stack
         var imageName = repo.RepositoryUrl;
 
         // ...2) Get registry info (creds and endpoint).
-        var registryInfo = repo.RegistryId.Apply(async (id) =>
+        var registryInfo = Ecr.GetCredentials.Invoke(new Ecr.GetCredentialsInvokeArgs
         {
-            var creds = await Ecr.GetCredentials.InvokeAsync(new Ecr.GetCredentialsArgs { RegistryId = id });
+            RegistryId = repo.RegistryId
+        }).Apply(creds =>
+        {
             var decodedData = Convert.FromBase64String(creds.AuthorizationToken);
             var decoded = ASCIIEncoding.ASCII.GetString(decodedData);
 

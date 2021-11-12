@@ -313,10 +313,10 @@ import * as k8s from "@pulumi/kubernetes";
 import * as pulumi from "@pulumi/pulumi";
 
 // Get the GCP project registry repository.
-const registry = gcp.container.getRegistryRepository();
+const registry = gcp.container.getRegistryRepositoryOutput();
 
 // Get the repository URL
-const repositoryUrl = registry.then(_r => _r.repositoryUrl);
+const repositoryUrl = registry.repositoryUrl;
 
 // Build a Docker image from a local Dockerfile context in the
 // './node-app' directory, and push it to the registry.
@@ -366,10 +366,10 @@ import * as kx from "@pulumi/kubernetesx";
 import * as pulumi from "@pulumi/pulumi";
 
 // Get the GCP project registry repository.
-const registry = gcp.container.getRegistryRepository();
+const registry = gcp.container.getRegistryRepositoryOutput();
 
 // Get the repository URL
-const repositoryUrl = registry.then(_r => _r.repositoryUrl);
+const repositoryUrl = registry.repositoryUrl;
 
 // Build a Docker image from a local Dockerfile context in the
 // './node-app' directory, and push it to the registry.

@@ -493,14 +493,14 @@ const sg = new awsx.ec2.SecurityGroup("webserver-sg", { vpc });
 const size = "t2.micro";
 
 // Get the most recent Amazon linux ami:
-const ami = pulumi.output(aws.getAmi({
+const ami = aws.getAmiOutput({
     filters: [{
         name: "name",
         values: ["amzn-ami-hvm-*"],
     }],
     owners: ["137112412989"], // This owner ID is Amazon
     mostRecent: true,
-}));
+});
 
 const server = new aws.ec2.Instance("webserver-www", {
     instanceType: size,
@@ -515,7 +515,7 @@ If we run `pulumi up`, the `aws.ec2.Instance` will be provisioned using the _fir
 ```bash
 $ pulumi up
 Updating (dev):
-     Type                                    Name                    Status  
+     Type                                    Name                    Status
  +   pulumi:pulumi:Stack                     crosswalk-dev           created
  +   ├─ awsx:x:ec2:SecurityGroup             webserver-sg            created
  +   │  └─ aws:ec2:SecurityGroup             webserver-sg            created

@@ -47,9 +47,10 @@ const storageAccount = new storage.StorageAccount("sa", {
 });
 
 // Export the primary key of the Storage Account
-const storageAccountKeys = pulumi.all([resourceGroup.name, storageAccount.name]).apply(([resourceGroupName, accountName]) =>
-    storage.listStorageAccountKeys({ resourceGroupName, accountName }));
-export const primaryStorageKey = storageAccountKeys.keys[0].value;
+const storageAccountKeys = storage.listStorageAccountKeysOutput({
+    resourceGroupName: resourceGroup.name,
+    accountName: storageAccount.name
+});
 ```
 
 {{% /choosable %}}
@@ -72,11 +73,10 @@ account = storage.StorageAccount('sa',
     kind=storage.Kind.STORAGE_V2)
 
 # Export the primary key of the Storage Account
-primary_key = pulumi.Output.all(resource_group.name, account.name) \
-    .apply(lambda args: storage.list_storage_account_keys(
-        resource_group_name=args[0],
-        account_name=args[1]
-    )).apply(lambda accountKeys: accountKeys.keys[0].value)
+primary_key = storage.list_storage_account_keys_output(
+    resource_group_name=resource_group.name,
+    account_name=account.name
+).accountKeys.keys[0].value
 
 pulumi.export("primary_storage_key", primary_key)
 ```
@@ -165,21 +165,19 @@ class MyStack : Stack
         });
 
         // Export the primary key of the Storage Account
-        this.PrimaryStorageKey = Output.Tuple(resourceGroup.Name, storageAccount.Name).Apply(names =>
-            Output.CreateSecret(GetStorageAccountPrimaryKey(names.Item1, names.Item2)));
+        this.PrimaryStorageKey = GetStorageAccountPrimaryKey(resourceGroup.Name, storageAccount.Name);
     }
 
     [Output]
     public Output<string> PrimaryStorageKey { get; set; }
 
-    private static async Task<string> GetStorageAccountPrimaryKey(string resourceGroupName, string accountName)
+    private static Output<string> GetStorageAccountPrimaryKey(Input<string> resourceGroupName, Input<string> accountName)
     {
-        var accountKeys = await ListStorageAccountKeys.InvokeAsync(new ListStorageAccountKeysArgs
+        return ListStorageAccountKeys.Invoke(new ListStorageAccountKeysInvokeArgs
         {
             ResourceGroupName = resourceGroupName,
             AccountName = accountName
-        });
-        return accountKeys.Keys[0].Value;
+        }).Apply(accountKeys => Output.CreateSecret(accountKeys.Keys[0].Value));
     }
 }
 ```

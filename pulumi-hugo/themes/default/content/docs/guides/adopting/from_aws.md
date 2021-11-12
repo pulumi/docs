@@ -30,11 +30,11 @@ Instead, you can look up that stack by name and use one of its output values. Th
 ```javascript
 let aws = require("@pulumi/aws");
 
-let network = aws.cloudformation.getStack({
+let network = aws.cloudformation.getStackOutput({
     name: "my-network-stack",
 });
 
-let subnetId = network.then(n => n.outputs["SubnetId"]);
+let subnetId = network.outputs["SubnetId"];
 
 let web = new aws.ec2.Instance("web", {
     ami: "ami-0adc0e3ef2558cb1f", // us-west-2 AMI
@@ -49,11 +49,11 @@ let web = new aws.ec2.Instance("web", {
 ```typescript
 import * as aws from "@pulumi/aws";
 
-const network = aws.cloudformation.getStack({
+const network = aws.cloudformation.getStackOutput({
     name: "my-network-stack",
 });
 
-const subnetId = network.then(n => n.outputs["SubnetId"]);
+const subnetId = network.outputs["SubnetId"];
 
 const web = new aws.ec2.Instance("web", {
     ami: "ami-0adc0e3ef2558cb1f", // us-west-2 AMI
@@ -88,34 +88,31 @@ web = aws.ec2.Instance('web',
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudformation"
-    "github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
-    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudformation"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
-    pulumi.Run(func(ctx *pulumi.Context) error {
-        network, err := cloudformation.LookupStack(ctx, &cloudformation.LookupStackArgs{
-            Name: "my-network-stack",
-        })
-        if err != nil {
-            return nil
-        }
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		network := cloudformation.LookupStackOutput(ctx, cloudformation.LookupStackOutputArgs{
+			Name: pulumi.String("my-network-stack"),
+		})
 
-        subnetID := network.Outputs["SubnetId"].(string)
+		subnetID := network.Outputs().MapIndex(pulumi.String("SubnetId"))
 
-        web, err := ec2.NewInstance(ctx, "web", &ec2.InstanceArgs{
-            Ami:          pulumi.String("ami-0adc0e3ef2558cb1f"), // us-west-2 AMI
-            InstanceType: pulumi.String("t2.micro"),
-            SubnetId:     pulumi.StringPtr(subnetID),
-        })
-        if err != nil {
-            return err
-        }
+		web, err := ec2.NewInstance(ctx, "web", &ec2.InstanceArgs{
+			Ami:          pulumi.String("ami-0adc0e3ef2558cb1f"), // us-west-2 AMI
+			InstanceType: pulumi.String("t2.micro"),
+			SubnetId:     subnetID,
+		})
+		if err != nil {
+			return err
+		}
 
-        ctx.Export("publicIp", web.PublicIp)
-        return nil
-    })
+		ctx.Export("publicIp", web.PublicIp)
+		return nil
+	})
 }
 ```
 
@@ -136,7 +133,7 @@ class Program
     {
         return Deployment.RunAsync(async () =>
         {
-            var network = await CloudFormation.GetStack.InvokeAsync(new CloudFormation.GetStackArgs
+            var network = CloudFormation.GetStack.InvokeAsync(new CloudFormation.GetStackArgs
             {
                 Name = "my-network-stack",
             });

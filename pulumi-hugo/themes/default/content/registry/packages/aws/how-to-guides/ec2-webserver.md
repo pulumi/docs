@@ -82,14 +82,14 @@ const aws = require("@pulumi/aws");
 const pulumi = require("@pulumi/pulumi");
 
 let size = "t2.micro";     // t2.micro is available in the AWS free tier
-let ami = pulumi.output(aws.getAmi({
+let ami = aws.getAmiOutput({
     filters: [{
       name: "name",
       values: ["amzn-ami-hvm-*"],
     }],
     owners: ["137112412989"], // This owner ID is Amazon
     mostRecent: true,
-}));
+});
 
 let group = new aws.ec2.SecurityGroup("webserver-secgrp", {
     ingress: [
@@ -115,14 +115,14 @@ import * as aws from "@pulumi/aws";
 import * as pulumi from "@pulumi/pulumi";
 
 const size = "t2.micro";     // t2.micro is available in the AWS free tier
-const ami = pulumi.output(aws.getAmi({
+const ami = aws.getAmiOutput({
     filters: [{
         name: "name",
         values: ["amzn-ami-hvm-*"],
     }],
     owners: ["137112412989"], // This owner ID is Amazon
     mostRecent: true,
-}));
+});
 
 const group = new aws.ec2.SecurityGroup("webserver-secgrp", {
     ingress: [
@@ -172,20 +172,18 @@ pulumi.export('publicHostName', server.public_dns)
 
 ```csharp
 using Pulumi;
-using Pulumi.Aws;
 using Pulumi.Aws.Ec2;
 using Pulumi.Aws.Ec2.Inputs;
-using Pulumi.Aws.Inputs;
 
 class MyStack : Stack
 {
     public MyStack()
     {
-        var ami = Output.Create(GetAmi.InvokeAsync(new GetAmiArgs
+        var ami = GetAmi.Invoke(new GetAmiInvokeArgs
         {
             Filters =
                 {
-                    new GetAmiFilterArgs
+                    new GetAmiFilterInputArgs
                     {
                         Name = "name",
                         Values =  { "amzn-ami-hvm-*" },
@@ -193,7 +191,7 @@ class MyStack : Stack
                 },
             Owners = { "137112412989" }, // This owner ID is Amazon
             MostRecent = true,
-        }));
+        });
 
         var group = new SecurityGroup("webserver-secgrp", new SecurityGroupArgs
         {
