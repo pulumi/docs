@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "AWS - Howdy Partner"
-meta_desc: "Join Laura Santamarina as they show off some of the newest features in Pulumi and how those features make building on AWS easier than ever."
+meta_desc: "Join Laura Santamaria as they show off some of the newest features in Pulumi and how those features make building on AWS easier than ever."
 
 aliases:
     - /resources/aws-howdy-partner-twitch-2020-06-01
@@ -63,7 +63,7 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Laura Santamarina
+        - name: Laura Santamaria
           role: Developer Advocate, Pulumi
 
         - name: Andrew Park
