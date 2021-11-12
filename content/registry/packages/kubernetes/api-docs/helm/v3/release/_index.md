@@ -13,8 +13,8 @@ no_edit_this_page: true
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Release is an instance of a chart running in a Kubernetes cluster.
-
-A Chart is a Helm package. It contains all of the resource definitions necessary to run an application, tool, or service inside of a Kubernetes cluster.
+A Chart is a Helm package. It contains all the resource definitions necessary to run an application, tool, or service inside a Kubernetes cluster.
+Note - Helm Release is currently in BETA and may change. Use in production environment is discouraged.
 
 
 

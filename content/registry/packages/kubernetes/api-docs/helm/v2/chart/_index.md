@@ -137,7 +137,7 @@ class HelmStack : Stack
             Version = "1.24.4",
             FetchOptions = new ChartFetchArgs
             {
-                Repo = "https://charts.helm.sh/stable//"
+                Repo = "https://charts.helm.sh/stable"
             }
         });
 
@@ -165,7 +165,7 @@ func main() {
 			chart:   pulumi.string("nginx-ingress"),
 			version: pulumi.string("1.24.4"),
 			fetchargs: helm.fetchargs{
-				repo: pulumi.string("https://charts.helm.sh/stable//"),
+				repo: pulumi.string("https://charts.helm.sh/stable"),
 			},
 		})
 		if err != nil {
@@ -192,7 +192,7 @@ nginx_ingress = Chart(
         chart="nginx-ingress",
         version="1.24.4",
         fetch_opts=FetchOpts(
-            repo="https://charts.helm.sh/stable//",
+            repo="https://charts.helm.sh/stable",
         ),
     ),
 )
@@ -212,7 +212,7 @@ const nginxIngress = new k8s.helm.v2.Chart("nginx-ingress", {
     chart: "nginx-ingress",
     version: "1.24.4",
     fetchOpts:{
-        repo: "https://charts.helm.sh/stable//",
+        repo: "https://charts.helm.sh/stable",
     },
 });
 ```
@@ -256,7 +256,7 @@ class HelmStack : Stack
             Version = "1.24.4",
             FetchOptions = new ChartFetchArgs
             {
-                Repo = "https://charts.helm.sh/stable//"
+                Repo = "https://charts.helm.sh/stable"
             },
             Values = values,
         });
@@ -285,7 +285,7 @@ func main() {
 			Chart:   pulumi.String("nginx-ingress"),
 			Version: pulumi.String("1.24.4"),
 			FetchArgs: helm.FetchArgs{
-				Repo: pulumi.String("https://charts.helm.sh/stable//"),
+				Repo: pulumi.String("https://charts.helm.sh/stable"),
 			},
 			Values: pulumi.Map{
 				"controller": pulumi.Map{
@@ -319,7 +319,7 @@ nginx_ingress = Chart(
         chart="nginx-ingress",
         version="1.24.4",
         fetch_opts=FetchOpts(
-            repo="https://charts.helm.sh/stable//",
+            repo="https://charts.helm.sh/stable",
         ),
         values={
             "controller": {
@@ -346,7 +346,7 @@ const nginxIngress = new k8s.helm.v2.Chart("nginx-ingress", {
     chart: "nginx-ingress",
     version: "1.24.4",
     fetchOpts:{
-        repo: "https://charts.helm.sh/stable//",
+        repo: "https://charts.helm.sh/stable",
     },
     values: {
         controller: {
@@ -386,7 +386,7 @@ class HelmStack : Stack
             Namespace = "test-namespace",
             FetchOptions = new ChartFetchArgs
             {
-                Repo = "https://charts.helm.sh/stable//"
+                Repo = "https://charts.helm.sh/stable"
             },
         });
 
@@ -415,7 +415,7 @@ func main() {
 			Version:   pulumi.String("1.24.4"),
 			Namespace: pulumi.String("test-namespace"),
 			FetchArgs: helm.FetchArgs{
-				Repo: pulumi.String("https://charts.helm.sh/stable//"),
+				Repo: pulumi.String("https://charts.helm.sh/stable"),
 			},
 		})
 		if err != nil {
@@ -443,7 +443,7 @@ nginx_ingress = Chart(
         version="1.24.4",
         namespace="test-namespace",
         fetch_opts=FetchOpts(
-            repo="https://charts.helm.sh/stable//",
+            repo="https://charts.helm.sh/stable",
         ),
     ),
 )
@@ -464,7 +464,7 @@ const nginxIngress = new k8s.helm.v2.Chart("nginx-ingress", {
     version: "1.24.4",
     namespace: "test-namespace",
     fetchOpts:{
-        repo: "https://charts.helm.sh/stable//",
+        repo: "https://charts.helm.sh/stable",
     },
 });
 ```
@@ -498,7 +498,7 @@ class HelmStack : Stack
             Version = "1.24.4",
             FetchOptions = new ChartFetchArgs
             {
-                Repo = "https://charts.helm.sh/stable//"
+                Repo = "https://charts.helm.sh/stable"
             },
             Transformations =
             {
@@ -576,7 +576,7 @@ func main() {
 			Chart:   pulumi.String("nginx-ingress"),
 			Version: pulumi.String("1.24.4"),
 			FetchArgs: helm.FetchArgs{
-				Repo: pulumi.String("https://charts.helm.sh/stable//"),
+				Repo: pulumi.String("https://charts.helm.sh/stable"),
 			},
 			Transformations: []yaml.Transformation{
 				// Make every service private to the cluster, i.e., turn all services into ClusterIP
@@ -659,7 +659,7 @@ nginx_ingress = Chart(
         chart="nginx-ingress",
         version="1.24.4",
         fetch_opts=FetchOpts(
-            repo="https://charts.helm.sh/stable//",
+            repo="https://charts.helm.sh/stable",
         ),
         transformations=[make_service_private, alias, omit_resource],
     ),
@@ -680,7 +680,7 @@ const nginxIngress = new k8s.helm.v2.Chart("nginx-ingress", {
     chart: "nginx-ingress",
     version: "1.24.4",
     fetchOpts:{
-        repo: "https://charts.helm.sh/stable//",
+        repo: "https://charts.helm.sh/stable",
     },
     transformations: [
         // Make every service private to the cluster, i.e., turn all services into ClusterIP instead of LoadBalancer.
@@ -1191,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resources created by the Chart.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="urn_csharp">
 <a href="#urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
@@ -1199,7 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}urn is the stable logical URN used to distinctly address a resource, both before and after deployments.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The stable logical URN used to distinctly address a resource, both before and after deployments.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1219,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resources created by the Chart.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="urn_go">
 <a href="#urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
@@ -1227,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}urn is the stable logical URN used to distinctly address a resource, both before and after deployments.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The stable logical URN used to distinctly address a resource, both before and after deployments.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1247,7 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resources created by the Chart.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="urn_nodejs">
 <a href="#urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
@@ -1255,7 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}urn is the stable logical URN used to distinctly address a resource, both before and after deployments.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The stable logical URN used to distinctly address a resource, both before and after deployments.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1275,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Resources created by the Chart.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="urn_python">
 <a href="#urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
@@ -1283,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}urn is the stable logical URN used to distinctly address a resource, both before and after deployments.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The stable logical URN used to distinctly address a resource, both before and after deployments.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1409,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#verify_csharp" style="color: inherit; text-decoration: inherit;">Verify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Verify the package against its signature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1533,7 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#verify_go" style="color: inherit; text-decoration: inherit;">Verify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Verify the package against its signature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1657,7 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#verify_nodejs" style="color: inherit; text-decoration: inherit;">verify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Verify the package against its signature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1781,7 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#verify_python" style="color: inherit; text-decoration: inherit;">verify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Verify the package against its signature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

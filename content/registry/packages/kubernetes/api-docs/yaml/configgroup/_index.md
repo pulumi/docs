@@ -872,7 +872,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Set of paths or a URLs that uniquely identify files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objs_csharp">
 <a href="#objs_csharp" style="color: inherit; text-decoration: inherit;">Objs</a>
@@ -880,7 +880,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">object | List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Objects representing Kubernetes resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceprefix_csharp">
 <a href="#resourceprefix_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Prefix</a>
@@ -904,7 +904,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}YAML text containing Kubernetes resource definitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -916,7 +916,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | []string</span>
     </dt>
-    <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Set of paths or a URLs that uniquely identify files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objs_go">
 <a href="#objs_go" style="color: inherit; text-decoration: inherit;">Objs</a>
@@ -924,7 +924,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">interface{} | []interface{}</span>
     </dt>
-    <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Objects representing Kubernetes resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceprefix_go">
 <a href="#resourceprefix_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Prefix</a>
@@ -948,7 +948,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | []string</span>
     </dt>
-    <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}YAML text containing Kubernetes resource definitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -960,7 +960,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | string[]</span>
     </dt>
-    <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Set of paths or a URLs that uniquely identify files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objs_nodejs">
 <a href="#objs_nodejs" style="color: inherit; text-decoration: inherit;">objs</a>
@@ -968,7 +968,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">any | any[]</span>
     </dt>
-    <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Objects representing Kubernetes resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceprefix_nodejs">
 <a href="#resourceprefix_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Prefix</a>
@@ -992,7 +992,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | string[]</span>
     </dt>
-    <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}YAML text containing Kubernetes resource definitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1004,7 +1004,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str | Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Set of paths or a URLs that uniquely identify files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objs_python">
 <a href="#objs_python" style="color: inherit; text-decoration: inherit;">objs</a>
@@ -1012,7 +1012,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Any | Sequence[Any]</span>
     </dt>
-    <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Objects representing Kubernetes resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_prefix_python">
 <a href="#resource_prefix_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>prefix</a>
@@ -1036,7 +1036,7 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str | Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}YAML text containing Kubernetes resource definitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1063,15 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="urn_csharp">
-<a href="#urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}urn is the stable logical URN used to distinctly address a resource, both before and after deployments.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resources created by the ConfigGroup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1091,15 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="urn_go">
-<a href="#urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}urn is the stable logical URN used to distinctly address a resource, both before and after deployments.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resources created by the ConfigGroup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1119,15 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="urn_nodejs">
-<a href="#urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}urn is the stable logical URN used to distinctly address a resource, both before and after deployments.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resources created by the ConfigGroup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1147,15 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="urn_python">
-<a href="#urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}urn is the stable logical URN used to distinctly address a resource, both before and after deployments.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Resources created by the ConfigGroup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

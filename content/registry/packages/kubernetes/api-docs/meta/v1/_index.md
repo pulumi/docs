@@ -23,6 +23,6 @@ Explore the resources and functions of the kubernetes.meta/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>3.9.0</dd>
+	<dd>3.10.0</dd>
 </dl>
 
