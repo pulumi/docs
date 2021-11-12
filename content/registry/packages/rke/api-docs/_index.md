@@ -26,6 +26,6 @@ A Pulumi package for creating and managing rke cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`rke` Terraform Provider](https://github.com/rancher/terraform-provider-rke).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>3.1.0</dd>
 </dl>
 
