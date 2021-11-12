@@ -15,9 +15,9 @@ aliases: ["/docs/reference/crosswalk/aws/cloudwatch/"]
 </a>
 
 [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/) is a monitoring and management service built for developers,
-system operators, site reliability engineers (SRE), and IT managers. CloudWatch provides data and actionable insights
+system operators, site reliability engineers (SRE), and IT managers. AWS CloudWatch provides data and actionable insights
 to monitor applications, understand and respond to system-wide performance changes, optimize resource utilization, and
-get a unified view of operational health. This takes the form of logs, metrics, and events, providing you with a
+get a unified view of operational health. AWS CloudWatch uses logs, metrics, and events to provide a
 unified view of AWS resources, applications and services.
 
 ## Overview
@@ -100,13 +100,13 @@ https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.ht
 
 ## Subscribing to CloudWatch Metrics
 
-What is a CloudWatch metric? Metric resources are the fundamental monitoring unit in CloudWatch. A metric represents
+What are CloudWatch metrics? Metric resources are the fundamental monitoring unit in CloudWatch. A metric represents
 a time-ordered set of data points that are published to CloudWatch. Think of a metric as a variable to monitor, and
 the data points as representing the values of that variable over time. For example, the CPU usage of a particular EC2
 instance is one metric provided by Amazon EC2. The data points themselves can come from any application or business activity
 from which you collect data.
 
-A CloudWatch metric in Pulumi Crosswalk for AWS is represented by an instance of the `awsx.cloudwatch.Metric` class.
+CloudWatch metrics in Pulumi Crosswalk for AWS are represented by an instance of the `awsx.cloudwatch.Metric` class.
 To get such an instance, you can either [create one manually](#creating-a-metric-object), or, more commonly,
 [use a pre-defined metric](#using-a-pre-defined-metric). From there, you can create
 [alarms](#creating-cloudwatch-alarms) and [dashboards](#declaring-cloudwatch-dashboards-in-code).
@@ -115,11 +115,11 @@ AWS services send metrics to CloudWatch, and you can send your own custom metric
 custom metrics, you can add the data points in any order, and at any rate you choose. You can retrieve statistics about
 those data points as an ordered set of time-series data.
 
-Metrics exist only in the region in which they are created. Metrics cannot be deleted, but they automatically expire
+CloudWatch Metrics exist only in the region in which they are created. Metrics cannot be deleted, but they automatically expire
 after 15 months if no new data is published to them. Data points older than 15 months expire on a rolling basis; as
 new data points come in, data older than 15 months is dropped.
 
-Metrics are uniquely defined by a name, a namespace, and zero or more dimensions. Each data point in a metric has a
+CloudWatch Metrics are uniquely defined by a name, a namespace, and zero or more dimensions. Each data point in a metric has a
 time stamp, and (optionally) a unit of measure. You can retrieve statistics from CloudWatch for any metric.
 
 For more details on the concept of metrics, refer to the [CloudWatch Concepts documentation](
@@ -273,7 +273,7 @@ CloudWatch metrics may also be used to trigger changes to [Autoscaling Scaling P
 ## Defining CloudWatch Dashboards in Code
 
 Amazon CloudWatch dashboards are customizable home pages in the CloudWatch console that you can use to monitor your
-resources in a single view, even resources that are spread across different regions. You can use CloudWatch dashboards
+resources in a single view, even resources that are spread across different regions. You can use AWS CloudWatch dashboards
 to create customized views of the metrics and alarms for your AWS resources.
 
 With dashboards, you can create the following:
@@ -399,7 +399,7 @@ const dashboard = new awsx.cloudwatch.Dashboard("TopicData", {
 More complex widget customization is possible. See the individual types and arguments in the
 [Cloudwatch API]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch" >}}) for more details.
 
-## Additional CloudWatch Resources
+## Additional AWS CloudWatch Resources
 
 For more information about Amazon CloudWatch, see the following:
 
