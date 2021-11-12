@@ -1,10 +1,7 @@
 ---
 # Name of the webinar.
-title: "AWS - Howdy Partner"
-meta_desc: "Join Laura Santamarina as they show off some of the newest features in Pulumi and how those features make building on AWS easier than ever."
-
-aliases:
-    - /resources/aws-howdy-partner-twitch-2020-06-01
+title: "Deploy Serverless Containers using Azure Container Apps"
+meta_desc: "Matty Stratton and Jay Gordon will walk you through how Azure Container Apps work, why you might find them awesome, and how you can use Pulumi."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -16,66 +13,76 @@ pre_recorded: false
 pulumi_tv: false
 
 # The preview image will be shown on the list page.
-preview_image: "/images/webinar/aws-howdy-partner.png"
+preview_image: ""
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
 
 # External webinars will link to an external page instead of a webinar
-# landing/registration page.
-external: false
-block_external_search_index: false
+# landing/registration page. If the webinar is external you will need
+# set the 'block_external_search_index' flag to true so Google does not index
+# the webinar page created.
+external: true
+block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "aws-howdy-partner-twitch"
+url_slug: "https://aka.ms/DeployServerlessReactor"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "AWS Howdy Partner"
+    title: ""
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
-# Content for the left hand side section of the page. External webinars just need the
-# time and duration values filled out.
+# Webinar pages support multiple session via the 'multiple' property.
+# multiple:
+#   - datetime: 2020-02-05T10:00:00-07:00
+#     hubspot_form_id: ""
+#     gotowebinar_key: ""
+
+# Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "AWS Howdy Partner"
+    title: ""
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2021-12-08T14:00:00-07:00
+    sortable_date: 2021-12-15T10:30:00-07:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.
     datetime: ""
     # Description of the webinar.
-    description: |
-        Join Pulumi and the AWS team for a fun live coding session showing off the new AWS Native Provider.
+    description: ""
 
     # The webinar presenters
     presenters:
-        - name: Laura Santamarina
-          role: Developer Advocate, Pulumi
-
-        - name: Andrew Park
-          role: Specialist Solutions Architect, AWS
-
-        - name: Marina Novikova
-          role: Partner Solutions Architect, AWS
+        - name: ""
+          role: ""
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - How to provision AWS resources with Pulumi.
+        - ""
 
+# This section contains the transcript for a video. It is optional.
+transcript: |
+    Here is where you would put the transcript for a recorded video.
+
+# The right hand side form section.
 form:
-    hubspot_form_id: "e97a5160-b983-457b-9195-878630599823"
+    # GoToWebinar webinar key. This key allows us to register people for webinars via the
+    # HubSpot form.
+    gotowebinar_key: ""
+
+    # HubSpot form id.
+    hubspot_form_id: ""
 ---
