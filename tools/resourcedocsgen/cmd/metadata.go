@@ -254,6 +254,10 @@ func packageMetadataCmd() *cobra.Command {
 			}
 			mainSpec.Version = version
 
+			if mainSpec.Repository == "" {
+				return errors.New("repository field must be set in the package schema")
+			}
+
 			status := pkg.PackageStatusGA
 			if strings.HasPrefix(version, "v0.") {
 				status = pkg.PackageStatusPublicPreview
