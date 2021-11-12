@@ -65,7 +65,35 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gitlab/sdk/v4/go/gitlab"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := gitlab.NewProjectApprovalRule(ctx, "example_one", &gitlab.ProjectApprovalRuleArgs{
+			ApprovalsRequired: pulumi.Int(3),
+			GroupIds: pulumi.IntArray{
+				pulumi.Int(51),
+			},
+			Project: pulumi.String("5"),
+			UserIds: pulumi.IntArray{
+				pulumi.Int(50),
+				pulumi.Int(500),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
@@ -163,7 +191,47 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gitlab/sdk/v4/go/gitlab"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleBranchProtection, err := gitlab.NewBranchProtection(ctx, "exampleBranchProtection", &gitlab.BranchProtectionArgs{
+			Project:          pulumi.String("5"),
+			Branch:           pulumi.String("release/*"),
+			PushAccessLevel:  pulumi.String("maintainer"),
+			MergeAccessLevel: pulumi.String("developer"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = gitlab.NewProjectApprovalRule(ctx, "exampleProjectApprovalRule", &gitlab.ProjectApprovalRuleArgs{
+			Project:           pulumi.String("5"),
+			ApprovalsRequired: pulumi.Int(3),
+			UserIds: pulumi.IntArray{
+				pulumi.Int(50),
+				pulumi.Int(500),
+			},
+			GroupIds: pulumi.IntArray{
+				pulumi.Int(51),
+			},
+			ProtectedBranchIds: pulumi.IntArray{
+				exampleBranchProtection.BranchProtectionId,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

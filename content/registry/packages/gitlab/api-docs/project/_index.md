@@ -83,7 +83,7 @@ func main() {
 			return err
 		}
 		_, err = gitlab.NewProject(ctx, "example_two", &gitlab.ProjectArgs{
-			PushRules: &gitlab.ProjectPushRulesArgs{
+			PushRules: &ProjectPushRulesArgs{
 				AuthorEmailRegex:     pulumi.String(fmt.Sprintf("%v%v", "@example\\.com", "$")),
 				CommitCommitterCheck: pulumi.Bool(true),
 				MemberCheck:          pulumi.Bool(true),

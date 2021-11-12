@@ -69,6 +69,6 @@ A Pulumi package for creating and managing GitLab resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`gitlab` Terraform Provider](https://github.com/gitlabhq/terraform-provider-gitlab).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.2.0</dd>
+	<dd>4.3.0</dd>
 </dl>
 

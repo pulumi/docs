@@ -90,19 +90,19 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := gitlab.NewBranchProtection(ctx, "branchProtect", &gitlab.BranchProtectionArgs{
-			AllowedToMerges: gitlab.BranchProtectionAllowedToMergeArray{
-				&gitlab.BranchProtectionAllowedToMergeArgs{
+			AllowedToMerges: BranchProtectionAllowedToMergeArray{
+				&BranchProtectionAllowedToMergeArgs{
 					UserId: pulumi.Int(15),
 				},
-				&gitlab.BranchProtectionAllowedToMergeArgs{
+				&BranchProtectionAllowedToMergeArgs{
 					UserId: pulumi.Int(37),
 				},
 			},
-			AllowedToPushes: gitlab.BranchProtectionAllowedToPushArray{
-				&gitlab.BranchProtectionAllowedToPushArgs{
+			AllowedToPushes: BranchProtectionAllowedToPushArray{
+				&BranchProtectionAllowedToPushArgs{
 					UserId: pulumi.Int(5),
 				},
-				&gitlab.BranchProtectionAllowedToPushArgs{
+				&BranchProtectionAllowedToPushArgs{
 					UserId: pulumi.Int(521),
 				},
 			},
