@@ -7,7 +7,14 @@ This tool calls the docs generator tool in `pulumi/pulumi` which uses the Pulumi
 You can install the `resorucedocsgen` tool just like any other Go-based CLI tool:
 
 ```
-go install github.com/pulumi/docs/tools/resourcedocsgen
+go install github.com/pulumi/docs/tools/resourcedocsgen@master
+```
+
+To build and install from source:
+
+```
+cd tools/resourcedocsgen
+go build -o "${GOPATH}/bin/resourcedocsgen" .
 ```
 
 ## Usage
