@@ -346,7 +346,7 @@ deployment = k8s.apps.v1.Deployment(f'{app_name}-dep',
         template = k8s.core.v1.PodTemplateSpecArgs(
             metadata = k8s.meta.v1.ObjectMetaArgs(labels = app_labels),
             spec = k8s.core.v1.PodSpecArgs(containers = [
-                k8s.core.v1.ContainerArgs(name = appName, image = 'nginx')
+                k8s.core.v1.ContainerArgs(name = app_name, image = 'nginx')
             ]),
         ),
     ), opts = pulumi.ResourceOptions(provider = cluster.provider)
