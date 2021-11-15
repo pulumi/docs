@@ -238,11 +238,13 @@ const finSpaceEnvironment = new aws_native.finspace.Environment("finSpaceEnviron
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">data_bundles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">federation_mode</span><span class="p">:</span> <span class="nx">Optional[EnvironmentFederationMode]</span> = None<span class="p">,</span>
                 <span class="nx">federation_parameters</span><span class="p">:</span> <span class="nx">Optional[EnvironmentFederationParametersArgs]</span> = None<span class="p">,</span>
                 <span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">superuser_parameters</span><span class="p">:</span> <span class="nx">Optional[EnvironmentSuperuserParametersArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[EnvironmentArgs]</a></span> = None<span class="p">,</span>
@@ -372,6 +374,14 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="databundles_csharp">
+<a href="#databundles_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Bundles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}ARNs of FinSpace Data Bundles to install{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -410,11 +420,27 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Environment{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of the Environment{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="superuserparameters_csharp">
+<a href="#superuserparameters_csharp" style="color: inherit; text-decoration: inherit;">Superuser<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentsuperuserparameters">Pulumi.<wbr>Aws<wbr>Native.<wbr>Fin<wbr>Space.<wbr>Inputs.<wbr>Environment<wbr>Superuser<wbr>Parameters<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="databundles_go">
+<a href="#databundles_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Bundles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}ARNs of FinSpace Data Bundles to install{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -454,11 +480,27 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Environment{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of the Environment{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="superuserparameters_go">
+<a href="#superuserparameters_go" style="color: inherit; text-decoration: inherit;">Superuser<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentsuperuserparameters">Environment<wbr>Superuser<wbr>Parameters<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="databundles_nodejs">
+<a href="#databundles_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Bundles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}ARNs of FinSpace Data Bundles to install{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -498,11 +540,27 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Environment{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of the Environment{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="superuserparameters_nodejs">
+<a href="#superuserparameters_nodejs" style="color: inherit; text-decoration: inherit;">superuser<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentsuperuserparameters">Environment<wbr>Superuser<wbr>Parameters<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="data_bundles_python">
+<a href="#data_bundles_python" style="color: inherit; text-decoration: inherit;">data_<wbr>bundles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}ARNs of FinSpace Data Bundles to install{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -542,7 +600,15 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Environment{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of the Environment{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="superuser_parameters_python">
+<a href="#superuser_parameters_python" style="color: inherit; text-decoration: inherit;">superuser_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentsuperuserparameters">Environment<wbr>Superuser<wbr>Parameters<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1126,6 +1192,120 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>FAILED_DELETION</dd><dt>RETRY_DELETION</dt>
     <dd>RETRY_DELETION</dd><dt>SUSPENDED</dt>
     <dd>SUSPENDED</dd></dl>
+{{% /choosable %}}
+
+<h4 id="environmentsuperuserparameters">Environment<wbr>Superuser<wbr>Parameters</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="emailaddress_csharp">
+<a href="#emailaddress_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Email address{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="firstname_csharp">
+<a href="#firstname_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}First name{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastname_csharp">
+<a href="#lastname_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last name{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="emailaddress_go">
+<a href="#emailaddress_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Email address{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="firstname_go">
+<a href="#firstname_go" style="color: inherit; text-decoration: inherit;">First<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}First name{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastname_go">
+<a href="#lastname_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last name{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="emailaddress_nodejs">
+<a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Email address{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="firstname_nodejs">
+<a href="#firstname_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}First name{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastname_nodejs">
+<a href="#lastname_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last name{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="email_address_python">
+<a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Email address{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="first_name_python">
+<a href="#first_name_python" style="color: inherit; text-decoration: inherit;">first_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}First name{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_name_python">
+<a href="#last_name_python" style="color: inherit; text-decoration: inherit;">last_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Last name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
