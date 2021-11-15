@@ -1,7 +1,9 @@
 package cmd
 
 import (
+	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"strings"
 	"time"
 
@@ -11,7 +13,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"gopkg.in/yaml.v2"
+	"github.com/ghodss/yaml"
 
 	pschema "github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 
@@ -19,6 +21,8 @@ import (
 )
 
 const defaultPackageCategory = pkg.PackageCategoryCloud
+
+var mainSpec *pschema.PackageSpec
 
 var categoryNameMap = map[string]pkg.PackageCategory{
 	"cloud":          pkg.PackageCategoryCloud,
@@ -221,13 +225,39 @@ func packageMetadataCmd() *cobra.Command {
 	var component bool
 	var featured bool
 	var publisher string
+	var schemaFile string
 	var title string
 	var updatedOn int64
+	var version string
 
 	cmd := &cobra.Command{
 		Use:   "metadata <metadataOutDir> [featured]",
 		Short: "Generate package metadata from Pulumi schema",
 		RunE: func(cmd *cobra.Command, args []string) error {
+			schema, err := ioutil.ReadFile(schemaFile)
+			if err != nil {
+				return errors.Wrap(err, "reading schema file from path")
+			}
+
+			// The source schema can be in YAML format. If that's the case
+			// convert it to JSON first.
+			if strings.HasSuffix(schemaFile, ".yaml") {
+				schema, err = yaml.YAMLToJSON(schema)
+				if err != nil {
+					return errors.Wrap(err, "reading YAML schema")
+				}
+			}
+
+			mainSpec = &pschema.PackageSpec{}
+			if err := json.Unmarshal(schema, mainSpec); err != nil {
+				return errors.Wrap(err, "unmarshalling schema into a PackageSpec")
+			}
+			mainSpec.Version = version
+
+			if mainSpec.Repository == "" {
+				return errors.New("repository field must be set in the package schema")
+			}
+
 			status := pkg.PackageStatusGA
 			if strings.HasPrefix(version, "v0.") {
 				status = pkg.PackageStatusPublicPreview
@@ -268,8 +298,8 @@ func packageMetadataCmd() *cobra.Command {
 			}
 
 			if native && component {
-				msg := fmt.Sprintf("package %q cannot be tagged as both native and component. only one is applicable", mainSpec.Name)
-				return errors.New(msg)
+				glog.Warning("Package found to be marked as both native and component. Will proceed with tagging the package as a component but not native.")
+				native = false
 			}
 
 			if publisher == "" && mainSpec.Publisher != "" {
@@ -278,19 +308,30 @@ func packageMetadataCmd() *cobra.Command {
 				publisher = "Pulumi"
 			}
 
+			cleanSchemaFilePath := func(s string) string {
+				s = strings.ReplaceAll(s, "../", "")
+				s = strings.ReplaceAll(s, fmt.Sprintf("pulumi-%s", mainSpec.Name), "")
+				return s
+			}
+
 			pm := pkg.PackageMeta{
-				Name:          mainSpec.Name,
-				UpdatedOn:     updatedOn,
-				Publisher:     publisher,
-				Title:         title,
-				Description:   mainSpec.Description,
-				Category:      category,
+				Name:        mainSpec.Name,
+				Description: mainSpec.Description,
+				LogoURL:     mainSpec.LogoURL,
+				Publisher:   publisher,
+				Title:       title,
+
+				RepoURL:        mainSpec.Repository,
+				SchemaFilePath: cleanSchemaFilePath(schemaFile),
+
 				PackageStatus: status,
-				Component:     component,
-				Featured:      featured,
-				Native:        native,
+				UpdatedOn:     updatedOn,
 				Version:       version,
-				LogoURL:       mainSpec.LogoURL,
+
+				Category:  category,
+				Component: component,
+				Featured:  featured,
+				Native:    native,
 			}
 			b, err := yaml.Marshal(pm)
 			if err != nil {
@@ -298,7 +339,7 @@ func packageMetadataCmd() *cobra.Command {
 			}
 
 			metadataFileName := fmt.Sprintf("%s.yaml", mainSpec.Name)
-			if err := emitFile(metadataOutDir, metadataFileName, b); err != nil {
+			if err := pkg.EmitFile(metadataOutDir, metadataFileName, b); err != nil {
 				return errors.Wrap(err, "writing metadata file")
 			}
 
@@ -306,6 +347,8 @@ func packageMetadataCmd() *cobra.Command {
 		},
 	}
 
+	cmd.Flags().StringVarP(&schemaFile, "schemaFile", "s", "", "Relative path to the schema.json file")
+	cmd.Flags().StringVar(&version, "version", "", "The version of the package")
 	cmd.Flags().StringVar(&metadataOutDir, "metadataOutDir", "", "The directory path to where the docs will be written to")
 	cmd.Flags().StringVar(&categoryStr, "category", "", fmt.Sprintf("The category for the package. Value must match one of the keys in the map: %v", categoryNameMap))
 	cmd.Flags().BoolVar(&featured, "featured", false, "Whether or not this package should be marked as featured in its metadata")
@@ -315,6 +358,8 @@ func packageMetadataCmd() *cobra.Command {
 	cmd.Flags().BoolVar(&component, "component", false, "Whether or not this package is a component and not a provider")
 
 	cmd.MarkFlagRequired("metadataOutDir")
+	cmd.MarkFlagRequired("schemaFile")
+	cmd.MarkFlagRequired("version")
 
 	return cmd
 }
