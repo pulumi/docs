@@ -15,22 +15,18 @@ Explore the resources and functions of the azure-native.iotsecurity module.
 <ul class="api">
     <li><a href="defendersetting" title="DefenderSetting"><span class="api-symbol api-symbol--resource"></span>DefenderSetting</a></li>
     <li><a href="devicegroup" title="DeviceGroup"><span class="api-symbol api-symbol--resource"></span>DeviceGroup</a></li>
-    <li><a href="locationsite" title="LocationSite"><span class="api-symbol api-symbol--resource"></span>LocationSite</a></li>
     <li><a href="onpremisesensor" title="OnPremiseSensor"><span class="api-symbol api-symbol--resource"></span>OnPremiseSensor</a></li>
     <li><a href="sensor" title="Sensor"><span class="api-symbol api-symbol--resource"></span>Sensor</a></li>
     <li><a href="site" title="Site"><span class="api-symbol api-symbol--resource"></span>Site</a></li>
-    <li><a href="sitesensor" title="SiteSensor"><span class="api-symbol api-symbol--resource"></span>SiteSensor</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getdefendersetting" title="GetDefenderSetting"><span class="api-symbol api-symbol--function"></span>GetDefenderSetting</a></li>
     <li><a href="getdevicegroup" title="GetDeviceGroup"><span class="api-symbol api-symbol--function"></span>GetDeviceGroup</a></li>
-    <li><a href="getlocationsite" title="GetLocationSite"><span class="api-symbol api-symbol--function"></span>GetLocationSite</a></li>
     <li><a href="getonpremisesensor" title="GetOnPremiseSensor"><span class="api-symbol api-symbol--function"></span>GetOnPremiseSensor</a></li>
     <li><a href="getsensor" title="GetSensor"><span class="api-symbol api-symbol--function"></span>GetSensor</a></li>
     <li><a href="getsite" title="GetSite"><span class="api-symbol api-symbol--function"></span>GetSite</a></li>
-    <li><a href="getsitesensor" title="GetSiteSensor"><span class="api-symbol api-symbol--function"></span>GetSiteSensor</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -40,6 +36,6 @@ Explore the resources and functions of the azure-native.iotsecurity module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.45.0</dd>
+	<dd>1.46.0</dd>
 </dl>
 

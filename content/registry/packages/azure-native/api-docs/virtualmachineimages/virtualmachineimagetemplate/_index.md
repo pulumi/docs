@@ -4652,7 +4652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2 for Gen1 images and Standard_D2ds_v4 for Gen2 images).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetconfig_csharp">
 <a href="#vnetconfig_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Config</a>
@@ -4680,7 +4680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2 for Gen1 images and Standard_D2ds_v4 for Gen2 images).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetconfig_go">
 <a href="#vnetconfig_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Config</a>
@@ -4708,7 +4708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2 for Gen1 images and Standard_D2ds_v4 for Gen2 images).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetconfig_nodejs">
 <a href="#vnetconfig_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Config</a>
@@ -4736,7 +4736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2 for Gen1 images and Standard_D2ds_v4 for Gen2 images).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnet_config_python">
 <a href="#vnet_config_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>config</a>
@@ -4766,7 +4766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2 for Gen1 images and Standard_D2ds_v4 for Gen2 images).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetconfig_csharp">
 <a href="#vnetconfig_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Config</a>
@@ -4794,7 +4794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2 for Gen1 images and Standard_D2ds_v4 for Gen2 images).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetconfig_go">
 <a href="#vnetconfig_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Config</a>
@@ -4822,7 +4822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2 for Gen1 images and Standard_D2ds_v4 for Gen2 images).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetconfig_nodejs">
 <a href="#vnetconfig_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Config</a>
@@ -4850,7 +4850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2 for Gen1 images and Standard_D2ds_v4 for Gen2 images).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnet_config_python">
 <a href="#vnet_config_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>config</a>

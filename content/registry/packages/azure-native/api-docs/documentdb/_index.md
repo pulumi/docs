@@ -24,6 +24,8 @@ Explore the resources and functions of the azure-native.documentdb module.
     <li><a href="gremlinresourcegremlingraph" title="GremlinResourceGremlinGraph"><span class="api-symbol api-symbol--resource"></span>GremlinResourceGremlinGraph</a></li>
     <li><a href="mongodbresourcemongodbcollection" title="MongoDBResourceMongoDBCollection"><span class="api-symbol api-symbol--resource"></span>MongoDBResourceMongoDBCollection</a></li>
     <li><a href="mongodbresourcemongodbdatabase" title="MongoDBResourceMongoDBDatabase"><span class="api-symbol api-symbol--resource"></span>MongoDBResourceMongoDBDatabase</a></li>
+    <li><a href="mongodbresourcemongoroledefinition" title="MongoDBResourceMongoRoleDefinition"><span class="api-symbol api-symbol--resource"></span>MongoDBResourceMongoRoleDefinition</a></li>
+    <li><a href="mongodbresourcemongouserdefinition" title="MongoDBResourceMongoUserDefinition"><span class="api-symbol api-symbol--resource"></span>MongoDBResourceMongoUserDefinition</a></li>
     <li><a href="notebookworkspace" title="NotebookWorkspace"><span class="api-symbol api-symbol--resource"></span>NotebookWorkspace</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="api-symbol api-symbol--resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="service" title="Service"><span class="api-symbol api-symbol--resource"></span>Service</a></li>
@@ -50,6 +52,8 @@ Explore the resources and functions of the azure-native.documentdb module.
     <li><a href="getgremlinresourcegremlingraph" title="GetGremlinResourceGremlinGraph"><span class="api-symbol api-symbol--function"></span>GetGremlinResourceGremlinGraph</a></li>
     <li><a href="getmongodbresourcemongodbcollection" title="GetMongoDBResourceMongoDBCollection"><span class="api-symbol api-symbol--function"></span>GetMongoDBResourceMongoDBCollection</a></li>
     <li><a href="getmongodbresourcemongodbdatabase" title="GetMongoDBResourceMongoDBDatabase"><span class="api-symbol api-symbol--function"></span>GetMongoDBResourceMongoDBDatabase</a></li>
+    <li><a href="getmongodbresourcemongoroledefinition" title="GetMongoDBResourceMongoRoleDefinition"><span class="api-symbol api-symbol--function"></span>GetMongoDBResourceMongoRoleDefinition</a></li>
+    <li><a href="getmongodbresourcemongouserdefinition" title="GetMongoDBResourceMongoUserDefinition"><span class="api-symbol api-symbol--function"></span>GetMongoDBResourceMongoUserDefinition</a></li>
     <li><a href="getnotebookworkspace" title="GetNotebookWorkspace"><span class="api-symbol api-symbol--function"></span>GetNotebookWorkspace</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="api-symbol api-symbol--function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getservice" title="GetService"><span class="api-symbol api-symbol--function"></span>GetService</a></li>
@@ -73,6 +77,6 @@ Explore the resources and functions of the azure-native.documentdb module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.45.0</dd>
+	<dd>1.46.0</dd>
 </dl>
 

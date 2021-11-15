@@ -24,25 +24,33 @@ API Version: 2021-03-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listBotConnectionServiceProviders<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListBotConnectionServiceProvidersArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListBotConnectionServiceProvidersResult</a></span>></span></code></pre></div>
+<div class="highlight"
+><pre class="chroma"><code class="language-typescript" data-lang="typescript"
+><span class="k">function </span>listBotConnectionServiceProviders<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListBotConnectionServiceProvidersArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListBotConnectionServiceProvidersResult</a></span>></span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_bot_connection_service_providers(</span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListBotConnectionServiceProvidersResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"
+><span class="k">def </span>list_bot_connection_service_providers<span class="p">(</span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>ListBotConnectionServiceProvidersResult</span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListBotConnectionServiceProviders<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">ListBotConnectionServiceProvidersArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListBotConnectionServiceProvidersResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"
+><span class="k">func </span>ListBotConnectionServiceProviders<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">ListBotConnectionServiceProvidersArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListBotConnectionServiceProvidersResult</a></span>, error)</span
+></code></pre></div>
 
-> Note: This function is named `ListBotConnectionServiceProviders` in the Go SDK.
+&gt; Note: This function is named `ListBotConnectionServiceProviders` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListBotConnectionServiceProviders </span><span class="p">{</span><span class="k">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListBotConnectionServiceProviders </span><span class="p">
+{</span><span class="k">
     public static </span>Task&lt;<span class="nx"><a href="#result">ListBotConnectionServiceProvidersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListBotConnectionServiceProvidersArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
@@ -202,6 +210,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Help Url for the  Service Provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceproviderparameterresponsemetadata">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Service<wbr>Provider<wbr>Parameter<wbr>Response<wbr>Metadata</a></span>
+    </dt>
+    <dd>{{% md %}}Meta data for the Service Provider{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -253,6 +269,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Help Url for the  Service Provider{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceproviderparameterresponsemetadata">Service<wbr>Provider<wbr>Parameter<wbr>Response<wbr>Metadata</a></span>
+    </dt>
+    <dd>{{% md %}}Meta data for the Service Provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -306,6 +330,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Help Url for the  Service Provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceproviderparameterresponsemetadata">Service<wbr>Provider<wbr>Parameter<wbr>Response<wbr>Metadata</a></span>
+    </dt>
+    <dd>{{% md %}}Meta data for the Service Provider{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -358,6 +390,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Help Url for the  Service Provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceproviderparameterresponsemetadata">Service<wbr>Provider<wbr>Parameter<wbr>Response<wbr>Metadata</a></span>
+    </dt>
+    <dd>{{% md %}}Meta data for the Service Provider{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -373,6 +413,110 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the Service Provider{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceproviderparameterresponseconstraints">Service<wbr>Provider<wbr>Parameter<wbr>Response<wbr>Constraints</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="required_csharp">
+<a href="#required_csharp" style="color: inherit; text-decoration: inherit;">Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether required the constraints of the bot meta data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="required_go">
+<a href="#required_go" style="color: inherit; text-decoration: inherit;">Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether required the constraints of the bot meta data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="required_nodejs">
+<a href="#required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether required the constraints of the bot meta data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="required_python">
+<a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether required the constraints of the bot meta data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceproviderparameterresponsemetadata">Service<wbr>Provider<wbr>Parameter<wbr>Response<wbr>Metadata</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="constraints_csharp">
+<a href="#constraints_csharp" style="color: inherit; text-decoration: inherit;">Constraints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceproviderparameterresponseconstraints">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Service<wbr>Provider<wbr>Parameter<wbr>Response<wbr>Constraints</a></span>
+    </dt>
+    <dd>{{% md %}}the constraints of the bot meta data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="constraints_go">
+<a href="#constraints_go" style="color: inherit; text-decoration: inherit;">Constraints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceproviderparameterresponseconstraints">Service<wbr>Provider<wbr>Parameter<wbr>Response<wbr>Constraints</a></span>
+    </dt>
+    <dd>{{% md %}}the constraints of the bot meta data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="constraints_nodejs">
+<a href="#constraints_nodejs" style="color: inherit; text-decoration: inherit;">constraints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceproviderparameterresponseconstraints">Service<wbr>Provider<wbr>Parameter<wbr>Response<wbr>Constraints</a></span>
+    </dt>
+    <dd>{{% md %}}the constraints of the bot meta data.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="constraints_python">
+<a href="#constraints_python" style="color: inherit; text-decoration: inherit;">constraints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceproviderparameterresponseconstraints">Service<wbr>Provider<wbr>Parameter<wbr>Response<wbr>Constraints</a></span>
+    </dt>
+    <dd>{{% md %}}the constraints of the bot meta data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceproviderpropertiesresponse">Service<wbr>Provider<wbr>Properties<wbr>Response</h4>

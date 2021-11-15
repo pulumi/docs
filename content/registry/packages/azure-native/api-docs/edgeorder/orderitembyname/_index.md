@@ -13,7 +13,7 @@ no_edit_this_page: true
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents order item contract
-API Version: 2020-12-01-preview.
+API Version: 2021-12-01.
 
 {{% examples %}}
 
@@ -1111,6 +1111,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="addressvalidationstatus_csharp">
+<a href="#addressvalidationstatus_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Validation<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of address validation{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="contactdetails_csharp">
 <a href="#contactdetails_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
 </span>
@@ -1130,6 +1138,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="addressvalidationstatus_go">
+<a href="#addressvalidationstatus_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Validation<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of address validation{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contactdetails_go">
 <a href="#contactdetails_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
@@ -1151,6 +1167,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="addressvalidationstatus_nodejs">
+<a href="#addressvalidationstatus_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Validation<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of address validation{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="contactdetails_nodejs">
 <a href="#contactdetails_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Details</a>
 </span>
@@ -1170,6 +1194,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="address_validation_status_python">
+<a href="#address_validation_status_python" style="color: inherit; text-decoration: inherit;">address_<wbr>validation_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of address validation{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contact_details_python">
 <a href="#contact_details_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>details</a>
