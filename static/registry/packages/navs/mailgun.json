@@ -1,1 +1,0 @@
-[{"name":"Domain","type":"resource","link":"domain"},{"name":"DomainCredential","type":"resource","link":"domaincredential"},{"name":"Provider","type":"resource","link":"provider"},{"name":"Route","type":"resource","link":"route"},{"name":"getDomain","type":"function","link":"getdomain"}]
