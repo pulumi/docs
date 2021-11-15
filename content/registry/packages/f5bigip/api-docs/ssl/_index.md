@@ -32,6 +32,6 @@ Explore the resources and functions of the f5bigip.ssl module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.6.0</dd>
 </dl>
 
