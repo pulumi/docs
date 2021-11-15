@@ -102,13 +102,13 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		demoServicev1, err := fastly.NewServicev1(ctx, "demoServicev1", &fastly.Servicev1Args{
-			Domains: fastly.Servicev1DomainArray{
-				&fastly.Servicev1DomainArgs{
+			Domains: Servicev1DomainArray{
+				&Servicev1DomainArgs{
 					Name: pulumi.String("example.com"),
 				},
 			},
-			Backends: fastly.Servicev1BackendArray{
-				&fastly.Servicev1BackendArgs{
+			Backends: Servicev1BackendArray{
+				&Servicev1BackendArgs{
 					Address: pulumi.String("127.0.0.1"),
 					Name:    pulumi.String("localhost"),
 				},

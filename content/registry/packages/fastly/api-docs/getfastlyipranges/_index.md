@@ -83,8 +83,8 @@ func main() {
 					FromPort:       pulumi.Int(443),
 					ToPort:         pulumi.Int(443),
 					Protocol:       pulumi.String("tcp"),
-					CidrBlocks:     toPulumiStringArray(fastly.CidrBlocks),
-					Ipv6CidrBlocks: toPulumiStringArray(fastly.Ipv6CidrBlocks),
+					CidrBlocks:     interface{}(fastly.CidrBlocks),
+					Ipv6CidrBlocks: interface{}(fastly.Ipv6CidrBlocks),
 				},
 			},
 		})
@@ -93,13 +93,6 @@ func main() {
 		}
 		return nil
 	})
-}
-func toPulumiStringArray(arr []string) pulumi.StringArray {
-	var pulumiArr pulumi.StringArray
-	for _, v := range arr {
-		pulumiArr = append(pulumiArr, pulumi.String(v))
-	}
-	return pulumiArr
 }
 ```
 
@@ -116,8 +109,8 @@ import pulumi_fastly as fastly
 
 fastly = fastly.get_fastly_ip_ranges()
 from_fastly = aws.ec2.SecurityGroup("fromFastly", ingress=[aws.ec2.SecurityGroupIngressArgs(
-    from_port="443",
-    to_port="443",
+    from_port=443,
+    to_port=443,
     protocol="tcp",
     cidr_blocks=fastly.cidr_blocks,
     ipv6_cidr_blocks=fastly.ipv6_cidr_blocks,
@@ -164,25 +157,33 @@ const fromFastly = new aws.ec2.SecurityGroup("fromFastly", {ingress: [{
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFastlyIpRanges<span class="p">(</span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFastlyIpRangesResult</a></span>></span></code></pre></div>
+<div class="highlight"
+><pre class="chroma"><code class="language-typescript" data-lang="typescript"
+><span class="k">function </span>getFastlyIpRanges<span class="p">(</span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFastlyIpRangesResult</a></span>></span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_fastly_ip_ranges(</span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFastlyIpRangesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"
+><span class="k">def </span>get_fastly_ip_ranges<span class="p">(</span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>GetFastlyIpRangesResult</span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFastlyIpRanges<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetFastlyIpRangesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"
+><span class="k">func </span>GetFastlyIpRanges<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetFastlyIpRangesResult</a></span>, error)</span
+></code></pre></div>
 
-> Note: This function is named `GetFastlyIpRanges` in the Go SDK.
+&gt; Note: This function is named `GetFastlyIpRanges` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFastlyIpRanges </span><span class="p">{</span><span class="k">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFastlyIpRanges </span><span class="p">
+{</span><span class="k">
     public static </span>Task&lt;<span class="nx"><a href="#result">GetFastlyIpRangesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}

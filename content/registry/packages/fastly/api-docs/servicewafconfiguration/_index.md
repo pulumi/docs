@@ -15,7 +15,6 @@ no_edit_this_page: true
 Defines a set of Web Application Firewall configuration options that can be used to populate a service WAF. This resource will configure rules, thresholds and other settings for a WAF.
 
 > **Warning:** This provider will take precedence over any changes you make in the UI or API. Such changes are likely to be reversed if you run the provider again.
-
 ## Adding a WAF to an existing service
 
 > **Warning:** A two-phase change is required when adding a WAF to an existing service
@@ -29,6 +28,277 @@ For this scenario, it's recommended to split the changes into two distinct steps
 
 1. Add the `waf` block to the `fastly.Servicev1` and apply the changes
 2. Add the `fastly.ServiceWafConfiguration` to the HCL and apply the changes
+
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Fastly = Pulumi.Fastly;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var demo = new Fastly.Servicev1("demo", new Fastly.Servicev1Args
+        {
+            Domains = 
+            {
+                new Fastly.Inputs.Servicev1DomainArgs
+                {
+                    Name = "example.com",
+                    Comment = "demo",
+                },
+            },
+            Backends = 
+            {
+                new Fastly.Inputs.Servicev1BackendArgs
+                {
+                    Address = "127.0.0.1",
+                    Name = "origin1",
+                    Port = 80,
+                },
+            },
+            Conditions = 
+            {
+                new Fastly.Inputs.Servicev1ConditionArgs
+                {
+                    Name = "WAF_Prefetch",
+                    Type = "PREFETCH",
+                    Statement = "req.backend.is_origin",
+                },
+                new Fastly.Inputs.Servicev1ConditionArgs
+                {
+                    Name = "WAF_always_false",
+                    Statement = "false",
+                    Type = "REQUEST",
+                },
+            },
+            ResponseObjects = 
+            {
+                new Fastly.Inputs.Servicev1ResponseObjectArgs
+                {
+                    Name = "WAF_Response",
+                    Status = 403,
+                    Response = "Forbidden",
+                    ContentType = "text/html",
+                    Content = "<html><body>Forbidden</body></html>",
+                    RequestCondition = "WAF_always_false",
+                },
+            },
+            Waf = new Fastly.Inputs.Servicev1WafArgs
+            {
+                PrefetchCondition = "WAF_Prefetch",
+                ResponseObject = "WAF_Response",
+            },
+            ForceDestroy = true,
+        });
+        var waf = new Fastly.ServiceWafConfiguration("waf", new Fastly.ServiceWafConfigurationArgs
+        {
+            WafId = demo.Waf.Apply(waf => waf?.WafId),
+            HttpViolationScoreThreshold = 100,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-fastly/sdk/v3/go/fastly"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		demo, err := fastly.NewServicev1(ctx, "demo", &fastly.Servicev1Args{
+			Domains: Servicev1DomainArray{
+				&Servicev1DomainArgs{
+					Name:    pulumi.String("example.com"),
+					Comment: pulumi.String("demo"),
+				},
+			},
+			Backends: Servicev1BackendArray{
+				&Servicev1BackendArgs{
+					Address: pulumi.String("127.0.0.1"),
+					Name:    pulumi.String("origin1"),
+					Port:    pulumi.Int(80),
+				},
+			},
+			Conditions: Servicev1ConditionArray{
+				&Servicev1ConditionArgs{
+					Name:      pulumi.String("WAF_Prefetch"),
+					Type:      pulumi.String("PREFETCH"),
+					Statement: pulumi.String("req.backend.is_origin"),
+				},
+				&Servicev1ConditionArgs{
+					Name:      pulumi.String("WAF_always_false"),
+					Statement: pulumi.String("false"),
+					Type:      pulumi.String("REQUEST"),
+				},
+			},
+			ResponseObjects: Servicev1ResponseObjectArray{
+				&Servicev1ResponseObjectArgs{
+					Name:             pulumi.String("WAF_Response"),
+					Status:           pulumi.Int(403),
+					Response:         pulumi.String("Forbidden"),
+					ContentType:      pulumi.String("text/html"),
+					Content:          pulumi.String("<html><body>Forbidden</body></html>"),
+					RequestCondition: pulumi.String("WAF_always_false"),
+				},
+			},
+			Waf: &Servicev1WafArgs{
+				PrefetchCondition: pulumi.String("WAF_Prefetch"),
+				ResponseObject:    pulumi.String("WAF_Response"),
+			},
+			ForceDestroy: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = fastly.NewServiceWafConfiguration(ctx, "waf", &fastly.ServiceWafConfigurationArgs{
+			WafId: demo.Waf.ApplyT(func(waf Servicev1Waf) (string, error) {
+				return waf.WafId, nil
+			}).(pulumi.StringOutput),
+			HttpViolationScoreThreshold: pulumi.Int(100),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_fastly as fastly
+
+demo = fastly.Servicev1("demo",
+    domains=[fastly.Servicev1DomainArgs(
+        name="example.com",
+        comment="demo",
+    )],
+    backends=[fastly.Servicev1BackendArgs(
+        address="127.0.0.1",
+        name="origin1",
+        port=80,
+    )],
+    conditions=[
+        fastly.Servicev1ConditionArgs(
+            name="WAF_Prefetch",
+            type="PREFETCH",
+            statement="req.backend.is_origin",
+        ),
+        fastly.Servicev1ConditionArgs(
+            name="WAF_always_false",
+            statement="false",
+            type="REQUEST",
+        ),
+    ],
+    response_objects=[fastly.Servicev1ResponseObjectArgs(
+        name="WAF_Response",
+        status=403,
+        response="Forbidden",
+        content_type="text/html",
+        content="<html><body>Forbidden</body></html>",
+        request_condition="WAF_always_false",
+    )],
+    waf=fastly.Servicev1WafArgs(
+        prefetch_condition="WAF_Prefetch",
+        response_object="WAF_Response",
+    ),
+    force_destroy=True)
+waf = fastly.ServiceWafConfiguration("waf",
+    waf_id=demo.waf.waf_id,
+    http_violation_score_threshold=100)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as fastly from "@pulumi/fastly";
+
+const demo = new fastly.Servicev1("demo", {
+    domains: [{
+        name: "example.com",
+        comment: "demo",
+    }],
+    backends: [{
+        address: "127.0.0.1",
+        name: "origin1",
+        port: 80,
+    }],
+    conditions: [
+        {
+            name: "WAF_Prefetch",
+            type: "PREFETCH",
+            statement: "req.backend.is_origin",
+        },
+        {
+            name: "WAF_always_false",
+            statement: "false",
+            type: "REQUEST",
+        },
+    ],
+    responseObjects: [{
+        name: "WAF_Response",
+        status: "403",
+        response: "Forbidden",
+        contentType: "text/html",
+        content: "<html><body>Forbidden</body></html>",
+        requestCondition: "WAF_always_false",
+    }],
+    waf: {
+        prefetchCondition: "WAF_Prefetch",
+        responseObject: "WAF_Response",
+    },
+    forceDestroy: true,
+});
+const waf = new fastly.ServiceWafConfiguration("waf", {
+    wafId: demo.waf.apply(waf => waf?.wafId),
+    httpViolationScoreThreshold: 100,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
 
 
 
