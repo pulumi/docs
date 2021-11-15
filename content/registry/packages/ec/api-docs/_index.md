@@ -37,6 +37,6 @@ A Pulumi package for creating and managing ElasticCloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`ec` Terraform Provider](https://github.com/elastic/terraform-provider-ec).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.2.0</dd>
 </dl>
 
