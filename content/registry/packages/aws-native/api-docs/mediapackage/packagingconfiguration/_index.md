@@ -975,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodtriggers_csharp" style="color: inherit; text-decoration: inherit;">Period<wbr>Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="#packagingconfigurationdashpackageperiodtriggersitem">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Media<wbr>Package.<wbr>Packaging<wbr>Configuration<wbr>Dash<wbr>Package<wbr>Period<wbr>Triggers<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains "ADS", new periods will be created where the Asset contains SCTE-35 ad markers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1027,7 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodtriggers_go" style="color: inherit; text-decoration: inherit;">Period<wbr>Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#packagingconfigurationdashpackageperiodtriggersitem">[]Packaging<wbr>Configuration<wbr>Dash<wbr>Package<wbr>Period<wbr>Triggers<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains "ADS", new periods will be created where the Asset contains SCTE-35 ad markers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1079,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodtriggers_nodejs" style="color: inherit; text-decoration: inherit;">period<wbr>Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="#packagingconfigurationdashpackageperiodtriggersitem">Packaging<wbr>Configuration<wbr>Dash<wbr>Package<wbr>Period<wbr>Triggers<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains "ADS", new periods will be created where the Asset contains SCTE-35 ad markers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1131,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#period_triggers_python" style="color: inherit; text-decoration: inherit;">period_<wbr>triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type"><a href="#packagingconfigurationdashpackageperiodtriggersitem">Sequence[Packaging<wbr>Configuration<wbr>Dash<wbr>Package<wbr>Period<wbr>Triggers<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains "ADS", new periods will be created where the Asset contains SCTE-35 ad markers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,6 +1150,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#packagingconfigurationdashpackagesegmenttemplateformat">Packaging<wbr>Configuration<wbr>Dash<wbr>Package<wbr>Segment<wbr>Template<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Determines the type of SegmentTemplate included in the Media Presentation Description (MPD). When set to NUMBER_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Number$ media URLs. When set to TIME_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Time$ media URLs. When set to NUMBER_WITH_DURATION, only a duration is included in each SegmentTemplate, with $Number$ media URLs.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="packagingconfigurationdashpackageperiodtriggersitem">Packaging<wbr>Configuration<wbr>Dash<wbr>Package<wbr>Period<wbr>Triggers<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Ads</dt>
+    <dd>ADS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Packaging<wbr>Configuration<wbr>Dash<wbr>Package<wbr>Period<wbr>Triggers<wbr>Item<wbr>Ads</dt>
+    <dd>ADS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Ads</dt>
+    <dd>ADS</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ADS</dt>
+    <dd>ADS</dd></dl>
 {{% /choosable %}}
 
 <h4 id="packagingconfigurationdashpackagesegmenttemplateformat">Packaging<wbr>Configuration<wbr>Dash<wbr>Package<wbr>Segment<wbr>Template<wbr>Format</h4>

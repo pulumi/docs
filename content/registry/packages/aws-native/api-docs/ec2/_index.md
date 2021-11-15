@@ -31,6 +31,7 @@ Explore the resources and functions of the aws-native.ec2 module.
     <li><a href="prefixlist" title="PrefixList"><span class="api-symbol api-symbol--resource"></span>PrefixList</a></li>
     <li><a href="routetable" title="RouteTable"><span class="api-symbol api-symbol--resource"></span>RouteTable</a></li>
     <li><a href="spotfleet" title="SpotFleet"><span class="api-symbol api-symbol--resource"></span>SpotFleet</a></li>
+    <li><a href="subnet" title="Subnet"><span class="api-symbol api-symbol--resource"></span>Subnet</a></li>
     <li><a href="subnetnetworkaclassociation" title="SubnetNetworkAclAssociation"><span class="api-symbol api-symbol--resource"></span>SubnetNetworkAclAssociation</a></li>
     <li><a href="subnetroutetableassociation" title="SubnetRouteTableAssociation"><span class="api-symbol api-symbol--resource"></span>SubnetRouteTableAssociation</a></li>
     <li><a href="transitgateway" title="TransitGateway"><span class="api-symbol api-symbol--resource"></span>TransitGateway</a></li>
@@ -51,6 +52,6 @@ Explore the resources and functions of the aws-native.ec2 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.4.0</dd>
+	<dd>0.5.0</dd>
 </dl>
 

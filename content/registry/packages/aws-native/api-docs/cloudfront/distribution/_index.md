@@ -918,6 +918,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="responseheaderspolicyid_csharp">
+<a href="#responseheaderspolicyid_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="smoothstreaming_csharp">
 <a href="#smoothstreaming_csharp" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
 </span>
@@ -1068,6 +1076,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="realtimelogconfigarn_go">
 <a href="#realtimelogconfigarn_go" style="color: inherit; text-decoration: inherit;">Realtime<wbr>Log<wbr>Config<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="responseheaderspolicyid_go">
+<a href="#responseheaderspolicyid_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1230,6 +1246,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="responseheaderspolicyid_nodejs">
+<a href="#responseheaderspolicyid_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="smoothstreaming_nodejs">
 <a href="#smoothstreaming_nodejs" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
 </span>
@@ -1380,6 +1404,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="realtime_log_config_arn_python">
 <a href="#realtime_log_config_arn_python" style="color: inherit; text-decoration: inherit;">realtime_<wbr>log_<wbr>config_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="response_headers_policy_id_python">
+<a href="#response_headers_policy_id_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2600,6 +2632,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="responseheaderspolicyid_csharp">
+<a href="#responseheaderspolicyid_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="smoothstreaming_csharp">
 <a href="#smoothstreaming_csharp" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
 </span>
@@ -2742,6 +2782,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="realtimelogconfigarn_go">
 <a href="#realtimelogconfigarn_go" style="color: inherit; text-decoration: inherit;">Realtime<wbr>Log<wbr>Config<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="responseheaderspolicyid_go">
+<a href="#responseheaderspolicyid_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2896,6 +2944,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="responseheaderspolicyid_nodejs">
+<a href="#responseheaderspolicyid_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="smoothstreaming_nodejs">
 <a href="#smoothstreaming_nodejs" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
 </span>
@@ -3038,6 +3094,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="realtime_log_config_arn_python">
 <a href="#realtime_log_config_arn_python" style="color: inherit; text-decoration: inherit;">realtime_<wbr>log_<wbr>config_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="response_headers_policy_id_python">
+<a href="#response_headers_policy_id_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

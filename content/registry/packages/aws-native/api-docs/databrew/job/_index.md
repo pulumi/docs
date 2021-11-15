@@ -378,7 +378,8 @@ const myDataBrewProfileJob = new aws_native.databrew.Job("myDataBrewProfileJob",
         <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[JobTagArgs]]</span> = None<span class="p">,</span>
         <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[JobType]</span> = None<span class="p">)</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[JobType]</span> = None<span class="p">,</span>
+        <span class="nx">validation_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[JobValidationConfigurationArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span>
@@ -658,7 +659,15 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Timeout{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Timeout{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="validationconfigurations_csharp">
+<a href="#validationconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobvalidationconfiguration">List&lt;Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Inputs.<wbr>Job<wbr>Validation<wbr>Configuration<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Data quality rules configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -814,7 +823,15 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Timeout{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Timeout{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="validationconfigurations_go">
+<a href="#validationconfigurations_go" style="color: inherit; text-decoration: inherit;">Validation<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobvalidationconfiguration">[]Job<wbr>Validation<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Data quality rules configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -970,7 +987,15 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Timeout{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Timeout{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="validationconfigurations_nodejs">
+<a href="#validationconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobvalidationconfiguration">Job<wbr>Validation<wbr>Configuration<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Data quality rules configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1126,7 +1151,15 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Timeout{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Timeout{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="validation_configurations_python">
+<a href="#validation_configurations_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobvalidationconfiguration">Sequence[Job<wbr>Validation<wbr>Configuration<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Data quality rules configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3040,6 +3073,110 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>PROFILE</dt>
     <dd>PROFILE</dd><dt>RECIPE</dt>
     <dd>RECIPE</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobvalidationconfiguration">Job<wbr>Validation<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rulesetarn_csharp">
+<a href="#rulesetarn_csharp" style="color: inherit; text-decoration: inherit;">Ruleset<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Arn of the Ruleset{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="validationmode_csharp">
+<a href="#validationmode_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobvalidationmode">Pulumi.<wbr>Aws<wbr>Native.<wbr>Data<wbr>Brew.<wbr>Job<wbr>Validation<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rulesetarn_go">
+<a href="#rulesetarn_go" style="color: inherit; text-decoration: inherit;">Ruleset<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Arn of the Ruleset{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="validationmode_go">
+<a href="#validationmode_go" style="color: inherit; text-decoration: inherit;">Validation<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobvalidationmode">Job<wbr>Validation<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rulesetarn_nodejs">
+<a href="#rulesetarn_nodejs" style="color: inherit; text-decoration: inherit;">ruleset<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Arn of the Ruleset{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="validationmode_nodejs">
+<a href="#validationmode_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobvalidationmode">Job<wbr>Validation<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ruleset_arn_python">
+<a href="#ruleset_arn_python" style="color: inherit; text-decoration: inherit;">ruleset_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Arn of the Ruleset{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="validation_mode_python">
+<a href="#validation_mode_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobvalidationmode">Job<wbr>Validation<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobvalidationmode">Job<wbr>Validation<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Check<wbr>All</dt>
+    <dd>CHECK_ALL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Job<wbr>Validation<wbr>Mode<wbr>Check<wbr>All</dt>
+    <dd>CHECK_ALL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Check<wbr>All</dt>
+    <dd>CHECK_ALL</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CHECK_ALL</dt>
+    <dd>CHECK_ALL</dd></dl>
 {{% /choosable %}}
 
 

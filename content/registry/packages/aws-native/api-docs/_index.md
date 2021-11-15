@@ -26,6 +26,7 @@ A native Pulumi package for creating and managing Amazon Web Services (AWS) reso
     <li><a href="auditmanager/" title="auditmanager"><span class="api-symbol api-symbol--module"></span>auditmanager</a></li>
     <li><a href="autoscaling/" title="autoscaling"><span class="api-symbol api-symbol--module"></span>autoscaling</a></li>
     <li><a href="backup/" title="backup"><span class="api-symbol api-symbol--module"></span>backup</a></li>
+    <li><a href="batch/" title="batch"><span class="api-symbol api-symbol--module"></span>batch</a></li>
     <li><a href="budgets/" title="budgets"><span class="api-symbol api-symbol--module"></span>budgets</a></li>
     <li><a href="cassandra/" title="cassandra"><span class="api-symbol api-symbol--module"></span>cassandra</a></li>
     <li><a href="ce/" title="ce"><span class="api-symbol api-symbol--module"></span>ce</a></li>
@@ -160,6 +161,6 @@ A native Pulumi package for creating and managing Amazon Web Services (AWS) reso
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.4.0</dd>
+	<dd>0.5.0</dd>
 </dl>
 

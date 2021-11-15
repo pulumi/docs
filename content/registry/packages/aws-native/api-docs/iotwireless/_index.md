@@ -15,6 +15,8 @@ Explore the resources and functions of the aws-native.iotwireless module.
 <ul class="api">
     <li><a href="destination" title="Destination"><span class="api-symbol api-symbol--resource"></span>Destination</a></li>
     <li><a href="deviceprofile" title="DeviceProfile"><span class="api-symbol api-symbol--resource"></span>DeviceProfile</a></li>
+    <li><a href="fuotatask" title="FuotaTask"><span class="api-symbol api-symbol--resource"></span>FuotaTask</a></li>
+    <li><a href="multicastgroup" title="MulticastGroup"><span class="api-symbol api-symbol--resource"></span>MulticastGroup</a></li>
     <li><a href="serviceprofile" title="ServiceProfile"><span class="api-symbol api-symbol--resource"></span>ServiceProfile</a></li>
     <li><a href="taskdefinition" title="TaskDefinition"><span class="api-symbol api-symbol--resource"></span>TaskDefinition</a></li>
     <li><a href="wirelessdevice" title="WirelessDevice"><span class="api-symbol api-symbol--resource"></span>WirelessDevice</a></li>
@@ -28,6 +30,6 @@ Explore the resources and functions of the aws-native.iotwireless module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.4.0</dd>
+	<dd>0.5.0</dd>
 </dl>
 
