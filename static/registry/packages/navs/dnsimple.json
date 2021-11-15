@@ -1,1 +1,1 @@
-[{"name":"Provider","type":"resource","link":"provider"},{"name":"EmailForward","type":"resource","link":"emailforward"},{"name":"Record","type":"resource","link":"record"}]
+[{"name":"EmailForward","type":"resource","link":"emailforward"},{"name":"Provider","type":"resource","link":"provider"},{"name":"Record","type":"resource","link":"record"}]

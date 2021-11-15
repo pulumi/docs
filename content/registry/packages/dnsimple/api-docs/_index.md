@@ -27,6 +27,6 @@ A Pulumi package for creating and managing dnsimple cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`dnsimple` Terraform Provider](https://github.com/dnsimple/terraform-provider-dnsimple).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.2.0</dd>
+	<dd>3.3.0</dd>
 </dl>
 

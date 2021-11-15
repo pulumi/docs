@@ -59,6 +59,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-dnsimple/sdk/v3/go/dnsimple"
+	"github.com/pulumi/pulumi-dnsimple/sdk/v3/go/dnsimple/index"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
