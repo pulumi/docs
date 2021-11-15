@@ -20,33 +20,54 @@ API Version: 2018-06-01.
 
 ## Using getDataFlow {#using}
 
+Two invocation forms are available. The direct form accepts plain
+arguments and either blocks until the result value is available, or
+returns a Promise-wrapped result. The output form accepts
+Input-wrapped arguments and returns an Output-wrapped result.
+
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDataFlow<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDataFlowArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDataFlowResult</a></span>></span></code></pre></div>
+<div class="highlight"
+><pre class="chroma"><code class="language-typescript" data-lang="typescript"
+><span class="k">function </span>getDataFlow<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDataFlowArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDataFlowResult</a></span>></span
+><span class="k">
+function </span>getDataFlowOutput<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDataFlowOutputArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Output&lt;<span class="nx"><a href="#result">GetDataFlowResult</a></span>></span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_data_flow(</span><span class="nx">data_flow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"
+><span class="k">def </span>get_data_flow<span class="p">(</span><span class="nx">data_flow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDataFlowResult</code></pre></div>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>GetDataFlowResult</span
+><span class="k">
+def </span>get_data_flow_output<span class="p">(</span><span class="nx">data_flow_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>Output[GetDataFlowResult]</span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDataFlow<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDataFlowArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDataFlowResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"
+><span class="k">func </span>LookupDataFlow<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDataFlowArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDataFlowResult</a></span>, error)</span
+></code></pre></div>
 
-> Note: This function is named `LookupDataFlow` in the Go SDK.
+&gt; Note: This function is named `LookupDataFlow` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDataFlow </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetDataFlowResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDataFlowArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDataFlow </span><span class="p">
+{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDataFlowResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDataFlowArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="k">
+    public static </span>Output&lt;<span class="nx"><a href="#result">GetDataFlowResult</a></span>> <span class="p">Invoke(</span><span class="nx">GetDataFlowInvokeArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -387,7 +408,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Data flow parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -415,7 +444,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Data flow parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -443,7 +480,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Data flow parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -471,7 +516,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Data flow parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dataflowresponsefolder">Data<wbr>Flow<wbr>Response<wbr>Folder</h4>
@@ -1073,14 +1126,6 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="additionalproperties_csharp">
-<a href="#additionalproperties_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span>
@@ -1148,14 +1193,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="additionalproperties_go">
-<a href="#additionalproperties_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -1225,14 +1262,6 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="additionalproperties_nodejs">
-<a href="#additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
@@ -1300,14 +1329,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="additional_properties_python">
-<a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -2025,6 +2046,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Transformation name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dataset_csharp">
+<a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -2039,7 +2068,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataflowreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linkedservice_csharp">
+<a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2052,6 +2089,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Transformation name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_go">
+<a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2067,7 +2112,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linkedservice_go">
+<a href="#linkedservice_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2080,6 +2133,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Transformation name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_nodejs">
+<a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2095,7 +2156,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linkedservice_nodejs">
+<a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2108,6 +2177,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Transformation name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_python">
+<a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2123,7 +2200,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Flowlet Reference{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linked_service_python">
+<a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="wranglingdataflowresponse">Wrangling<wbr>Data<wbr>Flow<wbr>Response</h4>

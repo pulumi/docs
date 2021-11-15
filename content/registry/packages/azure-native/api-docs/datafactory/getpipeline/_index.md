@@ -20,33 +20,54 @@ API Version: 2018-06-01.
 
 ## Using getPipeline {#using}
 
+Two invocation forms are available. The direct form accepts plain
+arguments and either blocks until the result value is available, or
+returns a Promise-wrapped result. The output form accepts
+Input-wrapped arguments and returns an Output-wrapped result.
+
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPipeline<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPipelineArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPipelineResult</a></span>></span></code></pre></div>
+<div class="highlight"
+><pre class="chroma"><code class="language-typescript" data-lang="typescript"
+><span class="k">function </span>getPipeline<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPipelineArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPipelineResult</a></span>></span
+><span class="k">
+function </span>getPipelineOutput<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPipelineOutputArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Output&lt;<span class="nx"><a href="#result">GetPipelineResult</a></span>></span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_pipeline(</span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"
+><span class="k">def </span>get_pipeline<span class="p">(</span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">pipeline_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPipelineResult</code></pre></div>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>GetPipelineResult</span
+><span class="k">
+def </span>get_pipeline_output<span class="p">(</span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">pipeline_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>Output[GetPipelineResult]</span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPipeline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPipelineArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPipelineResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"
+><span class="k">func </span>LookupPipeline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPipelineArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPipelineResult</a></span>, error)</span
+></code></pre></div>
 
-> Note: This function is named `LookupPipeline` in the Go SDK.
+&gt; Note: This function is named `LookupPipeline` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPipeline </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetPipelineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPipelineArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPipeline </span><span class="p">
+{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPipelineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPipelineArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="k">
+    public static </span>Output&lt;<span class="nx"><a href="#result">GetPipelineResult</a></span>> <span class="p">Invoke(</span><span class="nx">GetPipelineInvokeArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -18703,7 +18724,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Data flow parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -18731,7 +18760,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Data flow parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -18759,7 +18796,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Data flow parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -18787,7 +18832,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Reference data flow parameters from dataset.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Data flow parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dataflowstaginginforesponse">Data<wbr>Flow<wbr>Staging<wbr>Info<wbr>Response</h4>
@@ -28037,6 +28090,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablechunking_csharp">
+<a href="#disablechunking_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Chunking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
 </span>
@@ -28120,6 +28181,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablechunking_go">
+<a href="#disablechunking_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Chunking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -28205,6 +28274,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablechunking_nodejs">
+<a href="#disablechunking_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Chunking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
 </span>
@@ -28288,6 +28365,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_chunking_python">
+<a href="#disable_chunking_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>chunking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -52525,6 +52610,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablechunking_csharp">
+<a href="#disablechunking_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Chunking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
 </span>
@@ -52616,6 +52709,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablechunking_go">
+<a href="#disablechunking_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Chunking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -52709,6 +52810,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablechunking_nodejs">
+<a href="#disablechunking_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Chunking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
 </span>
@@ -52800,6 +52909,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_chunking_python">
+<a href="#disable_chunking_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>chunking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>

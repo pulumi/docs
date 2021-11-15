@@ -20,32 +20,52 @@ API Version: 2021-03-01.
 
 ## Using getBot {#using}
 
+Two invocation forms are available. The direct form accepts plain
+arguments and either blocks until the result value is available, or
+returns a Promise-wrapped result. The output form accepts
+Input-wrapped arguments and returns an Output-wrapped result.
+
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBot<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBotArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBotResult</a></span>></span></code></pre></div>
+<div class="highlight"
+><pre class="chroma"><code class="language-typescript" data-lang="typescript"
+><span class="k">function </span>getBot<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBotArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBotResult</a></span>></span
+><span class="k">
+function </span>getBotOutput<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBotOutputArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Output&lt;<span class="nx"><a href="#result">GetBotResult</a></span>></span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_bot(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"
+><span class="k">def </span>get_bot<span class="p">(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBotResult</code></pre></div>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>GetBotResult</span
+><span class="k">
+def </span>get_bot_output<span class="p">(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">resource_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> <span>Output[GetBotResult]</span
+></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBotArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBotResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"
+><span class="k">func </span>LookupBot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBotArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBotResult</a></span>, error)</span
+></code></pre></div>
 
-> Note: This function is named `LookupBot` in the Go SDK.
+&gt; Note: This function is named `LookupBot` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBot </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetBotResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBotArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBot </span><span class="p">
+{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBotResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBotArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="k">
+    public static </span>Output&lt;<span class="nx"><a href="#result">GetBotResult</a></span>> <span class="p">Invoke(</span><span class="nx">GetBotInvokeArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -178,6 +198,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="zones_csharp">
+<a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Entity zones{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span>
@@ -253,6 +281,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="zones_go">
+<a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Entity zones{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -330,6 +366,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="zones_nodejs">
+<a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Entity zones{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
@@ -405,6 +449,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="zones_python">
+<a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Entity zones{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -500,13 +552,37 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The bot's endpoint version{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="migrationtoken_csharp">
+<a href="#migrationtoken_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Token used to migrate non Azure bot to azure subscription{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="msaappid_csharp">
 <a href="#msaappid_csharp" style="color: inherit; text-decoration: inherit;">Msa<wbr>App<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allsettings_csharp">
+<a href="#allsettings_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Contains resource all settings defined as key/value pairs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apppasswordhint_csharp">
 <a href="#apppasswordhint_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Password<wbr>Hint</a>
@@ -515,6 +591,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hint (e.g. keyVault secret resourceId) on how to fetch the app secret{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cmekencryptionstatus_csharp">
+<a href="#cmekencryptionstatus_csharp" style="color: inherit; text-decoration: inherit;">Cmek<wbr>Encryption<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The CMK encryption status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cmekkeyvaulturl_csharp">
 <a href="#cmekkeyvaulturl_csharp" style="color: inherit; text-decoration: inherit;">Cmek<wbr>Key<wbr>Vault<wbr>Url</a>
@@ -556,6 +640,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablelocalauth_csharp">
+<a href="#disablelocalauth_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Local<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="iconurl_csharp">
 <a href="#iconurl_csharp" style="color: inherit; text-decoration: inherit;">Icon<wbr>Url</a>
 </span>
@@ -572,6 +664,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isdeveloperappinsightsapikeyset_csharp">
+<a href="#isdeveloperappinsightsapikeyset_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key<wbr>Set</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is developerAppInsightsApiKey set{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="isisolated_csharp">
 <a href="#isisolated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Isolated</a>
 </span>
@@ -579,6 +679,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="isstreamingsupported_csharp">
+<a href="#isstreamingsupported_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Streaming<wbr>Supported</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is streaming supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luisappids_csharp">
 <a href="#luisappids_csharp" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
@@ -596,6 +704,38 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="manifesturl_csharp">
+<a href="#manifesturl_csharp" style="color: inherit; text-decoration: inherit;">Manifest<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bot's manifest url{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="msaappmsiresourceid_csharp">
+<a href="#msaappmsiresourceid_csharp" style="color: inherit; text-decoration: inherit;">Msa<wbr>App<wbr>MSIResource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Microsoft App Managed Identity Resource Id for the bot{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="msaapptenantid_csharp">
+<a href="#msaapptenantid_csharp" style="color: inherit; text-decoration: inherit;">Msa<wbr>App<wbr>Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Microsoft App Tenant Id for the bot{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="msaapptype_csharp">
+<a href="#msaapptype_csharp" style="color: inherit; text-decoration: inherit;">Msa<wbr>App<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Microsoft App Type for the bot{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="openwithhint_csharp">
 <a href="#openwithhint_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>With<wbr>Hint</a>
 </span>
@@ -603,6 +743,22 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hint to browser (e.g. protocol handler) on how to open the bot for authoring{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Contains resource parameters defined as key/value pairs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publishingcredentials_csharp">
+<a href="#publishingcredentials_csharp" style="color: inherit; text-decoration: inherit;">Publishing<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Publishing credentials of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schematransformationversion_csharp">
 <a href="#schematransformationversion_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Transformation<wbr>Version</a>
@@ -656,13 +812,37 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The bot's endpoint version{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="migrationtoken_go">
+<a href="#migrationtoken_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Token used to migrate non Azure bot to azure subscription{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="msaappid_go">
 <a href="#msaappid_go" style="color: inherit; text-decoration: inherit;">Msa<wbr>App<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allsettings_go">
+<a href="#allsettings_go" style="color: inherit; text-decoration: inherit;">All<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Contains resource all settings defined as key/value pairs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apppasswordhint_go">
 <a href="#apppasswordhint_go" style="color: inherit; text-decoration: inherit;">App<wbr>Password<wbr>Hint</a>
@@ -671,6 +851,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hint (e.g. keyVault secret resourceId) on how to fetch the app secret{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cmekencryptionstatus_go">
+<a href="#cmekencryptionstatus_go" style="color: inherit; text-decoration: inherit;">Cmek<wbr>Encryption<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The CMK encryption status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cmekkeyvaulturl_go">
 <a href="#cmekkeyvaulturl_go" style="color: inherit; text-decoration: inherit;">Cmek<wbr>Key<wbr>Vault<wbr>Url</a>
@@ -712,6 +900,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablelocalauth_go">
+<a href="#disablelocalauth_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Local<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="iconurl_go">
 <a href="#iconurl_go" style="color: inherit; text-decoration: inherit;">Icon<wbr>Url</a>
 </span>
@@ -728,6 +924,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isdeveloperappinsightsapikeyset_go">
+<a href="#isdeveloperappinsightsapikeyset_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key<wbr>Set</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is developerAppInsightsApiKey set{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="isisolated_go">
 <a href="#isisolated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Isolated</a>
 </span>
@@ -735,6 +939,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="isstreamingsupported_go">
+<a href="#isstreamingsupported_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Streaming<wbr>Supported</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is streaming supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luisappids_go">
 <a href="#luisappids_go" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
@@ -752,6 +964,38 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="manifesturl_go">
+<a href="#manifesturl_go" style="color: inherit; text-decoration: inherit;">Manifest<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bot's manifest url{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="msaappmsiresourceid_go">
+<a href="#msaappmsiresourceid_go" style="color: inherit; text-decoration: inherit;">Msa<wbr>App<wbr>MSIResource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Microsoft App Managed Identity Resource Id for the bot{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="msaapptenantid_go">
+<a href="#msaapptenantid_go" style="color: inherit; text-decoration: inherit;">Msa<wbr>App<wbr>Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Microsoft App Tenant Id for the bot{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="msaapptype_go">
+<a href="#msaapptype_go" style="color: inherit; text-decoration: inherit;">Msa<wbr>App<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Microsoft App Type for the bot{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="openwithhint_go">
 <a href="#openwithhint_go" style="color: inherit; text-decoration: inherit;">Open<wbr>With<wbr>Hint</a>
 </span>
@@ -759,6 +1003,22 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hint to browser (e.g. protocol handler) on how to open the bot for authoring{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Contains resource parameters defined as key/value pairs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publishingcredentials_go">
+<a href="#publishingcredentials_go" style="color: inherit; text-decoration: inherit;">Publishing<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Publishing credentials of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schematransformationversion_go">
 <a href="#schematransformationversion_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Transformation<wbr>Version</a>
@@ -812,13 +1072,37 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The bot's endpoint version{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="migrationtoken_nodejs">
+<a href="#migrationtoken_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Token used to migrate non Azure bot to azure subscription{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="msaappid_nodejs">
 <a href="#msaappid_nodejs" style="color: inherit; text-decoration: inherit;">msa<wbr>App<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allsettings_nodejs">
+<a href="#allsettings_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Contains resource all settings defined as key/value pairs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apppasswordhint_nodejs">
 <a href="#apppasswordhint_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Password<wbr>Hint</a>
@@ -827,6 +1111,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hint (e.g. keyVault secret resourceId) on how to fetch the app secret{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cmekencryptionstatus_nodejs">
+<a href="#cmekencryptionstatus_nodejs" style="color: inherit; text-decoration: inherit;">cmek<wbr>Encryption<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The CMK encryption status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cmekkeyvaulturl_nodejs">
 <a href="#cmekkeyvaulturl_nodejs" style="color: inherit; text-decoration: inherit;">cmek<wbr>Key<wbr>Vault<wbr>Url</a>
@@ -868,6 +1160,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablelocalauth_nodejs">
+<a href="#disablelocalauth_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Local<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="iconurl_nodejs">
 <a href="#iconurl_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>Url</a>
 </span>
@@ -884,6 +1184,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isdeveloperappinsightsapikeyset_nodejs">
+<a href="#isdeveloperappinsightsapikeyset_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key<wbr>Set</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is developerAppInsightsApiKey set{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="isisolated_nodejs">
 <a href="#isisolated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Isolated</a>
 </span>
@@ -891,6 +1199,14 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="isstreamingsupported_nodejs">
+<a href="#isstreamingsupported_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Streaming<wbr>Supported</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is streaming supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luisappids_nodejs">
 <a href="#luisappids_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>App<wbr>Ids</a>
@@ -908,6 +1224,38 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="manifesturl_nodejs">
+<a href="#manifesturl_nodejs" style="color: inherit; text-decoration: inherit;">manifest<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bot's manifest url{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="msaappmsiresourceid_nodejs">
+<a href="#msaappmsiresourceid_nodejs" style="color: inherit; text-decoration: inherit;">msa<wbr>App<wbr>MSIResource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Microsoft App Managed Identity Resource Id for the bot{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="msaapptenantid_nodejs">
+<a href="#msaapptenantid_nodejs" style="color: inherit; text-decoration: inherit;">msa<wbr>App<wbr>Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Microsoft App Tenant Id for the bot{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="msaapptype_nodejs">
+<a href="#msaapptype_nodejs" style="color: inherit; text-decoration: inherit;">msa<wbr>App<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Microsoft App Type for the bot{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="openwithhint_nodejs">
 <a href="#openwithhint_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>With<wbr>Hint</a>
 </span>
@@ -915,6 +1263,22 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hint to browser (e.g. protocol handler) on how to open the bot for authoring{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Contains resource parameters defined as key/value pairs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publishingcredentials_nodejs">
+<a href="#publishingcredentials_nodejs" style="color: inherit; text-decoration: inherit;">publishing<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Publishing credentials of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schematransformationversion_nodejs">
 <a href="#schematransformationversion_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Transformation<wbr>Version</a>
@@ -968,13 +1332,37 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The bot's endpoint version{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="migration_token_python">
+<a href="#migration_token_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Token used to migrate non Azure bot to azure subscription{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="msa_app_id_python">
 <a href="#msa_app_id_python" style="color: inherit; text-decoration: inherit;">msa_<wbr>app_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="all_settings_python">
+<a href="#all_settings_python" style="color: inherit; text-decoration: inherit;">all_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Contains resource all settings defined as key/value pairs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_password_hint_python">
 <a href="#app_password_hint_python" style="color: inherit; text-decoration: inherit;">app_<wbr>password_<wbr>hint</a>
@@ -983,6 +1371,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hint (e.g. keyVault secret resourceId) on how to fetch the app secret{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cmek_encryption_status_python">
+<a href="#cmek_encryption_status_python" style="color: inherit; text-decoration: inherit;">cmek_<wbr>encryption_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The CMK encryption status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cmek_key_vault_url_python">
 <a href="#cmek_key_vault_url_python" style="color: inherit; text-decoration: inherit;">cmek_<wbr>key_<wbr>vault_<wbr>url</a>
@@ -1024,6 +1420,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_local_auth_python">
+<a href="#disable_local_auth_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>local_<wbr>auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="icon_url_python">
 <a href="#icon_url_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>url</a>
 </span>
@@ -1040,6 +1444,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="is_developer_app_insights_api_key_set_python">
+<a href="#is_developer_app_insights_api_key_set_python" style="color: inherit; text-decoration: inherit;">is_<wbr>developer_<wbr>app_<wbr>insights_<wbr>api_<wbr>key_<wbr>set</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is developerAppInsightsApiKey set{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="is_isolated_python">
 <a href="#is_isolated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>isolated</a>
 </span>
@@ -1047,6 +1459,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the bot is in an isolated network{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="is_streaming_supported_python">
+<a href="#is_streaming_supported_python" style="color: inherit; text-decoration: inherit;">is_<wbr>streaming_<wbr>supported</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the bot is streaming supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luis_app_ids_python">
 <a href="#luis_app_ids_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>app_<wbr>ids</a>
@@ -1064,6 +1484,38 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The LUIS Key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="manifest_url_python">
+<a href="#manifest_url_python" style="color: inherit; text-decoration: inherit;">manifest_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The bot's manifest url{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="msa_app_msi_resource_id_python">
+<a href="#msa_app_msi_resource_id_python" style="color: inherit; text-decoration: inherit;">msa_<wbr>app_<wbr>msi_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Microsoft App Managed Identity Resource Id for the bot{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="msa_app_tenant_id_python">
+<a href="#msa_app_tenant_id_python" style="color: inherit; text-decoration: inherit;">msa_<wbr>app_<wbr>tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Microsoft App Tenant Id for the bot{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="msa_app_type_python">
+<a href="#msa_app_type_python" style="color: inherit; text-decoration: inherit;">msa_<wbr>app_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Microsoft App Type for the bot{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="open_with_hint_python">
 <a href="#open_with_hint_python" style="color: inherit; text-decoration: inherit;">open_<wbr>with_<wbr>hint</a>
 </span>
@@ -1071,6 +1523,22 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hint to browser (e.g. protocol handler) on how to open the bot for authoring{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Contains resource parameters defined as key/value pairs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publishing_credentials_python">
+<a href="#publishing_credentials_python" style="color: inherit; text-decoration: inherit;">publishing_<wbr>credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Publishing credentials of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_transformation_version_python">
 <a href="#schema_transformation_version_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>transformation_<wbr>version</a>

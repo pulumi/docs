@@ -55,6 +55,7 @@ Explore the resources and functions of the azure-native.apimanagement module.
     <li><a href="productgroup" title="ProductGroup"><span class="api-symbol api-symbol--resource"></span>ProductGroup</a></li>
     <li><a href="productpolicy" title="ProductPolicy"><span class="api-symbol api-symbol--resource"></span>ProductPolicy</a></li>
     <li><a href="property" title="Property"><span class="api-symbol api-symbol--resource"></span>Property</a></li>
+    <li><a href="schema" title="Schema"><span class="api-symbol api-symbol--resource"></span>Schema</a></li>
     <li><a href="subscription" title="Subscription"><span class="api-symbol api-symbol--resource"></span>Subscription</a></li>
     <li><a href="tag" title="Tag"><span class="api-symbol api-symbol--resource"></span>Tag</a></li>
     <li><a href="tagbyapi" title="TagByApi"><span class="api-symbol api-symbol--resource"></span>TagByApi</a></li>
@@ -101,6 +102,7 @@ Explore the resources and functions of the azure-native.apimanagement module.
     <li><a href="getproduct" title="GetProduct"><span class="api-symbol api-symbol--function"></span>GetProduct</a></li>
     <li><a href="getproductpolicy" title="GetProductPolicy"><span class="api-symbol api-symbol--function"></span>GetProductPolicy</a></li>
     <li><a href="getproperty" title="GetProperty"><span class="api-symbol api-symbol--function"></span>GetProperty</a></li>
+    <li><a href="getschema" title="GetSchema"><span class="api-symbol api-symbol--function"></span>GetSchema</a></li>
     <li><a href="getsubscription" title="GetSubscription"><span class="api-symbol api-symbol--function"></span>GetSubscription</a></li>
     <li><a href="gettag" title="GetTag"><span class="api-symbol api-symbol--function"></span>GetTag</a></li>
     <li><a href="gettagbyapi" title="GetTagByApi"><span class="api-symbol api-symbol--function"></span>GetTagByApi</a></li>
@@ -126,6 +128,6 @@ Explore the resources and functions of the azure-native.apimanagement module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.45.0</dd>
+	<dd>1.46.0</dd>
 </dl>
 
