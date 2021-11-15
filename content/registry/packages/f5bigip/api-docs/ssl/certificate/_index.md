@@ -54,7 +54,39 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"io/ioutil"
+
+	"github.com/pulumi/pulumi-f5bigip/sdk/v3/go/f5bigip/ssl"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func readFileOrPanic(path string) pulumi.StringPtrInput {
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err.Error())
+	}
+	return pulumi.String(string(data))
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ssl.NewCertificate(ctx, "test_cert", &ssl.CertificateArgs{
+			Name:      pulumi.String("servercert.crt"),
+			Content:   readFileOrPanic("servercert.crt"),
+			Partition: pulumi.String("Common"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
