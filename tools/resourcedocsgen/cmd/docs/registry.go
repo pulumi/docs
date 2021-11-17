@@ -22,6 +22,7 @@ import (
 
 	"github.com/pulumi/docs/tools/resourcedocsgen/pkg"
 	pschema "github.com/pulumi/pulumi/pkg/v3/codegen/schema"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
 )
 
 func getRepoSlug(repoURL string) (string, error) {
@@ -57,6 +58,8 @@ func genResourceDocsForPackageFromRegistryMetadata(metadata pkg.PackageMeta, doc
 	if err != nil {
 		return errors.Wrapf(err, "reading schema file from VCS %s", schemaFileURL)
 	}
+
+	defer contract.IgnoreClose(resp.Body)
 
 	schemaBytes, err := io.ReadAll(resp.Body)
 	if err != nil {

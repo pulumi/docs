@@ -88,7 +88,7 @@ jobs:
       - if: github.event.action == 'non-resource-provider'
         name: generate python docs
         run: ./scripts/generate_python_docs.sh "${{ env.PROVIDER_SHORT_NAME }}"
-        working-directory: doc
+        working-directory: docs
       - name: git status
         if: github.event.action == 'non-resource-provider'
         run: git status && git diff
