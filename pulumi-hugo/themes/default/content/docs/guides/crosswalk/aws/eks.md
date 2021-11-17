@@ -66,7 +66,7 @@ To create a new EKS cluster, allocate an instance of an `eks.Cluster` class in y
 {{% choosable language javascript %}}
 
 ```javascript
-const aws = require("@pulumi/eks");
+const eks = require("@pulumi/eks");
 
 // Create an EKS cluster with the default configuration.
 const cluster = new eks.Cluster("my-cluster");
