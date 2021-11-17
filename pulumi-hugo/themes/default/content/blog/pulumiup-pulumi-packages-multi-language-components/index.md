@@ -27,28 +27,28 @@ Pulumi Packages bring the full power of the modern cloud and the amazing creativ
 
 {{% choosable language typescript %}}
 
-1. Choose from any of Pulumi’s [cloud provider]({{< relref "/registry" >}}) packages, or search the [npm registry](https://www.npmjs.com/search?q=pulumi) for other Pulumi Packages
+1. Choose from any of Pulumi’s cloud provider packages in the [Registry]({{< relref "/registry" >}}), or search the [npm registry](https://www.npmjs.com/search?q=pulumi) for other Pulumi Packages
 1. Install into your project with `npm i [package-name]`
 1. Reference a namespace in the newly-installed package and start writing code
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
-1. Choose from any of Pulumi’s [cloud provider]({{< relref "/registry" >}}) packages, or search [PyPI](https://pypi.org/search/?q=pulumi) for other Pulumi Packages
+1. Choose from any of Pulumi’s cloud provider packages in the [Registry]({{< relref "/registry" >}}), or search [PyPI](https://pypi.org/search/?q=pulumi) for other Pulumi Packages
 1. Install into your project with `pip install [package-name]`
 1. Reference a namespace in the newly-installed package and start writing code
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
-1. Choose from any of Pulumi’s [cloud provider]({{< relref "/registry" >}}), or search the [NuGet Gallery](https://www.nuget.org/packages?q=pulumi) for other Pulumi Packages
+1. Choose from any of Pulumi’s cloud provider packages in the [Registry]({{< relref "/registry" >}}), or search the [NuGet Gallery](https://www.nuget.org/packages?q=pulumi) for other Pulumi Packages
 1. Install into your project with `dotnet add package [package-name]`
 1. Reference a namespace in the newly-installed package and start writing code
 
 {{% /choosable %}}
 {{% choosable language go %}}
 
-1. Choose from any of Pulumi’s [cloud provider]({{< relref "/registry" >}}) packages
+1. Choose from any of Pulumi’s cloud provider packages in the [Registry]({{< relref "/registry" >}})
 1. Install into your project with `go get [package-url]`
 1. Reference a namespace in the newly-installed package and start writing code
 

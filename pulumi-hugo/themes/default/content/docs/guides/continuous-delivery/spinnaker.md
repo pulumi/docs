@@ -54,7 +54,7 @@ setup guide for the [Kubernetes provider](https://www.pulumi.com/registry/packag
 to ensure that Pulumi can access that Kubernetes cluster.
 
 The example in this topic shows you how to deploy a Kubernetes resource; however, you can use any of the other
-[cloud providers](https://www.pulumi.com/registry/packages/) that Pulumi supports.
+cloud providers in the [Registry](https://www.pulumi.com/registry) that Pulumi supports.
 
 ## Pulumi Plugin For Spinnaker
 

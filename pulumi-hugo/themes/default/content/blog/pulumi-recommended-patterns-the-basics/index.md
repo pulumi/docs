@@ -21,7 +21,7 @@ Let's dive in!
 
 Pulumi is an infrastructure-as-code tool, and it is at the center of many other services, platforms, and products. Pulumi can act as a unifying agent for many of these services, enabling users to combine multiple services seamlessly at once to create exciting and innovative platforms. In this way, Pulumi is the 'hub' connecting the diverse 'spokes' of your solution, allowing you to really get rolling.
 
-Pulumi is predominantly used with cloud providers like Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), and Kubernetes. But [many more]({{< relref "/registry" >}}) are available and supported. At the time of this writing, Pulumi supports 52 providers.
+Pulumi is predominantly used with cloud providers like Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), and Kubernetes. But many more are available and supported in the [Registry]({{< relref "/registry" >}}). At the time of this writing, Pulumi supports 52 providers.
 
 With such an impressive ecosystem, it's quite normal to follow your vendors' best practices as they are key ingredients to your long-term success on these platforms.
 

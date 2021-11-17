@@ -94,7 +94,7 @@ without needing to leave the page.
 In the following example the assistant is being used to configure a GitHub Actions workflow.
 So the assistant provides a direct link to configure secrets for your workflow.
 
-> See the [Cloud Providers]({{< relref "/registry" >}}) page to find the setup page for your cloud provider.
+> See the [Registry]({{< relref "/registry" >}}) page to find the setup page for your cloud provider.
 
 ### Add the workflow
 

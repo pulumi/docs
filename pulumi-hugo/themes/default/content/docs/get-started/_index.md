@@ -52,7 +52,7 @@ Or, watch how to do it in this video walkthrough:
     </iframe>
 </div>
 
-See [Cloud Providers]({{< relref "/registry" >}}) on how to use other supported clouds.
+See [Registry]({{< relref "/registry" >}}) on how to use other supported clouds.
 
 ## Additional resources
 
