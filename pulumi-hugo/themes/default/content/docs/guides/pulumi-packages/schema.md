@@ -103,6 +103,7 @@ Complete schema examples that include a much wider range of schema configuration
 | Property            | Type                                       | Required | Description                                                                                                                       |
 |---------------------|--------------------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------|
 | `name`              | `string`                                   | Yes      | Name is the unqualified name of the package (e.g. "aws", "azure", "gcp", "kubernetes", "random")                                  |
+| `displayName`       | `string`                                   | No       | The human-friendly name of the package.                                                                                           |
 | `version`           | `string`                                   | Yes      | Version is the version of the package. The version must be valid semver.                                                          |
 | `description`       | `string`                                   | No       | Description is the description of the package.                                                                                    |
 | `keywords`          | `array[string]`                            | No       | Keywords is the list of keywords that are associated with the package, if any.                                                    |
@@ -112,6 +113,7 @@ Complete schema examples that include a much wider range of schema configuration
 | `repository`        | `string`                                   | No       | Repository is the URL at which the source for the package can be found.                                                           |
 | `logoUrl`           | `string`                                   | No       | LogoURL is the URL for the package's logo, if any.                                                                                |
 | `pluginDownloadURL` | `string`                                   | No       | PluginDownloadURL is the URL to use to acquire the provider plugin binary, if any.                                                |
+| `publisher`         | `string`                                   | No       | The name of the person or organization that authored and published the package.                                                   |
 | `meta`              | [`Metadata`](#metadata)                    | No       | Meta contains information for the importer about this package.                                                                    |
 | `config`            | [`Config`](#config)                        | No       | Config describes the set of configuration variables defined by this package.                                                      |
 | `types`             | [`map[ComplexType]`](#complextype)         | No       | Types is a map from type token to ComplexType that describes the set of complex types (ie. object, enum) defined by this package. |
@@ -124,8 +126,8 @@ Complete schema examples that include a much wider range of schema configuration
 
 Metadata for the importer about this package.
 
-| Property       | Type     | Required | Description |
-|----------------|----------|----------|-------------|
+| Property       | Type     | Required | Description                                                                                                                                                                                                                                                                                                                                                                   |
+|----------------|----------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `moduleFormat` | `string` | No       | ModuleFormat is a regex that is used by the importer to extract a module name from the module portion of a type token. Packages that use the module format "namespace1/namespace2/.../namespaceN" do not need to specify a format. The regex must define one capturing group that contains the module name, which must be formatted as "namespace1/namespace2/...namespaceN". |
 
 ### Config
@@ -190,15 +192,15 @@ A function description.
 
 A reference to a type.
 
-| Property               | Type                              | Required | Description                                                                                                          |
-|------------------------|-----------------------------------|----------|----------------------------------------------------------------------------------------------------------------------|
-| `type`                 | `string`                          | Yes      | Type is the primitive or composite type, if any. May be "bool", "integer", "number", "string", "array", or "object". |
+| Property               | Type                              | Required | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|------------------------|-----------------------------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `type`                 | `string`                          | Yes      | Type is the primitive or composite type, if any. May be "bool", "integer", "number", "string", "array", or "object".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `$ref`                 | `string`                          | Yes      | Ref is a reference to a type in this or another document. For example, the built-in `Archive`, `Asset`, and `Any` types are referenced as `"pulumi.json#/Archive"`, `"pulumi.json#/Asset"`, and `"pulumi.json#/Any"`, respectively. A type from this document is referenced as `"#/types/pulumi:type:token"`. A type from another document is referenced as `"path#/types/pulumi:type:token"`, where path is of the form: `"/provider/vX.Y.Z/schema.json"` or `"pulumi.json"` or `"http[s]://example.com /provider/vX.Y.Z/schema.json"`.  A resource from another document is referenced as `"path#/resources/pulumi:type:token"`, where path is of the form: `"/provider/vX.Y.Z/schema.json"` or `"pulumi.json"` or `"http[s]://example.com /provider/vX.Y.Z/schema.json"`. |
-| `additionalProperties` | [`Type`](#type)                   | No       | AdditionalProperties, if set, describes the element type of an "object" (i.e. a string -> value map).                |
-| `items`                | [`Type`](#type)                   | No       | Items, if set, describes the element type of an array.                                                               |
-| `oneOf`                | [`array[Type]`](#type)            | No       | OneOf indicates that values of the type may be one of any of the listed types.                                       |
-| `discriminator`        | [`Discriminator`](#discriminator) | No       | Discriminator informs the consumer of an alternative schema based on the value associated with it.                   |
-| `plain`                | `boolean`                         | No       | Plain indicates that when used as an input, this type does not accept eventual values.                               |
+| `additionalProperties` | [`Type`](#type)                   | No       | AdditionalProperties, if set, describes the element type of an "object" (i.e. a string -> value map).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `items`                | [`Type`](#type)                   | No       | Items, if set, describes the element type of an array.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `oneOf`                | [`array[Type]`](#type)            | No       | OneOf indicates that values of the type may be one of any of the listed types.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `discriminator`        | [`Discriminator`](#discriminator) | No       | Discriminator informs the consumer of an alternative schema based on the value associated with it.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `plain`                | `boolean`                         | No       | Plain indicates that when used as an input, this type does not accept eventual values.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
 ### Property
 
@@ -265,40 +267,40 @@ Language-specific information for a package.
 
 For `nodejs`:
 
-| Property                                    | Type          | Required | Description                                                   |
-|---------------------------------------------|---------------|----------|---------------------------------------------------------------|
-| `packageName`                               | `string`      | No       | Custom name for the NPM package.                              |
-| `packageDescription`                        | `string`      | No       | Description for the NPM package.                              |
-| `readme`                                    | `string`      | No       | Readme contains the text for the package's README.md files.   |
-| `dependencies`                              | `map[string]` | No       | NPM dependencies to add to package.json.                      |
-| `devDependencies`                           | `map[string]` | No       | NPM dev-dependencies to add to package.json.                  |
-| `peerDependencies`                          | `map[string]` | No       | NPM peer-dependencies to add to package.json.                 |
-| `resolutions`                               | `map[string]` | No       | NPM resolutions to add to package.json                        |
-| `typescriptVersion`                         | `string`      | No       | A specific version of TypeScript to include in package.json.  |
-| `moduleToPackage`                           | `map[string]` | No       | A map containing overrides for module names to package names. |
-| `compatibility`                             | `string`      | No       | Toggle compatibility mode for a specified target.             |
-| `disableUnionOutputTypes`                   | `boolean`     | No       | Disable support for unions in output types.                   |
-| `containsEnums`                             | `boolean`     | No       | An indicator for whether the package contains enums.          |
+| Property                  | Type          | Required | Description                                                   |
+|---------------------------|---------------|----------|---------------------------------------------------------------|
+| `packageName`             | `string`      | No       | Custom name for the NPM package.                              |
+| `packageDescription`      | `string`      | No       | Description for the NPM package.                              |
+| `readme`                  | `string`      | No       | Readme contains the text for the package's README.md files.   |
+| `dependencies`            | `map[string]` | No       | NPM dependencies to add to package.json.                      |
+| `devDependencies`         | `map[string]` | No       | NPM dev-dependencies to add to package.json.                  |
+| `peerDependencies`        | `map[string]` | No       | NPM peer-dependencies to add to package.json.                 |
+| `resolutions`             | `map[string]` | No       | NPM resolutions to add to package.json                        |
+| `typescriptVersion`       | `string`      | No       | A specific version of TypeScript to include in package.json.  |
+| `moduleToPackage`         | `map[string]` | No       | A map containing overrides for module names to package names. |
+| `compatibility`           | `string`      | No       | Toggle compatibility mode for a specified target.             |
+| `disableUnionOutputTypes` | `boolean`     | No       | Disable support for unions in output types.                   |
+| `containsEnums`           | `boolean`     | No       | An indicator for whether the package contains enums.          |
 
 For `python`:
 
-| Property               | Type          | Required | Description                                                                                                              |
-|------------------------|---------------|----------|--------------------------------------------------------------------------------------------------------------------------|
-| `packageName`          | `string`      | No       | PackageName is an override for the name of the generated python package.                                                 |
-| `requires`             | `map[string]` | No       | Description for the NPM package.                                                                                         |
-| `readme`               | `string`      | No       | Readme contains the text for the package's README.md files.                                                              |
-| `moduleNameOverrides`  | `map[string]` | No       | Optional overrides for Pulumi module names. |
-| `compatibility`        | `string`      | No       | Toggle compatibility mode for a specified target.                                                                        |
+| Property              | Type          | Required | Description                                                              |
+|-----------------------|---------------|----------|--------------------------------------------------------------------------|
+| `packageName`         | `string`      | No       | PackageName is an override for the name of the generated python package. |
+| `requires`            | `map[string]` | No       | Description for the NPM package.                                         |
+| `readme`              | `string`      | No       | Readme contains the text for the package's README.md files.              |
+| `moduleNameOverrides` | `map[string]` | No       | Optional overrides for Pulumi module names.                              |
+| `compatibility`       | `string`      | No       | Toggle compatibility mode for a specified target.                        |
 
 For `go`:
 
-| Property                         | Type          |  Description                                                                                                                                              |
-|----------------------------------|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `importBasePath`                 | `string`      |  Base path for package imports.                                                            |
-| `rootPackageName`                | `string`      |  Explicit package name, which may be different to the import path.                                                                                        |
-| `moduleToPackage`                | `map[string]` |  Map from module -> package name.                                            |
-| `packageImportAliases`           | `map[string]` |  Map from package name -> package alias. |
-| `generateResourceContainerTypes` | `boolean`     |  Generate container types (arrays, maps, pointer output types etc.) for each resource. These are typically used to support external references.           |
+| Property                         | Type          | Description                                                                                                                                    |
+|----------------------------------|---------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| `importBasePath`                 | `string`      | Base path for package imports.                                                                                                                 |
+| `rootPackageName`                | `string`      | Explicit package name, which may be different to the import path.                                                                              |
+| `moduleToPackage`                | `map[string]` | Map from module -> package name.                                                                                                               |
+| `packageImportAliases`           | `map[string]` | Map from package name -> package alias.                                                                                                        |
+| `generateResourceContainerTypes` | `boolean`     | Generate container types (arrays, maps, pointer output types etc.) for each resource. These are typically used to support external references. |
 
 For `csharp`:
 
