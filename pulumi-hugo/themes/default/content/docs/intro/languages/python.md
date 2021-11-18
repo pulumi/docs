@@ -18,22 +18,30 @@ Pulumi supports programs written in Python 3. Python version 3.6 or later is req
 
 ## Getting Started
 
-The fastest way to get started with Pulumi Python is by using a template.  From an empty directory in which you'd like to create a new project:
+The fastest way to get up and running is to choose from one of the following Getting Started guides:
 
-```bash
-$ mkdir myproject && cd myproject
-$ pulumi new python
-```
-
-This creates a `Pulumi.yaml` file, containing minimal metadata about your project (including a name and description, which you may wish to change), a `requirements.txt` file, where you will specify your dependencies (see [Using Pulumi PyPI Packages](#pypi-packages) below), and a `__main__.py` file, containing your program.
-
-{{% notes %}}
-Although the template uses a very simple package structure, by placing `__main__.py` in the root directory, Pulumi fully supports [properly modularized Python programs](http://docs.python-guide.org/en/latest/writing/structure/) and `setup.py` files.  This is important if you ever decide to turn your Pulumi program into a library.
-{{% /notes %}}
-
-{{% notes %}}
-Pulumi looks for a `python3` executable to use on `PATH`. If not found, it looks for a `python` executable. It expects the executable it finds to refer to Python 3.6 or above. This can be overridden by explicitly setting the `PULUMI_PYTHON_CMD` environment variable to the name of the Python executable to use.
-{{% /notes %}}
+<div class="tiles mt-4">
+    <div class="flex-1 pb-4 md:mr-4">
+        <a class="tile p-4" href="{{< relref "/docs/get-started/aws" >}}?language=python">
+            <img class="h-8 mx-auto" src="/logos/tech/aws.svg" alt="AWS">
+        </a>
+    </div>
+    <div class="flex-1 pb-4 md:mr-4">
+        <a class="tile p-4" href="{{< relref "/docs/get-started/azure" >}}?language=python">
+            <img class="h-8 mx-auto" src="/logos/tech/azure.svg" alt="Azure">
+        </a>
+    </div>
+    <div class="flex-1 pb-4 md:mr-4">
+        <a class="tile p-4" href="{{< relref "/docs/get-started/gcp" >}}?language=python">
+            <img class="h-8 mx-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
+        </a>
+    </div>
+    <div class="flex-1 pb-4">
+        <a class="tile p-4" href="{{< relref "/docs/get-started/kubernetes" >}}?language=python">
+            <img class="h-8 mx-auto" src="/logos/tech/k8s.svg" alt="Kubernetes">
+        </a>
+    </div>
+</div>
 
 ## Pulumi Programming Model
 
