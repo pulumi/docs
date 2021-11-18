@@ -1,0 +1,12 @@
+id = "david-flanagan"
+name = "David Flanagan"
+title = "Staff Developer Advocate"
+weight = 1
+
+status = "active"
+role = "developer-advocate"
+
+[social]
+github = "rawkode"
+twitter = "rawkode"
+linkedin = "rawkode"
