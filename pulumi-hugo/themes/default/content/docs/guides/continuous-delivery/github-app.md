@@ -34,11 +34,10 @@ This provides even more detail about any resource changes, including the full up
 
 ## Installation and Configuration
 
-Pulumi's GitHub workflow integration is a GitHub application you can install by visiting
-[github.com/apps/pulumi](https://github.com/apps/pulumi) or clicking the button below.
+Pulumi's GitHub workflow integration is a GitHub application.
 
 <a class="btn" href="https://github.com/apps/pulumi" target="_blank">
-    INSTALL
+    Install Pulumi GitHub App
 </a>
 
 The Pulumi GitHub application is installed into a specific GitHub organization, and you can

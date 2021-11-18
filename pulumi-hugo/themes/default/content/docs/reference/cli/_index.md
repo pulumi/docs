@@ -18,7 +18,7 @@ This CLI has been designed for great inner loop productivity, in addition to
 
 The Pulumi CLI is free to download and install:
 
-<a class="btn" href="{{< relref "/docs/get-started/install" >}}">INSTALL PULUMI</a>
+<a class="btn" href="{{< relref "/docs/get-started/install" >}}">Install Pulumi</a>
 
 ## Common Commands
 

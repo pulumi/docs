@@ -18,7 +18,7 @@ Because programs are just JavaScript, you may elect to write them in any manner 
 That includes TypeScript, CoffeeScript, or Babel, in addition to your favorite tools such as build systems, linters, or
 test frameworks.
 
-<a class="btn" href="https://nodejs.org/en/download/" target="_blank" title="Install Node.js">INSTALL NODE.JS</a>
+<a class="btn" href="https://nodejs.org/en/download/" target="_blank" title="Install Node.js">Install Node.js</a>
 
 ## Getting Started
 
