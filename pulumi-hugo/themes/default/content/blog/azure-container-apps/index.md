@@ -74,7 +74,14 @@ Comparing to other vendors: Azure Container Apps are in the same space as **Goog
 
 ## Example: Run an HTTP API with Azure Container Apps and Pulumi
 
-Let's walk through the steps to build an example application with Azure Container Apps using infrastructure as code in familiar languages. In this scenario, we create an HTTP application that is available via a public domain name. We'll use Pulumi to provision the necessary resources. In this example, we will use TypeScript however you could also use JavaScript, Python, Go, and C#. You can check out the complete source code in the Pulumi Examples: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-containerapps), [C#](https://github.com/pulumi/examples/tree/master/azure-cs-containerapps), [Python](https://github.com/pulumi/examples/tree/master/azure-py-containerapps), [Go](https://github.com/pulumi/examples/tree/master/azure-go-containerapps).
+Let's walk through the steps to build an example application with Azure Container Apps using infrastructure as code in familiar languages. In this scenario, we create an HTTP application that is available via a public domain name. We'll use Pulumi to provision the necessary resources. In this example, we will use TypeScript however you could also use JavaScript, Python, Go, and C#.
+
+You can check out the complete source code in the Pulumi Examples:
+
+- [TypeScript Azure Container Apps Example](https://github.com/pulumi/examples/tree/master/azure-ts-containerapps)
+- [C# Azure Container Apps Example](https://github.com/pulumi/examples/tree/master/azure-cs-containerapps)
+- [Python Azure Container Apps Example](https://github.com/pulumi/examples/tree/master/azure-py-containerapps)
+- [Go Azure Container Apps Example](https://github.com/pulumi/examples/tree/master/azure-go-containerapps)
 
 ### Define a Dockerfile and app
 
@@ -84,7 +91,7 @@ Here are the key features of the container image for our application:
 - Installs `express` with NPM
 - Runs a node web app using `index.js` and `index.html` user files
 
-You can find the full Dockerfile [here](https://github.com/pulumi/examples/tree/master/azure-ts-containerapps/node-app/Dockerfile).
+[Full Dockerfile](https://github.com/pulumi/examples/tree/master/azure-ts-containerapps/node-app/Dockerfile).
 
 ### Set up the environment
 
@@ -479,8 +486,14 @@ Azure Container Apps enable you to build applications in your favorite language 
 
 This post shows how to use Pulumi to build a container image and publish it as an Azure Container App. Pulumi makes it easy to create artifacts and provision and manage cloud infrastructure on any cloud using familiar programming languages, including C#, TypeScript, Python, and Go. Docker images, ACR registries, container environments, and Apps can be managed within the same infrastructure definition.
 
-Further steps:
+### Further steps
 
 - [Get Started with Pulumi for Azure today.]({{<relref "/docs/get-started/azure">}})
 - [Read about Azure Container Apps announcement.](https://aka.ms/containerapps/ignite-blog)
-- Check out the complete Azure Container Apps example: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-containerapps), [C#](https://github.com/pulumi/examples/tree/master/azure-cs-containerapps), [Python](https://github.com/pulumi/examples/tree/master/azure-py-containerapps), [Go](https://github.com/pulumi/examples/tree/master/azure-go-containerapps).
+
+#### Complete Azure Container Apps example
+
+- [TypeScript Azure Container Apps Example](https://github.com/pulumi/examples/tree/master/azure-ts-containerapps)
+- [C# Azure Container Apps Example](https://github.com/pulumi/examples/tree/master/azure-cs-containerapps)
+- [Python Azure Container Apps Example](https://github.com/pulumi/examples/tree/master/azure-py-containerapps)
+- [Go Azure Container Apps Example](https://github.com/pulumi/examples/tree/master/azure-go-containerapps)
