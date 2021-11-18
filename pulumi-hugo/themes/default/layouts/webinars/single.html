@@ -93,10 +93,10 @@
                             <a href="#gettingStartedList" class="btn-primary mr-4">Get Started With Pulumi</a>
                             <a href="{{ relref $topLevelContext "/resources" }}" class="btn-secondary">More Resources</a>
                         </div>
-                        <span class="text-sm font-bold">Recorded on:</span>
-                        <time class="webinar-datetime text-sm font-bold">
-                            <span data-datetime="{{ .sortable_date }}">{{ .datetime }}</span>
-                        </time>
+                        <span class="text-sm font-bold">
+                            Published:
+                            <pulumi-datetime class="inline-block" date="{{ .sortable_date }}"></pulumi-datetime>
+                        </span>
                         <p class="description text-gray-600">
                             {{ .description | markdownify }}
                         </p>
