@@ -7,7 +7,7 @@ of the API Reference section so that we can use the additional metadata that goe
     {{ $pkgs := split (.Get 0) "," }}
     {{ $useLogo := default true (.Get 1) }}
     {{ range $pkg := $pkgs }}
-        {{ $href := printf "/registry/packages/%s" $pkg }}
+        {{ $href := printf "/registry/packages/%s/api-docs" $pkg }}
         {{ with $site.GetPage $href }}
             {{ $page := .Site.GetPage $href }}
             <div class="md:w-1/2 lg:w-1/3 xl:w-1/4 p-2">
