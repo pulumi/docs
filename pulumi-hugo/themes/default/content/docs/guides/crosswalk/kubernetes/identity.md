@@ -501,15 +501,13 @@ const dev = azuread.getUser({
 
 // Create the AD group for Developers.
 const devs = new azuread.Group("devs", {
-    name: "pulumi:devs",
-    members: [
-        // Assign a new or existing user to the group.
-        dev.objectId,
-    ],
+    displayName: "pulumi:devs",
+    // Assign a new or existing user to the group.
+    members: dev.then(d => [d.objectId]),
 });
 
 // Export outputs.
-export const adGroupDevs = devs.name;
+export const adGroupDevs = devs.displayName;
 ```
 
 {{% /choosable %}}
