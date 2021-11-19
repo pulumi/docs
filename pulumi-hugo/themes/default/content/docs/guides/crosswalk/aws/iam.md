@@ -369,7 +369,7 @@ const devs = new aws.iam.Group("devs", {
     path: "/users/",
 });
 const myDeveloperPolicy = new aws.iam.GroupPolicy("my_developer_policy", {
-    group: devs,
+    group: devs.id,
     policy: {
         Version: "2012-10-17",
         Statement: [{
@@ -382,8 +382,8 @@ const myDeveloperPolicy = new aws.iam.GroupPolicy("my_developer_policy", {
 
 // Finally add the users as members to this group.
 const devTeam = new aws.iam.GroupMembership("dev-team", {
-    group: devs,
-    users: [ jane, mary ],
+    group: devs.id,
+    users: [ jane.id, mary.id ],
 });
 ```
 
