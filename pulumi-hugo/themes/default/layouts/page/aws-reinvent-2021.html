@@ -1,0 +1,73 @@
+{{ define "hero" }}
+    {{ partial "hero.html" (dict "title" .Title) }}
+{{ end }}
+
+{{ define "main" }}
+    <section id="overview" class="max-w-5xl mx-auto p-3">
+        <h2>{{ .Params.events.title }}</h2>
+        <div class="flex flex-col lg:flex-row justify-center items-stretch my-8">
+            {{ range $item := .Params.events.items }}
+                <div class="w-full lg:w-1/2 p-2 my-6">
+                    <div class="card p-6 text-center bg-white h-full relative">
+                        <div>
+                            {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                        </div>
+                        <h5>{{ $item.title }}</h5>
+                        <p><pulumi-datetime class="inline-block" date="{{ .date }}"></pulumi-datetime></p>
+                        <p>{{ $item.description | markdownify }}</p>
+                        <div class="card-cta-btn text-center">
+                            <a href="{{ $item.url }}" class="btn-secondary">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <section id="details" class="max-w-5xl mx-auto p-3">
+        <h2>{{ .Params.newsroom.title }}</h2>
+        <div class="flex flex-wrap lg:flex-row justify-center items-stretch my-8">
+            {{ range $item := .Params.newsroom.items }}
+                <div class="w-full lg:w-1/2 p-6 h-full">
+                    <div class="card p-6 mx-4 text-center bg-white h-full relative">
+                        <div>
+                            {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                        </div>
+                        <h5>{{ $item.title }}</h5>
+                        <p>{{ $item.description | markdownify }}</p>
+                        <div class="card-cta-btn text-center">
+                            <a href="{{ $item.url }}" class="btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <section id="cta" class="max-w-5xl mx-auto p-3">
+        <h2>{{ .Params.hiring.title }}</h2>
+        <p>{{ .Params.hiring.description | markdownify }}
+        <ul class="list-none p-0 border-t-2 border-b-2" data-faq-type="faq-pricing">
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "Open Positions" "large_header" true) }}
+
+                <div class="accordion-item-body-no-animation text-base">
+                    <pulumi-greenhouse-jobs-list></pulumi-greenhouse-jobs-list>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="get-started" class="max-w-5xl px-6 lg:px-0 mx-auto my-16">
+        <div class="w-full bg-violet-600 card p-6 lg:p-16 lg:pt-24 text-center">
+            <div class="max-w-xl mx-auto">
+                <h2 class="text-white hidden lg:block px-0 lg:px-8">{{ .Params.get_started.title }}</h2>
+                <h4 class="text-white mt-0 lg:hidden">{{ .Params.get_started.title }}</h4>
+                <p class="text-white">{{ .Params.get_started.description }}</p>
+                <div class="mt-16">
+                    <a class="btn-secondary" href="{{ relref . "/docs/get-started/aws" }}">{{ .Params.get_started.cta_text }}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ end }}
