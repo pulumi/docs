@@ -27,9 +27,10 @@ jobs:
       - name: Check out branch
         uses: actions/checkout@v2
 
-      - name: Fetch the latest pulumi/theme
+      - name: Fetch the latest pulumi/theme and pulumi/registry
         run: |
-          hugo mod get github.com/pulumi/theme
+          hugo mod get github.com/pulumi/theme@release
+          hugo mod get github.com/pulumi/registry/themes/default
           hugo mod tidy
 
       - name: Commit any changes to go.mod/go.sum

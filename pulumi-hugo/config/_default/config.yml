@@ -13,6 +13,18 @@ module:
           target: static
         - source: layouts
           target: layouts
+    - path: github.com/pulumi/registry/themes/default
+      mounts:
+        - source: content
+          target: content
+        - source: static
+          target: static
+        - source: layouts
+          target: layouts
+        - source: data
+          target: data
+        - source: assets
+          target: assets
     - path: github.com/pulumi/pulumi-hugo/themes/default
       mounts:
         - source: content
