@@ -39,7 +39,7 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "getting-started-with-aws"
+url_slug: "aws-dev-day-getting-started-with-aws"
 
 # The content of the hero section.
 hero:
