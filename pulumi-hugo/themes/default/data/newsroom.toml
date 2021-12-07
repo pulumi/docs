@@ -1,4 +1,10 @@
 [[releases]]
+date = "7th December 2021"
+title = "Panther Labs Unleashes Innovation by Accelerating Delivery and Deployment of Modern Cloud Applications with Pulumi Cloud Engineering Platform"
+summary = "Fast-growth security analytics platform developer speeds cloud application deployments by 10X with increased reliability and agility by adopting cloud engineering practices enabled by Pulumi"
+url = "https://info.pulumi.com/press-release/panther-labs"
+
+[[releases]]
 date = "18th October 2021"
 title = "Pulumi Ushers in the Developer-first Infrastructure Era with New Package Registry Powering Software Sharing and Reuse"
 summary = "Growing collection of Pulumi Packages provides cloud building blocks and reusable cloud architectures for AWS, Azure, Google Cloud, Kubernetes, and top cloud software platforms in industry-standard languages"
