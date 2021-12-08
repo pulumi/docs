@@ -31,7 +31,7 @@ With the holiday season approaching, we've been focused on tidying up our produc
 
 ### Helm `Release` resource supports local charts
 
-When you're developing or using a Helm chart stored on your local machine, it can be helpful to use a Pulumi program to deploy and test it. Now, you can! The [`Release`]({{<relref "/registry/packages/kubernetes/api-docs/helm/v1/release">}}) resource's constructor now accepts paths to local Helm charts.
+When you're developing or using a Helm chart stored on your local machine, it can be helpful to use a Pulumi program to deploy and test it. Now, you can! The [`Release`]({{<relref "/registry/packages/kubernetes/api-docs/helm/v3/release">}}) resource's constructor now accepts paths to local Helm charts.
 
 [Learn more in this GitHub issue](https://github.com/pulumi/pulumi-kubernetes/issues/1732)
 
