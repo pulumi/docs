@@ -38,51 +38,51 @@ tags:
 
 When we launched the [first-ever Cloud Engineering Summit](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlpE6LxGPnfLfBQLbC7zX8FT) last year, we were humbled by the generosity and support from partners and sponsors across the industry who helped to make the summit a success. For [this year’s event]({{< relref "/cloud-engineering-summit" >}}), we’re equally thrilled to have an amazing group of sponsors participating in the summit and it’s worth a quick ‘guided tour’ of the teams that are helping us to pull off this amazing event.
 
-<a href="{{< relref "/cloud-engineering-summit/?iaid=sponsor-blog" >}}" class="btn">Save your spot &#x2192;</a>
+<a href="{{< relref "/cloud-engineering-summit/?iaid=sponsor-blog" >}}" class="btn">Watch the replay &#x2192;</a>
 
 ## Amazon Web Services
 
-AWS was an inaugural sponsor for the Cloud Engineering Summit with a talk from Alex Head about [cost optimization]({{< relref "/resources/creating-a-cost-aware-culture-aws" >}}). The AWS team returns again this year with four sessions: Emily Freeman will talk about _Rethinking the SDLC_, Rahul Sharma will share his team’s experience building the brand new [Cloud Control API](https://aws.amazon.com/blogs/aws/announcing-aws-cloud-control-api) in _How AWS architects APIs for hyper-scale_, and Jenna Pederson will show you how to _Bring software development practices to your infrastructure_. Finally, Ken Exner will be chatting with Joe Duffy about the future of tooling for modern cloud infrastructure.
+AWS was an inaugural sponsor for the Cloud Engineering Summit with a talk from Alex Head about [cost optimization]({{< relref "/resources/creating-a-cost-aware-culture-aws" >}}). The AWS team returns again this year with four sessions: Emily Freeman will talk about _Rethinking the SDLC_, Rahul Sharma will share his team’s experience building the brand new [Cloud Control API](https://aws.amazon.com/blogs/aws/announcing-aws-cloud-control-api) in _[How AWS architects APIs for hyper-scale]({{< relref "/resources/how-aws-architects-apis-for-hyper-scale" >}})_, and Jenna Pederson will show you how to _[Bringing software development practices to your infrastructure]({{< relref "/resources/bringing-software-development-practices-to-your-infrastructure" >}})_. Finally, Ken Exner will be chatting with Joe Duffy about the [future of tooling for modern cloud infrastructure]({{< relref "/resources/developer-first-infrastructure" >}}).
 
 We’ll cap off the summit in a free, post-event workshop with Marina Novikova and Laura Santamaria showing you [how to get started on AWS]({{< relref "/resources/getting-started-with-aws" >}}).
 
 ## Apple
 
-New to the Cloud Engineering Summit this year, cloud services experts Fariba Khan and Stephen Van Gordon will share their experiences managing infrastructure at scale in _Lifecycle of a Pulumi Program_. They’ll talk about building a custom state backend, using CI/CD tooling, and the Pulumi Automation API to empower teams to provision secure-by-default configurations automatically.
+New to the Cloud Engineering Summit this year, cloud services experts Fariba Khan and Stephen Van Gordon will share their experiences managing infrastructure at scale in _[Lifecycle of a Pulumi Program]({{< relref "/resources/lifecycle-of-a-pulumi-program" >}})_. They’ll talk about building a custom state backend, using CI/CD tooling, and the Pulumi Automation API to empower teams to provision secure-by-default configurations automatically.
 
 ## Google Cloud
 
-Last year we hosted a fantastic talk from Jason (Jay) Smith who showed attendees [how to stand up a serverless platform]({{< relref "/resources/standing-up-a-serverless-platform" >}}). This year, we’re proud to include Google Cloud as a sponsor and feature a keynote from Kelsey Hightower with Joe Duffy.
+Last year we hosted a fantastic talk from Jason (Jay) Smith who showed attendees [how to stand up a serverless platform]({{< relref "/resources/standing-up-a-serverless-platform" >}}). This year, we’re proud to include Google Cloud as a sponsor and feature a keynote from [Kelsey Hightower with Joe Duffy]({{< relref "/resources/kelsey-hightower-joe-duffy-fireside-chat" >}}).
 
 After the summit, you can also join Kat Cosgrove for free hands-on training showing you [how to get started with Google Cloud]({{< relref "/resources/getting-started-with-google-cloud-platform" >}}).
 
 ## Microsoft
 
-The 2020 Cloud Engineering Summit featured Amanda Silver in a [Future of Cloud Engineering panel]({{< relref "/resources/getting-started-with-google-cloud-platform" >}}) and Adora Nwodo showed everyone [how to manage apps and infrastructure in a single CI/CD pipeline]({{< relref "/resources/managing-your-cloud-application-and-infrastructure-deployment-in-one-pipeline" >}}). Adora will return to the summit again this year to talk about _Software engineering in infrastructure engineering_.
+The 2020 Cloud Engineering Summit featured Amanda Silver in a [Future of Cloud Engineering panel]({{< relref "/resources/getting-started-with-google-cloud-platform" >}}) and Adora Nwodo showed everyone [how to manage apps and infrastructure in a single CI/CD pipeline]({{< relref "/resources/managing-your-cloud-application-and-infrastructure-deployment-in-one-pipeline" >}}). Adora will return to the summit again this year to talk about _[Software engineering in infrastructure engineering]({{< relref "/resources/software-engineering-in-infrastructure-engineering" >}})_.
 
 For those looking to expand their cloud engineering skillset after the summit, Matt Stratton will host a workshop to show attendees [how to get started with Azure]({{< relref "/resources/getting-started-with-azure-native" >}}).
 
 ## NGINX
 
-We’ve spent a lot of time with the NGINX team over the past year in their quest to make it easier than ever to get to production with Kubernetes. Join first-time summit speakers Damian Curry and Elijah Zupancic for a lightning talk followed by NGINX office hours to learn about _Building a modern app reference architecture for Kubernetes_.
+We’ve spent a lot of time with the NGINX team over the past year in their quest to make it easier than ever to get to production with Kubernetes. Join first-time summit speakers Damian Curry and Elijah Zupancic for a lightning talk followed by NGINX office hours to learn about _[Building a modern app reference architecture for Kubernetes]({{< relref "/resources/building-a-modern-app-reference-architecture-for-kubernetes" >}})_.
 
 Then, if you’re ready for some hands-on Kubernetes help, join our post-event workshop [From Zero to Production in Kubernetes]({{< relref "/resources/from-zero-to-production-in-kubernetes" >}}).
 
 ## Bridgecrew
 
-New to the summit this year, Bridgecrew’s Steve Giguere is joining the Build track to share _Taking a Kubernetes Deployment from Default to Secure_.
+New to the summit this year, Bridgecrew’s Steve Giguere is joining the Build track to share _[Taking a Kubernetes Deployment from Default to Secure]({{< relref "/resources/taking-a-k8s-deployment-from-default-to-secure" >}})_.
 
 ## CircleCI
 
-Long-time collaborator Angel Rivera from CircleCI joins the Deploy track to talk about _Building Arm Compatible CI/CD Pipelines_ and show you how to take advantage of Arm architectures in both your pipelines and workloads.
+Long-time collaborator Angel Rivera from [CircleCI](https://circleci.com/) joins the Deploy track to talk about _[Building Arm Compatible CI/CD Pipelines]({{< relref "/resources/building-arm-compatible-cicd-pipelines" >}})_ and show you how to take advantage of Arm architectures in both your pipelines and workloads.
 
 ## GitHub
 
-The GitHub team participated in three sessions last year including the [Architectures and Platforms]({{< relref "/the-future-of-cloud-engineering-architectures-and-platforms" >}}) and [Security and Policy]({{< relref "/resources/the-future-of-cloud-engineering-security-and-policy" >}}) panels. This year, the team returns with Rizel Bobb-Semple delivering a plenary session showing you how to get _From Code to Cloud_ without learning new tools.
+The GitHub team participated in three sessions last year including the [Architectures and Platforms]({{< relref "/the-future-of-cloud-engineering-architectures-and-platforms" >}}) and [Security and Policy]({{< relref "/resources/the-future-of-cloud-engineering-security-and-policy" >}}) panels. This year, the team returns with Rizel Bobb-Semple delivering a plenary session showing you how to get _[From Code to Cloud]({{< relref "/resources/from-code-to-cloud" >}})_ without learning new tools.
 
 ## Honeycomb
 
-If you missed Charity Major’s summit session last year about [Testing In Production]({{< relref "/resources/testing-in-production" >}}), stop reading and go watch it. Then, register for Liz Fong-Jones’s Build track session this year: _What is OpenTelemetry_.
+If you missed Charity Major’s summit session last year about [Testing In Production]({{< relref "/resources/testing-in-production" >}}), stop reading and go watch it. Then, register for Liz Fong-Jones’s Build track session this year: _[What is OpenTelemetry]({{< relref "/resources/what-is-opentelemetry" >}})_.
 
 ## NS1
 
@@ -90,4 +90,4 @@ Last year, Johnathan Sullivan joined the [Culture, Process, and Tools]({{< relre
 
 ## ...and many more
 
-Beyond the teams and sessions mentioned above, the Cloud Engineering Summit wouldn’t be possible without help and support from a long list of sponsors and collaborators including Codefresh, Split, and Uffizzi. [Register today]({{< relref "/cloud-engineering-summit" >}}) to see what all the fuss is about.
+Beyond the teams and sessions mentioned above, the Cloud Engineering Summit wouldn’t be possible without help and support from a long list of sponsors and collaborators including Codefresh, Split, and Uffizzi. [Watch the replay today]({{< relref "/cloud-engineering-summit/replay" >}}) to see what all the fuss is about.
