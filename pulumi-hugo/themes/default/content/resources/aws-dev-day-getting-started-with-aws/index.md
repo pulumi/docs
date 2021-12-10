@@ -74,10 +74,10 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: "Laura Santamaria"
-          role: "Developer Advocate, Pulumi"
-        - name: Marina Novikova
-          role: Partner Solutions Architect, AWS
+        - name: "Matt Stratton"
+          role: "Senior Developer Advocate, Pulumi"
+        - name: Kat Cosgrove
+          role: "Senior Developer Advocate, Pulumi"
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
