@@ -1,9 +1,7 @@
 id = "cam-jung"
 name = "Cam Jung"
-title = "Enterprise Account Executive"
-weight = 1
 
-status = "active"
+status = "inactive"
 
 [social]
 twitter = "Killa___Cam"
