@@ -5,11 +5,13 @@ set -o errexit -o pipefail
 module=""
 topic=""
 
+content_root="themes/default/content/"
+
 prompt_for_module_name() {
     read -p "Module name (e.g., pulumi-101-aws): " module
 
     if [ ! -z "$module" ]; then
-        hugo new --kind learn/module "learn/${module}"
+        hugo new --kind learn/module "${content_root}learn/${module}"
         return
     fi
 
@@ -21,7 +23,7 @@ prompt_for_topic_name() {
     read -p "Topic name (e.g., basics): " topic
 
     if [ ! -z "$topic" ]; then
-        hugo new --kind learn/topic "learn/${module}/${topic}"
+        hugo new --kind learn/topic "${content_root}learn/${module}/${topic}"
         return
     fi
 
