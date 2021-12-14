@@ -38,6 +38,50 @@
             {{ partial "customer-logos/mercedes-benz-rdna" }}
         {{ end }}
     </span>
+{{ else if eq .logo "bio-fire" }}
+    <span class="w-full h-full">
+        {{ if eq .hoverable true }}
+            <span class="ro-hoverable">
+                <span class="ro-gray">{{ partial "customer-logos/bio-fire-gray" }}</span>
+                <span class="ro-color">{{ partial "customer-logos/bio-fire-color" }}</span>
+            </span>
+        {{ else }}
+            {{ partial "customer-logos/bio-fire-color" }}
+        {{ end }}
+    </span>
+{{ else if eq .logo "materialize" }}
+    <span class="w-full h-full">
+        {{ if eq .hoverable true }}
+            <span class="ro-hoverable">
+                <span class="ro-gray">{{ partial "customer-logos/materialize-gray" }}</span>
+                <span class="ro-color">{{ partial "customer-logos/materialize-color" }}</span>
+            </span>
+        {{ else }}
+            {{ partial "customer-logos/materialize-color" }}
+        {{ end }}
+    </span>
+{{ else if eq .logo "singtel" }}
+    <span class="w-full h-full">
+        {{ if eq .hoverable true }}
+            <span class="ro-hoverable">
+                <span class="ro-gray">{{ partial "customer-logos/singtel-gray" }}</span>
+                <span class="ro-color">{{ partial "customer-logos/singtel-color" }}</span>
+            </span>
+        {{ else }}
+            {{ partial "customer-logos/singtel-color" }}
+        {{ end }}
+    </span>
+{{ else if eq .logo "cboe" }}
+    <span class="w-full h-full">
+        {{ if eq .hoverable true }}
+            <span class="ro-hoverable">
+                <span class="ro-gray">{{ partial "customer-logos/cboe-gray" }}</span>
+                <span class="ro-color">{{ partial "customer-logos/cboe-color" }}</span>
+            </span>
+        {{ else }}
+            {{ partial "customer-logos/cboe-color" }}
+        {{ end }}
+    </span>
 {{ else }}
     <span class="{{ $logoClass }} w-full h-full">
         {{ $path := .logo | printf "%s/%s" "customer-logos" | printf "%s" }}

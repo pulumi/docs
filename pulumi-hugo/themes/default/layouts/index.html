@@ -234,6 +234,7 @@
                 </p>
                 <div class="mt-12">
                     <a class="btn-primary" href="{{ relref . "/case-studies/atlassian" }}">Read Atlassian Case Study</a>
+                    <a class="btn-secondary" href="{{ relref . "/case-studies" }}">See more case studies</a>
                 </div>
             </div>
         </div>
@@ -242,10 +243,22 @@
         <h6 class="text-center mb-10 lg:hidden">{{ .Params.customer_logos.title }}</h6>
         <div class="flex flex-wrap items-center justify-center">
             {{ range $logo := .Params.customer_logos.logos }}
-                <div class="w-3/4 lg:w-1/5 p-10">
-                    <a href="{{ relref $pageContext $logo.link }}">
+                <div class="w-3/4 lg:w-1/6 p-10">
+                    {{ if $logo.link }}
+                        <a href="{{ relref $pageContext $logo.link }}">
+                            {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
+                        </a>
+                    {{ else }}
                         {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
-                    </a>
+                    {{ end }}
+                </div>
+            {{ end }}
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center">
+            {{ range $logo := .Params.customer_logos.small_logos }}
+                <div class="w-3/4 lg:w-1/6 p-10">
+                    {{ partial "customer-logo.html" (dict "logo" $logo "hoverable" true) }}
                 </div>
             {{ end }}
         </div>

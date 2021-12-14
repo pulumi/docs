@@ -142,14 +142,22 @@ customer_logos:
       link: /blog/kenshoo-migrates-to-aws-with-pulumi
     - name: lemonade
       link: /case-studies/lemonade
-    - name: lykke
-      link: /case-studies/lykke
     - name: panther-labs
       link: /case-studies/panther-labs
     - name: sourcegraph
       link: /case-studies/sourcegraph
     - name: whylabs
       link: /case-studies/whylabs
+    - name: webflow
+    - name: cockroach-labs
+    - name: tableau
+    - name: fenergo
+    - name: bio-fire
+    - name: univision
+    - name: kavak
+    - name: blockfi
+    - name: linktree
+
 
 get_started:
   tweets:
