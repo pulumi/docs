@@ -111,7 +111,12 @@
         https://support.google.com/webmasters/answer/139066?hl=en
         https://en.wikipedia.org/wiki/Canonical_link_element
     -->
-    <link rel="canonical" href="{{ .Site.Params.canonicalURL }}{{ .RelPermalink }}" >
+
+    {{ if .Params.canonical_url }}
+        <link rel="canonical" href="{{ .Params.canonical_url }}" >
+    {{ else }}
+        <link rel="canonical" href="{{ .Site.Params.canonicalURL }}{{ .RelPermalink }}" >
+    {{ end }}
 
     <!-- RSS link for the blog. -->
     <link rel="alternate" type="application/rss+xml" href="{{ "/blog/rss.xml" | absURL }}" title="Pulumi Blog" />
