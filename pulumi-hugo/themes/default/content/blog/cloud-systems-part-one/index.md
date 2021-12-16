@@ -1,7 +1,7 @@
 ---
 title: "Cloud Systems Part One: Static Sites and AWS S3"
 
-date: 2021-15-10T09:44:47-08:00
+date: 2021-12-15
 
 draft: false
 
