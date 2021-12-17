@@ -1,9 +1,7 @@
 id = "alex-mullans"
 name = "Alex Mullans"
-title = "Staff Product Manager"
-weight = 1
 
-status = "active"
+status = "inactive"
 
 [social]
 github = "infin8x"
