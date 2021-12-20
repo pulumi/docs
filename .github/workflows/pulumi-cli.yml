@@ -59,7 +59,9 @@ jobs:
           hugo-version: '0.82.0'
           extended: true
       - name: Install node
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{matrix.nodeversion}}
       - name: Install python
         uses: actions/setup-python@v2
         with:
@@ -121,3 +123,5 @@ jobs:
           - 1.15.x
         pythonversion:
           - "3.7"
+        nodeversion:
+          - "14.x"
