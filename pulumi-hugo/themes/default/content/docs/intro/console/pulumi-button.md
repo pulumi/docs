@@ -66,39 +66,7 @@ https://app.pulumi.com/new?template=https://github.com/pulumi/examples/aws-js-s3
 
 ## Creating a Pulumi Button
 
-After you've verified your project template works as expected, you can add a button to the README in your repository or gist.
-
-There are two ways to reference the project template:
-
-- Implicitly without a `template` parameter. For public GitHub repositories or gists, if you don't specify a `template` parameter, Pulumi will infer the URL to the template using the HTTP `referer` header that is sent. This makes the button stable under forks and branches of the repository.
-
-- Explicitly specifying a `template` parameter that points to the project. This is useful for buttons that aren't inside a repository, such as in blog posts or other web pages, or when the README isn't in the same directory as the project template.
-
-### Implicit Templates
-
-If you're embedding the button in the README of a public GitHub repo or gist, Pulumi will automatically infer the URL to the template from the `referer` header that is sent.
-
-This is convenient because it eliminates the need for hard-coding the specific repository URL into the button, allowing forks and branches of the repository to work without needing to change the button's `template` parameter.
-
-Here's an example in Markdown:
-
-```markdown
-[![Deploy](https://get.pulumi.com/new/button.svg)](https://app.pulumi.com/new)
-```
-
-Or, the equivalent HTML:
-
-```html
-<a href="https://app.pulumi.com/new">
-  <img src="https://get.pulumi.com/new/button.svg" alt="Deploy">
-</a>
-```
-
-A `button.png` is also available.
-
-### Explicit Templates
-
-Alternatively, you can explicitly specify the `template` parameter.
+After you've verified your project template works as expected, you can add a button to the README in your repository or gist. You will need to specify a `template` parameter that points to the project.
 
 Here's an example in Markdown:
 
