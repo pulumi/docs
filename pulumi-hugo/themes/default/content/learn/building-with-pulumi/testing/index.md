@@ -261,7 +261,7 @@ def test_myfirstapp_tags():
 
 {{% /choosable %}}
 
-So now your overall `test_my_docker.py` file should match this code:
+So now your overall `test_my_first_app.py` file should match this code:
 
 {{< chooser language "python" / >}}
 
