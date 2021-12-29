@@ -82,8 +82,19 @@
             {{ partial "customer-logos/cboe-color" }}
         {{ end }}
     </span>
+{{ else if eq .logo "greenpark-sports" }}
+    <span class="w-full h-full">
+        {{ if eq .hoverable true }}
+            <span class="ro-hoverable">
+                <span class="ro-gray">{{ partial "customer-logos/greenpark-sports" }}</span>
+                <span class="ro-color">{{ partial "customer-logos/greenpark-sports" }}</span>
+            </span>
+        {{ else }}
+            {{ partial "customer-logos/greenpark-sports" }}
+        {{ end }}
+    </span>
 {{ else }}
-    <span class="{{ $logoClass }} w-full h-full">
+    <span class="{{ $logoClass }} w-full h-full m-auto">
         {{ $path := .logo | printf "%s/%s" "customer-logos" | printf "%s" }}
         {{ partial $path }}
     </span>

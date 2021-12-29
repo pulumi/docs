@@ -73,7 +73,7 @@ key_features:
                 icon: security
                 icon_color: purple
                 description: |
-                    Pulumi’s secure [cloud backend](/docs/intro/concepts/state/) manages your infrastructure state and automatically
+                    [Pulumi Service](/product/pulumi-service/) manages your infrastructure state and automatically
                     encrypts sensitive values in transit and at rest.
 
               - title: Administer teams and stacks
@@ -85,8 +85,8 @@ key_features:
 stats:
     title: Open source. Enterprise ready.
     description: |
-        Pulumi’s modern Infrastructure as Code SDK is an open-source project that’s supported
-        by an active community. We maintain a [public roadmap](/blog/relaunching-pulumis-public-roadmap/) and welcome feedback and contributions from anyone.
+        Pulumi’s modern Infrastructure as Code CLI and SDK is an [open-source project](https://github.com/pulumi/) that’s supported
+        by an active community. We maintain a [public roadmap](/blog/relaunching-pulumis-public-roadmap/) and welcome feedback and contributions.
     community:
         number: "10,000s"
         description: of community members
@@ -97,10 +97,9 @@ stats:
         number: "70+"
         description: Cloud and service integrations
     cta:
-        title: Managed infrastructure state, encryption, and more
+        title: The easiest way to use Pulumi open source at scale
         description: |
-            Pulumi’s secure cloud backend (the Pulumi Service) provides built-in state management and encrypts configuration secrets in transit and at rest.
-            You can also host your own backend locally or with a cloud provider.
+            The [Pulumi Service](/product/pulumi-service/) is a fully-managed service for the open-source CLI and SDK. It enables you and your team to focus on building, deploying, and managing cloud applications with your favorite languages and software engineering.
 
 get_started:
     title: Getting started
