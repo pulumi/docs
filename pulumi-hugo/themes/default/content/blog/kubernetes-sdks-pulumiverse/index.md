@@ -40,7 +40,7 @@ While this is a huge unblocker for working with Kubernetes, we can do better.
 
 ## crd2pulumi
 
-Back in August, 2020, we published [crd2pulumi]({{< relref "/blog/introducing-crd2pulumi/" >}}). `crd2pulumi` allows you to generate a Pulumi SDK for any Kubernetes Custom Resource. Now, when you want to start using cert-manager, Ambassador, Linkerd, or any other project within the Kubernetes and Cloud Native space; you can download the CRD YAML and run `crd2pulumi`, which will generate the SDK for whatever supported language you wish. Neat?
+Back in August, 2020, we published [crd2pulumi]({{< relref "/blog/introducing-crd2pulumi" >}}). `crd2pulumi` allows you to generate a Pulumi SDK for any Kubernetes Custom Resource. Now, when you want to start using cert-manager, Ambassador, Linkerd, or any other project within the Kubernetes and Cloud Native space; you can download the CRD YAML and run `crd2pulumi`, which will generate the SDK for whatever supported language you wish. Neat?
 
 I've been using this approach for the past year and it's the easiest way to provide that rich interface to developers, but the repetition can become a little frustrating. For every new project that I was working on, I'd need to build out the same automation and there's also the maintenance burden of ensuring the SDK is up to date with the latest version deployed to the cluster.
 
@@ -56,7 +56,6 @@ For us to make this easier, we have two issues:
 
 1. How do we automate the generation of the SDKs, ensuring that the SDKs are always up to date?
 2. Where do we publish them?
-
 
 ### Automation
 
@@ -187,7 +186,6 @@ Nice.
 ### Prior Art
 
 While writing this article, I discovered an [old repository](https://github.com/pulumi/pulumi-kubernetes-crds) within the Pulumi organization that actually did something similar to this last year 😮 It's not automated like this new initiative, but it was great to find that previous attempts to improve the developer experience for Kubernetes teams using Pulumi. Mad props to Paul Stack and Albert Zhong.
-
 
 So that's it! Thanks for reading. We hope you find this useful and we encourage you to join us and help by adding your favourite Kubernetes SDKs to the automation.
 
