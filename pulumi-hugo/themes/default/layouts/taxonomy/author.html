@@ -8,7 +8,8 @@
 
             <div class="lg:w-7/12">
                 {{ $authorData := index $.Site.Data.team.team .Data.Term }}
-                {{ $paginator := .Paginate .Data.Pages.ByDate.Reverse }}
+                {{ $blogPosts := where .Data.Pages "Section" "blog" }}
+                {{ $paginator := .Paginate $blogPosts.ByDate.Reverse }}
 
                 <header>
                     <div class="flex items-top">

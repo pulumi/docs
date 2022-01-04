@@ -10,8 +10,6 @@ estimated_time: 10
 meta_image: meta.png
 authors:
     - matt-stratton
-tags:
-    - learn
 block_external_search_index: false
 ---
 
@@ -89,7 +87,7 @@ View Live: https://app.pulumi.com/***/my-first-app/dev/updates/3
 
 
     pulumi:pulumi:Stack my-first-app-dev running
-    pulumi:pulumi:Stack my-first-app-dev  
+    pulumi:pulumi:Stack my-first-app-dev
 
 Outputs:
   + url: "http://localhost:3001"

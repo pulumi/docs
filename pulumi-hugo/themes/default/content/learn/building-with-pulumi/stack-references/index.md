@@ -11,7 +11,6 @@ meta_image: meta.png
 authors:
     - matt-stratton
 tags:
-    - learn
     - stacks
     - outputs
 block_external_search_index: false

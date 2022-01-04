@@ -11,7 +11,6 @@ meta_image: meta.png
 authors:
     - matt-stratton
 tags:
-    - learn
     - secrets
 block_external_search_index: false
 ---

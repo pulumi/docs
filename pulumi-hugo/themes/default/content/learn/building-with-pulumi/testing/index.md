@@ -12,7 +12,6 @@ authors:
     - matt-stratton
     - laura-santamaria
 tags:
-    - learn
     - testing
 block_external_search_index: false
 ---

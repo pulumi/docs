@@ -12,8 +12,6 @@ youll_learn:
     - Sharing values from one Pulumi program or project to another
     - Working with secrets inside of Pulumi
     - Testing your Pulumi programs
-tags:
-    - learn
 providers:
     - aws
 block_external_search_index: false

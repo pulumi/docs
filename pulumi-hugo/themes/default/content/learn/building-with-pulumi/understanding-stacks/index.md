@@ -12,7 +12,6 @@ authors:
     - matt-stratton
 tags:
     - stacks
-    - learn
 block_external_search_index: false
 ---
 
