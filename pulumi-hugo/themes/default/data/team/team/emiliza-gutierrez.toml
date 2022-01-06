@@ -1,10 +1,7 @@
 id = "emiliza-gutierrez"
 name = "Emiliza Gutierrez"
-title = "Engineering Manager"
-company = "Pulumi"
-weight = 1
 
-status = "active"
+status = "inactive"
 
 [social]
 github = "emiliza"
