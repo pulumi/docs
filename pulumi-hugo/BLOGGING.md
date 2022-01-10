@@ -73,6 +73,9 @@ including all the required frontmatter parameters.
    - **Technology/scenario tags:** Similar to feature tags, but focused on user scenarios. Today, that means `cloud-engineering`, `cloud-native`, `containers`, `data-and-analytics`, `development-environment`, `github-actions`, `kubernetes`, `serverless`.
    - **Language tags:** Any post that is language/ecosystem specific should have one or more of `.net`, `go`, `javascript`, `python`, `typescript`.
 
+**Canonical link**
+If you are posting a blog that originated somewhere else (for example, a syndicated community post) you will want to add the setting `canonical_url` for the URL where the blog post originated.
+
 2. If you don't already have a [TOML](https://github.com/toml-lang/toml) file [in the `team` directory](https://github.com/pulumi/docs/tree/master/data/team/team) of the repo, create one now. For Pulumi employees, that file should look something like this:
 
    ```
