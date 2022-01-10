@@ -15,7 +15,7 @@ layout: how-to-guide
     <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/classic-azure-py-arm-template" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View Code</span>
     </a>
-    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/classic-azure-py-arm-template" target="_blank">
+    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/blob/master/classic-azure-py-arm-template/README.md" target="_blank">
         <img src="https://get.pulumi.com/new/button.svg" alt="Deploy">
     </a>
 </p>
@@ -61,10 +61,10 @@ here](https://www.pulumi.com/docs/intro/cloud-providers/azure/setup/) to connect
     Updating stack 'azure-arm-dev'
     Performing changes:
 
-         Type                              Name                      Status
-     +   pulumi:pulumi:Stack               azure-arm--azure-arm-dev  created
-     +   ├─ azure:core:ResourceGroup       rg                        created
-     +   └─ azure:core:TemplateDeployment  arm-dep                   created
+         Type                                           Name                      Status
+     +   pulumi:pulumi:Stack                            azure-arm--azure-arm-dev  created
+     +   ├─ azure:core:ResourceGroup                    rg                        created
+     +   └─ azure:core:ResourceGroupTemplateDeployment  arm-dep                   created
 
     Outputs:
         storageAccountName: "abevrwebgje2wstorage"
