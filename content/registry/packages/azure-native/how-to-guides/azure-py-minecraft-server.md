@@ -15,7 +15,7 @@ layout: how-to-guide
     <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-py-minecraft-server" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View Code</span>
     </a>
-    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-py-minecraft-server" target="_blank">
+    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/blob/master/azure-py-minecraft-server/README.md" target="_blank">
         <img src="https://get.pulumi.com/new/button.svg" alt="Deploy">
     </a>
 </p>
@@ -62,14 +62,7 @@ This example deploys an Azure Virtual Machine and provisions a Minecraft server.
     $ cat rsa | pulumi config set privateKey --secret --
     ```
 
-    If your key is protected by a passphrase, add that too:
-
-    ```bash
-    $ pulumi config set privateKeyPassphrase --secret [yourPassphraseHere]
-    ```
-
-    Notice that we've used `--secret` for both `privateKey` and `privateKeyPassphrase`. This ensures they are
-    stored in encrypted form in the Pulumi secrets system.
+    Notice that we've used `--secret` for `privateKey`. This ensures they are stored in encrypted form in the Pulumi secrets system.
 
 1. Set the required configuration for this example. This example requires you to supply a username, password, location, and the public and private keys to the virtual machine that we are going to create. Check the Azure virtual machine [password requirements](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/faq#what-are-the-password-requirements-when-creating-a-vm) before creating a password.
 

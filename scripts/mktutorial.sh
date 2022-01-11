@@ -4,7 +4,7 @@ TUTORIAL_OUT=$(mktemp -d)
 pushd ./tools/mktutorial
 go run *.go https://github.com/pulumi/examples $TUTORIAL_OUT
 popd
-for cloud in "aws" "aws-native" "classic-azure" "azure" "gcp" "kubernetes" ; do
+for cloud in "aws-apigateway" "aws" "aws-native" "classic-azure" "azure" "gcp" "kubernetes" ; do
     ## Temporary hack to address mismatched package names in pulumi/examples
     if [[ "$cloud" == "azure" ]]
     then

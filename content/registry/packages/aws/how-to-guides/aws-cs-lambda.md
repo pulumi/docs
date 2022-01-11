@@ -17,7 +17,7 @@ layout: how-to-guide
     </a>
 </p>
 
-This example creates an AWS Lambda function that does a simple `.toUpper` on the string input and returns it. 
+This example creates an AWS Lambda function that does a simple `.ToUpper` on the string input and returns it. 
 
 ## Deploying the App
 
