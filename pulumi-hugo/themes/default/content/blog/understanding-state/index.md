@@ -54,8 +54,8 @@ changed. That's important for having multiple programs trying to execute at
 once, debugging system changes, and other important considerations for working
 in teams across a remote, cloud-based environment. In short, it's good to know
 what changed! When you use Pulumi, you have access to that change information
-through [audit logging](https://www.pulumi.com/docs/intro/console/audit-logs/)
-and can use [webhooks](https://www.pulumi.com/docs/intro/console/webhooks/) to
+through [audit logging](https://www.pulumi.com/docs/intro/pulumi-service/audit-logs/)
+and can use [webhooks](https://www.pulumi.com/docs/intro/pulumi-service/webhooks/) to
 feed those changes into other systems for observation, like a shared monitoring
 system with your security team or a distributed team that can't look over your
 shoulder as something deploys.

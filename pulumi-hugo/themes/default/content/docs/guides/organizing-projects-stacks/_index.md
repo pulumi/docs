@@ -104,7 +104,7 @@ its associated Pulumi stack. Read more about
 
 ## Tagging Stacks
 
-Stacks have associated metadata in the form of name/value tags. You can assign custom tags to stacks (when logged into the [Pulumi Service backend]({{< relref "/docs/intro/concepts/state" >}})) to customize how stacks are listed in the [Pulumi Console](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom `environment` tag to each stack, assigning a value of `production` to each production stack, `staging` to each staging stack, etc. Then in the Pulumi Console, you'll be able to group stacks by `Tag: environment`. For more information, see [Stack tags]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}).
+Stacks have associated metadata in the form of name/value tags. You can assign custom tags to stacks (when logged into the [Pulumi Service backend]({{< relref "/docs/intro/concepts/state" >}})) to customize how stacks are listed in the [Pulumi Service](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom `environment` tag to each stack, assigning a value of `production` to each production stack, `staging` to each staging stack, etc. Then in the Pulumi Service, you'll be able to group stacks by `Tag: environment`. For more information, see [Stack tags]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}).
 
 ## Examples
 

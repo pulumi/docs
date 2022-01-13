@@ -12,7 +12,7 @@ aliases:
 - /docs/console/accounts/saml/okta/
 ---
 
-This guide walks you through configuring Okta as a SAML SSO identity provider (IdP) for the Pulumi Console.
+This guide walks you through configuring Okta as a SAML SSO identity provider (IdP) for the Pulumi Service.
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ available, choose **SAML 2.0**.
 ### Configuring the Application
 
 Next you will be guided through a wizard to configure the Okta application. The first step is to
-give it a name---Pulumi Console for example---and an icon.
+give it a name---Pulumi Service for example---and an icon.
 
 ![Configuring a SAML Integration](/images/docs/reference/service/saml-okta/create-saml-integration.png)
 
@@ -72,7 +72,7 @@ page.
 
 ## Configuring Your Pulumi Organization
 
-The final step is to configure the Pulumi Console with details on your new Okta-based
+The final step is to configure the Pulumi Service with details on your new Okta-based
 SAML application. To do this, you need to obtain the IDP metadata document from Okta and then provide
 it to Pulumi.
 
@@ -88,11 +88,11 @@ a user's identity.
 
 ![SAML Application Metadata](/images/docs/reference/service/saml-okta/okta-xml-descriptor.png)
 
-With the block of XML text in your clipboard, open the Pulumi Console and navigate to your SAML
-organization. Click the **Settings** tab, and then select **SAML SSO**.
+With the block of XML text in your clipboard, open the Pulumi Service and navigate to your SAML
+organization. Select the **Settings** tab, and then select **SAML SSO**.
 
 Paste the IDP metadata descriptor into the bottom card
-titled **SAML SSO Settings**. Then click **Save** at the bottom of the card.
+titled **SAML SSO Settings**. Then select **Save** at the bottom of the card.
 
 ![Pulumi Organization Settings](/images/docs/reference/service/saml-okta/pulumi-org-settings.png)
 
@@ -104,7 +104,7 @@ Members of your Okta application can now sign into Pulumi. Navigate to
 [https://app.pulumi.com/signin/sso/](https://app.pulumi.com/signin/sso/) and enter the
 name of your Pulumi organization.
 
-![Pulumi Console](/images/docs/reference/service/saml-okta/pulumi-console-signin.png)
+![Pulumi Service](/images/docs/reference/service/saml-okta/pulumi-console-signin.png)
 
 ## Troubleshooting
 

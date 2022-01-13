@@ -171,6 +171,6 @@ aws:s3:Bucket (my-bucket):
 
 ## Next Steps
 
-Once you've validated the behavior of the AWSGuard policies you've configured in your Policy Pack, an organization administrator can publish the Policy Pack to the Pulumi Console to be enforced across your organization. To learn more see [Enforcing a Policy Pack Across an Organization]({{< relref "/docs/guides/crossguard/get-started#enforcing-a-policy-pack" >}}).
+Once you've validated the behavior of the AWSGuard policies you've configured in your Policy Pack, an organization administrator can publish the Policy Pack to the Pulumi Service to be enforced across your organization. To learn more see [Enforcing a Policy Pack Across an Organization]({{< relref "/docs/guides/crossguard/get-started#enforcing-a-policy-pack" >}}).
 
 Now that you've seen how to configure and use AWSGuard policies, you may want to write your own policies. See the [Getting Started tutorial]({{< relref "/docs/guides/crossguard/get-started" >}}) to get started.

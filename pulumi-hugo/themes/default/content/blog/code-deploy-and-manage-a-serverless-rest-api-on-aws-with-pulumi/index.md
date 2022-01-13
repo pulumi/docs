@@ -130,7 +130,7 @@ that will be created and prompts for confirmation.
 ![pulumi-update-preview](./pulumi-update-preview.png)
 
 Choose the "yes" option to deploy to AWS. At the end of the update,
-you'll see a link to the Pulumi Console that shows the details of the
+you'll see a link to the Pulumi Service that shows the details of the
 deployment.
 
 ![pulumi-update-complete](./pulumi-update-complete.png)
@@ -150,7 +150,7 @@ JavaScript code creates a **stack output**.
 exports.endpoint = endpoint.publish().url;
 ```
 
-You can view stack outputs in the Pulumi Console, or via
+You can view stack outputs in the Pulumi Service, or via
 `pulumi stack output`:
 
     $ pulumi stack output

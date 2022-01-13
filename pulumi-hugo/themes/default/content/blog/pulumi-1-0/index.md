@@ -34,7 +34,7 @@ In addition to the core infrastructure as code features, Pulumi's SDK offers:
 
 Using Pulumi in conjunction with the Pulumi service delivers the following additional features:
 
-* **Pulumi Console**: a dashboard for gaining visibility into and managing your deployments.
+* **Pulumi Service**: a dashboard for gaining visibility into and managing your deployments.
 * **Identity**: user and organization identity provider integrations with GitHub, GitLab, Atlassian, or SAML/SSO, including Active Directory, Okta, Google G Suite, and others.
 * **Role based access controls**: team management, also integrated with your identity provider.
 * **REST API and Webhooks**: a fully programmable web API for advanced automation scenarios.

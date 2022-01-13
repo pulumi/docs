@@ -227,7 +227,7 @@ After performing these steps, your stack will now be under the management of the
 
 ### Pulumi Service Architecture
 
-The Pulumi Service is comprised of two Internet-accessible endpoints &mdash; a web application at `app.pulumi.com` (called [the "Pulumi Console"]({{< relref "/docs/intro/console" >}})) and a REST API at `api.pulumi.com` &mdash; with an assortment of cloud infrastructure to support its features. A simplified diagram of its architecture looks like this:
+The Pulumi Service is comprised of two Internet-accessible endpoints&mdash;a web application at `app.pulumi.com` and a REST API at `api.pulumi.com`&mdash;with an assortment of cloud infrastructure to support its features. A simplified diagram of its architecture looks like this:
 
 <img src="/images/docs/reference/state_saas.png" alt="Pulumi Service Architecture" class="img-bordered">
 

@@ -1,7 +1,7 @@
 ---
 title: Add Support for CI/CD Systems
 meta_desc: This guide walks you through how you can configure your CI/CD environment manually
-           to surface data in the Pulumi Console.
+           to surface data in the Pulumi Service.
 menu:
     userguides:
         parent: cont_delivery
@@ -14,7 +14,7 @@ aliases:
 
 If the Pulumi CLI doesn't automatically detect your CI/CD system, this guide
 walks you through how you can configure your CI/CD environment manually
-to surface data in the Pulumi Console.
+to surface data in the Pulumi Service.
 
 ## Overview
 
@@ -29,9 +29,9 @@ The detection of metadata in a CI environment depends on some key environment va
 - PR Number
 - Commit Message
 
-The above metadata about your CI environment is then used to provide an enhanced experience in the [Pulumi Console](https://app.pulumi.com) when you look at your stack activity log. The metadata from your CI environment combined with the information about your Git repository allows us to provide links to things such as the Pull Request on github.com or the commit that triggered a PR build.
+The above metadata about your CI environment is then used to provide an enhanced experience in the [Pulumi Service](https://app.pulumi.com) when you look at your stack activity log. The metadata from your CI environment combined with the information about your Git repository allows us to provide links to things such as the Pull Request on github.com or the commit that triggered a PR build.
 
-![A Stack update entry in the Pulumi Console](/images/docs/reference/supporting-new-ci/stack-update.png)
+![Stack update entry](/images/docs/reference/supporting-new-ci/stack-update.png)
 
 In order to add support for your CI system, you should be somewhat familiar in working with [Go](https://golang.org/).
 
@@ -62,7 +62,7 @@ The `EnvVarsToDetect` is used by the `IsCI()` in [`systems.go`](https://github.c
 
 ### Detecting Additional Metadata About A CI Build
 
-A CI build could have been triggered by a PR or a push build. In the case of the former, the linked PR number is useful so that the Pulumi Console can add a link to it in the source repo of your stack. Note that the detection is done on a best-effort basis. We support linking to the following Git-based version control systems:
+A CI build could have been triggered by a PR or a push build. In the case of the former, the linked PR number is useful so that the Pulumi Service can add a link to it in the source repo of your stack. Note that the detection is done on a best-effort basis. We support linking to the following Git-based version control systems:
 
 - Atlassian Bitbucket
 - Azure DevOps

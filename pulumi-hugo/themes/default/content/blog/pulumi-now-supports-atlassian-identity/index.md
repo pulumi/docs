@@ -28,9 +28,9 @@ account for each of your identities, if that's what you want to do.
 ## Creating a new Pulumi account using your Atlassian identity
 
 To get started using your Atlassian identity, you can navigate to
-<https://app.pulumi.com> and click the Atlassian button to authenticate.
+<https://app.pulumi.com> and select the Atlassian button to authenticate.
 If you are already logged-in to Pulumi, you should first logout and then
-head back to the Pulumi Console.
+head back to the Pulumi Service.
 
 ![atlassian-1](./atlassian-1.png)
 
@@ -54,7 +54,7 @@ on Pulumi.
 This allows you to set permissions on
 [Stacks]({{< relref "/docs/intro/concepts/stack" >}}) owned by your
 organization. You can learn more about
-[Teams]({{< relref "/docs/intro/console/teams" >}})
+[Teams]({{< relref "/docs/intro/pulumi-service/teams" >}})
 in the Pulumi and how those permissions get applied too.
 
 ## CI Integration

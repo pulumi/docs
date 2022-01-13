@@ -19,9 +19,9 @@ To enable the integration with your GitLab project, you will need to ensure you 
 ## Prerequisites
 
 * You must have a GitLab identity associated with your Pulumi account.
-* If you are integrating a GitLab project that is under a group, [add an organization]({{< relref "/docs/intro/console/organizations#creating-an-organization" >}})
+* If you are integrating a GitLab project that is under a group, [add an organization]({{< relref "/docs/intro/pulumi-service/organizations#creating-an-organization" >}})
   in Pulumi.
-  * After you add the organization, ensure that it uses GitLab [as its identity provider]({{< relref "/docs/intro/console/organizations#changing-identity-providers" >}}).
+  * After you add the organization, ensure that it uses GitLab [as its identity provider]({{< relref "/docs/intro/pulumi-service/organizations#changing-identity-providers" >}}).
 
 ## Configuring the GitLab Webhook
 

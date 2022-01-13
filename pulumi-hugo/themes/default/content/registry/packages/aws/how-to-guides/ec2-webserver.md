@@ -289,9 +289,9 @@ Permalink: https://app.pulumi.com/bermudezmt/myproject/webserver-dev/updates/1
 
 ### Step 4: View your stack resources
 
-#### **Pulumi Console**
+#### **Pulumi Service**
 
-To see the full details of the deployment and the resources that are now part of the stack, open the update link in a browser. The **Resources** tab on the Pulumi Console has a link to the AWS console for the provisioned EC2 instance.
+To see the full details of the deployment and the resources that are now part of the stack, open the update link in a browser. The **Resources** tab in the Pulumi Service has a link to the AWS console for the provisioned EC2 instance.
 
 #### **Pulumi CLI**
 
@@ -531,7 +531,7 @@ Do you want to perform this update? details
 
 Select `yes` to confirm the update.
 
-You can use `pulumi stack output` to get the value of stack outputs from the CLI.  To do so, `curl` the EC2 instance to confirm that the HTTP server is running. Stack outputs can also be viewed on the Pulumi Console.
+You can use `pulumi stack output` to get the value of stack outputs from the CLI.  To do so, `curl` the EC2 instance to confirm that the HTTP server is running. Stack outputs can also be viewed in the Pulumi Service.
 
 ```bash
 $ curl $(pulumi stack output publicHostName)

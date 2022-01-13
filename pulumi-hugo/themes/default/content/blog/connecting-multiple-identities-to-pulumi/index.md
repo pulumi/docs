@@ -2,7 +2,7 @@
 title: "Connecting multiple identities to Pulumi"
 authors: ["praneet-loke"]
 tags: ["continuous-delivery"]
-meta_desc: "Pulumi now supports multiple identities for a single Pulumi account in the Pulumi Console."
+meta_desc: "Pulumi now supports multiple identities for a single Pulumi account in the Pulumi Service."
 date: "2018-12-14"
 
 meta_image: "multi-id.gif"
@@ -12,7 +12,7 @@ meta_image: "multi-id.gif"
 Hot on the heels of our
 [GitLab sign-in support]({{< relref "welcoming-gitlab-users-to-pulumi" >}}),
 we've just released support for multiple identities for a single Pulumi
-account in the Pulumi Console. Previously, you could only sign-up
+account in the Pulumi Service. Previously, you could only sign-up
 for a new Pulumi account using a GitHub or GitLab identity. Starting
 today, you can connect your Pulumi account with additional identities,
 beyond what you first signed-up with.

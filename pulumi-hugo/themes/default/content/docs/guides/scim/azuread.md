@@ -20,21 +20,21 @@ Please note that some advanced SCIM features aren't supported yet. For more info
 ## Enabling Automatic Provisioning
 
 1. Navigate to the Azure Active Directory where you have configured Single Sign On using SAML with Pulumi.
-2. Click **Enterprise Applications** and select the app in which you configured Single Sign On with Pulumi earlier.
-3. Click on the **Provisioning** feature, and change the value of **Provisioning Mode** to **Automatic**.
+2. Select **Enterprise Applications** and select the app in which you configured Single Sign On with Pulumi earlier.
+3. Select the **Provisioning** feature, and change the value of **Provisioning Mode** to **Automatic**.
 
 ### Admin Credentials
 
 Under the **Admin Credentials** section of the **Provisioning** feature, fill out the form as follows:
 
 * **Tenant URL**: `https://api.pulumi.com/scim/v2/{orgName}`, where `{orgName}` must be replaced with your organization’s login name (not display name). If you do not know this, navigate to your SAML settings and look at the SSO URL. It will have your organization’s login name in the URL.
-* **Secret Token**: You will use a token from the [Pulumi Console](https://app.pulumi.com) as the authorization bearer token. To generate a token, navigate to your org in the Pulumi Console, click on the **Settings** tab, and then click **SAML SSO**. Scroll down to the **SCIM** section and generate a new token if you have never generated one for your org, or regenerate it if you have already done so in the past.
+* **Secret Token**: You will use a token from the [Pulumi Service](https://app.pulumi.com) as the authorization bearer token. To generate a token, navigate to your org in the Pulumi Service, select the **Settings** tab, and then select **SAML SSO**. Scroll down to the **SCIM** section and generate a new token if you have never generated one for your org, or regenerate it if you have already done so in the past.
 
     {{% notes "info" %}}
-Once you generate the token, please save it securely. Neither the Pulumi Console nor Pulumi support can retrieve a token once it's been initially generated. If you lose the SCIM token and need it again, you'll have to generate a new token, which invalidates any previous tokens for your Pulumi organization.
+Once you generate the token, please save it securely. Neither the Pulumi Service nor Pulumi support can retrieve a token once it's been initially generated. If you lose the SCIM token and need it again, you'll have to generate a new token, which invalidates any previous tokens for your Pulumi organization.
     {{% /notes %}}
 
-Click **Test Connection**. You should get a success notification once the connection is successful.
+Select **Test Connection**. You should get a success notification once the connection is successful.
 
 ### Mappings
 

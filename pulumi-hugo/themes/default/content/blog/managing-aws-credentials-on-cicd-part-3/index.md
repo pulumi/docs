@@ -36,7 +36,7 @@ a CI/CD workflow using Pulumi.
 
 We will cover AWS's [IAM Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) and how they can be
 used to safely manage the access Pulumi has to your AWS account. We will also cover how sensitive data in your
-stack is stored within the Pulumi Console.
+stack is stored within the Pulumi Service.
 
 ## Assuming IAM Roles for Performing Updates {#assuming-iam-roles}
 
@@ -282,7 +282,7 @@ You just need to add the `--secret` flag.
 pulumi config set api-key "hunter2" --secret
 ```
 
-For stacks hosted on the [Pulumi Console](https://app.pulumi.com), the default is that your configuration
+For stacks hosted on the [Pulumi Service](https://app.pulumi.com), the default is that your configuration
 data is encrypted using a key specific to your stack. (So the ciphertext stored in the `Pulumi.yaml` file
 is safe to check into your source tree, since it cannot be copied/decrypted for another stack.)
 
@@ -296,16 +296,16 @@ output as "secret" and make sure that it is encrypted within the checkpoint file
 contents via [`pulumi stack export`]({{< ref "/docs/reference/cli/pulumi_stack_export" >}}), you would not be able to recover
 the data.
 
-Just like for secret configuration values, the default for stacks hosted on the Pulumi Console is to encrypt
+Just like for secret configuration values, the default for stacks hosted on the Pulumi Service is to encrypt
 this data using a key that Pulumi manages and is specific to your stack.
 
 ### Custom Secrets Providers
 
 We at Pulumi take great care in safeguarding your data, especially configuration or checkpoint data that is marked as sensitive.
 However, you might feel more comfortable if your stack's data were encrypted using a key that _you_ controlled. (So even if the
-data stored on the Pulumi Console were available, it would be useless without your specific key.)
+data stored in the Pulumi Service were available, it would be useless without your specific key.)
 
-If that's the case, then you can use a configurable secrets provider, and swap out the default "Pulumi Console managed" encryption
+If that's the case, then you can use a configurable secrets provider, and swap out the default "Pulumi Service managed" encryption
 scheme for your own. (And we won't take it personally, promise.)
 
 When you create a new stack using [pulumi stack init]({{< ref "/docs/reference/cli/pulumi_stack_init" >}}), you can optionally

@@ -20,7 +20,7 @@ We've created some resources. Now, let's see how we can use outputs outside of
 Pulumi. In this part, we're going to explore more about stacks, _stack outputs_,
 and _stack references_. Stack outputs are, as you might guess, the values
 exported from any given stack. These values can also be obtained from the
-[Pulumi Console](https://app.pulumi.com), and they're extremely useful when you
+[Pulumi Service](https://app.pulumi.com), and they're extremely useful when you
 want to run commands with the CLI that reference those values. Note, though,
 that stack outputs are for the current stack only. If you want to get values
 from another stack, you want to use stack references, which bridge different

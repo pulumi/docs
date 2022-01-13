@@ -104,7 +104,7 @@ For a more interesting view that shows the result of calling a Lambda function, 
 
 ### Step 5: Manage the stack
 
-The output also contained a permalink to the Pulumi Console. Click on that link to review the stack in the web UI, examine logs and resource usage, and learn how you can invite friends and coworkers to collaborate on stacks.
+The output also contained a permalink to the Pulumi Service. Select that link to review the stack in the web UI, examine logs and resource usage, and learn how you can invite friends and coworkers to collaborate on stacks.
 
 <img src="/images/docs/quickstart/hello/Quickstart6.png" width="600">
 

@@ -13,7 +13,7 @@ This page details how to use [JetBrains TeamCity](https://www.jetbrains.com/team
 ## Prerequisites
 
 - A working installation of TeamCity
-- An account on the [Pulumi Console](https://app.pulumi.com).
+- An account in the [Pulumi Service](https://app.pulumi.com).
 - [Latest version of Pulumi]({{< relref "/docs/get-started/install" >}}).
 - Setup a new project and [stack]({{< relref "/docs/intro/concepts/stack" >}}) using one of our
 [Get Started]({{< relref "/docs/get-started" >}}) guides or by running [`pulumi new`]({{< relref "/docs/reference/cli/pulumi_new.md" >}})

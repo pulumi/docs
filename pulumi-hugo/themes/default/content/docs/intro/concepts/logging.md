@@ -7,7 +7,7 @@ menu:
     weight: 9
 ---
 
-The {{< pulumi-log >}} collection of functions allow you to log diagnostics, warnings, or errors with the Pulumi engine. These are displayed, alongside all other Pulumi output, in the CLI and in the Pulumi Console. Events are logged and kept for historical purposes in case you want to audit or diagnose a past event.
+The {{< pulumi-log >}} collection of functions allow you to log diagnostics, warnings, or errors with the Pulumi engine. These are displayed, alongside all other Pulumi output, in the CLI and in the Pulumi Service. Events are logged and kept for historical purposes in case you want to audit or diagnose a past event.
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 

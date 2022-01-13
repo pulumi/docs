@@ -197,9 +197,9 @@ Duration: 31s
 Permalink: https://app.pulumi.com/spara/my_project/dev/updates/1
 ```
 
-You can CMD + click on the link to open a browser and display the status of your project on the Pulumi console.
+You can CMD + click on the link to open a browser and display the status of your project on the Pulumi Service.
 
-![Pulumi console](pulumi-console.png)
+![Pulumi Service](pulumi-console.png)
 
 ## Build a Pulumi examples devcontainer
 

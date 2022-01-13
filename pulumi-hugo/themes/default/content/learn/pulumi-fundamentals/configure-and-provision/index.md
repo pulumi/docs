@@ -457,7 +457,7 @@ If you want to remove the stack completely, run 'pulumi stack rm dev'.
 
 Now your resources should all be cleared! That last comment you see in the
 output notes that the stack and all of the configuration and history will stay
-in your dashboard on the Pulumi Console ([app.pulumi.com](https://app.pulumi.com/) and will be stored in
+in your dashboard on the Pulumi Service ([app.pulumi.com](https://app.pulumi.com/) and will be stored in
 the Pulumi Service that maintains the history. For now, that's okay. We'll talk
 more about removing the project from your history in another pathway.
 

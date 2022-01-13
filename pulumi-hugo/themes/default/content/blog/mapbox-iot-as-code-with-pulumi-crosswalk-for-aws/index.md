@@ -53,7 +53,7 @@ The fun part -- Pulumi Service console helps you map your cloud
 architecture shown above as a connected set of DAG resources so you need
 not remember what you deployed as your cloud environments scale:
 
-![Pulumi Console](./pulumi-saas-console-iot.jpg)
+![Pulumi Service](./pulumi-saas-console-iot.jpg)
 
 Lets now work through the solution flow with some sample snippets of
 code. To get access to the complete piece of code, please connect with

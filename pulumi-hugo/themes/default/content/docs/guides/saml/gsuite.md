@@ -13,7 +13,7 @@ aliases:
 ---
 
 This guide walks you through configuring your G Suite service as a SAML SSO identity provider
-(IDP) for the Pulumi Console.
+(IDP) for the Pulumi Service.
 
 ## Prerequisites
 
@@ -41,7 +41,7 @@ the downloaded file, then click **Next** to continue.
 
     ![Step 2: Download IDP metadata](/images/docs/reference/service/saml-gsuite/gsuite-dialog-step-2.png)
 
-1. Give your SAML application a name such as _Pulumi Console_ and an optional description
+1. Give your SAML application a name such as _Pulumi Service_ and an optional description
 and logo, then click **Next**.
 
     ![Step 3: Name the application](/images/docs/reference/service/saml-gsuite/gsuite-dialog-step-3.png)
@@ -79,14 +79,14 @@ domain users:
    Click **Save** to complete.
 
    At this point, you're done configuring G Suite, and can move on to completing SAML SSO setup in
-   the Pulumi Console.
+   the Pulumi Service.
 
 ## Configuring Your Pulumi Organization
 
 The final step in the process consists of associating your Pulumi organization with your SSO identity
 provider.
 
-1. Sign into the Pulumi Console where your SAML organization resides, then navigate to the **Settings** tab for that
+1. Sign in to the Pulumi Service where your SAML organization resides, then navigate to the **Settings** tab for that
 organization.
 
 1. Scroll to the SAML SSO Settings section, click on the **Identity Provider Metadata** field, and
@@ -96,17 +96,17 @@ paste the full contents of the XML IDP document you have previously downloaded.
 
     For example:
 
-1. Click **Save**.
+1. Select **Save**.
 
 Your Pulumi organization is now configured to use Google as a SAML SSO identity provider.
 
-## Signing into Pulumi with Google
+## Signing in to Pulumi with Google
 
 Members of your G Suite can now sign into Pulumi. Navigate to
 [https://app.pulumi.com/signin/sso/](https://app.pulumi.com/signin/sso/) and enter the
 name of your Pulumi organization.
 
-![Pulumi Console](/images/docs/reference/service/saml-gsuite/pulumi-console-signin.png)
+![Pulumi Service](/images/docs/reference/service/saml-gsuite/pulumi-console-signin.png)
 
 ## Troubleshooting
 

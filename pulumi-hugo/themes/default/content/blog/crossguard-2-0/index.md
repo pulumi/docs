@@ -15,7 +15,7 @@ In a [previous blog post]({{< relref "/blog/announcing-crossguard-preview" >}}),
 
 ## General Availability
 
-CrossGuard is enabled for enterprise organizations in the Pulumi Console, and as always, the open source offering is available for all to use.
+CrossGuard is enabled for enterprise organizations in the Pulumi Service, and as always, the open source offering is available for all to use.
 
 ### Improved CLI support
 
@@ -168,9 +168,9 @@ To enable the pack with this configuration, we can save the JSON to a file calle
 pulumi policy enable aws-policies latest --policy-group prod-stacks --config prod-policy-config.json
 ```
 
-Alternatively, we can enable the Policy Pack from the Pulumi Console, as shown below.
+Alternatively, we can enable the Policy Pack from the Pulumi Service.
 
-![CrossGuard Configuration using Pulumi Console](config.png)
+![CrossGuard Configuration using Pulumi Service](config.png)
 
 Configuration allows organization administrators to quickly and easily tweak Policy Packs to meet a variety of use cases.
 

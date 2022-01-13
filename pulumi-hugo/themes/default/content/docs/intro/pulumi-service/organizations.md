@@ -3,15 +3,16 @@ title: Organizations
 meta_desc: An overview of Organizations within the Pulumi Cloud Service.
 menu:
   intro:
-    parent: console
+    parent: pulumi-service
     weight: 2
 aliases:
 - /docs/reference/service/orgs/
 - /docs/console/accounts/organizations/
-- /docs/intro/console/accounts/organizations/
+- /docs/intro/pulumi-service/accounts/organizations/
 - /docs/console/collaboration/organization-roles
-- /docs/intro/console/organization-roles
+- /docs/intro/pulumi-service/organization-roles
 - /docs/console/organization-roles
+- /docs/intro/pulumi-service/organizations/
 ---
 
 Organizations are a space for you to collaborate on shared projects and stacks.
@@ -21,7 +22,7 @@ Organizations are a space for you to collaborate on shared projects and stacks.
 | Console Page | Description |
 |--------|--------|
 | Dashboard | An overview of the organization including recently updated stacks, recent activity, and a resource count graph. |
-| Projects | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management]({{< relref "/docs/intro/console/projects-and-stacks" >}}). |
+| Projects | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management]({{< relref "/docs/intro/pulumi-service/projects-and-stacks" >}}). |
 | Members | A list of active members of your Pulumi organization. |
 | Teams | An [Enterprise]({{< relref "/pricing" >}}) feature that provides a way to assign stack permissions to groups of organization members. |
 | Policies | Lists of organization policies and policy groups. Policies allow you to set guardrails to enforce best practices and compliance. |

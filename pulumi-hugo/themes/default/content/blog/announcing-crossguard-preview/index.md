@@ -26,8 +26,8 @@ The key features available during the CrossGuard preview are:
 * [Policy SDK](https://github.com/pulumi/pulumi-policy) to express custom policies using TypeScript or JavaScript
 * [Run Policy Packs locally]({{< relref "/docs/guides/crossguard/get-started#running-locally" >}}) using the `--policy-pack` flag, available to all users
 * [AWSGuard](https://github.com/pulumi/pulumi-awsguard) codifies best practices for AWS
-* [Enforce Policy Packs]({{< relref "/docs/guides/crossguard/get-started#enforcing-a-policy-pack" >}}) across your organization or particular stacks in the Pulumi Console, for Team and Enterprise users
-* View policy errors and Policy Packs for an update in the Pulumi Console
+* [Enforce Policy Packs]({{< relref "/docs/guides/crossguard/get-started#enforcing-a-policy-pack" >}}) across your organization or particular stacks in the Pulumi Service, for Team and Enterprise users
+* View policy errors and Policy Packs for an update in the Pulumi Service
 
 ## Pulumi CrossGuard for Everyone
 
@@ -88,7 +88,7 @@ While this is a simple demonstration of what you can do with Policy as Code, the
 
 ## Try it Today
 
-Pulumi CrossGuard empowers everyone to build better, safer applications and infrastructure. Today, Pulumi CrossGuard is available to preview for all Pulumi users. For Enterprise organizations, administrators can opt-in to the preview via the "Policies" tab in the [Pulumi Console](https://app.pulumi.com/). To get started with CrossGuard today, here are some resources:
+Pulumi CrossGuard empowers everyone to build better, safer applications and infrastructure. Today, Pulumi CrossGuard is available to preview for all Pulumi users. For Enterprise organizations, administrators can opt-in to the preview via the "Policies" tab in the [Pulumi Service](https://app.pulumi.com/). To get started with CrossGuard today, here are some resources:
 
 * If haven't played around with Pulumi yet, here is [Pulumi's Getting Started tutorial]({{< relref "/docs/get-started" >}}).
 * [Policy as Code Getting Started tutorial]({{< relref "/docs/guides/crossguard/get-started" >}})

@@ -82,7 +82,7 @@ main:
         - How to install Pulumi
         - Configuring your development environment
         - Choose your Pulumi language
-        - An introduction to the Pulumi state & the Pulumi console
+        - An introduction to the Pulumi state & the Pulumi Service
         - An introduction to Pulumi config
         - Storing sensitive data in Pulumi securely
         - Provision your first resources

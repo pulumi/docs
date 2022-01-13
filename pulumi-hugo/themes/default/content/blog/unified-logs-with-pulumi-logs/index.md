@@ -172,7 +172,7 @@ two different AWS regions - `pulumi logs` will be able to aggregate logs
 across multiple cloud providers and offer a seamless application-centric
 view of your logs.
 
-Users of the Pulumi Console at <https://app.pulumi.com> also would love
+Users of the Pulumi Service at <https://app.pulumi.com> also would love
 to have access to these logs at the click of a button - and this is
 something we're also excited to enable in the near future.
 

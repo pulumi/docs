@@ -23,7 +23,7 @@ The Pulumi GitHub app will automatically add comments to Pull Requests with the 
 stack changes. This includes a summary of how many resources were created, updated, and/or deleted.
 This allows you to quickly see the changes caused by your Pulumi program without needing to leave
 GitHub's Pull Request view, with a link to the richer details available on the
-[Pulumi Console](https://app.pulumi.com).
+[Pulumi Service](https://app.pulumi.com).
 
 ![Comment on Pull Request](/images/docs/github-app/pr-comment.png)
 

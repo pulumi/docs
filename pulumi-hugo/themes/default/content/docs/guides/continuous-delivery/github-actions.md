@@ -369,8 +369,8 @@ went as planned:
 
 ![Action Checks](/images/docs/reference/gh-actions-checks.png)
 
-Click the Logs pane to see the full output of the Pulumi CLI, along with the URL of your
-deployment on the Pulumi Console with more details:
+Select the Logs pane to see the full output of the Pulumi CLI, along with the URL of your
+deployment on the Pulumi Service with more details:
 
 ![Action Logs](/images/docs/reference/gh-actions-logs.png)
 

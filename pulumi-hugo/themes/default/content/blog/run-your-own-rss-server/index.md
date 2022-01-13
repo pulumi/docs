@@ -17,7 +17,7 @@ So a while back, after far too much time spent wandering the blogsphere manually
 
 <!--more-->
 
-If you're already comfortable with Pulumi, and you just want to get up and running, [I've set up a GitHub repo](https://github.com/pulumi/examples/tree/master/aws-ts-pulumi-miniflux) (complete with a [Deploy with Pulumi button]({{< relref "/docs/intro/console/pulumi-button" >}})!) that should have all you need to get going. Just click the button, set a few configs (like your RSS server's administrative password, which will be stored as an [encrypted Pulumi secret]({{< relref "/docs/intro/concepts/config" >}})), and follow the prompts. Your shiny new server should be up and running within minutes.
+If you're already comfortable with Pulumi, and you just want to get up and running, [I've set up a GitHub repo](https://github.com/pulumi/examples/tree/master/aws-ts-pulumi-miniflux) (complete with a [Deploy with Pulumi button]({{< relref "/docs/intro/pulumi-service/pulumi-button" >}})!) that should have all you need to get going. Just click the button, set a few configs (like your RSS server's administrative password, which will be stored as an [encrypted Pulumi secret]({{< relref "/docs/intro/concepts/config" >}})), and follow the prompts. Your shiny new server should be up and running within minutes.
 
 ## Sketching it Out
 

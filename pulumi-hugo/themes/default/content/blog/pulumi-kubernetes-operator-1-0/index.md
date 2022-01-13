@@ -96,7 +96,7 @@ This includes capabilities like [Leader Election](https://sdk.operatorframework.
 
 ### Prometheus Metrics
 
-The Pulumi Kubernetes Operator automatically manages a lot of details of Pulumi deployments, and as a result, it’s critical to be able to get insight into the operation of the Operator. Previously, this was available either via operator logs, or via the Pulumi Console. As part of the 1.0 release, the Operator is also now exporting Prometheus-compatible metrics for `stacks_active` and `stacks_failing`. These can be used to drive reporting and other workflows inside the Kubernetes cluster.
+The Pulumi Kubernetes Operator automatically manages a lot of details of Pulumi deployments, and as a result, it’s critical to be able to get insight into the operation of the Operator. Previously, this was available either via operator logs, or via the Pulumi Service. As part of the 1.0 release, the Operator is also now exporting Prometheus-compatible metrics for `stacks_active` and `stacks_failing`. These can be used to drive reporting and other workflows inside the Kubernetes cluster.
 
 ```bash
 $ kubectl port-forward service/pulumi-kubernetes-operator-metrics 8383:8383 &

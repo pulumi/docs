@@ -63,12 +63,12 @@ please refer to our documentation
     tags.
 - You can assign custom tags to stacks (when logged into the
   [Pulumi Service backend]({{< relref "/docs/intro/concepts/state" >}}) to customize how
-  stacks are listed in the [Pulumi Console](https://app.pulumi.com/).
+  stacks are listed in the [Pulumi Service](https://app.pulumi.com/).
     - In our example below we have two environments _prod_ and _dev_.
     - To group stacks by environment we assign custom tags
         `environment: prod` and `environment: dev` to the respective
         stacks
-    - In the Pulumi Console, you'll be able to group stacks by
+    - In the Pulumi Service, you'll be able to group stacks by
         tag: `environment:dev` and tag: `environment:prod`.
 
 Please read more about managing [stack tags in Pulumi]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}).

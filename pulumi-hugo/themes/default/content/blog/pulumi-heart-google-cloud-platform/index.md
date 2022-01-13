@@ -27,7 +27,7 @@ make it a joy to work with Pulumi + Google Cloud:
 - Working with Kubernetes and Google Container Engine (GKE)
 - Super Simple Serverless with Google Cloud Functions
 - Continuous Delivery with Google Cloud Build
-- Managing Deployment with the Pulumi Console
+- Managing Deployment with the Pulumi Service
 
 ## Infrastructure as Code for the Full Google Cloud Platform
 
@@ -232,23 +232,23 @@ you can see and approve infrastructure changes before they happen:
 Learn more about integrating Pulumi with CI/CD in our
 [continuous delivery]({{< relref "/docs/guides/continuous-delivery" >}}) documentation.
 
-## Managing Deployment with the Pulumi Console
+## Managing Deployment with the Pulumi Service
 
 In addition to the `pulumi` CLI for deploying and updating GCP
-infrastructure, Pulumi is always connected to the [Pulumi Console](https://app.pulumi.com), which provides a rich interface for
+infrastructure, Pulumi is always connected to the [Pulumi Service](https://app.pulumi.com), which provides a rich interface for
 viewing the history of your stacks and deployments, management of access
 controls for teams, and details of all resources under management.
 
 With deep links into the Google Cloud Console, Pulumi provides quick
 access to all resources in your project.
 
-![Pulumi Console](./pulumi_console.png)
+![Pulumi Service](./pulumi_console.png)
 
 And because Pulumi works with both Google Cloud and Kubernetes resources
 at the same time, it's just as easy to deep link into resources in the
 Kubernetes console as well!
 
-You can check out the Pulumi Console at <https://app.pulumi.com> and
+You can check out the Pulumi Service at <https://app.pulumi.com> and
 create your first Pulumi GCP project with just a few clicks, with an
 array of New Project options to get you up and running quickly.
 

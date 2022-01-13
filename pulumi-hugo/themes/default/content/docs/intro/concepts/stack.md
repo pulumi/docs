@@ -116,7 +116,7 @@ Stacks have associated metadata in the form of tags, with each tag consisting of
 Stack tags are only supported with the [Pulumi Service backend]({{< relref "/docs/intro/concepts/state" >}}).
 {{% /notes %}}
 
-Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> <value>`]({{< relref "/docs/reference/cli/pulumi_stack_tag_set" >}}) and can be used to customize the grouping of stacks in the [Pulumi Console](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom tag named `environment` to each stack. For example, running `pulumi stack tag set environment production` assigns a custom `environment` tag with a value of `production` to the active stack. Once you've assigned an `environment` tag to each stack, you'll be able to group by `Tag: environment` in the Pulumi Console.
+Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> <value>`]({{< relref "/docs/reference/cli/pulumi_stack_tag_set" >}}) and can be used to customize the grouping of stacks in the [Pulumi Service](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom tag named `environment` to each stack. For example, running `pulumi stack tag set environment production` assigns a custom `environment` tag with a value of `production` to the active stack. Once you've assigned an `environment` tag to each stack, you'll be able to group by `Tag: environment` in the Pulumi Service.
 
 As a best practice, custom tags should not be prefixed with `pulumi:`, `gitHub:`, or `vcs:` to avoid conflicting with built-in tags that are assigned and updated with fresh values each time a stack is updated.
 
@@ -124,7 +124,7 @@ Tags can be deleted by running [`pulumi stack tag rm <name>`]({{< relref "/docs/
 
 ## Stack Outputs {#outputs}
 
-A stack can export values as stack outputs. These outputs are shown during an update, can be easily retrieved with the Pulumi CLI, and are displayed in the Pulumi Console. They can be used for important values like resource IDs, computed IP addresses, and DNS names.
+A stack can export values as stack outputs. These outputs are shown during an update, can be easily retrieved with the Pulumi CLI, and are displayed in the Pulumi Service. They can be used for important values like resource IDs, computed IP addresses, and DNS names.
 
 To export values from a stack, use the following definition in the top-level of the entrypoint for your project:
 

@@ -24,8 +24,8 @@ description = "Self-hosted in Pulumi applies to on-premise \"behind a firewall\"
 link = "/docs/intro/concepts/state#self-managed-backend"
 
 [[entries]]
-term = "Pulumi Console"
-description = "The Pulumi Console refers to the web application at `app.pulumi.com` which automatically manages deployment state and enables collaboration between developers and operators."
+term = "Pulumi Service"
+description = "The Pulumi Service refers to the web application at `app.pulumi.com` which automatically manages deployment state and enables collaboration between developers and operators."
 link = "/docs/intro/console"
 
 [[entries]]
@@ -45,8 +45,8 @@ link = "https://en.wikipedia.org/wiki/SAML_Metadata#Introduction_to_SAML_Metadat
 
 [[entries]]
 term = "Organization"
-description = "An organization is the primary grouping unit for stacks within the Pulumi Console."
-link = "/docs/intro/console/organizations"
+description = "An organization is the primary grouping unit for stacks within the Pulumi Service."
+link = "/docs/intro/pulumi-service/organizations"
 
 [[entries]]
 term = "Language Host"
@@ -125,7 +125,7 @@ link = "/docs/intro/concepts/function-serialization"
 
 [[entries]]
 term = "SAML"
-description = "Security Assertion Markup Language. You may use a SAML 2.0-compatible identity provider in order to sign in to the Pulumi Console via single sign-on. The SAML SSO feature is only available in Pulumi Enterprise."
+description = "Security Assertion Markup Language. You may use a SAML 2.0-compatible identity provider in order to sign in to the Pulumi Service via single sign-on. The SAML SSO feature is only available in Pulumi Enterprise."
 link = "https://en.wikipedia.org/wiki/SAML_2.0"
 
 [[entries]]

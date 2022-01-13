@@ -1,18 +1,18 @@
 ---
 title: CI/CD Integration Assistant
-meta_desc: An overview of the CI/CD integration assistant in the Pulumi Console.
+meta_desc: An overview of the CI/CD integration assistant in the Pulumi Service.
 menu:
   intro:
-    parent: console
+    parent: pulumi-service
     weight: 7
 aliases:
-- /docs/intro/console/extensions/
-- /docs/intro/console/extensions/ci-cd-integration-assistant/
+- /docs/intro/pulumi-service/extensions/
+- /docs/intro/pulumi-service/extensions/ci-cd-integration-assistant/
 ---
 
 {{% notes "info" %}}
 The CI/CD integration assistant helps you integrate Pulumi into CI/CD systems for automatically deploying stacks and is only available
-on [Organizations]({{< relref "/docs/intro/console/organizations" >}}), not personal accounts.
+on [Organizations]({{< relref "/docs/intro/pulumi-service/organizations" >}}), not personal accounts.
 {{% /notes %}}
 
 <!--more-->
@@ -86,7 +86,7 @@ The **Configure CI/CD** step will help you configure secrets that will be used b
 For supported services, the assistant will provide a convenient link to the respective location
 where you can configure the secrets.
 
-The assistant provides a convenient way to create a [Pulumi Access Token]({{< relref "/docs/intro/console/accounts#access-tokens" >}})
+The assistant provides a convenient way to create a [Pulumi Access Token]({{< relref "/docs/intro/pulumi-service/accounts#access-tokens" >}})
 without needing to leave the page.
 
 ![Pulumi Access Token](/images/docs/reference/console/pulumi-access-token.png)

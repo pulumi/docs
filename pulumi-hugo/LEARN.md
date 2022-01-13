@@ -133,7 +133,7 @@ A module is a collection of topics that share a common theme and that are organi
 
 These definitions aren't perfect, but they should hopefully help clarify the differences.
 
-* An **example** is a single Pulumi program (possibly expressed in multiple languages) with a concise README and a maybe a [Deploy with Pulumi button](https://www.pulumi.com/docs/intro/console/extensions/pulumi-button/). Examples are meant to serve as references; they're like snapshots of a finished product. Most of the programs in the [examples repo](https://github.com/pulumi/examples) today fall into this category.
+* An **example** is a single Pulumi program (possibly expressed in multiple languages) with a concise README and a maybe a [Deploy with Pulumi button](https://www.pulumi.com/docs/intro/pulumi-service/extensions/pulumi-button/). Examples are meant to serve as references; they're like snapshots of a finished product. Most of the programs in the [examples repo](https://github.com/pulumi/examples) today fall into this category.
 
 * A **tutorial** is a guided walkthrough that often ends with a finished example. Like a blog post (and unlike an example), it's written in a familiar tone, generally in the second person ("you/your"), and it's aimed at having the reader learn by doing. Whereas an example might say, _Here's a finished thing you can look at and use_, a tutorial says, _Let's build a thing together_, from start to finish.
 

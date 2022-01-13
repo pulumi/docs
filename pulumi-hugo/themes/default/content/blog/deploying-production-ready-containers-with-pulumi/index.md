@@ -134,7 +134,7 @@ repository in ECR, builds the Docker container, and places the image in
 the repository. This all happens automatically and does not require
 manual configuration on your part.
 
-At the end of the update, you'll see a link to the Pulumi Console that
+At the end of the update, you'll see a link to the Pulumi Service that
 shows the details of the deployment.
 
 ![update complete](./update-complete.png)

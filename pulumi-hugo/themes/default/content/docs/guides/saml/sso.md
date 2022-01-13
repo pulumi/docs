@@ -9,11 +9,11 @@ menu:
     weight: 1
 
 aliases:
-  - /docs/intro/console/accounts/saml/
+  - /docs/intro/pulumi-service/accounts/saml/
 ---
 
 This document walks through the important aspects of configuring any SAML (Security Assertion Markup Language) 2.0 identity provider to work
-with the [Pulumi Console]({{< relref "/docs/intro/console" >}}).
+with the [Pulumi Service]({{< relref "/docs/intro/console" >}}).
 
 > For a specific example, refer to one of our integration guides:
 >
@@ -48,7 +48,7 @@ This is the URL where the IdP can `POST` SAML assertions. The URL format is alwa
 
 `https://api.pulumi.com/login/{orgName}/sso/saml/acs`
 
-`{orgName}` in the previous URL is where your Pulumi organization's name must be entered. The org name is case-sensitive. For example, if your Pulumi login name is `ACME-corp`, you must enter the name exactly as is in the above URL as well. You can find your org's Pulumi login name from the URL when you navigate to it in the [Pulumi Console](https://app.pulumi.com). Using this example, the URL would be `https://app.pulumi.com/ACME-corp`.
+`{orgName}` in the previous URL is where your Pulumi organization's name must be entered. The org name is case-sensitive. For example, if your Pulumi login name is `ACME-corp`, you must enter the name exactly as is in the above URL as well. You can find your org's Pulumi login name from the URL when you navigate to it in the [Pulumi Service](https://app.pulumi.com). Using this example, the URL would be `https://app.pulumi.com/ACME-corp`.
 
 ### Entity ID
 
@@ -73,9 +73,9 @@ The name ID format is one of the most important aspects of your SAML SSO configu
 
 ## Troubleshooting
 
-### Validation error while trying to save an IdP-provided metadata XML in the Pulumi Console
+### Validation error while trying to save an IdP-provided metadata XML in the Pulumi Service
 
-The Pulumi Console typically shows you the reason for the failure. The IdP-provided metadata XML
+The Pulumi Service typically shows you the reason for the failure. The IdP-provided metadata XML
 contains several XML elements, of which the `<IDPSSODescriptor>` is the element of concern to Pulumi. In the `IDPSSODescriptor`, we expect to see a valid `KeyDescriptor` public key certificate, a `NameIDFormat`, an entity ID identifying your organization in the IdP, and an SSO binding.
 
 The failure is typically due to one of the following reasons:
@@ -126,7 +126,7 @@ If your IdP does not support an emailAddress Name ID Format identifier but suppo
 
 ### An SSO binding was not found in the XML. Contact your SSO provider.
 
-This error occurs when the metadata XML you are trying to save does not have any `<SingleSignOnService>` elements under the `<IDPSSODescriptor>`. The `<SingleSignOnService>` is used by the Pulumi Console to determine the authentication mechanism supported by the IDP. [Learn more](https://en.wikipedia.org/wiki/SAML_2.0#SAML_2.0_Bindings) about SAML 2.0 bindings. You must contact your IdP support or your system admin to fix the metadata XML.
+This error occurs when the metadata XML you are trying to save does not have any `<SingleSignOnService>` elements under the `<IDPSSODescriptor>`. The `<SingleSignOnService>` is used by the Pulumi Service to determine the authentication mechanism supported by the IDP. Learn more about [SAML 2.0 Bindings from Wikipedia](https://en.wikipedia.org/wiki/SAML_2.0#SAML_2.0_Bindings). You must contact your IdP support or your system admin to fix the metadata XML.
 
 Here's an example of an SSO binding for `HTTP-POST`:
 

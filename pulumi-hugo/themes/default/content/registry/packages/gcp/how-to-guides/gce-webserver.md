@@ -189,7 +189,7 @@ Pulumi program to define the new state we want our infrastructure to be in, then
     Permalink: https://app.pulumi.com/lukehoban/webservergcp-dev/updates/2
     ```
 
-1. We can use `pulumi stack output` to get the value of stack outputs from the CLI.  So we can `curl` the virtual machine instance to see the HTTP server running there. Stack outputs can also be viewed on the Pulumi Console.
+1. We can use `pulumi stack output` to get the value of stack outputs from the CLI.  So we can `curl` the virtual machine instance to see the HTTP server running there. Stack outputs can also be viewed on the Pulumi Service.
 
     ```bash
     $ curl $(pulumi stack output instanceIP)
@@ -202,7 +202,7 @@ Before moving on, let's tear down the resources that are part of our stack.
 
 1. Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these resources. This takes about 60 seconds; Pulumi waits for the virtual machine instance to shutdown and for the compute network to be removed before it considers the destroy operation to be complete.
 
-1. To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the Pulumi Console.
+1. To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the Pulumi Service.
 
 ## Summary
 

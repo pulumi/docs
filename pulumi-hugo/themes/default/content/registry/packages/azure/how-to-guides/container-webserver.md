@@ -138,7 +138,7 @@ Before moving on, let's tear down the resources that are part of our stack.
 
 1. Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these resources. This takes some time; Pulumi waits for the ACI to shutdown and for the resource group to be removed before it considers the destroy operation to be complete.
 
-1. To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the Pulumi Console.
+1. To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the Pulumi Service.
 
 ## Summary
 

@@ -34,7 +34,7 @@ pathway]({{< relref "learn/pulumi-fundamentals" >}}) already.
 
 You will need the following tools to complete this module:
 
-* A [Pulumi account and token]({{< relref "/docs/intro/console/accounts#access-tokens" >}})
+* A [Pulumi account and token]({{< relref "/docs/intro/pulumi-service/accounts#access-tokens" >}})
 
 As to skills, you should be able to
 

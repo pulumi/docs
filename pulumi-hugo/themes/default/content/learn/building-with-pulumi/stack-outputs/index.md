@@ -17,7 +17,7 @@ We've created some resources. Now, let's see how we can use outputs outside of
 Pulumi. In this part, we're going to explore _stack outputs_. Stack outputs
 are, as you might guess, the values exported from any given stack. These values
 are shown during an update, can be retrieved with the Pulumi CLI, and are
-displayed in the [Pulumi Console](https://app.pulumi.com) once you've exported
+displayed in the [Pulumi Service](https://app.pulumi.com) once you've exported
 them. Example values include resource IDs, computed IP addresses, and DNS names.
 They're extremely useful when you want to run commands with the CLI that
 reference those values. Note, though, that stack outputs are for the current

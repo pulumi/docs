@@ -93,11 +93,11 @@ You can view the resources that the function created in two ways. The standard m
 
 ![AWS Console](aws_console.png)
 
-You can also view them with the [Pulumi console](https://app.pulumi.com) as a resource graph.
+You can also view them with the [Pulumi Service](https://app.pulumi.com) as a resource graph.
 
 ![Pulumi resource graph](pulumi_resource_graph.png)
 
-The Pulumi console also displays updates to the static site and the changes made.
+The Pulumi Service also displays updates to the static site and the changes made.
 
 ![Pulumi updates](pulumi_updates.png)
 
@@ -115,7 +115,7 @@ webbrowser.open(url)
 
 ## Data Science Your Way
 
-In this simple example, we demonstrated how to create a static website from an S3 bucket, write content into the bucket, and set the access policy as a Python function. We called the function, which created a stack for the website. The stack is returned as a Python object with the site URL as an output. You can manage the site and view updates using the Pulumi console.
+In this simple example, we demonstrated how to create a static website from an S3 bucket, write content into the bucket, and set the access policy as a Python function. We called the function, which created a stack for the website. The stack is returned as a Python object with the site URL as an output. You can manage the site and view updates using the Pulumi Service.
 
 Because it's code, you can create a separate module containing all the functions to create your infrastructure, import it into your notebooks, and reuse it. Pulumi lets you perform analysis and build models within a familiar environment while reducing the burden of managing infrastructure. You can find the complete example on [GitHub](https://github.com/pulumi/automation-api-examples/tree/main/python/pulumi_via_jupyter) including a Jupyter notebook for [database migration](https://github.com/pulumi/automation-api-examples/blob/main/python/pulumi_via_jupyter/database_migration.ipynb).
 

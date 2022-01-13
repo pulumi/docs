@@ -441,7 +441,7 @@ $ pulumi destroy
 $ pulumi stack rm
 ```
 
-> **Note:** This command deletes all deployment history from the Pulumi Console and cannot be undone.
+> **Note:** This command deletes all deployment history from the Pulumi Service and cannot be undone.
 
 ## Summary
 

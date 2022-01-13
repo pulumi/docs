@@ -180,7 +180,7 @@ It combines AWS S3, CloudFront and Route53.
 
 ![image-7](./image-7.png)
 
-This infrastructure is deployed and managed using the Pulumi console at
+This infrastructure is deployed and managed using the Pulumi Service at
 [app.pulumi.com](https://app.pulumi.com/), allowing us to track the
 history of deployments and changes to the infrastructure and quickly
 jump in to the resources defined by this stack in the AWS console.

@@ -12,7 +12,7 @@ aliases:
   - /docs/console/accounts/saml/onelogin/
 ---
 
-This guide walks you through configuring OneLogin as a SAML SSO identity provider (IdP) for the Pulumi Console.
+This guide walks you through configuring OneLogin as a SAML SSO identity provider (IdP) for the Pulumi Service.
 
 ## Prerequisites
 
@@ -83,7 +83,7 @@ To assign users or groups to the application, navigate to the **Users** tab in t
 
 ## Configuring Your Pulumi Organization
 
-The final step is to configure the Pulumi Console with details on your new OneLogin-based
+The final step is to configure the Pulumi Service with details on your new OneLogin-based
 SAML application. To do this, you need to obtain the IDP metadata document from OneLogin and then provide
 it to Pulumi.
 
@@ -92,13 +92,13 @@ First, navigate to the OneLogin Application you created above and click the **Mo
 ![Get Metadata](/images/docs/reference/service/saml-onelogin/onelogin-get-metadata.png)
 
 1. Open the file and copy the entire block of XML text in your clipboard
-1. Open the Pulumi Console and navigate to your SAML organization.
-1. Click the **Settings** tab, and then select **SAML SSO**.
+1. Open the Pulumi Service and navigate to your SAML organization.
+1. Select the **Settings** tab, and then select **SAML SSO**.
 1. Paste the IDP metadata XML into the bottom card titled **SAML SSO Settings**
 
     ![Pulumi Organization Settings](/images/docs/reference/service/saml-onelogin/onelogin-pulumi-saml-metadata.png)
 
-1. Click **Save** at the bottom of the card.
+1. Select **Save** at the bottom of the card.
 
 Once the IDP metadata descriptor has been saved, you are all set to log into Pulumi.
 
@@ -108,7 +108,7 @@ Members of your OneLogin application can now sign into Pulumi. Navigate to
 [https://app.pulumi.com/signin/sso/](https://app.pulumi.com/signin/sso/) and enter the
 name of your Pulumi organization.
 
-![Pulumi Console](/images/docs/reference/service/saml-okta/pulumi-console-signin.png)
+![Pulumi Service](/images/docs/reference/service/saml-okta/pulumi-console-signin.png)
 
 ## Troubleshooting
 

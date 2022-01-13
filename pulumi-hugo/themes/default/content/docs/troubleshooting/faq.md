@@ -84,7 +84,7 @@ You can disable this [auto-naming]({{< relref "/docs/intro/concepts/resources#au
 
 ### Are my secrets ever visible?
 
-Pulumi provides primitives so you can enforce your [secrets]({{< relref "/docs/intro/concepts/secrets#secrets" >}}) are stored in a secure manner in the CLI, state file and Pulumi Console. During an update, your secrets will be decrypted in memory and visible to your Pulumi program. It is your responsibility to ensure that you do not persist them outside of Pulumi without securing them.
+Pulumi provides primitives so you can enforce your [secrets]({{< relref "/docs/intro/concepts/secrets#secrets" >}}) are stored in a secure manner in the CLI, state file and Pulumi Service. During an update, your secrets will be decrypted in memory and visible to your Pulumi program. It is your responsibility to ensure that you do not persist them outside of Pulumi without securing them.
 
 ### How does Pulumi manage secrets?
 

@@ -96,9 +96,9 @@ To preview your Pulumi program, run [`pulumi up`]({{< relref "/docs/reference/cl
 
 ### Step 7: View your stack resources
 
-#### **Pulumi Console**
+#### **Pulumi Service**
 
-To see the full details of the deployment and the resources that are now part of the stack, open the update link in a browser. The **Resources** tab on the Pulumi Console has a link to the AWS console for the provisioned EC2 instance.
+To see the full details of the deployment and the resources that are now part of the stack, open the update link in a browser. The **Resources** tab in the Pulumi Service has a link to the AWS console for the provisioned EC2 instance.
 
 #### **Pulumi CLI**
 
@@ -111,7 +111,7 @@ Current stack outputs (1):
     bucketName                                     s3-website-bucket-8533d8b
 ```
 
-To see that the S3 bucket objects exist, you can either use the AWS Console (which is accessible from the Pulumi Console) or the AWS CLI:
+To see that the S3 bucket objects exist, you can either use the AWS Console (which is accessible from the Pulumi Service) or the AWS CLI:
 
 ```bash
 $ aws s3 ls $(pulumi stack output bucketName)

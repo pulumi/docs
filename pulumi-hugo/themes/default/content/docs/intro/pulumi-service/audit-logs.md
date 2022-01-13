@@ -3,11 +3,11 @@ title: Audit Logs
 meta_desc: "This is a guide on how to audit your organization's infrastructure as code activity"
 menu:
   intro:
-    parent: console
+    parent: pulumi-service
     weight: 8
 aliases:
-- /docs/intro/console/collaboration/auditing/
-- /docs/intro/console/auditing/
+- /docs/intro/pulumi-service/collaboration/auditing/
+- /docs/intro/pulumi-service/auditing/
 ---
 {{% notes "info" %}}
 Audit Logs are only available to organizations using Pulumi Enterprise.
@@ -204,6 +204,6 @@ Custom defined keys:
 | Team Deleted                             | indicates the deletion of a team from organization                                                                         |
 | Team Updated                             | indicates the updating of a team in an organization                                                                        |
 | User Added New Identity to Their Account | indicates a user has associated a new identity with their Pulumi account                                            |
-| User Login                        | indicates a user has successfully logged into the Pulumi Console                                                             |
-| User Login Failed                               | indicates a user tried and failed to log into the Pulumi Console        |
+| User Login                        | indicates a user has successfully logged into the Pulumi Service                                                             |
+| User Login Failed                               | indicates a user tried and failed to log into the Pulumi Service        |
 | SAML Configuration Updated                      | indicates the organization's SAML configuration has been updated  |

@@ -31,7 +31,7 @@ Here are a few highlights:
   entire API.
 - **EASY UPDATES:** Changing a `roleRef` in a `RoleBinding`, on one or
   multiple clusters involves updating your TypeScript file `index.ts`
-  and running `pulumi up`. The Pulumi console allows you to share your
+  and running `pulumi up`. The Pulumi Service allows you to share your
   stack with your team in your GitHub, GitLab, or Atlassian-based
   organization.
 - **WORKFLOW AUTOMATION FOR RBAC AT SCALE:** You can delete or update

@@ -168,7 +168,7 @@ manual configuration on your part.
 
 ![pulumi-update-output](./pulumi-update-output.png)
 
-At the end of the update, you'll see a link to the Pulumi Console that
+At the end of the update, you'll see a link to the Pulumi Service that
 shows the details of the deployment.
 
 ![pulumi-update-complete-1](./pulumi-update-complete-1.png)

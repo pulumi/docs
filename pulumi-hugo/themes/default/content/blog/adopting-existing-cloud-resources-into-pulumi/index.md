@@ -242,9 +242,9 @@ Deploying this, Pulumi shows we will update the existing resource to add the new
         }
 ```
 
-Since the resources are now being managed by Pulumi, we can use the Pulumi Console to see them:
+Since the resources are now being managed by Pulumi, we can use the Pulumi Service to see them:
 
-![The Pulumi Console stack resources page](./console.png)
+![The Pulumi Service stack resources page](./console.png)
 
 And then navigate to the Virtual Machine in the Azure Portal and see the newly added `managedBy: Pulumi` tag.
 

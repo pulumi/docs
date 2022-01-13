@@ -86,7 +86,7 @@ meta_desc: A list of different environment variables the Pulumi CLI supports.
     </dt>
     <dd>
         <p>
-            Overrides the domain used when generating links to the Pulumi Console.
+            Overrides the domain used when generating links to the Pulumi Service.
         </p>
         <pre><code class="text-xs">PULUMI_CONSOLE_DOMAIN="yourhost.domain.com"</code></pre>
     </dd>

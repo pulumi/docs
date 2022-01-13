@@ -229,11 +229,11 @@ The [Pulumi Policy Packs examples repository](https://github.com/pulumi/examples
 
 A Policy Pack can contain one or more policies to enforce. Packs provide a way to group together similar policies. For example, you may decide to have one pack with AWS policies and another with Kubernetes-specific policies. That being said, there are no restrictions on which policies you combine within a pack, and you should pack them however makes sense for your organization.
 
-As part of CrossGuard, organization administrators can author and publish Policy Packs to the Pulumi Console.
+As part of CrossGuard, organization administrators can author and publish Policy Packs to the Pulumi Service.
 
 ## Policy Group
 
-A Policy Group is a group of stacks with the same set of Policy Packs enforced. Policy Groups are only available from within the Pulumi Console when CrossGuard is enabled. A stack may belong to multiple Policy Groups. An example use of Policy Groups is to have a different group per environment. For example, you can have one for your stacks in production and a more permissive Policy Group for your other environments such as `staging` and `dev`.
+A Policy Group is a group of stacks with the same set of Policy Packs enforced. Policy Groups are only available from within the Pulumi Service when CrossGuard is enabled. A stack may belong to multiple Policy Groups. An example use of Policy Groups is to have a different group per environment. For example, you can have one for your stacks in production and a more permissive Policy Group for your other environments such as `staging` and `dev`.
 
 Organization admins can create new Policy Groups, add stacks to a Policy Group, or remove stacks from a group.
 

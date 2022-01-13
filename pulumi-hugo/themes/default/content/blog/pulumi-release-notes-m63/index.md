@@ -108,6 +108,6 @@ await stack.State.UnprotectAsync(resource.Urn);
 
 ### Automated audit log export
 
-Some larger companies manage their security risk using a Security Information and Event Management (SIEM) system to collect security information from all of the systems and SaaS products they use. To make it easier for you to bring Pulumi audit log events into such systems, you can now enable [automated export]({{<relref "/docs/intro/console/audit-logs#automated-export">}}) of your audit logs to an Amazon S3 bucket, which many SIEMs can read from automatically.
+Some larger companies manage their security risk using a Security Information and Event Management (SIEM) system to collect security information from all of the systems and SaaS products they use. To make it easier for you to bring Pulumi audit log events into such systems, you can now enable [automated export]({{<relref "/docs/intro/pulumi-service/audit-logs#automated-export">}}) of your audit logs to an Amazon S3 bucket, which many SIEMs can read from automatically.
 
-[Learn more in the docs]({{<relref "/docs/intro/console/audit-logs#automated-export">}}).
+[Learn more in the docs]({{<relref "/docs/intro/pulumi-service/audit-logs#automated-export">}}).

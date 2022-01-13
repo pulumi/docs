@@ -133,7 +133,7 @@ The stack emits the URL to the webhook handler in the stack's outputs.
 That URL is what will receive and process Pulumi webhooks.
 
 With the infrastructure in-place, we just need to register the webhook
-on the Pulumi Console. Organization administrators can do so under
+in the Pulumi Service. Organization administrators can do so under
 the organization's **SETTINGS** tab.
 
 ![webhooks3](./pulumi-webhooks-3.png)

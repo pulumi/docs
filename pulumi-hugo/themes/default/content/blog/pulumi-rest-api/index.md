@@ -46,7 +46,7 @@ Authentication and authorization is governed by the Pulumi identity and RBAC sys
 
 ## The REST API for Cloud Engineering
 
-We have already seen Cloud Engineering teams using the Pulumi REST API to build all sorts of custom functionality. These new capabilities are especially powerful when used in combination with the [Automation API]({{< relref "/automation" >}}), which lets you use infrastructure as code as a library embedded into a larger system, and [Webhooks]({{< relref "/docs/intro/console/webhooks" >}}), which lets you invoke your own REST API in response to a Pulumi event such as a stack update.
+We have already seen Cloud Engineering teams using the Pulumi REST API to build all sorts of custom functionality. These new capabilities are especially powerful when used in combination with the [Automation API]({{< relref "/automation" >}}), which lets you use infrastructure as code as a library embedded into a larger system, and [Webhooks]({{< relref "/docs/intro/pulumi-service/webhooks" >}}), which lets you invoke your own REST API in response to a Pulumi event such as a stack update.
 
 Examples of scenarios we've seen include:
 

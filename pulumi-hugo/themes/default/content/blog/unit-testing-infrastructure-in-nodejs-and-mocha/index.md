@@ -445,15 +445,15 @@ For instance, let's say somehow the VPC wasn't known at preview time, and ended 
 resolving to the default VPC. Even though the deployment occurred, we'd want to
 know that we now have an issue that we need to go track down.
 
-We can very clearly see such failures in the Pulumi Console:
+We can very clearly see such failures in the Pulumi Service:
 
 ![Failed Deployment](./failed-deployment.png)
 
-And if we click into it, we'll see the complete Mocha test output:
+And if we select it, we'll see the complete Mocha test output:
 
 ![Failed Deployment Details](./failed-deployment-details.png)
 
-We could even [use webhooks]({{< relref "/docs/intro/console/webhooks" >}}) to
+We could even [use webhooks]({{< relref "/docs/intro/pulumi-service/webhooks" >}}) to
 fire off a Slack alarm so that nobody misses the issue. This is often very helpful in
 unattended scenarios, like [continuous deployment]({{< relref "/docs/guides/continuous-delivery" >}}).
 

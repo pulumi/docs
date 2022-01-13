@@ -83,11 +83,11 @@ capabilities:
                 Visualize projects, stacks, and cloud resources so you and developers in your organization know what’s running and where.
 
               more_info: |
-                View [timelines](/docs/intro/console/projects-and-stacks/#stack-activity) that show diffs of changed resources and who made the changes.
+                View [timelines](/docs/intro/pulumi-service/projects-and-stacks/#stack-activity) that show diffs of changed resources and who made the changes.
 
                 [Tag stacks](/docs/intro/concepts/stack/#stack-tags) for easier filtering and searching.
 
-                Track the activity of users within your organization with [audit logs](/docs/intro/console/audit-logs/).
+                Track the activity of users within your organization with [audit logs](/docs/intro/pulumi-service/audit-logs/).
 
             - title: Software delivery integrations
               description: |
@@ -96,11 +96,11 @@ capabilities:
               more_info: |
                 Work with existing tools like IDEs, test frameworks, and package managers.
 
-                Integrate your [source control system](/docs/intro/console/ci-cd-integration-assistant/) so teams can trace changes back to commits and pull requests.
+                Integrate your [source control system](/docs/intro/pulumi-service/ci-cd-integration-assistant/) so teams can trace changes back to commits and pull requests.
 
                 Continuously deliver infrastructure through existing pipelines with [CI/CD integrations](/docs/guides/continuous-delivery/).
 
-                Use event-based [webhooks](/docs/intro/console/webhooks/) to notify external services like Slack or continuous integration tools.
+                Use event-based [webhooks](/docs/intro/pulumi-service/webhooks/) to notify external services like Slack or continuous integration tools.
 
                 Use [the Service API](/blog/pulumi-rest-api/) to manage stacks, updates, teams, and more.
 
@@ -118,7 +118,7 @@ capabilities:
 
                 Manage Pulumi access from your central identity provider via [SCIM 2.0 integration](/docs/guides/scim/).
 
-                Set [role-based access controls](/docs/intro/console/teams/) that limit who can access infrastructure.
+                Set [role-based access controls](/docs/intro/pulumi-service/teams/) that limit who can access infrastructure.
 
             - title: Proactive compliance enforcement
               description: |

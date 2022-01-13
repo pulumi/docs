@@ -383,7 +383,7 @@ Run the following command to tear down the resources that are part of our stack.
     resources.
 
 1. To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the
-    Pulumi Console and cannot be undone.
+    Pulumi Service and cannot be undone.
 
 ## Summary
 

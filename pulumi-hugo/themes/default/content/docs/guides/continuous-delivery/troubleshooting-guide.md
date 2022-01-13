@@ -15,7 +15,7 @@ The type of failure you experience is likely related to one of these steps.
 
 In order to run a Pulumi command, the following are required:
 
-* A [Pulumi access token]({{< relref "/docs/intro/console/accounts#access-tokens" >}}) for the account you wish to use.
+* A [Pulumi access token]({{< relref "/docs/intro/pulumi-service/accounts#access-tokens" >}}) for the account you wish to use.
 [Create a token](https://app.pulumi.com/account/tokens) by logging in with the appropriate account.
 * A stack that you would like to update the automated pipeline.
 * Pulumi CLI available in the system `PATH`.
@@ -49,7 +49,7 @@ beforehand using the `pulumi stack init` command and in the **appropriate organi
 * Ensure that the account represented by the token you are using has access to the stack.
 
   This can lead to 404s being returned from the Pulumi Service because the token is invalid for any number of reasons.
-  One way to check this is, that you are able to navigate to the stack in the [Pulumi Console](https://app.pulumi.com) using the same account you are using in CI.
+  One way to check this is, that you are able to navigate to the stack in the [Pulumi Service](https://app.pulumi.com) using the same account you are using in CI.
 
 * Ensure that you use the fully-qualified stack name when passing the stack name to `pulumi` commands.
 
