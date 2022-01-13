@@ -26,7 +26,7 @@ between different environments by merging or directly committing changes.
 Let's see how to get started -- it's easy!
 
 {{% notes type="info" %}}
-Users in organizations can use the [CI/CD Integration Assistant]({{< relref "docs/intro/console/ci-cd-integration-assistant" >}}) with GitHub Actions.
+Users in organizations can use the [CI/CD Integration Assistant]({{< relref "docs/intro/pulumi-service/ci-cd-integration-assistant" >}}) with GitHub Actions.
 {{% /notes %}}
 
 ## Pre-Requisites

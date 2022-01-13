@@ -13,7 +13,7 @@ aliases:
 ---
 
 This document walks through the important aspects of configuring any SAML (Security Assertion Markup Language) 2.0 identity provider to work
-with the [Pulumi Service]({{< relref "/docs/intro/console" >}}).
+with the [Pulumi Service]({{< relref "/docs/intro/pulumi-service" >}}).
 
 > For a specific example, refer to one of our integration guides:
 >

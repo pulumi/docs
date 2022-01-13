@@ -26,7 +26,7 @@ link = "/docs/intro/concepts/state#self-managed-backend"
 [[entries]]
 term = "Pulumi Service"
 description = "The Pulumi Service refers to the web application at `app.pulumi.com` which automatically manages deployment state and enables collaboration between developers and operators."
-link = "/docs/intro/console"
+link = "/docs/intro/pulumi-service"
 
 [[entries]]
 term = "IdP"

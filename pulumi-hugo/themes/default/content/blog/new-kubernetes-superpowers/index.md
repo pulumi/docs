@@ -43,7 +43,7 @@ We’re excited to announce the new [pulumi-kubernetes-operator](https://github.
 
 ![Pulumi Kubernetes Operator](pulumi-kubernetes-operator.png)
 
-Creating a Stack is simple: provide the stack name, project repo, and a commit (support for branches coming soon!), and the operator starts driving toward the specified state. Stacks can be used directly, or as part of higher-level abstractions to manage your infrastructure and applications. The [Pulumi Service]({{< relref "/docs/intro/console" >}}) augments these capabilities by providing visibility into the updates, resources under management, and policy enforcement of your stacks.
+Creating a Stack is simple: provide the stack name, project repo, and a commit (support for branches coming soon!), and the operator starts driving toward the specified state. Stacks can be used directly, or as part of higher-level abstractions to manage your infrastructure and applications. The [Pulumi Service]({{< relref "/docs/intro/pulumi-service" >}}) augments these capabilities by providing visibility into the updates, resources under management, and policy enforcement of your stacks.
 
 ```yaml
 apiVersion: pulumi.com/v1alpha1

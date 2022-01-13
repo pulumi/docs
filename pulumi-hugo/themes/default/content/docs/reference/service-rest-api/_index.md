@@ -1482,7 +1482,7 @@ EMPTY RESPONSE BODY
 
 {{% notes "info" %}}
 
-- For [GitHub-backed organizations]({{< relref "docs/intro/console/teams#github-based-teams" >}}), this operation cannot be used as membership is managed on GitHub.
+- For [GitHub-backed organizations]({{< relref "docs/intro/pulumi-service/teams#github-based-teams" >}}), this operation cannot be used as membership is managed on GitHub.
 - For [SCIM managed teams]({{< relref "/docs/guides/scim" >}}), this operation cannot be used as membership is managed via the SSO provider.
 
 {{% /notes %}}
