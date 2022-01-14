@@ -6,8 +6,8 @@ menu:
     parent: pulumi-service
     weight: 7
 aliases:
-- /docs/intro/pulumi-service/extensions/
-- /docs/intro/pulumi-service/extensions/ci-cd-integration-assistant/
+- /docs/intro/console/extensions/
+- /docs/intro/console/extensions/ci-cd-integration-assistant/
 ---
 
 {{% notes "info" %}}

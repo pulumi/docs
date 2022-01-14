@@ -8,11 +8,11 @@ menu:
 aliases:
 - /docs/reference/service/orgs/
 - /docs/console/accounts/organizations/
-- /docs/intro/pulumi-service/accounts/organizations/
+- /docs/intro/console/accounts/organizations/
 - /docs/console/collaboration/organization-roles
-- /docs/intro/pulumi-service/organization-roles
+- /docs/intro/console/organization-roles
 - /docs/console/organization-roles
-- /docs/intro/pulumi-service/organizations/
+- /docs/intro/console/organizations/
 ---
 
 Organizations are a space for you to collaborate on shared projects and stacks.

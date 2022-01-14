@@ -9,8 +9,8 @@ menu:
 aliases:
  - /docs/reference/service/pulumi-button/
  - /docs/console/extensions/pulumi-button/
- - /docs/intro/pulumi-service/extensions/pulumi-button/
- - /docs/intro/pulumi-service/pulumi-button/
+ - /docs/intro/console/extensions/pulumi-button/
+ - /docs/intro/console/pulumi-button/
 ---
 
 The "Deploy with Pulumi" button lets you easily create new Pulumi projects from the browser. You can embed the button in README files within GitHub repositories or gists, blog posts, or other web pages.

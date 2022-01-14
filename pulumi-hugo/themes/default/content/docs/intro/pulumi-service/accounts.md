@@ -6,10 +6,10 @@ menu:
     parent: pulumi-service
     weight: 1
 aliases:
-  - /docs/intro/pulumi-service/accounts/
-  - /docs/intro/pulumi-service/accounts/account/
-  - /docs/intro/pulumi-service/accounts-and-organizations/
-  - /docs/intro/pulumi-service/accounts-and-organizations/accounts/
+  - /docs/intro/console/accounts/
+  - /docs/intro/console/accounts/account/
+  - /docs/intro/console/accounts-and-organizations/
+  - /docs/intro/console/accounts-and-organizations/accounts/
 ---
 
 If you haven't created your Pulumi account, navigate to [app.pulumi.com](https://app.pulumi.com) and sign

@@ -8,9 +8,9 @@ menu:
 aliases:
 - /docs/reference/service/teams/
 - /docs/console/collaboration/teams/
-- /docs/intro/pulumi-service/collaboration/
-- /docs/intro/pulumi-service/collaboration/teams/
-- /docs/intro/pulumi-service/teams/
+- /docs/intro/console/collaboration/
+- /docs/intro/console/collaboration/teams/
+- /docs/intro/console/teams/
 ---
 
 {{% notes "info" %}}

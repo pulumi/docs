@@ -8,8 +8,8 @@ menu:
 aliases:
 - /docs/reference/service/webhooks/
 - /docs/console/extensions/webhooks/
-- /docs/intro/pulumi-service/extensions/webhooks/
-- /docs/intro/pulumi-service/webhooks/
+- /docs/intro/console/extensions/webhooks/
+- /docs/intro/console/webhooks/
 ---
 
 {{% notes "info" %}}

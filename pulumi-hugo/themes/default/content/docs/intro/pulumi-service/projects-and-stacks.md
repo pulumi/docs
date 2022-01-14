@@ -6,11 +6,11 @@ menu:
     parent: pulumi-service
     weight: 4
 aliases:
-- /docs/intro/pulumi-service/project-and-stack-management/
+- /docs/intro/console/project-and-stack-management/
 - /docs/reference/service/roles-and-access-controls/
 - /docs/console/collaboration/stack-permissions/
-- /docs/intro/pulumi-service/stack-permissions/
-- /docs/intro/pulumi-service/projects-and-stacks/
+- /docs/intro/console/stack-permissions/
+- /docs/intro/console/projects-and-stacks/
 ---
 
 Projects group stacks together and are folders containing a Pulumi.yaml file.
