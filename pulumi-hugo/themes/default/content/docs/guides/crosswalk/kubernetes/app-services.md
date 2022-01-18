@@ -18,39 +18,23 @@ usually a mix of cloud provider and custom services.
 
 {{% choosable cloud aws %}}
 
-The full code for the AWS app services stack is on [GitHub][gh-repo-stack].
-
-<!-- markdownlint-disable url -->
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/05-app-services
-<!-- markdownlint-enable url -->
+* [AWS app services stack on GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/aws/05-app-services)
 
 {{% /choosable %}}
 
 {{% choosable cloud azure %}}
 
-The full code for the Azure app services stack is on [GitHub][gh-repo-stack].
-
-<!-- markdownlint-disable url -->
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/05-app-services
-<!-- markdownlint-enable url -->
+* [Azure app services stack on GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/azure/05-app-services)
 
 {{% /choosable %}}
 
 {{% choosable cloud gcp %}}
 
-The full code for the GCP app services stack is on [GitHub][gh-repo-stack].
-
-<!-- markdownlint-disable url -->
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/05-app-services
-<!-- markdownlint-enable url -->
+* [GCP app services stack on GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/gcp/05-app-services)
 
 {{% /choosable %}}
 
-The full code for the general app services is on [GitHub][gh-repo-stack].
-
-<!-- markdownlint-disable url -->
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/general-app-services
-<!-- markdownlint-enable url -->
+* [General app services stack on GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/general-app-services)
 
 ## Overview
 
@@ -351,6 +335,8 @@ const cacheConn = new k8s.core.v1.ConfigMap(
 {{% /choosable %}}
 
 ## General App Services
+
+[General app services stack on GitHub](https://github.com/pulumi/kubernetes-guides/tree/master/general-app-services)
 
 ### NGINX Ingress Controller
 
