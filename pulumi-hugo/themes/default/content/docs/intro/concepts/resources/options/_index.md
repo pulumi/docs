@@ -10,7 +10,7 @@ menu:
 
 All resource constructors accept an options argument that provide the following resource options:
 
-- [additionalSecretOutputs]({{< relref "additional-secret-outputs" >}}): specify properties that must be encrypted as secrets.
+- [additionalSecretOutputs]({{< relref "additionalsecretoutputs" >}}): specify properties that must be encrypted as secrets.
 - [aliases]({{< relref "aliases" >}}): specify aliases for this resource, so that renaming or refactoring doesn’t replace it.
 - [customTimeouts]({{< relref "customtimeouts" >}}): override the default retry/timeout behavior for resource provisioning. The default value varies by resource.
 - [deleteBeforeReplace]({{< relref "deletebeforereplace" >}}): override the default create-before-delete behavior when replacing a resource.
