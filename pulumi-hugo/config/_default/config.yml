@@ -40,6 +40,12 @@ module:
         - source: archetypes
           target: archetypes
 
+security:
+  funcs:
+    getenv:
+      - ASSET_BUNDLE_ID
+      - REPO_THEME_PATH
+      - PULUMI_CONVERT_URL
 
 disableKinds:
   - category
