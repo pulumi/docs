@@ -153,7 +153,7 @@ elb_logging_enabled = ResourceValidationPolicy(
 
 ### Stack Validation Policy
 
-Policies of `StackValidationPolicy` are run against all the resources in a stack. These policies are run are all stack resources are registered and thus *do not* block an out-of-compliance resource from being created, but do fail the preview or update. To avoid creating out-of-compliance resources, we recommend always running a preview command before an update. This allows you to write policies where one resource depends on the state or existence of another resource.
+Policies of `StackValidationPolicy` are run against all the resources in a stack. These policies are run after all stack resources are registered and thus *do not* block an out-of-compliance resource from being created, but do fail the preview or update. To avoid creating out-of-compliance resources, we recommend always running a preview command before an update. This allows you to write policies where one resource depends on the state or existence of another resource.
 
 The below example requires that all dynamoDB tables have an App Autoscaling Policy associated with it.
 
