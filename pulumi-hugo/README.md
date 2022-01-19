@@ -12,21 +12,10 @@ First, be sure to read our [contributing guide](CONTRIBUTING.md) and review our 
 
 We build the Pulumi website statically with Hugo, manage our Node.js dependencies with Yarn, and write most of our documentation in Markdown. Below is a list of the tools you'll need to run the website locally:
 
-* [Go](https://golang.org/)
-* [Hugo](https://gohugo.io)
-* [Node.js](https://nodejs.org/en/)
-* [Yarn](https://classic.yarnpkg.com/en/)
-
-### CSS and JavaScript Tools
-
-We also use a handful of tools for compiling and managing our CSS and JavaScript assets, including:
-
-* [Sass](https://sass-lang.com/)
-* [TailwindCSS](https://tailwindcss.com/)
-* [Stencil.js](https://stenciljs.com/)
-* [TypeScript](https://www.typescriptlang.org/)
-
-You don't need to install these tools individually or globally; the scripts below will handle everything for you. But if you'd like to contribute any CSS or JavaScript, you'll probably want to understand how to work with each of these tools as well.
+* [Go](https://golang.org/) (>= 1.15)
+* [Hugo](https://gohugo.io) (>= 0.81)
+* [Node.js](https://nodejs.org/en/) (>= 1.14)
+* [Yarn](https://classic.yarnpkg.com/en/) (1.x)
 
 ## Installing prerequisites
 
@@ -45,16 +34,6 @@ make serve
 ```
 
 You can browse the development server at http://localhost:1313, and any changes you make to content or layouts should be reloaded automatically.
-
-## Running Hugo with CSS and JavaScript support
-
-If you plan on making changes to CSS or JavaScript files, you'll probably want to use this command instead:
-
-```
-make serve-all
-```
-
-The `serve-all` target runs Hugo, node-sass, and the Stencil development server concurrently, allowing you to make changes to Sass files, Stencil components, or TypeScript/JavaScript source files, and have those changes compiled and reloaded automatically as well.
 
 ## Linting and testing
 
@@ -95,7 +74,8 @@ You'll find all of these files in `themes/default`.
 
 ### What's not in this repo
 
-* Generated documentation for the Pulumi CLI and SDK. You'll find this at https://github.com/pulumi/docs).
+* CSS and JavaScript. You'll find these at https://github.com/pulumi/theme.
+* Generated documentation for the Pulumi CLI and SDK. You'll find this at https://github.com/pulumi/docs.
 * Generated tutorials. You'll find these at https://github.com/pulumi/examples).
 * Templates used for generating resource documentation. You'll find these at https://github.com/pulumi/pulumi.
 

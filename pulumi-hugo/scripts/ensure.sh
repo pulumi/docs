@@ -4,12 +4,8 @@ set -o errexit -o pipefail
 
 source ./scripts/common.sh
 
-REQUIRED_GO="1.16"
-REQUIRED_HUGO="0.82"
-REQUIRED_NODE="$(cat .nvmrc)"
-
-# Check for the required versions of Go, Hugo, Node, and Yarn.
-if [[ -z "$(which go)" || -z "$(go version | grep ${REQUIRED_GO})"  ]]; then
+# Check for Go, Hugo, Node, and Yarn.
+if [[ -z "$(which go)" ]]; then
     echo "This project uses Go version ${REQUIRED_GO}."
     echo "See the README for the complete list of prerequisities and "
     echo "https://golang.org/doc/install for help installing Go."
@@ -23,7 +19,7 @@ if [[ -z "$(which hugo)" ]]; then
     exit 1
 fi
 
-if [[ -z "$(which node)" || -z "$(node --version | grep ${REQUIRED_NODE})"  ]]; then
+if [[ -z "$(which node)" ]]; then
     echo "This project uses Node.js ${REQUIRED_NODE}."
     echo "See the README for the complete list of prerequisities and "
     echo "https://nodejs.org/en/download for help installing Node.js."
