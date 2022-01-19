@@ -46,7 +46,7 @@ $ pulumi up --logtostderr -v=9 2> out.txt
 
 Individual resource providers may also have additional flags to customize their diagnostic logging.
 For example, for any Pulumi resource providers that expose a Terraform resource provider into
-Pulumi, you can use [`TF_TRACE`](https://www.terraform.io/docs/internals/debugging.html) set to
+Pulumi, you can use [`TF_LOG`](https://www.terraform.io/docs/internals/debugging.html) set to
 `TRACE`, `DEBUG`, `INFO`, `WARN` or `ERROR`.
 
 ```
