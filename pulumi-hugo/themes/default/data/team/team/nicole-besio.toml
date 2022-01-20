@@ -1,0 +1,9 @@
+id = "nicole-besio"
+name = "Nicole Besio"
+title = "Senior Technical Recruiter"
+weight = 1
+
+status = "active"
+
+[social]
+linkedin = "nicole-besio-45901622"
