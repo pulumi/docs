@@ -89,7 +89,11 @@ a user's identity.
 ![SAML Application Metadata](/images/docs/reference/service/saml-okta/okta-xml-descriptor.png)
 
 With the block of XML text in your clipboard, open the Pulumi Service and navigate to your SAML
-organization. Select the **Settings** tab, and then select **SAML SSO**.
+organization. Select the **Settings** tab, and then select **Access Management**.
+
+In the **Membership Requirements** section, select the **Change requirements** button.
+
+Select **SAML SSO** for the IDP and then **Next**.
 
 Paste the IDP metadata descriptor into the bottom card
 titled **SAML SSO Settings**. Then select **Save** at the bottom of the card.
