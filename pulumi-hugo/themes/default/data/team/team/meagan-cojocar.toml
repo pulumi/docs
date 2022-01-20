@@ -1,0 +1,11 @@
+id = "meagan-cojocar"
+name = "Meagan Cojocar"
+title = "Senior Product Manager"
+weight = 1
+
+status = "active"
+
+[social]
+linkedin = "meagancojocar"
+github = "meagancojocar"
+twitter = "meagancojocar"
