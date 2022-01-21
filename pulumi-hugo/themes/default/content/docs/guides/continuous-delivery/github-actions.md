@@ -142,9 +142,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-go@v1
+      - uses: actions/setup-go@v2
         with:
-          go-version: 1.14.x
+          go-version: 1.16.x
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -282,9 +282,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-go@v1
+      - uses: actions/setup-go@v2
         with:
-          go-version: 1.14.x
+          go-version: 1.16.x
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -495,9 +495,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-go@v1
+      - uses: actions/setup-go@v2
         with:
-          go-version: 1.14.x
+          go-version: 1.16.x
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -654,9 +654,9 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
-      - uses: actions/setup-go@v1
+      - uses: actions/setup-go@v2
         with:
-          go-version: 1.14.x
+          go-version: 1.16.x
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -818,9 +818,9 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
-      - uses: actions/setup-go@v1
+      - uses: actions/setup-go@v2
         with:
-          go-version: 1.14.x
+          go-version: 1.16.x
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
