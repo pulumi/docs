@@ -405,3 +405,5 @@ IaC observability becomes rather simple when using Pulumi and Honeycomb.
 Pulumi's automation API allows us to control the CLI with JavaScript, and Honeycomb's Libhoney is low-level enough to instrument every part of our deployment process.
 
 This way we can keep track which resources are slowing our deployment down, or which was responsible for a failed deployment.
+***
+*This article was originally posted at [https://dev.to/fllstck/observable-infrastructure-as-code-52ha](https://dev.to/fllstck/observable-infrastructure-as-code-52ha). Reposted here with permission.*
