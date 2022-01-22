@@ -526,3 +526,10 @@ There are two ways to fix this, one way if you have access to an Intel based com
 ### I'm seeing other errors, please help
 
 Get in touch with us, either through the [Community Slack](https://slack.pulumi.com) or by emailing our support team: [support@pulumi.com](mailto:support@pulumi.com).
+
+## I can't connect to the Pulumi Service
+
+If your network blocks external traffic and you're using the Pulumi Service to manage your state, your security team may need the following details to allow the Pulumi CLI to connect to the Service:
+
+* The URL that the Pulumi CLI uses to connect to the Service is `https://api.pulumi.com`. (It does not use `https://app.pulumi.com`, so if you want to view the console, you'll need enable that as well.)
+* All access goes over HTTPS via port 443.
