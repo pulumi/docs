@@ -18,6 +18,7 @@ tags:
 Recently, Pulumi community member Josh Graham decided to bootstrap a simple application using a serverless approach, with a focus on using good engineering practices and being able to run the application locally. Given that Josh is the (OG) SaaS architect of Atlassian and an AWS user, [LocalStack](https://github.com/localstack/localstack#overview) was a natural choice.
 
 <!--more-->
+***
 
 ## Introduction
 
