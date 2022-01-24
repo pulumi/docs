@@ -1,0 +1,12 @@
+id = "steve-sloka"
+name = "Steve Sloka"
+title = "Software Engineer"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "stevesloka"
+linkedin = "steve-sloka"
+twitter = "stevesloka"
