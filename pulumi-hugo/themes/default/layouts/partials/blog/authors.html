@@ -3,7 +3,7 @@
         {{ $authorPage := $.context.Site.GetPage (printf "/authors/%s" ($id | urlize)) }}
         {{ $authorData := index $.context.Site.Data.team.team $id }}
 
-        <span class="flex items-center mr-2">
+        <span class="flex items-center">
             {{ if $authorData }}
                 <a data-track="{{ $authorData.name | urlize }}-img" class="rounded-full p-1 bg-blue-200 mr-2" href="{{ $authorPage.Permalink }}">
                     <img class="w-8 rounded-full" src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" title="{{ $authorData.name }}">
