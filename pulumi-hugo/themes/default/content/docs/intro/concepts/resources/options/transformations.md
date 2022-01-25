@@ -4,7 +4,7 @@ meta_desc: The transformations resource option provides a list of transformation
 menu:
   intro:
     parent: options
-    weight: 12
+    weight: 13
 ---
 
 The `transformations` resource option provides a list of transformations to apply to a resource and all of its children. This option is used to override or modify the inputs to the child resources of a component resource. One example is to use the option to add other resource options (such as `ignoreChanges` or `protect`). Another example is to modify an input property (such as adding to tags or changing a property that is not directly configurable).

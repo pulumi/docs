@@ -4,7 +4,7 @@ meta_desc: The replaceOnChanges resource option indicates that changes to proper
 menu:
   intro:
     parent: options
-    weight: 11
+    weight: 12
 ---
 
 The `replaceOnChanges` resource option can be used to indicate that changes to certain properties on a resource should force a replacement of the resource instead of an in-place update.  Typically users rely on the resource provider to make this decision based on whether the input property is one that the provider knows how to update in place, or if not, requires a replacement to modify.  However, there are cases where users want to replace a resource on a change to an input property even if the resource provider itself doesn't believe it has to replace the resource.

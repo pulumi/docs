@@ -304,12 +304,13 @@ For `go`:
 
 For `csharp`:
 
-| Property                 | Type          | Required | Description |
-|--------------------------|---------------|----------|-------------|
-| `packageReferences`      | `map[string]` | No       |             |
-| `namespaces`             | `map[string]` | No       |             |
-| `compatibility`          | `string`      | No       |             |
-| `dictionaryConstructors` | `boolean`     | No       |             |
+| Property                 | Type          | Required | Description                                                                                         |
+|--------------------------|---------------|----------|-----------------------------------------------------------------------------------------------------|
+| `packageReferences`      | `map[string]` | No       |                                                                                                     |
+| `namespaces`             | `map[string]` | No       |                                                                                                     |
+| `compatibility`          | `string`      | No       |                                                                                                     |
+| `dictionaryConstructors` | `boolean`     | No       |                                                                                                     |
+| `rootNamespace`          | `string`      | No       | The root namespace that the generated package should live under. This setting defaults to "Pulumi". |
 
 ### PropertyLanguage
 

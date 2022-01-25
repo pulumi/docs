@@ -40,7 +40,7 @@ You can browse the development server at http://localhost:1313, and any changes 
 To check your code and your Markdown files for issues before submitting, run:
 
 ```
-make lint test
+make lint
 ```
 
 ## Tidying up

@@ -4,7 +4,7 @@ meta_desc: The version resource option specifies a provider version to use when 
 menu:
   intro:
     parent: options
-    weight: 13
+    weight: 14
 ---
 
 The `version` resource option specifies a provider version to use when operating on a resource. This version overrides the version information inferred from the current package. This option should be used rarely.
