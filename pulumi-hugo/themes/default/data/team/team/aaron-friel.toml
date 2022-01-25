@@ -1,0 +1,12 @@
+id = "aaron-friel"
+name = "Aaron Friel"
+title = "Software Engineer"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "AaronFriel"
+twitter = "AaronFriel"
+linkedin = "aaronfriel"

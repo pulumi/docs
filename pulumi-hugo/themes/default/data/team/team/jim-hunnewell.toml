@@ -1,0 +1,10 @@
+id = "jim-hunnewell"
+name = "Jim Hunnewell"
+title = "CRO"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+linkedin = "jimhunnewell"
