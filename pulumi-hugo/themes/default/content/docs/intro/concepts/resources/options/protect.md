@@ -1,8 +1,9 @@
 ---
 title: "Protect"
-meta_desc: An in depth look at Pulumi resources and their usage.
+meta_desc: The protect resource option prevents accidental deletion of a resource by marking it as protected.
 menu:
   intro:
+    identifier: protect
     parent: options
     weight: 9
 ---

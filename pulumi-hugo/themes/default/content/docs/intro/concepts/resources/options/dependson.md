@@ -1,8 +1,9 @@
 ---
 title: "DependsOn"
-meta_desc: An in depth look at Pulumi resources and their usage.
+meta_desc: The dependsOn resource option specifies additional resource dependencies in addition to those in the dependency graph.
 menu:
   intro:
+    identifier: dependsOn
     parent: options
     weight: 5
 ---

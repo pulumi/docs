@@ -1,8 +1,9 @@
 ---
 title: "Provider"
-meta_desc: An in depth look at Pulumi resources and their usage.
+meta_desc: The provider resource option passes an explicitly configured provider to be used instead of the global or ambient provider.
 menu:
   intro:
+    identifier: provider
     parent: options
     weight: 10
 ---

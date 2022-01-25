@@ -1,8 +1,9 @@
 ---
 title: "Parent"
-meta_desc: An in depth look at Pulumi resources and their usage.
+meta_desc: The parent resource option establishes an explicit parent/child relationship between resources.
 menu:
   intro:
+    identifier: parent
     parent: options
     weight: 8
 ---

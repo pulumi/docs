@@ -1,8 +1,9 @@
 ---
 title: "Import"
-meta_desc: An in depth look at Pulumi resources and their usage.
+meta_desc: The import resource option brings an existing cloud resource into Pulumi.
 menu:
   intro:
+    identifier: import
     parent: options
     weight: 7
 ---

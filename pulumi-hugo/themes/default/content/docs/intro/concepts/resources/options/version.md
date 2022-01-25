@@ -1,8 +1,9 @@
 ---
 title: "Version"
-meta_desc: The version resource option specifies a provider version to use when operating on a resource. 
+meta_desc: The version resource option specifies a provider version to use when operating on a resource.
 menu:
   intro:
+    identifier: version
     parent: options
     weight: 14
 ---

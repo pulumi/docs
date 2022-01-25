@@ -1,8 +1,9 @@
 ---
 title: "Providers"
-meta_desc: An in depth look at Pulumi resources and their usage.
+meta_desc: The providers resource option specifies a set of explicitly configured providers to be used for a resource and all of its children.
 menu:
   intro:
+    identifier: providers
     parent: options
     weight: 11
 ---

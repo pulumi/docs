@@ -1,8 +1,9 @@
 ---
 title: "IgnoreChanges"
-meta_desc: An in depth look at Pulumi resources and their usage.
+meta_desc: The ignoreChanges resource option declares that changes to certain properties should be ignored during a diff.
 menu:
   intro:
+    identifier: ignoreChanges
     parent: options
     weight: 6
 ---

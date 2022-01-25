@@ -1,8 +1,9 @@
 ---
 title: "CustomTimeouts"
-meta_desc: An in depth look at Pulumi resources and their usage.
+meta_desc: The customTimeouts resource option specifies the default retry/timeout behavior for resource provisioning.
 menu:
   intro:
+    identifier: customTimeouts
     parent: options
     weight: 3
 ---
