@@ -1,3 +1,6 @@
+env:
+  GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
+
 name: Build and deploy
 on:
   push:
@@ -15,6 +18,12 @@ jobs:
     steps:
 
       - uses: actions/checkout@v2
+
+      - name: Checkout Scripts Repo
+        uses: actions/checkout@v2
+        with:
+          path: registry
+          repository: pulumi/registry
 
       - uses: actions/setup-node@v1
         with:
@@ -38,6 +47,14 @@ jobs:
 
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v1.0.1
+
+      - name: Install Registrygen CLI
+        uses: jaxxstorm/action-install-gh-release@v1.2.0
+        with:
+          repo: pulumi/registrygen
+
+      - name: Generate All Registry Docs
+        run: registrygen generate all-docs --registryPackagesPath="registry/themes/default/data/registry/packages/"
 
       - name: Build and deploy
         run: make ci_${GITHUB_EVENT_NAME}
