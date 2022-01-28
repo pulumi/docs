@@ -126,4 +126,4 @@ jobs:
         pythonversion:
           - "3.7"
         nodeversion:
-          - "14.x"
+          - "16.x"
