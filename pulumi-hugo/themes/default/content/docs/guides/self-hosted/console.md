@@ -56,8 +56,8 @@ The following are the core environment variables that are required at a minimum.
 | ------------- | ----------- |
 | PULUMI_API | The endpoint URL where the service APIs can be reached. This should match the value of PULUMI_API_DOMAIN. Default is `http://localhost:8080`. |
 | PULUMI_API_INTERNAL_ENDPOINT | The endpoint URL local to the container using which the Console app can reach the API container using a container-to-container network. |
-| CONSOLE_DOMAIN | `CONSOLE_DOMAIN` is used to redirect the user after they have **signed-in** using a social identity or SAML SSO. |
-| HOMEPAGE_DOMAIN | `HOMEPAGE_DOMAIN` is used to redirect the user after they have **signed-out**. |
+| PULUMI_CONSOLE_DOMAIN | `PULUMI_CONSOLE_DOMAIN` is used to redirect the user after they have **signed-in** using a social identity or SAML SSO. |
+| PULUMI_HOMEPAGE_DOMAIN | `PULUMI_HOMEPAGE_DOMAIN` is used to redirect the user after they have **signed-out**. |
 
 ### Environment Variables For Identities
 
