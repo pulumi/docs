@@ -10,7 +10,6 @@ estimated_time: 10
 meta_image: meta.png
 authors:
     - matt-stratton
-block_external_search_index: false
 ---
 
 We've created some resources. Now, let's see how we can use outputs outside of

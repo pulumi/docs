@@ -12,7 +12,6 @@ authors:
     - matt-stratton
 tags:
     - stacks
-block_external_search_index: false
 ---
 
 Every Pulumi program is deployed to a stack. A stack is an isolated,

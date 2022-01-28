@@ -14,7 +14,6 @@ authors:
     - laura-santamaria
 tags:
     - learn
-block_external_search_index: false
 ---
 
 Encapsulation is one part of what makes a programming language so powerful. Without encapsulation, programs would still be sets of commands. Encapsulation is generally considered as part of an object-oriented paradigm, but it's present in other software development paradigms like functional programming (e.g., lexical closures). But what does this have to do with infrastructure? Well, by using encapsulation we break logic down into reusable components. In doing so, we ensure better maintainability, readability, and reusability&mdash;all critical to good infrastructure as code both in theory and in practice.

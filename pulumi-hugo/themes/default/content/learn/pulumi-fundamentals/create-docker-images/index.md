@@ -17,7 +17,6 @@ tags:
 links:
     - text: Code Repo
       url: https://github.com/pulumi/tutorial-pulumi-fundamentals
-block_external_search_index: false
 ---
 
 In this part, we'll create our first Pulumi _resource_. Resources in Pulumi are

@@ -15,7 +15,6 @@ tags:
     - fundamentals
     - projects
     - docker
-block_external_search_index: false
 ---
 
 Infrastructure in Pulumi is organized into _projects_. In the Pulumi ecosystem,

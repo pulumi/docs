@@ -5,10 +5,10 @@ date: 2021-11-17
 draft: false
 description: |
     Try creating a component resource, or a logical grouping of code that Pulumi
-    recognizes as a resource. 
+    recognizes as a resource.
 meta_desc: |
     Try creating a component resource, or a logical grouping of code that Pulumi
-    recognizes as a resource. 
+    recognizes as a resource.
 index: 3
 estimated_time: 10
 meta_image: meta.png
@@ -19,7 +19,6 @@ tags:
 links:
     - text: Component Resources
       url: https://www.pulumi.com/docs/intro/concepts/resources/#components
-block_external_search_index: false
 ---
 
 Now that we have a better understanding of why abstraction and encapsulation are valuable concepts for Pulumi programs, let's explore what happens when we start working in larger teams at scale.

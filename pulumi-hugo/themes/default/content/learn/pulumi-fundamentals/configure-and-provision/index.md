@@ -20,7 +20,6 @@ tags:
 links:
     - text: Code Repo
       url: https://github.com/pulumi/tutorial-pulumi-fundamentals
-block_external_search_index: false
 ---
 
 Now that we've created our images, we can provision our application with a

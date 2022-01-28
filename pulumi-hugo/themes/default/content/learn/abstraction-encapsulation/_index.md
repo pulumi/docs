@@ -18,7 +18,6 @@ tags:
     - components
 providers:
     - aws
-block_external_search_index: false
 ---
 
 ## Time

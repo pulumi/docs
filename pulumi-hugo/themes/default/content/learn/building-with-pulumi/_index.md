@@ -14,7 +14,6 @@ youll_learn:
     - Testing your Pulumi programs
 providers:
     - aws
-block_external_search_index: false
 ---
 
 This tutorial digs a little deeper into what it means to create multiple Pulumi

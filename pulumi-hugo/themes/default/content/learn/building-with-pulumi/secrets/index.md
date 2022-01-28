@@ -12,7 +12,6 @@ authors:
     - matt-stratton
 tags:
     - secrets
-block_external_search_index: false
 ---
 
 All resource input and output values are recorded as _state_ and are stored

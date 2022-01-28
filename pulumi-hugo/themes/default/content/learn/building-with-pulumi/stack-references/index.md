@@ -13,7 +13,6 @@ authors:
 tags:
     - stacks
     - outputs
-block_external_search_index: false
 ---
 
 We've created some resources. Now, let's see how we can use outputs outside of

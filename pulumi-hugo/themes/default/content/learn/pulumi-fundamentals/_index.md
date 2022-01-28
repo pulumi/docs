@@ -6,7 +6,7 @@ draft: false
 description: |
     Learn how to use Pulumi to build, configure, and deploy a real-life, modern
     application.
-meta_desc: | 
+meta_desc: |
     Learn how to use Pulumi to build, configure, and deploy a real-life, modern
     application.
 index: 0
@@ -18,7 +18,6 @@ tags:
     - fundamentals
 providers:
     - docker
-block_external_search_index: false
 ---
 
 For this tutorial, we're going to learn more about cloud computing by exploring

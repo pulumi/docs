@@ -51,9 +51,6 @@ tags:
 links:
     - text: Some Website
       url: http://something.com
-
-# Exclude from search-engine indexing for now.
-block_external_search_index: true
 ---
 
 This is the actual body of the topic, authored in Markdown.

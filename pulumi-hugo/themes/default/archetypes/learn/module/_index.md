@@ -37,9 +37,6 @@ tags:
 # At least one provider is required.
 providers:
     - aws
-
-# Exclude from search-engine indexing for now.
-block_external_search_index: true
 ---
 
 This is the content that will appear at the top of the module index page. It should
