@@ -19,7 +19,7 @@ tags:
 links:
     - text: Component Resources
       url: https://www.pulumi.com/docs/intro/concepts/resources/#components
-block_external_search_index: true
+block_external_search_index: false
 ---
 
 Now that we have a better understanding of why abstraction and encapsulation are valuable concepts for Pulumi programs, let's explore what happens when we start working in larger teams at scale.
