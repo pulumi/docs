@@ -1,4 +1,10 @@
 [[awards]]
+title = "Best Innovation in Coding Tools, 2022"
+featured = true
+img = "/logos/press/awards/devies-2022.png"
+url = "https://www.developerweek.com/awards/2021-devies-winners/"
+
+[[awards]]
 title = "Top Open Source Tech Startups 2021"
 featured = true
 img = "/logos/press/awards/tracxn-emerging-startups.png"
