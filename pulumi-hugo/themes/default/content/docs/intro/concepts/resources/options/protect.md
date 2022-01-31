@@ -10,7 +10,7 @@ menu:
 
 The `protect` resource option marks a resource as protected. A protected resource cannot be deleted directly, and it will be an error to do a Pulumi deployment which tries to delete a protected resource for any reason.
 
-To delete a protected resource, it must first be *unprotected*.  There are two was to unprotect a resource:
+To delete a protected resource, it must first be *unprotected*.  There are two ways to unprotect a resource:
 
 * Set `protect: false` and then run `pulumi up`
 * Use the [`pulumi state unprotect`]({{< relref "/docs/reference/cli/pulumi_state_unprotect" >}}) command
