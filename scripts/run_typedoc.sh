@@ -13,7 +13,6 @@ set -o errexit -o pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 TOOL_TYPEDOC="$SCRIPT_DIR/../node_modules/.bin/typedoc"
-TOOL_APIDOCGEN="go run ./tools/tscdocgen/*.go"
 
 PULUMI_DOC_TMP=`mktemp -d`
 PULUMI_DOC_BASE=./content/docs/reference/pkg/nodejs/pulumi
@@ -70,8 +69,10 @@ generate_docs() {
         # Change back to the origin directory and create the API documents.
         popd
         echo -e "\033[0;93mGenerating pulumi.com API docs\033[0m"
-        echo -e ${TOOL_APIDOCGEN} "${PKGPATH}" "$1" "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" "${PULUMI_DOC_DATA_BASE}" "$PKG_REPO_DIR" $HEAD_COMMIT
-        ${TOOL_APIDOCGEN} "${PKGPATH}" "$1" "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" "${PULUMI_DOC_DATA_BASE}" "$PKG_REPO_DIR" $HEAD_COMMIT
+        pushd ./tools/tscdocgen
+        echo -e "go run *.go" "${PKGPATH}" "$1" "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" "${PULUMI_DOC_DATA_BASE}" "$PKG_REPO_DIR" $HEAD_COMMIT
+        go run *.go "${PKGPATH}" "$1" "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" "${PULUMI_DOC_DATA_BASE}" "$PKG_REPO_DIR" $HEAD_COMMIT
+        popd
     fi
 }
 
