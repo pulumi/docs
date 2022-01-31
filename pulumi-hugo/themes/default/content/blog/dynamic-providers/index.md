@@ -179,4 +179,4 @@ const catConfig = new provisioners.RemoteExec("cat-config", {
 ...
 ```
 
-Read more about dynamic providers in our [docs]({{< relref "/docs/intro/concepts/resources#dynamicproviders" >}}). Let us know what cool dynamic providers you create by dropping us a note on our community [Slack](https://slack.pulumi.com/)!
+Read more about dynamic providers in our [docs]({{< relref "/docs/intro/concepts/resources/dynamic-providers" >}}). Let us know what cool dynamic providers you create by dropping us a note on our community [Slack](https://slack.pulumi.com/)!
