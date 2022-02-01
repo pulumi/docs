@@ -17,7 +17,7 @@
         <div class="container mx-auto max-w-4xl pt-8">
             <h2>Pulumi Logos</h2>
             <p>
-                Logos are available in transparent scalable vector graphics (SVG) format,
+                Logos are available in SVG or PNG format,
                 and are suitable for both print and digital use.
             </p>
             <ul class="flex flex-wrap justify-around list-none p-0 pt-8">
@@ -28,10 +28,12 @@
                                 <img src="/logos/brand/{{ .file }}.svg" title="{{ .name }}">
                             </a>
                         </div>
-                        <div class="mt-6">
-                            <a class="btn btn-sm btn-brand-download" href="/logos/brand/{{ .file }}.svg" download>
-                                <i class="fa fa-download"></i>
-                                <span>Download</span>
+                        <div class="mt-6 flex flex-row place-content-center">
+                            <a class="btn btn-sm btn-brand-download mr-4" href="/logos/brand/{{ .file }}.svg" download>
+                                <span>Download SVG</span>
+                            </a>
+                            <a class="btn btn-sm btn-brand-download" href="/logos/brand/{{ .file }}.png" download>
+                                <span>Download PNG</span>
                             </a>
                         </div>
                     </li>
