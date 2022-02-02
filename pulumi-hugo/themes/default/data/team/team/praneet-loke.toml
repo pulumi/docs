@@ -3,8 +3,8 @@ name = "Praneet Loke"
 title = "Software Engineer"
 weight = 1
 
-status = "active"
+status = "inactive"
 
 [social]
 github = "praneetloke"
-linkedin = "praneet-loke-8974377"
+linkedin = "praneetloke"
