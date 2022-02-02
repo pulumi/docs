@@ -32,8 +32,8 @@ ci-scheduled:
 
 .PHONY: new-blog-post
 new-blog-post:
-	hugo new --kind blog-post \
-		"themes/default/content/blog/$(shell bash -c 'read -p "Slug (e.g., 'my-new-post'): " slug; echo $$slug')"
+	hugo new --kind blog-post --contentDir themes/default/content \
+	"blog/$(shell bash -c 'read -p "Slug (e.g., 'my-new-post'): " slug; echo $$slug')"
 
 .PHONY: new-learn-module
 new-learn-module:
