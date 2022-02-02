@@ -10,7 +10,14 @@
     <meta name="google-site-verification" content="N-ezSTIu4P3bSc4TqidV4wWCkMzFiMN269ZgDYArGkk" />
 
     {{ if .Params.redirect_to }}
-        <meta http-equiv="refresh" content="0; url={{ .Params.redirect_to }}" />
+        {{ $delay := 0 }}
+
+        {{/* https://developers.google.com/search/docs/advanced/crawling/301-redirects#metarefresh */}}
+        {{ if .Params.redirect_temporarily }}
+            {{ $delay = 1 }}
+        {{ end }}
+
+        <meta http-equiv="refresh" content="{{ $delay }}; url={{ .Params.redirect_to }}" />
     {{ end }}
 
     {{ if eq .Params.block_external_search_index true }}
