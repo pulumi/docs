@@ -1,7 +1,7 @@
 ---
-title: "Wordpress Helm Chart | TypeScript"
-h1: "Wordpress Helm Chart"
-linktitle: "Wordpress Helm Chart"
+title: "WordPress Helm Chart | TypeScript"
+h1: "WordPress Helm Chart"
+linktitle: "WordPress Helm Chart"
 no_edit_this_page: true
 cloud: kubernetes
 language: ts
@@ -21,10 +21,10 @@ layout: how-to-guide
 </p>
 
 
-Uses the Helm API of `@pulumi/kubernetes` to deploy `v9.6.0` of the Wordpress Helm Chart to a
+Uses the Helm API of `@pulumi/kubernetes` to deploy `v9.6.0` of the WordPress Helm Chart to a
 Kubernetes cluster. Pulumi will expand the Helm Chart and submit the expanded YAML to the cluster.
 
-![wordpress](https://raw.githubusercontent.com/pulumi/examples/master/kubernetes-ts-helm-wordpress/images/deploy.gif "Wordpress Helm Chart deployment")
+![wordpress](https://raw.githubusercontent.com/pulumi/examples/master/kubernetes-ts-helm-wordpress/images/deploy.gif "WordPress Helm Chart deployment")
 
 ## Running the App
 
@@ -95,7 +95,7 @@ Resources:
 Duration: 53s
 ```
 
-We can see here in the `---outputs:---` section that Wordpress was allocated a public IP, in this
+We can see here in the `---outputs:---` section that WordPress was allocated a public IP, in this
 case `35.193.210.254`. It is exported with a stack output variable, `frontendIp`. We can use `curl`
 and `grep` to retrieve the `<title>` of the site the proxy points at.
 
