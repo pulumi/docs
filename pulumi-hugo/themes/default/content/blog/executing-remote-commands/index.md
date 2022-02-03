@@ -1,7 +1,7 @@
 ---
-title: Deploying K3s with the Command Package
-date: 2022-02-02T13:25:00Z
-draft: true
+title: Executing Remote Commands with Pulumi
+date: 2022-02-03T22:10:00Z
+draft: false
 meta_desc: In this article, we deploy k3s and use the Command package to retrieve our kubeconfig from the virtual-machine and create a Kubernetes provider
 meta_image: meta.png
 authors: ["david-flanagan"]
