@@ -13,7 +13,7 @@ Existing users of the [`Helm V3 Chart`]({{< relref "/registry/packages/kubernete
 
 ## Helm Chart Resource
 
-The [`Helm V3 Chart`]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/chart">}}) resource renders the templates from your chart and then manage them directly with the Pulumi Kubernetes provider. `Chart` is implemented as a [`Component Resource`]({{< relref "/docs/intro/concepts/resources/components/" >}}) which provide a number of benefits for Pulumi users:
+The [`Helm V3 Chart`]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/chart">}}) resource renders the templates from your chart and then manage them directly with the Pulumi Kubernetes provider. `Chart` is implemented as a [`Component Resource`]({{< relref "/docs/intro/concepts/resources/components" >}}) which provide a number of benefits for Pulumi users:
 
 ### Benefits
 
@@ -88,12 +88,12 @@ If these are important for your use case, then the `Helm Chart` resource is pref
 
 ### Helm Chart
 
-* [API Reference Docs with examples]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/chart/" >}})
-* [Provisioning Helm Charts]({{< relref "/docs/guides/adopting/from_kubernetes/#provisioning-a-helm-chart" >}})
-* [Sample Project that installs Wordpress via Helm Chart in Typescript]({{< relref "/registry/packages/kubernetes/how-to-guides/kubernetes-ts-helm-wordpress/" >}})
+* [API Reference Docs with examples]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/chart" >}})
+* [Provisioning Helm Charts]({{< relref "/docs/guides/adopting/from_kubernetes#provisioning-a-helm-chart" >}})
+* [Sample Project that installs Wordpress via Helm Chart in Typescript]({{< relref "/registry/packages/kubernetes/how-to-guides/kubernetes-ts-helm-wordpress" >}})
 
 ### Helm Release
 
-* [API Reference Docs with examples]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release/" >}})
-* [Installing Helm Releases]({{< relref "/docs/guides/adopting/from_kubernetes/#installing-a-helm-release" >}})
-* [Sample Project that installs Wordpress via Helm Release in Typescript]({{< relref "/registry/packages/kubernetes/how-to-guides/kubernetes-ts-helm-release-wordpress/" >}})
+* [API Reference Docs with examples]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release" >}})
+* [Installing Helm Releases]({{< relref "/docs/guides/adopting/from_kubernetes#installing-a-helm-release" >}})
+* [Sample Project that installs Wordpress via Helm Release in Typescript]({{< relref "/registry/packages/kubernetes/how-to-guides/kubernetes-ts-helm-release-wordpress" >}})
