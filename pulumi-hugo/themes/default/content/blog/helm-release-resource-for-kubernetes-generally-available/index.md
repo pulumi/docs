@@ -16,7 +16,7 @@ draft: false
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
-meta_desc: The Helm Release resource is now GA. This adds native support for Helm, enabling full access to Helm features for Kubernetes users. 
+meta_desc: The Helm Release resource is now GA. This adds native support for Helm, enabling full access to Helm features for Kubernetes users.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -57,7 +57,7 @@ In contrast, the new [Helm Release]({{< relref "/registry/packages/kubernetes/ap
 
 ## Which Helm Resource Should I Choose?
 
-Both the `Chart` and `Helm Release` resource are complimentary with their own pros and cons. Depending on your use case, one might be a better fit than the other. We now have a [guide to help you choose]({{< relref "/registry/packages/kubernetes/how-to-guides/choosing-the-right-helm-resource-for-your-use-case/">}}) the right resource for your use case.
+Both the `Chart` and `Helm Release` resource are complimentary with their own pros and cons. Depending on your use case, one might be a better fit than the other. We now have a [guide to help you choose]({{< relref "/registry/packages/kubernetes/how-to-guides/choosing-the-right-helm-resource-for-your-use-case" >}}) the right resource for your use case.
 
 ## How Do I Get Started?
 
@@ -409,11 +409,11 @@ Thanks to our community of early adopters, we received excellent feedback on the
 You can learn more about Helm Release from the following sources:
 
 1. The `Helm Release` [API Reference docs]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release">}}) are an excellent starting point to learn more about the API in each of the supported languages along with code samples.
-2. Our guide on [choosing between the Chart and Release resource for your use case]({{< relref "/registry/packages/kubernetes/how-to-guides/choosing-the-right-helm-resource-for-your-use-case/">}})
+2. Our guide on [choosing between the Chart and Release resource for your use case]({{< relref "/registry/packages/kubernetes/how-to-guides/choosing-the-right-helm-resource-for-your-use-case" >}})
 3. One of our sample projects where you can see the Helm `Release` resource in action in any one of Pulumi's supported languages:
-   * [TypeScript]({{< relref "/registry/packages/kubernetes/how-to-guides/kubernetes-ts-helm-release-wordpress/">}})
-   * [Python]({{< relref "/registry/packages/kubernetes/how-to-guides/kubernetes-py-helm-release-wordpress/">}})
-   * [C#]({{< relref "/registry/packages/kubernetes/how-to-guides/kubernetes-cs-helm-release-wordpress/">}})
-   * [Go]({{< relref "/registry/packages/kubernetes/how-to-guides/kubernetes-go-helm-release-wordpress/">}})
+   * [TypeScript]({{< relref "/registry/packages/kubernetes/how-to-guides/kubernetes-ts-helm-release-wordpress" >}})
+   * [Python]({{< relref "/registry/packages/kubernetes/how-to-guides/kubernetes-py-helm-release-wordpress" >}})
+   * [C#]({{< relref "/registry/packages/kubernetes/how-to-guides/kubernetes-cs-helm-release-wordpress" >}})
+   * [Go]({{< relref "/registry/packages/kubernetes/how-to-guides/kubernetes-go-helm-release-wordpress" >}})
 
 If you have questions or run into issues, please don't hesitate to reach out by filing issues on [Github](https://github.com/pulumi/pulumi-kubernetes/issues) or asking questions on [Community Slack](https://slack.pulumi.com). Happy charting!
