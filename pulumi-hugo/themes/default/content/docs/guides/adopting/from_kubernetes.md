@@ -1,6 +1,6 @@
 ---
-title: "From Kubernetes or Helm YAML"
-meta_desc: Migrate your existing Kubernetes or Helm YAML and/or coexist with existing templates.
+title: "From Kubernetes YAML or Helm Charts"
+meta_desc: Migrate your existing Kubernetes YAML or Helm Charts and/or coexist with existing templates.
 menu:
   userguides:
     parent: adopting
@@ -356,32 +356,31 @@ Resources:
 
 <img src="/logos/tech/helm.svg" align="right" class="h-32 px-8 pb-4">
 
-Pulumi supports deploying Helm charts as-is without modification, including both Helm V2 and Helm V3. Pulumi renders the templates and applies them directly, much like with `ConfigFile` and `ConfigGroup` shown earlier, which means all provisioning happens client-side using your Kubernetes authentication setup without needing a server-side component such as Tiller.
+Pulumi supports two distinct means of using Helm Charts:
+
+1. [Emulating Helm Charts to render resource templates](#emulating-helm-charts-with-chart-resources)
+2. [Natively installing Helm Charts as Releases](#natively-installing-helm-charts-as-releases)
+
+We discuss and provide examples for each approach in this section.
+
+### Emulating Helm Charts With Chart Resources
+
+With the [Helm V3]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release" >}}) chart resources, Pulumi renders the templates and applies them directly, much like with `ConfigFile` and `ConfigGroup` shown earlier, which means all provisioning happens client-side using your Kubernetes authentication setup without needing a server-side component.
 
 The `Chart` resource type provides a number of options to control where to fetch the chart's contents from. This includes:
 
 * `chart`: The required chart name (for instance, `"wordpress"`).
-* `repo`: (Optional) The repository to pull the chart from (e.g., `"stable"`).
+* `repo`: (Optional) The helm repository to pull the chart from (e.g., `"stable"`).
 * `path`: (Optional) A path to a chart stored locally on your filesystem.
 * `version`: (Optional) The semantic chart version to pull (by default `"latest"`).
 * `values`: (Optional) A dictionary of named key/value values for Charts with parameters.
 * `fetchOpts`: (Optional) A bag of options to control the fetch behavior.
 
-In addition to those core options, you can specify `transformations` (similar to what is shown above), `namePrefix` to control naming, or `namespace` to place all resources inside of a specific Kubernetes namespace.
+In addition to those core options, you can specify `transformations` (similar to what is shown [configurations below](#configuration-transformations)), `namePrefix` to control naming, or `namespace` to place all resources inside of a specific Kubernetes namespace. Please refer to the [API reference]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release" >}}) documentation for more details.
 
-### Pre-Requisites
+#### Provisioning a Helm Chart
 
-Before using the Helm support, you will need to [install the Helm CLI](https://helm.sh/docs/intro/install/).
-
-Next, unless you're deploying a Chart directly from a URL or from your filesystem, you will need to [configure a repo to pull from](https://helm.sh/docs/intro/quickstart/#initialize-a-helm-chart-repository). The `stable` repo is a popular starting point:
-
-```bash
-$ helm repo add stable https://charts.helm.sh/stable
-```
-
-### Provisioning a Helm Chart
-
-To illustrate provisioning a Helm Chart using Pulumi, we will deploy the `stable/wordpress` chart. This will stand up a fully functional WordPress instance that uses MariaDB:
+To illustrate provisioning a Helm Chart using Pulumi, we will deploy the `wordpress` chart from `https://charts.bitnami.com/bitnami`. This will stand up a fully functional WordPress instance that uses MariaDB:
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
@@ -390,11 +389,13 @@ To illustrate provisioning a Helm Chart using Pulumi, we will deploy the `stable
 ```javascript
 let k8s = require("@pulumi/kubernetes");
 
-// Deploy the latest version of the stable/wordpress chart.
+// Deploy v9.6.0 version of the wordpress chart.
 let wordpress = new k8s.helm.v3.Chart("wpdev", {
-    repo: "stable",
+    fetchOpts: {
+        repo: "https://charts.bitnami.com/bitnami"
+    },
     chart: "wordpress",
-    version: "9.0.3",
+    version: "9.6.0",
 });
 
 // Export the public IP for WordPress.
@@ -410,11 +411,14 @@ module.exports = {
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
 
+// Deploy v9.6.0 version of the wordpress chart.
 // Deploy the latest version of the stable/wordpress chart.
 const wordpress = new k8s.helm.v3.Chart("wpdev", {
-    repo: "stable",
+    fetchOpts: {
+        repo: "https://charts.bitnami.com/bitnami"
+    },
     chart: "wordpress",
-    version: "9.0.3",
+    version: "9.6.0",
 });
 
 // Export the public IP for WordPress.
@@ -429,11 +433,11 @@ export const frontendIp = frontend.status.loadBalancer.ingress[0].ip;
 import pulumi
 from pulumi_kubernetes.helm.v3 import Chart, ChartOpts
 
-# Deploy the latest version of the stable/wordpress chart.
-wordpress = Chart('wpdev', config=ChartOpts(
-    repo='stable',
+# Deploy v9.6.0 version of the wordpress chart.
+wordpress = Chart('wpdev', ChartOpts(
+    fetch_opts={'repo': 'https://charts.bitnami.com/bitnami'},
     chart='wordpress',
-    version='9.0.3',
+    version='9.6.0',
 ))
 
 # Export the public IP for WordPress.
@@ -449,17 +453,19 @@ package main
 
 import (
     corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
-    helmv2 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/helm/v2"
+    helmv3 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/helm/v3"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
-        // Deploy the latest version of the stable/wordpress chart.
-        wordpress, err := helmv2.NewChart(ctx, "wpdev", helmv2.ChartArgs{
-            Repo:    pulumi.String("stable"),
+        // Deploy v9.6.0 version of the wordpress chart.
+        wordpress, err := helmv3.NewChart(ctx, "wpdev", helmv3.ChartArgs{
             Chart:   pulumi.String("wordpress"),
-            Version: pulumi.String("9.0.3"),
+            Version: pulumi.String("9.6.0"),
+            FetchArgs: helmv3.FetchArgs{
+                Repo: pulumi.String(`https://charts.bitnami.com/bitnami`),
+            },
         })
         if err != nil {
             return err
@@ -495,12 +501,16 @@ class Program
     {
         return Pulumi.Deployment.RunAsync(() =>
         {
-            // Deploy the latest version of the stable/wordpress chart.
+
+            // Deploy v9.6.0 version of the wordpress chart.
             var wordpress = new Chart("wpdev", new ChartArgs
             {
-                Repo = "stable",
                 Chart = "wordpress",
-                Version = "9.0.3",
+                Version = "9.6.0",
+                FetchOptions = new ChartFetchArgs
+                {
+                    Repo = "https://charts.bitnami.com/bitnami"
+                }
             });
 
             // Export the public IP for WordPress.
@@ -518,7 +528,7 @@ class Program
 
 {{< /chooser >}}
 
-Similar to `ConfigFile` and `ConfigGroup` resource types shown above, all provisioned resources are available via the `getResource` function. Be careful when depending on this, as the internal structure of Helm Charts regularly change and this could make your code more brittle and dependent upon implementation details.
+Similar to `ConfigFile` and `ConfigGroup` resource types shown above, all provisioned resources are available via the `getResource` function.
 
 After running `pulumi up`, we will see the resulting resources created, and the load balanced IP address will be printed:
 
@@ -526,7 +536,7 @@ After running `pulumi up`, we will see the resulting resources created, and the 
 Updating (dev):
      Type                                         Name                      Status
  +   pulumi:pulumi:Stack                          k8s-helm-dev              created
- +   └─ kubernetes:helm.sh:Chart                  wpdev                     created
+ +   └─ kubernetes:helm.sh/v3:Chart               wpdev                     created
  +      ├─ kubernetes:core:Secret                 wpdev-wordpress           created
  +      ├─ kubernetes:core:Secret                 wpdev-mariadb             created
  +      ├─ kubernetes:core:ConfigMap              wpdev-mariadb-tests       created
@@ -556,6 +566,196 @@ $ curl http://$(pulumi stack output frontendIp)
 <title>User's Blog! -- Just another WordPress site</title>
 ...
 ```
+
+### Natively installing Helm Charts as Releases
+
+The [Helm Release]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release">}})) resource (GA as of [v3.15.0](https://github.com/pulumi/pulumi-kubernetes/releases/tag/v3.15.0) of the Pulumi Kubernetes Provider) is another option for installing Charts. In this case, the Pulumi Kubernetes provider uses an embedded version of the Helm SDK to provide full-fidelity support for managing [`Helm Releases`](https://helm.sh/docs/glossary/#release).
+
+The `Release` resource type's inputs closely mirror the options supported by the Helm CLI and deviate slightly from the API supported by the `Chart` resources. Some key options are highlighted here:
+
+* `chart`: The required chart name (for instance, `"wordpress"`). For a local helm chart, a path can be specified instead.
+* `repositoryOpts`: (Optional) Options to configure URL and authentication/authorization information for the hosting Helm repository, if any.
+* `version`: (Optional) The semantic chart version to pull (by default `"latest"`).
+* `values`: (Optional) A dictionary of named key/value values for Charts with parameters.
+* `skipAwait`: (Optional) Whether or not to skip waiting on the availability of all resources installed by the chart. By default, this is set to `false` (i.e. awaits all resources) which allows us to chain dependent resources and execution to the `Release` resource.
+* `timeout`: (Optional) When `skipAwait` is `false`, the amount of time to wait on resources being available. If the timeout expires, the release is marked as `failed`.
+
+For more details on all the supported inputs, please refer to the [API reference documentation]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release/#inputs" >}}).
+
+Unlike `Chart` resource types, `Release` doesn't include references to the underlying Kubernetes resources created during the installation. As a result, only the `Release` resource is stored in Pulumi state by default. The `Release` resource type includes the [`ReleaseStatus`]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release/#releasestatus" >}}) as an output type. The following example shows how to retrieve resources managed by a Release.
+
+#### Installing a Helm Release
+
+To illustrate provisioning a Helm Chart using the `Release` resource, we will deploy the same `wordpress` chart as we did earlier:
+
+{{< chooser language "typescript,python,go,csharp" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as k8s from "@pulumi/kubernetes";
+import * as pulumi from "@pulumi/pulumi";
+
+// Deploy the bitnami/wordpress chart.
+const wordpress = new k8s.helm.v3.Release("wpdev", {
+    chart: "wordpress",
+    repositoryOpts: {
+        repo: "https://charts.bitnami.com/bitnami",
+    },
+    version: "9.6.0",
+});
+
+// Get the status field from the wordpress service, and then grab a reference to the spec.
+const svc = k8s.core.v1.Service.get("wpdev-wordpress", pulumi.interpolate`${wordpress.status.namespace}/${wordpress.status.name}-wordpress`);
+// Export the ingress IP for the wordpress frontend.
+export const frontendIp = svc.status.loadBalancer.ingress[0].ip;
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+from pulumi import Output
+from pulumi_kubernetes.core.v1 import Service
+from pulumi_kubernetes.helm.v3 import Release, ReleaseArgs, RepositoryOptsArgs
+
+# Deploy the bitnami/wordpress chart.
+wordpress = Release(
+    "wpdev",
+    ReleaseArgs(
+        chart="wordpress",
+        repository_opts=RepositoryOptsArgs(
+            repo="https://charts.bitnami.com/bitnami",
+        ),
+        version="9.6.0",
+    ),
+)
+
+srv = Service.get("wpdev-wordpress", Output.concat(wordpress.status.namespace, "/", wordpress.status.name, "-wordpress"))
+# Export the ingress IP for Wordpress frontend.
+pulumi.export("frontendIP", srv.status.load_balancer.ingress[0].ip)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"fmt"
+	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
+	"github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/helm/v3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		// Deploy the bitnami/wordpress chart.
+		wordpress, err := helm.NewRelease(ctx, "wpdev", &helm.ReleaseArgs{
+			Version: pulumi.String("9.6.0"),
+			Chart:   pulumi.String("wordpress"),
+			RepositoryOpts: &helm.RepositoryOptsArgs{
+				Repo: pulumi.String("https://charts.bitnami.com/bitnami"),
+			},
+		})
+
+        // Export the ingress IP for Wordpress frontend.
+		frontendIp := pulumi.All(wordpress.Status.Namespace(), wordpress.Status.Name()).ApplyT(func(r interface{})(interface{}, error){
+			arr := r.([]interface{})
+			namespace := arr[0].(*string)
+			name := arr[1].(*string)
+			svc, err := corev1.GetService(ctx, "svc", pulumi.ID(fmt.Sprintf("%s/%s-wordpress", *namespace, *name)), nil)
+			if err != nil {
+				return "", nil
+			}
+			return svc.Status.LoadBalancer().Ingress().Index(pulumi.Int(0)).Ip(), nil
+
+		})
+		ctx.Export("frontendIp", frontendIp)
+
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using Pulumi.Kubernetes.Core.V1;
+using System.Collections.Generic;
+using Pulumi.Kubernetes.Types.Inputs.Helm.V3;
+using Pulumi.Kubernetes.Helm.V3;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Deploy the bitnami/wordpress chart.
+        var wordpress = new Release("wpdev", new ReleaseArgs
+        {
+            Chart = "wordpress",
+            RepositoryOpts = new RepositoryOptsArgs
+            {
+                Repo = "https://charts.bitnami.com/bitnami"
+            },
+            Version = "9.6.0",
+        });
+
+        // Get the status field from the wordpress service, and then grab a reference to the spec.
+        var status = wordpress.Status;
+        var service = Service.Get("wpdev-wordpress", Output.All(status).Apply(
+            s => $"{s[0].Namespace}/{s[0].Name}-wordpress"));
+        // Export the ingress IP for Wordpress frontend.
+        this.FrontendIP = service.Status.Apply(status => status.LoadBalancer.Ingress[0].Ip);
+    }
+
+    [Output]
+    public Output<string> FrontendIP { get; set; }
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+After running `pulumi up`, we will see the resulting resources created, and the load balanced IP address will be printed:
+
+```
+Updating (dev)
+
+     Type                              Name                                      Status
+ +   pulumi:pulumi:Stack               <project/stack>                           created
+ +   ├─ kubernetes:helm.sh/v3:Release  wpdev                                     created
+     └─ kubernetes:core/v1:Service     wpdev-wordpress
+
+Outputs:
+    frontendIp        : "34.71.25.45"
+
+Resources:
+    + 2 created
+
+Duration: 1m28s
+```
+
+We can now use the Helm CLI to confirm that a release has been created:
+
+```
+helm list -a
+NAME            NAMESPACE       REVISION        UPDATED                                 STATUS          CHART           APP VERSION
+wpdev-xxxxxxxx  default         1               2022-02-01 01:06:08.513501 -0800 PST    deployed        wordpress-....
+```
+
+The Helm Release resource also supports importing existing Helm releases by using the `pulumi import` command.
 
 ## Converting Kubernetes YAML
 
