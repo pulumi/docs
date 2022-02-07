@@ -73,6 +73,11 @@ Metadata for your package is generated from the `schema.json` in your repository
   - `category/CATEGORY`: replace `CATEGORY` with one of `cloud`, `database`, `infrastructure`, `monitoring`, `network`, `utility`, `versioncontrol`
   - `kind/KIND`: replace `KIND` with one of `native`, `component`
     - Note: don't set a kind if you're bridging a Terraform provider
+- `pluginDownloadURL`: a web-accessible URL that contains the compiled binary plugin associated with your package; for more information see [Publish your package](#publish-your-package)
+
+{{% notes %}}
+Pulumi will interpolate `${VERSION}`, `${OS}` and `${ARCH}` with their respective values if found in `pluginDownloadURL`.
+{{% /notes %}}
 
 ### API docs
 
@@ -92,6 +97,24 @@ Once you've authored and tested your package locally, you can publish it to make
 - The package documentation–overview, installation & configuration, API docs, and how-to guides–to [Pulumi Registry]({{<relref "/registry">}})
 
 Future iterations of this guide will cover how to publish the first three items; for now, these are left as an exercise for the package author.
+
+The URL used to download a plugin is derived from `pluginDownloadURL`, as specified in the schema. Pulumi expects to find a plugin at
+
+```
+${pluginDownloadURL}/pulumi-${kind}-${name}-v${version}-${os}-${arch}.tar.gz
+```
+
+- `name`: the name field specified in the schema
+- `version`: the version field specified in the schema
+- `kind`: the kind specified in schema, probably `resource`
+- `os`: the target operating system (one of `darwin`, `linux`, `windows`)
+- `arch`: the target system architecture (one of `amd64`, `arm64`)
+
+Pulumi packages consist of SDKs, as well as a binary to facilitate the actual task (creating cloud resources, ect.). Package
+managers (npm, NuGet, Pip, GitHub) host the SDKs, but we need to know where the plugin is hosted. When a package embeds its
+`pluginDownloadURL`, we can automatically fetch the plugin. This means that `pulumi up` just works, and there is no need to run
+`pulumi plugin install ${NAME} ${VERSION} --server ${pluginDownloadURL}`. If `pluginDownloadURL` is not supplied, then the Pulumi
+CLI assumes the plugin is hosted at `get.pulumi.com`.
 
 ### Publish the documentation
 
