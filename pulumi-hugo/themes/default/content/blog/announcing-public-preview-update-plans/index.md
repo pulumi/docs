@@ -65,4 +65,4 @@ pulumi up --plan-file plan.json
 
 When `PULUMI_EXPERIMENTAL` is set `pulumi up` will also generate a plan during it's preview stage which will then apply to the update if an explict plan hasn't been given via `--plan`. This ensures your `up` previews match what happens in the resulting operations.
 
-We’d love to hear your thoughts on the Update Plans feature! Feel free to start discussions or ask questions using [GitHub Discussions in the `pulumi/pulumi` repository]([https://github.com/pulumi/pulumi/discussions/categories/preview-features](https://github.com/pulumi/pulumi/discussions/categories/preview-features)).
+We’d love to hear your thoughts on the Update Plans feature! Feel free to start discussions or ask questions using [GitHub Discussions in the `pulumi/pulumi` repository](https://github.com/pulumi/pulumi/discussions/categories/preview-features).
