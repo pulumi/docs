@@ -234,7 +234,7 @@ The following topics provide more details on the core concepts of Pulumi and how
     </div>
     <div class="md:w-1/2 border-solid md:ml-4 border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="{{< relref "/docs/intro/concepts/assets-archives" >}}"><i class="fas fa-stream pr-2"></i>Assets and Archives</a></h3>
-        <p>Learn about to use local or remote files with your Pulumi program.</p>
+        <p>Learn how to use local or remote files with your Pulumi program.</p>
     </div>
 </div>
 <div class="md:flex flex-row mt-6 mb-6">
