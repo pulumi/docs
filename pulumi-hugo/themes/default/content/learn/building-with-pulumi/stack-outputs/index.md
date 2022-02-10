@@ -26,7 +26,7 @@ references, which bridge different stacks through inter-stack dependencies.
 Typically, you will pass some value from your resources into the output, but to
 illustrate how stack outputs work, we will set some stack outputs manually:
 
-In the {{% langfile %}} file of `my-first-app`, add the following line:
+In the {{< langfile >}} file of `my-first-app`, add the following line:
 
 {{< chooser language "python" / >}}
 

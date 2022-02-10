@@ -38,10 +38,7 @@ const api = new awsx.apigateway.API("my-api", {
             eventHandler: async (apiGatewayEvent) => {
                 return {
                     statusCode: 200,
-                    body: JSON.stringify([
-                        "thingOne",
-                        "thingTwo",
-                    ]),
+                    body: JSON.stringify(["thingOne", "thingTwo"]),
                 };
             },
         },
@@ -56,7 +53,7 @@ I love this abstraction, and I use it all the time; it's an incredibly convenien
 
 Indeed, this arrangement is the API contract of a [Lambda _proxy_ integration](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html)---API Gateway integrations come in [many shapes and sizes](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations.html); Lambda integrations just happen to be one of the more popular---and much of the time, an approach like this one works out just fine. But depending on the needs of the application, it might not always be the best fit.
 
-Imagine you were building a print-on-demand service, for example, and you wanted to expose an API to let your customers upload  documents and have them converted into orders. On AWS, you might reach for API Gateway, as above, to define an HTTP method and route (`POST /uploads`, say), wire it up to an AWS Lambda, and have the Lambda parse the upload, write the order to a database, and return a response. Visually, such a design might look something like this:
+Imagine you were building a print-on-demand service, for example, and you wanted to expose an API to let your customers upload documents and have them converted into orders. On AWS, you might reach for API Gateway, as above, to define an HTTP method and route (`POST /uploads`, say), wire it up to an AWS Lambda, and have the Lambda parse the upload, write the order to a database, and return a response. Visually, such a design might look something like this:
 
 ![A diagram showing an HTTP POST made to an API Gateway endpoint, the endpoint invoking a Lambda function, and the Lambda function writing an order to a database.](./figure-1.png)
 
@@ -118,7 +115,7 @@ In this post, we'll be using [API Gateway V2](https://docs.aws.amazon.com/apigat
 
 ## Create the API gateway and stage
 
-Start by replacing the contents of {{% langfile %}} with the following code to declare a new API Gateway [API]({{< relref "/registry/packages/aws/api-docs/apigatewayv2/api" >}}):
+Start by replacing the contents of {{< langfile >}} with the following code to declare a new API Gateway [API]({{< relref "/registry/packages/aws/api-docs/apigatewayv2/api" >}}):
 
 {{< chooser language "typescript,python" / >}}
 
@@ -241,25 +238,21 @@ Add the following lines for the integration and route. The comments should expla
 // ...
 
 // Define a policy granting API Gateway permission to publish to EventBridge.
-const apiGatewayRole = new aws.iam.Role("api-gateway-role",
-    {
-        assumeRolePolicy: {
-            Version: "2012-10-17",
-            Statement: [
-                {
-                    Action: "sts:AssumeRole",
-                    Effect: "Allow",
-                    Principal: {
-                        Service: "apigateway.amazonaws.com",
-                    },
+const apiGatewayRole = new aws.iam.Role("api-gateway-role", {
+    assumeRolePolicy: {
+        Version: "2012-10-17",
+        Statement: [
+            {
+                Action: "sts:AssumeRole",
+                Effect: "Allow",
+                Principal: {
+                    Service: "apigateway.amazonaws.com",
                 },
-            ],
-        },
-        managedPolicyArns: [
-            "arn:aws:iam::aws:policy/AmazonEventBridgeFullAccess",
+            },
         ],
     },
-);
+    managedPolicyArns: ["arn:aws:iam::aws:policy/AmazonEventBridgeFullAccess"],
+});
 
 // Create an API Gateway integration to forward requests to EventBridge.
 const integration = new aws.apigatewayv2.Integration("integration", {
@@ -382,7 +375,6 @@ First, make a new folder and file alongside your Pulumi program, at `./api/handl
 const lambda = new aws.lambda.CallbackFunction("lambda", {
     policies: [aws.iam.ManagedPolicies.CloudWatchLogsFullAccess],
     callback: async (event: any) => {
-
         // For now, just log the event, including the uploaded document.
         // That'll be enough to verify everything's working.
         console.log({ source: event.source, detail: event.detail });

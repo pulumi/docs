@@ -42,11 +42,18 @@ independent project, name the directory differently.
 Since a Pulumi project is just a directory with some files in it, it is possible
 for you to create a new one by hand. The `pulumi new` command-line interface
 (CLI) command, however, automates the process and ensures you have everything
-you need, so let's use that command. Use Python for this tutorial (TypeScript,
-Go, and C# are coming soon!), and the `-y` flag answers "yes" to the prompts to
+you need, so let's use that command. The `-y` flag answers "yes" to the prompts to
 create a default project:
 
-{{< chooser language "python" / >}}
+{{< chooser language "typescript,python" / >}}
+
+{{% choosable language typescript %}}
+
+```bash
+$ pulumi new typescript -y
+```
+
+{{% /choosable %}}
 
 {{% choosable language python %}}
 
@@ -57,8 +64,27 @@ $ pulumi new python -y
 {{% /choosable %}}
 
 This command prints output similar to the following example with a bit more
-information and status as it goes (this example is in Python, but the basics
-are the same for any language):
+information and status as it goes:
+
+{{% choosable language typescript %}}
+
+```bash
+Created project 'my-first-app'
+...
+
+Installing dependencies...
+...
+
+Finished installing dependencies
+
+Your new project is ready to go! ✨
+
+To perform an initial deployment, run 'pulumi up'
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
 
 ```bash
 Created stack 'dev'
@@ -74,6 +100,8 @@ Your new project is ready to go! ✨
 To perform an initial deployment, run 'pulumi up'
 ```
 
+{{% /choosable %}}
+
 This command creates all the files we need, initializes a new stack named `dev`
 (an instance of our project), and installs any necessary dependencies.
 
@@ -81,17 +109,34 @@ This command creates all the files we need, initializes a new stack named `dev`
 
 The basic project created by `pulumi new` is comprised of multiple files:
 
-<ul>
-<li><strong><code>{{% langfile %}}</code></strong>: your program's main entrypoint file</li>
-{{% choosable language python %}}<li><strong><code>requirements.txt</code></strong>: your project's Python dependency information</li>{{% /choosable %}}
-<li><strong><code>Pulumi.yaml</code></strong>: your project's metadata, containing its name and language</li>
-<li><strong><code>venv</code></strong>: a <a href="https://pypi.org/project/virtualenv/">virtualenv</a> for your project</li>
-</ul>
+- `Pulumi.yaml`: your project's metadata, containing its name and language
+- {{< langfile >}}: your program's main entrypoint file
 
-Use the command <code>cat</code>{{% langfile %}} to explore the contents of your
+{{% choosable language typescript %}}
+
+- `package.json`: your project's Node.js dependency information
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+- `requirements.txt`: your project's Python dependency information
+- `venv`: a [virtualenv](https://pypi.org/project/virtualenv/) for your project
+
+{{% /choosable %}}
+
+Use the command <code>cat</code>{{< langfile >}} to explore the contents of your
 project's empty program:
 
-{{< chooser language "python" / >}}
+{{< chooser language "typescript,python" / >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+
+{{% /choosable %}}
 
 {{% choosable language python %}}
 

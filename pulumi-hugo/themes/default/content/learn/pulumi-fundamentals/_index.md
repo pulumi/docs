@@ -40,12 +40,13 @@ You will need the following tools to complete this tutorial:
   - If you don't have an account, go to the
     [signup page](https://app.pulumi.com/signup).
 - [Docker](https://docs.docker.com/get-docker/)
-- Python 3.8 or later
+- For the TypeScript version, Node.js 14 or later
+- For the Python version, Python 3.8 or later
 
 As to skills, you should be able to  <!-- Grammar note: No colon on lists when the list completes the sentence like this :) -->
 
 - use your local terminal.
-- read and understand basic Python code.
+- read and understand basic TypeScript or Python code.
 - read and understand Dockerfiles or understand basic Docker concepts.
 
 ## Sample app

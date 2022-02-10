@@ -80,7 +80,7 @@ config:
 We can access the secrets similarly to other configuration data, however we must
 specify that it is a secret:
 
-Add this code to the {{% langfile %}} inside of `my-first-app`:
+Add this code to the {{< langfile >}} inside of `my-first-app`:
 
 {{< chooser language "python" / >}}
 
@@ -91,8 +91,7 @@ const config = new pulumi.Config();
 
 const dbPassword = config.requireSecret("dbPassword");
 
-export let password = dbPassword
-
+export let password = dbPassword;
 ```
 
 {{% /choosable %}}

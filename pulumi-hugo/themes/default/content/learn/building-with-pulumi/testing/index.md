@@ -136,7 +136,7 @@ In this code, we've got a lot of comments that indicate what will eventually get
 built. We've got a couple things in there we can test, though, which is what we
 will focus on here.
 
-Replace the contents of {{% langfile %}} with the following code:
+Replace the contents of {{< langfile >}} with the following code:
 
 {{< chooser language "python" / >}}
 
@@ -149,7 +149,7 @@ import my_first_app
 
 {{% /choosable %}}
 
-When we run our test framework, we run it against the {{% langfile %}} file, so
+When we run our test framework, we run it against the {{< langfile >}} file, so
 adding our code as an import allows us to ensure it's tested. Let's go write
 some unit tests!
 
@@ -222,6 +222,7 @@ pulumi.runtime.set_all_config({
 {{% /choosable %}}
 
 <!-- TODO: This absolutely violates PEP 8. We need to explain this better. -->
+
 Then, we need to import our `my_first_app` module. Since the Pulumi CLI needs to
 be mocked before the main module can run, we have to import it partway through
 the test file. Add this line after the configuration details:

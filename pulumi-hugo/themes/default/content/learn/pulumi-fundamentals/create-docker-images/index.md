@@ -28,7 +28,7 @@ configuration and implementation) via component resources.
 
 In this case, our resources are going to be Docker containers and images that we
 build locally using infrastructure as code. Our resource provider is Docker, and
-we're using Python as our _language host_, or the executor that compiles the
+we're using {{< langhost >}} as our _language host_, or the executor that compiles the
 code we write and interprets it for Pulumi.
 
 {{% notes type="info" %}}
@@ -78,6 +78,21 @@ host machine.
 
 ## Build your Docker Image with Pulumi
 
+{{% choosable language typescript %}}
+
+Before we start writing our Pulumi program, we need to install the right
+provider. In this case, we want to use the `@pulumi/docker` provider for Node.js,
+our language host. Let's to install the provider now:
+
+```bash
+cd ../
+npm install @pulumi/docker
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
 Before we start writing our Pulumi program, we need to install the right
 provider. In this case, we want to use the `pulumi_docker` provider for Python,
 our language host. It's always good practice for Python to work inside a virtual
@@ -94,13 +109,35 @@ You should see output showing the provider package being installed, just like
 for any Python package install. Add the package to the `requirements.txt` file
 by adding `pulumi_docker` on a new line at the end of the file.
 
+{{% /choosable %}}
+
 Back inside your Pulumi program, let's build your first Docker image. Remember
 that a Pulumi program is the code that defines the desired state of your
 infrastructure using a general-purpose programming language. In this case, we're
-using Python, so our main file is {{% langfile %}}. Inside your program's
-{{% langfile %}} file, use any editor to add the following code:
+using {{< langhost >}}, so our main file is {{< langfile >}}. Inside your program's
+{{< langfile >}} file, use any editor to add the following code:
 
-{{< chooser language "python" / >}}
+{{< chooser language "typescript,python" / >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as docker from "@pulumi/docker";
+
+const stack = pulumi.getStack();
+
+const backendImageName = "backend";
+const backend = new docker.Image("backend", {
+    build: {
+        context: `${process.cwd()}/app/backend`,
+    },
+    imageName: `${backendImageName}:${stack}`,
+    skipPush: true,
+});
+```
+
+{{% /choosable %}}
 
 {{% choosable language python %}}
 
@@ -129,11 +166,25 @@ as "backend" before passing some arguments to the Docker provider. The Docker
 provider uses the build context and the image name to build an image, and it
 does not push the image up anywhere.
 
+{{% choosable language typescript %}}
+
+Notice that we're mixing in some language constructs in here like `process.cwd()`.
+With Pulumi, we have access to the full language ecosystem, including built-ins and
+third-party libraries. Pulumi also has typing support, so you can use the tools
+in your favorite IDE, like completion, to verify that you're using the correct
+types for any inputs you're using. Pretty cool!
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
 Notice that we're mixing in some language constructs in here like `os.getcwd()`.
 With Pulumi, we have access to the full language ecosystem, including
 third-party libraries. Pulumi also has typing support, so you can use the tools
 in your favorite IDE, like completion, to verify that you're using the correct
 types for any inputs you're using. Pretty cool!
+
+{{% /choosable %}}
 
 Run `pulumi up`.
 
@@ -159,10 +210,23 @@ In our case here, the Docker
 [`Image`]({{< relref "/registry/packages/docker/api-docs/image" >}}) resource
 takes the following inputs:
 
+{{% choosable language python %}}
+
 - `name`: a name for the resource we are creating
 - `build`: the Docker build context (i.e., the path to the app)
 - `image_name`: the qualified image name which can include a tag
 - `skip_push`: a flag that defines whether to push to a registry
+
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
+
+- `name`: a name for the resource we are creating
+- `build.context`: the Docker build context (i.e., the path to the app)
+- `imageName`: the qualified image name which can include a tag
+- `skipPush`: a flag that defines whether to push to a registry
+
+{{% /choosable %}}
 
 Now that we've provisioned our first piece of infrastructure, let's add the
 other pieces of our application.
@@ -172,7 +236,23 @@ other pieces of our application.
 Our application includes a frontend client and MongoDB. We'll add them to the
 program, so add this code after the previous fragment.
 
-{{< chooser language "python" / >}}
+{{< chooser language "typescript,python" / >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+// build our frontend image!
+const frontendImageName = "frontend";
+const frontend = new docker.Image("frontend", {
+    build: {
+        context: `${process.cwd()}/app/frontend`,
+    },
+    imageName: `${frontendImageName}:${stack}`,
+    skipPush: true,
+});
+```
+
+{{% /choosable %}}
 
 {{% choosable language python %}}
 
@@ -193,7 +273,18 @@ going to use the official MongoDB image from Docker Hub, so we use the
 [`RemoteImage`]({{< relref "/registry/packages/docker/api-docs/remoteimage" >}})
 resource.
 
-{{< chooser language "python" / >}}
+{{< chooser language "typescript,python" / >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+// build our mongodb image!
+const mongoImage = new docker.RemoteImage("mongo", {
+    name: "mongo:bionic",
+});
+```
+
+{{% /choosable %}}
 
 {{% choosable language python %}}
 
@@ -206,7 +297,42 @@ mongo_image = docker.RemoteImage("mongo", name="mongo:bionic")
 
 Compare your program now to this complete program before we move forward:
 
-{{< chooser language "python" / >}}
+{{< chooser language "typescript,python" / >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as docker from "@pulumi/docker";
+
+const stack = pulumi.getStack();
+
+const backendImageName = "backend";
+const backend = new docker.Image("backend", {
+    build: {
+        context: `${process.cwd()}/app/backend`,
+    },
+    imageName: `${backendImageName}:${stack}`,
+    skipPush: true,
+});
+
+// build our frontend image!
+const frontendImageName = "frontend";
+const frontend = new docker.Image("frontend", {
+    build: {
+        context: `${process.cwd()}/app/frontend`,
+    },
+    imageName: `${frontendImageName}:${stack}`,
+    skipPush: true,
+});
+
+// build our mongodb image!
+const mongoImage = new docker.RemoteImage("mongo", {
+    name: "mongo:bionic",
+});
+```
+
+{{% /choosable %}}
 
 {{% choosable language python %}}
 
@@ -252,9 +378,3 @@ We're only doing a step-by-step process here to make learning easier.
 From here, we can move on to configuring and provisioning our containers.
 
 Onward!
-
-<!-- [^1]: [resource](https://www.pulumi.com/docs/reference/glossary/#resources)
-[^2]: [resource providers](https://www.pulumi.com/docs/reference/glossary/#resource-provider)
-[^3]: [language host](https://www.pulumi.com/docs/reference/glossary/#language-host)
-[^4]: [input](https://www.pulumi.com/docs/intro/concepts/inputs-outputs/)
-[^5]: [output](https://www.pulumi.com/docs/reference/glossary/#outputs) -->
