@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "Cloud Native London 2021"
-meta_desc: "In this session, David Flanagan will live debug some clusters broken by members of the community, showing the methods and techniques to fix clusters quickly."
+title: "Rebranding DevOps as Cloud Engineering"
+meta_desc: "In this Kongcast episode, Matt Stratton explains the history of configuration automation, the world of cloud engineering and how it compares to DevOps."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -16,7 +16,7 @@ pulumi_tv: false
 preview_image: ""
 
 # Webinars with unlisted as true will not be shown on the webinar list
-unlisted: true
+unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
@@ -34,7 +34,7 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "https://www.meetup.com/Cloud-Native-London/events/276872320/"
+url_slug: "https://youtu.be/PUlte6-2JC0"
 
 # The content of the hero section.
 hero:
@@ -56,7 +56,7 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-01-05T10:30:00-08:00
+    sortable_date: 2022-02-21T08:00:00-07:00
     # Duration of the webinar.
     duration: "2 hours"
     # Datetime of the webinar.
