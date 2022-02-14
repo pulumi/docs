@@ -248,7 +248,9 @@ var group = new SecurityGroup("my-sg",
 
 {{< /chooser >}}
 
-> **Note:** Import IDs are resource specific. The ID to use is the same as the ID that gets assigned when Pulumi has provisioned a resource of that type from scratch.
+{{% notes type="info" %}}
+**Note:** Import IDs are resource specific. The ID to use is the same as the ID that gets assigned when Pulumi has provisioned a resource of that type from scratch and can be found in the resource's API docs. We support import IDs for all generally available providers.
+{{% /notes %}}
 
 When Pulumi first sees a resource with an `import` option set (in this case `my-sg`), it will adopt the existing resource by querying the target cloud provider for a resource of that type with the given ID, instead of creating a new resource as usual.
 
@@ -330,7 +332,9 @@ Diagnostics:
     error: imported resource sg-04aeda9a214730248's property 'ingress' does not match the existing value
 ```
 
-> **Note:** Because of [auto-naming]({{< relref "/docs/intro/concepts/resources#autonaming" >}}), it's common to accidentally get in a situation where names don't match. For example, if we left off the security group's name, `"my-sg-62a569b"`, in the earlier example, Pulumi would still auto-name the resource, leading to an error `imported resource sg-04aeda9a214730248's property 'name' does not match the existing value`. To fix this problem, make sure to specify names for all resources explicitly.
+{{% notes type="info" %}}
+**Note:** Because of [auto-naming]({{< relref "/docs/intro/concepts/resources#autonaming" >}}), it's common to accidentally get in a situation where names don't match. For example, if we left off the security group's name, `"my-sg-62a569b"`, in the earlier example, Pulumi would still auto-name the resource, leading to an error `imported resource sg-04aeda9a214730248's property 'name' does not match the existing value`. To fix this problem, make sure to specify names for all resources explicitly.
+{{% /notes %}}
 
 ### Bulk Import Operations
 
