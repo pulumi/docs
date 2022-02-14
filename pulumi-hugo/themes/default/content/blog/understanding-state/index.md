@@ -31,7 +31,9 @@ slow-motion camera, we see a single frame for each position of the ball. Each
 frame is a single state of the system, and the difference between the frames is
 a change in state. When our state changes, one or more variables change. In this
 case, the variables of speed and direction (combined as velocity) and distance
-from the ground
+from the ground all change in each snapshot of time, or each state. We can use
+this knowledge to predict how the ball's state will change, allowing us to
+identify patterns.
 
 When we think about our infrastructure that we manage with systems like Pulumi,
 we're thinking about states of the infrastructure system. How we move from one
