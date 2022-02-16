@@ -244,7 +244,7 @@ pulumi.runtime.setMocks({
             state: args.inputs,
         };
     },
-    call: function(args: MockCallArgs) {
+    call: function(args: pulumi.runtime.MockCallArgs) {
         return args.inputs;
     },
 });
