@@ -11,6 +11,7 @@ menu:
 aliases:
   - /docs/quickstart/
   - /start/
+  - /getting-started/
 ---
 
 Pulumi is a modern [infrastructure as code]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) platform that allows you to use familiar programming languages and tools to build, deploy, and manage cloud infrastructure.
