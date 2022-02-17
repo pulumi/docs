@@ -240,3 +240,21 @@ Console.WriteLine($"Active: {data.GetProperty("active")}");
 {{% /choosable %}}
 
 {{< /chooser >}}
+
+## Special Configuration Options
+
+This is a list of configuration keys that the Pulumi CLI is aware of:
+
+### `pulumi:disable-default-providers`
+
+A list of packages for which [default providers should be disabled]({{< relref
+"/docs/intro/concepts/resources/providers#disabling-default-providers" >}}). `*` disables default providers for all
+packages.
+
+In the following example, the default providers for [aws]({{< relref "/registry/packages/aws" >}}) and [kubernetes]({{< relref "/registry/packages/kubernetes" >}}) are disabled.
+
+```yaml
+- pulumi:disable-default-providers:
+    - aws
+    - kubernetes
+```
