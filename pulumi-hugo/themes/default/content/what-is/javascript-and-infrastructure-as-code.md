@@ -29,7 +29,7 @@ customer_logos:
       - ro
 ---
 
-[Infrastructure as Code (IaC)]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) means that you use code to define and manage your infrastructure automatically rather than with manual processes. In a broader sense, IaC enables [cloud engineering]({{< relref "/blog/wtf-is-cloud-engineering" >}}) and allows you to effectively apply software engineering practices to your infrastructure. With IaC, you can automatically build, deploy and manage your infrastructure much more effectively and reliably than you can manually. IaC makes your whole infrastructure versionable, [testable]({{< relref "/what-is/how-to-step-up-cloud-infrastructure-testing" >}}) and repeatable.
+[Infrastructure as Code (IaC)]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) means that you use code to define and manage your infrastructure automatically rather than with manual processes. In a broader sense, IaC enables [cloud engineering]({{< relref "/blog/what-exactly-is-cloud-engineering" >}}) and allows you to effectively apply software engineering practices to your infrastructure. With IaC, you can automatically build, deploy and manage your infrastructure much more effectively and reliably than you can manually. IaC makes your whole infrastructure versionable, [testable]({{< relref "/what-is/how-to-step-up-cloud-infrastructure-testing" >}}) and repeatable.
 
 People use many different programming languages to implement IaC (for our purposes, we mean infrastructure in the cloud). One of the most widely used is JavaScript.
 

@@ -72,7 +72,7 @@ There's a better way using infrastructure as code and cloud engineering methodol
 
 ## Cloud Engineering to the Rescue!
 
-Creating and provisioning one VM isn't difficult, but migrating a traditional n-tier application often requires multiple virtual machines including those needed for horizontal scaling. This is where infrastructure as code excels. By using [cloud engineering]({{< relref "/wtf-is-cloud-engineering" >}}), we can automate [build]({{< relref "/blog/wtf-is-cloud-engineering#build" >}}), [deploy]({{< relref "/blog/wtf-is-cloud-engineering#deploy" >}}), and [manage]({{< relref "/blog/wtf-is-cloud-engineering#manage" >}}) process for any infrastructure or application.
+Creating and provisioning one VM isn't difficult, but migrating a traditional n-tier application often requires multiple virtual machines including those needed for horizontal scaling. This is where infrastructure as code excels. By using [cloud engineering]({{< relref "/blog/what-exactly-is-cloud-engineering" >}}), we can automate [build]({{< relref "/blog/what-exactly-is-cloud-engineering#build" >}}), [deploy]({{< relref "/blog/what-exactly-is-cloud-engineering#deploy" >}}), and [manage]({{< relref "/blog/what-exactly-is-cloud-engineering#manage" >}}) process for any infrastructure or application.
 
 Let's look at an example of deploying a web server using a virtual machine. The complete example is available in either [Python](https://github.com/pulumi/examples/tree/master/azure-py-webserver) or [Typescript](https://github.com/pulumi/examples/tree/master/azure-ts-webserver). We will examine the Python code.
 
