@@ -56,7 +56,7 @@ We announced Pulumi Team Edition with usage-based pricing and a free tier to get
 
 July was a month of education, with articles on Cloud Engineering as a concept, more on testing, and a new series on Kubernetes:
 
-* [Cloud Enginering]({{< relref "/blog/wtf-is-cloud-engineering" >}})
+* [Cloud Enginering]({{< relref "/blog/what-exactly-is-cloud-engineering" >}})
 * [Testing]({{< relref "/blog/testing-in-practice" >}})
 * [Kubernetes]({{< relref "/blog/kubernetes-fundamentals-part-one" >}})
 
