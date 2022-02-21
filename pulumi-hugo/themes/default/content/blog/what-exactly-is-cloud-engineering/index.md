@@ -1,5 +1,5 @@
 ---
-title: "WTF Is Cloud Engineering?"
+title: "What Exactly Is Cloud Engineering?"
 date: 2021-07-23T12:46:42-05:00
 draft: false
 meta_desc: "We talk a lot about cloud engineering. But what exactly is it? Let's find out!"
@@ -8,6 +8,8 @@ authors:
     - matt-stratton
 tags:
     - cloud-engineering
+aliases:
+    - /blog/wtf-is-cloud-engineering/
 ---
 When we think about the idea of "cloud engineering," we often think about the concept of taking standard software engineering practices and tools, and making them available and consistent across development, infrastructure, and compliance teams.
 
