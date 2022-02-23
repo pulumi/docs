@@ -3,9 +3,9 @@ title: "Abstraction and Encapsulation"
 layout: module
 date: 2021-11-17
 description: |
-    Explore abstraction and encapsulation with Pulumi programs using component resources.
+    Explore abstraction and encapsulation with Pulumi and component resources.
 meta_desc: |
-    Explore abstraction and encapsulation with Pulumi programs using component resources.
+    Explore abstraction and encapsulation with Pulumi and component resources.
 index: 6
 meta_image: meta.png
 level: intermediate
