@@ -1,6 +1,6 @@
 # pulumi-hugo
 
-A [Hugo](https://gohugo.io) module containing the Pulumi Hugo theme and website content.
+A [Hugo](https://gohugo.io) module containing content and layouts used on pulumi.com, including hand-authored docs, the Pulumi blog, and Learn Pulumi.
 
 This repository is consumed by https://github.com/pulumi/docs to produce the website you see at https://pulumi.com. If you're interested in contributing some docs or a blog post at https://pulumi.com/blog, you've come to the right place! 🙌
 
