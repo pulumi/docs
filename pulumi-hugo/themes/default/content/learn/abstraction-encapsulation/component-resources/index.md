@@ -29,7 +29,7 @@ A resource in Pulumi terms is basically a building block. That building block co
 
 Why would you make a component resource instead of just a "simple" logical grouping that you can call and use like a generic library full of classes and functions? A component resource shows up in the Pulumi ecosystem just like any other resource. That means it has a trackable state, appears in diffs, and has a name field you can reference that refers to the entire grouping.
 
-We've actually already started creating a component resource in the encapsulation part when we made a new class that built up an `s3.Bucket` and an `s3.BucketPolicy` with a `define_policy` function. Let's now turn that logical grouping into an actual component resource.
+We've actually already started creating a component resource in the encapsulation part when we made a new class that built up an `s3.Bucket` and an `s3.BucketPolicy`. Let's now turn that logical grouping into an actual component resource.
 
 ## Converting to a component resource
 
@@ -37,9 +37,82 @@ When we're converting to a component resource, we're subclassing the `ComponentR
 
 In Python, we subclass by using `super()` in the initialization of the class. This call ensures that Pulumi registers the component resource as a resource properly.
 
+{{< chooser language "typescript,python" />}}
+
+{{% choosable language typescript %}}
+
+```typescript
+// ...
+
+// Create a class that encapsulates the functionality by subclassing
+// pulumi.ComponentResource.
+class OurBucketComponent extends pulumi.ComponentResource {
+    public bucket: aws.s3.Bucket;
+    private bucketPolicy: aws.s3.BucketPolicy;
+
+    private policies: { [K in PolicyType]: aws.iam.PolicyStatement } = {
+        default: {
+            Effect: "Allow",
+            Principal: "*",
+            Action: [
+                "s3:GetObject"
+            ],
+        },
+        locked: {
+            /* ... */
+        },
+        permissive: {
+            /* ... */
+        },
+    };
+
+    private getBucketPolicy(policyType: PolicyType): aws.iam.PolicyDocument {
+        return {
+            Version: "2012-10-17",
+            Statement: [{
+                ...this.policies[policyType],
+                Resource: [
+                    pulumi.interpolate`${this.bucket.arn}/*`,
+                ],
+            }],
+        }
+    };
+
+    constructor(name: string, args: { policyType: PolicyType }, opts?: pulumi.ComponentResourceOptions) {
+
+        // By calling super(), we ensure any instantiation of this class
+        // inherits from the ComponentResource class so we don't have to
+        // declare all the same things all over again.
+        super("pkg:index:OurBucketComponent", name, args, opts);
+
+        this.bucket = new aws.s3.Bucket(name, {}, { parent: this });
+
+        this.bucketPolicy = new aws.s3.BucketPolicy(`${name}-policy`, {
+            bucket: this.bucket.id,
+            policy: this.getBucketPolicy(args.policyType),
+        }, { parent: this });
+
+        // We also need to register all the expected outputs for this
+        // component resource that will get returned by default.
+        this.registerOutputs({
+            bucketName: this.bucket.id,
+        });
+    }
+}
+
+const bucket = new OurBucketComponent("laura-bucket-1", {
+    policyType: "permissive",
+});
+
+export const bucketName = bucket.bucket.id;
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
 ```python
 import ...
-
 
 # Create a class that encapsulates the functionality while subclassing the ComponentResource class (using the ComponentResource class as a template).
 class OurBucketComponent(pulumi.ComponentResource):
@@ -81,13 +154,27 @@ class OurBucketComponent(pulumi.ComponentResource):
         )
         return bucket_policy
 
+bucket1 = OurBucketClass('laura-bucket-1', 'default')
+bucket1.set_policy()
 
-
+pulumi.export("bucket_name", bucket1.bucket.id)
 ```
 
-Within `super()`'s init, we pass in a name for the resource, which [we recommend]({{< relref "/docs/intro/concepts/resources/components#authoring-a-new-component-resource" >}}) being of the form `<package>:<module>:<type>` to avoid type conflicts since it's being registered alongside other resources like the Bucket resource we're calling (`aws:s3:Bucket`).
+{{% /choosable %}}
+
+With the call to `super()`, we pass in a name for the resource, which [we recommend]({{< relref "/docs/intro/concepts/resources/components#authoring-a-new-component-resource" >}}) being of the form `<package>:<module>:<type>` to avoid type conflicts since it's being registered alongside other resources like the Bucket resource we're calling (`aws:s3:Bucket`).
+
+{{% choosable language python %}}
 
 That last call in the init, `self.register_outputs({})`, passes Pulumi the expected outputs so Pulumi can read the results of the creation or update of a component resource just like any other resource, so don't forget that call! You can [register default outputs using this call]({{< relref "/docs/intro/concepts/resources/components#registering-component-outputs" >}}), as well. It's not hard to imagine we will always want the bucket name for our use case, so we pass that in as an always-given output for our component resource.
+
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
+
+That last call in the init, `this.registerOutputs({})`, passes Pulumi the expected outputs so Pulumi can read the results of the creation or update of a component resource just like any other resource, so don't forget that call! You can [register default outputs using this call]({{< relref "/docs/intro/concepts/resources/components#registering-component-outputs" >}}), as well. It's not hard to imagine we will always want the bucket name for our use case, so we pass that in as an always-given output for our component resource.
+
+{{% /choosable %}}
 
 From here, you can deploy it and get your custom resource appearing in the resource tree in your terminal! You can also share it with others so they can import the resource and use it without ever needing to understand all of the underlying needs of a standard storage system on AWS.
 

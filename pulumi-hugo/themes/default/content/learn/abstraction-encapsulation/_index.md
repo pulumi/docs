@@ -34,7 +34,7 @@ Optionally, if you want to build some of the examples yourself to experiment, yo
 
 - A [Pulumi account and token]({{< relref "/docs/intro/pulumi-service/accounts#access-tokens" >}}) (If you don't have an account, go to the [signup page](https://app.pulumi.com/signup))
 - An AWS account (the free version should be fine)
-- Familiarity with the Python programming language
+- Familiarity with either the TypeScript or Python programming language
 
 ## About this pathway
 

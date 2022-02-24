@@ -36,8 +36,35 @@ Seems pretty clean, doesn't it? Abstraction is thinking through what we experien
 
 With Pulumi, one way to abstract the prior work away to match this diagram a bit better might be to wrap the whole thing in another class that requires you to define which cloud provider you want to use, kind of like this pseudo code layout:
 
+{{< chooser language "typescript,python" />}}
+
+{{% choosable language typescript %}}
+
+```typescript
+// ...
+
+type SupportedCloud = "aws" | "gcp";
+
+class StorageClass {
+    constructor(cloud: SupportedCloud) {
+        switch (cloud) {
+            case "aws":
+                // Create AWS storage resources...
+                break;
+            case "gcp":
+                // Create GCP storage resources...
+                break;
+        }
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
 ```python
-import ...
+# ...
 
 class StorageClass:
     def __init__(self, cloud):
@@ -49,5 +76,7 @@ class StorageClass:
         # gcp class here
     elif ...
 ```
+
+{{% /choosable %}}
 
 There's a cleaner way to do this, though, with Pulumi if you want to start to share these abstractions with others. We call them _Component Resources_. Let's go explore them next!
