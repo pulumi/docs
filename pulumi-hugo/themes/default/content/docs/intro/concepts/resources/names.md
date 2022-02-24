@@ -9,7 +9,7 @@ menu:
 
 Each resources in Pulumi has a [logical name]({{< relref "#logicalname" >}}) and a [physical name]({{< relref "#autonaming" >}}).  The logical name is how the resource is known inside Pulumi, and establishes a notion of identity within Pulumi even when the physical resource might need to change (for example, during a replacement).  The physical name is the name used for the resource in the cloud provider that a Pulumi program is deploying to.
 
-Pulumi [auto-names](({{< relref "#autonaming" >}})) most resource by default, using the logical name and a random suffix to construct a unique physical name for a resource.  Users can provide explicit names to override this default.
+Pulumi [auto-names]({{< relref "#autonaming" >}}) most resource by default, using the logical name and a random suffix to construct a unique physical name for a resource.  Users can provide explicit names to override this default.
 
 Each resource also has a [Uniform Resource Name (URN)]({{< relref "#urns" >}}) which is a unique name derived from both the logical name of the resource and the type of the resource and, in the case of components, its parents.
 
