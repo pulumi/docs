@@ -26,14 +26,14 @@ references, which bridge different stacks through inter-stack dependencies.
 Typically, you will pass some value from your resources into the output, but to
 illustrate how stack outputs work, we will set some stack outputs manually:
 
-In the {{< langfile >}} file of `my-first-app`, add the following line:
+At the end of the {{< langfile >}} file of `my-first-app`, add the following line:
 
-{{< chooser language "python" / >}}
+{{< chooser language "typescript,python" / >}}
 
 {{% choosable language typescript %}}
 
 ```typescript
-export let x = "hello";
+export const url = pulumi.interpolate`http://localhost:${frontendPort}`;
 ```
 
 {{% /choosable %}}
@@ -42,30 +42,6 @@ export let x = "hello";
 
 ```python
 pulumi.export("url", f"http://localhost:{frontend_port}")
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```go
-ctx.Export("x", pulumi.String("hello"))
-```
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-```csharp
-class MyStack : Stack
-{
-    [Output] public Output<string> x { get; set; }
-
-    public MyStack()
-    {
-        this.x = Output.Create("hello");
-    }
-}
 ```
 
 {{% /choosable %}}
@@ -83,16 +59,14 @@ View Live: https://app.pulumi.com/***/my-first-app/dev/previews/...
 Updating (dev)
 
 View Live: https://app.pulumi.com/***/my-first-app/dev/updates/3
-
+...
 
     pulumi:pulumi:Stack my-first-app-dev running
     pulumi:pulumi:Stack my-first-app-dev
 
 Outputs:
-  + url: "http://localhost:3001"
-
+    url: "http://localhost:3001"
 ...
-
 ```
 
 Notice that there is now a stack output for the value of the key `url`.
@@ -102,7 +76,6 @@ particular stack.
 
 ```bash
 $ pulumi stack output url
-
 http://localhost:3001
 ```
 
@@ -131,9 +104,6 @@ configuration:
 
 ```bash
 $ pulumi config
-```
-
-```bash
 KEY               VALUE
 backend_port      3000
 database          cart
@@ -148,12 +118,13 @@ as `dev`, except the `frontend_port` will be set to `3002`.
 
 ```bash
 $ pulumi stack select staging
-pulumi config set frontend_port 3002
-pulumi config set backend_port 3000
-pulumi config set mongo_port 27017
-pulumi config set mongo_host mongodb://mongo:27017
-pulumi config set database cart
-pulumi config set node_environment development
+
+$ pulumi config set frontend_port 3002
+$ pulumi config set backend_port 3000
+$ pulumi config set mongo_port 27017
+$ pulumi config set mongo_host mongodb://mongo:27017
+$ pulumi config set database cart
+$ pulumi config set node_environment development
 ```
 
 You should have two new files in your directory now: `Pulumi.dev.yaml` and
@@ -162,11 +133,12 @@ value for `frontend_port` set (along with some other values we set in the
 Fundamentals tutorial):
 
 ```bash
-$ cat Pulumi.dev.yaml
+$ cat Pulumi.staging.yaml
+
 config:
   my-first-app:backend_port: "3000"
   my-first-app:database: cart
-  my-first-app:frontend_port: "3001"
+  my-first-app:frontend_port: "3002"
   my-first-app:mongo_host: mongodb://mongo:27017
   my-first-app:mongo_port: "27017"
   my-first-app:node_environment: development
@@ -177,10 +149,7 @@ frontend port is now set to `3002`:
 
 ```bash
 $ pulumi stack output url
-
 http://localhost:3002
 ```
 
 Next up, we'll explore how to share outputs with other stacks. Let's go!
-
-<!-- [^1]: [stack outputs]({{< relref "/docs/reference/glossary#stack-output" >}}) -->

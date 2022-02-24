@@ -11,7 +11,6 @@ youll_learn:
     - Using stacks for unique configurations of different environments
     - Sharing values from one Pulumi program or project to another
     - Working with secrets inside of Pulumi
-    - Testing your Pulumi programs
 providers:
     - aws
 ---

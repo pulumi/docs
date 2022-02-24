@@ -35,15 +35,9 @@ alphanumeric characters, hyphens, underscores, or periods.
 
 Let's create a new stack in our project, for our staging environment:
 
-{{< chooser language "python" / >}}
-
-{{% choosable language python %}}
-
 ```bash
 $ pulumi stack init staging
 ```
-
-{{% /choosable %}}
 
 ## Listing stacks
 
@@ -55,7 +49,6 @@ $ pulumi stack ls
 NAME      LAST UPDATE    RESOURCE COUNT  URL
 dev       2 minutes ago  10              https://app.pulumi.com/***/my-first-app/dev
 staging*  n/a            n/a             https://app.pulumi.com/***/my-first-app/staging
-
 ```
 
 Notice that the `staging` stack has an `*` after its name; this asterisk marks
