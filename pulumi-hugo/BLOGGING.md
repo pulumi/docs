@@ -37,7 +37,6 @@ including all the required frontmatter parameters.
    ---
    title: "My New Post"
    date: 2019-07-17T14:26:50-07:00
-   draft: true
    meta_image: meta.png
    authors:
        - joe-duffy
@@ -61,7 +60,7 @@ including all the required frontmatter parameters.
    ---
    ```
 
-   **Keep in mind that only posts dated prior to "now" (meaning the moment the build process begins) and _not_ marked as `draft`s will published to production.** The development server renders both future and draft content (so you can work on scheduled posts in advance), but the build process does not; see below for details on scheduling posts for future publishing.
+   **Keep in mind that only posts dated prior to "now" (meaning the moment the build process begins) will published to production.** The development server renders future content (so you can work on scheduled posts in advance), but the build process does not; see below for details on scheduling posts for future publishing.
 
    **Tags**
 
@@ -185,20 +184,15 @@ For more Hugo shortcode fun, [go here](https://gohugo.io/content-management/shor
 
 ## Done? Submit!
 
-When you're ready to submit your post for review, issue a Pull Request against the `master` branch of the repo, and the team will have a look. Once merged &mdash; provided its `date` has passed and its `draft` status is no longer `true` &mdash; the post will be deployed to https://www.pulumi.com/.
+When you're ready to submit your post for review, issue a Pull Request against the `master` branch of the repo, and the team will have a look. Once merged &mdash; provided its `date` has passed the post will be deployed to https://www.pulumi.com/.
 
 ## A Note on Dates and Scheduling for Future Publishing
 
-If you'd like your post to be published at some future date or time, you have a couple of options.
-
-Since the build process is triggered by (and so requires) a commit to `master`, you can either wait for the post's `date` to pass, remove its `draft` setting (or change it to `false`), and _then_ merge it, or leave its `draft` property `true`, merge, then change the property to `false` once the `date`'s gone by. If a post happens to get merged with `draft: false` and a future date, the resulting build will exclude the post, requiring a commit of some sort to occur _after_ its `date` in order to trigger a build and get the post published.
-
-For this reason, leaving the `draft` property `true` until you're actually ready to publish gives you an easy way to kick off a build when the time comes.
+Since the build process is triggered by (and so requires) a commit to `master`, you can either wait for the post's `date` to pass, and _then_ merge it. If a post happens to get merged a future date, the resulting build will exclude the post, requiring a commit of some sort to occur _after_ its `date` in order to trigger a build and get the post published.
 
 ## Publishing Check List
 
 - [ ] As mentioned, use the Hugo blog-post generator instead of copying another post: `make new-blog-post` (or alternatively, the more verbose but equivalent `hugo new --kind blog-post "themes/default/content/blog/[your-slug]"`)
-- [ ] Drafts will not be published, so either set `draft: false` or or delete it.
 - [ ] Spell and grammar check. Consider using a service such as [Grammarly](http://grammarly.com).
 - [ ] Check for a break `<!--more-->` after the first paragraph, and ensure that your post's introduction looks right on the blog home page.
 - [ ] Check that your meta_image appears properly on the blog home page. Do not use animated GIFs for preview images.
