@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "Deploying Azure resources with Python"
-meta_desc: "In this session, the Pulumi and Azure team will show you how Python and Pulumi will help you deliver your apps to the cloud faster than ever."
+title: "2022 GAN Hub (SXSW)"
+meta_desc: "A panel, comprised of some of the leading DevRel practitioners, will answer questions around where they see DevRel changing and what it can become."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -16,7 +16,7 @@ pulumi_tv: false
 preview_image: ""
 
 # Webinars with unlisted as true will not be shown on the webinar list
-unlisted: true
+unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
@@ -34,7 +34,7 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "https://www.meetup.com/Microsoft-Reactor-New-York/events/283269190"
+url_slug: https://www.eventbrite.com/e/devrel-where-were-at-and-whats-next-tickets-265313288187
 
 # The content of the hero section.
 hero:
@@ -56,7 +56,7 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-02-16T10:30:00-07:00
+    sortable_date: 2022-03-11T12:00:00-07:00
     # Duration of the webinar.
     duration: "2 hours"
     # Datetime of the webinar.

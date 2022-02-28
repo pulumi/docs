@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "Deploying Azure resources with Python"
-meta_desc: "In this session, the Pulumi and Azure team will show you how Python and Pulumi will help you deliver your apps to the cloud faster than ever."
+title: "Introduction to Infrastructure as Code"
+meta_desc: "In this workshop, you’re going to learn about Infrastructure as Code by exploring Pulumi to build and deploy a real-life modern application using Docker."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -16,11 +16,11 @@ pulumi_tv: false
 preview_image: ""
 
 # Webinars with unlisted as true will not be shown on the webinar list
-unlisted: true
+unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -29,17 +29,17 @@ type: webinars
 # landing/registration page. If the webinar is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
 # the webinar page created.
-external: true
-block_external_search_index: true
+external: false
+block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "https://www.meetup.com/Microsoft-Reactor-New-York/events/283269190"
+url_slug: "introduction-to-infrastructure-as-code"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: ""
+    title: "Introduction to Infrastructure as Code"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
@@ -52,37 +52,32 @@ hero:
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: ""
+    title: "Introduction to Infrastructure as Code"
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-02-16T10:30:00-07:00
+    sortable_date: 2022-03-24T10:00:00-07:00
     # Duration of the webinar.
-    duration: "2 hours"
+    duration: "1 hour"
     # Datetime of the webinar.
     datetime: ""
     # Description of the webinar.
-    description: ""
+    description: |
+        In this workshop, we’re going to learn more about cloud computing and Infrastructure as Code by exploring how to use Pulumi to build, configure, and deploy a real-life, modern application using Docker. We will create a frontend, a backend, and a database to deploy the Pulumipus Boba Tea Shop, and along the way, learn more about how Pulumi works to make managing all of these different moving pieces a little bit less painful!
 
     # The webinar presenters
     presenters:
-        - name: ""
-          role: ""
+        - name: Kat Cosgrove
+          role: Staff Developer Advocate
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - ""
-
-# This section contains the transcript for a video. It is optional.
-transcript: |
-    Here is where you would put the transcript for a recorded video.
+        - How to provision, manage, and destroy cloud resources with Pulumi.
+        - How to build an deploy Docker containers.
+        - How to build and deploy a full stack application.
 
 # The right hand side form section.
 form:
-    # GoToWebinar webinar key. This key allows us to register people for webinars via the
-    # HubSpot form.
-    gotowebinar_key: ""
-
     # HubSpot form id.
-    hubspot_form_id: ""
+    hubspot_form_id: 7963c01d-339d-404b-b6da-d1367c46d4a2
 ---
