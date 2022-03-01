@@ -14,6 +14,10 @@ lint:
 build:
 	./scripts/build.sh
 
+.PHONY: ci-build-full-site
+ci-build-full-site:
+	./scripts/ci/build-full-site.sh
+
 .PHONY: serve
 serve:
 	./scripts/serve.sh

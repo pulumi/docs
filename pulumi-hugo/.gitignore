@@ -8,3 +8,4 @@ public
 .DS_Store
 yarn-error.log
 .hugo_build.lock
+docs

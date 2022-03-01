@@ -7,6 +7,8 @@ jobs:
   preview:
     # Only run this job for events that originate on this repository.
     if: github.event.pull_request.head.repo.full_name == github.repository
+    env:
+      GOPATH: ${{ github.workspace }}/go
     name: Build and deploy preview
     runs-on: ubuntu-18.04
     steps:
@@ -37,6 +39,9 @@ jobs:
           aws-region: us-west-2
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
           role-session-name: PullRequestPreviewSession
+
+      - name: Run a full docs build
+        run: make ci-build-full-site
 
       - name: Build and deploy preview
         run: make ci-pull-request
