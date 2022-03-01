@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "Improving the GitOps Pipeline"
-meta_desc: "Ever considered using Pulumi for your GitOps pipeline? Come learn from David Flanagan as he shows Bret Fisher how Pulumi streamlines your GitOps journey."
+title: "Building a scientific computing lab on public clouds"
+meta_desc: Join Laura Santamaria to build a data lab on a public cloud and explore public weather data, and learn a bit more about clouds and "the cloud".
 
 # A featured webinar will display first in the list.
 featured: false
@@ -34,7 +34,7 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: https://www.youtube.com/channel/UC0NErq0RhP51iXx64ZmyVfg
+url_slug: https://www.pytexas.org/
 
 # The content of the hero section.
 hero:
@@ -56,7 +56,7 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-03-24T09:30:00-07:00
+    sortable_date: 2022-03-26T10:00:00-07:00
     # Duration of the webinar.
     duration: "2 hours"
     # Datetime of the webinar.

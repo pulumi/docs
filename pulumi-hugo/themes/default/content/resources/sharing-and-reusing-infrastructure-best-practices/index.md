@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "Improving the GitOps Pipeline"
-meta_desc: "Ever considered using Pulumi for your GitOps pipeline? Come learn from David Flanagan as he shows Bret Fisher how Pulumi streamlines your GitOps journey."
+title: "Sharing and Reusing Infrastructure Best Practices"
+meta_desc: "Join David Flanagan for a workshop to explore how Pulumi allows you to build your own abstractions and keep your code clean, understandable, and testable."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -29,17 +29,17 @@ type: webinars
 # landing/registration page. If the webinar is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
 # the webinar page created.
-external: true
-block_external_search_index: true
+external: false
+block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: https://www.youtube.com/channel/UC0NErq0RhP51iXx64ZmyVfg
+url_slug: "sharing-and-reusing-infrastructure-best-practices"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: ""
+    title: "Sharing and Reusing Infrastructure Best Practices"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
@@ -52,37 +52,31 @@ hero:
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: ""
+    title: "Sharing and Reusing Infrastructure Best Practices"
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-03-24T09:30:00-07:00
+    sortable_date: 2022-04-14T10:00:00-07:00
     # Duration of the webinar.
-    duration: "2 hours"
+    duration: "1 hour"
     # Datetime of the webinar.
     datetime: ""
     # Description of the webinar.
-    description: ""
+    description: |
+        Join David Flanagan for a workshop to explore the different methods that Pulumi provides to allow you to build your own abstractions and keep your code clean, understandable, and testable.
 
     # The webinar presenters
     presenters:
-        - name: ""
-          role: ""
+        - name: David Flanagan
+          role: Staff Developer Advocate, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - ""
-
-# This section contains the transcript for a video. It is optional.
-transcript: |
-    Here is where you would put the transcript for a recorded video.
+        - How to build infrastructure as code abstractions.
+        - How to test infrastructure as code.
 
 # The right hand side form section.
 form:
-    # GoToWebinar webinar key. This key allows us to register people for webinars via the
-    # HubSpot form.
-    gotowebinar_key: ""
-
     # HubSpot form id.
-    hubspot_form_id: ""
+    hubspot_form_id: "5be001fb-39c4-4f92-af59-11c256190fbe"
 ---

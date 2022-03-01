@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "Improving the GitOps Pipeline"
-meta_desc: "Ever considered using Pulumi for your GitOps pipeline? Come learn from David Flanagan as he shows Bret Fisher how Pulumi streamlines your GitOps journey."
+title: "Automating Infrastructure as Code Workflows"
+meta_desc: "Join Laura Santamaria in this workshop to explore how to use Pulumi's Automation API to work with Pulumi in a programmatic manner."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -29,17 +29,17 @@ type: webinars
 # landing/registration page. If the webinar is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
 # the webinar page created.
-external: true
-block_external_search_index: true
+external: false
+block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: https://www.youtube.com/channel/UC0NErq0RhP51iXx64ZmyVfg
+url_slug: "automating-infrastructure-as-code-workflows"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: ""
+    title: "Automating Infrastructure as Code Workflows"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
@@ -52,37 +52,31 @@ hero:
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: ""
+    title: "Automating Infrastructure as Code Workflows"
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-03-24T09:30:00-07:00
+    sortable_date: 2022-04-28T10:00:00-07:00
     # Duration of the webinar.
-    duration: "2 hours"
+    duration: "1 hour"
     # Datetime of the webinar.
     datetime: ""
     # Description of the webinar.
-    description: ""
+    description: |
+        Join Laura Santamaria in this workshop to explore how to use Pulumi's Automation API to work with Pulumi in a programmatic manner.
 
     # The webinar presenters
     presenters:
-        - name: ""
-          role: ""
+        - name: Laura Santamaria
+          role: Developer Advocate, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - ""
-
-# This section contains the transcript for a video. It is optional.
-transcript: |
-    Here is where you would put the transcript for a recorded video.
+        - How to use Pulumi's Automation API.
+        - How to automate infrastructure as code workflows.
 
 # The right hand side form section.
 form:
-    # GoToWebinar webinar key. This key allows us to register people for webinars via the
-    # HubSpot form.
-    gotowebinar_key: ""
-
     # HubSpot form id.
-    hubspot_form_id: ""
+    hubspot_form_id: "5be001fb-39c4-4f92-af59-11c256190fbe"
 ---
