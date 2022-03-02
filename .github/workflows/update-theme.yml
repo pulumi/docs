@@ -52,7 +52,7 @@ jobs:
           author: Pulumi Bot <bot@pulumi.com>
           committer: Pulumi Bot <bot@pulumi.com>
           title: Update Hugo modules
-          labels: "automation/tfgen-provider-docs,automation/merge"
+          labels: "automation/tfgen-provider-docs"
           commit-message: Update Hugo module references
           token: ${{ secrets.PULUMI_BOT_TOKEN }}
           body: |
