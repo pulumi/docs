@@ -9,7 +9,7 @@ meta_desc: Pulumi Service is one of the components required for self-hosting Pul
 ---
 
 {{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Enterprise**. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate Self-Hosted Pulumi Enterprise.
+Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the Self-Hosted Pulumi Service, sign up for the [30 day trial]({{< relref "/product/self-hosted#self-hosted-trial" >}}) or [contact us]({{< relref "/contact.md" >}}).
 
 To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends]({{< relref "/docs/intro/concepts/state" >}}).
 {{% /notes %}}

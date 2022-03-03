@@ -9,7 +9,7 @@ meta_desc: Pulumi API is one of the components required for self-hosting the Pul
 ---
 
 {{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Business Critical**. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate Self-Hosted Pulumi Service.
+Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the Self-Hosted Pulumi Service, sign up for the [30 day trial]({{< relref "/product/self-hosted#self-hosted-trial" >}}) or [contact us]({{< relref "/contact.md" >}}).
 
 To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends]({{< relref "/docs/intro/concepts/state" >}}).
 {{% /notes %}}
@@ -37,10 +37,6 @@ The Pulumi API is one of the components required for self-hosting the Pulumi Ser
 > **Note**: The storage recommendations for the Object Storage can be lesser than 200GB depending on your organization size and the expected usage.
 
 ## What's In The Container?
-
-{{% notes type="info" %}}
-The container image repository is private. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate Self-Hosted Pulumi Service.
-{{% /notes %}}
 
 The API service is a Go-based application. This is a single binary application that has all of the dependencies it needs in order to run.
 

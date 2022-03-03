@@ -9,7 +9,7 @@ meta_desc: The Pulumi service container images page links and docker hub links.
 ---
 
 {{% notes type="info" %}}
-The component repositories are private. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
+Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the Self-Hosted Pulumi Service, sign up for the [30 day trial]({{< relref "/product/self-hosted#self-hosted-trial" >}}) or [contact us]({{< relref "/contact.md" >}}).
 {{% /notes %}}
 
 | Component | Repository |

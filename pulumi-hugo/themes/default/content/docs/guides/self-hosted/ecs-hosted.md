@@ -8,7 +8,7 @@ menu:
 meta_desc: Installer for deploying the self-hosted Pulumi service in ECS.
 ---
 
-The [ECS-Hosted Installer](https://github.com/pulumi/pulumi-self-hosted-installers/ecs-hosted) is used to deploy the self-hosted Pulumi service in Amazon Elastic Container Service.  
+The [ECS-Hosted Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/ecs-hosted) is used to deploy the self-hosted Pulumi service in Amazon Elastic Container Service.  
 
 ## Prerequisites
 

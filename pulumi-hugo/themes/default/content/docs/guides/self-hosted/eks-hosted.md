@@ -8,7 +8,7 @@ menu:
 meta_desc: Installer for deploying the self-hosted Pulumi service in EKS.
 ---
 
-The [EKS-Hosted Installer](https://github.com/pulumi/pulumi-self-hosted-installers/eks-hosted) installer is used to deploy the self-hosted Pulumi service in Amazon Elastic Kuberenetes Service (EKS).
+The [EKS-Hosted Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/eks-hosted) installer is used to deploy the self-hosted Pulumi service in Amazon Elastic Kuberenetes Service (EKS).
 
 ## Prerequisites
 

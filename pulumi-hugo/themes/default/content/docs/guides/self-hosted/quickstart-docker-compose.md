@@ -8,7 +8,7 @@ menu:
 meta_desc: Quickstart Docker compose installer for testing of the self-hosted Pulumi service.
 ---
 
-The Pulumi service Docker container images can be run using any OCI-compatible container orchestrator. We provide sample docker-compose files that can help you get started with your self-evaluation quickly.
+The Pulumi Service Docker container images can be run using any OCI-compatible container orchestrator. We provide sample docker-compose files that can help you get started with your self-evaluation quickly.
 
 > **Note**: docker-compose is not required to run these containers. We recommend that you choose a container orchestrator with which your IT team has experience.
 

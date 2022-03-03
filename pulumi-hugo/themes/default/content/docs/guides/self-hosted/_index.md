@@ -8,7 +8,7 @@ meta_desc: Pulumi Business Critical Edition gives you the option to self-host Pu
 ---
 
 {{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Business Critical**. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Pulumi Service.
+Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the Self-Hosted Pulumi Service, sign up for the [30 day trial]({{< relref "/product/self-hosted#self-hosted-trial" >}}) or [contact us]({{< relref "/contact.md" >}}).
 
 To manage your state with a self-*managed* backend, such as a cloud storage bucket, see [State and Backends]({{< relref "/docs/intro/concepts/state" >}}).
 {{% /notes %}}

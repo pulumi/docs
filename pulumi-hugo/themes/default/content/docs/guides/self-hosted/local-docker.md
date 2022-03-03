@@ -8,7 +8,7 @@ menu:
 meta_desc: Installer for deploying the self-hosted Pulumi service in docker.
 ---
 
-The [Local-Docker Installer](https://github.com/pulumi/pulumi-self-hosted-installers/local-docker) is generally meant to be used where an on-premise solution is needed or where the cloud-based installation solutions (i.e. EKS, ECS, AKS) are not possible.
+The [Local-Docker Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/local-docker) is generally meant to be used where an on-premise solution is needed or where the cloud-based installation solutions (i.e. EKS, ECS, AKS) are not possible.
 
 ## Prerequisites
 
