@@ -30,13 +30,13 @@ To this end, you need to set up the following:
 
 ### Deployment Steps
 
-See the [README](https://github.com/pulumi/pulumi-self-hosted-installers/aks-hosted/README.md) file provided with the installer package for detailed deployment steps.
+See the [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/aks-hosted/README.md) file provided with the installer package for detailed deployment steps.
 
-## ECS-Hosted System Management and Maintenance
+## AKS-Hosted System Management and Maintenance
 
 ### Pulumi Service Updates
 
-When deploying the Service, it is recommended to pin the Pulumi Service image tag to a specific version. See the installer's [README](https://github.com/pulumi/pulumi-self-hosted-installers/aks-hosted/README.md) file to set the `imageTag` configuration property for the installer to use.
+When deploying the Service, it is recommended to pin the Pulumi Service image tag to a specific version. See the installer's [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/aks-hosted/README.md) file to set the `imageTag` configuration property for the installer to use.
 
 When ready to update the Pulumi Sevice containers to use a different version, do the following:
 

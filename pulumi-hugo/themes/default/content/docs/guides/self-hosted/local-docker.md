@@ -41,7 +41,7 @@ To this end, you need to set up the following:
 
 ### Deployment Steps
 
-See the [README](https://github.com/pulumi/pulumi-self-hosted-installers/local-docker/README.md) file provided with the installer package for detailed deployment steps.
+See the [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/local-docker/README.md) file provided with the installer package for detailed deployment steps.
 
 ## Local-Docker System Management and Maintenance
 
