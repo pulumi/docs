@@ -26,7 +26,7 @@ Regardless of the quickstart option you choose below, `run-ee.sh` will be the wa
 
 ## Quickstart Docker Compose Deployment Options
 
-The [Quickstart Docker Compose Installer](https://github.com/pulumi/pulumi-self-hosted-installers/quickstart-docker-compose) is used to deploy a test system using Docker.
+The [Quickstart Docker Compose Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/quickstart-docker-compose) is used to deploy a test system using Docker.
 
 ### Option #1 - Using the all-in-one approach
 
@@ -51,6 +51,6 @@ Since the quickstart option is meant to be used for testing purposes, there is n
 
 ### Updating the Pulumi Service Containers
 
-For testing purposes, it is recommended to use the `latest` image tag in the docker compose file and re-run the `run-ee.sh` script when there are newer versions of the service image pushed to docker hub.  
+For testing purposes, it is recommended to use the `latest` image tag in the docker compose file and re-run the `run-ee.sh` script when there are newer versions of the service image pushed to docker hub.
 
 If you specified a specific image version in the docker compose file, then simply update the version tag and re-run the `run-ee.sh` script.
