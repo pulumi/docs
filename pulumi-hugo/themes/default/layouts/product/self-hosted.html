@@ -1,0 +1,173 @@
+{{ define "hero" }}
+{{ partial "hero" (dict "title" .Params.title) }}
+{{ end }}
+
+{{ define "main" }}
+{{ $pageContext := . }}
+
+<section id="self-hosted-overview" class="relative">
+    <div class="shape-background self-hosted-overview">
+        <div class="relative w-full h-full">
+            <div class="circle-right"></div>
+        </div>
+    </div>
+    <div class="max-w-6xl mx-auto flex flex-col items-center text-center my-28 px-6">
+        {{ with .Params.overview }}
+        <h2>{{ .title }}</h2>
+        <div class="max-w-3xl">
+            <p class="pb-4">{{ .descriptionTop | markdownify }}</p>
+            <p><i>{{ .descriptionBottom | markdownify }}</i></p>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+<section id="self-hosted-deployment" class="max-w-6xl mx-auto flex flex-col items-center text-center my-28 px-6">
+    {{ with .Params.deployment }}
+        <h2>{{ .title }}</h2>
+        <div class="max-w-2xl">
+            <p class="pb-4">{{ .descriptionTop | markdownify }}</p>
+            <p class=" mb-0">{{ .descriptionBottom | markdownify }}</p>
+        </div>
+        <div class="flex flex-col sm:flex-row mt-16 justify-between w-full lg:w-8/12">
+            <div class="flex flex-col pb-8 sm:pb-0">
+                <img class="h-12" src="/logos/tech/aws.svg" alt="AWS"/>
+                <h5 class="my-6">AWS</h5>
+                <a href="{{ relref $pageContext "/docs/guides/self-hosted/eks-hosted" }}" class="btn-secondary">AWS Docs</a>
+            </div>
+
+            <div class="flex flex-col pb-8 sm:pb-0">
+                <img class="h-12" src="/logos/pkg/azure-native.svg" alt="Azure"/>
+                <h5 class="my-6">Azure</h5>
+                <a href="{{ relref $pageContext "/contact" }}" class="btn-secondary">Contact Us</a>
+            </div>
+
+            <div class="flex flex-col pb-8 sm:pb-0">
+                <img class="h-12" src="/images/self-hosted/docker-whale.svg" alt="Docker" />
+                <h5 class="my-6">Docker</h5>
+                <a href="{{ relref $pageContext "/docs/guides/self-hosted/local-docker" }}" class="btn-secondary">Docker Docs</a>
+            </div>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:mt-16 justify-between w-full mb-28 lg:w-8/12">
+            <div class="flex flex-col pb-8 sm:pb-0">
+                <div class="sm:h-24 flex justify-center items-end">
+                    <img class="h-12" src="/logos/tech/gcp-logo.svg" alt="Google Cloud"/>
+                </div>
+                <h5 class="my-6">Google Cloud</h5>
+                <a href="{{ relref $pageContext "/contact" }}" class="btn-secondary">Contact Us</a>
+            </div>
+
+            <div class="flex flex-col pb-8 sm:pb-0">
+                <div class="sm:h-24 flex justify-center items-end">
+                    <img class="h-12" src="/images/self-hosted/kubernetes-logo-only.svg" alt="Kubernetes" />
+                </div>
+                <h5 class="my-6">Kubernetes</h5>
+                <a href="{{ relref $pageContext "/docs/guides/self-hosted/aks-hosted" }}" class="btn-secondary">Kubernetes
+                    Docs</a>
+            </div>
+
+            <div class="flex flex-col pb-8 sm:pb-0">
+                <img class="flex-grow h-52 sm:h-24 mt-6" src="/images/self-hosted/vmware.png" alt="VMware" />
+                <h5 class="mt-0 mb-6">VMware</h5>
+                <a href="{{ relref $pageContext "/contact" }}" class="btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    {{ end}}
+</section>
+
+<section id="self-hosted-capabilities" class="relative">
+    <div class="shape-background self-hosted-capabilities">
+        <div class="relative w-full h-full">
+            <div class="circle-left"></div>
+            <div class="circle-right"></div>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto flex flex-col items-center my-28 px-6">
+        {{ with .Params.capabilities }}
+            <h2 class="text-center">{{ .title }}</h2>
+            <div class="flex flex-col sm:flex-row flex-wrap mt-16 justify-between sm:ml-8">
+                {{ range $item := .items }}
+                    <div class="w-full sm:w-1/2 ">
+                        <div class="flex flex-col card xl:h-96 sm:mr-8 mb-9 p-12 items-start bg-white">
+                            <div class="icon-section">
+                                {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                            </div>
+                            <h5 class="mt-9 mb-6">{{ $item.title }}</h5>
+                            <p class="">{{ $item.description | markdownify }}</p>
+
+                            {{ if $item.items }}
+                                <div class="hidden xl:flex w-full justify-between h-8 items-center">
+                                    <img class="h-8" src="/logos/pkg/azuread.svg" alt="Azure Active Directory" />
+                                    <img class="h-5" src="/images/self-hosted/bitbucket.svg" alt="Bitbucket" />
+                                    <img class="h-6" src=/logos/pkg/github.svg alt="GitHub" />
+                                </div>
+                                <div class="hidden xl:flex w-8/12 justify-between self-center items-center mt-2 h-8">
+                                    <img class="h-8" src="/logos/pkg/gitlab.svg" alt="GitLab" />
+                                    <img class="h-5" src="/images/self-hosted/samlsso.svg" alt="SAML SSO" />
+                                </div>
+                                <p class="xl:hidden">Identity providers include Azure Active Directory, Bitbucket, GitHub, GitLab, and SAML SSO.</p>
+                            {{ end }}
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        {{ end}}
+    </div>
+</section>
+
+<section id="self-hosted-pricing" class="text-center mt-28 lg:mb-36 px-6 lg:pb-28 relative">
+    <div class="shape-background self-hosted-pricing">
+        <div class="shape-container">
+            <div class="dot-background-container">
+                <div class="dot-background-overlay"></div>
+                <div class="dot-background no-animate"></div>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-center">
+        <div class="bg-white sm:w-9/12 p-12 sm:p-28">
+            {{ with .Params.pricing }}
+                <h2>{{ .title }}</h2>
+                <p class="max-w-xl mx-auto my-20">{{ .description | markdownify }}</p>
+                <div class="mt-12">
+                    <a  class="btn-secondary" href="{{ relref $pageContext " /pricing" }}">Pricing</a>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+
+<section id="self-hosted-trial" class="relative">
+    <div class="shape-background self-hosted-trial">
+        <div class="relative w-full h-full">
+            <div class="circle-left"></div>
+            <div class="circle-right"></div>
+        </div>
+    </div>
+    <div class="max-w-5xl  flex flex-col items-center mx-auto text-center my-28 px-6">
+        {{ with .Params.trial }}
+            <h2 class="mt-9">{{ .title }}</h2>
+            <p class="max-w-xl px-6">{{ .description | markdownify }}</p>
+            <div class="hs-form font-normal card p-8 md:px-20 md:py-10 mt-14">
+                <pulumi-hubspot-form form-id="{{ .hubspot_form_id }}"></pulumi-hubspot-form>
+            </div>
+        {{ end }}
+    </div>
+</section>
+
+<section id="self-hosted-questions" class="container px-6 lg:px-0 mx-auto my-28 px-6 flex justify-center">
+    {{ with .Params.questions }}
+        <div class="w-full sm:w-10/12 bg-violet-600 card px-12 sm:px-20 py-16 text-center rounded-xl">
+            <div class="max-w-lg mx-auto">
+                <h2 class="text-white mt-16">{{ .title }}</h2>
+                <p class="text-white">{{ .description }}</p>
+                <div class="flex flex-col sm:flex-row mt-16 justify-between">
+                    <a class="btn-secondary w-56" href="{{ relref $pageContext "/contact" }}">Contact Us</a>
+                    <a class="btn-primary w-56" href="{{ relref $pageContext "/docs/guides/self-hosted/" }}">Self-Hosted Docs</a>
+                </div>
+            </div>
+        </div>
+    {{end}}
+</section>
+{{ end }}

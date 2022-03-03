@@ -14,7 +14,7 @@ aliases:
 ---
 
 {{% notes "info" %}}
-Teams are only available to organizations using Pulumi Enterprise.
+Teams are only available to organizations using Pulumi Enterprise Edition and Pulumi Business Critical Edition.
 To learn more about our editions visit our [pricing page]({{< relref "/pricing" >}}).
 {{% /notes %}}
 

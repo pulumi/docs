@@ -31,7 +31,7 @@ Organizations are a space for you to collaborate on shared projects and stacks.
 ## Creating an Organization
 
 Creating an organization will start a free trial that has access to all features.
-At the end of the trial, you can choose to move to Team or Enterprise.
+At the end of the trial, you can choose to move to the Pulumi Team Edition, the Pulumi Enterprise Edition or the Pulumi Business Critical Edition.
 Learn more about the edition features on the [Pricing Page]({{< relref "/pricing" >}}).
 
 To create an organization:
@@ -144,7 +144,7 @@ members that they can add or invite to the Pulumi organization.
 
 ### SAML Single Sign-on (SSO)
 
-Pulumi Enterprise provides support for any SAML 2.0-based identity provider.
+Pulumi Enterprise and Business Critical provide support for any SAML 2.0-based identity provider.
 
 * [SAML-based configuration guide]({{< relref "/docs/guides/saml" >}})
 * [Azure Active Directory]({{< relref "/docs/guides/saml/aad" >}})

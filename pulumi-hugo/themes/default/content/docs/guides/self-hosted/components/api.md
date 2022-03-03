@@ -2,19 +2,19 @@
 title: Pulumi API
 menu:
     userguides:
-        parent: self_hosted
+        parent: self_hosted_components
         identifier: self_hosted_api_service
         weight: 1
-meta_desc: Pulumi API is one of the components required for self-hosting Pulumi. Self-hosting is available as part of the Enterprise Edition.
+meta_desc: Pulumi API is one of the components required for self-hosting the Pulumi Service. Self-hosting is available as part of the Pulumi Business Critical Edition.
 ---
 
 {{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Enterprise**. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate Self-Hosted Pulumi Enterprise.
+Self-hosting is only available with **Pulumi Business Critical**. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate Self-Hosted Pulumi Service.
 
 To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends]({{< relref "/docs/intro/concepts/state" >}}).
 {{% /notes %}}
 
-The Pulumi API is one of the components required for self-hosting Pulumi in your organization's environment. It provides the necessary APIs for both the CLI and the [Console]({{< relref "console" >}}).
+The Pulumi API is one of the components required for self-hosting the Pulumi Service in your organization's environment. It provides the necessary APIs for both the CLI and the [Console]({{< relref "console" >}}).
 
 ## Prerequisites
 
@@ -39,7 +39,7 @@ The Pulumi API is one of the components required for self-hosting Pulumi in your
 ## What's In The Container?
 
 {{% notes type="info" %}}
-The container image repository is private. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
+The container image repository is private. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate Self-Hosted Pulumi Service.
 {{% /notes %}}
 
 The API service is a Go-based application. This is a single binary application that has all of the dependencies it needs in order to run.
@@ -170,11 +170,11 @@ Azure Storage account key using the `AZURE_STORAGE_KEY` env var.
 | GITLAB_OAUTH_ENDPOINT | Used for GitLab API calls. |
 | PULUMI_DATABASE_USER_NAME | Name of the database user the Pulumi Service connects as. Leave default unless you are having trouble connecting to your database.
 | PULUMI_DATABASE_USER_PASSWORD | Password of the database user the Pulumi Service connects as. Leave default unless you are having trouble connecting to your database.
-| PULUMI_DISABLE_EMAIL_LOGIN | When `true` the API will disallow logins using the email/password identity. To hide the email login option from the Console refer to the [email identity configuration]({{< relref "/docs/guides/self-hosted/console#email-identity" >}}) for the Console. |
-| PULUMI_DISABLE_EMAIL_SIGNUP | When `true` the API will disallow signups using the email/password identity. To hide the email signup option from the Console refer to the [email identity configuration]({{< relref "/docs/guides/self-hosted/console#email-identity" >}}) for the Console. |
+| PULUMI_DISABLE_EMAIL_LOGIN | When `true` the API will disallow logins using the email/password identity. To hide the email login option from the Console refer to the [email identity configuration]({{< relref "/docs/guides/self-hosted/components/console#email-identity" >}}) for the Console. |
+| PULUMI_DISABLE_EMAIL_SIGNUP | When `true` the API will disallow signups using the email/password identity. To hide the email signup option from the Console refer to the [email identity configuration]({{< relref "/docs/guides/self-hosted/components/console#email-identity" >}}) for the Console. |
 | RECAPTCHA_SECRET_KEY | reCAPTCHA secret key for self-service password reset. Create a [site key and a secret key from Google](https://www.google.com/recaptcha/admin). |
-| SAML_CERTIFICATE_PUBLIC_KEY | Public key used by the [IdP]({{< relref "../saml/sso#terminology" >}}) to sign SAML assertions. Learn how to [set SAML_CERTIFICATE_PUBLIC_KEY]({{< relref "saml-sso" >}}). |
-| SAML_CERTIFICATE_PRIVATE_KEY | Private key used by Pulumi to validate the SAML assertions sent by the IdP. Learn how to [set SAML_CERTIFICATE_PRIVATE_KEY]({{< relref "saml-sso" >}}). |
+| SAML_CERTIFICATE_PUBLIC_KEY | Public key used by the [IdP]({{< relref "/docs/reference/glossary#idp" >}}) to sign SAML assertions. Learn how to [set SAML_CERTIFICATE_PUBLIC_KEY]({{< relref "/docs/guides/self-hosted/saml-sso" >}}). |
+| SAML_CERTIFICATE_PRIVATE_KEY | Private key used by Pulumi to validate the SAML assertions sent by the IdP. Learn how to [set SAML_CERTIFICATE_PRIVATE_KEY]({{< relref "/docs/guides/self-hosted/saml-sso" >}}). |
 
 ## TLS Environment Variables
 

@@ -214,4 +214,4 @@ Previously, inviting new members to your Pulumi Service organization meant enter
 
 Once you've connected your Self-Hosted Pulumi Service instance with a directory–a SAML directory like Azure Active Directory or a source control directory like GitHub, GitLab, or Bitbucket–you may want to remove the ability for your users to sign in without using that directory. Now, you can by setting the `PULUMI_DISABLE_EMAIL_LOGIN` and `PULUMI_DISABLE_EMAIL_SIGNUP` environment variables to true.
 
-See the [self-hosted setup guide]({{<relref "/docs/guides/self-hosted/console#email-identity">}}) for more information.
+See the [self-hosted setup guide]({{<relref "/docs/guides/self-hosted/components/console#email-identity">}}) for more information.

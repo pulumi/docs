@@ -4,15 +4,15 @@ menu:
     userguides:
         parent: self_hosted
         identifier: self_hosted_sso
-        weight: 3
+        weight: 60
 meta_desc: Learn how to make the self-hosted Pulumi ready for SAML SSO with any IdP. Self-hosting is available as part of the Enterprise Edition.
 ---
 
-The self-hosted option allows you to control various aspects of the Pulumi Service including how users will sign in to the [Pulumi Service]({{< relref "console" >}}).
+The self-hosted option allows you to control various aspects of the Pulumi Service including how users will sign in to the [Pulumi Service]({{< relref "components/console" >}}).
 
 ## Creating The Keys
 
-Before you can use SAML SSO to logon to the Console, you will need to ensure that the [API service]({{< relref "api" >}}) has a pair of keys that will be used to sign
+Before you can use SAML SSO to logon to the Console, you will need to ensure that the [API service]({{< relref "components/api" >}}) has a pair of keys that will be used to sign
 and validate requests/responses, regardless of the IdP you choose to use.
 
 The credentials are simply a public/private key pair that are supplied as environment variables to the API service.
@@ -59,5 +59,5 @@ For these values to take effect, you will need to restart the API Service.
 ## Enabling SAML SSO as an identity option
 
 By default, the SAML SSO signin/signup option is not displayed to end users of the Console service.
-To enable this, set the `SAML_SSO_ENABLED` environment variable for the [console]({{< relref "console" >}}) container to `true`
+To enable this, set the `SAML_SSO_ENABLED` environment variable for the [console]({{< relref "components/console" >}}) container to `true`
 and restart the service.

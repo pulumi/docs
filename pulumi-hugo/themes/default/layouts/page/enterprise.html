@@ -1,0 +1,172 @@
+{{ define "hero" }}
+    {{ partial "hero.html" (dict "title" .Params.title) }}
+{{ end }}
+
+{{ define "main" }}
+    <section id="overview" class="container mx-auto mt-4 mb-16">
+        <div class="w-full px-5 mb-16 max-w-3xl mx-auto">
+                <p class="mr-4">{{ .Params.overview.description | markdownify }}</p>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto">
+            <div class="shape-background home-video-section">
+                <div class="shape-container">
+                    <div class="circle-left"></div>
+                    <div class="circle-right"></div>
+                </div>
+            </div>
+
+            <div class="rounded-xl shadow-2xl w-3/4 mx-auto" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
+                <iframe
+                    src="//www.youtube.com/embed/d8Xx2FIXHJw?rel=0"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+                    allowfullscreen=""
+                    title="Introduction to Pulumi: Modern Infrastructure as Code"
+                ></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="case-studies" class="w-full my-32 relative">
+        <div class="shape-background cloud-engineering-case-studies-section">
+            <div class="shape-container">
+                <div class="circle-left"></div>
+            </div>
+        </div>
+
+        <div class="w-full">
+            <h2 class="text-center mb-16">{{ .Params.case_studies.title }}</h2>
+            <div class="large-container mx-auto">
+                <div class="w-full flex flex-wrap justify-center items-stretch">
+                    {{ range $item := .Params.case_studies.items }}
+                        <div class="w-full lg:w-1/4 my-8 lg:my-0">
+                            <div class="w-full h-full px-4">
+                                <div class="h-full flex flex-col card p-6 bg-white relative">
+                                    <p class="text-left mt-0 italic font-semibold text-black">{{ $item.quote | markdownify }}</p>
+                                    <div class="flex flex-col flex-grow items-center justify-end pb-8">
+                                        <div class="w-48 mx-auto">
+                                            {{ partial "customer-logo.html" (dict "logo" $item.company) }}
+                                        </div>
+                                    </div>
+
+                                    <div class="card-cta-btn mt-8 text-center">
+                                        <a href="{{ $item.link }}" class="btn-secondary">Read Case Study</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="capabilities" class="relative my-32">
+        <div class="shape-background product-stats-section">
+            <div class="shape-container">
+                <div class="dot-background-container">
+                    <div class="dot-background-overlay"></div>
+                    <div class="dot-background no-animate"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto bg-white">
+            <h2 class="text-center">{{ .Params.capabilities.title }}</h2>
+
+            <div class="flex flex-col lg:flex-row lg:flex-wrap">
+                {{ range $feature := .Params.capabilities.items }}
+                    <div class="w-full lg:w-1/3 px-8 mt-8 lg:mb-0 text-center">
+                        {{ partial "color-icon.html" (dict "icon" $feature.icon "icon_color" $feature.icon_color) }}
+                        <h5>{{ $feature.title }}</h5>
+                        <p class="key-feature-description">{{ $feature.description | markdownify }}</p>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <section id="partners" class="my-32 relative">
+        <div class="shape-background home-build-section">
+            <div class="shape-container">
+                <div class="circle-left"></div>
+                <div class="circle-center"></div>
+                <div class="circle-right"></div>
+            </div>
+        </div>
+
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="card bg-white p-6">
+                <h2>{{ .Params.partners.title }}</h2>
+                <p>{{ .Params.partners.description | markdownify }}</p>
+
+                <div class="flex flex-wrap justify-center items-center">
+                    <div class="w-full lg:w-1/3 p-6">
+                        <img class="w-48 mx-auto" src="/images/partners/aws-apn.png" alt="AWS Partner" />
+                    </div>
+
+                    <div class="w-full lg:w-1/3 p-6">
+                        <img class="w-48 mx-auto" src="/images/partners/gcp-partner.png" alt="Google Cloud Partner" />
+                    </div>
+
+                    <div class="w-full lg:w-1/3 p-6">
+                        <img class="w-48 mx-auto" src="/images/partners/msft-partner.jpg" alt="Microsoft Partner" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="support" class="relative my-32 text-center">
+        <div class="shape-background cloud-engineering-case-studies-section cloud-engineering-use-cases-section">
+            <div class="shape-container">
+                <div class="circle-left"></div>
+                <div class="circle-right"></div>
+            </div>
+        </div>
+
+        <div class="max-w-3xl mx-auto">
+            <h2>{{ .Params.support.title }}</h2>
+            <p>{{ .Params.support.description | markdownify }}</p>
+        </div>
+    </section>
+
+    <section id="get-started" class="relative my-32">
+        <div class="container mx-auto">
+            <h2 class="text-center">{{ .Params.get_started.title }}</h2>
+            <div class="flex flex-wrap justify-center items-stretch">
+                {{ range .Params.get_started.items }}
+                    <div class="w-full lg:w-1/4 p-6 text-center">
+                        <div class="flex flex-col card h-full p-6 relative">
+                            <div>
+                                <h5>{{ .title }}</h5>
+                            </div>
+
+                            <div class="flex flex-col flex-grow items-center justify-end">
+                                <a href="{{ .link }}" class="btn-secondary">{{ .link_text }}</a>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="my-32 container mx-auto relative">
+        <div class="shape-background home-video-section">
+            <div class="shape-container">
+                <div class="circle-left"></div>
+                <div class="circle-right"></div>
+            </div>
+        </div>
+
+        <div class="max-w-4xl card bg-white mx-auto p-6 flex flex-col items-center">
+            <h2 class="text-center">{{ .Params.contact.title }}</h2>
+            <p class="max-w-xl mx-auto">{{ .Params.contact.description | markdownify }}<p>
+
+            <div class="hs-form hs-form-fg-dark font-normal">
+                <pulumi-hubspot-form form-id="{{ .Params.contact.form_id }}"></pulumi-hubspot-form>
+            </div>
+        </div>
+    </section>
+{{ end }}

@@ -274,7 +274,7 @@ Now that your Policy Pack is ready to go, let's enforce the pack across your org
 ## Enforcing a Policy Pack
 
 {{% notes type="info" %}}
-Server-side enforcement of policy packs across an organization is only available in **Pulumi Enterprise**. See [pricing]({{<relref "/pricing">}}) for more details.
+Server-side enforcement of policy packs across an organization is only available in **Pulumi Business Critical**. See [pricing]({{<relref "/pricing">}}) for more details.
 {{% /notes %}}
 
 Once you’ve validated the behavior of your policies, an organization administrator can publish them to the Pulumi Service to be enforced across your organization. Any Pulumi client (a developer’s workstation, CI/CD tool, etc) that interacts with a stack via the Pulumi Service will have policy enforcement during the execution of `preview` and `update`. Policy Packs are versioned by the Pulumi Service so that updated policies can be published and applied as ready and also reverted to previous versions as needed.

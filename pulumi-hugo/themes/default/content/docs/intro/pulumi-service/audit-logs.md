@@ -10,7 +10,7 @@ aliases:
 - /docs/intro/console/auditing/
 ---
 {{% notes "info" %}}
-Audit Logs are only available to organizations using Pulumi Enterprise.
+Audit Logs are only available to organizations using Pulumi Business Critical.
 To learn more about our editions, visit our [pricing page]({{< relref "/pricing" >}}).
 {{% /notes %}}
 
@@ -23,7 +23,7 @@ by recording user actions.
 
 Pulumi's audit logs allow you to account for the activity your
 users are taking within your organization. These logs are available to
-organizations with an Enterprise level subscription. The logs are immutable and
+organizations on the Pulumi Business Critical Edition. The logs are immutable and
 and record all user actions. Auditing makes the activity
 of members in an organization attributable.
 The logs capture the UNIX timestamp of the event, the user
@@ -32,7 +32,7 @@ of the call the user made.
 
 ## View Audit Logs
 
-Audit logs are an Enterprise feature. Only organization admins can view audit logs.
+Audit logs are a Enterprise Edition and Business Critical feature. Only organization admins can view audit logs.
 
 To view audit logs:
 
@@ -47,7 +47,7 @@ also filter logs by a particular user by selecting their profile picture.
 ## Automated Export
 
 {{% notes "info" %}}
-This feature is only available to some Pulumi Enterprise editions. If you don't see it in your organization, [contact sales]({{< relref "/contact?form=sales" >}}).
+This feature is only available on the Pulumi Business Critical Edition. If you don't see it in your organization, [contact sales]({{< relref "/contact?form=sales" >}}).
 {{% /notes %}}
 
 To configure the export of audit logs to AWS S3 using the console:

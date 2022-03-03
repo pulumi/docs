@@ -13,7 +13,7 @@ menu:
 
 The [Pulumi Policy SDK](https://github.com/pulumi/pulumi-policy) that allows you to express policies and using the local `--policy-pack` flag (as part of the Pulumi CLI) to enforce Policy Packs is also open source.
 
-Pulumi CrossGuard is available to [Pulumi Enterprise]({{< relref "/pricing" >}}) organizations and allows for enforcing Policy Packs across an organization and viewing Policy Pack results in the Pulumi Service.
+Pulumi CrossGuard is available to [Pulumi Business Critical]({{< relref "/pricing" >}}) organizations and allows for enforcing Policy Packs across an organization and viewing Policy Pack results in the Pulumi Service.
 
 ## How do Policy Packs enforced by the service interact with Policy Packs specified by the local Policy Pack flag?
 

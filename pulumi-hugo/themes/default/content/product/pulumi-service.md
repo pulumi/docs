@@ -158,7 +158,7 @@ deployment:
           icon: program
           icon_color: yellow
           description: |
-            Run the Pulumi Service in your on-premises or cloud environment and manage it yourself.
+            [Run the Pulumi Service](/product/self-hosted) in your on-premises or cloud environment and manage it yourself.
 
 pricing:
     title: Pricing

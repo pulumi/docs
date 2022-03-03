@@ -13,7 +13,7 @@ aliases:
 ---
 
 {{% notes "info" %}}
-Pulumi Webhooks is a feature available on the Pulumi Team and Enterprise editions.
+Pulumi Webhooks is a feature available on the Pulumi Team, Enterprise and Business Critical editions.
 To try it out, start a [trial](https://app.pulumi.com/site/trial) now.
 {{% /notes %}}
 

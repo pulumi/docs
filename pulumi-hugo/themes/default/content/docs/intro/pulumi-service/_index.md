@@ -27,14 +27,14 @@ You can create an unlimited number of stacks, encrypt configuration and resource
 
 The following editions are also available as upgrade options:
 
-* **Pulumi Team** is ideal for teams of all sizes from just getting started deploying cloud
-applications and infrastructure to managing multiple projects and/or clouds.
+* **Pulumi Team** is ideal for teams of up to 15 members and provides the basics of infrastructure as code in popular languages, enabling teams to ship faster.
 
-* **Pulumi Enterprise** is ideal for large organizations running cloud software at
-scale, with advanced or custom needs.
+* **Pulumi Enterprise** is ideal for large teams and organizations in production. It offers an unlimited number of members and teams and provides full cloud engineering capabilities.
+
+* **Pulumi Business Critical** is ideal for enterprises that have specific requirements, like advanced security and compliance features, premium support, and self-hosting options.
 
 For more information about the specific differences and capabilities offered for the
-Pulumi Team and Enterprise editions, refer to the [pricing page]({{< relref "/pricing" >}}).
+Pulumi Team, Enterprise and Business Critical editions, refer to the [pricing page]({{< relref "/pricing" >}}).
 
 Explore the following sections to learn more about the features and benefits of using the Pulumi Service.
 

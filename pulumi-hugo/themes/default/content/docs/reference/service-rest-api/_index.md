@@ -20,7 +20,7 @@ For the Managed Pulumi Service (i.e. [app.pulumi.com](https://app.pulumi.com/)),
 https://api.pulumi.com
 ```
 
-If you are using [Self-Hosted Pulumi Service]({{< relref "docs/guides/self-hosted" >}}), then use the configured endpoint for the [Pulumi API component]({{< relref "/docs/guides/self-hosted/api#api-service" >}}) (e.g. `https://api.pulumi.example.com`).
+If you are using [Self-Hosted Pulumi Service]({{< relref "docs/guides/self-hosted" >}}), then use the configured endpoint for the [Pulumi API component]({{< relref "/docs/guides/self-hosted/components/api#api-service" >}}) (e.g. `https://api.pulumi.example.com`).
 
 ## Authentication
 

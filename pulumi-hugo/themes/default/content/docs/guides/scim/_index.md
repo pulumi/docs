@@ -9,7 +9,7 @@ menu:
 
 ---
 
-The [Pulumi Service](https://app.pulumi.com) supports System for Cross-domain Identity Management (SCIM) 2.0 integration with different identity providers. SCIM enables you to manage your users and groups centrally in your Identity Provider (IdP) and then synchronize those users and groups to the Pulumi Service. This support requires Pulumi Enterprise. To learn more about the capabilities of Pulumi Enterprise, see the [pricing page]({{< relref "/pricing" >}}).
+The [Pulumi Service](https://app.pulumi.com) supports System for Cross-domain Identity Management (SCIM) 2.0 integration with different identity providers. SCIM enables you to manage your users and groups centrally in your Identity Provider (IdP) and then synchronize those users and groups to the Pulumi Service. This support requires Pulumi Business Critical. To learn more about the capabilities of Pulumi Business Critical, see the [pricing page]({{< relref "/pricing" >}}).
 
     {{% notes "info" %}}
 If desired, in addition to the SCIM-managed teams, one can also configure and manage Pulumi-local teams in the Pulumi Service. See [Teams]({{< relref "/docs/intro/pulumi-service/teams" >}}) for how to configure teams in the Pulumi Service.

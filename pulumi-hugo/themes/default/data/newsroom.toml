@@ -1,4 +1,10 @@
 [[releases]]
+date = "3rd March 2022"
+title = "Pulumi Business Critical Edition Addresses Rising Demand for Enterprise Modernization through Infrastructure as Code"
+summary = "Pulumi Business Critical Edition Addresses Rising Demand for Enterprise Modernization through Infrastructure as Code"
+url = "https://info.pulumi.com/press-release/business-critical"
+
+[[releases]]
 date = "7th December 2021"
 title = "Panther Labs Unleashes Innovation by Accelerating Delivery and Deployment of Modern Cloud Applications with Pulumi Cloud Engineering Platform"
 summary = "Fast-growth security analytics platform developer speeds cloud application deployments by 10X with increased reliability and agility by adopting cloud engineering practices enabled by Pulumi"

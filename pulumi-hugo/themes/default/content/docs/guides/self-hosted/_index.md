@@ -4,27 +4,22 @@ menu:
     userguides:
         identifier: self_hosted
         weight: 9
-meta_desc: Pulumi Enterprise gives you the option to self-host Pulumi within your organization's infrastructure.
+meta_desc: Pulumi Business Critical Edition gives you the option to self-host Pulumi within your organization's infrastructure.
 ---
 
 {{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Enterprise**. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate Self-Hosted Pulumi Enterprise.
+Self-hosting is only available with **Pulumi Business Critical**. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Pulumi Service.
 
-To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends]({{< relref "/docs/intro/concepts/state" >}}).
+To manage your state with a self-*managed* backend, such as a cloud storage bucket, see [State and Backends]({{< relref "/docs/intro/concepts/state" >}}).
 {{% /notes %}}
 
-This guide walks you through the components that are required to get the Pulumi Service running in your own environment.
+This guide presents the overall architecture for self-hosting the Pulumi Service as well as available reference architectures and related installers.
 
-There are two services that need to be hosted for the purposes of remote state management and a management UI for users. To store user data, and the state for your [stacks]({{< relref "/docs/intro/concepts/stack" >}}), the following components are also needed:
+## Managed Pulumi Service vs Self-Hosted Pulumi Service
 
-* MySQL 5.6 DB server with at least 20GB storage space for data
-* Minimum 50GB SSD for object storage
+Pulumi Service (i.e., [app.pulumi.com](https://app.pulumi.com)) is a fully managed SaaS providing state management, a secrets manager and features such as single sign-on (SSO), audit logs, centralized stack and policy management to name a few. As a SaaS, Pulumi manages all aspects of the service.
 
-> **Note**: You are responsible for the safe backup and storage of the object storage volume, as well as your DB’s data volume.
-
-## Self-Hosted vs. Managed Pulumi Service
-
-The self-hosted version of the Pulumi Service also offers some features that are not available with the managed version (i.e. [app.pulumi.com](https://app.pulumi.com)). The self-hosted installation of Pulumi provides full control of your data -- a requirement for enterprises in certain industries with specific security compliance requirements.
+The self-hosted version of the service provides all the same capabilities as the SaaS offering. The self-hosted deployment requires that the customer manages data backups and keeping the service running and up to date.  However, the self-hosted solution allows the customer to run the service fully within their own environment.
 
 If you are unsure about whether a self-hosted version of the Pulumi Service is right for your organization, [contact us]({{< relref "/contact.md" >}}) to learn more.
 
@@ -43,50 +38,18 @@ Here are some examples of deployment topologies:
 
 {{< figure src="/images/docs/guides/self-hosted/on-prem-intranet-config.png" caption="Intranet-Only Deployment" >}}
 
+## Deployment Options
+
+The Pulumi Service [Docker container images]({{< relref "components" >}}) can be run using any OCI-compatible container orchestrator.
+
+However, Pulumi provides [installers](https://github.com/pulumi/pulumi-self-hosted-installers) to support common deployment environments:
+
+* [Quickstart Docker Compose Install]({{< relref "quickstart-docker-compose" >}}): Using a Pulumi-provided set of docker-compose files and bash scripts, one can deploy a small system for **testing** in a local Docker environment.
+* [ECS-Hosted Install]({{< relref "ecs-hosted" >}}): Using a Pulumi-provided set of Pulumi programs written in TypeScript or Go, one can automate the deployment and maintenance of a production-grade self-hosted solution.
+* [EKS-Hosted Install]({{< relref "eks-hosted" >}}): Using a Pulumi-provided set of Pulumi programs written in TypeScript, one can automate the deployment and maintenance of a production-grade self-hosted solution running on Amazon Elastic Kubernetes Sevice (EKS). This solution most closely matches the managed service deployment model.
+* [AKS-Hosted Install]({{< relref "aks-hosted" >}}): Using a Pulumi-provided set of Pulumi programs written in TypeScript, one can automate the deployment and maintenance of a production-grade self-hosted solution on Azure Kubernetes Service (AKS).
+* [Local-Docker Install]({{< relref "local-docker" >}}): Using a Pulumi-provided Pulumi program written in TypeScript, one can automate the deployment and maintenance of a production-grade self-hosted solution using a customer-provided docker environment,  a customer-provided MySQL database and a customer-provided object store (e.g. Minio).
+
 ## Components
 
-{{% notes type="info" %}}
-The component repositories are private. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
-{{% /notes %}}
-
-| Component | Repository |
-| --------- | ---------- |
-| [API]({{< relref "api" >}}) | [https://hub.docker.com/r/pulumi/service/](https://hub.docker.com/r/pulumi/service/) |
-| [Console]({{< relref "console" >}}) |	[https://hub.docker.com/r/pulumi/console/](https://hub.docker.com/r/pulumi/console/) |
-| Migrations | [https://hub.docker.com/r/pulumi/migrations/](https://hub.docker.com/r/pulumi/migrations/) |
-
-## Quickstart
-
-The above Docker container images can be run using any OCI-compatible container orchestrator. We provide sample docker-compose files that can help you get started with your self-evaluation quickly.
-
-> **Note**: docker-compose is not required to run these containers. We recommend that you choose a container orchestrator with which your IT team has experience.
-
-In addition to the environment variables that each container exposes, the following can be set when using either of the quickstart solutions below. These are used by the `run-ee.sh` script provided to you as part of the self-evaluation package. If any of these variables are not set when you run `run-ee.sh`, the default values will be used.
-
-`PULUMI_DATA_PATH`: The persistent path where the service should store the checkpoint objects. Default uses `/tmp/pulumi-ee/data`.
-
-`PULUMI_LOCAL_DATABASE_NAME`: The database instance’s hostname. Default is `pulumi-db`.
-
-`PULUMI_LOCAL_DATABASE_PORT`: The database instance’s port. Default is `3306`.
-
-For example, `PULUMI_DATA_PATH=/my/persistent/dir LOCAL_DATABASE_NAME=my-db LOCAL_DATABASE_PORT=3306 ./scripts/run-ee.sh`.
-
-Regardless of the quickstart option you choose below, `run-ee.sh` will be the way to start the necessary containers. There will be at most 3 containers (including the DB) for the system to be considered complete.
-
-### Quickstart Option #1 - Using the all-in-one approach
-
-If you would like to use Pulumi’s all-in-one solution, you just need to run the run-ee.sh like this: `run-ee.sh -f ./all-in-one/docker-compose.yml`.
-This will start all components using working defaults, including a DB container that is migrated using our DB scripts.
-
-{{% notes "info" %}}
-Environment variables should be set in the `./all-in-one/docker-compose.yml` file.
-{{% /notes %}}
-
-### Quickstart Option #2 - Provide your own Database
-
-The service is tested against a MySQL version 5.6 instance. It is assumed that you have a DB instance called `pulumi-db` running at port `3306` and accessible within a network called `pulumi-ee`.
-
-{{% notes "info" %}}
-You will need the `migrations` folder downloaded locally, which contains the DB scripts that need to be applied against your DB instance.
-Your Pulumi sales contact should be able to provide you with this.
-{{% /notes %}}
+The Pulumi self-hosted [Components]({{< relref "components" >}}) consist of Docker images for the Pulumi Service's frontend UI and backend API.
