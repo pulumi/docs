@@ -163,7 +163,7 @@ deployment:
 pricing:
     title: Pricing
     description: |
-        The Pulumi Service offers Editions for Individual, Team, and Enterprise. We also provide different support options. You only pay for what you use, and there are free tiers available.
+        The Pulumi Service offers Editions for Individual, Team, Enterprise, and Business Critical. Support is available on Enterprise and Business Critical. You only pay for what you use, and there are free tiers available.
 
 get_started:
     title: Get started today
