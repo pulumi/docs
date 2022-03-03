@@ -97,7 +97,7 @@ support:
 partners:
     title: Cloud Partners
     description: |
-        Pulumi works with the leading cloud providers including AWS, Google Cloud, and Microsoft Azure to ensure best-in-class support of the Pulumi Cloud Engineering Platform across each cloud. Pulumi provides Native Providers which enables same-day support of all new products and features in each cloud. Pulumi is also available for purchase through [AWS Marketplace](https://aws.amazon.com/marketplace) with support for additional cloud provider marketplaces coming soon.
+        Pulumi works with the leading cloud providers including AWS, Google Cloud, and Microsoft Azure to ensure best-in-class support of the Pulumi Cloud Engineering Platform across each cloud. Pulumi provides Native Providers which enables same-day support of all new products and features in each cloud. Pulumi is also available for purchase through [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-dwn22batkhsyg) with support for additional cloud provider marketplaces coming soon.
 
 get_started:
     title: Get Started
