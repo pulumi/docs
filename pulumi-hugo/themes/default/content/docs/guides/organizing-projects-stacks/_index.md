@@ -1,6 +1,6 @@
 ---
 title: Organizing Projects and Stacks
-meta_desc: An overview of best practices when organization and structuring cloud projects and stacks.
+meta_desc: An overview of best practices when organizing and structuring cloud projects and stacks.
 menu:
   userguides:
     name: Organizing Projects and Stacks
@@ -108,4 +108,72 @@ Stacks have associated metadata in the form of name/value tags. You can assign c
 
 ## Examples
 
-See also the use of multiple projects and stacks in [Crosswalk for Kubernetes]({{< relref "/docs/guides/crosswalk/kubernetes" >}}), which contains a tutorial, reference architecture, and collection of prod-first code examples that demonstrate industry best-practices for **using Kubernetes** in contexts where an **organization of people** must ship **production applications.**
+### Monorepo with base infrastructure project
+
+Let's build an example of an organizational setup that leverages several different approaches to provide the most functionality and flexibility possible.
+
+We start with a central base "infrastructure" project, which contains things that are common across multiple services (or perhaps even your entire organization!). This project can include resources like Azure Resource Groups or AWS VPCs.
+
+Within this project, we create stacks for each unique configuration (often times stacks are related to SDLC environments like dev, staging, and production). These stacks are often deployed independently of each other and are often deployed in different regions. To use a metaphor, our Pulumi program code defines the shape of a dial, and the configuration in the different stack configuration files (e.g., `Pulumi.dev.yaml`, `Pulumi.staging.yaml`, `Pulumi.prod.yaml`) defines an actual dial setting. These "dial settings" might include things like subscription IDs, regions, etc. that are specific to that environment.
+
+This project looks a bit like this:
+
+```
+├─ infrastructure
+  ├── main.go
+  ├── Pulumi.dev.yaml
+  ├── Pulumi.staging.yaml
+  └── Pulumi.prod.yaml
+```
+
+![A diagram showing how the different stacks in a project overlay with the program](img/infra-project.jpg)
+
+Now that we have our base infrastructure, we can create a separate Pulumi project per application or service for each one's deployment and configuration that will include all the resources that the service needs, which are not provided by the base infrastructure project.
+
+These projects can be part of the [same monorepo as the infrastructure project](https://www.pulumi.com/blog/organizational-patterns-infra-repo/), or they can be separate repos, depending upon your organizational needs. One of the advantages to keeping the infrastructure project in a separate repo/project is that there is likely a limited number of users we want to be able to deploy these things; not every individual team needs to be able to do this. In this example, we will use a monorepo, however.
+
+Our example service is made up of an API and a database (RDS, CosmosDB, etc.). Our Pulumi program for the project defines the resources for the API and the database, and it can also deploy the actual code, as well. When we add our example service, our monorepo starts to look like this:
+
+```
+├── infrastructure
+│   ├── main.go
+│   ├── Pulumi.dev.yaml
+│   ├── Pulumi.staging.yaml
+│   └── Pulumi.prod.yaml
+├── myApp
+│   ├── main.go
+│   ├── Pulumi.dev.yaml
+│   ├── Pulumi.staging.yaml
+│   └── Pulumi.prod.yaml
+└── .etc
+```
+
+It's generally a good practice to keep our projects on the smaller side as this helps reduce the effect and impact of a deployment. If you have applications that require different rates of change, it may be useful to split them up into separate repos, aka micro-stacks.
+
+As we consider making our approach even more accessible and robust across teams, we bring in the idea of [Component Resources]({{< relref "/docs/intro/concepts/resources/components" >}}), which are a way to group affiliated resources together according the standard practices of the organization.
+
+Back to our example, our service needs a database and a subnet (or other networking). We can template these resources by creating a component resource, which abstracts these details away from the rest of the program. So now, any time someone needs to use Pulumi to add a standard application, they can call a resource called `Application` with its associated parameters (e.g., the container, parcel, folder). Behind the scenes, everything is being set up according to your organization's standards.
+
+![A diagram showing how the different stacks in a project overlay with the program](img/application-project.jpg)
+
+These component resources can be packaged up and stored alongside all of your other package management, so consumers in your organization can access them like any other library or package. If we want to add component resources to our monorepo example, it will look like this:
+
+```
+├── infrastructure
+│   ├── main.go
+│   ├── Pulumi.dev.yaml
+│   └── Pulumi.prod.yaml
+├── myApp
+│   ├── main.go
+│   ├── Pulumi.dev.yaml
+│   ├── Pulumi.staging.yaml
+│   └── Pulumi.prod.yaml
+├── pkg
+│   └──application
+│     └── app.go
+└── .etc
+```
+
+### Other examples
+
+See also the use of multiple projects and stacks in [Crosswalk for Kubernetes]({{< relref "/docs/guides/crosswalk/kubernetes" >}}), which contains a tutorial, reference architecture, and collection of prod-first code examples that demonstrate industry best-practices for using Kubernetes in contexts where an organization of people must ship production applications.
