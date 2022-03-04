@@ -71,7 +71,7 @@ A few notable success stories include:
 - **Learning Machine** went from 25KLOC YAML to 500 lines of
     JavaScript, got containers running in AWS and Kubernetes, and halved
     their cloud bill along the way.
-    [Read more.]({{< relref "delivering-cloud-native-infrastructure-as-code#delivering-cloud-native-infrastructure-for-learning-machine" >}})
+    [Read more.]({{< relref "/whitepapers/delivering-cloud-native-infrastructure-as-code#delivering-cloud-native-infrastructure-for-learning-machine" >}})
 - **Mapbox** built a scalable IoT tracking solution with serverless
     Lambdas. [Read more.]({{< relref "mapbox-iot-as-code-with-pulumi-crosswalk-for-aws" >}})
 - Multiple early stage startups, including **Jargon**, a TechStars

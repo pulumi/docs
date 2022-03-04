@@ -114,9 +114,9 @@ get_started:
           link: /docs/guides/adopting/
           link_text: View Docs
 
-        # - title: Enterprise Whitepaper
-        #   link: /enterprise/whitepaper/
-        #   link_text: Read Now
+        - title: Enterprise Whitepaper
+          link: /whitepapers/enterprise-innovation-through-cloud-engineering
+          link_text: Read Now
 
 contact:
     form_id: 71507f4e-e34e-4dc9-9da6-b44953cac811

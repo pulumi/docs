@@ -2,6 +2,8 @@
 title: Toward a Cloud Native Programming Model
 description: Cloud innovation has delivered limitless capabilities that promise to transform all aspects of software development.
 meta_desc: Pulumi provides a cloud native programming model for containers, Lambdas, and infrastructure, to get code to the cloud faster than ever before.
+aliases:
+    - /why-pulumi/point-of-view
 ---
 
 This radical democratization is thanks to containers, serverless (lambda) computing, and opinionated data and infrastructure services, leveling the playing field, lowering barriers to entry, and delivering the closest thing to an "operating system for the cloud" that we've ever seen.
