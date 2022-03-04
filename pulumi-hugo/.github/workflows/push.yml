@@ -26,6 +26,8 @@ jobs:
 
       - name: Check out branch
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PULUMI_BOT_TOKEN }}
 
       - name: Fetch the latest pulumi/theme and pulumi/registry
         run: |
