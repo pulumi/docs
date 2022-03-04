@@ -6,7 +6,7 @@ meta_desc: Pulumi's open source infrastructure as code SDK enables you to create
 hero:
   title: [ "Developer-First", "Infrastructure as Code" ]
   description: |
-    Open source meets Enterprise Saas. Use Cloud Engineering<br />
+    Open source meets Enterprise SaaS. Use Cloud Engineering<br />
     to tame modern cloud complexity.
   cta_text: Get Started
 
