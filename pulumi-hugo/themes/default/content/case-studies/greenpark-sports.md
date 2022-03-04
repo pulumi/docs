@@ -31,7 +31,7 @@ sections:
 
 ### About GreenPark Sports
 
-GreenPark Sports is a social gaming developer for next generation sports and esports fans.  Its mission is to bring global sports fans together to connect, compete, celebrate, and collaborate in a uniquely social and immersive experience. First launched in January 2021, the free to play mobile app now includes early gameplay within multiple fan universes, including the League of Legends Championship Series (LCS), LaLiga, and the National Basketball Association (NBA). The app also includes a blockchain digital collectible experience starting with its first non-fungible tokens (NFTs) which dropped in fall of 2021.
+GreenPark Sports is a social gaming developer for next generation sports and esports fans.  Its mission is to bring global sports fans together to connect, compete, celebrate, and collaborate in a uniquely social and immersive experience. First launched in January 2021, the free to play mobile app now includes early gameplay within multiple fan universes, including the League of Legends Championship Series (LCS), LaLiga, and the National Basketball Association (NBA). GreenPark is also building a blockchain digital collectible experience starting with its first non-fungible tokens (NFTs) which dropped in fall of 2021.
 
 ### Designing for Democratization
 
