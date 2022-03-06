@@ -51,7 +51,7 @@ Full details of our Pulumi Service editions can be found on [our pricing page]({
 The Pulumi Business Critical edition includes everything in the Pulumi Enterprise Edition, plus:
 
 - [Organization policies and enforcement]({{< relref "/docs/guides/crossguard" >}})
-- [Self-hosting available]({{< relref "/docs/guides/crossguard" >}})
+- [Self-hosting available]({{< relref "/docs/guides/self-hosted" >}})
 - [Cross-domain identity (SCIM)]({{< relref "/docs/guides/scim" >}})
 - [Automatic export of audit logs]({{< relref "docs/intro/pulumi-service/audit-logs#automated-export" >}})
 - 24 x 7 support included
