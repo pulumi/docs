@@ -29,7 +29,11 @@
     </section>
 
     <section id="register" class="container mx-auto text-center my-24">
-        <h2>Get Notified When Registration Opens</h2>
+         <h2>
+            <pulumi-datetime date="{{ .Params.event_date }}"></pulumi-datetime>
+        </h2>
+
+        <h3>Get Notified When Registration Opens</h3>
         <div class="">
             <div class="flex items-center justify-center mt-8">
                 <pulumi-hubspot-form form-id="f456537d-1ac8-4004-8ba7-9f5997321445" class="newsletter newsletter-wide ml-8"></pulumi-hubspot-form>
