@@ -33,7 +33,7 @@ Each option controls how your cluster's worker nodes are provisioned, managed, a
 
 [Abby Fuller](https://twitter.com/abbyfuller) from AWS explained these options visually and succinctly on Twitter:
 
-{{< tweet 1202020186234048512 >}}
+{{< tweet id="1202020186234048512" user="abbyfuller" >}}
 
 Let's now see how each of these work. To fully appreciate the new features, we will go in the reverse order &mdash; from most control and most difficult, to the least control and easiest, option.
 

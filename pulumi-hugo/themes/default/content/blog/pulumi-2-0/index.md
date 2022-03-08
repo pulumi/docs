@@ -37,7 +37,7 @@ We call Pulumi's unique approach _Modern Infrastructure as Code_:
 The main theme of 2.0 is something we've taken to calling "superpowers." This isn't just a buzzword we came up with &mdash; it's something we keep hearing from happy end users:
 
 <div class="ml-8">
-{{< tweet 1169245701714468864 >}}
+{{< tweet id="1169245701714468864" user="NinoFloris" >}}
 </div>
 
 ## What is Pulumi 2.0?

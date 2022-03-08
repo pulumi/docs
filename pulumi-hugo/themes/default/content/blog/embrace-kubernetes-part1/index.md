@@ -45,9 +45,9 @@ The first question to ask yourself is if your organization has the DNA required 
 
 As you can imagine, this can become a heated topic. If you’re interested in what others in the community are saying, here are a couple Tweets to get you started:
 
-{{< tweet 978758781805895681 >}}
+{{< tweet id="978758781805895681" user="whereistanya" >}}
 
-{{< tweet 1021012140675813376 >}}
+{{< tweet id="1021012140675813376" user="0xfraq" >}}
 
 Another way to look at this question is to ask yourself where your organization sits in terms of its adoption of DevOps. To quote the [2020 State of DevOps](https://puppet.com/resources/report/2020-state-of-devops-report/) report:
 

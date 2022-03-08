@@ -17,7 +17,7 @@ The Amazon Web Services (AWS) Cloud ecosystem is large and vibrant, so vast and 
 
 <!--more-->
 
-{{< tweet 1202016116580605952 >}}
+{{< tweet user="abbyfuller" id="1202016116580605952" >}}
 
 It looks straightforward, but it's easy to get lost in the details when configuring multiple services to get your application running on AWS. Although AWS has extensive documentation and a point and click interface to these services, replicating then can be challenging, and it isn't conducive to understanding the architecture. However, using infrastructure as code lets you see the details and results in a reproducible deployment that you can expand on. Let’s implement the diagram using Pulumi to deploy your container infrastructure with code in AWS.
 
@@ -39,7 +39,7 @@ export const url = repo.repository.repositoryUrl;
 
 ## Choose your scheduler
 
-{{< tweet 1204900986898137088 >}}
+{{< tweet user="abbyfuller" id="1204900986898137088" >}}
 
 There are two services for running containers in the AWS Cloud: Elastic Cloud Service (ECS), or Elastic Kubernetes Service (EKS). ECS is a proprietary service for running containers in the AWS Cloud. In contrast, EKS is a managed Kubernetes service for containers using a Kubernetes control plane. It has three master nodes distributed across three availability zones to provide high availability.
 
