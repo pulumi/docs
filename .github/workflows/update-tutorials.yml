@@ -28,6 +28,7 @@ jobs:
           author: Pulumi Bot <bot@pulumi.com>
           committer: Pulumi Bot <bot@pulumi.com>
           title: Update tutorials
+          labels: "automation/merge"
           commit-message: Update tutorials
           token: ${{ secrets.PULUMI_BOT_TOKEN }}
           body: |
