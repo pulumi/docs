@@ -655,7 +655,7 @@ Learn more about how [Pulumi works with Kubernetes](https://www.pulumi.com/regis
 You can help to shape this experience directly by
 providing feedback on [GitHub](https://github.com/pulumi/pulumi-kubernetes-operator/). We love to hear from our users!
 
-You can explore more content by checking out [PulumiTV on YouTube](http://youtube.com/pulumitv), work through
+You can explore more content by checking out [PulumiTV on YouTube](https://www.youtube.com/pulumitv), work through
 Kubernetes [tutorials](https://www.pulumi.com/docs/tutorials/kubernetes/) to dive deeper, and join the [Community Slack](https://slack.pulumi.com/) to engage
 with users and the Pulumi team.
 
