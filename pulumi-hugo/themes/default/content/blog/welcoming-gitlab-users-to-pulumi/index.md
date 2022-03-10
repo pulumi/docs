@@ -45,7 +45,7 @@ You should see a **People** tab. Select the People tab.
 
 > - You will see the People tab if *you* added the organization on
 >   Pulumi or if you are an Owner of the GitLab group on
->   [gitlab.com](http://gitlab.com).
+>   [gitlab.com](https://gitlab.com).
 > - Members must have an active and valid role in your GitLab group,
 >   so that you may invite them.
 
@@ -67,7 +67,7 @@ and uses that information to enhance your experience on
 `app.pulumi.com`.
 
 Here's an example of a project hosted on
-[gitlab.com](http://gitlab.com).
+[gitlab.com](https://gitlab.com).
 
 ![gl-3](./gl-3.png)
 
@@ -81,7 +81,7 @@ commit-hash, and the branch in which this stack was updated.
 ### I use my GitHub identity to login into GitLab. How do I do that with Pulumi?
 
 Click the **GitLab** sign-in button on <app.pulumi.com>, Pulumi
-will redirect you to [gitlab.com](http://gitlab.com) where GitLab will
+will redirect you to [gitlab.com](https://gitlab.com) where GitLab will
 present you with the sign-in options to login into your GitLab account.
 At that point, you may choose any of the sign-in options GitLab provides
 to sign-in.
