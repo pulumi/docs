@@ -136,6 +136,6 @@ providing feedback on [GitHub](https://github.com/pulumi/pulumi-kubernetes/). We
 Learn more about how [Pulumi works with Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/), and [Get Started](https://www.pulumi.com/docs/get-started/kubernetes/) if you're
 new.
 
-You can explore more content by checking out [PulumiTV on YouTube](http://youtube.com/pulumitv), work through
+You can explore more content by checking out [PulumiTV on YouTube](https://www.youtube.com/pulumitv), work through
 Kubernetes [tutorials](https://www.pulumi.com/docs/tutorials/kubernetes/) to dive deeper, and join the [Community Slack](https://slack.pulumi.com/) to engage
 with users and the Pulumi team.
