@@ -28,10 +28,10 @@ necessary supporting AWS resources whenever a Kubernetes user declares
 an Ingress resource on the cluster.
 [TargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html)
 are created for each backend specified in the Ingress resource.
-[Listeners](http://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html)
+[Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html)
 are created for every port specified as Ingress resource annotation.
 When no port is specified, sensible defaults (80 or 443) are used.
-[Rules](http://docs.aws.amazon.com/elasticloadbalancing/latest/application/listener-update-rules.html)
+[Rules](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/listener-update-rules.html)
 are created for each path specified in your ingress resource. This
 ensures that traffic to a specific path is routed to the correct
 TargetGroup.
