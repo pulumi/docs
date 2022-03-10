@@ -139,7 +139,7 @@ reusable `VPC` class` is a more efficient way of building out infrastructure tha
 take advantage of relating the resources to the correct parent to build out graph.
 
 We take it one step further, and be able to peer the VPCs. TypeScript, again, gives us the ability to do this in a
-concise manner by using a [member function](http://www.typescriptlang.org/docs/handbook/classes.html#public-private-and-protected-modifiers). The member function of the VPC class looks as follows:
+concise manner by using a [member function](https://www.typescriptlang.org/docs/handbook/classes.html#public-private-and-protected-modifiers). The member function of the VPC class looks as follows:
 
 ```typescript
 public configurePeering(args: PeerToArgs) {
