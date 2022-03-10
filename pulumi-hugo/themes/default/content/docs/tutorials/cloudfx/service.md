@@ -58,7 +58,7 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
       ```html
       <html>
         <head><title>Hello World</title><meta charset="UTF-8"></head>
-      <body><p>Hello containers!</p><p>Made with ❤️ with <a href="https://pulumi.com">Pulumi</a></p></body>
+      <body><p>Hello containers!</p><p>Made with ❤️ with <a href="https://www.pulumi.com">Pulumi</a></p></body>
       </html>
       ```
 
