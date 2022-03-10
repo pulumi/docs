@@ -175,7 +175,7 @@ We serve three properties as static content from S3, each described
 using Pulumi. One of these is
 [https://get.pulumi.com](https://get.pulumi.com/) which hosts downloads
 of our `pulumi` CLI installer. It's a very simple program, and even
-better - it's open source at <http://github.com/pulumi/get.pulumi.com>.
+better - it's [open source on GitHub](https://github.com/pulumi/get.pulumi.com).
 It combines AWS S3, CloudFront and Route53.
 
 ![image-7](./image-7.png)
