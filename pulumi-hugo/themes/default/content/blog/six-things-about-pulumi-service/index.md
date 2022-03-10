@@ -102,7 +102,7 @@ The Pulumi Service also links you to the resource’s cloud provider’s console
 ![Linking directly to an ECS Cluster resource in the AWS Console](https://user-images.githubusercontent.com/274700/150620181-be3e7a09-3630-4898-89fa-7c7b775e1d35.png)
 
 {{% notes %}}
-Is your resource missing a link to the cloud provider console? With new services being launched from the myriad providers Pulumi supports every day, it’s hard to keep up. So if you would like us to add cloud provider links, please file an issue over in the [pulumi/console-requests](http://github.com/pulumi/console-requests/) GitHub repository so we can update our database.
+Is your resource missing a link to the cloud provider console? With new services being launched from the myriad providers Pulumi supports every day, it’s hard to keep up. So if you would like us to add cloud provider links, please file an issue over in the [pulumi/console-requests](https://github.com/pulumi/console-requests/) GitHub repository so we can update our database.
 {{% /notes %}}
 
 There are plenty of other features to check out in the [Pulumi Service]({{< relref "/product/pulumi-service" >}}), and we have exciting improvements on the way! As always, feel free to stop by the [Pulumi Community Slack](https://slack.pulumi.com) to learn more, ask questions, or share anything cool you’re up to!
