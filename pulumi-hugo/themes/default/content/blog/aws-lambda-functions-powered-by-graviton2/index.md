@@ -14,7 +14,7 @@ tags:
 
 In late 2018, [AWS launched their first EC2 instances](https://aws.amazon.com/blogs/aws/new-ec2-instances-a1-powered-by-arm-based-aws-graviton-processors/)
 powered by ARM-based AWS Graviton Processors. These instances had been optimized for performance and cost. Since that initial launch,
-Amazon has continued to innovate in the Graviton space. In June 2021, they launched the [Graviton Challenge](http://amzn.to/GravitonChallenge)
+Amazon has continued to innovate in the Graviton space. In June 2021, they launched the [Graviton Challenge](https://amzn.to/GravitonChallenge)
 for users to move their applications to [AWS Graviton2](https://aws.amazon.com/ec2/graviton/). AWS Graviton2 processor instance types are up to 20%
 lower cost than x86 based instance types and see up to 40% better price performance.
 
