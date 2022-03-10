@@ -92,5 +92,5 @@ The AWS implementation of the Cloud Framework accepts the following configuratio
 * `ecsAutoClusterMinSize`: (Optional) The minimum size of the cluster. Defaults to `2`.
 * `ecsAutoClusterMaxSize`: (Optional) The maximum size of the cluster. Defaults to `100`.
 * `ecsAutoClusterPublicKey`: (Optional) Public key material for SSH access to the cluster. See [allowed formats](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html). If not provided, no SSH access is enabled on VMs.
-* `ecsAutoClusterECSOptimizedAMIName`: (Optional) The name of the ECS-optimzed AMI to use for the Container Instances in this cluster, e.g. `amzn-ami-2017.09.l-amazon-ecs-optimized`. See [valid values](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html).
+* `ecsAutoClusterECSOptimizedAMIName`: (Optional) The name of the ECS-optimzed AMI to use for the Container Instances in this cluster, e.g. `amzn-ami-2017.09.l-amazon-ecs-optimized`. See [valid values](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html).
 * `ecsAutoClusterUseEFS`: (Optional) Optionally auto-provision an Elastic File System for the Cluster.  Defaults to `false`.
