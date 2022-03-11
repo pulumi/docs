@@ -723,7 +723,7 @@ Pulumi has a concept of *stacks*, which are isolated environments for your appli
 (e.g., production, staging, or even distinct services).
 
 A stack name is a required input for the Pulumi Action. If you need the GitHub Action to create the stack
-(passed through the `stack-name` parameter) on your behalf you can do do with the `upsert` config option
+(passed through the `stack-name` parameter) on your behalf you can do so with the `upsert` config option
 as follows:
 
 {{< chooser language "typescript,python,go,csharp" >}}
