@@ -1,10 +1,7 @@
 id = "lee-zen"
 name = "Lee Zen"
-title = "VP Engineering"
-company = "Pulumi"
-weight = 1
 
-status = "active"
+status = "inactive"
 
 [social]
 github = "leezen"
