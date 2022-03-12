@@ -1,0 +1,9 @@
+id = "brant-soler"
+name = "Brant Soler"
+title = "Senior Growth Marketing Manager"
+weight = 1
+
+status = "active"
+
+[social]
+linkedin = "brant-soler"

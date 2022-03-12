@@ -1,0 +1,9 @@
+id = "sara-huddleston"
+name = "Sara Huddleston"
+title = "Senior Performance Marketing Manager"
+weight = 1
+
+status = "active"
+
+[social]
+linkedin = "huddlestonsara"
