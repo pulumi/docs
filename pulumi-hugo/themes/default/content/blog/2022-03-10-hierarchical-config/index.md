@@ -182,7 +182,6 @@ encryptionKmsKey: string | *"arn:aws:kms:eu-west-2:..."
 issueEmail: string | *"bugs@ellingsonmineral.com"
 ```
 
-
 ## Pulumi Native Hierarchical Configuration
 
 So we've worked out that project level configuration is a data structure within our Pulumi programs and it works pretty darn well.

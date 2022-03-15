@@ -50,54 +50,29 @@
             <span id="whitepaper" class="hidden"></span>
 
             <!-- The event filter -->
-            <div class="w-full mb-5 text-center event-list-filter">
-                <ul class="flex flex-wrap items-center justify-center list-none p-0">
-                    <li class="mx-3 md:mx-6" data-filter-name="all">
-                        <a href="#all" class="flex flex-col text-violet-600">
-                            <i class="fas fa-asterisk text-3xl"></i>
-                            <p class="text-xs md:text-base m-0 pt-3">All</p>
-                        </a>
-                    </li>
-                    <li class="mx-3 md:mx-6" data-filter-name="featured">
-                        <a href="#featured" class="flex flex-col">
-                            <i class="fas fa-star text-3xl"></i>
-                            <p class="text-xs md:text-base m-0 pt-3">Featured</p>
-                        </a>
-                    </li>
-                    <li class="mx-3 md:mx-6" data-filter-name="upcoming">
-                        <a href="#upcoming" class="flex flex-col">
-                            <i class="fas fa-users text-3xl"></i>
-                            <p class="text-xs md:text-base m-0 pt-3">Upcoming</p>
-                        </a>
-                    </li>
-                    <li class="mx-3 md:mx-6" data-filter-name="videos">
-                        <a href="#videos" class="flex flex-col">
-                            <i class="fas fa-video text-3xl"></i>
-                            <p class="text-xs md:text-base m-0 pt-3">Videos</p>
-                        </a>
-                    </li>
-                    <li class="mx-3 md:mx-6" data-filter-name="pulumitv">
-                        <a href="#pulumitv" class="flex flex-col">
-                            <i class="fas fa-tv text-3xl"></i>
-                            <p class="text-xs md:text-base m-0 pt-3">PulumiTV</p>
-                        </a>
-                    </li>
-                    <li class="mx-3 md:mx-6" data-filter-name="whitepaper">
-                        <a href="#whitepaper" class="flex flex-col">
-                            <i class="fas fa-book text-3xl"></i>
-                            <p class="text-xs md:text-base m-0 pt-3">Whitepapers</p>
-                        </a>
-                    </li>
+            <div class="pulumi-event-list-container justify-center event-list-filter container mx-auto flex">
+                <div class="scroll-container hidden lg:flex items-center"><button id="slideBackwards"><i class="text-gray-500 text-3xl fas fa-angle-left"></i></button></div>
+                <ul id="event-list-filter-nav">
+                    {{ range $item := .Params.sections }}
+                        <li data-filter-name={{ $item.anchor}}>
+                            <a href="#{{ $item.anchor}}">
+                                <i class="fas fa-{{ $item.icon }} mr-2"></i>
+                                <span>{{$item.label}}</span>
+                            </a>
+                        </li>
+                    {{ end }}
                 </ul>
+                <div class="scroll-container hidden lg:flex items-center"><button id="slideForward"><i class="text-gray-500 text-3xl fas fa-angle-right"></i></button></div>
             </div>
 
             <!-- Titles for the filtered section -->
-            <h3 class="ml-5" data-filter-title="all">All</h3>
-            <h3 class="hidden ml-5" data-filter-title="featured">Featured</h3>
-            <h3 class="hidden ml-5" data-filter-title="upcoming">Upcoming Sessions</h3>
-            <h3 class="hidden ml-5" data-filter-title="videos">Videos</h3>
-            <h3 class="hidden ml-5" data-filter-title="pulumitv">PulumiTV</h3>
-            <h3 class="hidden ml-5" data-filter-title="whitepaper">Whitepapers</h3>
+            <h3 class="ml-5 text-black" data-filter-title="all"><i class="fas fa-asterisk mr-8"></i>All</h3>
+            <h3 class="hidden ml-5 text-black" data-filter-title="featured"><i class="fas fa-star mr-8"></i>Featured</h3>
+            <h3 class="hidden ml-5 text-black" data-filter-title="upcoming"><i class="fas fa-users mr-8"></i>Upcoming Sessions</h3>
+            <h3 class="hidden ml-5 text-black" data-filter-title="videos"><i class="fas fa-video mr-8"></i>Videos</h3>
+            <h3 class="hidden ml-5 text-black" data-filter-title="pulumitv"><i class="fas fa-tv mr-8"></i>PulumiTV</h3>
+            <h3 class="hidden ml-5 text-black" data-filter-title="whitepaper"><i class="fas fa-book mr-8"></i>Whitepapers</h3>
+            
 
             <!-- Resources list. -->
             <ul class="flex flex-wrap justify-center list-none p-0 sm:p-2 resource-list">

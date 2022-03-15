@@ -3,17 +3,13 @@
 {{ end }}
 
 {{ define "main" }}
-    <nav class="nav-section-sticky shadow">
+    <nav>
         <div class="container mx-auto">
-            <ul>
-                {{ range .Params.sections }}
-                    <li><a href="#{{ .anchor }}">{{ .label }}</a></li>
-                {{ end }}
-            </ul>
+            <pulumi-tertiary-nav items={{ .Params.sections | jsonify }}></pulumi-tertiary-nav>
         </div>
     </nav>
 
-    <section id="logos" class="mt-8 px-4 md:px-0">
+    <section id="logos" class="mb-8 px-4 md:px-0 hidden">
         <div class="container mx-auto max-w-4xl pt-8">
             <h2>Pulumi Logos</h2>
             <p>
@@ -28,11 +24,11 @@
                                 <img src="/logos/brand/{{ .file }}.svg" title="{{ .name }}">
                             </a>
                         </div>
-                        <div class="mt-6 flex flex-row place-content-center">
-                            <a class="btn btn-sm btn-brand-download mr-4" href="/logos/brand/{{ .file }}.svg" download>
+                        <div class="mt-6 flex flex-col sm:flex-row items-center place-content-center">
+                            <a class="btn btn-sm btn-brand-download mb-4 sm:mr-4 sm:mb-0 w-48" href="/logos/brand/{{ .file }}.svg" download>
                                 <span>Download SVG</span>
                             </a>
-                            <a class="btn btn-sm btn-brand-download" href="/logos/brand/{{ .file }}.png" download>
+                            <a class="btn btn-sm btn-brand-download w-48" href="/logos/brand/{{ .file }}.png" download>
                                 <span>Download PNG</span>
                             </a>
                         </div>
@@ -42,8 +38,8 @@
         </div>
     </section>
 
-    <section id="colors" class="my-12 px-4 md:px-0">
-        <div class="container mx-auto max-w-4xl py-12 border-t border-gray-300">
+    <section id="colors" class="mb-8 px-4 md:px-0 hidden">
+        <div class="container mx-auto max-w-4xl py-8">
             <h2>Pulumi Brand Colors</h2>
             <p>
                 Official Pulumi brand colors, in hexadecimal, RGB, CMYK and Pantone color
