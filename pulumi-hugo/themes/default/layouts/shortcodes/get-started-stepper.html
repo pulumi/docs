@@ -7,7 +7,7 @@
 
 {{/* Get the pages in the current directory. */}}
 {{ $unsortedPages := slice $currentPage }}
-{{ if eq $currentPage.Dir $currentPage.Parent.Dir }}
+{{ if eq $currentPage.File.Dir $currentPage.Parent.File.Dir }}
     {{ $unsortedPages = $unsortedPages | append $currentPage.Parent }}
 {{ end }}
 {{ range $index, $page := .Page.CurrentSection.Pages }}
