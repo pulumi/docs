@@ -16,7 +16,7 @@ Last year, we [introduced a new Pulumi feature]({{< relref "blog/pulumi-import-g
 
 At Pulumi, we understand that many cloud engineers and platform teams around the world don't have the luxury of greenfield projects, more often than not we're stuck with the impossible task of "refactoring" or "migrating" existing projects to more modern stacks to help increase team productivity, velocity, and stability. These projects aren't trivial and we want to make it easier for teams and organizations to bring their infrastructure into a cloud engineering world. Oh, and worry not you lucky greenfielders ... even if you just wanna ClickOps your way through some resources and import them into your program; that's gonna work just fine too; we won't tell if you don't 😉.
 
-To help you understand the changes we've made to help you on your journey, let's take a look at some side-by-side examples of how `pulumi import` used to work vs. what we're releasing today.
+To help you understand the changes we've made to help you on your journey, let's take a look at some side-by-side examples of how `pulumi import` used to work vs. what we're releasing today in [Pulumi 3.26](https://github.com/pulumi/pulumi/releases/tag/v3.26.0).
 
 ### Example: AWS S3 Bucket
 
