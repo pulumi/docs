@@ -7,7 +7,7 @@
 		"args": {
 			"VARIANT": "hugo",
 			"VERSION": "0.82.1",
-			"NODE_VERSION": "14",
+			"NODE_VERSION": "16",
 			"GO_VERSION": "1.16.9"
 		}
 	},
