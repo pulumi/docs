@@ -211,7 +211,7 @@ on:
     branches:
       - master
 jobs:
-  preview:
+  update:
     name: Update
     runs-on: ubuntu-latest
     steps:
@@ -244,7 +244,7 @@ on:
     branches:
       - master
 jobs:
-  preview:
+  update:
     name: Update
     runs-on: ubuntu-latest
     steps:
@@ -277,7 +277,7 @@ on:
     branches:
       - master
 jobs:
-  preview:
+  update:
     name: Update
     runs-on: ubuntu-latest
     steps:
@@ -310,7 +310,7 @@ on:
     branches:
       - master
 jobs:
-  preview:
+  update:
     name: Update
     runs-on: ubuntu-latest
     steps:
