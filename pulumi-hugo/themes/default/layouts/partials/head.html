@@ -81,6 +81,11 @@
         <meta property="og:description" content="{{ .Summary }}">
     {{ end }}
 
+    <!-- For Registry package overview pages, add a swiftype meta tag to elevate the page in search results. -->
+    {{ if eq (.Params.layout) "overview" }}
+        <meta class="swiftype" name="package-overview-description" data-type="text" content="{{ .Params.meta_desc }}" />
+    {{ end }}
+
     {{ if .IsHome }}
         <title>{{ .Site.Title }}</title>
     {{ else if .Params.title_tag }}
