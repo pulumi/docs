@@ -21,16 +21,16 @@ The AWS Native provider offers same-day support for all new AWS features and rel
 This release also includes a new tool for migrating existing CloudFormation templates into Pulumi programs in your favorite language, powered by the new AWS Native provider and AWS Cloud Control API, as well as the ability to deploy any 3rd party resources in the CloudFormation Registry, including resources from Atlassian, Datadog, Densify, Dynatrace, Fortinet, New Relic, and Spot by NetApp.
 
 {{% notes type="info" %}}
-To learn how AWS built the Cloud Control API, and many other great topics, join us for the upcoming [Cloud Engineering Summit]({{< relref "/cloud-engineering-summit" >}}) where we’re excited to host speakers from each of the major cloud providers as well as 40+ leaders and practitioners from across the industry.
+To learn how AWS built the Cloud Control API, and many other great topics, [watch the replay of Cloud Engineering Summit 2021]({{< relref "/cloud-engineering-summit/replay" >}}) with speakers from each of the major cloud providers as well as 40+ leaders and practitioners from across the industry.
 {{% /notes %}}
 
 {{< youtube "oKxaZCyu2OQ" >}}
 
-## API Coverage  
+## API Coverage
 
 Resources available in the Pulumi AWS Native provider are based on the resources defined in the [AWS CloudFormation Registry](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html). Today, hundreds of AWS resources are available from this registry via Cloud Control API and the Pulumi AWS Native provider. This list will continue to grow as additional resources are added to the AWS Cloud Control API. In addition, all new features and services that are released by AWS will be supported in AWS Native, typically on the same day as the release.
 
-The Pulumi AWS Native provider can be used in combination with the classic Pulumi AWS provider, as well as the 60+ additional Pulumi resource providers which cover a wide variety of other cloud and SaaS platforms.  While in preview, the Pulumi AWS Native provider may not yet have support for every feature of AWS that you need in your Pulumi applications, but can always be used along with the classic Pulumi AWS provider to cover both existing use cases and brand new supported features.  
+The Pulumi AWS Native provider can be used in combination with the classic Pulumi AWS provider, as well as the 60+ additional Pulumi resource providers which cover a wide variety of other cloud and SaaS platforms.  While in preview, the Pulumi AWS Native provider may not yet have support for every feature of AWS that you need in your Pulumi applications, but can always be used along with the classic Pulumi AWS provider to cover both existing use cases and brand new supported features.
 
 In this example, we can see how the new AWS S3 Object Lambda feature can be used via the AWS Native provider, with access to the full API defined by the S3 team at AWS:
 
