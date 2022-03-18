@@ -118,6 +118,7 @@ This would be a similar approach for any other cloud-based provider but we are l
 
 ```sh
 $ pulumi stack init <name> --secrets-provider="<provider>://<provider-settings>"
+```
 
 e.g.,
 
