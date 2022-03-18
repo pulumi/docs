@@ -47,7 +47,7 @@
             <span id="upcoming" class="hidden"></span>
             <span id="videos" class="hidden"></span>
             <span id="pulumitv" class="hidden"></span>
-            <span id="whitepaper" class="hidden"></span>
+            <span id="whitepapers" class="hidden"></span>
 
             <!-- The event filter -->
             <div class="pulumi-event-list-container justify-center event-list-filter container mx-auto flex">
@@ -71,9 +71,7 @@
             <h3 class="hidden ml-5 text-black" data-filter-title="upcoming"><i class="fas fa-users mr-8"></i>Upcoming Sessions</h3>
             <h3 class="hidden ml-5 text-black" data-filter-title="videos"><i class="fas fa-video mr-8"></i>Videos</h3>
             <h3 class="hidden ml-5 text-black" data-filter-title="pulumitv"><i class="fas fa-tv mr-8"></i>PulumiTV</h3>
-            <h3 class="hidden ml-5 text-black" data-filter-title="whitepaper"><i class="fas fa-book mr-8"></i>Whitepapers</h3>
-            
-
+            <h3 class="hidden ml-5 text-black" data-filter-title="whitepapers"><i class="fas fa-book mr-8"></i>Whitepapers</h3>
             <!-- Resources list. -->
             <ul class="flex flex-wrap justify-center list-none p-0 sm:p-2 resource-list">
 
@@ -114,7 +112,7 @@
                         <!-- Set the icon and appropriate filters for the webinar. -->
                         {{ if $data.Params.whitepaper }}
                             {{ $icon = "book" }}
-                            {{ $filters = $filters | append "whitepaper" }}
+                            {{ $filters = $filters | append "whitepapers" }}
                         {{ else if $data.Params.pulumi_tv }}
                             {{ $icon = "tv" }}
                             {{ $filters = $filters | append "pulumitv" }}

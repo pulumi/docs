@@ -24,7 +24,7 @@ sections:
     - label: PulumiTV
       anchor: pulumitv
       icon: tv
-    - label: Whitepaper
-      anchor: whitepaper
+    - label: Whitepapers
+      anchor: whitepapers
       icon: book
 ---
