@@ -6,7 +6,7 @@ steps to make it happen.
 ## Set Up Your Development Environment
 
 If you haven't already, clone this repository and
-[follow the instructions in the README](https://github.com/pulumi/docs#pulumi-documentation-site)
+[follow the instructions in the README](https://github.com/pulumi/pulumi-hugo#running-hugo-locally)
 to set up your environment and run the development web server.
 
 Once you're able to run:
