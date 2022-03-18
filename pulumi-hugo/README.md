@@ -13,7 +13,7 @@ First, be sure to read our [contributing guide](CONTRIBUTING.md) and review our 
 We build the Pulumi website statically with Hugo, manage our Node.js dependencies with Yarn, and write most of our documentation in Markdown. Below is a list of the tools you'll need to run the website locally:
 
 * [Go](https://golang.org/) (>= 1.15)
-* [Hugo](https://gohugo.io) (>= 0.81)
+* [Hugo](https://gohugo.io) (>= 0.89)
 * [Node.js](https://nodejs.org/en/) (>= 1.14)
 * [Yarn](https://classic.yarnpkg.com/en/) (1.x)
 
