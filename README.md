@@ -4,7 +4,7 @@
 
 ## Contributing
 
-First, be sure to read our [contributing guide](CONTRIBUTING.md) and review our [code of conduct](CODE_OF_CONDUCT.md).
+First, be sure to read our [contributing guide](CONTRIBUTING.md) and review our [code of conduct](CODE-OF-CONDUCT.md).
 
 ## About this repository
 
