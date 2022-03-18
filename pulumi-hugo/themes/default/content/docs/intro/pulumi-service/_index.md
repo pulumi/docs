@@ -16,9 +16,9 @@ The [Pulumi Service](https://app.pulumi.com) web application automatically manag
 
 ## Getting Started
 
-In your browser, navigate to <a href="https://app.pulumi.com" target="_blank">app.pulumi.com</a> and sign up.
+In your browser, navigate to <a href="https://app.pulumi.com" target="_blank">app.pulumi.com</a> and create an account.
 
-<a class="btn btn-secondary" href="https://app.pulumi.com/signup" target="_blank">Sign up</a>
+<a class="btn btn-secondary" href="https://app.pulumi.com/signup" target="_blank">Create an Account</a>
 
 When you sign in to the Pulumi Service, an personal account is automatically
 created on the **Individual** Edition. The Pulumi Individual Edition is free forever for unlimited individual use.

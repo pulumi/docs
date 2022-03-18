@@ -55,6 +55,12 @@ Or, watch how to do it in this video walkthrough:
 
 See [Registry]({{< relref "/registry" >}}) on how to use other supported clouds.
 
+## Pulumi Service
+
+The Pulumi Service is a fully managed service that helps you adopt Pulumi’s open source SDK with ease. It provides built-in state and secrets management, integrates with source control and CI/CD, and offers a web console and API that make it easier to visualize and manage infrastructure. It is free for individual use, with features available for teams.
+
+<a class="btn btn-secondary" href="https://app.pulumi.com/signup" target="_blank">Create an Account</a>
+
 ## Additional resources
 
 The following sections are also useful when first learning how to use Pulumi:
