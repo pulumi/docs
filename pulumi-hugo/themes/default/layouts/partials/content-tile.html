@@ -12,8 +12,8 @@
         {{ $target = "" }}
     {{ end }}
 
-    <article class="card bg-white mb-10 flex flex-col mx-2 md:mx-0 content-tile">
-        <a href="{{ $href }}" rel="{{ $relref }}" target="{{ $target }}" class="w-full h-full hover:underline">
+    <article class="card bg-white mb-10 flex flex-col mx-2 md:mx-0 content-tile group">
+        <a href="{{ $href }}" rel="{{ $relref }}" target="{{ $target }}" class="w-full h-full group-hover">
             <span class="block w-full h-full p-4 flex flex-col">
                 <span class="block pb-2 mb-4">
                     <div class="bg-violet-100 rounded-full inline-block p-4 w-16 h-16 flex items-center justify-center">
@@ -21,7 +21,7 @@
                     </div>
                 </span>
                 <span class="block">
-                    <h6 class="">
+                    <h6 class="group-hover:underline">
                         {{ .data.Params.title }}
                         {{ if .external }}<i class="text-sm ml-2 fas fa-external-link-alt"></i>{{ end }}
                     </h6>

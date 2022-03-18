@@ -2,8 +2,7 @@
 # Name of the webinar.
 title: "PulumiUP"
 meta_desc: |
-    PulumiUP introduces you to the emerging practice of Cloud Engineering. Hear from the Pulumi team
-    and assorted industry experts.
+    PulumiUP is a virtual conference with industry-recognized leaders, demos, and panel discussions about the future of IaC, Cloud Engineering & DevOps and Cloud.
 
 redirect_to: /pulumi-up
 
@@ -43,5 +42,5 @@ url_slug: "pulumi-up"
 # Content for the left hand side section of the page.
 main:
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2021-04-20T09:00:00-07:00
+    sortable_date: 2022-05-04T09:00:00-07:00
 ---
