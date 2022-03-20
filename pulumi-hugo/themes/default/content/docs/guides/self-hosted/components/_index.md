@@ -1,11 +1,13 @@
 ---
 title: Pulumi Service Components
+meta_desc: The Pulumi service container images page links and docker hub links.
 menu:
     userguides:
         parent: self_hosted
         identifier: self_hosted_components
         weight: 70
-meta_desc: The Pulumi service container images page links and docker hub links.
+aliases:
+  - /docs/guides/self-hosted/console/
 ---
 
 {{% notes type="info" %}}
