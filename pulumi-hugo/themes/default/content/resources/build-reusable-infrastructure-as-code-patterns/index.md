@@ -64,8 +64,8 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Lee Briggs
-          role: Sales Engineer, Pulumi
+        - name: Matt Stratton
+          role: Staff Developer Advocate, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
