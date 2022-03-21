@@ -177,7 +177,7 @@ For videos belonging to the [Pulumi YouTube channel](https://www.youtube.com/cha
 There's a Hugo [shortcode for Tweets](https://gohugo.io/content-management/shortcodes/#tweet), too, which accepts a Tweet ID, accessible [from its permalink](https://twitter.com/jcreed/status/1147203941609984002):
 
 ```
-{{< tweet 1147203941609984002 >}}
+{{< tweet id="1202020186234048512" user="abbyfuller" >}}
 ```
 
 For more Hugo shortcode fun, [go here](https://gohugo.io/content-management/shortcodes).

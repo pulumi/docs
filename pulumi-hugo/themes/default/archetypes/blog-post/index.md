@@ -27,7 +27,7 @@ authors:
 tags:
     - change-me
 
-# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
+# See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
 ---
 
@@ -41,7 +41,7 @@ Either way, avoid using images or code samples [in the first 70 words](https://g
 
 ## Writing the Post
 
-For help assembling the content of your post, see [BLOGGING.md](https://github.com/pulumi/docs/blob/master/BLOGGING.md). For general formatting guidelines, see the Style Guide section of [CONTRIBUTING.md](https://github.com/pulumi/docs/blob/master/CONTRIBUTING.md#style-guide).
+For help assembling the content of your post, see [BLOGGING.md](https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md). For general formatting guidelines, see the [Style Guide](https://https://github.com/pulumi/pulumi-hugo/blob/master/STYLE-GUIDE.md).
 
 ## Code Samples
 
@@ -62,4 +62,4 @@ Note the `?rel=0` param, which tells YouTube to suggest only videos from same ch
 
 ## Tweets
 
-{{< tweet 1147203941609984002 >}}
+{{< tweet id="1202020186234048512" user="pulumipus" >}}
