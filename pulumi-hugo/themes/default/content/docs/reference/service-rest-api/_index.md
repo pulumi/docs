@@ -128,7 +128,9 @@ curl \
   -H "Accept: application/vnd.pulumi+8" \
   -H "Content-Type: application/json" \
   -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}
+  --request POST \
+  --data '{"description":"{description}"}' \
+  https://api.pulumi.com/api/user/tokens
 ```
 
 #### Default response
