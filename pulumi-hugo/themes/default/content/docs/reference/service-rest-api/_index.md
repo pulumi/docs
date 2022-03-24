@@ -71,9 +71,9 @@ GET /api/user/stacks
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   https://api.pulumi.com/api/user/stacks?organization={organization}&tagName={tagName}&tagValue={tagValue}
 ```
 
@@ -125,9 +125,9 @@ GET /api/stacks/{organization}/{project}/{stack}
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}
 ```
 
@@ -183,9 +183,9 @@ GET /api/stacks/{organization}/{project}/{stack}/export
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/export
 ```
 
@@ -309,9 +309,9 @@ POST /api/stacks/{organization}/{project}/{stack}/transfer
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
   --data '{"toOrg":"{toOrg}"}' \
   https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/transfer
@@ -348,9 +348,9 @@ DELETE /api/stacks/{organization}/{project}/{stack}
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request DELETE \
   https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}
 ```
@@ -397,9 +397,9 @@ POST /api/stacks/{organization}/{project}/{stack}/tags
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
   --data '{"name":"{tagName}","value":"{tagValue}"}' \
   https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/tags
@@ -436,9 +436,9 @@ DELETE /api/stacks/{organization}/{project}/{stack}/tags/{tagName}
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request DELETE \
   https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/tags/{tagName}
 ```
@@ -483,9 +483,9 @@ By default the results are not paginated. You can specify `page` and `pageSize` 
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/updates?output-type=service
 ```
 
@@ -747,9 +747,9 @@ GET /api/stacks/{organization}/{project}/{stack}/update/{updateID}
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/update/{updateID}
 ```
 
@@ -787,9 +787,9 @@ GET /api/stacks/{organization}/{project}/{stack}/update/{updateID}/events
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/update/{updateID}/events
 ```
 
@@ -1007,9 +1007,9 @@ GET /api/stacks/{organization}/{project}/{stack}/updates/latest/previews
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/updates/latest/previews
 ```
 
@@ -1265,9 +1265,9 @@ GET /api/orgs/{organization}/members?type=backend
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   https://api.pulumi.com/api/orgs/{organization}/members?type=backend
 ```
 
@@ -1330,9 +1330,9 @@ POST /api/orgs/{organization}/members/{username}
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
   --data '{"role":"{role}"}' \
   https://api.pulumi.com/api/orgs/{organization}/members/{username}
@@ -1367,9 +1367,9 @@ DELETE /api/orgs/{organization}/members/{username}
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request DELETE \
   https://api.pulumi.com/api/orgs/{organization}/members/{username}
 ```
@@ -1410,9 +1410,9 @@ POST /api/orgs/{org}/teams/{teamType}
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
   --data '{"name":"example-team","displayName":"example display name","description":"example description"}' \
   https://api.pulumi.com/api/orgs/{org}/teams/pulumi
@@ -1459,9 +1459,9 @@ DELETE /api/orgs/{org}/teams/{teamName}
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request DELETE \
   https://api.pulumi.com/api/orgs/{org}/teams/{teamName}
 ```
@@ -1504,9 +1504,9 @@ PATCH /api/orgs/{organization}/teams/{team}
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
   --data '{"memberAction":"{memberAction}","member":"{username}"}' \
   https://api.pulumi.com/api/orgs/{organization}/teams/{team}
@@ -1545,9 +1545,9 @@ PATCH /api/orgs/{organization}/teams/{team}
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request PATCH \
   --data '{"addStackPermission":{"projectName":"{projectName}","stackName":"{stackName}","permission": {permission}}}' \
   https://api.pulumi.com/api/orgs/{organization}/teams/{team}
@@ -1585,9 +1585,9 @@ PATCH /api/orgs/{organization}/teams/{team}
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request PATCH \
   --data '{"removeStack":{"projectName":"{projectName}","stackName":"{stackName}"}}' \
   https://api.pulumi.com/api/orgs/{organization}/teams/{team}
@@ -1623,9 +1623,9 @@ PATCH /api/orgs/{organization}/members/{username}
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request PATCH \
   --data '{"role":"{role}"}' \
   https://api.pulumi.com/api/orgs/{organization}/members/{username}
@@ -1657,9 +1657,9 @@ None
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   https://api.pulumi.com/api/user/tokens
 ```
 
@@ -1704,9 +1704,9 @@ POST /api/user/tokens
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
   --data '{"description":"{description}"}' \
   https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/tags
@@ -1743,9 +1743,9 @@ DELETE /api/user/tokens/{tokenId}
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request DELETE \
   https://api.pulumi.com/api/user/tokens/{tokenId}
 ```
@@ -1780,9 +1780,9 @@ POST /api/orgs/{organization}/hooks
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
   --data '{"organizationName":"{organization}","displayName":"My Webhook","payloadUrl":"https://example.com","secret":"mysecret","active":true}' \
   https://api.pulumi.com/api/orgs/{organization}/hooks
@@ -1820,9 +1820,9 @@ GET /api/orgs/{organization}/hooks
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   https://api.pulumi.com/api/orgs/{organization}/hooks
 ```
 
@@ -1864,9 +1864,9 @@ GET /api/orgs/{organization}/hooks/{webhookname}
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   https://api.pulumi.com/api/orgs/{organization}/hooks/{webhookname}
 ```
 
@@ -1903,9 +1903,9 @@ DELETE /api/stacks/{organization}/{project}/{stack}
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request DELETE \
   https://api.pulumi.com/api/orgs/{organization}/hooks/{webhookname}
 ```
@@ -1937,9 +1937,9 @@ POST /api/orgs/{organization}/hooks/{webhookname}/ping
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --request POST \
   https://api.pulumi.com/api/orgs/{organization}/hooks/ping
 ```
@@ -1979,9 +1979,9 @@ GET /api/orgs/{organization}/hooks/{webhookname}/deliveries
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   https://api.pulumi.com/api/orgs/{organization}/hooks/{webhookname}/deliveries
 ```
 
@@ -2024,9 +2024,9 @@ GET /api/orgs/{organization}/auditlogs
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: token pul-abcdefghijklmnopqrstuvwxyz' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token pul-abcdefghijklmnopqrstuvwxyz" \
   --compressed \
   https://api.pulumi.com/api/orgs/{organization}/auditlogs?startTime=1615872240
 ```
@@ -2107,8 +2107,8 @@ GET /api/orgs/{organization}/auditlogs/export
 
 ```bash
 curl \
-  -H 'Accept: application/vnd.pulumi+8' \
-  -H 'Authorization: token $PULUMI_ACCESS_TOKEN' \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
   --compressed \
   https://api.pulumi.com/api/orgs/{organization}/auditlogs/export?startTime=1615872240&format=cef
 ```
