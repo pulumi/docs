@@ -2,7 +2,7 @@
 title: Upgrade Your Kubernetes YAML to a Modern Language
 url: /kube2pulumi
 layout: kube2pulumi
-linktitle: kube2pulumi
+linktitle: Kubernetes YAML to Pulumi
 menu:
   converters:
     identifier: kube2pulumi

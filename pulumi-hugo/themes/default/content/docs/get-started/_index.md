@@ -1,5 +1,5 @@
 ---
-title: Get Started
+title: Get Started with Pulumi
 meta_desc: Step-by-step guides for creating, deploying, and managing infrastructure with
            Pulumi on the cloud using your favorite language.
 no_on_this_page: true

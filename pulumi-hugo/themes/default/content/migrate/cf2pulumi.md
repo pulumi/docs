@@ -2,7 +2,7 @@
 title: Convert CloudFormation Templates to a Programming Language
 url: /cf2pulumi
 layout: cf2pulumi
-linktitle: cf2pulumi
+linktitle: CloudFormation to Pulumi
 menu:
   converters:
     identifier: cf2pulumi

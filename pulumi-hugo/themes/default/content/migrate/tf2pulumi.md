@@ -2,7 +2,7 @@
 title: Convert Your Terraform to a Modern Language
 url: /tf2pulumi
 layout: tf2pulumi
-linktitle: tf2pulumi
+linktitle: Terraform to Pulumi
 menu:
   converters:
     identifier: tf2pulumi

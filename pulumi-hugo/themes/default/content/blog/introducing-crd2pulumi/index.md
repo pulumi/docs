@@ -5,7 +5,7 @@ meta_desc: Generate Kubernetes CustomResource types in TypeScript, Python, C#, a
 menu:
   converters:
     identifier: crd2pulumi
-linktitle: crd2pulumi
+linktitle: Kubernetes CustomResources to Pulumi
 weight: 2
 meta_image: crd.png
 authors:
