@@ -172,7 +172,7 @@ with AWS / Azure / Google Cloud, you can now use their official Actions:
 {{% choosable cloud gcp %}}
 
 ```yaml
-      - uses: google-github-actions/setup-gcloud@master
+      - uses: google-github-actions/setup-gcloud@v0
         with:
           service_account_key: ${{ secrets.GCP_KEY }}
           project_id: ${{ env.PROJECT_ID }}
