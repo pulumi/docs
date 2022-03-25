@@ -1,10 +1,10 @@
 ---
-title: Project Configuration Reference
-linktitle: Project Configuration
-meta_desc: A list of configuration settings for the Pulumi project file.
+title: Project File Reference
+linktitle: Project File
+meta_desc: Documentation of the settings that are valid for the Pulumi project file.
 menu:
   reference:
-    name: Project Configuration
+    name: Project File
     weight: 5
 ---
 
@@ -30,7 +30,9 @@ It contains the following required and optional attributes:
 
 - `main`: (optional) an override for the main program's location. By default, the program's working directory is assumed to be the location of `Pulumi.yaml`. To choose a different location, use the `main` property. For example, if your Pulumi program is in a subdirectory `infra/`, use `main: infra/`.
 
-- `config`: (optional) directory to store stack-specific configuration files, relative to location of `Pulumi.yaml`.
+- `stackConfigDir`: (optional) directory to store stack-specific configuration files, relative to location of `Pulumi.yaml`.
+
+- `config`: (optional) deprecated setting, this has been renamed to `stackConfigDir`.
 
 - `backend`: (optional) configuration for project state [backend]({{< relref "/docs/intro/concepts/state" >}}). Supports these options:
     - `url`: explicitly specify backend URL like `https://pulumi.acmecorp.com`, `file:///app/data`, etc.
