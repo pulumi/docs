@@ -98,7 +98,7 @@ To preview your Pulumi program, run [`pulumi up`]({{< relref "/docs/reference/cl
 
 #### **Pulumi Service**
 
-To see the full details of the deployment and the resources that are now part of the stack, open the update link in a browser. The **Resources** tab in the Pulumi Service has a link to the AWS console for the provisioned EC2 instance.
+To see the full details of the deployment and the resources that are now part of the stack, open the update link in a browser. You can see the bucket that was creAted in the **Resources** tab.
 
 #### **Pulumi CLI**
 
