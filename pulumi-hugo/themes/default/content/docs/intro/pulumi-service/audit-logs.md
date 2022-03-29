@@ -103,7 +103,7 @@ The JSON format is composed of the following fields:
 | timestamp | the RFC3339 timestamp of when the event was recorded |
 | sourceIP | IP Address of the client originating the request to invoke this event |
 | event | the name of the event |
-| decscription | detailed description of the event that occurred |
+| description | detailed description of the event that occurred |
 | user | details of the user invoking the event (login, name, and avatar URL) |
 
 #### CSV Format
