@@ -15,9 +15,15 @@ This project is especially important to me, because it's an idea that I've tried
 
 Fortunately, two other wonderful Pulumi community members stepped up and started to put together their own programme and with me now being at Pulumi, the timing was amazingly serendipitous.
 
-I spoke with [Ringo De Smet](https://twitter.com/ringods), Head of CI/CD at Napoleon Games and founding Pulumiverse member, and he had this to say about why he's excited to create the Pulumiverse:
+I spoke with [Ringo De Smet](https://twitter.com/ringods) and [Simen A. W. Olsen](https://twitter.com/cobrazo), the founding members of the Pulumiverse.
+
+Ringo, Head of CI/CD at Napoleon Games, had this to say about why he's excited to create the Pulumiverse:
 
 > For infrastructure automation, we had other great tools which preceded Pulumi: Chef, Puppet, Ansible. Any of these tools have a vibrant community of people preventing that all of us need to re-invent the wheel. We had [Sous-Chefs](https://sous-chefs.org) for Chef & [Vox Pupuli](https://voxpupuli.org) for Puppet. But I see a lot of Pulumi users implementing the same stuff over and over again. That's why I think Pulumi needs it's own community. So I started it: [Pulumiverse](https://github.com/pulumiverse)
+
+Simon, a Developer at [Bjerk AS](https://github.com/bjerkio), shared:
+
+> I imagine a community filled with like-minded people who build and support Pulumi providers, opinionated components, configurations and share ideas on how we can utilize the power of Pulumi in new ways. So I created Pulumiverse to share my enthusiasm, give back to Pulumi and support developers by building a platform where we can work together!
 
 ## What is the Pulumiverse?
 
