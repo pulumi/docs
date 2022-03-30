@@ -9,7 +9,7 @@ function minifyCSS(filePath) {
 
     // If there is no matching bundle then we will skip minifying things.
     if (bundlePath === undefined) {
-        return;
+        return Promise.resolve();
     }
 
     const css = fs.readFileSync(bundlePath);
