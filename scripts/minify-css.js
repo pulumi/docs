@@ -9,12 +9,12 @@ function minifyCSS(filePath) {
 
     // If there is no matching bundle then we will skip minifying things.
     if (bundlePath === undefined) {
-        return;
+        return Promise.resolve();
     }
 
     const css = fs.readFileSync(bundlePath);
 
-    postcss([
+    return postcss([
 
         // PurgeCSS removes unused CSS by analyzing the files of the built website.
         // https://purgecss.com/
@@ -74,10 +74,11 @@ function minifyCSS(filePath) {
     });
 }
 
-Promise.all([
-    minifyCSS("public/css/bundle.*.css"),
-    minifyCSS("public/css/marketing.*.css"),
-]);
+minifyCSS("public/css/bundle.*.css").then(() => {
+    minifyCSS("public/css/marketing.*.css").then(() => {
+        console.log("CSS bundles minified successfully!");
+    });
+});
 
 // Exit non-zero when something goes wrong in the promise chain.
 process.on("unhandledRejection", error => {
