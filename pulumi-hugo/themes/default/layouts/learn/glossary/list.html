@@ -1,0 +1,46 @@
+{{ define "main" }}
+    <div class="container mx-auto flex items-start px-4 md:px-0">
+        <div class="md:w-3/12 my-8 sticky-sidebar md:pr-8">
+            <nav>
+
+            </nav>
+        </div>
+        <div class="md:w-7/12 my-8">
+            <header class="container mx-auto">
+                {{ partial "docs/breadcrumb.html" . }}
+                <h1>{{ .Title }}</h1>
+            </header>
+            <section class="container mx-auto my-8">
+                {{ .Content }}
+            </section>
+
+            {{ $terms := sort $.Site.Data.learn.glossary.entries "term" }}
+            {{ $page := .}}
+
+            <ul>
+                {{ range $terms }}
+                    {{ $anchor := .term | anchorize }}
+                    <li><a href="#{{ $anchor }}">{{ .term }}</a></li>
+                {{ end }}
+            </ul>
+
+            {{ range $terms }}
+                {{ $anchor := .term | anchorize }}
+                <div class="flex-1 mt-8">
+                    <h2 id="{{ $anchor }}" class="mt-2 mb-0">{{ .term }} </h2>
+                    <p>{{ .description | markdownify }}</p>
+
+                    {{ if .link }}
+                        <p>
+                            <a href="{{ relref $page .link }}">Read more &rarr;</a>
+                        </p>
+                    {{ end }}
+                </div>
+            {{ end }}
+        </div>
+
+        <div class="md:w-2/12 md:ml-8 m8-8 ">
+
+        </div>
+    </div>
+{{ end }}
