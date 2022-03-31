@@ -13,6 +13,12 @@ authors:
 tags:
     - pulumi-news
     - features
+    - cloud engineering
+    - policy-as-code
+    - pulumi-service
+    - infrastructure as code
+    - pulumi-enterprise
+    - continuous-delivery
 ---
 
 As a reader of this blog, you've probably heard of the [Pulumi Service]({{< relref "/product/pulumi-service" >}}), the default state-management [backend]({{< relref "/docs/intro/concepts/state" >}}) of the Pulumi CLI. If that's the case, there's also a good chance you've heard of a number of the Service's key features, like helping you organize your [projects and stacks]({{< relref "/docs/intro/pulumi-service/projects-and-stacks" >}}), collaborate with others with the help of [organizations]({{< relref "/docs/intro/pulumi-service/organizations" >}}), or handle sensitive data securely with built-in support for [encrypted secrets](https://www.pulumi.com/docs/intro/concepts/secrets/).
@@ -21,7 +27,7 @@ What you might not know, though, is that we're adding new features to the Pulumi
 
 Let’s get started!
 
-## Thing 1: Stack Tags
+## Feature 1: Stack Tags
 
 The first thing we'll cover is the [Pulumi stack tags]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}) feature. Stack tags are key/value pairs that are associated with your Pulumi stack. You can use them for any number of purposes, from keeping things organized to even flagging whether or not it's okay for a script to reclaim the stack's resources.
 
@@ -33,7 +39,7 @@ Once set, you can quickly filter stacks on your organization’s Projects tab as
 
 ![Filtering stacks by tag name](https://user-images.githubusercontent.com/274700/150613454-1554b763-2e8b-42e9-80ce-e629048bb1b9.png)
 
-## Thing 2: Link Updates to your CI/CD pipeline
+## Feature 2: Link Updates to your CI/CD pipeline
 
 Another helpful thing the Pulumi Service can do is link the Pulumi stack update to the CI/CD job or run that was used to perform it, as well as to the specific source commit:
 
@@ -45,7 +51,7 @@ If you're curious to know all of the information Pulumi has for a stack update, 
 
 ![The Environment tab of a stack update](https://user-images.githubusercontent.com/274700/150613104-510c755f-180e-4f0c-a2cb-e9f9816649e6.png)
 
-## Thing 3: Custom Update Messages
+## Feature 3: Custom Update Messages
 
 One of the most useful pieces of additional data stored with each update is the `message` property. By default, Pulumi will use whatever the latest `git` commit message is. But did you know you can customize that message from the command line?
 
@@ -57,7 +63,7 @@ $ pulumi up --message "Release the hounds\!"
 
 ![An update in the Service with a custom message](https://user-images.githubusercontent.com/274700/150614494-b1c6aef1-aed0-4de5-a815-f4f8ddcef48a.png)
 
-## Thing 4: Viewing Resource Changes
+## Feature 4: Viewing Resource Changes
 
 Another thing you might have missed is that the Pulumi Service supports multiple views for a stack update's logs.
 
@@ -71,7 +77,7 @@ The _Diagnostic view_ just outputs so-called “diagnostic” messages from the 
 
 ![The diagnostic view, showing the output of a Docker image build](https://user-images.githubusercontent.com/274700/150619125-8067b1c6-843d-4f52-999c-69f8e184870e.png)
 
-## Thing 5: Stack Resource Visualization
+## Feature 5: Stack Resource Visualization
 
 Another cool feature of the Pulumi Service is being able to visualize a stack’s resources and their relationships to one another. This is a really important feature!
 
@@ -89,7 +95,7 @@ However, in order to see the expanded resource graph, click the Graph View butto
 
 Notice here that the resources that are part of a [_component_](https://www.pulumi.com/docs/intro/concepts/resources/#components) are grouped together. Also, you can double click on those nodes in the graph to expand or collapse them!
 
-## Thing 6: Drilling into Resource Properties
+## Feature 6: Drilling into Resource Properties
 
 But you don’t need to just settle for a "top-level view" of your resources. You can click on any specific resource on the Resources tab, and see all of the properties of that resource.
 
