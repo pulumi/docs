@@ -1,4 +1,6 @@
 {{ define "main" }}
+    {{ $pageContext := . }}
+
     <section id="overview" class="star-wars overflow-hidden">
         <div class="h-full flex justify-center items-center">
             <div class="title-animation">
@@ -28,35 +30,319 @@
         </div>
     </section>
 
-    <section id="register" class="container mx-auto text-center my-24">
-         <h2>
-            <pulumi-datetime date="{{ .Params.event_date }}"></pulumi-datetime>
-        </h2>
+    <section id="register" class="container mx-auto text-center mt-8 px-6 lg:px-0">
+        <div class="w-5/6 lg:max-w-2xl mx-auto text-center">
+            <div class="pulumiup-overview-date-block">
+                <p class="text-black">MAY 4 - 5, 2022 <span class="font-normal">|</span> ONLINE</p>
+            </div>
+        </div>
 
-        <h3>Get Notified When Registration Opens</h3>
-        <div class="">
-            <div class="flex items-center justify-center mt-8">
-                <pulumi-hubspot-form form-id="f456537d-1ac8-4004-8ba7-9f5997321445" class="newsletter newsletter-wide ml-8"></pulumi-hubspot-form>
+        <div class="max-w-2xl mx-auto">
+            <p>
+                May the fourth be with the cloud community.
+            </p>
+
+            <p>
+                PulumiUP is a free, virtual conference open to all interested in cloud engineering,
+                cloud infrastructure, software development, modern applications, or Pulumi.
+            </p>
+
+            <p>
+                Whether you're a seasoned cloud engineer or just curious to learn about cloud
+                engineering, at PulumiUP you can hear industry leaders and attend guest sessions,
+                demos, and panel sessions.
+            </p>
+        </div>
+
+        <div class="mt-8 h-24">
+            <event-session-registration-modal
+                modal-title="Register Now"
+                button-text="Register"
+                button-class="btn-primary"
+                event-sessions="{{ .Params.registration.main | jsonify }}"
+            >
+            </event-session-registration-modal>
+        </div>
+
+        <div class="date-countdown-container">
+            <div class="card bg-white inline-block mx-auto p-3">
+                <div class="date-countdown flex items-center lg:items-end">
+                    <img class="h-28" src="/logos/brand/twitter-card.png" alt="Pulumi" />
+                    <pulumi-date-countdown
+                        date-string="{{ .Params.event_date }}"
+                        value-label-class="block font-normal text-xl"
+                        container-class="flex flex-wrap justify-center items-center"
+                        text-class="px-3 text-5xl font-bold m-0 mb-2"
+                    >
+                    </pulumi-date-countdown>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="last-year" class="container mx-auto relative py-24">
-        <div class="shape-background home-video-section">
-            <div class="shape-container">
-                <div class="circle-left"></div>
-                <div class="circle-right"></div>
+    <section id="sessions" class="white-background">
+        <div class="container mx-auto py-24">
+            <h2 class="text-black px-6">Innovation & Future-Forward Thoughts on Cloud</h2>
+
+            <div class="flex flex-wrap">
+                <div class="w-full lg:w-1/2 p-3">
+                    <div class="card bg-white overflow-hidden">
+                        <div class="flex flex-col">
+                            <div class="bg-black lg:h-64 w-full p-2">
+                                <div class="flex flex-wrap items-center justify-center h-full">
+                                    <div class="w-full lg:w-2/3 lg:h-full flex justify-center lg:justify-start items-center pl-2">
+                                        <img class="w-1/2 pr-2" src="/images/team/joe-duffy.jpg" alt="Joe Duffy" title="Joe Duffy">
+                                    </div>
+
+                                    <div class="w-full lg:w-1/3 lg:h-full flex flex-col items-center lg:items-end justify-start pt-8 lg:py-8">
+                                        <event-session-registration-modal
+                                            modal-title="Save Your Spot"
+                                            button-text="Save Your Seat"
+                                            button-class="btn-pulumiup-card"
+                                            event-sessions="{{ .Params.registration.main | jsonify }}"
+                                        >
+                                        </event-session-registration-modal>
+
+                                        <p class="pulumiup-card-top-date pt-4">
+                                            May 4 | 10:00AM PDT
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lg:h-64 p-6">
+                                <p class="my-0 mt-2">
+                                    30 min
+                                </p>
+                                <h5 class="mt-0 mt-4">
+                                    PulumiUP 2022 Keynote: The Future of Cloud-Enabled IaC
+                                </h5>
+                                <p>
+                                    Learn about the future of Cloud Engineering and Infrastructure as Code from
+                                    Pulumi Founder & CEO, Joe Duffy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 p-3">
+                    <div class="card bg-white overflow-hidden">
+                        <div class="flex flex-col">
+                           <div class="bg-black lg:h-64 w-full p-2">
+                                <div class="flex flex-wrap items-center justify-center h-full">
+                                    <div class="w-full lg:w-2/3 lg:h-full flex justify-center lg:justify-start items-center pl-2">
+                                        <img class="w-1/2 pr-2" src="/images/team/joe-duffy.jpg" alt="Joe Duffy" title="Joe Duffy">
+                                        <img class="w-1/2 pr-2" src="/images/team/luke-hoban.jpg" alt="Luke Hoban" title="Luke Hoban">
+                                    </div>
+
+                                    <div class="w-full lg:w-1/3 lg:h-full flex flex-col items-center lg:items-end justify-start pt-8 lg:py-8">
+                                        <event-session-registration-modal
+                                            modal-title="Save Your Spot"
+                                            button-text="Save Your Seat"
+                                            button-class="btn-pulumiup-card"
+                                            event-sessions="{{ .Params.registration.main | jsonify }}"
+                                        >
+                                        </event-session-registration-modal>
+
+                                        <p class="pulumiup-card-top-date pt-4">
+                                            May 4 | 10:40AM PDT
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lg:h-64 p-6">
+                                <p class="my-0 mt-2">
+                                    60 min
+                                </p>
+                                <h5 class="mt-0 mt-4">
+                                    PulumiUP 2022 Keynote: Cloud Migration and Multicloud Solutions Forecast
+                                </h5>
+                                <p>
+                                    Learn about the future of Multicloud Solutions Forecasting and Cloud Migrations
+                                    from Pulumi CEO Joe Duffy and CTO Luke Hoban.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why" class="why-attend text-center container mx-auto py-24 px-6 lg:px-0">
+        <h2>Why Attend</h2>
+        <p>
+            Get ready to be inspired, challenged, and transformed. Learn from experts and success stories about
+            early adopters.
+        </p>
+
+        <div class="flex flex-col lg:flex-row">
+            <div class="w-full lg:w-1/3 px-8 mt-8 lg:mb-0">
+                {{ partial "color-icon.html" (dict "icon" "lightning" "icon_color" "yellow") }}
+                <p class="key-feature-description">
+                    Learn from cloud engineering experts about how they manage and solve frustrations
+                    with handling cloud complexity all the way from cloud native applications to structuring
+                    engineering orgs to be productive with the cloud.
+                </p>
+            </div>
+
+            <div class="w-full lg:w-1/3 px-8 mt-8 lg:mb-0">
+                {{ partial "color-icon.html" (dict "icon" "lock" "icon_color" "purple") }}
+                <p class="key-feature-description">
+                    Unlock the power of the cloud with thought-provoking presentations that are
+                    designed to help you transform your organization, your business, and yourself.
+                    Access open source code on Github and get involved with the community.
+                </p>
+            </div>
+
+            <div class="w-full lg:w-1/3 px-8 mt-8 lg:mb-0">
+                {{ partial "color-icon.html" (dict "icon" "rocketship" "icon_color" "salmon") }}
+                <p class="key-feature-description">
+                    You will learn how top-performing cloud engineering teams and organizations are leveraging
+                    the cloud to drive remarkable success and how to implement their techniques within your own
+                    organization or team.
+                </p>
             </div>
         </div>
 
-        <h2 class="text-center my-16 md:my-4">Watch Last Year's Announcements</h2>
-        <div class="rounded-xl shadow-2xl w-3/4 mx-auto" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
-            <iframe
-                src="//www.youtube.com/embed/Zko70KVGcgo?rel=0"
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
-                allowfullscreen=""
-                title="PulumiUP: Announcing Pulumi 3.0"
-            ></iframe>
+        <div class="mt-16 text-center">
+            <event-session-registration-modal
+                modal-title="Register Now"
+                button-text="Register"
+                button-class="btn-primary"
+                event-sessions="{{ .Params.registration.main | jsonify }}"
+            >
+            </event-session-registration-modal>
+        </div>
+
+        <div class="py-16">
+            <div class="max-w-3xl card white-background mx-auto p-6 text-left">
+                <h3>Who Should Attend</h3>
+                <p>
+                    Business leaders, engineering managers, developers, and anyone who is interested in learning
+                    more about the cloud and cloud engineering.
+                </p>
+
+                <ul>
+                    <li>Infrastructure and platform engineers</li>
+                    <li>Software engineers and developers</li>
+                    <li>Solutions architects</li>
+                    <li>Technical leaders (CIOs, CTOs, VPs, Directors)</li>
+                    <li>Everyone else interested in cloud engineering</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-0 mb-16 py-12 overflow-hidden px-3 white-background">
+        <div class="container mx-auto text-center">
+            <h3 class="text-center mb-10 hidden lg:block">{{ .Params.customer_logos.title }}</h3>
+            <h6 class="text-center mb-10 lg:hidden">{{ .Params.customer_logos.title }}</h6>
+            <div class="flex flex-wrap items-center justify-center">
+                {{ range $logo := .Params.customer_logos.logos }}
+                    <div class="w-3/4 lg:w-1/6 p-10">
+                        {{ if $logo.link }}
+                            <a href="{{ relref $pageContext $logo.link }}">
+                                {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
+                            </a>
+                        {{ else }}
+                            {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
+                        {{ end }}
+                    </div>
+                {{ end }}
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center">
+                {{ range $logo := .Params.customer_logos.small_logos }}
+                    <div class="w-3/4 lg:w-1/6 p-10">
+                        {{ partial "customer-logo.html" (dict "logo" $logo "hoverable" true) }}
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="container mx-auto py-16 px-6 lg:px-0">
+        <h2>Schedule At A Glance</h2>
+
+        <div class="flex flex-wrap my-8">
+            <div class="w-full lg:w-1/4 border-b lg:border-b-0 lg:border-r border-white">
+                <p class="text-3xl">Wednesday, May 4th</p>
+                <p>8:00AM - 12:00PM PDT<p>
+            </div>
+            <div class="w-full lg:w-3/4 lg:pl-6">
+                <p class="text-3xl">PulumiUP</p>
+                <p>
+                    PulumiUP is for anyone who is interested in cloud engineering, cloud infrastructure,
+                    software development, modern applications, or Pulumi. Whether you're a seasoned cloud
+                    engineer or just curious to learn what cloud engineering is all about, PulumiUP will
+                    teach you something new about the future and fundamentals of building on the cloud.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-wrap my-8">
+            <div class="w-full lg:w-1/4 border-b lg:border-b-0 lg:border-r border-white">
+                <p class="text-3xl">Thursday, May 5th</p>
+                <p>8:00AM - 12:00PM PDT<p>
+            </div>
+            <div class="w-full lg:w-3/4 lg:pl-6">
+                <p class="text-3xl">Community Summit</p>
+                <p>
+                    Join your friends in the Pulumi community for the first ever Pulumi Community Summit.
+                    This virtual event will include an "Open Spaces" concept where you can propose and
+                    vote on topics ahead of time. Those topics with the most interest will form the agenda
+                    for the day, with virtual breakout rooms centered around those themes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-pulumi" class="white-background py-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2>About Pulumi</h2>
+
+            <p>
+                Pulumi's cloud engineering platform brings infrastructure, developer, and security teams together through a
+                unified software engineering process that tames cloud complexity and accelerates innovation. Using the
+                Pulumi platform, teams can build, deploy, and manage modern cloud applications faster and with more
+                confidence, using any language, any architecture and any cloud. Pulumi lets teams build Modern Infrastructure
+                as Code using popular programming languages (Python, JavaScript, TypeScript, Go, .NET/C#). It enables
+                deploying infrastructure and applications together through a unified delivery process. Finally, teams
+                can manage cloud applications with Policy as Code, better visibility, and controls.
+            </p>
+
+            <div class="mt-8">
+                <event-session-registration-modal
+                    modal-title="Register Now"
+                    button-text="Register"
+                    button-class="btn-primary"
+                    event-sessions="{{ .Params.registration.main | jsonify }}"
+                >
+                </event-session-registration-modal>
+            </div>
+        </div>
+    </section>
+
+    <section id="ctas" class="container mx-auto py-16">
+        <div class="flex flex-wrap items-stretch">
+            <div class="w-full lg:w-1/2 p-3">
+                <div class="h-full card white-background p-6">
+                    <h3>Connect with Peers on GitHub</h3>
+                    <p class="mb-8">Pulumi open source code is available to all. Explore what we are working on and interact with the community.</p>
+                    <a href="https://github.com/pulumi/pulumi" target="_blank" rel="noopener noreferrer" class="btn-primary">github.com/pulumi</a>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-1/2 p-3">
+                <div class="h-full card white-background p-6">
+                    <h3>Live Q&A with Pulumi DAs</h3>
+                    <p class="mb-8">Ask questions when then conference is happening, get answers, and join discussions.</p>
+                    <a href="https://twitter.com/hashtag/PulumiUP" target="_blank" rel="noopener noreferrer" class="btn-primary">#PulumiUP</a>
+                </div>
+            </div>
         </div>
     </section>
 {{ end }}
