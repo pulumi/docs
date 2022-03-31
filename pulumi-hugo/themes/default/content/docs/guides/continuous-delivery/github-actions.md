@@ -113,7 +113,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: 3.6
+          python-version: 3.9
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -251,7 +251,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: 3.6
+          python-version: 3.9
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -464,7 +464,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: 3.6
+          python-version: 3.9
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -619,7 +619,7 @@ jobs:
           fetch-depth: 1
       - uses: actions/setup-python@v2
         with:
-          python-version: 3.6
+          python-version: 3.9
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -782,7 +782,7 @@ jobs:
           fetch-depth: 1
       - uses: actions/setup-python@v2
         with:
-          python-version: 3.6
+          python-version: 3.9
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
