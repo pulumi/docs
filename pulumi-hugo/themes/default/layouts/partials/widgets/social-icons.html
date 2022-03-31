@@ -10,7 +10,7 @@
     <ul class="list-none p-0 inline-flex items-center">
         {{ range $idx, $platform := $platforms }}
             {{ if (index $socialIdentities $platform) }}
-                <li class="mr-3">
+                <li class="{{ if lt $idx (sub (len $platforms) 1) }}mr-3{{ end }}">
                     <a data-track="{{ $platform | urlize }}" href="{{ index $platformUrlPrefixes $idx }}/{{ index $socialIdentities $platform }}">
                         <i class="fab fa-{{ $platform }}"></i>
                     </a>
