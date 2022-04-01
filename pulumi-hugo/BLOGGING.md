@@ -20,7 +20,9 @@ proceed to the next section.
 
 ## Make a New Post
 
-1. Resist the temptation to copy-and-tweak an existing post! Instead, run the following
+1. Move onto a new branch for your blog post using `git checkout -b initials/your-blog-post` (replace initials with your initials, and replace your-blog-post with the name of your blog post). 
+
+2. Resist the temptation to copy-and-tweak an existing post! Instead, run the following
 command into the terminal (at the root of the project). This will generate a new file,
 including all the required frontmatter parameters.
 
@@ -75,7 +77,7 @@ including all the required frontmatter parameters.
 **Canonical link**
 If you are posting a blog that originated somewhere else (for example, a syndicated community post) you will want to add the setting `canonical_url` for the URL where the blog post originated.
 
-2. If you don't already have a [TOML](https://github.com/toml-lang/toml) file [in the `team` directory](https://github.com/pulumi/docs/tree/master/data/team/team) of the repo, create one now. For Pulumi employees, that file should look something like this:
+3. If you don't already have a [TOML](https://github.com/toml-lang/toml) file [in the `team` directory](https://github.com/pulumi/docs/tree/master/data/team/team) of the repo, create one now. For Pulumi employees, that file should look something like this:
 
    ```
    id = "christian-nunciato"
