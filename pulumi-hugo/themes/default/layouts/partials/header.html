@@ -1,4 +1,71 @@
-<nav class="top-nav-bar transition-all">
+{{ if hasPrefix .RelPermalink "/docs/" }}
+    <nav class="top-nav-bar docs transition-all px-4 py-2.5">
+        <div class="top-nav-container lg:container lg:px-4 text-white">
+            <div data-track="header-pulumi-logo" class="logo-nav-button" aria-haspopup="true" aria-controls="logo-nav-menu">
+                <img class="h-6" src="/images/logo/logo-on-black.svg" alt="Pulumi logo">
+                <i class="fa fa-chevron-down ml-4 pr-1 hidden lg:block"></i>
+                <div class="flex-1"></div>
+                <i class="lg:hidden fa fa-bars text-white text-2xl mobile-menu-toggle-icon"></i>
+                <i class="lg:hidden hidden fa fa-times text-white text-2xl mobile-menu-toggle-icon"></i>
+            </div>
+            <ul id="logo-nav-menu" role="menu" class="logo-nav-menu hidden">
+                <li role="none"><a role="menuitem" href="/">Pulumi Home</a></li>
+                <li role="none"><a role="menuitem" href="{{ relref . " /docs/get-started" }}">Get Started</a></li>
+                <li role="none"><a role="menuitem" href="{{ relref . " /cloud-engineering" }}">Cloud Engineering</a></li>
+                <li role="none"><a role="menuitem" href="{{ relref . " /product" }}">Products</a></li>
+                <li role="none"><a role="menuitem" href="{{ relref . " /pricing" }}">Pricing</a></li>
+                <li role="none"><a role="menuitem" href="{{ relref . " /docs" }}">Docs</a></li>
+                <li role="none"><a role="menuitem" href="{{ relref . " /blog" }}">Blog</a></li>
+                <li role="none"><a role="menuitem" href="{{ relref . " /learn" }}">Learn Pulumi</a></li>
+                <li role="none"><a role="menuitem" href="{{ relref . " /resources" }}">Events & Workshops</a></li>
+                <ul role="menu" class="sm:hidden">
+                    <li role="none"><a role="menuitem" href="https://github.com/pulumi/pulumi">GitHub</a></li>
+                    <li role="none"><a role="menuitem" href="https://slack.pulumi.com">Slack</a></li>
+                    <li role="none"><a role="menuitem" href="{{ relref . " /registry" }}">Registry</a></li>
+                    <li role="none"><a role="menuitem" href="https://app.pulumi.com">Sign In</a></li>
+                </ul>
+            </ul>
+            <a class="get-started-header-button" data-track="get-started-practitioner-nav" href="{{ relref . " /docs/get-started" }}">Get Started</a>
+            <div class="flex-1"></div>
+            <ul class="hidden w-full lg:flex lg:w-1/2 justify-end items-center order-first lg:order-last">
+                <li class="github-widget mr-8">
+                    <a data-track="header-github-pulumi" class="github-button" href="https://github.com/pulumi/pulumi"
+                        data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">
+                        Star
+                    </a>
+                </li>
+                <li class="mr-8">
+                    <a data-track="header-slack" href="https://slack.pulumi.com/">
+                        <i class="fab fa-slack"></i>
+                        Slack
+                    </a>
+                </li>
+                <li class="mr-8">
+                    <a data-track="header-github" href="{{ relref . " /docs" }}">
+                        <i class="fas fa-book mr-0.5"></i>
+                        Docs
+                    </a>
+                </li>
+                <li class="mr-8">
+                    <a data-track="header-github" href="{{ relref . " /registry" }}">
+                        <i class="fas fa-archive mr-0.5"></i>
+                        Registry
+                    </a>
+                </li>
+                <li><a data-track="header-console" href="https://app.pulumi.com/" target="_blank">
+                        <i class="fas fa-user-circle"></i>
+                        Sign In
+                    </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header-container">
+        {{ partial "docs/search.html" . }}
+    </div>
+
+{{ else }}
+  <nav class="top-nav-bar transition-all">
     <div class="top-nav-container lg:container lg:px-4">
         {{ partial "banner" . }}
 
@@ -167,3 +234,5 @@
         </header>
     </nav>
 </div>
+{{end }}
+

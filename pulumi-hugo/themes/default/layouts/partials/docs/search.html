@@ -1,23 +1,47 @@
 <script>
-    (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-    })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+    (function (w, d, t, u, n, s, e) {
+        w["SwiftypeObject"] = n;
+        w[n] =
+            w[n] ||
+            function () {
+                (w[n].q = w[n].q || []).push(arguments);
+            };
+        s = d.createElement(t);
+        e = d.getElementsByTagName(t)[0];
+        s.async = 1;
+        s.src = u;
+        e.parentNode.insertBefore(s, e);
+    })(window, document, "script", "//s.swiftypecdn.com/install/v2/st.js", "_st");
 
-    _st('install','xxxQB1LC9DE212h8eJmh','2.0.0');
+    _st("install", "xxxQB1LC9DE212h8eJmh", "2.0.0");
 </script>
-<div id="search-container">
-    <div id="search-form">
-        <form class="relative flex">
-            <i class="fas fa-search absolute inset-y-0 flex items-center pl-3 text-gray-500"></i>
-            <input
-                id="search-query"
-                type="text"
-                class="st-default-search-input py-2 px-4 pl-8 text-sm border border-gray-400 focus:border-blue-500 focus:outline-none rounded transition"
-                placeholder="Search the docs" />
-        </form>
+<div class="w-full flex justify-center">
+    <div class="docs-pinned-container hidden md:flex">
+        <div class="docs-pinned ml-5 items-center transition-all hidden">
+            <img class="h-6 mr-16" src="/images/logo/logo-on-white.svg" alt="Pulumi logo" />
+            <div class="get-started-pinned-search-container">
+                <a class="get-started-pinned-search-button" data-track="get-started-pinned-search" href="{{ relref . " /docs/get-started"
+                    }}">Get Started</a>
+            </div>
+        </div>
     </div>
-    <div id="search-results" class="relative">
-
+    <div id="search-container" class="bg-white mt-4 md:mt-0 flex justify-center md:justify-start flex-grow">
+        <div id="search-form" class="text-gray-600 focus-within:text-gray-600 w-10/12 md:ml-10">
+            <form class="relative flex">
+                <input
+                    id="search-query"
+                    type="text"
+                    class="st-default-search-input text-sm transition"
+                    placeholder="Search..."
+                />
+                <button
+                    type="submit"
+                    class="hidden md:block bg-blue-600 font-display font-normal text-white p-2 px-4 rounded-r"
+                >
+                    Search
+                </button>
+            </form>
+            <div id="search-results" class="relative"></div>
+        </div>
     </div>
 </div>
