@@ -107,8 +107,8 @@ get_started:
           link_text: Start Free Trial
 
         - title: Self-Hosted Pulumi Service
-          link: https://app.pulumi.com/site/trial/
-          link_text: Start Free Trial
+          link: /product/self-hosted/#self-hosted-trial
+          link_text: Request Free Trial
 
         - title: Migration Tools
           link: /docs/guides/adopting/
