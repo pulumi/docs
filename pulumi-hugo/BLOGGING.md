@@ -164,6 +164,15 @@ For best results, we suggest the following specs for the `meta_image`, largely b
 
 Remember to replace the `meta_image` placeholder (or remove the property altogether and delete the placeholder `meta.png` file) before submitting your post.
 
+For help creating your `meta_image`, check out our [Build Your Own Meta Image file](https://www.figma.com/file/TnD7nxjIxVvXq8w0W7awPG/Build-Your-Own-Meta-Image?node-id=0%3A1) in Figma. There you’ll find backgrounds, images, and logos to assemble the `meta_image` for your blog post. 
+
+A few things to keep in mind when designing a `meta image`:
+
+   - Avoid placing important text or graphic elements too close to the edges of the frame — elements at the edges may get cropped at some display ratios 
+   - Try to include at least one Pulumi identifier (word mark, Pulumipus) so viewers can tell at a glance that the image belongs to the Pulumi blog
+   - Use dark text on light backgrounds, and light text on dark backgrounds to ensure readability
+   - Remember to zoom out from your image and confirm it looks as you intend at a thumbnail size 
+
 #### Video
 
 To embed a YouTube video, you can use Hugo's built-in [`youtube` shortcode](https://gohugo.io/content-management/shortcodes/#youtube), which takes the video's YouTube ID, obtainable from its public URL on youtube.com:
