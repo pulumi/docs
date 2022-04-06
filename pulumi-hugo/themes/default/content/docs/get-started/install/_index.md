@@ -111,7 +111,7 @@ Alternatively, you can install Pulumi manually. We provide a prebuilt binary for
 
 {{% choosable os windows %}}
 
-Windows 8 and 10 are supported.
+Windows 8 and later are supported.
 
 ### Chocolatey
 
@@ -129,6 +129,24 @@ Subsequent updates can be installed in the usual way:
 > choco upgrade pulumi
 ```
 
+### Winget
+
+Install Pulumi using the [winget-cli](https://github.com/microsoft/winget-cli/) package manager. This is built-in on Windows 11 and later.
+
+```powershell
+> winget install pulumi
+```
+
+To update Pulumi to a more recent version:
+
+```powershell
+> winget upgrade pulumi
+```
+
+### Standalone Installer
+
+You can download the latest [Pulumi Installer for Windows x64](https://github.com/pulumi/pulumi-winget/releases) and run it like any other installer. It will automatically add Pulumi to the path and make it available machine-wide.
+
 ### Installation Script
 
 1. Open a new command prompt window (**WIN+R**: `cmd.exe`):
@@ -143,10 +161,10 @@ This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it
 
 ### Manual Installation
 
-Alternatively, you can install Pulumi manually.
+Alternatively, you can install Pulumi manually using binaries built for Windows x64.
 
 <!-- markdownlint-disable url -->
-1. Download [Pulumi {{< latest-version >}} for Windows x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip). For prior versions and release notes, see the [Available Versions]({{< relref "/docs/get-started/install/versions" >}}) page.
+1. Download [Pulumi {{< latest-version >}} binaries for Windows x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip). For prior versions and release notes, see the [Available Versions]({{< relref "/docs/get-started/install/versions" >}}) page.
 <!-- markdownlint-enable url -->
 
 1. Unzip the file and extract the contents to a folder such as `C:\pulumi`.
