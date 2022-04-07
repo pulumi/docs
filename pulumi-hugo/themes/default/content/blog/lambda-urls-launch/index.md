@@ -15,13 +15,12 @@ meta_desc: Today, the AWS team announced HTTPS endpoint support for your Lambda 
 meta_image: aws_meta.png
 
 authors:
-    - kat-cosgrove
+  - kat-cosgrove
 
 tags:
-    - aws
-    - features
-    - launches
-
+  - aws
+  - features
+  - launches
 ---
 
 Since its introduction in 2014, the AWS Lambda service has steadily grown from ‘functions as a service’ to a powerful serverless platform that enables cloud engineers to run code without provisioning or managing underlying infrastructure.
@@ -34,11 +33,11 @@ Today, the AWS team announced [AWS Lambda Function URLs](http://aws.amazon.com/b
 
 ### Why Use Function URLs for AWS Lambda?
 
-Embedding URL support into Lambda functions is a big productivity boost compared to alternative methods such as configuring Amazon API Gateway to provide an HTTPS endpoint for your Lambda functions.  Here are some common use cases for configuring, monitoring, and observing your function URLs:
+Embedding URL support into Lambda functions is a big productivity boost compared to alternative methods such as configuring Amazon API Gateway to provide an HTTPS endpoint for your Lambda functions. Here are some common use cases for configuring, monitoring, and observing your function URLs:
 
 #### Easy-to-configure monitoring
 
-Since AWS Lambda is integrated with AWS CloudTrail, you can view recent events in event history or deliver CloudTrail events to an Amazon S3 bucket. For each request to AWS Lambda authorized via IAM, you can track useful information such as the IP address and the user/role or the requestor.  Aggregated metrics are also sent to Amazon CloudWatch - enabling you to track the number of requests to each URL, errors by status code (4xx and 5xx), and function latency.
+Since AWS Lambda is integrated with AWS CloudTrail, you can view recent events in event history or deliver CloudTrail events to an Amazon S3 bucket. For each request to AWS Lambda authorized via IAM, you can track useful information such as the IP address and the user/role or the requestor. Aggregated metrics are also sent to Amazon CloudWatch - enabling you to track the number of requests to each URL, errors by status code (4xx and 5xx), and function latency.
 
 #### Simplified throttling
 
@@ -46,7 +45,7 @@ You can configure [reserved concurrency](https://docs.aws.amazon.com/lambda/late
 
 #### Simple access controls
 
-By default, Lambda URLs use AWS Identity and Access Management (IAM) for authorization, but you can also disable  IAM authentication - enabling your function code to handle auth however you like. Function URLs also support Cross Origin Resource Sharing configuration options.
+By default, Lambda URLs use AWS Identity and Access Management (IAM) for authorization, but you can also disable IAM authentication - enabling your function code to handle auth however you like. Function URLs also support Cross Origin Resource Sharing configuration options.
 
 In short, Lambda Function URLs give you an easier way to configure, deploy and manage an HTTPS endpoint for your functions than setting up a full API Gateway. If you need more advanced options such as [per-client throttling](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html), then it’s worth exploring API Gateway features for managing endpoints for your Lambda functions.
 
@@ -54,48 +53,51 @@ In short, Lambda Function URLs give you an easier way to configure, deploy and m
 
 Ready to try out Function URLs for yourself? A function URL can be applied to any function alias from the AWS Console, CLI, or other Lambda API -- including from your Pulumi programs! Let’s see what that looks like:
 
-{{< chooser language "typescript" / >}}
+{{< chooser language "typescript, python, csharp, go" / >}}
 
 {{% choosable language typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws"
+import * as aws from "@pulumi/aws";
 import * as awsnative from "@pulumi/aws-native";
 
 const lambdaRole = new awsnative.iam.Role("lambdaRole", {
-    assumeRolePolicyDocument: {
-        "Version": "2012-10-17",
-        "Statement": [
-            {
-                "Action": "sts:AssumeRole",
-                "Principal": {
-                    "Service": "lambda.amazonaws.com",
-                },
-                "Effect": "Allow",
-                "Sid": "",
-            },
-        ],
-    },
+  assumeRolePolicyDocument: {
+    Version: "2012-10-17",
+    Statement: [
+      {
+        Action: "sts:AssumeRole",
+        Principal: {
+          Service: "lambda.amazonaws.com",
+        },
+        Effect: "Allow",
+        Sid: "",
+      },
+    ],
+  },
 });
 
-const lambdaRoleAttachment = new aws.iam.RolePolicyAttachment("lambdaRoleAttachment", {
+const lambdaRoleAttachment = new aws.iam.RolePolicyAttachment(
+  "lambdaRoleAttachment",
+  {
     role: pulumi.interpolate`${lambdaRole.roleName}`,
     policyArn: aws.iam.ManagedPolicy.AWSLambdaBasicExecutionRole,
-});
+  }
+);
 
-const helloFunction = new awsnative.lambda.Function('helloFunction', {
-    role: lambdaRole.arn,
-    runtime: "nodejs14.x",
-    handler: "index.handler",
-    code: {
-        zipFile: `exports.handler = function(event, context, callback){ callback(null, {"response": "Hello "}); };`,
-    },
+const helloFunction = new awsnative.lambda.Function("helloFunction", {
+  role: lambdaRole.arn,
+  runtime: "nodejs14.x",
+  handler: "index.handler",
+  code: {
+    zipFile: `exports.handler = function(event, context, callback){ callback(null, {"response": "Hello "}); };`,
+  },
 });
 
 const lambdaUrl = new awsnative.lambda.Url("test", {
-    targetFunctionArn: helloFunction.arn,
-    authType: awsnative.lambda.UrlAuthType.None,
+  targetFunctionArn: helloFunction.arn,
+  authType: awsnative.lambda.UrlAuthType.None,
 });
 
 export const url = lambdaUrl.functionUrl;
@@ -103,7 +105,206 @@ export const url = lambdaUrl.functionUrl;
 
 {{% /choosable %}}
 
-In the above code, we’re doing two things: creating a Lambda function and configuring a function URL for it. Using Pulumi to do this brings your infrastructure into a format much more familiar for most developers. This approach will work for any of the modern programming languages Pulumi supports.
+{{% choosable language python %}}
+
+```python
+import json
+import pulumi
+import pulumi_aws as aws
+import pulumi_aws_native as aws_native
+
+lambda_role = aws_native.iam.Role("lambda_role",
+                                  assume_role_policy_document=json.dumps({
+                                      "Version": "2012-10-17",
+                                      "Statement": [
+                                          {
+                                              "Action": "sts:AssumeRole",
+                                              "Principal": {
+                                                  "Service": "lambda.amazonaws.com",
+                                              },
+                                              "Effect": "Allow",
+                                              "Sid": "",
+                                          },
+                                      ],
+                                  })
+                                  )
+
+lambda_role_attachment = aws.iam.RolePolicyAttachment("lambda_role_attachment",
+                                                      role=pulumi.Output.concat(
+                                                          lambda_role.role_name),
+                                                      policy_arn="arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+                                                      )
+
+hello_function = aws_native.lambda_.Function("test",
+                                             runtime="nodejs14.x",
+                                             role=lambda_role.arn,
+                                             handler="index.handler",
+                                             code=aws_native.lambda_.FunctionCodeArgs(
+                                                 zip_file="exports.handler = function(event, context, callback){ callback(null, {'response': 'Hello'}); };",
+                                             ),
+                                             )
+
+lambda_url = aws_native.lambda_.Url("test",
+                                    target_function_arn=hello_function.arn,
+                                    auth_type=aws_native.lambda_.UrlAuthType.NONE
+                                    )
+
+pulumi.export("url", lambda_url.function_url)
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp%}}
+
+```csharp
+using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Aws = Pulumi.Aws;
+using AwsNative = Pulumi.AwsNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var lambdaRole = new AwsNative.IAM.Role("lambdaRole", new AwsNative.IAM.RoleArgs
+        {
+            AssumeRolePolicyDocument = JsonSerializer.Serialize(new Dictionary<string, object?>
+            {
+                { "Version", "2012-10-17" },
+                { "Statement", new[]
+                    {
+                        new Dictionary<string, object?>
+                        {
+                            { "Action", "sts:AssumeRole" },
+                            { "Effect", "Allow" },
+                            { "Sid", "" },
+                            { "Principal", new Dictionary<string, object?>
+                            {
+                                { "Service", "lambda.amazonaws.com" },
+                            } },
+                        },
+                    }
+                 },
+            }),
+        });
+
+        var lambdaRoleAttachment = new Aws.Iam.RolePolicyAttachment("lambdaRoleAttachment", new Aws.Iam.RolePolicyAttachmentArgs
+        {
+            Role = Pulumi.Output.Format($"{lambdaRole.RoleName}"),
+            PolicyArn = Aws.Iam.ManagedPolicy.AWSLambdaBasicExecutionRole.ToString()
+        });
+
+        var helloFunction = new AwsNative.Lambda.Function("hellofunction", new AwsNative.Lambda.FunctionArgs
+        {
+            Role = lambdaRole.Arn,
+            Runtime = "nodejs14.x",
+            Handler = "index.handler",
+            Code = new AwsNative.Lambda.Inputs.FunctionCodeArgs
+            {
+                ZipFile = "exports.handler = function(event, context, callback){ callback(null, {\"response\": \"Hello \"}); };"
+            }
+        });
+
+        var lambdaUrl = new AwsNative.Lambda.Url("test", new AwsNative.Lambda.UrlArgs
+        {
+            TargetFunctionArn = helloFunction.Arn,
+            AuthType = AwsNative.Lambda.UrlAuthType.None
+        });
+
+        this.Url = lambdaUrl.FunctionUrl;
+    }
+
+    [Output]
+    public Output<string> Url { get; set; }
+}
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"encoding/json"
+
+	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iam"
+	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/lambda"
+	awsiam "github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+
+		lambdaAssumeRolePolicy, err := json.Marshal(map[string]interface{}{
+			"Version": "2012-10-17",
+			"Statement": []map[string]interface{}{
+				map[string]interface{}{
+					"Action": "sts:AssumeRole",
+					"Effect": "Allow",
+					"Sid":    "",
+					"Principal": map[string]interface{}{
+						"Service": "lambda.amazonaws.com",
+					},
+				},
+			}})
+		if err != nil {
+			return err
+		}
+
+		lambdaRole, err := iam.NewRole(ctx, "lambdaRole", &iam.RoleArgs{
+			AssumeRolePolicyDocument: pulumi.String(lambdaAssumeRolePolicy),
+		})
+		if err != nil {
+			return err
+		}
+
+		_, err = awsiam.NewRolePolicyAttachment(ctx, "lambdaRoleAttachment", &awsiam.RolePolicyAttachmentArgs{
+			Role:      lambdaRole.RoleName,
+			PolicyArn: awsiam.ManagedPolicyAWSLambdaBasicExecutionRole,
+		})
+		if err != nil {
+			return err
+		}
+
+		helloFunction, err := lambda.NewFunction(ctx, "helloFunction", &lambda.FunctionArgs{
+			Role:    lambdaRole.Arn,
+			Runtime: pulumi.String("nodejs14.x"),
+			Handler: pulumi.String("index.handler"),
+			Code: &lambda.FunctionCodeArgs{
+				ZipFile: pulumi.String("exports.handler = function(event, context, callback){ callback(null, {\"response\": \"Hello \"}); };"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+
+		url, err := lambda.NewUrl(ctx, "test", &lambda.UrlArgs{
+			TargetFunctionArn: helloFunction.Arn,
+			AuthType:          lambda.UrlAuthTypeNone,
+		})
+
+		// Export the name of the bucket
+		ctx.Export("url", url.FunctionUrl)
+		return nil
+	})
+}
+
+```
+
+{{% /choosable %}}
+
+In the above code, we’re doing a couple of things:
+
+1. Creating a role for the Lambda function to use and assigning an AWS managed policy to it
+1. Creating a Lambda function and configuring a function URL for it
+
+Using Pulumi to do this brings your infrastructure into a format much more familiar for most developers. This approach will work for any of the modern programming languages Pulumi supports.
 
 We’ve named the Lambda function `helloFunction`, selected a runtime of nodeJS, and given it a tiny bit of code to run -- a single function that, when called, returns “Hello.” Next, we’re giving it a function URL with no authorization and exporting the URL.
 
