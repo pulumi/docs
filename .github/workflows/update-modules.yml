@@ -1,0 +1,52 @@
+name: "Scheduled jobs: Update Hugo modules"
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.x'
+
+      - name: Install Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.17.x
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.96.0'
+          extended: true
+
+      - name: Check out branch
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PULUMI_BOT_TOKEN }}
+
+      - name: Fetch the latest Hugo modules from member repos
+        run: |
+          hugo mod get github.com/pulumi/theme@release
+          hugo mod get github.com/pulumi/pulumi-hugo/themes/default
+          hugo mod get github.com/pulumi/registry/themes/default
+
+      - name: Identify relevant commits
+        run: |
+            make ensure
+            echo 'NEW_COMMITS<<EOF' >> $GITHUB_ENV
+            node scripts/get-module-diff-details.js >> $GITHUB_ENV
+            echo 'EOF' >> $GITHUB_ENV
+
+      - name: Commit any changes to go.mod/go.sum
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: go.*
+          commit_message: |
+            Bring in the latest content from Hugo module repos, including:
+
+            ${{ env.NEW_COMMITS }}
