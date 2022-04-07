@@ -4,8 +4,8 @@ meta_desc: Pulumi and AWS CloudFormation are alike in some ways, but different i
 linktitle: AWS CloudFormation
 menu:
   intro:
-    parent: templates
-    weight: 1
+    parent: vs
+    weight: 2
 ---
 
 <style>

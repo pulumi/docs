@@ -4,8 +4,8 @@ meta_desc: Pulumi and AWS CDK are alike in some ways, but different in many othe
 linktitle: AWS CDK
 menu:
   intro:
-    parent: transpilers
-    weight: 1
+    parent: vs
+    weight: 3
 ---
 
 <style>
