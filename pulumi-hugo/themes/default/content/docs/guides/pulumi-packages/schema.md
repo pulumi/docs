@@ -149,7 +149,7 @@ An object type.
 | `properties`  | [`map[Property]`](#property)                    | No       | Properties, if present, is a map from property name to Property that describes the type's properties.                                                             |
 | `type`        | `string`                                        | No       | Type must be "object" if this is an object type, or the underlying type for an enum.                                                                              |
 | `required`    | `array[string]`                                 | No       | Required, if present, is a list of the names of an object type's required properties. These properties must be set for inputs and will always be set for outputs. |
-| `language`    | [`map[ObjectTypeLanguge]`](#objecttypelanguage) | No       | Language specifies additional language-specific data about the type.                                                                                              |
+| `language`    | [`map[ObjectTypeLanguage]`](#objecttypelanguage) | No       | Language specifies additional language-specific data about the type.                                                                                              |
 
 ### ComplexType
 
