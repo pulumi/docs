@@ -13,7 +13,7 @@ First, be sure to read our [contributing guide](CONTRIBUTING.md) and review our 
 We build the Pulumi website statically with Hugo, manage our Node.js dependencies with Yarn, and write most of our documentation in Markdown. Below is a list of the tools you'll need to run the website locally:
 
 * [Go](https://golang.org/) (>= 1.15)
-* [Hugo](https://gohugo.io) (>= 0.89)
+* [Hugo](https://gohugo.io) (>= 0.92)
 * [Node.js](https://nodejs.org/en/) (>= 1.14)
 * [Yarn](https://classic.yarnpkg.com/en/) (1.x)
 
@@ -107,11 +107,11 @@ Swiftype is how we manage our search experience for docs and Registry.  The [Swi
 
 ### Swiftype console
 
-Visit [the Swiftype console](https://app.swiftype.com/) for information specific to our search implementation: the date and time of the most recent crawl, any customizations we have done of result rankings for specific search terms, synonyms we have set for specific search terms, or weighting of custom meta tags. 
+Visit [the Swiftype console](https://app.swiftype.com/) for information specific to our search implementation: the date and time of the most recent crawl, any customizations we have done of result rankings for specific search terms, synonyms we have set for specific search terms, or weighting of custom meta tags.
 
 ### Result rankings
 
-[Rankings](https://swiftype.com/documentation/site-search/guides/result-rankings) let us manually customize how results appear for any query.  Using the console, you can enter a query, and pin certain results to the top or delete results.  
+[Rankings](https://swiftype.com/documentation/site-search/guides/result-rankings) let us manually customize how results appear for any query.  Using the console, you can enter a query, and pin certain results to the top or delete results.
 
 
 ### Fields, meta tags, and weights

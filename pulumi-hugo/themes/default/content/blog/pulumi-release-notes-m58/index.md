@@ -192,7 +192,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-go@v1
         with:
-          go-version: 1.14.x
+          go-version: 1.17.x
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
