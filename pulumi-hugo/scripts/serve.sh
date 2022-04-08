@@ -5,4 +5,4 @@ set -o errexit -o pipefail
 source ./scripts/common.sh
 
 # Just run Hugo.
-hugo serve --buildDrafts --buildFuture | grep -v -e 'WARN .* REF_NOT_FOUND'
+HUGO_BASEURL=http://localhost:1313 hugo serve --buildDrafts --buildFuture | grep -v -e 'WARN .* REF_NOT_FOUND'
