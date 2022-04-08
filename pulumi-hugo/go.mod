@@ -4,8 +4,8 @@ go 1.16
 
 require (
 	github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20211008162151-6e65a2068c3b // indirect
-	github.com/pulumi/registry/themes/default v0.0.0-20220407220815-b25abb92214f // indirect
-	github.com/pulumi/theme v0.0.0-20220406232855-31835b2f9b8f // indirect
+	github.com/pulumi/registry/themes/default v0.0.0-20220408191356-49050def1489 // indirect
+	github.com/pulumi/theme v0.0.0-20220408190516-8a57775e2cfc // indirect
 )
 
 replace github.com/pulumi/pulumi-hugo/themes/default => ./themes/default
