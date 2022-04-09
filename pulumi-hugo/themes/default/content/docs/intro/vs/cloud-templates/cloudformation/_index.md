@@ -50,12 +50,12 @@ The following table summarizes some additional similarities and differences betw
 | [Cloud Native Support](#cloud-native) | Richly typed support for the full cloud-native ecosystem and Kubernetes | AWS only |
 | [Dynamic Provider Support](#dynamic-providers) | Yes | Limited |
 | [OSS License](#license) | Apache License 2.0 | None |
-| [Infrastructure Reuse and Modularity](#reuse) | Flexible and extensible: functions, classes, modules, packages, Component Resources, and more | Limited |
+| [Infrastructure Reuse and Modularity](#reuse) | Flexible and extensible: functions, classes, modules, Component Resources, multi-language packages, and more | Limited |
 | [Testing and Validation](#testing) | Unit, property, and integration testing supported with popular test frameworks | Limited |
 | [Modes of Execution](#modes) | Standard deployments performed with the Pulumi CLI, programmatic deployments through [Automation API]({{< relref "/automation" >}}) | Deployments performed by the CloudFormation service |
 | [Embed within Application Code](#embedding) | Yes, via [Automation API]({{< relref "/automation" >}}) | No |
 | [Third-party CI/CD Integration](#cicd) | Yes | Limited |
-| [Policy as Code](#policy) | Yes | No |
+| [Policy as Code](#policy) | Yes | Limited |
 | [Secrets Management](#secrets) | Built-in support for encrypted secrets, third-party providers supported as well | No built-in support, available through other services |
 | [Drift Detection](#drift-detection) | Yes | Yes |
 | [Stack Configuration and Deployment Environments](#configuration) | Yes | Limited |
@@ -85,7 +85,9 @@ For more information on how Pulumi manages state, or using alternative backends,
 
 ### Provider Support {#providers}
 
-As an AWS product, CloudFormation offers limited support for third-party cloud providers, whereas Pulumi provides first-class support for more than 60 cloud and SaaS providers in addition to AWS, including Microsoft Azure, Google Cloud Platform, Kubernetes, Auth0, CloudFlare, Confluent Cloud, Datadog, DigitalOcean, Docker, GitHub, Kong, MinIO, MongoDB Atlas, PagerDuty, Snowflake, Spot by NetApp, SumoLogic, and many others. Pulumi also has [native providers]({{< relref "/blog/pulumiup-native-providers" >}}) for AWS, Azure, Google, and Kubernetes, which are packages generated from cloud-provider API schemas that provide same-day support for new features as they're released.
+As an AWS product, CloudFormation offers limited support for third-party cloud providers, whereas Pulumi provides first-class support for more than 60 cloud and SaaS providers in addition to AWS, including Microsoft Azure, Google Cloud Platform, Kubernetes, Auth0, CloudFlare, Confluent Cloud, Datadog, DigitalOcean, Docker, GitHub, Kong, MinIO, MongoDB Atlas, PagerDuty, Snowflake, Spot by NetApp, SumoLogic, and many others.
+
+Pulumi also has [native providers]({{< relref "/blog/pulumiup-native-providers" >}}) for AWS, Azure, Google, and Kubernetes. Native providers are packages generated from cloud-provider API schemas that provide same-day support for new features as they're released.
 
 For a full list of the providers we currently support, visit the [Pulumi Registry]({{< relref "/registry/" >}}). To learn more about how you can build providers of your own, see [Pulumi Packages]({{< relref "/docs/guides/pulumi-packages" >}}) or [Dynamic Providers]({{< relref "/docs/intro/concepts/resources/dynamic-providers" >}}).
 
@@ -99,7 +101,7 @@ If you’d like to create a new Pulumi provider, or learn more about how this in
 
 #### Converting CloudFormation Templates to Pulumi {#providers-converting}
 
-We also offer a tool called [cf2pulumi]({{< relref "/cf2pulumi" >}}) that's able to convert a CloudFormation template into a downloadable Pulumi program written in your programming language of choice. To learn more, see [Converting AWS CloudFormation to Pulumi]({{< relref "/docs/guides/adopting/from_aws" >}}) in our Adopting Pulumi user guide.
+We also offer a tool called [cf2pulumi]({{< relref "/cf2pulumi" >}}) that converts CloudFormation templates into a downloadable Pulumi program written in your programming language of choice. To learn more, see [Converting AWS CloudFormation to Pulumi]({{< relref "/docs/guides/adopting/from_aws" >}}) in our Adopting Pulumi user guide.
 
 ### Cloud Native Support {#cloud-native}
 
@@ -109,7 +111,7 @@ To learn more about Pulumi's support for the cloud native ecosystem, see our whi
 
 ### Dynamic Provider Support {#dynamic-providers}
 
-Occasionally you may want to manage a third-party cloud or SaaS resource that isn't yet supported by Pulumi directly, and isn't covered by a community-supported package in the Pulumi Registry or elsewhere. With Dynamic Providers, you can write custom logic into your Pulumi program to extend the Pulumi resource model to include any local or remote resource that can be managed by way of standard `create`, `read`, `update`, and `delete` operations. Similar functionality is possible with CloudFormation custom resources, but these require you to create and manage publicly accessible HTTP endpoints to handle deploy-time requests from the CloudFormation service.
+Occasionally you may want to manage a third-party cloud or SaaS resource that isn't yet supported by Pulumi directly, and isn't covered by a community-supported package in the Pulumi Registry or elsewhere. With Dynamic Providers, you can write custom logic into your Pulumi program to extend the Pulumi resource model to include any local or remote resource that can be managed by way of standard `create`, `read`, `update`, and `delete` operations. Comparable functionality is possible with CloudFormation custom resources, but these require you to create and manage publicly accessible HTTP endpoints to handle deploy-time requests from the CloudFormation service.
 
 To learn more about Dynamic Providers and how to use them, see [Dynamic Providers]({{< relref "docs/intro/concepts/resources/dynamic-providers" >}}).
 
@@ -119,7 +121,7 @@ CloudFormation is a closed-source proprietary service of AWS. Pulumi's open-sour
 
 ### Infrastructure Reuse and Modularity {#reuse}
 
-With CloudFormation, you can codify and reuse infrastructure configuration by using CloudFormation _modules_ --- specialized templates that can be uploaded to the CloudFormation Registry and referenced from within other CloudFormation templates.
+With CloudFormation, you can codify and reuse infrastructure configuration by using CloudFormation modules --- specialized templates that can be uploaded to the CloudFormation Registry and referenced from within other CloudFormation templates.
 
 Pulumi also allows you to create modular and reusable infrastructure building blocks, but it does so by building onto the capabilities of your programming language and its ecosystem. With Pulumi [_components_]({{< relref "/docs/intro/concepts/resources/components" >}}), you can abstract and encapsulate complexity into higher-level software resources that have their own trackable state, appear in diffs, and use a logical name that identifies its resources across deployments. Moreover, with Pulumi Packages, you can author components in one language and make them accessible in any language Pulumi supports, and then list those packages on the public Pulumi Registry, a searchable collection of resource providers published by Pulumi, our partners, and the community.
 
@@ -153,9 +155,9 @@ For more information on how to integrate Pulumi with your CI/CD provider of choi
 
 ### Policy as Code {#policy}
 
-Pulumi CrossGuard gives you the ability to set guardrails that enforce best practices and security compliance, allowing developers to provision infrastructure easily while at the same time adhering to the standards defined by their teams and organizations. Using Policy as Code, you can write flexible business or security policies in any Pulumi-supported language as well as Open Policy Agent (OPA) Rego, and administrators can apply these policies either to individual stacks or to all of the stacks in an organization. CrossGuard is open source and free to use. CloudFormation has no built-in support for policy as code.
+Pulumi CrossGuard gives you the ability to set guardrails that enforce best practices and security compliance, allowing developers to provision infrastructure easily while at the same time adhering to the standards defined by their teams and organizations. Using Policy as Code, you can write flexible business or security policies in any Pulumi-supported language as well as Open Policy Agent (OPA) Rego, and administrators can apply these policies either to individual stacks or to all of the stacks in an organization. CrossGuard is open source and free to use. Comparable functionality is possible through the use of CloudFormation hooks, though the process of building, testing, and using CloudFormation hooks is considerably different.
 
-To learn more, see [Policy as Code ("CrossGuard")]({{< relref "/docs/guides/crossguard/" >}}).
+To learn more about policy as code with Pulumi, see [Policy as Code ("CrossGuard")]({{< relref "/docs/guides/crossguard/" >}}).
 
 ### Secrets Management {#secrets}
 
