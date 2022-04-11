@@ -6,7 +6,7 @@
 		"dockerfile": "Dockerfile",
 		"args": {
 			"VARIANT": "hugo",
-			"VERSION": "0.82.1",
+			"VERSION": "0.96.0",
 			"NODE_VERSION": "16",
 			"GO_VERSION": "1.16.9"
 		}
