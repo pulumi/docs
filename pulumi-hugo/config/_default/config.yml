@@ -96,7 +96,7 @@ markup:
     extensions:
       definitionList: true
       footnote: true
-      linkify: true
+      linkify: false
       strikethrough: true
       table: true
       taskList: true

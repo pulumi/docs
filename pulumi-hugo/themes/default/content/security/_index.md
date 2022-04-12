@@ -1,9 +1,18 @@
 ---
 title: Pulumi Security
 meta_desc: A summary of security topics and how they relate to the Pulumi platform.
+layout: security
 ---
 
 Pulumi takes security and privacy matters very seriously. We appreciate that our customers and users place a high degree of confidence and trust in our products and services and we strive to meet those expectations.
+
+## Pulumi Service Security
+
+<!-- markdownlint-disable url -->
+Pulumi Service, our managed service for using Pulumi open source, is multi-tenanted and runs within an AWS Virtual Private Cloud (VPC), whose only Internet-addressable endpoints are https://api.pulumi.com or https://app.pulumi.com. All communications between Pulumi clients and the server are encrypted using TLS. Pulumi is SOC 2 Type II certified.
+<!-- markdownlint-enable url -->
+
+For more details on Pulumi’s product architecture and security practices, please read our security whitepaper (last updated March 29, 2022).
 
 ## Vulnerability Reporting
 
