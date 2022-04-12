@@ -61,7 +61,7 @@ remoteAsset := pulumi.NewRemoteAsset("http://worldclockapi.com/api/json/est/now"
 ```csharp
 using Pulumi;
 
-var fileAsset = new FileAsset("./file.txt);
+var fileAsset = new FileAsset("./file.txt");
 var stringAsset = new StringAsset("Hello, world!");
 var remoteAsset = new RemoteAsset("http://worldclockapi.com/api/json/est/now");
 ```
