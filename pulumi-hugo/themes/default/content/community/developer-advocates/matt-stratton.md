@@ -6,16 +6,31 @@ layout: developer-advocates/single
 aliases:
   - /matty
 talks:
-  - event: DevOpsDays Raleigh 2022
-    title: The Journey From DevOps to Cloud Engineering
-    url: https://devopsdays.org/events/2022-raleigh/program/matt-stratton/
-    date: 2022-04-13T10:00:00.000-07:00
+  - event: SCALE 19x
+    title: Turning Infrastructure Into Software Through Cloud Engineering
+    url: https://www.socallinuxexpo.org/scale/19x/presentations/turning-infrastructure-software-through-cloud-engineering
+    date: 2022-06-28T14:00:00.000-01:00
+    slides: 
+  - event: DevOpsDays Amsterdam
+    title: Charting Your Own Course Through the Cloud Native Landscape
+    url: https://pulumip.us/matty-dod-ams
+    date: 2022-06-23T14:00:00.000-01:00
+    slides: 
+  - event: KubeCon + CloudNativeCon Europe 2022
+    title: Charting Your Own Course Through the Cloud Native Landscape
+    url: https://pulumip.us/matty-kubecon-talk
+    date: 2022-05-20T14:00:00.000-05:00
     slides: 
   - event: DevOpsDays Denver 2022
     title: The Journey From DevOps to Cloud Engineering
     url: https://devopsdays.org/events/2022-denver/program/matty-stratton/
     date: 2022-04-25T08:00:00.000-07:00
     slides: 
+  - event: DevOpsDays Raleigh 2022
+    title: The Journey From DevOps to Cloud Engineering
+    url: https://devopsdays.org/events/2022-raleigh/program/matt-stratton/
+    date: 2022-04-13T10:00:00.000-07:00
+    slides: https://speaking.mattstratton.com/JPe46p/the-journey-from-devops-to-cloud-engineering
   - event: Trajectory 2021
     title: "Kubernetes, You Rainbow-Infused Space Unicorn: What Leslie Knope Can Teach Us About DevOps"
     url: https://devopsdays.org/events/2022-denver/program/matty-stratton/
