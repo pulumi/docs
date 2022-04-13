@@ -1,13 +1,13 @@
 ---
 # Name of the webinar.
 title: "From Zero to Production in Kubernetes"
-meta_desc: "Join Damian Curry & Elijah Zupancic and go from zero to production on Kubernetes by using Python to build abstractions that make getting to production easier."
+meta_desc: "Join David Flanagan & Elijah Zupancic and go from zero to production on Kubernetes by using Python to build abstractions that make getting to production easier."
 
 # A featured webinar will display first in the list.
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: true
+pre_recorded: false
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -50,21 +50,22 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: "https://www.youtube.com/embed/L-8uzn6AdHM"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2021-10-21T14:00:00-07:00
+    sortable_date: 2022-05-10T09:00:00-07:00
     # Duration of the webinar.
-    duration: "1.5 hour"
+    duration: "1 hour"
     # Datetime of the webinar.
-    datetime: "OCTOBER 21st, 2021"
+    datetime: ""
     # Description of the webinar.
     description: |
         Setting up your production Kubernetes environment brings many benefits including scalability and portability for your applications. Before you reach production, It’s important to understand key Kubernetes concepts and architectures available to keep your clusters secure and scalable. Ingress controllers are vital parts of any Kubernetes platform and NGINX ingress controller provides the best in class traffic management solution for cloud native apps and containerized environments.
 
         It’s important to use repeatable mechanisms to handle your ingress objects and controller deployments. Adopting infrastructure as code provides a mechanism to easily deploy production-ready applications in a repeatable manner. In this livestream, we’ll explore how to leverage the power of Python with Pulumi, an infrastructure as code platform to define and manage your Kubernetes deployments and build powerful abstractions that make getting to production easier than ever before.
 
+
     # The webinar presenters
     presenters:
-        - name: Damian Curry
-          role: Business Development Technical Director, NGINX
+        - name: David Flanagan
+          role: Staff Developer Advocate, Pulumi
         - name: Elijah Zupancic
           role: Solutions Architect, NGINX
 
@@ -77,5 +78,5 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: e6b5082c-2ca8-43b7-96fb-6d19a331d554
+    hubspot_form_id: 2e4343b3-5108-4b0b-9361-59674be99e91
 ---

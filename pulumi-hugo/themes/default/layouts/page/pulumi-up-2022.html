@@ -135,6 +135,26 @@
         </div>
     </section>
 
+    <section id="workshops" class="container mx-auto py-16">
+        <h2>Workshops</h2>
+
+        <div class="flex flex-wrap justify-center items-stretch">
+            {{ range .Params.workshops }}
+                <div class="w-full lg:w-1/2 p-3">
+                    <div class="card bg-gray-800 p-6 text-black h-full">
+                        <h3>{{ .title }}</h3>
+                        <p>{{ .description }}</p>
+                        <div class="my-8">
+                            <a href="{{ .url }}" class="btn-secondary">
+                                <span class="text-violet-600">Register Now &#8594</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+
     <section id="why" class="why-attend text-center container mx-auto py-24 px-6 lg:px-0">
         <h2>Why Attend</h2>
         <p>

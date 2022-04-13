@@ -80,6 +80,18 @@ schedule_overview:
 
       <a href="/resources/introduction-to-infrastructure-as-code/" class="underline">Save your spot</a> &#8594;
 
+workshops:
+  - title: From Zero to Production in Kubernetes
+    url: /resources/from-zero-to-production-in-kubernetes/
+    description: |
+      Join David Flanagan & Elijah Zupancic and go from zero to production on Kubernetes by using Python to build abstractions that make getting to production easier.
+
+  - title: Introduction to Infrastructure as Code
+    url: /resources/introduction-to-infrastructure-as-code/
+    description: |
+      In this workshop, we’re going to learn more about cloud computing and Infrastructure as Code by exploring how to use Pulumi to build, configure, and deploy a real-life, modern application using Docker.
+
+
 registration:
     sponsor:
         - hubspot_form_id: ""
