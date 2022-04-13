@@ -1,6 +1,7 @@
 ---
 title: Laura Santamaria
 id: laura-santamaria
+first_name: Laura
 meta_desc: Laura Santamaria is a member of the Developer Advocacy team at Pulumi.
 layout: developer-advocates/single
 aliases:
@@ -33,6 +34,8 @@ talks:
     slides: https://speaking.nimbinatus.com/0Pm51b/engineering-the-cloud-exploring-infrastructure-as-code-in-real-life
 form:
     hubspot_form_id: 87c6f1d4-a928-4298-b4b4-89164561e01b
+giveaway:
+    hubspot_form_id: def7a2d4-6f77-4027-8654-ce10958be85a
 ---
 
 As a Developer Advocate at Pulumi, Laura Santamaria loves to learn and explain how things work, bridging the gaps in engineering disciplines. She is a cohost for [The Hallway Track](https://drunkandretired.com/) podcast, an organizer for DevOpsDays Texas and DevOpsDays Austin, and a co-host for Cloud Austin and Austin DevOps. Previously, Laura worked as a developer advocate at LogDNA and a software developer at Rackspace where, among other things, she owned Deconst, an open-source documentation delivery platform, and MC'ed Rackspace's internal technical conference. Apart from work, taught Python for Women Who Code Austin for many years and has been a returning program committee member for Open Source Summit. Outside of tech, Laura runs, plays with her dogs, throws discs, and watches clouds---the real kind.

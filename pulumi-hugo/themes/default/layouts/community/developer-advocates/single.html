@@ -3,63 +3,216 @@
 {{ end }}
 
 {{ define "main" }}
+    {{ $pageContext := . }}
+
     {{ $personData := index $.Site.Data.team.team .Params.id }}
+    <section class="max-w-5xl container mx-auto my-8 px-4 text-lg font-display">
+        <div class="w-full flex flex-col items-end">
+            <div  class="mb-2">Selected Profile</div>
+            <div class="developer-advocate-nav mb-4">
+                <li class="header-nav-item-drop-down">
+                    <span class="dropdown-title whitespace-nowrap">{{ $personData.name }}</span>
+                    <span class="dropdown-menu-caret"></span>
+                    <div class="header-nav-drop-down-menu">
+                        <ul>
+                            {{ $thisPage := . }}
+                            {{ range $.Site.Data.team.team }}
+                                {{ if (and (eq .status "active") (eq .role "developer-advocate")) }}
+                                    <li>
+                                        {{ $devAdvocatePage := relref $thisPage (printf "/community/developer-advocates/%s" .id) }}
+                                        <a href="{{ $devAdvocatePage }}">
+                                            {{ .name }}
+                                        </a>
+                                    </li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </li>
+            </div>
+            <div>
+                <a class="block text-blue-600 text-sm font-body" href="{{ relref . " /community/developer-advocates" }}">
+                    <i class="fas fa-arrow-left mr-4"></i>
+                    See All Developer Advocates
+                </a>
+            </div>
+        </div>
+    </section>
     <section class="max-w-5xl container mx-auto my-8 px-4 text-lg">
-        <div class="my-8 flex flex-col md:flex-row">
-            <div class="md:w-1/3">
+        <div class="my-8 flex flex-col md:block">
+            <div class="md:w-1/3 float-left md:mr-8">
                 <img class="rounded-full mb-4 shadow-md mx-auto w-64 md:w-auto" src="/images/team/{{ $personData.id }}.jpg" alt="{{ $personData.name }}" >
             </div>
-            <div class="text-center md:text-left md:w-2/3 md:pl-8">
-                <h2 class="mb-1">{{ $personData.name }}</h2>
-                <div class="text-sm text-gray-700 mb-1">
-                    <span class="">{{ $personData.title }}</span>
-                    <span>
-                        <span class="hidden md:inline">&bull; </span>
-                        <a class="block md:inline text-blue-500 underline" href="{{ relref . "/community/developer-advocates" }}">See all developer advocates</a>
-                    </span>
-                </div>
-                {{ partial "widgets/social-icons.html" (dict "social" $personData.social)}}
-                <div class="my-8 text-left">
+            <div class="text-center md:text-left md:w-2/3 float-none inline">
+                <h2 class="mb-0">{{ $personData.name }}</h2>
+                <h3 class="text-xl mt-0 mb-4 font-bold text-gray-700">
+                    {{ $personData.title }}
+                </h3>
+                {{ if $personData.social }}
+                    {{ $socialIdentities := $personData.social }}
+                    {{ $platforms := slice "github" "linkedin" "twitter" }}
+                    {{ $platformUrlPrefixes := slice "https://github.com" "https://www.linkedin.com/in" "https://twitter.com" }}
+                    
+                    <ul class="list-none p-0 inline-flex items-center">
+                        {{ range $idx, $platform := $platforms }}
+                            {{ if (index $socialIdentities $platform) }}
+                                <li class="{{ if lt $idx (sub (len $platforms) 1) }}mr-4{{ end }} text-base">
+                                    <a data-track="{{ $platform | urlize }}"
+                                        href="{{ index $platformUrlPrefixes $idx }}/{{ index $socialIdentities $platform }}"
+                                        target="_blank">
+                                        <i class="fab fa-{{ $platform }} developer-advocate-social {{ $platform }}"></i>
+                                        <span class="text-black hidden sm:inline font-display">@<span class="underline">{{ index $socialIdentities $platform }}</span></span>
+                                    </a>
+                                </li>
+                            {{ end }}
+                        {{ end }}
+                    </ul>
+                {{ end }}
+                <div class="my-8 text-left text-base">
                     {{ .Content }}
                 </div>
             </div>
         </div>
     </section>
 
+    {{ $hasGiveaway := .Params.giveaway.text }}
+    {{ if $hasGiveaway }}
+    <section class="max-w-5xl container mx-auto my-8 px-4 text-lg developer-advocates-giveaway">
+        <div class="card py-12 px-9 relative">
+            <div class="shape-background overflow-hidden developer-advocates-giveaway-section">
+                <div class="shape-container">
+                    <div class="circle-top"></div>
+                    <div class="circle-center"></div>
+                    <div class="circle-bottom"></div>
+                </div>
+            </div>
+            <div class="flex flex-col lg:flex-row md:items-center">
+                <div class="w-full lg:w-1/2">
+                    <h3 class="mb-5 rainbow-text">Join {{ .Params.first_name }}'s Giveaway!</h3>
+                    <div class="text-base leading-8 text-black">{{ .Params.giveaway.text }}</div>
+                    <div class="hs-form hs-form-fg-dark font-normal h-48 text-center flex items-center justify-center mt-6 sm:mt-0">
+                        <pulumi-hubspot-form form-id="{{ .Params.giveaway.hubspot_form_id }}"></pulumi-hubspot-form>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 lg:pl-6 mt-16 lg:mt-0">
+                    <h4 class="text-center text-gray-700 mb-7">Win Pulumi Swag</h4>
+                    <div class="flex justify-center">
+                        <img src="/images/developer-advocates/baseball-cap.svg" alt="Baseball cap" >
+                        <img src="/images/developer-advocates/classic-shirt.svg" alt="Classic shirt" >
+                        <img src="/images/developer-advocates/fitted-shirt.svg" alt="Fitted shirt" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{ end }}
+
     {{ $hasTalks := and (isset .Params "talks") (reflect.IsSlice .Params.talks) }}
     {{ if $hasTalks }}
-        <section class="max-w-6xl container mx-auto my-16 px-4">
-            <h3 class="mb-4">Speaking</h2>
-            <div class="flex bg-gray-200 text-gray-700 text-lg font-display p-4">
-                <div class="w-1/3">Event</div>
-                <div class="w-1/3">Title</div>
-                <div class="w-1/3">Details</div>
-            </div>
-            <ol class="p-0">
-                {{ range $talk := .Params.talks }}
-                    <li class="flex text-sm md:text-base p-4">
-                        <div class="w-1/3">
-                            <a class="text-blue-500 underline" href="{{ $talk.url }}">
-                                {{ $talk.event }}
-                            </a>
+        {{ $pastTalks := slice }}
+        {{ $upcomingTalks := slice }}
+        {{ range $talk := .Params.talks }}
+        {{ $t := (time $talk.date) }}
+            {{ if $t.After now}}
+                {{ $upcomingTalks = $upcomingTalks | append $talk }}
+            {{ else }}
+                {{ $pastTalks = $pastTalks | append $talk }}
+            {{ end }}
+        {{ end }}
+        <section class="developer-advocate-talks max-w-6xl container mx-auto my-16 px-4">
+            <h3 class="mb-4 text-gray-700">Speaking</h2>
+                <div class="text-right text-xl mb-6">
+                    <button id="upcoming-talks-select" class="is-selected">Upcoming</button>
+                    <span>|</span>
+                    <button id="past-talks-select">Past</button>
+                </div>
+                <div id="upcoming-talks">
+                    {{ if ( gt ( len $upcomingTalks) 0 ) }}
+                        <div class="flex bg-gray-200 text-gray-700 text-lg font-display p-4">
+                            <div class="w-1/3 text-gray-800">Event</div>
+                            <div class="w-1/3 text-gray-800">Title</div>
+                            <div class="w-1/3 text-gray-800">Details</div>
                         </div>
-                        <div class="w-1/3">
-                            <span>{{ $talk.title }}</span>
+                    {{ else }}
+                        <div class="flex bg-gray-200 text-gray-700 text-lg font-display p-4">
+                            <div class="w-full text-gray-800 text-center">No events to show</div>
                         </div>
-                        <div class="w-1/3">
-                            <div>
-                                <time time="{{ $talk.date }}">
-                                    {{ time.Format "1/2/2006 @ 3:04 PM" $talk.date }}
-                                </time>
+                    {{ end }}
+                    <ol class="p-0 text-gray-700">
+                        {{ range $talk := $upcomingTalks }}
+                                <li class="flex text-sm md:text-base p-4">
+                                    <div class="w-1/3 pr-4 sm:pr-0">
+                                        <a class="text-blue-500 underline" href="{{ $talk.url }}">
+                                            {{ $talk.event }}
+                                        </a>
+                                    </div>
+                                    <div class="w-1/3 pr-4 sm:pr-10">
+                                        <span>{{ $talk.title }}</span>
+                                    </div>
+                                    <div class="w-1/3">
+                                        <div>
+                                            <time time="{{ $talk.date }}">
+                                                {{ time.Format "1/2/2006 @ 3:04 PM" $talk.date }}
+                                            </time>
+                                        </div>
+                                    </div>
+                                </li>
+                                <hr>
+                        {{ end }}
+                    </ol>
+                </div>
+            
+                <div id="past-talks" class="hidden">
+                    {{ if ( gt ( len $pastTalks) 0 ) }}
+                        <div class="flex bg-gray-200 text-gray-700 text-lg font-display p-4">
+                            <div class="w-1/4 text-gray-800">Event</div>
+                            <div class="w-4/12 sm:w-5/12 text-gray-800">Title</div>
+                            <div class="w-1/4 sm:w-2/12 text-gray-800">Details</div>
+                            <div class="w-2/12 text-gray-800">Slides</div>
+                        </div>
+                    {{ else }}
+                        <div class="flex bg-gray-200 text-gray-700 text-lg font-display p-4">
+                            <div class="w-full text-gray-800 text-center">No events to show</div>
+                        </div>
+                    {{ end }}
+                    <ol class="p-0 text-gray-700">
+                        {{ range $talk := $pastTalks }}
+                        <li class="flex text-sm md:text-base p-4">
+                            <div class="w-1/4 pr-4 sm:pr-0">
+                                <a class="text-blue-500 underline" href="{{ $talk.url }}">
+                                    {{ $talk.event }}
+                                </a>
+                            </div>
+                            <div class="w-4/12 sm:w-5/12 pr-4 sm:pr-10">
+                                <span>{{ $talk.title }}</span>
+                            </div>
+                            <div class="w-1/4 sm:w-2/12">
+                                <div>
+                                    <time time="{{ $talk.date }}">
+                                        {{ time.Format "1/2/2006" $talk.date }}
+                                    </time>
+                                </div>
+                            </div>
+                            <div class="w-2/12">
                                 {{ if $talk.slides }}
-                                    &bull; <a class="text-blue-500 underline" href="{{ $talk.slides }}">Slides</a>
+                                    {{ if $talk.isDownload }}
+                                    <a href="{{ $talk.slides }}" target="_blank">
+                                        <i class="fas fa-download text-blue-500 mr-3"></i>
+                                        <span class="hidden sm:block text-black">Download</span>
+                                    </a>
+                                    {{ else }}
+                                        <a href="{{ $talk.slides }}" target="_blank">
+                                            <i class="fas fa-external-link-alt text-blue-500 mr-2"></i>
+                                            <span class="hidden sm:inline text-black">External Link</span>
+                                        </a>
+                                    {{ end }}
                                 {{ end }}
                             </div>
-                        </div>
-                    </li>
-                    <hr>
-                {{ end }}
-            </ol>
+                        </li>
+                        <hr>
+                        {{ end }}
+                    </ol>
+                </div>
         </section>
     {{ end }}
 
@@ -76,8 +229,8 @@
 
     {{ $hasPosts := gt (len $authorPosts) 0 }}
     {{ if $hasPosts }}
-        <section class="max-w-6xl container mx-auto my-16 px-4 text-lg">
-            <h3 class="mb-4">Recent Blog Posts</h2>
+        <section class="developer-advocate-blog-posts max-w-6xl container mx-auto mt-16 mb-12 px-4 text-lg">
+            <h3 class="mb-4 text-gray-700">Recent Blog Posts</h2>
             <ol class="p-0 flex flex-col lg:flex-row lg:flex-wrap list-none">
                 {{ range first 6 $authorPosts }}
                     <li class="lg:w-1/2 my-8">
@@ -113,24 +266,24 @@
         </section>
     {{ end }}
 
-    <section id="hidden" class="py-8 px-4">
+    <section id="hidden" class="pb-8 px-4 relative">
+        <div class="shape-background overflow-hidden developer-advocates-contact-section">
+            <div class="shape-container">
+                <div class="circle-left"></div>
+                <div class="circle-right"></div>
+            </div>
+        </div>
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl my-6">Get in touch!</h2>
+            <h2 class="text-4xl my-6 text-gray-700">Get in touch!</h2>
             <div class="w-full md:max-w-2xl md:mx-auto">
-                <div class="mt-4 mx-auto md:w-full md:mt-0 p-10 bg-white rounded rounded-lg shadow-lg border border-gray-300">
+                <div class="mt-4 mx-auto md:w-full md:mt-0 p-10 bg-white rounded rounded-lg developer-advocates-contact-us-container">
                     <div class="mx-auto flex justify-center">
-                        <div class="hs-form hs-form-fg-dark font-normal">
+                        <div class="hs-form hs-form-fg-dark font-normal developer-advocates-contact-us">
                             <pulumi-hubspot-form form-id="{{ .Params.form.hubspot_form_id }}"></pulumi-hubspot-form>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="text-center mt-8 mb-16 px-8">
-            <img class="mx-auto max-w-full" src="/images/developer-advocates/backpack-hat-handsup-blue-waterbottle.png" alt="A platypus">
         </div>
     </section>
 {{ end }}

@@ -23,6 +23,9 @@
                             <a href="{{ $authorPage }}">
                                 <img class="rounded mb-4 shadow-md mx-auto" src="/images/team/{{ .id }}.jpg" alt="{{ .name }}" >
                             </a>
+                            <a class="inline-flex" href="{{ $authorPage }}">
+                                <div class="border-2 border-solid border-blue-600 text-blue-600 rounded h-9 w-28 shadow-lg flex items-center justify-center">View Profile</div>
+                            </a>
                             <h2 class="text-3xl {{ if .bio }}cursor-pointer{{ end }} mb-0 text-gray-900" {{ if .bio }}data-toggle="modal" data-target="#{{ .id }}"{{ end }}>
                                 <a href="{{ $authorPage }}" class="text-gray-900">{{ .name }}</a>
                             </h2>

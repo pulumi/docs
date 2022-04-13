@@ -1,6 +1,7 @@
 ---
 title: David Flanagan
 id: david-flanagan
+first_name: David
 meta_desc: David Flanagan is a member of the Developer Advocacy team at Pulumi.
 layout: developer-advocates/single
 aliases:
@@ -18,6 +19,8 @@ talks:
     slides: https://noti.st/rawkode/zWEVI1/the-telegraf-toolbelt
 form:
     hubspot_form_id: 87c6f1d4-a928-4298-b4b4-89164561e01b
+giveaway:
+    hubspot_form_id: 3013a1cb-0c4b-4a9c-93c9-56cfe56516ba
 ---
 
 David is a Staff Developer Advocate at Pulumi, a CNCF Ambassador, a Kubernetes contributor and host of the official Kubernetes Office Hours, YouTuber at the Rawkode Academy, and a beloved husband and father to his wife, two amazing kids, and a plethora of animals which include a dog, five chinchillas, a degu, and a ferret called Zelda.
