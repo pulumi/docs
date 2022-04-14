@@ -17,6 +17,12 @@ We build the Pulumi website statically with Hugo, manage our Node.js dependencie
 * [Node.js](https://nodejs.org/en/) (>= 1.14)
 * [Yarn](https://classic.yarnpkg.com/en/) (1.x)
 
+### VS Code devcontainer
+
+Alternatively you can use the [devcontainer environment](https://code.visualstudio.com/docs/remote/create-dev-container) included in this repo. Open this folder in [VS Code](https://code.visualstudio.com/) and run the `Remote-Containers: Reopen in container` command in the [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette).
+
+Within the container you can run the various make commands explained below. Port 1313 is forwarded into the container so you can use your normal browser to access the results of `make serve` at http://localhost:1313.
+
 ## Installing prerequisites
 
 Run `make ensure` to check for the appropriate tools and versions and install any dependencies. The script will let you know if you're missing anything important.
