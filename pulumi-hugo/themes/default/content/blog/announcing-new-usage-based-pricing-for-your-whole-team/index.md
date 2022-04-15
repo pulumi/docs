@@ -24,7 +24,7 @@ New customers can sign up for Pulumi Team Edition starting today.  Existing cust
 The net result is three Pulumi editions available now:
 
 * **Individual Edition**: our Community Edition is being rebranded but remains unchanged, and is free for unlimited individual use.
-* **Team Edition**: up to 25 members can collaborate on projects with unlimited deployments, unlimited stacks and unlimited update history. This plan includes 150k free Pulumi Credits per month, letting you manage up to 200 cloud resources for free every month. After that, additional Pulumi Credits cost only $0.00025 each.
+* **Team Edition**: up to 25 members can collaborate on projects with unlimited deployments, unlimited stacks and unlimited update history. This plan includes 150k free Pulumi Credits per month, letting you manage up to 200 cloud resources for free every month. After that, additional Pulumi Credits cost only $0.00075 each.
 * **Enterprise Edition**: for large organizations that need unlimited users, unlimited teams, Role-Based Access Control, SAML/SSO, policy enforcement, audit logging, and 12x5 or 24x7 support for their production deployments.
 
 Full details of the new editions are available on our [pricing page]({{< relref "/pricing" >}}).
