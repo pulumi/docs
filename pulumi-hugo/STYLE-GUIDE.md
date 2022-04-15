@@ -66,7 +66,7 @@ This bit of info is serious. If you missed it, bad things could happen.
 ## Content Design
 
 * Lead with content that excites and engages, end with exactly one call-to-action.
-* Try and save links for the alt 75% of the content.
+* Try and save links for the last 75% of the content.
 * Use headings and lists to make content scannable and consumable.
 * Use visauls: code, graphs, videos, architecture diagrams, etc.
 * Highlight important points.
