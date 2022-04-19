@@ -65,7 +65,7 @@ main:
     description: |
         **Location**: [Sercotel Sorolla Palace](https://www.sercotelhoteles.com/hotel-sorolla-palace/)
 
-        **Distance from Venue**: 3.38 km 4-minute drive | 23 minutes on public transportation | 35-minute walk
+        **Distance from KubeCon Venue**: 3.38 km 4-minute drive | 23 minutes on public transportation | 35-minute walk
 
         Pulumi’s ability to use familiar programming languages for declarative deployments mean you can very quickly deploy Kubernetes clusters and workloads. In this half day workshop, we’ll examine how you can use Pulumi’s Typescript SDK to create reusable abstractions with Kubernetes that make sense to your developers.
 
