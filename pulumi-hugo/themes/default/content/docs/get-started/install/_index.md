@@ -27,12 +27,13 @@ This page contains detailed instructions for [installing Pulumi](#installing-pul
 
 macOS Sierra (10.12) or later is required.
 
-### Homebrew
+### Official Pulumi Homebrew Tap
 
-You can install Pulumi through the [Homebrew package manager](https://brew.sh/):
+You can install Pulumi through the [Homebrew package manager](https://brew.sh/) and using our official
+[Pulumi Homebrew Tap](https://github.com/pulumi/homebrew-tap/)
 
 ```bash
-$ brew install pulumi
+$ brew install pulumi/tap/pulumi
 ```
 
 This will install the `pulumi` CLI to the usual place (often `/usr/local/bin/pulumi`) and add it to your path.
@@ -41,6 +42,15 @@ Subsequent updates can be installed in the usual way:
 
 ```bash
 $ brew upgrade pulumi
+```
+
+### Community Homebrew
+
+A Pulumi formula is available on the Community Homebrew. If you do not have the Pulumi tap installed, then you can
+still install Pulumi from homebrew using the command:
+
+```bash
+$ brew install pulumi
 ```
 
 ### MacPorts
