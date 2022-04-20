@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "CI/CD Pipelines for Kubernetes Apps with Pulumi & Codefresh"
-meta_desc: "In this workshop we will cover how to set up automated CI/CD pipelines for Kubernetes applications using Pulumi and Codefresh."
+title: "GitOps with GitHub Actions and the Pulumi Operator"
+meta_desc: "In this workshop you will learn how to implement powerful Github Action workflows using Pulumi and the Pulumi Kubernetes Operator."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -34,12 +34,12 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "ci-cd-pipelines-for-kubernetes-apps-with-codefresh"
+url_slug: "gitops-with-github-actions-and-the-pulumi-operator"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "CI/CD Pipelines for Kubernetes Apps with Pulumi & Codefresh"
+    title: "GitOps with GitHub Actions and the Pulumi Operator"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
@@ -52,34 +52,34 @@ hero:
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "CI/CD Pipelines for Kubernetes Apps with Pulumi & Codefresh"
+    title: "GitOps with GitHub Actions and the Pulumi Operator"
     # URL for embedding a URL for ungated webinars.
-    # youtube_url: "https://www.youtube.com/embed/c7TUy-0N5OA"
+    youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-06-22T09:30:00-08:00
+    sortable_date: 2022-06-21T09:00:00-07:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.
     datetime: ""
     # Description of the webinar.
     description: |
-        Leading cloud engineering organizations are automating infrastructure deployments using Pulumi’s infrastructure as code platform and Codefresh makes it easy to manage infrastructure code as part of your continuous delivery process.
+        The Pulumi Kubernetes Operator enables Kubernetes users to create a Pulumi Stack as a first-class Kubernetes API resource, and use the StackController to drive updates. Combining GitHub Actions with the Pulumi Kubernetes Operator helps you to implement powerful GitOps workflows and automation for both your infrastructure and workloads.
 
     # The webinar presenters
     presenters:
-        - name: Mitch Gerdisch
-          role: Senior Sales Engineer, Pulumi
-        - name: Kostis Kapelonis
-          role: Developer Advocate, Codefresh
+        - name: David Flanagan
+          role: Staff Developer Advocate, Pulumi
+        - name: Rizel Scarlett
+          role: Developer Advocate, Github
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - The basics of CI/CD using Codefresh.
-        - How to declare cloud resources using Pulumi and your favorite programming languages.
-        - How to define a simple pipeline for Kubernetes deployments.
+        - How to stand up a Kubernetes cluster the easy way with Pulumi
+        - Configuring automation steps with GitHub Actions
+        - Deploying a workload into your cluster using the Pulumi Kubernetes Operator
 
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: "3a85893b-b023-4467-9e49-03619ce19e6d"
+    hubspot_form_id: "72d36924-efc8-4e3b-a9ac-4cfe584da3a7"
 ---

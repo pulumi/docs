@@ -91,6 +91,16 @@ workshops:
     description: |
       In this workshop, we’re going to learn more about cloud computing and Infrastructure as Code by exploring how to use Pulumi to build, configure, and deploy a real-life, modern application using Docker.
 
+  - title: CI/CD Pipelines for Kubernetes Apps with Pulumi & Codefresh
+    url: /resources/ci-cd-pipelines-for-kubernetes-apps-with-codefresh/
+    description: |
+      In this workshop we will cover how to set up automated CI/CD pipelines for Kubernetes applications using Pulumi and Codefresh.
+
+  - title: GitOps with GitHub Actions and the Pulumi Operator
+    url: /resources/gitops-with-github-actions-and-the-pulumi-operator/
+    description: |
+      In this workshop you will learn how to implement powerful Github Action workflows using Pulumi and the Pulumi Kubernetes Operator.
+
 
 registration:
     sponsor:
