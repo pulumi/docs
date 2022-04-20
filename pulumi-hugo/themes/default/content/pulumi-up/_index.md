@@ -62,9 +62,9 @@ schedule_overview:
     time: 8:00AM - 12:00PM PDT
     description: |
       Join your friends in the Pulumi community for the first ever Pulumi Community Summit.
-      This virtual event will include an "Open Spaces" concept where you can propose and
-      vote on topics ahead of time. Those topics with the most interest will form the agenda
-      for the day, with virtual breakout rooms centered around those themes.
+      This virtual event will include an "Open Spaces" concept where you can
+      <a href="https://pulumip.us/SuggestTopic" class="underline" target="_blank" rel="noopener noreferrer">propose topics ahead of time</a>.
+      Those topics with the most interest will form the agenda for the day, with virtual breakout rooms centered around those themes.
 
   - title: PulumiVision
     day: Thursday, May 5th
