@@ -61,6 +61,7 @@ Ready to try out Function URLs for yourself? A function URL can be applied to an
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 import * as awsnative from "@pulumi/aws-native";
+import {local} from "@pulumi/command";
 
 const lambdaRole = new awsnative.iam.Role("lambdaRole", {
   assumeRolePolicyDocument: {
@@ -100,6 +101,10 @@ const lambdaUrl = new awsnative.lambda.Url("test", {
   authType: awsnative.lambda.UrlAuthType.None,
 });
 
+const awsCommand = new local.Command("aws-command", {
+    create: pulumi.interpolate`aws lambda add-permission --function-name ${helloFunction.functionName} --action lambda:InvokeFunctionUrl --principal '*' --function-url-auth-type NONE --statement-id FunctionURLAllowPublicAccess`
+}, {deleteBeforeReplace: true, dependsOn: [helloFunction]})
+
 export const url = lambdaUrl.functionUrl;
 ```
 
@@ -112,6 +117,7 @@ import json
 import pulumi
 import pulumi_aws as aws
 import pulumi_aws_native as aws_native
+from pulumi_command import local
 
 lambda_role = aws_native.iam.Role("lambda_role",
                                   assume_role_policy_document=json.dumps({
@@ -149,8 +155,12 @@ lambda_url = aws_native.lambda_.Url("test",
                                     auth_type=aws_native.lambda_.UrlAuthType.NONE
                                     )
 
-pulumi.export("url", lambda_url.function_url)
+add_permissions = local.Command("add_permissions",
+    create=pulumi.Output.concat("aws lambda add-permission --function-name ",hello_function.function_name, " --action lambda:InvokeFunctionUrl --principal '*' --function-url-auth-type NONE --statement-id FunctionURLAllowPublicAccess"),
+    opts=pulumi.ResourceOptions(delete_before_replace=True)
+)
 
+pulumi.export("url", lambda_url.function_url)
 ```
 
 {{% /choosable %}}
@@ -163,6 +173,7 @@ using System.Text.Json;
 using Pulumi;
 using Aws = Pulumi.Aws;
 using AwsNative = Pulumi.AwsNative;
+using Local = Pulumi.Command.Local;
 
 class MyStack : Stack
 {
@@ -213,13 +224,22 @@ class MyStack : Stack
             AuthType = AwsNative.Lambda.UrlAuthType.None
         });
 
+        var localCommand = new Local.Command("addPermissions", new Local.CommandArgs
+        {
+            Create = Output.Format($"aws lambda add-permission --function-name {helloFunction.FunctionName} --action lambda:InvokeFunctionUrl --principal '*' --function-url-auth-type NONE --statement-id FunctionURLAllowPublicAccess")
+        }, new CustomResourceOptions {
+            DeleteBeforeReplace = true,
+            DependsOn = new InputList<Resource> {
+                helloFunction
+            }
+        });
+
         this.Url = lambdaUrl.FunctionUrl;
     }
 
     [Output]
     public Output<string> Url { get; set; }
 }
-
 ```
 
 {{% /choosable %}}
@@ -303,6 +323,7 @@ In the above code, we’re doing a couple of things:
 
 1. Creating a role for the Lambda function to use and assigning an AWS managed policy to it
 1. Creating a Lambda function and configuring a function URL for it
+{{% choosable language csharp %}}3. Using the Pulumi Command package to run a command with the AWS CLI to add invoke permissions to the Lambda function{{% /choosable %}} {{% choosable language python %}}3. Using the Pulumi Command package to run a command with the AWS CLI to add invoke permissions to the Lambda function{{% /choosable %}} {{% choosable language typescript %}}3. Using the Pulumi Command package to run a command with the AWS CLI to add invoke permissions to the Lambda function{{% /choosable %}}
 
 Using Pulumi to do this brings your infrastructure into a format much more familiar for most developers. This approach will work for any of the modern programming languages Pulumi supports.
 
@@ -317,6 +338,16 @@ Run `pulumi up` and this is what we get:
 Outputs:
   + url: "https://ppxrysls1a.lambda-url.eu-south-1.on.aws/"
 ```
+
+{{% choosable language go %}}
+
+You'll also need to run the following command to add the required permission to allow the Lambda function to be run. If you don't have the AWS CLI installed, there are instructions on our [getting started docs](/docs/get-started/aws/):
+
+```bash
+aws lambda add-permission --function-name $(pulumi stack output functionName) --action lambda:InvokeFunctionUrl --principal '*' --function-url-auth-type NONE --statement-id FunctionURLAllowPublicAccess
+```
+
+{{% /choosable %}}
 
 Our function has a public endpoint! Hit it with curl (or just visit that URL in a browser) to make sure it works:
 
