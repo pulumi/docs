@@ -95,7 +95,7 @@ Specifically, we have improved the following:
 
 ### Clear pending operations
 
-We have made two changes to how pending operations are treated. The first change is that when there are pending operations, updates can be made but we will produce a warning to investigate the pending operations. The prevents users from ending up with live cloud resources that are not tracked by Pulumi (orphaned resources). The second change we made is now users can run `pulumi refresh` and clear pending operations. This adds an easy way to clean up pending operations that have been investigated and can be cleared.
+We have made two changes to how pending operations are treated. The first change is that when there are pending operations, updates can be made but we will produce a warning to investigate the pending operations. This prevents users from ending up with live cloud resources that are not tracked by Pulumi (orphaned resources). The second change we made is now users can run `pulumi refresh` and clear pending operations. This adds an easy way to clean up pending operations that have been investigated and can be cleared.
 
 Learn more in the [clear pending operations GitHub issue](https://github.com/pulumi/pulumi/issues/4265). 
 
