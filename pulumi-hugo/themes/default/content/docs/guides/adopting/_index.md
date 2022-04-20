@@ -9,7 +9,7 @@ menu:
 
 If you've fallen in love with Pulumi, it might not be obvious how to adopt it. For brand new projects, it's easy: simply start writing your infrastructure as code using Pulumi from the start. But what if you already have infrastructure stood up? And perhaps even actively serving a critical business need? In these cases, you may wonder, is it even possible to adopt Pulumi, without downtime or a major disturbance to your existing infrastructure? The answer is **yes**!
 
-This user guide offers a tour of tried-and-true tools and techniques that can be used to migrate any infrastructure to Pulumi, regardless of how that infrastructure was originally provisioned, including using any of the tools [described here]({{< relref "/docs/intro/vs" >}}). These techniques range from coexisting with this infrastructure &mdash; either temporarily or permanently &mdash; as well as adopting infrastructure and/or converting existing infrastructure as code projects.
+This user guide offers a tour of tried-and-true tools and techniques that can be used to migrate any infrastructure to Pulumi, regardless of how that infrastructure was originally provisioned in the [cloud tooling ecosystem]({{< relref "/docs/intro/vs" >}}). These techniques range from coexisting with this infrastructure &mdash; either temporarily or permanently &mdash; as well as adopting infrastructure and/or converting existing infrastructure as code projects.
 
 Below we will review some basic concepts, but feel free to jump straight to a specific guide:
 
@@ -59,7 +59,7 @@ In the above coexistence scenarios, Pulumi simply _reads_ your existing infrastr
 
 Furthermore, Pulumi doesn't care where the infrastructure originally came from. You could have manually provisioned it in your cloud's console UI, from the CLI, using Terraform, your cloud's built-in templating mechanism, and so on. In all cases, after the import process, you'll be left with a working Pulumi program, and all subsequent infrastructure updates can be made with Pulumi. You can then retire the old way of managing your infrastructure. This works even if you've lost the original scripts or templates that created the infrastructure.
 
-To learn more about how to import resources in this manner, please [refer to this guide on resource adoption]({{< relref "import" >}}).
+To learn more about how to import resources in this manner, refer to the [import guide]({{< relref "import" >}}).
 
 ### Conversion
 
