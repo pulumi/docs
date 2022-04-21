@@ -105,7 +105,7 @@ The following are guidelines to follow when authoring docs:
 
 ## Shortcodes and web components
 
-We use number of Hugo shortcodes and web components in our pages. You can read more about many of them in the [components README](themes/default/components).
+We use number of Hugo shortcodes and web components in our pages. You can read more about many of them in the [components README](https://github.com/pulumi/theme/tree/master/stencil).
 
 ## Search and Swiftype
 
