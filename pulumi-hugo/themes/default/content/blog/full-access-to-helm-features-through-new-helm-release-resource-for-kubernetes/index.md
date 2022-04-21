@@ -120,7 +120,7 @@ const release = new k8s.helm.v3.Release("redis-helm", {
 // with `skipAwait: false` above, will wait to retrieve the Redis master
 // ClusterIP till all resources in the Chart are available.
 const srv = k8s.core.v1.Service.get("redis-master-svc",
-    pulumi.interpolate`${release.status.namespace}/${release.status.name}-redis-master`);
+    pulumi.interpolate`${release.status.namespace}/${release.status.name}-master`);
 export const redisMasterClusterIP = srv.spec.clusterIP;
 ```
 
@@ -208,7 +208,7 @@ func main() {
 				name := arr[1].(*string)
 				svc, err := corev1.GetService(ctx,
 					"redis-master-svc",
-					pulumi.ID(fmt.Sprintf("%s/%s-redis-master", *namespace, *name)),
+					pulumi.ID(fmt.Sprintf("%s/%s-master", *namespace, *name)),
 					nil,
 				)
 				if err != nil {
@@ -285,7 +285,7 @@ release = Release("redis-helm", args=release_args)
 # ClusterIP till all resources in the Chart are available.
 status = release.status
 srv = Service.get("redis-master-svc",
-                  Output.concat(status.namespace, "/", status.name, "-redis-master"))
+                  Output.concat(status.namespace, "/", status.name, "-master"))
 pulumi.export("redisMasterClusterIP", srv.spec.cluster_ip)
 ```
 
@@ -367,7 +367,7 @@ class MyStack : Stack
         // ClusterIP till all resources in the Chart are available.
         var status = release.Status;
         var service = Service.Get("redist-master-svc", Output.All(status).Apply(
-            s => $"{s[0].Namespace}/{s[0].Name}-redis-master"));
+            s => $"{s[0].Namespace}/{s[0].Name}-master"));
         this.RedisMasterClusterIP = service.Spec.Apply(spec => spec.ClusterIP);
     }
 
