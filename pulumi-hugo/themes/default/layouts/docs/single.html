@@ -1,36 +1,43 @@
 {{ define "main" }}
     <div class="container mx-auto px-4 py-8 mt-2">
-        <div class="lg:flex">
+        <div class="xxl:flex">
+            <div class="flex flex-col lg:flex-row xxl:w-9/12">
+                <div class="lg:hidden mb-6">
+                    <button class="docs-sidebar-toggle items-center px-3 py-2 border rounded">
+                        Toggle Docs Navigation
+                    </button>
+                </div>
 
-            <div class="lg:w-6/12 lg:px-4">
-                {{ partial "docs/breadcrumb.html" . }}
+                <div class="docs-sidebar-content hidden lg:block lg:w-1/4 xxl:w-4/12 pr-8 mb-2 pt-8 lg:order-first lg:border-none lg:pt-0 lg:mt-0">
+                    <div class="sticky-sidebar">
+                        {{ partial "docs/toc.html" . }}
+                    </div>
+                </div>
 
-                {{ if and (.Params.h1) (not .Params.notitle) }}
-                    <h1>{{ .Params.h1 }}</h1>
-                {{ else if and (ne .Title "") (not .Params.notitle) }}
-                    <h1>{{ .Title }}</h1>
-                {{ end }}
-                <section data-swiftype-index="true">
-                    {{ .Content }}
-                </section>
+                <div class="lg:w-3/4 lg:px-4 xxl:w-8/12">
+                    {{ partial "docs/breadcrumb.html" . }}
+
+                    {{ if and (.Params.h1) (not .Params.notitle) }}
+                        <h1>{{ .Params.h1 }}</h1>
+                    {{ else if and (ne .Title "") (not .Params.notitle) }}
+                        <h1>{{ .Title }}</h1>
+                    {{ end }}
+                    <section data-swiftype-index="true">
+                        {{ .Content }}
+                    </section>
+                </div>
             </div>
 
-            <div class="lg:w-3/12 lg:pl-8 mt-2">
+            <div class="xxl:w-3/12 xxl:pl-8 mt-2">
                 <div class="sticky-sidebar">
-                    <div class="ml-2 hidden lg:block">
+                    <div class="ml-2 hidden xxl:block">
                         {{ partial "docs/right-nav.html" . }}
                     </div>
                     <div>
                         {{ partial "docs/feedback.html" . }}
                     </div>
-
+            
                     {{ partial "right-nav-ad.html" }}
-                </div>
-            </div>
-
-            <div class="lg:w-3/12 pr-8 mb-2 pt-8 lg:order-first lg:border-none lg:pt-0 lg:mt-0">
-                <div class="sticky-sidebar">
-                    {{ partial "docs/toc.html" . }}
                 </div>
             </div>
         </div>

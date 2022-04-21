@@ -1,46 +1,48 @@
 {{ define "main" }}
     <div class="container mx-auto px-4 py-8">
-        <div class="lg:flex">
-            <div class="lg:w-3/12 pr-8">
-                {{ partial "blog/sidebar.html" . }}
-            </div>
+        <div class="xxl:flex">
+            <div class="flex flex-col lg:flex-row xxl:w-9/12">
+                <div class="lg:w-1/4 xxl:w-4/12  pr-8">
+                    {{ partial "blog/sidebar.html" . }}
+                </div>
 
-            <div class="lg:w-7/12">
-                <article class="mb-8 pb-8 border-b border-gray-200">
+                <div class="lg:w-3/4 xxl:w-9/12">
+                    <article class="mb-8 pb-8 border-b border-gray-200">
 
-                    {{ if and (.Params.h1) (not .Params.notitle) }}
-                        <h1 class="no-anchor">{{ .Params.h1 }}</h1>
-                    {{ else if and (ne .Title "") (not .Params.notitle) }}
-                        <h1 class="no-anchor">{{ .Title }}</h1>
-                    {{ end }}
-
-                    <p>Posted on <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time>
-
-                    <div class="flex items-center">
-                        <span class="text-sm text-gray-700">
-                            {{ partial "blog/authors.html" (dict "context" . "authors" .Params.authors) }}
-                        </span>
-                    </div>
-                    <section data-swiftype-index="true">
-                        {{ .Content }}
-                    </section>
-                    <div>
-                        {{ if .Params.tags }}
-                            <ul class="m-0 mt-8 p-0">
-                                {{ range $tag := .Params.tags }}
-                                <li class="mt-0 inline-flex">
-                                    <a class="tag tag-blog" href="/blog/tag/{{ $tag | urlize }}/">
-                                        {{ $tag | urlize }}
-                                    </a>
-                                </li>
-                                {{ end }}
-                            </ul>
+                        {{ if and (.Params.h1) (not .Params.notitle) }}
+                            <h1 class="no-anchor">{{ .Params.h1 }}</h1>
+                        {{ else if and (ne .Title "") (not .Params.notitle) }}
+                            <h1 class="no-anchor">{{ .Title }}</h1>
                         {{ end }}
-                    </div>
-                </article>
+
+                        <p>Posted on <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time>
+
+                        <div class="flex items-center">
+                            <span class="text-sm text-gray-700">
+                                {{ partial "blog/authors.html" (dict "context" . "authors" .Params.authors) }}
+                            </span>
+                        </div>
+                        <section data-swiftype-index="true">
+                            {{ .Content }}
+                        </section>
+                        <div>
+                            {{ if .Params.tags }}
+                                <ul class="m-0 mt-8 p-0">
+                                    {{ range $tag := .Params.tags }}
+                                    <li class="mt-0 inline-flex">
+                                        <a class="tag tag-blog" href="/blog/tag/{{ $tag | urlize }}/">
+                                            {{ $tag | urlize }}
+                                        </a>
+                                    </li>
+                                    {{ end }}
+                                </ul>
+                            {{ end }}
+                        </div>
+                    </article>
+                </div>
             </div>
 
-            <div class="lg:w-3/12 lg:pl-8">
+            <div class="xxl:w-3/12 lg:pl-8">
                 <div class="sticky-sidebar">
                     {{ partial "blog/right-nav.html" . }}
                     {{ partial "right-nav-ad.html" }}
