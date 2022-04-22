@@ -9,7 +9,7 @@ overview:
     title: Shifting left infrastructure
     image: /images/solutions/git-ops/git-ops-main-diagram.svg
     description: |
-        Infrastructure CI/CD (aka Infrastructure Shift Left, GitOps) is the process of automating the testing, provisioning, and management of infrastructure through a software delivery pipeline. This starts with Infrastructure as Code (IaC), which is provisioning and managing infrastructure through definition files (e.g., templates or code) and stored in version control systems. IaC provides automation to provision infrastructure and increases delivery velocity by removing the risk of human errors. Infrastructure CI/CD further automates infrastructure provisioning and management by building the entire IaC process into a CI/CD pipeline. All infrastructure updates run through a standard set of unit and integration tests, allowing reduced errors, greater security, and increased delivery velocity.
+        Infrastructure CI/CD (aka Infrastructure Shift Left or GitOps) is the process of automating the testing, provisioning, and management of infrastructure through a software delivery pipeline. This starts with Infrastructure as Code (IaC), which is provisioning and managing infrastructure through definition files (e.g. templates or code) and stored in version control systems. IaC provides automation to provision infrastructure and increases delivery velocity by removing the risk of human errors. Infrastructure CI/CD further automates infrastructure provisioning and management by building the entire IaC process into a CI/CD pipeline. All infrastructure updates run through a standard set of unit and integration tests, allowing reduced errors, greater security, and increased delivery velocity.
 
 benefits:
     title: Why Infrastructure CI/CD?
@@ -41,7 +41,7 @@ benefits:
           icon: rocketship
           icon_color: salmon
           description: |
-            Pulumi allows the the same programming languages used for application code to be used for infrastructure. This allows teams to leverage the same testing frameworks and same delivery process for both.
+            Pulumi allows the same programming languages used for application code to be used for infrastructure. This allows teams to leverage the same testing frameworks and same delivery process for both.
 
         - title: Shareable infrastructure components
           icon: gear
@@ -53,7 +53,7 @@ benefits:
           icon: eye
           icon_color: salmon
           description: |
-            You can increase automation across the entire lifecycle of your cloud infrastructure. You can program logic that orchestrates complex workflows during infrastructure provisioning instead of needing to use Bash scripts or glue code. In addition to its CLI, Pulumi provides the Automation API, a programmatic interface for infrastructure as code, so you can build applications that dynamically manage infrastructure.
+            You can increase automation across the entire lifecycle of your cloud infrastructure. You can program logic that orchestrates complex workflows during infrastructure provisioning instead of needing to use Bash scripts or glue code. In addition to its CLI, Pulumi provides the Automation API, a programmatic interface for IaC, so you can build applications that dynamically manage infrastructure.
 
 diagrams:
     title: GitOps Workflow Reference Architecture
@@ -77,7 +77,7 @@ diagrams:
         - title: 4. Incorporate software development best practices
           image: /images/solutions/git-ops/git-ops-diagram-four.svg
           content: |
-            Legacy IaC tools can run in CICD, however with Pulumi, you can incorporate in all the best practice software development practices such as testing. You can design what you want to test in terms of quality issues, deployment issues, and/or code quality checks.
+            Legacy IaC tools can run in CI/CD, however with Pulumi, you can incorporate in all the best practice software development practices such as testing. You can design what you want to test in terms of quality issues, deployment issues, and/or code quality checks.
 
         - title: 5. Define higher-level workflows
           image: /images/solutions/git-ops/git-ops-diagram-five.svg
@@ -102,8 +102,8 @@ get_started:
     title: Getting started
 
     get_started:
-        title: Talk with customer engineering
+        title: Talk with solution engineering
         description: |
-          Schedule some time with our customer engineering team, and we will help you automate your entire infrastructure provisioning and management through a CI/CD pipeline.
+          Schedule some time with our solution engineering team, and we will help you automate your entire infrastructure provisioning and management through a CI/CD pipeline.
         cta_text: Schedule now
 ---
