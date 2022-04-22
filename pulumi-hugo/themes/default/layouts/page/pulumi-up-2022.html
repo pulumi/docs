@@ -227,21 +227,12 @@
             <div class="flex flex-wrap items-center justify-center">
                 {{ range $logo := .Params.customer_logos.logos }}
                     <div class="w-3/4 lg:w-1/6 p-10">
-                        {{ if $logo.link }}
-                            <a href="{{ relref $pageContext $logo.link }}">
-                                {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
-                            </a>
-                        {{ else }}
-                            {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
+                        {{ $imgClass := "w-full" }}
+                        {{ if eq $logo "aws-logo.svg" }}
+                            {{ $imgClass = "w-2/3 mx-auto" }}
                         {{ end }}
-                    </div>
-                {{ end }}
-            </div>
 
-            <div class="flex flex-wrap items-center justify-center">
-                {{ range $logo := .Params.customer_logos.small_logos }}
-                    <div class="w-3/4 lg:w-1/6 p-10">
-                        {{ partial "customer-logo.html" (dict "logo" $logo "hoverable" true) }}
+                        <img class="{{ $imgClass }}" src="/images/pulumiup/sponsors/{{ $logo }}" />
                     </div>
                 {{ end }}
             </div>
