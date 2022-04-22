@@ -4,20 +4,65 @@ title: "pulumi stack import"
 
 
 
-Import a deployment from standard in into an existing stack
+Import a deployment (i.e. the "[state](/docs/reference/glossary/#state)") from standard in into an existing stack
 
 ### Synopsis
 
-Import a deployment from standard in into an existing stack.
+Import a deployment (i.e. the "[state](/docs/reference/glossary/#state)") from standard in into an existing stack to replace the stack's state.
 
-A deployment that was exported from a stack using `pulumi stack export` and
-hand-edited to correct inconsistencies due to failed updates, manual changes
-to cloud resources, etc. can be reimported to the stack using this command.
+To obtain a stack's deployment state JSON file, export it using [`pulumi stack export`](docs/reference/cli/pulumi_stack).
+
+Usecases of this command include importing hand-edited state files to 
+correct inconsistencies due to failed updates, manual changes to cloud resources, etc. 
+
 The updated deployment will be read from standard in.
 
 ```
 pulumi stack import [flags]
 ```
+
+#### Help
+
+Here is an example stack state JSON file:
+
+```json
+{
+  "version": 3,
+  "deployment": {
+    "resources": [
+      {
+        "urn": "urn:pulumi:your-stack::your-project::pulumi:pulumi:Stack::your-project-your-stack",
+        "custom": false,
+        "type": "pulumi:pulumi:Stack",
+        "sequenceNumber": 1
+      },
+      {
+        "urn": "urn:pulumi:your-stack::your-project::your-custom-resource-type::custom",
+        "custom": false,
+        "type": "your-custom-resource-type",
+        "parent": "urn:pulumi:your-stack::your-project::pulumi:pulumi:Stack::your-project-your-stack",
+        "sequenceNumber": 1
+      }
+    ],
+    "manifest": {
+      "time": "2020-01-01T00:00:00.00Z",
+      "magic": "123abc",
+      "version": "v3.30.0"
+    },
+    "secrets_providers": {
+      "type": "service",
+      "state": {
+        "url": "https://api.pulumi.com",
+        "owner": "your-organization",
+        "project": "your-project",
+        "stack": "your-stack"
+      }
+    }
+  }
+}
+```
+
+If you edit a deployment stack state JSON file, please keep in mind that order matters. Parent resources must come before their child resources.
 
 ### Options
 
