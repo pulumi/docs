@@ -66,7 +66,7 @@ This `go` template is cloud agnostic, and you will need to install additional Go
 
 The Pulumi programming model defines the core concepts you will use when creating infrastructure as code programs using
 Pulumi. [Architecture & Concepts]({{< relref "/docs/intro/concepts" >}}) describes these concepts
-with examples available in Python. These concepts are made available to you in the Pulumi SDK.
+with examples available in Go. These concepts are made available to you in the Pulumi SDK.
 
 The Pulumi SDK is available to Go developers in source form on GitHub. To learn more,
 [refer to the Pulumi SDK Reference Guide](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi).
