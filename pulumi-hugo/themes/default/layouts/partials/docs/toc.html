@@ -1,4 +1,4 @@
-<aside class="toc">
+<aside class="toc pl-4">
     {{ if hasPrefix .RelPermalink "/docs/aws/" }}
         <h4 class="no-anchor">
             <a data-track="toc-aws" href="{{ relref . "/docs/aws" }}">AWS</a>
@@ -9,6 +9,35 @@
         {{ $toc_page := . }}
         {{ $toc_sections := slice "Get Started with Pulumi" "Intro" "User Guides" "Converters" "Reference" "Support" }}
         {{ $toc_menus := dict "Get Started with Pulumi" .Site.Menus.getstarted "Intro" .Site.Menus.intro "User Guides" .Site.Menus.userguides "Converters" .Site.Menus.converters "Reference" .Site.Menus.reference "Support" .Site.Menus.troubleshooting }}
+
+        {{ range $index, $element := $toc_sections }}
+            {{ $sidenav_selected := "" }}
+            {{ $toc_name := . }}
+            {{ $toc_menu := (index $toc_menus $toc_name) }}
+            
+            {{ $toc_section_link := "" }}
+            {{ range $toc_menu }}
+                {{ if (eq .Name "Overview") }}
+                    {{ $toc_section_link = .URL }}
+                {{ end }}
+            {{ end }}
+
+            {{ if (eq $.Page.RelPermalink $toc_section_link) }}
+                {{ $sidenav_selected = "active" }}
+            {{ end }}
+            
+            <span>
+                {{ if $toc_section_link }}
+                    <a href="{{ $toc_section_link }}" class="{{ $sidenav_selected }}">{{ $toc_name }}</a>
+                    {{ else }}
+                    {{ $toc_name }}
+                {{ end }}
+                {{ if ne (add $index 1) (len $toc_sections)}}
+                    <span class="text-gray-500">/</span>
+                {{ end }}
+            </span>
+        {{ end }}
+
         {{ range $toc_sections }}
             {{ $toc_name := . }}
             {{ $toc_menu := (index $toc_menus $toc_name) }}
@@ -21,7 +50,7 @@
                 {{ end }}
             {{ end }}
 
-            <h5 class="no-anchor">
+            <h5 class="no-anchor toc-header" id="{{ $toc_name | urlize }}-toc-header">
                 {{ if $toc_section_link }}
                     <a href="{{ $toc_section_link }}">{{ $toc_name }}</a>
                 {{ else }}
