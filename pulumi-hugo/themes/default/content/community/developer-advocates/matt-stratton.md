@@ -26,7 +26,7 @@ talks:
     title: The Journey From DevOps to Cloud Engineering
     url: https://devopsdays.org/events/2022-denver/program/matty-stratton/
     date: 2022-04-25T08:00:00.000-07:00
-    slides: 
+    slides: https://speaking.mattstratton.com/yPpoOG/the-journey-from-devops-to-cloud-engineering
   - event: DevOpsDays Raleigh 2022
     title: The Journey From DevOps to Cloud Engineering
     url: https://devopsdays.org/events/2022-raleigh/program/matt-stratton/

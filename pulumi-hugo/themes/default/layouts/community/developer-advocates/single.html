@@ -132,6 +132,7 @@
                             <div class="w-1/3 text-gray-800">Event</div>
                             <div class="w-1/3 text-gray-800">Title</div>
                             <div class="w-1/3 text-gray-800">Details</div>
+                            <div class="w-1/3 text-gray-800">Slides</div>
                         </div>
                     {{ else }}
                         <div class="flex bg-gray-200 text-gray-700 text-lg font-display p-4">
@@ -155,6 +156,21 @@
                                                 {{ time.Format "1/2/2006 @ 3:04 PM" $talk.date }}
                                             </time>
                                         </div>
+                                    </div>
+                                    <div class="w-2/12">
+                                        {{ if $talk.slides }}
+                                            {{ if $talk.isDownload }}
+                                            <a href="{{ $talk.slides }}" target="_blank">
+                                                <i class="fas fa-download text-blue-500 mr-3"></i>
+                                                <span class="hidden sm:block text-black">Download</span>
+                                            </a>
+                                            {{ else }}
+                                                <a href="{{ $talk.slides }}" target="_blank">
+                                                    <i class="fas fa-external-link-alt text-blue-500 mr-2"></i>
+                                                    <span class="hidden sm:inline text-black">External Link</span>
+                                                </a>
+                                            {{ end }}
+                                        {{ end }}
                                     </div>
                                 </li>
                                 <hr>
