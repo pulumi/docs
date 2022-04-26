@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "Automating Infrastructure as Code Workflows"
-meta_desc: "Join Laura Santamaria in this workshop to explore how to use Pulumi's Automation API to work with Pulumi in a programmatic manner."
+title: "AWS Immersion Day - Hands-on Infrastructure as Code"
+meta_desc: "In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -34,12 +34,12 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "automating-infrastructure-as-code-workflows"
+url_slug: "aws-immersion-day-hands-on-infrastructure-as-code"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Automating Infrastructure as Code Workflows"
+    title: "AWS Immersion Day - Hands-on Infrastructure as Code"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
@@ -52,31 +52,35 @@ hero:
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Automating Infrastructure as Code Workflows"
+    title: "AWS Immersion Day - Hands-on Infrastructure as Code"
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-04-28T10:00:00-07:00
+    sortable_date: 2022-06-14T09:00:00-07:00
     # Duration of the webinar.
-    duration: "1 hour"
+    duration: "90 minutes"
     # Datetime of the webinar.
     datetime: ""
     # Description of the webinar.
     description: |
-        Join Laura Santamaria in this workshop to explore how to use Pulumi's Automation API to work with Pulumi in a programmatic manner.
+        In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform. Join Pulumi and our friends from VirtusLab and AWS for an interactive session where you will be introduced to infrastructure as code concepts, and use familiar programming languages to provision modern cloud infrastructure.
+
+        This workshop is designed to help users completely new to Pulumi to become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and a series of hands-on exercises to help you understand the building blocks available in Pulumi.
 
     # The webinar presenters
     presenters:
         - name: Laura Santamaria
           role: Developer Advocate, Pulumi
+        - name: Marina Novikova
+          role: Partner Solutions Architect, AWS
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - How to use Pulumi's Automation API.
-        - How to automate infrastructure as code workflows.
+        - The fundamentals of Infrastructure as Code.
+        - Provision cloud resources on AWS.
 
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: "b3add33f-a625-4dbd-ace9-8d8d66c244ea"
+    hubspot_form_id: "cf51e6f8-648e-4019-81f3-b38cdefd5d22"
 ---

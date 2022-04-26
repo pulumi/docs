@@ -121,6 +121,11 @@ workshops:
     description: |
       In this workshop, you’ll use the Azure native provider to build infrastructure using TypeScript SDK and examine some of the features not previously possible.
 
+  - title: AWS Immersion Day - Hands-on Infrastructure as Code
+    url: /resources/aws-immersion-day-hands-on-infrastructure-as-code/
+    description: |
+      In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform.
+
 
 registration:
     sponsor:
@@ -174,4 +179,5 @@ customer_logos:
     - jetstack.png
     - tfir.png
     - techstrong-group.png
+    - kong.png
 ---
