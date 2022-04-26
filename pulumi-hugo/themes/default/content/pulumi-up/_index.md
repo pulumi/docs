@@ -107,9 +107,19 @@ workshops:
       KubeCrash is a virtual event offering a variety of free crash courses on cloud native open source technologies. Learn directly from the maintainers of CNCF and other open source projects.
 
   - title: Getting started with Infrastructure as Code on Oracle Cloud
-    url: /resources/getting-started-with-infrastructure-as-code-on-oracle-cloud
+    url: /resources/getting-started-with-infrastructure-as-code-on-oracle-cloud/
     description: |
       In this workshop, you will learn the fundamentals of Infrastructure as Code through a guided exercise where you will provision infrastructure on Oracle Cloud.
+
+  - title: End-To-End Infrastructure, Apps, and Auth with Auth0
+    url: /resources/end-to-end-infrastructure-apps-and-auth-with-pulumi-and-auth0/
+    description: |
+      In this session, we’ll walk you through the process of building and deploying a web app with React, Express, MongoDB, Auth0, and Pulumi.
+
+  - title: Getting Started with Azure and Infrastructure as Code
+    url: /resources/getting-started-with-azure-native/
+    description: |
+      In this workshop, you’ll use the Azure native provider to build infrastructure using TypeScript SDK and examine some of the features not previously possible.
 
 
 registration:
@@ -162,13 +172,6 @@ customer_logos:
     - cockroachlabs.jpeg
     - fairwinds.png
     - jetstack.png
+    - tfir.png
+    - techstrong-group.png
 ---
-
-
-Codefresh	Workshop
-Microsoft	Workshop
-Bouyant	Workshop
-VirtusLab	Workshop
-Cockroach labs	Workshop
-Fairwinds	Workshop
-Jetstack	Workshop

@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "Getting Started with Azure and Infrastructure as Code"
-meta_desc: "In this workshop, you’ll use the Azure native provider to build infrastructure using TypeScript SDK and examine some of the features not previously possible."
+title: "End-To-End Infrastructure, Apps, and Auth with Auth0"
+meta_desc: "In this session, we’ll walk you through the process of building and deploying a web app with React, Express, MongoDB, Auth0, and Pulumi."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -34,52 +34,54 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "getting-started-with-azure-native"
-
-# Webinar pages support multiple session via the 'multiple' property.
-# multiple:
-#     - datetime: 2021-10-21T09:00:00-07:00
-#       hubspot_form_id: 7de43dee-4699-46e9-9ce3-9a6fffd56aa5
+url_slug: "end-to-end-infrastructure-apps-and-auth-with-pulumi-and-auth0"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Getting Started with Azure and Infrastructure as Code"
+    title: "End-To-End Infrastructure, Apps, and Auth with Auth0"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
+
+# Webinar pages support multiple session via the 'multiple' property.
+# multiple:
+#   - datetime: 2020-02-05T10:00:00-07:00
+#     hubspot_form_id: ""
+#     gotowebinar_key: ""
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Getting Started with Azure and Infrastructure as Code"
+    title: "End-To-End Infrastructure, Apps, and Auth with Auth0"
     # URL for embedding a URL for ungated webinars.
-    #youtube_url: "https://www.youtube.com/embed/yzTSUDp2KXU"
+    youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-06-08T09:00:00-07:00
+    sortable_date: 2022-06-07T16:00:00-07:00
     # Duration of the webinar.
-    duration: "90 minutes"
+    duration: "1 hour"
     # Datetime of the webinar.
-    datetime: "OCTOBER 21st, 2021"
+    datetime: ""
     # Description of the webinar.
     description: |
-        Microsoft Azure’s product offering is continuously evolving, and infrastructure tools often can’t keep up with the speed of innovation. Pulumi’s Azure Native provider is built directly from the Azure API, bringing power of familiar programming languages to Azure without sacrificing on latest features.
+        In this session, we’ll walk you through the process of building a three-tier web app: a single-page app built with React, a back end consisting of a REST API managed with Express and MongoDB. We’ll also show you how to enable authentication to restrict access to your app.
 
-        In this workshop, you’ll use the Azure native provider to build infrastructure using Pulumi’s TypeScript SDK and examine some of the features not previously possible.
+        Everything will be configured and deployed to the cloud using Pulumi.
 
     # The webinar presenters
     presenters:
         - name: Matt Stratton
           role: Staff Developer Advocate, Pulumi
-        - name: April Edwards
-          role: Senior Cloud Advocate, Microsoft
+        - name: Ben Dechrai
+          role: Senior Developer Advocate, Auth0
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - The basics of the Pulumi Programming Model.
-        - How to provision, update, and destroy Azure resources.
+        - How to provision Auth0 alongside cloud resources using JavaScript and Pulumi
+        - How to deploy a basic web app with authentication enabled.
+        - Common-sense policies for avoiding mistakes in production.
 
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: "a6e6eab6-add6-4182-81fd-9bff4e61dace"
+    hubspot_form_id: "07b9a29f-5eb7-484b-8e99-b3ab79c558c2"
 ---
