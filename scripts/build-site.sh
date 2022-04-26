@@ -36,7 +36,7 @@ if [ "$1" == "preview" ]; then
     export HUGO_BASEURL="http://$(origin_bucket_prefix)-$(build_identifier).s3-website.$(aws_region).amazonaws.com"
     GOGC=4 hugo --minify --templateMetrics -e "preview"
 else
-    GOGC=5 hugo --minify --templateMetrics -e production
+    GOGC=4 hugo --minify --templateMetrics -e production
 fi
 
 # Purge unused CSS.
