@@ -43,7 +43,7 @@ sessions:
         Senior Industry Analyst at RedMonk, Kelly Ann Fitzpatrick, will moderate this panel discussing the technical demands of building modern cloud applications.
 
     - title: Cloud Engineering Panel
-      presenters: [ "eric-rudder" ]
+      presenters: [ "eric-rudder", "justin-fitzhugh", "grace-francisco", "dan-gerrity" ]
       description: |
         In this panel, moderated by Pulumi Co-Founder, Eric Rudder, we will discuss accelerating innovation through cloud engineering.
 

@@ -84,48 +84,45 @@
         <div class="container mx-auto py-24">
             <h2 class="text-black px-6">Innovation & Future-Forward Thoughts on Cloud</h2>
 
-            <div class="flex flex-wrap">
+            <div class="flex flex-wrap justify-center items-stretch">
                 {{ $registrationData := .Params.registration.main }}
                 {{ $people := .Site.Data.team.team }}
                 {{ range .Params.sessions }}
                     <div class="w-full lg:w-1/2 p-3">
-                        <div class="card bg-white overflow-hidden">
+                        <div class="card h-full bg-white overflow-hidden">
                             <div class="flex flex-col">
-                                <div class="bg-black lg:h-64 w-full p-2">
-                                    <div class="flex flex-wrap items-center justify-center h-full">
-                                        <div class="w-full lg:w-2/3 lg:h-full flex justify-center lg:justify-start items-center pl-2">
-                                            <div class="flex justify-center items-center">
-                                                {{ range $presenter := .presenters }}
-                                                    {{ $presenterData := index $people $presenter }}
-                                                    <div class="w-1/3 pr-2">
-                                                        <img class="rounded-md" src="/images/team/{{ $presenter }}.jpg" alt="{{ $presenterData.name }}" title="{{ $presenterData.name }}">
-                                                        <div class="text-white text-sm text-center mt-2">
-                                                            {{ $presenterData.name }}
-                                                        </div>
+                                <div class="bg-black w-full p-6">
+                                    <div class="w-full lg:h-full">
+                                        <div class="flex justify-center items-center">
+                                            {{ range $presenter := .presenters }}
+                                                {{ $presenterData := index $people $presenter }}
+                                                <div class="w-1/4 pr-2">
+                                                    <img class="rounded-md" src="/images/team/{{ $presenter }}.jpg" alt="{{ $presenterData.name }}" title="{{ $presenterData.name }}">
+                                                    <div class="text-white text-sm text-center mt-2">
+                                                        {{ $presenterData.name }}
                                                     </div>
-                                                {{ end }}
-                                            </div>
-                                        </div>
-
-                                        <div class="w-full lg:w-1/3 lg:h-full flex flex-col items-center lg:items-end justify-start pt-8 lg:py-8">
-                                            <event-session-registration-modal
-                                                modal-title="Register Now"
-                                                button-text="Register now"
-                                                button-class="btn-pulumiup-card"
-                                                event-sessions="{{ $registrationData | jsonify }}"
-                                            >
-                                            </event-session-registration-modal>
+                                                </div>
+                                            {{ end }}
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="lg:h-64 p-6">
+                                <div class="p-6">
                                     <h5 class="mt-0 mt-4">
                                         {{ .title }}
                                     </h5>
                                     <p>
                                         {{ .description }}
                                     </p>
+                                    <div class="text-center mt-8">
+                                        <event-session-registration-modal
+                                            modal-title="Register Now"
+                                            button-text="Register now"
+                                            button-class="btn-pulumiup-card"
+                                            event-sessions="{{ $registrationData | jsonify }}"
+                                        >
+                                        </event-session-registration-modal>
+                                    </div>
                                 </div>
                             </div>
                         </div>
