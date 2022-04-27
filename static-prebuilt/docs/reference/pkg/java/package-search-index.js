@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.pulumi"},{"l":"com.pulumi.asset"},{"l":"com.pulumi.context"},{"l":"com.pulumi.core"},{"l":"com.pulumi.core.annotations"},{"l":"com.pulumi.core.function"},{"l":"com.pulumi.deployment"},{"l":"com.pulumi.exceptions"},{"l":"com.pulumi.resources"}]
