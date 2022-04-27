@@ -13,12 +13,12 @@ aliases:
 
 sessions:
     - title: "Opening Keynote and Welcome"
-      presenters: [ "joe-duffy" ]
+      presenters: [ "joe-duffy", "brian-goetz", "luke-hoban" ]
       description: |
         Joe Duffy, CEO of Pulumi, walks us through the evolution of the cloud and the modernization of infrastructure as code to support the changing needs of development and operations organizations. He will introduce the new features of Pulumi that will further help teams tackle scalability challenges, increase developer productivity, and manage multi-cloud complexity.
 
     - title: "Pulumi Infrastructure as Code "
-      presenters: [ "kat-cosgrove", "aaron-friel", "mikhail-shilkov" ]
+      presenters: [ "kat-cosgrove", "aaron-friel", "kyle-dixler" ]
       description: |
         Demos will be shared including new Pulumi features in this hands-on, coding-heavy session. You will learn how to build, deploy, and manage cloud applications with infrastructure as code, powered by popular programming languages. You can expect to pick up new best practices for taming cloud complexity and supercharging your productivity when building with modern cloud architectures.
 
@@ -38,7 +38,7 @@ sessions:
         Pulumi customer, Elkjøp Nordic shows us how to use Pulumi Automation API to build a self-service application that can create infrastructure on demand. This application can create environments with automated access control that provisions resources like resource groups, GitHub repositories, or Kubernetes namespaces.
 
     - title: Infrastructure as Code Panel
-      presenters: [ "kellyann-fitzpatrick" ]
+      presenters: [ "kellyann-fitzpatrick", "kris-nova", "kat-morgan", "elad-ben-isreal", "paul-sandoz" ]
       description: |
         Senior Industry Analyst at RedMonk, Kelly Ann Fitzpatrick, will moderate this panel discussing the technical demands of building modern cloud applications.
 
@@ -46,6 +46,12 @@ sessions:
       presenters: [ "eric-rudder", "justin-fitzhugh", "grace-francisco", "dan-gerrity" ]
       description: |
         In this panel, moderated by Pulumi Co-Founder, Eric Rudder, we will discuss accelerating innovation through cloud engineering.
+
+    - title: Closing, Future Roadmap, and Q&A
+      presenters: [ "joe-duffy", "luke-hoban" ]
+      description: |
+        Joe Duffy and Luke Hoban will close out the day with a recap of all the new features and capabilities introduced, provided
+        a look at our future plans, and finally answer any questions you might have about our announcements or Pulumi in general.
 
 schedule_overview:
   - title: PulumiUP

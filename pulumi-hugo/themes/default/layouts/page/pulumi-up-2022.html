@@ -90,10 +90,10 @@
                 {{ range .Params.sessions }}
                     <div class="w-full lg:w-1/2 p-3">
                         <div class="card h-full bg-white overflow-hidden">
-                            <div class="flex flex-col">
-                                <div class="bg-black w-full p-6">
+                            <div class="flex flex-col h-full pb-3">
+                                <div class="bg-black w-full p-6 pb-3">
                                     <div class="w-full lg:h-full">
-                                        <div class="flex justify-center items-center">
+                                        <div class="flex justify-center items-start">
                                             {{ range $presenter := .presenters }}
                                                 {{ $presenterData := index $people $presenter }}
                                                 <div class="w-1/4 pr-2">
@@ -107,14 +107,14 @@
                                     </div>
                                 </div>
 
-                                <div class="p-6">
+                                <div class="flex flex-col h-full p-6">
                                     <h5 class="mt-0 mt-4">
                                         {{ .title }}
                                     </h5>
                                     <p>
                                         {{ .description }}
                                     </p>
-                                    <div class="text-center mt-8">
+                                    <div class="flex-grow text-center mt-8 flex justify-center items-end">
                                         <event-session-registration-modal
                                             modal-title="Register Now"
                                             button-text="Register now"
