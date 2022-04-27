@@ -1,0 +1,9 @@
+com.pulumi
+com.pulumi.asset
+com.pulumi.context
+com.pulumi.core
+com.pulumi.core.annotations
+com.pulumi.core.function
+com.pulumi.deployment
+com.pulumi.exceptions
+com.pulumi.resources
