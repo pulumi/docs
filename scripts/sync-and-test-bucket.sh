@@ -66,7 +66,7 @@ echo "$s3_website_url"
 
 # Set the content-type of latest-version explicitly. (Otherwise, it'll be set as binary/octet-stream.)
 aws s3 cp "$build_dir/latest-version" "${destination_bucket_uri}/latest-version" \
-    --content-type "text/plain" --acl public-read --metadata-directive REPLACE
+    --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
 
 # Smoke test the deployed website. Specs are in ../cypress/integration.
 echo "Running tests..."
