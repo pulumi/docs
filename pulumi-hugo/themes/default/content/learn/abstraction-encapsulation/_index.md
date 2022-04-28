@@ -32,7 +32,7 @@ You will need the following knowledge to complete this pathway:
 
 Optionally, if you want to build some of the examples yourself to experiment, you'll need the following tools and skills:
 
-- A [Pulumi account and token]({{< relref "/docs/intro/pulumi-service/accounts#access-tokens" >}}) (If you don't have an account, go to the [signup page](https://app.pulumi.com/signup))
+- A [Pulumi account and token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}}) (If you don't have an account, go to the [signup page](https://app.pulumi.com/signup))
 - An AWS account (the free version should be fine)
 - Familiarity with either the TypeScript or Python programming language
 

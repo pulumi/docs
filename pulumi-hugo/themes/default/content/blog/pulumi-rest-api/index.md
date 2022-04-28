@@ -68,7 +68,7 @@ Let's take a look at the Pulumi REST API in action. This example will demonstrat
 
 Imagine that there is suddenly a MySQL vulnerability or EOL notice that we need to respond to. We use Amazon RDS and would like to query our entire organization to find projects and stacks that currently have RDS databases deployed using version 5.6 of MySQL. Thankfully the Pulumi REST API makes all metadata about all of my cloud projects and stacks &mdash; across all clouds &mdash; available for easy querying and inspection. So a dozen lines of bash will do the trick!
 
-The first step is to generate an API access token. The Pulumi Service lets you manage many access tokens (the same as what's used for `pulumi login`) and it's easiest to just create one specific to this project's purpose. This will let us revoke that token after we're done and know that there is no lingering access.
+The first step is to [generate an API access token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}}). The Pulumi Service lets you manage many access tokens (the same as what's used for `pulumi login`) and it's easiest to just create one specific to this project's purpose. This will let us revoke that token after we're done and know that there is no lingering access.
 
 To do that, go to <https://app.pulumi.com/account/tokens> (or click your avatar in the upper right and go to Settings, where you'll see Access Tokens on the left-hand nav):
 

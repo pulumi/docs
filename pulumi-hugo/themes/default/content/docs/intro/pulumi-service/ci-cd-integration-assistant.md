@@ -86,7 +86,7 @@ The **Configure CI/CD** step will help you configure secrets that will be used b
 For supported services, the assistant will provide a convenient link to the respective location
 where you can configure the secrets.
 
-The assistant provides a convenient way to create a [Pulumi Access Token]({{< relref "/docs/intro/pulumi-service/accounts#access-tokens" >}})
+The assistant provides a convenient way to create a [Pulumi access token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}})
 without needing to leave the page.
 
 ![Pulumi Access Token](/images/docs/reference/console/pulumi-access-token.png)

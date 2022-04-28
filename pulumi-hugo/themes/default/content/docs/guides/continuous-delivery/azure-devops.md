@@ -108,7 +108,7 @@ Install the Pulumi task from the [Visual Studio Marketplace](https://marketplace
 
 The task requires the use of a service connection, which allows the pipeline to connect to your Azure Subscription. The task also looks for the build variable `pulumi.access.token`, and automatically maps it to the environment variable `PULUMI_ACCESS_TOKEN`, that is used by the CLI for non-interactive logins. You may still use the `env` directive to map any other environment variables you wish to make available to your Pulumi app.
 
-You can get your Pulumi access token from [https://app.pulumi.com/account/tokens](https://app.pulumi.com/account/tokens). Here's an example snippet of how you can use the task in your pipeline yaml.
+You can get your [Pulumi access token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}}) from [https://app.pulumi.com/account/tokens](https://app.pulumi.com/account/tokens). Here's an example snippet of how you can use the task in your pipeline yaml.
 
 ```yaml
 # Lines omitted for brevity.

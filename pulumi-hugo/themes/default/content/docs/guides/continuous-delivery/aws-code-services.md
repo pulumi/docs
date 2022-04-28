@@ -29,7 +29,7 @@ pipeline.
 
 To update a Pulumi stack as part of a CodeBuild project, you'll need to add an environment variable
 named `PULUMI_ACCESS_TOKEN`. This is required to authenticate with pulumi.com in order to perform
-an update. You can create a new Pulumi access token specifically for your CloudBuild project on
+an update. You can create a new [Pulumi access token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}}) specifically for your CloudBuild project on
 your [Pulumi Account page](https://app.pulumi.com/account/tokens).
 
 Because of the sensitive nature of the access token, it is recommended that the Pulumi access

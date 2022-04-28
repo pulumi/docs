@@ -298,8 +298,8 @@ func main() {
 Stack CustomResources provide the following properties to configure the Stack update run:
 
 - The first is the access token secret (`PULUMI_ACCESS_TOKEN`), which is required to authenticate with pulumi.com to
-  perform the update. You can create a new Pulumi access token specifically for your
-  CI/CD job on your [Pulumi Account page](https://app.pulumi.com/account/tokens).
+  perform the update. You can create a new [Pulumi access token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}})
+  specifically for your CI/CD job on your [Pulumi Account page](https://app.pulumi.com/account/tokens).
 - Environment variables for the Stack that are sourced from Kubernetes ConfigMaps and/or Secrets. Examples include
   cloud provider credentials and other application settings.
 - Pulumi Stack configs and secrets that can complement or override settings

@@ -69,6 +69,8 @@ This tab lets you manage the [access tokens](https://en.wikipedia.org/wiki/Acces
 
 When you run [`pulumi login`]({{< relref "/docs/reference/cli/pulumi_login" >}}) from the command line, you will be prompted for an access token. Once obtained, the access token logs you into the Pulumi Service and lets you interact with the Pulumi service and manage your stacks.
 
+Please read the [Organization Access Tokens documentation]({{< relref "/docs/intro/pulumi-service/organization-access-tokens" >}}) for information about organization-managed tokens.
+
 ![Access tokens](/images/docs/reference/service/access-tokens.png)
 
 ### Creating Access Tokens

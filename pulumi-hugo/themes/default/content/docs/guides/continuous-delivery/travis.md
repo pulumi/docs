@@ -50,7 +50,8 @@ To use Pulumi within Travis CI, there are a few environment variables you'll nee
 build.
 
 The first is `PULUMI_ACCESS_TOKEN`, which is required to authenticate with pulumi.com in order to
-perform the preview or update. You can create a new Pulumi access token specifically for your
+perform the preview or update. You can create a new
+[Pulumi access token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}}) specifically for your
 CI/CD job on your [Pulumi Account page](https://app.pulumi.com/account/tokens).
 
 Next, you will also need to set environment variables specific to your cloud resource provider.

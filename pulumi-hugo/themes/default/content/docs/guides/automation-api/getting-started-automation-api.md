@@ -45,7 +45,7 @@ Install the required language runtime, if you have not already.
 
 ### Obtain a Pulumi access token
 
-You'll need a Pulumi access token so that your programs can store the resulting state in the Pulumi Service. The easiest way to obtain such a token is to run `pulumi login` from the command line.
+You'll need a [Pulumi access token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}}) so that your programs can store the resulting state in the Pulumi Service. The easiest way to obtain such a token is to run `pulumi login` from the command line.
 
 ## Define your Pulumi program
 

@@ -89,7 +89,7 @@ The `Stack` [CustomResourceDefinition (CRD)][k8s-crd] encapsulates an existing P
 infrastructure project in a Git repo, a specific commit SHA to deploy, and any
 additional settings to control the Pulumi update run.
 
-These settings include your Pulumi API access token, environment variables,
+These settings include your [Pulumi API access token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}}), environment variables,
 config and secrets, and lifecycle controls for the update.
 
 ### Deploying an NGINX Stack on Kubernetes

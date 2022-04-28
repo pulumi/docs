@@ -1888,40 +1888,6 @@ Status: 200 OK
 }
 ```
 
-### Delete Stack
-
-```
-DELETE /api/stacks/{organization}/{project}/{stack}
-```
-
-#### Parameters
-
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
-| `organization` | string | path | organization name |
-| `webhookname` | string | path | webhook name |
-
-#### Example
-
-```bash
-curl \
-  -H "Accept: application/vnd.pulumi+8" \
-  -H "Content-Type: application/json" \
-  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-  --request DELETE \
-  https://api.pulumi.com/api/orgs/{organization}/hooks/{webhookname}
-```
-
-#### Default response
-
-```
-Status: 204 OK
-```
-
-```
-EMPTY RESPONSE BODY
-```
-
 ### Ping Webhook
 
 ```

@@ -338,9 +338,10 @@ jobs:
 
 Now that you've got these two common workflows defined, you'll need to configure your
 secrets. Secrets are exposed as environment variables to the GitHub Actions runtime
-environment. Minimally, you'll need to supply a Pulumi access token to allow the Pulumi CLI to
-communicate with the Pulumi Service on your behalf, and you'll probably want to provide
-credentials for communicating with your cloud provider as well.
+environment. Minimally, you'll need to supply a [Pulumi access token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}})
+to allow the Pulumi CLI to communicate with the Pulumi Service on your behalf, and
+you'll probably want to provide credentials for communicating with your cloud
+provider as well.
 
 ### Configuring Your Secrets
 

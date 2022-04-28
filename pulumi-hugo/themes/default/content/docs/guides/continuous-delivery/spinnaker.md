@@ -80,7 +80,7 @@ To pass sensitive secrets to the Kubernetes batch job run by the plugin, define 
 The `Secret` resource must be in the same namespace as the Pulumi stage input when you configure the pipeline.
 {{% /notes %}}
 
-Sensitive secrets such as the Pulumi Access Token, the cloud provider credentials, or even your VCS credentials
+Sensitive secrets such as the [Pulumi Access Token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}}), the cloud provider credentials, or even your VCS credentials
 (eg. GitHub, Bitbucket, GitLab), should be defined as key/value pairs in the `Secret` resource.
 
 If you are using either the Pulumi-managed or the self-hosted [service backend]({{< relref "/docs/intro/concepts/state" >}}), get a

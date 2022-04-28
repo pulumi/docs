@@ -36,7 +36,7 @@ minutes to complete.
 
 You will need the following tools to complete this tutorial:
 
-- A [Pulumi account and token]({{< relref "/docs/intro/pulumi-service/accounts#access-tokens" >}})
+- A [Pulumi account and token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}})
   - If you don't have an account, go to the
     [signup page](https://app.pulumi.com/signup).
 - [Docker](https://docs.docker.com/get-docker/)
