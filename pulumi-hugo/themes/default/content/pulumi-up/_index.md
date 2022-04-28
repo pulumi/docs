@@ -132,6 +132,15 @@ workshops:
     description: |
       In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform.
 
+  - title: Microsoft JDConf 2022 - Infrastructure as Code with Pulumi
+    url: https://docs.microsoft.com/en-us/events/learntv/jdconf-2022/
+    description: |
+      Join Pulumi engineer, Kyle Dixler and Microsoft cloud advocate, Brian Benz for a fun talk about the history of infrastructure tooling and an end-to-end example for deploying infrastructure and applications on Azure using modern programming languages.
+
+  - title: Deploying Microservices With Pulumi & AWS Lambda
+    url: https://webinars.devops.com/pulumi-aws-workshop?utm_campaign=%242022.06.28%24_Pulumi_Workshop_DO&utm_source=Pulumi
+    description: |
+      In this workshop, we’ll examine how Pulumi can rapidly accelerate provisioning of cloud infrastructure. We’ll focus on AWS Lambda and build an example set of microservices utilizing AWS’s newest Lambda features.
 
 registration:
     sponsor:
