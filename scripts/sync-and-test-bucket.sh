@@ -48,17 +48,17 @@ aws s3 mb $destination_bucket_uri --region "$(aws_region)" || true
 
 # Tag the bucket with ownership information for production buckets.
 if [ "$(pulumi -C infrastructure stack --show-name)" == "production" ]; then
-    aws s3api put-bucket-tagging --bucket $destination_bucket --tagging file://$(pwd)/scripts/bucket-tagging.json
+    aws s3api put-bucket-tagging --bucket $destination_bucket --tagging file://$(pwd)/scripts/bucket-tagging.json --region "$(aws_region)"
 fi
 
 # Make the bucket an S3 website.
-aws s3 website $destination_bucket_uri --index-document index.html --error-document 404.html
+aws s3 website $destination_bucket_uri --index-document index.html --error-document 404.html --region "$(aws_region)"
 
 # Sync the local build directory to the bucket. Note that we do pass the --delete option
 # here, since in most cases, we'll be continually updating a bucket associated with a PR;
 # passing this option keeps the destination bucket clean.
 echo "Synchronizing to $destination_bucket_uri..."
-aws s3 sync "$build_dir" "$destination_bucket_uri" --acl public-read --delete --quiet
+aws s3 sync "$build_dir" "$destination_bucket_uri" --acl public-read --delete --quiet --region "$(aws_region)"
 
 echo "Sync complete."
 s3_website_url="http://${destination_bucket}.s3-website.$(aws_region).amazonaws.com"
