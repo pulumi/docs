@@ -31,8 +31,8 @@ go build -o "${GOPATH}/bin/resourcedocsgen" .
 resourcedocsgen docs registry --commitSha "${REGISTRY_COMMIT}" --logtostderr
 popd
 
-find content/registry/packages/*/api-docs -name _index.md -exec sed -i '' -e 's/{{% md %}}//g' {} \;
-find content/registry/packages/*/api-docs -name _index.md -exec sed -i '' -e 's/{{% \/md %}}//g' {} \;
+# find content/registry/packages/*/api-docs -name _index.md -exec sed -i '' -e 's/{{% md %}}//g' {} \;
+# find content/registry/packages/*/api-docs -name _index.md -exec sed -i '' -e 's/{{% \/md %}}//g' {} \;
 
 printf "Running Hugo...\n\n"
 if [ "$1" == "preview" ]; then
