@@ -31,15 +31,12 @@ go build -o "${GOPATH}/bin/resourcedocsgen" .
 resourcedocsgen docs registry --commitSha "${REGISTRY_COMMIT}" --logtostderr
 popd
 
-# find content/registry/packages/*/api-docs -name _index.md -exec sed -i '' -e 's/{{% md %}}//g' {} \;
-# find content/registry/packages/*/api-docs -name _index.md -exec sed -i '' -e 's/{{% \/md %}}//g' {} \;
-
 printf "Running Hugo...\n\n"
 if [ "$1" == "preview" ]; then
     export HUGO_BASEURL="http://$(origin_bucket_prefix)-$(build_identifier).s3-website.$(aws_region).amazonaws.com"
-    GOGC=10 hugo --minify --templateMetrics -e "preview"
+    GOGC=50 hugo --minify --templateMetrics -e "preview"
 else
-    GOGC=10 hugo --minify --templateMetrics -e production
+    GOGC=50 hugo --minify --templateMetrics -e production
 fi
 
 # Purge unused CSS.
