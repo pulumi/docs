@@ -37,9 +37,9 @@ find content/registry/packages/*/api-docs -name _index.md -exec sed -i '' -e 's/
 printf "Running Hugo...\n\n"
 if [ "$1" == "preview" ]; then
     export HUGO_BASEURL="http://$(origin_bucket_prefix)-$(build_identifier).s3-website.$(aws_region).amazonaws.com"
-    hugo --minify --templateMetrics -e "preview"
+    GOGC=5 hugo --minify --templateMetrics -e "preview"
 else
-    hugo --minify --templateMetrics -e production
+    GOGC=5 hugo --minify --templateMetrics -e production
 fi
 
 # Purge unused CSS.
