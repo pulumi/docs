@@ -142,6 +142,11 @@ workshops:
     description: |
       In this workshop, we’ll examine how Pulumi can rapidly accelerate provisioning of cloud infrastructure. We’ll focus on AWS Lambda and build an example set of microservices utilizing AWS’s newest Lambda features.
 
+  - title: Getting Started with Infrastructure as Code on DigitalOcean
+    url: /resources/getting-started-with-infrastructure-as-code-on-digital-ocean/
+    description: |
+      In this hands-on workshop, you will learn how to stand up basic services using Infrastructure as Code through a series of hands-on labs.
+
 registration:
     sponsor:
         - hubspot_form_id: ""
