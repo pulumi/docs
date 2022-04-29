@@ -34,9 +34,9 @@ popd
 printf "Running Hugo...\n\n"
 if [ "$1" == "preview" ]; then
     export HUGO_BASEURL="http://$(origin_bucket_prefix)-$(build_identifier).s3-website.$(aws_region).amazonaws.com"
-    hugo --templateMetrics -e "preview"
+    hugo --minify --templateMetrics -e "preview"
 else
-    hugo --templateMetrics -e production
+    hugo --minify --templateMetrics -e production
 fi
 
 # Purge unused CSS.
