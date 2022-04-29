@@ -24,6 +24,7 @@ func EmitFile(outDir, relPath string, contents []byte) error {
 	}
 	defer contract.IgnoreClose(f)
 
+	// fmt.Printf("%s", contents)
 	_, err = f.Write(contents)
 	return err
 }
