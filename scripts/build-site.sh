@@ -33,7 +33,7 @@ popd
 
 printf "Running Hugo...\n\n"
 if [ "$1" == "preview" ]; then
-    export HUGO_BASEURL="http://$(origin_bucket_prefix)-$(build_identifier).s3-website.$(aws_region).amazonaws.coma"
+    export HUGO_BASEURL="http://$(origin_bucket_prefix)-$(build_identifier).s3-website.$(aws_region).amazonaws.com"
     hugo --minify --templateMetrics -e "preview"
 else
     hugo --minify --templateMetrics -e production
