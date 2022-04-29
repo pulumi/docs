@@ -1,0 +1,11 @@
+id = "myles-haynes"
+name = "Myles Haynes"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "mchaynes"
+twitter = "mylescristopher"
+linkedin = "mchaynes"
