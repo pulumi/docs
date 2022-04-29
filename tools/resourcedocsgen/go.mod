@@ -8,7 +8,7 @@ require (
 	github.com/json-iterator/go v1.1.11 // indirect
 	github.com/kr/pretty v0.3.0 // indirect
 	github.com/pkg/errors v0.9.1
-	github.com/pulumi/pulumi/pkg/v3 v3.30.1-0.20220429171455-37006276a412
+	github.com/pulumi/pulumi/pkg/v3 v3.30.1-0.20220429205630-b9818e4e2e68
 	github.com/pulumi/pulumi/sdk/v3 v3.30.0
 	github.com/spf13/cobra v1.4.0
 	google.golang.org/genproto v0.0.0-20210602131652-f16073e35f0c // indirect
