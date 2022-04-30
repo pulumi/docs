@@ -23,13 +23,18 @@ export REPO_THEME_PATH="themes/default/"
 printf "Copying prebuilt docs...\n\n"
 make copy_static_prebuilt
 
-REGISTRY_COMMIT="$(go mod graph | grep pulumi/registry/themes/default | sed 's/.*-//')"
+REGISTRY_COMMIT="4f526d3ce8ff"
 
 printf "Generating API docs from registry commit %s...\n\n" "${REGISTRY_COMMIT}"
 pushd tools/resourcedocsgen
 go build -o "${GOPATH}/bin/resourcedocsgen" .
 resourcedocsgen docs registry --commitSha "${REGISTRY_COMMIT}" --logtostderr
 popd
+
+for i in {1..10}; do
+    rm -rf "content/registry/packages/oci-$i"
+    cp -R "content/registry/packages/oci" "content/registry/packages/oci-$i"
+done
 
 printf "Running Hugo...\n\n"
 if [ "$1" == "preview" ]; then
