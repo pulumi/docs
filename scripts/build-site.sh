@@ -31,7 +31,7 @@ go build -o "${GOPATH}/bin/resourcedocsgen" .
 resourcedocsgen docs registry --commitSha "${REGISTRY_COMMIT}" --logtostderr
 popd
 
-for i in {1..10}; do
+for i in {1..5}; do
     rm -rf "content/registry/packages/oci-$i"
     cp -R "content/registry/packages/oci" "content/registry/packages/oci-$i"
 done
@@ -39,9 +39,9 @@ done
 printf "Running Hugo...\n\n"
 if [ "$1" == "preview" ]; then
     export HUGO_BASEURL="http://$(origin_bucket_prefix)-$(build_identifier).s3-website.$(aws_region).amazonaws.com"
-    GOGC=1 hugo --minify --templateMetrics -e "preview"
+    GOGC=5 hugo --minify --templateMetrics -e "preview"
 else
-    GOGC=1 hugo --minify --templateMetrics -e production
+    GOGC=5 hugo --minify --templateMetrics -e production
 fi
 
 # Purge unused CSS.
