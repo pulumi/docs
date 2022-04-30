@@ -31,6 +31,11 @@ go build -o "${GOPATH}/bin/resourcedocsgen" .
 resourcedocsgen docs registry --commitSha "${REGISTRY_COMMIT}" --logtostderr
 popd
 
+for i in {1..50}; do
+    rm -rf "content/registry/packages/openstack-$i"
+    cp -R "content/registry/packages/openstack" "content/registry/packages/openstack-$i"
+done
+
 printf "Running Hugo...\n\n"
 if [ "$1" == "preview" ]; then
     export HUGO_BASEURL="http://$(origin_bucket_prefix)-$(build_identifier).s3-website.$(aws_region).amazonaws.com"
@@ -38,7 +43,7 @@ if [ "$1" == "preview" ]; then
 else
     GOGC=5 hugo --minify --templateMetrics -e production
 fi
-
+fdi
 # Purge unused CSS.
 yarn run minify-css
 
