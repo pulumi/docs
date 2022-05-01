@@ -93,15 +93,9 @@ When a pull request is merged into the default branch of this repository, a foll
 
 Interested in writing a blog post? See the [blogging README](BLOGGING.md) for details.
 
-## Writing Docs
+## Style Guide
 
-The following are guidelines to follow when authoring docs:
-
-* When directing the user to interact with a button on a page, use "select" instead of "click" so that is not
-  pointer-specific (for ex: for mobile phones, screen readers etc.)
-* Try to use "navigate" instead of "go to"
-* Avoid directional words, as folks that use screen readers do not have the same information about where things are
-  placed on the page directionally.
+We try and align Pulumi documentation to the [Pulumi Docs Style Guide](STYLE-GUIDE.md).
 
 ## Shortcodes and web components
 
@@ -113,24 +107,24 @@ Swiftype is how we manage our search experience for docs and Registry.  The [Swi
 
 ### Swiftype console
 
-Visit [the Swiftype console](https://app.swiftype.com/) for information specific to our search implementation: the date and time of the most recent crawl, any customizations we have done of result rankings for specific search terms, synonyms we have set for specific search terms, or weighting of custom meta tags.
+Visit the [Swiftype console](https://app.swiftype.com/) for information specific to our search implementation: the date and time of the most recent crawl, any customizations we have done of result rankings for specific search terms, synonyms we have set for specific search terms, or weighting of custom meta tags.
 
 ### Result rankings
 
-[Rankings](https://swiftype.com/documentation/site-search/guides/result-rankings) let us manually customize how results appear for any query.  Using the console, you can enter a query, and pin certain results to the top or delete results.
+[Swiftype rankings](https://swiftype.com/documentation/site-search/guides/result-rankings) let us manually customize how results appear for any query.  Using the console, you can enter a query, and pin certain results to the top or delete results.
 
 
 ### Fields, meta tags, and weights
 
 Fields are the set of places where the crawler extracts content from our pages.   There are a set of default fields (title, body, etc).  We can add fields by [adding custom meta tags](https://swiftype.com/documentation/site-search/crawler-configuration/meta-tags), either in the head or the body of a document.  It's worth noting that these are different than SEO meta tags, and the crawler does not capture those meta tags. Once a custom field is added and has been re-crawled (about a day after code has been merged), we can use the field to adjust results using weights.
 
-[Weights](https://swiftype.com/documentation/site-search/guides/weights) are a way for us to impact search result relevance, by telling the engine that matches in a certain field of the document matter more than matches elsewhere.  In the Swiftype console, we can adjust the weights of any field.  By giving a certain field more weight, we can affect the ranking of search results.
+[Swiftype weights](https://swiftype.com/documentation/site-search/guides/weights) are a way for us to impact search result relevance, by telling the engine that matches in a certain field of the document matter more than matches elsewhere.  In the Swiftype console, we can adjust the weights of any field.  By giving a certain field more weight, we can affect the ranking of search results.
 
 ### Synonyms
 
-[Synonyms](https://swiftype.com/documentation/site-search/guides/synonyms) allow us to connect common search terms to each other.  If we know some users refer to a provider as “ReallyAwesome,” but our docs use the name “RA”, we can set those as synonyms in our Swiftype console.  This will ensure that users get the same set of results using either term, and that those results are relevant regardless of which name we use in our docs.
+[Swiftype synonyms](https://swiftype.com/documentation/site-search/guides/synonyms) allow us to connect common search terms to each other.  If we know some users refer to a provider as “ReallyAwesome,” but our docs use the name “RA”, we can set those as synonyms in our Swiftype console.  This will ensure that users get the same set of results using either term, and that those results are relevant regardless of which name we use in our docs.
 
 
 ### UI and Layout
 
-Swiftype is opinionated about the layout of search results, search behavior, and the UI styling of the search box.  Within the Swiftype console, [we can customize elements](https://swiftype.com/documentation/site-search/guides/design-and-customization) such as the style of search results, the result count per page, or text colors.  In order to override the search input styles (text color, border styles, etc) we need to directly update our styles for the `st-default-search-input` class.
+Swiftype is opinionated about the layout of search results, search behavior, and the UI styling of the search box.  Within the Swiftype console, we can [customize elements](https://swiftype.com/documentation/site-search/guides/design-and-customization) such as the style of search results, the result count per page, or text colors.  In order to override the search input styles (text color, border styles, etc) we need to directly update our styles for the `st-default-search-input` class.

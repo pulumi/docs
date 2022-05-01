@@ -2,17 +2,19 @@
 
 This document defines some general styles we adhere to in the docs.
 
-## Use Inclusive Language
+## Language
 
-Words are important.  Pulumi strives to use language that is clear, harmonious, and friendly to all readers.  With these goals in mind, we use the following guidelines:
+Words are important. Pulumi strives to use language that is clear, harmonious, and friendly to all readers.  With these goals in mind, we use the following guidelines:
 
 * Avoid ableist language:
   * Instead of _crazy_ try _wild_.
   * Instead of _click_ use _select_.
   * Instead of _dummy_ use _placeholder_.
 * Avoid unnecessarily gendered language: Instead of _guys_ try _folks_, _yall_, or _everyone_.
-* Avoid using violent language (e.g., _kill_)
+* Avoid using violent language (e.g., _kill_).
 * Avoid pop-culture references as such references may not be familiar to all readers.
+* Instead of "go to," use "navigate".
+* Avoid directional words. Instead, link directly to the section you are referencing.
 
 ## Headings
 
