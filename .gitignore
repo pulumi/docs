@@ -64,3 +64,7 @@ _vendor/
 
 # Ignore Hugo build locks.
 .hugo_build.lock
+
+# Ignore registry-related build artifacts.
+/content/registry/packages/*/api-docs
+/static/registry
