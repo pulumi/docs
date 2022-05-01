@@ -43,7 +43,7 @@ if [ "$1" == "preview" ]; then
 else
     GOGC=5 hugo --minify --templateMetrics -e production
 fi
-fdi
+
 # Purge unused CSS.
 yarn run minify-css
 
