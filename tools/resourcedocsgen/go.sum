@@ -565,8 +565,8 @@ github.com/prometheus/procfs v0.0.8/go.mod h1:7Qr8sr6344vo1JqZ6HhLceV9o3AJ1Ff+Gx
 github.com/pulumi/pulumi/pkg/v3 v3.31.1-0.20220501020708-435f316e474d h1:GP6rpbxdp2vwPGfJRwmvqxstExh3nHEcoguI7yIn/FA=
 github.com/pulumi/pulumi/pkg/v3 v3.31.1-0.20220501020708-435f316e474d/go.mod h1:bO/BHZJoG2Mm8C3dxP414vLPvjxFfsetPE3Ep7Ffgro=
 github.com/pulumi/pulumi/sdk/v3 v3.31.0/go.mod h1:hGo/+AL1L4sPL9Ukd/i5bNFM3WHs3dHcA+GKEW7M3RA=
-github.com/pulumi/pulumi/sdk/v3 v3.31.1-0.20220501020708-435f316e474d h1:pQwISbXdQNbFHTiWJfsR5+4g8+iglEnpN6c7pRA80z0=
-github.com/pulumi/pulumi/sdk/v3 v3.31.1-0.20220501020708-435f316e474d/go.mod h1:hGo/+AL1L4sPL9Ukd/i5bNFM3WHs3dHcA+GKEW7M3RA=
+github.com/pulumi/pulumi/sdk/v3 v3.31.1-0.20220501140641-79ff5078d1e8 h1:hXFhH6nNp1ZmcMqIt0iPm9km9UZ+FAZ8hU68m12D7Us=
+github.com/pulumi/pulumi/sdk/v3 v3.31.1-0.20220501140641-79ff5078d1e8/go.mod h1:hGo/+AL1L4sPL9Ukd/i5bNFM3WHs3dHcA+GKEW7M3RA=
 github.com/rivo/uniseg v0.2.0 h1:S1pD9weZBuJdFmowNwbpi7BJ8TNftyUImj/0WQi72jY=
 github.com/rivo/uniseg v0.2.0/go.mod h1:J6wj4VEh+S6ZtnVlnTBMWIodfgj8LQOQFoIToxlJtxc=
 github.com/rjeczalik/notify v0.9.2 h1:MiTWrPj55mNDHEiIX5YUSKefw/+lCQVoAFmD6oQm5w8=

@@ -9,7 +9,7 @@ require (
 	github.com/kr/pretty v0.3.0 // indirect
 	github.com/pkg/errors v0.9.1
 	github.com/pulumi/pulumi/pkg/v3 v3.31.1-0.20220501020708-435f316e474d
-	github.com/pulumi/pulumi/sdk/v3 v3.31.1-0.20220501020708-435f316e474d
+	github.com/pulumi/pulumi/sdk/v3 v3.31.1-0.20220501140641-79ff5078d1e8
 	github.com/spf13/cobra v1.4.0
 	google.golang.org/genproto v0.0.0-20210602131652-f16073e35f0c // indirect
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
