@@ -32,6 +32,7 @@ resourcedocsgen docs registry --commitSha "${REGISTRY_COMMIT}" --logtostderr
 popd
 
 cp -R "content/registry" "content/registry-2"
+cp -R "content/registry" "content/registry-3"
 
 printf "Running Hugo...\n\n"
 if [ "$1" == "preview" ]; then
