@@ -26,6 +26,6 @@ If you're a member of a SAML-based Pulumi organization, you can sign in to [your
 If you're looking to integrate Pulumi with your SAML 2.0 identity provider, refer to one of our example guides:
 
 - [Azure Active Directory]({{< relref "aad" >}})
-- [G Suite (Google)]({{< relref "gsuite" >}})
+- [Google Workspace (formerly G Suite)]({{< relref "gsuite" >}})
 - [Okta]({{< relref "okta" >}})
 - [OneLogin]({{< relref "onelogin" >}})

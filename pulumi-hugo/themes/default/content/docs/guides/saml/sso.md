@@ -18,7 +18,7 @@ with the [Pulumi Service]({{< relref "/docs/intro/pulumi-service" >}}).
 > For a specific example, refer to one of our integration guides:
 >
 > - [Azure Active Directory]({{< relref "aad" >}})
-> - [G Suite (Google)]({{< relref "gsuite" >}})
+> - [Google Workspace]({{< relref "gsuite" >}})
 > - [Okta]({{< relref "okta" >}})
 > - [OneLogin]({{< relref "onelogin" >}})
 

@@ -148,7 +148,7 @@ Pulumi Enterprise and Business Critical provide support for any SAML 2.0-based i
 
 * [SAML-based configuration guide]({{< relref "/docs/guides/saml" >}})
 * [Azure Active Directory]({{< relref "/docs/guides/saml/aad" >}})
-* [G Suite]({{< relref "/docs/guides/saml/gsuite" >}})
+* [Google Workspace]({{< relref "/docs/guides/saml/gsuite" >}})
 * [Okta]({{< relref "/docs/guides/saml/okta" >}})
 
 Members of SSO organizations can login to Pulumi with the organization name auto-filled in the UI by visiting `https://app.pulumi.com/welcome/<organization-name>/sso`.

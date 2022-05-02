@@ -114,7 +114,7 @@ capabilities:
               more_info: |
                 Invite new team members and share projects to collaborate on infrastructure.
 
-                Single sign-on with any [SAML 2.0](/docs/guides/saml/) identity provider like Azure Active Directory, G Suite, Okta, and OneLogin.
+                Single sign-on with any [SAML 2.0](/docs/guides/saml/) identity provider like Azure Active Directory, Google Workspace , Okta, and OneLogin.
 
                 Manage Pulumi access from your central identity provider via [SCIM 2.0 integration](/docs/guides/scim/).
 

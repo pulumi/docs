@@ -57,7 +57,7 @@ capabilities:
           icon: security
           icon_color: salmon
           description: |
-            Leverage existing SAML 2.0 and Single Sign-On (SSO) solutions and use the System for Cross-domain Identity Management (SCIM) protocol for automatic identity synchronization with systems like Microsoft Active Directory, Google G Suite, and Okta.
+            Leverage existing SAML 2.0 and Single Sign-On (SSO) solutions and use the System for Cross-domain Identity Management (SCIM) protocol for automatic identity synchronization with systems like Microsoft Active Directory, Google Workspace, and Okta.
 
         - title: Role Based Access Control (RBAC)
           icon: lock
