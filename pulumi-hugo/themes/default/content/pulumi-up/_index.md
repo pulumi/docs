@@ -63,6 +63,14 @@ schedule_overview:
       engineer or just curious to learn what cloud engineering is all about, PulumiUP will
       teach you something new about the future and fundamentals of building on the cloud.
 
+  - title: PulumiUP Recap
+    day: Wednesday, May 4th
+    time: 12:30PM PDT
+    description: |
+      A lot of fun and cool stuff will be discussed and announced as part of PulumiUP! Staff Developer Advocate Matty Stratton will be joined by Luke Hoban and Joe Duffy (and others!) to talk about all the cool stuff. Join in the fun on Twitter!
+
+      <a href="https://pulumip.us/PulumiUPRecap" class="underline" target="_blank" rel="noopener noreferrer">Join the conversation</a>
+
   - title: Community Summit
     day: Thursday, May 5th
     time: 8:00AM - 12:00PM PDT
@@ -200,4 +208,5 @@ customer_logos:
     - tfir.png
     - techstrong-group.png
     - kong.png
+    - auth0.png
 ---
