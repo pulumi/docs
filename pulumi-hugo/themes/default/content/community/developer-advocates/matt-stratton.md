@@ -7,13 +7,23 @@ layout: developer-advocates/single
 aliases:
   - /matty
 talks:
+  - event: KCDC 2022
+    title: The Journey From DevOps to Cloud Engineering
+    url: 
+    date: 2022-08-08T14:00:00.000-01:00
+    slides: 
   - event: SCALE 19x
     title: Turning Infrastructure Into Software Through Cloud Engineering
     url: https://www.socallinuxexpo.org/scale/19x/presentations/turning-infrastructure-software-through-cloud-engineering
-    date: 2022-06-28T14:00:00.000-01:00
+    date: 2022-07-28T14:00:00.000-01:00
     slides: 
-  - event: DevOpsDays Amsterdam
-    title: Charting Your Own Course Through the Cloud Native Landscape
+  - event: DevOpsDays Seattle 2022
+    title: You’ve Convinced Me We Have To Collaborate — But How The Hell Do We Deal With People?
+    url: 
+    date: 2022-07-19T14:00:00.000-01:00
+    slides: 
+  - event: DevOpsDays Amsterdam 2022
+    title: Avengers Assemble - The Thanos Incident
     url: https://pulumip.us/matty-dod-ams
     date: 2022-06-23T14:00:00.000-01:00
     slides: 
