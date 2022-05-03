@@ -117,7 +117,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <hr>
 <pre>public interface <span class="typeNameLabel">Pulumi</span></pre>
-<div class="block">Pulumi program entrypoint.</div>
+<div class="block">Pulumi program entrypoint.
+ Possible exit codes:
+ <ul>
+     <li>0 - Process Exited Successfully</li>
+     <li>1 - Process Exited Before Logging User Actionable Message</li>
+     <li>32 - Process Exited After Logging User Actionable Message</li>
+ </ul></div>
 </li>
 </ul>
 </div>
@@ -139,15 +145,15 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static java.lang.Integer</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#run(java.util.function.Function)">run</a></span>&#8203;(java.util.function.Function&lt;<a href="Context.html" title="interface in com.pulumi">Context</a>,&#8203;<a href="Exports.html" title="interface in com.pulumi">Exports</a>&gt;&nbsp;stack)</code></th>
+<td class="colFirst"><code>static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#run(java.util.function.Consumer)">run</a></span>&#8203;(java.util.function.Consumer&lt;<a href="Context.html" title="interface in com.pulumi">Context</a>&gt;&nbsp;stack)</code></th>
 <td class="colLast">
 <div class="block">Run a Pulumi stack callback and wait for result.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static java.util.concurrent.CompletableFuture&lt;java.lang.Integer&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#runAsync(java.util.function.Function)">runAsync</a></span>&#8203;(java.util.function.Function&lt;<a href="Context.html" title="interface in com.pulumi">Context</a>,&#8203;<a href="Exports.html" title="interface in com.pulumi">Exports</a>&gt;&nbsp;stack)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#runAsync(java.util.function.Consumer)">runAsync</a></span>&#8203;(java.util.function.Consumer&lt;<a href="Context.html" title="interface in com.pulumi">Context</a>&gt;&nbsp;stack)</code></th>
 <td class="colLast">
 <div class="block">Run a Pulumi stack callback asynchronously.</div>
 </td>
@@ -169,31 +175,31 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="run(java.util.function.Function)">
+<a id="run(java.util.function.Consumer)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>run</h4>
-<pre class="methodSignature">static&nbsp;java.lang.Integer&nbsp;run&#8203;(java.util.function.Function&lt;<a href="Context.html" title="interface in com.pulumi">Context</a>,&#8203;<a href="Exports.html" title="interface in com.pulumi">Exports</a>&gt;&nbsp;stack)</pre>
-<div class="block">Run a Pulumi stack callback and wait for result.</div>
+<pre class="methodSignature">static&nbsp;void&nbsp;run&#8203;(java.util.function.Consumer&lt;<a href="Context.html" title="interface in com.pulumi">Context</a>&gt;&nbsp;stack)</pre>
+<div class="block">Run a Pulumi stack callback and wait for result.
+ <br>
+ In case of an error terminates the process with <code>System.exit(int)</code></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>stack</code> - the stack to run in Pulumi runtime</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>exit code from Pulumi runtime after running the stack</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#runAsync(java.util.function.Function)"><code>runAsync(Function)</code></a></dd>
+<dd><a href="#runAsync(java.util.function.Consumer)"><code>runAsync(Consumer)</code></a></dd>
 </dl>
 </li>
 </ul>
-<a id="runAsync(java.util.function.Function)">
+<a id="runAsync(java.util.function.Consumer)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>runAsync</h4>
-<pre class="methodSignature">static&nbsp;java.util.concurrent.CompletableFuture&lt;java.lang.Integer&gt;&nbsp;runAsync&#8203;(java.util.function.Function&lt;<a href="Context.html" title="interface in com.pulumi">Context</a>,&#8203;<a href="Exports.html" title="interface in com.pulumi">Exports</a>&gt;&nbsp;stack)</pre>
+<pre class="methodSignature">static&nbsp;java.util.concurrent.CompletableFuture&lt;java.lang.Integer&gt;&nbsp;runAsync&#8203;(java.util.function.Consumer&lt;<a href="Context.html" title="interface in com.pulumi">Context</a>&gt;&nbsp;stack)</pre>
 <div class="block">Run a Pulumi stack callback asynchronously.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -201,7 +207,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a future exit code from Pulumi runtime after running the stack</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#run(java.util.function.Function)"><code>run(Function)</code></a></dd>
+<dd><a href="#run(java.util.function.Consumer)"><code>run(Consumer)</code></a></dd>
 </dl>
 </li>
 </ul>

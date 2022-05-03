@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":9,"i13":9};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":9,"i15":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -211,23 +211,33 @@ extends java.lang.Object</pre>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>protected java.lang.String</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#pluginDownloadURL">pluginDownloadURL</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#protect">protect</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="ProviderResource.html" title="class in com.pulumi.resources">ProviderResource</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#provider">provider</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected java.util.List&lt;java.lang.String&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#replaceOnChanges">replaceOnChanges</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected java.util.List&lt;<a href="ResourceTransformation.html" title="interface in com.pulumi.resources">ResourceTransformation</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#resourceTransformations">resourceTransformations</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#retainOnDelete">retainOnDelete</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -265,7 +275,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected </code></td>
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(com.pulumi.core.Output,com.pulumi.resources.Resource,com.pulumi.core.Output,boolean,java.util.List,java.lang.String,com.pulumi.resources.ProviderResource,com.pulumi.resources.CustomTimeouts,java.util.List,java.util.List,java.lang.String,java.util.List)">ResourceOptions</a></span>&#8203;(<a href="../core/Output.html" title="interface in com.pulumi.core">Output</a>&lt;java.lang.String&gt;&nbsp;id,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(com.pulumi.core.Output,com.pulumi.resources.Resource,com.pulumi.core.Output,boolean,java.util.List,java.lang.String,com.pulumi.resources.ProviderResource,com.pulumi.resources.CustomTimeouts,java.util.List,java.util.List,java.lang.String,java.util.List,boolean,java.lang.String)">ResourceOptions</a></span>&#8203;(<a href="../core/Output.html" title="interface in com.pulumi.core">Output</a>&lt;java.lang.String&gt;&nbsp;id,
                <a href="Resource.html" title="class in com.pulumi.resources">Resource</a>&nbsp;parent,
                <a href="../core/Output.html" title="interface in com.pulumi.core">Output</a>&lt;java.util.List&lt;<a href="Resource.html" title="class in com.pulumi.resources">Resource</a>&gt;&gt;&nbsp;dependsOn,
                boolean&nbsp;protect,
@@ -276,7 +286,9 @@ extends java.lang.Object</pre>
                java.util.List&lt;<a href="ResourceTransformation.html" title="interface in com.pulumi.resources">ResourceTransformation</a>&gt;&nbsp;resourceTransformations,
                java.util.List&lt;<a href="../core/Output.html" title="interface in com.pulumi.core">Output</a>&lt;<a href="../core/Alias.html" title="class in com.pulumi.core">Alias</a>&gt;&gt;&nbsp;aliases,
                java.lang.String&nbsp;urn,
-               java.util.List&lt;java.lang.String&gt;&nbsp;replaceOnChanges)</code></th>
+               java.util.List&lt;java.lang.String&gt;&nbsp;replaceOnChanges,
+               boolean&nbsp;retainOnDelete,
+               java.lang.String&nbsp;pluginDownloadURL)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -308,7 +320,7 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>java.util.Optional&lt;<a href="CustomTimeouts.html" title="class in com.pulumi.resources">CustomTimeouts</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCustomTimeouts()">getCustomTimeouts</a></span>()</code></th>
 <td class="colLast">
-<div class="block">An optional CustomTimeouts configuration block.</div>
+<div class="block">An optional CustomTimeouts configuration.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -340,34 +352,42 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i6" class="altColor">
+<td class="colFirst"><code>java.util.Optional&lt;java.lang.String&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPluginDownloadURL()">getPluginDownloadURL</a></span>()</code></th>
+<td class="colLast">
+<div class="block">An optional URL, corresponding to the url from which the provider plugin that should be
+ used when operating on this resource is downloaded from.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>java.util.Optional&lt;<a href="ProviderResource.html" title="class in com.pulumi.resources">ProviderResource</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getProvider()">getProvider</a></span>()</code></th>
 <td class="colLast">
 <div class="block">An optional provider to use for this resource's CRUD operations.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getReplaceOnChanges()">getReplaceOnChanges</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Changes to any of these property paths will force a replacement.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="ResourceTransformation.html" title="interface in com.pulumi.resources">ResourceTransformation</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getResourceTransformations()">getResourceTransformations</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Optional list of transformations to apply to this resource during construction.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>java.util.Optional&lt;java.lang.String&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUrn()">getUrn</a></span>()</code></th>
 <td class="colLast">
 <div class="block">The URN of a previously-registered resource of this type to read from the engine.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>java.util.Optional&lt;java.lang.String&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getVersion()">getVersion</a></span>()</code></th>
 <td class="colLast">
@@ -375,20 +395,27 @@ extends java.lang.Object</pre>
  used when operating on this resource.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isProtect()">isProtect</a></span>()</code></th>
 <td class="colLast">
 <div class="block">When set to true, protect ensures this resource cannot be deleted.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isRetainOnDelete()">isRetainOnDelete</a></span>()</code></th>
+<td class="colLast">
+<div class="block">If set to True, the providers Delete method will not be called for this resource.</div>
+</td>
+</tr>
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>protected static &lt;T extends <a href="ResourceOptions.html" title="class in com.pulumi.resources">ResourceOptions</a>&gt;<br>T</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mergeSharedOptions(T,T)">mergeSharedOptions</a></span>&#8203;(T&nbsp;options1,
                   T&nbsp;options2)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>protected static &lt;T extends <a href="ResourceOptions.html" title="class in com.pulumi.resources">ResourceOptions</a>&gt;<br>T</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#mergeSharedOptions(T,T,com.pulumi.core.Output)">mergeSharedOptions</a></span>&#8203;(T&nbsp;options1,
                   T&nbsp;options2,
@@ -531,11 +558,30 @@ protected&nbsp;java.lang.String urn</pre>
 <a id="replaceOnChanges">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>replaceOnChanges</h4>
 <pre>@Nullable
 protected&nbsp;java.util.List&lt;java.lang.String&gt; replaceOnChanges</pre>
+</li>
+</ul>
+<a id="retainOnDelete">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>retainOnDelete</h4>
+<pre>protected&nbsp;boolean retainOnDelete</pre>
+</li>
+</ul>
+<a id="pluginDownloadURL">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>pluginDownloadURL</h4>
+<pre>@Nullable
+protected&nbsp;java.lang.String pluginDownloadURL</pre>
 </li>
 </ul>
 </li>
@@ -557,7 +603,7 @@ protected&nbsp;java.util.List&lt;java.lang.String&gt; replaceOnChanges</pre>
 <pre>protected&nbsp;ResourceOptions()</pre>
 </li>
 </ul>
-<a id="&lt;init&gt;(com.pulumi.core.Output,com.pulumi.resources.Resource,com.pulumi.core.Output,boolean,java.util.List,java.lang.String,com.pulumi.resources.ProviderResource,com.pulumi.resources.CustomTimeouts,java.util.List,java.util.List,java.lang.String,java.util.List)">
+<a id="&lt;init&gt;(com.pulumi.core.Output,com.pulumi.resources.Resource,com.pulumi.core.Output,boolean,java.util.List,java.lang.String,com.pulumi.resources.ProviderResource,com.pulumi.resources.CustomTimeouts,java.util.List,java.util.List,java.lang.String,java.util.List,boolean,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -585,7 +631,10 @@ protected&nbsp;java.util.List&lt;java.lang.String&gt; replaceOnChanges</pre>
                           @Nullable
                           java.lang.String&nbsp;urn,
                           @Nullable
-                          java.util.List&lt;java.lang.String&gt;&nbsp;replaceOnChanges)</pre>
+                          java.util.List&lt;java.lang.String&gt;&nbsp;replaceOnChanges,
+                          boolean&nbsp;retainOnDelete,
+                          @Nullable
+                          java.lang.String&nbsp;pluginDownloadURL)</pre>
 </li>
 </ul>
 </li>
@@ -682,7 +731,7 @@ protected&nbsp;java.util.List&lt;java.lang.String&gt; replaceOnChanges</pre>
 <li class="blockList">
 <h4>getCustomTimeouts</h4>
 <pre class="methodSignature">public&nbsp;java.util.Optional&lt;<a href="CustomTimeouts.html" title="class in com.pulumi.resources">CustomTimeouts</a>&gt;&nbsp;getCustomTimeouts()</pre>
-<div class="block">An optional CustomTimeouts configuration block.</div>
+<div class="block">An optional CustomTimeouts configuration.</div>
 </li>
 </ul>
 <a id="getResourceTransformations()">
@@ -693,8 +742,8 @@ protected&nbsp;java.util.List&lt;java.lang.String&gt; replaceOnChanges</pre>
 <h4>getResourceTransformations</h4>
 <pre class="methodSignature">public&nbsp;java.util.List&lt;<a href="ResourceTransformation.html" title="interface in com.pulumi.resources">ResourceTransformation</a>&gt;&nbsp;getResourceTransformations()</pre>
 <div class="block">Optional list of transformations to apply to this resource during construction.
- The transformations are applied in order, and are applied prior to transformation applied to
- parents walking from the resource up to the stack.</div>
+ The transformations are applied in order, and are applied prior to transformation
+ applied to parent walking from the resource up to the stack.</div>
 </li>
 </ul>
 <a id="getAliases()">
@@ -730,6 +779,28 @@ protected&nbsp;java.util.List&lt;java.lang.String&gt; replaceOnChanges</pre>
  instead of update only if `"*"` is passed.</div>
 </li>
 </ul>
+<a id="isRetainOnDelete()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isRetainOnDelete</h4>
+<pre class="methodSignature">public&nbsp;boolean&nbsp;isRetainOnDelete()</pre>
+<div class="block">If set to True, the providers Delete method will not be called for this resource.</div>
+</li>
+</ul>
+<a id="getPluginDownloadURL()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPluginDownloadURL</h4>
+<pre class="methodSignature">public&nbsp;java.util.Optional&lt;java.lang.String&gt;&nbsp;getPluginDownloadURL()</pre>
+<div class="block">An optional URL, corresponding to the url from which the provider plugin that should be
+ used when operating on this resource is downloaded from. This URL overrides the download URL
+ inferred from the current package and should rarely be used.</div>
+</li>
+</ul>
 <a id="mergeSharedOptions(com.pulumi.resources.ResourceOptions,com.pulumi.resources.ResourceOptions)">
 <!--   -->
 </a><a id="mergeSharedOptions(T,T)">
@@ -738,7 +809,8 @@ protected&nbsp;java.util.List&lt;java.lang.String&gt; replaceOnChanges</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>mergeSharedOptions</h4>
-<pre class="methodSignature">protected static&nbsp;&lt;T extends <a href="ResourceOptions.html" title="class in com.pulumi.resources">ResourceOptions</a>&gt;&nbsp;T&nbsp;mergeSharedOptions&#8203;(T&nbsp;options1,
+<pre class="methodSignature">@InternalUse
+protected static&nbsp;&lt;T extends <a href="ResourceOptions.html" title="class in com.pulumi.resources">ResourceOptions</a>&gt;&nbsp;T&nbsp;mergeSharedOptions&#8203;(T&nbsp;options1,
                                                                   T&nbsp;options2)</pre>
 </li>
 </ul>
@@ -750,7 +822,8 @@ protected&nbsp;java.util.List&lt;java.lang.String&gt; replaceOnChanges</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>mergeSharedOptions</h4>
-<pre class="methodSignature">protected static&nbsp;&lt;T extends <a href="ResourceOptions.html" title="class in com.pulumi.resources">ResourceOptions</a>&gt;&nbsp;T&nbsp;mergeSharedOptions&#8203;(T&nbsp;options1,
+<pre class="methodSignature">@InternalUse
+protected static&nbsp;&lt;T extends <a href="ResourceOptions.html" title="class in com.pulumi.resources">ResourceOptions</a>&gt;&nbsp;T&nbsp;mergeSharedOptions&#8203;(T&nbsp;options1,
                                                                   T&nbsp;options2,
                                                                   @Nullable
                                                                   <a href="../core/Output.html" title="interface in com.pulumi.core">Output</a>&lt;java.lang.String&gt;&nbsp;id)</pre>

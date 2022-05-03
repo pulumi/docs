@@ -106,6 +106,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/core/Output.ListBuilder.html#addAll(java.util.Iterator)">addAll(Iterator&lt;? extends E&gt;)</a></span> - Method in class com.pulumi.core.<a href="com/pulumi/core/Output.ListBuilder.html" title="class in com.pulumi.core">Output.ListBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/pulumi/resources/CustomResourceOptions.Builder.html#additionalSecretOutputs(java.lang.String...)">additionalSecretOutputs(String...)</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/CustomResourceOptions.Builder.html" title="class in com.pulumi.resources">CustomResourceOptions.Builder</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/CustomResourceOptions.Builder.html#additionalSecretOutputs(java.util.List)">additionalSecretOutputs(List&lt;String&gt;)</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/CustomResourceOptions.Builder.html" title="class in com.pulumi.resources">CustomResourceOptions.Builder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/core/TypeShape.Builder.html#addParameter(com.pulumi.core.TypeShape)">addParameter(TypeShape&lt;?&gt;)</a></span> - Method in class com.pulumi.core.<a href="com/pulumi/core/TypeShape.Builder.html" title="class in com.pulumi.core">TypeShape.Builder</a></dt>
@@ -121,6 +123,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><a href="com/pulumi/core/Alias.Builder.html" title="class in com.pulumi.core"><span class="typeNameLink">Alias.Builder</span></a> - Class in <a href="com/pulumi/core/package-summary.html">com.pulumi.core</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/ResourceOptions.html#aliases">aliases</a></span> - Variable in class com.pulumi.resources.<a href="com/pulumi/resources/ResourceOptions.html" title="class in com.pulumi.resources">ResourceOptions</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/pulumi/resources/ResourceOptions.Builder.html#aliases(com.pulumi.core.Alias...)">aliases(Alias...)</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/ResourceOptions.Builder.html" title="class in com.pulumi.resources">ResourceOptions.Builder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/ResourceOptions.Builder.html#aliases(com.pulumi.core.Output...)">aliases(Output&lt;Alias&gt;...)</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/ResourceOptions.Builder.html" title="class in com.pulumi.resources">ResourceOptions.Builder</a></dt>
 <dd>&nbsp;</dd>
@@ -225,15 +229,21 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/CustomResourceOptions.Builder.html#build()">build()</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/CustomResourceOptions.Builder.html" title="class in com.pulumi.resources">CustomResourceOptions.Builder</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/pulumi/resources/CustomTimeouts.Builder.html#build()">build()</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/CustomTimeouts.Builder.html" title="class in com.pulumi.resources">CustomTimeouts.Builder</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/core/Alias.html#builder()">builder()</a></span> - Static method in class com.pulumi.core.<a href="com/pulumi/core/Alias.html" title="class in com.pulumi.core">Alias</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/ComponentResourceOptions.html#builder()">builder()</a></span> - Static method in class com.pulumi.resources.<a href="com/pulumi/resources/ComponentResourceOptions.html" title="class in com.pulumi.resources">ComponentResourceOptions</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/CustomResourceOptions.html#builder()">builder()</a></span> - Static method in class com.pulumi.resources.<a href="com/pulumi/resources/CustomResourceOptions.html" title="class in com.pulumi.resources">CustomResourceOptions</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/pulumi/resources/CustomTimeouts.html#builder()">builder()</a></span> - Static method in class com.pulumi.resources.<a href="com/pulumi/resources/CustomTimeouts.html" title="class in com.pulumi.resources">CustomTimeouts</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/core/TypeShape.html#builder(java.lang.Class)">builder(Class&lt;? super T&gt;)</a></span> - Static method in class com.pulumi.core.<a href="com/pulumi/core/TypeShape.html" title="class in com.pulumi.core">TypeShape</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/core/Alias.Builder.html#%3Cinit%3E()">Builder()</a></span> - Constructor for class com.pulumi.core.<a href="com/pulumi/core/Alias.Builder.html" title="class in com.pulumi.core">Alias.Builder</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/pulumi/resources/CustomTimeouts.Builder.html#%3Cinit%3E()">Builder()</a></span> - Constructor for class com.pulumi.resources.<a href="com/pulumi/resources/CustomTimeouts.Builder.html" title="class in com.pulumi.resources">CustomTimeouts.Builder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/ResourceOptions.Builder.html#%3Cinit%3E(T)">Builder(T)</a></span> - Constructor for class com.pulumi.resources.<a href="com/pulumi/resources/ResourceOptions.Builder.html" title="class in com.pulumi.resources">ResourceOptions.Builder</a></dt>
 <dd>&nbsp;</dd>
@@ -346,12 +356,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">A bag of optional settings that control a @see <a href="com/pulumi/resources/ComponentResource.html" title="class in com.pulumi.resources"><code>ComponentResource</code></a> behavior.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="com/pulumi/resources/ComponentResourceOptions.html#%3Cinit%3E()">ComponentResourceOptions()</a></span> - Constructor for class com.pulumi.resources.<a href="com/pulumi/resources/ComponentResourceOptions.html" title="class in com.pulumi.resources">ComponentResourceOptions</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="com/pulumi/resources/ComponentResourceOptions.html#%3Cinit%3E(com.pulumi.core.Output,com.pulumi.resources.Resource,com.pulumi.core.Output,boolean,java.util.List,java.lang.String,com.pulumi.resources.CustomTimeouts,java.util.List,java.util.List,java.lang.String,java.util.List,java.util.List)">ComponentResourceOptions(Output&lt;String&gt;, Resource, Output&lt;List&lt;Resource&gt;&gt;, boolean, List&lt;String&gt;, String, CustomTimeouts, List&lt;ResourceTransformation&gt;, List&lt;Output&lt;Alias&gt;&gt;, String, List&lt;String&gt;, List&lt;ProviderResource&gt;)</a></span> - Constructor for class com.pulumi.resources.<a href="com/pulumi/resources/ComponentResourceOptions.html" title="class in com.pulumi.resources">ComponentResourceOptions</a></dt>
+<dt><span class="memberNameLink"><a href="com/pulumi/resources/ComponentResourceOptions.html#%3Cinit%3E(com.pulumi.core.Output,com.pulumi.resources.Resource,com.pulumi.core.Output,boolean,java.util.List,java.lang.String,com.pulumi.resources.CustomTimeouts,java.util.List,java.util.List,java.lang.String,java.util.List,boolean,java.lang.String,java.util.List)">ComponentResourceOptions(Output&lt;String&gt;, Resource, Output&lt;List&lt;Resource&gt;&gt;, boolean, List&lt;String&gt;, String, CustomTimeouts, List&lt;ResourceTransformation&gt;, List&lt;Output&lt;Alias&gt;&gt;, String, List&lt;String&gt;, boolean, String, List&lt;ProviderResource&gt;)</a></span> - Constructor for class com.pulumi.resources.<a href="com/pulumi/resources/ComponentResourceOptions.html" title="class in com.pulumi.resources">ComponentResourceOptions</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/pulumi/resources/ComponentResourceOptions.Builder.html" title="class in com.pulumi.resources"><span class="typeNameLink">ComponentResourceOptions.Builder</span></a> - Class in <a href="com/pulumi/resources/package-summary.html">com.pulumi.resources</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">The <a href="com/pulumi/resources/ComponentResourceOptions.html" title="class in com.pulumi.resources"><code>ComponentResourceOptions</code></a> builder.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/core/Output.html#concatList(com.pulumi.core.Output,com.pulumi.core.Output)">concatList(Output&lt;List&lt;E&gt;&gt;, Output&lt;List&lt;E&gt;&gt;)</a></span> - Static method in interface com.pulumi.core.<a href="com/pulumi/core/Output.html" title="interface in com.pulumi.core">Output</a></dt>
 <dd>
 <div class="block">Concatenates two lists of <a href="com/pulumi/core/Output.html" title="interface in com.pulumi.core"><code>Output</code></a>, can take a <code>null</code> value that will be treated as an empty list,
@@ -389,7 +399,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><a href="com/pulumi/Context.html" title="interface in com.pulumi"><span class="typeNameLink">Context</span></a> - Interface in <a href="com/pulumi/package-summary.html">com.pulumi</a></dt>
 <dd>
-<div class="block">Provides the current context to the stack callback.</div>
+<div class="block">Provides the current stack context used in the stack callback.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/core/Output.html#copy()">copy()</a></span> - Method in interface com.pulumi.core.<a href="com/pulumi/core/Output.html" title="interface in com.pulumi.core">Output</a></dt>
 <dd>
@@ -419,6 +429,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  optional project and optional stack.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/core/Urn.html#create(java.lang.String,java.lang.String,java.lang.String)">create(String, String, String)</a></span> - Static method in class com.pulumi.core.<a href="com/pulumi/core/Urn.html" title="class in com.pulumi.core">Urn</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/pulumi/resources/CustomTimeouts.Builder.html#create(java.time.Duration)">create(Duration)</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/CustomTimeouts.Builder.html" title="class in com.pulumi.resources">CustomTimeouts.Builder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/pulumi/resources/CustomResource.html" title="class in com.pulumi.resources"><span class="typeNameLink">CustomResource</span></a> - Class in <a href="com/pulumi/resources/package-summary.html">com.pulumi.resources</a></dt>
 <dd>
@@ -457,6 +469,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/CustomTimeouts.html#%3Cinit%3E(java.time.Duration,java.time.Duration,java.time.Duration)">CustomTimeouts(Duration, Duration, Duration)</a></span> - Constructor for class com.pulumi.resources.<a href="com/pulumi/resources/CustomTimeouts.html" title="class in com.pulumi.resources">CustomTimeouts</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="com/pulumi/resources/CustomTimeouts.Builder.html" title="class in com.pulumi.resources"><span class="typeNameLink">CustomTimeouts.Builder</span></a> - Class in <a href="com/pulumi/resources/package-summary.html">com.pulumi.resources</a></dt>
+<dd>
+<div class="block">The <a href="com/pulumi/resources/CustomTimeouts.html" title="class in com.pulumi.resources"><code>CustomTimeouts</code></a> builder</div>
+</dd>
 <dt><a href="com/pulumi/core/annotations/CustomType.html" title="annotation in com.pulumi.core.annotations"><span class="typeNameLink">CustomType</span></a> - Annotation Type in <a href="com/pulumi/core/annotations/package-summary.html">com.pulumi.core.annotations</a></dt>
 <dd>
 <div class="block">Annotation used by a Pulumi Cloud Provider Package to mark complex types used for a Resource
@@ -499,6 +515,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Logs a debug-level message that is generally hidden from end-users.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/Log.html#debugOrExcessive(java.lang.String,java.lang.String)">debugOrExcessive(String, String)</a></span> - Method in class com.pulumi.<a href="com/pulumi/Log.html" title="class in com.pulumi">Log</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/pulumi/resources/CustomTimeouts.Builder.html#delete(java.time.Duration)">delete(Duration)</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/CustomTimeouts.Builder.html" title="class in com.pulumi.resources">CustomTimeouts.Builder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/CustomResourceOptions.Builder.html#deleteBeforeReplace(boolean)">deleteBeforeReplace(boolean)</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/CustomResourceOptions.Builder.html" title="class in com.pulumi.resources">CustomResourceOptions.Builder</a></dt>
 <dd>&nbsp;</dd>
@@ -634,23 +652,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/Context.html#export(java.lang.String,com.pulumi.core.Output)">export(String, Output&lt;?&gt;)</a></span> - Method in interface com.pulumi.<a href="com/pulumi/Context.html" title="interface in com.pulumi">Context</a></dt>
 <dd>
-<div class="block">Exports and <a href="com/pulumi/core/Output.html" title="interface in com.pulumi.core"><code>Output</code></a> from a Pulumi stack.</div>
+<div class="block">Append an <a href="com/pulumi/core/Output.html" title="interface in com.pulumi.core"><code>Output</code></a> to exported stack outputs.</div>
 </dd>
 <dt><a href="com/pulumi/core/annotations/Export.html" title="annotation in com.pulumi.core.annotations"><span class="typeNameLink">Export</span></a> - Annotation Type in <a href="com/pulumi/core/annotations/package-summary.html">com.pulumi.core.annotations</a></dt>
 <dd>
 <div class="block">Annotation used by a mark @see <a href="com/pulumi/resources/Resource.html" title="class in com.pulumi.resources"><code>Resource</code></a> output properties.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="com/pulumi/Context.html#exports()">exports()</a></span> - Method in interface com.pulumi.<a href="com/pulumi/Context.html" title="interface in com.pulumi">Context</a></dt>
-<dd>
-<div class="block">Used to finish a stack callback.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="com/pulumi/Exports.html#exports()">exports()</a></span> - Method in interface com.pulumi.<a href="com/pulumi/Exports.html" title="interface in com.pulumi">Exports</a></dt>
-<dd>
-<div class="block">Used by Pulumi runtime.</div>
-</dd>
-<dt><a href="com/pulumi/Exports.html" title="interface in com.pulumi"><span class="typeNameLink">Exports</span></a> - Interface in <a href="com/pulumi/package-summary.html">com.pulumi</a></dt>
-<dd>
-<div class="block">All exports associated with the current <a href="com/pulumi/Context.html" title="interface in com.pulumi"><code>Context</code></a></div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/core/TypeShape.html#extract(java.lang.reflect.Parameter)">extract(Parameter)</a></span> - Static method in class com.pulumi.core.<a href="com/pulumi/core/TypeShape.html" title="class in com.pulumi.core">TypeShape</a></dt>
 <dd>&nbsp;</dd>
@@ -758,12 +764,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="com/pulumi/deployment/DeploymentInstance.html#getConfig()">getConfig()</a></span> - Method in interface com.pulumi.deployment.<a href="com/pulumi/deployment/DeploymentInstance.html" title="interface in com.pulumi.deployment">DeploymentInstance</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/CustomTimeouts.html#getCreate()">getCreate()</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/CustomTimeouts.html" title="class in com.pulumi.resources">CustomTimeouts</a></dt>
-<dd>
-<div class="block">The optional create timeout</div>
-</dd>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/ResourceOptions.html#getCustomTimeouts()">getCustomTimeouts()</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/ResourceOptions.html" title="class in com.pulumi.resources">ResourceOptions</a></dt>
 <dd>
-<div class="block">An optional CustomTimeouts configuration block.</div>
+<div class="block">An optional CustomTimeouts configuration.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/CustomTimeouts.html#getDelete()">getDelete()</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/CustomTimeouts.html" title="class in com.pulumi.resources">CustomTimeouts</a></dt>
 <dd>&nbsp;</dd>
@@ -884,6 +888,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">The previous parent of the resource.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="com/pulumi/resources/ResourceOptions.html#getPluginDownloadURL()">getPluginDownloadURL()</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/ResourceOptions.html" title="class in com.pulumi.resources">ResourceOptions</a></dt>
+<dd>
+<div class="block">An optional URL, corresponding to the url from which the provider plugin that should be
+ used when operating on this resource is downloaded from.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/core/Alias.html#getProject()">getProject()</a></span> - Method in class com.pulumi.core.<a href="com/pulumi/core/Alias.html" title="class in com.pulumi.core">Alias</a></dt>
 <dd>
 <div class="block">The previous project of the resource.</div>
@@ -914,7 +923,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/ComponentResourceOptions.html#getProviders()">getProviders()</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/ComponentResourceOptions.html" title="class in com.pulumi.resources">ComponentResourceOptions</a></dt>
 <dd>
-<div class="block">An optional set of providers to use for child resources.</div>
+<div class="block">An optional list of providers to use for child resources.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/ProviderResource.ProviderResourceInternal.html#getRegistrationId()">getRegistrationId()</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/ProviderResource.ProviderResourceInternal.html" title="class in com.pulumi.resources">ProviderResource.ProviderResourceInternal</a></dt>
 <dd>&nbsp;</dd>
@@ -991,9 +1000,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="com/pulumi/core/TypeShape.html#getTypeName()">getTypeName()</a></span> - Method in class com.pulumi.core.<a href="com/pulumi/core/TypeShape.html" title="class in com.pulumi.core">TypeShape</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/CustomTimeouts.html#getUpdate()">getUpdate()</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/CustomTimeouts.html" title="class in com.pulumi.resources">CustomTimeouts</a></dt>
-<dd>
-<div class="block">The optional update timeout.</div>
-</dd>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/core/Alias.html#getUrn()">getUrn()</a></span> - Method in class com.pulumi.core.<a href="com/pulumi/core/Alias.html" title="class in com.pulumi.core">Alias</a></dt>
 <dd>
 <div class="block">The previous urn to alias to.</div>
@@ -1214,6 +1221,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/ResourceOptions.html#isProtect()">isProtect()</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/ResourceOptions.html" title="class in com.pulumi.resources">ResourceOptions</a></dt>
 <dd>
 <div class="block">When set to true, protect ensures this resource cannot be deleted.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/pulumi/resources/ResourceOptions.html#isRetainOnDelete()">isRetainOnDelete()</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/ResourceOptions.html" title="class in com.pulumi.resources">ResourceOptions</a></dt>
+<dd>
+<div class="block">If set to True, the providers Delete method will not be called for this resource.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/core/Either.html#isRight()">isRight()</a></span> - Method in class com.pulumi.core.<a href="com/pulumi/core/Either.html" title="class in com.pulumi.core">Either</a></dt>
 <dd>&nbsp;</dd>
@@ -1547,6 +1558,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/core/Output.html#parseJson(java.lang.String)">parseJson(String)</a></span> - Static method in interface com.pulumi.core.<a href="com/pulumi/core/Output.html" title="interface in com.pulumi.core">Output</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/pulumi/resources/ResourceOptions.html#pluginDownloadURL">pluginDownloadURL</a></span> - Variable in class com.pulumi.resources.<a href="com/pulumi/resources/ResourceOptions.html" title="class in com.pulumi.resources">ResourceOptions</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/pulumi/resources/ResourceOptions.Builder.html#pluginDownloadURL(java.lang.String)">pluginDownloadURL(String)</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/ResourceOptions.Builder.html" title="class in com.pulumi.resources">ResourceOptions.Builder</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/core/Alias.Builder.html#project(com.pulumi.core.Output)">project(Output&lt;String&gt;)</a></span> - Method in class com.pulumi.core.<a href="com/pulumi/core/Alias.Builder.html" title="class in com.pulumi.core">Alias.Builder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/core/Alias.Builder.html#project(java.lang.String)">project(String)</a></span> - Method in class com.pulumi.core.<a href="com/pulumi/core/Alias.Builder.html" title="class in com.pulumi.core">Alias.Builder</a></dt>
@@ -1567,8 +1582,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/ResourceOptions.Builder.html#provider(com.pulumi.resources.ProviderResource)">provider(ProviderResource)</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/ResourceOptions.Builder.html" title="class in com.pulumi.resources">ResourceOptions.Builder</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="com/pulumi/resources/ComponentResourceOptions.Builder.html#provider(java.util.List)">provider(List&lt;ProviderResource&gt;)</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/ComponentResourceOptions.Builder.html" title="class in com.pulumi.resources">ComponentResourceOptions.Builder</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="com/pulumi/resources/ProviderResource.html" title="class in com.pulumi.resources"><span class="typeNameLink">ProviderResource</span></a> - Class in <a href="com/pulumi/resources/package-summary.html">com.pulumi.resources</a></dt>
 <dd>
 <div class="block">A @see <a href="com/pulumi/resources/Resource.html" title="class in com.pulumi.resources"><code>Resource</code></a> that implements CRUD operations
@@ -1583,6 +1596,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Creates and registers a new provider resource for a particular package.</div>
 </dd>
 <dt><a href="com/pulumi/resources/ProviderResource.ProviderResourceInternal.html" title="class in com.pulumi.resources"><span class="typeNameLink">ProviderResource.ProviderResourceInternal</span></a> - Class in <a href="com/pulumi/resources/package-summary.html">com.pulumi.resources</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/pulumi/resources/ComponentResourceOptions.Builder.html#providers(com.pulumi.resources.ProviderResource...)">providers(ProviderResource...)</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/ComponentResourceOptions.Builder.html" title="class in com.pulumi.resources">ComponentResourceOptions.Builder</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/pulumi/resources/ComponentResourceOptions.Builder.html#providers(java.util.List)">providers(List&lt;ProviderResource&gt;)</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/ComponentResourceOptions.Builder.html" title="class in com.pulumi.resources">ComponentResourceOptions.Builder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/pulumi/Pulumi.html" title="interface in com.pulumi"><span class="typeNameLink">Pulumi</span></a> - Interface in <a href="com/pulumi/package-summary.html">com.pulumi</a></dt>
 <dd>
@@ -1754,7 +1771,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/ResourceOptions.html#%3Cinit%3E()">ResourceOptions()</a></span> - Constructor for class com.pulumi.resources.<a href="com/pulumi/resources/ResourceOptions.html" title="class in com.pulumi.resources">ResourceOptions</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="com/pulumi/resources/ResourceOptions.html#%3Cinit%3E(com.pulumi.core.Output,com.pulumi.resources.Resource,com.pulumi.core.Output,boolean,java.util.List,java.lang.String,com.pulumi.resources.ProviderResource,com.pulumi.resources.CustomTimeouts,java.util.List,java.util.List,java.lang.String,java.util.List)">ResourceOptions(Output&lt;String&gt;, Resource, Output&lt;List&lt;Resource&gt;&gt;, boolean, List&lt;String&gt;, String, ProviderResource, CustomTimeouts, List&lt;ResourceTransformation&gt;, List&lt;Output&lt;Alias&gt;&gt;, String, List&lt;String&gt;)</a></span> - Constructor for class com.pulumi.resources.<a href="com/pulumi/resources/ResourceOptions.html" title="class in com.pulumi.resources">ResourceOptions</a></dt>
+<dt><span class="memberNameLink"><a href="com/pulumi/resources/ResourceOptions.html#%3Cinit%3E(com.pulumi.core.Output,com.pulumi.resources.Resource,com.pulumi.core.Output,boolean,java.util.List,java.lang.String,com.pulumi.resources.ProviderResource,com.pulumi.resources.CustomTimeouts,java.util.List,java.util.List,java.lang.String,java.util.List,boolean,java.lang.String)">ResourceOptions(Output&lt;String&gt;, Resource, Output&lt;List&lt;Resource&gt;&gt;, boolean, List&lt;String&gt;, String, ProviderResource, CustomTimeouts, List&lt;ResourceTransformation&gt;, List&lt;Output&lt;Alias&gt;&gt;, String, List&lt;String&gt;, boolean, String)</a></span> - Constructor for class com.pulumi.resources.<a href="com/pulumi/resources/ResourceOptions.html" title="class in com.pulumi.resources">ResourceOptions</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/pulumi/resources/ResourceOptions.Builder.html" title="class in com.pulumi.resources"><span class="typeNameLink">ResourceOptions.Builder</span></a>&lt;<a href="com/pulumi/resources/ResourceOptions.Builder.html" title="type parameter in ResourceOptions.Builder">T</a> extends <a href="com/pulumi/resources/ResourceOptions.html" title="class in com.pulumi.resources">ResourceOptions</a>,&#8203;<a href="com/pulumi/resources/ResourceOptions.Builder.html" title="type parameter in ResourceOptions.Builder">B</a> extends <a href="com/pulumi/resources/ResourceOptions.Builder.html" title="class in com.pulumi.resources">ResourceOptions.Builder</a>&lt;<a href="com/pulumi/resources/ResourceOptions.Builder.html" title="type parameter in ResourceOptions.Builder">T</a>,&#8203;<a href="com/pulumi/resources/ResourceOptions.Builder.html" title="type parameter in ResourceOptions.Builder">B</a>&gt;&gt; - Class in <a href="com/pulumi/resources/package-summary.html">com.pulumi.resources</a></dt>
 <dd>&nbsp;</dd>
@@ -1778,6 +1795,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/ResourceTransformation.Result.html#%3Cinit%3E(com.pulumi.resources.ResourceArgs,com.pulumi.resources.ResourceOptions)">Result(ResourceArgs, ResourceOptions)</a></span> - Constructor for class com.pulumi.resources.<a href="com/pulumi/resources/ResourceTransformation.Result.html" title="class in com.pulumi.resources">ResourceTransformation.Result</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/pulumi/resources/ResourceOptions.html#retainOnDelete">retainOnDelete</a></span> - Variable in class com.pulumi.resources.<a href="com/pulumi/resources/ResourceOptions.html" title="class in com.pulumi.resources">ResourceOptions</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/pulumi/resources/ResourceOptions.Builder.html#retainOnDelete(boolean)">retainOnDelete(boolean)</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/ResourceOptions.Builder.html" title="class in com.pulumi.resources">ResourceOptions.Builder</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/core/Either.html#right()">right()</a></span> - Method in class com.pulumi.core.<a href="com/pulumi/core/Either.html" title="class in com.pulumi.core">Either</a></dt>
 <dd>
 <div class="block">Returns the contained instance, which must be present.</div>
@@ -1787,11 +1808,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">The type name that should be used to construct the root component in the tree of Pulumi resources
  allocated by a deployment.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="com/pulumi/Pulumi.html#run(java.util.function.Function)">run(Function&lt;Context, Exports&gt;)</a></span> - Static method in interface com.pulumi.<a href="com/pulumi/Pulumi.html" title="interface in com.pulumi">Pulumi</a></dt>
+<dt><span class="memberNameLink"><a href="com/pulumi/Pulumi.html#run(java.util.function.Consumer)">run(Consumer&lt;Context&gt;)</a></span> - Static method in interface com.pulumi.<a href="com/pulumi/Pulumi.html" title="interface in com.pulumi">Pulumi</a></dt>
 <dd>
 <div class="block">Run a Pulumi stack callback and wait for result.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="com/pulumi/Pulumi.html#runAsync(java.util.function.Function)">runAsync(Function&lt;Context, Exports&gt;)</a></span> - Static method in interface com.pulumi.<a href="com/pulumi/Pulumi.html" title="interface in com.pulumi">Pulumi</a></dt>
+<dt><span class="memberNameLink"><a href="com/pulumi/Pulumi.html#runAsync(java.util.function.Consumer)">runAsync(Consumer&lt;Context&gt;)</a></span> - Static method in interface com.pulumi.<a href="com/pulumi/Pulumi.html" title="interface in com.pulumi">Pulumi</a></dt>
 <dd>
 <div class="block">Run a Pulumi stack callback asynchronously.</div>
 </dd>
@@ -2106,6 +2127,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">U</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="com/pulumi/resources/CustomTimeouts.Builder.html#update(java.time.Duration)">update(Duration)</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/CustomTimeouts.Builder.html" title="class in com.pulumi.resources">CustomTimeouts.Builder</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/ResourceOptions.html#urn">urn</a></span> - Variable in class com.pulumi.resources.<a href="com/pulumi/resources/ResourceOptions.html" title="class in com.pulumi.resources">ResourceOptions</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/pulumi/resources/Resource.LazyFields.html#urn()">urn()</a></span> - Method in class com.pulumi.resources.<a href="com/pulumi/resources/Resource.LazyFields.html" title="class in com.pulumi.resources">Resource.LazyFields</a></dt>

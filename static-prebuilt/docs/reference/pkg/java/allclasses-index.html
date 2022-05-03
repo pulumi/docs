@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":2,"i1":2,"i2":2,"i3":2,"i4":2,"i5":2,"i6":2,"i7":2,"i8":2,"i9":2,"i10":2,"i11":2,"i12":2,"i13":2,"i14":2,"i15":2,"i16":2,"i17":8,"i18":1,"i19":1,"i20":2,"i21":2,"i22":2,"i23":2,"i24":2,"i25":32,"i26":32,"i27":32,"i28":2,"i29":1,"i30":1,"i31":2,"i32":32,"i33":32,"i34":32,"i35":1,"i36":2,"i37":2,"i38":32,"i39":2,"i40":2,"i41":2,"i42":2,"i43":2,"i44":2,"i45":8,"i46":1,"i47":2,"i48":2,"i49":2,"i50":2,"i51":1,"i52":1,"i53":2,"i54":2,"i55":1,"i56":2,"i57":2,"i58":1,"i59":2,"i60":2,"i61":2,"i62":1,"i63":2,"i64":2,"i65":2,"i66":8,"i67":2,"i68":2,"i69":2,"i70":1,"i71":2,"i72":2,"i73":32,"i74":8,"i75":1,"i76":2,"i77":2,"i78":2,"i79":2,"i80":8,"i81":2,"i82":2,"i83":2,"i84":1,"i85":2,"i86":2,"i87":2,"i88":2,"i89":2,"i90":2,"i91":2,"i92":2,"i93":2,"i94":2,"i95":2,"i96":2};
+var data = {"i0":2,"i1":2,"i2":2,"i3":2,"i4":2,"i5":2,"i6":2,"i7":2,"i8":2,"i9":2,"i10":2,"i11":2,"i12":2,"i13":2,"i14":2,"i15":2,"i16":2,"i17":8,"i18":1,"i19":1,"i20":2,"i21":2,"i22":2,"i23":2,"i24":2,"i25":2,"i26":32,"i27":32,"i28":32,"i29":2,"i30":1,"i31":1,"i32":2,"i33":32,"i34":32,"i35":32,"i36":2,"i37":2,"i38":32,"i39":2,"i40":2,"i41":2,"i42":2,"i43":2,"i44":2,"i45":8,"i46":1,"i47":2,"i48":2,"i49":2,"i50":2,"i51":1,"i52":1,"i53":2,"i54":2,"i55":1,"i56":2,"i57":2,"i58":1,"i59":2,"i60":2,"i61":2,"i62":1,"i63":2,"i64":2,"i65":2,"i66":8,"i67":2,"i68":2,"i69":2,"i70":1,"i71":2,"i72":2,"i73":32,"i74":8,"i75":1,"i76":2,"i77":2,"i78":2,"i79":2,"i80":8,"i81":2,"i82":2,"i83":2,"i84":1,"i85":2,"i86":2,"i87":2,"i88":2,"i89":2,"i90":2,"i91":2,"i92":2,"i93":2,"i94":2,"i95":2,"i96":2};
 var tabs = {65535:["t0","All Classes"],1:["t1","Interface Summary"],2:["t2","Class Summary"],8:["t4","Exception Summary"],32:["t6","Annotation Types Summary"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -191,7 +191,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tr id="i15" class="rowColor">
 <td class="colFirst"><a href="com/pulumi/resources/ComponentResourceOptions.Builder.html" title="class in com.pulumi.resources">ComponentResourceOptions.Builder</a></td>
-<th class="colLast" scope="row">&nbsp;</th>
+<th class="colLast" scope="row">
+<div class="block">The <a href="com/pulumi/resources/ComponentResourceOptions.html" title="class in com.pulumi.resources"><code>ComponentResourceOptions</code></a> builder.</div>
+</th>
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><a href="com/pulumi/Config.html" title="class in com.pulumi">Config</a></td>
@@ -214,7 +216,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <tr id="i19" class="rowColor">
 <td class="colFirst"><a href="com/pulumi/Context.html" title="interface in com.pulumi">Context</a></td>
 <th class="colLast" scope="row">
-<div class="block">Provides the current context to the stack callback.</div>
+<div class="block">Provides the current stack context used in the stack callback.</div>
 </th>
 </tr>
 <tr id="i20" class="altColor">
@@ -245,69 +247,69 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </th>
 </tr>
 <tr id="i25" class="rowColor">
+<td class="colFirst"><a href="com/pulumi/resources/CustomTimeouts.Builder.html" title="class in com.pulumi.resources">CustomTimeouts.Builder</a></td>
+<th class="colLast" scope="row">
+<div class="block">The <a href="com/pulumi/resources/CustomTimeouts.html" title="class in com.pulumi.resources"><code>CustomTimeouts</code></a> builder</div>
+</th>
+</tr>
+<tr id="i26" class="altColor">
 <td class="colFirst"><a href="com/pulumi/core/annotations/CustomType.html" title="annotation in com.pulumi.core.annotations">CustomType</a></td>
 <th class="colLast" scope="row">
 <div class="block">Annotation used by a Pulumi Cloud Provider Package to mark complex types used for a Resource
  output property.</div>
 </th>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><a href="com/pulumi/core/annotations/CustomType.Constructor.html" title="annotation in com.pulumi.core.annotations">CustomType.Constructor</a></td>
 <th class="colLast" scope="row">
 <div class="block">Annotation used by a Pulumi Cloud Provider Package to marks the constructor for a complex
  property type so that it can be instantiated by the Pulumi runtime.</div>
 </th>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><a href="com/pulumi/core/annotations/CustomType.Parameter.html" title="annotation in com.pulumi.core.annotations">CustomType.Parameter</a></td>
 <th class="colLast" scope="row">
 <div class="block">Annotation used by a Pulumi Cloud Provider Package to marks a constructor parameter for a complex
  property type so that it can be instantiated by the Pulumi runtime.</div>
 </th>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><a href="com/pulumi/resources/DependencyResource.html" title="class in com.pulumi.resources">DependencyResource</a></td>
 <th class="colLast" scope="row">
 <div class="block">A @see <a href="com/pulumi/resources/Resource.html" title="class in com.pulumi.resources"><code>Resource</code></a> that is used to indicate that an @see <a href="com/pulumi/core/Output.html" title="interface in com.pulumi.core"><code>Output</code></a>
  has a dependency on a particular resource.</div>
 </th>
 </tr>
-<tr id="i29" class="rowColor">
+<tr id="i30" class="altColor">
 <td class="colFirst"><a href="com/pulumi/deployment/Deployment.html" title="interface in com.pulumi.deployment">Deployment</a></td>
 <th class="colLast" scope="row">&nbsp;</th>
 </tr>
-<tr id="i30" class="altColor">
+<tr id="i31" class="rowColor">
 <td class="colFirst"><a href="com/pulumi/deployment/DeploymentInstance.html" title="interface in com.pulumi.deployment">DeploymentInstance</a></td>
 <th class="colLast" scope="row">&nbsp;</th>
 </tr>
-<tr id="i31" class="rowColor">
+<tr id="i32" class="altColor">
 <td class="colFirst"><a href="com/pulumi/core/Either.html" title="class in com.pulumi.core">Either</a>&lt;<a href="com/pulumi/core/Either.html" title="type parameter in Either">L</a>,&#8203;<a href="com/pulumi/core/Either.html" title="type parameter in Either">R</a>&gt;</td>
 <th class="colLast" scope="row">
 <div class="block">Represents a value of one of two possible types (a disjoint union).</div>
 </th>
 </tr>
-<tr id="i32" class="altColor">
+<tr id="i33" class="rowColor">
 <td class="colFirst"><a href="com/pulumi/core/annotations/EnumType.html" title="annotation in com.pulumi.core.annotations">EnumType</a></td>
 <th class="colLast" scope="row">
 <div class="block">Annotation used by a Pulumi Cloud Provider Package to mark enum types.</div>
 </th>
 </tr>
-<tr id="i33" class="rowColor">
+<tr id="i34" class="altColor">
 <td class="colFirst"><a href="com/pulumi/core/annotations/EnumType.Converter.html" title="annotation in com.pulumi.core.annotations">EnumType.Converter</a></td>
 <th class="colLast" scope="row">
 <div class="block">Annotation used to mark an explicit converter method that converts the enum type to the underlying type.</div>
 </th>
 </tr>
-<tr id="i34" class="altColor">
+<tr id="i35" class="rowColor">
 <td class="colFirst"><a href="com/pulumi/core/annotations/Export.html" title="annotation in com.pulumi.core.annotations">Export</a></td>
 <th class="colLast" scope="row">
 <div class="block">Annotation used by a mark @see <a href="com/pulumi/resources/Resource.html" title="class in com.pulumi.resources"><code>Resource</code></a> output properties.</div>
-</th>
-</tr>
-<tr id="i35" class="rowColor">
-<td class="colFirst"><a href="com/pulumi/Exports.html" title="interface in com.pulumi">Exports</a></td>
-<th class="colLast" scope="row">
-<div class="block">All exports associated with the current <a href="com/pulumi/Context.html" title="interface in com.pulumi"><code>Context</code></a></div>
 </th>
 </tr>
 <tr id="i36" class="altColor">

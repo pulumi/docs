@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -180,20 +180,25 @@ extends <a href="ResourceOptions.Builder.html" title="class in com.pulumi.resour
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="CustomResourceOptions.Builder.html" title="class in com.pulumi.resources">CustomResourceOptions.Builder</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#additionalSecretOutputs(java.util.List)">additionalSecretOutputs</a></span>&#8203;(java.util.List&lt;java.lang.String&gt;&nbsp;additionalSecretOutputs)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#additionalSecretOutputs(java.lang.String...)">additionalSecretOutputs</a></span>&#8203;(java.lang.String...&nbsp;additionalSecretOutputs)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="CustomResourceOptions.Builder.html" title="class in com.pulumi.resources">CustomResourceOptions.Builder</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#additionalSecretOutputs(java.util.List)">additionalSecretOutputs</a></span>&#8203;(java.util.List&lt;java.lang.String&gt;&nbsp;additionalSecretOutputs)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="CustomResourceOptions.html" title="class in com.pulumi.resources">CustomResourceOptions</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#build()">build</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="CustomResourceOptions.Builder.html" title="class in com.pulumi.resources">CustomResourceOptions.Builder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deleteBeforeReplace(boolean)">deleteBeforeReplace</a></span>&#8203;(boolean&nbsp;deleteBeforeReplace)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="CustomResourceOptions.Builder.html" title="class in com.pulumi.resources">CustomResourceOptions.Builder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#importId(java.lang.String)">importId</a></span>&#8203;(java.lang.String&nbsp;importId)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -204,7 +209,7 @@ extends <a href="ResourceOptions.Builder.html" title="class in com.pulumi.resour
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;com.pulumi.resources.<a href="ResourceOptions.Builder.html" title="class in com.pulumi.resources">ResourceOptions.Builder</a></h3>
-<code><a href="ResourceOptions.Builder.html#aliases(com.pulumi.core.Output...)">aliases</a>, <a href="ResourceOptions.Builder.html#aliases(java.util.List)">aliases</a>, <a href="ResourceOptions.Builder.html#customTimeouts(com.pulumi.resources.CustomTimeouts)">customTimeouts</a>, <a href="ResourceOptions.Builder.html#dependsOn(com.pulumi.core.Output)">dependsOn</a>, <a href="ResourceOptions.Builder.html#dependsOn(com.pulumi.resources.Resource...)">dependsOn</a>, <a href="ResourceOptions.Builder.html#dependsOn(java.util.List)">dependsOn</a>, <a href="ResourceOptions.Builder.html#id(com.pulumi.core.Output)">id</a>, <a href="ResourceOptions.Builder.html#id(java.lang.String)">id</a>, <a href="ResourceOptions.Builder.html#ignoreChanges(java.lang.String...)">ignoreChanges</a>, <a href="ResourceOptions.Builder.html#ignoreChanges(java.util.List)">ignoreChanges</a>, <a href="ResourceOptions.Builder.html#parent(com.pulumi.resources.Resource)">parent</a>, <a href="ResourceOptions.Builder.html#protect(boolean)">protect</a>, <a href="ResourceOptions.Builder.html#provider(com.pulumi.resources.ProviderResource)">provider</a>, <a href="ResourceOptions.Builder.html#replaceOnChanges(java.lang.String...)">replaceOnChanges</a>, <a href="ResourceOptions.Builder.html#replaceOnChanges(java.util.List)">replaceOnChanges</a>, <a href="ResourceOptions.Builder.html#resourceTransformations(com.pulumi.resources.ResourceTransformation...)">resourceTransformations</a>, <a href="ResourceOptions.Builder.html#resourceTransformations(java.util.List)">resourceTransformations</a>, <a href="ResourceOptions.Builder.html#urn(java.lang.String)">urn</a>, <a href="ResourceOptions.Builder.html#version(java.lang.String)">version</a></code></li>
+<code><a href="ResourceOptions.Builder.html#aliases(com.pulumi.core.Alias...)">aliases</a>, <a href="ResourceOptions.Builder.html#aliases(com.pulumi.core.Output...)">aliases</a>, <a href="ResourceOptions.Builder.html#aliases(java.util.List)">aliases</a>, <a href="ResourceOptions.Builder.html#customTimeouts(com.pulumi.resources.CustomTimeouts)">customTimeouts</a>, <a href="ResourceOptions.Builder.html#dependsOn(com.pulumi.core.Output)">dependsOn</a>, <a href="ResourceOptions.Builder.html#dependsOn(com.pulumi.resources.Resource...)">dependsOn</a>, <a href="ResourceOptions.Builder.html#dependsOn(java.util.List)">dependsOn</a>, <a href="ResourceOptions.Builder.html#id(com.pulumi.core.Output)">id</a>, <a href="ResourceOptions.Builder.html#id(java.lang.String)">id</a>, <a href="ResourceOptions.Builder.html#ignoreChanges(java.lang.String...)">ignoreChanges</a>, <a href="ResourceOptions.Builder.html#ignoreChanges(java.util.List)">ignoreChanges</a>, <a href="ResourceOptions.Builder.html#parent(com.pulumi.resources.Resource)">parent</a>, <a href="ResourceOptions.Builder.html#pluginDownloadURL(java.lang.String)">pluginDownloadURL</a>, <a href="ResourceOptions.Builder.html#protect(boolean)">protect</a>, <a href="ResourceOptions.Builder.html#provider(com.pulumi.resources.ProviderResource)">provider</a>, <a href="ResourceOptions.Builder.html#replaceOnChanges(java.lang.String...)">replaceOnChanges</a>, <a href="ResourceOptions.Builder.html#replaceOnChanges(java.util.List)">replaceOnChanges</a>, <a href="ResourceOptions.Builder.html#resourceTransformations(com.pulumi.resources.ResourceTransformation...)">resourceTransformations</a>, <a href="ResourceOptions.Builder.html#resourceTransformations(java.util.List)">resourceTransformations</a>, <a href="ResourceOptions.Builder.html#retainOnDelete(boolean)">retainOnDelete</a>, <a href="ResourceOptions.Builder.html#urn(java.lang.String)">urn</a>, <a href="ResourceOptions.Builder.html#version(java.lang.String)">version</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
@@ -236,6 +241,15 @@ extends <a href="ResourceOptions.Builder.html" title="class in com.pulumi.resour
 <li class="blockList">
 <h4>deleteBeforeReplace</h4>
 <pre class="methodSignature">public&nbsp;<a href="CustomResourceOptions.Builder.html" title="class in com.pulumi.resources">CustomResourceOptions.Builder</a>&nbsp;deleteBeforeReplace&#8203;(boolean&nbsp;deleteBeforeReplace)</pre>
+</li>
+</ul>
+<a id="additionalSecretOutputs(java.lang.String...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>additionalSecretOutputs</h4>
+<pre class="methodSignature">public&nbsp;<a href="CustomResourceOptions.Builder.html" title="class in com.pulumi.resources">CustomResourceOptions.Builder</a>&nbsp;additionalSecretOutputs&#8203;(java.lang.String...&nbsp;additionalSecretOutputs)</pre>
 </li>
 </ul>
 <a id="additionalSecretOutputs(java.util.List)">

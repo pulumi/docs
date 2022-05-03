@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6};
+var data = {"i0":6,"i1":6,"i2":6,"i3":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -128,7 +128,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public interface <span class="typeNameLabel">Context</span>
 extends <a href="context/OutputContext.html" title="interface in com.pulumi.context">OutputContext</a>, <a href="context/ConfigContext.html" title="interface in com.pulumi.context">ConfigContext</a></pre>
-<div class="block">Provides the current context to the stack callback.</div>
+<div class="block">Provides the current stack context used in the stack callback.</div>
 </li>
 </ul>
 </div>
@@ -150,31 +150,24 @@ extends <a href="context/OutputContext.html" title="interface in com.pulumi.cont
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="Exports.html" title="interface in com.pulumi">Exports</a></code></td>
+<td class="colFirst"><code><a href="Context.html" title="interface in com.pulumi">Context</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#export(java.lang.String,com.pulumi.core.Output)">export</a></span>&#8203;(java.lang.String&nbsp;name,
       <a href="core/Output.html" title="interface in com.pulumi.core">Output</a>&lt;?&gt;&nbsp;output)</code></th>
 <td class="colLast">
-<div class="block">Exports and <a href="core/Output.html" title="interface in com.pulumi.core"><code>Output</code></a> from a Pulumi stack.</div>
+<div class="block">Append an <a href="core/Output.html" title="interface in com.pulumi.core"><code>Output</code></a> to exported stack outputs.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="Exports.html" title="interface in com.pulumi">Exports</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#exports()">exports</a></span>()</code></th>
-<td class="colLast">
-<div class="block">Used to finish a stack callback.</div>
-</td>
-</tr>
-<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="context/LoggingContext.html" title="interface in com.pulumi.context">LoggingContext</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#log()">log</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#projectName()">projectName</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#stackName()">stackName</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -252,32 +245,21 @@ extends <a href="context/OutputContext.html" title="interface in com.pulumi.cont
 <a id="export(java.lang.String,com.pulumi.core.Output)">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>export</h4>
-<pre class="methodSignature"><a href="Exports.html" title="interface in com.pulumi">Exports</a>&nbsp;export&#8203;(java.lang.String&nbsp;name,
+<pre class="methodSignature">@CanIgnoreReturnValue
+<a href="Context.html" title="interface in com.pulumi">Context</a>&nbsp;export&#8203;(java.lang.String&nbsp;name,
                <a href="core/Output.html" title="interface in com.pulumi.core">Output</a>&lt;?&gt;&nbsp;output)</pre>
-<div class="block">Exports and <a href="core/Output.html" title="interface in com.pulumi.core"><code>Output</code></a> from a Pulumi stack.</div>
+<div class="block">Append an <a href="core/Output.html" title="interface in com.pulumi.core"><code>Output</code></a> to exported stack outputs.
+ <p>
+ This method mutates the context internal state.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - name of the <code>Output</code></dd>
 <dd><code>output</code> - the <code>Output</code> value</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the <a href="Exports.html" title="interface in com.pulumi"><code>Exports</code></a> associated with current <a href="Context.html" title="interface in com.pulumi"><code>Context</code></a></dd>
-</dl>
-</li>
-</ul>
-<a id="exports()">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>exports</h4>
-<pre class="methodSignature"><a href="Exports.html" title="interface in com.pulumi">Exports</a>&nbsp;exports()</pre>
-<div class="block">Used to finish a stack callback.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the <a href="Exports.html" title="interface in com.pulumi"><code>Exports</code></a> associated with current <a href="Context.html" title="interface in com.pulumi"><code>Context</code></a></dd>
+<dd>the current <a href="Context.html" title="interface in com.pulumi"><code>Context</code></a></dd>
 </dl>
 </li>
 </ul>
