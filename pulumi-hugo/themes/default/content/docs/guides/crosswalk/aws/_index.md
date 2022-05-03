@@ -26,37 +26,155 @@ Pulumi Crosswalk for AWS supports "day one" tasks, such as creating your initial
 
 Pulumi Crosswalk for AWS also supports "day two and beyond" tasks, such as scaling your workload, securing and
 integrating it with your existing infrastructure, or going to production in multiple complex environments. This includes [Amazon Virtual Private Cloud (VPC)]({{< relref "vpc" >}}) for network isolation, [AWS Auto Scaling](
-{{< relref "autoscaling" >}}) for dynamic scaling, [Amazon CloudWatch]({{< relref "cloudwatch" >}}) for
-monitoring, alarms, and dashboards, and [AWS Identity and Access Management (IAM)]({{< relref "iam" >}}) for
+{{< relref "autoscaling" >}}) for dynamic scaling, and [AWS Identity and Access Management (IAM)]({{< relref "iam" >}}) for
 securing your infrastructure.
 
 For example, this program builds and publishes a Dockerized application to a private [Elastic Container Registry (ECR)](
 {{< relref "ecr" >}}), spins up an ECS Fargate cluster, and runs a scalable, load balanced service, all in
 response to a single `pulumi up` command line invocation:
 
+{{< chooser language "typescript,python,csharp" / >}}
+
+{{% choosable language typescript %}}
+
 ```typescript
 import * as awsx from "@pulumi/awsx";
+import * as aws from "@pulumi/aws";
 
-// Build and publish a Docker image to a private ECR registry.
-const img = awsx.ecs.Image.fromPath("app-img", "./app");
+// Create a repository.
+const repo = new awsx.ecr.Repository("my-repo");
 
-// Create a load balancer on port 80.
-const lb = new awsx.lb.ApplicationListener("app", { port: 80 });
+// Build an image from the "./app" directory (relative to our project and containing Dockerfile),
+// and publish it to our ECR repository provisioned above.
+const image = new awsx.ecr.Image("image", {
+    repositoryUrl: repo.url,
+    path: "./app",
+})
 
-// Create a Fargate service task that can scale out.
-const appService = new awsx.ecs.FargateService("app-svc", {
+// Create an ECS Cluster
+const cluster = new aws.ecs.Cluster("default-cluster");
+
+// Create a load balancer on port 80 and spin up two instances of Nginx.
+const lb = new awsx.lb.ApplicationLoadBalancer("nginx-lb");
+
+const service = new awsx.ecs.FargateService("my-service", {
+    cluster: cluster.arn,
     taskDefinitionArgs: {
         container: {
-            image: img,
-            portMappings: [ lb ],
+            image: image.imageUri,
+            cpu: 512,
+            memory: 128,
+            essential: true,
+            portMappings: [
+                {
+                    containerPort: 80,
+                    targetGroup: lb.defaultTargetGroup,
+                },
+            ],
         },
     },
-    desiredCount: 2,
 });
 
 // Export the load balancer's address so that it's easy to access.
-export const url = lb.endpoint.hostname;
+export const url = lb.loadBalancer.dnsName;
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_awsx as awsx
+
+repo = awsx.ecr.Repository("my-repo");
+
+image = awsx.ecr.Image("image",
+                       repository_url=repo.url,
+                       path="./app")
+
+cluster = aws.ecs.Cluster("default-cluster")
+
+lb = awsx.lb.ApplicationLoadBalancer("nginx-lb")
+
+service = awsx.ecs.FargateService("service",
+                                  cluster=cluster.arn,
+                                  task_definition_args=awsx.ecs.FargateServiceTaskDefinitionArgs(
+                                      containers={
+                                          "nginx": awsx.ecs.TaskDefinitionContainerDefinitionArgs(
+                                              image=image.image_uri,
+                                              memory=128,
+                                              port_mappings=[awsx.ecs.TaskDefinitionPortMappingArgs(
+                                                  container_port=80,
+                                                  target_group=lb.default_target_group,
+                                              )]
+                                          )
+                                      }
+                                  ))
+
+pulumi.export("url", lb.load_balancer.dns_name)
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Awsx.Ecs.Inputs;
+using Aws = Pulumi.Aws;
+using Ecr = Pulumi.Awsx.Ecr;
+using Ecs = Pulumi.Awsx.Ecs;
+using Lb = Pulumi.Awsx.Lb;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var repo = new Ecr.Repository("my-repo");
+
+        var image = new Ecr.Image("image", new Ecr.ImageArgs
+        {
+            RepositoryUrl = repo.Url,
+            Path = "./app",
+        });
+
+        var cluster = new Aws.Ecs.Cluster("demo-cluster");
+
+        var lb = new Lb.ApplicationLoadBalancer("nginx-lb");
+
+        var service = new Ecs.FargateService("my-service", new Ecs.FargateServiceArgs
+        {
+            Cluster = cluster.Arn,
+            TaskDefinitionArgs = new FargateServiceTaskDefinitionArgs
+            {
+                Container = new TaskDefinitionContainerDefinitionArgs
+                {
+                    Memory = 128,
+                    Cpu = 512,
+                    Image = image.ImageUri,
+                    Essential = true,
+                    PortMappings = new TaskDefinitionPortMappingArgs
+                    {
+                        ContainerPort = 80,
+                        TargetGroup = lb.DefaultTargetGroup,
+                    }
+                }
+            }
+        });
+    }
+}
+
+class Program
+{
+    static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
+}
+```
+
+{{% /choosable %}}
 
 This example uses the default VPC and reasonable security defaults, but supports easy customization of all aspects.
 
@@ -108,9 +226,7 @@ and [Kubernetes](https://github.com/pulumi/pulumi-kubernetes/issues/589)).
 
 ### What Languages are Supported?
 
-Pulumi Crosswalk for AWS is currently supported only in
-[Node.js (JavaScript or TypeScript) languages]({{< relref "/docs/intro/languages/javascript" >}}). Support for other languages,
-[including Python](https://github.com/pulumi/pulumi-awsx/issues/308), is on the future roadmap.
+Pulumi Crosswalk for AWS is available for all supported Pulumi languages.
 
 ### What Packages Define Pulumi Crosswalk for AWS?
 
@@ -133,6 +249,21 @@ https://github.com/pulumi/pulumi-aws), [`pulumi/pulumi-awsx`](https://github.com
 The primary change is new functionality added to the above packages, and the availability of these User Guides.
 Pulumi Crosswalk for AWS continues to work with the standard Pulumi CLI and Pulumi Service. If you already use the free Individual
 Edition, or paid Team or Enterprise Edition, you can continue to do so now with Pulumi Crosswalk for AWS functionality.
+
+### Upgrading from an old version of Pulumi Crosswalk for AWS?
+
+Previous versions of `@pulumi/awsx` were TypeScript-only. The functionality has changed from these TypeScript-only versions.
+We have taken the opportunity to move the existing TypeScript-only functionality into a `classic` namespace. To create a
+VPC using the old TypeScript version of Crosswalk for AWS, the following code would work:
+
+```typescript
+import * as awsx from "@pulumi/awsx/classic";
+
+const vpc = new awsx.ec2.Vpc("classic-vpc", {});
+```
+
+Any resource that you use from the existing library can continue to be used from that `classic` namespace. All of the classic
+functionality is available in that namesoace.
 
 ### Is Support or Training Available for Pulumi Crosswalk for AWS?
 

@@ -20,6 +20,10 @@ to monitor applications, understand and respond to system-wide performance chang
 get a unified view of operational health. AWS CloudWatch uses logs, metrics, and events to provide a
 unified view of AWS resources, applications and services.
 
+{{% notes type="info" %}}
+This functionality is currently only available in TypeScript and as part of the AWSx Classic namespace.
+{{% /notes %}}
+
 ## Overview
 
 Pulumi Crosswalk for AWS CloudWatch will help you operationally understand and manage your AWS resources and applications,
@@ -323,18 +327,18 @@ Creating a metric widget on your dashboard can be done like so:
 
 ```typescript
 import * as aws from "@pulumi/aws";
-import * as awsx from "@pulumi/awsx";
+import * as classic from "@pulumi/awsx/classic";
 
 // Get the metric for the lambda that processing our topic requests.
-const funcMetric = awsx.lambda.metrics.duration({ function: func });
+const funcMetric = classic.lambda.metrics.duration({ function: func });
 
 // Also create a dashboard to track two things:
 //     1) Average requests/minute.
 //     2) P90/95/99 latency durations.
 const dashboardName = "funcDashboard";
-const dashboard = new awsx.cloudwatch.Dashboard(dashboardName, {
+const dashboard = new classic.cloudwatch.Dashboard(dashboardName, {
     widgets: [
-        new awsx.cloudwatch.SingleNumberMetricWidget({
+        new classic.cloudwatch.SingleNumberMetricWidget({
             title: "Requests/Minute",
             width: 10,
             metrics: awsx.lambda.metrics.invocations({
@@ -344,7 +348,7 @@ const dashboard = new awsx.cloudwatch.Dashboard(dashboardName, {
                 period: 60,
             }),
         }),
-        new awsx.cloudwatch.LineGraphMetricWidget({
+        new classic.cloudwatch.LineGraphMetricWidget({
             title: "Lambda duration",
             width: 14,
 
@@ -375,15 +379,15 @@ const funcAlarm1 = funcMetric.with({ unit: "Milliseconds", period: 600 })
                              .createAlarm("SlowUrlProcessing", { threshold: 1000, evaluationPeriods: 5 });
 
 // Also create a dashboard to track this.
-const dashboard = new awsx.cloudwatch.Dashboard("TopicData", {
+const dashboard = new classic.cloudwatch.Dashboard("TopicData", {
     widgets: [
         ...,
-        new awsx.cloudwatch.LineGraphMetricWidget({
+        new classic.cloudwatch.LineGraphMetricWidget({
             title: "Lambda duration",
             width: 14,
 
             // Place a line on the graph to indicate where our alarm will be triggered.
-            annotations: new awsx.cloudwatch.HorizontalAnnotation(funcAlarm1),
+            annotations: new classic.cloudwatch.HorizontalAnnotation(funcAlarm1),
 
             // Log our different p90/p95/p99 latencies
             metrics: [

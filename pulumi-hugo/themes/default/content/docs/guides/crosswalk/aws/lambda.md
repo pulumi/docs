@@ -21,6 +21,10 @@ for virtually any type of application or backend service with zero administratio
 takes care of everything required to run and scale your code with high availability. You can set up your code to
 automatically trigger from other AWS services or call it directly from any web or mobile app.
 
+{{% notes type="info" %}}
+This functionality is available in TypeScript only and as part of the [AWS Classic provider]({{< relref "/registry/packages/aws" >}}).
+{{% /notes %}}
+
 ## Overview
 
 Pulumi Crosswalk for AWS brings a more natural, and easier to use, way of building serverless applications using

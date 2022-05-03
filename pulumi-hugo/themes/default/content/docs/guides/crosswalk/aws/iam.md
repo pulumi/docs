@@ -19,6 +19,10 @@ aliases: ["/docs/reference/crosswalk/aws/iam/"]
 and resources securely. Using IAM, you can create and manage AWS users and groups, and use permissions to allow and
 deny their access to AWS resources.
 
+{{% notes type="info" %}}
+This functionality is available in TypeScript only and as part of the [AWS Classic provider]({{< relref "/registry/packages/aws" >}}).
+{{% /notes %}}
+
 ## Overview
 
 Pulumi Crosswalk for AWS adds strongly typed IAM resource classes, to ensure that you can create, update, and

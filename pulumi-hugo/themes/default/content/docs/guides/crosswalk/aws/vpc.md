@@ -59,19 +59,64 @@ VPC is often the easiest path when you're just getting up and running or don't y
 requirements. Most resources will use this default VPC automatically if you leave it unspecified. In other cases,
 you may be required to pass it explicitly, in which case you'll need to get it programmatically.
 
-To get the default VPC, just call the `awsx.ec2.Vpc.getDefault()` function:
+To get the default VPC, just call the `awsx.vpc.DefaultVpc("default-vpc");` function:
+
+{{< chooser language "typescript,python,csharp" / >}}
+
+{{% choosable language typescript %}}
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
 
 // Fetch the default VPC information from your AWS account:
-const vpc = awsx.ec2.Vpc.getDefault();
+const vpc = new awsx.ec2.DefaultVpc("default-vpc");
 
 // Export a few interesting fields to make them easy to use:
-export const vpcId = vpc.id;
+export const vpcId = vpc.vpcId;
 export const vpcPrivateSubnetIds = vpc.privateSubnetIds;
 export const vpcPublicSubnetIds = vpc.publicSubnetIds;
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_awsx as awsx
+
+vpc = awsx.ec2.DefaultVpc("default-vpc")
+
+pulumi.export("vpc_id", vpc.vpc_id)
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Ec2 = Pulumi.Awsx.Ec2;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpc = new DefaultVpc("default-vpc");
+        this.VpcId = vpc.vpcId;
+    }
+    [Output] public Output<string> VpcId { get; set; }
+}
+
+class Program
+{
+    static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
+}
+```
+
+{{% /choosable %}}
 
 This example reads the default VPC and exports some of its properties for easy consumption. `pulumi up` will show:
 
@@ -81,28 +126,30 @@ Updating (dev):
 
      Type                     Name                  Status
  +   pulumi:pulumi:Stack      crosswalk-aws-dev     created
- +   ├─ awsx:x:ec2:Vpc        default-vpc           created
- +   │  ├─ awsx:x:ec2:Subnet  default-vpc-public-0  created
- +   │  ├─ awsx:x:ec2:Subnet  default-vpc-public-1  created
- >   │  ├─ aws:ec2:Subnet     default-vpc-public-0  read
- >   │  └─ aws:ec2:Subnet     default-vpc-public-1  read
- >   └─ aws:ec2:Vpc           default-vpc           read
+ +   └─ awsx:ec2:DefaultVpc   default-vpc           created
 
 Outputs:
-    vpcId              : "vpc-c93b06ae"
-    vpcPublicSubnetIds : [
-        [0]: "subnet-00412149"
-        [1]: "subnet-fd19eaa6"
+    publicSubnetIds : [
+        [0]: "subnet-03711d3b9b21b3a8e"
+        [1]: "subnet-06e8296c053e2b952"
+        [2]: "subnet-0fc2dc8f8ba906919"
+        [3]: "subnet-037f366816336db85"
+    ]
+    privateSubnetIds : [
+        [0]: "subnet-03711d3b9b21b3a8e"
+        [1]: "subnet-06e8296c053e2b952"
+        [2]: "subnet-0fc2dc8f8ba906919"
+        [3]: "subnet-037f366816336db85"
     ]
 
 Resources:
-    + 4 created
+    + 2 created
 
-Duration: 6s
+Duration: 9s
 ```
 
-In this case, the VPC is not created and managed by Pulumi. Instead `getDefault` reads from your AWS account
-and returns the VPC metadata. This object can be introspected or passed anywhere an `awsx.ec2.Vpc` is expected.
+In this case, the VPC is not created and managed by Pulumi. Instead `DefaultVpc` reads from your AWS account
+and returns the VPC metadata. This object can be introspected or passed anywhere a `VpcID` or `SubnetIds` are expected.
 
 ## Setting Up a New VPC
 
@@ -115,17 +162,69 @@ simple defaults that many will want to start with, to complete control over ever
 
 The following code creates a new VPC using all default settings:
 
+{{< chooser language "typescript,python,csharp" / >}}
+
+{{% choosable language typescript %}}
+
 ```typescript
 import * as awsx from "@pulumi/awsx";
 
 // Allocate a new VPC with the default settings:
-const vpc = new awsx.ec2.Vpc("custom", {});
+const vpc = new awsx.ec2.Vpc("custom");
 
 // Export a few resulting fields to make them easy to use:
-export const vpcId = vpc.id;
-export const vpcPrivateSubnetIds = vpc.privateSubnetIds;
-export const vpcPublicSubnetIds = vpc.publicSubnetIds;
+export const vpcId = vpc.vpcId;
+export const privateSubnetIds = vpc.privateSubnetIds;
+export const publicSubnetIds = vpc.publicSubnetIds;
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_awsx as awsx
+
+vpc = awsx.ec2.Vpc("custom")
+
+pulumi.export("vpcId", vpc.vpc_id)
+pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
+pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using Ec2 = Pulumi.Awsx.Ec2;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpc = new Ec2.Vpc("custom");
+
+        this.VpcId = vpc.VpcId;
+        this.PublicSubnetIds = vpc.PublicSubnetIds;
+        this.PrivateSubnetIds = vpc.PrivateSubnetIds;
+    }
+
+
+    [Output] public Output<ImmutableArray<string>> PrivateSubnetIds { get; private set; }
+    [Output] public Output<ImmutableArray<string>> PublicSubnetIds { get; private set; }
+    [Output] public Output<string> VpcId { get; set; }
+}
+
+class Program
+{
+    static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
+}
+```
+
+{{% /choosable %}}
 
 If we run `pulumi up`, the VPC and its supporting resources will be provisioned:
 
@@ -133,60 +232,65 @@ If we run `pulumi up`, the VPC and its supporting resources will be provisioned:
 $ pulumi up
 Updating (dev):
 
-     Type                                    Name                    Status
- +   pulumi:pulumi:Stack                     crosswalk-aws-dev       created
- +   ├─ awsx:x:ec2:Vpc                       custom                  created
- +   │  ├─ awsx:x:ec2:Subnet                 custom-public-0         created
- +   │  │  ├─ aws:ec2:RouteTable             custom-public-0         created
- +   │  │  ├─ aws:ec2:Subnet                 custom-public-0         created
- +   │  │  ├─ aws:ec2:Route                  custom-public-0-ig      created
- +   │  │  └─ aws:ec2:RouteTableAssociation  custom-public-0         created
- +   │  ├─ awsx:x:ec2:Subnet                 custom-public-1         created
- +   │  │  ├─ aws:ec2:RouteTable             custom-public-1         created
- +   │  │  ├─ aws:ec2:Subnet                 custom-public-1         created
- +   │  │  ├─ aws:ec2:Route                  custom-public-1-ig      created
- +   │  │  └─ aws:ec2:RouteTableAssociation  custom-public-1         created
- +   │  ├─ awsx:x:ec2:Subnet                 custom-private-0        created
- +   │  │  ├─ aws:ec2:RouteTable             custom-private-0        created
- +   │  │  ├─ aws:ec2:Subnet                 custom-private-0        created
- +   │  │  ├─ aws:ec2:RouteTableAssociation  custom-private-0        created
- +   │  │  └─ aws:ec2:Route                  custom-private-0-nat-0  created
- +   │  ├─ awsx:x:ec2:Subnet                 custom-private-1        created
- +   │  │  ├─ aws:ec2:RouteTable             custom-private-1        created
- +   │  │  ├─ aws:ec2:Subnet                 custom-private-1        created
- +   │  │  ├─ aws:ec2:RouteTableAssociation  custom-private-1        created
- +   │  │  └─ aws:ec2:Route                  custom-private-1-nat-1  created
- +   │  ├─ awsx:x:ec2:NatGateway             custom-1                created
- +   │  │  ├─ aws:ec2:Eip                    custom-1                created
- +   │  │  └─ aws:ec2:NatGateway             custom-1                created
- +   │  ├─ awsx:x:ec2:InternetGateway        custom                  created
- +   │  │  └─ aws:ec2:InternetGateway        custom                  created
- +   │  └─ awsx:x:ec2:NatGateway             custom-0                created
- +   │     ├─ aws:ec2:Eip                    custom-0                created
- +   │     └─ aws:ec2:NatGateway             custom-0                created
- +   └─ aws:ec2:Vpc                          custom                  created
+     Type                                          Name                Status
+ +   pulumi:pulumi:Stack                           crosswalk-aws-dev   created
+ +   └─ awsx:ec2:Vpc                               custom              created
+ +      └─ aws:ec2:Vpc                             custom              created
+ +         ├─ aws:ec2:InternetGateway              custom              created
+ +         ├─ aws:ec2:Subnet                       custom-private-3    created
+ +         │  └─ aws:ec2:RouteTable                custom-private-3    created
+ +         │     ├─ aws:ec2:RouteTableAssociation  custom-private-3    created
+ +         │     └─ aws:ec2:Route                  custom-private-3    created
+ +         ├─ aws:ec2:Subnet                       custom-public-1     created
+ +         │  ├─ aws:ec2:RouteTable                custom-public-1     created
+ +         │  │  ├─ aws:ec2:RouteTableAssociation  custom-public-1     created
+ +         │  │  └─ aws:ec2:Route                  custom-public-1     created
+ +         │  ├─ aws:ec2:Eip                       custom-1            created
+ +         │  └─ aws:ec2:NatGateway                custom-1            created
+ +         ├─ aws:ec2:Subnet                       custom-public-3     created
+ +         │  ├─ aws:ec2:RouteTable                custom-public-3     created
+ +         │  │  ├─ aws:ec2:RouteTableAssociation  custom-public-3     created
+ +         │  │  └─ aws:ec2:Route                  custom-public-3     created
+ +         │  ├─ aws:ec2:Eip                       custom-3            created
+ +         │  └─ aws:ec2:NatGateway                custom-3            created
+ +         ├─ aws:ec2:Subnet                       custom-private-1    created
+ +         │  └─ aws:ec2:RouteTable                custom-private-1    created
+ +         │     ├─ aws:ec2:RouteTableAssociation  custom-private-1    created
+ +         │     └─ aws:ec2:Route                  custom-private-1    created
+ +         ├─ aws:ec2:Subnet                       custom-private-2    created
+ +         │  └─ aws:ec2:RouteTable                custom-private-2    created
+ +         │     ├─ aws:ec2:RouteTableAssociation  custom-private-2    created
+ +         │     └─ aws:ec2:Route                  custom-private-2    created
+ +         └─ aws:ec2:Subnet                       custom-public-2     created
+ +            ├─ aws:ec2:Eip                       custom-2            created
+ +            ├─ aws:ec2:RouteTable                custom-public-2     created
+ +            │  ├─ aws:ec2:Route                  custom-public-2     created
+ +            │  └─ aws:ec2:RouteTableAssociation  custom-public-2     created
+ +            └─ aws:ec2:NatGateway                custom-2            created
 
 Outputs:
-    vpcId              : "vpc-0db13470ea4417118"
-    vpcPrivateSubnetIds: [
-        [0]: "subnet-046a7b24ce8c72997"
-        [1]: "subnet-0cd37676da1738dcc"
+  + privateSubnetIds: [
+  +     [0]: "subnet-0dd701be10146604d"
+  +     [1]: "subnet-0cb44ff5ad9916c8b"
+  +     [2]: "subnet-0a71e13e0f7cb1072"
     ]
-    vpcPublicSubnetIds : [
-        [0]: "subnet-022b9acda1e440d69"
-        [1]: "subnet-0cdb12f9c04eafa68"
+  + publicSubnetIds : [
+  +     [0]: "subnet-07aeb839d421ec509"
+  +     [1]: "subnet-0f3ddf15e83b09a51"
+  +     [2]: "subnet-0ea5745eb5d7d5353"
     ]
+  + vpcId           : "vpc-06d9c2a16345db520"
 
 Resources:
-    + 31 created
+    + 34 created
 
-Duration: 1m56s
+Duration: 2m42s
 ```
 
 If unspecified, this VPC will use the following defaults:
 
 * An IPv4 CIDR block of `10.0.0.0/16`.
-* The first `2` availability zones inside of your region.
+* The first `3` availability zones inside of your region.
 * A public and private subnet per availability zone.
 * Equally partitioned CIDR address spaces per subnet (per availability zone).
 * A NAT Gateway and EIP per private subnet.
@@ -203,19 +307,73 @@ Although the default CIDR block of `10.0.0.0/16` is reasonable most of the time,
 
 To set our VPC's CIDR block, pass a custom `cidrBlock` argument to `awsx.ec2.Vpc`'s constructor:
 
+{{< chooser language "typescript,python,csharp" / >}}
+
+{{% choosable language typescript %}}
+
 ```typescript
 import * as awsx from "@pulumi/awsx";
 
-// Allocate a new VPC with a smaller CIDR range:
+// Allocate a new VPC with the default settings:
 const vpc = new awsx.ec2.Vpc("custom", {
-    cidrBlock: "172.16.8.0/28",
+  cidrBlock: "172.16.8.0/24",
 });
 
 // Export a few resulting fields to make them easy to use:
-export const vpcId = vpc.id;
-export const vpcPrivateSubnetIds = vpc.privateSubnetIds;
-export const vpcPublicSubnetIds = vpc.publicSubnetIds;
+export const vpcId = vpc.vpcId;
+export const privateSubnetIds = vpc.privateSubnetIds;
+export const publicSubnetIds = vpc.publicSubnetIds;
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_awsx as awsx
+
+vpc = awsx.ec2.Vpc("custom", cidr_block="172.16.8.0/24")
+
+pulumi.export("vpcId", vpc.vpc_id)
+pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
+pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using Ec2 = Pulumi.Awsx.Ec2;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpc = new Ec2.Vpc("custom", new Ec2.VpcArgs
+        {
+            CidrBlock = "172.16.8.0/24",
+        });
+
+        this.VpcId = vpc.VpcId;
+        this.PublicSubnetIds = vpc.PublicSubnetIds;
+        this.PrivateSubnetIds = vpc.PrivateSubnetIds;
+    }
+
+    [Output] public Output<ImmutableArray<string>> PrivateSubnetIds { get; private set; }
+    [Output] public Output<ImmutableArray<string>> PublicSubnetIds { get; private set; }
+    [Output] public Output<string> VpcId { get; set; }
+}
+
+class Program
+{
+    static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
+}
+```
+
+{{% /choosable %}}
 
 This decreases the number of available IP addresses in our VPC from the default of 65,536 addresses (`/16` netmask) to
 256 addresses (`/24` netmask), in addition to changing the IP address prefix from `10.0.0.0` to `172.16.8.0`.
@@ -236,47 +394,81 @@ A VPC spans all of the availability zones in your region. By default, however, t
 only use 2 of them when allocating subnets and the associated gateways. This provides fault tolerance between
 two zones at a reasonable cost.
 
-All regions support at least 2 availability zones, but many of them support more. If you'd like to improve the
+All regions support at least 3 availability zones, but many of them support more. If you'd like to improve the
 fault tolerance of your configuration, simply override this with the `numberOfAvailabilityZones` argument:
+
+{{< chooser language "typescript,python,csharp" / >}}
+
+{{% choosable language typescript %}}
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
 
-// Allocate a new VPC that uses 3 availability zones, instead of 2:
+// Allocate a new VPC with the default settings:
 const vpc = new awsx.ec2.Vpc("custom", {
-    numberOfAvailabilityZones: 3,
+  numberOfAvailabilityZones: 4,
 });
 
 // Export a few resulting fields to make them easy to use:
-export const vpcId = vpc.id;
-export const vpcPrivateSubnetIds = vpc.privateSubnetIds;
-export const vpcPublicSubnetIds = vpc.publicSubnetIds;
+export const vpcId = vpc.vpcId;
+export const privateSubnetIds = vpc.privateSubnetIds;
+export const publicSubnetIds = vpc.publicSubnetIds;
 ```
 
-The VPC resource will internally adjust to fully consume 3 availability zones and split traffic accordingly.
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_awsx as awsx
+
+vpc = awsx.ec2.Vpc("custom", number_of_availability_zones=4)
+
+pulumi.export("vpcId", vpc.vpc_id)
+pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
+pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using Ec2 = Pulumi.Awsx.Ec2;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpc = new Ec2.Vpc("custom", new Ec2.VpcArgs
+        {
+            NumberOfAvailabilityZones = 4,
+        });
+
+        this.VpcId = vpc.VpcId;
+        this.PublicSubnetIds = vpc.PublicSubnetIds;
+        this.PrivateSubnetIds = vpc.PrivateSubnetIds;
+    }
+
+    [Output] public Output<ImmutableArray<string>> PrivateSubnetIds { get; private set; }
+    [Output] public Output<ImmutableArray<string>> PublicSubnetIds { get; private set; }
+    [Output] public Output<string> VpcId { get; set; }
+}
+
+class Program
+{
+    static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
+}
+```
+
+{{% /choosable %}}
+
+The VPC resource will internally adjust to fully consume 4 availability zones and split traffic accordingly.
 
 For information about regional support for availability zones, refer to AWS's
 [Global Infrastructures Regions and AZs](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/) help page.
-
-## Using All of a Region's Availability Zones for a VPC
-
-To use all availability zones within a region, simply pass `"all"` for `numberOfAvailabilityZones`:
-
-```typescript
-import * as awsx from "@pulumi/awsx";
-
-// Allocate a new VPC that uses all of the current region's availability zones:
-const vpc = new awsx.ec2.Vpc("custom", {
-    numberOfAvailabilityZones: "all",
-});
-
-// Export a few resulting fields to make them easy to use:
-export const vpcId = vpc.id;
-export const vpcPrivateSubnetIds = vpc.privateSubnetIds;
-export const vpcPublicSubnetIds = vpc.publicSubnetIds;
-```
-
-This approach keeps your code flexibly deployable across different regions, where the number of zones may vary.
 
 ## Configuring Subnets for a VPC
 
@@ -289,12 +481,25 @@ the behavior using its constructor's `subnets` argument.
 
 For example, this program replicates the default behavior but with an explicit specification:
 
+{{< chooser language "typescript,python,csharp" / >}}
+
+{{% choosable language typescript %}}
+
 ```typescript
 import * as awsx from "@pulumi/awsx";
 
 // Allocate a new VPC with public and private subnets per AZ:
 const vpc = new awsx.ec2.Vpc("custom", {
-    subnets: [{ type: "public" }, { type: "private" }],
+  subnetSpecs:[
+    {
+      type: awsx.ec2.SubnetType.Public,
+      cidrMask: 22,
+    },
+    {
+      type: awsx.ec2.SubnetType.Private,
+      cidrMask: 20,
+    },
+  ],
 });
 
 // Export a few resulting fields to make them easy to use:
@@ -302,53 +507,95 @@ export const vpcId = vpc.id;
 export const vpcPrivateSubnetIds = vpc.privateSubnetIds;
 export const vpcPublicSubnetIds = vpc.publicSubnetIds;
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_awsx as awsx
+
+vpc = awsx.ec2.Vpc("custom", subnet_specs=[
+  awsx.ec2.SubnetSpecArgs(
+    type=awsx.ec2.SubnetType.PRIVATE,
+    cidr_mask=20,
+  ),
+  awsx.ec2.SubnetSpecArgs(
+    type=awsx.ec2.SubnetType.PUBLIC,
+    cidr_mask=22,
+  )
+])
+
+pulumi.export("vpcId", vpc.vpcId)
+pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
+pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Immutable;
+using Pulumi;
+using Pulumi.Awsx.Ec2.Inputs;
+using Ec2 = Pulumi.Awsx.Ec2;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpc = new Ec2.Vpc("custom", new Ec2.VpcArgs
+        {
+            SubnetSpecs =
+            {
+                new SubnetSpecArgs
+                {
+                    Type = Ec2.SubnetType.Public,
+                    CidrMask = 22,
+                },
+                new SubnetSpecArgs
+                {
+                    Type = Ec2.SubnetType.Private,
+                    CidrMask = 20,
+                }
+            }
+        });
+
+        this.VpcId = vpc.VpcId;
+        this.PublicSubnetIds = vpc.PublicSubnetIds;
+        this.PrivateSubnetIds = vpc.PrivateSubnetIds;
+    }
+
+    [Output] public Output<ImmutableArray<string>> PrivateSubnetIds { get; private set; }
+    [Output] public Output<ImmutableArray<string>> PublicSubnetIds { get; private set; }
+    [Output] public Output<string> VpcId { get; set; }
+}
+
+class Program
+{
+    static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
+}
+```
+
+{{% /choosable %}}
 
 The `subnets` argument simply takes an array of subnet specifications. Each one can include this information:
 
 * `type`: A required type of subnet to create. There are three kinds available:
-    * A `public` subnet is one whose traffic is routed to an
+    * A `Public` subnet is one whose traffic is routed to an
     [Internet Gateway (IGW)](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html).
-    * A `private` subnet is one that is configured to use a
+    * A `Private` subnet is one that is configured to use a
     [NAT Gateway (NAT)](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat.html) so that it can reach the internet,
     but which prevents the internet from initiating connections to it.
-    * An `isolated` subnet is one that cannot reach the internet either through an IGW or with NAT.
-
-* `name`: An optional name to use as part of the subnet name. If not provided, the type of the subnet will be
-  used. As a result, this is required when making multiple subnets of the same type.
+    * An `Isolated` subnet is one that cannot reach the internet either through an IGW or with NAT.
 
 * `cidrMask`: The number of leading bits in the VPC's CIDR block to use to define the CIDR for this specific
   subnet. By providing masking bits, this ensures each subnet has a distinct block.
 
-* `tags`: A map of name/value pairs to tag the resulting subnet resource with.
-
-There is no restriction on the number of subnets in an availability zone. For example, it might be useful to
-have multiple isolated subnets, one for DB instances, and another for Redis instances. To facilitate this sort
-of arrangements, we can use the `name` property mentioned above:
-
-```typescript
-import * as awsx from "@pulumi/awsx";
-
-// Allocate a new VPC with a public and private subnet per AZ, plus two isolated subnets
-// without Internet access, one for our DB instances and another for our Redis instances.
-const vpc = new awsx.ec2.Vpc("custom", {
-    subnets: [
-        { type: "public" },
-        { type: "private" },
-        { type: "isolated", name: "db" },
-        { type: "isolated", name: "redis" },
-    ],
-});
-
-// Export a few resulting fields to make them easy to use:
-export const vpcId = vpc.id;
-export const vpcPrivateSubnetIds = vpc.privateSubnetIds;
-export const vpcPublicSubnetIds = vpc.publicSubnetIds;
-```
-
-By default, the subnet CIDR ranges will be divided as evenly as possible within the VPC. If this isn't desired,
-a particular size for each zone can be requested by passing in an appropriate `cidrMask` value between 16 and 28.
-This value can be provided for specific subnets you know the number of instances you want IP addresses for. The
-remaining IP addresses in the availability zone, if any, will be split over the subnets without a defined size.
+* `name`: An optional name to use as part of the subnet name. If not provided, the type of the subnet will be
+  used. As a result, this is required when making multiple subnets of the same type.
 
 Refer to [VPCs and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) for complete
 information about how VPCs and subnets relate in AWS and the configuration options available to you.
@@ -362,15 +609,20 @@ To allow connections from private subnets to the internet, NAT gateways will als
 NAT Gateway will be created for each availability zone, to maximize fault tolerance. Because the NAT gateway must be
 in a public subnet, NAT gateways will only be created if there is at least one public subnet.
 
-Fewer NAT gateways can be requested (e.g., to save on costs) using the `numberOfNatGateways` property:
+Fewer NAT gateways can be requested (e.g., to save on costs) using the `natGateways` property:
+
+{{< chooser language "typescript,python,csharp" / >}}
+
+{{% choosable language typescript %}}
 
 ```typescript
-import * as aws from "@pulumi/aws";
 import * as awsx from "@pulumi/awsx";
 
-// Allocate a VPC that routes all traffic through a single NAT Gateway:
+// Allocate a new VPC with public and private subnets per AZ:
 const vpc = new awsx.ec2.Vpc("custom", {
-   numberOfNatGateways: 1,
+  natGateways: {
+    strategy: awsx.ec2.NatGatewayStrategy.Single,
+  }
 });
 
 // Export a few resulting fields to make them easy to use:
@@ -378,6 +630,62 @@ export const vpcId = vpc.id;
 export const vpcPrivateSubnetIds = vpc.privateSubnetIds;
 export const vpcPublicSubnetIds = vpc.publicSubnetIds;
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_awsx as awsx
+
+vpc = awsx.ec2.Vpc("custom", nat_gateways=awsx.ec2.NatGatewayConfigurationArgs(
+    strategy=awsx.ec2.NatGatewayStrategy.SINGLE))
+
+pulumi.export("vpcId", vpc.vpcId)
+pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
+pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Immutable;
+using Pulumi;
+using Pulumi.Awsx.Ec2.Inputs;
+using Ec2 = Pulumi.Awsx.Ec2;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpc = new Ec2.Vpc("custom", new Ec2.VpcArgs
+        {
+            NatGateways = new NatGatewayConfigurationArgs
+            {
+                Strategy = Ec2.NatGatewayStrategy.Single
+            }
+        });
+
+        this.VpcId = vpc.VpcId;
+        this.PublicSubnetIds = vpc.PublicSubnetIds;
+        this.PrivateSubnetIds = vpc.PrivateSubnetIds;
+    }
+
+    [Output] public Output<ImmutableArray<string>> PrivateSubnetIds { get; private set; }
+    [Output] public Output<ImmutableArray<string>> PublicSubnetIds { get; private set; }
+    [Output] public Output<string> VpcId { get; set; }
+}
+
+class Program
+{
+    static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
+}
+```
+
+{{% /choosable %}}
 
 In the case where there is one NAT gateway per availability zone, then routing is very simple. Each private subnet
 will have have connections routed through gateway in that availability zone.
@@ -403,73 +711,162 @@ traffic. This will be used by default, however you may allocate and assign resou
 
 Here is a program that allocates a new group with a few rules:
 
+{{< chooser language "typescript,python,csharp" / >}}
+
+{{% choosable language typescript %}}
+
 ```typescript
 import * as aws from "@pulumi/aws";
 import * as awsx from "@pulumi/awsx";
 
-// Allocate a new VPC using any of the above techniques.
-const vpc = new awsx.ec2.Vpc("custom", { /*...*/ });
+// Allocate a new VPC with the default settings:
+const vpc = new awsx.ec2.Vpc("custom");
 
 // Allocate a security group and then a series of rules:
-const sg = new awsx.ec2.SecurityGroup("webserver-sg", { vpc });
-
-// 1) inbound SSH traffic on port 22 from a specific IP address
-sg.createIngressRule("ssh-access", {
-    location: { cidrBlocks: [ "203.0.113.25/32" ] },
-    ports: new awsx.ec2.TcpPorts(22),
+const sg = new aws.ec2.SecurityGroup("webserver-sg", {
+  vpcId: vpc.vpcId,
+  ingress: [{
     description: "allow SSH access from 203.0.113.25",
-});
-
-// 2) inbound HTTPS traffic on port 443 from anywhere
-sg.createIngressRule("https-access", {
-    location: new awsx.ec2.AnyIPv4Location(),
-    ports: new awsx.ec2.TcpPorts(443),
+    fromPort: 22,
+    toPort: 22,
+    protocol: "tcp",
+    cidrBlocks: ["203.0.113.25/32"],
+  }, {
     description: "allow HTTPS access from anywhere",
+    fromPort: 443,
+    toPort: 443,
+    protocol: "tcp",
+    cidrBlocks: ["0.0.0.0"],
+  }],
+  egress: [{
+    fromPort: 0,
+    toPort: 0,
+    protocol: "-1",
+    cidrBlocks: ["0.0.0.0/0"],
+  }],
 });
 
-// 3) outbound TCP traffic on any port to anywhere
-sg.createEgressRule("outbound-access", {
-    location: new awsx.ec2.AnyIPv4Location(),
-    ports: new awsx.ec2.AllTcpPorts(),
-    description: "allow outbound access to anywhere",
-});
+// Export a few resulting fields to make them easy to use:
+export const vpcId = vpc.vpcId;
+export const privateSubnetIds = vpc.privateSubnetIds;
+export const publicSubnetIds = vpc.publicSubnetIds;
 ```
 
-This program allows all ingress traffic on port 443, only ingress from a certain IP address over SSH, and explicitly
-allows all egress to any TCP destination. This code uses helpers like `AnyIPv4Location` and `TcpPorts` to cut down
-on boilerplate we'd otherwise have to state by hand. We can write it out by hand if we prefer:
+{{% /choosable %}}
 
-```typescript
-import * as aws from "@pulumi/aws";
-import * as awsx from "@pulumi/awsx";
+{{% choosable language python %}}
 
-// Allocate a new VPC using any of the above techniques.
-const vpc = new awsx.ec2.Vpc("custom", { /*...*/ });
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_awsx as awsx
 
-// Allocate a security group and then a series of rules:
-const sg = new awsx.ec2.SecurityGroup("webserver-sg", { vpc });
+vpc = awsx.ec2.Vpc("custom")
 
-// 1) inbound SSH traffic on port 22 from a specific IP address
-sg.createIngressRule("ssh-access", {
-    location: { cidrBlocks: [ "203.0.113.25/32" ] },
-    ports: { protocol: "tcp", fromPort: 22 },
-    description: "allow SSH access to 203.0.113.25",
-});
+allow_tls = aws.ec2.SecurityGroup("allowTls",
+                                  description="Allow TLS inbound traffic",
+                                  vpc_id=vpc.vpc_id,
+                                  ingress=[aws.ec2.SecurityGroupIngressArgs(
+                                    description="allow SSH access from 203.0.113.25",
+                                    from_port=22,
+                                    to_port=22,
+                                    protocol="tcp",
+                                    cidr_blocks=["203.0.113.25/32"],
+                                  ), aws.ec2.SecurityGroupIngressArgs(
+                                    description="allow HTTPS access from anywhere",
+                                    from_port=443,
+                                    to_port=443,
+                                    protocol="tcp",
+                                    cidr_blocks=["0.0.0.0"],
+                                  )],
+                                  egress=[aws.ec2.SecurityGroupEgressArgs(
+                                    from_port=0,
+                                    to_port=0,
+                                    protocol="-1",
+                                    cidr_blocks=["0.0.0.0/0"],
+                                  )])
 
-// 2) inbound HTTPS traffic on port 443 from anywhere
-sg.createIngressRule("https-access", {
-    location: { cidrBlocks: [ "0.0.0.0/0" ] },
-    ports: { protocol: "tcp", fromPort: 443 },
-    description: "allow HTTPS access from anywhere",
-});
-
-// 3) outbound TCP traffic on any port to anywhere
-sg.createEgressRule("outbound-access", {
-    location: { cidrBlocks: [ "0.0.0.0/0" ] },
-    ports: { protocol: "tcp", fromPort: 65535 },
-    description: "allow outbound access to anywhere",
-});
+pulumi.export("vpcId", vpc.vpc_id)
+pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
+pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
 ```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+using Ec2 = Pulumi.Awsx.Ec2;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpc = new Ec2.Vpc("custom");
+
+        var allowTls = new Aws.Ec2.SecurityGroup("allowTls", new Aws.Ec2.SecurityGroupArgs
+        {
+            Description = "Allow TLS inbound traffic",
+            VpcId = vpc.VpcId,
+            Ingress =
+            {
+                new Aws.Ec2.Inputs.SecurityGroupIngressArgs
+                {
+                    Description = "allow SSH access from 203.0.113.25",
+                    FromPort = 22,
+                    ToPort = 22,
+                    Protocol = "tcp",
+                    CidrBlocks =
+                    {
+                        "203.0.113.25/32"
+                    },
+                },
+                new Aws.Ec2.Inputs.SecurityGroupIngressArgs
+                {
+                    Description = "allow HTTPS access from anywhere",
+                    FromPort = 443,
+                    ToPort = 443,
+                    Protocol = "tcp",
+                    CidrBlocks =
+                    {
+                        "0.0.0.0"
+                    },
+                },
+            },
+            Egress =
+            {
+                new Aws.Ec2.Inputs.SecurityGroupEgressArgs
+                {
+                    FromPort = 0,
+                    ToPort = 0,
+                    Protocol = "-1",
+                    CidrBlocks =
+                    {
+                        "0.0.0.0/0",
+                    },
+                },
+            },
+        });
+
+        this.VpcId = vpc.VpcId;
+        this.PublicSubnetIds = vpc.PublicSubnetIds;
+        this.PrivateSubnetIds = vpc.PrivateSubnetIds;
+    }
+
+    [Output] public Output<ImmutableArray<string>> PrivateSubnetIds { get; private set; }
+    [Output] public Output<ImmutableArray<string>> PublicSubnetIds { get; private set; }
+    [Output] public Output<string> VpcId { get; set; }
+}
+
+class Program
+{
+    static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
+}
+```
+
+{{% /choosable %}}
 
 For additional details about configuring security group rules, See the
 [Security Groups for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) documentation.
@@ -478,80 +875,205 @@ For additional details about configuring security group rules, See the
 
 This example shows how to deploy an EC2 instance using a VPC and Security Group provisioned with the Crosswalk AWS component:
 
-```typescript
-import * as awsx from "@pulumi/awsx";
-import * as aws from "@pulumi/aws";
-import * as pulumi from "@pulumi/pulumi";
+{{< chooser language "typescript,python,csharp" / >}}
 
-// Allocate a new VPC using any of the above techniques.
-const vpc = new awsx.ec2.Vpc("custom", { /*...*/ });
+{{% choosable language typescript %}}
+
+```typescript
+import * as aws from "@pulumi/aws";
+import * as awsx from "@pulumi/awsx";
+
+// Allocate a new VPC with the default settings:
+const vpc = new awsx.ec2.Vpc("custom");
 
 // Allocate a security group using the above techniques:
-const sg = new awsx.ec2.SecurityGroup("webserver-sg", { vpc });
+const sg = new aws.ec2.SecurityGroup("webserver-sg", {
+  vpcId: vpc.vpcId,
+})
 
 // t2.micro is available in the AWS free tier
 const size = "t2.micro";
 
 // Get the most recent Amazon linux ami:
-const ami = aws.getAmiOutput({
-    filters: [{
-        name: "name",
-        values: ["amzn-ami-hvm-*"],
-    }],
-    owners: ["137112412989"], // This owner ID is Amazon
-    mostRecent: true,
+const ami = aws.ec2.getAmiOutput({
+  filters: [{
+    name: "name",
+    values: ["amzn-ami-hvm-*"],
+  }],
+  owners: ["137112412989"], // This owner ID is Amazon
+  mostRecent: true,
 });
 
 const server = new aws.ec2.Instance("webserver-www", {
-    instanceType: size,
-    vpcSecurityGroupIds: [ sg.id ], // reference the security group resource above
-    subnetId: pulumi.output(vpc.publicSubnetIds)[0],  // reference the public subnet from the custom vpc above
-    ami: ami.id,
+  instanceType: size,
+  vpcSecurityGroupIds: [ sg.id ], // reference the security group resource above
+  subnetId: vpc.publicSubnetIds.apply(x => x![0]),  // reference the public subnet from the custom vpc above
+  ami: ami.id,
 });
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_awsx as awsx
+
+vpc = awsx.ec2.Vpc("custom")
+
+sg = aws.ec2.SecurityGroup("webserver-sg",
+                                  vpc_id=vpc.vpc_id)
+
+ami = aws.ec2.get_ami(filters=[
+                            aws.ec2.GetAmiFilterArgs(
+                              name="name",
+                              values=["amzn-ami-hvm-*"],
+                            )],
+                          most_recent=True,
+                          owners=["137112412989"])
+
+server = aws.ec2.Instance("webserver-www",
+                          instance_type="t2.micro",
+                          vpc_security_group_ids=[sg.id],
+                          ami=ami.id,
+                          subnet_id=vpc.public_subnet_ids.apply(lambda id: id[0]))
+
+pulumi.export("vpcId", vpc.vpc_id)
+pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
+pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+using Ec2 = Pulumi.Awsx.Ec2;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpc = new Ec2.Vpc("custom");
+
+        var sg = new Aws.Ec2.SecurityGroup("webserver-sg", new Aws.Ec2.SecurityGroupArgs
+        {
+            VpcId = vpc.VpcId,
+        });
+
+        var ami = Output.Create(Aws.Ec2.GetAmi.InvokeAsync(new Aws.Ec2.GetAmiArgs
+        {
+            Filters =
+            {
+                new Aws.Ec2.Inputs.GetAmiFilterArgs
+                {
+                    Name = "name",
+                    Values =
+                    {
+                        "amzn-ami-hvm-*",
+                    },
+                },
+            },
+            MostRecent = true,
+            Owners =
+            {
+                "137112412989",
+            },
+        }));
+
+        var web = new Aws.Ec2.Instance("web", new Aws.Ec2.InstanceArgs
+        {
+            Ami = ami.Apply(ami => ami.Id),
+            InstanceType = "t2.micro",
+            VpcSecurityGroupIds =
+            {
+                sg.Id,
+            },
+            SubnetId = vpc.PublicSubnetIds.Apply(subnet => subnet[0]),
+        });
+
+        this.VpcId = vpc.VpcId;
+        this.PublicSubnetIds = vpc.PublicSubnetIds;
+        this.PrivateSubnetIds = vpc.PrivateSubnetIds;
+    }
+
+    [Output] public Output<ImmutableArray<string>> PrivateSubnetIds { get; private set; }
+    [Output] public Output<ImmutableArray<string>> PublicSubnetIds { get; private set; }
+    [Output] public Output<string> VpcId { get; set; }
+}
+
+class Program
+{
+    static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
+}
+```
+
+{{% /choosable %}}
 
 If we run `pulumi up`, the `aws.ec2.Instance` will be provisioned using the _first_ public subnet from the `awsx.ec2.Vpc` component and the security group provisioned with the `awsx.ec2.SecurityGroup` component:
 
 ```bash
 $ pulumi up
 Updating (dev):
-     Type                                    Name                    Status
- +   pulumi:pulumi:Stack                     crosswalk-dev           created
- +   ├─ awsx:x:ec2:SecurityGroup             webserver-sg            created
- +   │  └─ aws:ec2:SecurityGroup             webserver-sg            created
- +   ├─ awsx:x:ec2:Vpc                       custom                  created
- +   │  ├─ awsx:x:ec2:Subnet                 custom-public-1         created
- +   │  │  ├─ aws:ec2:RouteTable             custom-public-1         created
- +   │  │  ├─ aws:ec2:Subnet                 custom-public-1         created
- +   │  │  ├─ aws:ec2:RouteTableAssociation  custom-public-1         created
- +   │  │  └─ aws:ec2:Route                  custom-public-1-ig      created
- +   │  ├─ awsx:x:ec2:NatGateway             custom-1                created
- +   │  │  ├─ aws:ec2:Eip                    custom-1                created
- +   │  │  └─ aws:ec2:NatGateway             custom-1                created
- +   │  ├─ awsx:x:ec2:Subnet                 custom-private-0        created
- +   │  │  ├─ aws:ec2:RouteTable             custom-private-0        created
- +   │  │  ├─ aws:ec2:Subnet                 custom-private-0        created
- +   │  │  ├─ aws:ec2:RouteTableAssociation  custom-private-0        created
- +   │  │  └─ aws:ec2:Route                  custom-private-0-nat-0  created
- +   │  ├─ awsx:x:ec2:Subnet                 custom-private-1        created
- +   │  │  ├─ aws:ec2:RouteTable             custom-private-1        created
- +   │  │  ├─ aws:ec2:Subnet                 custom-private-1        created
- +   │  │  ├─ aws:ec2:RouteTableAssociation  custom-private-1        created
- +   │  │  └─ aws:ec2:Route                  custom-private-1-nat-1  created
- +   │  ├─ awsx:x:ec2:Subnet                 custom-public-0         created
- +   │  │  ├─ aws:ec2:RouteTable             custom-public-0         created
- +   │  │  ├─ aws:ec2:Subnet                 custom-public-0         created
- +   │  │  ├─ aws:ec2:RouteTableAssociation  custom-public-0         created
- +   │  │  └─ aws:ec2:Route                  custom-public-0-ig      created
- +   │  ├─ awsx:x:ec2:NatGateway             custom-0                created
- +   │  │  ├─ aws:ec2:Eip                    custom-0                created
- +   │  │  └─ aws:ec2:NatGateway             custom-0                created
- +   │  ├─ awsx:x:ec2:InternetGateway        custom                  created
- +   │  │  └─ aws:ec2:InternetGateway        custom                  created
- +   │  └─ aws:ec2:Vpc                       custom                  created
- +   └─ aws:ec2:Instance                     webserver-www           created
+     Type                                          Name                   Status
+ +   pulumi:pulumi:Stack                           crosswalk-dev          created
+ +   ├─ awsx:ec2:Vpc                               custom                 created
+ +   │  └─ aws:ec2:Vpc                             custom                 created
+ +   │     ├─ aws:ec2:InternetGateway              custom                 created
+ +   │     ├─ aws:ec2:Subnet                       custom-public-2        created
+ +   │     │  ├─ aws:ec2:Eip                       custom-2               created
+ +   │     │  ├─ aws:ec2:RouteTable                custom-public-2        created
+ +   │     │  │  ├─ aws:ec2:Route                  custom-public-2        created
+ +   │     │  │  └─ aws:ec2:RouteTableAssociation  custom-public-2        created
+ +   │     │  └─ aws:ec2:NatGateway                custom-2               created
+ +   │     ├─ aws:ec2:Subnet                       custom-public-1        created
+ +   │     │  ├─ aws:ec2:RouteTable                custom-public-1        created
+ +   │     │  │  ├─ aws:ec2:RouteTableAssociation  custom-public-1        created
+ +   │     │  │  └─ aws:ec2:Route                  custom-public-1        created
+ +   │     │  ├─ aws:ec2:Eip                       custom-1               created
+ +   │     │  └─ aws:ec2:NatGateway                custom-1               created
+ +   │     ├─ aws:ec2:Subnet                       custom-public-3        created
+ +   │     │  ├─ aws:ec2:Eip                       custom-3               created
+ +   │     │  ├─ aws:ec2:RouteTable                custom-public-3        created
+ +   │     │  │  ├─ aws:ec2:Route                  custom-public-3        created
+ +   │     │  │  └─ aws:ec2:RouteTableAssociation  custom-public-3        created
+ +   │     │  └─ aws:ec2:NatGateway                custom-3               created
+ +   │     ├─ aws:ec2:Subnet                       custom-private-1       created
+ +   │     │  └─ aws:ec2:RouteTable                custom-private-1       created
+ +   │     │     ├─ aws:ec2:RouteTableAssociation  custom-private-1       created
+ +   │     │     └─ aws:ec2:Route                  custom-private-1       created
+ +   │     ├─ aws:ec2:Subnet                       custom-private-3       created
+ +   │     │  └─ aws:ec2:RouteTable                custom-private-3       created
+ +   │     │     ├─ aws:ec2:RouteTableAssociation  custom-private-3       created
+ +   │     │     └─ aws:ec2:Route                  custom-private-3       created
+ +   │     └─ aws:ec2:Subnet                       custom-private-2       created
+ +   │        └─ aws:ec2:RouteTable                custom-private-2       created
+ +   │           ├─ aws:ec2:RouteTableAssociation  custom-private-2       created
+ +   │           └─ aws:ec2:Route                  custom-private-2       created
+ +   ├─ aws:ec2:SecurityGroup                      webserver-sg           created
+ +   └─ aws:ec2:Instance                           web                    created
+
+Outputs:
+    PrivateSubnetIds: [
+        [0]: "subnet-0f494849172af77b6"
+        [1]: "subnet-024b4e3ff6a4cf859"
+        [2]: "subnet-0c50551a11e563fc7"
+    ]
+    PublicSubnetIds : [
+        [0]: "subnet-00a260ee8643426dc"
+        [1]: "subnet-0bd4649d712d67c17"
+        [2]: "subnet-08ffd5328715d39c7"
+    ]
+    VpcId           : "vpc-0c5e0fd20533e9e6f"
+
 Resources:
-    + 34 created
+    + 36 created
+
+Duration: 3m23s
 ```
 
 ## Setting Up a New VPC the Hard Way

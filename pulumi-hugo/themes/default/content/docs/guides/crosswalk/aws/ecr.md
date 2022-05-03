@@ -35,6 +35,10 @@ https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html) to act
 
 To create a new ECR repository, simply allocate an instance of the `awsx.ecr.Repository` class:
 
+{{< chooser language "typescript,python,csharp" / >}}
+
+{{% choosable language typescript %}}
+
 ```typescript
 import * as awsx from "@pulumi/awsx";
 
@@ -42,8 +46,51 @@ import * as awsx from "@pulumi/awsx";
 const repo = new awsx.ecr.Repository("my-repo");
 
 // And publish its URL, so we can push to it if we'd like.
-export const url = repo.repository.repositoryUrl;
+export const url = repo.url;
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_awsx as awsx
+
+// Create a repository.
+repo = awsx.ecr.Repository("my-repo");
+
+// And publish its URL, so we can push to it if we'd like.
+pulumi.export("url", repo.url)
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Ecr = Pulumi.Awsx.Ecr;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var repo = new Repository("my-repo");
+        this.Url = repo.url;
+    }
+    [Output] public Output<string> Url { get; set; }
+}
+
+class Program
+{
+    static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
+}
+```
+
+{{% /choosable %}}
 
 From there, we can just run `pulumi up` to provision a new repository:
 
@@ -53,9 +100,9 @@ Updating (dev):
 
      Type                           Name               Status
  +   pulumi:pulumi:Stack            crosswalk-aws-dev  created
- +   └─ awsx:ecr:Repository         my-repo            created
- +      ├─ aws:ecr:Repository       my-repo            created
- +      └─ aws:ecr:LifecyclePolicy  my-repo            created
+ +   ├─ awsx:ecr:Repository         my-repo            created
+ +   │  └─ aws:ecr:Repository       my-repo            created
+ +   └─ aws:ecr:LifecyclePolicy     my-repo            created
 
 Outputs:
     url: "012345678901.dkr.ecr.us-west-2.amazonaws.com/my-repo-e2fe830"
@@ -144,16 +191,71 @@ entirely from code. This lets you version and deploy container changes easily al
 
 The ECR repository class has a `buildAndPushImage` function that does this in one go:
 
+{{< chooser language "typescript,python,csharp" / >}}
+
+{{% choosable language typescript %}}
+
 ```typescript
 import * as awsx from "@pulumi/awsx";
 
-// Create a repository, as before.
+// Create a repository.
 const repo = new awsx.ecr.Repository("my-repo");
 
 // Build an image from the "./app" directory (relative to our project and containing Dockerfile),
 // and publish it to our ECR repository provisioned above.
-export const image = repo.buildAndPushImage("./app");
+const image = new awsx.ecr.Image("image", {
+    repositoryUrl: repo.url,
+    path: "./app",
+});
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_awsx as awsx
+
+// Create a repository.
+repo = awsx.ecr.Repository("my-repo");
+
+image = awsx.ecr.Image("image",
+                       repository_url=repo.url,
+                       path="./app")
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Ecr = Pulumi.Awsx.Ecr;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var repo = new Repository("my-repo");
+
+        var image = new Image("image", new ImageArgs
+        {
+            RepositoryUrl = repo.Url,
+            Path = "./app",
+        });
+    }
+}
+
+class Program
+{
+    static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
+}
+```
+
+{{% /choosable %}}
 
 As we run `pulumi up`, we will see Docker build output in the Pulumi CLI display. If there is an error, it'll
 be printed in the diagnostics section, but otherwise the resulting image name is printed:
@@ -202,54 +304,150 @@ defaults to `latest`). The container instances require IAM permissions which are
 
 To use your private repository from an ECS task definition, reference it like so:
 
-```typescript
-import * as awsx from "@pulumi/awsx";
+{{< chooser language "typescript,python,csharp" / >}}
 
-// Build and publish an image.
-const repo = new awsx.ecr.Repository("app");
-const image = repo.buildAndPushImage("./app");
-
-// Create a load balanced service using this image.
-const lb = new awsx.lb.NetworkListener("app", { port: 80 });
-const nginx = new awsx.ecs.FargateService("app", {
-    taskDefinitionArgs: {
-        containers: {
-            nginx: {
-                image: image,
-                portMappings: [ lb ],
-            },
-        },
-    },
-    desiredCount: 2,
-});
-
-// Export the URL for the load balanced service.
-export const url = lb.endpoint.hostname;
-```
-
-In the case where you don't really need to use the repository (except as a place to store the built image), the above
-can be simplified to:
+{{% choosable language typescript %}}
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
+import * as aws from "@pulumi/aws";
 
-// Create a load balanced service using out of a built Docker image.
-const lb = new awsx.lb.NetworkListener("app", { port: 80 });
-const nginx = new awsx.ecs.FargateService("app", {
+// Create a repository.
+const repo = new awsx.ecr.Repository("my-repo");
+
+// Build an image from the "./app" directory (relative to our project and containing Dockerfile),
+// and publish it to our ECR repository provisioned above.
+const image = new awsx.ecr.Image("image", {
+    repositoryUrl: repo.url,
+    path: "./app",
+})
+
+// Create an ECS Cluster
+const cluster = new aws.ecs.Cluster("default-cluster");
+
+// // Create a load balancer on port 80 and spin up two instances of Nginx.
+const lb = new awsx.lb.ApplicationLoadBalancer("nginx-lb");
+
+const service = new awsx.ecs.FargateService("my-service", {
+    cluster: cluster.arn,
     taskDefinitionArgs: {
-        containers: {
-            nginx: {
-                image: awsx.ecr.buildAndPushImage("app", "./app").image(),
-                portMappings: [ lb ],
-            },
+        container: {
+            image: image.imageUri,
+            cpu: 512,
+            memory: 128,
+            essential: true,
+            portMappings: [
+                {
+                    containerPort: 80,
+                    targetGroup: lb.defaultTargetGroup,
+                },
+            ],
         },
     },
-    desiredCount: 2,
 });
 
-// Export the URL for the load balanced service.
-export const url = lb.endpoint.hostname;
+// Export the load balancer's address so that it's easy to access.
+export const url = lb.loadBalancer.dnsName;
 ```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_awsx as awsx
+
+repo = awsx.ecr.Repository("my-repo");
+
+image = awsx.ecr.Image("image",
+                       repository_url=repo.url,
+                       path="./app")
+
+
+cluster = aws.ecs.Cluster("default-cluster")
+
+lb = awsx.lb.ApplicationLoadBalancer("nginx-lb")
+
+service = awsx.ecs.FargateService("service",
+                                  cluster=cluster.arn,
+                                  task_definition_args=awsx.ecs.FargateServiceTaskDefinitionArgs(
+                                      containers={
+                                          "nginx": awsx.ecs.TaskDefinitionContainerDefinitionArgs(
+                                              image=image.image_uri,
+                                              memory=128,
+                                              port_mappings=[awsx.ecs.TaskDefinitionPortMappingArgs(
+                                                  container_port=80,
+                                                  target_group=lb.default_target_group,
+                                              )]
+                                          )
+                                      }
+                                  ))
+
+pulumi.export("url", lb.load_balancer.dns_name)
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Awsx.Ecs.Inputs;
+using Aws = Pulumi.Aws;
+using Ecr = Pulumi.Awsx.Ecr;
+using Ecs = Pulumi.Awsx.Ecs;
+using Lb = Pulumi.Awsx.Lb;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var repo = new Ecr.Repository("my-repo");
+
+        var image = new Ecr.Image("image", new Ecr.ImageArgs
+        {
+            RepositoryUrl = repo.Url,
+            Path = "./app",
+        });
+
+        var cluster = new Aws.Ecs.Cluster("demo-cluster");
+
+        var lb = new Lb.ApplicationLoadBalancer("nginx-lb");
+
+        var service = new Ecs.FargateService("my-service", new Ecs.FargateServiceArgs
+        {
+            Cluster = cluster.Arn,
+            TaskDefinitionArgs = new FargateServiceTaskDefinitionArgs
+            {
+                Container = new TaskDefinitionContainerDefinitionArgs
+                {
+                    Memory = 128,
+                    Cpu = 512,
+                    Image = image.ImageUri,
+                    Essential = true,
+                    PortMappings = new TaskDefinitionPortMappingArgs
+                    {
+                        ContainerPort = 80,
+                        TargetGroup = lb.DefaultTargetGroup,
+                    }
+                }
+            }
+        });
+    }
+}
+
+class Program
+{
+    static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
+}
+```
+
+{{% /choosable %}}
 
 For information about ECS, refer to the [Pulumi Crosswalk for AWS ECS documentation]({{< relref "ecs" >}}). For
 information about consuming ECR images from ECS services specifically, see
@@ -258,6 +456,10 @@ information about consuming ECR images from ECS services specifically, see
 ### Consuming a Private Repository from EKS
 
 To use your private repository from a Kubernetes service, such as one using EKS, reference it like so:
+
+{{< chooser language "typescript,python,csharp" / >}}
+
+{{% choosable language typescript %}}
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
@@ -304,49 +506,188 @@ const service = new k8s.core.v1.Service(`${appName}-svc`, {
 export const url = service.status.loadBalancer.ingress[0].hostname;
 ```
 
-In the case where you don't really need to use the repository (except as a place to store the built image), the above
-can be simplified to:
+{{% /choosable %}}
 
-```typescript
-import * as awsx from "@pulumi/awsx";
-import * as eks from "@pulumi/eks";
-import * as k8s from "@pulumi/kubernetes";
+{{% choosable language python %}}
 
-// Create a new EKS cluster.
-const cluster = new eks.Cluster("cluster");
+```python
+import pulumi
+import pulumi_awsx as awsx
+from pulumi_kubernetes.apps.v1 import Deployment, DeploymentSpecArgs
+from pulumi_kubernetes.core.v1 import (
+    ContainerArgs,
+    ContainerPortArgs,
+    PodSpecArgs,
+    PodTemplateSpecArgs,
+    Service,
+    ServicePortArgs,
+    ServiceSpecArgs,
+)
+from pulumi_kubernetes.meta.v1 import LabelSelectorArgs, ObjectMetaArgs
 
-// Create a NGINX Deployment and load balanced Service, running our app.
-const appName = "my-app";
-const appLabels = { appClass: appName };
-const deployment = new k8s.apps.v1.Deployment(`${appName}-dep`, {
-    metadata: { labels: appLabels },
-    spec: {
-        replicas: 2,
-        selector: { matchLabels: appLabels },
-        template: {
-            metadata: { labels: appLabels },
-            spec: {
-                containers: [{
-                    name: appName,
-                    image: awsx.ecr.buildAndPushImage("my-repo", "./app").image(),
-                    ports: [{ name: "http", containerPort: 80 }]
-                }],
-            }
-        }
-    },
-}, { provider: cluster.provider });
-const service = new k8s.core.v1.Service(`${appName}-svc`, {
-    metadata: { labels: appLabels },
-    spec: {
-        type: "LoadBalancer",
-        ports: [{ port: 80, targetPort: "http" }],
-        selector: appLabels,
-    },
-}, { provider: cluster.provider });
+repo = awsx.ecr.Repository("my-repo");
 
-// Export the URL for the load balanced service.
-export const url = service.status.loadBalancer.ingress[0].hostname;
+image = awsx.ecr.Image("image",
+                       repository_url=repo.url,
+                       path="./app")
+
+app_labels = {
+    "appName": "my-app",
+}
+
+deployment = Deployment(
+    "my-deployment",
+    spec=DeploymentSpecArgs(
+        selector=LabelSelectorArgs(
+            match_labels=app_labels,
+        ),
+        replicas=2,
+        template=PodTemplateSpecArgs(
+            metadata=ObjectMetaArgs(
+                labels=app_labels,
+            ),
+            spec=PodSpecArgs(
+                containers=[ContainerArgs(
+                    name="my-app",
+                    image=image.image_uri,
+                    ports=[ContainerPortArgs(
+                        container_port=80,
+                        name="http"
+                    )],
+                )],
+            ),
+        ),
+    ))
+
+service = Service(
+    "svc",
+    metadata=ObjectMetaArgs(
+        labels=app_labels
+    ),
+    spec=ServiceSpecArgs(
+        ports=[ServicePortArgs(
+            port=80,
+            target_port="http",
+        )],
+        selector=app_labels
+    ))
 ```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Awsx.Ecs.Inputs;
+using Pulumi.Kubernetes.Types.Inputs.Apps.V1;
+using Pulumi.Kubernetes.Types.Inputs.Core.V1;
+using Pulumi.Kubernetes.Types.Inputs.Meta.V1;
+using Ecr = Pulumi.Awsx.Ecr;
+using Ecs = Pulumi.Awsx.Ecs;
+using K8s = Pulumi.Kubernetes;
+using CoreV1 = Pulumi.Kubernetes.Core.V1;
+using AppsV1 = Pulumi.Kubernetes.Apps.V1;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var repo = new Ecr.Repository("my-repo");
+
+        var image = new Ecr.Image("image", new Ecr.ImageArgs
+        {
+            RepositoryUrl = repo.Url,
+            Path = "./app",
+        });
+
+        var cluster = new Eks.Cluster("eks-cluster")
+
+        var appLabels = new InputMap<string>
+        {
+            {"appClass", "my-app"}
+        };
+
+        var deployment = new AppsV1.Deployment("app-dep", new DeploymentArgs
+        {
+            Metadata = new ObjectMetaArgs
+            {
+                Labels = appLabels
+            },
+            Spec = new DeploymentSpecArgs
+            {
+                Selector = new LabelSelectorArgs
+                {
+                    MatchLabels = appLabels
+                },
+                Replicas = 2,
+                Template = new PodTemplateSpecArgs
+                {
+                    Metadata = new ObjectMetaArgs
+                    {
+                        Labels = appLabels
+                    },
+                    Spec = new PodSpecArgs
+                    {
+                        Containers =
+                        {
+                            new ContainerArgs
+                            {
+                                Name = "my-app",
+                                Image = "image.imageUri,
+                                Ports =
+                                {
+                                    new DeploymentPortArgs
+                                    {
+                                        Name = "http",
+                                        ContainerPort = 80,
+                                    },
+                                },
+                            }
+                        }
+                    }
+                }
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = cluster.Provider,
+        });
+
+        var service = new CoreV1.Service("app-service", new ServiceArgs
+        {
+            Metadata = new ObjectMetaArgs
+            {
+                Labels = appLabels,
+            },
+            Spec = new ServiceSpecArgs
+            {
+                Type = "LoadBalancer",
+                Ports =
+                {
+                    new ServicePortArgs
+                    {
+                        Port = 80,
+                        TargetPort = "http"
+                    },
+                },
+                Selector = appLabels,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = cluster.Provider,
+        });
+    }
+}
+
+class Program
+{
+    static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
+}
+```
+
+{{% /choosable %}}
 
 For information about EKS, refer to the [Pulumi Crosswalk for AWS EKS documentation]({{< relref "eks" >}}).
 
@@ -391,201 +732,11 @@ to control how an image is purged from the repository:
 1. Once a maximum number of images has been reached (`maximumNumberOfImages`).
 2. Once an image reaches a maximum allowed age (`maximumAgeLimit`).
 
-Policies can apply to all images, untagged images, or tagged images that match a specific tag-prefix.
-
-By default an `awsx.ecr.Repository` is created with a policy that will only keep at most one untagged image
-around. In other words, the following repositories have equivalent lifecycle policies:
-
-```typescript
-const repository1 = new awsx.ecr.Repository("app1");
-const repository2 = new awsx.ecr.Repository("app2", {
-    lifeCyclePolicyArgs: {
-        rules: [{
-            selection: "untagged",
-            maximumNumberOfImages: 1,
-        }],
-    },
-});
-```
-
 ### Lifecycle Policy Rules
-
-A custom lifecycle policy is built from one or more `rules`, ordered in the array from lowest priority to
-highest priority. The collection of rules are interpreted as follows:
-
-1. An image is expired by exactly one or zero rules.
-2. An image that matches the tagging requirements of a higher priority rule cannot be expired by a
-   rule with a lower priority.
-3. Rules can never mark images that are marked by higher priority rules, but can still identify them
-   as if they haven't been expired.
-4. The set of rules must contain a unique set of tag prefixes.
-5. Only one rule is allowed to select `untagged` images.
-6. Expiration is always ordered by the "pushed at time" for an image, and always expires older
-   images before newer ones.
-7. When using the `tagPrefixList`, an image is successfully matched if all of the tags in the
-   `tagPrefixList` value are matched against any of the image's tags.
-8. With `maximumNumberOfImages`, images are sorted from youngest to oldest based on their "pushed at
-   time" and then all images greater than the specified count are expired.
-9. `maximumAgeLimit`, all images whose "pushed at time" is older than the specified number of days
-   based on `countNumber` are expired.
 
 For more details, refer to [Amazon ECR Lifecycle Policies](
 https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html), however we will now examine
 a number of examples to demonstrate how lifecycle policies are applied.
-
-### Examples
-
-#### Example A:
-
-The following example shows the lifecycle policy syntax for a policy that expires untagged images older than 14 days:
-
-```typescript
-const repository = new awsx.ecr.Repository("app", {
-    lifeCyclePolicyArgs: {
-        rules: [{
-            selection: "untagged",
-            maximumAgeLimit: 14,
-        }],
-    },
-});
-```
-
-#### Example B: Filtering on Multiple Rules
-
-The following examples use multiple rules in a lifecycle policy. An example repository and lifecycle policy are given
-along with an explanation of the outcome:
-
-```typescript
-const repository = new awsx.ecr.Repository("app", {
-    lifeCyclePolicyArgs: {
-        rules: [{
-            selection: { tagPrefixList: ["prod"] },
-            maximumNumberOfImages: 1,
-        }, {
-            selection: { tagPrefixList: ["beta"] },
-            maximumNumberOfImages: 1,
-        }],
-    },
-});
-```
-
-Repository contents:
-
-* Image A, Taglist: `["beta-1", "prod-1"]`, Pushed: 10 days ago
-* Image B, Taglist: `["beta-2", "prod-2"]`, Pushed: 9 days ago
-* Image C, Taglist: `["beta-3"]`, Pushed: 8 days ago
-
-The logic of this lifecycle policy would be:
-
-1. Rule 1 identifies images tagged with prefix `prod`. It should mark images, starting with the
-   oldest, until there is one or fewer images remaining that match. It marks Image A for expiration.
-
-2. Rule 2 identifies images tagged with prefix beta. It should mark images, starting with the
-   oldest, until there is one or fewer images remaining that match. It marks both Image A and Image
-   B for expiration. However, Image A has already been seen by Rule 1 and if Image B were expired it
-   would violate Rule 1 and thus is skipped.
-
-Result: Image A is expired.
-
-#### Example C: Filtering on Multiple Rules
-
-This is the same repository as the previous example but the rule priority order is changed to illustrate the outcome:
-
-```typescript
-const repository = new awsx.ecr.Repository("app", {
-    lifeCyclePolicyArgs: {
-        rules: [{
-            selection: { tagPrefixList: ["beta"] },
-            maximumNumberOfImages: 1,
-        }, {
-            selection: { tagPrefixList: ["prod"] },
-            maximumNumberOfImages: 1,
-        }],
-    },
-});
-```
-
-Repository contents:
-
-* Image A, Taglist: `["beta-1", "prod-1"]`, Pushed: 10 days ago
-* Image B, Taglist: `["beta-2", "prod-2"]`, Pushed: 9 days ago
-* Image C, Taglist: `["beta-3"]`, Pushed: 8 days ago
-
-The logic of this lifecycle policy would be:
-
-1. Rule 1 identifies images tagged with beta. It should mark images, starting with the oldest, until
-   there is one or fewer images remaining that match. It sees all three images and would mark Image
-   A and Image B for expiration.
-
-2. Rule 2 identifies images tagged with prod. It should mark images, starting with the oldest, until
-   there is one or fewer images remaining that match. It would see no images because all available
-   images were already seen by Rule 1 and thus would mark no additional images.
-
-Result: Images A and B are expired.
-
-#### Example D: Filtering on Multiple Tags in a Single Rule
-
-The following examples specify the lifecycle policy syntax for multiple tag prefixes in a single rule. An example
-repository and lifecycle policy are given along with an explanation of the outcome.
-
-When multiple tag prefixes are specified on a single rule, images must match all listed tag prefixes:
-
-```typescript
-const repository = new awsx.ecr.Repository("app", {
-    lifeCyclePolicyArgs: {
-        rules: [{
-            selection: { tagPrefixList: ["alpha", "beta"] },
-            maximumAgeLimit: 5,
-        },
-    },
-});
-```
-
-Repository contents:
-
-* Image A, Taglist: `["alpha-1"]`, Pushed: 12 days ago
-* Image B, Taglist: `["beta-1"]`, Pushed: 11 days ago
-* Image C, Taglist: `["alpha-2", "beta-2"]`, Pushed: 10 days ago
-* Image D, Taglist: `["alpha-3"]`, Pushed: 4 days ago
-* Image E, Taglist: `["beta-3"]`, Pushed: 3 days ago
-* Image F, Taglist: `["alpha-4", "beta-4"]`, Pushed: 2 days ago
-
-The logic of this lifecycle policy would be:
-
-1. Rule 1 identifies images tagged with alpha and beta. It sees images C and F. It should mark
-   images that are older than five days, which would be Image C.
-
-2. Result: Image C is expired.
-
-#### Example E: Filtering on All Images
-
-The following lifecycle policy examples specify all images with different filters. An example repository and lifecycle
-policy are given along with an explanation of the outcome:
-
-```typescript
-const repository = new awsx.ecr.Repository("app", {
-    lifeCyclePolicyArgs: {
-        rules: [{
-            selection: "any",
-            maximumNumberOfImages: 5,
-        },
-    },
-});
-```
-
-Repository contents:
-
-* Image A, Taglist: `["alpha-1"]`, Pushed: 4 days ago
-* Image B, Taglist: `["beta-1"]`, Pushed: 3 days ago
-* Image C, Taglist: `[]`, Pushed: 2 days ago
-* Image D, Taglist: `["alpha-2"]`, Pushed: 1 day ago
-
-The logic of this lifecycle policy would be:
-
-1. Rule 1 identifies all images. It sees images A, B, C, and D. It should expire all images other
-   than the newest one. It marks images A, B, and C for expiration.
-
-2. Result: Images A, B, and C are expired.
 
 ## Additional ECR Resources
 

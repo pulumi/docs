@@ -22,6 +22,10 @@ scaling plans for resources including Amazon EC2 instances and Spot Fleets, and 
 Auto Scaling, your applications always have the right resources at the right time, and you pay only for the AWS
 resources needed to run your applications and any associated Amazon CloudWatch monitoring fees.
 
+{{% notes type="info" %}}
+This functionality is currently only available in TypeScript and as part of the AWSx Classic namespace.
+{{% /notes %}}
+
 ## Overview
 
 Pulumi Crosswalk for AWS enables easy definition of Auto Scaling Groups (ASGs) to configure scaling of EC2
@@ -47,16 +51,16 @@ response to events happening in the system.
 
 ### Creating Your Auto Scaling Group
 
-To create an ASG, allocate an instance of `awsx.autoscaling.AutoScalingGroup`. The constructor accepts properties
+To create an ASG, allocate an instance of `awsx.classic.autoscaling.AutoScalingGroup`. The constructor accepts properties
 to control the network (`vpc` and `subnetIds`), scaling policies (`templateParameters`), EC2 instance properties
 (`launchConfiguration`), and more.
 
 This example creates an ASG that attempts to keep around at least 10 `t1.medium` EC2 instances:
 
 ```typescript
-import * as awsx from "@pulumi/awsx";
+import * as classic from "@pulumi/awsx/classic";
 
-const autoScalingGroup = new awsx.autoscaling.AutoScalingGroup("testing", {
+const autoScalingGroup = new classic.autoscaling.AutoScalingGroup("testing", {
     templateParameters: { minSize: 10 },
     launchConfigurationArgs: { instanceType: "t2.medium" },
 });
@@ -74,13 +78,13 @@ our ECS cluster. This is not necessary when using ECS "Fargate", but by defining
 over the scaling of your ECS cluster. For more information about ECS specifically, see the associated
 [Pulumi Crosswalk for AWS ECS documentation]({{< relref "ecs" >}}).
 
-To make this easier, the `awsx.ecs.Cluster` class offers a `createAutoScalingGroup` class that associates the newly
+To make this easier, the `awsx.classic.ecs.Cluster` class offers a `createAutoScalingGroup` class that associates the newly
 created ASG with the ECS cluster, and runs all container compute on it. For example:
 
 ```typescript
-import * as awsx from "@pulumi/awsx";
+import * as classic from "@pulumi/awsx/classic";
 
-const cluster = new awsx.ecs.Cluster("testing", { vpc });
+const cluster = new classic.ecs.Cluster("testing", { vpc });
 
 const autoScalingGroup = cluster.createAutoScalingGroup("testing", {
     templateParameters: { minSize: 10 },
@@ -242,8 +246,8 @@ Target Tracking Scaling for ASGs offer several pre-defined scaling metrics.
   for ELB TargetGroups is only supported if the `targetType` is set to `"instance"`:
 
     ```typescript
-    const cluster = new awsx.ecs.Cluster("testing");
-    const loadBalancer = new awsx.lb.ApplicationLoadBalancer("testing");
+    const cluster = new classic.ecs.Cluster("testing");
+    const loadBalancer = new classic.lb.ApplicationLoadBalancer("testing");
 
     const targetGroup = loadBalancer.createTargetGroup("testing", { port: 80, targetType: "instance" });
 
@@ -280,7 +284,7 @@ The following example scales your ASG by attempting to keep EC2 instances around
 
 ```typescript
 autoScalingGroup.scaleToTrackMetric("keepAround50Percent", {
-    metric: awsx.ecs.metrics.memoryUtilization({ service, statistic: "Average", unit: "Percent" }),
+    metric: classic.ecs.metrics.memoryUtilization({ service, statistic: "Average", unit: "Percent" }),
     targetValue: 50,
 });
 ```
@@ -300,7 +304,7 @@ and less than 60:
 
 ```typescript
 autoScalingGroup.scaleInSteps("scale-in-out", {
-    metric: awsx.ecs.metrics.memoryUtilization({ service, statistic: "Average", unit: "Percent" }),
+    metric: classic.ecs.metrics.memoryUtilization({ service, statistic: "Average", unit: "Percent" }),
     adjustmentType: "PercentChangeInCapacity",
     steps: {
         lower: [{ value: 30, adjustment: -30 }, { value: 40, adjustment: -10 }],

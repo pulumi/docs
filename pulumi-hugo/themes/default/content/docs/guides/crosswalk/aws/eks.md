@@ -744,7 +744,7 @@ const awsx = require("@pulumi/awsx");
 const eks = require("@pulumi/eks");
 
 // Create a VPC for our cluster.
-const vpc = new awsx.ec2.Vpc("my-vpc", {});
+const vpc = new awsx.ec2.Vpc("my-vpc");
 
 // Create an EKS cluster inside of the VPC.
 const cluster = new eks.Cluster("my-cluster", {
@@ -768,7 +768,7 @@ import * as awsx from "@pulumi/awsx";
 import * as eks from "@pulumi/eks";
 
 // Create a VPC for our cluster.
-const vpc = new awsx.ec2.Vpc("my-vpc", {});
+const vpc = new awsx.ec2.Vpc("my-vpc");
 
 // Create an EKS cluster inside of the VPC.
 const cluster = new eks.Cluster("my-cluster", {
@@ -2752,7 +2752,10 @@ const k8s = require("@pulumi/kubernetes");
 const cluster = new eks.Cluster("cluster");
 
 // Build and publish our app's container image.
-const image = awsx.ecr.buildAndPushImage("my-repo", "./app");
+const repo = new awsx.ecr.Repository("my-repo")
+const image = awsx.ecr.Image("image", {
+    path: "./app",
+});
 
 // Create a NGINX Deployment and load balanced Service, running our app.
 const appName = "my-app";
@@ -2767,7 +2770,7 @@ const deployment = new k8s.apps.v1.Deployment(`${appName}-dep`, {
             spec: {
                 containers: [{
                     name: appName,
-                    image: image.image(),
+                    image: image.imageUri,
                     ports: [{ name: "http", containerPort: 80 }]
                 }],
             }
@@ -2801,7 +2804,10 @@ import * as k8s from "@pulumi/kubernetes";
 const cluster = new eks.Cluster("cluster");
 
 // Build and publish our app's container image.
-const image = awsx.ecr.buildAndPushImage("my-repo", "./app");
+const repo = new awsx.ecr.Repository("my-repo")
+const image = awsx.ecr.Image("image", {
+    path: "./app",
+});
 
 // Create a NGINX Deployment and load balanced Service, running our app.
 const appName = "my-app";
@@ -2816,7 +2822,7 @@ const deployment = new k8s.apps.v1.Deployment(`${appName}-dep`, {
             spec: {
                 containers: [{
                     name: appName,
-                    image: image.image(),
+                    image: image.imageUri,
                     ports: [{ name: "http", containerPort: 80 }]
                 }],
             }
@@ -2842,8 +2848,7 @@ export const url = service.status.loadBalancer.ingress[0].hostname;
 ```python
 import base64
 import pulumi
-import pulumi_aws as aws
-import pulumi_docker as docker
+import pulumi_awss as awss
 import pulumi_eks as eks
 import pulumi_kubernetes as k8s
 
@@ -2853,26 +2858,11 @@ cluster = eks.Cluster('my-cluster');
 # Build and publish our app's container image:
 
 # ...1) Create a private ECR repository.
-repo = aws.ecr.Repository('my-repo')
-image_name = repo.repository_url
+repo = awsx.ecr.Repository("my-repo");
 
-# ...2) Get registry info (creds and endpoint).
-def get_registry_info(creds):
-    """Get registry info (creds and endpoint)."""
-    decoded = base64.b64decode(creds.authorization_token).decode()
-    parts = decoded.split(':')
-    if len(parts) != 2:
-        raise Exception('Invalid credentials')
-    return docker.ImageRegistry(creds.proxy_endpoint, parts[0], parts[1])
-
-registry_info = aws.ecr.get_credentials_output(registry_id=repo.registry_id)
-
-# ...3) Build and publish the container image.
-image = docker.Image('my-app-image',
-    build='app',
-    image_name=image_name,
-    registry=registry_info
-)
+image = awsx.ecr.Image("image",
+                       repository_url=repo.url,
+                       path="./app")
 
 # Create a NGINX Deployment and load balanced Service, running our app.
 app_name = 'my-app'
@@ -2886,7 +2876,7 @@ deployment = k8s.apps.v1.Deployment(f'{app_name}-dep',
             spec = k8s.core.v1.PodSpecArgs(containers = [
                 k8s.core.v1.ContainerArgs(
                     name = app_name,
-                    image = image.image_name
+                    image = image.image_uri
                 )
             ]),
         ),
@@ -2921,7 +2911,7 @@ import (
 	"strings"
 
 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecr"
-	"github.com/pulumi/pulumi-docker/sdk/v3/go/docker"
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx"
 	"github.com/pulumi/pulumi-eks/sdk/go/eks"
 	k8s "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes"
 	appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/apps/v1"
@@ -2960,32 +2950,11 @@ func main() {
 		if err != nil {
 			return err
 		}
-
-		// ...2) Get registry info (creds and endpoint).
-		imageName := repo.RepositoryUrl
-		registryInfo := ecr.GetCredentialsOutput(ctx, ecr.GetCredentialsOutputArgs{RegistryId: repo.RegistryId}).
-			ApplyT(func(creds ecr.GetCredentialsResult) (docker.ImageRegistry, error) {
-				decoded, err := base64.StdEncoding.DecodeString(creds.AuthorizationToken)
-				if err != nil {
-					return docker.ImageRegistry{}, err
-				}
-				parts := strings.Split(string(decoded), ":")
-				if len(parts) != 2 {
-					return docker.ImageRegistry{}, errors.New("Invalid credentials")
-				}
-				return docker.ImageRegistry{
-					Server:   creds.ProxyEndpoint,
-					Username: parts[0],
-					Password: parts[1],
-				}, nil
-			}).(docker.ImageRegistryOutput)
-
-		// ...3) Build and publish the container image.
-		image, err := docker.NewImage(ctx, "my-app-image", &docker.ImageArgs{
-			Build:     &docker.DockerBuildArgs{Context: pulumi.String("app")},
-			ImageName: imageName,
-			Registry:  registryInfo,
-		})
+		
+		image, err := ecr.NewImage(ctx, "image", &ecr.ImageArgs{
+			RepositoryId: repo.url,
+			Path: pulumi.String("./app"),
+        })
 
 		// Create a NGINX Deployment and load balanced Service, running our app.
 		appName := "my-app"
@@ -3002,7 +2971,7 @@ func main() {
 							Containers: corev1.ContainerArray{
 								&corev1.ContainerArgs{
 									Name:  pulumi.String(appName),
-									Image: image.ImageName,
+									Image: image.ImageUri,
 								},
 							},
 						},
@@ -3046,8 +3015,7 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
-using Pulumi.Docker;
-using Ecr = Pulumi.Aws.Ecr;
+using Ecr = Pulumi.Awsx.Ecr;
 using K8s = Pulumi.Kubernetes;
 using K8sApps = Pulumi.Kubernetes.Apps.V1;
 using K8sAppsArgs = Pulumi.Kubernetes.Types.Inputs.Apps.V1;
@@ -3076,39 +3044,10 @@ class MyStack : Stack
 
         // Build and publish our app's container image:
 
-        // ...1) Create a private ECR repository.
-        var repo = new Ecr.Repository("my-repo");
-        var imageName = repo.RepositoryUrl;
-
-        // ...2) Get registry info (creds and endpoint).
-        var registryInfo = Ecr.GetCredentials.Invoke(new Ecr.GetCredentialsInvokeArgs
+        var image = new Image("image", new ImageArgs
         {
-            RegistryId = repo.RegistryId
-        }).Apply(creds =>
-        {
-            var decodedData = Convert.FromBase64String(creds.AuthorizationToken);
-            var decoded = ASCIIEncoding.ASCII.GetString(decodedData);
-
-            var parts = decoded.Split(':');
-            if (parts.Length != 2)
-            {
-                throw new Exception("Invalid credentials");
-            }
-
-            return new ImageRegistry
-            {
-                Server = creds.ProxyEndpoint,
-                Username = parts[0],
-                Password = parts[1],
-            };
-        });
-
-        // ...3) Build and publish the container image.
-        var image = new Image("my-image", new ImageArgs
-        {
-            Build = new DockerBuild { Context = "app" },
-            ImageName = imageName,
-            Registry = registryInfo,
+            RepositoryUrl = repo.Url,
+            Path = "./app",
         });
 
 		// Create a NGINX Deployment and load balanced Service, running our app.
@@ -3126,7 +3065,7 @@ class MyStack : Stack
                             Containers = {
                                 new K8sCoreArgs.ContainerArgs {
                                     Name = appName,
-                                    Image = image.ImageName,
+                                    Image = image.imageUri,
                                 },
                             },
                         },
