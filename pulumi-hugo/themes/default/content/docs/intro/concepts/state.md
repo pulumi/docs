@@ -223,7 +223,7 @@ $ pulumi stack import --file my-app-production.checkpoint.json
 
 After performing these steps, your stack will now be under the management of the Pulumi Service. All subsequent operations should be performed using this new backend.
 
-> **Note:**: After migration, your stack's state will be managed by the the Pulumi Service backend, but the stack will continue using the same secrets provider. You can separately [change the secrets provider]({{< relref "docs/intro/concepts/config#changing-the-secrets-provider-for-a-stack" >}}) for your stack if needed.
+> **Note:**: After migration, your stack's state will be managed by the the Pulumi Service backend, but the stack will continue using the same secrets provider. You can separately [change the secrets provider]({{< relref "docs/intro/concepts/secrets#changing-the-secrets-provider-for-a-stack" >}}) for your stack if needed.
 
 ### Pulumi Service Architecture
 
