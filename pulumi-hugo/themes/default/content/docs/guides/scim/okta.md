@@ -100,6 +100,14 @@ Now that the SCIM connector knows how to connect to Pulumi, you need to adjust t
 5. Click **Save Mappings**.
 6. Click **Apply Updates**.
 
+## Adjusting the Okta to Pulumi Username Mappings
+
+Pulumi usernames are immutable and should not be changed after a user is associated with a Pulumi application. To disable Okta from pushing username updates to Pulumi, perform the following steps:
+
+1. Under **Sign On** in the **Settings** module, select **Edit**.
+2. Under **Credentials Details**, change **Update application username on** from **Create and update** to **Create only**.
+3. Select **Save**.
+
 ## Setting up Group Provisioning {#groupprovisioning}
 
 The Pulumi Service supports the provisioning of teams within your organization using SCIM. This is done by mapping the groups you have created using SCIM to create teams within your organization in the Pulumi Service. Setting this up allows you to manage your teams' memberships solely in Okta.
