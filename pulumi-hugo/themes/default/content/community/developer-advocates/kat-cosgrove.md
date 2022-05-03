@@ -7,6 +7,16 @@ layout: developer-advocates/single
 aliases:
   - /kat
 talks:
+  - event: JFokus
+    title: The DevOps Revolution, or We Haven't Always Known Everything
+    url: https://jfokus.se
+    date: 2022-05-03T10:00:00.000-07:00
+    slides: https://docs.google.com/presentation/d/1yKtURFwJkDRgs708DgUSTY4nH22Q2jr7BmGxf-dI2WM/edit?usp=sharing
+  - event: JFokus
+    title: A CI/CD History Lesson
+    url: https://jfokus.se
+    date: 2022-05-04T10:00:00.000-07:00
+    slides: https://docs.google.com/presentation/d/1yKtURFwJkDRgs708DgUSTY4nH22Q2jr7BmGxf-dI2WM/edit?usp=sharing
   - event: Devoxx UK
     title: Gatekeeping and the DevOps Revolution
     url: https://devoxx.co.uk
