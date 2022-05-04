@@ -9,7 +9,7 @@ menu:
 aliases: ["/docs/reference/concepts/"]
 ---
 
-Pulumi is a modern [infrastructure as code]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) platform. It leverages existing programming languages---TypeScript, JavaScript, Python, Go, and .NET---and their native ecosystem to interact with cloud resources through the Pulumi SDK. A downloadable CLI, runtime, libraries, and a hosted service work together to deliver a robust way of provisioning, updating, and managing cloud infrastructure.
+Pulumi is a modern [infrastructure as code]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) platform. It leverages existing programming languages---TypeScript, JavaScript, Python, Go, .NET, Java, and markup languages like YAML---and their native ecosystem to interact with cloud resources through the Pulumi SDK. A downloadable CLI, runtime, libraries, and a hosted service work together to deliver a robust way of provisioning, updating, and managing cloud infrastructure.
 
 > If this is your first time using Pulumi, you likely want to begin with [the Getting Started guide]({{< relref "/docs/get-started" >}}) for your cloud of choice. It will walk you through an [AWS]({{< relref "/docs/get-started/aws" >}}), [Azure]({{< relref "/docs/get-started/azure" >}}), [GCP]({{< relref "/docs/get-started/gcp" >}}), or [Kubernetes]({{< relref "/docs/get-started/kubernetes" >}}) deployment from start to finish.
 
@@ -31,7 +31,7 @@ To use the security group, the EC2 resource requires the security group's ID. Pu
 
 Finally, the server's resulting IP address and DNS name are exported as stack outputs so that their values can be accessed through either a CLI command or by another stack.
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -187,6 +187,77 @@ class MyStack : Stack
     [Output]
     public Output<string> PublicDns { get; set; }
 }
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Context;
+import com.pulumi.Exports;
+import com.pulumi.Pulumi;
+import com.pulumi.aws.ec2.Instance;
+import com.pulumi.aws.ec2.InstanceArgs;
+import com.pulumi.aws.ec2.SecurityGroup;
+import com.pulumi.aws.ec2.SecurityGroupArgs;
+import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
+
+import java.util.List;
+
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        final var group = new SecurityGroup("web-sg",
+            SecurityGroupArgs.builder()
+            .description("Enable HTTP access")
+            .ingress(SecurityGroupIngressArgs.builder()
+                .protocol("tcp")
+                .fromPort(80)
+                .toPort(80)
+                .cidrBlocks("0.0.0.0/0")
+                .build())
+            .build());
+        final var server = new Instance("web-server",
+            InstanceArgs.builder()
+                .ami("ami-6869aa05")
+                .instanceType("t2.micro")
+                .vpcSecurityGroupIds(group.name().applyValue(List::of))
+                .build());
+        ctx.export("publicIp", server.publicIp());
+        ctx.export("publicDns", server.publicDns());
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  group:
+    type: aws:ec2:SecurityGroup
+    properties:
+      description: Enable HTTP access
+      ingress:
+        - protocol: tcp
+          fromPort: 80
+          toPort: 80
+          cidrBlocks: ["0.0.0.0/0"]
+  server:
+    type: aws:ec2:Instance
+    properties:
+      ami: ami-6869aa05
+      instanceType: t2.micro
+      vpcSecurityGroupIds: ${group.name}
+outputs:
+  publicIp: ${server.publicIp}
+  publicDns: ${server.publicDns}
 ```
 
 {{% /choosable %}}

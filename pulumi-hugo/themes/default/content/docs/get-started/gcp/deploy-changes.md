@@ -61,7 +61,7 @@ Duration: 3s
 
 Once the update has completed, you can verify the object was created in your bucket by checking the Google Cloud Console or by running the following `gsutil` command:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -102,6 +102,23 @@ $ gsutil ls $(pulumi stack output BucketName)
 ```
 
 {{% /choosable %}}
+
+{{% choosable language java %}}
+
+```bash
+$ gsutil ls $(pulumi stack output bucketName)
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```bash
+$ gsutil ls $(pulumi stack output bucketName)
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 Notice that your `index.html` file has been added to the bucket:
@@ -350,6 +367,149 @@ public Output<string> BucketEndpoint { get; set; }
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+Now that your `index.html` is in your bucket, modify the program to have the bucket serve `index.html` as a static website.
+
+First, add the `BucketArgs`, `BucketIAMBinding`, `BucketIAMBindingArgs`, and `BucketWebsiteArgs` classes to the list of imports.
+
+```java
+// ...
+import com.pulumi.gcp.storage.BucketArgs;
+import com.pulumi.gcp.storage.BucketWebsiteArgs;
+import com.pulumi.gcp.storage.inputs.BucketWebsiteArgs;
+import com.pulumi.gcp.storage.BucketIAMBinding;
+import com.pulumi.gcp.storage.BucketIAMBindingArgs;
+```
+
+Next, set the `website` property on your bucket. And, to align with Google Cloud Storage recommendations, set uniform bucket-level access on the bucket to `true`:
+
+```java
+// ...
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            // Create an AWS resource (S3 Bucket)
+            var bucket = new Bucket("my-bucket",
+                    BucketArgs.builder()
+                            .location("US")
+                            .website(BucketWebsiteArgs.builder()
+                                    .mainPageSuffix("index.html")
+                                    .build())
+                            .uniformBucketLevelAccess(true)
+                            .build());
+            //...
+```
+
+Next, allow the contents of your bucket to be viewed anonymously over the Internet.
+
+```java
+// ...
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            // var bucket = ...
+            var binding = new BucketIAMBinding("my-bucket-IAMBinding",
+                    BucketIAMBindingArgs.builder()
+                            .bucket(bucket.name())
+                            .role("roles/storage.objectViewer")
+                            .members("allUsers")
+                            .build());
+            // Create an S3 Bucket object ...
+```
+
+Also, change the content type of your index.html object so that it is served as HTML.
+
+```java
+// ...
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            // var bucket = ...
+            // var binding = ...
+            // Create an S3 Bucket object
+            var bucketObject = new BucketObject("index.html", BucketObjectArgs.builder()
+                    .bucket(bucket.name())
+                    .contentType("text/html")
+                    .source(new FileAsset("index.html"))
+                    .build());
+```
+
+Finally, at the end of the program file, export the resulting bucket’s endpoint URL so you can access it easily. You can do that by importing the Pulumi `Output` class:
+
+```java
+// ...
+import com.pulumi.core.Output;
+```
+
+And adding a line to read the endpoint from the `Bucket` instance:
+
+```java
+// ...
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            // ...
+            ctx.export("bucketEndpoint", Output.format("http://storage.googleapis.com/%s/%s", bucket.name(), bucketObject.name()));
+            return ctx.exports();
+        });
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+Now that your `index.html` is in your bucket, modify the program to have the bucket serve `index.html` as a static website. To do that, set the bucket's `website` property, passing the filename to use as an `mainPageSuffix`. And, to align with Google Cloud Storage recommendations, set uniform bucket-level access on the bucket to `true`.
+
+```yaml
+resources:
+  my-bucket:
+    type: gcp:storage:Bucket
+    properties:
+      website:
+        mainPageSuffix: index.html
+      location: US
+      uniformBucketLevelAccess: true
+```
+
+Next, allow the contents of your bucket to be viewed anonymously over the Internet.
+
+```yaml
+resources:
+  # ...
+  my-bucket-binding:
+    type: gcp:storage:BucketIAMBinding
+    properties:
+      bucket: ${bucket.name}
+      role: "roles/storage.objectViewer"
+      members: ["allUsers"]
+```
+
+Also, change the content type of your `index.html` object so that it is served as HTML.
+
+```yaml
+resources:
+  # ...
+  index-object:
+    type: gcp:storage:BucketObject
+    properties:
+      bucket: ${my-bucket}
+      contentType: "text/html"
+      source:
+        Fn::FileAsset: ./index.html
+```
+
+Finally, at the end of the file, export the resulting bucket’s endpoint URL so you can access it easily:
+
+```yaml
+# ...
+outputs:
+  bucketName: ${my-bucket.url}
+  bucketEndpoint: http://storage.googleapis.com/${my-bucket.name}/${index-object.name}
+  ```
+
+{{% /choosable %}}
+
 Now update your stack to have your storage bucket serve your `index.html` file as a static website.
 
 ```bash
@@ -444,6 +604,22 @@ $ curl $(pulumi stack output bucketEndpoint)
 
 ```bash
 $ curl $(pulumi stack output BucketEndpoint)
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```bash
+$ curl $(pulumi stack output bucketEndpoint)
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```bash
+$ curl $(pulumi stack output bucketEndpoint)
 ```
 
 {{% /choosable %}}

@@ -30,7 +30,8 @@ Inside of an `apply` or `Output.all` call, your secret is decrypted into plainte
 
 There are two ways to programmatically create secret values:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+
 {{% choosable language javascript %}}
 
 - Using [`getSecret(key)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret" >}}) or [`requireSecret(key)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret" >}}) when reading a value from config.
@@ -61,11 +62,24 @@ There are two ways to programmatically create secret values:
 - Calling `Output.CreateSecret(value)` to construct a secret from an existing value.
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+- Using `ctx.config().getSecret(key)` or `ctx.config().requireSecret(key)` when reading a value from config.
+- Calling `Output.of(value).asSecret()` to construct a secret from an existing value.
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+- Setting `configuration.${KEY}.Secret: true` when reading a value from the config.
+- Calling `Fn::Secret` to construct a secret from an existing value.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 As an example, let’s create an AWS Parameter Store secure value. Parameter Store is an AWS service that stores strings. Those strings can either be secret or not. To create an encrypted value, we need to pass an argument to initialize the store’s `value` property. Unfortunately, the obvious thing to do —passing a raw, unencrypted value— means that the value is also stored in the Pulumi state, unencrypted so we need to ensure that the value is a secret:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -138,6 +152,34 @@ var param = new Aws.Ssm.Parameter("a-secret-param", new Aws.Ssm.ParameterArgs
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var config = ctx.config();
+var param = new com.pulumi.aws.ssm.Parameter("a-secret-param",
+    com.pulumi.aws.ssm.ParameterArgs.builder()
+    .type("SecureString")
+    .value(config.requireSecret("my-secret-value"))
+    .build());
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+configuration:
+  mySecretValue:
+    secret: true
+
+resources:
+  param:
+    type: aws:ssm:Parameter
+    properties:
+      type: SecureString
+      value: mySecretValue
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -184,7 +226,7 @@ dbPassword                 [secret]
 
 Similarly, if our program attempts to print the value of `dbPassword` to the console-either intentionally or accidentally-Pulumi will mask it out:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 
 {{% choosable language javascript %}}
 
@@ -229,6 +271,14 @@ Console.WriteLine($"Password: {config.Require("dbPassword")}");
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var config = ctx.config();
+ctx.log().info(String.format("Password: %s", config.require("dbPassword")));
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -260,7 +310,7 @@ $ pulumi config set --secret dbPassword S3cr37 # set an encrypted secret value
 
 Use the following code to access these configuration values in your Pulumi program:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 
 {{% choosable language javascript %}}
 
@@ -332,6 +382,30 @@ class MyStack : Stack
 
         var name = config.Require("name");
         var dbPassword = config.RequireSecret("dbPassword");
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Context;
+import com.pulumi.Exports;
+import com.pulumi.Pulumi;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var config = ctx.config();
+
+        var name = config.require("name");
+        var dbPassword = config.requireSecret("dbPassword");
     }
 }
 ```

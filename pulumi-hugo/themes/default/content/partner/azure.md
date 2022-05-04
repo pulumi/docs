@@ -3,10 +3,10 @@ title: Cloud Engineering with Azure
 layout: azure
 url: /azure
 
-meta_desc: Modern Infrastructure as Code on the Azure cloud with Pulumi gives you huge productivity gains and a unified programming model for developers and operators.
+meta_desc: Universal Infrastructure as Code on the Azure cloud with Pulumi gives you huge productivity gains and a unified programming model for developers and operators.
 
 hero:
-    title: Modern Infrastructure as Code for 100% of Microsoft Azure
+    title: Universal Infrastructure as Code for 100% of Microsoft Azure
     description: |
         Pulumi's [infrastructure as code](/what-is/what-is-infrastructure-as-code/) SDK
         helps create, deploy, and manage 100% of your Microsoft Azure infrastructure, including
@@ -94,6 +94,58 @@ hero:
                     }
                 }
 
+            - title: Pulumi.yaml
+              language: yaml
+              code: |
+                name: azure-storage-account
+                runtime: yaml
+                description: A simple Pulumi program.
+                resources:
+                  resourcegroup:
+                    type: azure-native:resources:ResourceGroup
+                  sa:
+                    type: azure-native:storage:StorageAccount
+                    properties:
+                      resourceGroupName: ${resourcegroup.name}
+                      kind: 'StorageV2'
+                      sku: { name: 'Standard_LRS' }
+
+            - title: Main.java
+              language: java
+              code: |
+                package com.pulumi.example.infra;
+
+                import com.pulumi.Context;
+                import com.pulumi.Exports;
+                import com.pulumi.Pulumi;
+                import com.pulumi.azurenative.resources.ResourceGroup;
+                import com.pulumi.azurenative.storage.StorageAccount;
+                import com.pulumi.azurenative.storage.StorageAccountArgs;
+                import com.pulumi.azurenative.storage.enums.Kind;
+                import com.pulumi.azurenative.storage.enums.SkuName;
+                import com.pulumi.azurenative.storage.inputs.SkuArgs;
+
+                public class Main {
+
+                    public static void main(String[] args) {
+                        Pulumi.run(Main::stack);
+                    }
+
+                    private static Exports stack(Context ctx) {
+                        var resourceGroup = new ResourceGroup("linux-fn-rg");
+
+                        var storageAccount = new StorageAccount("linux-fn-sa", StorageAccountArgs.builder()
+                                .resourceGroupName(resourceGroup.name())
+                                .kind(Kind.StorageV2)
+                                .sku(SkuArgs.builder()
+                                        .name(SkuName.Standard_LRS)
+                                        .build())
+                                .build());
+
+                        return ctx.exports();
+                    }
+                }
+
 customer_logos:
   title: Powering top engineering teams
   logos:
@@ -117,9 +169,9 @@ customer_logos:
       - ro
 
 azure_overview:
-  title: Modern Infrastructure as Code on Azure
+  title: Universal Infrastructure as Code on Azure
   list:
-    - Define infrastructure in JavaScript, TypeScript, Python, Go, or any .NET language, including C#, F#, and VB.
+    - Define infrastructure in JavaScript, TypeScript, Python, Go, Java, YAML, or any .NET language, including C#, F#, and VB.
     - Increase your productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate all of your Azure resources.
     - Keep your cloud secure and in compliance by enforcing policies on every deployment.
     - Codify best practices and policies then share them with your team or community as self-service architectures.
@@ -192,7 +244,7 @@ detail_sections:
         - title: All Languages
           icon: code
           icon_color: yellow
-          description: The Pulumi Azure Native provider is available in all Pulumi languages, including JavaScript, TypeScript, Python, Go, and .NET Core. All SDKs are open source on GitHub and available as npm, NuGet, PyPI, and Go modules.
+          description: The Pulumi Azure Native provider is available in all Pulumi languages, including JavaScript, TypeScript, Python, Go, .NET Core, Java, and YAML. All SDKs are open source on GitHub and available as npm, NuGet, PyPI, and Go modules.
 
 superpowers:
   - title: Multi Cloud

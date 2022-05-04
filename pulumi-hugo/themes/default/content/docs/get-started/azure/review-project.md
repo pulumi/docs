@@ -14,7 +14,18 @@ aliases: ["/docs/quickstart/azure/review-project/"]
 
 Let's review some of the generated project files:
 
+{{% choosable language "javascript,typescript,python,go,csharp,java" %}}
+
 - `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project" >}}).
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+- `Pulumi.yaml` defines both the [project]({{< relref "/docs/intro/concepts/project" >}}) and the program that manages your stack resources.
+
+{{% /choosable %}}
+
 - `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) you initialized.
 
 {{% choosable language csharp %}}
@@ -23,9 +34,22 @@ Let's review some of the generated project files:
 
 {{% /choosable %}}
 
-- {{< langfile >}} is the Pulumi program that defines your stack resources. Let's examine it.
+{{% choosable language java %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+- `src/main/java/myproject` defines the project's Java package root.
+
+{{% /choosable %}}
+
+{{% choosable language "javascript,typescript,python,go,csharp,java" %}}
+
+<!-- The wrapping spans are infortunately necessary here; without them, the renderer gets confused and generates invalid markup. -->
+- <span>{{< langfile >}}</span> is the Pulumi program that defines your stack resources.
+
+{{% /choosable %}}
+
+Let's examine {{< langfile >}}.
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -180,6 +204,92 @@ class MyStack : Stack
         }).Apply(accountKeys => Output.CreateSecret(accountKeys.Keys[0].Value));
     }
 }
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.azurenative.resources.ResourceGroup;
+import com.pulumi.azurenative.storage.StorageAccount;
+import com.pulumi.azurenative.storage.StorageAccountArgs;
+import com.pulumi.azurenative.storage.StorageFunctions;
+import com.pulumi.azurenative.storage.enums.Kind;
+import com.pulumi.azurenative.storage.enums.SkuName;
+import com.pulumi.azurenative.storage.inputs.ListStorageAccountKeysArgs;
+import com.pulumi.azurenative.storage.inputs.SkuArgs;
+import com.pulumi.core.Either;
+import com.pulumi.core.Output;
+import com.pulumi.deployment.InvokeOptions;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var resourceGroup = new ResourceGroup("resourceGroup");
+            var storageAccount = new StorageAccount("sa", StorageAccountArgs.builder()
+                    .resourceGroupName(resourceGroup.name())
+                    .sku(SkuArgs.builder()
+                            .name(SkuName.Standard_LRS)
+                            .build())
+                    .kind(Kind.StorageV2)
+                    .build());
+
+            var primaryStorageKey = getStorageAccountPrimaryKey(
+                    resourceGroup.name(),
+                    storageAccount.name());
+
+            ctx.export("primaryStorageKey", primaryStorageKey);
+        });
+    }
+
+    private static Output<String> getStorageAccountPrimaryKey(Output<String> resourceGroupName,
+                                                              Output<String> accountName) {
+        return Output.tuple(resourceGroupName, accountName).apply(tuple -> {
+            var actualResourceGroupName = tuple.t1;
+            var actualAccountName = tuple.t2;
+            var invokeResult = StorageFunctions.listStorageAccountKeys(ListStorageAccountKeysArgs.builder()
+                    .resourceGroupName(actualResourceGroupName)
+                    .accountName(actualAccountName)
+                    .build(), InvokeOptions.Empty);
+            return Output.of(invokeResult)
+                    .applyValue(r -> r.keys().get(0).value())
+                    .asSecret();
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: quickstart
+runtime: yaml
+description: A minimal Azure Native Pulumi YAML program
+resources:
+  resourceGroup:
+    type: azure-native:resources:ResourceGroup
+  storageAccount:
+    type: azure-native:storage:StorageAccount
+    properties:
+      resourceGroupName: ${resourceGroup.name}
+      sku:
+        name: Standard_LRS
+      kind: StorageV2
+variables:
+  storageAccountKeys:
+    Fn::Invoke:
+      Function: azure-native:storage:listStorageAccountKeys
+      Arguments:
+        resourceGroupName: ${resourceGroup.name}
+        accountName: ${storageAccount.name}
+outputs:
+  primaryStorageKey: ${storageAccountKeys.keys[0].value}
 ```
 
 {{% /choosable %}}

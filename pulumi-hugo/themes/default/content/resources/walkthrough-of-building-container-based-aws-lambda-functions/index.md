@@ -47,7 +47,7 @@ main:
 
         Code for this episode available [here](https://github.com/pulumi/pulumitv/tree/master/modern-infrastructure-wednesday/2020-12-02).
 
-        Today's example is in TypeScript, but Pulumi makes it easy to stand up infrastructure in your favorite languages including JavaScript, Python, C#, and Go - saving time over legacy tools like CloudFormation and Hashicorp Terraform.
+        Today's example is in TypeScript, but Pulumi makes it easy to stand up infrastructure in your favorite languages including JavaScript, Python, C#, Go, and Java - saving time over legacy tools like CloudFormation and Hashicorp Terraform.
 
     # The video presenters
     presenters:

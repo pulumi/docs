@@ -17,7 +17,7 @@ Each resource also has a [Uniform Resource Name (URN)]({{< relref "#urns" >}}) w
 
 Every resource managed by Pulumi has a logical name that you specify as an argument to its constructor. For instance, the logical name of this IAM role is `my-role`:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -54,6 +54,22 @@ var role = new Aws.Iam.Role("my-role");
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var role = new com.pulumi.aws.iam.Role("my-role");
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  my-role:
+    type: aws:iam:Role
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -83,7 +99,7 @@ This random suffix serves two purposes:
 
 For cases that require specific names, you can override auto-naming by specifying a physical name. Most resources have a `name` property that you can use to name the resource yourself. Specify your name in the argument object to the constructor. Here’s an example.
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -131,6 +147,27 @@ var role = new Aws.Iam.Role("my-role", new Aws.Iam.RoleArgs
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var role = new com.pulumi.aws.iam.Role("my-role",
+    com.pulumi.aws.iam.RoleArgs.builder()
+        .name("my-role-001")
+        .build());
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+    role:
+        type: aws:iam:Role
+        properties:
+            name: my-role-001
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -140,7 +177,7 @@ Overriding auto-naming makes your project susceptible to naming collisions. As a
 
 Because physical and logical names do not need to match, you can construct the physical name by using your project and stack names. Similarly to auto-naming, this approach protects you from naming collisions while still having meaningful names. Note that `deleteBeforeReplace` is still necessary:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -187,6 +224,32 @@ var role = new Aws.Iam.Role("my-role", new Aws.Iam.RoleArgs
     },
     new CustomResourceOptions { DeleteBeforeReplace = true }
 );
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var role = new com.pulumi.aws.iam.Role("my-role",
+    com.pulumi.aws.iam.RoleArgs.builder()
+        .name(String.format("my-role-%s-%s", ctx.projectName(), ctx.stackName()))
+        .build(),
+    CustomResourceOptions.builder()
+        .deleteBeforeReplace(true)
+        .build());
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  role:
+    type: aws:iam:Role
+    properties:
+      name: my-role${pulumi.project}-${pulumi.stack}
+    options:
+      deleteBeforeReplace: true
 ```
 
 {{% /choosable %}}

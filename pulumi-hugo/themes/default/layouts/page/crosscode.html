@@ -1,0 +1,69 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" .Params.title) }}
+{{ end }}
+
+{{ define "main" }}
+    {{ $pageContext := . }}
+
+    <section id="crosscode-overview" class="relative">
+        <div class="shape-background crosscode-overview">
+            <div class="relative w-full h-full">
+                <div class="circle-right"></div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto flex flex-col items-center px-6 text-lg text-gray-800">
+            <div class="max-w-3xl my-12">
+                <p>{{ .Params.description | markdownify }}</p>
+            </div>
+            <div>
+                <img src="/images/product/cloud-engineering-platform.png" alt="Pulumi Cloud Engineering Platform">
+            </div>
+        </div>
+    </section>
+
+    <section id="crosscode-capabilities" class="relative">
+        <div class="shape-background">
+            <div class="relative w-full h-full">
+                <div class="circle-left"></div>
+                <div class="circle-right"></div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto flex flex-col items-center my-28 px-6">
+            {{ with .Params.capabilities }}
+                <h2 class="text-center">{{ .title }}</h2>
+                <div class="flex flex-col sm:flex-row flex-wrap mt-16 justify-between sm:ml-8">
+                    {{ range $item := .items }}
+                        <div class="w-full sm:w-1/2 ">
+                            <div class="flex flex-col card xl:h-128 sm:mr-8 mb-9 p-12 items-start bg-white">
+                                <div class="icon-section">
+                                    {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                                </div>
+                                <h5 class="mt-9 mb-6">{{ $item.title }}</h5>
+                                <p>
+                                    {{ $item.description | markdownify }}
+                                    {{ if $item.more }}
+                                        <p><a href="{{ $item.more.href }}">{{ $item.more.label }} &rarr;</a></p>
+                                    {{ end }}
+                                </p>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ end}}
+        </div>
+    </section>
+
+    <section id="crosscode-questions" class="container px-6 lg:px-0 mx-auto my-28 px-6 flex justify-center">
+        {{ with .Params.questions }}
+            <div class="w-full sm:w-10/12 bg-violet-600 card px-12 sm:px-20 py-16 text-center rounded-xl">
+                <div class="max-w-lg mx-auto">
+                    <h2 class="text-white mt-16">{{ .title }}</h2>
+                    <p class="text-white">{{ .description }}</p>
+                    <div class="flex flex-col sm:flex-row mt-16 justify-center">
+                        <a class="btn-secondary w-56" href="{{ relref $pageContext "/contact" }}">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        {{end}}
+    </section>
+{{ end }}

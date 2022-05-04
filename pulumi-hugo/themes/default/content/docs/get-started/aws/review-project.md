@@ -14,8 +14,19 @@ aliases: ["/docs/quickstart/aws/review-project/"]
 
 Let's review some of the generated project files:
 
+{{% choosable language "javascript,typescript,python,go,csharp,java" %}}
+
 - `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project" >}}).
-- `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) you initialized.
+
+{{% /choosable %}}
+
+{{% choosable language "yaml" %}}
+
+- `Pulumi.yaml` defines both the [project]({{< relref "/docs/intro/concepts/project" >}}) and the program that manages your stack resources.
+
+{{% /choosable %}}
+
+- `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) you just initialized.
 
 {{% choosable language csharp %}}
 
@@ -23,9 +34,22 @@ Let's review some of the generated project files:
 
 {{% /choosable %}}
 
-- {{< langfile >}} is the Pulumi program that defines your stack resources. Let's examine it.
+{{% choosable language java %}}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+- `src/main/java/myproject` defines the project's Java package root.
+
+{{% /choosable %}}
+
+{{% choosable language "javascript,typescript,python,go,csharp,java" %}}
+
+<!-- The wrapping spans are infortunately necessary here; without them, the renderer gets confused and generates invalid markup. -->
+- <span>{{< langfile >}}</span> is the Pulumi program that defines your stack resources.
+
+{{% /choosable %}}
+
+Let's examine {{< langfile >}}.
+
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language javascript %}}
 
@@ -126,6 +150,46 @@ class MyStack : Stack
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.aws.s3.Bucket;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+
+            // Create an AWS resource (S3 Bucket)
+            var bucket = new Bucket("my-bucket");
+
+            // Export the name of the bucket
+            ctx.export("bucketName", bucket.getId());
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: quickstart
+runtime: yaml
+resources:
+  # Create an AWS resource (S3 Bucket)
+  my-bucket:
+    type: aws:s3:Bucket
+outputs:
+  # Export the name of the bucket
+  bucketName: ${my-bucket.id}
+```
+
+{{% /choosable %}}
+
 This Pulumi program creates a new S3 bucket and exports the name of the bucket.
 
 {{% choosable language javascript %}}
@@ -165,6 +229,23 @@ ctx.Export("bucketName", bucket.ID())
 ```csharp
 [Output]
 public Output<string> BucketName { get; set; }
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+ctx.export("bucketName", bucket.getId());
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+outputs:
+  bucketName: ${my-bucket.id}
 ```
 
 {{% /choosable %}}

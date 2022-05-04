@@ -62,7 +62,7 @@ Now that you have your new `index.html` with some content, open your program fil
 
 To accomplish this, you will use Pulumi's `FileAsset` class to assign the content of the file to a new  `BucketObject`.
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language javascript %}}
 
@@ -130,6 +130,48 @@ var bucketObject = new BucketObject("index.html", new BucketObjectArgs
     Bucket = bucket.BucketName,
     Source = new FileAsset("index.html")
 });
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+In {{< langfile >}}, import the `FileAsset`, `BucketObject`, and `BucketObjectArgs` classes, then create the `BucketObject` right after creating the bucket itself.
+
+```java
+// ...
+import com.pulumi.asset.FileAsset;
+import com.pulumi.aws.s3.BucketObject;
+import com.pulumi.aws.s3.BucketObjectArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            // var bucket = ...
+
+            // Create an S3 Bucket object
+            new BucketObject("index.html", BucketObjectArgs.builder()
+                .bucket(bucket.getId())
+                .source(new FileAsset("index.html"))
+                .build()
+            );
+```
+
+{{% /choosable %}}
+
+{{% choosable language "yaml" %}}
+
+In {{< langfile >}}, create the `BucketObject` right below the bucket itself.
+
+```yaml
+resources:
+  # ...
+  index.html:
+    type: aws:s3:BucketObject
+    properties:
+      bucket: ${my-bucket}
+      source:
+        Fn::FileAsset: ./index.html
 ```
 
 {{% /choosable %}}

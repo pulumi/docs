@@ -59,7 +59,7 @@ Duration: 6s
 
 Once the update has completed, you can verify the object was created in your bucket by checking the AWS Console or by running the following AWS CLI command:
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language javascript %}}
 
@@ -97,6 +97,22 @@ $ aws s3 ls $(pulumi stack output bucketName)
 
 ```bash
 $ aws s3 ls $(pulumi stack output BucketName)
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```bash
+$ aws s3 ls $(pulumi stack output bucketName)
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```bash
+$ aws s3 ls $(pulumi stack output bucketName)
 ```
 
 {{% /choosable %}}
@@ -280,6 +296,116 @@ public Output<string> BucketEndpoint { get; set; }
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+Now that your `index.html` is in your bucket, modify the program to have the bucket serve `index.html` as a static website.
+
+First, add the `BucketArgs` and `BucketWebsiteArgs` classes to the list of imports.
+
+```java
+// ...
+import com.pulumi.aws.s3.BucketArgs;
+import com.pulumi.aws.s3.inputs.BucketWebsiteArgs;
+```
+
+Next, extend the `Bucket` declaration to include a `website` property containing the filename to use as an `indexDocument`:
+
+```java
+// ...
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+
+            // Create an AWS resource (S3 Bucket)
+            var bucket = new Bucket("my-bucket", BucketArgs.builder()
+                .website(BucketWebsiteArgs.builder()
+                    .indexDocument("index.html")
+                    .build()
+                )
+                .build()
+            );
+```
+
+Now add two properties to the `BucketObject`: an ACL of `public-read` so that it can be accessed anonymously over the Internet, and a content type ensure it's served as HTML:
+
+```java
+// ...
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            // var bucket = ...
+
+            // Create an S3 Bucket object
+            new BucketObject("index.html", BucketObjectArgs.builder()
+                .bucket(bucket.getId())
+                .source(new FileAsset("index.html"))
+                .acl("public-read")
+                .contentType("text/html")
+                .build()
+            );
+```
+
+Finally, at the end of the program file, export the resulting bucket’s endpoint URL so you can access it easily. You can do that by importing the Pulumi `Output` class:
+
+```java
+// ...
+import com.pulumi.core.Output;
+```
+
+And adding a line to read the endpoint from the `Bucket` instance:
+
+```java
+// ...
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+
+            // ...
+            ctx.export("bucketEndpoint", Output.format("http://%s", bucket.websiteEndpoint()));
+        });
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+Now that your `index.html` is in your bucket, modify the program to have the bucket serve `index.html` as a static website. To do that, set the bucket's `website` property, passing the filename to use as an `indexDocument`.
+
+```yaml
+resources:
+  my-bucket:
+    type: aws:s3:Bucket
+    properties:
+      website:
+        indexDocument: index.html
+```
+
+Now add two properties to the `BucketObject`: an ACL of `public-read` so that it can be accessed anonymously over the Internet, and a content type ensure it's served as HTML:
+
+```yaml
+resources:
+  # ...
+  index.html:
+    type: aws:s3:BucketObject
+    properties:
+      bucket: ${my-bucket}
+      source:
+        Fn::FileAsset: ./index.html
+      acl: public-read
+      contentType: text/html
+```
+
+Finally, at the end of the file, export the resulting bucket’s endpoint URL so you can access it easily:
+
+```yaml
+# ...
+outputs:
+  bucketName: ${my-bucket.id}
+  bucketEndpoint: http://${my-bucket.websiteEndpoint}
+```
+
+{{% /choosable %}}
+
 Now update your stack to have your S3 bucket serve your `index.html` file as a static website.
 
 ```bash
@@ -369,6 +495,22 @@ $ curl $(pulumi stack output bucketEndpoint)
 
 ```bash
 $ curl $(pulumi stack output BucketEndpoint)
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```bash
+$ curl $(pulumi stack output bucketEndpoint)
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```bash
+$ curl $(pulumi stack output bucketEndpoint)
 ```
 
 {{% /choosable %}}

@@ -1,7 +1,14 @@
 #!/bin/bash
 
+# Returns the repository name. As GITHUB_REPOSITORY consists of <owner>/<repo>, we ignore everything
+# up to and including the last occurring slash.
+# https://docs.github.com/en/actions/learn-github-actions/environment-variables
 repo_name() {
-    echo "pulumi-hugo"
+    if [[ ! -z "$GITHUB_REPOSITORY" ]]; then
+        echo ${GITHUB_REPOSITORY##*/}
+    else
+        echo "pulumi-hugo"
+    fi
 }
 
 aws_region() {

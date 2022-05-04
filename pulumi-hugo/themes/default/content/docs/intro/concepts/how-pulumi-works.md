@@ -44,7 +44,7 @@ Like the language runtime itself, the SDKs are available as regular packages.  F
 
 Let's walk through a simple example. Suppose we have the following Pulumi program, which creates two S3 buckets:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -101,6 +101,41 @@ public MyStack : Stack
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Context;
+import com.pulumi.Exports;
+import com.pulumi.Pulumi;
+import com.pulumi.aws.s3.Bucket;
+
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var mediaBucket = new Bucket("media-bucket");
+        var contentBucket = new Bucket("content-bucket");
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+    mediaBucket:
+        type: aws:s3:Bucket
+    contentBucket:
+        type: aws:s3:Bucket
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -124,7 +159,7 @@ Note the extra suffixes on the end of these bucket names. This is due to a proce
 
 Now, let's make a change to one of resources and run `pulumi up` again.  Since Pulumi operates on a desired state model, it will use the last deployed state to compute the minimal set of changes needed to update your deployed infrastructure. For example, imagine that we wanted to make the S3 `media-bucket` publicly readable.  We change our program to express this new desired state:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -188,6 +223,45 @@ public MyStack : Stack
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Context;
+import com.pulumi.Exports;
+import com.pulumi.Pulumi;
+import com.pulumi.aws.s3.Bucket;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var mediaBucket = new Bucket("media-bucket",
+            BucketArgs.builder()
+                .acl("public-read")   // add acl
+                .build());
+        var contentBucket = new Bucket("content-bucket");
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  mediaBucket:
+    type: aws:s3:Bucket
+    properties:
+      acl: public-read # add acl
+  contentBucket:
+    type: aws:s3:Bucket
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -197,7 +271,7 @@ The engine also receives a resource registration request for "content-bucket".  
 
 Now, suppose we rename `content-bucket` to `app-bucket`.
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -255,9 +329,47 @@ public MyStack : Stack
         {
             Acl = "public-read",   // add acl
         });
-        var contentBucket = new Aws.S3.Bucket("app-bucket");
+        var appBucket = new Aws.S3.Bucket("app-bucket");
     }
 }
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Context;
+import com.pulumi.Exports;
+import com.pulumi.Pulumi;
+import com.pulumi.aws.s3.Bucket;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var mediaBucket = new Bucket("media-bucket", BucketArgs.builder()
+            .acl("public-read")   // add acl
+            .build());
+        var contentBucket = new Bucket("app-bucket");
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  mediaBucket:
+    type: aws:s3:Bucket
+    properties:
+      acl: public-read # add acl
+  appBucket:
+    type: aws:s3:Bucket
 ```
 
 {{% /choosable %}}

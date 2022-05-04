@@ -32,7 +32,7 @@ $ pulumi config set aws:region us-west-2
 
 Then, suppose you deploy the following Pulumi program:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 
 {{% choosable language javascript %}}
 
@@ -88,6 +88,17 @@ var instance = new Aws.Ec2.Instance("myInstance", new Aws.Ec2.InstanceArgs
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var instance = new Instance("myInstance",
+    InstanceArgs.builder()
+        .instanceType("t2.micro")
+        .ami("myAMI")
+        .build());
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -97,7 +108,7 @@ It creates a single EC2 instance in the us-west-2 region.
 
 While the default provider configuration may be appropriate for the majority of Pulumi programs, some programs may have special requirements. One example is a program that needs to deploy to multiple AWS regions simultaneously. Another example is a program that needs to deploy to a Kubernetes cluster, created earlier in the program, which requires explicitly creating, configuring, and referencing providers. This is typically done by instantiating the relevant package’s `Provider` type and passing in the options for each `Resource` that needs to use it. For example, the following configuration and program creates an ACM certificate in the `us-east-1` region and a load balancer listener in the `us-west-2` region.
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 
 {{% choosable language javascript %}}
 
@@ -258,6 +269,39 @@ var listener = new Aws.Lb.Listener("listener", new Aws.Lb.ListenerArgs
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+// Create an AWS provider for the us-east-1 region.
+var useast1 = new Provider("useast1",
+        ProviderArgs.builder().region("us-east-1").build());
+
+// Create an ACM certificate in us-east-1.
+var cert = new Certificate("cert",
+    CertificateArgs.builder()
+        .domainName("foo.com")
+        .validationMethod("EMAIL")
+        .build(),
+    CustomResourceOptions.builder()
+            .provider(useast1)
+            .build());
+
+// Create an ALB listener in the default region that references the ACM certificate created above.
+var listener = new Listener("listener",
+        ListenerArgs.builder()
+            .loadBalancerArn(loadBalancerArn)
+            .port(443)
+            .protocol("HTTPS")
+            .sslPolicy("ELBSecurityPolicy-2016-08")
+            .certificateArn(cert.arn())
+            .defaultActions(ListenerDefaultActionArgs.builder()
+                    .targetGroupArn(targetGroupArn)
+                    .type("forward")
+                    .build())
+            .build());
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -267,7 +311,7 @@ $ pulumi config set aws:region us-west-2
 
 Component resources also accept a set of providers to use with their child resources. For example, the EC2 instance parented to `myResource` in the program below is created in `us-east-1`, and the Kubernetes pod parented to myResource is created in the cluster targeted by the `test-ci` context.
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 
 {{% choosable language javascript %}}
 
@@ -372,6 +416,24 @@ class MyStack
             new ComponentResourceOptions { Providers = { useast1, myk8s } });
     }
 }
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+final var usEast1 = new com.pulumi.aws.Provider("aws",
+    com.pulumi.aws.ProviderArgs.builder()
+        .region("us-east-1")
+        .build());
+final var myk8s = new com.pulumi.kubernetes.Provider("kubernetes",
+    com.pulumi.kubernetes.ProviderArgs.builder()
+        .kubeconfig(kubeconfig)
+        .build());
+final var myresource = new MyResource("myResource",
+    ComponentResourceOptions.builder()
+        .providers(usEast1, myk8s)
+        .build());
 ```
 
 {{% /choosable %}}

@@ -36,7 +36,7 @@ Next, install the required language runtime, if you have not already.
 
 #### Choose Your Language
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language "javascript,typescript" %}}
 {{< install-node >}}
@@ -54,7 +54,13 @@ Next, install the required language runtime, if you have not already.
 {{< install-dotnet >}}
 {{% /choosable %}}
 
-Finally, configure Pulumi with AWS.
+{{% choosable language "java" %}}
+{{< install-java >}}
+{{% /choosable %}}
+
+{{% choosable language "yaml" %}}
+{{< install-yaml >}}
+{{% /choosable %}}
 
 ### Configure Pulumi to access your AWS account
 

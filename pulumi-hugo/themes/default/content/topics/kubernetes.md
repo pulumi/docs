@@ -148,6 +148,65 @@ kubernetes_overview:
                         });
                     }
                 }
+            - title: Main.java
+              language: java
+              code: |
+                package com.pulumi.example.infra;
+
+                import com.pulumi.Context;
+                import com.pulumi.Exports;
+                import com.pulumi.Pulumi;
+                import com.pulumi.kubernetes.core_v1.Namespace;
+                import com.pulumi.kubernetes.core_v1.NamespaceArgs;
+                import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+                import com.pulumi.kubernetes.helm.sh_v3.Release;
+                import com.pulumi.kubernetes.helm.sh_v3.ReleaseArgs;
+                import com.pulumi.kubernetes.helm.sh_v3.inputs.RepositoryOptsArgs;
+
+                public class Main {
+
+                    public static void main(String[] args) {
+                        Pulumi.run(Main::stack);
+                    }
+
+                    private static Exports stack(Context ctx) {
+                        var devNamespace = new Namespace("devNamespace", NamespaceArgs.builder()
+                                  .metadata(ObjectMetaArgs.builder()
+                                            .name("dev")
+                                            .build())
+                                  .build());
+
+                        var nginxIngress = new Release("nginx-ingress", ReleaseArgs.builder()
+                                  .chart("nginx-ingress)
+                                  .namespace(devNamespace.metadata.name)
+                                  .repositoryOpts(RepositoryOptsArgs.builder()
+                                            .repo("https://charts.helm.sh/stable/")
+                                            .build())
+                                  .build());
+
+                        return ctx.exports();
+                    }
+                }
+
+            - title: Pulumi.yaml
+              language: yaml
+              code: |
+                name: simple-kubernetes
+                runtime: yaml
+                resources:
+                  devNamespace:
+                    type: kubernetes:core:Namespace
+                    properties:
+                      metadata:
+                        name: "dev"
+                  nginxIngress:
+                    type: kubernetes:helm.sh:Chart
+                    properties:
+                      chart: "nginx-ingress"
+                      namespace: ${devNamespace.metadata.name}
+                      fetchOpts:
+                          repo: "https://charts.helm.sh/stable/"
+
     list:
         - Manage Kubernetes clusters on all major cloud providers.
         - Increase productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate Kubernetes clusters, app workloads, or both.

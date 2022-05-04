@@ -77,7 +77,7 @@ With Pulumi, the codebase shrank by more than 50%.
 
 After adopting the Pulumi platform, Panther Labs can now build, deploy, and manage its cloud infrastructure and applications faster and with more confidence, using any language and any cloud. The result was faster innovation and improved time to market. This was possible because Pulumi enabled the Panther Labs team to adopt cloud engineering practices out-of-the-box.
 
-With Pulumi, the team could build modern infrastructure as code using standard, general-purpose languages such as TypeScript, Python, .NET and Go. Developers could easily create strongly-typed, structured configurations and use standard programming constructs they’d always relied on such as loops, constants and helper functions.
+With Pulumi, the team could build universal infrastructure as code using standard, general-purpose languages such as TypeScript, Python, .NET and Go. Developers could easily create strongly-typed, structured configurations and use standard programming constructs they’d always relied on such as loops, constants and helper functions.
 
 Because Pulumi supports general purpose programming languages, Panther’s developers could also use standard unit testing frameworks that enable them to frequently test their infrastructure and “shift risk left.” The team could also version infrastructure code with Git and deliver their infrastructure code through the same CI/CD pipelines used for application code. Frequently testing infrastructure code and delivering it through automated pipelines increased both delivery speed and quality.
 

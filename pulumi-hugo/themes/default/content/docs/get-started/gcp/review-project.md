@@ -14,7 +14,18 @@ aliases: ["/docs/quickstart/gcp/review-project/"]
 
 Let's review some of the generated project files:
 
+{{% choosable language "javascript,typescript,python,go,csharp,java" %}}
+
 - `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project" >}}).
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+- `Pulumi.yaml` defines both the [project]({{< relref "/docs/intro/concepts/project" >}}) and the program that manages your stack resources.
+
+{{% /choosable %}}
+
 - `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) you initialized.
 
 {{% choosable language csharp %}}
@@ -23,9 +34,22 @@ Let's review some of the generated project files:
 
 {{% /choosable %}}
 
-- {{< langfile >}} is the Pulumi program that defines your stack resources. Let's examine it.
+{{% choosable language java %}}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+- `src/main/java/myproject` defines the project's Java package root.
+
+{{% /choosable %}}
+
+{{% choosable language "javascript,typescript,python,go,csharp,java" %}}
+
+<!-- The wrapping spans are infortunately necessary here; without them, the renderer gets confused and generates invalid markup. -->
+- <span>{{< langfile >}}</span> is the Pulumi program that defines your stack resources.
+
+{{% /choosable %}}
+
+Let's examine {{< langfile >}}.
+
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language javascript %}}
 
@@ -126,6 +150,49 @@ class MyStack : Stack
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.gcp.storage.Bucket;
+import com.pulumi.gcp.storage.BucketArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var bucket = new Bucket("my-bucket",
+                                    BucketArgs.builder()
+                                    .location("US")
+                                    .build());
+            ctx.export("bucketName", bucket.url());
+            return ctx.exports();
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: yaml
+runtime: yaml
+description: A minimal Google Cloud Pulumi YAML program
+resources:
+  bucket:
+    type: gcp:storage:Bucket
+    properties:
+      location: US
+outputs:
+  bucketName: ${bucket.url}
+```
+
+{{% /choosable %}}
+
 This Pulumi program creates a new storage bucket and exports the DNS name of the bucket.
 
 {{% choosable language javascript %}}
@@ -165,6 +232,24 @@ ctx.Export("bucketName", bucket.Url)
 ```csharp
 [Output]
 public Output<string> BucketName { get; set; }
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+ctx.export("bucketName", bucket.url());
+return ctx.exports();
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+outputs:
+  bucketName: ${bucket.url}
 ```
 
 {{% /choosable %}}

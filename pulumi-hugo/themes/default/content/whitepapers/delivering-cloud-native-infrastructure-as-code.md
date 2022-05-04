@@ -109,7 +109,7 @@ Pulumi aims to provide a solution to the challenges of cloud application develop
 
 The fragmentation of existing tools and DSLs is consolidated within the Pulumi framework which offers:
 
-**Multi-Language Runtime.** The Pulumi runtime was architected to support many languages, and to do so in an idiomatic way for all aspects of a target language: style, syntax, packages, etc. It currently supports JavaScript, TypeScript, Python, and Go and is fully open source to accept contributions for alternative languages.
+**Multi-Language Runtime.** The Pulumi runtime was architected to support many languages, and to do so in an idiomatic way for all aspects of a target language: style, syntax, packages, etc. It currently supports JavaScript, TypeScript, Python, Go, Java, and YAML and is fully open source to accept contributions for alternative languages.
 
 **Cloud Object Model.** Pulumi's underlying cloud object model offers a rich view into how cloud programs are constructed. The resulting objects form a Directed Acyclic Graph (DAG) using dependencies from program that the system can analyze and understand to deliver insights for sophisticated static analysis and visualizations.
 

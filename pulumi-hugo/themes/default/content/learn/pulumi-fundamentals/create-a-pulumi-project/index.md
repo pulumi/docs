@@ -30,8 +30,8 @@ Each Pulumi project lives in its own directory. Create one now and change into
 it by running these commands in your terminal:
 
 ```bash
-mkdir my-first-app
-cd my-first-app
+mkdir my_first_app
+cd my_first_app
 ```
 
 Pulumi will use the directory name as your project name by default. To create an
@@ -45,7 +45,7 @@ for you to create a new one by hand. The `pulumi new` command-line interface
 you need, so let's use that command. The `-y` flag answers "yes" to the prompts to
 create a default project:
 
-{{< chooser language "typescript,python" / >}}
+{{< chooser language "typescript,python,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -63,17 +63,33 @@ $ pulumi new python -y
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```bash
+$ pulumi new java-gradle --dir my_first_app --name my_first_app -y
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```bash
+$ pulumi new yaml -y
+```
+
+{{% /choosable %}}
+
 This command prints output similar to the following example with a bit more
 information and status as it goes:
 
 {{% choosable language typescript %}}
 
 ```bash
-Created project 'my-first-app'
-...
+Created project 'my_first_app'
+# ...
 
 Installing dependencies...
-...
+# ...
 
 Finished installing dependencies
 
@@ -87,14 +103,44 @@ To perform an initial deployment, run 'pulumi up'
 {{% choosable language python %}}
 
 ```bash
+Created project 'my_first_app'
+# ...
 Created stack 'dev'
 
 Creating virtual environment...
-
+# ...
 Finished creating virtual environment
 
 Updating pip, setuptools, and wheel in virtual environment...
-...
+# ...
+Your new project is ready to go! ✨
+
+To perform an initial deployment, run 'pulumi up'
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```bash
+Created project 'my_first_app'
+# ...
+Created stack 'dev'
+
+Your new project is ready to go! ✨
+
+To perform an initial deployment, run 'cd my_first_app', then, run 'pulumi up'
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```bash
+Created project 'my_first_app'
+# ...
+Created stack 'dev'
+
 Your new project is ready to go! ✨
 
 To perform an initial deployment, run 'pulumi up'
@@ -125,10 +171,22 @@ The basic project created by `pulumi new` is comprised of multiple files:
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+- `settings.gradle`: your project's Gradle settings
+- `app/`: the app directory generated for Java, which includes the following files:
+    - `build.gradle`: your project's build information for Gradle
+    - `src/main/java/my_first_app/`: the directory that holds your main entrypoint file
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+{{% /choosable %}}
+
 Use the command <code>cat</code>{{< langfile >}} to explore the contents of your
 project's empty program:
 
-{{< chooser language "typescript,python" / >}}
+{{< chooser language "typescript,python,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -148,8 +206,42 @@ import pulumi
 
 {{% /choosable %}}
 
-Feel free to explore the other files, although we won't be editing any of them
-by hand.
+{{% choosable language java %}}
+
+```java
+package my_first_app;
+
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            ctx.export("exampleOutput", Output.of("example"));
+            return ctx.exports();
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+description: ${DESCRIPTION}
+runtime: yaml
+template:
+    description: A minimal Pulumi YAML program
+configuration: {}
+variables: {}
+resources: {}
+outputs: {}
+```
+
+{{% /choosable %}}
+
+Feel free to explore the other files.
 
 Let's move on to creating your first real bit of infrastructure with Pulumi:
 some Docker images.

@@ -14,7 +14,7 @@ Setting the `deleteBeforeReplace` option to true means that Pulumi will delete t
 
 This example deletes a database entirely before its replacement is created:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -54,6 +54,30 @@ db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
 // The resource will be deleted before it's replacement is created
 var db = new Database("db", new DatabaseArgs(),
     new CustomResourceOptions { DeleteBeforeReplace = true });
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+// The resource will be deleted before it's replacement is created
+var db = new Database("db",
+    DatabaseArgs.Empty,
+    CustomResourceOptions.builder()
+        .deleteBeforeReplace(true)
+        .build());
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+# The resource will be deleted before it's replacement is created
+resources:
+  db:
+    type: Database
+    options:
+      deleteBeforeReplace: true
 ```
 
 {{% /choosable %}}

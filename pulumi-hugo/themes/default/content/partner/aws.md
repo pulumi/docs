@@ -1,9 +1,9 @@
 ---
-title: Modern Infrastructure as Code for AWS
+title: Universal Infrastructure as Code for AWS
 layout: aws
 url: /aws
 
-meta_desc: Build, deploy & manage AWS Infrastructure as Code with TypeScript, Python, Go and C#. Use existing software engineering tools & practices with infrastructure.
+meta_desc: Build, deploy & manage AWS Infrastructure with TypeScript, Python, Go, C#, Java & YAML. Use existing software engineering tools & practices with infrastructure.
 
 hero:
     title: Cloud Engineering for AWS

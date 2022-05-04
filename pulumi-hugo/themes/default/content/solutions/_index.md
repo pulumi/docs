@@ -71,7 +71,7 @@ use_cases:
 
         - name: On-premises to cloud migration
           description: |
-            Simplify your cloud migration with Modern Infrastructure-as-Code. Pulumi lets you model and automate the provisioning of infrastructure being migrated
+            Simplify your cloud migration with Universal Infrastructure-as-Code. Pulumi lets you model and automate the provisioning of infrastructure being migrated
             to the cloud to increase speed and success.
 
 architectures:
@@ -136,7 +136,7 @@ personas:
               icon_color: purple
               description: |
                 Define [infrastructure as code](/what-is/what-is-infrastructure-as-code/) using
-                familiar languages and IDEs: JavaScript, TypeScript, Python, Go, and .NET.
+                familiar languages and IDEs: JavaScript, TypeScript, Python, Go, .NET, Java, and YAML.
             - title: Cloud programming model
               icon: program
               icon_color: yellow
@@ -153,7 +153,7 @@ personas:
     devops:
         label: DevOps / Infra Teams
         items:
-            - title: Modern Infrastructure as Code
+            - title: Universal Infrastructure as Code
               icon: code-window
               icon_color: purple
               description: |

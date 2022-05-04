@@ -21,7 +21,7 @@ key_features:
                 icon: code
                 icon_color: yellow
                 description: |
-                    Use TypeScript, JavaScript, Python, Go, and .NET to model cloud infrastructure
+                    Use TypeScript, JavaScript, Python, Go, .NET, Java, and YAML to model cloud infrastructure
                     by leveraging the features of each language.
 
               - title: Build on any cloud
@@ -85,7 +85,7 @@ key_features:
 stats:
     title: Open source. Enterprise ready.
     description: |
-        Pulumi’s modern Infrastructure as Code CLI and SDK is an [open-source project](https://github.com/pulumi/) that’s supported
+        Pulumi’s Universal Infrastructure as Code CLI and SDK is an [open-source project](https://github.com/pulumi/) that’s supported
         by an active community. We maintain a [public roadmap](/blog/relaunching-pulumis-public-roadmap/) and welcome feedback and contributions.
     community:
         number: "10,000s"

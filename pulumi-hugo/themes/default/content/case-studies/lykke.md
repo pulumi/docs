@@ -33,7 +33,7 @@ Founded in 2013, Lykke received its initial funding in 2015 to bridge the gap be
 
 Lykke originally built a monolithic stack with a wide variety of components. The engineering team wanted to adopt a serverless architecture and in April 2019, they decided to build a completely new infrastructure to support new applications - all without a dedicated ops team. To add to the complexity, the group needed to accurately model key parts of their infrastructure and create abstractions that would simplify scaling and make it accessible to both-back end and front-end engineers. This greenfield project was an exciting opportunity to select best-in-class solutions that worked well with their chosen cloud provider, AWS, and were compatible with their preferred engineering tools and frameworks -- React Native, .NET Core, and serverless architecture.
 
-## Solution: Pulumi Modern Infrastructure-as-Code and Cloud Best Practices
+## Solution: Pulumi Universal Infrastructure-as-Code and Cloud Best Practices
 
 Lykke engineering head Damian Hickey had been aware of Pulumi since the company launched in 2017 and decided to deploy the new infrastructure using [Pulumi's collection of libraries]({{< relref "/crosswalk/aws" >}}) that model AWS infrastructure patterns using well-architected best practices. This allowed him to design and manage infrastructure within his development team, rather than building a dedicated ops team. Pulumi's libraries also provided Lykke with built-in Well Architected patterns and best practices - helping the team move new applications into production faster.
 
@@ -59,7 +59,7 @@ Lykke’s engineering team also plans to adopt unit testing for existing and fut
 
 ## About Pulumi
 
-Pulumi’s cloud engineering platform brings infrastructure, developer, and security teams together through a unified software engineering process that tames cloud complexity and accelerates innovation. Using the Pulumi platform, teams can build, deploy, and manage modern cloud applications faster and with more confidence, using any language, any architecture and any cloud. Pulumi lets teams build Modern Infrastructure as Code using popular programming languages (Python, JavaScript, TypeScript, Go, .NET/C#). It enables deploying infrastructure and applications together through a unified delivery process. Finally, teams can manage cloud applications with Policy as Code, better visibility, and controls.
+Pulumi’s cloud engineering platform brings infrastructure, developer, and security teams together through a unified software engineering process that tames cloud complexity and accelerates innovation. Using the Pulumi platform, teams can build, deploy, and manage modern cloud applications faster and with more confidence, using any language, any architecture and any cloud. Pulumi lets teams build Universal Infrastructure as Code using popular programming languages (Python, JavaScript, TypeScript, Go, .NET/C#). It enables deploying infrastructure and applications together through a unified delivery process. Finally, teams can manage cloud applications with Policy as Code, better visibility, and controls.
 
 Check out the following articles to get started:
 

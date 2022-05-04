@@ -97,6 +97,22 @@ $ pulumi stack output BucketName
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```bash
+$ pulumi stack output bucketName
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```bash
+$ pulumi stack output bucketName
+```
+
+{{% /choosable %}}
+
 Running that command will print out the name of your bucket.
 
 {{< console-note >}}

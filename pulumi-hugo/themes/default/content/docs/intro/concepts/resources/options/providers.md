@@ -10,7 +10,7 @@ menu:
 
 The `providers` resource option sets a map of providers for the resource and its children. This map is combined with resource parent's `providers` map. If no value is provided, the providers map is identical to the parent's providers map. When determining which provider to use for a resource, the `providers` map is used if [provider]({{< relref "provider" >}}) is not supplied.
 
-{{< chooser language "javascript,typescript,python,go" >}}
+{{< chooser language "javascript,typescript,python,go,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -67,6 +67,32 @@ providers := pulumi.Providers(awsProvider, kubeProvider)
 
 vpc, _ := ec2.NewVpc(ctx, "vpc", &ec2.VpcArgs{}, providers)
 namespace, _ := v1.NewNamespace(ctx, "namespace", &v1.NamespaceArgs{}, providers)
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+variables:
+  providers:
+    - ${awsProvider}
+    - ${kubeProvider}
+resources:
+  awsProvider:
+    type: pulumi:providers:aws
+    properties:
+      region: us-west-2
+  kubeProvider:
+    type: pulumi:providers:kubernetes
+    properties:
+      kubeconfig: ./kubeconfig
+  vpc:
+    type: aws:ec2:Vpc
+    options:
+      providers: ${providers}
+  namespace:
+    options:
+      providers: ${providers}
 ```
 
 {{% /choosable %}}

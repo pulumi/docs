@@ -14,7 +14,7 @@ For the most part, Pulumi automatically waits for operations to complete and tim
 
 This example specifies that the create operation should wait up to 30 minutes to complete before timing out:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -55,6 +55,32 @@ var db = new Database("db", new DatabaseArgs(),
     new CustomResourceOptions {
         CustomTimeouts = new CustomTimeouts { Create = TimeSpan.FromMinutes(30) }
     });
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var db = new Database("db",
+    DatabaseArgs.Empty,
+    CustomResourceOptions.builder()
+        .customTimeouts(
+            CustomTimeouts.builder()
+                .create(Duration.ofMinutes(30))
+                .build())
+        .build());
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  db:
+    type: Database
+    options:
+      customTimeouts:
+        create: "30m"
 ```
 
 {{% /choosable %}}

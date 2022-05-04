@@ -16,7 +16,7 @@ Now that we have an instance of our Pulumi program deployed, let's update it to 
 
 Replace the entire contents of {{< langfile >}} with the following:
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language javascript %}}
 
@@ -349,6 +349,131 @@ class MyStack : Stack
     [Output("ip")]
     public Output<string> IP { get; set; }
 }
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.kubernetes.apps_v1.Deployment;
+import com.pulumi.kubernetes.apps_v1.DeploymentArgs;
+import com.pulumi.kubernetes.apps_v1.inputs.DeploymentSpecArgs;
+import com.pulumi.kubernetes.core_v1.*;
+import com.pulumi.kubernetes.core_v1.ServiceArgs;
+import com.pulumi.kubernetes.core_v1.enums.ServiceSpecType;
+import com.pulumi.kubernetes.core_v1.inputs.*;
+import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
+import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+
+import java.util.Map;
+
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var config = ctx.config();
+            var isMinikube = config.getBoolean("isMinikube").orElse(false); // Double check
+
+            var labels = Map.of("app", "nginx");
+
+            var deployment = new Deployment("nginx", DeploymentArgs.builder()
+                .spec(DeploymentSpecArgs.builder()
+                    .selector(LabelSelectorArgs.builder()
+                        .matchLabels(labels)
+                        .build())
+                    .replicas(1)
+                    .template(PodTemplateSpecArgs.builder()
+                        .metadata(ObjectMetaArgs.builder()
+                            .labels(labels)
+                            .build())
+                        .spec(PodSpecArgs.builder()
+                            .containers(ContainerArgs.builder()
+                                .name("nginx")
+                                .image("nginx")
+                                .ports(ContainerPortArgs.builder()
+                                    .containerPort(80)
+                                    .build())
+                                .build())
+                            .build())
+                        .build())
+
+                    .build())
+                .build());
+
+            var name = deployment.metadata()
+                .applyValue(m -> m.orElseThrow().name().orElse(""));
+
+            var frontend = new Service("nginx", ServiceArgs.builder()
+                .metadata(ObjectMetaArgs.builder()
+                    .labels(deployment.spec().applyValue(spec -> spec.get().template().metadata().get().labels()))
+                    .build())
+                .spec(ServiceSpecArgs.builder()
+                    .type(isMinikube ? ServiceSpecType.ClusterIP : ServiceSpecType.LoadBalancer)
+                    .selector(labels)
+                    .ports(ServicePortArgs.builder()
+                        .port(80)
+                        .targetPort(80)
+                        .protocol("TCP")
+                        .build())
+                    .build())
+                .build());
+
+            ctx.export("ip", isMinikube ?
+                frontend.spec().applyValue(spec -> spec.get().clusterIP()) : Output.tuple(frontend.status(), frontend.spec()).applyValue(t -> {
+                var status = t.t1;
+                var spec = t.t2;
+                var ingress = status.get().loadBalancer().get().ingress().get(0);
+                return ingress.ip().orElse(ingress.hostname().orElse(spec.get().clusterIP().get()));
+            }));
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: quickstart
+description: A minimal Kubernetes Pulumi YAML program
+runtime: yaml
+variables:
+  appLabels:
+    app: nginx
+resources:
+  deployment:
+    type: kubernetes:apps/v1:Deployment
+    properties:
+      spec:
+        selector:
+          matchLabels: ${appLabels}
+        replicas: 1
+        template:
+          metadata:
+            labels: ${appLabels}
+          spec:
+            containers:
+              - name: nginx
+                image: nginx
+  service:
+    type: kubernetes:core/v1:Service
+    properties:
+      metadata:
+        labels: ${appLabels}
+      spec:
+        type: ClusterIP
+        selector: ${appLabels}
+        ports:
+          - port: 80
+            targetPort: 80
+            protocol: TCP
+outputs:
+  name: ${service.spec.clusterIP}
 ```
 
 {{% /choosable %}}

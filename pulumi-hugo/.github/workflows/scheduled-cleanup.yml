@@ -1,4 +1,4 @@
-name: Scheduled
+name: "Scheduled Jobs: Bucket Cleanup"
 on:
   schedule:
     # Daily at 3:00PM UTC

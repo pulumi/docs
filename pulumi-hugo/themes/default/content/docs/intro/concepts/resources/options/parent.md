@@ -12,7 +12,7 @@ The `parent` resource option specifies a parent for a resource. It is used to as
 
 For example, this code creates two resources, a parent and child, the latter of which is a child to the former:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -52,6 +52,31 @@ child, _ := NewMyResource(ctx, "child", &MyResourceArgs{/*...*/}, pulumi.Parent(
 var parent = new MyResource("parent", new MyResourceArgs());
 var child = new MyResource("child", new MyResourceArgs(),
     new CustomResourceOptions { Parent = parent });
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var parent = new MyResource("parent");
+var child = new MyResource("child",
+    MyResourceArgs.Empty,
+    CustomResourceOptions.builder()
+        .parent(parent)
+        .build());
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  parent:
+    type: MyResource
+  child:
+    type: MyResource
+    options:
+      parent: ${parent}
 ```
 
 {{% /choosable %}}

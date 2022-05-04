@@ -91,6 +91,22 @@ $ pulumi stack output PrimaryStorageKey
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```bash
+$ pulumi stack output primaryStorageKey
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```bash
+$ pulumi stack output primaryStorageKey
+```
+
+{{% /choosable %}}
+
 Running that command will print out the storage account's primary key.
 
 {{< console-note >}}

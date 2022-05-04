@@ -97,6 +97,22 @@ $ curl $(pulumi stack output StaticEndpoint)
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```bash
+$ curl $(pulumi stack output staticEndpoint)
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```bash
+$ curl $(pulumi stack output staticEndpoint)
+```
+
+{{% /choosable %}}
+
 And you should see:
 
 ```bash

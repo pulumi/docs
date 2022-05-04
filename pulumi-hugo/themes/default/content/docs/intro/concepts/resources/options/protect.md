@@ -19,7 +19,7 @@ Once the resource is unprotected, it can be deleted as part of a following updat
 
 The default is to inherit this value from the parent resource, and `false` for resources without a parent.
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -54,6 +54,27 @@ db, _ := NewDatabase(ctx, "db", &DatabaseArgs{}, pulumi.Protect(true));
 ```csharp
 var db = new Database("db", new DatabaseArgs(),
     new CustomResourceOptions { Protect = true });
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var db = new Database("db",
+    DatabaseArgs.Empty,
+    CustomResourceOptions.builder()
+        .protect(true)
+        .build());
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  type: Database
+  options:
+    protect: true
 ```
 
 {{% /choosable %}}

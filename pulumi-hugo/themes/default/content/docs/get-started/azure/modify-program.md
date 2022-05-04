@@ -60,7 +60,7 @@ EOT
 
 Now that you have your new `index.html` with some content, you can enable static website support, upload `index.html` to a storage container, and retrieve a public URL through the use of resource properties. These properties can be used to define dependencies between related resources or to retrieve property values for further processing.
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -118,6 +118,47 @@ var staticWebsite = new StorageAccountStaticWebsite("staticWebsite", new Storage
     ResourceGroupName = resourceGroup.Name,
     IndexDocument = "index.html",
 });
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+To start, open `App.java` and add the following imports:
+
+```java
+import com.pulumi.azurenative.storage.StorageAccountStaticWebsite;
+import com.pulumi.azurenative.storage.StorageAccountStaticWebsiteArgs;
+import com.pulumi.azurenative.storage.Blob;
+import com.pulumi.azurenative.storage.BlobArgs;
+```
+
+Next, add the following right after the storage account creation:
+
+```java
+var staticWebsite = new StorageAccountStaticWebsite("staticWebsite",
+                    StorageAccountStaticWebsiteArgs.builder()
+                            .accountName(storageAccount.name())
+                            .resourceGroupName(resourceGroup.name())
+                            .indexDocument("index.html")
+                            .build());
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+To start, open `Pulumi.yaml` and add the following right after the storage account creation:
+
+```yaml
+resources:
+  # ...
+  staticWebsite:
+    type: azure-native:resources:StorageAccountStaticWebsite
+    properties:
+      accountName: ${storageAccount.name}
+      resourceGroupName: ${resourceGroup.name}
+      indexDocument: ./index.html
 ```
 
 {{% /choosable %}}
@@ -187,6 +228,40 @@ var index_html = new Blob("index.html", new BlobArgs
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```java
+// Upload the file
+var index_html = new Blob("index.html", BlobArgs.builder()
+                    .resourceGroupName(resourceGroup.name())
+                    .accountName(storageAccount.name())
+                    .containerName(staticWebsite.containerName())
+                    .source(new FileAsset("index.html"))
+                    .contentType("text/html")
+                    .build());
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+# ...
+# Upload the file
+  index-html:
+    type: azure-native:storage:Blob
+    properties:
+      resourceGroupName: ${resourceGroup.name}
+      accountName: ${storageAccount.name}
+      containerName: ${staticWebsite.containerName}
+      source:
+        Fn::FileAsset: ./index.html
+      contentType: text/html
+```
+
+{{% /choosable %}}
+
 {{% choosable language typescript %}}
 
 Finally, at the end of `index.ts`, export the resulting storage container's endpoint URL to stdout for easy access:
@@ -233,6 +308,29 @@ this.StaticEndpoint = storageAccount.PrimaryEndpoints.Apply(
 ```csharp
 [Output]
 public Output<string> StaticEndpoint { get; set; }
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+Finally, at the end of `App.java`, export the resulting storage container's endpoint URL to stdout for easy access:
+
+```java
+ctx.export("staticEndpoint", storageAccount.primaryEndpoints()
+        .applyValue(EndpointsResponse::web));
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+Finally, at the end of `Pulumi.yaml` in the `outputs`, export the resulting storage container's endpoint URL to stdout for easy access:
+
+```yaml
+outputs:
+  # ...
+  staticEndpoint: ${storageAccount.primaryEndpoints.web}
 ```
 
 {{% /choosable %}}

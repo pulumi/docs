@@ -36,7 +36,7 @@ Next, we'll install the required language runtime.
 
 #### Choose Your Language
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language "javascript,typescript" %}}
 {{< install-node >}}
@@ -52,6 +52,14 @@ Next, we'll install the required language runtime.
 
 {{% choosable language "csharp,fsharp,visualbasic" %}}
 {{< install-dotnet >}}
+{{% /choosable %}}
+
+{{% choosable language java %}}
+{{< install-java >}}
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+{{< install-yaml >}}
 {{% /choosable %}}
 
 Next, we'll configure Kubernetes.

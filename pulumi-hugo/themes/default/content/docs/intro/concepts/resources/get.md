@@ -11,7 +11,7 @@ You can use the static `get` function, which is available on all resource types,
 
 You can use the `get` function to consume properties from a resource that was provisioned elsewhere. For example, this program reads an existing EC2 Security Group whose ID is `sg-0dfd33cdac25b1ec9` and uses the result as input to create an EC2 Instance that Pulumi will manage:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -105,6 +105,30 @@ class MyStack : Stack
         });
     }
 }
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+public static void stack(Context ctx) {
+    var group = SecurityGroup.get("group", Output.of("sg-0dfd33cdac25b1ec9"), null, null);
+
+    var server = new Instance("web-server", InstanceArgs.builder()
+        .ami("ami-6869aa05")
+        .instanceType("t2.micro")
+        .securityGroups(
+            group.name().applyValue(v -> List.of(v)))
+        .build());
+}
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+# YAML does not yet support the `get` function. See
+# https://github.com/pulumi/pulumi-yaml/issues/155 for details.
 ```
 
 {{% /choosable %}}

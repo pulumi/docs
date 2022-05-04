@@ -9,7 +9,7 @@ menu:
 aliases: ["/docs/reference/project/"]
 ---
 
-A Pulumi project is any folder which contains a `Pulumi.yaml` file.  When in a subfolder, the closest enclosing folder with a `Pulumi.yaml` file determines the current project. A new project can be created with `pulumi new`. A project specifies which runtime to use and determines where to look for the program that should be executed during deployments. Supported runtimes are `nodejs`, `python`, `dotnet`, and `go`.
+A Pulumi project is any folder which contains a `Pulumi.yaml` file.  When in a subfolder, the closest enclosing folder with a `Pulumi.yaml` file determines the current project. A new project can be created with `pulumi new`. A project specifies which runtime to use and determines where to look for the program that should be executed during deployments. Supported runtimes are `nodejs`, `python`, `dotnet`, `go`, `java`, and `yaml`.
 
 ## Project file {#pulumi-yaml}
 
@@ -60,13 +60,34 @@ The following are other examples of `Pulumi.yaml` files that define project conf
     description: A precompiled .NET Pulumi program
     ```
 
+* A `Pulumi.yaml` file for a `java` program that will use a pre-built JAR `target/my-project-1.0-SNAPSHOT-jar-with-dependencies.jar`.
+
+    ```yaml
+    name: my-project
+    runtime:
+        name: java
+        options:
+            binary: target/my-project-1.0-SNAPSHOT-jar-with-dependencies.jar
+    description: A precompiled Java Pulumi program
+    ```
+
+* A `Pulumi.yaml` file for a `YAML` program that includes its resources inline.
+
+    ```yaml
+    name: my-project
+    runtime: yaml
+    resources:
+      bucket:
+        type: aws:s3:Bucket
+    ```
+
 For more information on valid Pulumi project metadata, see [Pulumi Configuration Reference]({{< relref "/docs/reference/pulumi-yaml">}}).
 
 ## Paths
 
 When your Pulumi program references resources in the local filesystem, they are always relative to the working directory. The following example code references a subfolder `app` of the working directory, which would contain a `Dockerfile` and application code:
 
-{{< chooser language "javascript,typescript,python,csharp" >}}
+{{< chooser language "javascript,typescript,python,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -111,6 +132,28 @@ var myTask = new Task("myTask", new TaskArgs
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var myTask = new Task("myTask",
+    TaskArgs.builder()
+    .build("./app") // subfolder of working directory.
+    .build()); // Java overloading handles ambiguity since the arguments are different
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  myTask:
+    type: cloud:Task
+    properties:
+      build: ./app # subfolder of working directory
+      ...
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -118,7 +161,7 @@ var myTask = new Task("myTask", new TaskArgs
 
 The {{< pulumi-getproject >}} function returns the name of the currently deploying project. This can be useful for naming or tagging resources.
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -152,6 +195,21 @@ project := ctx.Project()
 
 ```csharp
 var project = Deployment.Instance.ProjectName;
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var project = ctx.projectName();
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+variables:
+    project: ${pulumi.project}
 ```
 
 {{% /choosable %}}

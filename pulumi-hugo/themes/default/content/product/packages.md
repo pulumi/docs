@@ -185,6 +185,119 @@ details:
 
                     private const string Size = "t2.micro";
                 }
+            - title: Main.Java
+              language: java
+              code: |
+                package webserver;
+
+                import com.pulumi.Context;
+                import com.pulumi.Exports;
+                import com.pulumi.Pulumi;
+                import com.pulumi.aws.ec2.Ec2Functions;
+                import com.pulumi.aws.ec2.Instance;
+                import com.pulumi.aws.ec2.InstanceArgs;
+                import com.pulumi.aws.ec2.SecurityGroup;
+                import com.pulumi.aws.ec2.SecurityGroupArgs;
+                import com.pulumi.aws.ec2.inputs.GetAmiArgs;
+                import com.pulumi.aws.ec2.inputs.GetAmiFilter;
+                import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
+                import com.pulumi.aws.ec2.outputs.GetAmiResult;
+                import com.pulumi.core.Output;
+
+                import java.util.List;
+                import java.util.Map;
+
+                public class App {
+                    public static void main(String[] args) {
+                        Pulumi.run(App::stack);
+                    }
+
+                    public static Exports stack(Context ctx) {
+                        final var ami = Ec2Functions.getAmi(GetAmiArgs.builder()
+                                .filters(new GetAmiFilter("name", List.of("amzn-ami-hvm-*-x86_64-ebs")))
+                                .owners("137112412989")
+                                .mostRecent(true)
+                                .build()
+                        ).thenApply(GetAmiResult::id);
+
+                        final var group = new SecurityGroup("web-secgrp", SecurityGroupArgs.builder()
+                                .ingress(SecurityGroupIngressArgs.builder()
+                                        .protocol("tcp")
+                                        .fromPort(80)
+                                        .toPort(80)
+                                        .cidrBlocks("0.0.0.0/0")
+                                        .build())
+                                .build()
+                        );
+
+                        // (optional) create a simple web server using the startup
+                        // script for the instance
+
+                        final var userData =
+                                "#!/bin/bash\n" +
+                                        "echo \"Hello, World!\" > index.html\n" +
+                                        "nohup python -m SimpleHTTPServer 80 &";
+
+                        final var server = new Instance("web-server-www", InstanceArgs.builder()
+                                .tags(Map.of("Name", "web-server-www"))
+                                .instanceType(Output.ofRight(com.pulumi.aws.ec2.enums.InstanceType.T2_Micro))
+                                .vpcSecurityGroupIds(group.getId().applyValue(List::of))
+                                .ami(Output.of(ami))
+                                .userData(userData)
+                                .build()
+                        );
+
+                        ctx.export("publicIp", server.publicIp());
+                        ctx.export("publicHostName", server.publicDns());
+                        return ctx.exports();
+                    }
+                }
+            - title: Pulumi.yaml
+              language: yaml
+              code: |
+                name: webserver
+                runtime: yaml
+                description: Basic example of an AWS web server accessible over HTTP
+                configuration:
+                InstanceType:
+                    type: String
+                    default: t3.micro
+                variables:
+                    ec2ami:
+                        Fn::Invoke:
+                        Function: aws:getAmi
+                        Arguments:
+                            filters:
+                              - name: name
+                                values: ["amzn-ami-hvm-*-x86_64-ebs"]
+                            owners: ["137112412989"]
+                            mostRecent: true
+                        Return: id
+                resources:
+                    WebSecGrp:
+                        type: aws:ec2:SecurityGroup
+                        properties:
+                        ingress:
+                            - protocol: tcp
+                              fromPort: 80
+                              toPort: 80
+                              cidrBlocks: ["0.0.0.0/0"]
+                    WebServer:
+                        type: aws:ec2:Instance
+                        properties:
+                        instanceType: ${InstanceType}
+                        ami: ${ec2ami}
+                        userData: |-
+                            #!/bin/bash
+                            echo 'Hello, World from ${WebSecGrp.arn}!' > index.html
+                            nohup python -m SimpleHTTPServer 80 &
+                        vpcSecurityGroupIds:
+                            - ${WebSecGrp}
+                outputs:
+                    PublicIp: ${WebServer.publicIp}
+                    PublicHostName: ${WebServer.publicDns}
+
+
 
     components:
         title: Components give you production-ready cloud architectures
@@ -287,6 +400,55 @@ details:
                 {
                     static Task<int> Main(string[] args) => Deployment.RunAsync<EksStack>();
                 }
+
+            - title: Main.java
+              language: java
+              code: |
+                package com.pulumi.example.eks;
+
+                import com.pulumi.Context;
+                import com.pulumi.Exports;
+                import com.pulumi.Pulumi;
+                import com.pulumi.core.Output;
+                import com.pulumi.eks.Cluster;
+                import com.pulumi.eks.ClusterArgs;
+
+                import java.util.stream.Collectors;
+
+                public class App {
+                    public static void main(String[] args) {
+                        Pulumi.run(App::stack);
+                    }
+
+                    private static Exports stack(Context ctx) {
+                        var cluster = new Cluster("my-cluster", ClusterArgs.builder()
+                                .instanceType("t2.micro")
+                                .desiredCapacity(2)
+                                .minSize(1)
+                                .maxSize(2)
+                                .build());
+
+                        ctx.export("kubeconfig", cluster.kubeconfig());
+                        return ctx.exports();
+                    }
+                }
+
+            - title: Pulumi.yaml
+              language: yaml
+              code: |
+                name: aws-eks
+                runtime: yaml
+                description: An EKS cluster
+                resources:
+                    cluster:
+                        type: eks:Cluster
+                        properties:
+                            instanceType: "t2.medium"
+                            desiredCapacity: 2
+                            minSize: 1
+                            maxSize: 2
+                outputs:
+                    kubeconfig: ${cluster.kubeconfig}
 
 benefits:
     title: Benefits

@@ -36,7 +36,7 @@ Next, install the required language runtime, if you have not already.
 
 #### Choose Your Language
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language "typescript" %}}
 {{< install-node >}}
@@ -52,6 +52,14 @@ Next, install the required language runtime, if you have not already.
 
 {{% choosable language "csharp,fsharp,visualbasic" %}}
 {{< install-dotnet >}}
+{{% /choosable %}}
+
+{{% choosable language java %}}
+{{< install-java >}}
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+{{< install-yaml >}}
 {{% /choosable %}}
 
 Finally, configure Pulumi with Microsoft Azure.

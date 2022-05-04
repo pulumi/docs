@@ -15,7 +15,7 @@ aliases: ["/docs/quickstart/gcp/create-project/"]
 Now that you have set up your environment by installing Pulumi, installing your preferred language runtime,
 and configuring your Google Cloud credentials, let's create your first Pulumi program.
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language javascript %}}
 
@@ -59,6 +59,24 @@ $ pulumi new gcp-csharp
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```bash
+$ mkdir quickstart && cd quickstart
+$ pulumi new gcp-java
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```bash
+$ mkdir quickstart && cd quickstart
+$ pulumi new gcp-yaml
+```
+
+{{% /choosable %}}
+
 The [`pulumi new`]({{< relref "/docs/reference/cli/pulumi_new" >}}) command creates a new Pulumi project with some basic scaffolding based on the cloud and language specified.
 
 {{< cli-note >}}
@@ -86,6 +104,14 @@ After the command completes, the project and stack will be ready.
 {{% /choosable %}}
 
 {{% choosable language "csharp,fsharp,visualbasic" %}}
+After the command completes, the project and stack will be ready.
+{{% /choosable %}}
+
+{{% choosable language java %}}
+After the command completes, the project and stack will be ready.
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
 After the command completes, the project and stack will be ready.
 {{% /choosable %}}
 

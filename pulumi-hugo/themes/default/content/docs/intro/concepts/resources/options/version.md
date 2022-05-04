@@ -10,7 +10,7 @@ menu:
 
 The `version` resource option specifies a provider version to use when operating on a resource. This version overrides the version information inferred from the current package. This option should be used rarely.
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -45,6 +45,28 @@ vpc, _ := ec2.NewVpc(ctx, "vpc", &ec2.VpcArgs{}, pulumi.Version("2.10.0"))
 ```csharp
 var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs(),
     new CustomResourceOptions { Version = "2.10.0" });
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var vpc = new com.pulumi.aws.ec2.Vpc("vpc",
+    com.pulumi.aws.ec2.VpcArgs.Empty,
+    CustomResourceOptions.builder()
+        .version("2.10.0" )
+        .build();
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  vpc:
+    type: aws:ec2:Vpc
+    options:
+      version: "2.10.0"
 ```
 
 {{% /choosable %}}

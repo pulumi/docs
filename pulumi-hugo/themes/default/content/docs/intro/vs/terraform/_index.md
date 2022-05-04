@@ -33,13 +33,13 @@ Terraform and Pulumi have some similarities in that you can create, deploy and m
 
 ## Pulumi vs. Terraform: Key Differences {#differences}
 
-Pulumi and Terraform differ in that Terraform requires the use of a domain-specific language: HashiCorp Configuration Language (HCL). In contrast, Pulumi allows you to use familiar general purpose languages like [Python]({{< relref "/docs/intro/languages/python" >}}), [TypeScript]({{< relref "/docs/intro/languages/javascript" >}}), [JavaScript]({{< relref "/docs/intro/languages/javascript" >}}), [Go]({{< relref "/docs/intro/languages/go" >}}) and [.NET]({{< relref "/docs/intro/languages/dotnet" >}}) with the tools you already use to accomplish the same goals. Terraform recently released the beta of a development kit that allows you to use programming languages that compile to HCL.
+Pulumi and Terraform differ in that Terraform requires the use of a domain-specific language: HashiCorp Configuration Language (HCL). In contrast, Pulumi allows you to use familiar general purpose languages like [Python]({{< relref "/docs/intro/languages/python" >}}), [TypeScript]({{< relref "/docs/intro/languages/javascript" >}}), [JavaScript]({{< relref "/docs/intro/languages/javascript" >}}), [Go]({{< relref "/docs/intro/languages/go" >}}), [.NET]({{< relref "/docs/intro/languages/dotnet" >}}), [Java]({{< relref "/docs/intro/languages/java" >}}), and markup languages like [YAML]({{< relref "/docs/intro/languages/yaml" >}}), with the tools you already use to accomplish the same goals. Terraform recently released the beta of a development kit that allows you to use programming languages that compile to HCL.
 
 Here is a summary of the key differences between Pulumi and Terraform:
 
 | Feature | Pulumi | Terraform |
 | ------- | ------ | --------- |
-| [Language Support](#language) | Python, TypeScript, JavaScript, Go, C#, F# | HashiCorp Configuration Language (HCL) |
+| [Language Support](#language) | Python, TypeScript, JavaScript, Go, C#, F#, Java, YAML | HashiCorp Configuration Language (HCL) |
 | [IDE Support](#ide) | Code completion, strong typing, error squiggles, rich resource documentation, etc. | Limited |
 | [State Management](#state) | Managed through Pulumi Service by default, self-managed options available. | Self-managed by default, managed SaaS offering available. |
 | [Provider Support](#providers) | Native cloud providers with 100% same-day resource coverage plus Terraform-based providers for additional coverage. | Support across multiple IaaS, SaaS, and PaaS providers. |
@@ -67,7 +67,7 @@ The following sections go into further detail on the differences between Pulumi 
 
 ### Language Support {#language}
 
-Terraform requires that you and your team write programs in a custom domain-specific language (DSL) called HashiCorp Configuration Language (HCL). In contrast, Pulumi lets you use programming languages like Python, Go, JavaScript, TypeScript, and C#. Because of the use of familiar languages, you get familiar constructs like conditionals, loops, functions, and classes. This significantly improves the ability to cut down on boilerplate and enforce best practices. With HCL, it is common to copy and paste blocks of HCL code between different projects. Pulumi’s supported programming languages have been built over multiple decades to tame complexity at scale---the very complexity modern cloud architectures operating at global scale need to tackle. Instead of creating a new ecosystem of modules and sharing, Pulumi lets you leverage existing package management tools and techniques.
+Terraform requires that you and your team write programs in a custom domain-specific language (DSL) called HashiCorp Configuration Language (HCL). In contrast, Pulumi lets you use programming languages like Python, Go, JavaScript, TypeScript, C#, and Java. Because of the use of familiar languages, you get familiar constructs like conditionals, loops, functions, and classes. This significantly improves the ability to cut down on boilerplate and enforce best practices. With HCL, it is common to copy and paste blocks of HCL code between different projects. Pulumi’s supported programming languages have been built over multiple decades to tame complexity at scale---the very complexity modern cloud architectures operating at global scale need to tackle. Instead of creating a new ecosystem of modules and sharing, Pulumi lets you leverage existing package management tools and techniques.
 
 ### IDE Support {#ide}
 

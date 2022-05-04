@@ -1,3 +1,6 @@
+
+default: ensure build serve
+
 .PHONY: clean
 clean:
 	./scripts/clean.sh

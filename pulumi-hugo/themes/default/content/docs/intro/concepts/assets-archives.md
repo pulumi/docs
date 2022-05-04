@@ -18,7 +18,7 @@ There are three types of `Asset` objects:
 - `StringAsset`: The contents of the asset are read from a string in memory.
 - `RemoteAsset`: The contents of the asset are read from an `http`, `https` or `file` URI.
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -67,12 +67,34 @@ var remoteAsset = new RemoteAsset("http://worldclockapi.com/api/json/est/now");
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+final var fileAsset = new com.pulumi.asset.FileAsset("./file.txt");
+final var stringAsset = new com.pulumi.asset.StringAsset("Hello, world!");
+final var remoteAsset = new com.pulumi.asset.RemoteAsset("http://worldclockapi.com/api/json/est/now");
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+variables:
+  fileAsset:
+    Fn::FileAsset: ./file.txt
+  stringAsset:
+    Fn::StringAsset: Hello, world!
+  remoteAsset:
+    Fn::RemoteAsset: http://worldclockapi.com/api/json/est/now
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
 Any of these assets can be passed to a resource accepting an `Asset` as input.
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -129,6 +151,31 @@ var obj = new Aws.S3.BucketObject("obj", new Aws.S3.BucketObjectArgs
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var obj = new com.pulumi.aws.s3.BucketObject("obj",
+    com.pulumi.aws.s3.BucketObjectArgs.builder()
+        .bucket(bucket.getId())
+        .key(key)
+        .source(fileAsset)
+        .build());
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  obj:
+    type: aws:s3:BucketObject
+    properties:
+      bucket: ${bucket}
+      key: ${key}
+      source: ${fileAsset}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -140,7 +187,7 @@ There are three types of `Archive` objects:
 - `RemoteArchive`: The contents of the asset are read from an `http`, `https` or `file` URI, which must produce an archive of one of the same supported types as `FileArchive`.
 - `AssetArchive`:  The contents of the archive are read from a map of either [`Asset`](#asset) or [`Archive`](#archive) objects, one file or folder respectively per entry in the map.
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -205,6 +252,35 @@ var assetArchive = new AssetArchive(new Dictionary<string, string>
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var fileArchive = new com.pulumi.asset.FileArchive("./file.zip");
+var remoteArchive = new com.pulumi.asset.RemoteArchive("http://contoso.com/file.zip");
+var assetArchive = new com.pulumi.asset.AssetArchive(
+    Map.of(
+        "file", new com.pulumi.asset.StringAsset("Hello, world!"),
+        "folder", new com.pulumi.asset.FileArchive("./folder")));
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+variables:
+  fileArchive:
+    Fn::FileArchive: ./file.zip
+  remoteArchive:
+    Fn::RemoteArchive: http://contoso.com/file.zip
+  assetArchive:
+    Fn::AssetArchive:
+      file:
+        Fn::StringAsset: Hello, World!
+      folder:
+        Fn::FileArchive: ./folder
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -212,7 +288,7 @@ Note that a folder may be passed to `FileArchive` to construct an archive from t
 
 Any of these archives can be passed to a resource accepting an `Archive` as input.
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -271,6 +347,33 @@ var fn = new Aws.Lambda.Function("fn", new Aws.Lambda.FunctionArgs
     Handler = "hello.handler",
     Code = fileArchive,
 });
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var fn = new com.pulumi.aws.lambda.Function("fn",
+    com.pulumi.aws.lambda.FunctionArgs.builder()
+        .role(role.arn())
+        .runtime("python3.7")
+        .handler("hello.handler")
+        .code(fileArchive)
+        .build());
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  fn:
+    type: aws:lambda:Function
+    properties:
+      role: ${role.arn}
+      runtime: python3.7
+      handler: hello.handler
+      code: ${fileArchive}
 ```
 
 {{% /choosable %}}

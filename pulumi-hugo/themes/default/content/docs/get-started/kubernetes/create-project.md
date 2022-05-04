@@ -13,7 +13,7 @@ aliases: ["/docs/quickstart/kubernetes/create-project/"]
 ---
 Now that you have set up your environment let's create your first Pulumi program.
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language javascript %}}
 
@@ -56,6 +56,24 @@ $ pulumi new kubernetes-csharp
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```bash
+$ mkdir quickstart && cd quickstart
+$ pulumi new kubernetes-java
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```bash
+$ mkdir quickstart && cd quickstart
+$ pulumi new kubernetes-yaml
+```
+
+{{% /choosable %}}
+
 {{< cli-note >}}
 
 After logging in, the CLI will proceed with walking you through creating a new project.
@@ -93,6 +111,14 @@ After the command completes, the project and stack will be ready.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+After the command completes, the project and stack will be ready.
+{{% /choosable %}}
+
+{{% choosable language java %}}
+After the command completes, the project and stack will be ready.
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
 After the command completes, the project and stack will be ready.
 {{% /choosable %}}
 

@@ -192,7 +192,7 @@ Our example below will result in a Pulumi program that creates a Storage Account
 ### Generate Code with Arm2Pulumi
 
 With the Next Generation Pulumi Azure Provider, it's possible to convert ARM templates into Pulumi program code using [arm2pulumi]({{< relref "/arm2pulumi" >}}). Simply provide your ARM template
-and get back a Pulumi program in C#, TypeScript, Python, or Go.
+and get back a Pulumi program in C#, TypeScript, Python, Go, Java, or YAML.
 
 Let's say you have an existing ARM Template shown below.
 

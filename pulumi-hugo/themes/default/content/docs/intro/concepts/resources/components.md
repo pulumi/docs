@@ -23,7 +23,7 @@ To author a new component, either in a program or for a reusable library, create
 
 Here’s a simple component example:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 
 {{% choosable language javascript %}}
 
@@ -92,6 +92,24 @@ class MyComponent : Pulumi.ComponentResource
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+import com.pulumi.resources.ComponentResource;
+import com.pulumi.resources.ComponentResourceOptions;
+
+class MyComponent extends ComponentResource {
+    public MyComponent(String name, ComponentResourceOptions opts) {
+        super("pkg:index:MyComponent", name, null, opts);
+        // initialization logic.
+
+        // Signal to the UI that this resource has completed construction.
+        this.registerOutputs();
+    }
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -109,7 +127,7 @@ Component resources often contain child resources. The names of child resources 
 
 This example demonstrates both the naming convention and how to designate the component resource as the parent:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 
 {{% choosable language javascript %}}
 
@@ -151,6 +169,19 @@ var bucket = new Aws.S3.Bucket($"{name}-bucket",
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var bucket = new Bucket(String.format("%s-bucket", name),
+    BucketArgs.builder()
+    ...
+    .build(),
+    CustomResourceOptions.builder()
+    .parent(this)
+    .build());
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -160,7 +191,7 @@ Component resources can define their own output properties by using register_out
 
 For example, this code registers an S3 bucket’s computed domain name, which won’t be known until the bucket is created:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 
 {{% choosable language javascript %}}
 
@@ -208,6 +239,15 @@ this.RegisterOutputs(new Dictionary<string, object>
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+this.registerOutputs(Map.of(
+    "bucketDnsName", bucket.bucketDomainName()
+));
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -221,7 +261,7 @@ One option all resources have is the ability to pass an [explicit resource provi
 
 To allow this, component resources accept a `providers` option that custom resources don’t have. This value contains a map from the provider name to the explicit provider instance to use for the component resource. The map is used by a component resource to fetch the proper `provider` object to use for any child resources. This example overrides the globally configured AWS region and sets it to us-east-1. Note that `myk8s` is the name of the Kubernetes provider.
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 
 {{% choosable language javascript %}}
 
@@ -278,6 +318,16 @@ var component = new MyResource("...", new ComponentResourceOptions {
         { "kubernetes", myk8s }
     }
 });
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var component = new MyResource("...",
+    ComponentResourceOptions.builder()
+        .providers(awsUsEast1, myk8s)
+        .build());
 ```
 
 {{% /choosable %}}

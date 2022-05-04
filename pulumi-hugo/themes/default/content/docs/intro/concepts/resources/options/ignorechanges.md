@@ -12,7 +12,7 @@ The `ignoreChanges` resource option specifies a list of properties that Pulumi w
 
 For instance, in this example, the resource’s prop property "new-value" will be set when Pulumi initially creates the resource, but from then on, any updates will ignore it:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -54,6 +54,33 @@ res, _ := NewMyResource(ctx, "res",
 var res = new MyResource("res",
     new MyResourceArgs { Prop = "new-value" },
     new CustomResourceOptions { IgnoreChanges = { "prop" } });
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var res = new MyResource("res",
+    MyResourceArgs.builder()
+        .prop("new-value")
+        .build(),
+    CustomResourceOptions.builder()
+        .ignoreChanges("prop")
+        .build());
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  res:
+    type: MyResource
+    properties:
+      prop: new-value
+    options:
+      ignoreChanges:
+        - prop
 ```
 
 {{% /choosable %}}

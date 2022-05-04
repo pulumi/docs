@@ -16,7 +16,7 @@ tags:
     - learn
 ---
 
-Just like any application code, Pulumi infrastructure code can be abstracted, enabling us to work with high-level, generic representations of the things we need to build. If we use an object-oriented language such as JavaScript, Python, or TypeScript, we can create and instantiate classes. For languages like Go, we can build up interfaces. In all cases, we're thinking in terms of taking code that we've written and making it reusable in some form. Let's first explore abstraction.
+Just like any application code, Pulumi infrastructure code can be abstracted, enabling us to work with high-level, generic representations of the things we need to build. If we use an object-oriented language such as JavaScript, TypeScript, Python, C#, or Java, we can create and instantiate classes. For languages like Go, we can build up interfaces. In all cases, we're thinking in terms of taking code that we've written and making it reusable in some form. Let's first explore abstraction.
 
 ## Thinking in abstraction
 

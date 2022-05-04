@@ -1,13 +1,13 @@
 ---
 # The below values need updating.
-title: Pulumi - Modern Infrastructure as Code
+title: Pulumi - Universal Infrastructure as Code
 meta_desc: Pulumi's open source infrastructure as code SDK enables you to create, deploy, and manage infrastructure on any cloud, using your favorite languages.
 
 hero:
-  title: [ "Developer-First", "Infrastructure as Code" ]
+  title: [ "Universal", "Infrastructure as Code" ]
   description: |
-    Open source meets Enterprise SaaS. Use Cloud Engineering<br />
-    to tame modern cloud complexity.
+    Program the cloud and bridge the Dev and Ops divide with cloud engineering.
+    <br />From open source to enterprise.
   cta_text: Get Started
 
 overview:
@@ -19,6 +19,8 @@ overview:
       - /logos/tech/typescript.svg
       - /logos/tech/dot-net.svg
       - /logos/tech/go.svg
+      - /logos/tech/java.svg
+      - /logos/tech/yaml.svg
       - /logos/tech/python.svg
       - /logos/tech/javascript.svg
       - /logos/tech/f-sharp.svg

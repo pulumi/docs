@@ -14,7 +14,18 @@ aliases: ["/docs/quickstart/kubernetes/review-project/"]
 
 Let's review some of the generated project files:
 
+{{% choosable language "javascript,typescript,python,go,csharp,java" %}}
+
 - `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project" >}}).
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+- `Pulumi.yaml` defines both the [project]({{< relref "/docs/intro/concepts/project" >}}) and the program that manages your stack resources.
+
+{{% /choosable %}}
+
 - `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) we initialized.
 
 {{% choosable language csharp %}}
@@ -23,9 +34,22 @@ Let's review some of the generated project files:
 
 {{% /choosable %}}
 
-- {{< langfile >}} is the Pulumi program that defines our stack resources. Let's examine it.
+{{% choosable language java %}}
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+- `src/main/java/myproject` defines the project's Java package root.
+
+{{% /choosable %}}
+
+{{% choosable language "javascript,typescript,python,go,csharp,java" %}}
+
+<!-- The wrapping spans are infortunately necessary here; without them, the renderer gets confused and generates invalid markup. -->
+- <span>{{< langfile >}}</span> is the Pulumi program that defines your stack resources.
+
+{{% /choosable %}}
+
+Let's examine {{< langfile >}}.
+
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language javascript %}}
 
@@ -205,6 +229,94 @@ class MyStack : Stack
     [Output]
     public Output<string> Name { get; set; }
 }
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.kubernetes.apps_v1.Deployment;
+import com.pulumi.kubernetes.apps_v1.DeploymentArgs;
+import com.pulumi.kubernetes.apps_v1.inputs.DeploymentSpecArgs;
+import com.pulumi.kubernetes.core_v1.inputs.ContainerArgs;
+import com.pulumi.kubernetes.core_v1.inputs.ContainerPortArgs;
+import com.pulumi.kubernetes.core_v1.inputs.PodSpecArgs;
+import com.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
+import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
+import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+
+import java.util.Map;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var labels = Map.of("app", "nginx");
+
+            var deployment = new Deployment("nginx", DeploymentArgs.builder()
+                    .spec(DeploymentSpecArgs.builder()
+                            .selector(LabelSelectorArgs.builder()
+                                    .matchLabels(labels)
+                                    .build())
+                            .replicas(1)
+                            .template(PodTemplateSpecArgs.builder()
+                                    .metadata(ObjectMetaArgs.builder()
+                                            .labels(labels)
+                                            .build())
+                                    .spec(PodSpecArgs.builder()
+                                            .containers(ContainerArgs.builder()
+                                                    .name("nginx")
+                                                    .image("nginx")
+                                                    .ports(ContainerPortArgs.builder()
+                                                            .containerPort(80)
+                                                            .build())
+                                                    .build())
+                                            .build())
+                                    .build())
+
+                            .build())
+                    .build());
+
+            var name = deployment.metadata()
+                .applyValue(m -> m.orElseThrow().name().orElse(""));
+
+            ctx.export("name", name);
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: quickstart
+description: A minimal Kubernetes Pulumi YAML program
+runtime: yaml
+variables:
+  appLabels:
+    app: nginx
+resources:
+  deployment:
+    type: kubernetes:apps/v1:Deployment
+    properties:
+      spec:
+        selector:
+          matchLabels: ${appLabels}
+        replicas: 1
+        template:
+          metadata:
+            labels: ${appLabels}
+          spec:
+            containers:
+              - name: nginx
+                image: nginx
+outputs:
+  name: ${deployment.metadata.name}
 ```
 
 {{% /choosable %}}

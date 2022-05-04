@@ -8,7 +8,7 @@ menu:
     parent: testing
 ---
 
-Pulumi programs are authored in a general-purpose language like TypeScript, Python, Go, or C#. The full power of each language is available, including access to tools and libraries for that runtime, including testing frameworks.
+Pulumi programs are authored in a general-purpose language like TypeScript, Python, Go, C# or Java. The full power of each language is available, including access to tools and libraries for that runtime, including testing frameworks.
 
 When running an update, your Pulumi program talks to the Pulumi CLI to orchestrate the deployment. The idea of _unit tests_ is to cut this communication channel and replace the engine with mocks. The mocks respond to the commands from within the same OS process and return dummy data for each call that your Pulumi program makes.
 

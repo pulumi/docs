@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="card bg-white p-6">
-                    <pulumi-chooser type="language" options="typescript,python,go,csharp">
+                    <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
                         {{ range $item := .Params.details.providers.ide }}
                             <pulumi-choosable type="language" class="highlight" value="{{ $item.language }}">
                                 {{ partial "code" (dict "lang" $item.language "code" $item.code "mode" "light") }}
@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div class="card bg-white p-6">
-                    <pulumi-chooser type="language" options="typescript,python,go,csharp">
+                    <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
                         {{ range $item := .Params.details.components.ide }}
                             <pulumi-choosable type="language" class="highlight" value="{{ $item.language }}">
                                 {{ partial "code" (dict "lang" $item.language "code" $item.code "mode" "light") }}

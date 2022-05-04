@@ -31,7 +31,7 @@ Both Pulumi and CDK allow you to build and deploy infrastructure on AWS using fa
 
 ## Pulumi vs. CDK: Key Differences {#differences}
 
-First, CDK supports only AWS, whereas Pulumi supports over 60 cloud and SaaS providers, with more being added all the time. Second, while both Pulumi and CDK support languages like TypeScript, Python, Go, and C#, the two tools are fundamentally different in how they interpret these languages and deploy resources. Unlike Pulumi, whose open-source engine understands these languages and communicates directly with cloud providers to deploy infrastructure, CDK is a transpiler (i.e., a [source-to-source compiler](https://en.wikipedia.org/wiki/Source-to-source_compiler)) that produces AWS Cloud Assembly, an intermediate format consisting of CloudFormation templates and other files that it uploads to the CloudFormation service, which acts as the deployment engine for provisioning resources.
+First, CDK supports only AWS, whereas Pulumi supports over 60 cloud and SaaS providers, with more being added all the time. Second, while both Pulumi and CDK support languages like TypeScript, Python, Go, C#, and Java, the two tools are fundamentally different in how they interpret these languages and deploy resources. Unlike Pulumi, whose open-source engine understands these languages and communicates directly with cloud providers to deploy infrastructure, CDK is a transpiler (i.e., a [source-to-source compiler](https://en.wikipedia.org/wiki/Source-to-source_compiler)) that produces AWS Cloud Assembly, an intermediate format consisting of CloudFormation templates and other files that it uploads to the CloudFormation service, which acts as the deployment engine for provisioning resources.
 
 Moreover, because CDK depends on CloudFormation as the deployment engine, it shares many of the same benefits and limitations as CloudFormation (see [Pulumi vs. CloudFormation]({{< relref "/docs/intro/vs/cloud-templates/cloudformation" >}})).
 
@@ -43,7 +43,7 @@ The following table summarizes some additional similarities and differences betw
 
 | Feature | Pulumi | AWS CDK |
 | ------- | ------ | -------------- |
-| [Language Support](#language) | TypeScript, JavaScript, Python, Go, C#, F#, VB.NET | Python, TypeScript, JavaScript, Go (developer preview), C#, Java |
+| [Language Support](#language) | TypeScript, JavaScript, Python, Go, C#, F#, VB.NET, Java, YAML | Python, TypeScript, JavaScript, Go (developer preview), C#, Java |
 | [State Management](#state) | Managed by Pulumi Service or with self-managed options | Managed by the AWS CloudFormation service |
 | [Provider Support](#providers) | Supports all major cloud providers, including 100% same-day coverage of new resources with AWS Native | AWS only |
 | [Cloud Native Support](#cloud-native) | Richly typed support for the full cloud-native ecosystem and Kubernetes | AWS only |

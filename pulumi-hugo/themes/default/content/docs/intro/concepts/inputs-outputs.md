@@ -35,7 +35,7 @@ To access the raw value of an output and transform that value into a new value, 
 
 For example, the following code creates an HTTPS URL from the DNS name (the raw value) of a virtual machine:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -76,6 +76,21 @@ var url = virtualmachine.DnsName.Apply(dnsName => "https://" + dnsName);
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var url = virtualmachine.dnsName().applyValue(dnsName -> "https://" + dnsName);
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+variables:
+  url: https://${virtualmachine.DnsName}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -91,7 +106,7 @@ If you have multiple outputs and need to join them, the `all` function acts like
 
 For example, let’s use a server and a database name to create a database connection string:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -167,6 +182,27 @@ var connectionString2 = Output.Tuple(sqlServer.name, database.name).Apply(t =>
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+// When all the input values have the same type, Output.all can be used
+var connectionString = Output.all(sqlServer.name(), database.name())
+        .applyValue(t -> String.format("Server=tcp:%s.database.windows.net;initial catalog=%s...", t.get(0), t.get(1));
+
+// For more flexibility, 'Output.tuple' is used so that each unwrapped value will preserve their distinct type.
+var connectionString2 = Output.tuple(sqlServer.name, database.name)
+        .applyValue(t -> String.format("Server=tcp:%s.database.windows.net;initial catalog=%s...", t.t1, t.t2));
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+variables:
+  connectionString: Server=tcp:${sqlServer.name}.database.windows.net;initial catalog=${database.name}...
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -178,7 +214,7 @@ If you just need to access a property of an {{< pulumi-output >}} value in order
 
 For example, to read a domain record from an ACM certificate, you need to access a resource’s property value. Because that value is an output, we would normally need to use {{< pulumi-apply >}}:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 
 {{% choosable language javascript %}}
 
@@ -280,12 +316,32 @@ var record = new Record("validation", new RecordArgs
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var cert = new Certificate("cert",
+    CertificateArgs.builder()
+        .domainName("example")
+        .validationMethod("DNS")
+        .build());
+
+var record = new Record("validation",
+    RecordArgs.builder()
+        .records(
+            cert.domainValidationOptions()
+            .applyValue(opts -> opts.get(0).resourceRecordValue().get())
+            .applyValue(String::valueOf)
+            .applyValue(List::of))
+        .build());
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
 Instead, to make it easier to access simple property and array elements, an {{< pulumi-output >}} lifts the properties of the underlying value, behaving very much like an instance of it. Lift allows you to access properties and elements directly from the {{< pulumi-output >}} itself without needing {{< pulumi-apply >}}. If we return to the above example, we can now simplify it:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -380,6 +436,31 @@ var record = new Record("validation", new RecordArgs
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+// Lifting is currently not supported in Java.
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  cert:
+    type: aws:acm:Certificate
+    properties:
+      domainName: example
+      validationMethod: DNS
+  record:
+    type: aws:route53:Record
+    properties:
+      records:
+        # YAML handles inputs and outputs transparently.
+        - ${cert.domainValidationOptions[0].resourceRecordValue}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -417,7 +498,7 @@ Outputs that contain strings cannot be used directly in operations such as strin
 
 For example, say you want to create a URL from `hostname` and `port` output values. You can do this using `apply` and `all`.
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -478,6 +559,18 @@ var url = Output.Tuple(hostname, port).Apply(t => $"http://{t.Item1}:{t.Item2}/"
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+Output<String> hostname = Output.of("localhost"); // get some Output
+Output<Integer> port = Output.of(8080); // get some Output
+
+// Would like to produce a string equivalent to: http://{hostname}:{port}/
+var url = Output.tuple(hostname, port)
+        .applyValue(t -> String.format("http://%s:%s/", t.t1, t.t2));
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -526,6 +619,22 @@ var url = Output.Format($"http://{hostname}:{port}/");
 ```
 
 {{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+// Format takes a FormattableString and expands outputs correctly:
+var url = Output.format("http://%s:%s/", hostname, port);
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+variables:
+  url: https://${hostname}:${port}
+```
+
+{{% /choosable %}}
 
 ## Convert Input to Output through Interpolation
 
@@ -533,7 +642,7 @@ It is possible to turn an {{< pulumi-input >}} into an {{< pulumi-output >}} val
 
 For example, this code transforms an {{< pulumi-input >}} into an {{< pulumi-output >}} so that it can use the `apply` function:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 
 {{% choosable language javascript %}}
 
@@ -582,6 +691,15 @@ Output<string[]> Split(Input<string> input)
 {
     var output = input.ToOutput()
     return output.Apply(v => v.Split(","));
+}
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+public static Output<List<String>> split(Output<String> str) {
+    return str.applyValue(v -> List.of(v.split(",")));
 }
 ```
 

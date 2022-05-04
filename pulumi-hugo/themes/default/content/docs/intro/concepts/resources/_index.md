@@ -56,7 +56,7 @@ All infrastructure resources are described by one of two subclasses of the `Reso
 
 A resource’s desired state is declared by constructing an instance of the resource:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -90,6 +90,24 @@ res, err := NewResource(ctx, name, args, opt1, opt2)
 
 ```csharp
 var res = new Resource(name, args, options);
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var res = new Resource(name, args, options);
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  res:
+    type: the:resource:Type
+    properties: ...args
+    options: ...options
 ```
 
 {{% /choosable %}}

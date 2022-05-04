@@ -15,7 +15,7 @@ aliases: ["/docs/quickstart/azure/create-project/"]
 Now that you have set up your environment by installing Pulumi, installing your preferred language runtime,
 and configuring your Azure credentials, let's create your first Pulumi program.
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -47,6 +47,24 @@ $ pulumi new azure-csharp
 # from within your $GOPATH
 $ mkdir quickstart && cd quickstart
 $ pulumi new azure-go
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```bash
+$ mkdir quickstart && cd quickstart
+$ pulumi new azure-java
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```bash
+$ mkdir quickstart && cd quickstart
+$ pulumi new azure-yaml
 ```
 
 {{% /choosable %}}
@@ -90,6 +108,14 @@ After the command completes, the project and stack will be ready.
 {{% /choosable %}}
 
 {{% choosable language "csharp,fsharp,visualbasic" %}}
+After the command completes, the project and stack will be ready.
+{{% /choosable %}}
+
+{{% choosable language java %}}
+After the command completes, the project and stack will be ready.
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
 After the command completes, the project and stack will be ready.
 {{% /choosable %}}
 

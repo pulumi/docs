@@ -33,7 +33,7 @@ Like CloudFormation, Pulumi is a declarative infrastructure-as-code platform tha
 
 There are a couple of fundamental differences between CloudFormation and Pulumi.
 
-First, a CloudFormation stack is a template file written in JSON or YAML, whereas a Pulumi stack is a program written in a general-purpose programming language like Python, TypeScript, C#, or Go. CloudFormation resources are configured with simple key-value pairs, whereas in Pulumi, they're declared with programming constructs --- classes in object-oriented languages like Python or TypeScript, functions in languages like Go, and the like. Ultimately, this approach unlocks a great deal more flexibility in terms of expressing, composing, and managing cloud architectures.
+First, a CloudFormation stack is a template file written in JSON or YAML, whereas a Pulumi stack is a program written in a general-purpose programming language like Python, TypeScript, C#, Go, and Java, or a markup language like YAML. CloudFormation resources are configured with simple key-value pairs, whereas in Pulumi, they're declared with programming constructs --- classes in object-oriented languages like Python or TypeScript, functions in languages like Go, and the like. Ultimately, this approach unlocks a great deal more flexibility in terms of expressing, composing, and managing cloud architectures.
 
 Secondly, a CloudFormation deployment is performed out of band by the CloudFormation service (in response to a template file upload, for example), whereas a Pulumi deployment is performed by the Pulumi CLI itself, which communicates directly with the cloud provider to create, update, or destroy cloud resources as defined by your program. This approach provides not only a more interactive CLI experience but also a number of additional features like rich diffing, drift detection, and a tighter development loop that can often be several times faster than working with CloudFormation.
 
@@ -43,7 +43,7 @@ The following table summarizes some additional similarities and differences betw
 
 | Feature | Pulumi | CloudFormation |
 | ------- | ------ | -------------- |
-| [Language Support](#language) | TypeScript, JavaScript, Python, Go, C#, F#, VB.NET | YAML or JSON only |
+| [Language Support](#language) | TypeScript, JavaScript, Python, Go, C#, F#, VB.NET, Java, YAML | YAML or JSON only |
 | [IDE Support](#ide) | IntelliSense, code completion, strong typing, error squiggles, rich documentation, interactive debugging, and more | Plugin-based |
 | [State Management](#state) | Managed by Pulumi Service or with self-managed options | Managed by the AWS CloudFormation service |
 | [Provider Support](#providers) | All major cloud providers supported, including 100% same-day coverage of new resources with [AWS Native]({{< relref "/registry/packages/aws-native" >}}) | Third-party providers supported through CloudFormation Registry extensions |

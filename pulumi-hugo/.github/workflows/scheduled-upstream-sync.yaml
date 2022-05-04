@@ -1,0 +1,40 @@
+name: "Scheduled Jobs: Upstream Sync"
+
+on:
+  schedule:
+  - cron: 0/15 * * * *
+  workflow_dispatch:
+
+jobs:
+  sync_latest_from_upstream:
+    # Only run this job for events that originate on downstream repos.
+    if: github.repository != 'pulumi/pulumi-hugo'
+    runs-on: ubuntu-latest
+    name: Sync latest commits from upstream repo
+
+    steps:
+    - name: Checkout target repo
+      uses: actions/checkout@v2
+      with:
+        ref: master
+        token: ${{ secrets.PULUMI_BOT_TOKEN }}
+
+    - name: Sync upstream changes
+      id: sync
+      uses: aormsby/Fork-Sync-With-Upstream-action@v3.2
+      with:
+        upstream_sync_repo: pulumi/pulumi-hugo
+        upstream_sync_branch: master
+        target_sync_branch: master
+        target_repo_token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: New commits found
+      if: steps.sync.outputs.has_new_commits == 'true'
+      run: echo "New commits were found to sync."
+
+    - name: No new commits
+      if: steps.sync.outputs.has_new_commits == 'false'
+      run: echo "There were no new commits."
+
+    - name: Show value of 'has_new_commits'
+      run: echo ${{ steps.sync.outputs.has_new_commits }}

@@ -9,7 +9,7 @@ menu:
 
 The {{< pulumi-log >}} collection of functions allow you to log diagnostics, warnings, or errors with the Pulumi engine. These are displayed, alongside all other Pulumi output, in the CLI and in the Pulumi Service. Events are logged and kept for historical purposes in case you want to audit or diagnose a past event.
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 
 {{% choosable language javascript %}}
 
@@ -70,6 +70,19 @@ Pulumi.Log.Info("message", resource);
 Pulumi.Log.Debug("hidden by default");
 Pulumi.Log.Warn("warning");
 Pulumi.Log.Error("fatal error");
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+public static void stack(Context ctx) {
+    ctx.log.info("message");
+    ctx.log.info("message", resource);
+    ctx.log.debug("hidden by default");
+    ctx.log.warn("warning");
+    ctx.log.error("fatal error");
+}
 ```
 
 {{% /choosable %}}

@@ -1,5 +1,5 @@
 ---
-title: Modern Infrastructure as Code for Kubernetes with Pulumi
+title: Universal Infrastructure as Code for Kubernetes with Pulumi
 layout: kubernetes
 
 meta_title: Production-Ready Kubernetes for Teams

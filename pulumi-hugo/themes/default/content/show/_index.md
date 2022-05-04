@@ -1,5 +1,5 @@
 ---
-title: Modern Infrastructure as Code
+title: Universal Infrastructure as Code
 meta_desc: Pulumi provides a cloud native programming model for container management. Any code, any cloud, any app.
 type: page
 layout: show
@@ -20,7 +20,7 @@ carousel:
       details:
         - title: Popular programming languages.
           description: >
-            Define infrastructure in JavaScript, TypeScript, Python, Go, or
+            Define infrastructure in JavaScript, TypeScript, Python, Go, Java, YAML, or
             any .NET language, including C#, F#, and VB.
         - title: Your favorite tools.
           description: Use familiar IDEs, test frameworks, and tools.

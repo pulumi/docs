@@ -6,7 +6,7 @@
     <section id="overview" class="my-16">
         <div class="flex flex-wrap container mx-auto">
             <div class="w-full order-last lg:mt-0 lg:order-first lg:w-1/2 px-5">
-                <h2>Modern Infrastructure as Code for Google Cloud</h2>
+                <h2>Universal Infrastructure as Code for Google Cloud</h2>
                 <p class="mr-4">
                     Pulumi's <a href="{{ relref . "/what-is/what-is-infrastructure-as-code" }}">infrastructure as code</a>
                     SDK helps create, deploy, and manage Google Cloud Platform containers,
@@ -22,27 +22,7 @@
                 </div>
             </div>
             <div class="w-full order-first lg:order-last mt-8 lg:mt-0 lg:w-1/2 lg:mt-0">
-                <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                    {{ $code := `import * as k8s from "@pulumi/kubernetes";
-import * as pulumi from "@pulumi/pulumi";
-import { k8sProvider, k8sConfig } from "./cluster";
-
-const name = pulumi.getProject() + "-" + pulumi.getStack();
-const canaryLabels = { app: "canary-" + name };
-const canary = new k8s.apps.v1beta1.Deployment("canary", {
-    spec: {
-        selector: { matchLabels: canaryLabels },
-        replicas: 1,
-        template: {
-            metadata: { labels: canaryLabels },
-            spec: { containers: [{ name, image: "nginx" }] },
-        },
-    },
-}, { provider: k8sProvider });
-
-export let kubeConfig = k8sConfig;` }}
-                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark" "chrome" true) }}
-                </div>
+                {{ partial "code-tabbed" (dict "tabs" .Params.hero.ide.tabs "chrome" "true" "mode" "dark") }}
             </div>
         </div>
     </section>
@@ -51,183 +31,137 @@ export let kubeConfig = k8sConfig;` }}
         {{ partial "benefits.html" (dict "benefits" .Params.benefits) }}
     </section>
 
-    <section id="code" class="py-16 px-4">
-        <div class="container mx-auto">
+    <section id="packages" class="container mx-auto my-12">
+        <div class="flex flex-wrap">
+            <div class="w-full lg:w-1/2 p-6">
+                <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                    <pulumi-choosable type="language" class="highlight" value="typescript">
+                        {{ partial "code" (dict "code" .Params.package.ts "lang" "ts") }}
+                    </pulumi-choosable>
 
-            <!-- Example 1 -->
-            <div class="md:flex my-8">
-                <div class="md:w-1/2 md:mr-4 md:pr-24">
-                    <h3>Build and deploy a GKE cluster</h3>
-                    <p>
-                        Pulumi supports programming against Kubernetes – Minikube, custom
-                        on-premises, or cloud-hosted custom clusters or in managed
-                        clusters such as Google GKE.
-                    </p>
-                    <p>
-                        This code defines a GKE cluster with configurable settings which
-                        could be used in a module which could then be used to deploy an
-                        app to the cluster.
-                    </p>
-                    <p class="my-8">
-                        <a class="btn-secondary" href="{{ relref . "/docs/get-started" }}">Get Started</a>
-                    </p>
-                </div>
-                <div class="md:w-1/2 md:ml:4">
-                    {{ $code := `// Define a GKE cluster with configurable settings
-import * as gcp from "@pulumi/gcp";
-import { nodeCount, nodeMachineType, password, username } from "./config";
+                    <pulumi-choosable type="language" class="highlight" value="python">
+                        {{ partial "code" (dict "code" .Params.package.py "lang" "go") }}
+                    </pulumi-choosable>
 
-const engineVersion = gcp.container.getEngineVersions().then(v => v.latestMasterVersion);
-export const k8sCluster = new gcp.container.Cluster("gke-cluster", {
-    initialNodeCount: nodeCount,
-    minMasterVersion: engineVersion,
-    nodeVersion: engineVersion,
-    masterAuth: { username, password },
-    nodeConfig: {
-        machineType: nodeMachineType,
-        oauthScopes: [
-            "https://www.googleapis.com/auth/compute",
-            "https://www.googleapis.com/auth/devstorage.read_only",
-            "https://www.googleapis.com/auth/logging.write",
-            "https://www.googleapis.com/auth/monitoring"
-        ],
-    },
-});` }}
-                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
-                </div>
+                    <pulumi-choosable type="language" class="highlight" value="go">
+                        {{ partial "code" (dict "code" .Params.package.go "lang" "go") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="csharp">
+                        {{ partial "code" (dict "code" .Params.package.csharp "lang" "csharp") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="java">
+                        {{ partial "code" (dict "code" .Params.package.java "lang" "java") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="yaml">
+                        {{ partial "code" (dict "code" .Params.package.yaml "lang" "yaml") }}
+                    </pulumi-choosable>
+                </pulumi-chooser>
             </div>
 
-            <!-- Example 2 -->
-            <div class="md:flex my-8">
-                <div class="md:w-1/2 md:mr-4 md:pr-24">
-                    <h3>Build and deploy Kubernetes apps to GKE</h3>
-                    <p>
-                        Pulumi supports programming against GKE. Pulumi is entirely unopinionated about how
-                        containers are built, published, and deployed to your Kubernetes cluster.
-                    </p>
-                    <p>
-                        This code makes use of our previously defined GKE cluster and
-                        deploys an nginx canary onto the cluster with 1 replica.
-                    </p>
-                    <p class="my-8">
-                        <a class="btn-secondary" href="{{ relref . "/docs/get-started" }}">Get Started</a>
-                    </p>
-                </div>
-                <div class="md:w-1/2 md:ml:4">
-                    {{ $code := `// Deploy an nginx canary to GKE
-import * as k8s from "@pulumi/kubernetes";
-import * as pulumi from "@pulumi/pulumi";
-import { k8sProvider, k8sConfig } from "./cluster";
+            <div class="w-full lg:w-1/2 p-6">
+                <h3>Reduce your complexity with shared packages</h3>
+                <p>
+                    Pulumi Packages enable you to define cloud infrastructure once and then consume
+                    that package in any supported Pulumi language. You can easily reduce boilerplate
+                    code, define best practices, and allow teammates to use your package in the language
+                    of their choice, regardless of the language you authored the package with.
 
-// Create a canary deployment to test that this cluster works.
-const name = pulumi.getProject() + "-" + pulumi.getStack();
-const canaryLabels = { app: "canary-" + name };
-const canary = new k8s.apps.v1beta1.Deployment("canary", {
-    spec: {
-        selector: { matchLabels: canaryLabels },
-        replicas: 1,
-        template: {
-            metadata: { labels: canaryLabels },
-            spec: { containers: [{ name, image: "nginx" }] },
-        },
-    },
-}, { provider: k8sProvider });
+                    <a href="{{ relref . "/registry" }}">Pulumi Registry</a> is the central location
+                    where you can find all of the Pulumi Packages you can use.
+                </p>
+            </div>
+        </div>
+    </section>
 
-// Export the Kubeconfig so that clients can easily access our cluster.
-export let kubeConfig = k8sConfig;` }}
-                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
-                </div>
+    <section id="native" class="container mx-auto my-12">
+        <div class="flex flex-wrap">
+            <div class="w-full lg:w-1/2 p-6">
+                <h3>Access to all Google Cloud APIs</h3>
+                <p>
+                    Google Cloud Native gives you access to 100% of the resources available in the Google Cloud APIs. You
+                    have access to every property of every resource and every version of every resource is available. The SDK
+                    is generated from the Google API Discovery Service, giving you same-day access to new features and bug
+                    fixes.
+                </p>
             </div>
 
-            <!-- Example 3 -->
-            <div class="md:flex my-8">
-                <div class="md:w-1/2 md:mr-4 md:pr-24">
-                    <h3>Creating a Simple Web Server</h3>
-                    <p>
-                        Pulumi gives you a way to express infrastructure configuration on Google Cloud
-                        using your favorite programming language.
-                    </p>
-                    <p>
-                        This code uses TypeScript on Node.js to define the necessary
-                        environment, defines a very simple web server, and then creates
-                        the instance, before exporting the IP and Hostname.
-                    </p>
-                    <p class="my-8">
-                        <a class="btn-secondary" href="{{ relref . "/docs/get-started" }}">Get Started</a>
-                    </p>
-                </div>
-                <div class="md:w-1/2 md:ml:4">
-                    {{ $code := `const gcp = require("@pulumi/gcp");
+             <div class="w-full lg:w-1/2 p-6 order-first lg:order-last">
+                <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                    <pulumi-choosable type="language" class="highlight" value="typescript">
+                        {{ partial "code" (dict "code" .Params.native.ts "lang" "ts") }}
+                    </pulumi-choosable>
 
-const computeNetwork = new gcp.compute.Network("network", {
-    autoCreateSubnetworks: true,
-});
+                    <pulumi-choosable type="language" class="highlight" value="python">
+                        {{ partial "code" (dict "code" .Params.native.py "lang" "go") }}
+                    </pulumi-choosable>
 
-const computeFirewall = new gcp.compute.Firewall("firewall", {
-    network: computeNetwork.selfLink,
-    allows: [{
-        protocol: "tcp",
-        ports: [ "22", "80" ],
-    }],
-});
+                    <pulumi-choosable type="language" class="highlight" value="go">
+                        {{ partial "code" (dict "code" .Params.native.go "lang" "go") }}
+                    </pulumi-choosable>
 
-// Create a simple web server.
-const startupScript =
-    "#!/bin/bash \n" +
-    "echo 'Hello, World!' > index.html \n" +
-    "nohup python -m SimpleHTTPServer 80 &";
+                    <pulumi-choosable type="language" class="highlight" value="csharp">
+                        {{ partial "code" (dict "code" .Params.native.csharp "lang" "csharp") }}
+                    </pulumi-choosable>
 
-const computeInstance = new gcp.compute.Instance("instance", {
-    machineType: "f1-micro",
-    metadataStartupScript: startupScript,
-    bootDisk: {
-        initializeParams: {
-            image: "debian-cloud/debian-8",
-        },
-    },
-    networkInterfaces: [{
-        network: computeNetwork.id,
-        accessConfigs: [{}], // must be empty
-    }],
-    serviceAccount: {
-      scopes: ["https://www.googleapis.com/auth/cloud-platform"],
-    },
-}, { dependsOn: [computeFirewall] });
+                    <pulumi-choosable type="language" class="highlight" value="java">
+                        {{ partial "code" (dict "code" .Params.native.java "lang" "java") }}
+                    </pulumi-choosable>
 
-exports.instanceName = computeInstance.name;
-exports.instanceIP = computeInstance.networkInterfaces.apply(ni => ni[0].accessConfigs[0].natIp);` }}
-                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
-                </div>
+                    <pulumi-choosable type="language" class="highlight" value="yaml">
+                        {{ partial "code" (dict "code" .Params.native.yaml "lang" "yaml") }}
+                    </pulumi-choosable>
+                </pulumi-chooser>
+            </div>
+        </div>
+    </section>
+
+    <section id="gke" class="container mx-auto my-12">
+        <div class="flex flex-wrap">
+            <div class="w-full lg:w-1/2 p-6">
+                <pulumi-chooser type="language" options="typescript,python,go,csharp,java">
+                    <pulumi-choosable type="language" class="highlight" value="typescript">
+                        {{ partial "code" (dict "code" .Params.gke.ts "lang" "ts") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="python">
+                        {{ partial "code" (dict "code" .Params.gke.py "lang" "go") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="go">
+                        {{ partial "code" (dict "code" .Params.gke.go "lang" "go") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="csharp">
+                        {{ partial "code" (dict "code" .Params.gke.csharp "lang" "csharp") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="java">
+                        {{ partial "code" (dict "code" .Params.gke.java "lang" "java") }}
+                    </pulumi-choosable>
+
+                    <!-- <pulumi-choosable type="language" class="highlight" value="yaml">
+                        {{ partial "code" (dict "code" .Params.gke.yaml "lang" "yaml") }}
+                    </pulumi-choosable> -->
+                </pulumi-chooser>
             </div>
 
-            <!-- Example 4 -->
-            <div class="md:flex my-8">
-                <div class="md:w-1/2 md:mr-4 md:pr-24">
-                    <h3>Creating a Google Cloud Function</h3>
-                    <p>
-                        With Pulumi, you can combine Google Cloud infrastructure definitions and application code in one program. This example shows how to create a simple Google Cloud Function that returns a message when invoked.
-                    </p>
-                    <p class="my-8">
-                        <a class="btn-secondary" href="{{ relref . "/docs/get-started" }}">Get Started</a>
-                    </p>
-                </div>
-                <div class="md:w-1/2 md:ml:4">
-                    {{ $code := `import * as gcp from "@pulumi/gcp";
+            <div class="w-full lg:w-1/2 p-6">
+                <h2>Create your own GKE cluster</h2>
+                <p>
+                    Pulumi supports programming against Kubernetes - Minikube, custom on-premises, or cloud-hosted
+                    custom clusters or in managed clusters such as Google GKE.
 
-let greetingFunction = new gcp.cloudfunctions.HttpFunction("greeting", (req, res) => {
-    res.send("Greetings from " + (req.body.name || "Google Cloud Functions") + "!");
-});
-
-export let url = greetingFunction.httpsTriggerUrl;` }}
-                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
-                </div>
+                    This code defines a GKE cluster with configurable settings that could be packaged in a module
+                    and then used to deploy an app to the cluster.
+                </p>
             </div>
         </div>
     </section>
 
     {{ partial "how-pulumi-works.html" . }}
-
-    {{ partial "learning-machine.html" . }}
 
     {{ partial "get-started.html" . }}
 

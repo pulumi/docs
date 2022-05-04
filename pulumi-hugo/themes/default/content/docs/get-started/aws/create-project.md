@@ -15,7 +15,7 @@ aliases: ["/docs/quickstart/aws/create-project/"]
 Now that you have set up your environment by installing Pulumi, installing your preferred language runtime,
 and configuring your AWS credentials, let's create your first Pulumi program.
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language javascript %}}
 
@@ -55,6 +55,22 @@ $ pulumi new aws-go
 ```bash
 $ mkdir quickstart && cd quickstart
 $ pulumi new aws-csharp
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```bash
+$ mkdir quickstart && cd quickstart
+$ pulumi new aws-java
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```bash
+$ mkdir quickstart && cd quickstart
+$ pulumi new aws-yaml
 ```
 
 {{% /choosable %}}

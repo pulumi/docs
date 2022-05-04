@@ -9,7 +9,7 @@
                 <span class="rainbow-text" data-text={{index (.Params.hero.title) 0}}>{{ index (.Params.hero.title) 0 }}</span><br />
                 <span class="rainbow-text" data-text={{index (.Params.hero.title) 1}}>{{ index (.Params.hero.title) 1 }}</span>
             </h1>
-            <p class="text-center max-w-xl leading-7">{{ .Params.hero.description | markdownify }}</p>
+            <p class="text-center max-w-3xl leading-7">{{ .Params.hero.description | markdownify }}</p>
             <div class="mt-8 text-center">
                 <div class="pb-12">
                     <a class="home-hero-btn-primary" href="{{ relref . "/docs/get-started" }}">{{ .Params.hero.cta_text }}</a>
@@ -35,6 +35,7 @@
                     <div class="overlay-end"></div>
                 </div>
                 <pulumi-slot-machine
+                    image-class="h-20"
                     left-images="{{ delimit .Params.overview.logos.clouds "," }}"
                     center-images="{{ delimit .Params.overview.logos.languages "," }}"
                     right-images="{{ delimit .Params.overview.logos.identity "," }}"
@@ -84,13 +85,9 @@
                 </div>
 
                 <div class="w-full lg:w-1/2 flex items-start justify-center mt-12 lg:mt-0">
-                    <pulumi-chooser type="language" options="typescript,javascript,python,go,csharp">
+                    <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
                         <pulumi-choosable type="language" class="highlight" value="typescript">
                             <img src="/images/home/typescript.svg" alt="" />
-                        </pulumi-choosable>
-
-                        <pulumi-choosable type="language" class="highlight" value="javascript">
-                            <img src="/images/home/javascript.svg" alt="" />
                         </pulumi-choosable>
 
                         <pulumi-choosable type="language" class="highlight" value="python">
@@ -103,6 +100,14 @@
 
                         <pulumi-choosable type="language" class="highlight" value="csharp">
                             <img src="/images/home/c-sharp.svg" alt="" />
+                        </pulumi-choosable>
+
+                        <pulumi-choosable type="language" class="highlight" value="java">
+                            <img src="/images/home/java.svg" alt="" />
+                        </pulumi-choosable>
+
+                        <pulumi-choosable type="language" class="highlight" value="yaml">
+                            <img src="/images/home/yaml.svg" alt="" />
                         </pulumi-choosable>
                     </pulumi-chooser>
                 </div>
@@ -277,8 +282,8 @@
                 src="//www.youtube.com/embed/6f8KF6UGN7g?rel=0"
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
                 allowfullscreen=""
-                title="Introduction to Pulumi: Modern Infrastructure as Code"
-                srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/6f8KF6UGN7g?autoplay=1><img src='/images/home/youtube-preview.svg' alt='Introduction to Pulumi: Modern Infrastructure as Code'></a>"
+                title="Introduction to Pulumi: Universal Infrastructure as Code"
+                srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/6f8KF6UGN7g?autoplay=1><img src='/images/home/youtube-preview.svg' alt='Introduction to Pulumi: Universal Infrastructure as Code'></a>"
             ></iframe>
         </div>
     </section>

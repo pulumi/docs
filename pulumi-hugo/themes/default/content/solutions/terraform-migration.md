@@ -45,7 +45,7 @@ benefits:
           icon: gear
           icon_color: violet
           description: |
-            Pulumi increases the accessibility and reduces the complexity of the modern cloud. Developers can just use the standard programming languages they already know like Typescript, Python, C#, and Go as well as their existing tools like IDEs and test frameworks. Pulumi makes the cloud easily accessible to your developers without them having to wait on infrastructure from the operations teams. They can develop and release features faster.
+            Pulumi increases the accessibility and reduces the complexity of the modern cloud. Developers can just use the standard programming languages they already know like Typescript, Python, C#, Go, and Java as well as their existing tools like IDEs and test frameworks. Pulumi makes the cloud easily accessible to your developers without them having to wait on infrastructure from the operations teams. They can develop and release features faster.
 
         - title: Full support of the modern cloud
           icon: global

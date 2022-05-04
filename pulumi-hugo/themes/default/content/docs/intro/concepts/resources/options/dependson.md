@@ -14,7 +14,7 @@ Pulumi automatically tracks dependencies between resources when you supply an in
 
 This example demonstrates how to make `res2` dependent on `res1`, even if there is no property-level dependency:
 
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -54,6 +54,31 @@ res2, _ := NewMyResource(ctx, "res2", &MyResourceArgs{/*...*/}, pulumi.DependsOn
 var res1 = new MyResource("res1", new MyResourceArgs());
 var res2 = new MyResource("res2", new MyResourceArgs(),
     new CustomResourceOptions { DependsOn = { res1 } });
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var res1 = new MyResource("res1", new MyResourceArgs());
+var res2 = new MyResource("res2",
+    new MyResourceArgs(),
+    CustomResourceOptions.builder()
+        .dependsOn(res1)
+        .build());
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  res1:
+    type: MyResource
+  res2:
+    type: MyResource
+    options:
+      dependsOn: ${res1}
 ```
 
 {{% /choosable %}}

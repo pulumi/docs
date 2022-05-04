@@ -204,7 +204,7 @@ case_studies:
           name: Keith Redmond
           title:  VP of SaaS Engineering, Fenergo
           quote: |
-            Pulumi improved our time-to-market by removing cloud infrastructure as a roadblock to business innovation. Our developers rely on Pulumi’s Modern Infrastructure as Code and software engineering approach to build modern cloud applications, including the underlying infrastructure, using programming languages they understand. This has resulted in faster software delivery, closer collaboration and higher-quality deployments. Every developer is now empowered to move faster and spend more time on developing things that matter to our customers, which drives a competitive advantage for Fenergo.
+            Pulumi improved our time-to-market by removing cloud infrastructure as a roadblock to business innovation. Our developers rely on Pulumi’s Universal Infrastructure as Code and software engineering approach to build modern cloud applications, including the underlying infrastructure, using programming languages they understand. This has resulted in faster software delivery, closer collaboration and higher-quality deployments. Every developer is now empowered to move faster and spend more time on developing things that matter to our customers, which drives a competitive advantage for Fenergo.
 
 get_started:
     title: Get started with Cloud Engineering
