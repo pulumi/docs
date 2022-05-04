@@ -21,7 +21,7 @@ Today, we’re excited to announce a wave of innovation across the Pulumi projec
 
 Today’s launches include:
 
-* __Pulumi Java__: New support for Java across the entire Pulumi platform, providing full access to the rich software engineering ecosystem for Java and the JVM.
+* __Pulumi support for Java__: New support for Java across the entire Pulumi platform, providing full access to the rich software engineering ecosystem for Java and the JVM.
 * __Pulumi YAML__: A new simple YAML interface to the Pulumi platform, broadening the reach of Pulumi to use cases where a full blown programming language is not (yet!) necessary.
 * __Crosswalk for AWS in all Pulumi Languages__: Support for the popular Crosswalk for AWS packages (for ECS, VPC, API Gateway and EKS) in all Pulumi languages.
 * __AWS CDK on Pulumi__: Support for deploying AWS CDK constructs from within Pulumi infrastructure as code programs, enabling access to the broad array of higher-level components for AWS built by teams at AWS and the AWS CDK community.
@@ -35,17 +35,17 @@ These new features build on the Pulumi 3.0 foundation to offer a truly universal
 To learn more about all of today's new releases, join us at [PulumiUP]({{< relref "/pulumi-up" >}}), a free two day conference with deep dive sessions on new Pulumi features, panel sessions with Cloud Engineering leaders, and a wide range of technical workshops.
 {{% /notes %}}
 
-## Pulumi Java
+## Pulumi Support For Java
 
 Java is one of the most used programming languages in the world, with heavy usage in enterprises and organizations building for the cloud. The Java ecosystem has played a leading role in offering an incredibly rich ecosystem of software engineering capabilities - IDE tooling, strong typing, design patterns, build and package management, unit testing, and more.
 
 Pulumi now supports Java (in addition to existing support for TypeScript, Python, Go and .NET) and other languages targeting the JVM. All the existing Pulumi CLI workflows can now be used with Java, and all packages in the Pulumi Registry are now available as Java libraries in Maven Central.
 
-![IntelliJ IDEA with Pulumi Java Program](intellij.png)
+![IntelliJ IDE with Pulumi and Java Program](intellij.png)
 
-You can get started with Pulumi Java today in the [Pulumi Getting Started guide]({{< relref "/docs/get-started" >}}) and the [Pulumi Java language docs]({{< relref "/docs/intro/languages/java" >}}).
+You can get started with Pulumi using Java today in the [Pulumi Getting Started guide]({{< relref "/docs/get-started" >}}) and the [Pulumi and Java language docs]({{< relref "/docs/intro/languages/java" >}}).
 
-👉 Read more in the [Pulumi Java]({{< relref "./announcing-infrastructure-as-code-with-java-and-pulumi" >}}) blog post.
+👉 Read more in the [Pulumi and Java]({{< relref "./announcing-infrastructure-as-code-with-java-and-pulumi" >}}) blog post.
 
 ## Pulumi YAML
 
@@ -87,7 +87,7 @@ outputs:
 
 Access to Pulumi packages authored in other Pulumi languages means complexity can be pushed into reusable infrastructure components instead of copy-pasted in YAML. And when complexity does increase, Pulumi YAML supports a new `pulumi convert` command to eject into any other Pulumi programming language to manage the increased complexity via rich software engineering features in those languages.
 
-You can get started with Pulumi YAML today in the [Pulumi Getting Started]({{< relref "/docs/get-started" >}}) guide and the [Pulumi YAML language docs]({{< relref "/docs/intro/languages/java" >}}).
+You can get started with Pulumi YAML today in the [Pulumi Getting Started]({{< relref "/docs/get-started" >}}) guide and the [Pulumi YAML language docs]({{< relref "/docs/intro/languages/yaml" >}}).
 
 👉 Read more in the [Pulumi YAML blog post]({{< relref "./pulumi-yaml" >}}).
 
@@ -431,7 +431,7 @@ With support for more than 80 cloud and SaaS providers, Pulumi can be used acros
 
 To learn more about each of the new features - check out these blog posts with more details:
 
-* [Pulumi Java]({{< relref "./announcing-infrastructure-as-code-with-java-and-pulumi" >}})
+* [Pulumi and Java]({{< relref "./announcing-infrastructure-as-code-with-java-and-pulumi" >}})
 * [Pulumi YAML]({{< relref "./pulumi-yaml" >}})
 * [Pulumi Crosswalk for AWS support for all Pulumi Languages]({{< relref "./crosswalk-for-aws-all-languages" >}})
 * [AWS CDK on Pulumi]({{< relref "./aws-cdk-on-pulumi" >}})
