@@ -11,11 +11,11 @@ tags:
 
 One of our key goals with Pulumi’s Universal Infrastructure as Code platform is to offer access to the widest range of cloud infrastructure building blocks for use within your cloud engineering projects. Over the years, that has led us to support interoperating seamlessly with a variety of alternative infrastructure definition formats, like Helm, CloudFormation, Azure Resource Manager and Kubernetes YAML. Today we’re really excited to add support for AWS CDK constructs to the list!
 
+<!--more-->
+
 The AWS Cloud Development Kit (CDK) offers a large collection of higher-level libraries (“constructs”) for working with the AWS platform, built by service teams at AWS and by the AWS CDK community. These libraries are available in the same set of general purpose programming languages that Pulumi supports, with the primary difference being that AWS CDK compiles infrastructure programs into CloudFormation. This dependence on CloudFormation limits AWS CDK to being deployed via the CloudFormation deployment service which can slow down deployments and introduce some developer productivity friction due to the impedance mismatch between the program you write and the YAML it gets transpiled into.
 
 With the new [AWS CDK on Pulumi](https://github.com/pulumi/pulumi-cdk) project, available in public preview today, we are opening up the ability to use AWS CDK constructs from within a Pulumi deployment. For users already using AWS CDK, this provides Pulumi as a new option for orchestrating deployments in place of CloudFormation, offering improved deployment speed, integration with the full set of features of the Pulumi Cloud Engineering Platform (like [Policy as Code]({{< relref "/docs/guides/crossguard" >}}), [Audit Logs]({{< relref "/docs/intro/pulumi-service/audit-logs" >}}), Secrets, and much more). And for Pulumi users, they are now able to leverage and benefit from the decades of experience AWS teams and the AWS CDK community have invested in designing well-architected infrastructure patterns through these constructs.
-
-<!--more-->
 
 Even better, you can also now combine AWS CDK and Pulumi resources in a single Pulumi infrastructure as code project - passing outputs from Pulumi resources into AWS CDK constructs, and outputs from AWS CDK constructs into Pulumi resources. This allows you to work across the more than 80 cloud and SaaS providers that Pulumi offers access to, while still benefiting from high level libraries from the AWS CDK project, and without the hassles of a transpiler.
 
