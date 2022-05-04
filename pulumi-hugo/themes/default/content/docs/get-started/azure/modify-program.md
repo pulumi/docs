@@ -156,7 +156,7 @@ resources:
   staticWebsite:
     type: azure-native:resources:StorageAccountStaticWebsite
     properties:
-      accountName: ${storageAccount.name}
+      accountName: ${sa.name}
       resourceGroupName: ${resourceGroup.name}
       indexDocument: ./index.html
 ```
@@ -253,7 +253,7 @@ resources:
     type: azure-native:storage:Blob
     properties:
       resourceGroupName: ${resourceGroup.name}
-      accountName: ${storageAccount.name}
+      accountName: ${sa.name}
       containerName: ${staticWebsite.containerName}
       source:
         Fn::FileAsset: ./index.html

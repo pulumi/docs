@@ -274,7 +274,7 @@ description: A minimal Azure Native Pulumi YAML program
 resources:
   resourceGroup:
     type: azure-native:resources:ResourceGroup
-  storageAccount:
+  sa:
     type: azure-native:storage:StorageAccount
     properties:
       resourceGroupName: ${resourceGroup.name}
@@ -287,7 +287,7 @@ variables:
       Function: azure-native:storage:listStorageAccountKeys
       Arguments:
         resourceGroupName: ${resourceGroup.name}
-        accountName: ${storageAccount.name}
+        accountName: ${sa.name}
 outputs:
   primaryStorageKey: ${storageAccountKeys.keys[0].value}
 ```
