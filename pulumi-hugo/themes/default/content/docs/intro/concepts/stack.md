@@ -4,7 +4,7 @@ meta_desc: An in depth look at Pulumi Stacks and their usage.
 menu:
   intro:
     parent: concepts
-    weight: 2
+    weight: 3
 
 aliases: ["/docs/reference/stack/"]
 ---

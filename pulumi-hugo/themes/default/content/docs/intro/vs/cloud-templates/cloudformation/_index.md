@@ -141,7 +141,7 @@ Pulumi's approach is fundamentally different in that deployments are performed b
 
 Pulumi can also be embedded into application code and driven programmatically with [Automation API]({{< relref "/docs/guides/automation-api" >}}), enabling higher-order orchestration workflows and more dynamically managed infrastructure.
 
-To learn more about how Pulumi deploys infrastructure, see [Pulumi Architecture]({{< relref "/docs/intro/concepts/how-pulumi-works" >}}). To learn more about running Pulumi within the context of another program, see [Automation API]({{< relref "/docs/guides/automation-api" >}}).
+To learn more about how Pulumi deploys infrastructure, see [How Pulumi Works]({{< relref "/docs/intro/concepts/how-pulumi-works" >}}). To learn more about running Pulumi within the context of another program, see [Automation API]({{< relref "/docs/guides/automation-api" >}}).
 
 ### Embed within Application Code {#embedding}
 

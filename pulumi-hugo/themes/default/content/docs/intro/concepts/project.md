@@ -4,7 +4,7 @@ meta_desc: An in depth look at Pulumi projects and their usage.
 menu:
   intro:
     parent: concepts
-    weight: 1
+    weight: 2
 
 aliases: ["/docs/reference/project/"]
 ---

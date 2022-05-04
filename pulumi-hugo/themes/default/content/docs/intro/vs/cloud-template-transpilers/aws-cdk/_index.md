@@ -70,7 +70,7 @@ While both Pulumi and CDK support using general-purpose programming languages fo
 
 With CDK, the code you write is converted into AWS Cloud Assembly --- structured configuration consisting of CloudFormation template code and other assets (to be uploaded later to the CloudFormation service). With Pulumi, however, your code communicates at runtime with the deployment engine, which has deep support for multiple languages and integration with language runtimes. Overall, Pulumi is therefore able to deliver a far richer experience for developers, as its architecture unlocks many advanced capabilities (such as standard unit testing) that may not be possible with CDK.
 
-To learn more about languages and language runtimes in Pulumi, see [Pulumi Architecture]({{< relref "/docs/intro/concepts/how-pulumi-works" >}}).
+To learn more about languages and language runtimes in Pulumi, see [How Pulumi Works]({{< relref "/docs/intro/concepts/how-pulumi-works" >}}).
 
 ### State Management {#state}
 
@@ -113,7 +113,7 @@ The CDK CLI synthesizes CDK apps into CloudFormation templates and initiates dep
 Pulumi’s approach is fundamentally different in that deployments are performed within the CLI itself by the Pulumi engine. This results in a much tighter development loop, easier debugging, and simpler integration into CI/CD workflows because of the CLI’s ability to block until deployment is complete and return with a standard exit code indicating whether the deployment was successful.
 Moreover, with Automation API, Pulumi can be embedded into application code and driven programmatically, enabling higher-order orchestration workflows and dynamically managed infrastructure.
 
-To learn more about how Pulumi deploys infrastructure, see [Pulumi Architecture]({{< relref "/docs/intro/concepts/how-pulumi-works" >}}). To learn more about how to run Pulumi within the context of another program, see [Automation API]({{< relref "/docs/guides/automation-api" >}}).
+To learn more about how Pulumi deploys infrastructure, see [How Pulumi Works]({{< relref "/docs/intro/concepts/how-pulumi-works" >}}). To learn more about how to run Pulumi within the context of another program, see [Automation API]({{< relref "/docs/guides/automation-api" >}}).
 
 ### Embed within Application Code {#embedding}
 
