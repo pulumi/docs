@@ -7,7 +7,7 @@ menu:
     weight: 2
 ---
 
-Organization Access Tokens provide Enterprise Growth and Business Critical customers the opportunity to manage resources and stack operations for their organization independent of a single-user account.
+Organization Access Tokens provide Enterprise and Business Critical customers the opportunity to manage resources and stack operations for their organization independent of a single-user account.
 
 Leveraging Organization Access Tokens for your organization's automation delivers many benefits over Personal Access Tokens:
 
@@ -17,11 +17,12 @@ Leveraging Organization Access Tokens for your organization's automation deliver
 
 ## Creating an Organization Access Token
 
-From the organization’s homepage, follow the same steps as for a Personal Access Token:
+Organization tokens are available on trials, and Enterprise and Business Critical subscriptions.
+
+Navigate to your organization and then:
 
 1. Select **Settings**.
 1. Navigate to **Access Tokens**.
-    1. To be shown this menu option, you must be on an Enterprise Growth or Business Critical subscription/trial.
 1. Select **Create token**.
 
 An Organization Access Token must have a name that is unique among all Organization Access Tokens assigned to it. This allows tokens taking operations on behalf of your organization to be identifiable in the event that one is compromised. This name must be unique even among deleted tokens, in order to maintain the integrity of Audit Log Events which persist the token’s name (even for a deleted token) as part of the event (see below). Any other organization admin can delete this token; it is not owned by the admin which created it.
@@ -30,7 +31,7 @@ Creation of any Organization Access Token, and the user who performed it, is log
 
 ## Viewing Organization Access Tokens
 
-Organization Access Tokens are viewed by going to the organization’s Settings page, then selecting Access Tokens from the menu. As with Personal Access Tokens, this table displays all tokens belonging to your organization, and at what time they were last successfully used to carry out an operation. Only organization admins of an organization with an Enterprise Growth or Business Critical subscription will see access to this page.
+Organization Access Tokens are viewed by going to the organization’s Settings page, then selecting Access Tokens from the menu. As with Personal Access Tokens, this table displays all tokens belonging to your organization, and at what time they were last successfully used to carry out an operation. Only organization admins of an organization with an Enterprise or Business Critical subscription will see access to this page.
 
 ## Deleting an Organization Access Token
 
@@ -57,30 +58,36 @@ Organization Access Tokens behave like an organization member with [stack write 
 
 See the Pulumi [Service REST API docs](https://www.pulumi.com/docs/reference/service-rest-api/) for more information about each API endpoint.
 
+#### Stacks
+
 | Action | Org Token Access |
-|--------|------|
-| Stacks |
 |--------|------|
 | List Stacks | ✅ |
 | Get Stack | ✅ |
 | Get Stack State | ✅ |
 | Transfer Stack |  |
 | Delete Stack | ✅ |
-|--------|------|
-| Stack Tags |
+
+#### Stack Tags
+
+| Action | Org Token Access |
 |--------|------|
 | Get Stack Tags | ✅ |
 | Set Stack Tag | ✅ |
 | Delete Stack Tag | ✅ |
-|--------|------|
-| Stack Updates |
+
+#### Stack Updates
+
+| Action | Org Token Access |
 |--------|------|
 | List Stack Updates | ✅ |
 | Get Update Status | ✅ |
 | List Update Events | ✅ |
 | List Previews | ✅ |
-|--------|------|
-| Organizations |
+
+#### Organizations
+
+| Action | Org Token Access |
 |--------|------|
 | List Users | ✅ |
 | Add User to Organization |  |
@@ -99,8 +106,10 @@ See the Pulumi [Service REST API docs](https://www.pulumi.com/docs/reference/ser
 | Get Webhook | ✅ |
 | Ping Webhook | ✅ |
 | List Webhooks Deliveries | ✅ |
-|--------|------|
-| Audit Logs |
+
+#### Audit Logs
+
+| Action | Org Token Access |
 |--------|------|
 | Get Audit Log Events (JSON) | ✅ |
 | Export Audit Log Events (CSV or CEF) | ✅ |
