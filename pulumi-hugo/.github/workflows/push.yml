@@ -6,6 +6,8 @@ on:
 jobs:
   build:
     name: Build
+    # Only run this step on the upstream repo.
+    if: github.repository == 'pulumi/pulumi-hugo'
     runs-on: ubuntu-18.04
     steps:
       - name: Install Node

@@ -1,4 +1,16 @@
 [[releases]]
+date = "4th May 2022"
+title = "Pulumi Infrastructure as Code Goes Universal"
+summary = "Pulumi CrossCode and support for new languages provides universal authoring of infrastructure using all popular programming languages and universal translation from any cloud format"
+url = "https://info.pulumi.com/press-release/pulumi-universal-iac"
+
+[[releases]]
+date = "4th May 2022"
+title = "Pulumi Named the Infrastructure-as-Code Product to Watch in 2022/23 by Enterprise Management Associates"
+summary = "Leading IT industry analysis firm cites Pulumi sharply outgrowing other Infrastructure as Code platforms along with native Kubernetes and Helm support, continuous compliance, increased developer productivity and consistency across languages and clouds as drivers for recognition"
+url = "https://info.pulumi.com/press-release/pulumi-ema-product-to-watch"
+
+[[releases]]
 date = "3rd March 2022"
 title = "Pulumi Business Critical Edition Addresses Rising Demand for Enterprise Modernization through Infrastructure as Code"
 summary = "Pulumi Business Critical Edition Addresses Rising Demand for Enterprise Modernization through Infrastructure as Code"
