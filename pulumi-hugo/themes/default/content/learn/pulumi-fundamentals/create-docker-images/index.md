@@ -115,8 +115,8 @@ repositories {
     mavenLocal()
 }
 
-var pulumiJavaSdkVersion = System.getenv("PULUMI_JAVA_SDK_VERSION") ?: "0.0.1"
-var pulumiDockerSdkVersion = System.getenv("PULUMI_DOCKER_PROVIDER_SDK_VERSION") ?: "3.1.0"
+var pulumiJavaSdkVersion = System.getenv("PULUMI_JAVA_SDK_VERSION") ?: "0.1.0"
+var pulumiDockerSdkVersion = System.getenv("PULUMI_DOCKER_PROVIDER_SDK_VERSION") ?: "3.2.0"
 
 dependencies {
     implementation "com.pulumi:pulumi:$pulumiJavaSdkVersion"
@@ -134,6 +134,7 @@ application {
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
+
 {{% /choosable %}}
 
 Back inside your Pulumi program, let's build your first Docker image. Remember
@@ -184,7 +185,6 @@ backend = docker.RemoteImage("backend",
 package my_first_app;
 
 import com.pulumi.Context;
-import com.pulumi.Exports;
 import com.pulumi.Pulumi;
 import com.pulumi.docker.RemoteImage;
 import com.pulumi.docker.RemoteImageArgs;
@@ -196,7 +196,7 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    private static Exports stack(Context ctx) {
+    private static void stack(Context ctx) {
 
         final var stackName = ctx.stackName();
 
@@ -207,6 +207,8 @@ public class App {
                         .name(String.format("pulumi/tutorial-pulumi-fundamentals-%s:latest",backendImageName))
                         .build()
         );
+    }
+}
 ```
 
 {{% /choosable %}}
@@ -459,7 +461,6 @@ mongo_image = docker.RemoteImage("mongo",
 package my_first_app;
 
 import com.pulumi.Context;
-import com.pulumi.Exports;
 import com.pulumi.Pulumi;
 import com.pulumi.docker.RemoteImage;
 import com.pulumi.docker.RemoteImageArgs;
@@ -471,7 +472,7 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    private static Exports stack(Context ctx) {
+    private static void stack(Context ctx) {
 
         final var stackName = ctx.stackName();
 
@@ -497,6 +498,8 @@ public class App {
                         .name("pulumi/tutorial-pulumi-fundamentals-database-local:latest")
                         .build()
         );
+    }
+}
 ```
 
 {{% /choosable %}}

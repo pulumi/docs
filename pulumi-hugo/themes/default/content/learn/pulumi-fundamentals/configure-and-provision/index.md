@@ -66,7 +66,7 @@ mongo_port = config.require_int("mongoPort")
 
 {{% choosable language java %}}
 
-These configuration declarations go in the `Exports stack()` private static method:
+These configuration declarations go in the static `stack()` method:
 
 ```java
 var config = ctx.config();
@@ -174,7 +174,6 @@ mongo_image = docker.RemoteImage("mongo",
 package my_first_app;
 
 import com.pulumi.Context;
-import com.pulumi.Exports;
 import com.pulumi.Pulumi;
 import com.pulumi.docker.RemoteImage;
 import com.pulumi.docker.RemoteImageArgs;
@@ -186,7 +185,7 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    private static Exports stack(Context ctx) {
+    private static void stack(Context ctx) {
         var config = ctx.config();
         var frontendPort = config.requireInteger("frontendPort");
         var backendPort = config.requireInteger("backendPort");
@@ -316,6 +315,20 @@ network = docker.Network("network", name=f"services-{stack}")
 {{% /choosable %}}
 
 {{% choosable language java %}}
+
+Add these imports to the top:
+
+```java
+import com.pulumi.docker.Network;
+import com.pulumi.docker.NetworkArgs;
+import com.pulumi.docker.Container;
+import com.pulumi.docker.ContainerArgs;
+import com.pulumi.docker.inputs.ContainerNetworksAdvancedArgs;
+import com.pulumi.docker.inputs.ContainerPortArgs;
+import com.pulumi.resources.CustomResourceOptions;
+```
+
+Add this code at the bottom:
 
 ```java
 // Set up a Docker Network
@@ -488,6 +501,7 @@ the command line:
 pulumi config set mongoHost mongodb://mongo:27017
 pulumi config set database cart
 pulumi config set nodeEnvironment development
+pulumi config set protocol http://
 ```
 
 Then, we need to add them to the top of our program with the rest of the
@@ -522,7 +536,7 @@ protocol = config.require("protocol")
 ```java
 var mongoHost = config.require("mongoHost");
 var database = config.require("database");
-var nodeEnvironment = config.require("node_environment");
+var nodeEnvironment = config.require("nodeEnvironment");
 var protocol = config.require("protocol");
 ```
 
@@ -975,7 +989,6 @@ frontend_container = docker.Container("frontend_container",
 package my_first_app;
 
 import com.pulumi.Context;
-import com.pulumi.Exports;
 import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
 import com.pulumi.docker.RemoteImage;
@@ -995,14 +1008,14 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    private static Exports stack(Context ctx) {
+    private static void stack(Context ctx) {
         var config = ctx.config();
         var frontendPort = config.requireInteger("frontendPort");
         var backendPort = config.requireInteger("backendPort");
         var mongoPort = config.requireInteger("mongoPort");
         var mongoHost = config.require("mongoHost");
         var database = config.require("database");
-        var nodeEnvironment = config.require("node_environment");
+        var nodeEnvironment = config.require("nodeEnvironment");
         var protocol = config.require("protocol");
 
         final var stackName = ctx.stackName();
