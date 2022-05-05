@@ -154,11 +154,11 @@ To start, open `Pulumi.yaml` and add the following right after the storage accou
 resources:
   # ...
   staticWebsite:
-    type: azure-native:resources:StorageAccountStaticWebsite
+    type: azure-native:storage:StorageAccountStaticWebsite
     properties:
       accountName: ${sa.name}
       resourceGroupName: ${resourceGroup.name}
-      indexDocument: ./index.html
+      indexDocument: index.html
 ```
 
 {{% /choosable %}}
@@ -258,6 +258,8 @@ resources:
       source:
         Fn::FileAsset: ./index.html
       contentType: text/html
+      blobName: index.html
+      type: block
 ```
 
 {{% /choosable %}}
