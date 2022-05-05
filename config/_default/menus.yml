@@ -120,4 +120,4 @@ reference:
   - name: Pulumi YAML
     parent: Pulumi SDK
     url: https://github.com/pulumi/pulumi-yaml#spec
-    weight: 5
+    weight: 6
