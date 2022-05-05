@@ -59,4 +59,20 @@ Choose your language runtime to view the API documentation for the Pulumi SDK:
             <img class="h-12 mx-auto inline" src="/logos/tech/visual-basic.svg" alt="Visual Basic">
         </a>
     </div>
+    <div class="pb-4 md:pr-4 md:w-1/2">
+        <a class="tile p-8 pb-16 text-center" href="/docs/reference/pkg/java">
+            <p class="mx-auto text-xl font-semibold link">
+                Java
+            </p>
+            <img class="h-12 mx-auto inline" src="/logos/tech/java.svg" alt="Java">
+        </a>
+    </div>
+    <div class="pb-4 md:w-1/2">
+        <a class="tile p-8 pb-16 text-center" href="https://github.com/pulumi/pulumi-yaml/#spec">
+            <p class="mx-auto text-xl font-semibold link">
+                YAML
+            </p>
+            <img class="h-12 mx-auto inline" src="/logos/tech/yaml.svg" alt="Yaml">
+        </a>
+    </div>
 </div>
