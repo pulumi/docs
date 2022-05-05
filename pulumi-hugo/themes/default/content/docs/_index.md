@@ -8,11 +8,11 @@ menu:
         weight: 3
 ---
 
-Welcome to the Pulumi documentation! These pages cover what Pulumi is, how to get started using it, and reference materials for its features and supported cloud providers.
+Welcome to the Pulumi documentation! These pages cover what Pulumi is, how to get started using it, and reference materials for its features.
 
 ### What is Pulumi?
 
-Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> infrastructure as code tool for creating, deploying, and managing cloud infrastructure. Pulumi works with traditional infrastructure like VMs, networks, and databases, in addition to modern architectures, including containers, Kubernetes clusters, and serverless functions. Pulumi supports dozens of public, private, and hybrid cloud service providers.
+Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> infrastructure as code tool for creating, deploying, and managing cloud infrastructure. Pulumi works with traditional infrastructures like VMs, networks, and databases, in addition to modern architectures, including containers, Kubernetes clusters, and serverless functions. Pulumi supports 70+ public, private, and hybrid cloud service providers.
 
 <div class="flex justify-center py-6">
     <a class="btn btn-lg mx-1 my-1" href="{{< relref "/docs/get-started" >}}">Get Started</a>
@@ -48,8 +48,7 @@ Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open sou
     <div class="md:mx-8 md:w-1/3">
         <h3 class="no-anchor">Alternatives</h3>
         <p class="text-sm text-gray-700">
-            <a href="{{< relref "/docs/intro/vs" >}}">Other approaches</a> use YAML,
-            JSON, or proprietary domain-specific languages (DSLs) that you need to
+            <a href="{{< relref "/docs/intro/vs" >}}">Other approaches</a> use proprietary domain-specific languages (DSLs) that you need to
             master and train your team to use. These alternative approaches reinvent
             familiar concepts like sharing and reuse, don't tap into existing
             ecosystems, and are often different for every cloud that you need to target.
