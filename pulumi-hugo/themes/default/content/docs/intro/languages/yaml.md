@@ -88,6 +88,7 @@ project and set up starter resources for the chosen cloud. The `yaml` template i
 - `pulumi new aws-yaml`: creates a starter AWS Pulumi YAML project
 - `pulumi new azure-yaml`: creates a starter Azure Pulumi YAML project
 - `pulumi new gcp-yaml`: creates a starter Google Cloud Pulumi YAML project
+- `pulumi new kubernetes-yaml`: creates a starter Kubernetes Pulumi YAML project
 
 ## Pulumi Programming Model
 
