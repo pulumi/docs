@@ -114,7 +114,7 @@ reference:
 
   - name: Java
     parent: Pulumi SDK
-    url: /docs/reference/pkg/java
+    url: /docs/reference/pkg/java/
     weight: 5
 
   - name: Pulumi YAML
