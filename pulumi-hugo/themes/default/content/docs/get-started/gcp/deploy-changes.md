@@ -371,12 +371,11 @@ public Output<string> BucketEndpoint { get; set; }
 
 Now that your `index.html` is in your bucket, modify the program to have the bucket serve `index.html` as a static website.
 
-First, add the `BucketArgs`, `BucketIAMBinding`, `BucketIAMBindingArgs`, and `BucketWebsiteArgs` classes to the list of imports.
+First, add the `BucketArgs`,  `BucketWebsiteArgs`, `BucketIAMBinding`, and `BucketIAMBindingArgs` classes to the list of imports.
 
 ```java
 // ...
 import com.pulumi.gcp.storage.BucketArgs;
-import com.pulumi.gcp.storage.BucketWebsiteArgs;
 import com.pulumi.gcp.storage.inputs.BucketWebsiteArgs;
 import com.pulumi.gcp.storage.BucketIAMBinding;
 import com.pulumi.gcp.storage.BucketIAMBindingArgs;
@@ -451,7 +450,6 @@ public class App {
         Pulumi.run(ctx -> {
             // ...
             ctx.export("bucketEndpoint", Output.format("http://storage.googleapis.com/%s/%s", bucket.name(), bucketObject.name()));
-            return ctx.exports();
         });
 ```
 
@@ -480,7 +478,7 @@ resources:
   my-bucket-binding:
     type: gcp:storage:BucketIAMBinding
     properties:
-      bucket: ${bucket.name}
+      bucket: ${my-bucket.name}
       role: "roles/storage.objectViewer"
       members: ["allUsers"]
 ```

@@ -168,7 +168,6 @@ public class App {
                                     .location("US")
                                     .build());
             ctx.export("bucketName", bucket.url());
-            return ctx.exports();
         });
     }
 }
@@ -179,16 +178,20 @@ public class App {
 {{% choosable language yaml %}}
 
 ```yaml
-name: yaml
+name: quickstart
 runtime: yaml
 description: A minimal Google Cloud Pulumi YAML program
+
 resources:
-  bucket:
+  # Create a GCP resource (Storage Bucket)
+  my-bucket:
     type: gcp:storage:Bucket
     properties:
       location: US
+
 outputs:
-  bucketName: ${bucket.url}
+  # Export the DNS name of the bucket
+  bucketName: ${my-bucket.url}
 ```
 
 {{% /choosable %}}
@@ -240,7 +243,6 @@ public Output<string> BucketName { get; set; }
 
 ```java
 ctx.export("bucketName", bucket.url());
-return ctx.exports();
 ```
 
 {{% /choosable %}}
@@ -249,7 +251,7 @@ return ctx.exports();
 
 ```yaml
 outputs:
-  bucketName: ${bucket.url}
+  bucketName: ${my-bucket.url}
 ```
 
 {{% /choosable %}}

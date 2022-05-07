@@ -295,13 +295,16 @@ public class App {
 
 ```yaml
 name: quickstart
-description: A minimal Kubernetes Pulumi YAML program
 runtime: yaml
+description: A minimal Kubernetes Pulumi YAML program
+
 variables:
   appLabels:
     app: nginx
+
 resources:
   deployment:
+    name: nginx
     type: kubernetes:apps/v1:Deployment
     properties:
       spec:
@@ -315,6 +318,7 @@ resources:
             containers:
               - name: nginx
                 image: nginx
+
 outputs:
   name: ${deployment.metadata.name}
 ```

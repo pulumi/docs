@@ -155,7 +155,7 @@ public class App {
                 .bucket(bucket.name())
                 .source(new FileAsset("index.html"))
                 .build()
-            )
+            );
 
             // ctx.export(...
         });
@@ -173,7 +173,7 @@ In {{< langfile >}}, create the `BucketObject` right below the bucket itself.
 resources:
   # ...
   index-object:
-    type: gcp.storage:BucketObject
+    type: gcp:storage:BucketObject
     properties:
       bucket: ${my-bucket}
       source:

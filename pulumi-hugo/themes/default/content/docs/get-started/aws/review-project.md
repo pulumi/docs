@@ -179,10 +179,13 @@ public class App {
 ```yaml
 name: quickstart
 runtime: yaml
+description: A minimal AWS Pulumi YAML program
+
 resources:
   # Create an AWS resource (S3 Bucket)
   my-bucket:
     type: aws:s3:Bucket
+
 outputs:
   # Export the name of the bucket
   bucketName: ${my-bucket.id}

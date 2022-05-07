@@ -131,6 +131,8 @@ import com.pulumi.azurenative.storage.StorageAccountStaticWebsite;
 import com.pulumi.azurenative.storage.StorageAccountStaticWebsiteArgs;
 import com.pulumi.azurenative.storage.Blob;
 import com.pulumi.azurenative.storage.BlobArgs;
+import com.pulumi.azurenative.storage.outputs.EndpointsResponse;
+import com.pulumi.asset.FileAsset;
 ```
 
 Next, add the following right after the storage account creation:
@@ -247,8 +249,8 @@ var index_html = new Blob("index.html", BlobArgs.builder()
 
 ```yaml
 resources:
-# ...
-# Upload the file
+  # ...
+  # Upload the file
   index-html:
     type: azure-native:storage:Blob
     properties:
@@ -332,7 +334,7 @@ Finally, at the end of `Pulumi.yaml` in the `outputs`, export the resulting stor
 ```yaml
 outputs:
   # ...
-  staticEndpoint: ${storageAccount.primaryEndpoints.web}
+  staticEndpoint: ${sa.primaryEndpoints.web}
 ```
 
 {{% /choosable %}}

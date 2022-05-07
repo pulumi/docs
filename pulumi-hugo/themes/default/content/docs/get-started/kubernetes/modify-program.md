@@ -368,16 +368,13 @@ import com.pulumi.kubernetes.core_v1.enums.ServiceSpecType;
 import com.pulumi.kubernetes.core_v1.inputs.*;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
-
 import java.util.Map;
-
 
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
             var config = ctx.config();
-            var isMinikube = config.getBoolean("isMinikube").orElse(false); // Double check
-
+            var isMinikube = config.requireBoolean("isMinikube");
             var labels = Map.of("app", "nginx");
 
             var deployment = new Deployment("nginx", DeploymentArgs.builder()
@@ -400,7 +397,6 @@ public class App {
                                 .build())
                             .build())
                         .build())
-
                     .build())
                 .build());
 
@@ -422,13 +418,15 @@ public class App {
                     .build())
                 .build());
 
-            ctx.export("ip", isMinikube ?
-                frontend.spec().applyValue(spec -> spec.get().clusterIP()) : Output.tuple(frontend.status(), frontend.spec()).applyValue(t -> {
-                var status = t.t1;
-                var spec = t.t2;
-                var ingress = status.get().loadBalancer().get().ingress().get(0);
-                return ingress.ip().orElse(ingress.hostname().orElse(spec.get().clusterIP().get()));
-            }));
+            ctx.export("ip", isMinikube
+                ? frontend.spec().applyValue(spec -> spec.get().clusterIP())
+                : Output.tuple(frontend.status(), frontend.spec()).applyValue(t -> {
+                    var status = t.t1;
+                    var spec = t.t2;
+                    var ingress = status.get().loadBalancer().get().ingress().get(0);
+                    return ingress.ip().orElse(ingress.hostname().orElse(spec.get().clusterIP().get()));
+                })
+            );
         });
     }
 }
@@ -440,11 +438,13 @@ public class App {
 
 ```yaml
 name: quickstart
-description: A minimal Kubernetes Pulumi YAML program
 runtime: yaml
+description: A minimal Kubernetes Pulumi YAML program
+
 variables:
   appLabels:
     app: nginx
+
 resources:
   deployment:
     type: kubernetes:apps/v1:Deployment
@@ -472,8 +472,9 @@ resources:
           - port: 80
             targetPort: 80
             protocol: TCP
+
 outputs:
-  name: ${service.spec.clusterIP}
+  ip: ${service.spec.clusterIP}
 ```
 
 {{% /choosable %}}

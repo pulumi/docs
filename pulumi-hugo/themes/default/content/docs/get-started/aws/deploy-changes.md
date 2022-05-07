@@ -369,7 +369,7 @@ public class App {
 
 {{% choosable language yaml %}}
 
-Now that your `index.html` is in your bucket, modify the program to have the bucket serve `index.html` as a static website. To do that, set the bucket's `website` property, passing the filename to use as an `indexDocument`.
+Now that your `index.html` is in your bucket, modify the program to have the bucket serve `index.html` as a static website. To do that, set the bucket's `website` property, passing the filename to use as an `indexDocument`:
 
 ```yaml
 resources:
