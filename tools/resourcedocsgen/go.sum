@@ -673,13 +673,13 @@ github.com/pulumi/pulumi-yaml v0.3.0 h1:I7aW6Qm/1EsYDJJDJ0DLrLvpOlpmjbAgTnYo8pZl
 github.com/pulumi/pulumi-yaml v0.3.0/go.mod h1:6pQ0QcQqLYbq+i5vYjir/gDnpCvTkKcHqB5+mt0d3So=
 github.com/pulumi/pulumi/pkg/v3 v3.26.0/go.mod h1:L9E+MXe05AbrSmX1GjX3jIrVNpE2RrauKEjME+BNzi4=
 github.com/pulumi/pulumi/pkg/v3 v3.31.1-0.20220429232336-81582c4dcb93/go.mod h1:bO/BHZJoG2Mm8C3dxP414vLPvjxFfsetPE3Ep7Ffgro=
-github.com/pulumi/pulumi/pkg/v3 v3.31.2-0.20220504080053-86c015b9e64a h1:akW2Qw2g/wjBibxB8SM/CPB6qnSOmeoVsAB0XJe8fM8=
-github.com/pulumi/pulumi/pkg/v3 v3.31.2-0.20220504080053-86c015b9e64a/go.mod h1:cxbumszeFmK4a9wAVJrcrJnXVd8F8uIg24OVD1SCIEI=
+github.com/pulumi/pulumi/pkg/v3 v3.32.2-0.20220506231925-70e30c95b4fa h1:6XZay0mUGZ++tqLvevW+oKxY1P2DfZNNGD9jLY9shRo=
+github.com/pulumi/pulumi/pkg/v3 v3.32.2-0.20220506231925-70e30c95b4fa/go.mod h1:TNPDg+H4Mzy5ldOJNpkzqPYTuYH8ehorPFtnQd3pRUU=
 github.com/pulumi/pulumi/sdk/v3 v3.26.0/go.mod h1:VsxW+TGv2VBLe/MeqsAr9r0zKzK/gbAhFT9QxYr24cY=
 github.com/pulumi/pulumi/sdk/v3 v3.28.0/go.mod h1:Oe6AnW5MjJE5X2UJeqeXm1Al7qahdLVhIPeiKuoqxAw=
 github.com/pulumi/pulumi/sdk/v3 v3.31.0/go.mod h1:hGo/+AL1L4sPL9Ukd/i5bNFM3WHs3dHcA+GKEW7M3RA=
-github.com/pulumi/pulumi/sdk/v3 v3.31.1 h1:2DvdxfBj5YBCxnIX5b54mOJtXR39efonWe0LBOHcTZ8=
-github.com/pulumi/pulumi/sdk/v3 v3.31.1/go.mod h1:hGo/+AL1L4sPL9Ukd/i5bNFM3WHs3dHcA+GKEW7M3RA=
+github.com/pulumi/pulumi/sdk/v3 v3.32.1 h1:g7bcNmaL1/gKHFL35cWLpMad0GSIWAcj/1KDK0hy7bU=
+github.com/pulumi/pulumi/sdk/v3 v3.32.1/go.mod h1:hGo/+AL1L4sPL9Ukd/i5bNFM3WHs3dHcA+GKEW7M3RA=
 github.com/rivo/uniseg v0.2.0 h1:S1pD9weZBuJdFmowNwbpi7BJ8TNftyUImj/0WQi72jY=
 github.com/rivo/uniseg v0.2.0/go.mod h1:J6wj4VEh+S6ZtnVlnTBMWIodfgj8LQOQFoIToxlJtxc=
 github.com/rjeczalik/notify v0.9.2 h1:MiTWrPj55mNDHEiIX5YUSKefw/+lCQVoAFmD6oQm5w8=
