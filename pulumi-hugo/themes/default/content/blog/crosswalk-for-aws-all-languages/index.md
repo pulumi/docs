@@ -51,7 +51,7 @@ Let’s walk through some examples of using Crosswalk for AWS for common use cas
 
 Many Pulumi customers deploy containerized workloads on AWS with ECS or Fargate. AWSx significantly simplifies deploying your application to these managed container services. With just a few lines of code and tens of seconds to deploy, our container is running in production in AWS.
 
-{{< chooser language "typescript,python,csharp" >}}
+{{< chooser language "typescript,python,csharp,java,yaml" >}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -192,6 +192,159 @@ class Program
 ```
 
 {{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_awsx as awsx
+
+repo = awsx.ecr.Repository("my-repo");
+
+image = awsx.ecr.Image("image",
+                       repository_url=repo.url,
+                       path="./app")
+
+
+cluster = aws.ecs.Cluster("default-cluster")
+
+lb = awsx.lb.ApplicationLoadBalancer("nginx-lb")
+
+service = awsx.ecs.FargateService("service",
+                                  cluster=cluster.arn,
+                                  task_definition_args=awsx.ecs.FargateServiceTaskDefinitionArgs(
+                                      containers={
+                                          "nginx": awsx.ecs.TaskDefinitionContainerDefinitionArgs(
+                                              image=image.image_uri,
+                                              memory=128,
+                                              port_mappings=[awsx.ecs.TaskDefinitionPortMappingArgs(
+                                                  container_port=80,
+                                                  target_group=lb.default_target_group,
+                                              )]
+                                          )
+                                      }
+                                  ))
+
+pulumi.export("url", lb.load_balancer.dns_name)
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.aws.ecs.Cluster;
+import com.pulumi.aws.lb.LoadBalancer;
+import com.pulumi.awsx.ecr.ImageArgs;
+import com.pulumi.awsx.ecr.Repository;
+import com.pulumi.awsx.ecr.Image;
+import com.pulumi.awsx.ecs.FargateService;
+import com.pulumi.awsx.ecs.FargateServiceArgs;
+import com.pulumi.awsx.ecs.inputs.FargateServiceTaskDefinitionArgs;
+import com.pulumi.awsx.ecs.inputs.TaskDefinitionContainerDefinitionArgs;
+import com.pulumi.awsx.ecs.inputs.TaskDefinitionPortMappingArgs;
+import com.pulumi.awsx.lb.ApplicationLoadBalancer;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            // Create a repository.
+            var repo = new Repository("my-repo");
+
+            // Build an image from the "./app" directory (relative to our project and containing Dockerfile),
+            // and publish it to our ECR repository provisioned above.
+            var image = new Image("image", ImageArgs.builder()
+                    .repositoryUrl(repo.url())
+                    .path("./app")
+                    .build()
+            );
+
+            // Create an ECS Cluster
+            var cluster = new Cluster("default-cluster");
+
+            // // Create a load balancer on port 80 and spin up two instances of Nginx.
+            var lb = new ApplicationLoadBalancer("nginx-lb");
+
+            new FargateService("my-service", FargateServiceArgs.builder()
+                    .cluster(cluster.arn())
+                    .taskDefinitionArgs(FargateServiceTaskDefinitionArgs.builder()
+                            .container(TaskDefinitionContainerDefinitionArgs.builder()
+                                    .image(image.imageUri())
+                                    .cpu(521)
+                                    .memory(128)
+                                    .essential(true)
+                                    .portMappings(TaskDefinitionPortMappingArgs.builder()
+                                            .containerPort(80)
+                                            .targetGroup(lb.defaultTargetGroup())
+                                            .build()
+                                    )
+                                    .build())
+                            .build())
+                    .build()
+            );
+
+            // Export the load balancer's address so that it's easy to access.
+            ctx.export("load-balancer-dns-name", lb.loadBalancer().applyValue(LoadBalancer::dnsName));
+        });
+    }
+}
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: awsx-containers-yaml
+runtime: yaml
+description: A minimal AWS Pulumi YAML program
+
+resources:
+  # Create an AWS resource (S3 Bucket)
+  bucket:
+    type: aws:s3:Bucket
+  # Create a repository
+  repo:
+    type: awsx:ecr:Repository
+  # Build an image from the "./app" directory (relative to our project and
+  # containing Dockerfile), and publish it to our ECR repository provisioned above.
+  image:
+    type: awsx:ecr:Image
+    properties:
+      repositoryUrl: ${repo.url}
+      path: "./app"
+  # Create an ECS Cluster
+  cluster:
+    type: aws:ecs:Cluster
+  # Create a load balancer on port 80 and spin up two instances of Nginx.
+  lb:
+    type: awsx:lb:ApplicationLoadBalancer
+  service:
+    type: awsx:ecs:FargateService
+    properties:
+      cluster: ${cluster.arn}
+      taskDefinitionArgs:
+        container:
+          image: ${image.imageUri}
+          cpu: 512
+          memory: 128
+          essential: true
+          portMappings:
+            - containerPort: 80
+              targetGroup: ${lb.defaultTargetGroup}
+
+outputs:
+  # Export the name of the bucket
+  url: ${lb.loadBalancer.dnsName}
+
+```
+
+{{% /choosable %}}
 
 {{% /chooser %}}
 
@@ -201,7 +354,7 @@ Using ECS, Fargate, ECR and ALB, we get a robust production-ready container depl
 
 To adopt a security posture using best practices, we may want to move our cluster into a custom VPC, and run the containers in private subnets. We can define and configure our VPC:
 
-{{< chooser language "typescript,python,csharp" >}}
+{{< chooser language "typescript,python,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
@@ -257,6 +410,50 @@ class Program
 {
     static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
 }
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.awsx.ec2.Vpc;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var vpc = new Vpc("custom");
+
+            ctx.export("vpcId", vpc.vpcId());
+            ctx.export("privateSubnetIds", vpc.privateSubnetIds());
+            ctx.export("publicSubnetIds", vpc.publicSubnetIds());
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: awsx-networking-yaml
+runtime: yaml
+description: A minimal AWS Pulumi YAML program
+
+resources:
+  # Allocate a new VPC with the default settings:
+  vpc:
+    type: awsx:ec2:Vpc
+
+outputs:
+  vpcId: ${vpc.VpcId}
+  privateSubnetIds: ${vpc.privateSubnetIds}
+  publicSubnetIds: ${vpc.publicSubnetIds}
+
 ```
 
 {{% /choosable %}}
@@ -431,79 +628,95 @@ class MyStack : Stack
 package main
 
 import (
-	apigateway "github.com/pulumi/pulumi-aws-apigateway/sdk/go/apigateway"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ apigateway "github.com/pulumi/pulumi-aws-apigateway/sdk/go/apigateway"
+ "github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+ "github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+ "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
+ pulumi.Run(func(ctx *pulumi.Context) error {
 
-		role, err := iam.NewRole(ctx, "lambda-role", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(`{
-				"Version": "2012-10-17",
-				"Statement": [{
-					"Effect": "Allow",
-					"Principal": { "Service": "lambda.amazonaws.com" },
-					"Action": "sts:AssumeRole"
-				}]
-			}`),
-		})
-		if err != nil {
-			return err
-		}
+  role, err := iam.NewRole(ctx, "lambda-role", &iam.RoleArgs{
+   AssumeRolePolicy: pulumi.String(`{
+    "Version": "2012-10-17",
+    "Statement": [{
+     "Effect": "Allow",
+     "Principal": { "Service": "lambda.amazonaws.com" },
+     "Action": "sts:AssumeRole"
+    }]
+   }`),
+  })
+  if err != nil {
+   return err
+  }
 
-		policy, err := iam.NewRolePolicy(ctx, "lambda-policy", &iam.RolePolicyArgs{
-			Role: role.ID(),
-			Policy: pulumi.String(`{
-				"Version": "2012-10-17",
-				"Statement": [{
-					"Action": ["logs:*", "cloudwatch:*"],
-					"Resource": "*",
-					"Effect": "Allow"
-				}]
-			}`),
-		})
-		if err != nil {
-			return err
-		}
+  policy, err := iam.NewRolePolicy(ctx, "lambda-policy", &iam.RolePolicyArgs{
+   Role: role.ID(),
+   Policy: pulumi.String(`{
+    "Version": "2012-10-17",
+    "Statement": [{
+     "Action": ["logs:*", "cloudwatch:*"],
+     "Resource": "*",
+     "Effect": "Allow"
+    }]
+   }`),
+  })
+  if err != nil {
+   return err
+  }
 
-		// Closure serialization is not supported in multi-lang components
-		// so we need to provide a handler function explicitly from the file-system.
-		// Refer to https://github.com/pulumi/pulumi-aws-apigateway/tree/main/examples/simple-go/handler
-		// for an example handler.
-		f, err := lambda.NewFunction(ctx, "lambda", &lambda.FunctionArgs{
-			Runtime: lambda.RuntimePython3d8,
-			Code: pulumi.NewAssetArchive(map[string]interface{}{
-				".": pulumi.NewFileArchive("./handler"),
-			}),
-			Timeout: pulumi.Int(300),
-			Handler: pulumi.String("handler.handler"),
-			Role:    role.Arn,
-		}, pulumi.DependsOn([]pulumi.Resource{policy}))
-		if err != nil {
-			return err
-		}
+  // Closure serialization is not supported in multi-lang components
+  // so we need to provide a handler function explicitly from the file-system.
+  // Refer to https://github.com/pulumi/pulumi-aws-apigateway/tree/main/examples/simple-go/handler
+  // for an example handler.
+  f, err := lambda.NewFunction(ctx, "lambda", &lambda.FunctionArgs{
+   Runtime: lambda.RuntimePython3d8,
+   Code: pulumi.NewAssetArchive(map[string]interface{}{
+    ".": pulumi.NewFileArchive("./handler"),
+   }),
+   Timeout: pulumi.Int(300),
+   Handler: pulumi.String("handler.handler"),
+   Role:    role.Arn,
+  }, pulumi.DependsOn([]pulumi.Resource{policy}))
+  if err != nil {
+   return err
+  }
 
-		getMethod := apigateway.MethodGET
-		restAPI, err := apigateway.NewRestAPI(ctx, "api", &apigateway.RestAPIArgs{
-			Routes: []apigateway.RouteArgs{
-				apigateway.RouteArgs{
-					Path:         "/",
-					Method:       &getMethod,
-					EventHandler: f,
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
+  getMethod := apigateway.MethodGET
+  restAPI, err := apigateway.NewRestAPI(ctx, "api", &apigateway.RestAPIArgs{
+   Routes: []apigateway.RouteArgs{
+    apigateway.RouteArgs{
+     Path:         "/",
+     Method:       &getMethod,
+     EventHandler: f,
+    },
+   },
+  })
+  if err != nil {
+   return err
+  }
 
-		ctx.Export("url", restAPI.Url)
-		return nil
-	})
+  ctx.Export("url", restAPI.Url)
+  return nil
+ })
 }
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+
 ```
 
 {{% /choosable %}}
@@ -588,25 +801,31 @@ class Program
 package main
 
 import (
-	"github.com/pulumi/pulumi-eks/sdk/go/eks"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ "github.com/pulumi/pulumi-eks/sdk/go/eks"
+ "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		// Create cluster with default settings
-		cluster1, err := eks.NewCluster(ctx, "example-cluster-go-1", nil)
-		if err != nil {
-			return err
-		}
+ pulumi.Run(func(ctx *pulumi.Context) error {
+  // Create cluster with default settings
+  cluster1, err := eks.NewCluster(ctx, "example-cluster-go-1", nil)
+  if err != nil {
+   return err
+  }
 
-		// Export the kubeconfig for clusters
-		ctx.Export("kubeconfig1", cluster1.Kubeconfig)
-		return nil
-	})
+  // Export the kubeconfig for clusters
+  ctx.Export("kubeconfig1", cluster1.Kubeconfig)
+  return nil
+ })
 }
 ```
 
+{{% /choosable %}}
+
+{{% choosable language java %}}
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
 {{% /choosable %}}
 
 {{% /chooser %}}
