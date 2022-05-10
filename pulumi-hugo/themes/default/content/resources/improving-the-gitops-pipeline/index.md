@@ -34,7 +34,7 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: https://www.youtube.com/channel/UC0NErq0RhP51iXx64ZmyVfg
+url_slug: https://www.youtube.com/watch?v=bV3JizzaMZk
 
 # The content of the hero section.
 hero:
