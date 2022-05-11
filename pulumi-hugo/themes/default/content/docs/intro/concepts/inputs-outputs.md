@@ -689,7 +689,7 @@ func split(input pulumi.StringInput) pulumi.StringArrayOutput {
 ```csharp
 Output<string[]> Split(Input<string> input)
 {
-    var output = input.ToOutput()
+    var output = input.ToOutput();
     return output.Apply(v => v.Split(","));
 }
 ```
