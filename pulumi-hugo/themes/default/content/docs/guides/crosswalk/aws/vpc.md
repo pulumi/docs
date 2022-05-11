@@ -581,7 +581,7 @@ class Program
 
 {{% /choosable %}}
 
-The `subnets` argument simply takes an array of subnet specifications. Each one can include this information:
+The `subnetSpecs` argument simply takes an array of subnet specifications. Each one can include this information:
 
 * `type`: A required type of subnet to create. There are three kinds available:
     * A `Public` subnet is one whose traffic is routed to an
