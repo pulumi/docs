@@ -167,6 +167,10 @@ function getCloudProvidersRedirect(uri: string): string | undefined {
 }
 
 function getAPIDocsRedirect(uri: string): string | undefined {
+    console.log(`getAPIDocsRedirect uri: '${uri}'`);
+    console.log(uri.match(/\/docs\/reference\/pkg\/nodejs|python|dotnet|java\//));
+    console.log(uri.match(/\/docs\/reference\/pkg\/(nodejs|python|dotnet|java)\//));
+
     if (uri.match(/\/docs\/reference\/pkg\/nodejs|python|dotnet|java\//)) {
         return undefined;
     }
