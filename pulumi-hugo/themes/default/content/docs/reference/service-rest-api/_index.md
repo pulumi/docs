@@ -1388,6 +1388,58 @@ EMPTY RESPONSE BODY
 
 <!-- ###################################################################### -->
 
+### List Teams
+
+```
+GET /api/orgs/{organization}/teams
+```
+
+#### Parameters
+
+| Parameter | Type | In | Description |
+| --------- | ---------- | ---------- | ---------- |
+| `organization` | string | path | organization name |
+| `continuationToken` | string | query | **Optional.** the continuation token to use for retrieving the next set of results if results were truncated |
+
+#### Example
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  https://api.pulumi.com/api/orgs/{organization}/teams
+```
+
+#### Default Response
+
+```
+Status: 200 OK
+```
+
+```
+{
+   "teams":[
+      {
+         "kind":"pulumi",
+         "name":"team1",
+         "displayName":"team1",
+         "description":"",
+         "userRole":"none"
+      },
+      {
+         "kind":"pulumi",
+         "name":"team2",
+         "displayName":"team2",
+         "description":"",
+         "userRole":"admin"
+      }
+   ]
+}
+```
+
+<!-- ###################################################################### -->
+
 ### Create Team
 
 {{% notes "info" %}}

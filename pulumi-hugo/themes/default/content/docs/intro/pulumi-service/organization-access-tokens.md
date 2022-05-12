@@ -92,6 +92,7 @@ See the Pulumi [Service REST API docs](https://www.pulumi.com/docs/reference/ser
 | List Users | ✅ |
 | Add User to Organization |  |
 | Remove User from Organization |  |
+| List Teams | ✅ | |
 | Create Team | ✅ |
 | Delete Team | ✅ |
 | Update Team Membership |  |
