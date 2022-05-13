@@ -93,6 +93,23 @@ entries:
           A virtualization tool that allows you to deliver your software in a particular
           type of package called a container, which includes an operating system.
 
+    - term: Elastic Container Service
+      description: |
+          A managed container orchestration tool on AWS, allowing for the deployment and 
+          automated management of containerized applications.
+      link: aws-ecs
+
+    - term: Elastic Kubernetes Service
+      description: |
+          A managed Kubernetes service on AWS, allowing you to run your containerized 
+          workloads on Kubernetes without the overhead of managing it yourself.
+      link: aws-eks
+
+    - term: Fargate
+      description: |
+          A serverless compute product from AWS, designed for use with containerized workloads.
+      link: aws-fargate
+
     - term: Helm
       description: |
           A package manager for Kubernetes. Written in YAML, a Helm chart allows you to
@@ -122,6 +139,12 @@ entries:
           A container orchestration tool designed to make the deployment and management of
           containerized applications easier. Think of it like the thing that helps you
           define which shipping containers go where on a barge.
+
+    - term: Lambda
+      description: |
+          A serverless platform on AWS, allowing for the execution of code or containers 
+          without the need to provision infrastructure yourself.
+      link: aws-lambda
 
     - term: Microservice
       description: |
