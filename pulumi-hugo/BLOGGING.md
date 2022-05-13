@@ -20,7 +20,7 @@ proceed to the next section.
 
 ## Make a New Post
 
-1. Move onto a new branch for your blog post using `git checkout -b initials/your-blog-post` (replace initials with your initials, and replace your-blog-post with the name of your blog post). 
+1. Move onto a new branch for your blog post using `git checkout -b initials/your-blog-post` (replace initials with your initials, and replace your-blog-post with the name of your blog post).
 
 2. Resist the temptation to copy-and-tweak an existing post! Instead, run the following
 command into the terminal (at the root of the project). This will generate a new file,
@@ -56,13 +56,11 @@ including all the required frontmatter parameters.
    ```
    ---
    title: This a Page Title
-   allow_long_title: True
+   allow_long_title: true
    linktitle: This is the link text
    ...
    ---
    ```
-
-   **Keep in mind that only posts dated prior to "now" (meaning the moment the build process begins) will published to production.** The development server renders future content (so you can work on scheduled posts in advance), but the build process does not; see below for details on scheduling posts for future publishing.
 
    **Tags**
 
@@ -164,14 +162,14 @@ For best results, we suggest the following specs for the `meta_image`, largely b
 
 Remember to replace the `meta_image` placeholder (or remove the property altogether and delete the placeholder `meta.png` file) before submitting your post.
 
-For help creating your `meta_image`, check out our [Build Your Own Meta Image file](https://www.figma.com/file/TnD7nxjIxVvXq8w0W7awPG/Build-Your-Own-Meta-Image?node-id=0%3A1) in Figma. There you’ll find backgrounds, images, and logos to assemble the `meta_image` for your blog post. 
+For help creating your `meta_image`, check out our [Build Your Own Meta Image file](https://www.figma.com/file/TnD7nxjIxVvXq8w0W7awPG/Build-Your-Own-Meta-Image?node-id=0%3A1) in Figma. There you’ll find backgrounds, images, and logos to assemble the `meta_image` for your blog post.
 
 A few things to keep in mind when designing a `meta image`:
 
-   - Avoid placing important text or graphic elements too close to the edges of the frame — elements at the edges may get cropped at some display ratios 
+   - Avoid placing important text or graphic elements too close to the edges of the frame — elements at the edges may get cropped at some display ratios
    - Try to include at least one Pulumi identifier (word mark, Pulumipus) so viewers can tell at a glance that the image belongs to the Pulumi blog
    - Use dark text on light backgrounds, and light text on dark backgrounds to ensure readability
-   - Remember to zoom out from your image and confirm it looks as you intend at a thumbnail size 
+   - Remember to zoom out from your image and confirm it looks as you intend at a thumbnail size
 
 #### Video
 
@@ -199,7 +197,7 @@ When you're ready to submit your post for review, issue a Pull Request against t
 
 ## A Note on Dates and Scheduling for Future Publishing
 
-Since the build process is triggered by (and so requires) a commit to `master`, you can either wait for the post's `date` to pass, and _then_ merge it. If a post happens to get merged a future date, the resulting build will exclude the post, requiring a commit of some sort to occur _after_ its `date` in order to trigger a build and get the post published.
+Because the website is deployed in response to a commit to pulumi/docs `master`, it isn't possible to schedule a post to be released automatically at a precise date and time. (The `date` frontmatter property is used only for sorting and display purposes.) You can, however, influence the timing of the publishing process manually. See the [Merging and Releasing section of the README](README.md#merging-and-releasing) for details.
 
 ## Publishing Check List
 
