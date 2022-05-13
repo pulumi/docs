@@ -87,7 +87,25 @@ You'll find all of these files in `themes/default`.
 
 ## Merging and releasing
 
-When a pull request is merged into the default branch of this repository, a follow-up PR is triggered on [pulumi/docs](https://github.com/pulumi/docs) that produces an integration build. Once that build completes and is approved and merged into pulumi/docs, the changes are deployed to pulumi.com.
+When a pull request is merged into the `master` branch of this repository, the content of the pull request isn't published immediately. Instead, it's published at some point later, typically as a result of an [hourly GitHub Actions job in pulumi/docs](https://github.com/pulumi/docs/actions/workflows/update-theme.yml) that checks this repository and others for new content. When that hourly job finds new content to be published, it creates a new pull request (or updates an existing one) on pulumi/docs, builds and tests a full site preview, and merges that pull request automatically after the tests pass, triggering the website to be republished.
+
+The typical timeline looks something like this:
+
+* 8:45 AM: A PR is merged into pulumi-hugo `master`.
+* 9:00 AM: The [`Scheduled Jobs: Update Hugo modules`](https://github.com/pulumi/docs/actions/workflows/update-theme.yml) workflow runs in pulumi/docs.
+* 9:05 AM: The workflow detects the newly merged pulumi-hugo content and generates a new PR on pulumi/docs.
+* 9:30 AM: The pulumi/docs PR is automatically merged into `master`, triggering a redeployment of pulumi.com.
+* 10:00 AM: The new content is live.
+
+In other words, once the pulumi/docs PR is generated, it usually takes about an hour (half-hour for the PR build, another for the website deployment) for new content to appear on pulumi.com.
+
+Note, however, that despite that we schedule the module-update job to run at the top of the hour, it often doesn't; delays of 20 minutes or more are unfortunately fairly common.
+
+If having more direct control over release timing is important, you can opt to trigger the module-update job manually. To do that, [navigate to the workflow](https://github.com/pulumi/docs/actions/workflows/update-theme.yml) and choose **Run Workflow** to kick it off immediately:
+
+![image](https://user-images.githubusercontent.com/274700/168188720-e4b2ee56-4b84-4c4f-ad3a-68e145d69124.png)
+
+The behavior in this case is no different than if you'd allowed the job to run on its own, and once it completes, the remaining steps will complete in the usual way.
 
 ## Blogging
 
