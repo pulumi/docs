@@ -26,6 +26,8 @@ Pulumi YAML is a great option for smaller scale cloud infrastructure use cases. 
 
 Like all other Pulumi languages, Pulumi YAML programs have access to all the core features of Pulumi’s infrastructure-as-code tooling, including native providers, secrets management, stack references, Pulumi Packages, and all the features of the Pulumi Service.  Critically, Pulumi YAML programs can interoperate seamlessly with the rest of the Pulumi ecosystem, consuming the outputs of other Pulumi programs and using Pulumi components built in existing Pulumi languages.  If the complexity of your Pulumi YAML projects increases, the new `pulumi convert` feature, enabled by the underlying [Pulumi CrossCode]({{< relref "/crosscode" >}}) technology, can be used to convert your Pulumi YAML program into your favorite general purpose Pulumi language.
 
+{{< youtube "QFCkubMhY3U" >}}
+
 ## Pulumi YAML
 
 Pulumi YAML programs are defined in the same `Pulumi.yaml` file that all Pulumi projects contain.  Instead of specifying a runtime like `nodejs` or `python`, Pulumi YAML programs use the `yaml` runtime.  This allows them to also include the set of `resources` and `outputs` that their infrastructure requires.  All that is needed is the single `Pulumi.yaml` file.

@@ -31,10 +31,6 @@ Today’s launches include:
 
 These new features build on the Pulumi 3.0 foundation to offer a truly universal infrastructure as code platform for modern cloud engineers and teams.
 
-{{% notes type="info" %}}
-To learn more about all of today's new releases, join us at [PulumiUP]({{< relref "/pulumi-up" >}}), a free two day conference with deep dive sessions on new Pulumi features, panel sessions with Cloud Engineering leaders, and a wide range of technical workshops.
-{{% /notes %}}
-
 ## Pulumi Support For Java
 
 Java is one of the most used programming languages in the world, with heavy usage in enterprises and organizations building for the cloud. The Java ecosystem has played a leading role in offering an incredibly rich ecosystem of software engineering capabilities - IDE tooling, strong typing, design patterns, build and package management, unit testing, and more.
