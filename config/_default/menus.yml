@@ -109,7 +109,7 @@ reference:
 
   - name: .NET Core
     parent: Pulumi SDK
-    url: /docs/reference/pkg/dotnet/Pulumi/Pulumi.html
+    url: /docs/reference/pkg/dotnet
     weight: 4
 
   - name: Java
