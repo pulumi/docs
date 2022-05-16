@@ -314,6 +314,10 @@ $(function() {
                 } else if (ui.item.category === catSearchTags) {
                     url += ui.item.u;
                 }
+
+                // Nastiest hack ever, but it works.
+                url = url.replace("undefined/", "");
+
                 if (top !== window) {
                     parent.classFrame.location = pathtoroot + url;
                 } else {
