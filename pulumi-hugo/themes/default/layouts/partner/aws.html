@@ -226,7 +226,8 @@
             </div>
 
             <div class="w-full mt-8 lg:mt-0 lg:w-7/12">
-                {{ partial "code" (dict "code" .Params.automation_api_code "lang" "js" "mode" "dark" "chrome" true) }}
+                <img class="shadow-xl rounded" src="/blog/automation-api/http.gif" alt="Pulumi over HTTP" />
+                <!-- {{ partial "code" (dict "code" .Params.automation_api_code "lang" "js" "mode" "dark" "chrome" true) }} -->
             </div>
         </div>
     </section>
@@ -235,7 +236,31 @@
     <section id="awsx" class="container mx-auto mt-32 mb-12 px-8 lg:px-0">
         <div class="flex flex-col lg:flex-row">
             <div class="w-full order-last mt-8 lg:mt-0 lg:order-first lg:w-1/2">
-                {{ partial "code" (dict "code" .Params.awsx_code "lang" "js" "mode" "dark" "chrome" true) }}
+                <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                    <pulumi-choosable type="language" class="highlight" value="typescript">
+                        {{ partial "code" (dict "code" .Params.awsx.ts "lang" "ts") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="python">
+                        {{ partial "code" (dict "code" .Params.awsx.py "lang" "go") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="go">
+                        {{ partial "code" (dict "code" .Params.awsx.go "lang" "go") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="csharp">
+                        {{ partial "code" (dict "code" .Params.awsx.csharp "lang" "csharp") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="java">
+                        {{ partial "code" (dict "code" .Params.awsx.java "lang" "java") }}
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="yaml">
+                        {{ partial "code" (dict "code" .Params.awsx.yaml "lang" "yaml") }}
+                    </pulumi-choosable>
+                </pulumi-chooser>
             </div>
 
             <div class="w-full order-first lg:order-last lg:w-1/2 px-8">
@@ -246,6 +271,15 @@
                     tasks in AWS easier and more secure. Secure and cost-conscious defaults
                     are chosen so that simple programs automatically use best practices for
                     the underlying infrastructure, enabling better productivity with confidence.
+                </p>
+
+                <h5>Deploy CDK Constructs with Pulumi</h5>
+                <p>
+                    You can deploy any AWS CDK construct from within a Pulumi deployment. If you're
+                    already using AWS CDK, you can now use Pulumi to orchestrate deployments instead
+                    of CloudFormation. This gives you [improved deployment speed](/case-studies/panther-labs/#proving-pulumis-advantages/)
+                    and integration with all features of Pulumi (like [Policy as Code](/docs/guides/crossguard/),
+                    [Audit Logs](/docs/intro/pulumi-service/audit-logs/), Secrets, and much more).
                 </p>
 
                 <h5>Application and Infrastructure Together</h5>

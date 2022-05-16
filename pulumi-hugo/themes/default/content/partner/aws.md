@@ -3,57 +3,150 @@ title: Universal Infrastructure as Code for AWS
 layout: aws
 url: /aws
 
-meta_desc: Build, deploy & manage AWS Infrastructure with TypeScript, Python, Go, C#, Java & YAML. Use existing software engineering tools & practices with infrastructure.
+meta_desc: Build, deploy & manage infrastructure as code on AWS with TypeScript, Python, Go, C#, Java & YAML. Use existing software engineering tools & practices.
 
 hero:
     title: Cloud Engineering for AWS
     description: |
-        Pulumi's [infrastructure as code](/what-is/what-is-infrastructure-as-code/)
+        Pulumi’s [infrastructure as code](/what-is/what-is-infrastructure-as-code/)
         SDK enables you to build, deploy, and manage your AWS infrastructure faster
         and with more confidence, using modern programming languages and software engineering
-        practices. Leverage the full expressivity of languages like [TypeScript/JavaScript](/docs/intro/languages/javascript/),
-        [Python](/docs/intro/languages/python/), [Go](/docs/intro/languages/go/), and [C#](/docs/intro/languages/dotnet/) to build any cloud architecture including containers, serverless, and server-based.
+        practices. Leverage the full expressivity of general-purpose languages ([TypeScript/JavaScript](/docs/intro/languages/javascript/),
+        [Python](/docs/intro/languages/python/), [Go](/docs/intro/languages/go/), [C#](/docs/intro/languages/dotnet/), [Java](/docs/intro/languages/java/))
+        or use markup languages (e.g., [YAML](/docs/intro/languages/yaml/), CUE) to build any cloud architecture including containers, serverless, and server-based.
 
-awsx_code: |
-    import * as eks from "@pulumi/eks";
+awsx:
+    yaml: |
+        name: aws-eks
+        runtime: yaml
+        description: An EKS cluster
+        resources:
+            cluster:
+                type: eks:Cluster
+                properties:
+                    instanceType: "t2.medium"
+                    desiredCapacity: 2
+                    minSize: 1
+                    maxSize: 2
+        outputs:
+            kubeconfig: ${cluster.kubeconfig}
+    java: |
+        package com.pulumi.example.eks;
 
-    // Create an EKS cluster with the default configuration.
-    const cluster = new eks.Cluster("my-cluster", {
-        desiredCapacity: 5,
-        minSize: 3,
-        maxSize: 5,
-        deployDashboard: false,
-        enabledClusterLogTypes: [
-            "api",
-            "audit",
-            "authenticator",
-        ],
-    });
+        import com.pulumi.Context;
+        import com.pulumi.Exports;
+        import com.pulumi.Pulumi;
+        import com.pulumi.core.Output;
+        import com.pulumi.eks.Cluster;
+        import com.pulumi.eks.ClusterArgs;
 
-    // Export the cluster's kubeconfig.
-    export const kubeconfig = cluster.kubeconfig;
+        import java.util.stream.Collectors;
 
-automation_api_code: |
-    func NewAddCmd() *cobra.Command {
-        return &cobra.Command{
-            Use:   "add",
-            Short: "add deploys an additional vm stack",
-            Run: func(cmd *cobra.Command, args []string) {
-                stackName := fmt.Sprintf("vmgr%d", rangeIn(10000000, 99999999))
-                s, err := auto.NewStackInlineSource(ctx, stackName, projectName, nil)
-                subnetID, rgName, err := EnsureNetwork(ctx, projectName)
-                stack.SetProgram(GetDeployVMFunc(subnetID, rgName))
-                stdoutStreamer := optup.ProgressStreams(os.Stdout)
+        public class App {
+            public static void main(String[] args) {
+                Pulumi.run(App::stack);
+            }
 
-                res, err := s.Up(ctx, stdoutStreamer)
-                if err != nil {
-                    fmt.Printf("Failed to deploy vm stack: %v\n", err)
-                    os.Exit(1)
-                }
-                fmt.Printf("deployed server running at public IP %s\n", res.Outputs["ip"].Value)
-            },
+            private static Exports stack(Context ctx) {
+                var cluster = new Cluster("my-cluster", ClusterArgs.builder()
+                        .instanceType("t2.micro")
+                        .desiredCapacity(2)
+                        .minSize(1)
+                        .maxSize(2)
+                        .build());
+
+                ctx.export("kubeconfig", cluster.kubeconfig());
+                return ctx.exports();
+            }
         }
-    }
+    csharp: |
+        using System;
+        using System.Threading.Tasks;
+        using Pulumi;
+        using Pulumi.Eks.Cluster;
+
+        class EksStack : Stack
+        {
+            public EksStack()
+            {
+                // Create an EKS cluster.
+                var cluster = new Cluster("cluster", new ClusterArgs
+                {
+                    InstanceType = "t2.medium",
+                    DesiredCapacity = 2,
+                    MinSize = 1,
+                    MaxSize = 2,
+                });
+
+                // Export the cluster's kubeconfig.
+                this.Kubeconfig = cluster.Kubeconfig;
+            }
+
+            [Output("kubeconfig")]
+            public Output<string> Kubeconfig { get; set; }
+        }
+
+        class Program
+        {
+            static Task<int> Main(string[] args) => Deployment.RunAsync<EksStack>();
+        }
+    go: |
+        package main
+
+        import (
+            "github.com/pulumi/pulumi-eks/sdk/go/eks/cluster"
+            "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+        )
+
+        func main() {
+            pulumi.Run(func(ctx *pulumi.Context) error {
+            // Create an EKS cluster.
+            cluster, err := cluster.NewCluster(ctx, "cluster",
+                cluster.ClusterArgs{
+                    InstanceType:    pulumi.String("t2.medium"),
+                    DesiredCapacity: pulumi.Int(2),
+                    MinSize:         pulumi.Int(1),
+                    MaxSize:         pulumi.Int(2),
+                },
+            )
+            if err != nil {
+                return err
+            }
+
+            // Export the cluster's kubeconfig.
+            ctx.Export("kubeconfig", cluster.Kubeconfig)
+
+            return nil
+            })
+        }
+    py: |
+        import pulumi
+        import pulumi_eks as eks
+
+        # Create an EKS cluster.
+        cluster = eks.Cluster(
+            "cluster",
+            instance_type="t2.medium",
+            desired_capacity=2,
+            min_size=1,
+            max_size=2,
+        )
+
+        # Export the cluster's kubeconfig.
+        pulumi.export("kubeconfig", cluster.kubeconfig)
+    ts: |
+       import * as eks from "@pulumi/eks";
+
+        // Create an EKS cluster.
+        const cluster = new eks.Cluster("cluster", {
+            instanceType: "t2.medium",
+            desiredCapacity: 2,
+            minSize: 1,
+            maxSize: 2,
+        });
+
+        // Export the cluster's kubeconfig.
+        export const kubeconfig = cluster.kubeconfig;
 
 contact_us_form:
     section_id: contact-us

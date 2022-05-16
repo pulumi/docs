@@ -1,5 +1,4 @@
 ---
-# TODO: update these values
 title: Cloud Engineering
 meta_desc: Apply software engineering practices and tools across infrastructure, development, and compliance teams to tame the complexity of modern cloud applications.
 
@@ -25,10 +24,10 @@ build:
     description: |
         Cloud engineers use cloud resources to build shared services platforms and reusable infrastructure components.
     items:
-        - title: Standard Programming Languages
+        - title: General-Purpose Programming Languages
           description: |
-            Define infrastructure in Node.js, Python, Go, and .NET and use standard constructs like loops and conditionals. This enables more flexibility
-            and reduces complexity compared to domain-specific languages.
+            Define infrastructure with general-purpose programming languages like TypeScript/JavaScript, Python, Go, .NET, and Java and use standard constructs like loops
+            and conditionals. This gives you more flexibility and reduces complexity compared to domain-specific languages. You could also use markup languages like YAML as a simple way for consuming complex infrastructure modeled in general-purpose languages. 
 
         - title: Broad Development Ecosystem
           description: |
