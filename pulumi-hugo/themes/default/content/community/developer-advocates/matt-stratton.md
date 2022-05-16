@@ -31,7 +31,7 @@ talks:
     title: Charting Your Own Course Through the Cloud Native Landscape
     url: https://pulumip.us/matty-kubecon-talk
     date: 2022-05-20T14:00:00.000-05:00
-    slides: 
+    slides: https://speaking.mattstratton.com/ajYcGf/charting-your-own-course-through-the-cloud-native-landscape
   - event: DevOpsDays Denver 2022
     title: The Journey From DevOps to Cloud Engineering
     url: https://devopsdays.org/events/2022-denver/program/matty-stratton/
