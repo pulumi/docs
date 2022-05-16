@@ -44,7 +44,6 @@ disableKinds:
 sectionPagesMenu: main
 pygmentsCodeFences: true
 pygmentsUseClasses: true
-disablePathToLower: true
 
 # We always generate the robots.txt file. But based on the environment
 # built, it may disallow crawling.
