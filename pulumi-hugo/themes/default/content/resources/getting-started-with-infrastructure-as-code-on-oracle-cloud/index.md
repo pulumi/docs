@@ -73,7 +73,7 @@ main:
     presenters:
         - name: Laura Santamaria
           role: Developer Advocate, Pulumi
-        - name: Guarav Jain
+        - name: Gaurav Jain
           role: Principal Product Manager, Oracle
 
     # A bullet point list containing what the user will learn during the webinar.
