@@ -315,7 +315,8 @@ $(function() {
                     url += ui.item.u;
                 }
 
-                // Nastiest hack ever, but it works.
+                // Nastiest (temporary) hack ever, but it works.
+                // https://github.com/pulumi/pulumi-java/issues/595
                 url = url.replace("undefined/", "");
 
                 if (top !== window) {
