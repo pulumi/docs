@@ -32,6 +32,8 @@ authors:
 tags:
     - features
 
+draft: true
+
 # See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
 ---
