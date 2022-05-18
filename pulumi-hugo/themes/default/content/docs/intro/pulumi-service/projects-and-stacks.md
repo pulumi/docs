@@ -64,6 +64,137 @@ To view an organization's stacks:
 1. To view a stacks details select the name of the stack.
 1. To view a specific stack update, navigate to **Activity** and select it from the list.
 
+### Stack README
+
+To add a README to a stack:
+
+1. Export a [Stack output](https://www.pulumi.com/learn/building-with-pulumi/stack-outputs) named `readme` that contains your templated Stack README markdown, commonly by reading a file, i.e. `Pulumi.README.md`.
+2. Create a README template for the Stack.
+3. Run `pulumi up` on that Stack.
+4. Open the Pulumi Service UI, navigate to Projects and then the Stack you have updated. Once on the Stack page you will see the README tab with your README file.
+
+Examples for adding the Stack Output `readme` to a Pulumi program:
+
+{{< chooser language "typescript,python,go,csharp,java" / >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import { readFileSync } from "fs";
+export const strVar = "foo";
+export const arrVar = ["fizz", "buzz"];
+// add readme to stack outputs. must be named "readme".
+export const readme = readFileSync("./Pulumi.README.md");
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+pulumi.export('strVar', 'foo')
+pulumi.export('arrVar', ['fizz', 'buzz'])
+# open template readme and read contents into stack output
+with open('./Pulumi.README.md') as f:
+    pulumi.export('readme', f.read())
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+func main() {
+  pulumi.Run(func(ctx *pulumi.Context) error {
+    strVar := "foo"
+    arrVar := []string{"fizz", "buzz"}
+    readmeBytes, err := ioutil.ReadFile("./Pulumi.README.md")
+    if err != nil {
+      return fmt.Errorf("failed to read readme: %w", err)
+    }
+    ctx.Export("strVar", pulumi.String(strVar))
+    ctx.Export("arrVar", pulumi.ToStringArray(arrVar))
+    ctx.Export("readme", pulumi.String(string(readmeBytes)))
+    return nil
+  })
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        this.StrVar = "foo";
+        this.ArrVar = new string[] { "fizz", "buzz" };
+        this.Readme = System.IO.File.ReadAllText("./Pulumi.README.md");
+    }
+    [Output]
+    public Output<string> StrVar { get; set; }
+    [Output]
+    public Output<string[]> ArrVar { get; set; }
+    [Output]
+    public Output<string> Readme { get; set; }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package stackreadme;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var strVar = "foo";
+            var arrVar = new String[]{ "fizz", "buzz" };
+            try {
+                var readme = Files.readString(Paths.get("./Pulumi.README.md"));
+                ctx.export("strVar", Output.of(strVar));
+                ctx.export("arrVar", Output.of(arrVar));
+                ctx.export("readme", Output.of(readme));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+An example of a README file, `Pulumi.README.md`, the template Stack README file for the Pulumi Service.
+
+```markdown
+# Pulumi Service README
+​
+[Sign in to AWS to view stack resources!](https://top-secret-url.com)
+​
+## On Call Operations
+​
+### Monitor
+​
+1. [Cloudwatch Metrics](https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#dashboards:name=${outputs.dashboardName}): Monitor holistic metrics tracking overall service health
+2. [RDS Performance Metrics](https://us-west-2.console.aws.amazon.com/rds/home?region=us-west-2#performance-insights-v20206:/resourceId/${database.databaseCluster.id}/resourceName/${outputs.rdsClusterWriterInstance}): Monitor RDS performance (wait times, top queries)
+3. [Cloudwatch Logs](https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#logStream:group=${outputs.cloudwatchLogGroup}): Search across service logs
+```
+
+Here is how it looks rendered in the [Pulumi Service UI](https://app.pulumi.com):
+
+![Stack READMEs](/images/docs/reference/service/stack-readme.png)
+
 ### Stack Detailed View
 
 To view a stack's details:
