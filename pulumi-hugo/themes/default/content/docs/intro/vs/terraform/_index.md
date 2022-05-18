@@ -77,7 +77,7 @@ Terraform has plugins for some IDEs. However, the features are varied and limite
 
 The Terraform engine takes care of provisioning and updating resources. With Pulumi, you use general purpose languages to express desired state, and Pulumi’s engine similarly gives you diffs and a way to robustly update your infrastructure.
 
-By default, Terraform requires that you manage concurrency and state manually, by way of its “state files.” Pulumi, in contrast, uses the free [Pulumi Service](https://app.pulumi.com/) to eliminate these concerns. This makes getting started with Pulumi, and operationalizing it in a team setting, much easier. For advanced use cases, it is possible to [use Pulumi without the Service]({{< relref "/docs/troubleshooting/faq#can-i-use-pulumi-without-depending-on-the-pulumi-service" >}}), which works a lot more like Terraform, but requires you to manage state and concurrency issues. Pulumi errs on the side of ease-of-use.
+By default, Terraform requires that you manage concurrency and state manually, by way of its “state files.” Pulumi, in contrast, uses the free [Pulumi Service](https://app.pulumi.com/) to eliminate these concerns. This makes getting started with Pulumi, and operationalizing it in a team setting, much easier. For advanced use cases, it is possible to [use Pulumi without the Service]({{< relref "/docs/support/faq#can-i-use-pulumi-without-depending-on-the-pulumi-service" >}}), which works a lot more like Terraform, but requires you to manage state and concurrency issues. Pulumi errs on the side of ease-of-use.
 
 For more information on how Pulumi manages state or how to use different backends, see [State and Backends]({{< relref "/docs/intro/concepts/state" >}}).
 

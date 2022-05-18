@@ -3,10 +3,12 @@ title: Troubleshooting
 meta_desc: A collection of common troubleshooting techniques when using the Pulumi CLI
            and Cloud Services.
 menu:
-  troubleshooting:
+  support:
     weight: 1
 
-aliases: ["/docs/reference/troubleshooting/"]
+aliases:
+  - /docs/reference/troubleshooting/
+  - /docs/troubleshooting/
 ---
 
 Pulumi tries very hard to ensure that your infrastructure is always in a known and predictable state.

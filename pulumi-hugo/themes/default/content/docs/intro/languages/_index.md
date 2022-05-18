@@ -77,6 +77,6 @@ The following language runtimes are currently supported by Pulumi. Select one to
 
 If your favorite language isn't listed, it may be on its way soon. Pulumi is
 [open source](https://github.com/pulumi/pulumi), and it is possible
-[to add your own language]({{< relref "/docs/troubleshooting/faq#how-can-i-add-support-for-my-favorite-language" >}}).
-For further questions, [contact us]({{< relref "/docs/troubleshooting#contact-us" >}}) and let us
+[to add your own language]({{< relref "/docs/support/faq#how-can-i-add-support-for-my-favorite-language" >}}).
+For further questions, [contact us]({{< relref "/docs/support/troubleshooting#contact-us" >}}) and let us
 know what you're looking for.

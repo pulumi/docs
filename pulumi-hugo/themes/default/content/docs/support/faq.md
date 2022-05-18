@@ -2,9 +2,12 @@
 title: FAQ
 meta_desc: A collection of Frequently Asked Questions (FAQ) about Pulumi.
 menu:
-  troubleshooting:
+  support:
     weight: 2
-aliases: ["/docs/reference/faq/"]
+
+aliases:
+  - /docs/reference/faq/
+  - /docs/troubleshooting/faq/
 ---
 
 ## Automatic Rollbacks

@@ -329,7 +329,7 @@ This might seem tricky at first, but digest this for a bit, then have a look at 
 
 ### Don't name resources unless you really have to
 
-Pulumi is pretty smart when it comes to naming the actual resources on AWS. If you don't specify a `name` when creating a resource Pulumi will use the identifier and [append a hex character suffix](https://www.pulumi.com/docs/troubleshooting/faq/#why-do-resource-names-have-random-hex-character-suffixes) .
+Pulumi is pretty smart when it comes to naming the actual resources on AWS. If you don't specify a `name` when creating a resource Pulumi will use the identifier and [append a hex character suffix](https://www.pulumi.com/docs/support/faq/#why-do-resource-names-have-random-hex-character-suffixes) .
 
 This gives two great advantages. The first is that you can have multiple stacks next to each other, e.g. a "review" and a "production" environment. If you hard coded the names this wouldn't be possible.
 

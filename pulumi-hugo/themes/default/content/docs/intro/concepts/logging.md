@@ -89,4 +89,4 @@ public static void stack(Context ctx) {
 
 {{< /chooser >}}
 
-For information on how to use diagnostic information for troubleshooting, see [Diagnosing Issues]({{< relref "/docs/troubleshooting#diagnosing-issues" >}}).
+For information on how to use diagnostic information for troubleshooting, see [Diagnosing Issues]({{< relref "/docs/support/troubleshooting#diagnosing-issues" >}}).
