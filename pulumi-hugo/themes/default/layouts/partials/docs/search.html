@@ -16,8 +16,18 @@
     _st("install", "xxxQB1LC9DE212h8eJmh", "2.0.0");
 </script>
 <div class="search-header container flex">
-    <div class="docs-pinned-container hidden md:flex xl:w-3/12 px-3">
-        <div class="docs-pinned ml-5 items-center transition-all hidden">
+    <div class="header-pinned-container hidden md:flex xl:w-3/12 px-4 lg:px-8 xl:px-5">
+        <div class="header-hero-title pr-3">
+            <div class="flex items-center">
+                <a href="{{ relref . " /docs" }}">
+                    <i class="fas fa-book title-icon"></i>
+                </a>
+                <a href="{{ relref . " /docs" }}">
+                    <span class="title-text-content">Pulumi Docs</span>
+                </a>
+            </div>
+        </div>
+        <div class="header-pinned items-center transition-all hidden">
             <img class="h-6 mr-12" src="/images/logo/logo-on-white.svg" alt="Pulumi logo" />
             <div class="get-started-pinned-search-container">
                 <a class="get-started-pinned-search-button" data-track="get-started-pinned-search" href="{{ relref . " /docs/get-started"
@@ -25,18 +35,19 @@
             </div>
         </div>
     </div>
-    <div id="search-container" class="docs-search-container bg-white mt-4 md:mt-0 flex justify-center lg:ml-6">
-        <div id="search-form" class="docs-search-widget text-gray-600 focus-within:text-gray-600">
+    <div id="search-container" class="search-container bg-white mt-4 md:mt-0 flex justify-center lg:ml-6">
+        <div id="search-form" class="search-widget text-gray-600 focus-within:text-gray-700">
             <form class="relative flex">
+                <i class="fas fa-search absolute inset-y-0 flex items-center pl-3" style="color: inherit"></i>
                 <input
                     id="search-query"
                     type="text"
-                    class="st-default-search-input text-sm transition"
+                    class="st-default-search-input docs text-sm transition"
                     placeholder="Search..."
                 />
                 <button
                     type="submit"
-                    class="hidden md:block bg-blue-600 font-display font-normal text-white p-2 px-4 rounded-r"
+                    class="hidden md:block bg-blue-600 font-display font-normal text-lg text-white p-1.5 px-4 rounded-r"
                 >
                     Search
                 </button>
