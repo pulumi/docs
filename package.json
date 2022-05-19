@@ -21,6 +21,7 @@
     "parse-diff": "^0.8.1",
     "postcss": "^8.3.7",
     "postcss-cli": "^8.3.1",
+    "sitemapper": "^3.2.2",
     "typedoc": "^0.15.3"
   }
 }

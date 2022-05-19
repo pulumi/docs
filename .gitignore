@@ -68,3 +68,6 @@ _vendor/
 # Ignore registry-related build artifacts.
 /content/registry/packages/*/api-docs
 /static/registry
+
+# Ignore log files.
+/scripts/link-checker/pages-with-broken-links.txt
