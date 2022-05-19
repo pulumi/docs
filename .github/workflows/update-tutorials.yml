@@ -2,6 +2,7 @@ name: "Scheduled jobs: Update tutorials"
 on:
   schedule:
     - cron:  '0 15 * * *'
+  workflow_dispatch:
 jobs:
   merge:
     name: Update tutorials
