@@ -44,22 +44,11 @@ build:
 	@echo -e "\033[0;32mBUILD:\033[0m"
 	./scripts/build-site.sh
 
-
-.PHONY: test
-test:
-	$(MAKE) check_links_local
-
-.PHONY: check_links_local
-check_links_local:
-	$(MAKE) banner
-	$(MAKE) ensure
-	./scripts/check-links.sh local
-
 .PHONY: check_links
 check_links:
 	$(MAKE) banner
 	$(MAKE) ensure
-	./scripts/check-links.sh www
+	./scripts/link-checker/check-links.sh "https://www.pulumi.com"
 
 .PHONY: new_learn_module
 new_learn_module:

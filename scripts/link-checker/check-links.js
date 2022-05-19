@@ -293,6 +293,8 @@ function getDefaultExcludedKeywords() {
         "https://ceph.io",
         "https://www.pagerduty.com",
         "https://support.pulumi.com",
+        "https://pbs.twimg.com/profile_images/",
+        "https://linen.dev/",
     ];
 }
 
