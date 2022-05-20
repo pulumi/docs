@@ -13,18 +13,22 @@ Since we first launched Pulumi 4 years ago, a core point of differentiation betw
 
 Our goal though has always been to offer the broadest range of programming language options to empower __*every*__ cloud builder so that they could benefit from the best of Pulumi’s Infrastructure as Code platform.
 
-Today, we are excited to launch [Pulumi YAML]({{< relref "/docs/intro/languages/yaml" >}}), a simple YAML-based interface to the entirety of the Pulumi Infrastructure as Code platform.  
+Today, we are excited to launch [Pulumi YAML]({{< relref "/docs/intro/languages/yaml" >}}), a simple YAML-based interface to the entirety of the Pulumi Infrastructure as Code platform.
 
 <!--more-->
 
 Pulumi YAML is a great option for smaller scale cloud infrastructure use cases.  This includes:
 
 * Teams that don’t (yet) need the richness of a general purpose programming language, and feel more comfortable with YAML.
-* Simple infrastructure definitions which only need to compose a small number of cloud building blocks together.  
+* Simple infrastructure definitions which only need to compose a small number of cloud building blocks together.
 * Providing a simple interface to a complex set of high-level cloud components built with existing general-purpose Pulumi languages.
 * Systems which will generate infrastructure as code definitions programmatically -- such as self-service provisioning portals.
 
 Like all other Pulumi languages, Pulumi YAML programs have access to all the core features of Pulumi’s infrastructure-as-code tooling, including native providers, secrets management, stack references, Pulumi Packages, and all the features of the Pulumi Service.  Critically, Pulumi YAML programs can interoperate seamlessly with the rest of the Pulumi ecosystem, consuming the outputs of other Pulumi programs and using Pulumi components built in existing Pulumi languages.  If the complexity of your Pulumi YAML projects increases, the new `pulumi convert` feature, enabled by the underlying [Pulumi CrossCode]({{< relref "/crosscode" >}}) technology, can be used to convert your Pulumi YAML program into your favorite general purpose Pulumi language.
+
+{{% notes type="info" %}}
+Join us on June 16th, 2022 for our Introduction to Infrastructure as Code with YAML workshop. In this workshop, you’re going to learn more about cloud computing and Infrastructure as Code by exploring how you can use Pulumi to build, configure, and deploy a real-life, modern application using Docker. You will create a frontend, a backend, and a database to deploy the Pulumipus Boba Tea Shop. [Register Now]({{< relref "/resources/introduction-to-infrastructure-as-code-with-yaml" >}})
+{{% /notes %}}
 
 {{< youtube "QFCkubMhY3U" >}}
 
