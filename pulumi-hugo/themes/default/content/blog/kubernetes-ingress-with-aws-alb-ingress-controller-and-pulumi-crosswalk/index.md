@@ -56,7 +56,7 @@ templates](https://github.com/pulumi/templates). We will use the
 `aws-typescript` template here and install all library
 dependencies.
 
-    $ brew install pulumi # download pulumi CLI
+    $ brew install pulumi/tap/pulumi # download pulumi CLI
     $ mkdir eks-alb-ingress && cd eks-alb-ingress
     $ pulumi new aws-typescript
     $ npm install --save @pulumi/kubernetes @pulumi/eks

@@ -52,7 +52,7 @@ Initialize a new
 templates. We use `aws-typescript template` here to install all
 dependencies and save the configuration.
 
-    $ brew install pulumi # download pulumi CLI
+    $ brew install pulumi/tap/pulumi # download pulumi CLI
 
     $ mkdir eks-rbac && cd eks-rbac
 

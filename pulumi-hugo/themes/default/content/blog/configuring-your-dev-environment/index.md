@@ -575,7 +575,7 @@ macOS Sierra (10.12) or later is required.
 You can install Pulumi through the [Homebrew package manager](https://brew.sh/):
 
 ```bash
-$ brew install pulumi
+$ brew install pulumi/tap/pulumi
 ```
 
 This will install the `pulumi` CLI to the usual place (often `/usr/local/bin/pulumi`) and add it to your path.

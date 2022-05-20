@@ -63,7 +63,7 @@ solution on AWS!
 
 ### **STEP 1: Create a Pulumi project using an AWS JavaScript template**
 
-    $ brew install pulumi
+    $ brew install pulumi/tap/pulumi
     $ mkdir asset-tracking && cd asset-tracking
     $ pulumi new aws-javascript
     $ yarn install
