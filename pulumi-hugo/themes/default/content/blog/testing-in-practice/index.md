@@ -20,7 +20,7 @@ In this article, we'll do a deep dive into each of these testing methods.
 
 <!--more-->
 
-Cloud engineering testing differs from application testing because multiple dependencies between components can have high latency. Let's examine these dependencies using an [example application](https://github.com/pulumi/examples/tree/master/aws-stackreference-architecture) composed of an application layer, a database layer, and a network layer. We can visualize these dependencies with Pulumi's resource graph.The graph is constructed from the [inputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) needed to create a resource.
+Cloud engineering testing differs from application testing because multiple dependencies between components can have high latency. Let's examine these dependencies using an [example application](https://github.com/pulumi/examples/tree/master/aws-ts-stackreference-architecture) composed of an application layer, a database layer, and a network layer. We can visualize these dependencies with Pulumi's resource graph.The graph is constructed from the [inputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) needed to create a resource.
 
 The resource graph for the application layer shows many dependencies. The application deploys containers in AWS Fargate, which are instantiated with an application service that requires a service definition with many inputs.
 
