@@ -47,7 +47,7 @@ See the [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/ma
 
 ### Pulumi Service Updates
 
-When deploying the service, it is recommended to pin the Pulumi Service image tag to a specific version. See the installer's [README](https://github.com/pulumi/pulumi-self-hosted-installers/local-docker/README.md) file to set the `imageTag` configuration property for the installer to use.
+When deploying the service, it is recommended to pin the Pulumi Service image tag to a specific version. See the installer's [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/local-docker/README.md) file to set the `imageTag` configuration property for the installer to use.
 
 When ready to update the Pulumi Sevice containers to use a different version, do the following:
 

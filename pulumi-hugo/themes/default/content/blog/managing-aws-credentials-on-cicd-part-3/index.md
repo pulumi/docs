@@ -150,7 +150,7 @@ to the `s3:*` actions.
 
 Unfortunately, Pulumi doesn't currently support generating a reasonable IAM Policy document for your stack. For a
 good introduction to some of the "worst-case scenarios" that could arise from a misconfigured IAM Policy,
-see [this blog post from BishopFox](https://know.bishopfox.com/research/privilege-escalation-in-aws).
+see [this blog post from BishopFox](https://know.bishopfox.com/blog/privilege-escalation-in-aws).
 
 The following is a hypothetical IAM policy that restricts the operations performed to just those for the
 AWS CloudFront and S3 products. (Which might be sufficient for

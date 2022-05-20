@@ -153,7 +153,7 @@ On the other hand, for ephemeral environments spawned in CI/CD or long-lived env
 
 Let’s take a look at how it all works in the actual code.
 
-As mentioned, by default, every Webiny project comes with three project applications: API, Admin Area, and Website, which are located in the [`api`](https://github.com/webiny/webiny-js/tree/next/packages/cwp-template-aws/template/api), [`apps/admin`](https://github.com/webiny/webiny-js/tree/next/packages/cwp-template-aws/template/apps/admin), and [`apps/website`](https://github.com/webiny/webiny-js/tree/next/packages/cwp-template-aws/template/apps/website) folders, respectively:
+As mentioned, by default, every Webiny project comes with three project applications: API, Admin Area, and Website, which are located in the `api`, `apps/admin`, and `apps/website` folders, respectively:
 
 ```bash
 .
@@ -184,7 +184,7 @@ As we can see, every project application follows the same general organization. 
 - `code` - contains application code (one or more packages)
 - `pulumi` - contains cloud infrastructure (Pulumi) code
 
-Furthermore, if we opened each of these `pulumi` folders, we’d see different cloud infrastructure resources clearly defined via multiple TypeScript classes. As a simple example, if we were to open the [`apps/admin/pulumi`](https://github.com/webiny/webiny-js/tree/next/packages/cwp-template-aws/template/apps/admin/pulumi) (Admin Area) folder, we’d find the following three files:
+Furthermore, if we opened each of these `pulumi` folders, we’d see different cloud infrastructure resources clearly defined via multiple TypeScript classes. As a simple example, if we were to open the [`apps/admin/pulumi`](https://github.com/webiny/webiny-js/tree/next/packages/cwp-template-aws/template/common/apps/admin/pulumi) (Admin Area) folder, we’d find the following three files:
 
 - [`app.ts`](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/apps/admin/pulumi/app.ts) - deploys an [Amazon S3](https://aws.amazon.com/s3/) bucket that hosts the Admin Area (React) application
 - [`cloudfront.ts`](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/apps/admin/pulumi/cloudfront.ts) - deploys an [Amazon CloudFront](https://aws.amazon.com/cloudfront/) distribution for improved availability
@@ -192,7 +192,7 @@ Furthermore, if we opened each of these `pulumi` folders, we’d see different c
 
 This code organization makes it much easier for developers to grasp the overall cloud infrastructure. It also makes it easier for them to adjust the code to their needs eventually.
 
-A more complex example is the cloud infrastructure code in the API project application ([`api/pulumi`](https://github.com/webiny/webiny-js/tree/next/packages/cwp-template-aws/template/api)), which deploys many different cloud infrastructure resources, like [AWS Lambda functions](https://www.pulumi.com/docs/reference/pkg/aws/lambda/), [DynamoDB tables](https://www.pulumi.com/docs/reference/pkg/aws/dynamodb/), [ElasticSearch clusters](https://www.pulumi.com/docs/reference/pkg/aws/elasticsearch/), [VPCs](https://www.pulumi.com/docs/reference/pkg/aws/ec2/), and more.
+A more complex example is the cloud infrastructure code in the API project application ([`api/pulumi`](https://github.com/webiny/webiny-js/tree/next/packages/cwp-template-aws/template/common/api)), which deploys many different cloud infrastructure resources, like [AWS Lambda functions](https://www.pulumi.com/docs/reference/pkg/aws/lambda/), [DynamoDB tables](https://www.pulumi.com/docs/reference/pkg/aws/dynamodb/), [ElasticSearch clusters](https://www.pulumi.com/docs/reference/pkg/aws/elasticsearch/), [VPCs](https://www.pulumi.com/docs/reference/pkg/aws/ec2/), and more.
 
 But I will leave this up to you to check out, as pasting multiple chunks of code here might not be that productive.
 
@@ -208,7 +208,7 @@ Another good example are [VPCs](https://aws.amazon.com/vpc/) and potentially [NA
 
 These extra resources make it slower to perform deployments from developers' machines and  incur extra costs for an organization because developers are deploying more resources, some of which are charged hourly.
 
-So, with that in mind, we split the API project application’s cloud infrastructure into two stacks - the [`dev`](https://github.com/webiny/webiny-js/tree/next/packages/cwp-template-aws/template/api/pulumi/dev) and [`prod`](https://github.com/webiny/webiny-js/tree/next/packages/cwp-template-aws/template/api/pulumi/prod). And, as you might’ve already guessed, only the `prod` variant will deploy absolutely all necessary cloud infrastructure resources.
+So, with that in mind, we split the API project application’s cloud infrastructure into two stacks - the `dev` and `prod`. And, as you might’ve already guessed, only the `prod` variant will deploy absolutely all necessary cloud infrastructure resources.
 
 What is even more interesting is the fact that this can be achieved with a simple if statement, which we placed in the [`index.ts`](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/api/pulumi/index.ts#L10-L16) entrypoint file:
 

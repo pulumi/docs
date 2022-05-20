@@ -21,9 +21,9 @@ The customer is required to provide and manage the following:
     * An "isolated" subnet means it can only route traffic within the subnet. So there is no NAT gateway.
 * Route53 hosted zone.
 * ACM Certiciate that covers FQDNs of the following form, where `{subdomain}` is optional:
-  * `{subdomain}.{zoneDomainName}`  
-  * `api.{subdomain}.{zoneDomainName}`  
-  * `app.{subdomain}.{zoneDomainName}`  
+  * `{subdomain}.{zoneDomainName}`
+  * `api.{subdomain}.{zoneDomainName}`
+  * `app.{subdomain}.{zoneDomainName}`
 * KMS key to be used the self-hosted Pulumi Service for encryption/decryption purposes.
 
 ## ECS-Hosted Deployment
@@ -50,13 +50,13 @@ To this end, you need to set up the following:
 
 ### Deployment Steps
 
-See the [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/ecs-hosted/README.md) file provided with the installer package for detailed deployment steps.
+See the [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/ecs-hosted) file provided with the installer package for detailed deployment steps.
 
 ## ECS-Hosted System Management and Maintenance
 
 ### Pulumi Service Updates
 
-When deploying the service, it is recommended to pin the Pulumi Service image tag to a specific version. See the installer's [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/ecs-hosted/README.md) file to set the `imageTag` configuration property for the installer to use.
+When deploying the service, it is recommended to pin the Pulumi Service image tag to a specific version. See the installer's [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/ecs-hosted) file to set the `imageTag` configuration property for the installer to use.
 
 When ready to update the Pulumi Sevice containers to use a different version, do the following:
 
@@ -70,7 +70,7 @@ The installer configures the RDS backend database for replication and checkpoint
 
 ### Blob Storage Maintenance
 
-The service automatically creates backups of checkpoint (i.e. state) files. However the customer may want to enable AWS Backup to periodically backup the S3 buckets created by the installer.  
+The service automatically creates backups of checkpoint (i.e. state) files. However the customer may want to enable AWS Backup to periodically backup the S3 buckets created by the installer.
 The buckets will have names of the form:
 
 * `pulumi-checkpoint-XXX`

@@ -33,7 +33,7 @@ So let's build ourselves a MERN app and deploy it on DigitalOcean with Pulumi. G
 
 ## First steps: setting up {#setting-up}
 
-The code for this walkthrough is [available as a template repository on GitHub](https://github.com/cnunciato/fullstack-pulumi-mern-digitalocean), so if you want to follow along (and you should!), you should [grab a copy of your own](https://github.com/cnunciato/fullstack-pulumi-mern-digitalocean/generate) to work with by forking the repository or creating a new one from the template. Once you've done that, you should also:
+The code for this walkthrough is [available as a template repository on GitHub](https://github.com/cnunciato/fullstack-pulumi-mern-digitalocean), so if you want to follow along (and you should!), you should grab a copy of your own to work with by forking the repository or creating a new one from the template. Once you've done that, you should also:
 
 * [Clone the repository](https://github.com/cnunciato/fullstack-pulumi-mern-digitalocean) to your local machine.
 * [Install Pulumi]({{< relref "/docs/get-started/install" >}}) and [Node.js](https://nodejs.org/).

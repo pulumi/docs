@@ -154,10 +154,7 @@ Internet.
 Right away, we notice:
 
 - Pulumi does not define a new API for Kubernetes; it simply uses the
-    same schema as the upstream
-    [Deployment](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#deployment-v1-apps)
-    and
-    [Service](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#service-v1-core)
+    same schema as the upstream Deployment and Service
     APIs. In fact, it is generated from the
     [Kubernetes OpenAPI specification](https://github.com/kubernetes/kubernetes/tree/master/api/openapi-spec),
     so it is always up-to-date and complete.
