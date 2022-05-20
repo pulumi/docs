@@ -409,4 +409,4 @@ For more information about Amazon CloudWatch, see the following:
 
 * [Amazon CloudWatch homepage](https://aws.amazon.com/cloudwatch/)
 
-Or [get started]({{< relref "/docs/get-started/aws" >}}) with Pulumi.
+Or [get started with Pulumi]({{< relref "/docs/get-started/aws" >}}).
