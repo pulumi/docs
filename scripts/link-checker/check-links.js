@@ -255,6 +255,7 @@ function getDefaultExcludedKeywords() {
         "https://github.com/pulumi/pulumi-hugo/edit/master",
         "https://github.com/pulumi/pulumi-hugo/issues/new",
         "https://www.linkedin.com/",
+        "https://linkedin.com/",
         "https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task",
         "https://blog.mapbox.com/",
         "https://www.youtube.com/",
@@ -292,6 +293,8 @@ function getDefaultExcludedKeywords() {
         "https://support.pulumi.com",
         "https://pbs.twimg.com/profile_images/",
         "https://linen.dev/",
+        "https://cloud.yandex.com/",
+        "http://localhost:3000",
     ];
 }
 
@@ -305,6 +308,9 @@ function excludeAcceptable(links) {
 
         // Ignore remote disconnects.
         .filter(b => b.reason !== "ERRNO_ECONNRESET")
+
+        // Ignore HTTP 308s.
+        .filter(b => b.reason !== "HTTP_308")
 
         // Ignore complaints about MIME types. BLC currently hard-codes an expectation of
         // type text/html, which causes it to fail on direct links to images, PDFs, and
