@@ -219,14 +219,11 @@ async function onComplete(brokenLinks) {
         }
 
         const list = filtered
-            .map(link => `• <${link.source}|${new URL(link.source).pathname}> → ${link.destination} (${link.reason})`)
+            .map(link => `:link: <${link.source}|${new URL(link.source).pathname}> → ${link.destination} (${link.reason})`)
             .join("\n");
 
         // Post the results to Slack.
-        await postToSlack(
-            "ops-notifications",
-            `Eek! :scream_cat: There are broken links on ${new URL(baseURL).hostname}: \n\n ${list}`
-        );
+        await postToSlack("website-notifications", list);
 
         throw new Error("Finished, but failed with errors. See the log for details.");
     }
