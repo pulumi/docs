@@ -224,7 +224,7 @@ async function onComplete(brokenLinks) {
 
         // Post the results to Slack.
         await postToSlack(
-            "ops-notifications",
+            "website-notifications",
             `Eek! :scream_cat: There are broken links on ${new URL(baseURL).hostname}: \n\n ${list}`
         );
 
