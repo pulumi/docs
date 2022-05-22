@@ -470,8 +470,8 @@ Each provider has its own unique `<provider-settings>` and authentication mechan
 The `awskms` provider uses an existing KMS key in your AWS account for encryption. This key can be specified using one of three approaches:
 
 1. By ID: `awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1`.
-2. By alias: `awskms://alias/ExampleAlias?region=us-east-1`.
-3. By ARN: `awskms:///arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34bc-56ef-1234567890ab?region=us-east-1`.
+1. By alias: `awskms://alias/ExampleAlias?region=us-east-1`.
+1. By ARN: `awskms:///arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34bc-56ef-1234567890ab?region=us-east-1`.
 
 For example, this configures a stack to use an AWS KMS key with ID `1234abcd-12ab-34cd-56ef-1234567890ab`:
 
@@ -481,6 +481,14 @@ $ pulumi stack init my-stack \
 ```
 
 If you have previously configured the AWS CLI, the same credentials will be used. These can also be overridden using the standard `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables. For more options, refer to the [AWS Go SDK documentation](https://docs.aws.amazon.com/sdk-for-go/api/aws/session/).
+
+{{% notes "info" %}}
+As of Pulumi CLI v3.33.1, instead of specifying the AWS Profile using the `AWS_PROFILE` environment variable, you can append the profile as a querystring to the above KMS identifiers:
+
+1. By ID: `awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1&profile=dev`.
+1. By alias: `awskms://alias/ExampleAlias?region=us-east-1&profile=qa`.
+1. By ARN: `awskms:///arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34bc-56ef-1234567890ab?region=us-east-1&profile=prod`.
+{{% /notes %}}
 
 #### Azure Key Vault
 
