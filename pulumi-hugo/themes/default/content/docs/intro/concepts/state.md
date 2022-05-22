@@ -62,7 +62,17 @@ The basic form of `login` will use the Pulumi Service by default. If you wish to
 $ pulumi login <backend-url>
 ```
 
-Alternatively, you may set the `PULUMI_BACKEND_URL` environment variable to avoid needing to type it each time.
+Alternatively, there are 2 other options that help to avoid the need to type it every time:
+
+1. Set the `PULUMI_BACKEND_URL` environment variable.
+1. Set `backend` property in the project `Pulumi.yaml` config file as below:
+
+```yaml
+....
+backend:
+    url: <backend-url>
+....
+```
 
 For details on the various backend URL formats and options, please see the following sections:
 
@@ -155,6 +165,10 @@ To use the [AWS S3](https://aws.amazon.com/s3/) backend, pass the `s3://<bucket-
 ```sh
 $ pulumi login s3://<bucket-name>
 ```
+
+{{% notes type="info"%}}
+As of Pulumi CLI v3.33.1, it's possible to specify AWS profile from the shared config file `~/.aws/config` in the URL query parameter, i.e. `s3://<bucket-name>?profile=main`
+{{% /notes %}}
 
 {{% notes type="info"%}}
 The `bucket-name` value can include multiple folders, such as `my-bucket/app/project1`. This is useful when storing multiple projects' state in the same bucket.
