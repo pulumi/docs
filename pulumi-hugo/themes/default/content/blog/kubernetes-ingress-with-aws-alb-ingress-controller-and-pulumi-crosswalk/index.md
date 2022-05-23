@@ -40,7 +40,7 @@ In this post, we will work through a simple example of running ALB based
 Kubernetes Ingresses with Pulumi
 [EKS](https://github.com/pulumi/pulumi-eks),
 [AWS](https://github.com/pulumi/pulumi-aws), and
-[AWSX](https://github.com/pulumi/pulumi-awsx/tree/master/nodejs/awsx)
+[AWSX](https://github.com/pulumi/pulumi-awsx/tree/master/sdk/nodejs)
 packages.
 
 <!--more-->
