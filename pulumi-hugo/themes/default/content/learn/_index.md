@@ -22,17 +22,17 @@ tutorials:
         Tutorials are series of hands-on activities that help you along your
         learning journey with Pulumi.
 
+# There are 2 trailing spaces appended to each line in the paragraphs below
+# in order to force a new line to limit the line length to 75 characters.
 overview: |
-    <h1>Welcome to Learn Pulumi!</h1>
+    <h2 class="learn-h2">Welcome to Learn Pulumi!</h2>
 
-    These learning pathways will help you learn all of the concepts of Pulumi,
-    along with best practices and architectural patterns, through real-life
-    examples.
+    Learn all the concepts of Pulumi, along with best practices and  
+    architectural patterns.
 
-    In each tutorial, you'll complete a series of steps while exploring Pulumi
-    to complete a project or build a system. Start with Pulumi Fundamentals to
-    get comfortable with the vocabulary, and then head to another pathway to
-    explore further.
+    Each tutorial will step you through exploring Pulumi and completing a  
+    project. Start with Pulumi Fundamentals to get comfortable with  
+    vocabulary, then try another pathway to explore more!
 ---
 
 Ipsum lorem
