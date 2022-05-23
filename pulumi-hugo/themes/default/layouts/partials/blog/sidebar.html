@@ -1,7 +1,7 @@
 <!--
-    Blog sidebar, showing a list of tags, and a quick intro for context.
+    Blog sidebar, showing a list of tags, search, and a quick intro for context.
 -->
-<aside class="lg:pr-8">
+<aside class="lg:pr-8 sticky-sidebar">
 
     <!-- Sidebar menu toggle for mobile. -->
     <div class="lg:hidden">
@@ -11,19 +11,22 @@
     </div>
 
     {{ if eq .Page.Title "Blog" }}
-        <h1 class="no-anchor hidden lg:flex mt-2">
+        <h1 class="no-anchor hidden lg:flex mt-2 mb-6">
             <a data-track="sidebar" class="text-2xl" href="{{ relref . "/blog" }}">Pulumi Blog</a>
         </h1>
     {{ else }}
-        <h2 class="no-anchor hidden lg:flex mt-2">
+        <h2 class="no-anchor hidden lg:flex mt-2 mb-6">
             <a data-track="sidebar" class="text-2xl" href="{{ relref . "/blog" }}">Pulumi Blog</a>
         </h2>
     {{ end }}
 
-    <hr class="my-8">
-
     <!-- Sidebar content. Hidden on smaller displays unless toggled. -->
     <div class="blog-sidebar-content hidden lg:block">
+
+        {{ partial "blog/search" . }}
+
+        <hr class="my-8">
+        
         {{ partial "sidebar-cta" . }}
 
         <hr class="my-8">

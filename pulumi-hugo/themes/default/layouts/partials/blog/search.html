@@ -1,0 +1,51 @@
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','xxxQB1LC9DE212h8eJmh','2.0.0');
+</script>
+
+<div id="search-container">
+    <div id="search-form">
+        <form class="relative flex">
+            <i class="fas fa-search absolute inset-y-0 flex items-center pl-3 text-gray-500"></i>
+            <input
+                id="search-query"
+                type="text"
+                class="st-default-search-input py-2 px-4 pl-8 text-sm border border-gray-400 focus:border-blue-500 focus:outline-none rounded transition"
+                placeholder="Search the blog" />
+        </form>
+    </div>
+    <div id="search-results" class="relative"></div>
+</div>
+
+<script>
+        // We want to restrict the results to just the ones from the blog.
+        // Create a MutationObserver and attach it to the #search-results container above.
+        // The `subtree` modifications property will allow our callback to be called
+        // whenever search result nodes (the `<a>` tag elements) will be added to the
+        // container.
+        // This mirrors our approach for limiting results in the Registry.
+        const observer = new MutationObserver((mutations, observer) => {
+            mutations.forEach(mutation => {
+                mutation.addedNodes.forEach(n => {
+                    // Remove the result if its URL does not contain `blog`.
+                    if (n.classList.contains("st-ui-result") && !n.href.includes("blog")) {
+                        n.remove();
+                    }
+                });
+            });
+        });
+
+        // Start listening for DOM mutation events for the search results.
+        observer.observe(
+            document.querySelector("#search-container #search-results"),
+            {
+                attributes: false,
+                childList: true,
+                subtree: true,
+            },
+        );
+    </script>
