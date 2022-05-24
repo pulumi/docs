@@ -1,0 +1,10 @@
+id = "michael-bridgen"
+name = "Michael Bridgen"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "squaremo"
+linkedin = "michaelbridgen"
