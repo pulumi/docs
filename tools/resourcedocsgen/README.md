@@ -52,6 +52,7 @@ for a certain package (or all packages) within the registry repo for development
 For both of the above commands, the default location for generating the API docs is `content/registry/packages/<package name>/api-docs`
 and for the nav tree it is `static/registry/packages/navs/<package name>.json`.
 
+## Contributing
 ### Updating the API docs templates
 
 This tool depends on the `pulumi/pulumi` repo, namely the `pkg/codegen/docs` generator.
