@@ -317,7 +317,7 @@ $(function() {
 
                 // Nastiest (temporary) hack ever, but it works.
                 // https://github.com/pulumi/pulumi-java/issues/595
-                url = url.replace("undefined/", "");
+                //url = url.replace("undefined/", "");
 
                 if (top !== window) {
                     parent.classFrame.location = pathtoroot + url;
