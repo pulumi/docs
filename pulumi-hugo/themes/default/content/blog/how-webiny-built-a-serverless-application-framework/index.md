@@ -186,9 +186,9 @@ As we can see, every project application follows the same general organization. 
 
 Furthermore, if we opened each of these `pulumi` folders, we’d see different cloud infrastructure resources clearly defined via multiple TypeScript classes. As a simple example, if we were to open the [`apps/admin/pulumi`](https://github.com/webiny/webiny-js/tree/next/packages/cwp-template-aws/template/common/apps/admin/pulumi) (Admin Area) folder, we’d find the following three files:
 
-- [`app.ts`](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/apps/admin/pulumi/app.ts) - deploys an [Amazon S3](https://aws.amazon.com/s3/) bucket that hosts the Admin Area (React) application
-- [`cloudfront.ts`](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/apps/admin/pulumi/cloudfront.ts) - deploys an [Amazon CloudFront](https://aws.amazon.com/cloudfront/) distribution for improved availability
-- [`index.ts`](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/apps/admin/pulumi/index.ts) - the Pulumi entrypoint file, imports classes defined within separate files
+- [`app.ts`](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/common/apps/admin/pulumi/app.ts) - deploys an [Amazon S3](https://aws.amazon.com/s3/) bucket that hosts the Admin Area (React) application
+- [`cloudfront.ts`](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/common/apps/admin/pulumi/cloudfront.ts) - deploys an [Amazon CloudFront](https://aws.amazon.com/cloudfront/) distribution for improved availability
+- [`index.ts`](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/common/apps/admin/pulumi/index.ts) - the Pulumi entrypoint file, imports classes defined within separate files
 
 This code organization makes it much easier for developers to grasp the overall cloud infrastructure. It also makes it easier for them to adjust the code to their needs eventually.
 
@@ -210,7 +210,7 @@ These extra resources make it slower to perform deployments from developers' mac
 
 So, with that in mind, we split the API project application’s cloud infrastructure into two stacks - the `dev` and `prod`. And, as you might’ve already guessed, only the `prod` variant will deploy absolutely all necessary cloud infrastructure resources.
 
-What is even more interesting is the fact that this can be achieved with a simple if statement, which we placed in the [`index.ts`](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/api/pulumi/index.ts#L10-L16) entrypoint file:
+What is even more interesting is the fact that this can be achieved with a simple if statement, which we placed in the [`index.ts`](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/ddb-es/api/pulumi/index.ts#L19-L25) entrypoint file:
 
 ```typescript
 // (...)
@@ -237,7 +237,7 @@ Another useful feature is the automatic tagging of the deployed cloud infrastruc
 
 We created a `tagResources` function, which essentially registers a global stack transformation via [`pulumi.runtime.registerStackTransformation`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#registerStackTransformation) function to achieve this.
 
-It is also applied in the same [`index.ts`](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/api/pulumi/index.ts#L4-L8) entrypoint file we saw in the previous section:
+It is also applied in the same [`index.ts`](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/common/apps/admin/pulumi/index.ts#L6-L11) entrypoint file we saw in the previous section:
 
 ```typescript
 import { tagResources } from "@webiny/cli-plugin-deploy-pulumi/utils";
@@ -259,7 +259,7 @@ Finally, to protect our users from accidental deletions of mission-critical clou
 
 > The protect option marks a resource as protected. A protected resource cannot be deleted directly. Instead, you must first set `protect: false` and run `pulumi up`. Then you can delete the resource by removing the line of code or by running `pulumi destroy`. The default is to inherit this value from the parent resource and `false` for resources without a parent.
 
-So, for Webiny users, we’ve made sure that this feature is automatically enabled for resources like [DynamoDB tables](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/api/pulumi/prod/dynamoDb.ts#L27), [Cognito User Pools](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/api/pulumi/prod/cognito.ts#L70), [Elasticsearch Cluster](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/api/pulumi/prod/elasticSearch.ts#L41), and similar.
+So, for Webiny users, we’ve made sure that this feature is automatically enabled for resources like [DynamoDB tables](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/ddb/api/pulumi/prod/dynamoDb.ts#L27), [Cognito User Pools](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/ddb/api/pulumi/prod/cognito.ts#L70), [Elasticsearch Cluster](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/ddb-es/api/pulumi/prod/elasticSearch.ts#L42), and similar.
 
 ## Future Plans
 
