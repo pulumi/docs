@@ -28,7 +28,7 @@ case_studies:
             Atlassian Bitbucket reduced developers' time spent on maintenance by 50% with a self-service platform built with Pulumi.
 
         - company: sans
-          link: /case-studies/sans/
+          link: /case-studies/sans-institute/
           quote: |
             SANS increased deployment velocity by 3X after adopting cloud engineering and implementing infrastructure CI/CD.
 
