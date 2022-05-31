@@ -91,6 +91,37 @@ One reason you would use the `ignoreChanges` option is to ignore changes in prop
 
 In addition to passing simple property names, nested properties can also be supplied to ignore changes to a more targeted nested part of the resource's inputs. Here are examples of legal paths that can be passed to specify nested properties of objects and arrays, as well as to escape object keys that contain special characters:
 
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language python %}}
+
+{{% notes "info" %}}
+The property names passed to `ignoreChanges` should always be the "camelCase" version of the property name, as used in the core Pulumi resource model.
+For example, a property named `nested_resource` would turn into `nestedResource`.
+{{% /notes %}}
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+{{% notes "info" %}}
+The property names passed to `ignoreChanges` should always be the "camelCase" version of the property name, as used in the core Pulumi resource model.
+For example, a property named `NestedResource` would turn into `nestedResource`.
+{{% /notes %}}
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+{{% notes "info" %}}
+The property names passed to `ignoreChanges` should always be the "camelCase" version of the property name, as used in the core Pulumi resource model.
+For example, a property named `NestedResource` would turn into `nestedResource`.
+{{% /notes %}}
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 - `root`
 - `root.nested`
 - `root["nested"]`
@@ -106,7 +137,3 @@ In addition to passing simple property names, nested properties can also be supp
 - `root["key with a ."]`
 - `["root key with \"escaped\" quotes"].nested`
 - `["root key with a ."][100]`
-
-{{% notes "info" %}}
-The property names passed to `ignoreChanges` should always be the "camelCase" version of the property name, as used in the core Pulumi resource model.
-{{% /notes %}}
