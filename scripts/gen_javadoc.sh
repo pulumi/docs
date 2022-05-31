@@ -9,7 +9,7 @@ DEST=./static-prebuilt/docs/reference/pkg/java
 rm -rf "$DEST"
 cp -r "$SRC" "$DEST"
 
-cat > static-prebuilt/docs/reference/pkg/java/search.js <<EOF
+cat > static-prebuilt/docs/reference/pkg/java/search.js <<"EOF"
 /*
  * Copyright (c) 2015, 2018, Oracle and/or its affiliates. All rights reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
