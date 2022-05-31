@@ -44,6 +44,16 @@ The API service is a Go-based application. This is a single binary application t
 
 This container runs an HTTP server which provides the APIs needed by the Console and the CLI. By default, this container will serve using port `8080` over standard HTTP. If [TLS](#tls-environment-variables) is configured the server will instead serve over port `8443` using HTTPS.
 
+#### Function Mode
+
+It's possible to split apart the HTTP Server from the Background Jobs functionality to distribute reponsibility across multiple instances. The function mode determines the mode in which the server runs based upon the env variable `PULUMI_API_CONTAINER_MODE`. If this value is not defined, or doesn't match a valid option, then it defaults to `FULL`.
+
+| Variable Name | Description                  |
+| ------------- | ---------------------------- |
+|	FULL          | Pulumi API & Background Jobs (Default) |
+| API           | Only Pulumi API              |
+| JOBS          | Only Background Jobs         |
+
 ## Environment Variables for Core Infrastructure
 
 The core infrastructure components to successfully run the API service are the database, object storage, and encryption services.
