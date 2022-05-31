@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":1,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":1,"i17":1,"i18":1,"i19":1,"i20":1};
+var data = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":1,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -125,8 +125,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt>All Known Subinterfaces:</dt>
 <dd><code><a href="DeploymentInstance.html" title="interface in com.pulumi.deployment">DeploymentInstance</a></code></dd>
 </dl>
+<dl>
+<dt>All Known Implementing Classes:</dt>
+<dd><code><a href="MockDeployment.html" title="class in com.pulumi.deployment">MockDeployment</a></code></dd>
+</dl>
 <hr>
-<pre>public interface <span class="typeNameLabel">Deployment</span></pre>
+<pre>@InternalUse
+public interface <span class="typeNameLabel">Deployment</span></pre>
 </li>
 </ul>
 </div>
@@ -280,43 +285,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isDryRun()">isDryRun</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Whether or not the application is currently being previewed or actually applied.</div>
-</td>
-</tr>
-<tr id="i16" class="altColor">
-<td class="colFirst"><code>static java.util.concurrent.CompletableFuture&lt;java.lang.Integer&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#runAsync(java.util.function.Supplier)">runAsync</a></span>&#8203;(java.util.function.Supplier&lt;java.util.Map&lt;java.lang.String,&#8203;<a href="../core/Output.html" title="interface in com.pulumi.core">Output</a>&lt;?&gt;&gt;&gt;&nbsp;callback)</code></th>
-<td class="colLast">
-<div class="block">An entry-point to a Pulumi application.</div>
-</td>
-</tr>
-<tr id="i17" class="rowColor">
-<td class="colFirst"><code>static java.util.concurrent.CompletableFuture&lt;java.lang.Integer&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#runAsyncFuture(java.util.function.Supplier)">runAsyncFuture</a></span>&#8203;(java.util.function.Supplier&lt;java.util.concurrent.CompletableFuture&lt;java.util.Map&lt;java.lang.String,&#8203;<a href="../core/Output.html" title="interface in com.pulumi.core">Output</a>&lt;?&gt;&gt;&gt;&gt;&nbsp;callback)</code></th>
-<td class="colLast">
-<div class="block">An entry-point to a Pulumi application.</div>
-</td>
-</tr>
-<tr id="i18" class="altColor">
-<td class="colFirst"><code>static java.util.concurrent.CompletableFuture&lt;java.lang.Integer&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#runAsyncFuture(java.util.function.Supplier,com.pulumi.resources.StackOptions)">runAsyncFuture</a></span>&#8203;(java.util.function.Supplier&lt;java.util.concurrent.CompletableFuture&lt;java.util.Map&lt;java.lang.String,&#8203;<a href="../core/Output.html" title="interface in com.pulumi.core">Output</a>&lt;?&gt;&gt;&gt;&gt;&nbsp;callback,
-              <a href="../resources/StackOptions.html" title="class in com.pulumi.resources">StackOptions</a>&nbsp;options)</code></th>
-<td class="colLast">
-<div class="block">An entry-point to a Pulumi application.</div>
-</td>
-</tr>
-<tr id="i19" class="rowColor">
-<td class="colFirst"><code>static java.util.concurrent.CompletableFuture&lt;java.lang.Integer&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#runAsyncRunnable(java.lang.Runnable)">runAsyncRunnable</a></span>&#8203;(java.lang.Runnable&nbsp;callback)</code></th>
-<td class="colLast">
-<div class="block">An entry-point to a Pulumi application.</div>
-</td>
-</tr>
-<tr id="i20" class="altColor">
-<td class="colFirst"><code>static &lt;S extends <a href="../resources/Stack.html" title="class in com.pulumi.resources">Stack</a>&gt;<br>java.util.concurrent.CompletableFuture&lt;java.lang.Integer&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#runAsyncStack(java.util.function.Supplier)">runAsyncStack</a></span>&#8203;(java.util.function.Supplier&lt;S&gt;&nbsp;stackFactory)</code></th>
-<td class="colLast">
-<div class="block">An entry-point to a Pulumi application.</div>
+<div class="block">Whether the application is currently being previewed or actually applied.</div>
 </td>
 </tr>
 </table>
@@ -342,9 +311,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>getInstance</h4>
-<pre class="methodSignature">static&nbsp;<a href="DeploymentInstance.html" title="interface in com.pulumi.deployment">DeploymentInstance</a>&nbsp;getInstance()</pre>
+<pre class="methodSignature">@InternalUse
+static&nbsp;<a href="DeploymentInstance.html" title="interface in com.pulumi.deployment">DeploymentInstance</a>&nbsp;getInstance()</pre>
 <div class="block">The current running deployment instance. This is only available from inside the function
- passed to @see <a href="#runAsync(java.util.function.Supplier)"><code>runAsync(Supplier)</code></a> (or its overloads).</div>
+ passed to @see <code>Runner.runAsync(Supplier)</code> (or its overloads).</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.IllegalStateException</code> - if called before 'run' was called</dd>
@@ -386,7 +356,7 @@ java.lang.String&nbsp;getProjectName()</pre>
 <li class="blockList">
 <h4>isDryRun</h4>
 <pre class="methodSignature">boolean&nbsp;isDryRun()</pre>
-<div class="block">Whether or not the application is currently being previewed or actually applied.</div>
+<div class="block">Whether the application is currently being previewed or actually applied.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>true if application is being applied</dd>
@@ -558,151 +528,12 @@ java.lang.String&nbsp;getProjectName()</pre>
 <a id="call(java.lang.String,com.pulumi.resources.CallArgs)">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>call</h4>
 <pre class="methodSignature">void&nbsp;call&#8203;(java.lang.String&nbsp;token,
           <a href="../resources/CallArgs.html" title="class in com.pulumi.resources">CallArgs</a>&nbsp;args)</pre>
 <div class="block">Same as <a href="#call(java.lang.String,com.pulumi.core.TypeShape,com.pulumi.resources.CallArgs,com.pulumi.resources.Resource,com.pulumi.deployment.CallOptions)"><code>call(String, TypeShape, CallArgs, Resource, CallOptions)</code></a>, however the return value is ignored.</div>
-</li>
-</ul>
-<a id="runAsyncRunnable(java.lang.Runnable)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>runAsyncRunnable</h4>
-<pre class="methodSignature">static&nbsp;java.util.concurrent.CompletableFuture&lt;java.lang.Integer&gt;&nbsp;runAsyncRunnable&#8203;(java.lang.Runnable&nbsp;callback)</pre>
-<div class="block">An entry-point to a Pulumi application.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>callback</code> - Callback that creates stack resources.</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#runAsyncFuture(java.util.function.Supplier,com.pulumi.resources.StackOptions)"><code>for more details.</code></a></dd>
-</dl>
-</li>
-</ul>
-<a id="runAsync(java.util.function.Supplier)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>runAsync</h4>
-<pre class="methodSignature">static&nbsp;java.util.concurrent.CompletableFuture&lt;java.lang.Integer&gt;&nbsp;runAsync&#8203;(java.util.function.Supplier&lt;java.util.Map&lt;java.lang.String,&#8203;<a href="../core/Output.html" title="interface in com.pulumi.core">Output</a>&lt;?&gt;&gt;&gt;&nbsp;callback)</pre>
-<div class="block">An entry-point to a Pulumi application.
- Deployment will instantiate a default stack instance based on the callback passed as <code>callback</code> parameter.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>callback</code> - Callback that creates stack resources.</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>A dictionary of stack outputs.</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#runAsyncFuture(java.util.function.Supplier,com.pulumi.resources.StackOptions)"><code>for more details.</code></a></dd>
-</dl>
-</li>
-</ul>
-<a id="runAsyncFuture(java.util.function.Supplier)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>runAsyncFuture</h4>
-<pre class="methodSignature">static&nbsp;java.util.concurrent.CompletableFuture&lt;java.lang.Integer&gt;&nbsp;runAsyncFuture&#8203;(java.util.function.Supplier&lt;java.util.concurrent.CompletableFuture&lt;java.util.Map&lt;java.lang.String,&#8203;<a href="../core/Output.html" title="interface in com.pulumi.core">Output</a>&lt;?&gt;&gt;&gt;&gt;&nbsp;callback)</pre>
-<div class="block">An entry-point to a Pulumi application.
- Deployment will instantiate a default stack instance based on the callback passed as <code>callback</code> parameter.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>callback</code> - Callback that creates stack resources.</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#runAsyncFuture(java.util.function.Supplier,com.pulumi.resources.StackOptions)"><code>for more details.</code></a></dd>
-</dl>
-</li>
-</ul>
-<a id="runAsyncFuture(java.util.function.Supplier,com.pulumi.resources.StackOptions)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>runAsyncFuture</h4>
-<pre class="methodSignature">static&nbsp;java.util.concurrent.CompletableFuture&lt;java.lang.Integer&gt;&nbsp;runAsyncFuture&#8203;(java.util.function.Supplier&lt;java.util.concurrent.CompletableFuture&lt;java.util.Map&lt;java.lang.String,&#8203;<a href="../core/Output.html" title="interface in com.pulumi.core">Output</a>&lt;?&gt;&gt;&gt;&gt;&nbsp;callback,
-                                                                                @Nullable
-                                                                                <a href="../resources/StackOptions.html" title="class in com.pulumi.resources">StackOptions</a>&nbsp;options)</pre>
-<div class="block">An entry-point to a Pulumi application.
- Deployment will instantiate a default stack instance based on the callback passed as <code>callback</code> parameter.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>callback</code> - Callback that creates stack resources.</dd>
-<dd><code>options</code> - Optional Stack options.
- Java applications should perform all startup logic
- they need in their <code>main</code> method and then end with:
- <p>
- <code>
- public static void main(String[] args) {
-     // program initialization code ...
-
-     return Deployment.runAsync(() -&gt; {
-        // Code that creates resources.
-     });
- }
- </code>
- </p>
- <p>
- Importantly: Cloud resources cannot be created outside of the lambda passed
- to any of the @see #runAsync overloads.
- </p>
- <p>
- Because cloud Resource construction is inherently asynchronous,
- the result of this function is a @see <code>CompletableFuture</code> which should
- then be returned or awaited. This will ensure that any problems that are
- encountered during the running of the program are properly reported.
- Failure to do this may lead to the program ending early before all
- resources are properly registered.
- </p>
- The function passed to @see #runAsyncFuture(Supplier, StackOptions)
- can optionally return a @see <code>Map</code>.
- The keys and values in this map will become the outputs for the Pulumi Stack that is created.</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#runAsyncStack(java.util.function.Supplier)"><code>for more information.</code></a></dd>
-</dl>
-</li>
-</ul>
-<a id="runAsyncStack(java.util.function.Supplier)">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>runAsyncStack</h4>
-<pre class="methodSignature">static&nbsp;&lt;S extends <a href="../resources/Stack.html" title="class in com.pulumi.resources">Stack</a>&gt;&nbsp;java.util.concurrent.CompletableFuture&lt;java.lang.Integer&gt;&nbsp;runAsyncStack&#8203;(java.util.function.Supplier&lt;S&gt;&nbsp;stackFactory)</pre>
-<div class="block">An entry-point to a Pulumi application.
- Deployment will instantiate a new stack instance using the supplier passed as <code>stackFactory</code> parameter.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>stackFactory</code> - The stack supplier used to create stack instances
- Java applications should perform all startup logic they
- need in their <code>main</code> method and then end with:
- <p>
- <code>
- public static void main(String[] args) {
-     // program initialization code ...
-
-     return Deployment.runAsyncStack(() -&gt; new MyStack()));
- }
- </code>
- </p>
- <p>
- Importantly: cloud resources cannot be created outside of the @see Stack component.
- </p>
- <p>
- Because cloud Resource construction is inherently asynchronous, the
- result of this function is a @see <code>CompletableFuture</code> which should then
- be returned or awaited. This will ensure that any problems that are
- encountered during the running of the program are properly reported.
- Failure to do this may lead to the program ending early before all
- resources are properly registered.
- </p></dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#runAsyncFuture(java.util.function.Supplier,com.pulumi.resources.StackOptions)"><code>for more information.</code></a></dd>
-</dl>
 </li>
 </ul>
 </li>

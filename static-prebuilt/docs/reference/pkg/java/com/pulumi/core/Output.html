@@ -275,11 +275,10 @@ extends com.pulumi.core.internal.Copyable&lt;<a href="Output.html" title="interf
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>static <a href="Output.html" title="interface in com.pulumi.core">Output</a>&lt;java.lang.String&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#format(java.lang.String,com.pulumi.core.Output...)">format</a></span>&#8203;(java.lang.String&nbsp;formattableString,
-      <a href="Output.html" title="interface in com.pulumi.core">Output</a>...&nbsp;arguments)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#format(java.lang.String,java.lang.Object...)">format</a></span>&#8203;(java.lang.String&nbsp;formattableString,
+      java.lang.Object...&nbsp;arguments)</code></th>
 <td class="colLast">
-<div class="block">Takes in a <code>formattableString</code> with potential <a href="Output.html" title="interface in com.pulumi.core"><code>Output</code></a>
- in the 'placeholder holes'.</div>
+<div class="block">Takes in a <code>formattableString</code> with potential <a href="Output.html" title="interface in com.pulumi.core"><code>Output</code></a> or a regular <code>Object</code>.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
@@ -895,16 +894,18 @@ static&nbsp;&lt;T&gt;&nbsp;<a href="Output.html" title="interface in com.pulumi.
 </dl>
 </li>
 </ul>
-<a id="format(java.lang.String,com.pulumi.core.Output...)">
+<a id="format(java.lang.String,java.lang.Object...)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>format</h4>
 <pre class="methodSignature">static&nbsp;<a href="Output.html" title="interface in com.pulumi.core">Output</a>&lt;java.lang.String&gt;&nbsp;format&#8203;(java.lang.String&nbsp;formattableString,
-                                       <a href="Output.html" title="interface in com.pulumi.core">Output</a>...&nbsp;arguments)</pre>
-<div class="block">Takes in a <code>formattableString</code> with potential <a href="Output.html" title="interface in com.pulumi.core"><code>Output</code></a>
- in the 'placeholder holes'. Conceptually, this method unwraps all the underlying values in the holes,
+                                       @Nullable
+                                       java.lang.Object...&nbsp;arguments)</pre>
+<div class="block">Takes in a <code>formattableString</code> with potential <a href="Output.html" title="interface in com.pulumi.core"><code>Output</code></a> or a regular <code>Object</code>.
+ in the 'placeholder holes'.
+ Conceptually, this method unwraps all the underlying values in the holes,
  combines them appropriately with the <code>formattableString</code>, and produces an <a href="Output.html" title="interface in com.pulumi.core"><code>Output</code></a>
  containing the final result.
  <p>
@@ -915,8 +916,9 @@ static&nbsp;&lt;T&gt;&nbsp;<a href="Output.html" title="interface in com.pulumi.
  then the final result will be a secret.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>formattableString</code> - the format string with same syntax as expected by <code>String.format(String, Object...)</code></dd>
-<dd><code>arguments</code> - <a href="Output.html" title="interface in com.pulumi.core"><code>Output</code></a>s that values of will be applied to the format String</dd>
+<dd><code>formattableString</code> - The format string with same syntax as expected by <code>String.format(String, Object...)</code>,
+                          the behaviour on a <code>null</code> argument depends on the format conversion.</dd>
+<dd><code>arguments</code> - <a href="Output.html" title="interface in com.pulumi.core"><code>Output</code></a>s or regular <code>Object</code>s that values of will be applied to the format String</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an <a href="Output.html" title="interface in com.pulumi.core"><code>Output</code></a> with the result of the formatting</dd>
 </dl>

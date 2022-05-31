@@ -26,8 +26,8 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var data = {"i0":9,"i1":42,"i2":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -140,9 +140,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <hr>
-<pre>public class <span class="typeNameLabel">StackReferenceArgs</span>
+<pre>public final class <span class="typeNameLabel">StackReferenceArgs</span>
 extends <a href="ResourceArgs.html" title="class in com.pulumi.resources">ResourceArgs</a></pre>
-<div class="block">The set of arguments for constructing a StackReference resource.</div>
+<div class="block">The set of arguments for constructing a <a href="StackReference.html" title="class in com.pulumi.resources"><code>StackReference</code></a> resource.</div>
 </li>
 </ul>
 </div>
@@ -156,6 +156,21 @@ extends <a href="ResourceArgs.html" title="class in com.pulumi.resources">Resour
 <!--   -->
 </a>
 <h3>Nested Class Summary</h3>
+<table class="memberSummary">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Class</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="StackReferenceArgs.Builder.html" title="class in com.pulumi.resources">StackReferenceArgs.Builder</a></span></code></th>
+<td class="colLast">
+<div class="block">The builder for <a href="StackReferenceArgs.html" title="class in com.pulumi.resources"><code>StackReferenceArgs</code></a>.</div>
+</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a id="nested.classes.inherited.from.class.com.pulumi.resources.InputArgs">
 <!--   -->
@@ -183,13 +198,8 @@ extends <a href="ResourceArgs.html" title="class in com.pulumi.resources">Resour
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="StackReferenceArgs.html" title="class in com.pulumi.resources">StackReferenceArgs</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#Empty">Empty</a></span></code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../core/Output.html" title="interface in com.pulumi.core">Output</a>&lt;java.lang.String&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#name">name</a></span></code></th>
 <td class="colLast">
-<div class="block">The name of the stack to reference.</div>
+<div class="block">An empty <a href="StackReferenceArgs.html" title="class in com.pulumi.resources"><code>StackReferenceArgs</code></a> instance.</div>
 </td>
 </tr>
 </table>
@@ -225,16 +235,32 @@ extends <a href="ResourceArgs.html" title="class in com.pulumi.resources">Resour
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t6" class="tableTab"><span><a href="javascript:show(32);">Deprecated Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colSecond" scope="col">Method</th>
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="StackReferenceArgs.Builder.html" title="class in com.pulumi.resources">StackReferenceArgs.Builder</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#builder()">builder</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.util.Optional&lt;<a href="../core/Output.html" title="interface in com.pulumi.core">Output</a>&lt;java.lang.String&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getName()">getName</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>
+<div class="deprecationComment">use <a href="#name()"><code>name()</code></a></div>
+</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>java.util.Optional&lt;<a href="../core/Output.html" title="interface in com.pulumi.core">Output</a>&lt;java.lang.String&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#name()">name</a></span>()</code></th>
+<td class="colLast">
+<div class="block">The name of the stack to reference.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -270,21 +296,11 @@ extends <a href="ResourceArgs.html" title="class in com.pulumi.resources">Resour
 <a id="Empty">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>Empty</h4>
 <pre>public static final&nbsp;<a href="StackReferenceArgs.html" title="class in com.pulumi.resources">StackReferenceArgs</a> Empty</pre>
-</li>
-</ul>
-<a id="name">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>name</h4>
-<pre>@Nullable
-public final&nbsp;<a href="../core/Output.html" title="interface in com.pulumi.core">Output</a>&lt;java.lang.String&gt; name</pre>
-<div class="block">The name of the stack to reference.</div>
+<div class="block">An empty <a href="StackReferenceArgs.html" title="class in com.pulumi.resources"><code>StackReferenceArgs</code></a> instance.</div>
 </li>
 </ul>
 </li>
@@ -320,10 +336,38 @@ public final&nbsp;<a href="../core/Output.html" title="interface in com.pulumi.c
 <a id="getName()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getName</h4>
-<pre class="methodSignature">public&nbsp;java.util.Optional&lt;<a href="../core/Output.html" title="interface in com.pulumi.core">Output</a>&lt;java.lang.String&gt;&gt;&nbsp;getName()</pre>
+<pre class="methodSignature">@Deprecated
+public&nbsp;java.util.Optional&lt;<a href="../core/Output.html" title="interface in com.pulumi.core">Output</a>&lt;java.lang.String&gt;&gt;&nbsp;getName()</pre>
+<div class="deprecationBlock"><span class="deprecatedLabel">Deprecated.</span>
+<div class="deprecationComment">use <a href="#name()"><code>name()</code></a></div>
+</div>
+<div class="block">The name of the stack to reference.</div>
+</li>
+</ul>
+<a id="name()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>name</h4>
+<pre class="methodSignature">public&nbsp;java.util.Optional&lt;<a href="../core/Output.html" title="interface in com.pulumi.core">Output</a>&lt;java.lang.String&gt;&gt;&nbsp;name()</pre>
+<div class="block">The name of the stack to reference.</div>
+</li>
+</ul>
+<a id="builder()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>builder</h4>
+<pre class="methodSignature">public static&nbsp;<a href="StackReferenceArgs.Builder.html" title="class in com.pulumi.resources">StackReferenceArgs.Builder</a>&nbsp;builder()</pre>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a <a href="StackReferenceArgs.Builder.html" title="class in com.pulumi.resources"><code>StackReferenceArgs.Builder</code></a> instance</dd>
+</dl>
 </li>
 </ul>
 </li>
