@@ -5,8 +5,5 @@
     {{ $options = "javascript,typescript" }}
 {{ end }}
 <div>
-<pulumi-chooser
-    type="{{ $type }}"
-    options="{{ $options }}"
-    mode="{{ $mode }}">{{ .Inner }}</pulumi-chooser>
+    <pulumi-chooser type="{{ $type }}" options="{{ $options }}" mode="{{ $mode }}">{{ .Inner }}</pulumi-chooser>
 </div>

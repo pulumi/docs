@@ -1,5 +1,5 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" .Params.title )}}
+    {{ partial "hero" (dict "title" .Params.title ) }}
 {{ end }}
 
 {{ define "main" }}
@@ -32,8 +32,10 @@
                             {{ $itemClass = "border-t-2 border-b-2" }}
                         {{ end }}
 
+
                         <li class="accordion-item {{ $itemClass }} py-6">
                             {{ partial "accordian-header" (dict "text" $item.name) }}
+
 
                             <div class="accordion-item-body-no-animation">
                                 <p class="mt-6">{{ $item.description | markdownify }}</p>

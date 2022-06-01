@@ -30,7 +30,7 @@ function checkPageTitle(title) {
             return "Page title exceeds 60 characters";
         }
     } else {
-        return "Page title is not a valid string"
+        return "Page title is not a valid string";
     }
     return null;
 }
@@ -74,7 +74,7 @@ function searchForMarkdown(paths, result) {
         result = {
             files: [],
             frontMatter: {},
-        }
+        };
     }
     // Grab the first file in the list and generate
     // its full path.
@@ -162,7 +162,7 @@ function searchForMarkdown(paths, result) {
  * @param {string} parentPath The path to search for markdown files
  */
 function getMarkdownFiles(parentPath) {
-    const fullParentPath = path.resolve(__dirname, parentPath)
+    const fullParentPath = path.resolve(__dirname, parentPath);
     const dirs = fs.readdirSync(fullParentPath).map(function (dir) {
         return path.join(parentPath, dir);
     });
@@ -274,19 +274,23 @@ const result = markdownlint.sync(opts);
 const errors = groupLintErrorOutput(result);
 
 // Get the total number of errors.
-const errorsArray = errors.map(function (err) { return err.errors });
+const errorsArray = errors.map(function (err) {
+    return err.errors;
+});
 const errorsCount = [].concat.apply([], errorsArray).length;
 
 // Create the error output string.
-const errorOutput = errors.map(function (err) {
-    let msg = err.path + ":\n";
-    for (let i = 0; i < err.errors.length; i++) {
-        const error = err.errors[i];
-        msg += "Line " + error.lineNumber + ": " + error.ruleDescription;
-        msg += error.errorDetail ? " [" + error.errorDetail + "].\n" : ".\n";
-    }
-    return msg;
-}).join("\n");
+const errorOutput = errors
+    .map(function (err) {
+        let msg = err.path + ":\n";
+        for (let i = 0; i < err.errors.length; i++) {
+            const error = err.errors[i];
+            msg += "Line " + error.lineNumber + ": " + error.ruleDescription;
+            msg += error.errorDetail ? " [" + error.errorDetail + "].\n" : ".\n";
+        }
+        return msg;
+    })
+    .join("\n");
 
 // If there are errors output the error string and exit
 // the program with an error.

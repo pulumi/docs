@@ -1,14 +1,12 @@
 {{ $cloud := .Get 0 }}
 
+
 <div>
     <p>
-        Pulumi's infrastructure-as-code SDK helps you create, deploy, and manage {{ .Get 0 }} containers,
-        serverless functions, and infrastructure using programming languages like TypeScript, Python, Go, C#, and Java, and markup languages like YAML. The Pulumi {{ .Get 0 }} provider packages
-        and CLI help you accomplish all these within minutes.
+        Pulumi's infrastructure-as-code SDK helps you create, deploy, and manage {{ .Get 0 }} containers, serverless functions, and infrastructure using programming languages like
+        TypeScript, Python, Go, C#, and Java, and markup languages like YAML. The Pulumi {{ .Get 0 }} provider packages and CLI help you accomplish all these within minutes.
     </p>
-    <p>
-        For a quick example of how Pulumi deploys infrastructure on {{ .Get 0 }}, this tutorial takes you through the following steps to easily deploy a static website:
-    </p>
+    <p>For a quick example of how Pulumi deploys infrastructure on {{ .Get 0 }}, this tutorial takes you through the following steps to easily deploy a static website:</p>
     <ol>
         <li>Setting up and configuring Pulumi to access your {{ .Get 0 }} account.</li>
         <li>Creating a new Pulumi project.</li>
@@ -18,7 +16,7 @@
         {{ else if eq $cloud "Microsoft Azure" }}
             <li>Provisioning a new Blob storage container.</li>
             <li>Adding an <code>index.html</code> file to your container and serving it as a static website.</li>
-        {{ else if eq $cloud "Google Cloud"}}
+        {{ else if eq $cloud "Google Cloud" }}
             <li>Provisioning a new Google Cloud Storage bucket.</li>
             <li>Adding an <code>index.html</code> file to your bucket and serving it as a static website.</li>
         {{ end }}

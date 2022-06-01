@@ -46,10 +46,13 @@
 
     <section id="cta" class="max-w-5xl mx-auto p-3">
         <h2>{{ .Params.hiring.title }}</h2>
-        <p>{{ .Params.hiring.description | markdownify }}
+        <p>
+            {{ .Params.hiring.description | markdownify }}
+        </p>
         <ul class="list-none p-0 border-t-2 border-b-2" data-faq-type="faq-pricing">
             <li class="accordion-item text-2xl py-3">
                 {{ partial "accordian-header" (dict "text" "Open Positions" "large_header" true) }}
+
 
                 <div class="accordion-item-body-no-animation text-base">
                     <pulumi-greenhouse-jobs-list></pulumi-greenhouse-jobs-list>

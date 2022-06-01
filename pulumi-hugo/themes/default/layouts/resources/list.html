@@ -1,17 +1,20 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" .Params.title )}}
+    {{ partial "hero" (dict "title" .Params.title ) }}
 {{ end }}
 
 {{ define "main" }}
     <!-- Set the page context in a variable in a loop. -->
     {{ $pageContext := . }}
 
+
     <!-- Grab the webinar and event page data. -->
     {{ $webinars := (where $.Site.Pages "Type" "webinars") }}
     {{ $events := (where $.Site.Pages "Type" "events") }}
 
+
     <!-- Create dicts so we can sort the resources by start/publish date. -->
     {{ $resourcesWithDate := slice }}
+
 
     <!-- Create the resource data dicts for webinars. -->
     {{ range $webinars }}
@@ -30,6 +33,7 @@
         {{ end }}
     {{ end }}
 
+
     <!-- Create the resource data dicts for events. -->
     {{ range $events }}
         <!-- If the webinar is not marked as unlisted we will add it to the list. -->
@@ -37,6 +41,7 @@
             {{ $resourcesWithDate = $resourcesWithDate | append (dict "date" .Params.main.start_date "data" .) }}
         {{ end }}
     {{ end }}
+
 
     <div class="pulumi-event-list-container mt-5">
         <div class="container mx-auto pt-10">
@@ -51,18 +56,22 @@
 
             <!-- The event filter -->
             <div class="pulumi-event-list-container justify-center event-list-filter container mx-auto flex">
-                <div class="scroll-container hidden lg:flex items-center"><button id="slideBackwards"><i class="text-gray-500 text-3xl fas fa-angle-left"></i></button></div>
+                <div class="scroll-container hidden lg:flex items-center">
+                    <button id="slideBackwards"><i class="text-gray-500 text-3xl fas fa-angle-left"></i></button>
+                </div>
                 <ul id="event-list-filter-nav">
                     {{ range $item := .Params.sections }}
-                        <li data-filter-name={{ $item.anchor}}>
-                            <a href="#{{ $item.anchor}}">
+                        <li data-filter-name="{{ $item.anchor }}">
+                            <a href="#{{ $item.anchor }}">
                                 <i class="fas fa-{{ $item.icon }} mr-2"></i>
-                                <span>{{$item.label}}</span>
+                                <span>{{ $item.label }}</span>
                             </a>
                         </li>
                     {{ end }}
                 </ul>
-                <div class="scroll-container hidden lg:flex items-center"><button id="slideForward"><i class="text-gray-500 text-3xl fas fa-angle-right"></i></button></div>
+                <div class="scroll-container hidden lg:flex items-center">
+                    <button id="slideForward"><i class="text-gray-500 text-3xl fas fa-angle-right"></i></button>
+                </div>
             </div>
 
             <!-- Titles for the filtered section -->
@@ -74,10 +83,10 @@
             <h3 class="hidden ml-5 text-black" data-filter-title="whitepapers"><i class="fas fa-book mr-8"></i>Whitepapers</h3>
             <!-- Resources list. -->
             <ul class="flex flex-wrap justify-center list-none p-0 sm:p-2 resource-list">
-
                 <!-- Loop over the resource items and create the tiles. -->
                 {{ range sort $resourcesWithDate "date" "desc" }}
                     {{ $data := .data }}
+
 
                     <!-- Create the values for rendering. -->
                     {{ $description := "" }}
@@ -87,10 +96,12 @@
                     {{ $icon := "users" }}
                     {{ $filters := slice "all" }}
 
+
                     <!-- Set the values based on the type of the page. -->
                     {{ if eq $data.Type "webinars" }}
                         {{ $description = $data.Params.meta_desc }}
                         {{ $displayDate = dateFormat "January 2, 2006" .date }}
+
 
                         <!-- Set the url to link to. -->
                         {{ if $data.Params.external }}
@@ -101,13 +112,15 @@
                         {{ end }}
 
                         {{ if isset $data.Params "multiple" }}
-                            {{ $link = printf "%s/?date=%s" $link  (dateFormat "2006/01/02" .date)}}
+                            {{ $link = printf "%s/?date=%s" $link  (dateFormat "2006/01/02" .date) }}
                         {{ end }}
+
 
                         <!-- If the webinar is featured add the feature filter. -->
                         {{ if $data.Params.featured }}
                             {{ $filters = $filters | append "featured" }}
-                        {{end }}
+                        {{ end }}
+
 
                         <!-- Set the icon and appropriate filters for the webinar. -->
                         {{ if $data.Params.whitepaper }}
@@ -116,7 +129,7 @@
                         {{ else if $data.Params.pulumi_tv }}
                             {{ $icon = "tv" }}
                             {{ $filters = $filters | append "pulumitv" }}
-                        {{ else if $data.Params.pre_recorded}}
+                        {{ else if $data.Params.pre_recorded }}
                             {{ $icon = "video" }}
                             {{ $filters = $filters | append "videos" }}
                         {{ else }}
@@ -127,7 +140,8 @@
                         <!-- Set the appropriate values for the event. -->
                         {{ $description = $data.Params.event.description }}
                         {{ $displayDate = dateFormat "January 2, 2006" $data.Params.event.start_date }}
-                        {{ $filters = $filters | append "upcoming"}}
+                        {{ $filters = $filters | append "upcoming" }}
+
 
                         <!-- If the event has a redirect attribute it is external so set the link correctly. -->
                         {{ if $data.Params.redirect_to }}
@@ -138,7 +152,7 @@
                         {{ end }}
                     {{ end }}
 
-                    {{ $tileOptions := (dict "multiple" $data.Params.multiple "pageContext" $pageContext "external" $external "filters" $filters "link" $link "icon" $icon "description" $description "displayDate" $displayDate "data" $data)}}
+                    {{ $tileOptions := (dict "multiple" $data.Params.multiple "pageContext" $pageContext "external" $external "filters" $filters "link" $link "icon" $icon "description" $description "displayDate" $displayDate "data" $data) }}
                     {{ partial "content-tile.html" $tileOptions }}
                 {{ end }}
             </ul>

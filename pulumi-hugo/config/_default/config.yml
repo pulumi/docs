@@ -113,11 +113,11 @@ markup:
       xhtml: false
 
 params:
-    canonicalURL: https://www.pulumi.com
-    contentRepositoryURL: https://github.com/pulumi/pulumi-hugo
-    contentRepositoryBaseBranch: master
-    registryRepositoryURL: https://github.com/pulumi/registry
-    registryRepositoryBaseBranch: master
-    meta_desc: |
-        Pulumi's open source infrastructure as code SDK enables you to create, deploy,
-        and manage infrastructure on any cloud, using your favorite languages.
+  canonicalURL: https://www.pulumi.com
+  contentRepositoryURL: https://github.com/pulumi/pulumi-hugo
+  contentRepositoryBaseBranch: master
+  registryRepositoryURL: https://github.com/pulumi/registry
+  registryRepositoryBaseBranch: master
+  meta_desc: |
+    Pulumi's open source infrastructure as code SDK enables you to create, deploy,
+    and manage infrastructure on any cloud, using your favorite languages.

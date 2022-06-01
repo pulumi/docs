@@ -2,7 +2,7 @@
     <div class="pulumi-up-body text-white pb-12 ">
         <div class="relative overflow-hidden pulumi-up-video-section">
             <video class="pulumiup-video" autoplay muted loop>
-                <source src="/video/pulumiup-lofi.mp4" type="video/mp4">
+                <source src="/video/pulumiup-lofi.mp4" type="video/mp4" />
             </video>
             <div class="pulumiup-title">
                 <div class="neon-container">
@@ -40,9 +40,10 @@
                                 {{ $authorPage := $.Site.GetPage (printf "/authors/%s" ($id | urlize)) }}
                                 {{ $authorData := index $.Site.Data.team.team $id }}
 
+
                                 <div class="flex flex-col md:flex-row w-full md:w-1/2 items-center text-center md:text-left md:items-start mt-4 pr-4">
                                     <div class="speaker-image lg:mr-2">
-                                        <img src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" title="{{ $authorData.name }}">
+                                        <img src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" title="{{ $authorData.name }}" />
                                     </div>
                                     <div class="flex flex-col justify-center h-full">
                                         <h5 class="ml-2">{{ $authorData.name }}</h5>
@@ -89,21 +90,14 @@
     <section id="get-started" class="container px-6 lg:px-0 mx-auto my-16">
         <div class="w-full bg-violet-600 card p-6 lg:p-16 lg:pt-24 text-center">
             <div class="max-w-xl mx-auto">
-                <h2 class="text-white hidden lg:block px-0 lg:px-16">
-                    Get started with Cloud Engineering
-                </h2>
-                <h4 class="text-white mt-0 lg:hidden">
-                    Get started with Cloud Engineering
-                </h4>
+                <h2 class="text-white hidden lg:block px-0 lg:px-16">Get started with Cloud Engineering</h2>
+                <h4 class="text-white mt-0 lg:hidden">Get started with Cloud Engineering</h4>
                 <p class="text-white">
-                    Pulumi is a cloud engineering platform that brings infrastructure, application development,
-                    and compliance teams together through a unified software engineering process to deliver
-                    and manage modern cloud applications.
+                    Pulumi is a cloud engineering platform that brings infrastructure, application development, and compliance teams together through a unified software engineering
+                    process to deliver and manage modern cloud applications.
                 </p>
                 <div class="mt-16">
-                    <a class="btn-secondary" href="{{ relref . "/docs/get-started" }}">
-                        Get Started
-                    </a>
+                    <a class="btn-secondary" href="{{ relref . "/docs/get-started" }}"> Get Started </a>
                 </div>
             </div>
         </div>

@@ -25,7 +25,8 @@
                             {{ if eq .Params.event.start_date .Params.event.end_date }}
                                 {{ dateFormat "Mon, Jan 2" .Params.event.start_date }}
                             {{ else }}
-                                {{ dateFormat "Mon, Jan 2" .Params.event.start_date }} - {{ dateFormat "Mon, Jan 2" .Params.event.end_date }}
+                                {{ dateFormat "Mon, Jan 2" .Params.event.start_date }} -
+                                {{ dateFormat "Mon, Jan 2" .Params.event.end_date }}
                             {{ end }}
                         </span>
                     </div>
@@ -47,17 +48,28 @@
                         {{ if .Params.event.calendly_url }}
 
                             <!-- Calendly link widget begin -->
-                            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
                             <script src="https://assets.calendly.com/assets/external/widget.js"></script>
-                            <a href="#" class="btn bg-orange-500 border-2 border-orange-600 hover:bg-orange-600 hover:border-orange-600" onclick="Calendly.initPopupWidget({url: '{{ .Params.event.calendly_url }}&hide_event_type_details=1'});return false;">Register Now</a>
+                            <a
+                                href="#"
+                                class="btn bg-orange-500 border-2 border-orange-600 hover:bg-orange-600 hover:border-orange-600"
+                                onclick="Calendly.initPopupWidget({url: '{{ .Params.event.calendly_url }}&hide_event_type_details=1'});return false;"
+                                >Register Now</a
+                            >
                             <!-- Calendly link widget end -->
-
                         {{ else if .Params.event.eventbrite_url }}
-
                             <!-- Noscript content for added SEO -->
-                            <noscript><a href="{{ .Params.event.eventbrite_url }}" rel="noopener noreferrer" target="_blank"></noscript>
-                            <button id="eventbrite-widget-modal-trigger-{{ .Params.event.eventbrite_id }}" type="button" class="btn bg-orange-500 border-2 border-orange-600 hover:bg-orange-600 hover:border-orange-600">Buy Tickets</button>
-                            <noscript></a>Buy Tickets on Eventbrite</noscript>
+                            <noscript
+                                ><a href="{{ .Params.event.eventbrite_url }}" rel="noopener noreferrer" target="_blank">
+                                    <button
+                                        id="eventbrite-widget-modal-trigger-{{ .Params.event.eventbrite_id }}"
+                                        type="button"
+                                        class="btn bg-orange-500 border-2 border-orange-600 hover:bg-orange-600 hover:border-orange-600"
+                                    >
+                                        Buy Tickets
+                                    </button> </a
+                                >Buy Tickets on Eventbrite</noscript
+                            >
                             <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
                             <script>
                                 if (window && window.EBWidgets && (typeof window.EBWidgets.createWidget === "function")) {
@@ -72,7 +84,6 @@
                                     });
                                 }
                             </script>
-
                         {{ end }}
                     </div>
                 </div>

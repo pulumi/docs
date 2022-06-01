@@ -8,14 +8,14 @@
 
                 <div class="lg:w-3/4 xxl:w-9/12">
                     <article class="mb-8 pb-8 border-b border-gray-200">
-
                         {{ if and (.Params.h1) (not .Params.notitle) }}
                             <h1 class="no-anchor">{{ .Params.h1 }}</h1>
                         {{ else if and (ne .Title "") (not .Params.notitle) }}
                             <h1 class="no-anchor">{{ .Title }}</h1>
                         {{ end }}
 
-                        <p>Posted on <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time>
+
+                        <p>Posted on <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time></p>
 
                         <div class="flex items-center">
                             <span class="text-sm text-gray-700">
@@ -41,11 +41,11 @@
                             {{ if .Params.tags }}
                                 <ul class="m-0 mt-8 p-0">
                                     {{ range $tag := .Params.tags }}
-                                    <li class="mt-0 inline-flex">
-                                        <a class="tag tag-blog" href="/blog/tag/{{ $tag | urlize }}/">
-                                            {{ $tag | urlize }}
-                                        </a>
-                                    </li>
+                                        <li class="mt-0 inline-flex">
+                                            <a class="tag tag-blog" href="/blog/tag/{{ $tag | urlize }}/">
+                                                {{ $tag | urlize }}
+                                            </a>
+                                        </li>
                                     {{ end }}
                                 </ul>
                             {{ end }}

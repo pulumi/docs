@@ -5,6 +5,7 @@
 {{ define "main" }}
     {{ $modules := where (where .Site.Pages ".Type" "learn") ".Layout" "module" }}
 
+
     <div class="p-0">
         <div class="pt-8 pb-64 mx-4 md:mx-0">
             <section id="overview" class="container mx-auto">
@@ -15,7 +16,7 @@
                     </div>
 
                     <!-- <div class="w-full lg:w-1/2 p-6"> -->
-                        <!-- <img src="/images/learn/learn-progression.svg" alt="Pulumi Learn Progression" /> -->
+                    <!-- <img src="/images/learn/learn-progression.svg" alt="Pulumi Learn Progression" /> -->
                     <!-- </div> -->
                 </div>
             </section>
@@ -31,10 +32,7 @@
                                     <div>
                                         {{ if .Params.meta_image }}
                                             <a class="block" href="{{ .RelPermalink }}">
-                                                <img
-                                                    class="rounded-t"
-                                                    src="{{ (.Resources.GetMatch .Params.meta_image).RelPermalink }}"
-                                                alt="{{ .Title }}">
+                                                <img class="rounded-t" src="{{ (.Resources.GetMatch .Params.meta_image).RelPermalink }}" alt="{{ .Title }}" />
                                             </a>
                                         {{ end }}
                                     </div>

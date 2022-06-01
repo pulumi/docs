@@ -5,7 +5,7 @@
 {{ define "main" }}
     <section id="overview" class="container mx-auto mt-4 mb-16">
         <div class="w-full px-5 mb-16 max-w-3xl mx-auto">
-                <p class="mr-4">{{ .Params.overview.description | markdownify }}</p>
+            <p class="mr-4">{{ .Params.overview.description | markdownify }}</p>
         </div>
 
         <div class="relative max-w-4xl mx-auto">
@@ -162,7 +162,8 @@
 
         <div class="max-w-4xl card bg-white mx-auto p-6 flex flex-col items-center">
             <h2 class="text-center">{{ .Params.contact.title }}</h2>
-            <p class="max-w-xl mx-auto">{{ .Params.contact.description | markdownify }}<p>
+            <p class="max-w-xl mx-auto">{{ .Params.contact.description | markdownify }}</p>
+            <p></p>
 
             <div class="hs-form hs-form-fg-dark font-normal">
                 <pulumi-hubspot-form form-id="{{ .Params.contact.form_id }}"></pulumi-hubspot-form>

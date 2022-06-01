@@ -9,8 +9,7 @@
                 <h2>Universal Infrastructure as Code for Google Cloud</h2>
                 <p class="mr-4">
                     Pulumi's <a href="{{ relref . "/what-is/what-is-infrastructure-as-code" }}">infrastructure as code</a>
-                    SDK helps create, deploy, and manage Google Cloud Platform containers,
-                    serverless functions, and infrastructure using real programming languages.
+                    SDK helps create, deploy, and manage Google Cloud Platform containers, serverless functions, and infrastructure using real programming languages.
                 </p>
                 <div>
                     <div class="flex justify-start items-start mt-8">
@@ -18,7 +17,8 @@
                             <a class="btn-primary mr-4" href="{{ relref . "/docs/get-started/gcp" }}">Get Started</a>
                             <a class="btn-secondary" href="{{ relref . "#benefits" }}">Learn More</a>
                         </div>
-                        <img class="object-scale-down w-48 md:ml-4" src="/images/partners/gcp-partner.png" alt="Google Cloud Premium Partner">                    </div>
+                        <img class="object-scale-down w-48 md:ml-4" src="/images/partners/gcp-partner.png" alt="Google Cloud Premium Partner" />
+                    </div>
                 </div>
             </div>
             <div class="w-full order-first lg:order-last mt-8 lg:mt-0 lg:w-1/2 lg:mt-0">
@@ -64,13 +64,10 @@
             <div class="w-full lg:w-1/2 p-6">
                 <h3>Reduce your complexity with shared packages</h3>
                 <p>
-                    Pulumi Packages enable you to define cloud infrastructure once and then consume
-                    that package in any supported Pulumi language. You can easily reduce boilerplate
-                    code, define best practices, and allow teammates to use your package in the language
-                    of their choice, regardless of the language you authored the package with.
+                    Pulumi Packages enable you to define cloud infrastructure once and then consume that package in any supported Pulumi language. You can easily reduce boilerplate
+                    code, define best practices, and allow teammates to use your package in the language of their choice, regardless of the language you authored the package with.
 
-                    <a href="{{ relref . "/registry" }}">Pulumi Registry</a> is the central location
-                    where you can find all of the Pulumi Packages you can use.
+                    <a href="{{ relref . "/registry" }}">Pulumi Registry</a> is the central location where you can find all of the Pulumi Packages you can use.
                 </p>
             </div>
         </div>
@@ -81,14 +78,12 @@
             <div class="w-full lg:w-1/2 p-6">
                 <h3>Access to all Google Cloud APIs</h3>
                 <p>
-                    Google Cloud Native gives you access to 100% of the resources available in the Google Cloud APIs. You
-                    have access to every property of every resource and every version of every resource is available. The SDK
-                    is generated from the Google API Discovery Service, giving you same-day access to new features and bug
-                    fixes.
+                    Google Cloud Native gives you access to 100% of the resources available in the Google Cloud APIs. You have access to every property of every resource and every
+                    version of every resource is available. The SDK is generated from the Google API Discovery Service, giving you same-day access to new features and bug fixes.
                 </p>
             </div>
 
-             <div class="w-full lg:w-1/2 p-6 order-first lg:order-last">
+            <div class="w-full lg:w-1/2 p-6 order-first lg:order-last">
                 <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
                     <pulumi-choosable type="language" class="highlight" value="typescript">
                         {{ partial "code" (dict "code" .Params.native.ts "lang" "ts") }}
@@ -151,11 +146,8 @@
             <div class="w-full lg:w-1/2 p-6">
                 <h2>Create your own GKE cluster</h2>
                 <p>
-                    Pulumi supports programming against Kubernetes - Minikube, custom on-premises, or cloud-hosted
-                    custom clusters or in managed clusters such as Google GKE.
-
-                    This code defines a GKE cluster with configurable settings that could be packaged in a module
-                    and then used to deploy an app to the cluster.
+                    Pulumi supports programming against Kubernetes - Minikube, custom on-premises, or cloud-hosted custom clusters or in managed clusters such as Google GKE. This
+                    code defines a GKE cluster with configurable settings that could be packaged in a module and then used to deploy an app to the cluster.
                 </p>
             </div>
         </div>

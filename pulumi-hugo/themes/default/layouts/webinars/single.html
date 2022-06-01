@@ -61,9 +61,7 @@
                 <div id="webinarRegistrationForm" class="mt-10 md:mt-0 md:w-1/2 md:mx-8 bg-gray-200 rounded p-6">
                     {{ if .Params.unlisted }}
                         <h4 class="text-orange">Recording Coming Soon!</h4>
-                        <p>
-                            This live webinar is no longer available. The recording will be posted to this page when it is available.
-                        </p>
+                        <p>This live webinar is no longer available. The recording will be posted to this page when it is available.</p>
                     {{ else }}
                         {{ $formHeader := (cond (eq .Params.pre_recorded true) "Watch The Recording Now" "Register Here") }}
                         {{ if isset .Params.form "header" }}
@@ -131,17 +129,23 @@
 
     <section id="gettingStartedList" class="px-4">
         <div class="container mx-auto max-w-6xl pb-16">
-            {{ if .Params.gated }}
-                <div class="md:mx-8">
-            {{ else }}
-                <div>
-            {{ end }}
+            <div class="{{ if .Params.gated }}md:mx-8{{ end }}">
                 <h4 class="text-orange">Get Started with Pulumi</h4>
                 <ul class="text-gray-600">
-                    <li><strong><a class="link" href="{{ relref . "/docs/get-started/aws" }}">Create an AWS S3 Bucket</a></strong> then modify the bucket to host a static website.</li>
-                    <li><strong><a class="link" href="{{ relref . "/docs/get-started/azure" }}">Create an Azure Resource Group and Storage Account</a></strong>, then export the storage account’s connection string.</li>
-                    <li><strong><a class="link" href="{{ relref . "/docs/get-started/gcp" }}">Create a Google Cloud Storage Bucket</a></strong> and apply labels to that bucket.</li>
-                    <li><strong><a class="link" href="{{ relref . "/docs/get-started/kubernetes" }}">Create a Kubernetes NGINX deployment</a></strong> and add a config value for MiniKube deployments.</li>
+                    <li>
+                        <strong><a class="link" href="{{ relref . "/docs/get-started/aws" }}">Create an AWS S3 Bucket</a></strong> then modify the bucket to host a static website.
+                    </li>
+                    <li>
+                        <strong><a class="link" href="{{ relref . "/docs/get-started/azure" }}">Create an Azure Resource Group and Storage Account</a></strong
+                        >, then export the storage account’s connection string.
+                    </li>
+                    <li>
+                        <strong><a class="link" href="{{ relref . "/docs/get-started/gcp" }}">Create a Google Cloud Storage Bucket</a></strong> and apply labels to that bucket.
+                    </li>
+                    <li>
+                        <strong><a class="link" href="{{ relref . "/docs/get-started/kubernetes" }}">Create a Kubernetes NGINX deployment</a></strong> and add a config value for
+                        MiniKube deployments.
+                    </li>
                 </ul>
             </div>
         </div>

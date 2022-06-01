@@ -1,19 +1,13 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" "Universal Infrastructure with Superpowers")}}
+    {{ partial "hero" (dict "title" "Universal Infrastructure with Superpowers") }}
 {{ end }}
 
 {{ define "main" }}
     <section id="overview" class="my-16">
         <div class="max-w-3xl mx-auto text-center">
             <h2>Supercharge your cloud infrastructure.</h2>
-            <p>
-                Pulumi 2.0 includes new capabilities for Delivery, Provisioning,
-                Architecture, Testing, and Policy-as-code &mdash; on any cloud, using your
-                favorite languages.
-            </p>
-            <p>
-                Read more about what's new in Pulumi 2.0 <a class="link" href="{{ relref . "/blog/pulumi-2-0" }}">here.</a>
-            </p>
+            <p>Pulumi 2.0 includes new capabilities for Delivery, Provisioning, Architecture, Testing, and Policy-as-code &mdash; on any cloud, using your favorite languages.</p>
+            <p>Read more about what's new in Pulumi 2.0 <a class="link" href="{{ relref . "/blog/pulumi-2-0" }}">here.</a></p>
             <div>
                 <div class="flex justify-center items-center mt-8">
                     <div class="flex flex-col lg:flex-row items-start">
@@ -37,15 +31,12 @@
                         </div>
                     </div>
                     <div class="md:pl-6 md:pr-12">
-                        <h4 class="text-center md:text-left font-normal mt-0" >
-                            <a class="link" href="{{ relref . "/docs/get-started" }}">
-                                Any cloud, any language
-                            </a>
+                        <h4 class="text-center md:text-left font-normal mt-0">
+                            <a class="link" href="{{ relref . "/docs/get-started" }}"> Any cloud, any language </a>
                         </h4>
                         <p>
-                            Pulumi works with top programming languages across all public
-                            clouds with support for dozens of popular infrastructure
-                            service providers including private and hybrid clouds.
+                            Pulumi works with top programming languages across all public clouds with support for dozens of popular infrastructure service providers including
+                            private and hybrid clouds.
                         </p>
                         <p class="m-0 text-center md:text-left">
                             <a class="link" href="{{ relref . "/docs/get-started" }}">
@@ -63,15 +54,12 @@
                         </div>
                     </div>
                     <div class="md:pl-6 md:pr-12">
-                        <h4 class="text-center md:text-left font-normal mt-0" >
-                            <a class="link" href="{{ relref . "/docs/get-started" }}">
-                                Provisioning
-                            </a>
+                        <h4 class="text-center md:text-left font-normal mt-0">
+                            <a class="link" href="{{ relref . "/docs/get-started" }}"> Provisioning </a>
                         </h4>
                         <p>
-                            Reduce complexity and ship applications to any cloud faster.
-                            Boost productivity using the best languages and tools. Plan,
-                            preview, and track all changes. Easy SaaS and self-hosted options.
+                            Reduce complexity and ship applications to any cloud faster. Boost productivity using the best languages and tools. Plan, preview, and track all
+                            changes. Easy SaaS and self-hosted options.
                         </p>
                         <p class="m-0 text-center md:text-left">
                             <a class="link" href="{{ relref . "/docs/get-started" }}">
@@ -89,16 +77,12 @@
                         </div>
                     </div>
                     <div class="md:pl-6 md:pr-12">
-                        <h4 class="text-center md:text-left font-normal mt-0" >
-                            <a class="link" href="{{ relref . "/docs/guides/continuous-delivery" }}">
-                                Delivery
-                            </a>
-                        </h3>
+                        <h4 class="text-center md:text-left font-normal mt-0">
+                            <a class="link" href="{{ relref . "/docs/guides/continuous-delivery" }}"> Delivery </a>
+                        </h4>
                         <p>
-                            Continuously deliver apps and infrastructure with CI/CD and
-                            SCM integrations and built-in secrets management. Improve
-                            velocity and visibility for deployments in complex global
-                            environments.
+                            Continuously deliver apps and infrastructure with CI/CD and SCM integrations and built-in secrets management. Improve velocity and visibility for
+                            deployments in complex global environments.
                         </p>
                         <p class="m-0 text-center md:text-left">
                             <a class="link" href="{{ relref . "/docs/guides/continuous-delivery" }}">
@@ -116,15 +100,12 @@
                         </div>
                     </div>
                     <div class="md:pl-6 md:pr-12">
-                        <h4 class="text-center md:text-left font-normal mt-0" >
-                            <a class="link" href="{{ relref . "/docs/intro/concepts" }}">
-                                Architecture
-                            </a>
-                        </h3>
+                        <h4 class="text-center md:text-left font-normal mt-0">
+                            <a class="link" href="{{ relref . "/docs/intro/concepts" }}"> Architecture </a>
+                        </h4>
                         <p>
-                            Avoid reinventing the wheel with infrastructure that codifies
-                            patterns and best practices. Benefit from an ecosystem of
-                            libraries and language packages shared with the community.
+                            Avoid reinventing the wheel with infrastructure that codifies patterns and best practices. Benefit from an ecosystem of libraries and language packages
+                            shared with the community.
                         </p>
                         <p class="m-0 text-center md:text-left">
                             <a class="link" href="{{ relref . "/docs/intro/concepts" }}">
@@ -142,16 +123,12 @@
                         </div>
                     </div>
                     <div class="md:pl-6 md:pr-12">
-                        <h4 class="text-center md:text-left font-normal mt-0" >
-                            <a class="link" href="{{ relref . "/docs/guides/crossguard" }}">
-                                Policy
-                            </a>
-                        </h3>
+                        <h4 class="text-center md:text-left font-normal mt-0">
+                            <a class="link" href="{{ relref . "/docs/guides/crossguard" }}"> Policy </a>
+                        </h4>
                         <p>
-                            Prevent mistakes from getting deployed. Enforce security,
-                            compliance, cost controls, and best practices using policies
-                            defined in real languages. Apply policies across the
-                            organization with fine-grained controls.
+                            Prevent mistakes from getting deployed. Enforce security, compliance, cost controls, and best practices using policies defined in real languages. Apply
+                            policies across the organization with fine-grained controls.
                         </p>
                         <p class="m-0 text-center md:text-left">
                             <a class="link" href="{{ relref . "/docs/guides/crossguard" }}">
@@ -169,16 +146,12 @@
                         </div>
                     </div>
                     <div class="md:pl-6 md:pr-12">
-                        <h4 class="text-center md:text-left font-normal mt-0" >
-                            <a class="link" href="{{ relref . "/docs/guides/testing" }}">
-                                Testing
-                            </a>
-                        </h3>
+                        <h4 class="text-center md:text-left font-normal mt-0">
+                            <a class="link" href="{{ relref . "/docs/guides/testing" }}"> Testing </a>
+                        </h4>
                         <p>
-                            Be confident that infrastructure is correct before and after
-                            deployment. Use popular tools and test-driven techniques.
-                            Perform integration tests for ephemeral environments and
-                            post-deployment validation.
+                            Be confident that infrastructure is correct before and after deployment. Use popular tools and test-driven techniques. Perform integration tests for
+                            ephemeral environments and post-deployment validation.
                         </p>
                         <p class="m-0 text-center md:text-left">
                             <a class="link" href="{{ relref . "/docs/guides/testing" }}">
@@ -199,19 +172,29 @@
         <div class="container mx-auto max-w-2xl flex flex-col justify-center text-center">
             <div class="inline-block flex items-center justify-center">
                 <span class="text-violet-600 bg-violet-100 p-4 rounded-full border-4 border-violet-300" style="fill: #805ac3;">
-                    <svg class="w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.fa-secondary{opacity:.4}</style></defs>
-                        <path d="M423.16 186.58L448 127l59.58-24.84a8 8 0 0 0 0-14.32L448 63 423.16 3.42a8 8 0 0 0-14.32 0L384 63l-59.58 24.84a8 8 0 0 0 0 14.32L384 127l24.84 59.58a8 8 0 0 0 14.32 0zm-14.32 136.84L384 383l-59.58 24.84a8 8 0 0 0 0 14.32L384 447l24.84 59.58a8 8 0 0 0 14.32 0L448 447l59.58-24.84a8 8 0 0 0 0-14.32L448 383l-24.84-59.58a8 8 0 0 0-14.32 0z" class="fa-secondary sparkle secondary"/>
-                        <path d="M384 254.64a16.06 16.06 0 0 0-8.84-14.33l-112.57-56.39-56.28-112.77c-5.44-10.87-23.19-10.87-28.62 0l-56.28 112.77L8.84 240.31a16 16 0 0 0 0 28.67l112.57 56.39 56.28 112.77a16 16 0 0 0 28.62 0l56.28-112.77L375.16 269a16.07 16.07 0 0 0 8.84-14.36z" class="fa-primary sparkle primary"/>
+                    <svg class="w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <defs>
+                            <style>
+                                .fa-secondary {
+                                    opacity: 0.4;
+                                }
+                            </style>
+                        </defs>
+                        <path
+                            d="M423.16 186.58L448 127l59.58-24.84a8 8 0 0 0 0-14.32L448 63 423.16 3.42a8 8 0 0 0-14.32 0L384 63l-59.58 24.84a8 8 0 0 0 0 14.32L384 127l24.84 59.58a8 8 0 0 0 14.32 0zm-14.32 136.84L384 383l-59.58 24.84a8 8 0 0 0 0 14.32L384 447l24.84 59.58a8 8 0 0 0 14.32 0L448 447l59.58-24.84a8 8 0 0 0 0-14.32L448 383l-24.84-59.58a8 8 0 0 0-14.32 0z"
+                            class="fa-secondary sparkle secondary"
+                        />
+                        <path
+                            d="M384 254.64a16.06 16.06 0 0 0-8.84-14.33l-112.57-56.39-56.28-112.77c-5.44-10.87-23.19-10.87-28.62 0l-56.28 112.77L8.84 240.31a16 16 0 0 0 0 28.67l112.57 56.39 56.28 112.77a16 16 0 0 0 28.62 0l56.28-112.77L375.16 269a16.07 16.07 0 0 0 8.84-14.36z"
+                            class="fa-primary sparkle primary"
+                        />
                     </svg>
                 </span>
             </div>
-            <h3 class="mt-4 text-4xl text-gray-800">
-                Watch the Launch Event
-            </h3>
+            <h3 class="mt-4 text-4xl text-gray-800">Watch the Launch Event</h3>
             <div class="">
                 <p class="leading-relaxed mt-6 mb-10 text-2xl text-gray-700">
-                    Corey Quinn, Joe Duffy and the Pulumi team introduce you to
-                    Pulumi 2.0's new superpowers and improvements.
+                    Corey Quinn, Joe Duffy and the Pulumi team introduce you to Pulumi 2.0's new superpowers and improvements.
                 </p>
                 <div>
                     <a href="{{ relref . "/resources/pulumi-update-2020-04-29" }}" class="btn-secondary">
@@ -231,12 +214,15 @@
                 <h2 class="bg-white text-gray-800">Watch the Talks</h2>
             </div>
             <ul class="flex flex-col items-start w-full list-none p-0">
-
                 <!-- PaC -->
                 <li class="md:flex w-full items-start pb-12 mb-12 border-b border-gray-200">
                     <div class="mb-4 md:mb-0 md:mr-8 md:w-2/5">
-                        <a href="{{ relref . "/resources/getting-started-policy-as-code" }}" class="rounded transition-all block border-2 border-gray-400" title="Policy as Code for Any Cloud">
-                            <img src="/images/superpowers/pac-demo.png" alt="Policy-as-code demo">
+                        <a
+                            href="{{ relref . "/resources/getting-started-policy-as-code" }}"
+                            class="rounded transition-all block border-2 border-gray-400"
+                            title="Policy as Code for Any Cloud"
+                        >
+                            <img src="/images/superpowers/pac-demo.png" alt="Policy-as-code demo" />
                         </a>
                     </div>
                     <div class="md:mt-2 md:w-3/5">
@@ -244,8 +230,7 @@
                             <a href="{{ relref . "/resources/getting-started-policy-as-code" }}" class="text-blue-600 text-2xl">Policy as Code for Any Cloud</a>
                         </h3>
                         <p class="leading-relaxed mb-8 text-lg">
-                            Erin Krengel and Cameron Stokes show you how to apply policies
-                            to avoid common security and cost management issues.
+                            Erin Krengel and Cameron Stokes show you how to apply policies to avoid common security and cost management issues.
                         </p>
                         <div>
                             <a href="{{ relref . "/resources/getting-started-policy-as-code" }}" class="btn btn-secondary">Watch Now</a>
@@ -256,8 +241,12 @@
                 <!-- Go -->
                 <li class="md:flex w-full items-start pb-12 mb-12 border-b border-gray-200">
                     <div class="mb-4 md:mb-0 md:mr-8 md:w-2/5">
-                        <a href="{{ relref . "/resources/infrastructure-as-code-go" }}" class="rounded transition-all block border-2 border-gray-800" title="Getting Started with Infrastructure as Code using Go">
-                            <img src="/images/superpowers/go-demo.png" alt="Policy-as-code demo">
+                        <a
+                            href="{{ relref . "/resources/infrastructure-as-code-go" }}"
+                            class="rounded transition-all block border-2 border-gray-800"
+                            title="Getting Started with Infrastructure as Code using Go"
+                        >
+                            <img src="/images/superpowers/go-demo.png" alt="Policy-as-code demo" />
                         </a>
                     </div>
                     <div class="md:mt-2 md:w-3/5">
@@ -265,9 +254,8 @@
                             <a href="{{ relref . "/resources/infrastructure-as-code-go" }}" class="text-blue-600 text-2xl">Getting Started with Infrastructure as Code using Go</a>
                         </h3>
                         <p class="leading-relaxed mb-8 text-lg">
-                            Pulumi engineer Evan Boyle uses Go to walk us through
-                            universal infrastructure-as-code concepts and best practices like
-                            functions, containers, and Kubernetes.
+                            Pulumi engineer Evan Boyle uses Go to walk us through universal infrastructure-as-code concepts and best practices like functions, containers, and
+                            Kubernetes.
                         </p>
                         <div>
                             <a href="{{ relref . "/resources/infrastructure-as-code-go" }}" class="btn btn-secondary">Watch Now</a>
@@ -278,8 +266,12 @@
                 <!-- .NET -->
                 <li class="md:flex w-full items-start pb-12 mb-12 border-b border-gray-200">
                     <div class="mb-4 md:mb-0 md:mr-8 md:w-2/5">
-                        <a href="{{ relref . "/resources/manage-any-cloud-dotnet" }}" class="rounded transition-all block border-2 border-gray-400" title="Managing Any Cloud with .NET">
-                            <img src="/images/superpowers/dotnet-demo.png" alt="Policy-as-code demo">
+                        <a
+                            href="{{ relref . "/resources/manage-any-cloud-dotnet" }}"
+                            class="rounded transition-all block border-2 border-gray-400"
+                            title="Managing Any Cloud with .NET"
+                        >
+                            <img src="/images/superpowers/dotnet-demo.png" alt="Policy-as-code demo" />
                         </a>
                     </div>
                     <div class="md:mt-2 md:w-3/5">
@@ -287,9 +279,7 @@
                             <a href="{{ relref . "/resources/manage-any-cloud-dotnet" }}" class="text-blue-600 text-2xl">Managing Any Cloud with .NET</a>
                         </h3>
                         <p class="leading-relaxed mb-8 text-lg">
-                            Mikhail Shilkov shows you how you can use C#, F#, and VB.NET
-                            to define the infrastructure for Azure, AWS, or even on-prem
-                            Kubernetes clusters.
+                            Mikhail Shilkov shows you how you can use C#, F#, and VB.NET to define the infrastructure for Azure, AWS, or even on-prem Kubernetes clusters.
                         </p>
                         <div>
                             <a href="{{ relref . "/resources/manage-any-cloud-dotnet" }}" class="btn btn-secondary">Watch Now</a>
@@ -300,8 +290,12 @@
                 <!-- Self-service clouds -->
                 <li class="md:flex w-full items-start pb-12 mb-12 border-b border-gray-200">
                     <div class="mb-4 md:mb-0 md:mr-8 md:w-2/5">
-                        <a href="{{ relref . "/resources/building-self-service-clouds" }}" class="rounded transition-all block border-2 border-transparent cursor-default" title="Building Self-service Clouds with Pulumi">
-                            <img class="rounded" src="/images/superpowers/mbrdna-demo.png" alt="Building Self-service Clouds with Pulumi">
+                        <a
+                            href="{{ relref . "/resources/building-self-service-clouds" }}"
+                            class="rounded transition-all block border-2 border-transparent cursor-default"
+                            title="Building Self-service Clouds with Pulumi"
+                        >
+                            <img class="rounded" src="/images/superpowers/mbrdna-demo.png" alt="Building Self-service Clouds with Pulumi" />
                         </a>
                     </div>
                     <div class="md:mt-2 md:w-3/5">
@@ -309,9 +303,8 @@
                             <a href="{{ relref . "/resources/building-self-service-clouds" }}" class="text-blue-600 text-2xl">Building Self-service Clouds with Pulumi</a>
                         </h3>
                         <p class="leading-relaxed mb-8 text-lg">
-                            Mercedes-Benz R&D is leading the way in showing how large
-                            organizations can leverage all of the clouds and empower teams
-                            to rapidly innovate with new services and architectures.
+                            Mercedes-Benz R&D is leading the way in showing how large organizations can leverage all of the clouds and empower teams to rapidly innovate with new
+                            services and architectures.
                         </p>
                         <div>
                             <a href="{{ relref . "/resources/building-self-service-clouds" }}" class="btn btn-secondary">Watch Now</a>
@@ -322,8 +315,12 @@
                 <!-- GitLab -->
                 <li class="md:flex w-full items-start pb-8 mb-12">
                     <div class="mb-4 md:mb-0 md:mr-8 md:w-2/5">
-                        <a href="{{ relref . "/resources/gitops-with-gitlab-and-pulumi-2020-05-20" }}" class="rounded transition-all block border-2 border-transparent" title="GitOps with Pulumi and GitLab">
-                            <img class="rounded" src="/images/superpowers/gitlab-demo.png" alt="GitOps with Pulumi and GitLab">
+                        <a
+                            href="{{ relref . "/resources/gitops-with-gitlab-and-pulumi-2020-05-20" }}"
+                            class="rounded transition-all block border-2 border-transparent"
+                            title="GitOps with Pulumi and GitLab"
+                        >
+                            <img class="rounded" src="/images/superpowers/gitlab-demo.png" alt="GitOps with Pulumi and GitLab" />
                         </a>
                     </div>
                     <div class="md:mt-2 md:w-3/5">
@@ -331,8 +328,7 @@
                             <a href="{{ relref . "/resources/gitops-with-gitlab-and-pulumi-2020-05-20" }}" class="text-blue-600 text-2xl">GitOps with Pulumi and GitLab</a>
                         </h3>
                         <p class="leading-relaxed mb-8 text-lg">
-                            William Chia from GitLab and Pulumi engineer Praneet Loke will
-                            show you how to super-charge your team's velocity with GitOps.
+                            William Chia from GitLab and Pulumi engineer Praneet Loke will show you how to super-charge your team's velocity with GitOps.
                         </p>
                         <div>
                             <a href="{{ relref . "/resources/gitops-with-gitlab-and-pulumi-2020-05-20" }}" class="btn btn-secondary">Watch Now</a>
@@ -343,17 +339,22 @@
                 <!-- JFrog -->
                 <li class="md:flex w-full items-start pb-8 mb-12">
                     <div class="mb-4 md:mb-0 md:mr-8 md:w-2/5">
-                        <a href="{{ relref . "/resources/sharing-and-reusing-infrastructure" }}" class="rounded transition-all block border-2 border-transparent" title="Sharing and Reusing Infrastructure with Pulumi and Artifactory">
-                            <img class="rounded" src="/images/webinar/jfrog-pulumi.png" alt="Pulumi and JFrog">
+                        <a
+                            href="{{ relref . "/resources/sharing-and-reusing-infrastructure" }}"
+                            class="rounded transition-all block border-2 border-transparent"
+                            title="Sharing and Reusing Infrastructure with Pulumi and Artifactory"
+                        >
+                            <img class="rounded" src="/images/webinar/jfrog-pulumi.png" alt="Pulumi and JFrog" />
                         </a>
                     </div>
                     <div class="md:mt-2 md:w-3/5">
                         <h3>
-                            <a href="{{ relref . "/resources/sharing-and-reusing-infrastructure" }}" class="text-blue-600 text-2xl">Sharing and Reusing Infrastructure with Pulumi and Artifactory</a>
+                            <a href="{{ relref . "/resources/sharing-and-reusing-infrastructure" }}" class="text-blue-600 text-2xl"
+                                >Sharing and Reusing Infrastructure with Pulumi and Artifactory</a
+                            >
                         </h3>
                         <p class="leading-relaxed mb-8 text-lg">
-                            Dan Hernandez and Melissa McKay will show you how to define resources such as VPCs,
-                            Kubernetes clusters, and policies using multiple languages.
+                            Dan Hernandez and Melissa McKay will show you how to define resources such as VPCs, Kubernetes clusters, and policies using multiple languages.
                         </p>
                         <div>
                             <a href="{{ relref . "/resources/sharing-and-reusing-infrastructure" }}" class="btn btn-secondary">Watch Now</a>
@@ -364,18 +365,23 @@
                 <!-- CircleCI -->
                 <li class="md:flex w-full items-start pb-8 mb-12">
                     <div class="mb-4 md:mb-0 md:mr-8 md:w-2/5">
-                        <a href="{{ relref . "/resources/verify-your-infrastructure-on-deployment" }}" class="rounded transition-all block border-2 border-transparent" title="Verify Your Infrastructure on Each Deployment with Pulumi and CircleCI">
-                            <img class="rounded" src="/images/superpowers/circleci-demo.png" alt="Verify Your Infrastructure on Each Deployment with Pulumi and CircleCI">
+                        <a
+                            href="{{ relref . "/resources/verify-your-infrastructure-on-deployment" }}"
+                            class="rounded transition-all block border-2 border-transparent"
+                            title="Verify Your Infrastructure on Each Deployment with Pulumi and CircleCI"
+                        >
+                            <img class="rounded" src="/images/superpowers/circleci-demo.png" alt="Verify Your Infrastructure on Each Deployment with Pulumi and CircleCI" />
                         </a>
                     </div>
                     <div class="md:mt-2 md:w-3/5">
                         <h3>
-                            <a href="{{ relref . "/resources/verify-your-infrastructure-on-deployment" }}" class="text-blue-600 text-2xl">Verify Your Infrastructure on Each Deployment with Pulumi and CircleCI</a>
+                            <a href="{{ relref . "/resources/verify-your-infrastructure-on-deployment" }}" class="text-blue-600 text-2xl"
+                                >Verify Your Infrastructure on Each Deployment with Pulumi and CircleCI</a
+                            >
                         </h3>
                         <p class="leading-relaxed mb-8 text-lg">
-                            Angel Rivera and Chris Smith will walk you through best
-                            practices for application developers, DevOps, and SREs to keep
-                            configuration mistakes from reaching production.
+                            Angel Rivera and Chris Smith will walk you through best practices for application developers, DevOps, and SREs to keep configuration mistakes from
+                            reaching production.
                         </p>
                         <div>
                             <a href="{{ relref . "/resources/verify-your-infrastructure-on-deployment" }}" class="btn btn-secondary">Watch Now</a>

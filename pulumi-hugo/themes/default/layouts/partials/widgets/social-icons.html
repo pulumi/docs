@@ -7,6 +7,7 @@
     {{ $platforms := slice "github" "linkedin" "twitter" }}
     {{ $platformUrlPrefixes := slice "https://github.com" "https://www.linkedin.com/in" "https://twitter.com" }}
 
+
     <ul class="list-none p-0 inline-flex items-center">
         {{ range $idx, $platform := $platforms }}
             {{ if (index $socialIdentities $platform) }}

@@ -1,6 +1,7 @@
 {{ define "main" }}
     {{ $pageContext := . }}
 
+
     <section id="overview" class="star-wars overflow-hidden">
         <div class="h-full flex justify-center items-center">
             <div class="title-animation">
@@ -12,20 +13,19 @@
 
         <div class="fade"></div>
         <div class="crawl">
-             <div class="title">
+            <div class="title">
                 <p>PulumiUP</p>
                 <h1>The Cloud Awakens</h1>
             </div>
 
             <p class="mb-24">
-                Frustration brought on by vast complexity has engulfed the cloud community. With hundreds of
-                cloud providers, thousands of services, and almost unlimited ways to interact with those
-                services, Cloud Engineers are faced with an almost impossible task.
+                Frustration brought on by vast complexity has engulfed the cloud community. With hundreds of cloud providers, thousands of services, and almost unlimited ways to
+                interact with those services, Cloud Engineers are faced with an almost impossible task.
             </p>
 
             <p>
-                While Tech Twitter endlessly debates the correct approach to ease complexity, Pulumi has secretly
-                dispatched a platypus, the guardian of simplicity and productivity in the cloud, to settle the debate....
+                While Tech Twitter endlessly debates the correct approach to ease complexity, Pulumi has secretly dispatched a platypus, the guardian of simplicity and productivity
+                in the cloud, to settle the debate....
             </p>
         </div>
     </section>
@@ -38,24 +38,18 @@
         </div>
 
         <div class="max-w-2xl mx-auto">
-            <p>
-                May the fourth be with the cloud community.
-            </p>
+            <p>May the fourth be with the cloud community.</p>
+
+            <p>PulumiUP is a free, virtual conference open to all interested in cloud engineering, cloud infrastructure, software development, modern applications, or Pulumi.</p>
 
             <p>
-                PulumiUP is a free, virtual conference open to all interested in cloud engineering,
-                cloud infrastructure, software development, modern applications, or Pulumi.
-            </p>
-
-            <p>
-                Whether you're a seasoned cloud engineer or just curious to learn about cloud
-                engineering, at PulumiUP you can hear industry leaders and attend guest sessions,
+                Whether you're a seasoned cloud engineer or just curious to learn about cloud engineering, at PulumiUP you can hear industry leaders and attend guest sessions,
                 demos, and panel sessions.
             </p>
         </div>
 
         <div class="mt-8 h-24">
-                <a class="btn-primary" href="https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlpcvhSsUXdT5CXjRwAaM_My" target="_blank" rel="noopener noreferrer">Watch now</a>
+            <a class="btn-primary" href="https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlpcvhSsUXdT5CXjRwAaM_My" target="_blank" rel="noopener noreferrer">Watch now</a>
         </div>
 
         <div class="date-countdown-container">
@@ -91,7 +85,12 @@
                                             {{ range $presenter := .presenters }}
                                                 {{ $presenterData := index $people $presenter }}
                                                 <div class="w-1/4 pr-2">
-                                                    <img class="rounded-md" src="/images/team/{{ $presenter }}.jpg" alt="{{ $presenterData.name }}" title="{{ $presenterData.name }}">
+                                                    <img
+                                                        class="rounded-md"
+                                                        src="/images/team/{{ $presenter }}.jpg"
+                                                        alt="{{ $presenterData.name }}"
+                                                        title="{{ $presenterData.name }}"
+                                                    />
                                                     <div class="text-white text-sm text-center mt-2">
                                                         {{ $presenterData.name }}
                                                     </div>
@@ -109,7 +108,13 @@
                                         {{ .description }}
                                     </p>
                                     <div class="flex-grow text-center mt-8 flex justify-center items-end">
-                                        <a class="btn-secondary" href="https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlpcvhSsUXdT5CXjRwAaM_My" target="_blank" rel="noopener noreferrer">Watch now</a>
+                                        <a
+                                            class="btn-secondary"
+                                            href="https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlpcvhSsUXdT5CXjRwAaM_My"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            >Watch now</a
+                                        >
                                     </div>
                                 </div>
                             </div>
@@ -131,7 +136,7 @@
                         <p>{{ .description }}</p>
                         <div class="my-8">
                             <a href="{{ .url }}" class="btn-secondary">
-                                <span class="text-violet-600">Register Now &#8594</span>
+                                <span class="text-violet-600">Register Now &#8594;</span>
                             </a>
                         </div>
                     </div>
@@ -142,26 +147,21 @@
 
     <section id="why" class="why-attend text-center container mx-auto py-24 px-6 lg:px-0">
         <h2>Why Attend</h2>
-        <p>
-            Get ready to be inspired, challenged, and transformed. Learn from experts and success stories about
-            early adopters.
-        </p>
+        <p>Get ready to be inspired, challenged, and transformed. Learn from experts and success stories about early adopters.</p>
 
         <div class="flex flex-col lg:flex-row">
             <div class="w-full lg:w-1/3 px-8 mt-8 lg:mb-0">
                 {{ partial "color-icon.html" (dict "icon" "lightning" "icon_color" "yellow") }}
                 <p class="key-feature-description">
-                    Learn from cloud engineering experts about how they manage and solve frustrations
-                    with handling cloud complexity all the way from cloud native applications to structuring
-                    engineering orgs to be productive with the cloud.
+                    Learn from cloud engineering experts about how they manage and solve frustrations with handling cloud complexity all the way from cloud native applications to
+                    structuring engineering orgs to be productive with the cloud.
                 </p>
             </div>
 
             <div class="w-full lg:w-1/3 px-8 mt-8 lg:mb-0">
                 {{ partial "color-icon.html" (dict "icon" "lock" "icon_color" "purple") }}
                 <p class="key-feature-description">
-                    Unlock the power of the cloud with thought-provoking presentations that are
-                    designed to help you transform your organization, your business, and yourself.
+                    Unlock the power of the cloud with thought-provoking presentations that are designed to help you transform your organization, your business, and yourself.
                     Access open source code on Github and get involved with the community.
                 </p>
             </div>
@@ -169,9 +169,8 @@
             <div class="w-full lg:w-1/3 px-8 mt-8 lg:mb-0">
                 {{ partial "color-icon.html" (dict "icon" "rocketship" "icon_color" "salmon") }}
                 <p class="key-feature-description">
-                    You will learn how top-performing cloud engineering teams and organizations are leveraging
-                    the cloud to drive remarkable success and how to implement their techniques within your own
-                    organization or team.
+                    You will learn how top-performing cloud engineering teams and organizations are leveraging the cloud to drive remarkable success and how to implement their
+                    techniques within your own organization or team.
                 </p>
             </div>
         </div>
@@ -183,10 +182,7 @@
         <div class="py-16">
             <div class="max-w-3xl card white-background mx-auto p-6 text-left">
                 <h3>Who Should Attend</h3>
-                <p>
-                    Business leaders, engineering managers, developers, and anyone who is interested in learning
-                    more about the cloud and cloud engineering.
-                </p>
+                <p>Business leaders, engineering managers, developers, and anyone who is interested in learning more about the cloud and cloud engineering.</p>
 
                 <ul>
                     <li>Infrastructure and platform engineers</li>
@@ -211,6 +207,7 @@
                             {{ $imgClass = "w-2/3 mx-auto" }}
                         {{ end }}
 
+
                         <img class="{{ $imgClass }}" src="/images/pulumiup/sponsors/{{ $logo }}" />
                     </div>
                 {{ end }}
@@ -220,16 +217,16 @@
 
     <section id="schedule" class="container mx-auto py-16 px-6 lg:px-0">
         <h2>Schedule At A Glance</h2>
-        <p>
-            Time not work for you? Register and we'll share the on-demand version when its available.
-        </p>
+        <p>Time not work for you? Register and we'll share the on-demand version when its available.</p>
 
         {{ range .Params.schedule_overview }}
             <div class="flex flex-wrap my-8">
                 <div class="w-full lg:w-1/4 border-b lg:border-b-0 lg:border-r border-white">
                     <p class="text-3xl">{{ .day }}</p>
-                    <p>{{ .time }}<p>
+                    <p>{{ .time }}</p>
+                    <p></p>
                 </div>
+
                 <div class="w-full lg:w-3/4 lg:pl-6">
                     <p class="text-3xl">{{ .title }}</p>
                     <p>
@@ -245,13 +242,11 @@
             <h2>About Pulumi</h2>
 
             <p>
-                Pulumi's cloud engineering platform brings infrastructure, developer, and security teams together through a
-                unified software engineering process that tames cloud complexity and accelerates innovation. Using the
-                Pulumi platform, teams can build, deploy, and manage modern cloud applications faster and with more
-                confidence, using any language, any architecture and any cloud. Pulumi lets teams build Universal Infrastructure
-                as Code using popular programming languages (Python, JavaScript, TypeScript, Go, .NET/C#, Java) and markup
-                languages (YAML, JSON, CUE). It enables deploying infrastructure and applications together through a unified delivery
-                process. Finally, teams can manage cloud applications with Policy as Code, better visibility, and controls.
+                Pulumi's cloud engineering platform brings infrastructure, developer, and security teams together through a unified software engineering process that tames cloud
+                complexity and accelerates innovation. Using the Pulumi platform, teams can build, deploy, and manage modern cloud applications faster and with more confidence,
+                using any language, any architecture and any cloud. Pulumi lets teams build Universal Infrastructure as Code using popular programming languages (Python,
+                JavaScript, TypeScript, Go, .NET/C#, Java) and markup languages (YAML, JSON, CUE). It enables deploying infrastructure and applications together through a unified
+                delivery process. Finally, teams can manage cloud applications with Policy as Code, better visibility, and controls.
             </p>
 
             <div class="mt-8">

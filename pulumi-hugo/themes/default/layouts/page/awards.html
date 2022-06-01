@@ -12,10 +12,10 @@
                             <div class="md:w-1/3 p-4">
                                 {{ if .url }}
                                     <a data-track="{{ .title | urlize }}-img" class="block text-center" href="{{ .url }}">
-                                        <img class="text-center inline-block rounded shadow p-1" src="{{ .img }}">
+                                        <img class="text-center inline-block rounded shadow p-1" src="{{ .img }}" />
                                     </a>
                                 {{ else }}
-                                    <img class="text-center inline-block rounded shadow p-1" src="{{ .img }}">
+                                    <img class="text-center inline-block rounded shadow p-1" src="{{ .img }}" />
                                 {{ end }}
                             </div>
                             <div class="md:w-2/3 p-4 text-left">

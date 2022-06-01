@@ -5,13 +5,13 @@
 </ul>
 
 {{ range sort $.Site.Data.glossary.entries "term" }}
-<h2 id="{{ anchorize .term }}">{{ .term }}</h2>
-<p>{{ .description }}</p>
-<p>
-    {{ $link := .link }}
-    {{ if hasPrefix $link "/" }}
-        {{ $link = relref $.Page $link }}
-    {{ end }}
-    <a data-track="{{ .term | urlize }}" href="{{ $link }}"><i class="fab fa-readme mr-2"></i>{{ .term }}</a>
-</p>
+    <h2 id="{{ anchorize .term }}">{{ .term }}</h2>
+    <p>{{ .description }}</p>
+    <p>
+        {{ $link := .link }}
+        {{ if hasPrefix $link "/" }}
+            {{ $link = relref $.Page $link }}
+        {{ end }}
+        <a data-track="{{ .term | urlize }}" href="{{ $link }}"><i class="fab fa-readme mr-2"></i>{{ .term }}</a>
+    </p>
 {{ end }}

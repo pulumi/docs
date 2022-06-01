@@ -9,16 +9,17 @@
 {{/* Loop through all pages, sorting tutorials for the selected cloud into the appropriate language bucket. */}}
 {{ range .Site.Pages }}
     {{ if and (hasPrefix .Path (printf "docs/tutorials/%s/" $cloud)) (eq .Params.cloud $cloud) }}
-        {{ if eq "ts" .Params.language }} {{ $ts = $ts | append . }} {{ end }}
-        {{ if eq "js" .Params.language }} {{ $js = $js | append . }} {{ end }}
-        {{ if eq "py" .Params.language }} {{ $py = $py | append . }} {{ end }}
-        {{ if eq "go" .Params.language }} {{ $go = $go | append . }} {{ end }}
-        {{ if eq "cs" .Params.language }} {{ $cs = $cs | append . }} {{ end }}
+        {{ if eq "ts" .Params.language }}{{ $ts = $ts | append . }}{{ end }}
+        {{ if eq "js" .Params.language }}{{ $js = $js | append . }}{{ end }}
+        {{ if eq "py" .Params.language }}{{ $py = $py | append . }}{{ end }}
+        {{ if eq "go" .Params.language }}{{ $go = $go | append . }}{{ end }}
+        {{ if eq "cs" .Params.language }}{{ $cs = $cs | append . }}{{ end }}
     {{ end }}
 {{ end }}
 
+
 <pulumi-choosable type="language" value="typescript">
-    <table width=100%>
+    <table width="100%">
         <thead>
             <tr>
                 <th>Tutorial</th>
@@ -28,15 +29,13 @@
             {{ $both := (append $js $ts) }}
             {{ if eq (len $both) 0 }}
                 <tr>
-                    <td>
-                        None for this language.
-                    </td>
+                    <td>None for this language.</td>
                 </tr>
             {{ else }}
                 {{ range sort $both ".Params.h1" }}
                     <tr>
                         <td>
-                            <a href="{{ .RelPermalink }}">{{ .Params.h1 }}</a></td>
+                            <a href="{{ .RelPermalink }}">{{ .Params.h1 }}</a>
                         </td>
                     </tr>
                 {{ end }}
@@ -46,7 +45,7 @@
 </pulumi-choosable>
 
 <pulumi-choosable type="language" value="python">
-    <table width=100%>
+    <table width="100%">
         <thead>
             <tr>
                 <th>Tutorial</th>
@@ -55,15 +54,13 @@
         <tbody>
             {{ if eq (len $py) 0 }}
                 <tr>
-                    <td>
-                        None for this language.
-                    </td>
+                    <td>None for this language.</td>
                 </tr>
             {{ else }}
                 {{ range sort $py ".Params.h1" }}
                     <tr>
                         <td>
-                            <a href="{{ .RelPermalink }}">{{ .Params.h1 }}</a></td>
+                            <a href="{{ .RelPermalink }}">{{ .Params.h1 }}</a>
                         </td>
                     </tr>
                 {{ end }}
@@ -73,7 +70,7 @@
 </pulumi-choosable>
 
 <pulumi-choosable type="language" value="go">
-    <table width=100%>
+    <table width="100%">
         <thead>
             <tr>
                 <th>Tutorial</th>
@@ -82,15 +79,13 @@
         <tbody>
             {{ if eq (len $go) 0 }}
                 <tr>
-                    <td>
-                        None for this language.
-                    </td>
+                    <td>None for this language.</td>
                 </tr>
             {{ else }}
                 {{ range sort $go ".Params.h1" }}
                     <tr>
                         <td>
-                            <a href="{{ .RelPermalink }}">{{ .Params.h1 }}</a></td>
+                            <a href="{{ .RelPermalink }}">{{ .Params.h1 }}</a>
                         </td>
                     </tr>
                 {{ end }}
@@ -100,7 +95,7 @@
 </pulumi-choosable>
 
 <pulumi-choosable type="language" value="csharp">
-    <table width=100%>
+    <table width="100%">
         <thead>
             <tr>
                 <th>Tutorial</th>
@@ -109,15 +104,13 @@
         <tbody>
             {{ if eq (len $cs) 0 }}
                 <tr>
-                    <td>
-                        None for this language.
-                    </td>
+                    <td>None for this language.</td>
                 </tr>
             {{ else }}
                 {{ range sort $cs ".Params.h1" }}
                     <tr>
                         <td>
-                            <a href="{{ .RelPermalink }}">{{ .Params.h1 }}</a></td>
+                            <a href="{{ .RelPermalink }}">{{ .Params.h1 }}</a>
                         </td>
                     </tr>
                 {{ end }}

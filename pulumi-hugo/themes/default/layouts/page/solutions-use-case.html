@@ -56,7 +56,7 @@
     <!-- Diagrams -->
     <section class="container mx-auto my-16 text-center">
         <h2>{{ .Params.diagrams.title }}</h2>
-        <p>{{ .Params.diagrams.description | markdownify  }}</p>
+        <p>{{ .Params.diagrams.description | markdownify }}</p>
 
         {{ range $diagram := .Params.diagrams.items }}
             <div class="flex flex-wrap text-left">
@@ -75,6 +75,7 @@
     <!-- Logos -->
     <section class="container mx-auto text-center my-0 mb-16 lg:my-24 overflow-hidden px-3">
         {{ $pageContext := . }}
+
 
         <h3 class="text-center mb-10 hidden lg:block">{{ .Params.customer_logos.title }}</h3>
         <h6 class="text-center mb-10 lg:hidden">{{ .Params.customer_logos.title }}</h6>

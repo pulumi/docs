@@ -3,160 +3,164 @@
 {{ end }}
 
 {{ define "main" }}
-{{ $pageContext := . }}
+    {{ $pageContext := . }}
 
-<section id="overview" class="max-w-5xl mx-auto text-center my-28 px-6">
-    {{ with .Params.overview }}
-    <h2>{{ .titleTop }}<br />{{ .titleBottom }}</h2>
-    <p>{{ .description | markdownify }}</p>
-    {{ end }}
-</section>
 
-<section id="console-screenshot" class="max-w-4xl mx-auto text-center relative mb-28 px-6 lg:px-0">
-    <div class="shape-background pulumi-service-screenshot">
-        <div class="shape-container">
-            <div class="circle-right"></div>
-            <div class="circle-left"></div>
+    <section id="overview" class="max-w-5xl mx-auto text-center my-28 px-6">
+        {{ with .Params.overview }}
+            <h2>{{ .titleTop }}<br />{{ .titleBottom }}</h2>
+            <p>{{ .description | markdownify }}</p>
+        {{ end }}
+    </section>
+
+    <section id="console-screenshot" class="max-w-4xl mx-auto text-center relative mb-28 px-6 lg:px-0">
+        <div class="shape-background pulumi-service-screenshot">
+            <div class="shape-container">
+                <div class="circle-right"></div>
+                <div class="circle-left"></div>
+            </div>
         </div>
-    </div>
 
-    <img class="card mx-auto" src="/images/home/pulumi-console.svg" alt="Pulumi Service Screenshot" />
-</section>
+        <img class="card mx-auto" src="/images/home/pulumi-console.svg" alt="Pulumi Service Screenshot" />
+    </section>
 
-<section id="capabilities" class="my-28 px-6 relative">
-    <div class="shape-background pulumi-service-capabilities">
-        <div class="shape-container">
-            <div class="circle-top"></div>
-            <div class="circle-middle"></div>
-            <div class="circle-bottom"></div>
+    <section id="capabilities" class="my-28 px-6 relative">
+        <div class="shape-background pulumi-service-capabilities">
+            <div class="shape-container">
+                <div class="circle-top"></div>
+                <div class="circle-middle"></div>
+                <div class="circle-bottom"></div>
+            </div>
         </div>
-    </div>
 
-    <div class="container mx-auto">
-        <div class="card p-6 lg:p-28 bg-white">
-            {{ with .Params.capabilities }}
+        <div class="container mx-auto">
+            <div class="card p-6 lg:p-28 bg-white">
+                {{ with .Params.capabilities }}
+                    <h2>{{ .title }}</h2>
+
+                    {{ range .items }}
+                        <h3>{{ .title }}</h3>
+                        <img src="{{ .image }}" />
+
+                        <ul class="list-none mt-6 mb-20">
+                            {{ $listLength := len .details }}
+                            {{ range $index, $item := .details }}
+                                {{ $itemClass := "border-t-2" }}
+                                {{ if eq (add $index 1) $listLength }}
+                                    {{ $itemClass = "border-t-2 border-b-2" }}
+                                {{ end }}
+
+
+                                <li class="accordion-item {{ $itemClass }} py-6">
+                                    {{ partial "accordian-header" (dict "text" $item.title) }}
+                                    <p class="mt-6">{{ $item.description | markdownify }}</p>
+
+                                    <div class="accordion-item-body-no-animation">
+                                        <p class="mt-6">{{ $item.more_info | markdownify }}</p>
+                                    </div>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <section id="open-source" class="container mx-auto text-center px-6">
+        {{ with .Params.open_source }}
             <h2>{{ .title }}</h2>
-
-            {{ range .items }}
-            <h3>{{ .title }}</h3>
-            <img src="{{ .image }}" />
-
-            <ul class="list-none mt-6 mb-20">
-                {{ $listLength := len .details }}
-                {{ range $index, $item := .details }}
-                {{ $itemClass := "border-t-2" }}
-                {{ if eq (add $index 1) $listLength }}
-                {{ $itemClass = "border-t-2 border-b-2" }}
-                {{ end }}
-
-                <li class="accordion-item {{ $itemClass }} py-6">
-                    {{ partial "accordian-header" (dict "text" $item.title) }}
-                    <p class="mt-6">{{ $item.description | markdownify }}</p>
-
-                    <div class="accordion-item-body-no-animation">
-                        <p class="mt-6">{{ $item.more_info | markdownify }}</p>
-                    </div>
-                </li>
-                {{ end }}
-            </ul>
-            {{ end }}
-            {{ end }}
-        </div>
-    </div>
-</section>
-
-<section id="open-source" class="container mx-auto text-center px-6">
-    {{ with .Params.open_source }}
-    <h2>{{ .title }}</h2>
-    <div class="max-w-4xl mx-auto">{{ .description | markdownify }}</div>
-    <img class="mx-auto" src="{{ .image }}" alt="Pulumi Open Source" />
-    {{ end }}
-</section>
-
-<section id="security" class="mt-28 px-6 relative">
-    <div class="shape-background pulumi-service-security">
-        <div class="shape-container">
-            <div class="circle-right"></div>
-        </div>
-    </div>
-
-    <div class="container mx-auto text-center">
-        {{ with .Params.security }}
-        <h2>{{ .title }}</h2>
-        <p class="max-w-3xl mx-auto">{{ .description | markdownify }}</p>
-        <img class="mx-auto" src="{{ .image }}" alt="Pulumi Open Source" />
+            <div class="max-w-4xl mx-auto">{{ .description | markdownify }}</div>
+            <img class="mx-auto" src="{{ .image }}" alt="Pulumi Open Source" />
         {{ end }}
-    </div>
-</section>
+    </section>
 
-<section id="case-studies" class="relative px-6 mt-28">
-    <div class="shape-background pulumi-service-case-studies">
-        <div class="shape-container">
-            <div class="circle-right"></div>
+    <section id="security" class="mt-28 px-6 relative">
+        <div class="shape-background pulumi-service-security">
+            <div class="shape-container">
+                <div class="circle-right"></div>
+            </div>
         </div>
-    </div>
 
-    <div class="container mx-auto">
-        <h2 class="text-center">{{ .Params.case_studies.title }}</h2>
-        <div class="flex flex-wrap justify-center items-stretch">
-            {{ range .Params.case_studies.items }}
-            <div class="w-full lg:w-1/3 text-center my-8 relative">
-                <div class="h-full p-8">
-                    <div class="h-16">{{ partial "customer-logo.html" (dict "logo" .logo) }}</div>
-                    <h5>{{ .name }}</h5>
-                    <p class="pb-8">{{ .description | markdownify }}</p>
-                    <div class="absolute bottom-0 left-0 w-full">
-                        <a href="{{ relref $pageContext .link }}" class="btn-secondary whitespace-nowrap">{{ .name }}
-                            Case Study</a>
+        <div class="container mx-auto text-center">
+            {{ with .Params.security }}
+                <h2>{{ .title }}</h2>
+                <p class="max-w-3xl mx-auto">{{ .description | markdownify }}</p>
+                <img class="mx-auto" src="{{ .image }}" alt="Pulumi Open Source" />
+            {{ end }}
+        </div>
+    </section>
+
+    <section id="case-studies" class="relative px-6 mt-28">
+        <div class="shape-background pulumi-service-case-studies">
+            <div class="shape-container">
+                <div class="circle-right"></div>
+            </div>
+        </div>
+
+        <div class="container mx-auto">
+            <h2 class="text-center">{{ .Params.case_studies.title }}</h2>
+            <div class="flex flex-wrap justify-center items-stretch">
+                {{ range .Params.case_studies.items }}
+                    <div class="w-full lg:w-1/3 text-center my-8 relative">
+                        <div class="h-full p-8">
+                            <div class="h-16">{{ partial "customer-logo.html" (dict "logo" .logo) }}</div>
+                            <h5>{{ .name }}</h5>
+                            <p class="pb-8">{{ .description | markdownify }}</p>
+                            <div class="absolute bottom-0 left-0 w-full">
+                                <a href="{{ relref $pageContext .link }}" class="btn-secondary whitespace-nowrap"
+                                    >{{ .name }}
+                                    Case Study</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <section id="deployment" class="container mx-auto text-center mt-28 px-6">
+        <h2>{{ .Params.deployment.title }}</h2>
+        <div class="flex flex-wrap justify-content items-stretch text-left mt-16">
+            {{ range $item := .Params.deployment.items }}
+                <div class="w-full lg:w-1/2 p-3">
+                    <div class="benefits-item-auto-h card bg-white p-12">
+                        <div class="icon-section mb-8">
+                            {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                        </div>
+                        <div>
+                            <h5>{{ $item.title }}</h5>
+                        </div>
+                        <div class="mt-6">
+                            <p>{{ $item.description | markdownify }}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
             {{ end }}
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="deployment" class="container mx-auto text-center mt-28 px-6">
-    <h2>{{ .Params.deployment.title }}</h2>
-    <div class="flex flex-wrap justify-content items-stretch text-left mt-16">
-        {{ range $item := .Params.deployment.items }}
-        <div class="w-full lg:w-1/2 p-3">
-            <div class="benefits-item-auto-h card bg-white p-12">
-                <div class="icon-section mb-8">
-                    {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
-                </div>
-                <div>
-                    <h5>{{ $item.title }}</h5>
-                </div>
-                <div class="mt-6">
-                    <p>{{ $item.description | markdownify }}</p>
-                </div>
+    <section id="pricing" class="container mx-auto text-center mt-28 px-6">
+        {{ with .Params.pricing }}
+            <h2>{{ .title }}</h2>
+            <p class="max-w-xl mx-auto">{{ .description | markdownify }}</p>
+            <div class="mt-12">
+                <a href="{{ relref $pageContext " /pricing" }}" class="btn-secondary">Pricing</a>
             </div>
-        </div>
         {{ end }}
-    </div>
-</section>
+    </section>
 
-<section id="pricing" class="container mx-auto text-center mt-28 px-6">
-    {{ with .Params.pricing }}
-    <h2>{{ .title }}</h2>
-    <p class="max-w-xl mx-auto">{{ .description | markdownify }}</p>
-    <div class="mt-12">
-        <a href="{{ relref $pageContext " /pricing" }}" class="btn-secondary">Pricing</a>
-    </div>
-    {{ end }}
-</section>
-
-<section id="get-started" class="container px-6 lg:px-0 mx-auto my-28 px-6">
-    <div class="w-full bg-violet-600 card p-6 lg:p-16 lg:pt-24 text-center">
-        <div class="max-w-xl mx-auto">
-            <h2 class="text-white hidden lg:block px-0 lg:px-16">{{ .Params.get_started.title }}</h2>
-            <h4 class="text-white mt-0 lg:hidden">{{ .Params.get_started.title }}</h4>
-            <p class="text-white">{{ .Params.get_started.description }}</p>
-            <div class="mt-16">
-                <a class="btn-secondary" href="{{ relref . " /docs/get-started" }}">Get Started</a>
+    <section id="get-started" class="container px-6 lg:px-0 mx-auto my-28 px-6">
+        <div class="w-full bg-violet-600 card p-6 lg:p-16 lg:pt-24 text-center">
+            <div class="max-w-xl mx-auto">
+                <h2 class="text-white hidden lg:block px-0 lg:px-16">{{ .Params.get_started.title }}</h2>
+                <h4 class="text-white mt-0 lg:hidden">{{ .Params.get_started.title }}</h4>
+                <p class="text-white">{{ .Params.get_started.description }}</p>
+                <div class="mt-16">
+                    <a class="btn-secondary" href="{{ relref . " /docs/get-started" }}">Get Started</a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 {{ end }}

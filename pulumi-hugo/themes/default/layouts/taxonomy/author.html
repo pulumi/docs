@@ -1,7 +1,6 @@
 {{ define "main" }}
     <div class="container mx-auto px-4 py-8">
         <div class="lg:flex">
-
             <div class="lg:w-3/12 pr-8">
                 {{ partial "blog/sidebar.html" . }}
             </div>
@@ -11,10 +10,11 @@
                 {{ $blogPosts := where .Data.Pages "Section" "blog" }}
                 {{ $paginator := .Paginate $blogPosts.ByDate.Reverse }}
 
+
                 <header>
                     <div class="flex items-top">
                         <span class="rounded-full mr-4 lg:mr-6">
-                            <img class="rounded-full w-32 bg-blue-200 p-1" src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}">
+                            <img class="rounded-full w-32 bg-blue-200 p-1" src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" />
                         </span>
                         <div>
                             <h1 class="no-anchor mb-0">{{ $authorData.name }}</h1>
@@ -53,9 +53,7 @@
                 {{ partial "blog/paginator.html" . }}
             </div>
 
-            <div class="lg:w-2/12 pl-8">
-
-            </div>
+            <div class="lg:w-2/12 pl-8"></div>
         </div>
     </div>
 {{ end }}

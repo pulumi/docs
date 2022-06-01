@@ -19,9 +19,9 @@
                 <ul id="event-list" class="list-none md:flex md:flex-wrap pl-0">
                     {{ $events := (where $.Pages "Type" "events") }}
                     {{ range $index, $event := (sort $events ".Params.event.start_date") }}
-                        {{ if and ((time .Params.event.end_date).After (now.AddDate 0 0 -1)) (ne .Params.unlisted true)}}
-                            <li class="w-full m-0 p-0" data-event-type='{{ delimit .Params.event.type "," }}'>
-                                <article class="{{ if lt (add $index 1) (len $events) }} pb-16 mb-12 border-b border-gray-300 {{ end }}">
+                        {{ if and ((time .Params.event.end_date).After (now.AddDate 0 0 -1)) (ne .Params.unlisted true) }}
+                            <li class="w-full m-0 p-0" data-event-type="{{ delimit .Params.event.type "," }}">
+                                <article class="{{ if lt (add $index 1) (len $events) }}pb-16 mb-12 border-b border-gray-300{{ end }}">
                                     <h3>
                                         {{ if .Params.url_slug }}
                                             <a class="text-2xl" href="/events/{{ .Params.url_slug }}/">
@@ -40,7 +40,8 @@
                                             {{ if eq .Params.event.start_date .Params.event.end_date }}
                                                 {{ dateFormat "Monday, Jan 2" .Params.event.start_date }}
                                             {{ else }}
-                                                {{ dateFormat "Monday, Jan 2" .Params.event.start_date }} - {{ dateFormat "Mon, Jan 2" .Params.event.end_date }}
+                                                {{ dateFormat "Monday, Jan 2" .Params.event.start_date }} -
+                                                {{ dateFormat "Mon, Jan 2" .Params.event.end_date }}
                                             {{ end }}
                                         </span>
                                     </div>

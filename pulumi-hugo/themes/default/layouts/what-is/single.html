@@ -1,5 +1,5 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" .Params.page_title "small_title" "true")}}
+    {{ partial "hero" (dict "title" .Params.page_title "small_title" "true") }}
 {{ end }}
 
 {{ define "main" }}
@@ -22,7 +22,7 @@
                 <div class="lg:max-w-5xl">
                     {{ with .Params.video }}
                         <div class="card p-6 my-12">
-                            <h4>{{ .title}}</h4>
+                            <h4>{{ .title }}</h4>
                             <div>
                                 <div class="" style="position: relative; padding-bottom: 48.25%; height: 0; overflow: hidden;">
                                     <iframe src="{{ .youtube_url }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""></iframe>
@@ -35,6 +35,7 @@
                                 <div class="accordion-item text-2xl py-3 border-b-2 border-t-2">
                                     {{ partial "accordian-header" (dict "text" "Transcript" "large_header" false) }}
 
+
                                     <div class="accordion-item-body-no-animation text-base">
                                         <p>{{ .transcript | markdownify }}</p>
                                     </div>
@@ -42,6 +43,7 @@
                             </div>
                         </div>
                     {{ end }}
+
 
                     <div class="bg-white px-3">
                         {{ .Content }}
@@ -73,15 +75,10 @@
     <section id="get-started" class="container px-6 lg:px-0 mx-auto my-16">
         <div class="w-full bg-violet-600 card p-6 lg:p-16 lg:pt-24 text-center">
             <div class="max-w-xl mx-auto">
-                <h2 class="text-white hidden lg:block px-0 lg:px-16">
-                    Get started with Cloud Engineering
-                </h2>
-                <h4 class="text-white mt-0 lg:hidden">
-                    Get started with Cloud Engineering
-                </h4>
+                <h2 class="text-white hidden lg:block px-0 lg:px-16">Get started with Cloud Engineering</h2>
+                <h4 class="text-white mt-0 lg:hidden">Get started with Cloud Engineering</h4>
                 <p class="text-white">
-                    Pulumi is a cloud engineering platform that brings infrastructure, application
-                    development, and compliance teams together through a unified software engineering
+                    Pulumi is a cloud engineering platform that brings infrastructure, application development, and compliance teams together through a unified software engineering
                     process to deliver and manage modern cloud applications.
                 </p>
                 <div class="mt-16">

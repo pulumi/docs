@@ -1,16 +1,12 @@
 {{ define "main" }}
     <div class="container mx-auto px-4 py-8 mt-2">
         <div class="xxl:flex">
-
             <div class="flex flex-col lg:flex-row xxl:w-9/12">
                 <div class="lg:hidden mb-6">
-                    <button class="docs-sidebar-toggle items-center px-3 py-2 border rounded">
-                        Toggle Docs Navigation
-                    </button>
+                    <button class="docs-sidebar-toggle items-center px-3 py-2 border rounded">Toggle Docs Navigation</button>
                 </div>
-                
-                <div
-                    class="docs-sidebar-content hidden lg:w-1/4 lg:block xxl:w-4/12 pr-8 mb-2 pt-8 lg:order-first lg:border-none lg:pt-0 lg:mt-0">
+
+                <div class="docs-sidebar-content hidden lg:w-1/4 lg:block xxl:w-4/12 pr-8 mb-2 pt-8 lg:order-first lg:border-none lg:pt-0 lg:mt-0">
                     <div class="sticky-sidebar">
                         <div>
                             {{ partial "docs/toc.html" . }}
@@ -22,24 +18,20 @@
                     <h1>{{ .Title }}</h1>
 
                     <p>
-                        Pulumi helps you get your code to the AWS cloud faster than ever before:
-                        from high-level multi-cloud libraries, to low-level fine grained control
-                        of AWS-specific resources.
+                        Pulumi helps you get your code to the AWS cloud faster than ever before: from high-level multi-cloud libraries, to low-level fine grained control of
+                        AWS-specific resources.
                     </p>
 
                     <h2>Pulumi and AWS</h2>
 
                     <div class="md:flex">
                         <div class="flex-1">
-                            <img class="m-0 p-0 border border-gray-400" src="/images/docs/brand/aws-technology-partner.png" alt="AWS advanced technology partner">
+                            <img class="m-0 p-0 border border-gray-400" src="/images/docs/brand/aws-technology-partner.png" alt="AWS advanced technology partner" />
                         </div>
 
                         <p class="flex-1 mx-8 mt-0">
-                            Pulumi is an AWS Advanced Technology Partner providing everything you need
-                            to get code to the AWS cloud. Pulumi provides a cloud development platform
-                            enabling Development and DevOps teams to code, deploy, any cloud app: from
-                            serverless functions, to container apps, to data services and
-                            infrastructure.
+                            Pulumi is an AWS Advanced Technology Partner providing everything you need to get code to the AWS cloud. Pulumi provides a cloud development platform
+                            enabling Development and DevOps teams to code, deploy, any cloud app: from serverless functions, to container apps, to data services and infrastructure.
                         </p>
 
                         <div class="flex-1">
@@ -50,13 +42,12 @@
                     <h2>Now available -- Pulumi Crosswalk for AWS</h2>
 
                     <a href="{{ relref . "/docs/guides/crosswalk/aws" }}">
-                        <img src="/images/docs/reference/crosswalk/aws/logo.svg" width="150" align="right" style="margin-left: 16px">
+                        <img src="/images/docs/reference/crosswalk/aws/logo.svg" width="150" align="right" style="margin-left: 16px" />
                     </a>
 
                     <p>
-                        Use Pulumi Crosswalk for AWS to easily use the best of what AWS has to offer, with
-                        well-architected best practices, for the entire AWS cloud. Go to production
-                        with containers, Kubernetes, and serverless applications.
+                        Use Pulumi Crosswalk for AWS to easily use the best of what AWS has to offer, with well-architected best practices, for the entire AWS cloud. Go to
+                        production with containers, Kubernetes, and serverless applications.
                     </p>
 
                     <p>
@@ -67,8 +58,7 @@
 
                     <p>
                         Pulumi supports all AWS services available for deployment. The
-                        <code>@pulumi/aws</code> library enables fine-grained control over chosen resources
-                        meaning so your app can be optimized for AWS.
+                        <code>@pulumi/aws</code> library enables fine-grained control over chosen resources meaning so your app can be optimized for AWS.
                     </p>
 
                     <p>Example services include:</p>
@@ -106,11 +96,11 @@
                 <div class="ml-2 hidden xxl:block">
                     {{ partial "docs/right-nav.html" . }}
                 </div>
-            
+
                 <div>
                     {{ partial "docs/feedback.html" . }}
                 </div>
-            
+
                 {{ partial "right-nav-ad.html" }}
             </div>
         </div>

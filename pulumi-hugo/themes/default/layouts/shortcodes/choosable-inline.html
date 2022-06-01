@@ -3,9 +3,4 @@
 {{ $mode := .Get 2 }}
 {{ if eq $values "nodejs" }}
     {{ $values = "javascript,typescript" }}
-{{ end }}
-<pulumi-choosable
-    type="{{ $type }}"
-    values="{{ $values }}"
-    mode="{{ $mode }}"
-    class="inline">{{ .Inner }}</pulumi-choosable>
+{{ end }} <pulumi-choosable type="{{ $type }}" values="{{ $values }}" mode="{{ $mode }}" class="inline">{{ .Inner }}</pulumi-choosable>

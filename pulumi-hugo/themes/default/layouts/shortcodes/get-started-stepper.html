@@ -1,5 +1,4 @@
-{{/*
-    Emits PREVIOUS and NEXT buttons based on the pages in the current directory,
+{{/* Emits PREVIOUS and NEXT buttons based on the pages in the current directory,
     ordered by page weight.
 */}}
 
@@ -31,13 +30,14 @@
     {{ end }}
 {{ end }}
 
+
 <div class="mt-6">
-{{ if ne $step $first }}
-    {{ $prev := index $pages (sub $step 1) }}
-    <a data-track="previous-step" class="btn btn-secondary" href="{{ $prev.RelPermalink }}">&larr; Previous Step</a>
-{{ end }}
-{{ if ne $step $last }}
-    {{ $next := index $pages (add $step 1) }}
-    <a data-track="next-step" class="btn" href="{{ $next.RelPermalink }}">{{ $next.LinkTitle }} &rarr;</a>
-{{ end }}
+    {{ if ne $step $first }}
+        {{ $prev := index $pages (sub $step 1) }}
+        <a data-track="previous-step" class="btn btn-secondary" href="{{ $prev.RelPermalink }}">&larr; Previous Step</a>
+    {{ end }}
+    {{ if ne $step $last }}
+        {{ $next := index $pages (add $step 1) }}
+        <a data-track="next-step" class="btn" href="{{ $next.RelPermalink }}">{{ $next.LinkTitle }} &rarr;</a>
+    {{ end }}
 </div>

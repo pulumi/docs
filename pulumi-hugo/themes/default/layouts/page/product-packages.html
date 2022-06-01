@@ -1,5 +1,5 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" .Params.title )}}
+    {{ partial "hero" (dict "title" .Params.title ) }}
 {{ end }}
 
 {{ define "main" }}
@@ -76,7 +76,6 @@
     </section>
 
     <section id="benefits" class="container mx-auto my-16 lg:my-24 relative">
-
         <h2 class="text-center">{{ .Params.benefits.title }}</h2>
         <div class="benefits-section relative">
             <div class="shape-background home-benefits-section">
@@ -106,7 +105,6 @@
     </section>
 
     <section id="case-studies" class="w-full my-16">
-
         <div class="w-full">
             <h2 class="text-center mb-16">{{ .Params.case_studies.title }}</h2>
             <div class="lg:flex lg:items-stretch">
@@ -151,7 +149,9 @@
                     <div class="border lg:border-none lg:shadow-2xl p-8 lg:px-12 lg:pt-4 g:pb-12 rounded-xl bg-white h-full">
                         <h4>{{ .Params.get_started.publish.title }}</h4>
                         <p class="mb-12">{{ .Params.get_started.publish.description }}</p>
-                        <a href="{{ relref . "/docs/guides/pulumi-packages/#process-of-authoring-a-pulumi-package" }}" class="btn-secondary">{{ .Params.get_started.publish.cta_text }}</a>
+                        <a href="{{ relref . "/docs/guides/pulumi-packages/#process-of-authoring-a-pulumi-package" }}" class="btn-secondary"
+                            >{{ .Params.get_started.publish.cta_text }}</a
+                        >
                     </div>
                 </div>
             </div>

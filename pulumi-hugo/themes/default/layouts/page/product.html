@@ -1,5 +1,5 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" .Params.heading )}}
+    {{ partial "hero" (dict "title" .Params.heading ) }}
 {{ end }}
 
 {{ define "main" }}
@@ -131,7 +131,8 @@
                 <div class="max-w-5xl bg-white mx-auto pt-8 pt-16 pb-32">
                     <div class="max-w-2xl mx-auto">
                         <h2 class="mt-16">{{ .Params.stats.cta.title }}</h2>
-                        <p>{{ .Params.stats.cta.description | markdownify }}<p>
+                        <p>{{ .Params.stats.cta.description | markdownify }}</p>
+                        <p></p>
                     </div>
                 </div>
             </div>

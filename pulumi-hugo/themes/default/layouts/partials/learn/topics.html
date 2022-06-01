@@ -6,10 +6,12 @@
         <h5 class="mb-8 mt-2">Tutorials</h5>
         <ul class="p-0">
             {{ range $index, $topic := $topics }}
-                <li class="flex items-center list-none border-gray-200
-                    {{ if eq $currentTopic . }} font-bold {{ end }}
-                    {{ if lt (add $index 1) (len $topics) }} pb-4 mb-4 border-b border-gray-100 {{ end }}
-                    ">
+                <li
+                    class="flex items-center list-none border-gray-200
+                    {{ if eq $currentTopic . }}font-bold{{ end }}
+                    {{ if lt (add $index 1) (len $topics) }}pb-4 mb-4 border-b border-gray-100{{ end }}
+                    "
+                >
                     <span class="w-full">
                         <a href="{{ .RelPermalink }}">{{ $topic.Title }}</a>
                     </span>
@@ -20,10 +22,12 @@
 {{ else }}
     <ul class="p-0 border-4 border-gray-100 rounded">
         {{ range $index, $topic := $topics }}
-            <li class="flex items-center list-none py-3 px-4 border-gray-200
-                {{ if eq $currentTopic . }} font-bold {{ end }}
-                {{ if lt (add $index 1) (len $topics) }} border-b {{ end }}
-                ">
+            <li
+                class="flex items-center list-none py-3 px-4 border-gray-200
+                {{ if eq $currentTopic . }}font-bold{{ end }}
+                {{ if lt (add $index 1) (len $topics) }}border-b{{ end }}
+                "
+            >
                 <span class="w-full">
                     <a href="{{ .RelPermalink }}">{{ $topic.Title }}</a>
                 </span>

@@ -1,10 +1,11 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" .Params.title )}}
+    {{ partial "hero" (dict "title" .Params.title ) }}
 {{ end }}
 
 {{ define "main" }}
     <!-- Get the webinars as they contain the CES sessions -->
     {{ $webinars := (where $.Site.Pages "Type" "webinars") }}
+
 
     <!-- Create slices for each section of CES so we create the nav -->
     {{ $cesKeynotes := slice }}
@@ -14,7 +15,6 @@
 
     {{ range sort $webinars ".Params.main.sortable_date" "asc" }}
         {{ if isset .Params "cloud_engineering_summit" }}
-
             {{ if eq .Params.cloud_engineering_summit.track "keynote" }}
                 {{ $cesKeynotes = $cesKeynotes | append . }}
             {{ end }}
@@ -32,6 +32,7 @@
             {{ end }}
         {{ end }}
     {{ end }}
+
 
     <section id="keynotes" class="container mx-auto my-12 p-6">
         <h2>Keynotes</h2>
@@ -51,6 +52,7 @@
                 <li class="accordion-item text-2xl py-3 border-b-2">
                     {{ partial "accordian-header" (dict "text" "Build" "large_header" true) }}
 
+
                     <div class="accordion-item-body-no-animation text-base">
                         <ul class="list-none p-0">
                             {{ range $cesBuild }}
@@ -65,6 +67,7 @@
                 <li class="accordion-item text-2xl py-3 border-b-2">
                     {{ partial "accordian-header" (dict "text" "Deploy" "large_header" true) }}
 
+
                     <div class="accordion-item-body-no-animation text-base">
                         <ul class="list-none p-0">
                             {{ range $cesDeploy }}
@@ -78,6 +81,7 @@
 
                 <li class="accordion-item text-2xl py-3 border-b-2">
                     {{ partial "accordian-header" (dict "text" "Manage" "large_header" true) }}
+
 
                     <div class="accordion-item-body-no-animation text-base">
                         <ul class="list-none p-0">

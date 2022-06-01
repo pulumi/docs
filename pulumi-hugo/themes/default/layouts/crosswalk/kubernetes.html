@@ -5,10 +5,8 @@
 {{ define "main" }}
     <section id="overview" class="max-w-4xl mx-auto text-center my-24">
         <h3>Production-Ready Kubernetes for Teams</h3>
-        <p>
-            Work as a team to deliver Kubernetes to any cloud, AWS, Azure, Google Cloud, or private.
-        </p>
-        <img class="w-full" src="/images/docs/quickstart/kubernetes/cake.svg" alt="Pulumi Crosswalk for Kubernetes Architecture">
+        <p>Work as a team to deliver Kubernetes to any cloud, AWS, Azure, Google Cloud, or private.</p>
+        <img class="w-full" src="/images/docs/quickstart/kubernetes/cake.svg" alt="Pulumi Crosswalk for Kubernetes Architecture" />
         <div class="mt-8">
             <a class="btn-primary" href="{{ relref . "/blog/crosswalk-kubernetes" }}">Read the blog</a>
         </div>
@@ -22,7 +20,8 @@
                         {{ partial "color-icon.html" (dict "icon" "lightning" "icon_color" "violet") }}
                         <h5>Production-Ready</h5>
                         <p>
-                            Create, deploy, and manage clusters in any cloud, including Amazon EKS, Azure AKS, and Google Cloud GKE. Leverage built-in security, scale, and manageability.
+                            Create, deploy, and manage clusters in any cloud, including Amazon EKS, Azure AKS, and Google Cloud GKE. Leverage built-in security, scale, and
+                            manageability.
                         </p>
                     </div>
                 </div>
@@ -32,9 +31,8 @@
                         {{ partial "color-icon.html" (dict "icon" "rocketship" "icon_color" "yellow") }}
                         <h5>Easy Development</h5>
                         <p>
-                            Eliminate walls of YAML and mountains of Bash, using
-                            real programming languages and world class tools. Share and
-                            reuse patterns with a growing community of practitioners.
+                            Eliminate walls of YAML and mountains of Bash, using real programming languages and world class tools. Share and reuse patterns with a growing community
+                            of practitioners.
                         </p>
                     </div>
                 </div>
@@ -44,9 +42,8 @@
                         {{ partial "color-icon.html" (dict "icon" "code" "icon_color" "violet") }}
                         <h5>Operational Insights</h5>
                         <p>
-                            Continuously deliver your applications and infrastructure, and
-                            tackle Day Two and beyond challenges. Gain operational insights
-                            in realtime using Cloud Query Language (CQL).
+                            Continuously deliver your applications and infrastructure, and tackle Day Two and beyond challenges. Gain operational insights in realtime using Cloud
+                            Query Language (CQL).
                         </p>
                     </div>
                 </div>
@@ -60,50 +57,37 @@
                 <div class="md:w-1/2 md:mr-4">
                     <h3>Playbooks for Infrastructure</h3>
                     <p>
-                        Create, deploy, and manage production-ready infrastructure leveraging
-                        hosted Kubernetes offerings such as Amazon Elastic Kubernetes Service (EKS),
-                        Azure Kubernetes Service (AKS), or Google Kubernetes Engine (GKE). Benefit
-                        from tried-and-true Day Two and beyond integrations and playbooks, improving
-                        your organization's security, manageability, and cost effectiveness.
+                        Create, deploy, and manage production-ready infrastructure leveraging hosted Kubernetes offerings such as Amazon Elastic Kubernetes Service (EKS), Azure
+                        Kubernetes Service (AKS), or Google Kubernetes Engine (GKE). Benefit from tried-and-true Day Two and beyond integrations and playbooks, improving your
+                        organization's security, manageability, and cost effectiveness.
                     </p>
-                    <p>
-                        With Pulumi's unique approach to infrastructure as code, you'll
-                        focus more on code and business logic, and less on YAML or DSL
-                        configuration languages.
-                    </p>
+                    <p>With Pulumi's unique approach to infrastructure as code, you'll focus more on code and business logic, and less on YAML or DSL configuration languages.</p>
                     <p class="my-8">
                         <a class="btn-primary" href="{{ relref . "/docs/guides/crosswalk/kubernetes" }}">Get Started</a>
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
                     {{ $code := `import * as gcp from "@pulumi/gcp";
-import * as k8s from "@pulumi/kubernetes";
+                        import * as k8s from "@pulumi/kubernetes";
 
-// Create a GKE cluster.
-const cluster = new gcp.container.Cluster("gke-cluster");
+                        // Create a GKE cluster.
+                        const cluster = new gcp.container.Cluster("gke-cluster");
 
-// Create a performant node pool in the cluster.
-const performantNodes = new gcp.container.NodePool("performant-nodes", {
-    cluster: cluster.name,
-    nodeConfig: { machineType: "n1-standard-16"}
-});
+                        // Create a performant node pool in the cluster.
+                        const performantNodes = new gcp.container.NodePool("performant-nodes", {
+                        cluster: cluster.name,
+                        nodeConfig: { machineType: "n1-standard-16"}
+                        });
 
-// Create an Apps namespace.
-const appsNamespace = new k8s.core.v1.Namespace("apps");
+                        // Create an Apps namespace.
+                        const appsNamespace = new k8s.core.v1.Namespace("apps");
 
-// Create a quota.
-const quotaAppNamespace = new k8s.core.v1.ResourceQuota("apps", {
-    spec: {hard: {cpu: "200", memory: "1Gi", pods: "10"}},
-})
-
-// Create a restrictive PodSecurityPolicy.
-const restrictivePSP = new k8s.policy.v1beta1.PodSecurityPolicy("restrictive", {
-    spec: { privileged: false,
-        runAsUser: { rule: "RunAsAny" }, fsGroup: { rule: "RunAsAny" },
-        seLinux: { rule: "RunAsAny" }, supplementalGroups: { rule: "RunAsAny" },
-    }
-});` }}
-
+                        // Create a quota.
+                        const quotaAppNamespace = new k8s.core.v1.ResourceQuota("apps", {
+                        spec: {hard: {cpu: "200", memory: "1Gi", pods: "10"
+                    }},
+                    }) // Create a restrictive PodSecurityPolicy. const restrictivePSP = new k8s.policy.v1beta1.PodSecurityPolicy("restrictive", { spec: { privileged: false,
+                    runAsUser: { rule: "RunAsAny" }, fsGroup: { rule: "RunAsAny" }, seLinux: { rule: "RunAsAny" }, supplementalGroups: { rule: "RunAsAny" }, } });` }}
                     {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
                 </div>
             </div>
@@ -116,16 +100,12 @@ const restrictivePSP = new k8s.policy.v1beta1.PodSecurityPolicy("restrictive", {
                 <div class="md:w-1/2 md:mr-4">
                     <h3>Simplified Application Configuration</h3>
                     <p>
-                        Using libraries, you can focus on the most important parts of
-                        your application configuration, eliminating toil and boilerplate.
-                        Instead of walls of YAML and mountains of Bash, you can write
-                        infrastructure as code in a general purpose language, benefiting
-                        from world class tools and ecosystems.
+                        Using libraries, you can focus on the most important parts of your application configuration, eliminating toil and boilerplate. Instead of walls of YAML and
+                        mountains of Bash, you can write infrastructure as code in a general purpose language, benefiting from world class tools and ecosystems.
                     </p>
                     <p>
                         Pulumi's unique approach to <a href="{{ relref . "/what-is/what-is-infrastructure-as-code" }}">infrastructure as code</a>
-                        means you can also leverage highly configurable and extensible components to enforce
-                        best practices within your team.
+                        means you can also leverage highly configurable and extensible components to enforce best practices within your team.
                     </p>
                     <p class="my-8">
                         <a class="btn-primary my-2" href="{{ relref . "/docs/guides/crosswalk/kubernetes" }}">Get Started</a>
@@ -134,20 +114,21 @@ const restrictivePSP = new k8s.policy.v1beta1.PodSecurityPolicy("restrictive", {
                 <div class="md:w-1/2 md:ml:4">
                     {{ $code := `import * as kx from "@pulumi/kubernetesx";
 
-// Define a Pod.
-const pb = new kx.PodBuilder({
-    containers: [{ image: "nginx" }]
-});
+                        // Define a Pod.
+                        const pb = new kx.PodBuilder({
+                        containers: [{ image: "nginx" }]
+                        });
 
-// Create a Kubernetes Deployment using the previous Pod definition.
-const deployment = new kx.Deployment("nginx", {
-    spec: pb.asDeploymentSpec()
-});
+                        // Create a Kubernetes Deployment using the previous Pod definition.
+                        const deployment = new kx.Deployment("nginx", {
+                        spec: pb.asDeploymentSpec()
+                        });
 
-// Expose the Deployment using a load balanced Kubernetes Service.
-const service = deployment.createService({
-    type: kx.types.ServiceType.LoadBalancer,
-});` }}
+                        // Expose the Deployment using a load balanced Kubernetes Service.
+                        const service = deployment.createService({
+                        type: kx.types.ServiceType.LoadBalancer,
+                        });`
+                    }}
 
                     {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
                 </div>
@@ -160,13 +141,10 @@ const service = deployment.createService({
             <div class="w-full lg:w-1/2 lg:mx-auto p-6">
                 <div class="flex flex-col card p-6 bg-white relative">
                     <p class="text-left mt-0 italic text-black">
-                        Pulumi enables our teams to deploy, scale and manage Kubernetes clusters in a
-                        fraction of the time that it took them previously, by giving them the ability
-                        to work with the languages they already know, bypassing YAML and unwieldy DSLs.
-                        It helps bring together application and infrastructure developers by eliminating
-                        silos and reducing friction in their workflows and interactions. We're excited
-                        that Pulumi Crosswalk for Kubernetes will simplify our infrastructure provisioning
-                        even further, advancing application lifecycle management throughout our organization.
+                        Pulumi enables our teams to deploy, scale and manage Kubernetes clusters in a fraction of the time that it took them previously, by giving them the ability
+                        to work with the languages they already know, bypassing YAML and unwieldy DSLs. It helps bring together application and infrastructure developers by
+                        eliminating silos and reducing friction in their workflows and interactions. We're excited that Pulumi Crosswalk for Kubernetes will simplify our
+                        infrastructure provisioning even further, advancing application lifecycle management throughout our organization.
                     </p>
                     <div class="flex flex-grow items-end">
                         <div class="w-2/3 text-left">

@@ -1,1709 +1,1648 @@
 {{ define "hero" }}
-{{ partial "hero.html" (dict "title" "Pricing") }}
+    {{ partial "hero.html" (dict "title" "Pricing") }}
 {{ end }}
 
 {{ define "main" }}
-<section class="container mx-auto text-center my-16">
-    <h2 class="mt-14 text-center">
-        Fully managed cloud engineering platform
-    </h2>
-    <p class="max-w-3xl mx-auto mt-6">
+    <section class="container mx-auto text-center my-16">
+        <h2 class="mt-14 text-center">Fully managed cloud engineering platform</h2>
+        <p class="max-w-3xl mx-auto mt-6">
+            {{/* prettier-ignore-start */}}
         The <a class="underline" href="{{ relref . " /product/pulumi-service" }}">Pulumi Service</a> is the easiest way to adopt
         Pulumi <a class="underline" href="https://github.com/pulumi/pulumi">open source</a>.
         <p>Prefer to manage your own
         <a class="text-blue-600 underline" href="{{ relref . "/docs/intro/concepts/state#logging-into-a-self-managed-backend" }}"> state storage backend</a>?
         </p>
-    </p>
-</section>
+            {{/* prettier-ignore-end */}}
+        </p>
+    </section>
 
-<section id="plans" class="relative">
-    <div class="shape-background pricing-small-dots">
-        <div class="relative w-full h-full">
-            <div class="dot-background-container">
-                <div class="dot-background-overlay"></div>
-                <div class="dot-background no-animate"></div>
-            </div>
-            <div class="circle-left"></div>
-        </div>
-    </div>
-
-    <div class="mx-5 flex justify-center">
-        <div class="lg:flex lg:items-stretch">
-            <div class="edition bg-white p-5 pb-8 xl:pl-8 hidden lg:flex lg:grow card mr-4 xl:mr-8">
-                <div class="max-w-md lg:max-w-xs mx-auto">
-                    <div class="h-full flex flex-col pt-6">
-                        <h3 class="title mb-8 h-14 lg:h-24 xl:h-14">Individual</h3>
-                        <p class="text-base mb-8 mt-0 h-14 max-w-xs lg:h-24 xl:h-14">
-                            Start using infrastructure as code for individual projects.
-                        </p>
-
-                        <div class="text-black text-2xl lg:text-xl xl:text-2xl h-20">Always free</div>
-
-                        <div class="flex-grow lg:whitespace-nowrap">
-                            <div class="text-base pt-4 text-black mb-4">Everything to <b>get started</b>:</div>
-
-                            <ul class="list-none text-left text-sm inline-block pl-0">
-                                <li>
-                                    <span>
-                                        <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                        <span>Any cloud and language</span>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                        <span>1 member</span>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                        <span>State & secret management</span>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                        <span>Unlimited deployments</span>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="mt-8 lg:mt-4 xl:mt-8 flex flex-col w-48">
-                            <a href="{{ relref . " /docs/get-started" }}" class="btn-secondary py-3 px-6 text-center">Get
-                                Started</a>
-                            <p class="text-xs pt-1 my-0 text-center">Follow the step-by-step guide!</p>
-                        </div>
-                    </div>
+    <section id="plans" class="relative">
+        <div class="shape-background pricing-small-dots">
+            <div class="relative w-full h-full">
+                <div class="dot-background-container">
+                    <div class="dot-background-overlay"></div>
+                    <div class="dot-background no-animate"></div>
                 </div>
+                <div class="circle-left"></div>
             </div>
+        </div>
 
-            <div class="trialed-editions">
-                <div class="hidden lg:block gradient lg:w-full"></div>
-                <div class=" lg:flex lg:flex-row">
+        <div class="mx-5 flex justify-center">
+            <div class="lg:flex lg:items-stretch">
+                <div class="edition bg-white p-5 pb-8 xl:pl-8 hidden lg:flex lg:grow card mr-4 xl:mr-8">
+                    <div class="max-w-md lg:max-w-xs mx-auto">
+                        <div class="h-full flex flex-col pt-6">
+                            <h3 class="title mb-8 h-14 lg:h-24 xl:h-14">Individual</h3>
+                            <p class="text-base mb-8 mt-0 h-14 max-w-xs lg:h-24 xl:h-14">Start using infrastructure as code for individual projects.</p>
 
-                    <div class="edition py-5 px-0 lg:hidden">
-                        <div class="h-full bg-white max-w-md mx-auto">
-                            <div class="h-full flex flex-col px-4 py-4">
-                                <h3 class="title mb-8 h-14 lg:h-24 xl:h-14">Individual</h3>
-                                <p class="text-base mb-8 mt-0 h-14 max-w-xs lg:h-24 xl:h-14">
-                                    Start using infrastructure as code for individual projects.
-                                </p>
+                            <div class="text-black text-2xl lg:text-xl xl:text-2xl h-20">Always free</div>
 
-                                <div class="text-black text-2xl lg:text-xl xl:text-2xl h-14">Always free</div>
+                            <div class="flex-grow lg:whitespace-nowrap">
+                                <div class="text-base pt-4 text-black mb-4">Everything to <b>get started</b>:</div>
 
-                                <div class="flex-grow lg:whitespace-nowrap">
-                                    <div class="text-base pt-4 text-black mb-4">Everything to <b>get started</b>:</div>
+                                <ul class="list-none text-left text-sm inline-block pl-0">
+                                    <li>
+                                        <span>
+                                            <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                            <span>Any cloud and language</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                            <span>1 member</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                            <span>State & secret management</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                            <span>Unlimited deployments</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
 
-                                    <ul class="list-none text-left text-sm inline-block pl-0">
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>Any cloud and language</span>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>1 member</span>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>State & secret management</span>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>Unlimited deployments</span>
-                                            </span>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="lg:hidden mt-8 lg:mt-4 xl:mt-8 flex flex-col w-56 xl:w-60">
-                                    <a href="{{ relref . " /docs/get-started" }}" class="btn-secondary py-3 px-6 text-center">Get
-                                        Started</a>
-                                    <p class="text-xs pt-1 my-0 text-center">Follow the step-by-step guide!</p>
-                                </div>
+                            <div class="mt-8 lg:mt-4 xl:mt-8 flex flex-col w-48">
+                                <a href="{{ relref . " /docs/get-started" }}" class="btn-secondary py-3 px-6 text-center">Get Started</a>
+                                <p class="text-xs pt-1 my-0 text-center">Follow the step-by-step guide!</p>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="edition py-5 px-0 lg:pb-3.5 lg:w-1/3">
-                        <div class="h-full bg-white max-w-md mx-auto">
-                            <div class="h-full flex flex-col pr-4 pl-4 xl:pl-8 py-4">
-                                <h3 class="title mb-8 h-14 lg:h-24 xl:h-14">Team</h3>
-                                <p class="text-base mb-8 mt-0 h-14 max-w-xs lg:h-24 xl:h-14">
-                                    The basics of infrastructure as code for teams wanting to ship faster.
-                                </p>
+                <div class="trialed-editions">
+                    <div class="hidden lg:block gradient lg:w-full"></div>
+                    <div class=" lg:flex lg:flex-row">
+                        <div class="edition py-5 px-0 lg:hidden">
+                            <div class="h-full bg-white max-w-md mx-auto">
+                                <div class="h-full flex flex-col px-4 py-4">
+                                    <h3 class="title mb-8 h-14 lg:h-24 xl:h-14">Individual</h3>
+                                    <p class="text-base mb-8 mt-0 h-14 max-w-xs lg:h-24 xl:h-14">Start using infrastructure as code for individual projects.</p>
 
-                                <div class="h-20">
-                                    <div class="text-black text-2xl lg:text-xl xl:text-2xl flex items-center lg:whitespace-nowrap">150k free credits / <div class="m-0 text-xs mt-1 flex flex-col pl-1">
-                                        <span>every</span><span>month</span>
+                                    <div class="text-black text-2xl lg:text-xl xl:text-2xl h-14">Always free</div>
+
+                                    <div class="flex-grow lg:whitespace-nowrap">
+                                        <div class="text-base pt-4 text-black mb-4">Everything to <b>get started</b>:</div>
+
+                                        <ul class="list-none text-left text-sm inline-block pl-0">
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Any cloud and language</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>1 member</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>State & secret management</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Unlimited deployments</span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="lg:hidden mt-8 lg:mt-4 xl:mt-8 flex flex-col w-56 xl:w-60">
+                                        <a href="{{ relref . " /docs/get-started" }}" class="btn-secondary py-3 px-6 text-center">Get Started</a>
+                                        <p class="text-xs pt-1 my-0 text-center">Follow the step-by-step guide!</p>
                                     </div>
                                 </div>
-                                    <p class="m-0">
-                                        Then <a class="underline" href="#faq-pricing">$0.00075/credit</a>
-                                    </p>
-                                </div>
+                            </div>
+                        </div>
 
-                                <div class="flex-grow">
-                                    <div class="text-base pt-4 text-black mb-4">Everything in <b>Individual</b>, plus:</div>
-                                    <ul class="list-none text-left text-sm inline-block pl-0">
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>Up to 15 members</span>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>Unlimited stacks</span>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>5 concurrent updates</span>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>CI/CD Assistant</span>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>Webhooks</span>
-                                            </span>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <div class="edition py-5 px-0 lg:pb-3.5 lg:w-1/3">
+                            <div class="h-full bg-white max-w-md mx-auto">
+                                <div class="h-full flex flex-col pr-4 pl-4 xl:pl-8 py-4">
+                                    <h3 class="title mb-8 h-14 lg:h-24 xl:h-14">Team</h3>
+                                    <p class="text-base mb-8 mt-0 h-14 max-w-xs lg:h-24 xl:h-14">The basics of infrastructure as code for teams wanting to ship faster.</p>
 
-                                <div class="lg:hidden mt-8 relative z-0 flex flex-col w-56 xl:w-60">
-                                    <a id="teamStartTrialButton" class="btn-secondary py-3 px-6 text-center">14-day Free
-                                        Trial</a>
-                                    <p class="text-xs pt-1 my-0 text-center">No credit card needed.</p>
+                                    <div class="h-20">
+                                        <div class="text-black text-2xl lg:text-xl xl:text-2xl flex items-center lg:whitespace-nowrap">
+                                            150k free credits /
+                                            <div class="m-0 text-xs mt-1 flex flex-col pl-1"><span>every</span><span>month</span></div>
+                                        </div>
+                                        <p class="m-0">Then <a class="underline" href="#faq-pricing">$0.00075/credit</a></p>
+                                    </div>
+
+                                    <div class="flex-grow">
+                                        <div class="text-base pt-4 text-black mb-4">Everything in <b>Individual</b>, plus:</div>
+                                        <ul class="list-none text-left text-sm inline-block pl-0">
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Up to 15 members</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Unlimited stacks</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>5 concurrent updates</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>CI/CD Assistant</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Webhooks</span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="lg:hidden mt-8 relative z-0 flex flex-col w-56 xl:w-60">
+                                        <a id="teamStartTrialButton" class="btn-secondary py-3 px-6 text-center">14-day Free Trial</a>
+                                        <p class="text-xs pt-1 my-0 text-center">No credit card needed.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="edition py-5 px-0 lg:pb-3.5 lg:w-1/3">
+                            <div class="h-full bg-white max-w-md mx-auto">
+                                <div class="h-full flex flex-col px-4 py-4">
+                                    <h3 class="title mb-8 h-14 lg:h-24 xl:h-14">Enterprise</h3>
+                                    <p class="text-base mb-8 mt-0 h-14 max-w-xs lg:h-24 xl:h-14">Full cloud engineering capabilities for large teams in production.</p>
+
+                                    <div class="h-20">
+                                        <div class="text-black text-2xl lg:text-xl xl:text-2xl lg:whitespace-nowrap">Custom</div>
+                                        <p class="m-0 text-base mt-1"><a href="{{ relref . " /contact" }}?form=sales" class="underline">Contact us</a> for a demo & quote.</p>
+                                    </div>
+
+                                    <div class="flex-grow">
+                                        <div class="text-base pt-4 text-black mb-4">Everything in <b>Team</b>, plus:</div>
+                                        <ul class="list-none text-left text-sm inline-block pl-0">
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Unlimited members & teams</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Role-based access control (RBAC)</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>SAML/SSO</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Commitment discounts</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>12 x 5 support included</span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="lg:hidden mt-8 relative z-0 flex flex-col w-56 xl:w-60">
+                                        <a id="enterpriseStartTrialButton" class="btn-primary py-3 px-6 text-center">14-day Free Trial</a>
+                                        <p class="text-xs pt-1 my-0 text-center">No credit card needed.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="edition py-5 px-0 lg:pb-3.5 lg:w-1/3">
+                            <div class="h-full bg-white max-w-md mx-auto">
+                                <div class="h-full flex flex-col pl-4 pr-4 xl:pr-0 py-4">
+                                    <h3 class="title mb-8 h-14 lg:h-24 xl:h-14 xl:whitespace-nowrap">Business Critical</h3>
+                                    <p class="text-base mb-8 mt-0 h-14 max-w-xs lg:h-24 xl:h-14">Advanced security, compliance, and hosting for mission-critical needs.</p>
+
+                                    <div class="h-20">
+                                        <div class="text-black text-2xl lg:text-xl xl:text-2xl xl:whitespace-nowrap">Custom</div>
+                                        <p class="m-0 text-base mt-1"><a href="{{ relref . " /contact" }}?form=sales" class="underline">Contact us</a> for a demo & quote.</p>
+                                    </div>
+
+                                    <div class="flex-grow">
+                                        <div class="text-base pt-4 text-black mb-4">Everything in <b>Enterprise</b>, plus:</div>
+
+                                        <ul class="list-none text-left text-sm inline-block pl-0">
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Organization policies & enforcement</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span><a href="{{ relref . " /product/self-hosted" }}" class="underline">Self-hosting available</a></span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Automatic group & user sync (SCIM)</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Exportable audit logs</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>24 x 7 support included</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Private Slack channel</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Training, onboarding & workshops</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Professional services</span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="lg:hidden mt-8 lg:mt-4 xl:mt-8 relative z-0 flex flex-col w-56 xl:w-60">
+                                        <a id="businessCriticalStartTrialButton" class="btn-secondary py-3 px-6 text-center">14-day Free Trial</a>
+                                        <p class="text-xs pt-1 my-0 text-center">No credit card needed.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="edition py-5 px-0 lg:pb-3.5 lg:w-1/3">
-                        <div class="h-full bg-white max-w-md mx-auto">
-                            <div class="h-full flex flex-col px-4 py-4">
-                                <h3 class="title mb-8 h-14 lg:h-24 xl:h-14">Enterprise</h3>
-                                <p class="text-base mb-8 mt-0 h-14 max-w-xs lg:h-24 xl:h-14">
-                                    Full cloud engineering capabilities for large teams in production.
+                    <div class="hidden lg:flex justify-center pb-8">
+                        <div class="flex flex-col w-80 mr-9">
+                            <a id="pricingStartTrial" class="btn-primary py-3 px-12 text-center">Start Trial of All Features</a>
+                            <p class="text-xs pt-1 my-0 text-center">14-day trial. No credit card needed.</p>
+                        </div>
+
+                        <div class="flex flex-col w-80">
+                            <a href="{{ relref . " /contact" }}?form=sales" class="btn-secondary py-3 px-6 text-center">Contact Us</a>
+                            <p class="text-xs pt-1 my-0 text-center">Contact us for a demo & quote.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="pricingTrialOptionsDialog" class="hidden text-gray-700 text-sm">
+            <div class="popup-overlay">
+                <div class="dialog-body bg-white m-auto max-w-s lg:min-w-4xl lg:max-w-4xl px-6 lg:px-14 py-8 lg:rounded-xl overflow-hidden">
+                    <div class="flex justify-end top-0 right-0"><i id="closePricingTrialOptionsDialog" class="cursor-pointer fas fa-times"></i></div>
+                    <div class="md:p-5 pt-0 flex flex-col items-center">
+                        <h4 class="mb-0 text-center">Use SaaS or Self-Hosted?</h4>
+                        <p class="text-base text-center">Choose how you'd like to use Pulumi Service.</p>
+                        <div class="flex flex-col md:flex-row mt-4 md:mt-12">
+                            <div class="flex flex-col items-center md:border-r md:border-gray-500 md:border-solid md:w-96">
+                                <div class="icon-section mb-1 md:mb-4 hidden md:block">
+                                    {{ partial "color-icon.html" (dict "icon" "rocketship" "icon_color" "purple") }}
+                                </div>
+                                <h6 class="mt-0">Managed Service (SaaS)</h6>
+                                <span class="pb-6 md:pb-0">Most popular way to use Pulumi</span>
+                                <p class="py-0 md:py-6 text-center hidden md:block">
+                                    The fastest and easiest way to try Pulumi <br />using our scalable, highly available, and secure SaaS.
                                 </p>
-
-                                <div class="h-20">
-                                    <div class="text-black text-2xl lg:text-xl xl:text-2xl lg:whitespace-nowrap">Custom</div>
-                                    <p class="m-0 text-base mt-1">
-                                        <a href="{{ relref . " /contact" }}?form=sales" class="underline">Contact us</a> for a demo & quote.
-                                    </p>
-                                </div>
-
-                                <div class="flex-grow">
-                                    <div class="text-base pt-4 text-black mb-4">Everything in <b>Team</b>, plus:</div>
-                                    <ul class="list-none text-left text-sm inline-block pl-0">
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>Unlimited members & teams</span>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>Role-based access control (RBAC)</span>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>SAML/SSO</span>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>Commitment discounts</span>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>12 x 5 support included</span>
-                                            </span>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="lg:hidden mt-8 relative z-0 flex flex-col w-56 xl:w-60">
-                                    <a id="enterpriseStartTrialButton" class="btn-primary py-3 px-6 text-center">14-day Free
-                                        Trial</a>
-                                    <p class="text-xs pt-1 my-0 text-center">No credit card needed.</p>
+                                <div class="z-0">
+                                    <a id="startServiceTrial" data-track="trial-dialog-service" class="btn-primary" href="https://app.pulumi.com/site/trial">Start 14-Day Trial</a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="edition py-5 px-0 lg:pb-3.5 lg:w-1/3">
-                        <div class="h-full bg-white max-w-md mx-auto">
-                            <div class="h-full flex flex-col pl-4 pr-4 xl:pr-0 py-4">
-                                <h3 class="title mb-8 h-14 lg:h-24 xl:h-14 xl:whitespace-nowrap">Business Critical</h3>
-                                <p class="text-base mb-8 mt-0 h-14 max-w-xs lg:h-24 xl:h-14">
-                                    Advanced security, compliance, and hosting for mission-critical needs.
-                                </p>
-
-                                <div class="h-20">
-                                    <div class="text-black text-2xl lg:text-xl xl:text-2xl xl:whitespace-nowrap">Custom</div>
-                                    <p class="m-0 text-base mt-1">
-                                        <a href="{{ relref . " /contact" }}?form=sales" class="underline">Contact us</a> for a demo & quote.
-                                    </p>
+                            <div class="mt-16 md:mt-0 flex flex-col items-center md:w-96">
+                                <div class="icon-section mb-1 md:mb-4 hidden md:block">
+                                    {{ partial "color-icon.html" (dict "icon" "gear" "icon_color" "yellow") }}
                                 </div>
-
-                                <div class="flex-grow">
-                                    <div class="text-base pt-4 text-black mb-4">Everything in <b>Enterprise</b>, plus:</div>
-
-                                    <ul class="list-none text-left text-sm inline-block pl-0">
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>Organization policies & enforcement</span>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span><a href="{{ relref . " /product/self-hosted" }}" class="underline">Self-hosting available</a></span>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>Automatic group & user sync (SCIM)</span>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>Exportable audit logs</span>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>24 x 7 support included</span>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>Private Slack channel</span>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>Training, onboarding & workshops</span>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>
-                                                <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                <span>Professional services</span>
-                                            </span>
-                                        </li>
-                                    </ul>
+                                <h6 class="mt-0">Self-Hosted</h6>
+                                <span class="pb-6 md:pb-0">For enterprises with data control requirements</span>
+                                <p class="py-0 md:py-6 text-center hidden md:block">Run the Pulumi Service in your on-premises or cloud environment and manage it yourself.</p>
+                                <div class="z-0">
+                                    <a
+                                        id="startSelfHostedTrial"
+                                        data-track="trial-dialog-self-hosted"
+                                        class="btn-secondary"
+                                        href="{{ relref . " /product/self-hosted#self-hosted-trial" }}"
+                                        >Request Trial of Self-Hosted</a
+                                    >
                                 </div>
-
-                                <div class="lg:hidden mt-8 lg:mt-4 xl:mt-8 relative z-0 flex flex-col w-56 xl:w-60">
-                                    <a id="businessCriticalStartTrialButton" class="btn-secondary py-3 px-6 text-center">14-day Free
-                                        Trial</a>
-                                    <p class="text-xs pt-1 my-0 text-center">No credit card needed.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hidden lg:flex justify-center pb-8">
-                    <div class="flex flex-col w-80 mr-9">
-                        <a id="pricingStartTrial" class="btn-primary py-3 px-12 text-center">Start Trial of All Features</a>
-                        <p class="text-xs pt-1 my-0 text-center">14-day trial. No credit card needed.</p>
-                    </div>
-
-                    <div class="flex flex-col w-80">
-                        <a href="{{ relref . " /contact" }}?form=sales" class="btn-secondary py-3 px-6 text-center">Contact Us</a>
-                        <p class="text-xs pt-1 my-0 text-center">Contact us for a demo & quote.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="pricingTrialOptionsDialog" class="hidden text-gray-700 text-sm">
-        <div class="popup-overlay">
-            <div class="dialog-body bg-white m-auto max-w-s lg:min-w-4xl lg:max-w-4xl px-6 lg:px-14 py-8 lg:rounded-xl overflow-hidden">
-                <div class="flex justify-end top-0 right-0"><i id="closePricingTrialOptionsDialog" class="cursor-pointer fas fa-times"></i></div>
-                <div class="md:p-5 pt-0 flex flex-col items-center">
-                    <h4 class="mb-0 text-center">Use SaaS or Self-Hosted?</h3>
-                    <p class="text-base text-center">Choose how you'd like to use Pulumi Service.</p>
-                    <div class="flex flex-col md:flex-row mt-4 md:mt-12">
-                        <div class="flex flex-col items-center md:border-r md:border-gray-500 md:border-solid md:w-96">
-                            <div class="icon-section mb-1 md:mb-4 hidden md:block">
-                                {{ partial "color-icon.html" (dict "icon" "rocketship" "icon_color" "purple") }}
-                            </div>
-                            <h6 class="mt-0">Managed Service (SaaS)</h6>
-                            <span class="pb-6 md:pb-0">Most popular way to use Pulumi</span>
-                            <p class="py-0 md:py-6 text-center hidden md:block">The fastest and easiest way to try Pulumi <br />using our scalable, highly available, and secure SaaS.</p>
-                            <div class="z-0">
-                                <a id="startServiceTrial" data-track="trial-dialog-service" class="btn-primary" href="https://app.pulumi.com/site/trial" >Start 14-Day Trial</a>
-                            </div>
-                        </div>
-                        <div class="mt-16 md:mt-0 flex flex-col items-center md:w-96">
-                            <div class="icon-section mb-1 md:mb-4 hidden md:block">
-                                {{ partial "color-icon.html" (dict "icon" "gear" "icon_color" "yellow") }}
-                            </div>
-                            <h6 class="mt-0">Self-Hosted</h6>
-                            <span class="pb-6 md:pb-0">For enterprises with data control requirements</span>
-                            <p class="py-0 md:py-6 text-center hidden md:block">Run the Pulumi Service in your on-premises or cloud environment and manage it yourself.</p>
-                            <div class="z-0">
-                                <a id="startSelfHostedTrial" data-track="trial-dialog-self-hosted" class="btn-secondary" href="{{ relref . " /product/self-hosted#self-hosted-trial" }}">Request Trial of Self-Hosted</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-</section>
+    <section id="faq" class="pricing-faq container mx-auto mt-16 mb-32">
+        <h2 class="text-center">Frequently asked questions</h2>
 
-<section id="faq" class="pricing-faq container mx-auto mt-16 mb-32">
-    <h2 class="text-center">Frequently asked questions</h2>
+        <span id="faq-product"></span>
+        <span id="faq-pricing"></span>
+        <span id="faq-billing"></span>
 
-    <span id="faq-product"></span>
-    <span id="faq-pricing"></span>
-    <span id="faq-billing"></span>
+        <ul id="faq-headers" class="hidden lg:flex list-none mt-10">
+            <li class="px-10 py-3 mr-3 border-b-4 border-solid border-blue-600" data-faq-label="pricing">
+                <h4><a href="#faq-pricing" class="text-black">Credits and Pricing</a></h4>
+            </li>
+            <li class="px-10 py-3 mr-3" data-faq-label="product">
+                <h4><a href="#faq-product" class="text-gray-500">Product</a></h4>
+            </li>
+            <li class="px-10 py-3" data-faq-label="billing">
+                <h4><a href="#faq-billing" class="text-gray-500">Billing and Support</a></h4>
+            </li>
+        </ul>
 
-    <ul id="faq-headers" class="hidden lg:flex list-none mt-10">
-        <li class="px-10 py-3 mr-3 border-b-4 border-solid border-blue-600" data-faq-label="pricing">
-            <h4><a href="#faq-pricing" class="text-black">Credits and Pricing</a></h4>
-        </li>
-        <li class="px-10 py-3 mr-3" data-faq-label="product">
-            <h4><a href="#faq-product" class="text-gray-500">Product</a></h4>
-        </li>
-        <li class="px-10 py-3" data-faq-label="billing">
-            <h4><a href="#faq-billing" class="text-gray-500">Billing and Support</a></h4>
-        </li>
-    </ul>
+        <p class="text-2xl font-bold lg:hidden mt-12 pl-5">Credits and Pricing</p>
+        <ul class="list-none p-0 mx-5 xl:ml-12" data-faq-type="faq-pricing">
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "What is a Pulumi Credit?" "large_header" true) }}
 
-    <p class="text-2xl font-bold lg:hidden mt-12 pl-5">Credits and Pricing</p>
-    <ul class="list-none p-0 mx-5 xl:ml-12" data-faq-type="faq-pricing">
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "What is a Pulumi Credit?" "large_header" true) }}
 
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    A Pulumi Credit is the price for managing one resource for one hour. If using the Team Edition, each credit costs $0.00075. For billing purposes, we count any resource that's
-                    declared in a Pulumi program.
-                    This includes <a class="underline" href="{{ relref . " /docs/intro/concepts/resources#custom-resources" }}">provider
-                    resources</a> (e.g., an Amazon S3 bucket),
-                    <a class="underline" href="{{ relref . " /docs/intro/concepts/resources#components" }}">component resources</a>
-                    which are groupings of resources (e.g., an Amazon EKS cluster), and
-                    <a class="underline" href="{{ relref . " /docs/intro/concepts/stack" }}">stacks</a> which contain resources
-                    (e.g., dev, test, prod stacks).
-                </p>
-                <p>
-                    You consume one Pulumi Credit to manage each resource for an hour. For example, one stack containing one S3 bucket and
-                    one EC2 instance is three resources that are counted in your bill.
-                </p>
-            </div>
-        </li>
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        A Pulumi Credit is the price for managing one resource for one hour. If using the Team Edition, each credit costs $0.00075. For billing purposes, we count
+                        any resource that's declared in a Pulumi program. This includes
+                        <a class="underline" href="{{ relref . " /docs/intro/concepts/resources#custom-resources" }}">provider resources</a> (e.g., an Amazon S3 bucket),
+                        <a class="underline" href="{{ relref . " /docs/intro/concepts/resources#components" }}">component resources</a>
+                        which are groupings of resources (e.g., an Amazon EKS cluster), and
+                        <a class="underline" href="{{ relref . " /docs/intro/concepts/stack" }}">stacks</a> which contain resources (e.g., dev, test, prod stacks).
+                    </p>
+                    <p>
+                        You consume one Pulumi Credit to manage each resource for an hour. For example, one stack containing one S3 bucket and one EC2 instance is three resources
+                        that are counted in your bill.
+                    </p>
+                </div>
+            </li>
 
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "How much will the Team Edition cost me?" "large_header" true) }}
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "How much will the Team Edition cost me?" "large_header" true) }}
 
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    You pay only for what you use. You are billed for the number of resources managed in your Pulumi
-                    account on a per-hour basis. Each partial hour used is billed as a full hour. If there are no
-                    resources in your account, then there is no usage for billing purposes.
-                </p>
-                <p>
-                    Hourly usage is measured in the number of Pulumi Credits, and you are billed one Pulumi Credit
-                    to manage one <a class="underline" href="{{ relref . " /docs/intro/concepts/resources"
-                        }}">resource</a>
-                    for one hour. Each credit costs $0.00075 USD.
-                </p>
-                <p>
-                    Each month you get 150,000 free Pulumi Credits (roughly 200 resources), so you only pay for the credits used beyond
-                    that amount in a given month. Free credits do not roll over from month to month.
-                </p>
-                <p>
-                    Example: If you manage 625 resources with Pulumi every month, you will use 450,000 Pulumi
-                    Credits each month. Your monthly bill would be $225 USD = (450,000 total credits - 150,000 free
-                    credits) * $0.00075.
-                </p>
 
-                <img class="mt-16" src="/images/pricing/team-edition-cost.png"></img>
-            </div>
-        </li>
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        You pay only for what you use. You are billed for the number of resources managed in your Pulumi account on a per-hour basis. Each partial hour used is
+                        billed as a full hour. If there are no resources in your account, then there is no usage for billing purposes.
+                    </p>
+                    <p>
+                        Hourly usage is measured in the number of Pulumi Credits, and you are billed one Pulumi Credit to manage one
+                        <a class="underline" href="{{ relref . " /docs/intro/concepts/resources" }}">resource</a>
+                        for one hour. Each credit costs $0.00075 USD.
+                    </p>
+                    <p>
+                        Each month you get 150,000 free Pulumi Credits (roughly 200 resources), so you only pay for the credits used beyond that amount in a given month. Free
+                        credits do not roll over from month to month.
+                    </p>
+                    <p>
+                        Example: If you manage 625 resources with Pulumi every month, you will use 450,000 Pulumi Credits each month. Your monthly bill would be $225 USD = (450,000
+                        total credits - 150,000 free credits) * $0.00075.
+                    </p>
 
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "What can I do with my 150k monthly free credits in Team Edition?" "large_header"
-            true) }}
+                    <img class="mt-16" src="/images/pricing/team-edition-cost.png" />
+                </div>
+            </li>
 
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    150,000 credits represent approximately 200 resources managed for a month. So, for example,
-                    you could manage 200 S3 buckets or 200 EC2 instances for a month using this amount.
-                </p>
-                <p>
-                    As another example, you could manage something more complex like a production Amazon
-                    EKS cluster with associated IAM roles, VPC, subnets, gateway route tables, and a small
-                    microservice deployed into the cluster.
-                </p>
-            </div>
-        </li>
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "What can I do with my 150k monthly free credits in Team Edition?" "large_header"
+                    true)
+                }}
 
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "How many credits are needed for my use case?" "large_header" true) }}
 
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    It depends on the number of resources managed in your Pulumi organization. This
-                    usually maps to the size and complexity of your project or application. On the
-                    Team Edition, you receive 150k credits for free every month. Below are a few examples with estimated costs.
-                </p>
-                <p>
-                    <b><a class="underline" href="https://github.com/pulumi/examples/tree/master/aws-ts-apigatewayv2-http-api">Serverless API with Amazon API Gateway and AWS Lambda</a></b>
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        150,000 credits represent approximately 200 resources managed for a month. So, for example, you could manage 200 S3 buckets or 200 EC2 instances for a month
+                        using this amount.
+                    </p>
+                    <p>
+                        As another example, you could manage something more complex like a production Amazon EKS cluster with associated IAM roles, VPC, subnets, gateway route
+                        tables, and a small microservice deployed into the cluster.
+                    </p>
+                </div>
+            </li>
+
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "How many credits are needed for my use case?" "large_header" true) }}
+
+
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        It depends on the number of resources managed in your Pulumi organization. This usually maps to the size and complexity of your project or application. On
+                        the Team Edition, you receive 150k credits for free every month. Below are a few examples with estimated costs.
+                    </p>
+                    <div>
+                        <b
+                            ><a class="underline" href="https://github.com/pulumi/examples/tree/master/aws-ts-apigatewayv2-http-api"
+                                >Serverless API with Amazon API Gateway and AWS Lambda</a
+                            ></b
+                        >
+                        <ul>
+                            <li>Estimated resources: 9</li>
+                            <li>Estimated monthly cost: $4.93 USD / 6,570 credits</li>
+                            <li>
+                                This scenario is a stack with an Amazon API Gateway, an AWS Lambda event handler, and associated IAM roles. View the
+                                <a class="underline" href="https://github.com/pulumi/examples/tree/master/aws-ts-apigatewayv2-http-api">code</a> for this scenario here.
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a class="underline" href="https://github.com/pulumi/examples/tree/master/aws-py-eks"><b>Amazon EKS running in a VPC</b></a>
+                        <ul>
+                            <li>Estimated resources: 20</li>
+                            <li>Estimated monthly cost: $10.95 USD / 14,600 credits</li>
+                            <li>
+                                This scenario is a stack with an Amazon VPC (including subnets, internet gateway, security groups, and route table), Amazon EKS cluster and node
+                                group, and associated IAM roles. View the <a class="underline" href="https://github.com/pulumi/examples/tree/master/aws-py-eks">code</a> for this
+                                scenario here.
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <b
+                            ><a class="underline" href="https://github.com/pulumi/examples/tree/master/aws-py-wordpress-fargate-rds"
+                                >Amazon ECS cluster and RDS backend running in a VPC</a
+                            ></b
+                        >
+                        <ul>
+                            <li>Estimated resources: 24</li>
+                            <li>Estimated monthly cost: $13.14 USD / 17,520 credits</li>
+                            <li>
+                                This scenario is a stack with an Amazon VPC (including subnets, security groups, and route table associations), Amazon ECS (including cluster and
+                                service, load balancer resources, and IAM resources), and Amazon RDS (including RDS instance and subnet group). Each group of resources (VPC, ECS,
+                                RDS) is represented by a component resource. View the
+                                <a class="underline" href="https://github.com/pulumi/examples/tree/master/aws-py-wordpress-fargate-rds">code</a> for this scenario here.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "How do I find out how many resources I have?" "large_header" true) }}
+
+
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>There are several ways you can estimate the number of resources you have managed with Pulumi.</p>
+                    <p><span class="underline">If using the Pulumi Service:</span> Navigate to the dashboard and review the resource graph titled “Resource Count over Time.”</p>
+                    <p>
+                        <span class="underline">If using Pulumi with a self-managed backend:</span> Export your stack state and count the number of lines with a universal resource
+                        name (URN). You can pipe the state through a grep command for "urn" to estimate the number of resources.
+                    </p>
+                    <p>
+                        <span class="underline">If you haven't deployed anything with Pulumi:</span> See the previous FAQ for a few examples of applications and their number of
+                        resources.
+                    </p>
+                </div>
+            </li>
+
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "Can I prepay for credits?" "large_header" true) }}
+
+
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        Yes, you can! Please <a class="underline" href="{{ relref . " /contact.md" }}?form=sales">contact us</a>
+                        to discuss the Enterprise and Business Critical Editions, which include bulk discounts for buying your credits in advance.
+                    </p>
+                </div>
+            </li>
+        </ul>
+
+        <p class="text-2xl font-bold lg:hidden mt-12 pl-5">Product</p>
+        <ul class="list-none p-0 mx-5 xl:ml-12 lg:hidden" data-faq-type="faq-product">
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "What are Pulumi open source and Pulumi Service?" "large_header"
+                    true)
+                }}
+
+
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        Pulumi's universal Infrastructure as Code CLI and SDK are an open-source project that is supported by an active community. Pulumi Service is a managed
+                        service for the open source CLI and SDK. It tracks your infrastructure’s state and coordinates updates with the CLI, which creates or updates resources to
+                        reach your infrastructure’s desired state. It also manages secrets, supports SAML SSO, integrates with CI/CD pipelines, enforces compliance rules, and much
+                        more.
+                    </p>
+                    <p>
+                        You're not required to use <a class="underline" href="{{ relref . " /product/pulumi-service" }}">Pulumi Service</a>. You can use any cloud or on-premises
+                        storage to build and run your own backend.
+                    </p>
+                </div>
+            </li>
+
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "Can I use Pulumi for free?" "large_header" true) }}
+
+
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>Yes! There are three ways to use Pulumi for free.</p>
+                    <p>
+                        First, the Pulumi Service is free to use, now and forever, for individuals. You get all of the convenience of automatic state management, unlimited
+                        deployments, and many other great features without needing to pay anything at all for it.
+                    </p>
+                    <p>
+                        Second, Pulumi is an <a class="underline" href="https://github.com/pulumi/pulumi">open source project</a>. You can
+                        <a class="underline" href="{{ relref . " /docs/intro/concepts/state#self-managed-backend" }}">run Pulumi entirely offline</a> without the online service’s
+                        features, and manage state yourself, instead of using the online service. There are no restrictions &mdash; it's all there in the open for you to use freely
+                        as you'd like.
+                    </p>
+                    <p>
+                        Finally, Pulumi Team Edition offers a 14-day free trial. Once the trial is over, you get 150k free Pulumi Credits every month (equivalent to ~200 resources
+                        managed free each month). If this isn't a sufficient duration for your project, please
+                        <a class="underline" href="{{ relref . " /contact.md" }}?form=sales">contact us</a>, and we are happy to work out a custom trial period for you that makes
+                        sense given your proof-of-concept timeline. After your trial expires, no data will be lost, and there is a grace period with soft enforcement.
+                    </p>
+                </div>
+            </li>
+
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "How do I get started?" "large_header" true) }}
+
+
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        Follow the <a class="underline" href="{{ relref . " /docs/get-started" }}">Getting Started guide</a>, which walks you through creating and deploying your
+                        first Pulumi project.
+                    </p>
+                </div>
+            </li>
+
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "What is an organization? What are projects and stacks?"
+                    "large_header" true)
+                }}
+
+
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        The key distinction between Pulumi's free Individual Edition and its paid offerings -- Team and Enterprise -- is the presence of an organization. The
+                        Individual Edition is great for single users with private projects. However, if you are working within a team, you'll typically want to share your projects.
+                        This is what organizations provide. The Team Edition is designed for teams to collaborate on shared infrastructure projects. The Enterprise Edition offers
+                        more sophisticated organization management facilities, including RBAC for advanced policy controls.
+                    </p>
+                    <p>
+                        Pulumi <a class="underline" href="{{ relref . " /docs/intro/concepts/project" }}">projects</a> and
+                        <a class="underline" href="{{ relref . " /docs/intro/concepts/stack" }}">stacks</a> are a way to organize Pulumi code. You can consider a Pulumi Project to
+                        be analogous to a GitHub repo: a single place for code -- and a Stack to be an instance of that code which has separate configuration. For instance, Project
+                        Foo may have multiple stacks for Dev, Test, Prod, or perhaps for different cloud configurations (e.g. geographic region).
+                    </p>
+                </div>
+            </li>
+
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "Can I start small and upgrade later?" "large_header" true) }}
+
+
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        Yes! If you plan to use Pulumi by yourself, then try the free Individual Edition. If you and your team want to collaborate on infrastructure projects, then
+                        try the Team Edition which has a 14-day free trial. After the trial, you get 150k free Pulumi Credits every month (additional credits are $0.00075 USD
+                        each). 150k credits is enough to manage a small environment with about 200 resources. To upgrade to Enterprise, please
+                        <a class="underline" href="{{ relref . " /contact.md" }}?form=sales">contact us</a>.
+                    </p>
+                </div>
+            </li>
+
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "How do I move from Starter or Pro to the new Team Edition?"
+                    "large_header" true)
+                }}
+
+
+                <div class="accordion-item-body-no-animation text-base">
+                    <p><a class="underline" href="{{ relref . " /contact.md" }}?form=sales">Contact us</a> to move to Team.</p>
+                </div>
+            </li>
+
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "Is Pulumi SOC 2 compliant?" "large_header" true) }}
+
+
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>Yes, Pulumi has completed the SOC 2 Type 2 compliance process. Pulumi is committed to operational excellence for our customers.</p>
+                </div>
+            </li>
+
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "Can I host Pulumi Service in my cloud or datacenter?" "large_header" true) }}
+
+
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        Yes, we offer a self-hosted Pulumi Service for companies that have specific data control requirements and want to maintain complete control over hosting the
+                        Pulumi Service. This option is available in Business Critical Edition. You can get started with a
+                        <a class="underline" href="{{ relref . " /product/self-hosted.md#self-hosted-trial" }}">30-day free trial here</a>.
+                    </p>
+                </div>
+            </li>
+
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "How do I convince my boss?" "large_header" true) }}
+
+
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        Do you want to use Pulumi in your organization, but aren't sure how to bring it up with your boss? We've created a sample email to help you explain its
+                        benefits. Feel free to use the full letter or pieces of it. We are always happy to meet to learn more about your needs and explain these benefits in person
+                        &mdash; just <a class="underline" href="{{ relref . " /contact.md" }}?form=sales">contact us</a>.
+                    </p>
+                    <h5>Sample Email</h5>
+                    <p>Dear {Name},</p>
+                    <p>
+                        I'd like to propose that we use Pulumi for our cloud infrastructure needs. I've researched the top infrastructure as code platforms, and Pulumi stands out
+                        because of its maturity, strong open source community, support for many clouds, and mix of productivity and enterprise controls, meaning it works great for
+                        developers and infrastructure teams alike.
+                    </p>
+                    <p>
+                        I discovered that Pulumi's community is over 10,000 people and growing, and their customer base includes a diverse array of companies, from startups to some
+                        of the largest Fortune 500 and Global 2000 organizations. The top four reasons people are choosing Pulumi are 1) it tames cloud complexity and reduces
+                        infrastructure risks, 2) it lets teams use software engineering best practices with infrastructure, 3) it helps teams adopt modern cloud architectures, and
+                        4) it increases collaboration between infrastructure teams, developers, and security engineers.
+                    </p>
+                    <p>Here are some examples of their customers to give you an idea of who is using it and why:</p>
                     <ul>
-                        <li>Estimated resources: 9</li>
-                        <li>Estimated monthly cost: $4.93 USD / 6,570 credits</li>
-                        <li>This scenario is a stack with an Amazon API Gateway, an AWS Lambda event handler, and associated IAM roles. View the
-                        <a class="underline" href="https://github.com/pulumi/examples/tree/master/aws-ts-apigatewayv2-http-api">code</a> for this scenario here.</li>
+                        <li>Tableau and Fenergo can now release new features faster by empowering their developers to deploy cloud infrastructure easily.</li>
+                        <li>
+                            <a class="underline" href="{{ relref . " /case-studies/snowflake" }}">Snowflake migrated to</a>
+                            Kubernetes across multiple clouds in three months.
+                        </li>
+                        <li>
+                            <a class="underline" href="{{ relref . " /case-studies/mercedes-benz" }}">Mercedes-Benz</a>
+                            Research & Development North America improved collaboration between its infrastructure and application development teams.
+                        </li>
+                        <li>
+                            <a class="underline" href="{{ relref . " /blog/kenshoo-migrates-to-aws-with-pulumi" }}">Skai</a>
+                            managed a complex public cloud migration project.
+                        </li>
+                        <li>
+                            Cockroach Labs, <a class="underline" href="{{ relref . " /case-studies/sourcegraph" }}">Sourcegraph</a>, and
+                            <a class="underline" href="{{ relref . " /case-studies/lemonade" }}">Lemonade</a> created innovative engineering cultures.
+                        </li>
                     </ul>
-                </p>
-                <p>
-                    <a class="underline" href="https://github.com/pulumi/examples/tree/master/aws-py-eks"><b>Amazon EKS running in a VPC</b></a>
-                    <ul>
-                        <li>Estimated resources: 20</li>
-                        <li>Estimated monthly cost: $10.95 USD / 14,600 credits</li>
-                        <li>This scenario is a stack with an Amazon VPC (including subnets, internet gateway, security groups, and route table),
-                        Amazon EKS cluster and node group, and associated IAM roles. View the <a class="underline" href="https://github.com/pulumi/examples/tree/master/aws-py-eks">code</a> for this scenario here.</li>
-                    </ul>
-                </p>
-                <p>
-                    <b><a class="underline" href="https://github.com/pulumi/examples/tree/master/aws-py-wordpress-fargate-rds">Amazon ECS cluster and RDS backend running in a VPC</a></b>
-                    <ul>
-                        <li>Estimated resources: 24</li>
-                        <li>Estimated monthly cost: $13.14 USD / 17,520 credits</li>
-                        <li>This scenario is a stack with an Amazon VPC (including subnets, security groups, and route table associations), Amazon
-                        ECS (including cluster and service, load balancer resources, and IAM resources), and Amazon RDS (including RDS instance
-                        and subnet group). Each group of resources (VPC, ECS, RDS) is represented by a component resource. View the <a class="underline" href="https://github.com/pulumi/examples/tree/master/aws-py-wordpress-fargate-rds">code</a> for
-                        this scenario here.</li>
-                    </ul>
-                </p>
-            </div>
-        </li>
-
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "How do I find out how many resources I have?" "large_header" true) }}
-
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    There are several ways you can estimate the number of resources you have managed with Pulumi.
-                </p>
-                <p>
-                    <span class="underline">If using the Pulumi Service:</span> Navigate to the dashboard and review the resource graph titled “Resource Count over Time.”
-                </p>
-                <p>
-                    <span class="underline">If using Pulumi with a self-managed backend:</span> Export your stack state and count the number of lines with a universal
-                    resource name (URN). You can pipe the state through a grep command for "urn" to estimate the number of resources.
-                </p>
-                <p>
-                    <span class="underline">If you haven't deployed anything with Pulumi:</span> See the previous FAQ for a few examples of applications and their number
-                    of resources.
-                </p>
-            </div>
-        </li>
-
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "Can I prepay for credits?" "large_header" true) }}
-
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    Yes, you can! Please <a class="underline" href="{{ relref . " /contact.md" }}?form=sales">contact us</a>
-                    to discuss the Enterprise and Business Critical Editions, which include bulk discounts for buying your credits
-                    in advance.
-                </p>
-            </div>
-        </li>
-    </ul>
-
-    <p class="text-2xl font-bold lg:hidden mt-12 pl-5">Product</p>
-    <ul class="list-none p-0 mx-5 xl:ml-12 lg:hidden" data-faq-type="faq-product">
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "What are Pulumi open source and Pulumi Service?" "large_header"
-            true) }}
-
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    Pulumi's universal Infrastructure as Code CLI and SDK are an open-source project that
-                    is supported by an active community. Pulumi Service is a managed service for the
-                    open source CLI and SDK. It tracks your infrastructure’s state and coordinates
-                    updates with the CLI, which creates or updates resources to reach your infrastructure’s
-                    desired state. It also manages secrets, supports SAML SSO, integrates with CI/CD pipelines,
-                    enforces compliance rules, and much more.
-                </p>
-                <p>
-                    You're not required to use <a class="underline" href="{{ relref . " /product/pulumi-service"
-                        }}">Pulumi Service</a>.
-                    You can use any cloud or on-premises storage to build and run your own backend.
-                </p>
-            </div>
-        </li>
-
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "Can I use Pulumi for free?" "large_header" true) }}
-
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    Yes! There are three ways to use Pulumi for free.
-                </p>
-                <p>
-                    First, the Pulumi Service is free to use, now and forever, for individuals.
-                    You get all of the convenience of automatic state management, unlimited
-                    deployments, and many other great features without needing to pay anything
-                    at all for it.
-                </p>
-                <p>
-                    Second, Pulumi is an <a class="underline" href="https://github.com/pulumi/pulumi">open source
-                        project</a>. You can
-                    <a class="underline" href="{{ relref . " /docs/intro/concepts/state#self-managed-backend" }}">run
-                        Pulumi entirely
-                        offline</a> without the online service’s features, and manage state yourself, instead of using
-                    the online service.
-                    There are no restrictions &mdash; it's all there in the open for you to use freely as you'd like.
-                </p>
-                <p>
-                    Finally, Pulumi Team Edition offers a 14-day free trial. Once the trial is over, you get 150k free
-                    Pulumi Credits every month (equivalent to ~200 resources managed free each month). If this isn't a
-                    sufficient duration for your project, please <a class="underline" href="{{ relref . " /contact.md"
-                        }}?form=sales">contact us</a>,
-                    and we are happy to work out a custom trial period for you that makes sense given your
-                    proof-of-concept
-                    timeline. After your trial expires, no data will be lost, and there is a grace period with soft
-                    enforcement.
-                </p>
-            </div>
-        </li>
-
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "How do I get started?" "large_header" true) }}
-
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    Follow the <a class="underline" href="{{ relref . " /docs/get-started" }}">Getting Started
-                        guide</a>, which
-                    walks you through creating and deploying your first Pulumi project.
-                </p>
-            </div>
-        </li>
-
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "What is an organization? What are projects and stacks?"
-            "large_header" true) }}
-
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    The key distinction between Pulumi's free Individual Edition and its paid offerings --
-                    Team and Enterprise -- is the presence of an organization. The Individual Edition is
-                    great for single users with private projects. However, if you are working within a team,
-                    you'll typically want to share your projects. This is what organizations provide.
-                    The Team Edition is designed for teams to collaborate on shared infrastructure projects.
-                    The Enterprise Edition offers more sophisticated organization management facilities,
-                    including RBAC for advanced policy controls.
-                </p>
-                <p>
-                    Pulumi <a class="underline" href="{{ relref . " /docs/intro/concepts/project" }}">projects</a>
-                    and <a class="underline" href="{{ relref . " /docs/intro/concepts/stack" }}">stacks</a> are a way
-                    to organize Pulumi code. You can consider a Pulumi Project to be analogous to a GitHub repo:
-                    a single place for code -- and a Stack to be an instance of that code which has separate
-                    configuration. For instance, Project Foo may have multiple stacks for Dev, Test, Prod, or
-                    perhaps for different cloud configurations (e.g. geographic region).
-                </p>
-            </div>
-        </li>
-
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "Can I start small and upgrade later?" "large_header" true) }}
-
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    Yes! If you plan to use Pulumi by yourself, then try the free Individual Edition.
-                    If you and your team want to collaborate on infrastructure projects, then try the
-                    Team Edition which has a 14-day free trial. After the trial, you get 150k free
-                    Pulumi Credits every month (additional credits are $0.00075 USD each). 150k credits is
-                    enough to manage a small environment with about 200 resources. To upgrade to Enterprise,
-                    please <a class="underline" href="{{ relref . " /contact.md" }}?form=sales">contact us</a>.
-                </p>
-            </div>
-        </li>
-
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "How do I move from Starter or Pro to the new Team Edition?"
-            "large_header" true) }}
-
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    <a class="underline" href="{{ relref . " /contact.md" }}?form=sales">Contact us</a> to move to Team.
-                </p>
-            </div>
-        </li>
-
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "Is Pulumi SOC 2 compliant?" "large_header" true) }}
-
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    Yes, Pulumi has completed the SOC 2 Type 2 compliance process. Pulumi is
-                    committed to operational excellence for our customers.
-                </p>
-            </div>
-        </li>
-
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "Can I host Pulumi Service in my cloud or datacenter?" "large_header" true) }}
-
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    Yes, we offer a self-hosted Pulumi Service for companies that have specific data control requirements and want to
-                    maintain complete control over hosting the Pulumi Service. This option is available in Business Critical Edition. You
-                    can get started with a <a class="underline" href="{{ relref . " /product/self-hosted.md#self-hosted-trial" }}">30-day free trial here</a>.
-                </p>
-            </div>
-        </li>
-
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "How do I convince my boss?" "large_header" true) }}
-
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    Do you want to use Pulumi in your organization, but aren't sure how to bring it up with your boss?
-                    We've created a sample email to help you explain its benefits. Feel free to use the full letter or
-                    pieces of it. We are always happy to meet to learn more about your needs and explain these
-                    benefits in person &mdash; just <a class="underline" href="{{ relref . " /contact.md" }}?form=sales">contact
-                        us</a>.
-                </p>
-                <h5>Sample Email</h5>
-                <p>
-                    Dear {Name},
-                </p>
-                <p>
-                    I'd like to propose that we use Pulumi for our cloud infrastructure needs. I've researched
-                    the top infrastructure as code platforms, and Pulumi stands out because of its maturity,
-                    strong open source community, support for many clouds, and mix of productivity and enterprise
-                    controls, meaning it works great for developers and infrastructure teams alike.
-                </p>
-                <p>
-                    I discovered that Pulumi's community is over 10,000 people and growing, and their customer
-                    base includes a diverse array of companies, from startups to some of the largest Fortune 500
-                    and Global 2000 organizations. The top four reasons people are choosing Pulumi are 1) it tames
-                    cloud complexity and reduces infrastructure risks, 2) it lets teams use software engineering best
-                    practices with infrastructure, 3) it helps teams adopt modern cloud architectures, and 4) it
-                    increases
-                    collaboration between infrastructure teams, developers, and security engineers.
-                </p>
-                <p>
-                    Here are some examples of their customers to give you an idea of who is using it and why:
-                </p>
-                <ul>
-                    <li>
-                        Tableau and Fenergo can now release
-                        new features faster by empowering their developers to deploy cloud infrastructure easily.
-                    </li>
-                    <li>
-                        <a class="underline" href="{{ relref . " /case-studies/snowflake" }}">Snowflake migrated to</a>
-                        Kubernetes
-                        across multiple clouds in three months.
-                    </li>
-                    <li>
-                        <a class="underline" href="{{ relref . " /case-studies/mercedes-benz" }}">Mercedes-Benz</a>
-                        Research & Development North
-                        America improved collaboration between its infrastructure and application development teams.
-                    </li>
-                    <li>
-                        <a class="underline" href="{{ relref . " /blog/kenshoo-migrates-to-aws-with-pulumi" }}">Skai</a>
-                        managed a complex
-                        public cloud migration project.
-                    </li>
-                    <li>
-                        Cockroach Labs, <a class="underline" href="{{ relref . " /case-studies/sourcegraph"
-                            }}">Sourcegraph</a>,
-                        and <a class="underline" href="{{ relref . " /case-studies/lemonade" }}">Lemonade</a> created
-                        innovative
-                        engineering cultures.
-                    </li>
-                </ul>
-                <p>
-                    Pulumi is open source and has a SaaS product that helps organizations like ours manage
-                    infrastructure with advanced security and policies. Because it's a SaaS, we can start small
-                    and grow as our success with the product grows.
-                </p>
-                <p>
-                    You can learn more on the <a class="underline" href="https://www.pulumi.com/">Pulumi website</a> or
-                    view a short <a class="underline" href="https://www.youtube.com/watch?v=QfJTJs24-JM">introduction
-                        video</a>.
-                </p>
-                <p>
-                    I have many ideas on how Pulumi would deliver immediate value to our team. Should I
-                    write a more detailed proposal and share it with you or other members of the team for
-                    feedback? The Pulumi team has also offered to have a meeting with us to learn more about
-                    our use cases, and discuss potential ways we can work together. Should I set that up?
-                </p>
-                <p>
-                    Thanks,<br>
-                    {Your Name}
-                </p>
-            </div>
-        </li>
-    </ul>
-
-    <p class="text-2xl font-bold lg:hidden mt-12 pl-5">Billing and Support</p>
-    <ul class="list-none p-0 mx-5 xl:ml-12 lg:hidden" data-faq-type="faq-billing">
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "How can I keep track of the Pulumi Credits I’ve used?"
-            "large_header" true) }}
-
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    You can keep track of current credit usage and upcoming charges by navigating to
-                    Settings and then Billing & Usage in the <a class="underline" href="{{ relref . "/product/pulumi-service" }}">Pulumi Service</a>.
-                </p>
-            </div>
-        </li>
-
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "When will I be billed for using the Team Edition?"
-            "large_header" true) }}
-
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    You will be billed for the previous month’s usage on the first day of each month.
-                </p>
-            </div>
-        </li>
-
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "How can groups not seeking a profit use Pulumi for free?"
-            "large_header" true) }}
-
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    The <a class="underline" href="{{ relref . " open-source-free-tier/" }}">Open-Source Free
-                        Edition</a> allows
-                    organizations not seeking a profit with projects under an open-source license to use Pulumi for
-                    free.
-                </p>
-            </div>
-        </li>
-
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "What payment options do you accept?" "large_header" true) }}
-
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    For the Pulumi Team Edition, you can pay with a credit card (we use Stripe for processing).
-                    Pulumi Enterprise Edition offers additional payment options. Please
-                    <a class="underline" href="{{ relref . " /contact.md" }}?form=sales">contact us</a> for those options.
-                </p>
-            </div>
-        </li>
-
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "What if I have billing or account issues?" "large_header" true)
-            }}
-
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    For any billing or related issues,
-                    please <a class="underline" href="{{ relref . " /contact.md" }}">contact us</a>.
-                </p>
-            </div>
-        </li>
-
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "What if I am not satisfied with my Pulumi purchase?"
-            "large_header" true) }}
-
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    If you're not satisfied with
-                    Pulumi, we offer a 14-day money-back guarantee. No questions asked.
-                    <a class="underline" href="{{ relref . " /contact.md" }}">Contact us</a>.
-                </p>
-            </div>
-        </li>
-
-        <li class="accordion-item text-2xl py-3">
-            {{ partial "accordian-header" (dict "text" "How do I get support for Pulumi?" "large_header" true) }}
-
-            <div class="accordion-item-body-no-animation text-base">
-                <p>
-                    12 x 5 support is included in Enterprise Edition and 24 x 7 support (includes a private Slack channel and dedicated
-                    support) is included in Business Critical Edition.
-                    <a class="underline" href="{{ relref . " /contact.md" }}?form=sales">Contact us</a> if you need
-                    help or have any questions.
-                </p>
-            </div>
-        </li>
-    </ul>
-</section>
-
-<section id="compare" class="relative mt-16 mb-24">
-    <div class="shape-background pricing-compare-updated">
-        <div class="relative w-full h-full">
-            <div class="circle-left"></div>
-            <div class="circle-center"></div>
-            <div class="circle-right"></div>
-        </div>
-    </div>
-
-    <h2 class="text-center">Compare editions</h2>
-
-    <div class="container mx-auto bg-white">
-        <p class="text-lg font-bold text-center mb-0 lg:hidden">Fundamentals</p>
-        <div id="fundamentals" class="pricing-compare-plans-table">
-            <div class="compare-plans-table-header-container">
-                <div class="compare-plans-table-header-item">
-                    <span class="font-bold hidden lg:block">Fundamentals</span>
+                    <p>
+                        Pulumi is open source and has a SaaS product that helps organizations like ours manage infrastructure with advanced security and policies. Because it's a
+                        SaaS, we can start small and grow as our success with the product grows.
+                    </p>
+                    <p>
+                        You can learn more on the <a class="underline" href="https://www.pulumi.com/">Pulumi website</a> or view a short
+                        <a class="underline" href="https://www.youtube.com/watch?v=QfJTJs24-JM">introduction video</a>.
+                    </p>
+                    <p>
+                        I have many ideas on how Pulumi would deliver immediate value to our team. Should I write a more detailed proposal and share it with you or other members of
+                        the team for feedback? The Pulumi team has also offered to have a meeting with us to learn more about our use cases, and discuss potential ways we can work
+                        together. Should I set that up?
+                    </p>
+                    <p>
+                        Thanks,<br />
+                        {Your Name}
+                    </p>
                 </div>
-                <div class="compare-plans-table-header-item">
-                    <span>Individual</span>
-                </div>
-                <div class="compare-plans-table-header-item">
-                    <span>Team</span>
-                </div>
-                <div class="compare-plans-table-header-item">
-                    <span>Enterprise</span>
-                </div>
-                <div class="compare-plans-table-header-item">
-                    <span>Business Critical</span>
-                </div>
-            </div>
+            </li>
+        </ul>
 
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span>Members</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>1</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>Up to 15</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>Unlimited</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>Unlimited</span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span>Admins</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>1</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>Unlimited</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>Unlimited</span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span><a class="compare-table-link" href="{{ relref . " /docs/intro/pulumi-service/organizations"
-                            }}">Organizations</a></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>1</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>Unlimited</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>Unlimited</span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span><a class="compare-table-link" href="{{ relref . "/docs/intro/pulumi-service/projects-and-stacks" }}">Unlimited projects & stacks</a></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span>Unlimited deployments</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span>Concurrent updates</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>1</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>5</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>Unlimited</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>Unlimited</span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span><a class="compare-table-link" href="{{ relref . " /product/pulumi-service" }}">Pulumi web console</a></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span><a class="compare-table-link" href="{{ relref . " /docs/reference/service-rest-api/" }}">REST API</a></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-            </div>
+        <p class="text-2xl font-bold lg:hidden mt-12 pl-5">Billing and Support</p>
+        <ul class="list-none p-0 mx-5 xl:ml-12 lg:hidden" data-faq-type="faq-billing">
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "How can I keep track of the Pulumi Credits I’ve used?"
+                    "large_header" true)
+                }}
 
 
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span><a class="compare-table-link" href="{{ relref . " /automation" }}">Automation API</a></span>
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        You can keep track of current credit usage and upcoming charges by navigating to Settings and then Billing & Usage in the
+                        <a class="underline" href="{{ relref . "/product/pulumi-service" }}">Pulumi Service</a>.
+                    </p>
                 </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-            </div>
+            </li>
 
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span>Commitment discounts</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-            </div>
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "When will I be billed for using the Team Edition?"
+                    "large_header" true)
+                }}
 
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span><a class="compare-table-link" href="{{ relref . " /product/self-hosted"
-                            }}">Self-hosting</a></span>
+
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>You will be billed for the previous month’s usage on the first day of each month.</p>
                 </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
+            </li>
+
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "How can groups not seeking a profit use Pulumi for free?"
+                    "large_header" true)
+                }}
+
+
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        The <a class="underline" href="{{ relref . " open-source-free-tier/" }}">Open-Source Free Edition</a> allows organizations not seeking a profit with
+                        projects under an open-source license to use Pulumi for free.
+                    </p>
                 </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
+            </li>
+
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "What payment options do you accept?" "large_header" true) }}
+
+
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        For the Pulumi Team Edition, you can pay with a credit card (we use Stripe for processing). Pulumi Enterprise Edition offers additional payment options.
+                        Please
+                        <a class="underline" href="{{ relref . " /contact.md" }}?form=sales">contact us</a> for those options.
+                    </p>
                 </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
+            </li>
+
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "What if I have billing or account issues?" "large_header" true) }}
+
+
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>For any billing or related issues, please <a class="underline" href="{{ relref . " /contact.md" }}">contact us</a>.</p>
                 </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+            </li>
+
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "What if I am not satisfied with my Pulumi purchase?"
+                    "large_header" true)
+                }}
+
+
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        If you're not satisfied with Pulumi, we offer a 14-day money-back guarantee. No questions asked.
+                        <a class="underline" href="{{ relref . " /contact.md" }}">Contact us</a>.
+                    </p>
                 </div>
+            </li>
+
+            <li class="accordion-item text-2xl py-3">
+                {{ partial "accordian-header" (dict "text" "How do I get support for Pulumi?" "large_header" true) }}
+
+
+                <div class="accordion-item-body-no-animation text-base">
+                    <p>
+                        12 x 5 support is included in Enterprise Edition and 24 x 7 support (includes a private Slack channel and dedicated support) is included in Business
+                        Critical Edition.
+                        <a class="underline" href="{{ relref . " /contact.md" }}?form=sales">Contact us</a> if you need help or have any questions.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="compare" class="relative mt-16 mb-24">
+        <div class="shape-background pricing-compare-updated">
+            <div class="relative w-full h-full">
+                <div class="circle-left"></div>
+                <div class="circle-center"></div>
+                <div class="circle-right"></div>
             </div>
         </div>
 
-        <p class="text-lg font-bold text-center mb-0 lg:hidden">Continuous Delivery</p>
-        <div id="continuous-delivery" class="pricing-compare-plans-table">
-            <div class="compare-plans-table-header-container">
-                <div class="compare-plans-table-header-item">
-                    <span class="font-bold hidden lg:block">Continuous Delivery</span>
+        <h2 class="text-center">Compare editions</h2>
+
+        <div class="container mx-auto bg-white">
+            <p class="text-lg font-bold text-center mb-0 lg:hidden">Fundamentals</p>
+            <div id="fundamentals" class="pricing-compare-plans-table">
+                <div class="compare-plans-table-header-container">
+                    <div class="compare-plans-table-header-item">
+                        <span class="font-bold hidden lg:block">Fundamentals</span>
+                    </div>
+                    <div class="compare-plans-table-header-item">
+                        <span>Individual</span>
+                    </div>
+                    <div class="compare-plans-table-header-item">
+                        <span>Team</span>
+                    </div>
+                    <div class="compare-plans-table-header-item">
+                        <span>Enterprise</span>
+                    </div>
+                    <div class="compare-plans-table-header-item">
+                        <span>Business Critical</span>
+                    </div>
                 </div>
-                <div class="compare-plans-table-header-item">
-                    <span>Individual</span>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span>Members</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>1</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>Up to 15</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>Unlimited</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>Unlimited</span>
+                    </div>
                 </div>
-                <div class="compare-plans-table-header-item">
-                    <span>Team</span>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span>Admins</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>1</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>Unlimited</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>Unlimited</span>
+                    </div>
                 </div>
-                <div class="compare-plans-table-header-item">
-                    <span>Enterprise</span>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span><a class="compare-table-link" href="{{ relref . " /docs/intro/pulumi-service/organizations" }}">Organizations</a></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>1</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>Unlimited</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>Unlimited</span>
+                    </div>
                 </div>
-                <div class="compare-plans-table-header-item">
-                    <span>Business Critical</span>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span><a class="compare-table-link" href="{{ relref . "/docs/intro/pulumi-service/projects-and-stacks" }}">Unlimited projects & stacks</a></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                </div>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span>Unlimited deployments</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                </div>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span>Concurrent updates</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>1</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>5</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>Unlimited</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>Unlimited</span>
+                    </div>
+                </div>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span><a class="compare-table-link" href="{{ relref . " /product/pulumi-service" }}">Pulumi web console</a></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                </div>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span><a class="compare-table-link" href="{{ relref . " /docs/reference/service-rest-api/" }}">REST API</a></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                </div>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span><a class="compare-table-link" href="{{ relref . " /automation" }}">Automation API</a></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                </div>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span>Commitment discounts</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                </div>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span><a class="compare-table-link" href="{{ relref . " /product/self-hosted" }}">Self-hosting</a></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
                 </div>
             </div>
 
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span>Deployment history</span>
+            <p class="text-lg font-bold text-center mb-0 lg:hidden">Continuous Delivery</p>
+            <div id="continuous-delivery" class="pricing-compare-plans-table">
+                <div class="compare-plans-table-header-container">
+                    <div class="compare-plans-table-header-item">
+                        <span class="font-bold hidden lg:block">Continuous Delivery</span>
+                    </div>
+                    <div class="compare-plans-table-header-item">
+                        <span>Individual</span>
+                    </div>
+                    <div class="compare-plans-table-header-item">
+                        <span>Team</span>
+                    </div>
+                    <div class="compare-plans-table-header-item">
+                        <span>Enterprise</span>
+                    </div>
+                    <div class="compare-plans-table-header-item">
+                        <span>Business Critical</span>
+                    </div>
                 </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span>Deployment history</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
                 </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span>Activity timeline</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
                 </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span>GitOps workflows</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
                 </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span><a class="compare-table-link" href="{{ relref . " /docs/guides/continuous-delivery" }}">CI/CD integrations</a></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>
+                            Many
+                            <pulumi-tooltip>
+                                <i class="w-8 fas fa-info-circle text-blue-600"></i>
+                                <span slot="content"> AWS Code Services, Azure DevOps, Codeship, CircleCI, GitHub, GitLab, Google Cloud Build, Jenkins, Travis, and more </span>
+                            </pulumi-tooltip>
+                        </span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>
+                            Many
+                            <pulumi-tooltip>
+                                <i class="w-8 fas fa-info-circle text-blue-600"></i>
+                                <span slot="content"> AWS Code Services, Azure DevOps, Codeship, CircleCI, GitHub, GitLab, Google Cloud Build, Jenkins, Travis, and more </span>
+                            </pulumi-tooltip>
+                        </span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>Customized for you</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>Customized for you</span>
+                    </div>
+                </div>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span><a class="compare-table-link" href="{{ relref . " /docs/intro/pulumi-service/ci-cd-integration-assistant" }}">CI/CD Assistant</a></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                </div>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span><a class="compare-table-link" href="{{ relref . " /docs/intro/pulumi-service/webhooks" }}">Webhooks</a></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
                 </div>
             </div>
 
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span>Activity timeline</span>
+            <p class="text-lg font-bold text-center mb-0 lg:hidden">Policy as Code</p>
+            <div id="policy" class="pricing-compare-plans-table">
+                <div class="compare-plans-table-header-container">
+                    <div class="compare-plans-table-header-item">
+                        <span class="font-bold hidden lg:block">Policy as Code</span>
+                    </div>
+                    <div class="compare-plans-table-header-item">
+                        <span>Individual</span>
+                    </div>
+                    <div class="compare-plans-table-header-item">
+                        <span>Team</span>
+                    </div>
+                    <div class="compare-plans-table-header-item">
+                        <span>Enterprise</span>
+                    </div>
+                    <div class="compare-plans-table-header-item">
+                        <span>Business Critical</span>
+                    </div>
                 </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span>Gated deployments</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>Local <span class="hidden md:block">enforcement</span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>Local <span class="hidden md:block">enforcement</span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>Local <span class="hidden md:block">enforcement</span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>Server-side <span class="hidden md:block">enforcement</span></span>
+                    </div>
                 </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span>Organization policies</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
                 </div>
             </div>
 
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span>GitOps workflows</span>
+            <p class="text-lg font-bold text-center mb-0 lg:hidden">Security</p>
+            <div id="security" class="pricing-compare-plans-table">
+                <div class="compare-plans-table-header-container">
+                    <div class="compare-plans-table-header-item">
+                        <span class="font-bold hidden lg:block">Security</span>
+                    </div>
+                    <div class="compare-plans-table-header-item">
+                        <span>Individual</span>
+                    </div>
+                    <div class="compare-plans-table-header-item">
+                        <span>Team</span>
+                    </div>
+                    <div class="compare-plans-table-header-item">
+                        <span>Enterprise</span>
+                    </div>
+                    <div class="compare-plans-table-header-item">
+                        <span>Business Critical</span>
+                    </div>
                 </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span><a class="compare-table-link" href="{{ relref . " /docs/intro/concepts/config" }}">Secrets and encryption</a></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
                 </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span><a class="compare-table-link" href="{{ relref . " /docs/intro/pulumi-service/accounts" }}">Identity providers</a></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>GitHub, GitLab, Atlassian</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>GitHub, GitLab, Atlassian</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>GitHub, GitLab, Atlassian, SAML/SSO</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>GitHub, GitLab, Atlassian, SAML/SSO</span>
+                    </div>
                 </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span><a class="compare-table-link" href="{{ relref . " /docs/guides/saml " }}">SAML/SSO</a></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>
+                            Many
+                            <pulumi-tooltip>
+                                <i class="w-8 fas fa-info-circle text-blue-600"></i>
+                                <span slot="content"> Azure Active Directory, Google Workspace, Okta, OneLogin, and more </span>
+                            </pulumi-tooltip>
+                        </span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>
+                            Many
+                            <pulumi-tooltip>
+                                <i class="w-8 fas fa-info-circle text-blue-600"></i>
+                                <span slot="content"> Azure Active Directory, Google Workspace, Okta, OneLogin, and more </span>
+                            </pulumi-tooltip>
+                        </span>
+                    </div>
                 </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span><a class="compare-table-link" href="{{ relref . " /docs/guides/scim" }}">SCIM integration</a></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                </div>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span><a class="compare-table-link" href="{{ relref . " /docs/intro/pulumi-service/teams" }}">Create and manage teams</a></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                </div>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span
+                            ><a class="compare-table-link" href="{{ relref . "/docs/intro/pulumi-service/organizations#organization-roles" }}"
+                                >Role-based access control (RBAC)</a
+                            ></span
+                        >
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                </div>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span><a class="compare-table-link" href="{{ relref . " /docs/intro/pulumi-service/audit-logs" }}">Audit logs</a></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                </div>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span><a class="compare-table-link" href="{{ relref . " /docs/intro/pulumi-service/audit-logs#automated-export" }}">Automated log export to S3</a></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
                 </div>
             </div>
 
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span><a class="compare-table-link" href="{{ relref . " /docs/guides/continuous-delivery" }}">CI/CD
-                            integrations</a></span>
+            <p class="text-lg font-bold text-center mb-0 lg:hidden">Support</p>
+            <div id="support" class="pricing-compare-plans-table">
+                <div class="compare-plans-table-header-container">
+                    <div class="compare-plans-table-header-item">
+                        <span class="font-bold hidden lg:block">Support</span>
+                    </div>
+                    <div class="compare-plans-table-header-item">
+                        <span>Individual</span>
+                    </div>
+                    <div class="compare-plans-table-header-item">
+                        <span>Team</span>
+                    </div>
+                    <div class="compare-plans-table-header-item">
+                        <span>Enterprise</span>
+                    </div>
+                    <div class="compare-plans-table-header-item">
+                        <span>Business Critical</span>
+                    </div>
                 </div>
-                <div class="compare-plans-table-row-item">
-                    <span>
-                        Many
-                        <pulumi-tooltip>
-                            <i class="w-8 fas fa-info-circle text-blue-600"></i>
-                            <span slot="content">
-                                AWS Code Services, Azure DevOps, Codeship, CircleCI, GitHub,
-                                GitLab, Google Cloud Build, Jenkins, Travis, and more
-                            </span>
-                        </pulumi-tooltip>
-                    </span>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span><a class="compare-table-link" href="https://slack.pulumi.com">Community Slack</a></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark"></i></span>
+                    </div>
                 </div>
-                <div class="compare-plans-table-row-item">
-                    <span>
-                        Many
-                        <pulumi-tooltip>
-                            <i class="w-8 fas fa-info-circle text-blue-600"></i>
-                            <span slot="content">
-                                AWS Code Services, Azure DevOps, Codeship, CircleCI, GitHub,
-                                GitLab, Google Cloud Build, Jenkins, Travis, and more
-                            </span>
-                        </pulumi-tooltip>
-                    </span>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span>Support</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>12 x 5</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>24 x 7</span>
+                    </div>
                 </div>
-                <div class="compare-plans-table-row-item">
-                    <span>Customized for you</span>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span>Ticketing & email support</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark"></i></span>
+                    </div>
                 </div>
-                <div class="compare-plans-table-row-item">
-                    <span>Customized for you</span>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span>Private Slack channel</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>Available</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark"></i></span>
+                    </div>
+                </div>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span>Normal ticket <br />service level objective</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>5 business days</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>1 business day</span>
+                    </div>
+                </div>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span>Urgent ticket <br />service level objective</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>1 business day</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>1 hour</span>
+                    </div>
+                </div>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span>Advisor access</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>Annually</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>Monthly</span>
+                    </div>
+                </div>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span>Onboarding and training</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>Available</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark"></i></span>
+                    </div>
+                </div>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span>Professional services</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span>Available</span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark"></i></span>
+                    </div>
                 </div>
             </div>
 
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span><a class="compare-table-link" href="{{ relref . " /docs/intro/pulumi-service/ci-cd-integration-assistant" }}">CI/CD Assistant</a></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span><a class="compare-table-link" href="{{ relref . " /docs/intro/pulumi-service/webhooks"
-                            }}">Webhooks</a></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-            </div>
-        </div>
-
-        <p class="text-lg font-bold text-center mb-0 lg:hidden">Policy as Code</p>
-        <div id="policy" class="pricing-compare-plans-table">
-            <div class="compare-plans-table-header-container">
-                <div class="compare-plans-table-header-item">
-                    <span class="font-bold hidden lg:block">Policy as Code</span>
-                </div>
-                <div class="compare-plans-table-header-item">
-                    <span>Individual</span>
-                </div>
-                <div class="compare-plans-table-header-item">
-                    <span>Team</span>
-                </div>
-                <div class="compare-plans-table-header-item">
-                    <span>Enterprise</span>
-                </div>
-                <div class="compare-plans-table-header-item">
-                    <span>Business Critical</span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span>Gated deployments</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>Local <span class="hidden md:block">enforcement</span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>Local <span class="hidden md:block">enforcement</span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>Local <span class="hidden md:block">enforcement</span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>Server-side <span class="hidden md:block">enforcement</span></span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span>Organization policies</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-            </div>
-        </div>
-
-        <p class="text-lg font-bold text-center mb-0 lg:hidden">Security</p>
-        <div id="security" class="pricing-compare-plans-table">
-            <div class="compare-plans-table-header-container">
-                <div class="compare-plans-table-header-item">
-                    <span class="font-bold hidden lg:block">Security</span>
-                </div>
-                <div class="compare-plans-table-header-item">
-                    <span>Individual</span>
-                </div>
-                <div class="compare-plans-table-header-item">
-                    <span>Team</span>
-                </div>
-                <div class="compare-plans-table-header-item">
-                    <span>Enterprise</span>
-                </div>
-                <div class="compare-plans-table-header-item">
-                    <span>Business Critical</span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span><a class="compare-table-link" href="{{ relref . " /docs/intro/concepts/config" }}">Secrets and
-                            encryption</a></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span><a class="compare-table-link" href="{{ relref . " /docs/intro/pulumi-service/accounts"
-                            }}">Identity providers</a></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>GitHub, GitLab, Atlassian</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>GitHub, GitLab, Atlassian</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>GitHub, GitLab, Atlassian, SAML/SSO</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>GitHub, GitLab, Atlassian, SAML/SSO</span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span><a class="compare-table-link" href="{{ relref . " /docs/guides/saml " }}">SAML/SSO</a></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>
-                        Many
-                        <pulumi-tooltip>
-                            <i class="w-8 fas fa-info-circle text-blue-600"></i>
-                            <span slot="content">
-                                Azure Active Directory, Google Workspace, Okta, OneLogin, and more
-                            </span>
-                        </pulumi-tooltip>
-                    </span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>
-                        Many
-                        <pulumi-tooltip>
-                            <i class="w-8 fas fa-info-circle text-blue-600"></i>
-                            <span slot="content">
-                                Azure Active Directory, Google Workspace, Okta, OneLogin, and more
-                            </span>
-                        </pulumi-tooltip>
-                    </span>
-                </div>
-            </div>
-
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span><a class="compare-table-link" href="{{ relref . " /docs/guides/scim" }}">SCIM integration</a></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-            </div>
-
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span><a class="compare-table-link" href="{{ relref . " /docs/intro/pulumi-service/teams" }}">Create and manage teams</a></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span><a class="compare-table-link" href="{{ relref . "/docs/intro/pulumi-service/organizations#organization-roles" }}">Role-based access
-                            control (RBAC)</a></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span><a class="compare-table-link" href="{{ relref . " /docs/intro/pulumi-service/audit-logs"
-                            }}">Audit logs</a></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span><a class="compare-table-link" href="{{ relref . " /docs/intro/pulumi-service/audit-logs#automated-export" }}">Automated log export to S3</a></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
-                </div>
-            </div>
-        </div>
-
-        <p class="text-lg font-bold text-center mb-0 lg:hidden">Support</p>
-        <div id="support" class="pricing-compare-plans-table">
-            <div class="compare-plans-table-header-container">
-                <div class="compare-plans-table-header-item">
-                    <span class="font-bold hidden lg:block">Support</span>
-                </div>
-                <div class="compare-plans-table-header-item">
-                    <span>Individual</span>
-                </div>
-                <div class="compare-plans-table-header-item">
-                    <span>Team</span>
-                </div>
-                <div class="compare-plans-table-header-item">
-                    <span>Enterprise</span>
-                </div>
-                <div class="compare-plans-table-header-item">
-                    <span>Business Critical</span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span><a class="compare-table-link" href="https://slack.pulumi.com">Community Slack</a></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark"></i></span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span>Support</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>12 x 5</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>24 x 7</span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span>Ticketing & email support</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark"></i></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark"></i></span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span>Private Slack channel</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>Available</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark"></i></span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span>Normal ticket <br/>service level objective</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>5 business days</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>1 business day</span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span>Urgent ticket <br />service level objective</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>1 business day</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>1 hour</span>
-                </div>
-            </div>
-
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span>Advisor access</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>Annually</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>Monthly</span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span>Onboarding and training</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>Available</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark"></i></span>
-                </div>
-            </div>
-
-            <div class="compare-plans-table-row-container">
-                <div class="compare-plans-table-row-item">
-                    <span>Professional services</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span></span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span>Available</span>
-                </div>
-                <div class="compare-plans-table-row-item">
-                    <span><i class="fa fa-check pricing-checkmark"></i></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="flex justify-center mt-24">
-            <div class="card ready-cta w-full rounded-xl p-1 gradient">
-                <div class="flex justify-center rounded-xl bg-purple-100">
-                    <div class="p-8 md:p-16 lg:pt-28 lg:pb-28 inline-flex flex-col items-center">
-                        <h2 class="mb-12 text-center">Ready to try the Pulumi Service?</h2>
-                        <div class="flex flex-col lg:flex-row self-stretch items-center lg:justify-between">
-                            <div class="flex flex-col justify-center align-center text-center w-full md:w-2/4 lg:ml-14 lg:mr-4 mb-14 lg:mb-0 z-0">
-                                <a id="pricingStartTrialBottomCTA" class="btn-primary py-3">Start
-                            Trial of All Features</a>
-                                <p class="text-xs pt-1 my-0">14-day trial. No credit card needed.</p>
-                            </div>
-                            <div class="flex flex-col justify-center align-center text-center w-full md:w-2/4 lg:mr-14 lg:ml-4">
-                                <a href="{{ relref . "/contact" }}?form=sales" class="btn-secondary py-3 px-6">Contact Us</a>
-                                <p class="text-xs pt-1 my-0">Contact us for a demo & quote.</p>
+            <div class="flex justify-center mt-24">
+                <div class="card ready-cta w-full rounded-xl p-1 gradient">
+                    <div class="flex justify-center rounded-xl bg-purple-100">
+                        <div class="p-8 md:p-16 lg:pt-28 lg:pb-28 inline-flex flex-col items-center">
+                            <h2 class="mb-12 text-center">Ready to try the Pulumi Service?</h2>
+                            <div class="flex flex-col lg:flex-row self-stretch items-center lg:justify-between">
+                                <div class="flex flex-col justify-center align-center text-center w-full md:w-2/4 lg:ml-14 lg:mr-4 mb-14 lg:mb-0 z-0">
+                                    <a id="pricingStartTrialBottomCTA" class="btn-primary py-3">Start Trial of All Features</a>
+                                    <p class="text-xs pt-1 my-0">14-day trial. No credit card needed.</p>
+                                </div>
+                                <div class="flex flex-col justify-center align-center text-center w-full md:w-2/4 lg:mr-14 lg:ml-4">
+                                    <a href="{{ relref . "/contact" }}?form=sales" class="btn-secondary py-3 px-6">Contact Us</a>
+                                    <p class="text-xs pt-1 my-0">Contact us for a demo & quote.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
+    </section>
 {{ end }}

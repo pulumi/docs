@@ -1,10 +1,11 @@
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
     <!-- Our CSS and JS bundles. -->
     {{ partial "assets" . }}
+
 
     <!-- Google Site Verification for Google Webmaster tools and YouTube. -->
     <meta name="google-site-verification" content="N-ezSTIu4P3bSc4TqidV4wWCkMzFiMN269ZgDYArGkk" />
@@ -17,12 +18,14 @@
             {{ $delay = 1 }}
         {{ end }}
 
+
         <meta http-equiv="refresh" content="{{ $delay }}; url={{ .Params.redirect_to }}" />
     {{ end }}
 
     {{ if eq .Params.block_external_search_index true }}
-        <meta name="robots" content="noindex">
+        <meta name="robots" content="noindex" />
     {{ end }}
+
 
     <!--
         Metadata tags for OpenGraph and Twitter.
@@ -38,48 +41,50 @@
             {{ $image = .Params.meta_image }}
         {{ end }}
 
+
         <!-- Only use large-image Twitter cards where we've set meta_images. -->
         {{ $twitter_card_type = "summary_large_image" }}
     {{ end }}
-    <meta property="og:image" content="{{ $image | absURL }}">
+    <meta property="og:image" content="{{ $image | absURL }}" />
 
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:site_name" content="pulumi">
-    <meta name="twitter:card" content="{{ $twitter_card_type }}">
-    <meta name="twitter:site" content="@PulumiCorp">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:site_name" content="pulumi" />
+    <meta name="twitter:card" content="{{ $twitter_card_type }}" />
+    <meta name="twitter:site" content="@PulumiCorp" />
 
     {{ if .Params.meta_twitter_creator }}
-        <meta name="twitter:creator" content="{{ .Params.meta_twitter_creator }}">
+        <meta name="twitter:creator" content="{{ .Params.meta_twitter_creator }}" />
     {{ else if .Params.authors }}
         {{ range $idx, $authorName := .Params.authors }}
             {{ $authorData := index $.Site.Data.team.team $authorName }}
             {{ with $authorData.social }}
                 {{ with .twitter }}
-                    <meta name="twitter:creator" content="@{{ . }}">
+                    <meta name="twitter:creator" content="@{{ . }}" />
                 {{ end }}
             {{ end }}
         {{ end }}
     {{ end }}
 
     {{ if .Params.meta_title }}
-        <meta property="og:title" content="{{ .Params.meta_title }}">
+        <meta property="og:title" content="{{ .Params.meta_title }}" />
     {{ else if .Params.title }}
-        <meta property="og:title" content="{{ .Params.title }}">
+        <meta property="og:title" content="{{ .Params.title }}" />
     {{ else }}
-        <meta property="og:title" content="{{ .Site.Title }}">
+        <meta property="og:title" content="{{ .Site.Title }}" />
     {{ end }}
 
     {{ if .Params.meta_desc }}
-        <meta name="description" content="{{ .Params.meta_desc }}">
-        <meta property="og:description" content="{{ .Params.meta_desc }}">
+        <meta name="description" content="{{ .Params.meta_desc }}" />
+        <meta property="og:description" content="{{ .Params.meta_desc }}" />
     {{ else if and .IsHome .Site.Params.meta_desc }}
-        <meta name="description" content="{{ .Site.Params.meta_desc }}">
-        <meta property="og:description" content="{{ .Site.Params.meta_desc }}">
+        <meta name="description" content="{{ .Site.Params.meta_desc }}" />
+        <meta property="og:description" content="{{ .Site.Params.meta_desc }}" />
     {{ else if .Summary }}
-        <meta name="description" content="{{ .Summary }}">
-        <meta property="og:description" content="{{ .Summary }}">
+        <meta name="description" content="{{ .Summary }}" />
+        <meta property="og:description" content="{{ .Summary }}" />
     {{ end }}
+
 
     <!-- For Registry package overview pages, add a swiftype meta tag to elevate the page in search results. -->
     {{ if eq (.Params.layout) "overview" }}
@@ -102,9 +107,10 @@
             <meta class="swiftype" name="title" data-type="string" content="{{ .Title }}" />
         {{ end }}
 
+
         <!-- The blog tags, specifically the tag lists, end up clashing with other page titles on the website. We
              add "Blog" to the title so that the titles no longer clash. -->
-        {{ if and (eq .Type "blog") .IsPage}}
+        {{ if and (eq .Type "blog") .IsPage }}
             <title>{{ .Title }} | Pulumi Blog</title>
         {{ else }}
             <title>{{ .Title }} | Pulumi</title>
@@ -125,16 +131,17 @@
     -->
 
     {{ if .Params.canonical_url }}
-        <link rel="canonical" href="{{ .Params.canonical_url }}" >
+        <link rel="canonical" href="{{ .Params.canonical_url }}" />
     {{ else }}
-        <link rel="canonical" href="{{ .Site.Params.canonicalURL }}{{ .RelPermalink }}" >
+        <link rel="canonical" href="{{ .Site.Params.canonicalURL }}{{ .RelPermalink }}" />
     {{ end }}
+
 
     <!-- RSS link for the blog. -->
     <link rel="alternate" type="application/rss+xml" href="{{ "/blog/rss.xml" | absURL }}" title="Pulumi Blog" />
 
     <!-- Lazy-load Sentry.  -->
-    <script src='https://js.sentry-cdn.com/02614bf2f18e4615a73218b810563ced.min.js' crossorigin="anonymous"></script>
+    <script src="https://js.sentry-cdn.com/02614bf2f18e4615a73218b810563ced.min.js" crossorigin="anonymous"></script>
     <script>
         Sentry.onLoad(function() {
             Sentry.init({
@@ -150,35 +157,82 @@
     {{- if eq hugo.Environment "production" }}
         <!--Segment tracking-->
         <script>
-        !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-        analytics.load("UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u");
-        analytics.page();
-        }}();
+            !(function () {
+                var analytics = (window.analytics = window.analytics || []);
+                if (!analytics.initialize)
+                    if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice.");
+                    else {
+                        analytics.invoked = !0;
+                        analytics.methods = [
+                            "trackSubmit",
+                            "trackClick",
+                            "trackLink",
+                            "trackForm",
+                            "pageview",
+                            "identify",
+                            "reset",
+                            "group",
+                            "track",
+                            "ready",
+                            "alias",
+                            "debug",
+                            "page",
+                            "once",
+                            "off",
+                            "on",
+                        ];
+                        analytics.factory = function (t) {
+                            return function () {
+                                var e = Array.prototype.slice.call(arguments);
+                                e.unshift(t);
+                                analytics.push(e);
+                                return analytics;
+                            };
+                        };
+                        for (var t = 0; t < analytics.methods.length; t++) {
+                            var e = analytics.methods[t];
+                            analytics[e] = analytics.factory(e);
+                        }
+                        analytics.load = function (t, e) {
+                            var n = document.createElement("script");
+                            n.type = "text/javascript";
+                            n.async = !0;
+                            n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
+                            var a = document.getElementsByTagName("script")[0];
+                            a.parentNode.insertBefore(n, a);
+                            analytics._loadOptions = e;
+                        };
+                        analytics.SNIPPET_VERSION = "4.1.0";
+                        analytics.load("UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u");
+                        analytics.page();
+                    }
+            })();
         </script>
 
         <!-- Zoominfo Websights -->
         <script>
-        (function() {
-        var zi = document.createElement('script');
-        zi.type = 'text/javascript';
-        zi.async = true;
-        zi.referrerPolicy = 'unsafe-url';
-        zi.src = 'https://ws.zoominfo.com/pixel/61f9917376ed81001a80e653';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(zi, s);
-        })();
+            (function () {
+                var zi = document.createElement("script");
+                zi.type = "text/javascript";
+                zi.async = true;
+                zi.referrerPolicy = "unsafe-url";
+                zi.src = "https://ws.zoominfo.com/pixel/61f9917376ed81001a80e653";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(zi, s);
+            })();
         </script>
 
         <!-- Facebook Domain Verification -->
         <meta name="facebook-domain-verification" content="phlf6qes2bxa9ufzk8zt2es0qivg8j" />
     {{- end }}
 
+
     <!-- Apply anchor links to headings in the docs, blog and taxonomy pages. -->
     {{ if and (not .IsHome) (.Section) (in "docs blog authors tags registry" .Section) }}
         <script async defer src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
         <script>
             // Wait for the window's `load` event to ensure the deferred anchor.js script has finished loading as well.
-            window.addEventListener("load", function(event) {
+            window.addEventListener("load", function (event) {
                 if (anchors) {
                     anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
                 }

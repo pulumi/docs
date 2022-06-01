@@ -17,7 +17,7 @@
                     <article class="pb-16 mb-16 border-b border-gray-300 md:flex items-start">
                         <div class="mb-8 md:mb-0 md:pt-2 px-8 md:w-1/3">
                             <a href="{{ .RelPermalink }}">
-                                <img class="md:block w-40 md:w-48 mx-auto" src="{{ .Params.customer_logo }}" alt="{{ .Params.customer_name }} logo">
+                                <img class="md:block w-40 md:w-48 mx-auto" src="{{ .Params.customer_logo }}" alt="{{ .Params.customer_name }} logo" />
                             </a>
                         </div>
                         <div class="md:w-2/3">
@@ -34,22 +34,21 @@
                 </li>
             {{ end }}
 
+
             <li class="m-0 p-0">
                 <article class="md:flex items-start">
                     <div class="mb-8 md:mb-0 md:pt-2 px-8 md:w-1/3">
                         <a href="{{ relref . "/blog/kenshoo-migrates-to-aws-with-pulumi" }}">
-                            <img class="md:block w-40 md:w-48 mx-auto" src="/logos/customers/skai-logo.svg" alt="Skai logo">
+                            <img class="md:block w-40 md:w-48 mx-auto" src="/logos/customers/skai-logo.svg" alt="Skai logo" />
                         </a>
                     </div>
                     <div class="md:w-2/3">
                         <h5 class="leading-none">
-                            <a class="link" href="{{ relref . "/blog/kenshoo-migrates-to-aws-with-pulumi" }}">
-                                Skai
-                            </a>
+                            <a class="link" href="{{ relref . "/blog/kenshoo-migrates-to-aws-with-pulumi" }}"> Skai </a>
                         </h5>
                         <p class="mb-0">
-                            Skai selected Pulumi as their IaC framework of choice due to its native programmatic nature,
-                            an endless number of modules, and the ability to customize the solution.
+                            Skai selected Pulumi as their IaC framework of choice due to its native programmatic nature, an endless number of modules, and the ability to customize
+                            the solution.
                         </p>
                     </div>
                 </article>

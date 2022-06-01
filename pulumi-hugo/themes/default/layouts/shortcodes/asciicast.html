@@ -1,9 +1,9 @@
-{{/*
-    Use this shortcode to embed an asciicast hosted on https://asciinema.org.
+{{/* Use this shortcode to embed an asciicast hosted on https://asciinema.org.
     For configuration details, see https://asciinema.org/docs/embedding.
 
     Example:
-    {{< asciicast id="abc123" speed="2" autoplay="true" >}}
+    {{< asciicast id="abc123" speed="2" autoplay="true"
+>}}
 */}}
 <script
     id="asciicast-{{ .Get "id" }}"
@@ -16,4 +16,5 @@
     data-size="{{ default "small" (.Get "size") }}"
     data-theme="{{ default "tango" (.Get "theme") }}"
     data-rows="{{ default 28 (.Get "rows") }}"
-    async></script>
+    async
+></script>

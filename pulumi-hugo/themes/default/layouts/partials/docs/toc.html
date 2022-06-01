@@ -14,7 +14,7 @@
             {{ $sidenav_selected := "" }}
             {{ $toc_name := . }}
             {{ $toc_menu := (index $toc_menus $toc_name) }}
-            
+
             {{ $toc_section_link := "" }}
             {{ range $toc_menu }}
                 {{ if (eq .Name "Overview") }}
@@ -25,14 +25,15 @@
             {{ if (eq $.Page.RelPermalink $toc_section_link) }}
                 {{ $sidenav_selected = "active" }}
             {{ end }}
-            
+
+
             <span>
                 {{ if $toc_section_link }}
                     <a href="{{ $toc_section_link }}" class="{{ $sidenav_selected }}">{{ $toc_name }}</a>
-                    {{ else }}
+                {{ else }}
                     {{ $toc_name }}
                 {{ end }}
-                {{ if ne (add $index 1) (len $toc_sections)}}
+                {{ if ne (add $index 1) (len $toc_sections) }}
                     <span class="text-gray-500">/</span>
                 {{ end }}
             </span>
@@ -49,6 +50,7 @@
                     {{ $toc_section_link = .URL }}
                 {{ end }}
             {{ end }}
+
 
             <h5 class="no-anchor toc-header" id="{{ $toc_name | urlize }}-toc-header">
                 {{ if $toc_section_link }}
@@ -79,6 +81,7 @@
                 {{ $toggle_state = "toggleVisible" }}
             {{ end }}
 
+
             <ul class="{{ $toggle_state }}">
                 <ul class="collapsed">
                     <li class="sidenav-topic {{ $sidenav_selected }}">
@@ -91,7 +94,7 @@
                     </li>
                 </ul>
                 <ul class="expanded">
-                    <li class="sidenav-topic {{ if .HasChildren }} sidenav-parent {{ end }} {{ $sidenav_selected }}">
+                    <li class="sidenav-topic {{ if .HasChildren }}sidenav-parent{{ end }} {{ $sidenav_selected }}">
                         <a href="{{ .URL }}" data-track="toc-{{ .Name | urlize }}">{{ .Name }}</a>
                         {{- if .HasChildren -}}
                             <span class="toggleButton">

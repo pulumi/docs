@@ -3,12 +3,15 @@
     {{ $h1Class = "small-title" }}
 {{ end }}
 
+
 <header class="page-hero">
     <div class="dot-background-container">
         <div class="dot-background"></div>
     </div>
     <div class="dot-overlay"></div>
     <div class="page-hero-title">
-        <h1 class="{{ $h1Class }}"><span><span class="rainbow-text" data-text={{ .title }}>{{ .title }}</span></span></h1>
+        <h1 class="{{ $h1Class }}">
+            <span><span class="rainbow-text" data-text="{{ .title }}">{{ .title }}</span></span>
+        </h1>
     </div>
 </header>

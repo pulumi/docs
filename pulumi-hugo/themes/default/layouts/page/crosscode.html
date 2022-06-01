@@ -5,6 +5,7 @@
 {{ define "main" }}
     {{ $pageContext := . }}
 
+
     <section id="crosscode-overview" class="relative">
         <div class="shape-background crosscode-overview">
             <div class="relative w-full h-full">
@@ -16,7 +17,7 @@
                 <p>{{ .Params.description | markdownify }}</p>
             </div>
             <div>
-                <img src="/images/product/cloud-engineering-platform.png" alt="Pulumi Cloud Engineering Platform">
+                <img src="/images/product/cloud-engineering-platform.png" alt="Pulumi Cloud Engineering Platform" />
             </div>
         </div>
     </section>
@@ -49,7 +50,7 @@
                         </div>
                     {{ end }}
                 </div>
-            {{ end}}
+            {{ end }}
         </div>
     </section>
 
@@ -64,6 +65,6 @@
                     </div>
                 </div>
             </div>
-        {{end}}
+        {{ end }}
     </section>
 {{ end }}

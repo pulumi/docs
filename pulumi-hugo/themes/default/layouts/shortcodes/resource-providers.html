@@ -1,7 +1,9 @@
 {{- /* Takes a list of package names and displays them as a tiled list. Limited to those defined as pages
-of the API Reference section so that we can use the additional metadata that goes along with them. */ -}}
+    of the API Reference section so that we can use the additional metadata that goes along with them. */
+-}}
 
 {{ $site := .Site }}
+
 
 <div class="tiles flex-wrap">
     {{ $pkgs := split (.Get 0) "," }}
@@ -13,7 +15,7 @@ of the API Reference section so that we can use the additional metadata that goe
             <div class="md:w-1/2 lg:w-1/3 xl:w-1/4 p-2">
                 <a class="tile p-6 font-display font-semibold text-lg" href="{{ .RelPermalink }}" title="{{ .Title }} resource documentation">
                     {{ if eq $useLogo true }}
-                        <img class="h-10 mx-auto text-center" src="/logos/pkg/{{ $pkg }}.svg" alt="{{ .Title }}">
+                        <img class="h-10 mx-auto text-center" src="/logos/pkg/{{ $pkg }}.svg" alt="{{ .Title }}" />
                     {{ else }}
                         <div class="text-center">{{ .Title }}</div>
                     {{ end }}

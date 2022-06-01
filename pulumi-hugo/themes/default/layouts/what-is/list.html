@@ -1,13 +1,15 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" .Params.title )}}
+    {{ partial "hero" (dict "title" .Params.title ) }}
 {{ end }}
 
 {{ define "main" }}
     <!-- Set the page context in a variable in a loop. -->
     {{ $pageContext := . }}
 
+
     <!-- Grab the webinar and event page data. -->
     {{ $topics := (where (where $.Site.Pages "Type" "what-is") "Title" "ne" "What Is?") }}
+
 
     <div class="container mx-auto py-16">
         <h2>Topics</h2>

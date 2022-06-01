@@ -4,28 +4,19 @@
         <div class="flex items-center">
             <a id="docsFeedbackYes" data-track="feedback-yes" class="flex items-center cursor-pointer hover:text-gray-700">
                 <i class="fas fa-thumbs-up mr-2"></i>
-                <span>
-                    Yes
-                </span>
+                <span> Yes </span>
             </a>
             <a id="docsFeedbackNo" data-track="feedback-no" class="flex items-center cursor-pointer ml-4 hover:text-gray-700">
                 <i class="fas fa-thumbs-down mr-2"></i>
-                <span>
-                    No
-                </span>
+                <span> No </span>
             </a>
         </div>
     </div>
     <div id="feedbackThankYou" class="hidden">
         {{ $problemTitle := printf "Issue with %s" .Permalink }}
         {{ $improvementTitle := printf "Improvement for %s" .Permalink }}
-        <p>
-            Thank you for your feedback!
-        </p>
-        <p>
-            If you have a question about how
-            to use Pulumi, reach out in <a href="https://slack.pulumi.com/">Community Slack</a>.
-        </p>
+        <p>Thank you for your feedback!</p>
+        <p>If you have a question about how to use Pulumi, reach out in <a href="https://slack.pulumi.com/">Community Slack</a>.</p>
         <p>
             Open an issue on GitHub to
             <a href="https://github.com/pulumi/docs/issues/new?title={{ $problemTitle }}">report a problem</a> or
@@ -40,7 +31,12 @@
                 </div>
                 <div class="p-5 pt-0">
                     <p>Thank you for your feedback! If you would like to provide additional feedback, please let us know your thoughts below.</p>
-                    <textarea id="feedbackAdditionalComments" rows="5" class="mb-3 w-full p-2 bg-white rounded border border-gray-500 outline-none" placeholder="Additional Comments"></textarea>
+                    <textarea
+                        id="feedbackAdditionalComments"
+                        rows="5"
+                        class="mb-3 w-full p-2 bg-white rounded border border-gray-500 outline-none"
+                        placeholder="Additional Comments"
+                    ></textarea>
                     <input id="feedbackEmail" type="email" class="block mb-4 w-full p-2 rounded border border-gray-500 outline-none" placeholder="Email (optional)" />
                     <a id="docsSubmitFeedback" class="btn md:w-1/4 mb-3 text-center block md:inline-block">Submit</a>
                     <a id="docsCloseFeedbackLongForm" class="cursor-pointer md:inline-block md:w-1/4 text-center block">Close</a>

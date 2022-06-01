@@ -2,7 +2,8 @@
     <li>
         <i class="fas fa-book text-center w-6 text-gray-500"></i>
         {{ $topicCount := len (.module.CurrentSection.Pages) }}
-        {{ $topicCount }} topic{{ if ne $topicCount 1 }}s{{ end }}
+        {{ $topicCount }}
+        topic{{ if ne $topicCount 1 }}s{{ end }}
     </li>
     <li>
         {{ $timeToComplete := 0 }}

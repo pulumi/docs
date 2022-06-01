@@ -1,221 +1,221 @@
 entries:
-    - term: Build
-      description: |
-          As a verb, to compile your source code into an executable binary. As a noun, a
-          version of your application as an executable binary.
+  - term: Build
+    description: |
+      As a verb, to compile your source code into an executable binary. As a noun, a
+      version of your application as an executable binary.
 
-    - term: CI/CD
-      description: |
-          The combination of Continuous Integration and either Continuous Deployment or
-          Continuous Delivery. Broadly, this is the term for a set of tools and behaviors
-          that allow you to automate everything that occurs between committing code and
-          either delivering or deploying your application, including building, testing,
-          vulnerability scanning, and promotion from development to production.
+  - term: CI/CD
+    description: |
+      The combination of Continuous Integration and either Continuous Deployment or
+      Continuous Delivery. Broadly, this is the term for a set of tools and behaviors
+      that allow you to automate everything that occurs between committing code and
+      either delivering or deploying your application, including building, testing,
+      vulnerability scanning, and promotion from development to production.
 
-    - term: Cloud Engineering
-      description: |
-          A software development methodology wherein application development and delivery
-          relies heavily on the use of cloud-based services and resources, rather than
-          in-house or on-prem services such as hosting.
+  - term: Cloud Engineering
+    description: |
+      A software development methodology wherein application development and delivery
+      relies heavily on the use of cloud-based services and resources, rather than
+      in-house or on-prem services such as hosting.
 
-    - term: Compiler
-      description: |
-          A tool that translates an entire application written in one higher-level
-          programming language into another lower-level language so that it can be
-          executed. Examples of compiled languages are C, C++, and Go.
+  - term: Compiler
+    description: |
+      A tool that translates an entire application written in one higher-level
+      programming language into another lower-level language so that it can be
+      executed. Examples of compiled languages are C, C++, and Go.
 
-    - term: Container
-      description: |
-          A virtualized operating system environment that includes your application and
-          its dependencies, allowing you to have a greater level of confidence that it
-          will run no matter where it's deployed.
+  - term: Container
+    description: |
+      A virtualized operating system environment that includes your application and
+      its dependencies, allowing you to have a greater level of confidence that it
+      will run no matter where it's deployed.
 
-    - term: Continuous Delivery
-      description: |
-          A philosophy that your software updates should be continuously delivered to the
-          target, although deployment to the user is still triggered manually, allowing
-          you to deploy quickly and often. Quality gates like testing are performed
-          automatically. Continuous Delivery requires Continuous Integration.
+  - term: Continuous Delivery
+    description: |
+      A philosophy that your software updates should be continuously delivered to the
+      target, although deployment to the user is still triggered manually, allowing
+      you to deploy quickly and often. Quality gates like testing are performed
+      automatically. Continuous Delivery requires Continuous Integration.
 
-    - term: Continuous Deployment
-      description: |
-          Like Continuous Delivery, a philosophy that your software updates should be
-          continuously delivered to the target. However, Continuous Deployment goes one
-          step further and says that your updates should be automatically deployed without
-          human interference as well. Also requires Continuous Integration.
+  - term: Continuous Deployment
+    description: |
+      Like Continuous Delivery, a philosophy that your software updates should be
+      continuously delivered to the target. However, Continuous Deployment goes one
+      step further and says that your updates should be automatically deployed without
+      human interference as well. Also requires Continuous Integration.
 
-    - term: Continuous Integration
-      description: |
-          Enabled by a Continuous Integration tool like CircleCI, merging all developers’
-          working codebase with the source, multiple times a day. Doing this requires a
-          series of automated build and unit tests to ensure none of the proposed changes
-          cause problems, but the result is that bugs and integration issues are
-          discovered much earlier in the development process. Ideally, a build is
-          triggered with every single commit, so that failures are caught by the developer
-          immediately and corrected.
+  - term: Continuous Integration
+    description: |
+      Enabled by a Continuous Integration tool like CircleCI, merging all developers’
+      working codebase with the source, multiple times a day. Doing this requires a
+      series of automated build and unit tests to ensure none of the proposed changes
+      cause problems, but the result is that bugs and integration issues are
+      discovered much earlier in the development process. Ideally, a build is
+      triggered with every single commit, so that failures are caught by the developer
+      immediately and corrected.
 
-    - term: Continuous Verification
-      description: |
-          Like Continuous Integration, this means merging all developers’ working codebase
-          with source multiple times a day, and running a series of automated build and
-          unit tests. However, it also includes testing infrastructure, applying policies,
-          and spinning up and testing ephemeral environments.
+  - term: Continuous Verification
+    description: |
+      Like Continuous Integration, this means merging all developers’ working codebase
+      with source multiple times a day, and running a series of automated build and
+      unit tests. However, it also includes testing infrastructure, applying policies,
+      and spinning up and testing ephemeral environments.
 
-    - term: Database Cache
-      description: |
-          A database cache is supplementary to your primary database, either built into your 
-          database itself or as an additional layer. It exists to radically speed up read 
-          access to frequently-queried data and reduce pressure on the primary database, 
-          allowing you to scale while consuming fewer resources. Caches exist for both 
-          relational and non-relational databases. These solutions frequently use a key-value 
-          data structure.
-      link: cache-database
+  - term: Database Cache
+    description: |
+      A database cache is supplementary to your primary database, either built into your 
+      database itself or as an additional layer. It exists to radically speed up read 
+      access to frequently-queried data and reduce pressure on the primary database, 
+      allowing you to scale while consuming fewer resources. Caches exist for both 
+      relational and non-relational databases. These solutions frequently use a key-value 
+      data structure.
+    link: cache-database
 
-    - term: Dependency
-      description: |
-          Code, libraries, or tools that your application relies on to operate. May or
-          may not be written by a third party.
+  - term: Dependency
+    description: |
+      Code, libraries, or tools that your application relies on to operate. May or
+      may not be written by a third party.
 
-    - term: DevOps
-      description: |
-          DevOps is the term for the union of the development team and the IT operations
-          team, through the use of a specific set of practices and toolchains. Rather than
-          having the development and operations team handle their own specific
-          responsibilities independently of one another, the two teams should work
-          together. This is both a cultural change and a technology change, with the
-          ultimate goal of drastically shortening the amount of time it takes the team to
-          deliver software. The result is more frequent software deployments, deploying
-          bad updates less frequently, and being able to recover from bad updates faster.
-          CI/CD is a core concept of DevOps.
+  - term: DevOps
+    description: |
+      DevOps is the term for the union of the development team and the IT operations
+      team, through the use of a specific set of practices and toolchains. Rather than
+      having the development and operations team handle their own specific
+      responsibilities independently of one another, the two teams should work
+      together. This is both a cultural change and a technology change, with the
+      ultimate goal of drastically shortening the amount of time it takes the team to
+      deliver software. The result is more frequent software deployments, deploying
+      bad updates less frequently, and being able to recover from bad updates faster.
+      CI/CD is a core concept of DevOps.
 
-    - term: Docker
-      description: |
-          A virtualization tool that allows you to deliver your software in a particular
-          type of package called a container, which includes an operating system.
+  - term: Docker
+    description: |
+      A virtualization tool that allows you to deliver your software in a particular
+      type of package called a container, which includes an operating system.
 
-    - term: Elastic Container Service
-      description: |
-          A managed container orchestration tool on AWS, allowing for the deployment and 
-          automated management of containerized applications.
-      link: aws-ecs
+  - term: Elastic Container Service
+    description: |
+      A managed container orchestration tool on AWS, allowing for the deployment and 
+      automated management of containerized applications.
+    link: aws-ecs
 
-    - term: Elastic Kubernetes Service
-      description: |
-          A managed Kubernetes service on AWS, allowing you to run your containerized 
-          workloads on Kubernetes without the overhead of managing it yourself.
-      link: aws-eks
+  - term: Elastic Kubernetes Service
+    description: |
+      A managed Kubernetes service on AWS, allowing you to run your containerized 
+      workloads on Kubernetes without the overhead of managing it yourself.
+    link: aws-eks
 
-    - term: Fargate
-      description: |
-          A serverless compute product from AWS, designed for use with containerized workloads.
-      link: aws-fargate
+  - term: Fargate
+    description: |
+      A serverless compute product from AWS, designed for use with containerized workloads.
+    link: aws-fargate
 
-    - term: Helm
-      description: |
-          A package manager for Kubernetes. Written in YAML, a Helm chart allows you to
-          define, install, and upgrade complex Kubernetes applications.
+  - term: Helm
+    description: |
+      A package manager for Kubernetes. Written in YAML, a Helm chart allows you to
+      define, install, and upgrade complex Kubernetes applications.
 
-    - term: Infrastructure as Code
-      description: |
-          A tool that allows you to manage and provision infrastructure such as containers
-          and network configuration through your code, in a way that can be versioned just
-          like your code, rather than handling your infrastructure separately through an
-          interactive tool or dashboard. Pulumi is an Infrastructure as Code tool.
+  - term: Infrastructure as Code
+    description: |
+      A tool that allows you to manage and provision infrastructure such as containers
+      and network configuration through your code, in a way that can be versioned just
+      like your code, rather than handling your infrastructure separately through an
+      interactive tool or dashboard. Pulumi is an Infrastructure as Code tool.
 
-    - term: Integration Tests
-      description: |
-          A type of testing that verifies entire parts of an application work when
-          combined with other parts of an application.
+  - term: Integration Tests
+    description: |
+      A type of testing that verifies entire parts of an application work when
+      combined with other parts of an application.
 
-    - term: Interpreter
-      description: |
-          A tool that translates source code in a higher-level language into a lower-level
-          language for execution, line-by-line, at runtime. JavaScript, Lisp, and Ruby are
-          examples of interpreted languages. Technically, Python is compiled to bytecode
-          before being interpreted by CPython.
+  - term: Interpreter
+    description: |
+      A tool that translates source code in a higher-level language into a lower-level
+      language for execution, line-by-line, at runtime. JavaScript, Lisp, and Ruby are
+      examples of interpreted languages. Technically, Python is compiled to bytecode
+      before being interpreted by CPython.
 
-    - term: Kubernetes
-      description: |
-          A container orchestration tool designed to make the deployment and management of
-          containerized applications easier. Think of it like the thing that helps you
-          define which shipping containers go where on a barge.
+  - term: Kubernetes
+    description: |
+      A container orchestration tool designed to make the deployment and management of
+      containerized applications easier. Think of it like the thing that helps you
+      define which shipping containers go where on a barge.
 
-    - term: Lambda
-      description: |
-          A serverless platform on AWS, allowing for the execution of code or containers 
-          without the need to provision infrastructure yourself.
-      link: aws-lambda
+  - term: Lambda
+    description: |
+      A serverless platform on AWS, allowing for the execution of code or containers 
+      without the need to provision infrastructure yourself.
+    link: aws-lambda
 
-    - term: Microservice
-      description: |
-          A software development architecture that breaks your application up into
-          multiple independent services that interact with one another. Each service
-          performs a specific task, and may have its own resources such as a database.
+  - term: Microservice
+    description: |
+      A software development architecture that breaks your application up into
+      multiple independent services that interact with one another. Each service
+      performs a specific task, and may have its own resources such as a database.
 
-    - term: Monolith
-      description: |
-          A software development architecture wherein your application is built as a
-          single unit -- front-end, back-end, and database. Until fairly recently, this is
-          how all software was written.
+  - term: Monolith
+    description: |
+      A software development architecture wherein your application is built as a
+      single unit -- front-end, back-end, and database. Until fairly recently, this is
+      how all software was written.
 
-    - term: NoSQL Database
-      description: |
-          A type of database that does not store its data in tables. Also called
-          non-relational databases, NoSQL databases can be [document-based](/learn/glossary/document-oriented) (like MongoDB),
-          [column-based](/learn/glossary/column-oriented) (like Apache Cassandra), [graph-based](/learn/glossary/graph-oriented) (like Neo4j), or [key-value](/learn/glossary/key-value)
-          (like DynamoDB).
-      link: nosql
+  - term: NoSQL Database
+    description: |
+      A type of database that does not store its data in tables. Also called
+      non-relational databases, NoSQL databases can be [document-based](/learn/glossary/document-oriented) (like MongoDB),
+      [column-based](/learn/glossary/column-oriented) (like Apache Cassandra), [graph-based](/learn/glossary/graph-oriented) (like Neo4j), or [key-value](/learn/glossary/key-value)
+      (like DynamoDB).
+    link: nosql
 
-    - term: Policy as Code
-      description: |
-          Allows you to define and enforce business and security policies for your
-          application through the use of a programming language, similar to Infrastructure as Code.
+  - term: Policy as Code
+    description: |
+      Allows you to define and enforce business and security policies for your
+      application through the use of a programming language, similar to Infrastructure as Code.
 
-    - term: Relational Database
-      description: |
-          A type of database that stores its data organized into tables, made up of
-          columns and rows. Commonly, multiple tables are involved, each containing data
-          of a specific category (e.g., a table of users and a table of books), with
-          primary and foreign keys for each entry being used to describe the relationship
-          between entries (which books a user owns, for example). An example of a
-          relational database is PostgreSQL.
+  - term: Relational Database
+    description: |
+      A type of database that stores its data organized into tables, made up of
+      columns and rows. Commonly, multiple tables are involved, each containing data
+      of a specific category (e.g., a table of users and a table of books), with
+      primary and foreign keys for each entry being used to describe the relationship
+      between entries (which books a user owns, for example). An example of a
+      relational database is PostgreSQL.
 
-    - term: Serverless
-      description: |
-          A cloud computing model in which resources are allocated to an application on an
-          as-needed basis, rather than the "always on" model of more classic cloud computing.
-          Users do not need configure or maintain the servers their applications are running
-          on, and billing is typically based exclusively on the resources consumed by the
-          application while it is in use.
+  - term: Serverless
+    description: |
+      A cloud computing model in which resources are allocated to an application on an
+      as-needed basis, rather than the "always on" model of more classic cloud computing.
+      Users do not need configure or maintain the servers their applications are running
+      on, and billing is typically based exclusively on the resources consumed by the
+      application while it is in use.
 
-    - term: Service Mesh
-      description: |
-          A tool that makes it easier to monitor and control the flow of information
-          between the microservices that make up your application. This is part of your
-          infrastructure. Istio is an example of a service mesh.
+  - term: Service Mesh
+    description: |
+      A tool that makes it easier to monitor and control the flow of information
+      between the microservices that make up your application. This is part of your
+      infrastructure. Istio is an example of a service mesh.
 
-    - term: SDLC
-      description: |
-          Often-used shorthand for Software Development Lifecycle, which is the processes
-          and tools involved in writing and delivering software.
+  - term: SDLC
+    description: |
+      Often-used shorthand for Software Development Lifecycle, which is the processes
+      and tools involved in writing and delivering software.
 
-    - term: SLO
-      description: |
-          A part of a Service Level Agreement that defines measurable characteristics for
-          the performance of the service provider, such as incident response time, availability,
-          and support response time.
+  - term: SLO
+    description: |
+      A part of a Service Level Agreement that defines measurable characteristics for
+      the performance of the service provider, such as incident response time, availability,
+      and support response time.
 
-    - term: Source Control
-      description: |
-          A tool that helps manage your uncompiled source code into repositories. Examples
-          are GitHub or GitLab.
+  - term: Source Control
+    description: |
+      A tool that helps manage your uncompiled source code into repositories. Examples
+      are GitHub or GitLab.
 
-    - term: Unit Tests
-      description: |
-          A type of test that aims to verify functionality within a very specific, narrow
-          scope, e.g., a specific function or class.
+  - term: Unit Tests
+    description: |
+      A type of test that aims to verify functionality within a very specific, narrow
+      scope, e.g., a specific function or class.
 
-    - term: YAML
-      description: |
-          A data serialization language designed to be human-readable, frequently used for
-          configuration files in DevOps and beyond.
+  - term: YAML
+    description: |
+      A data serialization language designed to be human-readable, frequently used for
+      configuration files in DevOps and beyond.

@@ -2,9 +2,10 @@
 {{ $modules := where $sectionPages ".Layout" "module" }}
 {{ $optionalModule := .module }}
 
+
 <ul class="p-0">
     {{ range sort $modules ".Params.index" }}
-        <li class="list-none px-4 p-2 {{ if eq $optionalModule . }} font-bold {{ end }}">
+        <li class="list-none px-4 p-2 {{ if eq $optionalModule . }}font-bold{{ end }}">
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         </li>
     {{ end }}

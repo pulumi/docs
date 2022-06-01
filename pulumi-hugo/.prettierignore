@@ -1,0 +1,11 @@
+_vendor
+node_modules
+/resources
+themes/*/resources
+public
+.idea
+.vscode
+.DS_Store
+yarn-error.log
+.hugo_build.lock
+*.md

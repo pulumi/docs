@@ -2,9 +2,8 @@
     {{ partial "hero" (dict "title" "Convert Your Terraform to Pulumi") }}
     <section class="mx-auto px-4 py-8 lg:p-16">
         <p class="text-center mt-4 mb-16 max-w-3xl text-xl text-gray-800 mx-auto">
-            If you already have some Terraform and want to see what it would look like
-            in your favorite language, we've got you covered. This
-            conversion tool will do the magic of translating your HCL into modern code using Pulumi.
+            If you already have some Terraform and want to see what it would look like in your favorite language, we've got you covered. This conversion tool will do the magic of
+            translating your HCL into modern code using Pulumi.
         </p>
         <div class="container container-2xl mx-auto">
             {{ partial "convert" (dict "from" "tf" "examples" .Params.examples ) }}
@@ -15,41 +14,35 @@
 {{ define "main" }}
     {{ partial "get-started.html" . }}
 
+
     <section class="py-16 px-4">
         <div class="container mx-auto max-w-5xl md:flex my-8 align-top justify-center text-center">
             <div class="md:w3-/12 mr-4">
                 <h2>Learn More</h2>
                 <p class="text-xl">
-                    Pulumi is a universal infrastructure as code platform that supports many clouds and many
-                    languages. It supports any Terraform provider in addition to great native providers.
+                    Pulumi is a universal infrastructure as code platform that supports many clouds and many languages. It supports any Terraform provider in addition to great
+                    native providers.
                 </p>
                 <div class="md:flex mx-auto max-w-5xl mb-8 pt-8 text-center">
                     <div class="md:w-1/2 p-4">
-                        <img class="inline-block w-24 mb-4" src="/icons/icon-why-dev-lang.svg">
-                        <h4 class="mt-2 text-3xl">Compare Pulumi to Terraform</h3>
+                        <img class="inline-block w-24 mb-4" src="/icons/icon-why-dev-lang.svg" />
+                        <h4 class="mt-2 text-3xl">Compare Pulumi to Terraform</h4>
                         <p class="text-gray-600 mb-8">
-                            Pulumi is a comprehensive infrastructure as code platform. Instead of using a proprietary
-                            DSLs, you can use the industry's best languages and tools.
+                            Pulumi is a comprehensive infrastructure as code platform. Instead of using a proprietary DSLs, you can use the industry's best languages and tools.
                         </p>
-                        <a class="btn-primary" href="{{ relref . "/docs/intro/vs/terraform" }}">
-                            Learn how they compare
-                        </a>
+                        <a class="btn-primary" href="{{ relref . "/docs/intro/vs/terraform" }}"> Learn how they compare </a>
                     </div>
                     <div class="md:w-1/2 p-4">
-                        <img class="inline-block w-24 mb-4" src="/icons/icon-why-dev-model.svg">
-                        <h4 class="mt-2">Check Out the Tool</h3>
+                        <img class="inline-block w-24 mb-4" src="/icons/icon-why-dev-model.svg" />
+                        <h4 class="mt-2">Check Out the Tool</h4>
                         <p class="text-gray-600 mb-8">
                             The tool that powers this webpage is called <span class="font-mono">tf2pulumi</span>. It's
-                            <a href="https://github.com/pulumi/tf2pulumi">open source</a> and you can download it to
-                            tackle complex conversions, including importing existing resource state.
+                            <a href="https://github.com/pulumi/tf2pulumi">open source</a> and you can download it to tackle complex conversions, including importing existing
+                            resource state.
                         </p>
-                        <a class="btn-secondary"
-                                href="{{ relref . "/docs/guides/adopting/from_terraform#converting-terraform-hcl-to-pulumi" }}">
-                            Learn how to convert
-                        </a>
+                        <a class="btn-secondary" href="{{ relref . "/docs/guides/adopting/from_terraform#converting-terraform-hcl-to-pulumi" }}"> Learn how to convert </a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>

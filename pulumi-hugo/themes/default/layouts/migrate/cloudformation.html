@@ -7,14 +7,10 @@
         <div class="flex flex-wrap container mx-auto">
             <div class="w-full order-last lg:mt-0 lg:order-first lg:w-1/2 px-5 mt-8 lg:mt-0">
                 <h2>Increase productivity with programming languages</h2>
+                <p>AWS CloudFormation provides a configuration DSL for you to describe and provision infrastructure resources on AWS.</p>
                 <p>
-                    AWS CloudFormation provides a configuration DSL for you to describe and
-                    provision infrastructure resources on AWS.
-                </p>
-                <p>
-                    Pulumi enables you to describe the same infrastructure resources as real
-                    code, providing huge productivity gains, while decreasing the brittleness
-                    of YAML-based configuration files.
+                    Pulumi enables you to describe the same infrastructure resources as real code, providing huge productivity gains, while decreasing the brittleness of YAML-based
+                    configuration files.
                 </p>
                 <div>
                     <div class="flex justify-start items-start mt-8">
@@ -26,7 +22,14 @@
                 </div>
             </div>
             <div class="w-full order-first lg:order-last mt-8 lg:mt-0 lg:w-1/2 lg:mt-0 px-2">
-                <iframe class="w-full h-full rounded shadow" style="height: 28rem;" src="https://www.youtube.com/embed/R3OfgFHkj3o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe
+                    class="w-full h-full rounded shadow"
+                    style="height: 28rem;"
+                    src="https://www.youtube.com/embed/R3OfgFHkj3o"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
             </div>
         </div>
     </section>
@@ -39,56 +42,49 @@
         <div class="md:flex my-8">
             <div class="md:w-1/2 md:mr-4">
                 <h3>Creating a Simple Web Server on AWS</h3>
+                <p>In this example, we use JavaScript to create a simple web server on AWS using EC2.</p>
                 <p>
-                    In this example, we use JavaScript to create a simple web server on AWS
-                    using EC2.
+                    This code creates the necessary security group, deploys a very simple web server for example purposes, and then creates the instance, before exporting the IP
+                    and hostname.
                 </p>
+                <p>Pulumi can be used on any resource on AWS, Azure, GCP, Kubernetes, and OpenStack, covering serverless, containers, and infrastructure.</p>
                 <p>
-                    This code creates the necessary security group, deploys a very simple web
-                    server for example purposes, and then creates the instance, before
-                    exporting the IP and hostname.
-                </p>
-                <p>
-                    Pulumi can be used on any resource on AWS, Azure, GCP, Kubernetes, and
-                    OpenStack, covering serverless, containers, and infrastructure.
-                </p>
-                <p>
-                    <a class="link" href="https://github.com/pulumi/examples" target="_blank">Find many
-                    other examples here.</a>
+                    <a class="link" href="https://github.com/pulumi/examples" target="_blank">Find many other examples here.</a>
                 </p>
             </div>
             <div class="md:w-1/2 md:ml:4">
                 {{ $code := `const aws = require("@pulumi/aws");
 
-let size = "t2.micro";
-let ami  = "ami-7172b611"
+                    let size = "t2.micro";
+                    let ami  = "ami-7172b611"
 
-// Create a new security group for port 80.
-let group = new aws.ec2.SecurityGroup("web-secgrp", {
-    ingress: [
-        { protocol: "tcp", fromPort: 22,
-            toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
-        { protocol: "tcp", fromPort: 80,
-            toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
-    ],
-});
+                    // Create a new security group for port 80.
+                    let group = new aws.ec2.SecurityGroup("web-secgrp", {
+                    ingress: [
+                    { protocol: "tcp", fromPort: 22,
+                    toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
+                    { protocol: "tcp", fromPort: 80,
+                    toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
+                    ],
+                    });
 
-// Create a simple web server.
-let userData =
-    "#!/bin/bash \n" +
-    "echo 'Hello, World!' > index.html \n" +
-    "nohup python -m SimpleHTTPServer 80 &";
+                    // Create a simple web server.
+                    let userData =
+                    "#!/bin/bash \n" +
+                    "echo 'Hello, World!' > index.html \n" +
+                    "nohup python -m SimpleHTTPServer 80 &";
 
-let server = new aws.ec2.Instance("web-server-www", {
-    tags: { "Name": "web-server-www" },
-    instanceType: size,
-    securityGroups: [ group.name ],
-    ami: ami,
-    userData: userData
-});
+                    let server = new aws.ec2.Instance("web-server-www", {
+                    tags: { "Name": "web-server-www" },
+                    instanceType: size,
+                    securityGroups: [ group.name ],
+                    ami: ami,
+                    userData: userData
+                    });
 
-exports.publicIp = server.publicIp;
-exports.publicHostName = server.publicDns;` }}
+                    exports.publicIp = server.publicIp;
+                    exports.publicHostName = server.publicDns;`
+                }}
 
                 {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
             </div>
@@ -100,6 +96,7 @@ exports.publicHostName = server.publicDns;` }}
     {{ partial "learning-machine.html" . }}
 
     {{ partial "get-started.html" . }}
+
 
     <div id="contact">
         {{ partial "hand-raise-section" . }}

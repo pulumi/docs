@@ -1,9 +1,7 @@
 {{ define "main" }}
     <div class="container mx-auto flex items-start px-4 md:px-0">
         <div class="md:w-3/12 my-8 sticky-sidebar md:pr-8">
-            <nav>
-
-            </nav>
+            <nav></nav>
         </div>
         <div class="md:w-7/12 my-8">
             <header class="container mx-auto">
@@ -15,7 +13,8 @@
             </section>
 
             {{ $terms := sort $.Site.Data.learn.glossary.entries "term" }}
-            {{ $page := .}}
+            {{ $page := . }}
+
 
             <ul>
                 {{ range $terms }}
@@ -27,7 +26,7 @@
             {{ range $terms }}
                 {{ $anchor := .term | anchorize }}
                 <div class="flex-1 mt-8">
-                    <h2 id="{{ $anchor }}" class="mt-2 mb-0">{{ .term }} </h2>
+                    <h2 id="{{ $anchor }}" class="mt-2 mb-0">{{ .term }}</h2>
                     <p>{{ .description | markdownify }}</p>
 
                     {{ if .link }}
@@ -39,8 +38,6 @@
             {{ end }}
         </div>
 
-        <div class="md:w-2/12 md:ml-8 m8-8 ">
-
-        </div>
+        <div class="md:w-2/12 md:ml-8 m8-8 "></div>
     </div>
 {{ end }}

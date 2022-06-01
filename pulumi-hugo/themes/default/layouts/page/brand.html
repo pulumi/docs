@@ -1,27 +1,24 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" .Params.title )}}
+    {{ partial "hero" (dict "title" .Params.title ) }}
 {{ end }}
 
 {{ define "main" }}
     <nav>
         <div class="container mx-auto">
-            <pulumi-tertiary-nav items={{ .Params.sections | jsonify }}></pulumi-tertiary-nav>
+            <pulumi-tertiary-nav items="{{ .Params.sections | jsonify }}"></pulumi-tertiary-nav>
         </div>
     </nav>
 
     <section id="logos" class="mb-8 px-4 md:px-0 hidden">
         <div class="container mx-auto max-w-4xl pt-8">
             <h2>Pulumi Logos</h2>
-            <p>
-                Logos are available in SVG or PNG format,
-                and are suitable for both print and digital use.
-            </p>
+            <p>Logos are available in SVG or PNG format, and are suitable for both print and digital use.</p>
             <ul class="flex flex-wrap justify-around list-none p-0 pt-8">
                 {{ range .Params.logos }}
                     <li class="text-center md:w-1/2 mb-12">
-                        <div class="rounded {{ if .bg }} bg-gray-900 {{ end }} p-8">
+                        <div class="rounded {{ if .bg }}bg-gray-900{{ end }} p-8">
                             <a class="inline-block w-{{ .size }}" href="/logos/brand/{{ .file }}.svg" download>
-                                <img src="/logos/brand/{{ .file }}.svg" title="{{ .name }}">
+                                <img src="/logos/brand/{{ .file }}.svg" title="{{ .name }}" />
                             </a>
                         </div>
                         <div class="mt-6 flex flex-col sm:flex-row items-center place-content-center">
@@ -41,10 +38,7 @@
     <section id="colors" class="mb-8 px-4 md:px-0 hidden">
         <div class="container mx-auto max-w-4xl py-8">
             <h2>Pulumi Brand Colors</h2>
-            <p>
-                Official Pulumi brand colors, in hexadecimal, RGB, CMYK and Pantone color
-                values.
-            </p>
+            <p>Official Pulumi brand colors, in hexadecimal, RGB, CMYK and Pantone color values.</p>
             <ul class="flex flex-wrap justify-center list-none p-0">
                 {{ range .Params.colors }}
                     <li class="md:w-1/2 md:pr-4">

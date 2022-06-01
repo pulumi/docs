@@ -1,16 +1,12 @@
 {{ define "main" }}
     <div class="container mx-auto px-4 py-8 mt-2">
         <div class="xxl:flex">
-
             <div class="flex flex-col lg:flex-row xxl:w-9/12">
                 <div class="lg:hidden mb-6">
-                    <button class="docs-sidebar-toggle items-center px-3 py-2 border rounded">
-                        Toggle Docs Navigation
-                    </button>
+                    <button class="docs-sidebar-toggle items-center px-3 py-2 border rounded">Toggle Docs Navigation</button>
                 </div>
-                
-                <div
-                    class="docs-sidebar-content hidden lg:block lg:w-1/4 xxl:w-4/12 pr-8 mb-2 pt-8 lg:order-first lg:border-none lg:pt-0 lg:mt-0">
+
+                <div class="docs-sidebar-content hidden lg:block lg:w-1/4 xxl:w-4/12 pr-8 mb-2 pt-8 lg:order-first lg:border-none lg:pt-0 lg:mt-0">
                     <div class="sticky-sidebar">
                         {{ partial "docs/toc.html" . }}
                     </div>
@@ -20,22 +16,19 @@
                     <h1>{{ .Title }}</h1>
 
                     <p>
-                        This reference shows how to use Pulumi to define an AWS {{ .Params.service }}
-                        resource using pure code which can then be deployed to AWS and managed as
-                        infrastructure as code.
+                        This reference shows how to use Pulumi to define an AWS
+                        {{ .Params.service }}
+                        resource using pure code which can then be deployed to AWS and managed as infrastructure as code.
                     </p>
 
                     <h2>What is AWS {{ .Params.service }}?</h2>
 
-
                     <div class="md:flex">
                         <div class="flex-1">
-                            <img class="m-0 p-0" src="/images/docs/brand/aws.png" alt="AWS">
+                            <img class="m-0 p-0" src="/images/docs/brand/aws.png" alt="AWS" />
                         </div>
 
-                        <p class="flex-1 mx-8 mt-0">
-                            AWS {{ .Params.service }} {{ .Params.description }}. Find out more at <a href="{{ .Params.aws_here }}">AWS here</a>.
-                        </p>
+                        <p class="flex-1 mx-8 mt-0">AWS {{ .Params.service }} {{ .Params.description }}. Find out more at <a href="{{ .Params.aws_here }}">AWS here</a>.</p>
 
                         <div class="flex-1">
                             {{ partial "docs/aws/find-out-more.html" . }}
@@ -46,16 +39,15 @@
                 </div>
             </div>
 
-
             <div class="xxl:w-3/12 xxl:pl-8 mt-2 md:order-last">
                 <div class="ml-2 hidden xxl:block">
                     {{ partial "docs/right-nav.html" . }}
                 </div>
-            
+
                 <div>
                     {{ partial "docs/feedback.html" . }}
                 </div>
-            
+
                 {{ partial "right-nav-ad.html" }}
             </div>
         </div>

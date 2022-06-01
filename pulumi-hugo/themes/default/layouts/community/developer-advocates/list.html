@@ -5,9 +5,8 @@
 {{ define "main" }}
     <section class="max-w-4xl container mx-auto py-8 px-4 text-center text-lg">
         <p>
-            The Pulumi Developer Advocate team wants to help you build, manage, and deploy
-            all the things and learn something new along the way. Here's a list of the team
-            and their social media. Need help? We would love to help you accomplish your goals!
+            The Pulumi Developer Advocate team wants to help you build, manage, and deploy all the things and learn something new along the way. Here's a list of the team and their
+            social media. Need help? We would love to help you accomplish your goals!
         </p>
     </section>
 
@@ -21,7 +20,7 @@
                         {{ $authorPage := relref $thisPage (printf "/community/developer-advocates/%s" .id) }}
                         <li class="text-center w-48 mx-4 mb-8">
                             <a href="{{ $authorPage }}">
-                                <img class="rounded mb-4 shadow-md mx-auto" src="/images/team/{{ .id }}.jpg" alt="{{ .name }}" >
+                                <img class="rounded mb-4 shadow-md mx-auto" src="/images/team/{{ .id }}.jpg" alt="{{ .name }}" />
                             </a>
                             <a class="inline-flex" href="{{ $authorPage }}">
                                 <div class="border-2 border-solid border-blue-600 text-blue-600 rounded h-9 w-28 shadow-lg flex items-center justify-center">View Profile</div>
@@ -31,7 +30,7 @@
                             </h2>
                             <div>{{ .title }}</div>
                             <div class="text-center">
-                                {{ partial "widgets/social-icons.html" (dict "social" .social)}}
+                                {{ partial "widgets/social-icons.html" (dict "social" .social) }}
                             </div>
                         </li>
                     {{ end }}
@@ -41,25 +40,22 @@
     </section>
 
     <section id="contact" class="pt-16 px-4">
-      <div class="container mx-auto text-center ">
-          <h2 class="text-4xl my-6">Contact the Developer Advocates!</h2>
-          <div class="w-full md:max-w-2xl md:mx-auto">
-
-              <div class="mt-4 mx-auto md:w-full md:mt-0 p-10 bg-white rounded rounded-lg shadow-lg border border-gray-300">
-                  <div class="mx-auto flex justify-center">
-                      <div class="hs-form hs-form-fg-dark font-normal">
-                        <pulumi-hubspot-form form-id="{{ .Params.form.hubspot_form_id }}"></pulumi-hubspot-form>
-                      </div>
-                  </div>
-              </div>
-
-          </div>
-      </div>
-      <div class="text-center mb-16 mt-8">
-        <p class="mt-8">
-            <img class="mx-auto" src="/images/developer-advocates/backpack-hat-handsup-blue-waterbottle.png" alt="A platypus" />
-        </p>
-    </div>
-  </section>
-
+        <div class="container mx-auto text-center ">
+            <h2 class="text-4xl my-6">Contact the Developer Advocates!</h2>
+            <div class="w-full md:max-w-2xl md:mx-auto">
+                <div class="mt-4 mx-auto md:w-full md:mt-0 p-10 bg-white rounded rounded-lg shadow-lg border border-gray-300">
+                    <div class="mx-auto flex justify-center">
+                        <div class="hs-form hs-form-fg-dark font-normal">
+                            <pulumi-hubspot-form form-id="{{ .Params.form.hubspot_form_id }}"></pulumi-hubspot-form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mb-16 mt-8">
+            <p class="mt-8">
+                <img class="mx-auto" src="/images/developer-advocates/backpack-hat-handsup-blue-waterbottle.png" alt="A platypus" />
+            </p>
+        </div>
+    </section>
 {{ end }}
