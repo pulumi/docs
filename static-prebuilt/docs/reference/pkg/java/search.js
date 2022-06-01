@@ -50,7 +50,7 @@ function getURLPrefix(ui) {
             return ui.item.m + slash;
         } else if ((ui.item.category === catTypes && ui.item.p) || ui.item.category === catMembers) {
             $.each(packageSearchIndex, function(index, item) {
-                if (ui.item.p == item.l) {
+                if (ui.item.p == item.l && item.m !== undefined) {
                     urlPrefix = item.m + slash;
                 }
             });
@@ -314,10 +314,6 @@ $(function() {
                 } else if (ui.item.category === catSearchTags) {
                     url += ui.item.u;
                 }
-
-                // Nastiest (temporary) hack ever, but it works.
-                // https://github.com/pulumi/pulumi-java/issues/595
-                url = url.replace("undefined/", "");
 
                 if (top !== window) {
                     parent.classFrame.location = pathtoroot + url;
