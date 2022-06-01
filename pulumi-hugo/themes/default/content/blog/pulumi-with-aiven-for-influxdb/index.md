@@ -93,7 +93,7 @@ $ pulumi plugin install resource aiven 3.3.2
 ```
 
 - To find out the current version numbers, go to
-[Pulumi changelog](https://github.com/pulumi/pulumi-aws/blob/master/CHANGELOG.md) or  [the Aiven changelog](https://github.com/pulumi/pulumi-aiven/blob/master/CHANGELOG.md).
+[Pulumi changelog](https://github.com/pulumi/pulumi-aws/releases) or the [Aiven changelog](https://github.com/pulumi/pulumi-aiven/blob/master/CHANGELOG.md).
 
 Set your preferred cloud regions and Aiven project name (these defaults are used in the setup script):
 
