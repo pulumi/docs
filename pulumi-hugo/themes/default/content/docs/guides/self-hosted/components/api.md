@@ -168,12 +168,20 @@ Azure Storage account key using the `AZURE_STORAGE_KEY` env var.
 | AZURE_SUBSCRIPTION_ID | (Optional) Subscription ID of the Azure AP. |
 | AZURE_STORAGE_DOMAIN | (Optional) The custom domain for your storage domain, if any. If this is not provided, the default Azure public domain "blob.core.windows.net" will be used. |
 
+### GitLab OAuth
+Only required if using GitLab as the backing identity provider for your organization.
+
+| Variable Name | Description |
+| ------------- | ----------- |
+| GITLAB_OAUTH_ID | GitLab OAuth app client ID. It is used for GitLab OAuth sign in. [Create a new GitLab OAuth app](https://gitlab.com/profile/applications). |
+| GITLAB_OAUTH_SECRET | GitLab OAuth app client secret. See above to create a new GitLab OAuth app. |
+| GITLAB_OAUTH_ENDPOINT | The domain for your GitLab instance. It defaults to `https://gitlab.com`, which should be used unless you are running GitLab on a custom domain. |
+
 ## Other Environment Variables {#other-env-vars}
 
 | Variable Name | Description |
 | ------------- | ----------- |
 | GITHUB_OAUTH_ENDPOINT | Used for GitHub API calls. |
-| GITLAB_OAUTH_ENDPOINT | Used for GitLab API calls. |
 | PULUMI_DATABASE_USER_NAME | Name of the database user the Pulumi Service connects as. Leave default unless you are having trouble connecting to your database.
 | PULUMI_DATABASE_USER_PASSWORD | Password of the database user the Pulumi Service connects as. Leave default unless you are having trouble connecting to your database.
 | PULUMI_DISABLE_EMAIL_LOGIN | When `true` the API will disallow logins using the email/password identity. To hide the email login option from the Console refer to the [email identity configuration]({{< relref "/docs/guides/self-hosted/components/console#email-identity" >}}) for the Console. |

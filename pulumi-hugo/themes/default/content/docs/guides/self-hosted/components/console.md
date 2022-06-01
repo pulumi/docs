@@ -80,7 +80,7 @@ The following are the core environment variables that are required at a minimum.
 | ------------- | ----------- |
 | GITLAB_OAUTH_ID | GitLab OAuth app client ID. Used for GitLab OAuth signins. [Create a new GitLab OAuth app](https://gitlab.com/profile/applications). |
 | GITLAB_OAUTH_SECRET | GitLab OAuth app client secret. See above. |
-| GITLAB_OAUTH_ENDPOINT | |
+| GITLAB_OAUTH_ENDPOINT | The domain for your GitLab instance. It defaults to `https://gitlab.com`, which should be used unless you are running GitLab on a custom domain. |
 
 ### Bitbucket OAuth
 
