@@ -418,7 +418,7 @@ Refer to the API documentation for these libraries for full details on configura
 
 ## Converting Terraform HCL to Pulumi
 
-The [`tf2pulumi`](https://github.com/pulumi/tf2pulumi) tool can convert existing Terraform source code written in the HashiCorp Configuration Language (HCL) into Pulumi source code. In addition to converting source code, this tool also offers the option to [automatically insert import IDs]({{< relref "import" >}}), so that you can also import state during the conversion. This ensures live resources are brought under the control of Pulumi as well as letting you deploy and manage new copies of that inrastruture.
+The [`tf2pulumi`](https://github.com/pulumi/tf2pulumi) tool can convert existing Terraform source code written in the HashiCorp Configuration Language (HCL) into Pulumi source code. In addition to converting source code, this tool also offers the option to [automatically insert import IDs]({{< relref "import" >}}), so that you can also import state during the conversion. This ensures live resources are brought under the control of Pulumi as well as letting you deploy and manage new copies of that infrastructure.
 
 ### How to Use the Tool
 
