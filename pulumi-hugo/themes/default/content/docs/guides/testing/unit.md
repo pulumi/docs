@@ -501,6 +501,17 @@ public async Task InstanceHasNameTag()
     tags.Should().NotBeNull("Tags are not defined");
     tags.Should().ContainKey("Name");
 }
+
+public static Task<T> GetValueAsync<T>(this Output<T> output)
+{
+    var tcs = new TaskCompletionSource<T>();
+    output.Apply(v =>
+    {
+        tcs.SetResult(v);
+        return v;
+    });
+    return tcs.Task;
+}
 ```
 
 {{% /choosable %}}
