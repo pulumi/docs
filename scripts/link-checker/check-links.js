@@ -306,6 +306,9 @@ function excludeAcceptable(links) {
         // intelligently, but we can come back to that in a follow up.
         .filter(b => !(b.reason === "HTTP_429" && b.destination.match(/github.com|npmjs.com/)))
 
+        // Ignore GitHub 403s
+        .filter(b => !(b.reason === "HTTP_403" && b.destination.match(/github.com/)))
+
         // Ignore remote disconnects.
         .filter(b => b.reason !== "ERRNO_ECONNRESET")
 
