@@ -169,6 +169,7 @@ Azure Storage account key using the `AZURE_STORAGE_KEY` env var.
 | AZURE_STORAGE_DOMAIN | (Optional) The custom domain for your storage domain, if any. If this is not provided, the default Azure public domain "blob.core.windows.net" will be used. |
 
 ### GitLab OAuth
+
 Only required if using GitLab as the backing identity provider for your organization.
 
 | Variable Name | Description |
