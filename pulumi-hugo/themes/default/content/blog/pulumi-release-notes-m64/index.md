@@ -207,7 +207,7 @@ We shipped new versions of the Azure Native provider (1.43.0 through 1.45.0) tha
 
 ## Pulumi CLI and core technologies
 
-In this milestone, we shipped Pulumi versions [3.16.1](https://github.com/pulumi/pulumi/releases/tag/v3.16.1) through [3.17.0](https://github.com/pulumi/pulumi/releases/tag/v3.17.0). The full list of changes in each version is available in the [changelog](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md); read on to learn about some of the biggest changes.
+In this milestone, we shipped Pulumi version [3.17.0](https://github.com/pulumi/pulumi/releases/tag/v3.17.0). The full list of changes in this version is available in the [changelog](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md); read on to learn about some of the biggest changes.
 
 ### Functions now support outputs
 
