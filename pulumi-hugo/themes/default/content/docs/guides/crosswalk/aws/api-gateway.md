@@ -836,7 +836,7 @@ For additional information about request validation, refer to [Enable Request Va
 {{% notes type="info" %}}
 
 Request body validation is currently not supported. If you have a need for it, we would love to hear from you.
-Comment on [this open issue](https://github.com/pulumi/pulumi-awsx/issues/198) with details about your use case.
+Comment on [this open issue](https://github.com/pulumi/pulumi-aws-apigateway/issues/36) with details about your use case.
 
 {{% /notes %}}
 
