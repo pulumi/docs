@@ -1,0 +1,9 @@
+{{ $file := .Get "file" }}
+<div class="border-solid border-t border-gray-300 pt-2">
+    <h6 class="nohighlight">
+        <span class="font-mono">{{ $file }}</span>
+    </h6>
+    <div>
+        {{- .Inner | markdownify -}}
+    </div>
+</div>
