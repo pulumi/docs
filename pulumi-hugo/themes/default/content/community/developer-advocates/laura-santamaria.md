@@ -6,6 +6,7 @@ meta_desc: Laura Santamaria is a member of the Developer Advocacy team at Pulumi
 layout: developer-advocates/single
 aliases:
   - /laura
+  - /nimbinatus
 talks:
   - event: PyTexas 2022
     title: Stand Back! Building a scientific computing lab on public clouds with Python.
