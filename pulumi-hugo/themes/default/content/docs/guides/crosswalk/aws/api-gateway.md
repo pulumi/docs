@@ -117,7 +117,7 @@ export const url = api.url;
 ```python
 import pulumi
 import pulumi_aws as aws
-import pulumi_apigateway as apigateway
+import pulumi_aws_apigateway as apigateway
 
 # Create a Lambda Function
 # helloHandler = aws.lambda_.Function(...)
