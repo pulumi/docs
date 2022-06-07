@@ -3,39 +3,52 @@
 {{ end }}
 
 {{ define "main" }}
-    <section id="overview" class="max-w-4xl mx-auto px-2 my-16">
-        <div class="text-center px-3 container mx-auto">
-            <div>
-                <h2>Increase productivity with programming languages</h2>
-                <p>Terraform uses a proprietary DSL called HCL to describe and provision infrastructure resources.</p>
-                <p>
-                    In Pulumi, you describe infrastructure using familiar languages and tools, providing productivity gains, better abstraction and reuse, and developer
-                    approachability &mdash; while still supporting robust infrastructure as code provisioning across many clouds.
-                </p>
+    <section id="overview" class="container mx-auto px-2 my-16">
+        <div class="flex flex-wrap">
+            <div class="w-full lg:w-1/2 p-6">
+                <div>
+                    <h2>Increase productivity with programming languages</h2>
+                    <p>Terraform uses a proprietary DSL called HCL to describe and provision infrastructure resources.</p>
+                    <p>
+                        In Pulumi, you describe infrastructure using familiar languages and tools, providing productivity gains, better abstraction and reuse, and developer
+                        approachability &mdash; while still supporting robust infrastructure as code provisioning across many clouds.
+                    </p>
+                </div>
+                <div class="max-w-2xl mx-auto">
+                    <div class="py-8 px-16" style="flex-direction: column">
+                        <h4>Automating your migration</h4>
+                        <ul class="text-left">
+                            <li class="my-4">
+                                <a href="{{ relref . "/blog/using-terraform-remote-state-with-pulumi" }}" class="link">
+                                    <strong>Coexist</strong>
+                                    with Terraform, by using remote state from Pulumi
+                                </a>
+                            </li>
+                            <li class="my-4">
+                                <a href="{{ relref . "/blog/from-terraform-to-infrastructure-as-software" }}" class="link">
+                                    <strong>Convert</strong>
+                                    HCL to Pulumi code
+                                </a>
+                            </li>
+                            <li class="my-4">
+                                <a href="{{ relref . "/blog/adopting-existing-cloud-resources-into-pulumi" }}" class="link">
+                                    <strong>Adopt</strong>
+                                    existing resource state into Pulumi
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="max-w-2xl mx-auto">
-                <div class="py-8 px-16" style="flex-direction: column">
-                    <h4>Automating your migration</h4>
-                    <ul class="text-left">
-                        <li class="my-4">
-                            <a href="{{ relref . "/blog/using-terraform-remote-state-with-pulumi" }}" class="link">
-                                <strong>Coexist</strong>
-                                with Terraform, by using remote state from Pulumi
-                            </a>
-                        </li>
-                        <li class="my-4">
-                            <a href="{{ relref . "/blog/from-terraform-to-infrastructure-as-software" }}" class="link">
-                                <strong>Convert</strong>
-                                HCL to Pulumi code
-                            </a>
-                        </li>
-                        <li class="my-4">
-                            <a href="{{ relref . "/blog/adopting-existing-cloud-resources-into-pulumi" }}" class="link">
-                                <strong>Adopt</strong>
-                                existing resource state into Pulumi
-                            </a>
-                        </li>
-                    </ul>
+
+            <div class="w-full lg:w-1/2 p-6">
+                <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                    <iframe
+                        src="//www.youtube.com/embed/PqAP4BunQZU?rel=0"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+                        allowfullscreen=""
+                        title="Pulumi + AWS: Universal Infrastructure as Code"
+                    ></iframe>
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@ menu:
     parent: vs
     weight: 1
 aliases:
-- /docs/reference/vs/terraform/
+    - /docs/reference/vs/terraform/
 ---
 
 <style>
@@ -23,9 +23,56 @@ aliases:
 
 Choosing the right cloud engineering platform is critical. We want you to have the best information possible to pick the solution that fits your needs.
 
+## What is Pulumi?
+
+Pulumi’s universal infrastructure as code platform helps teams tame the cloud’s complexity using the world’s most popular programming languages (TypeScript, Go, .NET, Python, and Java) and markup languages (YAML, CUE).
+
 ## What is Terraform?
 
 Terraform provides open-source [infrastructure as code]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) software for cloud service management with a consistent CLI workflow. Terraform allows you to write, plan, and apply changes to deliver infrastructure as code.
+
+<div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe
+        src="//www.youtube.com/embed/PqAP4BunQZU?rel=0"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+        allowfullscreen=""
+        title="Pulumi + AWS: Universal Infrastructure as Code"
+    ></iframe>
+</div>
+
+<div>
+    <div class="accordion-item text-2xl py-3 border-b-2 border-t-2">
+        <input type="checkbox" class="absolute hidden" id="Transcript" />
+        <label for="Transcript" class="accordion-label">
+            <h5 class="mt-2 w-2/3">Video Transcript</h5>
+            <div class="flex flex-grow justify-end items-center">
+                <span class="closed-accordion">+</span>
+                <span class="open-accordion hidden">-</span>
+            </div>
+        </label>
+        <div class="accordion-item-body-no-animation text-base">
+            <p>
+                Hi, my name's Lee, and if you're a Terraform user who's curious about Pulumi, here's some things that you need to know.
+            </p>
+            <p>
+                If you've used Terraform, you've probably used the HCL 2 configuration language, which allows you to define the infrastructure in a DSL, in a domain-specific language. Pulumi uses languages that you're already using in your application life cycle. So you can write code in Python, you can write code in TypeScript, you can write code in Java, in .NET, and in Go, and you can also use YAML as a mechanism to offer those infrastructure as code programs. What that means is it's more familiar. You're already using these languages elsewhere, whether it's in your CI pipelines or whether it's in your application code. Pulumi brings this familiarity to your infrastructure. Something else that's really important to know about Pulumi is that it is declarative. So you use an imperative language to offer the code, and Pulumi's engine turns that code into a declarative graph that is executed. So you can always be sure when you run a Pulumi program over and over and over again that it is gonna have the same result and the same effect. This is very similar to Terraform, but that authoring experience is different, meaning that you get a more improved experience.
+            </p>
+            <p>
+                The next important thing to know about Pulumi is how you execute that infrastructure as code. So with Terraform, you use the Terraform command line tool, and it creates that infrastructure. So you would usually do that from your laptop or from a CICD pipeline. Pulumi also supports this workflow, however, with Pulumi's automation API, because you're using those familiar programming languages, you can embed Pulumi into any workflow you choose. So common use cases here are like creating Heroku and platform-as-a-service-like experiences, or embedding Pulumi directly into a webpage. If you wanna create a platform that provisions infrastructure, Pulumi will allow you to do that very, very easily.
+            </p>
+            <p>
+                So the authoring and the execution experience are the two main differentiators when it comes to Pulumi. But there's also some awesome other great differentiators that you might be familiar with. One thing that I use is they tell us they love is the fact that Pulumi encrypts all secrets in transit and at rest. It is not possible for you to look at a secret value without the encryption key. This gives you an amazing piece of mind, because you can know things like database passwords and private keys. You can star them in your state, where they are encrypted. They are not viewable in plain text. So anybody who gets access to the state will not be able to view those secrets.
+            </p>
+            <p>
+                Another key differentiator is the way that you would write policy in Pulumi. Pulumi supports policy as code. So you can define the policy again in familiar languages. You can write policies in JavaScript, you can write policies in Python, and you can also use open policy agents Rego language to define those policies. Again, this gives you the familiarity of using tools and mechanisms that you already have at your disposal. Another key differentiator with Pulumi is the support for native providers. Native providers are generated directly from a cloud provider's API, which means when a cloud provider adds support for a new feature or a new resource, Pulumi gets access to that feature extremely quickly. With Terraform, cloud provider APIs are often supported by the community, and could take a little bit of time to become available in Terraform.
+                One of my favorite features of Pulumi is the ability to adopt existing infrastructure into infrastructure as code. Terraform supports importing infrastructure like Pulumi, but the differentiator is that Pulumi also generates the code that matches the resource that you have imported.
+            </p>
+            <p>
+                There are many more awesome features in Pulumi, but the final one that I want talk about is the ability to manage state. Terraform will often require you to manipulate state in order to move resources around in your code. Pulumi allows you to use aliases, which means that you do not need to manually modify state in order to move a resource. This can save a lot of time and be very, very productive.
+            </p>
+        </div>
+    </div>
+</div>
 
 ## Pulumi vs. Terraform: Similarities {#similarities}
 
@@ -174,3 +221,7 @@ Transformations, which are unique to Pulumi, allow you to programmatically set o
 ### Import Code from Other IaC Tools {#converting}
 
 Pulumi allows you to convert templates by Terraform HCL , Kubernetes YAML, and Azure ARM into Pulumi programs. This preserves existing program structure, which may be important if you carefully designed your existing infrastructure as code layout in terms of names, modules, and configurability. Conversion takes care of the static program structure and will automatically generate a new, fully-functional Pulumi program that matches the source infrastructure as code program. To learn more, see [Conversion]({{< relref "/docs/guides/adopting/#conversion" >}}) in our Adopting Pulumi user guide.
+
+## Get Started with Pulumi
+
+Pulumi’s Universal Infrastructure as Code platform supports the widest range of builders, clouds, programming languages, and cloud architectures available today. [Get started today]({{< relref "/docs/get-started/" >}}).
