@@ -59,7 +59,7 @@ Here is a summary of the key differences between Pulumi and Terraform:
 | [Transformations](#transformations) | Yes | No |
 | [Import Code from other IaC Tools](#converting) | Yes | No |
 
-Getting started with Pulumi is easy. If you have experience with Terraform and already have HCL, you can convert it to Pulumi. Follow our [Converting Terraform HCL to Pulumi]({{< relref "/docs/guides/adopting/from_terraform#converting-terraform-hcl-to-pulumi" >}}) guide. If you would like a reference on Terraform terminology or command equivalents in Pulumi, see [Terminology and Command Equivalence]({{< relref "/docs/intro/vs/terraform/terminology" >}}) table. If you would like to deploy a simple program, follow our Get Started guide:
+Getting started with Pulumi is easy. If you have experience with Terraform and already have HCL, you can convert it to Pulumi. Follow our [Converting Terraform HCL to Pulumi]({{< relref "/docs/guides/adopting/from_terraform#converting-terraform-hcl-to-pulumi" >}}) guide. If you would like a reference on Terraform terminology or command equivalents in Pulumi, see [Terminology and Command Equivalence]({{< relref "/docs/intro/vs/terraform/terminology" >}}) table. If you would like to see how other Pulumi customers have migrated from Terraform to Pulumi, see the [Atlassian case study]({{< relref "/case-studies/atlassian" >}}) and the [Green Park Sports case study]({{< relref "/case-studies/greenpark-sports" >}}). If you would like to deploy a simple program, follow our Get Started guide:
 
 {{< get-started >}}
 
