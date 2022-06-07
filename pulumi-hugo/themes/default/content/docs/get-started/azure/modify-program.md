@@ -167,8 +167,7 @@ resources:
 
 The static website resource leverages the storage account and resource group names defined previously in your program.
 
-Now use all of these cloud resources, and a local `FileAsset` resource, to upload `index.html` into your storage container.
-
+Now use all of these cloud resources and a local `FileAsset` resource to upload `index.html` into your storage container by adding the following at the end of the file (after enabling the static website support):
 {{% choosable language typescript %}}
 
 ```typescript
