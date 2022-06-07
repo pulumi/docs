@@ -52,6 +52,11 @@ bhttp.request = function() {
     // https://git.cryto.net/joepie91/node-bhttp/src/branch/master/lib/bhttp.js#L886
     options.headers.accept = "*/*";
 
+    // Some CDNs reject requests that don't provide an acceptable accept-encoding header.
+    // The checker's underlying HTTP library seems to support deflate compression best, so
+    // we use that for all requests.
+    options.headers["accept-encoding"] = "deflate";
+
     return oldRequest.apply(this, arguments);
 };
 
