@@ -63,7 +63,7 @@ A future improvement to Pulumi Packages will enable Pulumi Registry to create th
 
 ### Package metadata
 
-Metadata for your package is generated from the `schema.json` in your repository. To make sure your package looks great in Pulumi Registry, ensure you add metadata like:
+Metadata for your package is generated from the [`schema.json`]({{<relref "/docs/guides/pulumi-packages/schema">}}) in your repository. To make sure your package looks great in Pulumi Registry, ensure you add metadata like:
 
 - `displayName`: the friendly name for your package that's displayed throughout Registry
 - `description`: a short description of your package

@@ -267,30 +267,32 @@ Language-specific information for a package.
 
 For `nodejs`:
 
-| Property                  | Type          | Required | Description                                                   |
-|---------------------------|---------------|----------|---------------------------------------------------------------|
-| `packageName`             | `string`      | No       | Custom name for the NPM package.                              |
-| `packageDescription`      | `string`      | No       | Description for the NPM package.                              |
-| `readme`                  | `string`      | No       | Readme contains the text for the package's README.md files.   |
-| `dependencies`            | `map[string]` | No       | NPM dependencies to add to package.json.                      |
-| `devDependencies`         | `map[string]` | No       | NPM dev-dependencies to add to package.json.                  |
-| `peerDependencies`        | `map[string]` | No       | NPM peer-dependencies to add to package.json.                 |
-| `resolutions`             | `map[string]` | No       | NPM resolutions to add to package.json                        |
-| `typescriptVersion`       | `string`      | No       | A specific version of TypeScript to include in package.json.  |
-| `moduleToPackage`         | `map[string]` | No       | A map containing overrides for module names to package names. |
-| `compatibility`           | `string`      | No       | Toggle compatibility mode for a specified target.             |
-| `disableUnionOutputTypes` | `boolean`     | No       | Disable support for unions in output types.                   |
-| `containsEnums`           | `boolean`     | No       | An indicator for whether the package contains enums.          |
+| Property                  | Type          | Required | Description                                                       |
+|---------------------------|---------------|----------|-------------------------------------------------------------------|
+| `packageName`             | `string`      | No       | Custom name for the NPM package.                                  |
+| `packageDescription`      | `string`      | No       | Description for the NPM package.                                  |
+| `readme`                  | `string`      | No       | Readme contains the text for the package's README.md files.       |
+| `dependencies`            | `map[string]` | No       | NPM dependencies to add to package.json.                          |
+| `devDependencies`         | `map[string]` | No       | NPM dev-dependencies to add to package.json.                      |
+| `peerDependencies`        | `map[string]` | No       | NPM peer-dependencies to add to package.json.                     |
+| `resolutions`             | `map[string]` | No       | NPM resolutions to add to package.json                            |
+| `typescriptVersion`       | `string`      | No       | A specific version of TypeScript to include in package.json.      |
+| `moduleToPackage`         | `map[string]` | No       | A map containing overrides for module names to package names.     |
+| `compatibility`           | `string`      | No       | Toggle compatibility mode for a specified target.                 |
+| `disableUnionOutputTypes` | `boolean`     | No       | Disable support for unions in output types.                       |
+| `containsEnums`           | `boolean`     | No       | An indicator for whether the package contains enums.              |
+| `respectSchemaVersion`    | `boolean`     | No       | Use the [`package.version`](#package) field in the generated SDK. |
 
 For `python`:
 
-| Property              | Type          | Required | Description                                                              |
-|-----------------------|---------------|----------|--------------------------------------------------------------------------|
-| `packageName`         | `string`      | No       | PackageName is an override for the name of the generated python package. |
-| `requires`            | `map[string]` | No       | Description for the NPM package.                                         |
-| `readme`              | `string`      | No       | Readme contains the text for the package's README.md files.              |
-| `moduleNameOverrides` | `map[string]` | No       | Optional overrides for Pulumi module names.                              |
-| `compatibility`       | `string`      | No       | Toggle compatibility mode for a specified target.                        |
+| Property               | Type          | Required | Description                                                              |
+|------------------------|---------------|----------|--------------------------------------------------------------------------|
+| `packageName`          | `string`      | No       | PackageName is an override for the name of the generated python package. |
+| `requires`             | `map[string]` | No       | Description for the NPM package.                                         |
+| `readme`               | `string`      | No       | Readme contains the text for the package's README.md files.              |
+| `moduleNameOverrides`  | `map[string]` | No       | Optional overrides for Pulumi module names.                              |
+| `compatibility`        | `string`      | No       | Toggle compatibility mode for a specified target.                        |
+| `respectSchemaVersion` | `boolean`     | No       | Use the [`package.version`](#package) field in the generated SDK.        |
 
 For `go`:
 
@@ -301,6 +303,7 @@ For `go`:
 | `moduleToPackage`                | `map[string]` | Map from module -> package name.                                                                                                               |
 | `packageImportAliases`           | `map[string]` | Map from package name -> package alias.                                                                                                        |
 | `generateResourceContainerTypes` | `boolean`     | Generate container types (arrays, maps, pointer output types etc.) for each resource. These are typically used to support external references. |
+| `respectSchemaVersion`           | `boolean`     | Use the [`package.version`](#package) field in the generated SDK.                                                                              |
 
 For `csharp`:
 
@@ -311,6 +314,7 @@ For `csharp`:
 | `compatibility`          | `string`      | No       |                                                                                                     |
 | `dictionaryConstructors` | `boolean`     | No       |                                                                                                     |
 | `rootNamespace`          | `string`      | No       | The root namespace that the generated package should live under. This setting defaults to "Pulumi". |
+| `respectSchemaVersion`   | `boolean`     | No       | Use the [`package.version`](#package) field in the generated SDK.                                   |
 
 ### PropertyLanguage
 
