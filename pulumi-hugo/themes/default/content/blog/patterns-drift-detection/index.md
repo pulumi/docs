@@ -1,17 +1,17 @@
 ---
-title: "Patterns for Drift Detection"
+title: "Patterns for Drift Detection with Pulumi"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date this file was generated. Posts with future dates are visible in development,
 # but excluded from production builds. Use the time and timezone-offset portions of
 # of this value to schedule posts for publishing later.
-date: 2022-06-06T09:26:46-05:00
+date: 2022-06-08T09:26:46-05:00
 
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
 # Max length is 160 characters.
-meta_desc:
+meta_desc: Ever been curious about how to handle drift with your CICD or GitOps workflows? Let David show you how.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
