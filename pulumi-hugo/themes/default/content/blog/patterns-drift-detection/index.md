@@ -11,7 +11,7 @@ date: 2022-06-08T09:26:46-05:00
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
 # Max length is 160 characters.
-meta_desc: Ever been curious about how to handle drift with your CICD or GitOps workflows? Let David show you how.
+meta_desc: Curious about how to handle drift with your CICD or GitOps workflows? Developer Advocate David shows a couple of patterns for detecting and reconciling this drift with your Pulumi programs.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
