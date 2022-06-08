@@ -34,25 +34,28 @@ of issue reports.
 ### Verbose Logging
 
 Verbose logging of the internals of the Pulumi engine and resource providers can be enabled by
-passing the `-v` flag to any `pulumi` CLI command. The `--logtostderr` flag can be added to send
-this verbose logging directly to `stderr` for easier access.  Pulumi emits logs at a variety of log
-levels between `1` and `9`.
+passing the `-v` flag to any `pulumi` CLI command. Pulumi emits logs at log levels between `1` and
+`9`, with `9` being the most verbose.
+
+By default, logs are written to the top-level temp directory (usually `/tmp` or the value of
+`$TMPDIR`). The `--logtostderr` flag can be added to write logs to `stderr` instead, for easier
+access.  Use the flag `--logflow` to apply the same log level to resource providers.
 
 > These logs may include sensitive information that is provided from your execution environment to
 your cloud provider (and which Pulumi may not even itself be aware of) so be careful to audit before
 sharing.
 
 ```
-$ pulumi up --logtostderr -v=9 2> out.txt
+$ pulumi up --logtostderr --logflow -v=9 2> out.txt
 ```
 
-Individual resource providers may also have additional flags to customize their diagnostic logging.
-For example, for any Pulumi resource providers that expose a Terraform resource provider into
-Pulumi, you can use [`TF_LOG`](https://www.terraform.io/docs/internals/debugging.html) set to
-`TRACE`, `DEBUG`, `INFO`, `WARN` or `ERROR`.
+Individual resource providers may also have flags and environment entries to customize their
+diagnostic logging.  For example, for any Pulumi resource providers that expose a Terraform resource
+provider into Pulumi, you can use [`TF_LOG`](https://www.terraform.io/docs/internals/debugging.html)
+set to `TRACE`, `DEBUG`, `INFO`, `WARN` or `ERROR`.
 
 ```
-$ TF_LOG=TRACE pulumi up --logtostderr -v=9 2> out.txt
+$ TF_LOG=TRACE pulumi up --logtostderr --logflow -v=9 2> out.txt
 ```
 
 ### Performance
