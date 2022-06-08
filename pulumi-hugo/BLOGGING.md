@@ -195,6 +195,11 @@ For more Hugo shortcode fun, [go here](https://gohugo.io/content-management/shor
 
 When you're ready to submit your post for review, issue a Pull Request against the `master` branch of the repo, and the team will have a look. Once merged &mdash; provided its `date` has passed the post will be deployed to https://www.pulumi.com/.
 
+## Publicize your blog
+
+When you create an awesome blog post, we want to make sure it reaches as many people as possible. 
+After your Pull Request is approved, but before merge/publication date, reach out in #blogs so that Marketing can broadcast your publication via social media.
+
 ## A Note on Dates and Scheduling for Future Publishing
 
 Because the website is deployed in response to a commit to pulumi/docs `master`, it isn't possible to schedule a post to be released automatically at a precise date and time. (The `date` frontmatter property is used only for sorting and display purposes.) You can, however, influence the timing of the publishing process manually. See the [Merging and Releasing section of the README](README.md#merging-and-releasing) for details.
@@ -207,3 +212,4 @@ Because the website is deployed in response to a commit to pulumi/docs `master`,
 - [ ] Check that your meta_image appears properly on the blog home page. Do not use animated GIFs for preview images.
 - [ ] Preview locally. Check formatting, links, and images for appearance.
 - [ ] Use the [Twitter card validator](https://cards-dev.twitter.com/validator) to check the how the blog appears in a tweet (use the preview provided in the PR).
+- [ ] Reach out in #blogs to make Marketing aware that your post is about to go live!
