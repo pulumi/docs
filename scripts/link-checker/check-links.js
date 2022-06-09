@@ -300,6 +300,7 @@ function getDefaultExcludedKeywords() {
         "https://linen.dev/",
         "https://cloud.yandex.com/",
         "http://localhost:3000",
+        "https://data-flair.training",
     ];
 }
 
