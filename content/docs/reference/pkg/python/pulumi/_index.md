@@ -1314,16 +1314,27 @@ conflicts:</p>
 <dt id="pulumi.automation.create_stack">
 <code class="sig-prename descclassname">pulumi.automation.</code><code class="sig-name descname">create_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">project_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">work_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.automation._local_workspace.LocalWorkspaceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.Stack<a class="headerlink" href="#pulumi.automation.create_stack" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a Stack with a LocalWorkspace utilizing the specified inline (in process) Pulumi program or the local
-Pulumi CLI program from the specified workdir.</p>
+Pulumi CLI program from the specified working dir.</p>
 <p><strong>Inline Programs</strong></p>
 <p>For inline programs, the program and project_name keyword arguments must be provided. This program is fully
-debuggable and runs in process. If no project_settings option is specified, default project settings will be
-created on behalf of the user. Similarly, unless a <code class="docutils literal notranslate"><span class="pre">work_dir</span></code> option is specified, the working directory will
-default to a new temporary directory provided by the OS.</p>
+debuggable and runs in process. The work_dir keyword argument is ignored (but see the note on the work_dir
+field of opts, below).</p>
+<p>If no project_settings option is specified, default project settings will be created on behalf of the user.
+Similarly, unless a <code class="docutils literal notranslate"><span class="pre">work_dir</span></code> option is specified, the working directory will default to a new temporary
+directory provided by the OS.</p>
+<p>Example of creating a stack with an inline program:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">create_stack</span><span class="p">(</span><span class="s1">&#39;dev&#39;</span><span class="p">,</span> <span class="n">project_name</span><span class="o">=</span><span class="s1">&#39;my-app&#39;</span><span class="p">,</span> <span class="n">program</span><span class="o">=</span><span class="n">myAppFn</span><span class="p">)</span>
+</pre></div>
+</div>
 <p><strong>Local Programs</strong></p>
-<p>For local programs, the work_dir keyword argument must be provided.
-This is a way to create drivers on top of pre-existing Pulumi programs. This Workspace will pick up any
+<p>For local programs, the work_dir keyword argument must be provided, and will override the work_dir field in
+opts. Keyword arguments other than work_dir and opts are ignored.</p>
+<p>This is a way to create drivers on top of pre-existing Pulumi programs. This Workspace will pick up any
 available Settings files (Pulumi.yaml, Pulumi.[stack].yaml).</p>
+<p>Example of creating a stack with a local program:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">create_stack</span><span class="p">(</span><span class="s1">&#39;dev&#39;</span><span class="p">,</span> <span class="n">work_dir</span><span class="o">=</span><span class="s1">&#39;myapp/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1345,16 +1356,27 @@ variables to pass through to every command.</p></li>
 <dt id="pulumi.automation.select_stack">
 <code class="sig-prename descclassname">pulumi.automation.</code><code class="sig-name descname">select_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">project_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">work_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.automation._local_workspace.LocalWorkspaceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.Stack<a class="headerlink" href="#pulumi.automation.select_stack" title="Permalink to this definition"></a></dt>
 <dd><p>Selects a Stack with a LocalWorkspace utilizing the specified inline (in process) Pulumi program or the local
-Pulumi CLI program from the specified workdir.</p>
+Pulumi CLI program from the specified working dir.</p>
 <p><strong>Inline Programs</strong></p>
 <p>For inline programs, the program and project_name keyword arguments must be provided. This program is fully
-debuggable and runs in process. If no project_settings option is specified, default project settings will be
-created on behalf of the user. Similarly, unless a <code class="docutils literal notranslate"><span class="pre">work_dir</span></code> option is specified, the working directory will
-default to a new temporary directory provided by the OS.</p>
+debuggable and runs in process. The work_dir keyword argument is ignored (but see the note on the work_dir
+field of opts, below).</p>
+<p>If no project_settings option is specified, default project settings will be created on behalf of the user.
+Similarly, unless a <code class="docutils literal notranslate"><span class="pre">work_dir</span></code> option is specified, the working directory will default to a new temporary
+directory provided by the OS.</p>
+<p>Example of selecting a stack with an inline program:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">select_stack</span><span class="p">(</span><span class="s1">&#39;dev&#39;</span><span class="p">,</span> <span class="n">project_name</span><span class="o">=</span><span class="s1">&#39;my-app&#39;</span><span class="p">,</span> <span class="n">program</span><span class="o">=</span><span class="n">myAppFn</span><span class="p">)</span>
+</pre></div>
+</div>
 <p><strong>Local Programs</strong></p>
-<p>For local programs, the work_dir keyword argument must be provided.
-This is a way to create drivers on top of pre-existing Pulumi programs. This Workspace will pick up any
+<p>For local programs, the work_dir keyword argument must be provided, and will override the work_dir field in
+opts. Keyword arguments other than work_dir and opts are ignored.</p>
+<p>This is a way to create drivers on top of pre-existing Pulumi programs. This Workspace will pick up any
 available Settings files (Pulumi.yaml, Pulumi.[stack].yaml).</p>
+<p>Example of selecting a stack with a local program:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">select_stack</span><span class="p">(</span><span class="s1">&#39;dev&#39;</span><span class="p">,</span> <span class="n">work_dir</span><span class="o">=</span><span class="s1">&#39;myapp/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1376,16 +1398,27 @@ variables to pass through to every command.</p></li>
 <dt id="pulumi.automation.create_or_select_stack">
 <code class="sig-prename descclassname">pulumi.automation.</code><code class="sig-name descname">create_or_select_stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stack_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">project_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">work_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.automation._local_workspace.LocalWorkspaceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.Stack<a class="headerlink" href="#pulumi.automation.create_or_select_stack" title="Permalink to this definition"></a></dt>
 <dd><p>Creates or selects an existing Stack with a LocalWorkspace utilizing the specified inline (in process) Pulumi
-program or the local Pulumi CLI program from the specified workdir.</p>
+program or the local Pulumi CLI program from the specified working dir.</p>
 <p><strong>Inline Programs</strong></p>
 <p>For inline programs, the program and project_name keyword arguments must be provided. This program is fully
-debuggable and runs in process. If no project_settings option is specified, default project settings will be
-created on behalf of the user. Similarly, unless a <code class="docutils literal notranslate"><span class="pre">work_dir</span></code> option is specified, the working directory will
-default to a new temporary directory provided by the OS.</p>
+debuggable and runs in process. The work_dir keyword argument is ignored (but see the note on the work_dir
+field of opts, below).</p>
+<p>If no project_settings option is specified, default project settings will be created on behalf of the user.
+Similarly, unless a <code class="docutils literal notranslate"><span class="pre">work_dir</span></code> option is specified, the working directory will default to a new temporary
+directory provided by the OS.</p>
+<p>Example of selecting a stack with an inline program:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">create_or_select_stack</span><span class="p">(</span><span class="s1">&#39;dev&#39;</span><span class="p">,</span> <span class="n">project_name</span><span class="o">=</span><span class="s1">&#39;my-app&#39;</span><span class="p">,</span> <span class="n">program</span><span class="o">=</span><span class="n">myAppFn</span><span class="p">)</span>
+</pre></div>
+</div>
 <p><strong>Local Programs</strong></p>
-<p>For local programs, the work_dir keyword argument must be provided.
-This is a way to create drivers on top of pre-existing Pulumi programs. This Workspace will pick up any
+<p>For local programs, the work_dir keyword argument must be provided, and will override the work_dir field in
+opts. Keyword arguments other than work_dir and opts are ignored.</p>
+<p>This is a way to create drivers on top of pre-existing Pulumi programs. This Workspace will pick up any
 available Settings files (Pulumi.yaml, Pulumi.[stack].yaml).</p>
+<p>Example of creating or selecting a stack with a local program:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">create_or_select_stack</span><span class="p">(</span><span class="s1">&#39;dev&#39;</span><span class="p">,</span> <span class="n">work_dir</span><span class="o">=</span><span class="s1">&#39;myapp/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
