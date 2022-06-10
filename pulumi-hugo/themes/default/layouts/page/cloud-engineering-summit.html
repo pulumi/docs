@@ -22,7 +22,7 @@
         <div class="container mx-auto flex flex-wrap">
             <div class="w-full p-6">
                 <h3 class="text-center">
-                    <pulumi-datetime date="2021-10-20T08:00:00-07:00"></pulumi-datetime>
+                    <pulumi-datetime date="2022-09-28T08:00:00-07:00"></pulumi-datetime>
                 </h3>
                 <div class="max-w-4xl mx-auto text-center">
                     <p class="mt-10">
@@ -31,8 +31,9 @@
                     </p>
                 </div>
                 <div class="text-center mt-12 mb-12">
-                    <div>
-                        <a class="btn-primary text-xl" href="{{ relref . "/cloud-engineering-summit/replay" }}">Watch the replay</a>
+                    <h3>Get notified when registration opens</h3>
+                    <div class="flex items-center justify-center">
+                        <pulumi-hubspot-form form-id="f456537d-1ac8-4004-8ba7-9f5997321445" class="newsletter newsletter-wide newsletter-dark-border"></pulumi-hubspot-form>
                     </div>
                 </div>
             </div>
@@ -41,9 +42,9 @@
 
     <section id="speakers" class="container mx-auto text-center">
         <h1 class="m-0">Cloud Engineering Summit</h1>
-        <h2 class="mt-0 mb-10">Featured Speakers</h2>
+        <h2 class="mt-0 mb-10">2021 Featured Speakers</h2>
         <div class="my-10">
-            <a class="btn-secondary" href="{{ relref . "/cloud-engineering-summit/speakers" }}">View all speakers</a>
+            <a class="btn-secondary" href="{{ relref . "/cloud-engineering-summit/speakers" }}">View all speakers from 2021</a>
         </div>
 
         <div class="cloud-engineering-summit-speaker-wall">
@@ -62,9 +63,10 @@
         </div>
 
         <div class="container mx-auto">
-            <h2 class="text-center">Summit Tracks</h2>
+            <h2 class="text-center">2021 Summit Tracks</h2>
             <div class="text-center my-12">
-                <a class="btn-secondary" href="{{ relref . "/cloud-engineering-summit/agenda" }}">See the agenda</a>
+                <a class="btn-secondary" href="{{ relref . "/cloud-engineering-summit/replay" }}">Watch the replay</a>
+                <a class="btn-secondary" href="{{ relref . "/cloud-engineering-summit/agenda" }}">View the 2021 agenda</a>
             </div>
 
             {{ range $item := .Params.tracks_outline }}
@@ -122,7 +124,7 @@
                                 {{ end }}
                             </div>
                             <div class="card-cta-btn">
-                                <a href="{{ $item.link }}" class="btn-primary">Watch on-demand</a>
+                                <a href="{{ $item.link }}" class="btn-primary">Watch now</a>
                             </div>
                         </div>
                     </div>
@@ -132,7 +134,7 @@
     </section>
 
     <section id="sponsors" class="container mx-auto mt-32">
-        <h2 class="text-center">Brought to you by</h2>
+        <h2 class="text-center">2021 Sponsors</h2>
         <div class="flex flex-wrap items-center justify-center">
             <div class="w-full lg:w-1/5 flex items-center justify-center mx-8 my-4 h-32">
                 <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
