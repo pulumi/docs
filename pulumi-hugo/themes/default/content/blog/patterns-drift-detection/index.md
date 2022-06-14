@@ -5,7 +5,7 @@ title: "Patterns for Drift Detection with Pulumi"
 # the date this file was generated. Posts with future dates are visible in development,
 # but excluded from production builds. Use the time and timezone-offset portions of
 # of this value to schedule posts for publishing later.
-date: 2022-06-09T09:26:46-05:00
+date: 2022-06-14T09:26:46-05:00
 
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
@@ -35,6 +35,14 @@ tags:
 Let's face it, at some point someone is going to modify your carefully-crafted and automated infrastructure without updating your Pulumi program. These changes cause the desired state of our Pulumi program's to be inconsistent with the state of the world. These inconsistencies are often referred to as "drift". In this article, I want to cover a couple of patterns for detecting and reconciling this drift with your Pulumi programs.
 
 <!--more-->
+
+## Why is Drift Detection Important?
+
+Reconciling drift as quickly as possible is very important in the infrastructure as code (IaC) space because the longer drift is left unattended, the harder it becomes for automation to reconcile in a manner that can be considered safe for your organization, SLAs, and customers happiness. Imagine this as if it were your car. If a single tyre needs replaced, you might be OK for a while and not notice any problems driving. If you leave that unattended and another tyre runs flat, then you've got a slightly more serious problem. As these smaller problems accumulate you're applying a multiplier of risk to your overall infrastructure, especially during reconciliation. The more resources Pulumi needs to handle during this step, the more likely for some collateral damage.
+
+It's important that you build a system that can tolerate a nominal amount of drift but actively works to repair that as quickly as possible.
+
+Let's see how.
 
 ## Refreshing the World
 
