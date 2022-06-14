@@ -20,9 +20,9 @@ Services like these were called [speaking clocks](https://en.wikipedia.org/wiki/
 
 {{< youtube "0IHzWWMzqmI?rel=0" >}}
 
-By the mid-2000s, though, most of these locally run services had been shut down --- by then, we had clocks baked into our phones --- and today, only a handful of Audichrons survive. Thanks to the National Institute of Standards and Technology, [you can still call a phone number to get the time](https://www.theatlantic.com/technology/archive/2016/06/remember-when-you-could-call-the-time/488273/), and while the voice might not be the same, and long distance rates will apply, it's definitely there, and you can use it. So on the off chance you happen to find yourself with no idea what time it is and only an analog phone line in reach, fear not --- old-school telephone tech has your back. For now. And assuming you remember the number.
+By the mid-2000s, though, most of these locally run services had been shut down --- by then, we had clocks baked into our phones --- and today, only a handful of Audichrons survive. Thanks to the National Institute of Standards and Technology, however, [you can still call a phone number to get the time](https://www.theatlantic.com/technology/archive/2016/06/remember-when-you-could-call-the-time/488273/), and while the voice might not be the same, and long distance rates will apply, it's definitely there, and you can use it. So on the off chance you happen to find yourself with no idea what time it is and only an analog phone line in reach, fear not --- old-school telephone tech has your back. For now. Assuming you remember the number.
 
-Remebering all this stuff did make me wonder, though, what a more modern version of a speaking clock might look like. So in this post, we're going to build one ourselves. We won't use an actual phone number, but we will use Pulumi and AWS --- and because we want to do it _right_, we'll take a test-driven approach to developing the infrastructure with [Jest, the JavaScript testing framework](https://jestjs.io). We'll use TypeScript and Node.js for everything, focus on [unit tests]({{<relref "/docs/guides/testing/unit" >}}), and when we're done, we'll have a single, serverless, browser-friendly HTTPS endpoint that returns an MP3 audio stream that speaks the current time.
+Recalling all this stuff did make me wonder, though, what a more modern version of a speaking clock might look like. So in this post, we're going to build one ourselves. We won't use an actual phone number, but we will use Pulumi and AWS --- and because we want to do it _right_, we'll take a test-driven approach to developing the infrastructure with [Jest, the JavaScript testing framework](https://jestjs.io). We'll use TypeScript and Node.js for everything, focus on [unit tests]({{<relref "/docs/guides/testing/unit" >}}), and when we're done, we'll have a single, serverless, browser-friendly HTTPS endpoint that returns an MP3 audio stream that speaks the current time.
 
 Let's get started.
 
@@ -269,7 +269,7 @@ it("is publicly accessible", (done) => {
 });
 ```
 
-This is a perfectly valid test, of course; we know because we just ran it. Still, you might still wonder, especially since we're only checking one property, whether this test might be written a bit more concisely --- something more like this, maybe:
+This is a perfectly valid test, of course; we know because we just ran it. Still, you might wonder, especially since we're only checking one property, whether this test might be written a bit more concisely --- something more like this, maybe:
 
 ```typescript
 it("is publicly accessible", () => {
@@ -599,6 +599,6 @@ When you're ready, you can tear everything down with a `pulumi destroy`.
 
 Beyond just having a nifty (and admittedly rather silly) new way to tell time, you should have a much better sense at this point of how you can use Pulumi with Jest to write better, safer infrastructure code.
 
-From here, there's a bunch more you might think about next: writing more tests to cover the code we just added, [exploring some additional flavors of testing]({{< relref "docs/guides/testing/" >}}) in the docs, [having a look at a few examples](https://github.com/pulumi/examples). You'll find the [full source for this walkthrough up on GitHub](https://github.com/cnunciato/pulumi-jest-unit-testing-example) as well.
+From here, there's a bunch more you might think about next: writing more tests to cover the code we just added, [exploring some additional flavors of testing]({{< relref "docs/guides/testing/" >}}) in the docs, or [having a look at a few examples](https://github.com/pulumi/examples). You'll find the [full source for this walkthrough up on GitHub](https://github.com/cnunciato/pulumi-jest-unit-testing-example) as well.
 
 Happy testing!
