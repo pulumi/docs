@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "CI/CD Pipelines for Kubernetes Apps with Pulumi & Codefresh"
-meta_desc: "In this workshop we will cover how to set up automated CI/CD pipelines for Kubernetes applications using Pulumi and Codefresh."
+title: "GitOps with Pulumi and Codefresh"
+meta_desc: "Learn how Pulumi’s infrastructure as code platform and Codefresh makes it easy to manage infrastructure code as part of your continuous delivery process."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -52,18 +52,26 @@ hero:
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "CI/CD Pipelines for Kubernetes Apps with Pulumi & Codefresh"
+    title: "GitOps with Pulumi and Codefresh"
     # URL for embedding a URL for ungated webinars.
     # youtube_url: "https://www.youtube.com/embed/c7TUy-0N5OA"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-06-22T09:30:00-07:00
+    sortable_date: 2022-08-30T09:30:00-07:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.
-    datetime: ""
+    datetime: "August 30th, 2022"
     # Description of the webinar.
     description: |
-        Leading cloud engineering organizations are automating infrastructure deployments using Pulumi’s infrastructure as code platform and Codefresh makes it easy to manage infrastructure code as part of your continuous delivery process.
+        Traditionally organizations had completely different methods of deploying
+        infrastructure and applications. Teams had to learn completely different tools
+        as the lifecycle of an application vs the instrustructure it is hosted on have
+        different requirements and limitations.
+        GitOps is a set of best practices that redefines the way changes are applied and can be used
+        for both infrastructure and applications. Contrary to popular belief GitOps is not constrained
+        on Kubernetes applications and simply adopting infrastructure as code is not automatically GitOps.
+        In this webinar we will see how you can apply GitOps to both infrastructure (even for non-kubernetes
+        environments) and applications using a unified workflow is equally attractive to operators and developers.
 
     # The webinar presenters
     presenters:
