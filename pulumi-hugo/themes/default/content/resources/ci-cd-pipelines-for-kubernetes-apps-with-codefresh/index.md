@@ -39,7 +39,7 @@ url_slug: "ci-cd-pipelines-for-kubernetes-apps-with-codefresh"
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "CI/CD Pipelines for Kubernetes Apps with Pulumi & Codefresh"
+    title: "GitOps with Pulumi and Codefresh"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
@@ -82,9 +82,9 @@ main:
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - The basics of CI/CD using Codefresh.
-        - How to declare cloud resources using Pulumi and your favorite programming languages.
-        - How to define a simple pipeline for Kubernetes deployments.
+        - How to apply GitOps to both Infrastructure and Applications 
+        - Infrastructure as code for Kubernetes and non-Kubernetes deployments 
+        - How to set up a unified workflow for both operators and app developers.
 
 # The right hand side form section.
 form:
