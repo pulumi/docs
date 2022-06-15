@@ -94,6 +94,7 @@ any valid AWS region name. For example, `us-west-2`.
 | ------------- | ----------- |
 | PULUMI_CHECKPOINT_BLOB_STORAGE_ENDPOINT | The storage endpoint for persisting stack state/checkpoint. The value takes the format: `s3://<bucket-name>`. The `s3://` scheme also supports query-params. See the GoCloud docs for an [example](https://gocloud.dev/howto/blob/#s3-compatible) of the query-params. |
 | PULUMI_POLICY_PACK_BLOB_STORAGE_ENDPOINT | The storage endpoint for persisting published policy packs. The value takes the format: `s3://<bucket-name>`. Similar to `PULUMI_CHECKPOINT_BLOB_STORAGE_ENDPOINT`, this also supports query-params. |
+| PULUMI_ENGINE_EVENTS_BLOB_STORAGE_ENDPOINT | The storage endpoint for persisting large engine events. We recommend configuring this value to improve performance and reduce the size of the MySQL database. The value takes the format: `s3://<bucket-name>`. Similar to `PULUMI_CHECKPOINT_BLOB_STORAGE_ENDPOINT`, this also supports query-params. |
 
 ### Azure Storage
 
@@ -101,6 +102,7 @@ any valid AWS region name. For example, `us-west-2`.
 | ------------- | ----------- |
 | PULUMI_CHECKPOINT_BLOB_STORAGE_ENDPOINT | The storage endpoint for persisting stack state/checkpoint. The value takes the format: `azblob://<blob-container>`. |
 | PULUMI_POLICY_PACK_BLOB_STORAGE_ENDPOINT | The storage endpoint for persisting published policy packs. The value takes the format: `azblob://<blob-container>`. |
+| PULUMI_ENGINE_EVENTS_BLOB_STORAGE_ENDPOINT | The storage endpoint for persisting large engine events. We recommend configuring this value to improve performance and reduce the size of the MySQL database. The value takes the format: `azblob://<blob-container>`. |
 | AZURE_STORAGE_ACCOUNT | The name of the Azure storage account where the blob containers for checkpoint and policy pack have been created. See [Cloud Provider Authentication](#azure) for additional configuration options for Azure. |
 | AZURE_STORAGE_KEY | (Optional) The primary or secondary storage key for the storage account. You only need to specify this if you are _not_ using Azure MSI. |
 
@@ -236,3 +238,39 @@ The database migrations container is configurable to enable connections to the d
 | PULUMI_DATABASE_ENDPOINT      | The database server endpoint in the format `host:port`. This should be a MySQL 5.6 server. |
 | PULUMI_DATABASE_PING_ENDPOINT | The database server endpoint to ping for availability before login. |
 | RUN_MIGRATIONS_EXTERNALLY     | Request for migrations to be run against an external database. |
+
+
+## Audit Logs
+
+Audit Logs are persisted in MySQL by default. Alternative backends can be configured to support a higher volume of writes without scaling out MySQL.
+
+### DynamoDB
+
+To use [AWS DynamoDB](https://aws.amazon.com/dynamodb) to persist Audit Logs, specify the name of the table in the environment variable `PULUMI_AUDIT_LOGS_DYNAMO_TABLE`. The table provided must be configured with following attributes:
+
+```
+  hashKey: "org_id",
+  rangeKey: "timestamp_id",
+  globalSecondaryIndexes: [
+      {
+          hashKey: "org_user_id",
+          projectionType: "ALL",
+          name: "org_user",
+          rangeKey: "timestamp_id",
+      },
+  ],
+  attributes: [
+      {
+          name: "org_id",
+          type: "S",
+      },
+      {
+          name: "org_user_id",
+          type: "S",
+      },
+      {
+          name: "timestamp_id",
+          type: "S",
+      },
+  ],
+```
