@@ -128,7 +128,7 @@ You only need to configure one of the support services.
 {{% notes type="info" %}}
 When you need to create a new version of a key, do not disable the previous version. All versions of the key must remain
 active. The API service never has access to the private key material of the key you create in Azure KeyVault. It only
-uses the public key for encryption. The API will request KeyVault to decrypt a cipher text.  
+uses the public key for encryption. The API will request KeyVault to decrypt a cipher text.
 {{% /notes %}}
 
 | Variable Name | Description |
@@ -238,7 +238,6 @@ The database migrations container is configurable to enable connections to the d
 | PULUMI_DATABASE_ENDPOINT      | The database server endpoint in the format `host:port`. This should be a MySQL 5.6 server. |
 | PULUMI_DATABASE_PING_ENDPOINT | The database server endpoint to ping for availability before login. |
 | RUN_MIGRATIONS_EXTERNALLY     | Request for migrations to be run against an external database. |
-
 
 ## Audit Logs
 
