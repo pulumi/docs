@@ -201,7 +201,7 @@ import * as aws from "@pulumi/aws";
 import * as awsx from "@pulumi/awsx";
 
 const vpc = new awsx.ec2.Vpc("vpc");
-const securityGroup = new aws.ec2.SecurityGroup("sg", {
+const securityGroup = new aws.ec2.SecurityGroup("secgrp", {
     vpcId: vpc.vpcId,
     // Add ingress and egress rules as required
 });
@@ -228,12 +228,12 @@ import pulumi_aws as aws
 import pulumi_awsx as awsx
 
 vpc = awsx.ec2.Vpc("vpc")
-securityGroup = aws.ec2.SecurityGroup("sg", vpc_id=vpc.vpc_id)
+securityGroup = aws.ec2.SecurityGroup("secgrp", vpc_id=vpc.vpc_id)
 cluster = aws.ecs.Cluster("default-cluster")
 
 service = awsx.ecs.FargateService("my-service",
     cluster=cluster.arn,
-    network_configuration=awsx.ecs.ServiceNetworkConfiguration(
+    network_configuration=aws.ecs.ServiceNetworkConfigurationArgs(
         subnets=vpc.private_subnet_ids,
         security_groups=[securityGroup.id]
     ),
@@ -256,17 +256,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vpc = new Aws.Ecs.Vpc("vpc");
+        var vpc = new Awsx.Ec2.Vpc("vpc");
         var cluster = new Aws.Ecs.Cluster("default-cluster");
 
-        var securityGroup = new Aws.Ec2.SecurityGroup("sg", new Aws.Ec2.SecurityGroupArgs
+        var securityGroup = new Aws.Ec2.SecurityGroup("secgrp", new Aws.Ec2.SecurityGroupArgs
         {
             VpcId = vpc.VpcId,
         });
 
         var service = new Awsx.Ecs.FargateService("my-service", new Awsx.Ecs.FargateServiceArgs
         {
-            NetworkConfiguration = new Awsx.Ecs.Inputs.ServiceNetworkConfiguration
+            NetworkConfiguration = new Aws.Ecs.Inputs.ServiceNetworkConfigurationArgs
             {
                 Subnets = vpc.PrivateSubnetIds,
                 SecurityGroups =
