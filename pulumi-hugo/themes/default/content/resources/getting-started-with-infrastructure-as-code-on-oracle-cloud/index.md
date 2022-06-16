@@ -29,12 +29,12 @@ type: webinars
 # landing/registration page. If the webinar is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
 # the webinar page created.
-external: false
-block_external_search_index: false
+external: true
+block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "getting-started-with-infrastructure-as-code-on-oracle-cloud"
+url_slug: "https://go.oracle.com/LP=127531?elqCampaignId=350230"
 
 # The content of the hero section.
 hero:
@@ -62,27 +62,19 @@ main:
     # Datetime of the webinar.
     datetime: ""
     # Description of the webinar.
-    description: |
-        With Pulumi’s new Oracle Cloud integration you can now define, deploy, and manage OCI resources using your favorite programming languages including JavaScript/TypeScript, Python, C#/.NET, and Golang.
-
-        In this workshop, you will learn the fundamentals of Infrastructure as Code through a guided exercise using Pulumi’s infrastructure as code platform, where you can use familiar programming languages to provision infrastructure on any cloud.
-
-        This workshop is designed to help users completely new to Pulumi to become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and hands-on exercises to help you understand the building blocks available in Pulumi.
+    description: ""
 
     # The webinar presenters
     presenters:
-        - name: Laura Santamaria
-          role: Developer Advocate, Pulumi
-        - name: Gaurav Jain
-          role: Principal Product Manager, Oracle
+        - name: ""
+          role: ""
 
     # A bullet point list containing what the user will learn during the webinar.
-    learn:
-        - The basics of the Pulumi Programming Model.
-        - How to provision, update, and destroy OCI resources using Pulumi.
+    learn: 
+        - ""
 
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: "c692cb72-6a2d-41eb-af41-cb9134a049f8"
+    hubspot_form_id: ""
 ---
