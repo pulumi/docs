@@ -2,6 +2,8 @@ id = "simen-a-w-olsen"
 name = "Simen A. W. Olsen"
 title = "Software Architect and Manager"
 status = "guest"
+role = "puluminary"
+company = "Bjerk"
 
 [social]
 

@@ -3,3 +3,7 @@ name = "Kat Morgan"
 title = "Senior Field Engineer"
 company = "Kong"
 status = "guest"
+role = "puluminary"
+[social]
+github = "usrbinkat"
+twitter = "usrbinkat"

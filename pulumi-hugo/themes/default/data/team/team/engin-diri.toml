@@ -1,0 +1,7 @@
+id = "engin-diri"
+name = "Engin Diri"
+status = "guest"
+role = "puluminary"
+[social]
+github = "dirien"
+twitter = "_ediri"

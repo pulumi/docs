@@ -1,7 +1,9 @@
 id = "komal-ali"
 name = "Komal Ali"
-
-status = "inactive"
+title = "Software Engineer"
+company = "Sym"
+status = "guest"
+role = "puluminary"
 
 [social]
 github = "komalali"

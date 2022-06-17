@@ -10,7 +10,7 @@ date: 2022-05-03T10:04:47-05:00
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
-meta_desc: We are very excited to announce and showcase our new program of community champions, the Puluminaries! 
+meta_desc: We are very excited to announce and showcase our new program of community champions, the Puluminaries!
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -26,8 +26,6 @@ authors:
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - community
-aliases:
-    - /puluminaries/
 
 # See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.

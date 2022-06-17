@@ -1,0 +1,10 @@
+id = "rizel-scarlett"
+name = "Rizel Scarlett"
+company = "GitHub"
+title = "Developer Advocate"
+status = "guest"
+role = "puluminary"
+[social]
+github = "blackgirlbytes"
+twitter = "blackgirlbytes"
+linkedin = "rizel-bobb-semple"
