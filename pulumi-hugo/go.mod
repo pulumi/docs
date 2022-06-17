@@ -4,7 +4,7 @@ go 1.16
 
 require (
 	github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20220504042409-82f5a4588c0e // indirect
-	github.com/pulumi/registry/themes/default v0.0.0-20220617195306-dbb88a388e63 // indirect
+	github.com/pulumi/registry/themes/default v0.0.0-20220617225955-98c6c36158f2 // indirect
 	github.com/pulumi/theme v0.0.0-20220609175305-f85d9ba8fe9c // indirect
 )
 
