@@ -603,6 +603,25 @@ class MyStack : Stack
 {{% /choosable %}}
 {{% /chooser %}}
 
+The bulk import JSON file follows this schema:
+
+| Property    | Type              | Required | Description                                                                                                     |
+| ----------- | ----------------- | -------- | --------------------------------------------------------------------------------------------------------------- |
+| `nameTable` | `map[URN]`        | No       | A mapping from in-language variable names to URNs. Used on when generating references to parents and providers. |
+| `resources` | `array[Resource]` | Yes      | The list of resources to import.                                                                                |
+
+A `Resource` has the following schema:
+
+| Property     | Type            | Required | Description                                                                                                                                                    |
+|--------------|-----------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `name`       | `string`        | Yes      | The name of the resource.                                                                                                                                      |
+| `type`       | `Type Token`    | Yes      | The type of the corresponding Pulumi resource.                                                                                                                 |
+| `id`         | `string`        | Yes      | The provider determined ID for this resource type.                                                                                                             |
+| `parent`     | `string`        | No       | The name of the [parent]({{< relref "/docs/intro/concepts/resources/options/parent" >}}) resource. The mentioned name must be present in the `nameTable`.     |
+| `provider`   | `string`        | No       | The name of the [provider]({{< relref "/docs/intro/concepts/resources/options/provider" >}}) resource. The mentioned name must be present in the `nameTable`. |
+| `version`    | `string`        | No       | The [version]({{< relref "/docs/intro/concepts/resources/options/version" >}}) of the provider to use.                                                        |
+| `properties` | `array[string]` | No       | The list of properties to include in the generated code. If unspecified all properties will be included.                                                       |
+
 Check out the video clip below for a demo.
 
 {{< youtube "6qHVbu8vb4w" >}}
