@@ -1,6 +1,6 @@
 ---
 title: Languages
-meta_desc: An overview of how to use Node.js, Python, Go, .NET Core, Java, and YAML when writing cloud applications for AWS, Azure, Google Cloud, Kubernetes, etc.
+meta_desc: An overview of how to use Node.js, Python, Go, .NET, Java, and YAML when writing cloud applications for AWS, Azure, Google Cloud, Kubernetes, etc.
 menu:
   intro:
     identifier: languages
@@ -48,10 +48,10 @@ The following language runtimes are currently supported by Pulumi. Select one to
     <div class="pb-4 md:w-1/2">
         <a class="tile p-8 pb-16 text-center" href="{{< relref "./dotnet" >}}">
             <p class="mx-auto text-xl font-semibold link">
-                .NET Core
+                .NET
                 <span class="text-xs font-light">(C#, F#, VB)</span>
             </p>
-            <img class="h-12 mx-auto inline" src="/logos/tech/dot-net.svg" alt=".NET Core">
+            <img class="h-12 mx-auto inline" src="/logos/tech/dot-net.svg" alt=".NET">
             <img class="h-12 mx-auto inline" src="/logos/tech/c-sharp.svg" alt="C#">
             <img class="h-12 mx-auto inline" src="/logos/tech/f-sharp.svg" alt="F#">
             <img class="h-12 mx-auto inline" src="/logos/tech/visual-basic.svg" alt="Visual Basic">

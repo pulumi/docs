@@ -14,7 +14,7 @@ This how-to guide will take you step-by-step through the tasks required to autho
 
 - You need to [install Pulumi]({{<relref "/docs/get-started/install">}}).
 - You should be familiar with the Pulumi [Resource and Component model]({{<relref "/docs/intro/concepts/resources">}}).
-- Pulumi Packages are multi-language: you can write your package once in either Go, Python, or TypeScript/JavaScript and then make it available to all Pulumi users, even if they use another language. To develop them, you need to have Git, Go, .NET Core, Python, and TypeScript installed on your system.
+- Pulumi Packages are multi-language: you can write your package once in either Go, Python, or TypeScript/JavaScript and then make it available to all Pulumi users, even if they use another language. To develop them, you need to have Git, Go, .NET, Python, and TypeScript installed on your system.
 - To follow the whole guide, you need a GitHub account. However, using GitHub is not a requirement; you may still find this guide useful even if you use another system to store your source code.
 
 ## Create a repository

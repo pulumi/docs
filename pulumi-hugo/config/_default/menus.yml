@@ -107,7 +107,7 @@ reference:
     url: https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi
     weight: 3
 
-  - name: .NET Core
+  - name: .NET
     parent: Pulumi SDK
     url: /docs/reference/pkg/dotnet/Pulumi/Pulumi.html
     weight: 4

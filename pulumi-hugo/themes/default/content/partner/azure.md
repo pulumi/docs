@@ -244,7 +244,7 @@ detail_sections:
         - title: All Languages
           icon: code
           icon_color: yellow
-          description: The Pulumi Azure Native provider is available in all Pulumi languages, including JavaScript, TypeScript, Python, Go, .NET Core, Java, and YAML. All SDKs are open source on GitHub and available as npm, NuGet, PyPI, and Go modules.
+          description: The Pulumi Azure Native provider is available in all Pulumi languages, including JavaScript, TypeScript, Python, Go, .NET, Java, and YAML. All SDKs are open source on GitHub and available as npm, NuGet, PyPI, and Go modules.
 
 superpowers:
   - title: Multi Cloud

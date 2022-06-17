@@ -1,5 +1,5 @@
 ---
-title: ".NET Core (C#, VB, F#)"
+title: ".NET (C#, VB, F#)"
 meta_desc: An overview of how to use .NET languages like C# and F# for infrastructure as code
            on any cloud (AWS, Azure, GCP, Kubernetes, etc.).
 menu:
@@ -12,9 +12,9 @@ aliases: ["/dotnet/"]
 
 <img src="/logos/tech/dotnet.png" align="right" width="150" style="padding:8px; margin-top: -64px">
 
-Pulumi supports infrastructure as code using any .NET Core language. You can use your favorite .NET tools &mdash; such as editors, package managers, build systems, and test frameworks &mdash; to create, deploy, and manage infrastructure on any cloud, including Azure, AWS, and Google Cloud.
+Pulumi supports infrastructure as code using any .NET language. You can use your favorite .NET tools &mdash; such as editors, package managers, build systems, and test frameworks &mdash; to create, deploy, and manage infrastructure on any cloud, including Azure, AWS, and Google Cloud.
 
-<a class="btn" href="https://dotnet.microsoft.com/download" target="_blank" title="Install .NET Core">Install .NET Core</a>
+<a class="btn" href="https://dotnet.microsoft.com/download" target="_blank" title="Install .NET">Install .NET</a>
 
 ## Getting Started
 
@@ -49,10 +49,10 @@ The Getting Started guides only demonstrate C#, but will also work for F# and Vi
 
 ## Prerequisites
 
-Before using Pulumi for .NET, you will need to install both Pulumi and .NET Core SDK 3.1 or later. If you follow the Getting Started guides above, they will walk you through doing this.
+Before using Pulumi for .NET, you will need to install both Pulumi and .NET Core SDK 3.1, .NET 5, or .NET 6 (recommended). If you follow the Getting Started guides above, they will walk you through doing this.
 
 1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-1. [Install .NET Core SDK 3.1](https://dotnet.microsoft.com/download)
+1. [Install .NET SDK](https://dotnet.microsoft.com/download)
 
 ## Example
 
@@ -166,7 +166,7 @@ End Module
 
 ## C\#, F\#, and VB Templates
 
-As of version 1.5, Pulumi supports .NET Core 3.1. You can write Pulumi programs in your favorite .NET language to get additional verification and tooling benefits. The fastest way to get started is to use a template. The template will autogenerate a set of files and initialize a Pulumi project. The getting started guides shown above will help do this on your cloud of choice, but this section describes doing so independently.
+You can write Pulumi programs in your favorite .NET language to get additional verification and tooling benefits. The fastest way to get started is to use a template. The template will autogenerate a set of files and initialize a Pulumi project. The getting started guides shown above will help do this on your cloud of choice, but this section describes doing so independently.
 
 {{< chooser language "csharp,fsharp,visualbasic" >}}
 
@@ -229,11 +229,11 @@ This `visualbasic` template is cloud agnostic, and you will need to install NuGe
 
 {{< /chooser >}}
 
-## .NET Core Tools
+## .NET Tools
 
 Pulumi packages are distributed on [NuGet for download](https://www.nuget.org/packages?q=pulumi).
 
-Although you can use any editor, [Visual Studio Code](https://code.visualstudio.com/download), [Visual Studio](https://visualstudio.microsoft.com/downloads/), or [Rider](https://www.jetbrains.com/rider/) will deliver full tooling support for .NET Core out-of-the-box, including auto-completion, red error markers and build errors.
+Although you can use any editor, [Visual Studio Code](https://code.visualstudio.com/download), [Visual Studio](https://visualstudio.microsoft.com/downloads/), or [Rider](https://www.jetbrains.com/rider/) will deliver full tooling support for .NET out-of-the-box, including auto-completion, red error markers and build errors.
 
 ![VSCode](/images/docs/quickstart/vscode-dotnet.png)
 
@@ -243,7 +243,7 @@ The Pulumi programming model defines the core concepts you will use when creatin
 Pulumi. [Architecture & Concepts]({{< relref "/docs/intro/concepts" >}}) describes these concepts
 with examples available in Python. These concepts are made available to you in the Pulumi SDK.
 
-The Pulumi SDK is available to .NET Core developers as a Nuget package. To learn more,
+The Pulumi SDK is available to .NET developers as a Nuget package. To learn more,
 [refer to the Pulumi SDK Reference Guide](/docs/reference/pkg/dotnet/Pulumi/Pulumi.html).
 
 The Pulumi programming model includes a core concept of `Input` and `Output` values, which are used to track how outputs of one resource flow in as inputs to another resource.  This concept is important to understand when getting started with .NET and Pulumi, and the [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) documentation is recommended to get a feel for how to work with this core part of Pulumi in common cases.
@@ -256,7 +256,7 @@ In addition to the CLI-driven workflows shown above, you can continuously deploy
 
 <img src="/logos/tech/azuredevops.png" align="right" width="100" style="padding:0 0 16px 32px">
 
-Pulumi can deploy infrastructure changes from your Azure DevOps Pipelines. This enables easy integration with your existing automation while using .NET Core for your infrastructure as code, leveraging the Pulumi task in the Visual Studio Marketplace.
+Pulumi can deploy infrastructure changes from your Azure DevOps Pipelines. This enables easy integration with your existing automation while using .NET for your infrastructure as code, leveraging the Pulumi task in the Visual Studio Marketplace.
 
 To learn more, [see the Pulumi Azure DevOps user guide]({{< relref "/docs/guides/continuous-delivery/azure-devops" >}}).
 
