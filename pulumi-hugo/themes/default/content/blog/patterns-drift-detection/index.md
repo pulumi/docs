@@ -300,3 +300,9 @@ options:
 {{% /chooser %}}
 
 Once you've run a couple of `pulumi up --refresh` and you're comfortable with the proposed executions, you can adopt the automation and sleep easier, knowing that you're handling drift and keeping your infrastructure up to date.
+
+## Want to See More?
+
+Watch me demo some of these features live, on YouTube, on my PulumiTV series: Modern Infrastructure.
+
+{{< youtube "7nJBFEtqTl8?rel=0" >}}
