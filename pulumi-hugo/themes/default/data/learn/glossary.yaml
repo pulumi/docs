@@ -1,4 +1,10 @@
 entries:
+  - term: Azure Kubernetes Service
+    description: |
+      A managed container orchestration tool on Microsoft Azure, allowing for the 
+      deployment and automated management of containerized applications.
+    link: msft-aks
+
   - term: Build
     description: |
       As a verb, to compile your source code into an executable binary. As a noun, a
@@ -109,6 +115,12 @@ entries:
     description: |
       A serverless compute product from AWS, designed for use with containerized workloads.
     link: aws-fargate
+
+  - term: Google Kubernetes Engine
+    description: |
+      A managed container orchestration tool on Google Cloud Platform (GCP), allowing for the 
+      deployment and automated management of containerized applications.
+    link: gcp-gke
 
   - term: Helm
     description: |
