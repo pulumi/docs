@@ -1,0 +1,10 @@
+id = "kelsey-dirks"
+name = "Kelsey Dirks"
+title = "Customer Success Manager"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+linkedin = "kelseydirks"
