@@ -7,9 +7,9 @@ menu:
   converters:
     identifier: arm2pulumi
     weight: 1
-    
+aliases:
+    - /migrate/arm2pulumi
 meta_desc: See what your Azure ARM Template would look like in a modern language thanks to Pulumi.
-
 examples:
     - name: Storage Account
       filename: azuredeploy.json

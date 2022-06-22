@@ -1,0 +1,37 @@
+{{ define "hero" }}
+    {{ partial "hero.html" (dict "title" .Title) }}
+{{ end }}
+
+{{ define "main" }}
+    <div class="container mx-auto text-center my-12 px-4 text-xl text-gray-900">
+        <div class="max-w-2xl mx-auto">
+            {{ .Content }}
+        </div>
+    </div>
+    <div class="container mx-auto max-w-2xl px-4 md:px-8 mb-24">
+        <ul class="list-none p-0 text-lg md:text-xl">
+            <li class="my-8">
+                <p>
+                    <a href="/migrate/tf2pulumi">Convert Terraform HCL to Pulumi &rarr;</a>
+                </p>
+            </li>
+            <li class="my-8">
+                <p>
+                    <a href="/migrate/cf2pulumi">Convert CloudFormation templates to Pulumi &rarr;</a>
+                </p>
+            </li>
+            <li class="my-8">
+                <p>
+                    <a href="/migrate/arm2pulumi">Convert Azure Resource Manager (ARM) templates to Pulumi &rarr;</a>
+                </p>
+            </li>
+            <li class="my-8">
+                <p>
+                    <a href="/migrate/kube2pulumi">Convert Kubernetes YAML to Pulumi &rarr;</a>
+                </p>
+            </li>
+        </ul>
+    </div>
+
+    {{ partial "hand-raise-section" . }}
+{{ end }}

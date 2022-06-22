@@ -7,8 +7,9 @@ menu:
   converters:
     identifier: tf2pulumi
     weight: 4
+aliases:
+    - /migrate/tf2pulumi
 meta_desc: See what your Terraform HCL would look like in a modern language thanks to Pulumi.
-
 examples:
     - name: AWS EC2 Instance
       filename: main.tf

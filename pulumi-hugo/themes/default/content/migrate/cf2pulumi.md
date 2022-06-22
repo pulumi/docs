@@ -7,9 +7,9 @@ menu:
   converters:
     identifier: cf2pulumi
     weight: 1
-    
+aliases:
+    - /migrate/cf2pulumi
 meta_desc: See what your CloudFormation templates would look like in a modern programming language thanks to Pulumi.
-
 examples:
     - name: Provision a Log Group
       filename: instance.yaml

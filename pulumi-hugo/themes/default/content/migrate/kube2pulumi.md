@@ -7,8 +7,9 @@ menu:
   converters:
     identifier: kube2pulumi
     weight: 3
+aliases:
+    - /migrate/kube2pulumi
 meta_desc: See what your Kubernetes YAML would look like in a modern language thanks to Pulumi.
-
 examples:
     - name: Nginx Pod
       filename: kube.yaml

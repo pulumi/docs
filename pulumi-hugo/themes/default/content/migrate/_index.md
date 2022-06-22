@@ -1,5 +1,6 @@
 ---
-private: true
-title: Migrate
-meta_desc: Information on migrating to Pulumi from an existing templating workflow.
+title: Migrate to Pulumi
+meta_desc: Interested in migrating to Pulumi from another infrastructure as code tool? Our conversion tools can help you make the transition.
 ---
+
+Interested in migrating to Pulumi from another infrastructure as code tool? Our conversion tools can help you make the transition.
