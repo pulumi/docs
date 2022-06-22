@@ -29,19 +29,19 @@ Of course, there are many more reasons to visit our booths. You'll find lots of 
 
 ### Pulumi — Universal Infrastructure as Code
 
-At the [Pulumi](https://www.pulumi.com/) booth, you'll learn about our cloud engineering platform, which brings infrastructure, developer, and security teams together through a unified software engineering process that tames cloud complexity and accelerates innovation. Don't miss our Ask an Expert live sessions to hear directly from the engineering team. Whether you want to know more about how to build with Universal Infrastructure as Code in general-purpose programming and markup languages or just learn more about what's on the roadmap, this is your chance to ask us anything. [Visit the Pulumi booth today](https://bit.ly/3M5b6Qj)!
+At the [Pulumi](https://www.pulumi.com/) booth, you'll learn about our cloud engineering platform, which brings infrastructure, developer, and security teams together through a unified software engineering process that tames cloud complexity and accelerates innovation. Don't miss our Ask an Expert live sessions to hear directly from the engineering team. Whether you want to know more about how to build with Universal Infrastructure as Code in general-purpose programming and markup languages or just learn more about what's on the roadmap, this is your chance to ask us anything.
 
 ### Buoyant — the creator of Linkerd
 
-[Buoyant](https://buoyant.io/) is announcing something really exciting: the introduction of *fully managed Linkerd*. You can be one of the first to check out the demo, and you'll also find a ton of service mesh content including a service mesh 101 in English and Spanish, their Engineer's Guide to mTLS, and details on Buoyant's Service Mesh Academy. For this and more, visit [the Buoyant booth](https://kubecon-cloudnativecon-europe.com/virtual-exhibitor/?v4b4342b0f72f3260e37d74de68eab433fee0c641d933e76d52be7eb34b211371656f07b5a54b2e522db3ac7b27c7d555=908815D44FE61A2E80915ACEC6E64FC9A625809715300E330E9CA19100987FDC5540D5D12FFF991541BCDBA641CF8FDC)!
+[Buoyant](https://buoyant.io/) is announcing something really exciting: the introduction of *fully managed Linkerd*. You can be one of the first to check out the demo, and you'll also find a ton of service mesh content including a service mesh 101 in English and Spanish, their Engineer's Guide to mTLS, and details on Buoyant's Service Mesh Academy.
 
 ### Civo — Fast Simple, Managed Kubernetes
 
-Stop by the [Civo](https://www.civo.com/) booth for live sessions on how to get the most out of your Kubernetes environment - including demos, Civo marketplace walkthroughs and an inside look at how they live-provision a private region. You'll find lots of resources and friendly team members to answer any questions on Civo’s easy-to-use managed Kubernetes service. It is fully CNCF certified and 100% Kubernetes upstream compatible. [Check out the Civo booth today](http://civo.io/kubecon)!
+Stop by the [Civo](https://www.civo.com/) booth for live sessions on how to get the most out of your Kubernetes environment - including demos, Civo marketplace walkthroughs and an inside look at how they live-provision a private region. You'll find lots of resources and friendly team members to answer any questions on Civo’s easy-to-use managed Kubernetes service. It is fully CNCF certified and 100% Kubernetes upstream compatible.
 
 ### Cockroach Labs — Build What you Dream
 
-[CockroachDB](https://www.cockroachlabs.com/)'s presence this year at KubeCon (both physical and virtual) is primarily a charitable one (if you attend in person, visit booth P16, where for each badge scanned they'll donate $3 to either Black Girls Code, Women Who Code, the Cancer Research Institute, or UNICEF for Ukrainian relief). Visit their booth ([or book a meeting here](https://www.cockroachlabs.com/guides/kubecon-emea-2022/)) to see demos and architecture overviews that relate what they’ve learned from building a multi-region, managed distributed SQL database offering on Kubernetes. [Check it out now](http://cockroachlabs.com/kubecon).
+[CockroachDB](https://www.cockroachlabs.com/)'s presence this year at KubeCon (both physical and virtual) is primarily a charitable one (if you attend in person, visit booth P16, where for each badge scanned they'll donate $3 to either Black Girls Code, Women Who Code, the Cancer Research Institute, or UNICEF for Ukrainian relief). Visit their booth ([or book a meeting here](https://www.cockroachlabs.com/guides/kubecon-emea-2022/)) to see demos and architecture overviews that relate what they’ve learned from building a multi-region, managed distributed SQL database offering on Kubernetes.
 
 ### Fairwinds — Kubernetes Governance and Security
 
@@ -49,7 +49,7 @@ Stop by the [Civo](https://www.civo.com/) booth for live sessions on how to get 
 
 ### Jetstack — the creator of cert-manager
 
-Get more out of [cert-manager](https://cert-manager.io/) and find out how  [Jetstack](https://www.jetstack.io/) Secure can eliminate workload misconfigurations and provide full visibility of each certificate across every production cluster. Chat directly to one of the project maintainers and learn to use cert-manager to secure Ingress endpoints and internal workloads using mTLS. [Check out the Jetstack booth today](https://jetstack.io/kubecon)!
+Get more out of [cert-manager](https://cert-manager.io/) and find out how  [Jetstack](https://www.jetstack.io/) Secure can eliminate workload misconfigurations and provide full visibility of each certificate across every production cluster. Chat directly to one of the project maintainers and learn to use cert-manager to secure Ingress endpoints and internal workloads using mTLS.
 
 ## Lots of great reasons to visit our booths
 
