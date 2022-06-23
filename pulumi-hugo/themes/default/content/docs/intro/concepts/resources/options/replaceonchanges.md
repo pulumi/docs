@@ -122,3 +122,7 @@ The property paths passed to `replaceOnChanges` should always be the "camelCase"
 If there are initialization errors on a resource (because the resource was created but failed to fully initialize correctly on a previous deployment) then the resource will normally be updated on the following Pulumi update, even if there are no other changes to the resource's inputs.  If `*` is specified as a property path for `replaceOnChanges`, then initialization errors will trigger a replacement instead of an update.
 
 The `replaceOnChanges` resource option can be combined with the [`deleteBeforeReplace`]({{< relref "deletebeforereplace" >}}) resource option to trigger a resource to be deleted before it is replaced whenever a given input has changes.
+
+{{% notes type="warning" %}}
+The `replaceOnChanges` resource option does not apply to component resources, and will not have the intended effect.
+{{% /notes %}}

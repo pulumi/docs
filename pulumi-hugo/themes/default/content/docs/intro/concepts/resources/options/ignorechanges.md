@@ -137,3 +137,7 @@ For example, a property named `NestedResource` would turn into `nestedResource`.
 - `root["key with a ."]`
 - `["root key with \"escaped\" quotes"].nested`
 - `["root key with a ."][100]`
+
+{{% notes type="warning" %}}
+The `ignoreChanges` resource option does not apply to component resources, and will not have the intended effect.
+{{% /notes %}}

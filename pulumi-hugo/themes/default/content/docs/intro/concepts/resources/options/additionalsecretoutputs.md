@@ -81,3 +81,7 @@ resources:
 {{< /chooser >}}
 
 Only top-level resource properties can be designated secret. If sensitive data is nested inside of a property, you must mark the entire top-level output property as secret.
+
+{{% notes type="warning" %}}
+The `additionalSecretOutputs` resource option does not apply to component resources, and will not have the intended effect.
+{{% /notes %}}
