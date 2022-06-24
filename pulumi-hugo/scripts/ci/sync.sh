@@ -40,16 +40,16 @@ destination_bucket_uri="s3://${destination_bucket}"
 # created in another account, in which case subsequent operations on the bucket will also
 # fail, causing this script to exit nonzero. In either case, it's okay to continue.
 aws s3 mb $destination_bucket_uri --region "$(aws_region)" || true
-aws s3api put-bucket-tagging --bucket $destination_bucket --tagging "TagSet=[{$(aws_owner_tag)}]"
+aws s3api put-bucket-tagging --bucket $destination_bucket --tagging "TagSet=[{$(aws_owner_tag)}]" --region "$(aws_region)"
 
 # Make the bucket an S3 website.
-aws s3 website $destination_bucket_uri --index-document index.html --error-document 404.html
+aws s3 website $destination_bucket_uri --index-document index.html --error-document 404.html --region "$(aws_region)"
 
 # Sync the local build directory to the bucket. Note that we do pass the --delete option
 # here, since in most cases, we'll be continually updating a bucket associated with a PR;
 # passing this option keeps the destination bucket clean.
 echo "Synchronizing to $destination_bucket_uri..."
-aws s3 sync "$build_dir" "$destination_bucket_uri" --acl public-read --delete --quiet
+aws s3 sync "$build_dir" "$destination_bucket_uri" --acl public-read --delete --quiet --region "$(aws_region)"
 
 echo "Sync complete."
 s3_website_url="http://${destination_bucket}.s3-website.$(aws_region).amazonaws.com"
@@ -57,7 +57,7 @@ echo "$s3_website_url"
 
 # Set the content-type of latest-version explicitly. (Otherwise, it'll be set as binary/octet-stream.)
 aws s3 cp "$build_dir/latest-version" "${destination_bucket_uri}/latest-version" \
-    --content-type "text/plain" --acl public-read --metadata-directive REPLACE
+    --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
 
 # At this point, we have a bucket that's suitable for deployment. As a result of this run,
 # we leave a file in the project root indicating the name of the bucket that was generated
