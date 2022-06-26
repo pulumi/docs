@@ -26,7 +26,7 @@ echo
 
 for bucket in $buckets_to_remove; do
     echo "Removing ${bucket}..."
-    aws s3 rb "s3://${bucket}" --force
+    aws s3 rb "s3://${bucket}" --force --region "$(aws_region)"
     echo
 done
 

@@ -104,7 +104,7 @@ get_bucket_for_commit() {
     aws ssm get-parameter \
         --name "$(ssm_parameter_key_for_commit $1)" \
         --query Parameter.Value \
-        --region us-west-2 \
+        --region "$(aws_region)" \
         --output text || echo ""
 }
 
@@ -124,6 +124,7 @@ set_bucket_for_commit() {
 get_recent_buckets() {
     aws s3api list-buckets \
         --query "reverse(sort_by(Buckets,&CreationDate))[:100].{id:Name,date:CreationDate}|[?starts_with(id,'$(origin_bucket_prefix)-${1}')]" \
+        --region "$(aws_region)" \
         --output json | jq -r '.[].id'
 }
 
