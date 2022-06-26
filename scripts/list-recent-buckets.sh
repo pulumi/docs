@@ -71,7 +71,7 @@ deletables=()
 for bucket in $buckets; do
     maybe_echo
     maybe_echo "Fetching metadata for ${bucket}..."
-    metadata="$(aws s3 cp "s3://${bucket}/metadata.json" 2>/dev/null - || echo '')"
+    metadata="$(aws s3 cp "s3://${bucket}/metadata.json" --region $(aws_region) 2>/dev/null - || echo '')"
 
     if [ ! -z "$metadata" ]; then
         bucket_url="$(echo $metadata | jq -r '.url')"
@@ -103,7 +103,7 @@ for bucket in $buckets; do
             if [ "$buckets_beyond_current" -gt "$buckets_to_retain" ]; then
                 maybe_echo
                 maybe_echo "❌ This bucket is ${buckets_beyond_current} buckets behind the current website, so it can safely be deleted."
-                maybe_echo "   aws s3 rb s3://${bucket_name} --force"
+                maybe_echo "   aws s3 rb s3://${bucket_name} --region $(aws_region) --force"
 
                 deletables+=($bucket_name)
             fi
@@ -124,7 +124,7 @@ for bucket in $buckets; do
             if [ "$pr_state" == "closed" ]; then
                 maybe_echo
                 maybe_echo "❌ This bucket's PR state is ${pr_state} (https://github.com/pulumi/docs/pull/${pr_number}), so it can safely be deleted."
-                maybe_echo "   aws s3 rb s3://${bucket_name} --force"
+                maybe_echo "   aws s3 rb s3://${bucket_name} --region $(aws_region) --force"
 
                 deletables+=($bucket_name)
             fi
@@ -151,7 +151,7 @@ maybe_echo "   pulumi -C infrastructure config set originBucketNameOverride \"<b
 maybe_echo "   pulumi -C infrastructure up"
 maybe_echo
 maybe_echo "❌ To delete one of these buckets, run:"
-maybe_echo "   aws s3 rb \"s3://<bucket-name>\" --force"
+maybe_echo "   aws s3 rb \"s3://<bucket-name>\" --region $(aws_region) --force"
 maybe_echo
 
 if [ ${#deletables} -gt 0 ]; then
@@ -161,7 +161,7 @@ if [ ${#deletables} -gt 0 ]; then
         if [ $only_deletables == true ]; then
             echo "$deletable"
         else
-            echo "   aws s3 rb \"s3://${deletable}\" --force"
+            echo "   aws s3 rb \"s3://${deletable}\" --region $(aws_region) --force"
         fi
     done
 

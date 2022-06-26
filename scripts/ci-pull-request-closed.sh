@@ -39,8 +39,8 @@ if [[ "$GITHUB_EVENT_NAME" == "pull_request" && ! -z "$GITHUB_EVENT_PATH" ]]; th
 
                 # aws s3api head-bucket is a quick way to determine whether the bucket exists
                 # and we have access to it.
-                if aws s3api head-bucket --bucket "$pr_bucket_name" 2>/dev/null; then
-                    aws s3 rb "s3://${pr_bucket_name}" --force
+                if aws s3api head-bucket --bucket "$pr_bucket_name" --region "$(aws_region)" 2>/dev/null; then
+                    aws s3 rb "s3://${pr_bucket_name}" --force --region "$(aws_region)"
                 else
                     echo "Unable to delete ${pr_bucket_name}. Skipping."
                 fi
