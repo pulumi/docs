@@ -60,6 +60,7 @@ Collaborate with other developers and coordinate on updates. Provide fine-graine
 Integrate Pulumi with your current continuous delivery pipeline. Build your own extensions, and create reusable templates.
 
 * [CI/CD Integration Assistant]({{< relref "/docs/intro/pulumi-service/ci-cd-integration-assistant" >}})
+* [Pulumi Service Provider]({{< relref "/registry/packages/pulumiservice/" >}}): A Pulumi Provider To Configure Pulumi
 * [Continuous Delivery]({{< relref "/docs/guides/continuous-delivery" >}})
 * [Pulumi Service REST API]({{< relref "/docs/reference/service-rest-api" >}})
 * [Webhooks]({{< relref "/docs/intro/pulumi-service/webhooks" >}})
