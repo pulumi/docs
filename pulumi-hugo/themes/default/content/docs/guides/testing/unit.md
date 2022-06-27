@@ -247,7 +247,11 @@ pulumi.runtime.setMocks({
     call: function(args: pulumi.runtime.MockCallArgs) {
         return args.inputs;
     },
-});
+},
+  "project",
+  "stack",
+  false, // Sets the flag `dryRun`, which indicates if pulumi is running in preview mode.
+);
 ```
 
 {{% /choosable %}}
@@ -265,7 +269,10 @@ class MyMocks(pulumi.runtime.Mocks):
     def call(self, args: pulumi.runtime.MockCallArgs):
         return {}
 
-pulumi.runtime.set_mocks(MyMocks())
+pulumi.runtime.set_mocks(
+    MyMocks(),
+    preview=False,  # Sets the flag `dry_run`, which is true at runtime during a preview.
+)
 ```
 
 {{% /choosable %}}
