@@ -70,7 +70,7 @@ main:
           role: ""
 
     # A bullet point list containing what the user will learn during the webinar.
-    learn: 
+    learn:
         - ""
 
 # The right hand side form section.

@@ -7,7 +7,7 @@ meta_desc: "In this workshop, you will learn the fundamentals of Infrastructure 
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -54,7 +54,7 @@ main:
     # Webinar title.
     title: "AWS Immersion Day - Hands-on Infrastructure as Code"
     # URL for embedding a URL for ungated webinars.
-    youtube_url: ""
+    youtube_url: "https://www.youtube.com/embed/elCqbTB3m40"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2022-06-14T09:00:00-07:00
     # Duration of the webinar.
@@ -63,7 +63,7 @@ main:
     datetime: ""
     # Description of the webinar.
     description: |
-        In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform. Join Pulumi and our friends from VirtusLab and AWS for an interactive session where you will be introduced to infrastructure as code concepts, and use familiar programming languages to provision modern cloud infrastructure.
+        In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform. Join Pulumi and our friends from VirtusLab and AWS for an interactive session where you will be introduced to infrastructure as code concepts, and use the Java programming language to provision resources on AWS.
 
         This workshop is designed to help users completely new to Pulumi to become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and a series of hands-on exercises to help you understand the building blocks available in Pulumi.
 
@@ -73,11 +73,14 @@ main:
           role: Developer Advocate, Pulumi
         - name: Marina Novikova
           role: Partner Solutions Architect, AWS
+        - name: Paweł Prażak
+          role: Cloud Architect, VirtusLab
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
         - The fundamentals of Infrastructure as Code.
         - Provision cloud resources on AWS.
+        - All about Pulumi Java support
 
 # The right hand side form section.
 form:

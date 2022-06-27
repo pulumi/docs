@@ -1,13 +1,13 @@
 ---
 # Name of the webinar.
-title: "Getting Started with Azure and Infrastructure as Code"
-meta_desc: "In this workshop, you’ll use the Azure native provider to build infrastructure using TypeScript SDK and examine some of the features not previously possible."
+title: "DevOpsDays Seattle 2022"
+meta_desc: "Join Matty Stratton at DevOpsDays Seattle and listen to his talk \"You’ve Convinced Me We Have To Collaborate — But How The Hell Do We Deal With People?\""
 
 # A featured webinar will display first in the list.
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: true
+pre_recorded: false
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -29,57 +29,60 @@ type: webinars
 # landing/registration page. If the webinar is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
 # the webinar page created.
-external: false
-block_external_search_index: false
+external: true
+block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "getting-started-with-azure-native"
-
-# Webinar pages support multiple session via the 'multiple' property.
-# multiple:
-#     - datetime: 2021-10-21T09:00:00-07:00
-#       hubspot_form_id: 7de43dee-4699-46e9-9ce3-9a6fffd56aa5
+url_slug: https://pulumip.us/dodSEAMatty
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Getting Started with Azure and Infrastructure as Code"
+    title: ""
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
+
+# Webinar pages support multiple session via the 'multiple' property.
+# multiple:
+#   - datetime: 2020-02-05T10:00:00-07:00
+#     hubspot_form_id: ""
+#     gotowebinar_key: ""
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Getting Started with Azure and Infrastructure as Code"
+    title: ""
     # URL for embedding a URL for ungated webinars.
-    youtube_url: "https://www.youtube.com/embed/yzTSUDp2KXU"
+    youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-06-01T09:00:00-07:00
+    sortable_date: 2022-07-20T10:00:00-07:00
     # Duration of the webinar.
-    duration: "90 minutes"
+    duration: "30 minutes"
     # Datetime of the webinar.
-    datetime: "OCTOBER 21st, 2021"
+    datetime: ""
     # Description of the webinar.
-    description: |
-        Microsoft Azure’s product offering is continuously evolving, and infrastructure tools often can’t keep up with the speed of innovation. Pulumi’s Azure Native provider is built directly from the Azure API, bringing power of familiar programming languages to Azure without sacrificing on latest features.
-
-        In this workshop, you’ll use the Azure native provider to build infrastructure using Pulumi’s TypeScript SDK and examine some of the features not previously possible.
+    description: ""
 
     # The webinar presenters
     presenters:
-        - name: Matt Stratton
-          role: Staff Developer Advocate, Pulumi
-        - name: April Edwards
-          role: Senior Cloud Advocate, Microsoft
+        - name: ""
+          role: ""
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - The basics of the Pulumi Programming Model.
-        - How to provision, update, and destroy Azure resources.
+        - ""
+
+# This section contains the transcript for a video. It is optional.
+transcript: |
+    Here is where you would put the transcript for a recorded video.
 
 # The right hand side form section.
 form:
+    # GoToWebinar webinar key. This key allows us to register people for webinars via the
+    # HubSpot form.
+    gotowebinar_key: ""
+
     # HubSpot form id.
-    hubspot_form_id: "a6e6eab6-add6-4182-81fd-9bff4e61dace"
+    hubspot_form_id: ""
 ---
