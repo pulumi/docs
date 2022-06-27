@@ -1,0 +1,11 @@
+id = "alex-qiu"
+name = "Alex Qiu"
+title = "Software Engineer"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "aq17"
+linkedin = "alexqiu8"
