@@ -13,28 +13,28 @@ menu:
 aliases: ["/docs/quickstart/kubernetes/next-steps/"]
 ---
 
-We've seen how to quickly get started using Kubernetes with Pulumi.
+Congrats! You've deployed your first project to Kubernetes with Pulumi. Here are some next steps, depending on your learning style.
 
-From here, you can dive deeper with additional tutorials:
+## Learn Pulumi
 
-## Clusters
+Dive into Learn Pulumi for a comprehensive walkthrough of key Pulumi concepts in the context of a real-life application.
 
-The following tutorials are focused on creating managed Kubernetes clusters
-across the major cloud providers.
+{{< get-started-next-step path="/learn/pulumi-fundamentals" label="Learn Pulumi Fundamentals" ref="gs-k8s-learn" >}}
 
-- [AWS EKS - Hello World!]({{< relref "/registry/packages/kubernetes/how-to-guides/eks" >}})
-- [Azure AKS - Hello World!]({{< relref "/registry/packages/kubernetes/how-to-guides/aks" >}})
-- [Google Cloud GKE - Hello World!]({{< relref "/registry/packages/kubernetes/how-to-guides/gke" >}})
+## How-to Guides
 
-## Workloads
+Explore our how-to guides if you're looking for examples of specific architectures or application stacks. These guides are available in all Pulumi languages and cover creating managed Kubernetes clusters across all major cloud providers ([AWS]({{< relref "/registry/packages/kubernetes/how-to-guides/eks" >}}), [Azure]({{< relref "/registry/packages/kubernetes/how-to-guides/aks" >}}), [Google Cloud]({{< relref "/registry/packages/kubernetes/how-to-guides/gke" >}})) as well as deploying app workloads on running Kubernetes clusters ([WordPress Helm Chart]({{< relref "/registry/packages/kubernetes/how-to-guides/wordpress-chart" >}}), [Stateless App Deployment]({{< relref "/registry/packages/kubernetes/how-to-guides/stateless-app" >}})).
 
-The following tutorials are focused on deploying app workloads to running Kubernetes clusters, managed or self-managed.
+{{< get-started-next-step path="/registry/packages/kubernetes/how-to-guides" label="Explore How-to Guides" ref="gs-k8s-guides" >}}
 
-1. [Hello, World!]({{< relref "/registry/packages/kubernetes/how-to-guides/exposed-deployment" >}})
-2. [Deploying the WordPress Helm Chart]({{< relref "/registry/packages/kubernetes/how-to-guides/wordpress-chart" >}})
-3. [Guestbook App with Redis and Nginx]({{< relref "/registry/packages/kubernetes/how-to-guides/guestbook" >}})
-4. [Graceful App Rollout]({{< relref "/registry/packages/kubernetes/how-to-guides/configmap-rollout" >}})
-5. [Gating rollout on Prometheus checks]({{< relref "/registry/packages/kubernetes/how-to-guides/p8s-rollout" >}})
-6. [Run a Stateless App Deployment]({{< relref "/registry/packages/kubernetes/how-to-guides/stateless-app" >}})
+## How Pulumi Works
 
-{{< get-started-stepper >}}
+Learn how Pulumi works from its architecture to key concepts, including [stacks]({{< relref "/docs/intro/concepts/stack" >}}), [state]({{< relref "/docs/intro/concepts/state" >}}), [configuration]({{< relref "/docs/intro/concepts/config" >}}), and [secrets]({{< relref "/docs/intro/concepts/secrets" >}}).
+
+{{< get-started-next-step path="/docs/intro/concepts" label="Read Documentation" ref="gs-k8s-docs" >}}
+
+## Blog Posts
+
+Read through the latest blog posts about using Pulumi with Kubernetes.
+
+{{< get-started-next-step path="/blog/tag/kubernetes" label="Read the Pulumi Blog" ref="gs-k8s-blog" >}}
