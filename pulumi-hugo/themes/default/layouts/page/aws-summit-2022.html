@@ -1,0 +1,125 @@
+{{ define "hero" }}
+    {{ partial "hero.html" (dict "title" .Params.title) }}
+{{ end }}
+
+{{ define "main" }}
+    <section id="ctas" class="container mx-auto my-16 text-center">
+        <h3>July 19 - NYC and August 24 - Chicago</h3>
+        <h2>Interact with us at AWS Summit 2022!</h2>
+        <div class="my-16">
+            <div class="lg:flex lg:flex-wrap justify-center items-stretch">
+                <div class="lg:w-1/2 px-3 py-6">
+                    <div class="card text-center p-6 relative h-full">
+                        <div class="icon-section">
+                            {{ partial "color-icon.html" (dict "icon" "code" "icon_color" "salmon") }}
+                        </div>
+                        <div>
+                            <h5>Want to meet with us?</h5>
+                        </div>
+                        <div class="description">
+                            <p>Meet with our team in-person at AWS Summit! Use the link below to schedule some time.</p>
+                        </div>
+                        <div class="card-cta-btn">
+                            <a href="{{ relref . "/contact.md" }}?form=sales" class="btn-primary">Meet with us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 px-3 py-6">
+                    <div class="card text-center p-6 relative h-full">
+                        <div class="icon-section">
+                            {{ partial "color-icon.html" (dict "icon" "rocketship" "icon_color" "violet") }}
+                        </div>
+                        <div>
+                            <h5>Join our workshop</h5>
+                        </div>
+                        <div class="description">
+                            <p>Join us at one of our upcoming workshops!</p>
+                        </div>
+                        <div class="card-cta-btn">
+                            <a href="{{ relref . "/resources/getting-started-with-iac-aws" }}" class="btn-primary">Register</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 px-3 py-6">
+                    <div class="card text-center p-6 relative h-full">
+                        <div class="icon-section">
+                            {{ partial "color-icon.html" (dict "icon" "team" "icon_color" "blue") }}
+                        </div>
+                        <div>
+                            <h5>Come by our booth for fun swag!</h5>
+                        </div>
+                        <div class="description flex flex-col items-center">
+                            <div class="my-1 flex flex-row">
+                                <img src="/images/swag/t-shirt.png" alt="Pulumi T-Shirt" class="h-24 md:mx-4 my-4" />
+                                <img src="/images/swag/cat-ears.png" alt="Pulumi cat ears" class="h-24 md:mx-4 my-4" />
+                                <img src="/images/swag/backpack-hat-handsup.png" alt="Pulumi sticker" class="h-24 md:mx-4 my-4" />
+                            </div>
+                            <p>*items vary by event and location</p>
+                        </div>
+                        <div class="card-cta-btn">
+                            <!-- <a href="#" class="btn-primary"></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 px-3 py-6">
+                    <div class="card text-center p-6 relative">
+                        <div class="icon-section">
+                            {{ partial "color-icon.html" (dict "icon" "pen" "icon_color" "yellow") }}
+                        </div>
+                        <div>
+                            <h5>Register to attend!</h5>
+                            <p>Register to attend the 2022 AWS Summit in NYC and Chicago.</p>
+                        </div>
+                        <div class="card-cta-btn">
+                            <a href="https://aws.amazon.com/events/summits/new-york/" target="_blank" rel="noopener noreferrer" class="btn-primary">NYC</a>
+                            <a href="https://aws.amazon.com/events/summits/chicago/" target="_blank" rel="noopener noreferrer" class="btn-primary">Chicago</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="learn-more" class="container mx-auto my-20">
+        <div class="max-w-3xl mx-auto">
+            <h2>Additional learning materials</h2>
+            <div class="text-base text-left mb-8 flex flex-row my-6">
+                <div class="card-cta-btn pr-4">
+                    <a href="https://www.pulumi.com/learn/" target="_blank" rel="noopener noreferrer" class="btn-secondary">Learn Pulumi</a>
+                </div>
+                <div class="card-cta-btn pr-4">
+                    <a href="https://www.pulumi.com/docs/get-started/aws/" target="_blank" rel="noopener noreferrer" class="btn-secondary">Get Started</a>
+                </div>
+                <div class="card-cta-btn pr-4">
+                    <a href="https://www.youtube.com/c/PulumiTV" target="_blank" rel="noopener noreferrer" class="btn-secondary">Pulumi TV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hiring" class="container mx-auto my-16">
+        <div class="max-w-3xl mx-auto">
+            <h2>Join the team</h2>
+            <div class="text-base text-left mb-8">
+                <p>
+                    Pulumi is reinventing how people build modern cloud applications, with a unique platform that combines deep systems and infrastructure innovation with elegant
+                    programming models and developer tools.
+                </p>
+                <p>
+                    Our team is a diverse and talented group of individuals, with backgrounds in distributed cloud systems, programming languages, developer tools, and operating
+                    systems, from companies from all corners of the industry. Our culture is one of technical excellence, passion for teamwork, and customer obsession.
+                </p>
+                <p>
+                    While we have a fabulous office in downtown Seattle, Pulumi cares about the health, safety and happiness of our employees, and we've been a fully remote company
+                    since March, 2020. We've learned and grown as a company this year, and &mdash; unless otherwise specified &mdash; all of our open positions are remote. We will
+                    continue to collaborate and grow from different locations, and are committed to making sure our team is successful from their home offices.
+                </p>
+                <h3 class="mb-0">Open Positions</h3>
+                <pulumi-greenhouse-jobs-list></pulumi-greenhouse-jobs-list>
+            </div>
+        </div>
+    </section>
+{{ end }}
