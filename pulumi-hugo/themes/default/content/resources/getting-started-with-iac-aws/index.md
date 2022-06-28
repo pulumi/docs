@@ -39,7 +39,7 @@ url_slug: "getting-started-with-iac-aws"
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Getting started with Infrastructure as Code on AWS"
+    title: "Getting Started with Infrastructure as Code on AWS"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
