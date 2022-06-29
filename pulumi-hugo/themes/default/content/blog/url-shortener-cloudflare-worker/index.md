@@ -43,7 +43,7 @@ Let's see how we can deploy a low-latency serverless URL shortener to Cloudflare
 
 ## Setting Up
 
-You'll need the Cloudflare package added to your Pulumi project and an API token configured.
+You'll need the [Cloudflare package]({{< relref "/registry/packages/cloudflare" >}}) added to your Pulumi project and an [API token configured]({{< relref "registry/packages/cloudflare/installation-configuration" >}}).
 
 ```shell
 yarn add @pulumi/cloudflare
@@ -52,9 +52,7 @@ pulumi config set --secret cloudflare:apiToken
 
 ## Our URL Shortener
 
-We're going to use plain old JavaScript for our worker code, as this means we don't need to transpile anything down.
-
-Our URL Shortener will store domains, short tokens, and long URLs in a JavaScript object. Though we'll show you an example of deploying these to Cloudflare Workers via the KV service too.
+We're going to use plain old JavaScript for our worker code, as this means we don't need to transpile anything down. Our URL Shortener will store domains, short tokens, and long URLs in a JavaScript object. We'll also provide a `DEFAULT_URL` in-case we can't match the `path` requested.
 
 ```javascript
 const DEFAULT_URL = "https://youtube.com/pulumitv"
@@ -152,11 +150,16 @@ You could then use `compileWorker.stdout` as instead of `fs.readFileSync` within
 
 ## Hooking Up a Domain
 
-Cloudflare Workers allow us to connect a domain name, instead of using the generated `workers.dev` subdomain. To do so with Pulumi, we need to create or fetch a Zone.
+Cloudflare Workers allow us to connect a domain name, instead of using the generated `workers.dev` subdomain. To do so with Pulumi, we need to [create]({{< relref "/registry/packages/cloudflare/api-docs/zone/" >}}) or [fetch]({{< relref "registry/packages/cloudflare/api-docs/getzone/" >}}) a Cloudflare Zone.
 
-### Create a Domain(s)
+### Create a Zone(s)
 
-Once we create the `cloudflare.Zone` resource, we also need to create a `cloudflare.ZoneSettingsOverride` resource to ensure that we enable `alwaysUseHttps: "on"`, `automaticHttpsRewrites: "on"`, `ssl: "strict"`, and `universalSsl: "on"`.
+Once we create the `cloudflare.Zone` resource, we also need to create a `cloudflare.ZoneSettingsOverride` resource to ensure that we enable:
+
+- `alwaysUseHttps: "on"`
+- `automaticHttpsRewrites: "on"`
+- `ssl: "strict"`
+- `universalSsl: "on"`.
 
 Without these settings, our traffic will be available over HTTP and ... come on, it's 2022 already.
 
@@ -184,7 +187,7 @@ const linkZones = linkZoneNames.map((zone) => {
 });
 ```
 
-### Fetch a Domain
+### Fetch a Zone
 
 ```typescript
 const zone = await cloudflare.getZone({
@@ -205,7 +208,9 @@ new cloudflare.ZoneSettingsOverride(zone, {
 
 ### Creating the Routes
 
-In-order to actually send traffic to our workers from these zones, we need to setup the DNS records and create the routes.
+In-order to actually send traffic to our workers from these zones, we need to setup the DNS records and create the routes. While Cloudflare does provide a web UI to "connect" a custom domain, in beta, this isn't yet available over the Cloudflare API.
+
+Instead, we need to use a proxied DNS record on a subdomain, or domain apex, that points to `workers.dev`.
 
 ```typescript
 linkZones.forEach((zone) => {
@@ -239,4 +244,33 @@ linkZones.forEach((zone) => {
 
 ## Fin
 
-That's it! Deploying your own URL Shortener with some JavaScript and Cloudflare Workers.
+Lastly, we can run `pulumi up` and run a `curl` 😀
+
+```shell
+❯ pulumi up
+
+     Type                                      Name                    Status
+ +   pulumi:pulumi:Stack                       short-links-production  created
+ +   ├─ cloudflare:index:Zone                  pulumi.tv               created
+ +   ├─ cloudflare:index:WorkerScript          links                   created
+ +   ├─ cloudflare:index:ZoneSettingsOverride  pulumi.tv               created
+ +   ├─ cloudflare:index:Record                pulumi.tv               created
+ +   └─ cloudflare:index:WorkerRoute           pulumi.tv               created
+
+Resources:
+    + 7 created
+
+Duration: 27s
+
+❯ curl -I https://pulumi.tv
+HTTP/2 302
+date: Wed, 29 Jun 2022 21:57:20 GMT
+location: https://youtube.com/pulumitv
+
+❯ curl -I https://pulumi.tv/modern-infrastructure
+HTTP/2 302
+date: Wed, 29 Jun 2022 21:57:20 GMT
+location: https://www.youtube.com/playlist?list=PLyy8Vx2ZoWloyj3V5gXzPraiKStO2GGZw
+```
+
+That's it! Deploying your own URL Shortener with some JavaScript and Cloudflare Workers with Pulumi.
