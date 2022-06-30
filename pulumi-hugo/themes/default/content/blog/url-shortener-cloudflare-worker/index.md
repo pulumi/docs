@@ -1,4 +1,4 @@
-;---
+---
 title: "Deploying a URL Shortener with Cloudflare Workers"
 
 # The date represents the post's publish date, and by default corresponds with
@@ -11,7 +11,7 @@ date: 2022-06-29T23:00:09+01:00
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
 # Max length is 160 characters.
-meta_desc: Need a URL shortener that responds is milliseconds from anywhere in the world, delivered from over 250 edge locations? Let's deploy one with Pulumi to Cloudflare Workers.
+meta_desc: Need a URL shortener that responds is milliseconds from anywhere, delivered from over 250 edge locations? Let's deploy one with Pulumi to Cloudflare Workers.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -540,7 +540,6 @@ variables:
 
 {{% /choosable %}}
 
-
 ### Creating the Routes
 
 In-order to actually send traffic to our workers from these zones, we need to setup the DNS records and create the routes. While Cloudflare does provide a web UI to "connect" a custom domain, in beta, this isn't yet available over the Cloudflare API.
@@ -669,7 +668,6 @@ location: https://www.youtube.com/playlist?list=PLyy8Vx2ZoWloyj3V5gXzPraiKStO2GG
 ```
 
 That's it! Deploying your own URL Shortener with some JavaScript and Cloudflare Workers with Pulumi.
-
 
 ## Complete Code
 
