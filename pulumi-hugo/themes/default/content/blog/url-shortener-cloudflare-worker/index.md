@@ -547,6 +547,12 @@ variables:
      Arguments:
        name: pulumi.tv
      Return: id
+ zoneName:
+   Fn::Invoke:
+     Function: cloudflare:index:getZone
+     Arguments:
+       name: pulumi.tv
+     Return: name
 ```
 
 {{% /choosable %}}
@@ -644,7 +650,9 @@ resources:
   route:
     type: cloudflare:index:WorkerRoute
     properties:
+      # If you fetched a Zone, this would be ${zoneId}
       zoneId: ${zone.id}
+      # If you fetched a Zone, this would be ${zoneName}
       pattern: ${zone.zone}/*
       scriptName: ${worker.name}
 ```
