@@ -163,6 +163,7 @@ Now on to our Pulumi code. We need to read our JavaScript code and send it to Cl
 {{% choosable language typescript %}}
 
 ```typescript
+// index.ts
 import * as cloudflare from "@pulumi/cloudflare";
 import * as fs from "fs";
 
@@ -316,6 +317,7 @@ npm install @pulumi/command
 ```
 
 ```typescript
+// index.ts
 import * as command from "@pulumi/command";
 
 const compileWorker = new command.local.Command("compile-worker", {
@@ -353,6 +355,7 @@ go get github.com/pulumi/pulumi-command/sdk/go/...
 ```
 
 ```go
+// main.go
 import (
 	"github.com/pulumi/pulumi-command/sdk/go/command/local"
 )
@@ -373,6 +376,7 @@ You could then use the `stdout` output, `compileWorker.Stdout`, from our local c
 {{% choosable language yaml %}}
 
 ```yaml
+# Pulumi.yaml
 resources:
   compileWorker:
     type: command:local:Command
@@ -427,6 +431,7 @@ const zoneSettings = new cloudflare.ZoneSettingsOverride("pulumi.tv", {
 {{% choosable language python %}}
 
 ```python
+# __main__.py
 zone = cloudflare.Zone("pulumi.tv", zone="pulumi.tv", plan="free")
 zone_settings = cloudflare.ZoneSettingsOverride(
     "pulumi.tv",
@@ -446,6 +451,7 @@ zone_settings = cloudflare.ZoneSettingsOverride(
 {{% choosable language go %}}
 
 ```go
+// main.go
 zone, err := cloudflare.NewZone(ctx, "pulumi.tv", &cloudflare.ZoneArgs{
 	Zone: pulumi.String("pulumi.tv"),
 	Plan: pulumi.String("free"),
@@ -474,6 +480,7 @@ if err != nil {
 {{% choosable language yaml %}}
 
 ```yaml
+# Pulumi.yaml
 resources:
   zone:
     type: cloudflare:index:Zone
@@ -501,6 +508,7 @@ resources:
 {{% choosable language typescript %}}
 
 ```typescript
+// index.ts
 const zone = await cloudflare.getZone({
   name: "pulumi.tv",
 });
@@ -511,6 +519,7 @@ const zone = await cloudflare.getZone({
 {{% choosable language python %}}
 
 ```python
+# __main__.py
 zone = cloudflare.get_zone(name="pulumi.tv")
 ```
 
@@ -519,6 +528,7 @@ zone = cloudflare.get_zone(name="pulumi.tv")
 {{% choosable language go %}}
 
 ```go
+// main.go
 zone, err := cloudflare.LookupZone(ctx, &cloudflare.LookupZoneArgs{
     Name: pulumi.String("pulumi.tv"),
 })
@@ -529,6 +539,7 @@ zone, err := cloudflare.LookupZone(ctx, &cloudflare.LookupZoneArgs{
 {{% choosable language yaml %}}
 
 ```yaml
+# Pulumi.yaml
 variables:
  zoneId:
    Fn::Invoke:
@@ -551,6 +562,7 @@ Instead, we need to use a proxied DNS record on a subdomain, or domain apex, tha
 {{% choosable language typescript %}}
 
 ```typescript
+// index.ts
 const record = new cloudflare.Record(
   "pulumi.tv",
   {
@@ -580,6 +592,7 @@ const route = new cloudflare.WorkerRoute(
 {{% choosable language python %}}
 
 ```python
+# __main__.py
 from pulumi import Output
 
 record = cloudflare.Record("pulumi.tv",
@@ -593,6 +606,7 @@ route = cloudflare.WorkerRoute("pulumi.tv", zone_id=zone.id, pattern=Output.conc
 {{% choosable language go %}}
 
 ```go
+// main.go
 _, err = cloudflare.NewRecord(ctx, "pulumi.tv", &cloudflare.RecordArgs{
 	Name:   pulumi.String("@"),
 	ZoneId: zone.ID(),
@@ -618,6 +632,7 @@ if err != nil {
 {{% choosable language yaml %}}
 
 ```yaml
+# Pulumi.yaml
 resources:
   record:
     type: cloudflare:index:Record
@@ -676,6 +691,7 @@ That's it! Deploying your own URL Shortener with some JavaScript and Cloudflare 
 {{% choosable language typescript %}}
 
 ```typescript
+// index.ts
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
 import * as fs from "fs";
@@ -734,6 +750,7 @@ const workerRoute = new cloudflare.WorkerRoute(
 {{% choosable language python %}}
 
 ```python
+# __main__.py
 import pulumi
 from pulumi import Output
 import pulumi_cloudflare as cloudflare
@@ -743,7 +760,6 @@ worker_script = worker_script_file.read()
 worker_script_file.close()
 
 worker = cloudflare.WorkerScript("url-shortener", name="url-shortener", content=worker_script)
-
 
 zone = cloudflare.Zone("pulumi.tv", zone="pulumi.tv", plan="free")
 zone_settings = cloudflare.ZoneSettingsOverride(
@@ -769,6 +785,7 @@ route = cloudflare.WorkerRoute("pulumi.tv", zone_id=zone.id, pattern=Output.conc
 {{% choosable language go %}}
 
 ```go
+// main.go
 package main
 
 import (
@@ -846,6 +863,7 @@ func main() {
 {{% choosable language yaml %}}
 
 ```yaml
+# Pulumi.yaml
 name: url-shortener
 runtime: yaml
 description: url-shortener in Pulumi YAML
