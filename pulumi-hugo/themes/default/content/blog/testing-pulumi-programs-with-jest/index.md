@@ -12,6 +12,7 @@ tags:
     - aws
     - lambda
     - serverless
+    - fullstack
 ---
 
 When I was a kid growing up in Southern California, there was a phone number you could call to find out what time it was. It was a local number, 853-1212 (easy to remember as the arrangement of the numbers on the keypad made a capital T), and I used it all the time, to set my watch, adjust the alarm clock, fix the display on the VCR. I don't recall the last time I used it, probably sometime in the mid '90s, but I do remember clearly the sound of [the voice at the other end of the line](https://telephoneworld.org/telephone-sounds/modern-north-american-telephone-sounds/time-temperature-weather-forecast-recordings/).
