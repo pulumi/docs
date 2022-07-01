@@ -6,7 +6,7 @@ layout: glossary/single
 
 ## Description
 
-[Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine) (GKE) is a managed container orchestration tool. Applications are deployed within containers by defining a cluster and node pool, then giving the cluster a kubeconfig, deployment definition, and service definition, as with any other application deployed on a Kubernetes cluster. GKE also provides some additional services, such as auto-repair for unhealthy nodes and auto-scaling. Serverless functionality is available via [Cloud Run](https://cloud.google.com/run) for Anthos.
+[Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine) (GKE) is a [managed kubernetes service](/learn/glossary/managed-kubernetes). Applications are deployed within containers by defining a cluster and node pool, then giving the cluster a kubeconfig, deployment definition, and service definition, as with any other application deployed on a Kubernetes cluster. GKE also provides some additional services, such as auto-repair for unhealthy nodes and auto-scaling. Serverless functionality is available via [Cloud Run](https://cloud.google.com/run) for Anthos.
 
 ### Use Cases
 

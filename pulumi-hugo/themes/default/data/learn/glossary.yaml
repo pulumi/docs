@@ -158,6 +158,12 @@ entries:
       without the need to provision infrastructure yourself.
     link: aws-lambda
 
+  - term: Managed Kubernetes Service
+    description: |
+      A kubernetes platform where some or all of the responsibility for setup and 
+      maintenance lies with a third-party provider.
+    link: managed-kubernetes
+
   - term: Microservice
     description: |
       A software development architecture that breaks your application up into

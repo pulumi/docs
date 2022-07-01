@@ -6,7 +6,7 @@ layout: glossary/single
 
 ## Description
 
-[Microsoft Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/) (AKS) is a managed container orchestration tool. Containerized applications are deployed by creating a cluster within a resource group, which can then pull from Azure Container Registry or elsewhere. Microsoft has a fairly robust set of services accessible to AKS, including integration with Active Directory.
+[Microsoft Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/) (AKS) is a [managed kubernetes service](/learn/glossary/managed-kubernetes). Containerized applications are deployed by creating a cluster within a resource group, which can then pull from Azure Container Registry or elsewhere. Microsoft has a fairly robust set of services accessible to AKS, including integration with Active Directory.
 
 ### Use Cases
 

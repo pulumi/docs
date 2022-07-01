@@ -6,7 +6,7 @@ layout: glossary/single
 
 ## Description
 
-[AWS Elastic Kubernetes Service](https://aws.amazon.com/eks/) (EKS) is a managed Kubernetes service, allowing you to run your containerized workloads on Kubernetes without the overhead of managing it yourself. When using EKS, the control plane nodes responsible for the scheduling and scaling of your application containers are managed automatically by AWS. The native role-based access control (RBAC) built into Kubernetes integrates directly with AWS IAM. Like Amazon ECS, deployment can be via [Fargate](/learn/glossary/aws-fargate) or EC2.
+[AWS Elastic Kubernetes Service](https://aws.amazon.com/eks/) (EKS) is a [managed Kubernetes service](/learn/glossary/managed-kubernetes), allowing you to run your containerized workloads on Kubernetes without the overhead of managing it yourself. When using EKS, the control plane nodes responsible for the scheduling and scaling of your application containers are managed automatically by AWS. The native role-based access control (RBAC) built into Kubernetes integrates directly with AWS IAM. Like Amazon ECS, deployment can be via [Fargate](/learn/glossary/aws-fargate) or EC2.
 
 ### Use Cases
 
