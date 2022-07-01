@@ -117,7 +117,7 @@ Once we understood how to use Pulumi concepts with Webiny's project organization
 
 And although the Pulumi CLI is great, we still wanted to keep it super simple for the user and make the overall developer experience as straightforward and unified as possible. For starters, we didn’t want our users to install the Pulumi CLI manually. We wanted it to happen automatically.
 
-We’ve created our version of the [Pulumi SDK](https://github.com/webiny/webiny-js/tree/next/packages/pulumi-sdk), which lets us use the Pulumi CLI more programmatically. It also enables us to make the Pulumi CLI download experience as smooth as possible. Essentially, whenever a user runs a deployment-related command, all of the necessary Pulumi CLI binaries and plugins are downloaded and stored inside the project’s node_modules folder.
+We’ve created our version of the [Pulumi SDK](https://github.com/webiny/webiny-js/tree/v5.28.0/packages/pulumi-sdk), which lets us use the Pulumi CLI more programmatically. It also enables us to make the Pulumi CLI download experience as smooth as possible. Essentially, whenever a user runs a deployment-related command, all of the necessary Pulumi CLI binaries and plugins are downloaded and stored inside the project’s node_modules folder.
 
 > Although we could’ve saved us some time by using Pulumi’s [Automation API](https://www.pulumi.com/docs/guides/automation-api/) (instead of creating the mentioned Pulumi SDK), at the time, the Automation API was still in preview and not generally available. And since the setup we already had was working well, we decided to keep it and hopefully revisit the Automation API integration in the future.
 
@@ -184,15 +184,15 @@ As we can see, every project application follows the same general organization. 
 - `code` - contains application code (one or more packages)
 - `pulumi` - contains cloud infrastructure (Pulumi) code
 
-Furthermore, if we opened each of these `pulumi` folders, we’d see different cloud infrastructure resources clearly defined via multiple TypeScript classes. As a simple example, if we were to open the [`apps/admin/pulumi`](https://github.com/webiny/webiny-js/tree/next/packages/cwp-template-aws/template/common/apps/admin/pulumi) (Admin Area) folder, we’d find the following three files:
+Furthermore, if we opened each of these `pulumi` folders, we’d see different cloud infrastructure resources clearly defined via multiple TypeScript classes. As a simple example, if we were to open the [`apps/admin/pulumi`](https://github.com/webiny/webiny-js/tree/v5.28.0/packages/cwp-template-aws/template/common/apps/admin/pulumi) (Admin Area) folder, we’d find the following three files:
 
-- [`app.ts`](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/common/apps/admin/pulumi/app.ts) - deploys an [Amazon S3](https://aws.amazon.com/s3/) bucket that hosts the Admin Area (React) application
-- [`cloudfront.ts`](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/common/apps/admin/pulumi/cloudfront.ts) - deploys an [Amazon CloudFront](https://aws.amazon.com/cloudfront/) distribution for improved availability
-- [`index.ts`](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/common/apps/admin/pulumi/index.ts) - the Pulumi entrypoint file, imports classes defined within separate files
+- [`app.ts`](https://github.com/webiny/webiny-js/blob/v5.28.0/packages/cwp-template-aws/template/common/apps/admin/pulumi/app.ts) - deploys an [Amazon S3](https://aws.amazon.com/s3/) bucket that hosts the Admin Area (React) application
+- [`cloudfront.ts`](https://github.com/webiny/webiny-js/blob/v5.28.0/packages/cwp-template-aws/template/common/apps/admin/pulumi/cloudfront.ts) - deploys an [Amazon CloudFront](https://aws.amazon.com/cloudfront/) distribution for improved availability
+- [`index.ts`](https://github.com/webiny/webiny-js/blob/v5.28.0/packages/cwp-template-aws/template/common/apps/admin/pulumi/index.ts) - the Pulumi entrypoint file, imports classes defined within separate files
 
 This code organization makes it much easier for developers to grasp the overall cloud infrastructure. It also makes it easier for them to adjust the code to their needs eventually.
 
-A more complex example is the cloud infrastructure code in the API project application ([`api/pulumi`](https://github.com/webiny/webiny-js/tree/next/packages/cwp-template-aws/template/common/api)), which deploys many different cloud infrastructure resources, like [AWS Lambda functions](https://www.pulumi.com/docs/reference/pkg/aws/lambda/), [DynamoDB tables](https://www.pulumi.com/docs/reference/pkg/aws/dynamodb/), [ElasticSearch clusters](https://www.pulumi.com/docs/reference/pkg/aws/elasticsearch/), [VPCs](https://www.pulumi.com/docs/reference/pkg/aws/ec2/), and more.
+A more complex example is the cloud infrastructure code in the API project application ([`api/pulumi`](https://github.com/webiny/webiny-js/tree/nextv5.28.0/packages/cwp-template-aws/template/common/api)), which deploys many different cloud infrastructure resources, like [AWS Lambda functions](https://www.pulumi.com/docs/reference/pkg/aws/lambda/), [DynamoDB tables](https://www.pulumi.com/docs/reference/pkg/aws/dynamodb/), [ElasticSearch clusters](https://www.pulumi.com/docs/reference/pkg/aws/elasticsearch/), [VPCs](https://www.pulumi.com/docs/reference/pkg/aws/ec2/), and more.
 
 But I will leave this up to you to check out, as pasting multiple chunks of code here might not be that productive.
 
@@ -210,7 +210,7 @@ These extra resources make it slower to perform deployments from developers' mac
 
 So, with that in mind, we split the API project application’s cloud infrastructure into two stacks - the `dev` and `prod`. And, as you might’ve already guessed, only the `prod` variant will deploy absolutely all necessary cloud infrastructure resources.
 
-What is even more interesting is the fact that this can be achieved with a simple if statement, which we placed in the [`index.ts`](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/ddb-es/api/pulumi/index.ts#L19-L25) entrypoint file:
+What is even more interesting is the fact that this can be achieved with a simple if statement, which we placed in the [`index.ts`](https://github.com/webiny/webiny-js/blob/v5.28.0/packages/cwp-template-aws/template/ddb-es/api/pulumi/index.ts#L19-L25) entrypoint file:
 
 ```typescript
 // (...)
@@ -237,7 +237,7 @@ Another useful feature is the automatic tagging of the deployed cloud infrastruc
 
 We created a `tagResources` function, which essentially registers a global stack transformation via [`pulumi.runtime.registerStackTransformation`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#registerStackTransformation) function to achieve this.
 
-It is also applied in the same [`index.ts`](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/common/apps/admin/pulumi/index.ts#L6-L11) entrypoint file we saw in the previous section:
+It is also applied in the same [`index.ts`](https://github.com/webiny/webiny-js/blob/v5.28.0/packages/cwp-template-aws/template/common/apps/admin/pulumi/index.ts#L6-L11) entrypoint file we saw in the previous section:
 
 ```typescript
 import { tagResources } from "@webiny/cli-plugin-deploy-pulumi/utils";
@@ -259,7 +259,7 @@ Finally, to protect our users from accidental deletions of mission-critical clou
 
 > The protect option marks a resource as protected. A protected resource cannot be deleted directly. Instead, you must first set `protect: false` and run `pulumi up`. Then you can delete the resource by removing the line of code or by running `pulumi destroy`. The default is to inherit this value from the parent resource and `false` for resources without a parent.
 
-So, for Webiny users, we’ve made sure that this feature is automatically enabled for resources like [DynamoDB tables](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/ddb/api/pulumi/prod/dynamoDb.ts#L27), [Cognito User Pools](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/ddb/api/pulumi/prod/cognito.ts#L70), [Elasticsearch Cluster](https://github.com/webiny/webiny-js/blob/next/packages/cwp-template-aws/template/ddb-es/api/pulumi/prod/elasticSearch.ts#L42), and similar.
+So, for Webiny users, we’ve made sure that this feature is automatically enabled for resources like [DynamoDB tables](https://github.com/webiny/webiny-js/blob/v5.28.0/packages/cwp-template-aws/template/ddb/api/pulumi/prod/dynamoDb.ts#L27), [Cognito User Pools](https://github.com/webiny/webiny-js/blob/v5.28.0/packages/cwp-template-aws/template/ddb/api/pulumi/prod/cognito.ts#L70), [Elasticsearch Cluster](https://github.com/webiny/webiny-js/blob/v5.28.0/packages/cwp-template-aws/template/ddb-es/api/pulumi/prod/elasticSearch.ts#L42), and similar.
 
 ## Future Plans
 
