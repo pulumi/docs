@@ -10,6 +10,8 @@ set -o errexit -o pipefail
 #   currently serving the website, or
 # * It's associated with a PR that's been closed.
 
+source ./scripts/common.sh
+
 echo "Finding deletable $1 buckets..."
 
 buckets_to_remove="$(./scripts/list-recent-buckets.sh "$1" --only-deletables)"
@@ -26,7 +28,7 @@ echo
 
 for bucket in $buckets_to_remove; do
     echo "Removing ${bucket}..."
-    aws s3 rb "s3://${bucket}" --force --region "$(aws_region)"
+    aws s3  "s3://${bucket}" --force --region "$(aws_region)"
     echo
 done
 
