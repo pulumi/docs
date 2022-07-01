@@ -1,0 +1,104 @@
+{{ define "hero" }}{{ partial "hero.html" (dict "title" "Community") }}{{ end }}
+{{ define "main" }}
+    <section class="max-w-4xl container mx-auto py-8 px-4 text-center text-lg">
+        <p>
+            No matter how you like to participate in developer communities, Pulumi wants to meet you there. If you want to meet other Pulumi users to share use-cases and best
+            practices, contribute code or documentation, see us at an event, or just tell a story about something cool you did with Pulumi, you're part of our community!
+        </p>
+    </section>
+
+    <section id="communities" class="w-full relative overflow-visible">
+        <!-- Only do the 2x2 layout at tablet width (md) and up. -->
+        <ul class="md:flex flex-wrap list-none">
+            <li class="md:w-1/2">
+                <div>
+                    <div class="w-full p-4 my-2">
+                        <div class="card text-center py-16 px-8 relative bg-white">
+                            <h4>Meet the Community</h4>
+                            <p class="my-8">
+                                Want to talk to other Pulumi users and staff for help or ideas? Find us on Slack and GitHub Discussions, and join our monthly community meetup for
+                                the Pulumiverse.
+                            </p>
+                            <div class="flex flex-col lg:flex-row justify-center items-center">
+                                <div class="my-2 mx-2 w-full lg:w-auto">
+                                    <a href="https://slack.pulumi.com/" class="w-full block btn-secondary">Slack</a>
+                                </div>
+                                <div class="my-2 mx-2 w-full lg:w-auto">
+                                    <a href="" class="w-full block btn-secondary">GitHub</a>
+                                </div>
+                                <div class="my-2 mx-2 w-full lg:w-auto">
+                                    <a href="https://github.com/pulumiverse" class="w-full block btn-secondary">Pulumiverse</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="md:w-1/2">
+                <div>
+                    <div class="w-full p-4 my-2">
+                        <div class="card text-center py-16 px-8 relative bg-white">
+                            <h4>Contributing</h4>
+                            <p class="my-8">
+                                Built a cool provider? Want to add support for your favorite language? Got a component you want to share? Find us on GitHub. If you're not sure
+                                where to start, check out our contributor education series on YouTube!
+                            </p>
+                            <div class="flex flex-col lg:flex-row justify-center items-center">
+                                <div class="my-2 mx-2 w-full lg:w-auto">
+                                    <a href="" class="w-full block btn-secondary">GitHub</a>
+                                </div>
+                                <div class="my-2 mx-2 w-full lg:w-auto">
+                                    <a href="https://youtube.com/playlist?list=PLyy8Vx2ZoWlp6O0lHzMsKB6HJp35-9tAW" class="w-full block btn-secondary">YouTube</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="md:w-1/2">
+                <div>
+                    <div class="w-full p-4 my-2">
+                        <div class="card text-center py-16 px-8 relative bg-white">
+                            <h4>Meet us IRL</h4>
+                            <p class="my-8">
+                                We love to be where our community is, so we do a lot of traveling! See what our awesome team of Developer Advocates and incredible Puluminaries are
+                                doing lately, and where you can see them speak!
+                            </p>
+                            <div class="flex flex-col lg:flex-row justify-center items-center">
+                                <div class="my-2 mx-2 w-full lg:w-auto">
+                                    <a href="/developer-advocates" class="w-full block btn-secondary">Advocates</a>
+                                </div>
+                                <div class="my-2 mx-2 w-full lg:w-auto">
+                                    <a href="/puluminaries" class="w-full block btn-secondary">Puluminaries</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="md:w-1/2">
+                <div>
+                    <div class="w-full p-4 my-2">
+                        <div class="card text-center py-16 px-8 relative bg-white">
+                            <h4>Brag about it</h4>
+                            <p class="my-8">
+                                Use Pulumi to do something cool and want to brag about it? We want to hear about it, and so does everyone else! Tweet at us about it, or you can
+                                even submit it as a blog. We want to highlight your accomplishments!
+                            </p>
+                            <div class="flex flex-col lg:flex-row justify-center items-center">
+                                <div class="my-2 mx-2 w-full lg:w-auto">
+                                    <a href="https://twitter.com/pulumicorp" class="w-full block btn-secondary">Twitter</a>
+                                </div>
+                                <div class="my-2 mx-2 w-full lg:w-auto">
+                                    <a href="https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md" class="w-full block btn-secondary">Blog</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    {{ partial "hand-raise-section" . }}
+{{ end }}
