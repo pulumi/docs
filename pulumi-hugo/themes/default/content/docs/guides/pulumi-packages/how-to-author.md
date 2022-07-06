@@ -116,7 +116,21 @@ managers (npm, NuGet, Pip, GitHub) host the SDKs, but we need to know where the 
 `pulumi plugin install ${NAME} ${VERSION} --server ${pluginDownloadURL}`. If `pluginDownloadURL` is not supplied, then the Pulumi
 CLI assumes the plugin is hosted at `get.pulumi.com`.
 
-### Publish the documentation
+### Support for GitHub releases
+
+Since [release 3.35.3](https://github.com/pulumi/pulumi/releases/tag/v3.35.3), Pulumi understands a special form of `pluginDownloadURL` to download plugins via GitHub releases
+
+```
+github://${github api host}/{organization}[/{repository}]
+```
+
+- `github api host`: the address of a GitHub API, for `github.com` this is `api.github.com`
+- `organization`: the GitHub organization to use
+- `repository`: the GitHub repository to use, this defaults to `pulumi-${package name}`
+
+For example the [Pulumiverse Astra](https://github.com/pulumiverse/pulumi-astra) package would specify `github://api.github.com/pulumiverse`.
+
+## Publish the documentation
 
 All package documentation on Pulumi Registry is published via the [`pulumi/registry` repository on GitHub](https://github.com/pulumi/registry). To publish your package on Pulumi Registry:
 
