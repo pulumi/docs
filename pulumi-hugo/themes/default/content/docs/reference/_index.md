@@ -16,4 +16,5 @@ This section includes all reference documentation for Pulumi.
 * [Pulumi SDK]({{< relref "pulumi-sdk" >}}): documentation of the core types and functions you will use in your programs common to all cloud provider libraries
 * [Pulumi Service REST API]({{< relref "service-rest-api" >}}): documentation of the REST API for interacting with the Pulumi Service
 * [Project Configuration Reference]({{< relref "pulumi-yaml" >}}): required and optional metadata to configure your Pulumi project
+* [Pulumi YAML format]({{< relref "/docs/reference/yaml" >}}): specification for the [Pulumi YAML]({{< relref "/docs/intro/languages/yaml" >}}) format and its built-in functions
 * [Glossary]({{< relref "glossary" >}}): common terms and their definitions relating to the Pulumi CLI and Cloud Services
