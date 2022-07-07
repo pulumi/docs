@@ -47,24 +47,34 @@ The value of `resources` is an object whose keys are logical resource names by w
 
 #### Resource Options
 
-The value of the `options` property of a Resource is an object whose keys are [resource option names]({{< relref "/docs/intro/concepts/resources/options/" >}}) and whose values are elements of the schema below.
+The value of the `options` property of a Resource is an object whose keys are [resource option names]({{< relref "/docs/intro/concepts/resources/options/" >}}) and whose values are elements of the schema below. No resource options are required.
 
-To specify resources in `dependsOn`, `parent`, `provider`, and `providers`, use
+The `dependsOn`, `parent`, `provider`, and `providers` values permit expressions which must use interpolation syntax to reference resources by name. For example:
 
-| Property        | Type | Required           | Expressions  | Description |
-| ------------- |---|-------------| -----|---|
-| `additionalSecretOutputs`      | string[] | No | No | AdditionalSecretOutputs specifies properties that must be encrypted as secrets |
-| `aliases`      | string[] | No | No | Aliases specifies names that this resource used to have, so that renaming or refactoring doesn’t replace it |
-| `customTimeouts`      | [Custom Timeout](#custom-timeout) | No | No | CustomTimeouts overrides the default retry/timeout behavior for resource provisioning |
-| `deleteBeforeReplace`      | bool | No | No | DeleteBeforeReplace  overrides the default create-before-delete behavior when replacing |
-| `dependsOn`      | Expression[] | No | Yes | DependsOn makes this resource explicitly depend on another resource, by name, so that it won't be created before the dependent finishes being created (and the reverse for destruction). Normally, Pulumi automatically tracks implicit dependencies through inputs/outputs, but this can be used when dependencies aren't captured purely from input/output edges.|
-| `ignoreChanges`      | string[] | No | No | IgnoreChanges declares that changes to certain properties should be ignored during diffing |
-| `import`      | string | No | No | Import adopts an existing resource from your cloud account under the control of Pulumi |
-| `parent`      | Expression | No | Yes | Parent specifies a parent for the resource |
-| `protect`      | bool | No | No | Protect prevents accidental deletion of a resource |
-| `provider`      | Expression | No | Yes | Provider specifies an explicitly configured provider, instead of using the default global provider |
-| `providers`      | map[string]Expression | No | Yes | Map of providers for a resource and its children. |
-| `version`      | string | No | No | Version specifies a provider plugin version that should be used when operating on a resource |
+```yaml
+    options:
+      provider: ${myEksProvider}
+      providers:
+        aws: ${myAwsProvider}
+      dependsOn:
+        - ${otherResource}
+      parent: ${someParentResource}
+```
+
+| Property                  | Type         | Description |
+| ------------------------- |--------------|-------------|
+| `additionalSecretOutputs` | string[]     | AdditionalSecretOutputs specifies properties that must be encrypted as secrets |
+| `aliases`                 | string[]     | Aliases specifies names that this resource used to have, so that renaming or refactoring doesn’t replace it |
+| `customTimeouts`          | [Custom Timeout](#custom-timeout) | CustomTimeouts overrides the default retry/timeout behavior for resource provisioning |
+| `deleteBeforeReplace`     | bool         | DeleteBeforeReplace  overrides the default create-before-delete behavior when replacing |
+| `dependsOn`               | Expression[] | No | Yes | DependsOn makes this resource explicitly depend on another resource, by name, so that it won't be created before the dependent finishes being created (and the reverse for destruction). Normally, Pulumi automatically tracks implicit dependencies through inputs/outputs, but this can be used when dependencies aren't captured purely from input/output edges.|
+| `ignoreChanges`           | string[]     | IgnoreChanges declares that changes to certain properties should be ignored during diffing |
+| `import`                  | string       | Import adopts an existing resource from your cloud account under the control of Pulumi |
+| `parent`                  | Expression   | No | Yes | Parent specifies a parent for the resource |
+| `protect`                 | bool         | Protect prevents accidental deletion of a resource |
+| `provider`                | Expression   | No | Yes | Provider specifies an explicitly configured provider, instead of using the default global provider |
+| `providers`               | map[string]Expression | No | Yes | Map of providers for a resource and its children. |
+| `version`                 | string       | Version specifies a provider plugin version that should be used when operating on a resource |
 
 #### Custom Timeout
 
