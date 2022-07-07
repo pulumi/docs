@@ -201,6 +201,20 @@ variables:
 
 The expression `${greeting}` will return `Hello, World!`
 
+##### `Fn::ToJSON`
+
+Converts a value into its JSON representation.
+
+```yaml
+variables:
+  item:
+    Fn::ToJSON:
+      key1: value1
+      key2: 123
+```
+
+The expression `${item}` will return a JSON value `{ "key1": "value1", "key2": 123 }`.
+
 ##### `Fn::Invoke`
 
 Calls a function from a package and returns either the whole object or a single key if given the "Return" property. The schema is:
