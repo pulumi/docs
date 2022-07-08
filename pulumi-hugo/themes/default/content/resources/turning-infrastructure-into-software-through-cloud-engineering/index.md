@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "Turning Infrastructure Into Software Through Cloud Engineering"
-meta_desc: "In this talk, Matty Stratton will teach you why defining infrastructure in general programming languages is a better choice for infrastructure management."
+title: "Speedrunning Kubernetes Deployments"
+meta_desc: "Join Kat Cosgrove for an introduction to Kubernetes and learn how to stand up your infrastructure and deploy an application to it using a programming language!"
 
 # A featured webinar will display first in the list.
 featured: false
@@ -34,7 +34,7 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: https://pulumip.us/scale19-matty
+url_slug: https://www.socallinuxexpo.org/scale/19x/presentations/speedrunning-kubernetes-deployments
 
 # The content of the hero section.
 hero:
@@ -56,7 +56,7 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-07-30T01:30:00-07:00
+    sortable_date: 2022-07-29T01:30:00-07:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.

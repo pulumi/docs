@@ -45,7 +45,7 @@ hero:
 
 # Webinar pages support multiple session via the 'multiple' property.
 multiple:
-  - datetime: 2022-07-19T10:00:00.000-07:00
+  - datetime: 2022-07-28T10:00:00.000-07:00
     hubspot_form_id: 21e1d99b-9d59-43cb-a5bb-cb77217db726
   - datetime: 2022-09-08T10:00:00.00-07:00
     hubspot_form_id: "99717c20-c713-452a-9ac0-26af767cbf36"
@@ -67,11 +67,11 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: "Matt Stratton"
+        - name: "David Flanagan"
           role: "Staff Developer Advocate, Pulumi"
 
     # A bullet point list containing what the user will learn during the webinar.
-    learn: 
+    learn:
         - "The basics of the Pulumi Programming Model"
         - "How to provision, update, and destroy AWS resources"
 
