@@ -1,10 +1,7 @@
 id = "matt-stratton"
 name = "Matty Stratton"
-title = "Staff Developer Advocate"
-weight = 1
 
-status = "active"
-role = "developer-advocate"
+status = "inactive"
 
 [social]
 github = "mattstratton"
