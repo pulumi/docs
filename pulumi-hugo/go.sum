@@ -1,4 +1,4 @@
-github.com/pulumi/registry/themes/default v0.0.0-20220708145929-b57878f85ac6 h1:tl9zN5sOJf+bJw9fqMg3Sc5iWMFSSLQ6a52r+XqPB+s=
-github.com/pulumi/registry/themes/default v0.0.0-20220708145929-b57878f85ac6/go.mod h1:QSvobZqmJMqVmn3BTfSiYkbRKtJHhSA8gotu/pD1a0w=
+github.com/pulumi/registry/themes/default v0.0.0-20220710225110-ea797e0bbcd6 h1:O8j61baPJFRMgJNxk9Vmmo+Z1x2l4J+AZmwfkO+81vM=
+github.com/pulumi/registry/themes/default v0.0.0-20220710225110-ea797e0bbcd6/go.mod h1:QSvobZqmJMqVmn3BTfSiYkbRKtJHhSA8gotu/pD1a0w=
 github.com/pulumi/theme v0.0.0-20220707223129-22a3e1ce16f4 h1:3L6+5NONwXSLcvcNQW2HtlCaCimwxi5K4SXI3Y9I2B0=
 github.com/pulumi/theme v0.0.0-20220707223129-22a3e1ce16f4/go.mod h1:Ksr+ztEgwxDLYFRalb0SYu4WcGROgnF35iILealOMno=
