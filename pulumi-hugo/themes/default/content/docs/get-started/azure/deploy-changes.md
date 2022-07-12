@@ -92,7 +92,7 @@ $ curl $(pulumi stack output staticEndpoint)
 {{% choosable language csharp %}}
 
 ```bash
-$ curl $(pulumi stack output StaticEndpoint)
+$ curl $(pulumi stack output staticEndpoint)
 ```
 
 {{% /choosable %}}

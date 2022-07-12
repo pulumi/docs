@@ -91,7 +91,7 @@ $ pulumi stack output bucketName
 {{% choosable language csharp %}}
 
 ```bash
-$ pulumi stack output BucketName
+$ pulumi stack output bucketName
 ```
 
 {{% /choosable %}}

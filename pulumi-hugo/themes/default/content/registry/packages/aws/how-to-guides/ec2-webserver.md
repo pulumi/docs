@@ -175,61 +175,54 @@ using Pulumi;
 using Pulumi.Aws.Ec2;
 using Pulumi.Aws.Ec2.Inputs;
 
-class MyStack : Stack
+await Deployment.RunAsync(() =>
 {
-    public MyStack()
+    var ami = GetAmi.Invoke(new GetAmiInvokeArgs
     {
-        var ami = GetAmi.Invoke(new GetAmiInvokeArgs
+        Owners = { "137112412989" }, // This owner ID is Amazon
+        MostRecent = true,
+        Filters =
         {
-            Filters =
-                {
-                    new GetAmiFilterInputArgs
-                    {
-                        Name = "name",
-                        Values =  { "amzn-ami-hvm-*" },
-                    },
-                },
-            Owners = { "137112412989" }, // This owner ID is Amazon
-            MostRecent = true,
-        });
-
-        var group = new SecurityGroup("webserver-secgrp", new SecurityGroupArgs
-        {
-            Ingress = new SecurityGroupIngressArgs
+            new GetAmiFilterInputArgs
             {
-                Protocol = "tcp",
-                FromPort = 80,
-                ToPort = 80,
-                CidrBlocks = { "0.0.0.0/0" }
+                Name = "name",
+                Values =  { "amzn-ami-hvm-*" },
             },
-        });
+        },
+    });
 
-        var userData = @"
-                    #!/bin/bash
-                    echo ""Hello, World!"" > index.html
-                    nohup python -m SimpleHTTPServer 80 &
-                    ";
-
-        var server = new Instance("webserver-www", new InstanceArgs
+    var group = new SecurityGroup("webserver-secgrp", new SecurityGroupArgs
+    {
+        Ingress = new SecurityGroupIngressArgs
         {
-            InstanceType = Size,
-            VpcSecurityGroupIds = { group.Id }, // reference the security group resource above
-            UserData = userData,
-            Ami = ami.Apply(x => x.Id),
-        }); ;
+            Protocol = "tcp",
+            FromPort = 80,
+            ToPort = 80,
+            CidrBlocks = { "0.0.0.0/0" }
+        },
+    });
 
-        PublicIp = server.PublicIp;
-        PublicDns = server.PublicDns;
-    }
+    var userData = @"
+                #!/bin/bash
+                echo ""Hello, World!"" > index.html
+                nohup python -m SimpleHTTPServer 80 &
+                ";
 
-    [Output]
-    public Output<string> PublicIp { get; set; }
+    var server = new Instance("webserver-www", new InstanceArgs
+    {
+        // t2.micro is available in the AWS free tier
+        InstanceType = "t2.micro",
+        VpcSecurityGroupIds = { group.Id }, // reference the security group resource above
+        UserData = userData,
+        Ami = ami.Apply(x => x.Id),
+    });
 
-    [Output]
-    public Output<string> PublicDns { get; set; }
-
-    private const string Size = "t2.micro"; // t2.micro is available in the AWS free tier
-}
+    return new Dictionary<string, object?>
+    {
+        ["publicIp"] = server.PublicIp,
+        ["publicHostName"] = server.PublicDns
+    };
+});
 ```
 
 {{% /choosable %}}
@@ -445,9 +438,10 @@ nohup python -m SimpleHTTPServer 80 &";
 
 var server = new Aws.Ec2.Instance("webserver-www", new Aws.Ec2.InstanceArgs
 {
-    InstanceType = size,
+    // t2.micro is available in the AWS free tier
+    InstanceType = "t2.micro",
     VpcSecurityGroupIds = { group.Id }, // reference the security group resource above
-    Ami = Ami.Id,
+    Ami = ami.Apply(x => x.Id),
     UserData = userData,             // <-- ADD THIS LINE
 });
 ```

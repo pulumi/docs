@@ -96,7 +96,7 @@ $ aws s3 ls $(pulumi stack output bucketName)
 {{% choosable language csharp %}}
 
 ```bash
-$ aws s3 ls $(pulumi stack output BucketName)
+$ aws s3 ls $(pulumi stack output bucketName)
 ```
 
 {{% /choosable %}}
@@ -281,17 +281,11 @@ var bucketObject = new BucketObject("index.html", new BucketObjectArgs
 Finally, at the end of the program file, export the resulting bucket’s endpoint URL so you can easily access it:
 
 ```csharp
-// Export the name of the bucket
-this.BucketName = bucket.Id;
-this.BucketEndpoint = Output.Format($"http://{bucket.WebsiteEndpoint}");
-```
-
-```csharp
-[Output]
-public Output<string> BucketName { get; set; }
-
-[Output]
-public Output<string> BucketEndpoint { get; set; }
+return new Dictionary<string, object?>
+{
+    ["bucketName"] = bucket.Id,
+    ["bucketEndpoint"] = Output.Format($"http://{bucket.WebsiteEndpoint}")
+};
 ```
 
 {{% /choosable %}}
@@ -494,7 +488,7 @@ $ curl $(pulumi stack output bucketEndpoint)
 {{% choosable language csharp %}}
 
 ```bash
-$ curl $(pulumi stack output BucketEndpoint)
+$ curl $(pulumi stack output bucketEndpoint)
 ```
 
 {{% /choosable %}}

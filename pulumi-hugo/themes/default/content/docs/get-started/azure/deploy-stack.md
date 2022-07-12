@@ -86,7 +86,7 @@ $ pulumi stack output primaryStorageKey
 {{% choosable language csharp %}}
 
 ```bash
-$ pulumi stack output PrimaryStorageKey
+$ pulumi stack output primaryStorageKey
 ```
 
 {{% /choosable %}}

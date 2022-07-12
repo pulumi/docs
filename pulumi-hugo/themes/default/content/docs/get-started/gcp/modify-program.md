@@ -123,13 +123,13 @@ if err != nil {
 
 {{% choosable language csharp %}}
 
-In `MyStack.cs`, create the `BucketObject` right after creating the bucket itself.
+In `Program.cs`, create the `BucketObject` right after creating the bucket itself.
 
 ```csharp
 var bucketObject = new BucketObject("index.html", new BucketObjectArgs
 {
     Bucket = bucket.Name,
-    Source = new FileAsset("index.html")
+    Source = new FileAsset("./index.html")
 });
 ```
 

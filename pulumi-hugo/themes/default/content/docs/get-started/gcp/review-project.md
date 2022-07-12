@@ -28,12 +28,6 @@ Let's review some of the generated project files:
 
 - `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) you initialized.
 
-{{% choosable language csharp %}}
-
-- `Program.cs` with a simple entry point.
-
-{{% /choosable %}}
-
 {{% choosable language java %}}
 
 - `src/main/java/myproject` defines the project's Java package root.
@@ -131,21 +125,23 @@ func main() {
 ```csharp
 using Pulumi;
 using Pulumi.Gcp.Storage;
+using System.Collections.Generic;
 
-class MyStack : Stack
+await Deployment.RunAsync(() =>
 {
-    public MyStack()
+    // Create a GCP resource (Storage Bucket)
+    var bucket = new Bucket("my-bucket", new BucketArgs
     {
-        // Create a GCP resource (Storage Bucket)
-        var bucket = new Bucket("my-bucket");
+        Location = "US"
+    });
 
-        // Export the DNS name of the bucket
-        this.BucketName = bucket.Url;
-    }
+    // Export the DNS name of the bucket
+    return new Dictionary<string, object?>
+    {
+        ["bucketName"] = bucket.Url
+    };
+});
 
-    [Output]
-    public Output<string> BucketName { get; set; }
-}
 ```
 
 {{% /choosable %}}
@@ -233,8 +229,10 @@ ctx.Export("bucketName", bucket.Url)
 {{% choosable language csharp %}}
 
 ```csharp
-[Output]
-public Output<string> BucketName { get; set; }
+return new Dictionary<string, object?>
+{
+    ["bucketName"] = bucket.Url
+};
 ```
 
 {{% /choosable %}}

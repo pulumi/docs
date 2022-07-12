@@ -122,13 +122,13 @@ if err != nil {
 
 {{% choosable language csharp %}}
 
-In `MyStack.cs`, create the `BucketObject` right after creating the bucket itself.
+In `Program.cs`, create a new `BucketObject` right after creating the bucket itself.
 
 ```csharp
 var bucketObject = new BucketObject("index.html", new BucketObjectArgs
 {
     Bucket = bucket.BucketName,
-    Source = new FileAsset("index.html")
+    Source = new FileAsset("./index.html")
 });
 ```
 
@@ -176,7 +176,9 @@ resources:
 
 {{% /choosable %}}
 
-Notice how you provide the bucket you created earlier as an input to your new `BucketObject`. This is so Pulumi knows what S3 bucket the object should live in.
+This bucket object is part of the `Bucket` that we deployed earlier because we _reference_ the bucket name in the properties of the bucket object.
+
+We refer to this relationship as the `BucketObject` being a _child_ resource of the S3 `Bucket` that is the _parent_ resource. This is how Pulumi knows what S3 bucket the object should live in.
 
 Next, you'll deploy your changes.
 

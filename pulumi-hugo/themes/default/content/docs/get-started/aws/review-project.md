@@ -30,7 +30,7 @@ Let's review some of the generated project files:
 
 {{% choosable language csharp %}}
 
-- `Program.cs` with a simple entry point.
+- `Program.cs` is the Pulumi program that defines your stack resources.
 
 {{% /choosable %}}
 
@@ -40,7 +40,7 @@ Let's review some of the generated project files:
 
 {{% /choosable %}}
 
-{{% choosable language "javascript,typescript,python,go,csharp,java" %}}
+{{% choosable language "javascript,typescript,python,go,java" %}}
 
 <!-- The wrapping spans are infortunately necessary here; without them, the renderer gets confused and generates invalid markup. -->
 - <span>{{< langfile >}}</span> is the Pulumi program that defines your stack resources.
@@ -131,21 +131,19 @@ func main() {
 ```csharp
 using Pulumi;
 using Pulumi.Aws.S3;
+using System.Collections.Generic;
 
-class MyStack : Stack
+await Deployment.RunAsync(() =>
 {
-    public MyStack()
-    {
-        // Create an AWS resource (S3 Bucket)
-        var bucket = new Bucket("my-bucket");
+   // Create an AWS resource (S3 Bucket)
+   var bucket = new Bucket("my-bucket");
 
-        // Export the name of the bucket
-        this.BucketName = bucket.Id;
-    }
-
-    [Output]
-    public Output<string> BucketName { get; set; }
-}
+   // Export the name of the bucket
+   return new Dictionary<string, object?>
+   {
+      ["bucketName"] = bucket.Id
+   };
+});
 ```
 
 {{% /choosable %}}
@@ -230,8 +228,10 @@ ctx.Export("bucketName", bucket.ID())
 {{% choosable language csharp %}}
 
 ```csharp
-[Output]
-public Output<string> BucketName { get; set; }
+return new Dictionary<string, object?>
+{
+   ["bucketName"] = bucket.Id
+};
 ```
 
 {{% /choosable %}}

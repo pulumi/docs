@@ -108,7 +108,7 @@ if err != nil {
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
-To start, open `MyStack.cs` and add the following right after the storage account creation:
+To start, open `Program.cs` and add the following right after the storage account creation:
 
 ```csharp
 // Enable static website support
@@ -217,12 +217,12 @@ if err != nil {
 
 ```csharp
 // Upload the file
-var index_html = new Blob("index.html", new BlobArgs
+var indexHtml = new Blob("index.html", new BlobArgs
 {
     ResourceGroupName = resourceGroup.Name,
     AccountName = storageAccount.Name,
     ContainerName = staticWebsite.ContainerName,
-    Source = new FileAsset("index.html"),
+    Source = new FileAsset("./index.html"),
     ContentType = "text/html",
 });
 ```
@@ -300,17 +300,15 @@ ctx.Export("staticEndpoint", account.PrimaryEndpoints.Web())
 
 {{% choosable language csharp %}}
 
-Finally, at the end of `MyStack.cs`, export the resulting storage container's endpoint URL to stdout for easy access:
+Finally, at the end of `Program.cs`, export the resulting storage container's endpoint URL to stdout for easy access:
 
 ```csharp
 // Web endpoint to the website
-this.StaticEndpoint = storageAccount.PrimaryEndpoints.Apply(
-        primaryEndpoints => primaryEndpoints.Web);
-```
-
-```csharp
-[Output]
-public Output<string> StaticEndpoint { get; set; }
+return new Dictionary<string, object?>
+{
+    ["primaryStorageKey"] = primaryStorageKey,
+    ["staticEndpoint"] = storageAccount.PrimaryEndpoints.Apply(primaryEndpoints => primaryEndpoints.Web)
+};
 ```
 
 {{% /choosable %}}

@@ -28,12 +28,6 @@ Let's review some of the generated project files:
 
 - `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) you initialized.
 
-{{% choosable language csharp %}}
-
-- `Program.cs` with a simple entry point.
-
-{{% /choosable %}}
-
 {{% choosable language java %}}
 
 - `src/main/java/myproject` defines the project's Java package root.
@@ -164,46 +158,46 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
-using System.Threading.Tasks;
 using Pulumi;
 using Pulumi.AzureNative.Resources;
 using Pulumi.AzureNative.Storage;
 using Pulumi.AzureNative.Storage.Inputs;
+using System.Collections.Generic;
 
-class MyStack : Stack
+await Pulumi.Deployment.RunAsync(() =>
 {
-    public MyStack()
+    // Create an Azure Resource Group
+    var resourceGroup = new ResourceGroup("resourceGroup");
+
+    // Create an Azure resource (Storage Account)
+    var storageAccount = new StorageAccount("sa", new StorageAccountArgs
     {
-        // Create an Azure Resource Group
-        var resourceGroup = new ResourceGroup("resourceGroup");
-
-        // Create an Azure resource (Storage Account)
-        var storageAccount = new StorageAccount("sa", new StorageAccountArgs
+        ResourceGroupName = resourceGroup.Name,
+        Sku = new SkuArgs
         {
-            ResourceGroupName = resourceGroup.Name,
-            Sku = new SkuArgs
-            {
-                Name = SkuName.Standard_LRS
-            },
-            Kind = Kind.StorageV2
-        });
+            Name = SkuName.Standard_LRS
+        },
+        Kind = Kind.StorageV2
+    });
 
-        // Export the primary key of the Storage Account
-        this.PrimaryStorageKey = GetStorageAccountPrimaryKey(resourceGroup.Name, storageAccount.Name);
-    }
-
-    [Output]
-    public Output<string> PrimaryStorageKey { get; set; }
-
-    private static Output<string> GetStorageAccountPrimaryKey(Input<string> resourceGroupName, Input<string> accountName)
+    var storageAccountKeys = ListStorageAccountKeys.Invoke(new ListStorageAccountKeysInvokeArgs
     {
-        return ListStorageAccountKeys.Invoke(new ListStorageAccountKeysInvokeArgs
-        {
-            ResourceGroupName = resourceGroupName,
-            AccountName = accountName
-        }).Apply(accountKeys => Output.CreateSecret(accountKeys.Keys[0].Value));
-    }
-}
+        ResourceGroupName = resourceGroup.Name,
+        AccountName = storageAccount.Name
+    });
+
+    var primaryStorageKey = storageAccountKeys.Apply(accountKeys =>
+    {
+        var firstKey = accountKeys.Keys[0].Value;
+        return Output.CreateSecret(firstKey);
+    });
+
+    // Export the primary key of the Storage Account
+    return new Dictionary<string, object?>
+    {
+        ["primaryStorageKey"] = primaryStorageKey
+    };
+});
 ```
 
 {{% /choosable %}}

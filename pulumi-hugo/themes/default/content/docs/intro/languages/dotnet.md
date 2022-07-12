@@ -178,7 +178,7 @@ $ mkdir myproject && cd myproject
 $ pulumi new csharp
 ```
 
-This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `myproject.csproj` file that holds references used by the project, a `Program.cs` file, containing the program entry point, and a `MyStack.cs` file with resource definitions. The name of the directory is used as the project name in `Pulumi.yaml` and as the `csproj` file name.
+This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `myproject.csproj` file that holds references used by the project, a `Program.cs` file, containing the program entry point and resource definitions. The name of the directory is used as the project name in `Pulumi.yaml` and as the `csproj` file name.
 
 To deploy your infrastructure run `pulumi up` and the Pulumi engine automatically runs `dotnet build` as part of the deployment. Pulumi will perform the operations needed to deploy the infrastructure you have declared.
 
@@ -216,7 +216,7 @@ $ mkdir myproject && cd myproject
 $ pulumi new visualbasic
 ```
 
-This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `myproject.vbproj` file that holds references used by the project, a `Program.vb` file, containing the program entry point, and a `MyStack.vb` file with resource definitions. The name of the directory is used as the project name in `Pulumi.yaml` and as the `vbproj` file name.
+This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `myproject.vbproj` file that holds references used by the project, a `Program.vb` file, containing the program entry point and resource definitions. The name of the directory is used as the project name in `Pulumi.yaml` and as the `vbproj` file name.
 
 To deploy your infrastructure run `pulumi up` and the Pulumi engine automatically runs `dotnet build` as part of the deployment. Pulumi will perform the operations needed to deploy the infrastructure you have declared.
 

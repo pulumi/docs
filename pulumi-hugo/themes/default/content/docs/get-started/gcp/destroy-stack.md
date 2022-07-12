@@ -31,8 +31,8 @@ Previewing destroy (dev):
  -   └─ gcp:storage:Bucket            my-bucket              delete
 
 Outputs:
-  - BucketEndpoint: "http://storage.googleapis.com/my-bucket-0167228/index.html-50b2ce9"
-  - BucketName    : "gs://my-bucket-0167228"
+  - bucketEndpoint: "http://storage.googleapis.com/my-bucket-0167228/index.html-50b2ce9"
+  - bucketName    : "gs://my-bucket-0167228"
 
 Resources:
     - 4 to delete
@@ -46,8 +46,8 @@ Destroying (dev):
  -   └─ gcp:storage:Bucket            my-bucket              deleted
 
 Outputs:
-  - BucketEndpoint: "http://storage.googleapis.com/my-bucket-0167228/index.html-50b2ce9"
-  - BucketName    : "gs://my-bucket-0167228"
+  - bucketEndpoint: "http://storage.googleapis.com/my-bucket-0167228/index.html-50b2ce9"
+  - bucketName    : "gs://my-bucket-0167228"
 
 Resources:
     - 4 deleted
