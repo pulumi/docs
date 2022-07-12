@@ -77,13 +77,13 @@ main:
     presenters:
         - name: Mitch Gerdisch
           role: Senior Sales Engineer, Pulumi
-        - name: Kostis Kapelonis
-          role: Developer Advocate, Codefresh
+        - name: Christian Hernandez
+          role: Head of Developer Experience and Community Management, Codefresh
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - How to apply GitOps to both Infrastructure and Applications 
-        - Infrastructure as code for Kubernetes and non-Kubernetes deployments 
+        - How to apply GitOps to both Infrastructure and Applications
+        - Infrastructure as code for Kubernetes and non-Kubernetes deployments
         - How to set up a unified workflow for both operators and app developers.
 
 # The right hand side form section.
