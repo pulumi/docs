@@ -57,10 +57,10 @@ export const url = repo.url;
 import pulumi
 import pulumi_awsx as awsx
 
-// Create a repository.
+# Create a repository.
 repo = awsx.ecr.Repository("my-repo");
 
-// And publish its URL, so we can push to it if we'd like.
+# And publish its URL, so we can push to it if we'd like.
 pulumi.export("url", repo.url)
 ```
 
