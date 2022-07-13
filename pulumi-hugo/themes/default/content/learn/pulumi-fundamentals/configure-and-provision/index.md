@@ -426,7 +426,7 @@ var backendContainer = new Container(
                         .envs(List.of(
                                 String.format("DATABASE_HOST=%s",mongoHost),
                                 String.format("DATABASE_NAME=%s",database),
-                                String.format("NODE_ENV%s",nodeEnvironment)
+                                String.format("NODE_ENV=%s",nodeEnvironment)
                         ))
                         .networksAdvanced(ContainerNetworksAdvancedArgs.builder()
                                 .name(network.name())
@@ -1082,7 +1082,7 @@ public class App {
                         .envs(List.of(
                                 String.format("DATABASE_HOST=%s",mongoHost),
                                 String.format("DATABASE_NAME=%s",database),
-                                String.format("NODE_ENV%s",nodeEnvironment)
+                                String.format("NODE_ENV=%s",nodeEnvironment)
                         ))
                         .networksAdvanced(ContainerNetworksAdvancedArgs.builder()
                                 .name(network.name())
