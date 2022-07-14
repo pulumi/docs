@@ -59,7 +59,7 @@ var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs(),
 var provider = new Provider("provider",
     ProviderArgs.builder()
         .region("us-west-2")
-        .build();
+        .build());
 
 var vpc = new Vpc("vpc",
     VpcArgs.Empty,
