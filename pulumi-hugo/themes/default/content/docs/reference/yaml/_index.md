@@ -312,18 +312,6 @@ variables:
         Fn::FileArchive: ./folder
 ```
 
-##### `Fn::StackReference`
-
-[Stack References]({{< relref "/docs/intro/concepts/stack#stackreferences" >}}) allow accessing the outputs of a stack from a YAML program. Arguments are passed as a list, with the first item being the stack name and the second argument the name of an output to reference:
-
-```yaml
-variables:
-  reference:
-    Fn::StackReference:
-      - org/project/stack
-      - outputName
-```
-
 The expression `${reference}` will have the value of the `outputName` output from the stack `org/project/stack`.
 
 ##### `Fn::Secret`

@@ -449,11 +449,14 @@ var otherOutput = other.getOutput(Output.of("x"));
 {{% choosable language yaml %}}
 
 ```yaml
+resources:
+  my-stack-reference:
+    type: pulumi:pulumi:StackReference
+    properties:
+      name: acmecorp/infra/other
+
 variables:
-  otherOutput:
-    Fn::StackReference:
-      - acmecorp/infra/other
-      - x
+  stack_output: ${my-stack-reference.outputs["x"]}
 ```
 
 {{% /choosable %}}
@@ -667,11 +670,12 @@ public class App {
 
 ```yaml
 variables:
-  cluster:
-    Fn::StackReference:
-      - mycompany/infra/${pulumi.stack}
-      - "KubeConfig"
+  kubeConfig: ${my-stack-reference.outputs["KubeConfig"]}
 resources:
+  my-stack-reference:
+    type: pulumi:pulumi:StackReference
+    properties:
+      name: mycompany/infra/${pulumi.stack}
   provider:
     type: pulumi:providers:kubernetes
     properties:
