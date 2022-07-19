@@ -38,7 +38,7 @@ you may wish to restrict access across teams such that Developer Team members ca
 For this example, we’ll define a new role 'abac-test' as well as a team attribute that must have the value of either
 'developers' or 'ops' to enable creating a Lambda function.
 
-![Controlling access to creating an AWS Lambda function via IAM Roles and Attributes](./figure-1.png)
+![Controlling access to creating an AWS Lambda function via IAM Roles and Attributes](./figure1.png)
 
 To get started, let's first install the Pulumi AWS Classic provider:
 
