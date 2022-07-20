@@ -20,7 +20,7 @@ capabilities such as [AWS Lambda URLs](https://www.pulumi.com/blog/lambda-urls-l
 Functions are a platform that teams can use to deliver increasingly sophisticated services without worrying about
 managing underlying compute resources.
 
-Today, AWS announced another advancement for their Lambda Functions platform: [Attribute-Based Access Control](https://aws.amazon.com/blogs/compute/scaling-lambda-permissions-with-attribute-based-access-control/)
+Today, AWS announced another advancement for their Lambda Functions platform: [Attribute-Based Access Control](https://aws.amazon.com/blogs/compute/scaling-aws-lambda-permissions-with-attribute-based-access-control-abac/)
 (ABAC). At its core, ABAC support brings more granular permissions that are automatically applied based on IAM role tags,
 Lambda tags, or both. This update builds on well-established Role-Based Access Control (RBAC) principles while making it
 possible to implement granular controls without permissions updates for every new user and resource.
