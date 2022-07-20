@@ -284,7 +284,20 @@ public static void stack(Context ctx) {
 
 {{< /chooser >}}
 
-## Special Configuration Options
+## Provider Configuration Options
+
+There are three ways to configure providers:
+
+1. Set configuration keys in the stack configuration file: `pulumi config set [PROVIDER]:[KEY] [VALUE]`
+2. Set a provider-specific environment variable
+3. Pass arguments to the provider's SDK constructor, in your program
+
+Please note:
+
+* Configuration file settings are only used by the default provider. If you instantiate a provider object, it will not read values from the stack configuration.
+* The precedence of configuration sources (configuration file, environment and args) can vary between providers. Please refer to the provider's documentation for specific configuration instructions.
+
+## Pulumi Configuration Options
 
 This is a list of configuration keys that the Pulumi CLI is aware of:
 
