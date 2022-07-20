@@ -11,7 +11,9 @@ jobs:
     env:
       GOPATH: ${{ github.workspace }}/go
     name: Install deps and build site
-    runs-on: ubuntu-18.04
+    runs-on:
+      - self-hosted
+      - vm:t3.micro
     steps:
 
       - uses: actions/checkout@v2
