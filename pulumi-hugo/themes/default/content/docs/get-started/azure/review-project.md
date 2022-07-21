@@ -164,7 +164,7 @@ using Pulumi.AzureNative.Storage;
 using Pulumi.AzureNative.Storage.Inputs;
 using System.Collections.Generic;
 
-await Pulumi.Deployment.RunAsync(() =>
+return await Deployment.RunAsync(() =>
 {
     // Create an Azure Resource Group
     var resourceGroup = new ResourceGroup("resourceGroup");

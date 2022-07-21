@@ -264,7 +264,7 @@ using Pulumi.Kubernetes.Types.Inputs.Apps.V1;
 using Pulumi.Kubernetes.Types.Inputs.Meta.V1;
 using System.Collections.Generic;
 
-await Pulumi.Deployment.RunAsync(() =>
+return await Deployment.RunAsync(() =>
 {
     var config = new Pulumi.Config();
     var isMinikube = config.GetBoolean("isMinikube") ?? false;

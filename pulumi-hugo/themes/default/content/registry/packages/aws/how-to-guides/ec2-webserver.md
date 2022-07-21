@@ -175,7 +175,7 @@ using Pulumi;
 using Pulumi.Aws.Ec2;
 using Pulumi.Aws.Ec2.Inputs;
 
-await Deployment.RunAsync(() =>
+return await Deployment.RunAsync(() =>
 {
     var ami = GetAmi.Invoke(new GetAmiInvokeArgs
     {

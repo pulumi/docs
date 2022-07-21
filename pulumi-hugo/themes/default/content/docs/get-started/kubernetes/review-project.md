@@ -172,7 +172,7 @@ using Pulumi.Kubernetes.Types.Inputs.Apps.V1;
 using Pulumi.Kubernetes.Types.Inputs.Meta.V1;
 using System.Collections.Generic;
 
-await Deployment.RunAsync(() =>
+return await Deployment.RunAsync(() =>
 {
     var appLabels = new InputMap<string>
     {
