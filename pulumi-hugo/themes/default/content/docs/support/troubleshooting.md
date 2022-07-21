@@ -35,15 +35,20 @@ of issue reports.
 
 Verbose logging of the internals of the Pulumi engine and resource providers can be enabled by
 passing the `-v` flag to any `pulumi` CLI command. Pulumi emits logs at log levels between `1` and
-`9`, with `9` being the most verbose.
+`11`, with `11` being the most verbose.
 
 By default, logs are written to the top-level temp directory (usually `/tmp` or the value of
 `$TMPDIR`). The `--logtostderr` flag can be added to write logs to `stderr` instead, for easier
 access.  Use the flag `--logflow` to apply the same log level to resource providers.
 
-> These logs may include sensitive information that is provided from your execution environment to
-your cloud provider (and which Pulumi may not even itself be aware of) so be careful to audit before
-sharing.
+{{% notes type="warning" %}}
+Enabling verbose logging may reveal sensitive information (tokens, credentials...) that is provided from
+your execution environment to your cloud provider and which Pulumi may not even itself be aware of. It is
+recommended that you audit the saved logs and redact any information before sharing the logs. At log level 10
+or below, Pulumi will avoid intentionally exposing any *known* credentials. At log level 11, Pulumi will
+intentionally expose some known credentials to aid with debugging, so these log levels should be used only
+when absolutely needed.
+{{% /notes %}}
 
 ```
 $ pulumi up --logtostderr --logflow -v=9 2> out.txt
