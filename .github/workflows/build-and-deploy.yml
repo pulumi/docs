@@ -11,9 +11,7 @@ jobs:
     env:
       GOPATH: ${{ github.workspace }}/go
     name: Install deps and build site
-    runs-on:
-      - self-hosted
-      - vm:t3.micro
+    runs-on: self-hosted
     steps:
 
       - uses: actions/checkout@v2
