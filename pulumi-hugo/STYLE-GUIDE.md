@@ -15,6 +15,7 @@ Words are important. Pulumi strives to use language that is clear, harmonious, a
 * Avoid pop-culture references as such references may not be familiar to all readers.
 * Instead of "go to," use "navigate".
 * Avoid directional words. Instead, link directly to the section you are referencing.
+* Avoid using "easy", "simple" or their adjectives, as they make a judgment about the difficulty of a concept explained, or the level of a reader's subject matter expertise. Often, you can omit these words entirely.
 
 ## Headings
 
