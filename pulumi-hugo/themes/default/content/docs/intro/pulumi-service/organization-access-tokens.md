@@ -1,6 +1,6 @@
 ---
 title: "Organization Access Tokens"
-meta_desc: Overview of Access Tokens in the Pulumi Service for both personal accounts and organizations.
+meta_desc: Overview of Organization Access Tokens in the Pulumi Service.
 menu:
   intro:
     parent: pulumi-service
@@ -60,7 +60,7 @@ See the Pulumi [Service REST API docs](https://www.pulumi.com/docs/reference/ser
 
 #### Stacks
 
-| Action | Org Token Access |
+| Action |  |
 |--------|------|
 | List Stacks | ✅ |
 | Get Stack | ✅ |
@@ -70,7 +70,7 @@ See the Pulumi [Service REST API docs](https://www.pulumi.com/docs/reference/ser
 
 #### Stack Tags
 
-| Action | Org Token Access |
+| Action |  |
 |--------|------|
 | Get Stack Tags | ✅ |
 | Set Stack Tag | ✅ |
@@ -87,7 +87,7 @@ See the Pulumi [Service REST API docs](https://www.pulumi.com/docs/reference/ser
 
 #### Organizations
 
-| Action | Org Token Access |
+| Action |  |
 |--------|------|
 | List Users | ✅ |
 | Add User to Organization |  |
@@ -110,7 +110,7 @@ See the Pulumi [Service REST API docs](https://www.pulumi.com/docs/reference/ser
 
 #### Audit Logs
 
-| Action | Org Token Access |
+| Action |  |
 |--------|------|
 | Get Audit Log Events (JSON) | ✅ |
 | Export Audit Log Events (CSV or CEF) | ✅ |
