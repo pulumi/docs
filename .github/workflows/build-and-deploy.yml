@@ -13,8 +13,8 @@ jobs:
     name: Install deps and build site
     runs-on: self-hosted
     steps:
-      - name: Install Yarn
-        run: echo "hey girl"
+      - name: Testing
+        run: echo "123"
 
       - uses: actions/checkout@v2
 
