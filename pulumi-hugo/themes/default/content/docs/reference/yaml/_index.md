@@ -82,6 +82,54 @@ The optional `customTimeouts` property of a resource is an object of the followi
 | `delete`      | string | No | No | Delete is the custom timeout for delete operations. |
 | `update`      | string | No | No | Update is the custom timeout for update operations. |
 
+### Providers and provider versions
+
+There are at least two reasons to explicitly define providers in YAML, or explicitly set their versions while creating resources.
+
+1. Using explicit versions enables pinning the dependencies used, a technique used to improve build reliability.
+1. Using explicit providers enables controlling the options for providers used by each resource, as described in [Unlock Programmatic Control by Disabling Default Providers]({{< relref "/blog/disable-default-providers/index" >}}).
+
+#### Resource version
+
+To create a resource with a specific provider version use the `version` option as described in [Resource Options](#resource-options):
+
+```yaml
+resources:
+  something:
+    type: aws:s3:Bucket
+    properties:
+      ...
+    options:
+      version: 5.6.0
+```
+
+#### Explicit provider
+
+To create an explicit provider instance, preferably with a specific version, use the [`resources`](#resources) section and prefix the name of the provider with `pulumi:providers` which will the value of the `type` property.
+
+```yaml
+provider:
+    type: pulumi:providers:azure
+    options:
+      version: 5.1.0
+```
+
+The provider instance can than be used as described in section [Resource Options](#resource-options) by setting the `provider` option:
+
+```yaml
+resources:
+  provider:
+    type: pulumi:providers:azure
+    options:
+      version: 5.1.0
+  rg:
+    type: azure:core:ResourceGroup
+    properties:
+      location: WestEurope
+    options:
+      provider: ${provider}
+```
+
 ### Outputs
 
 The value of `outputs` is an object whose keys are the logical names of the outputs that are available from outside the Pulumi stack (via `pulumi stack output`), and whose values are potentially computed expressions the resolve to the values of the desired outputs.
