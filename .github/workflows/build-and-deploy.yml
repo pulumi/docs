@@ -12,6 +12,8 @@ jobs:
       GOPATH: ${{ github.workspace }}/go
     name: Install deps and build site
     runs-on: self-hosted
+    permissions:
+      pull-requests: read
     steps:
 
       - uses: actions/checkout@v2
