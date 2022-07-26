@@ -456,9 +456,9 @@ api = apigateway.RestAPI("api", routes=[
         path="/",
         local_path="www",
         authorizers=[apigateway.AuthorizerArgs(
-            parameterName="Authorization",
-            identitySource=["method.request.header.Authorization"],
-            providerARNs=[userPool.arn]
+            parameter_name="Authorization",
+            identity_source=["method.request.header.Authorization"],
+            provider_arns=[userPool.arn]
         )]
     ),
 ])
