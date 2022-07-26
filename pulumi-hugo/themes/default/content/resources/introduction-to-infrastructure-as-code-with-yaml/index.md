@@ -7,7 +7,7 @@ meta_desc: "Learn how to use Infrastructure as Code (IaC) with Pulumi, using Doc
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: true
+pre_recorded: false
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -54,9 +54,9 @@ main:
     # Webinar title.
     title: "Introduction to Infrastructure as Code with Pulumi YAML"
     # URL for embedding a URL for ungated webinars.
-    youtube_url: "https://www.youtube.com/embed/7Z8hElGMdPU"
+    youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-06-16T10:00:00-07:00
+    sortable_date: 2022-08-09T10:00:00-07:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.
@@ -67,13 +67,16 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Matty Stratton
-          role: Staff Developer Advocate, Pulumi
-        - name: Kat Cosgrove
+        - name: David Flanagan
           role: Staff Developer Advocate, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
         - How to use YAML with Pulumi.
         - How to provision Docker containers with Pulumi.
+
+# The right hand side form section.
+form:
+    # HubSpot form id.
+    hubspot_form_id: "4e328ce5-4ecd-4cb8-82b7-5aa6b86405bf"
 ---
