@@ -133,7 +133,7 @@ class MyStack : Stack
     {
         this.StrVar = "foo";
         this.ArrVar = new string[] { "fizz", "buzz" };
-        this.Readme = System.IO.File.ReadAllText("./Pulumi.README.md");
+        this.Readme = Output.Create(System.IO.File.ReadAllText("./Pulumi.README.md"));
     }
     [Output]
     public Output<string> StrVar { get; set; }
