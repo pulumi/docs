@@ -275,7 +275,7 @@ If the resource is not found, an error will occur:
 error: Preview failed: importing sg-04aeda9a214730248: security group not found
 ```
 
-After successfully importing a resource, you can delete the `import` statement, rerun `pulumi up`, and all subsequent operations will behave as though Pulumi provisioned the resource from the outset. Be careful, as this applies to `destroy` operations also.
+After successfully importing a resource, you can delete the import option, rerun `pulumi up`, and all subsequent operations will behave as though Pulumi provisioned the resource from the outset. Be careful, as this applies to `destroy` operations also.
 
 #### Mismatched State
 
