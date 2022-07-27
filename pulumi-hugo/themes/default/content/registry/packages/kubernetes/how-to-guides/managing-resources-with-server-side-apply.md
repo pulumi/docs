@@ -91,7 +91,34 @@ await Deployment.RunAsync(() =>
 
 {{% choosable language java %}}
 
-Coming soon!
+```java
+package generated_program;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.kubernetes;
+import com.pulumi.kubernetes.ProviderArgs;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var provider = new Provider("provider", ProviderArgs.builder()
+            .enableServerSideApply(true)
+            .build());
+
+    }
+}
+```
 
 {{% /choosable %}}
 
@@ -175,13 +202,12 @@ import (
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
-        _, err := kubernetes.NewProvider(ctx, "k8s", &kubernetes.ProviderArgs{
-            EnableServerSideApply: pulumi.BoolPtr(true),
+        provider, err := kubernetes.NewProvider(ctx, "provider", &kubernetes.ProviderArgs{
+            EnableServerSideApply: pulumi.Bool(true),
         })
         if err != nil {
             return err
         }
-
         _, err = corev1.NewConfigMap(ctx, "example", &corev1.ConfigMapArgs{
             Metadata: &metav1.ObjectMetaArgs{
                 Annotations: pulumi.StringMap{
@@ -206,17 +232,18 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Collections.Generic;
 using Pulumi;
 using Kubernetes = Pulumi.Kubernetes;
 
-await Deployment.RunAsync(() =>
+return await Deployment.RunAsync(() =>
 {
-    var provider = new Kubernetes.Provider("k8s", new Kubernetes.ProviderArgs
+    var provider = new Kubernetes.Provider("provider", new()
     {
         EnableServerSideApply = true,
     });
 
-    var example = new Kubernetes.Core.V1.ConfigMap("example", new Kubernetes.Types.Inputs.Core.V1.ConfigMapArgs
+    var example = new Kubernetes.Core.V1.ConfigMap("example", new()
     {
         Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
         {
@@ -241,7 +268,48 @@ await Deployment.RunAsync(() =>
 
 {{% choosable language java %}}
 
-Coming soon!
+```java
+package generated_program;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.kubernetes;
+import com.pulumi.kubernetes.ProviderArgs;
+import com.pulumi.kubernetes.core_v1.ConfigMap;
+import com.pulumi.kubernetes.core_v1.ConfigMapArgs;
+import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.resources.CustomResourceOptions;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var provider = new Provider("provider", ProviderArgs.builder()
+            .enableServerSideApply(true)
+            .build());
+
+        var example = new ConfigMap("example", ConfigMapArgs.builder()
+            .metadata(ObjectMetaArgs.builder()
+                .annotations(Map.of("pulumi.com/patchForce", "true"))
+                .name("example")
+                .build())
+            .data(Map.of("foo", "bar"))
+            .build(), CustomResourceOptions.builder()
+                .provider(provider)
+                .build());
+
+    }
+}
+```
 
 {{% /choosable %}}
 
@@ -257,6 +325,8 @@ resources:
         type: kubernetes:core/v1:ConfigMap
         properties:
             metadata:
+                annotations:
+                    pulumi.com/patchForce: "true"
                 name:
                     example
             data:
@@ -369,13 +439,12 @@ import (
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
-        _, err := kubernetes.NewProvider(ctx, "k8s", &kubernetes.ProviderArgs{
-            EnableServerSideApply: pulumi.BoolPtr(true),
+        provider, err := kubernetes.NewProvider(ctx, "provider", &kubernetes.ProviderArgs{
+            EnableServerSideApply: pulumi.Bool(true),
         })
         if err != nil {
             return err
         }
-
         patch1, err := corev1.NewConfigMapPatch(ctx, "patch1", &corev1.ConfigMapPatchArgs{
             Metadata: &metav1.ObjectMetaPatchArgs{
                 Annotations: pulumi.StringMap{
@@ -416,17 +485,18 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Collections.Generic;
 using Pulumi;
 using Kubernetes = Pulumi.Kubernetes;
 
-await Deployment.RunAsync(() =>
+return await Deployment.RunAsync(() =>
 {
-    var provider = new Kubernetes.Provider("k8s", new Kubernetes.ProviderArgs
+    var provider = new Kubernetes.Provider("provider", new()
     {
         EnableServerSideApply = true,
     });
 
-    var patch1 = new Kubernetes.Core.V1.ConfigMapPatch("patch1", new Kubernetes.Types.Inputs.Core.V1.ConfigMapPatchArgs
+    var patch1 = new Kubernetes.Core.V1.ConfigMapPatch("patch1", new()
     {
         Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaPatchArgs
         {
@@ -444,7 +514,8 @@ await Deployment.RunAsync(() =>
     {
         Provider = provider,
     });
-    var patch2 = new Kubernetes.Core.V1.ConfigMapPatch("patch2", new Kubernetes.Types.Inputs.Core.V1.ConfigMapPatchArgs
+
+    var patch2 = new Kubernetes.Core.V1.ConfigMapPatch("patch2", new()
     {
         Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaPatchArgs
         {
@@ -461,7 +532,7 @@ await Deployment.RunAsync(() =>
     }, new CustomResourceOptions
     {
         Provider = provider,
-        DependsOn =
+        DependsOn = new[]
         {
             patch1,
         },
@@ -473,7 +544,59 @@ await Deployment.RunAsync(() =>
 
 {{% choosable language java %}}
 
-Coming soon!
+```java
+package generated_program;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.kubernetes;
+import com.pulumi.kubernetes.ProviderArgs;
+import com.pulumi.kubernetes.core_v1.ConfigMapPatch;
+import com.pulumi.kubernetes.core_v1.ConfigMapPatchArgs;
+import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaPatchArgs;
+import com.pulumi.resources.CustomResourceOptions;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var provider = new Provider("provider", ProviderArgs.builder()
+            .enableServerSideApply(true)
+            .build());
+
+        var patch1 = new ConfigMapPatch("patch1", ConfigMapPatchArgs.builder()
+            .metadata(ObjectMetaPatchArgs.builder()
+                .annotations(Map.of("pulumi.com/patchForce", "true"))
+                .name("example")
+                .build())
+            .data(Map.of("foo", "bar"))
+            .build(), CustomResourceOptions.builder()
+                .provider(provider)
+                .build());
+
+        var patch2 = new ConfigMapPatch("patch2", ConfigMapPatchArgs.builder()
+            .metadata(ObjectMetaPatchArgs.builder()
+                .annotations(Map.of("pulumi.com/patchForce", "true"))
+                .name("example")
+                .build())
+            .data(Map.of("oof", "rab"))
+            .build(), CustomResourceOptions.builder()
+                .provider(provider)
+                .dependsOn(patch1)
+                .build());
+
+    }
+}
+```
 
 {{% /choosable %}}
 
@@ -607,13 +730,12 @@ import (
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
         uuid := "ee0d1b94-e749-4de4-ae8a-e4319a7f3ef2" // Arbitrary UUID
-        _, err := kubernetes.NewProvider(ctx, "k8s", &kubernetes.ProviderArgs{
-            EnableServerSideApply: pulumi.BoolPtr(true),
+        provider, err := kubernetes.NewProvider(ctx, "provider", &kubernetes.ProviderArgs{
+            EnableServerSideApply: pulumi.Bool(true),
         })
         if err != nil {
             return err
         }
-
         patch1, err := corev1.NewNamespacePatch(ctx, "patch1", &corev1.NamespacePatchArgs{
             Metadata: &metav1.ObjectMetaPatchArgs{
                 Name: pulumi.String("foo"),
@@ -656,18 +778,20 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Collections.Generic;
 using Pulumi;
 using Kubernetes = Pulumi.Kubernetes;
 
-await Deployment.RunAsync(() =>
+return await Deployment.RunAsync(() =>
 {
     var uuid = "ee0d1b94-e749-4de4-ae8a-e4319a7f3ef2"; // Arbitrary UUID
-    var provider = new Kubernetes.Provider("k8s", new Kubernetes.ProviderArgs
+
+    var provider = new Kubernetes.Provider("provider", new()
     {
         EnableServerSideApply = true,
     });
 
-    var patch1 = new Kubernetes.Core.V1.NamespacePatch("patch1", new Kubernetes.Types.Inputs.Core.V1.NamespacePatchArgs
+    var patch1 = new Kubernetes.Core.V1.NamespacePatch("patch1", new()
     {
         Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaPatchArgs
         {
@@ -686,7 +810,8 @@ await Deployment.RunAsync(() =>
     {
         Provider = provider,
     });
-    var patch2 = new Kubernetes.Core.V1.NamespacePatch("patch2", new Kubernetes.Types.Inputs.Core.V1.NamespacePatchArgs
+
+    var patch2 = new Kubernetes.Core.V1.NamespacePatch("patch2", new()
     {
         Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaPatchArgs
         {
@@ -704,7 +829,7 @@ await Deployment.RunAsync(() =>
     }, new CustomResourceOptions
     {
         Provider = provider,
-        DependsOn =
+        DependsOn = new[]
         {
             patch1,
         },
@@ -716,7 +841,67 @@ await Deployment.RunAsync(() =>
 
 {{% choosable language java %}}
 
-Coming soon!
+```java
+package generated_program;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.kubernetes;
+import com.pulumi.kubernetes.ProviderArgs;
+import com.pulumi.kubernetes.core_v1.NamespacePatch;
+import com.pulumi.kubernetes.core_v1.NamespacePatchArgs;
+import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaPatchArgs;
+import com.pulumi.resources.CustomResourceOptions;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        final var uuid = "ee0d1b94-e749-4de4-ae8a-e4319a7f3ef2"; // Arbitrary UUID
+
+        var provider = new Provider("provider", ProviderArgs.builder()
+            .enableServerSideApply(true)
+            .build());
+
+        var patch1 = new NamespacePatch("patch1", NamespacePatchArgs.builder()
+            .metadata(ObjectMetaPatchArgs.builder()
+                .name("foo")
+                .annotations(Map.ofEntries(
+                    Map.entry("pulumi.com/patchForce", "true"),
+                    Map.entry("pulumi.com/patchFieldManager", uuid)
+                ))
+                .labels(Map.of("foo", ""))
+                .build())
+            .build(), CustomResourceOptions.builder()
+                .provider(provider)
+                .build());
+
+        var patch2 = new NamespacePatch("patch2", NamespacePatchArgs.builder()
+            .metadata(ObjectMetaPatchArgs.builder()
+                .name("foo")
+                .annotations(Map.ofEntries(
+                    Map.entry("pulumi.com/patchForce", "true"),
+                    Map.entry("pulumi.com/patchFieldManager", uuid)
+                ))
+                .labels(Map.of("foo", null))
+                .build())
+            .build(), CustomResourceOptions.builder()
+                .provider(provider)
+                .dependsOn(patch1)
+                .build());
+
+    }
+}
+```
 
 {{% /choosable %}}
 
