@@ -4,11 +4,11 @@ title: "pulumi logs"
 
 
 
-[PREVIEW] Show aggregated resource logs for a stack
+Show aggregated resource logs for a stack
 
 ### Synopsis
 
-[PREVIEW] Show aggregated resource logs for a stack
+[EXPERIMENTAL] Show aggregated resource logs for a stack
 
 This command aggregates log entries associated with the resources in a stack from the corresponding
 provider. For example, for AWS resources, the `pulumi logs` command will query
