@@ -150,7 +150,7 @@ $ cd ../my-website
 $ pulumi new aws-yaml
 ```
 
-Once again, follow the prompts to create a new `dev` stack, then replace the contents of `Pulumi.yaml` with the program below. Here, we're fetching the names of the parameters being managed by `shared-config`, pulling their values from Systems Manager, and creating a one-page website to render those values in the browser. (Be sure to adjust the [`pulumi:pulumi:StackReference`](https://github.com/pulumi/pulumi-yaml#fnstackreference)s resource to point to your stack instead of mine.)
+Once again, follow the prompts to create a new `dev` stack, then replace the contents of `Pulumi.yaml` with the program below. Here, we're fetching the names of the parameters being managed by `shared-config`, pulling their values from Systems Manager, and creating a one-page website to render those values in the browser. (Be sure to adjust the [`Fn::StackReference`](https://github.com/pulumi/pulumi-yaml#fnstackreference)s to point to your stack instead of mine.)
 
 ```yaml
 name: my-website
@@ -159,8 +159,14 @@ runtime: yaml
 variables:
 
   # Get the names of the parameters we care about from the shared-config stack.
-  motd_param_ref: ${my-stack-reference.outputs["motd_param_name"]}
-  motd_secret_param_ref: ${my-stack-reference.outputs["motd_secret_param_name"]}
+  motd_param_ref:
+    Fn::StackReference:
+      - cnunciato/shared-config/dev  # <-- Change this.
+      - motd_param_name
+  motd_secret_param_ref:
+    Fn::StackReference:
+      - cnunciato/shared-config/dev  # <-- And this.
+      - motd_secret_param_name
 
   # Fetch (and decrypt) their values from Systems Manager.
   motd_param:
@@ -176,11 +182,6 @@ variables:
         withDecryption: true
 
 resources:
-  # Create the stack reference
-  my-stack-reference:
-    type: pulumi:pulumi:StackReference
-    properties:
-      name: cnunciato/shared-config/dev  # <-- Change this.
 
   # Create an S3 bucket and configure it as a website.
   my-bucket:
