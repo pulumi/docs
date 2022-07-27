@@ -9,7 +9,11 @@ tags:
     - Azure
 ---
 
-We are happy to announce the release of a new major version of the Pulumi Azure provider. Pulumi Azure 2.0 is based on the [2.0 release](https://www.terraform.io/docs/providers/azurerm/guides/2.0-upgrade-guide.html) of the upstream provider and brings several improvements and breaking changes.
+{{% notes type="warning" %}}
+This blog post is outdated and no longer accurate. Go to our [Azure Classic package page](https://www.pulumi.com/registry/packages/azure) for up to date details.
+{{% /notes %}}
+
+We are happy to announce the release of a new major version of the Pulumi Azure provider. Pulumi Azure 2.0 is based on the 2.0 release of the upstream provider and brings several improvements and breaking changes.
 
 <!--more-->
 
@@ -93,11 +97,11 @@ const vm = new azure.compute.LinuxVirtualMachine("server-vm", {
 
 Azure Active Directory now has its [own Pulumi provider](https://github.com/pulumi/pulumi-azuread/), so all the AD resources were removed from the `AD` namespace of the Azure Provider 2.0.
 
-A number of other resources, invokes, and fields were removed too, following the changes in the upstream provider. You can see the full list in [this upgrade guide](https://www.terraform.io/docs/providers/azurerm/guides/2.0-upgrade-guide.html).
+A number of other resources, invokes, and fields were removed too, following the changes in the upstream provider.
 
 ## Default Versions in Callback Functions
 
-[Serverless as Callbacks](https://www.pulumi.com/blog/serverless-as-simple-callbacks-with-pulumi-and-azure-functions/) running on Azure Functions have bumped the default version of the Azure Functions runtime to `~3` and `Node.js` to `~12`. As always, you can override the default to set the versions that you require.
+[Serverless as Callbacks](https://www.pulumi.com/blog/serverless-as-simple-callbacks-with-pulumi-and-azure-functions) running on Azure Functions have bumped the default version of the Azure Functions runtime to `~3` and `Node.js` to `~12`. As always, you can override the default to set the versions that you require.
 
 Callback Functions also moved from `ZipBlob` to `Blob` deploy as described above, so expect another replacement operation while upgrading.
 
@@ -175,7 +179,7 @@ pulumi-azure>=2.0.0
 
 {{% /choosable %}}
 
-There are quite a few breaking changes, so you may need to adjust your code before you can run the program successfully again. Check [the upgrade guide](https://www.terraform.io/docs/providers/azurerm/guides/2.0-upgrade-guide.html) for details.
+There are quite a few breaking changes, so you may need to adjust your code before you can run the program successfully again.
 
 To help with this process, we upgraded all our Azure [templates](https://github.com/pulumi/templates/) and [examples](https://github.com/pulumi/examples/) to 2.0.
 
