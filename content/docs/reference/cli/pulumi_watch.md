@@ -4,11 +4,11 @@ title: "pulumi watch"
 
 
 
-[PREVIEW] Continuously update the resources in a stack
+Continuously update the resources in a stack
 
 ### Synopsis
 
-Continuously update the resources in a stack.
+[EXPERIMENTAL] Continuously update the resources in a stack.
 
 This command watches the working directory or specified paths for the current project and updates
 the active stack whenever the project changes.  In parallel, logs are collected for all resources
