@@ -74,11 +74,11 @@ function minifyCSS(filePath) {
     });
 }
 
-minifyCSS("public/css/bundle.*.css").then(() => {
-    minifyCSS("public/css/marketing.*.css").then(() => {
-        console.log("CSS bundles minified successfully!");
-    });
-});
+Promise.all([
+    minifyCSS("public/css/bundle.*.css"),
+    minifyCSS("public/css/marketing.*.css"),
+])
+.then(() => console.log("CSS bundles minified successfully!"));
 
 // Exit non-zero when something goes wrong in the promise chain.
 process.on("unhandledRejection", error => {
