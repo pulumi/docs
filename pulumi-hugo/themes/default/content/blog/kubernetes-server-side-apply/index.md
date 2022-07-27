@@ -17,6 +17,14 @@ how Pulumi can help you work with shared resources safely and effectively.
 
 <!--more-->
 
+We first launched the Pulumi Kubernetes provider in 2018, and it has grown to be one of the most used providers across the Pulumi ecosystem. Many of our customers rely on this provider to manage critical production workloads, and a common request was for an easier way to manage shared Kubernetes resources with Pulumi. We've been listening, and are grateful to everyone who took the time to share their feedback with us!
+
+A lot has changed since 2018, and our provider continues to evolve to support new use cases and the ever-growing richness of the Kubernetes ecosystem. One such development is [Server-Side Apply](https://kubernetes.io/docs/reference/using-api/server-side-apply/) (SSA), which is a resource management strategy that was introduced in Kubernetes `v1.18`. Kubernetes clients that use SSA can safely share the management of Kubernetes resources by making the API Server responsible for computing diffs and resolving conflicts.
+
+We have kept a close eye on the SSA feature since it was announced and have been waiting patiently for its broad availability in production clusters. The wait is over, and we are excited to bring the power of SSA to Pulumi users!
+
+## What's new in Pulumi's Kubernetes provider?
+
 Our Server-Side Apply support adds several new capabilities:
 
 1. New Patch resource types corresponding to every Kubernetes resource kind. (e.g., `NamespacePatch`, `DeploymentPatch`)
@@ -215,6 +223,8 @@ resources:
 {{< /chooser >}}
 
 After running an update with this program, the new label is applied to the shared Namespace.
+
+![Patch a Namespace](patch.gif)
 
 ```
 $ pulumi up --skip-preview
@@ -693,6 +703,8 @@ resources:
 {{< /chooser >}}
 
 Here is what it looks like to update an existing `ConfigMap` with this program.
+
+![Upsert a ConfigMap](upsert.gif)
 
 ```
 $ kubectl get configmap app-settings -o yaml
