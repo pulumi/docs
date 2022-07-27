@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "Getting Started with Infrastructure as Code on DigitalOcean"
-meta_desc: "In this hands-on workshop, you will learn how to stand up basic services using Infrastructure as Code through a series of hands-on labs."
+title: "Introduction to Infrastructure as Code with Python"
+meta_desc: "Learn the fundamentals of Infrastructure as Code (IaC) with Pulumi, using Docker, and Python. Build and deploy a full stack python app. Source code available."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -34,12 +34,12 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "getting-started-with-infrastructure-as-code-on-digital-ocean"
+url_slug: "introduction-to-infrastructure-as-code-with-python"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Getting Started with Infrastructure as Code on DigitalOcean"
+    title: "Introduction to Infrastructure as Code with Python"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
@@ -52,33 +52,28 @@ hero:
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Getting Started with Infrastructure as Code on DigitalOcean"
+    title: "Introduction to Infrastructure as Code with Python"
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-09-29T08:00:00-07:00
+    sortable_date: 2022-08-12T10:00:00-07:00
     # Duration of the webinar.
-    duration: "90 minutes"
+    duration: "1 hour"
     # Datetime of the webinar.
     datetime: ""
     # Description of the webinar.
     description: |
-        In this hands-on workshop, the Pulumi and the DigitalOcean teams will show you how to stand up basic services using Infrastructure as Code (IaC) through a series of hands-on labs.
+        In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform. You will be introduced to Pulumi, an infrastructure as code platform, where you can use familiar programming languages to provision modern cloud infrastructure.
+
+        This workshop is designed to help users completely new to Pulumi to become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and a series of hands on exercises to help you understand the building blocks available in Pulumi.
 
     # The webinar presenters
     presenters:
-        - name: Matt Stratton
+        - name: Kat Cosgrove
           role: Staff Developer Advocate, Pulumi
-        - name: Chris Sevilleaja
-          role: Senior Developer Advocate, DigitalOcean
-
-    # A bullet point list containing what the user will learn during the webinar.
-    learn:
-        - How to use Pulumi to provision cloud resources
-        - How to use IaC on DigitalOcean
 
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: "7498bb01-dceb-4519-ab4e-9413355ada23"
+    hubspot_form_id: "dbdd2458-72d8-476f-b68d-ce4223c04494"
 ---
