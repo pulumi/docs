@@ -5,7 +5,7 @@ on:
       - master
   pull_request:
     branches:
-      - master
+      - cnunciato/try-self-hosted-runners
 jobs:
   buildSite:
     env:
@@ -15,6 +15,8 @@ jobs:
     permissions:
       pull-requests: write
     steps:
+      - name: Testing
+        run: echo "123"
 
       - uses: actions/checkout@v2
 
