@@ -155,7 +155,7 @@ $ pulumi config set branch "your-main-branch"               # e.g., main
 With these values in place, you're ready to start writing the program.
 
 {{% notes %}}
-App Platform also supports GitLab and other Git-based repositories as well. See the [App Specification docs](https://docs.digitalocean.com/products/app-platform/references/app-specification-reference/) for details.
+App Platform also supports GitLab and other Git-based repositories as well. See the [App Specification docs](https://docs.digitalocean.com/products/app-platform/reference/app-spec/) for details.
 {{% /notes %}}
 
 ## Writing the program
