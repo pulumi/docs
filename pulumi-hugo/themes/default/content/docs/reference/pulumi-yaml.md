@@ -48,3 +48,9 @@ It contains the following required and optional attributes:
         - `description`: (optional) a description for the config setting.
         - `default`: (optional) the default value of the config setting - which will be presented to the user as a default.
         - `secret`: (optional) if `true` indicates that this configration value should be marked as secret.
+
+- `plugins`: (optional) allows the overriding of plugin selection to make use of plugins not installed into the global plugin cache.
+  - `providers`/`analyzers`/`languages`: (optional) each entry has a list of plugins underneath it.
+    - `name`: (required) the name of the plugin.
+    - `path`: (required) the path to the folder containing the plugin.
+    - `version`: (optional) the version of the plugin, if not set this plugin will match for any version the engine requests.
