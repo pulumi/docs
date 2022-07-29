@@ -127,8 +127,18 @@ public static void stack(Context ctx) {
 {{% choosable language yaml %}}
 
 ```yaml
-# YAML does not yet support the `get` function. See
-# https://github.com/pulumi/pulumi-yaml/issues/155 for details.
+resources:
+  group:
+    type: aws:ec2:SecurityGroup
+    get:
+      id: sg-0dfd33cdac25b1ec9
+  web-server:
+    type: aws:ec2:Instance
+    properties:
+      ami: ami-6869aa05
+      instanceType: t2.micro
+      securityGroups:
+        - ${group.name}
 ```
 
 {{% /choosable %}}

@@ -101,7 +101,7 @@ code programs using Pulumi. [Architecture & Concepts]({{< relref "/docs/intro/co
 describes these concepts with examples available in all supported languages, including Pulumi YAML.
 
 To learn how the Pulumi Programming Model is implemented for Pulumi YAML, refer
-to the [Pulumi YAML Reference Guide](https://github.com/pulumi/pulumi-yaml#spec).
+to the [Pulumi YAML Reference Guide]({{< relref "/docs/reference/yaml/" >}}).
 
 ## Compiler support
 

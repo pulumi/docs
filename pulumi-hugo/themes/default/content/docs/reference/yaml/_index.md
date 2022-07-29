@@ -35,11 +35,12 @@ The value of `configuration` is an object whose keys are logical names by which 
 
 The value of `resources` is an object whose keys are logical resource names by which the resource will be referenced in expressions within the program, and whose values which are elements of the schema below.  Each item in this object represents a resource which will be managed by the Pulumi program.
 
-| Property        | Type | Required           | Expressions  | Description |
-| ------------- |---|-------------| -----|---|
-| `type`      | string | Yes | No | Type is the Pulumi type token for this resource. |
-| `properties`      | map[string]Expression | No | Yes | Properties contains the primary resource-specific keys and values to initialize the resource state. |
-| `options`         | [Resource Options](#resource-options) | No | No | Options contains all resource options supported by Pulumi. |
+| Property     | Type                                  | Required | Expressions | Description                                                                                         |
+|--------------|---------------------------------------|----------|-------------|-----------------------------------------------------------------------------------------------------|
+| `type`       | string                                | Yes      | No          | Type is the Pulumi type token for this resource.                                                    |
+| `properties` | map[string]Expression                 | No       | Yes         | Properties contains the primary resource-specific keys and values to initialize the resource state. |
+| `options`    | [Resource Options](#resource-options) | No       | No          | Options contains all resource options supported by Pulumi.                                          |
+| `get`        | [Resource Getter](#resource-getter)   | No       | Yes         | A getter function for the resource. Supplying `get` is mutually exclusive to `properties`.          |
 
 #### Resource Options
 
@@ -72,15 +73,24 @@ The `dependsOn`, `parent`, `provider`, and `providers` values permit expressions
 | `providers`               | map[string]Expression | No | Yes | Map of providers for a resource and its children. |
 | `version`                 | string       | Version specifies a provider plugin version that should be used when operating on a resource |
 
+#### Resource Getter
+
+Supplying a `get` key turns the resource declaration into a [Getter Function]({{< relref "/docs/intro/concepts/resources/get.md" >}}).
+
+| Property | Type                  | Required | Description                                                                                                        |
+|----------|-----------------------|----------|--------------------------------------------------------------------------------------------------------------------|
+| `id`     | string                | Yes      | The ID of the resource to import                                                                                   |
+| `state`  | map[string]Expression | No       | Known properties (input & output) of the resource. This assists the provider in figuring out the correct resource. |
+
 #### Custom Timeout
 
 The optional `customTimeouts` property of a resource is an object of the following schema:
 
-| Property        | Type | Required           | Expression  | Description |
-| ------------- |---|-------------| -----|---|
-| `create`      | string | No | No | Create is the custom timeout for create operations. |
-| `delete`      | string | No | No | Delete is the custom timeout for delete operations. |
-| `update`      | string | No | No | Update is the custom timeout for update operations. |
+| Property | Type   | Required | Expression | Description                                         |
+|----------|--------|----------|------------|-----------------------------------------------------|
+| `create` | string | No       | No         | Create is the custom timeout for create operations. |
+| `delete` | string | No       | No         | Delete is the custom timeout for delete operations. |
+| `update` | string | No       | No         | Update is the custom timeout for update operations. |
 
 ### Providers and provider versions
 
