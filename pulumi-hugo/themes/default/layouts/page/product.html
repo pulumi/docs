@@ -1,5 +1,21 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" .Params.heading ) }}
+    <header class="home-page-hero">
+        <div class="dot-background-container pointer-events-none">
+            <div class="dot-background"></div>
+        </div>
+        <div class="dot-overlay"></div>
+        <div class="home-page-hero-content mt-8">
+            <h1 class="relative">
+                <span class="rainbow-text" data-text="{{ .Params.heading }}">{{ .Params.heading }}</span>
+            </h1>
+            <p class="text-center max-w-3xl leading-7">{{ .Params.subheading | markdownify }}</p>
+            <div class="mt-8 text-center">
+                <div class="pb-12">
+                    <a class="home-hero-btn-primary" href="{{ relref . "/docs/get-started" }}">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
 {{ end }}
 
 {{ define "main" }}

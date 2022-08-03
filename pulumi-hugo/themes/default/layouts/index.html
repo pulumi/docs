@@ -4,7 +4,7 @@
             <div class="dot-background"></div>
         </div>
         <div class="dot-overlay"></div>
-        <div class="home-page-hero-content">
+        <div class="home-page-hero-content mt-8">
             <h1 class="relative">
                 <span class="rainbow-text" data-text="{{ index (.Params.hero.title) 0 }}">{{ index (.Params.hero.title) 0 }}</span><br />
                 <span class="rainbow-text" data-text="{{ index (.Params.hero.title) 1 }}">{{ index (.Params.hero.title) 1 }}</span>
@@ -23,7 +23,7 @@
     {{ $pageContext := . }}
 
 
-    <section class="container mx-auto mt-32 pt-8">
+    <section class="container mx-auto mt-12 pt-8">
         <div class="flex flex-col lg:flex-row h-full">
             <div class="w-full lg:w-1/2 mt-16 lg:mt-0 h-full flex items-center justify-center relative overflow-hidden">
                 <div class="slot-machine-overlay">
@@ -60,7 +60,7 @@
         </div>
     </section>
 
-    <section class="mb-8 mt-16 lg:my-32 px-6 lg:px-0 relative">
+    <section class="mb-8 mt-12 lg:my-32 px-6 lg:px-0 relative">
         <div class="shape-background home-build-section">
             <div class="shape-container">
                 <div class="circle-left"></div>
@@ -129,7 +129,7 @@
         </div>
     </section>
 
-    <section class="py-16 lg:my-32 px-6 lg:px-0 relative">
+    <section class="py-12 lg:my-12 px-6 lg:px-0 relative">
         <div class="shape-background home-deploy-section">
             <div class="shape-container">
                 <div class="dot-background-container">
@@ -162,7 +162,7 @@
         </div>
     </section>
 
-    <section class="my-16 lg:py-32 px-6 lg:px-0 relative">
+    <section class="my-12 lg:py-12 px-6 lg:px-0 relative">
         <div class="shape-background home-manage-section">
             <div class="shape-container">
                 <div class="dot-background-container">
@@ -197,7 +197,7 @@
     </section>
 
     <!-- Benefits -->
-    <section class="container mx-auto my-16 lg:my-24 relative">
+    <section class="container mx-auto my-12 lg:my-12 relative">
         <h2 class="text-center">{{ .Params.benefits.title }}</h2>
         <div class="benefits-section relative">
             <div class="shape-background home-benefits-section">
@@ -225,7 +225,7 @@
     <!-- Logos -->
     <section class="container mx-auto text-center my-0 mb-16 lg:my-24 overflow-hidden px-3">
         <div class="mb-16">
-            <h3>Atlassian Bitbucket reduced developers’ time spent on maintenance by 50%</h3>
+            <h3>Atlassian reduced time spent on maintenance by 50%</h3>
             <div class="max-w-2xl mx-auto text-center">
                 <div class="max-w-xs mx-auto">
                     {{ partial "customer-logo.html" (dict "logo" "atlassian") }}
@@ -245,26 +245,39 @@
 
         <h3 class="text-center mb-10 hidden lg:block">{{ .Params.customer_logos.title }}</h3>
         <h6 class="text-center mb-10 lg:hidden">{{ .Params.customer_logos.title }}</h6>
-        <div class="flex flex-wrap items-center justify-center">
-            {{ range $logo := .Params.customer_logos.logos }}
-                <div class="w-3/4 lg:w-1/6 p-10">
-                    {{ if $logo.link }}
-                        <a href="{{ relref $pageContext $logo.link }}">
-                            {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
-                        </a>
-                    {{ else }}
-                        {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
-                    {{ end }}
-                </div>
-            {{ end }}
+        <div class="w-full order-first pb-16 items-center justify-center lg:hidden">
+            <pulumi-swiper slides="3" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
+                {{ range $logo := .Params.customer_logos.logos }}
+                    <pulumi-swipeable>
+                        <div class="p-4 flex flex-col flex-grow items-end h-24 justify-center">
+                            {{ if $logo.link }}
+                                <a href="{{ relref $pageContext $logo.link }}">
+                                    {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
+                                </a>
+                            {{ else }}
+                                {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
+                            {{ end }}
+                        </div>
+                    </pulumi-swipeable>
+                {{ end }}
+            </pulumi-swiper>
         </div>
-
-        <div class="flex flex-wrap items-center justify-center">
-            {{ range $logo := .Params.customer_logos.small_logos }}
-                <div class="w-3/4 lg:w-1/6 p-10">
-                    {{ partial "customer-logo.html" (dict "logo" $logo "hoverable" true) }}
-                </div>
-            {{ end }}
+        <div class="w-full order-first pb-16 items-center justify-center lg:block hidden">
+            <pulumi-swiper slides="6" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
+                {{ range $logo := .Params.customer_logos.logos }}
+                    <pulumi-swipeable>
+                        <div class="p-8 flex flex-col flex-grow items-end h-24 justify-center">
+                            {{ if $logo.link }}
+                                <a href="{{ relref $pageContext $logo.link }}">
+                                    {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
+                                </a>
+                            {{ else }}
+                                {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
+                            {{ end }}
+                        </div>
+                    </pulumi-swipeable>
+                {{ end }}
+            </pulumi-swiper>
         </div>
     </section>
 

@@ -49,17 +49,6 @@
             {{ partial "customer-logos/bio-fire-color" }}
         {{ end }}
     </span>
-{{ else if eq .logo "materialize" }}
-    <span class="w-full h-full">
-        {{ if eq .hoverable true }}
-            <span class="ro-hoverable">
-                <span class="ro-gray">{{ partial "customer-logos/materialize-gray" }}</span>
-                <span class="ro-color">{{ partial "customer-logos/materialize-color" }}</span>
-            </span>
-        {{ else }}
-            {{ partial "customer-logos/materialize-color" }}
-        {{ end }}
-    </span>
 {{ else if eq .logo "singtel" }}
     <span class="w-full h-full">
         {{ if eq .hoverable true }}

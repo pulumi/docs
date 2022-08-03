@@ -125,6 +125,42 @@ summary = "Company funded by Madrona Venture Group and Tola Capital to help comp
 url = "https://info.pulumi.com/press-release/pulumi-launches-cloud-development-platform-to-help-teams-get-code-to-the-cloud-faster/"
 
 [[coverage]]
+date = "6th May 2022"
+title = "Pulumi Takes Infrastructure as Code Universal with CrossCode"
+img = "/logos/press/itprotoday.png"
+url = "https://www.itprotoday.com/cloudops/pulumi-takes-infrastructure-code-universal-crosscode"
+
+[[coverage]]
+date = "5th May 2022"
+title = "Pulumi Extends Infrastructure-as-Code Reach"
+img = "/logos/press/devops.png"
+url = "https://devops.com/pulumi-extends-infrastructure-as-code-reach/"
+
+[[coverage]]
+date = "5th May 2022"
+title = "Pulumi CrossCode Makes Cloud Infrastructure as Code Universal"
+img = "/logos/press/tfir.png"
+url = "https://www.tfir.io/pulumi-crosscode-makes-cloud-infrastructure-as-code-universal/"
+
+[[coverage]]
+date = "5th May 2022"
+title = "Pulumi broadens reach by adding Java, YAML, and CrossCode translator"
+img = "/logos/press/devclass.png"
+url = "https://devclass.com/2022/05/05/pulumi-broadens-reach-adding-java-yaml-crosscode-translator/"
+
+[[coverage]]
+date = "4th May 2022"
+title = "Pulumi infrastructure-as-code goes universal to build cloud apps"
+img = "/logos/press/venturebeat.png"
+url = "https://venturebeat.com/2022/05/04/pulumi-infrastructure-as-code-goes-universal-to-build-cloud-apps/"
+
+[[coverage]]
+date = "4th May 2022"
+title = "Pulumi extends infrastructure as code support for Java and YAML"
+img = "/logos/press/infoworld.png"
+url = "https://www.infoworld.com/article/3658857/pulumi-extends-infrastructure-as-code-support-for-java-and-yaml.html"
+
+[[coverage]]
 date = "2nd July 2021"
 title = "The 10 Coolest Open-Source Software Tools Of 2021 (So Far)"
 img = "/logos/press/crn.png"

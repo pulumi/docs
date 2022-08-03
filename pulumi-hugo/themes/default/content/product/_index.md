@@ -4,13 +4,18 @@ meta_desc: Learn how Pulumi's products enable your team to get code to any cloud
 type: page
 layout: product
 
-heading: Pulumi Cloud Engineering Platform
+heading: Pulumi Overview
+subheading: |
+    Pulumi is a free, open source infrastructure as code tool, and works best with the Pulumi Service to
+    make managing infrastructure secure, reliable, and hassle-free.<br><br>
+    Pulumi helps developers and infrastructure teams collaborate
+    and tame cloud complexity -- something we call Cloud Engineering.
 
 overview:
     title: Unite developers, infrastructure teams, and security engineers
     description: |
-        Pulumi enables teams to use a unified software engineering process to deliver infrastructure and applications together and faster.
-        This increases agility, reduces risks, and speeds innovation.
+        By using the industry's best languages, you can skip learning proprietary, limited domain-specific
+        languages, and enable your team to work more productively and better together.
 
 key_features:
     title: Key features
