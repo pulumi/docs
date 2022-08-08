@@ -301,6 +301,8 @@ function getDefaultExcludedKeywords() {
         "https://cloud.yandex.com/",
         "http://localhost:3000",
         "https://data-flair.training",
+        "https://opensource.org/licenses",
+        "https://console.eventstore.cloud/authentication-tokens",
     ];
 }
 
