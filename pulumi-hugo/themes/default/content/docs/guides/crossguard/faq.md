@@ -33,9 +33,9 @@ Under a stack's "Settings" tab you can take a look at the Policy Packs that woul
 
 ## How does Policy as Code work during a stack import or refresh?
 
-During `pulumi stack import`, Policy Packs are not run. This command does not modify any resources and simply allows you to make manual changes to the state file. During the next update, the resources and state file would be updated based on the stack's Pulumi program, which must be in compliance to succeed.
+During `pulumi stack import`, Policy Packs are not run. This command does not modify any resources and allows you to make manual changes to the state file. During the next update, the resources and state file would be updated based on the stack's Pulumi program, which must be in compliance to succeed.
 
-During `pulumi refresh`, no resources are modified. This command simply updates the state file with the current state of the resources. If there are out-of-compliance resources that get consumed into the state file during the `pulumi refresh` command, they will be updated during the next update to reflect the declared infrastructure from the stack's Pulumi program. The Pulumi program must be in compliance with the required Policy Packs for the update to be successful.
+During `pulumi refresh`, no resources are modified. This command updates the state file with the current state of the resources. If there are out-of-compliance resources that get consumed into the state file during the `pulumi refresh` command, they will be updated during the next update to reflect the declared infrastructure from the stack's Pulumi program. The Pulumi program must be in compliance with the required Policy Packs for the update to be successful.
 
 ## What happens if I add a Policy Pack that causes an existing resource to become out-of-compliance?
 

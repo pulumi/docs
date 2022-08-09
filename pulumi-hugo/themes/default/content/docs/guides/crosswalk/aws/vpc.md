@@ -395,7 +395,7 @@ only use 2 of them when allocating subnets and the associated gateways. This pro
 two zones at a reasonable cost.
 
 All regions support at least 3 availability zones, but many of them support more. If you'd like to improve the
-fault tolerance of your configuration, simply override this with the `numberOfAvailabilityZones` argument:
+fault tolerance of your configuration, override this with the `numberOfAvailabilityZones` argument:
 
 {{< chooser language "typescript,python,csharp" / >}}
 
@@ -581,7 +581,7 @@ class Program
 
 {{% /choosable %}}
 
-The `subnetSpecs` argument simply takes an array of subnet specifications. Each one can include this information:
+The `subnetSpecs` argument takes an array of subnet specifications. Each one can include this information:
 
 * `type`: A required type of subnet to create. There are three kinds available:
     * A `Public` subnet is one whose traffic is routed to an

@@ -33,7 +33,7 @@ Each AWS account automatically has an ECR [_registry_](https://docs.aws.amazon.c
 and within each registry, you can create any number of [_repositories_](
 https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html) to actually contain your Docker images.
 
-To create a new ECR repository, simply allocate an instance of the `awsx.ecr.Repository` class:
+To create a new ECR repository, allocate an instance of the `awsx.ecr.Repository` class:
 
 {{< chooser language "typescript,python,csharp" / >}}
 

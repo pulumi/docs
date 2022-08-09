@@ -203,7 +203,7 @@ jobs:
 
 ### Sample `build-and-deploy.ps1` (Optional)
 
-This `PowerShell` script simply builds the UI app, and uploads the `dist/` folder to an Azure Storage blob container. You don't have to use a script like this. You can always use the built-in Azure DevOps task to accomplish the steps in this script. This script is just an example of how `pulumi` can be easily integrated into your existing app.
+This `PowerShell` script builds the UI app, and uploads the `dist/` folder to an Azure Storage blob container. You don't have to use a script like this. You can always use the built-in Azure DevOps task to accomplish the steps in this script. This script is just an example of how `pulumi` can be easily integrated into your existing app.
 
 ```powershell
 Param(

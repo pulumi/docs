@@ -191,7 +191,7 @@ approach is simple and hides a lot of complexity, it's often desirable to contro
 ## Creating an ECS Cluster in a VPC
 
 To create an ECS service inside of a VPC, we will first create or use an existing VPC using any of the techniques
-described in [Pulumi Crosswalk for AWS VPC]({{< relref "vpc" >}}). Then we simply pass the subnets
+described in [Pulumi Crosswalk for AWS VPC]({{< relref "vpc" >}}). Then we pass the subnets
 from that VPC into the network configuration argument for our cluster:
 
 {{< chooser language "typescript,python,csharp" / >}}

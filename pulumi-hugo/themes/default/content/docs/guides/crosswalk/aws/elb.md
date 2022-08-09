@@ -187,7 +187,7 @@ the number of and placement of VMs. Refer to the API docs for
 ## Load Balancing ECS Service Targets
 
 Your ECS service can use ELB to distribute traffic evenly across each of your service's tasks. To target an ECS service
-with your load balancer, simply pass the listener in your task definition's `portMappings`:
+with your load balancer, pass the listener in your task definition's `portMappings`:
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
@@ -277,7 +277,7 @@ Each region contains [a default VPC](https://docs.aws.amazon.com/vpc/latest/user
 account. The load balancers created above will use it automatically, in addition to its default public or private
 subnets, depending on whether you've overridden the default of public using `external`.
 
-If you'd like to create a load balancer for a custom VPC, simply pass the `vpc` property:
+If you'd like to create a load balancer for a custom VPC, pass the `vpc` property:
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
@@ -395,7 +395,7 @@ https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balance
 A target group is automatically created for each listener that doesn't override the default action. This group
 can then be used to load balance any number of targets, including EC2 instances, ECS services, or arbitrary IPs.
 
-To create a target group manually, simply call `createTargetGroup` on the load balancer, or allocate a
+To create a target group manually, call `createTargetGroup` on the load balancer, or allocate a
 `NetworkTargetGroup` or `ApplicationTargetGroup` by hand. When doing so, the following additional options are available:
 
 * `deregistrationDelay`: The amount of time for ELB to wait before changing the state of a load balancer from

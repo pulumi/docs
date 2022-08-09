@@ -421,7 +421,7 @@ await stack.SetConfigValueAsync("aws:region", new ConfigValue("us-west-2"));
 ## Invoke Pulumi commands against the stack
 
 You're now ready to execute commands against the `Stack`, including update, preview, refresh, destroy, import, and export.
-If you want to update the stack, simply invoke the update method (`up`) against the `Stack` object:
+If you want to update the stack, invoke the update method (`up`) against the `Stack` object:
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 {{% choosable language "javascript,typescript" %}}

@@ -178,7 +178,7 @@ Now let's take a look at how to run the Policy Pack locally against a Pulumi pro
     $ pulumi preview --policy-pack <path-to-policy-pack-directory>
     ```
 
-    If the Pulumi stack is in compliance, we expect the output to simply tell us which Policy Packs were run.
+    If the Pulumi stack is in compliance, we expect the output to tell us which Policy Packs were run.
 
         Previewing update (dev):
              Type                 Name          Plan
@@ -229,7 +229,7 @@ Now let's take a look at how to run the Policy Pack locally against a Pulumi pro
     $ pulumi preview --policy-pack <path-to-policy-pack-directory>
     ```
 
-    If the Pulumi stack is in compliance, we expect the output to simply tell us which Policy Packs were run.
+    If the Pulumi stack is in compliance, we expect the output to tell us which Policy Packs were run.
 
         Previewing update (dev):
              Type                 Name          Plan

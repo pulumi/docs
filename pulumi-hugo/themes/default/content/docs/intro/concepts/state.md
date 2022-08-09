@@ -156,7 +156,7 @@ $ pulumi login file:///app/data
 
 > **Note:** If you use a relative path (e.g. `file://./einstein`), it will be relative to _the current working directory_.
 
-Notice that `pulumi login --local` is simply syntactic sugar for `pulumi login file://~`.
+Notice that `pulumi login --local` is syntactic sugar for `pulumi login file://~`.
 
 ##### Logging Into the AWS S3 Backend
 
@@ -206,7 +206,7 @@ To configure credentials for this backend, see [Application Default Credentials]
 
 To log out from your currently chosen backend, run the [`pulumi logout` CLI command]({{< relref "/docs/reference/cli/pulumi_logout" >}}). This will remove all credentials information from `~/.pulumi/credentials.json` and you will need to log in again before performing any subsequent stack or state operations.
 
-To change backends, simply run `pulumi logout` followed by `pulumi login` with the desired backend (or just leave it blank for the default).
+To change backends, run `pulumi logout` followed by `pulumi login` with the desired backend (or just leave it blank for the default).
 
 ### Migrating Between Backends
 
@@ -285,7 +285,7 @@ To learn more about available encryption providers and how to customize your sta
 
 ### Exporting and Importing State
 
-The `pulumi stack export` and `pulumi stack import` commands can be used to export the latest or a specific version of a stack's state. This can be used to simply inspect or even manually edit the contents for advanced use cases. For more information on usage, [refer to the CLI documentation]({{< relref "/docs/reference/cli/pulumi_stack" >}}).
+The `pulumi stack export` and `pulumi stack import` commands can be used to export the latest or a specific version of a stack's state. This can be used to inspect or even manually edit the contents for advanced use cases. For more information on usage, [refer to the CLI documentation]({{< relref "/docs/reference/cli/pulumi_stack" >}}).
 
 ### Editing State Manually
 

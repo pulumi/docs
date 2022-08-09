@@ -34,7 +34,7 @@ a production environment in each of the US east coast, west coast, Europe, and A
 
 Most users will start a monolithic structure, for a few good reasons:
 
-* **Simplicity.** Having a single project and collection of stacks is, quite simply, the easiest thing you could
+* **Simplicity.** Having a single project and collection of stacks is the easiest thing you could
   possibly do. Pulumi diffs edits to your application and infrastructure code, and so this approach leaves the
   hard work of doing incremental deployments and tracking dependencies to the Pulumi engine.
 
@@ -372,4 +372,4 @@ func forwardPrometheusService(ctx *pulumi.Context)  {
 
 There are a couple of reasons that this pattern is helpful. One, in this particular case, is that the `forwardPrometheusService` function exists to forward the Prometheus service to localhost, so we can check it. If you are running in-cluster, we probably don't need it! So we could add a conditional to determine if we need to run that function - which makes our code a lot clearer.
 
-Additionally, by breaking out the function, we can easily reuse it in other places in our code. For example, if we wanted to forward the Prometheus service to a different port, we could simply change the `localPort` parameter.
+Additionally, by breaking out the function, we can easily reuse it in other places in our code. For example, if we wanted to forward the Prometheus service to a different port, we could change the `localPort` parameter.

@@ -536,7 +536,7 @@ There are two ways to fix this, one way if you have access to an Intel based com
 
 ### I don't have access to an Intel based computer
 
-1. Remove Pulumi - if you're using Homebrew, `brew remove pulumi` or simply `rm -rf ~/.pulumi`
+1. Remove Pulumi - if you're using Homebrew, `brew remove pulumi` or `rm -rf ~/.pulumi`
 1. Download latest version of Pulumi: `https://www.pulumi.com/docs/get-started/install/versions/` (current version is [https://get.pulumi.com/releases/sdk/pulumi-v2.24.0-darwin-x64.tar.gz](https://get.pulumi.com/releases/sdk/pulumi-v2.24.0-darwin-x64.tar.gz)) and extract to ~/.pulumi/bin
 1. Add Pulumi to path: `export PATH=$PATH:~/.pulumi/bin`
 1. Update packages in your Pulumi program to latest version (for example `npm install @pulumi/aws@latest)

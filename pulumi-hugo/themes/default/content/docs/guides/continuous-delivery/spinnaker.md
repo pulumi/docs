@@ -251,5 +251,5 @@ We showed you a simple example of how you can get started with using Pulumi in y
   would like to provide feedback, we encourage you to open an issue in the [plugin repo](https://github.com/pulumi/spinnaker-preconfigured-job-plugin).
   The plugin is free and open-source.
 * Lastly, whether you are looking to use Pulumi to deploy a Spinnaker installation on your favorite cloud and have
-  questions about it, or you want to simply participate in the various conversations happening with our community of
+  questions about it, or you want to participate in the various conversations happening with our community of
   users, feel free to drop by our [Community Slack](https://slack.pulumi.com).

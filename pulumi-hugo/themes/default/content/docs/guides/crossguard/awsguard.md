@@ -47,7 +47,7 @@ To use AWSGuard policies, you must create a Policy Pack that references the `@pu
     $ pulumi policy new awsguard-typescript
     ```
 
-1. Tweak the code in the `index.ts` file as desired. The default implementation provided by the `awsguard-typescript` template simply creates a new instance of `AwsGuard` with all policies set to have an enforcement level of advisory.
+1. Tweak the code in the `index.ts` file as desired. The default implementation provided by the `awsguard-typescript` template creates a new instance of `AwsGuard` with all policies set to have an enforcement level of advisory.
 
     ```typescript
     new AwsGuard({ all: "advisory" });

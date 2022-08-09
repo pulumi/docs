@@ -14,7 +14,7 @@ menu:
 - A working installation of Octopus or a hosted instance from [https://octopus.com](https://octopus.com).
 - An account in the [Pulumi Service](https://app.pulumi.com).
 - The [latest version of Pulumi]({{< relref "/docs/get-started/install" >}}).
-- Setup a new project and [stack]({{< relref "/docs/intro/concepts/stack" >}}) using one of our [Get Started]({{< relref "/docs/get-started" >}}) guides or simply by running [`pulumi new`]({{< relref "/docs/reference/cli/pulumi_new" >}})
+- Setup a new project and [stack]({{< relref "/docs/intro/concepts/stack" >}}) using one of our [Get Started]({{< relref "/docs/get-started" >}}) guides or by running [`pulumi new`]({{< relref "/docs/reference/cli/pulumi_new" >}})
 and choosing one of the many templates that are available.
 - Optionally, also create a CI pipeline from a source control repository of your choice to be the source of packages. You will learn more about packages and how to create them later in this guide.
 
@@ -48,7 +48,7 @@ Packages can be your source code bundled-up in one of the [supported formats](ht
 
 In order to create a package, Octopus offers several ways that you can integrate into your existing build (CI) system. [Learn more](https://octopus.com/docs/packaging-applications/create-packages) about the options available to you for packaging your apps.
 
-For Pulumi apps, you can simply package the entire Pulumi app and extract the bundled package onto a worker where the Pulumi CLI can access them.
+For Pulumi apps, you can package the entire Pulumi app and extract the bundled package onto a worker where the Pulumi CLI can access them.
 
 ## Deployment Process
 

@@ -147,4 +147,4 @@ resources:
 
 Two values are passed to the `get` function - the logical name Pulumi will use to refer to the resource, and the physical ID that the resource has in the target cloud.
 
-Importantly, Pulumi will never attempt to modify the security group in this example. It simply reads back the state from your currently configured cloud account and then uses it as input for the new EC2 Instance.
+Importantly, Pulumi will never attempt to modify the security group in this example. It reads back the state from your currently configured cloud account and then uses it as input for the new EC2 Instance.

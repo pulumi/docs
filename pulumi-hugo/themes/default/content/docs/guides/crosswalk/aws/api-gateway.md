@@ -45,7 +45,7 @@ however one of the benefits of Pulumi Crosswalk for AWS is that it hides these m
 
 {{% /notes %}}
 
-Each API Gateway deployment is associated with a _stage_. A stage is simply a version of your API, such
+Each API Gateway deployment is associated with a _stage_. A stage is a version of your API, such
 as `stage`, `prod`, `v1`, or `v2`. For simple APIs, you will likely just have one. You can always define a custom
 stage name, but if you leave it off, a default of `stage` will be chosen.
 
@@ -68,7 +68,7 @@ An Event Handler Route is an API that will map to a [Lambda Function](https://aw
 the path, HTTP method, and the Lambda Function to invoke when the API is called. Pulumi offers multiple ways of defining
 the Lambda Function and it provisions the appropriate permissions so that API Gateway can communicate with it.
 
-This example creates an AWS API Gateway endpoint with a single API, listening at `/` for `GET` requests, which simply returns a `200 OK` for each call.
+This example creates an AWS API Gateway endpoint with a single API, listening at `/` for `GET` requests, which returns a `200 OK` for each call.
 
 The path can be parameterized to match specific patterns:
 
@@ -314,7 +314,7 @@ static examples use integrations internally, even if it's not evident in the sim
 
 Integrations give you full control over how HTTP requests are handled, and responses served, by an API Gateway
 route. If you want more flexibility than the earlier methods, to proxy HTTP requests, to integrate with
-AWS services other than Lambda Functions, or to mock your APIs, you can use an Integration Route simply by
+AWS services other than Lambda Functions, or to mock your APIs, you can use an Integration Route by
 specifying the `target` property on your route.
 
 An Integration Route is a route that will map an endpoint to a specified backend. The supported types are:
@@ -332,7 +332,7 @@ An Integration Route is a route that will map an endpoint to a specified backend
 - `mock`: This type of integration lets API Gateway return a response without sending a request further to
   the backend. This is useful for API testing without needing to configure any backend to service requests.
 
-The following example sets up an `http_proxy` integration type that simply passes requests/responses directly
+The following example sets up an `http_proxy` integration type that passes requests/responses directly
 through to another endpoint, in this case `https://www.google.com`:
 
 {{< chooser language "typescript,python,go" / >}}

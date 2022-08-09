@@ -133,7 +133,7 @@ https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/working_with_metr
 
 ### Creating a Metric Object
 
-To allocate a new `Metric` object, simply use its constructor, for instance:
+To allocate a new `Metric` object, use its constructor, for instance:
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
@@ -225,7 +225,7 @@ sent to an Amazon SNS topic, which can itself trigger an email, Lambda, or other
 You can also add alarms to CloudWatch dashboards and monitor them visually. When an alarm is on a dashboard, it turns
 red when it is in the `ALARM` state, making it easier for you to monitor its status proactively.
 
-Alarms invoke actions for sustained state changes only. CloudWatch alarms do not invoke actions simply because they are
+Alarms invoke actions for sustained state changes only. CloudWatch alarms do not invoke actions because they are
 in a particular state, the state must have changed and been maintained for a specified number of periods.
 
 After an alarm invokes an action due to a change in state, its subsequent behavior depends on the type of action that

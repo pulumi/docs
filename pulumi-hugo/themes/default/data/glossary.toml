@@ -160,7 +160,7 @@ link = "/docs/intro/concepts/project#paths"
 
 [[entries]]
 term = "State"
-description = "Pulumi stores its own copy of the current state of your infrastructure. This is often simply called state, and is stored in transactional snapshots we call checkpoints."
+description = "Pulumi stores its own copy of the current state of your infrastructure. This is often called state, and is stored in transactional snapshots we call checkpoints."
 link = "/docs/intro/concepts/state"
 
 

@@ -26,7 +26,7 @@ During preview, every resource is checked for policy violations, which are batch
 
 A policy can have an optional enforcement level of {{< policy-enforcementlevel-advisory >}}, {{< policy-enforcementlevel-mandatory >}}, or {{< policy-enforcementlevel-disabled >}}.
 
-- {{< policy-enforcementlevel-advisory >}} simply prints a warning message when there is a violation.
+- {{< policy-enforcementlevel-advisory >}} prints a warning message when there is a violation.
 - {{< policy-enforcementlevel-mandatory >}} means that an update will halt before creating a resource that violates that policy.
 - {{< policy-enforcementlevel-disabled >}} prevents the policy from running.
 

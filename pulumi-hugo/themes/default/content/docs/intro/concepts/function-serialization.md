@@ -134,7 +134,7 @@ All functions that are needed for _run time_ execution will then be included in 
 
 #### Capturing values in a JavaScript function
 
-For most functions, the code of the function can simply be included practically as is in the code file for the Lambda. The important exception to this are functions that ***capture*** values defined outside of the function itself. For example:
+For most functions, the code of the function can be included practically as is in the code file for the Lambda. The important exception to this are functions that ***capture*** values defined outside of the function itself. For example:
 
 ```typescript
 const obj1 = { a: 1, b: 2 };
@@ -153,11 +153,11 @@ function foo(o) {
 }
 ```
 
-In this code, the JavaScript function ends up capturing `obj1`, `obj2`, and `obj3` from outside the function. If the code `async e => { foo(obj1); /*...*/ }` were captured as is inside the Lambda, then it would simply fail to work properly when triggered in the cloud because the values for `obj1` and the rest would not exist. In order to support this, `pulumi` will analyze these functions to determine what values are captured, and it will _serialize_ them into a form that can then be retrieved and used at _run time_ for use by the actual Lambda.
+In this code, the JavaScript function ends up capturing `obj1`, `obj2`, and `obj3` from outside the function. If the code `async e => { foo(obj1); /*...*/ }` were captured as is inside the Lambda, then it would fail to work properly when triggered in the cloud because the values for `obj1` and the rest would not exist. In order to support this, `pulumi` will analyze these functions to determine what values are captured, and it will _serialize_ them into a form that can then be retrieved and used at _run time_ for use by the actual Lambda.
 
 The actual process of serialization is conceptually straightforward. Because JavaScript itself allows unimpeded reflection over values, `pulumi` uses this to serialize the entire object graph for the referenced JavaScript value, including the prototype chain, properties, and methods on the object and any values those transitively reference.
 
-Because of this, almost all JavaScript values can be serialized with very few exceptions. Importantly, Pulumi resources themselves are captured in this fashion, allowing _run time_ code to simply reference the defined resources of a Pulumi application and to use them when a Lambda is triggered.
+Because of this, almost all JavaScript values can be serialized with very few exceptions. Importantly, Pulumi resources themselves are captured in this fashion, allowing _run time_ code to reference the defined resources of a Pulumi application and to use them when a Lambda is triggered.
 
 ##### Known Limitations when Capturing Values
 
@@ -223,7 +223,7 @@ var fs = require("fs");
 await fs.writeFile("example.txt", "data");
 ```
 
-This ensures that all modules can be referenced simply in application code, and then used simply in _run time_ code with expected semantics.
+This ensures that all modules can be referenced in application code, and then used in _run time_ code with expected semantics.
 
 {{% notes "info" %}}
 This form of module capturing only applies to external modules that are referenced, such as modules that are directly part of Node, or are in the `node_modules` directory.

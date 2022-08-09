@@ -709,7 +709,7 @@ Roles are often useful for creating [instance profiles](
 https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html), which
 controls the IAM role assumed by compute running inside of your AWS account, whether that be in EC2, ECS, EKS, or
 Lambda, for example. To create one, use the [`InstanceProfile` resource](
-{{< relref "/registry/packages/aws/api-docs/iam/instanceprofile" >}}) and simply pass in your role:
+{{< relref "/registry/packages/aws/api-docs/iam/instanceprofile" >}}) and pass in your role:
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 

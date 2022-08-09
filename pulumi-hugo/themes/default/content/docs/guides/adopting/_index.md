@@ -7,7 +7,7 @@ menu:
     weight: 2
 ---
 
-If you've fallen in love with Pulumi, it might not be obvious how to adopt it. For brand new projects, it's easy: simply start writing your infrastructure as code using Pulumi from the start. But what if you already have infrastructure stood up? And perhaps even actively serving a critical business need? In these cases, you may wonder, is it even possible to adopt Pulumi, without downtime or a major disturbance to your existing infrastructure? The answer is **yes**!
+If you've fallen in love with Pulumi, it might not be obvious how to adopt it. For brand new projects, it's easy: start writing your infrastructure as code using Pulumi from the start. But what if you already have infrastructure stood up? And perhaps even actively serving a critical business need? In these cases, you may wonder, is it even possible to adopt Pulumi, without downtime or a major disturbance to your existing infrastructure? The answer is **yes**!
 
 This user guide offers a tour of tried-and-true tools and techniques that can be used to migrate any infrastructure to Pulumi, regardless of how that infrastructure was originally provisioned in the [cloud tooling ecosystem]({{< relref "/docs/intro/vs" >}}). These techniques range from coexisting with this infrastructure &mdash; either temporarily or permanently &mdash; as well as adopting infrastructure and/or converting existing infrastructure as code projects.
 
@@ -47,7 +47,7 @@ In these cases, new infrastructure can coexist with old infrastructure in two wa
 
 * [**Stack References**]({{< relref "/docs/intro/concepts/stack#stackreferences" >}}) let you reference outputs of another Pulumi stack for use as inputs to a stack, which is very useful for [organizing projects and stacks]({{< relref "/docs/guides/organizing-projects-stacks" >}}).
 
-* **External State References** let you reference outputs from a non-Pulumi stack for use as inputs to a Pulumi stack. Many infrastructure as code tools have the notion of "outputs," which are simply values exported for easy consumption. This might be VPC IDs, auto-assigned IP addresses, and so on. Examples include [Terraform state files and workspaces]({{< relref "from_terraform" >}}), [AWS CloudFormation stacks]({{< relref "from_aws" >}}), and [Azure Resource Manager (ARM) deployments]({{< relref "from_azure" >}}).
+* **External State References** let you reference outputs from a non-Pulumi stack for use as inputs to a Pulumi stack. Many infrastructure as code tools have the notion of "outputs," which are values exported for easy consumption. This might be VPC IDs, auto-assigned IP addresses, and so on. Examples include [Terraform state files and workspaces]({{< relref "from_terraform" >}}), [AWS CloudFormation stacks]({{< relref "from_aws" >}}), and [Azure Resource Manager (ARM) deployments]({{< relref "from_azure" >}}).
 
 Together, these make it easy to reference existing infrastructure regardless of how it was provisioned, without Pulumi taking over control of its ongoing management.
 
@@ -55,7 +55,7 @@ Together, these make it easy to reference existing infrastructure regardless of 
 
 Pulumi can adopt existing infrastructure so that, going forward, it is under the control of Pulumi. This is called _importing_, and it is a great way to adopt Pulumi fully without needing to perturb or recreate existing infrastructure.
 
-In the above coexistence scenarios, Pulumi simply _reads_ your existing infrastructure, but won't assume control of managing it. As such, Pulumi will never modify or delete infrastructure that is still managed outside of Pulumi. In the case of importing infrastructure, on the other hand, that won't be true. After the import process, all resources are entirely managed by Pulumi.
+In the above coexistence scenarios, Pulumi _reads_ your existing infrastructure, but won't assume control of managing it. As such, Pulumi will never modify or delete infrastructure that is still managed outside of Pulumi. In the case of importing infrastructure, on the other hand, that won't be true. After the import process, all resources are entirely managed by Pulumi.
 
 Furthermore, Pulumi doesn't care where the infrastructure originally came from. You could have manually provisioned it in your cloud's console UI, from the CLI, using Terraform, your cloud's built-in templating mechanism, and so on. In all cases, after the import process, you'll be left with a working Pulumi program, and all subsequent infrastructure updates can be made with Pulumi. You can then retire the old way of managing your infrastructure. This works even if you've lost the original scripts or templates that created the infrastructure.
 

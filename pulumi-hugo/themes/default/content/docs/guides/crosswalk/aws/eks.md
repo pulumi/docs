@@ -899,7 +899,7 @@ Nodes exist in groups and you can create multiple groups for workloads that requ
 is given a default node group, with the instance sizes and counts that you specify (or the defaults of two `t2.medium`
 instances otherwise). The latest version of Kubernetes available is used by default.
 
-If you would like to disable the creation of a default node group, and instead rely on creating your own, simply pass
+If you would like to disable the creation of a default node group, and instead rely on creating your own, pass
 [`skipDefaultNodeGroup`]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks#ClusterOptions-skipDefaultNodeGroup" >}})
 as `true` to the `eks.Cluster` constructor. Additional node groups may then be created by calling
 [the `createNodeGroup` function]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks#Cluster-createNodeGroup" >}}) on

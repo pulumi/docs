@@ -364,7 +364,7 @@ based on your provider of choice. For example:
 
 ## Try It Out!
 
-To try things out, simply create a Pull Request or commit, and you will see these new
+To try things out, create a Pull Request or commit, and you will see these new
 actions showing up in the usual GitHub Checks dialog, with a green checkmark if everything
 went as planned:
 
@@ -409,7 +409,7 @@ Example comment when using the Pulumi GitHub App:
 
 If you don't want to use the Pulumi GitHub App, you can configure Pulumi's GitHub Actions
 to copy the output of the `pulumi` invocation on the Pull Request. This option doesn't
-have as rich an output display as the Pulumi GitHub App, as it simply copies the raw
+have as rich an output display as the Pulumi GitHub App, as it copies the raw
 output of the Pulumi CLI.
 
 To allow your GitHub Action to leave Pull Request comments, you'll need to add
@@ -563,7 +563,7 @@ You can configure how Pulumi's GitHub Actions work to have more control about wh
 ### Using a Different Root Directory
 
 By default, the Pulumi GitHub Action assumes your Pulumi project is in your repo's root
-directory. If you are using a different root directory for your project, simply set the
+directory. If you are using a different root directory for your project, set the
 `work-dir` variable in your workflow action, with a relative path to your Pulumi
 project directory. For example:
 

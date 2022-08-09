@@ -95,7 +95,7 @@ programming model and CLI to manage both consistently.
 
 You can create event sources and handlers in the same program, but Pulumi's approach is flexible, so that you can
 elect to wire up new Lambda-based functions to existing resources -- such as if you already have core infrastructure
-defined -- or even use functions that already exist, and simply glue them together with resources.
+defined -- or even use functions that already exist, and glue them together with resources.
 
 Because Pulumi provisions and manages resources, updating your functions after creating them is easy. Just edit your
 code, run `pulumi up`, and Pulumi will diff and compute the minimal set of changes it can make to upgrade your code,
@@ -341,7 +341,7 @@ authors and manages the serverless functions attached to them. For more informat
 [Pulumi Crosswalk for AWS CloudWatch]({{< relref "cloudwatch" >}}) ensures that resources have built-in
 logging, with easy ways to customize associated policies. Additionally, the `pulumi logs` CLI command allows
 us to monitor logs in realtime from any CloudWatch resources in our program. For Lambda Functions, this means
-we can simply run `pulumi logs -f` to tail all of the logs for all of our Lambdas in a program.
+we can run `pulumi logs -f` to tail all of the logs for all of our Lambdas in a program.
 
 For example, let's modify the example from earlier to print the name of the object to the console:
 

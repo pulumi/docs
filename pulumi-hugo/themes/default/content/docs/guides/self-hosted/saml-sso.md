@@ -15,7 +15,7 @@ The self-hosted option allows you to control various aspects of the Pulumi Servi
 Before you can use SAML SSO to logon to the Console, you will need to ensure that the [API service]({{< relref "components/api" >}}) has a pair of keys that will be used to sign
 and validate requests/responses, regardless of the IdP you choose to use.
 
-The credentials are simply a public/private key pair that are supplied as environment variables to the API service.
+The credentials are a public/private key pair that are supplied as environment variables to the API service.
 In the following snippets, we show you how you can generate a key pair by using `openssl`.
 The snippet shows the command for a self-hosted API service that is accessible via `api.company.com`.
 Be sure to adjust the value accordingly.

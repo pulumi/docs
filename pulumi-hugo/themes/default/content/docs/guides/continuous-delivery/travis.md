@@ -74,7 +74,7 @@ the steps to download the Pulumi CLI and add it to the path.
 
 The example `.travis.yml` file then calls either `scripts/travis_pull.sh` or
 `scripts/travis_pull_request.sh`, depending on the build type. However, if you already have a
-build script or `Makefile` target to deploy your software, you can simply add the commands
+build script or `Makefile` target to deploy your software, you can add the commands
 to run Pulumi to that.
 
 ```yaml
