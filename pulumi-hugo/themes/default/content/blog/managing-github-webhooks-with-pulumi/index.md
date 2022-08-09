@@ -350,7 +350,7 @@ Yes, there is!
 
 ## Managing all the things with Pulumi
 
-Pulumi [uses gRPC](https://github.com/pulumi/pulumi/blob/master/sdk/proto/provider.proto)
+Pulumi [uses gRPC](https://github.com/pulumi/pulumi/blob/master/proto/pulumi/provider.proto)
 to define a contract between resource providers and the rest of Pulumi.
 So, we could go implement that contract in a language like go, like we
 do in our [Kubernetes](https://github.com/pulumi/pulumi-kubernetes)
