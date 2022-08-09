@@ -2,6 +2,8 @@
 
 ![Deployment Status](https://github.com/pulumi/docs/actions/workflows/build-and-deploy.yml/badge.svg?branch=master)
 
+im in ur readme
+
 ## Contributing
 
 First, be sure to read our [contributing guide](CONTRIBUTING.md) and review our [code of conduct](CODE-OF-CONDUCT.md).
