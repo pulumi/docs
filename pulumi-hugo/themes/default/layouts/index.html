@@ -10,9 +10,10 @@
                 <span class="rainbow-text" data-text="{{ index (.Params.hero.title) 1 }}">{{ index (.Params.hero.title) 1 }}</span>
             </h1>
             <p class="text-center max-w-3xl leading-7">{{ .Params.hero.description | markdownify }}</p>
-            <div class="mt-8 text-center">
+            <div class="overlay-middle mt-8 flex text-center justify-center items-center">
                 <div class="pb-12">
-                    <a class="home-hero-btn-primary" href="{{ relref . "/docs/get-started" }}">{{ .Params.hero.cta_text }}</a>
+                    <a class="home-hero-btn-primary mr-4" href="{{ relref . "/docs/get-started" }}">{{ .Params.hero.cta_text }}</a>
+                    <a class="btn-secondary ml-4 px-12 py-4" href="{{ relref . "/docs/get-started/install" }}">Download</a>
                 </div>
             </div>
         </div>
