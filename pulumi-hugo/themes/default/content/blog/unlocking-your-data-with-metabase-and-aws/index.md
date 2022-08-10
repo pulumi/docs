@@ -57,7 +57,7 @@ To accomplish the task of provisioning all the required resources, the team wrot
 
 ## The Metabase Package
 
-That brings us to today, and we are happy to deliver an open source Pulumi Package for running Metabase on AWS ECS (link?). With Pulumi’s Metabase Package, you can quickly get started with Metabase without having to worry about the underlying infrastructure.
+That brings us to today, and we are happy to deliver an open source Pulumi Package for running Metabase on [AWS ECS]({{< relref "/docs/guides/crosswalk/aws/ecs" >}}). With Pulumi’s Metabase Package, you can quickly get started with Metabase without having to worry about the underlying infrastructure.
 
 In the below sections we will look at example configurations of the Metabase resource, all the way from a bare bones configuration to a more complex configuration with a custom VPC, subnets, and domain.
 
