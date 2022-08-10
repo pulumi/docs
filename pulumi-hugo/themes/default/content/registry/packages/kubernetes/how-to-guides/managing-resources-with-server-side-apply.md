@@ -644,6 +644,10 @@ resources:
 
 With Server-Side Apply mode enabled, you can also remove a field from an existing resource. This example demonstrates removing `.labels.foo` from an existing Namespace.
 
+In most cases, it is not necessary to set the [fieldManager](https://kubernetes.io/docs/reference/using-api/server-side-apply/#managers) name explicitly because the provider automatically assigns a unique manager name to each resource by default.
+
+Deleting an existing field is a special case where this is needed. In this workflow, we first take ownership of the field to delete (using the `patch1` resource in this example), and then set it to null/undefined in a subsequent step (using the `patch2` in this example). Since both patches need to operate on the same field, they must use the same `fieldManager` rather than using the auto-assigned value. Also note the use of the `patchForce` option to explicitly take ownership of the field from another `fieldManager`.
+
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
