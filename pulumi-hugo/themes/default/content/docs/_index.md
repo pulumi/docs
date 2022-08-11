@@ -15,7 +15,8 @@ Welcome to the Pulumi documentation! These pages cover what Pulumi is, how to ge
 Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> infrastructure as code tool for creating, deploying, and managing cloud infrastructure. Pulumi works with traditional infrastructures like VMs, networks, and databases, in addition to modern architectures, including containers, Kubernetes clusters, and serverless functions. Pulumi supports 70+ public, private, and hybrid cloud service providers.
 
 <div class="flex justify-center py-6">
-    <a class="btn btn-lg mx-1 my-1" href="{{< relref "/docs/get-started" >}}">Get Started</a>
+    <a class="btn btn-lg mx-2 my-1" href="{{< relref "/docs/get-started" >}}">Get Started</a>
+    <a class="btn btn-secondary btn-lg mx-2 my-1" href="{{< relref "/docs/get-started/install" >}}">Download</a>
 </div>
 
 <div class="bg-gray-100 rounded max-w-6xl my-4 px-4 py-2">
