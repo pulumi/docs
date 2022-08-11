@@ -242,7 +242,7 @@ Alternatively, you can install Pulumi manually. We provide a prebuilt binary for
 <div class="w-full md:w-3/4">
 <h3 class="no-anchor pt-4"><i class="fas fa-box pr-2"></i>Installer (MSI)</h3>
 <p>
-<a class="btn btn-secondary mx-2" href="https://github.com/pulumi/pulumi-winget/releases/download/{{< latest-version >}}/pulumi-{{< latest-version >}}-windows-x64.msi">amd64</a>
+<a class="btn btn-secondary mx-2" href="https://github.com/pulumi/pulumi-winget/releases/download/v{{< latest-version >}}/pulumi-{{< latest-version >}}-windows-x64.msi">amd64</a>
 </p>
 </div>
 <div class="w-full">
