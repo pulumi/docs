@@ -26,7 +26,7 @@ Organizations are a space for you to collaborate on shared projects and stacks.
 | Members | A list of active members of your Pulumi organization. |
 | Teams | An [Enterprise]({{< relref "/pricing" >}}) feature that provides a way to assign stack permissions to groups of organization members. |
 | Policies | Lists of organization policies and policy groups. Policies allow you to set guardrails to enforce best practices and compliance. |
-| Settings | Organization settings including subscription and payment information and history, stack permissions, and links to Pulumi's [continuous delivery guides]({{< relref "/docs/guides/continuous-delivery" >}}). |
+| Settings | Organization settings including subscription and payment information and history, Billing Managers, stack permissions, and links to Pulumi's [continuous delivery guides]({{< relref "/docs/guides/continuous-delivery" >}}). |
 
 ## Creating an Organization
 
@@ -80,6 +80,7 @@ To switch to a different organization:
 |--------|--------|
 | Admin | Administrators have full access to the organization including: inviting members, creating teams and policies, managing stack permissions and [role-based access control, adjusting billing information, and controlling the organization settings. |
 | Member | Members are able to view and edit stacks they have access to and view members and teams. |
+| Billing Manager | Billing Managers are able to adjust billing information and view other Billing Managers. They do not have read or write access to stacks, teams, or policies. |
 
 ## Organization Identity Providers
 
