@@ -53,11 +53,11 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-09-08T10:00:00.000-07:00
+    sortable_date: 2022-09-12T10:00:00.000-07:00
     # Duration of the webinar.
     duration: "60 minutes"
     # Datetime of the webinar.
-    datetime: "9/8/2022 10:00am - 11:00am PT"
+    datetime: "9/12/2022 10:00am - 11:00am PT"
     # Description of the webinar.
     description: "In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform. You will be introduced to Pulumi, an infrastructure as code platform, where you can use familiar programming languages to provision modern cloud infrastructure. This workshop is designed to help users completely new to Pulumi to become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and a series of hands on exercises to help you understand the building blocks available in Pulumi."
 
