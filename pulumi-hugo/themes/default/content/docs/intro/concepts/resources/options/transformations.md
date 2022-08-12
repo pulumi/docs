@@ -215,7 +215,15 @@ public class MyStack : Stack
 {{% choosable language java %}}
 
 ```java
-// Stack Transformations are currently not supported in Java.
+var stackOptions = StackOptions.builder()
+    .resourceTransformations(args -> {
+        // ...
+    })
+    .build();
+
+Pulumi.withOptions(stackOptions).run(ctx -> {
+    // ...
+});
 ```
 
 {{% /choosable %}}
