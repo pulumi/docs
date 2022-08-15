@@ -1094,6 +1094,8 @@ github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20220812185514-26d28e45ea70 
 github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20220812185514-26d28e45ea70/go.mod h1:081/gGTOxNFBjrLQ3QvsyP34iiWgmmKDtoi5falfsuo=
 github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20220813023300-ef41b33d6850 h1:ZwO4fdgAjcRq9yFejqr1c9ign+OoQm/13iHgnbNnnAg=
 github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20220813023300-ef41b33d6850/go.mod h1:081/gGTOxNFBjrLQ3QvsyP34iiWgmmKDtoi5falfsuo=
+github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20220815220022-ba0091a3e280 h1:a7qomyI9JSqGXNmFpbBpPu0PsCS6w6IYT0iWTpdk8Qc=
+github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20220815220022-ba0091a3e280/go.mod h1:081/gGTOxNFBjrLQ3QvsyP34iiWgmmKDtoi5falfsuo=
 github.com/pulumi/registry v0.0.0-20211018002248-032308df8c9b h1:cc9syvwwbJF8OOwiQA806f05ZPo8Y9i6MhQp+DyQ7Gk=
 github.com/pulumi/registry v0.0.0-20211018002248-032308df8c9b/go.mod h1:5njB00aDODdidTJgd4o+FiH7pM9YZ9cqAR0xHEPyq6s=
 github.com/pulumi/registry/themes/default v0.0.0-20210929002709-940e5a1d2c43/go.mod h1:QSvobZqmJMqVmn3BTfSiYkbRKtJHhSA8gotu/pD1a0w=
