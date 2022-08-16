@@ -8,49 +8,123 @@ menu:
     weight: 5
 ---
 
-The `Pulumi.yaml` project file specifies metadata about your project, such as the project name, applicable runtime for your program, and other higher-level information.
+The `Pulumi.yaml` project file specifies metadata about your project, such as the project name and language runtime for your project.
 
-It contains the following required and optional attributes:
+## Example project files
 
-- `name`: (required) a name for your project.  This shows up in the Pulumi dashboard and is used to aggregate the
-  associated stacks and their resources underneath the project, as a simple kind of hierarchy.  Project names may only contain alphanumeric characters, hyphens, underscores, or periods.
+### Example project file with only required attributes
 
-- `runtime`: (required) (`string`|`object`) the language runtime configuration to use for your program.  Possible string options are `nodejs`
-  (for JavaScript and TypeScript), `python` (for Python),`go` (for Go), `dotnet` (for .NET), `java` (for Java) and `yaml` (for YAML).  Pulumi doesn't depend on specific versions
-  of these runtimes, and will simply use whatever version you have installed on your machine.
-    - `name`: `runtime` can either be specified as a string, or a complex object with additional configuration. If you need to include additional configuration, specify language information (`nodejs`, `python`, `go`, `dotnet`, `java` or `yaml`) in this property.
-    - `options`: (optional) a property bag that has various configuration options that apply to different language runtimes.
-        - `typescript`: applies to Node.js projects only. A boolean (`true` | `false`) controls whether to use ts-node to execute sources. Defaults to `true`.
-        - `binary`: applies to Go, .NET and Java projects.
-            - **Go**: A string that specifies the name of a pre-built executable to look for on your path. If not specified, go sources in $CWD will be invoked via `go run`.
-            - **.NET**: A string that specifies the path of a pre-built .NET assembly. If not specified, a .NET project in $CWD will be invoked via `dotnet run`.
-            - **Java**: A string that specifies the path of a pre-built jar file.
-        - `virtualenv`: applies to Python projects only. A string that specifies the path to a virtual environment to use when running the program. New Python projects created with `pulumi new` have this option set by default. If not specified, Pulumi will invoke the `python3` command it finds on $PATH (falling back to `python`) to run the Python program. If you'd like to use a virtual environment without the `virtualenv` option, you'll need to run any `pulumi` commands (such as `pulumi up`) from an activated virtual environment shell (or, if using a tool like [Pipenv](https://github.com/pypa/pipenv), prefix any `pulumi` commands with `pipenv run pulumi ...`).
-        - `compiler`: applies to Pulumi YAML projects only. A executable and arguments that will emit to standard out a Pulumi YAML program to run.
+```yaml
+name: Example Pulumi project file with only requires attributes
+runtime: nodejs
+```
 
-- `description`: (optional) a friendly description about your project.
+### Example project file with all possible attributes
 
-- `main`: (optional) an override for the main program's location. By default, the program's working directory is assumed to be the location of `Pulumi.yaml`. To choose a different location, use the `main` property. For example, if your Pulumi program is in a subdirectory `infra/`, use `main: infra/`.
+```yaml
+name: Example Pulumi project file will all possible attributes
+runtime: yaml
+description: An example project
+main: example-project/
+stackConfigDir: config/
+backend:
+  url: https://pulumi.example.com
+options:
+  refresh: true
+template:
+  description: An example template
+  config:
+    aws:region:
+      description: The AWS region to deploy into
+      default: us-east-1
+      secret: true
+plugins:
+  providers:
+    name: aws
+    path: ../.../bin
+  languages:
+    name: yaml
+    path: ../../../pulumi-yaml/bin
+    version: 1.2.3
+```
 
-- `stackConfigDir`: (optional) directory to store stack-specific configuration files, relative to location of `Pulumi.yaml`.
+## Attributes
 
-- `config`: (optional) deprecated setting, this has been renamed to `stackConfigDir`.
+### All attributes
 
-- `backend`: (optional) configuration for project state [backend]({{< relref "/docs/intro/concepts/state" >}}). Supports these options:
-    - `url`: explicitly specify backend URL like `https://pulumi.acmecorp.com`, `file:///app/data`, etc.
+| Name | Required | Description | Options |
+| - | - | - | - |
+| `name` | required | Name of the project containing alphanumeric characters, hyphens, underscores, and periods. | None. |
+| `runtime` | required | Installed language runtime of the project: `nodejs`, `python`, `go`, `dotnet`, `java` or `yaml`. | [runtime options](#runtime-options)
+| `description` | optional | Description of the project. | None. |
+| `main` | optional | Path to the Pulumi program. The default is the working directory. | None. |
+| `stackConfigDir` | optional | Config directory location relative to the location of `Pulumi.yaml`. | None. |
+| `backend` | optional | [Backend]({{< relref "/docs/intro/concepts/state" >}}) of the project. | None. |
+| `options` | optional | Additional project options. | [options options](#options-options) |
+| `template` | optional | Config to be used when creating new stacks in the project. | [template options](#template-options) |
+| `plugins` | optional | Override for the plugin selection. Intended for use in developing pulumi plugins.  | [plugins options](#plugins-options) |
 
-- `options`: (optional) optional set of project options.
-    - `refresh`: (optional) (`string`) set to `always` to refresh the state of the stack's resources before the deployment operations (e.g. `up`, `pre`, `destroy`, etc.). This is equivalent to passing the `--refresh=true` command-line flag. Passing `--refresh=false` will override the option set in `Pulumi.yaml`.
+### `runtime` options
 
-- `template`: (optional) provides configuration settings that will be used when initializing a new stack from a project file using `pulumi new`. Currently these values are *only- used by `pulumi new`, and not by `pulumi stack init` or as default configuration for existing stacks.
-    - `description`: (optional) a description for the template itself.
-    - `config`: (required) the map of configuration values keyed by the name of the config setting - such as `aws:region`.  The value of each key includes:
-        - `description`: (optional) a description for the config setting.
-        - `default`: (optional) the default value of the config setting - which will be presented to the user as a default.
-        - `secret`: (optional) if `true` indicates that this configration value should be marked as secret.
+The runtime attribute has an additional property called options where you can further specify runtime configuration.
 
-- `plugins`: (optional) allows the overriding of plugin selection to make use of plugins not installed into the global plugin cache.
-  - `providers`/`analyzers`/`languages`: (optional) each entry has a list of plugins underneath it.
-    - `name`: (required) the name of the plugin.
-    - `path`: (required) the path to the folder containing the plugin.
-    - `version`: (optional) the version of the plugin, if not set this plugin will match for any version the engine requests.
+| Name | Use case | Description |
+| - | - | - |
+| `typescript` | Only applicable for the nodejs runtime | Boolean indicating whether to use `ts-node` or not. |
+| `binary` | Applicable for the go, .net, and java runtimes | Path to pre-built executable. |
+| `virtualenv` | Ony applicable for the python runtime | Virtual environment path. |
+| `compiler` | Only applicable for YAML projects | Executable and arguments that emit to standard out. |
+
+#### About `binary`
+
+- For Go, if not specified, go sources in `$CWD` will be invoked via `go run`.
+- For .NET, if not specified, a .NET project in `$CWD` will be invoked via `dotnet run`.
+
+#### About `virtualenv`
+
+New Python projects created with `pulumi new` have this option set by default. If not specified, Pulumi will invoke the `python3` command it finds on `$PATH` (falling back to `python`) to run the Python program. To use a virtual environment without the `virtualenv` option, run `pulumi` commands (such as `pulumi up`) from an activated virtual environment shell. Or, if using a tool like [Pipenv](https://github.com/pypa/pipenv), prefix `pulumi` commands with `pipenv run pulumi ...`.
+
+### `options` options
+
+| Name | Required | Description | Default |
+| - | - | - | - |
+| `refresh` | optional | Boolean indicating whether to refresh the state before performing a Pulumi operation. | `true` |
+
+### `template` options
+
+| Name | Required | Description |
+| - | - | - |
+| `description` | optional | Description of the template. |
+| `config` | required | Config to apply to each stack in the project. |
+
+#### `config` options
+
+| Name | Required | Description |
+| - | - | - |
+| `description` | optional | Description of the config. |
+| `default` | optional | Default value of the config. |
+| `secret` | optional | Boolean indicating if the configuration is labeled as a secret. |
+
+### `plugins` options
+
+Use this option to link to local plugin binaries. This option is intended for use in developing pulumi plugins.
+
+| Name | Required | Description |
+| - | - | - |
+| `providers` | optional | Plugin for the provider. |
+| `analyzers` | optional | Plugin for the policy. |
+| `languages` | optional | Plugin in for the language. |
+
+#### Options for `providers`, `analyzers`, and `languages`
+
+| Name | Required | Description |
+| - | - | - |
+| `name` | required | Name of the plugin. |
+| `path` | optional | Path to the plugin folder. |
+| `version` | optional | Version of the plugin, if not set, will match any version the engine requests. |
+
+### Deprecated attributes
+
+| Name | Required | Description |
+| - | - | - |
+| `config` | optional | Config directory relative to the location of `Pulumi.yaml`. |
