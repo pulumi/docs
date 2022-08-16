@@ -120,23 +120,19 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Collections.Generic;
 using Pulumi;
 using Metabase = Pulumi.Metabase;
 
-class MyStack : Stack
+return await Deployment.RunAsync(() =>
 {
-    public MyStack()
+    var metabaseService = new Metabase.Metabase("metabaseService");
+
+    return new Dictionary<string, object?>
     {
-        var metabaseService = new Metabase.Metabase("metabaseService", new Metabase.MetabaseArgs
-        {
-        });
-
-        this.Url = metabaseService.DnsName;
-    }
-
-    [Output("url")]
-    public Output<string> Url { get; set; }
-}
+        ["url"] = metabaseService.DnsName,
+    };
+});
 ```
 
 {{% /choosable %}}
@@ -219,24 +215,22 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Collections.Generic;
 using Pulumi;
 using Metabase = Pulumi.Metabase;
 
-class MyStack : Stack
+return await Deployment.RunAsync(() =>
 {
-    public MyStack()
+    var metabaseService = new Metabase.Metabase("metabaseService", new()
     {
-        var metabaseService = new Metabase.Metabase("metabaseService", new Metabase.MetabaseArgs
-        {
-            VpcId = "vpc-123",
-        });
+        VpcId = "vpc-123",
+    });
 
-        this.Url = metabaseService.DnsName;
-    }
-
-    [Output("url")]
-    public Output<string> Url { get; set; }
-}
+    return new Dictionary<string, object?>
+    {
+        ["url"] = metabaseService.DnsName,
+    };
+});
 ```
 
 {{% /choosable %}}
@@ -363,42 +357,40 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Collections.Generic;
 using Pulumi;
 using Metabase = Pulumi.Metabase;
 
-class MyStack : Stack
+return await Deployment.RunAsync(() =>
 {
-    public MyStack()
+    var metabaseService = new Metabase.Metabase("metabaseService", new()
     {
-        var metabaseService = new Metabase.Metabase("metabaseService", new Metabase.MetabaseArgs
+        VpcId = "vpc-123",
+        Networking = new Metabase.Inputs.NetworkingArgs
         {
-            VpcId = "vpc-123",
-            Networking = new Metabase.Inputs.NetworkingArgs
+            EcsSubnetIds = new[]
             {
-                EcsSubnetIds =
-                {
-                    "subnet-123",
-                    "subnet-456",
-                },
-                DbSubnetIds =
-                {
-                    "subnet-789",
-                    "subnet-abc",
-                },
-                LbSubnetIds =
-                {
-                    "subnet-def",
-                    "subnet-ghi",
-                },
+                "subnet-123",
+                "subnet-456",
             },
-        });
+            DbSubnetIds = new[]
+            {
+                "subnet-789",
+                "subnet-abc",
+            },
+            LbSubnetIds = new[]
+            {
+                "subnet-def",
+                "subnet-ghi",
+            },
+        },
+    });
 
-        this.Url = metabaseService.DnsName;
-    }
-
-    [Output("url")]
-    public Output<string> Url { get; set; }
-}
+    return new Dictionary<string, object?>
+    {
+        ["url"] = metabaseService.DnsName,
+    };
+});
 ```
 
 {{% /choosable %}}
@@ -496,28 +488,27 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Collections.Generic;
 using Pulumi;
 using Metabase = Pulumi.Metabase;
 
-class MyStack : Stack
+return await Deployment.RunAsync(() =>
 {
-    public MyStack()
+    var metabaseService = new Metabase.Metabase("metabaseService", new()
     {
-        var metabaseService = new Metabase.Metabase("metabaseService", new Metabase.MetabaseArgs
+        VpcId = "vpc-123",
+        Domain = new Metabase.Inputs.CustomDomainArgs
         {
-            Domain = new Metabase.Inputs.CustomDomainArgs
-            {
-                HostedZoneName = "example.com",
-                DomainName = "metabase.example.com",
-            },
-        });
+            HostedZoneName = "example.com",
+            DomainName = "metabase.example.com",
+        },
+    });
 
-        this.Url = metabaseService.DnsName;
-    }
-
-    [Output("url")]
-    public Output<string> Url { get; set; }
-}
+    return new Dictionary<string, object?>
+    {
+        ["url"] = metabaseService.DnsName,
+    };
+});
 ```
 
 {{% /choosable %}}
@@ -659,47 +650,45 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Collections.Generic;
 using Pulumi;
 using Metabase = Pulumi.Metabase;
 
-class MyStack : Stack
+return await Deployment.RunAsync(() =>
 {
-    public MyStack()
+    var metabaseService = new Metabase.Metabase("metabaseService", new()
     {
-        var metabaseService = new Metabase.Metabase("metabaseService", new Metabase.MetabaseArgs
+        VpcId = "vpc-123",
+        Networking = new Metabase.Inputs.NetworkingArgs
         {
-            VpcId = "vpc-123",
-            Networking = new Metabase.Inputs.NetworkingArgs
+            EcsSubnetIds = new[]
             {
-                EcsSubnetIds =
-                {
-                    "subnet-123",
-                    "subnet-456",
-                },
-                DbSubnetIds =
-                {
-                    "subnet-789",
-                    "subnet-abc",
-                },
-                LbSubnetIds =
-                {
-                    "subnet-def",
-                    "subnet-ghi",
-                },
+                "subnet-123",
+                "subnet-456",
             },
-            Domain = new Metabase.Inputs.CustomDomainArgs
+            DbSubnetIds = new[]
             {
-                HostedZoneName = "example.com",
-                DomainName = "metabase.example.com",
+                "subnet-789",
+                "subnet-abc",
             },
-        });
+            LbSubnetIds = new[]
+            {
+                "subnet-def",
+                "subnet-ghi",
+            },
+        },
+        Domain = new Metabase.Inputs.CustomDomainArgs
+        {
+            HostedZoneName = "example.com",
+            DomainName = "metabase.example.com",
+        },
+    });
 
-        this.Url = metabaseService.DnsName;
-    }
-
-    [Output("url")]
-    public Output<string> Url { get; set; }
-}
+    return new Dictionary<string, object?>
+    {
+        ["url"] = metabaseService.DnsName,
+    };
+});
 ```
 
 {{% /choosable %}}
