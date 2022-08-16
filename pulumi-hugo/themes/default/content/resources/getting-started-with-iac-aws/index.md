@@ -63,8 +63,10 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: "Kat Cosgrove"
-          role: "Staff Developer Advocate, Pulumi"
+        - name: "Josh Kodroff"
+          role: "Sr. Solutions Architect, Pulumi"
+        - name: "Marina Novikova"
+          role: "Partner Solution Architect at Amazon Web Services (AWS)"
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
