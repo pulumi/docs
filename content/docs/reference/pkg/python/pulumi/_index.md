@@ -530,11 +530,16 @@ of the current project is used.</p>
 
 <dl class="py method">
 <dt id="pulumi.Config.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>str<span class="p">]</span><a class="headerlink" href="#pulumi.Config.get" title="Permalink to this definition"></a></dt>
-<dd><p>Returns an optional configuration value by its key, or None if it doesn’t exist.</p>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">default</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>str<span class="p">]</span><a class="headerlink" href="#pulumi.Config.get" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an optional configuration value by its key,
+a default value if that key is unset and a default is provided,
+or None if it doesn’t exist.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>key</strong> (<em>str</em>) – The requested configuration key.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>str</em>) – The requested configuration key.</p></li>
+<li><p><strong>default</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – An optional fallback value to use if the given configuration key is not set.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The configuration key’s value, or None if one does not exist.</p>
@@ -548,10 +553,15 @@ of the current project is used.</p>
 <dl class="py method">
 <dt id="pulumi.Config.get_secret">
 <code class="sig-name descname">get_secret</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>pulumi.output.Output<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#pulumi.Config.get_secret" title="Permalink to this definition"></a></dt>
-<dd><p>Returns an optional configuration value by its key, marked as a secret, or None if it doesn’t exist.</p>
+<dd><p>Returns an optional configuration value by its key, marked as a secret,
+a default value if that key is unset and a default is provided,
+or None if it doesn’t exist.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>key</strong> (<em>str</em>) – The requested configuration key.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>str</em>) – The requested configuration key.</p></li>
+<li><p><strong>default</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – An optional fallback value to use if the given configuration key is not set.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The configuration key’s value, or None if one does not exist.</p>
@@ -564,12 +574,17 @@ of the current project is used.</p>
 
 <dl class="py method">
 <dt id="pulumi.Config.get_bool">
-<code class="sig-name descname">get_bool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>bool<span class="p">]</span><a class="headerlink" href="#pulumi.Config.get_bool" title="Permalink to this definition"></a></dt>
-<dd><p>Returns an optional configuration value, as a bool, by its key, or None if it doesn’t exist.
+<code class="sig-name descname">get_bool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">default</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>bool<span class="p">]</span><a class="headerlink" href="#pulumi.Config.get_bool" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an optional configuration value, as a bool, by its key,
+a default value if that key is unset and a default is provided,
+or None if it doesn’t exist.
 If the configuration value isn’t a legal boolean, this function will throw an error.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>key</strong> (<em>str</em>) – The requested configuration key.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>str</em>) – The requested configuration key.</p></li>
+<li><p><strong>default</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – An optional fallback value to use if the given configuration key is not set.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The configuration key’s value, or None if one does not exist.</p>
@@ -585,12 +600,17 @@ If the configuration value isn’t a legal boolean, this function will throw an 
 
 <dl class="py method">
 <dt id="pulumi.Config.get_secret_bool">
-<code class="sig-name descname">get_secret_bool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>pulumi.output.Output<span class="p">[</span>bool<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#pulumi.Config.get_secret_bool" title="Permalink to this definition"></a></dt>
-<dd><p>Returns an optional configuration value, as a bool, by its key, marked as a secret or None if it doesn’t exist.
+<code class="sig-name descname">get_secret_bool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">default</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>pulumi.output.Output<span class="p">[</span>bool<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#pulumi.Config.get_secret_bool" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an optional configuration value, as a bool, by its key, marked as a secret,
+a default value if that key is unset and a default is provided,
+or None if it doesn’t exist.
 If the configuration value isn’t a legal boolean, this function will throw an error.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>key</strong> (<em>str</em>) – The requested configuration key.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>str</em>) – The requested configuration key.</p></li>
+<li><p><strong>default</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – An optional fallback value to use if the given configuration key is not set.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The configuration key’s value, or None if one does not exist.</p>
@@ -606,12 +626,17 @@ If the configuration value isn’t a legal boolean, this function will throw an 
 
 <dl class="py method">
 <dt id="pulumi.Config.get_int">
-<code class="sig-name descname">get_int</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>int<span class="p">]</span><a class="headerlink" href="#pulumi.Config.get_int" title="Permalink to this definition"></a></dt>
-<dd><p>Returns an optional configuration value, as an int, by its key, or None if it doesn’t exist.
+<code class="sig-name descname">get_int</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">default</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>int<span class="p">]</span><a class="headerlink" href="#pulumi.Config.get_int" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an optional configuration value, as an int, by its key,
+a default value if that key is unset and a default is provided,
+or None if it doesn’t exist.
 If the configuration value isn’t a legal int, this function will throw an error.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>key</strong> (<em>str</em>) – The requested configuration key.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>str</em>) – The requested configuration key.</p></li>
+<li><p><strong>default</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em>) – An optional fallback value to use if the given configuration key is not set.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The configuration key’s value, or None if one does not exist.</p>
@@ -627,12 +652,17 @@ If the configuration value isn’t a legal int, this function will throw an erro
 
 <dl class="py method">
 <dt id="pulumi.Config.get_secret_int">
-<code class="sig-name descname">get_secret_int</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>pulumi.output.Output<span class="p">[</span>int<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#pulumi.Config.get_secret_int" title="Permalink to this definition"></a></dt>
-<dd><p>Returns an optional configuration value, as an int, by its key, marked as a secret, or None if it doesn’t exist.
+<code class="sig-name descname">get_secret_int</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">default</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>pulumi.output.Output<span class="p">[</span>int<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#pulumi.Config.get_secret_int" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an optional configuration value, as an int, by its key, marked as a secret,
+a default value if that key is unset and a default is provided,
+or None if it doesn’t exist.
 If the configuration value isn’t a legal int, this function will throw an error.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>key</strong> (<em>str</em>) – The requested configuration key.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>str</em>) – The requested configuration key.</p></li>
+<li><p><strong>default</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em>) – An optional fallback value to use if the given configuration key is not set.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The configuration key’s value, or None if one does not exist.</p>
@@ -648,12 +678,17 @@ If the configuration value isn’t a legal int, this function will throw an erro
 
 <dl class="py method">
 <dt id="pulumi.Config.get_float">
-<code class="sig-name descname">get_float</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>float<span class="p">]</span><a class="headerlink" href="#pulumi.Config.get_float" title="Permalink to this definition"></a></dt>
-<dd><p>Returns an optional configuration value, as a float, by its key, or None if it doesn’t exist.
+<code class="sig-name descname">get_float</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">default</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>float<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>float<span class="p">]</span><a class="headerlink" href="#pulumi.Config.get_float" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an optional configuration value, as a float, by its key, marked as a secret,
+a default value if that key is unset and a default is provided,
+or None if it doesn’t exist.
 If the configuration value isn’t a legal float, this function will throw an error.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>key</strong> (<em>str</em>) – The requested configuration key.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>str</em>) – The requested configuration key.</p></li>
+<li><p><strong>default</strong> (<em>Optional</em><em>[</em><em>float</em><em>]</em>) – An optional fallback value to use if the given configuration key is not set.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The configuration key’s value, or None if one does not exist.</p>
@@ -669,12 +704,17 @@ If the configuration value isn’t a legal float, this function will throw an er
 
 <dl class="py method">
 <dt id="pulumi.Config.get_secret_float">
-<code class="sig-name descname">get_secret_float</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>pulumi.output.Output<span class="p">[</span>float<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#pulumi.Config.get_secret_float" title="Permalink to this definition"></a></dt>
-<dd><p>Returns an optional configuration value, as a float, by its key, marked as a secret or None if it doesn’t exist.
+<code class="sig-name descname">get_secret_float</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">default</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>float<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>pulumi.output.Output<span class="p">[</span>float<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#pulumi.Config.get_secret_float" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an optional configuration value, as a float, by its key, marked as a secret,
+a default value if that key is unset and a default is provided,
+or None if it doesn’t exist.
 If the configuration value isn’t a legal float, this function will throw an error.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>key</strong> (<em>str</em>) – The requested configuration key.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>str</em>) – The requested configuration key.</p></li>
+<li><p><strong>default</strong> (<em>Optional</em><em>[</em><em>float</em><em>]</em>) – An optional fallback value to use if the given configuration key is not set.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The configuration key’s value, or None if one does not exist.</p>
@@ -690,18 +730,54 @@ If the configuration value isn’t a legal float, this function will throw an er
 
 <dl class="py method">
 <dt id="pulumi.Config.get_object">
-<code class="sig-name descname">get_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>Any<span class="p">]</span><a class="headerlink" href="#pulumi.Config.get_object" title="Permalink to this definition"></a></dt>
-<dd><p>Returns an optional configuration value, as an object, by its key, or undefined if it
+<code class="sig-name descname">get_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">default</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Any<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>Any<span class="p">]</span><a class="headerlink" href="#pulumi.Config.get_object" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an optional configuration value, as an object, by its key,
+a default value if that key is unset and a default is provided, or undefined if it
 doesn’t exist. This routine simply JSON parses and doesn’t validate the shape of the
 contents.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>str</em>) – The requested configuration key.</p></li>
+<li><p><strong>default</strong> (<em>Optional</em><em>[</em><em>Any</em><em>]</em>) – An optional fallback value to use if the given configuration key is not set.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The configuration key’s value, or None if one does not exist.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Optional[Any]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#pulumi.ConfigTypeError" title="pulumi.ConfigTypeError"><strong>ConfigTypeError</strong></a> – The configuration value existed but couldn’t be coerced to float.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi.Config.get_secret_object">
-<code class="sig-name descname">get_secret_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>pulumi.output.Output<span class="p">[</span>Any<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#pulumi.Config.get_secret_object" title="Permalink to this definition"></a></dt>
-<dd><p>Returns an optional configuration value, as an object, by its key, marking it as a secret or
-undefined if it doesn’t exist. This routine simply JSON parses and doesn’t validate the
+<code class="sig-name descname">get_secret_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">default</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Any<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>pulumi.output.Output<span class="p">[</span>Any<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#pulumi.Config.get_secret_object" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an optional configuration value, as an object, by its key, marking it as a secret,
+a default value if that key is unset and a default is provided,
+or undefined if it doesn’t exist. This routine simply JSON parses and doesn’t validate the
 shape of the contents.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>str</em>) – The requested configuration key.</p></li>
+<li><p><strong>default</strong> (<em>Optional</em><em>[</em><em>Any</em><em>]</em>) – An optional fallback value to use if the given configuration key is not set.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The configuration key’s value, or None if one does not exist.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Optional[Any]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#pulumi.ConfigTypeError" title="pulumi.ConfigTypeError"><strong>ConfigTypeError</strong></a> – The configuration value existed but couldn’t be coerced to float.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -975,7 +1051,7 @@ legal JSON string, an error is thrown.</p>
 <dt id="pulumi.runtime.is_dry_run">
 <code class="sig-prename descclassname">pulumi.runtime.</code><code class="sig-name descname">is_dry_run</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pulumi.runtime.is_dry_run" title="Permalink to this definition"></a></dt>
 <dd><p>Returns whether or not we are currently doing a preview.</p>
-<p>When writing unit tests, you can set this flag via <code class="docutils literal notranslate"><span class="pre">set_mocks</span></code> by supplying a value
+<p>When writing unit tests, you can set this flag via <code class="docutils literal notranslate"><span class="pre">pulumi.runtime.set_mocks</span></code> by supplying a value
 for the argument <code class="docutils literal notranslate"><span class="pre">preview</span></code>.</p>
 </dd></dl>
 
@@ -1877,7 +1953,7 @@ it will be created and selected.</p>
 
 <dl class="py method">
 <dt id="pulumi.automation.Stack.up">
-<code class="sig-name descname">up</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parallel</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_packs</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_pack_configs</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expect_no_changes</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">diff</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_dependents</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replace</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">color</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_output</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_event</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>pulumi.automation.events.EngineEvent<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">show_secrets</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.UpResult<a class="headerlink" href="#pulumi.automation.Stack.up" title="Permalink to this definition"></a></dt>
+<code class="sig-name descname">up</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parallel</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_packs</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_pack_configs</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expect_no_changes</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">diff</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_dependents</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replace</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">color</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_output</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_event</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>pulumi.automation.events.EngineEvent<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">show_secrets</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">log_flow</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_verbosity</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_to_std_err</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tracing</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">debug</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.UpResult<a class="headerlink" href="#pulumi.automation.Stack.up" title="Permalink to this definition"></a></dt>
 <dd><p>Creates or updates the resources in a stack by executing the program in the Workspace.
 <a class="reference external" href="https://www.pulumi.com/docs/reference/cli/pulumi_up/">https://www.pulumi.com/docs/reference/cli/pulumi_up/</a></p>
 <dl class="field-list simple">
@@ -1898,7 +1974,12 @@ it will be created and selected.</p>
 <li><p><strong>program</strong> – The inline program.</p></li>
 <li><p><strong>color</strong> – Colorize output. Choices are: always, never, raw, auto (default “auto”)</p></li>
 <li><p><strong>plan</strong> – Plan specifies the path to an update plan to use for the update.</p></li>
-<li><p><strong>show_secrets</strong> – Inclode config secrets in the UpResult summary.</p></li>
+<li><p><strong>show_secrets</strong> – Include config secrets in the UpResult summary.</p></li>
+<li><p><strong>log_flow</strong> – Flow log settings to child processes (like plugins)</p></li>
+<li><p><strong>log_verbosity</strong> – Enable verbose logging (e.g., v=3); anything &gt;3 is very verbose</p></li>
+<li><p><strong>log_to_std_err</strong> – Log to stderr instead of to files</p></li>
+<li><p><strong>tracing</strong> – Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file</p></li>
+<li><p><strong>debug</strong> – Print detailed debugging output during resource operations</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -1909,7 +1990,7 @@ it will be created and selected.</p>
 
 <dl class="py method">
 <dt id="pulumi.automation.Stack.preview">
-<code class="sig-name descname">preview</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parallel</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_packs</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_pack_configs</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expect_no_changes</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">diff</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_dependents</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replace</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">color</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_output</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_event</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>pulumi.automation.events.EngineEvent<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.PreviewResult<a class="headerlink" href="#pulumi.automation.Stack.preview" title="Permalink to this definition"></a></dt>
+<code class="sig-name descname">preview</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parallel</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_packs</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_pack_configs</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expect_no_changes</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">diff</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_dependents</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replace</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">color</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_output</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_event</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>pulumi.automation.events.EngineEvent<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">program</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_flow</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_verbosity</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_to_std_err</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tracing</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">debug</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.PreviewResult<a class="headerlink" href="#pulumi.automation.Stack.preview" title="Permalink to this definition"></a></dt>
 <dd><p>Performs a dry-run update to a stack, returning pending changes.
 <a class="reference external" href="https://www.pulumi.com/docs/reference/cli/pulumi_preview/">https://www.pulumi.com/docs/reference/cli/pulumi_preview/</a></p>
 <dl class="field-list simple">
@@ -1930,6 +2011,11 @@ it will be created and selected.</p>
 <li><p><strong>program</strong> – The inline program.</p></li>
 <li><p><strong>color</strong> – Colorize output. Choices are: always, never, raw, auto (default “auto”)</p></li>
 <li><p><strong>plan</strong> – Plan specifies the path where the update plan should be saved.</p></li>
+<li><p><strong>log_flow</strong> – Flow log settings to child processes (like plugins)</p></li>
+<li><p><strong>log_verbosity</strong> – Enable verbose logging (e.g., v=3); anything &gt;3 is very verbose</p></li>
+<li><p><strong>log_to_std_err</strong> – Log to stderr instead of to files</p></li>
+<li><p><strong>tracing</strong> – Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file</p></li>
+<li><p><strong>debug</strong> – Print detailed debugging output during resource operations</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -1940,7 +2026,7 @@ it will be created and selected.</p>
 
 <dl class="py method">
 <dt id="pulumi.automation.Stack.refresh">
-<code class="sig-name descname">refresh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parallel</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expect_no_changes</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">color</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_output</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_event</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>pulumi.automation.events.EngineEvent<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">show_secrets</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.RefreshResult<a class="headerlink" href="#pulumi.automation.Stack.refresh" title="Permalink to this definition"></a></dt>
+<code class="sig-name descname">refresh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parallel</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expect_no_changes</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">color</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_output</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_event</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>pulumi.automation.events.EngineEvent<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">show_secrets</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">log_flow</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_verbosity</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_to_std_err</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tracing</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">debug</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.RefreshResult<a class="headerlink" href="#pulumi.automation.Stack.refresh" title="Permalink to this definition"></a></dt>
 <dd><p>Compares the current stack’s resource state with the state known to exist in the actual
 cloud provider. Any such changes are adopted into the current stack.</p>
 <dl class="field-list simple">
@@ -1954,7 +2040,12 @@ cloud provider. Any such changes are adopted into the current stack.</p>
 <li><p><strong>on_output</strong> – A function to process the stdout stream.</p></li>
 <li><p><strong>on_event</strong> – A function to process structured events from the Pulumi event stream.</p></li>
 <li><p><strong>color</strong> – Colorize output. Choices are: always, never, raw, auto (default “auto”)</p></li>
-<li><p><strong>show_secrets</strong> – Inclode config secrets in the RefreshResult summary.</p></li>
+<li><p><strong>show_secrets</strong> – Include config secrets in the RefreshResult summary.</p></li>
+<li><p><strong>log_flow</strong> – Flow log settings to child processes (like plugins)</p></li>
+<li><p><strong>log_verbosity</strong> – Enable verbose logging (e.g., v=3); anything &gt;3 is very verbose</p></li>
+<li><p><strong>log_to_std_err</strong> – Log to stderr instead of to files</p></li>
+<li><p><strong>tracing</strong> – Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file</p></li>
+<li><p><strong>debug</strong> – Print detailed debugging output during resource operations</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -1965,7 +2056,7 @@ cloud provider. Any such changes are adopted into the current stack.</p>
 
 <dl class="py method">
 <dt id="pulumi.automation.Stack.destroy">
-<code class="sig-name descname">destroy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parallel</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_dependents</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">color</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_output</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_event</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>pulumi.automation.events.EngineEvent<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">show_secrets</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.DestroyResult<a class="headerlink" href="#pulumi.automation.Stack.destroy" title="Permalink to this definition"></a></dt>
+<code class="sig-name descname">destroy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parallel</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_dependents</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">color</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_output</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">on_event</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>pulumi.automation.events.EngineEvent<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">show_secrets</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">log_flow</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_verbosity</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">log_to_std_err</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tracing</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">debug</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.automation._stack.DestroyResult<a class="headerlink" href="#pulumi.automation.Stack.destroy" title="Permalink to this definition"></a></dt>
 <dd><p>Destroy deletes all resources in a stack, leaving all history and configuration intact.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1978,7 +2069,12 @@ cloud provider. Any such changes are adopted into the current stack.</p>
 <li><p><strong>on_output</strong> – A function to process the stdout stream.</p></li>
 <li><p><strong>on_event</strong> – A function to process structured events from the Pulumi event stream.</p></li>
 <li><p><strong>color</strong> – Colorize output. Choices are: always, never, raw, auto (default “auto”)</p></li>
-<li><p><strong>show_secrets</strong> – Inclode config secrets in the DestroyResult summary.</p></li>
+<li><p><strong>show_secrets</strong> – Include config secrets in the DestroyResult summary.</p></li>
+<li><p><strong>log_flow</strong> – Flow log settings to child processes (like plugins)</p></li>
+<li><p><strong>log_verbosity</strong> – Enable verbose logging (e.g., v=3); anything &gt;3 is very verbose</p></li>
+<li><p><strong>log_to_std_err</strong> – Log to stderr instead of to files</p></li>
+<li><p><strong>tracing</strong> – Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file</p></li>
+<li><p><strong>debug</strong> – Print detailed debugging output during resource operations</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
