@@ -67,11 +67,10 @@ Now that we have our handler function, we can create a CloudWatch event that fir
 const emptyTrashSchedule: aws.cloudwatch.EventRuleEventSubscription = aws.cloudwatch.onSchedule(
   "emptyTrash",
   "cron(0 23 ? * FRI *)",
-  emptyTrash
+  emptyTrash);
 
 // Export the name of the bucket
 export const bucketName = trashBucket.id;
-);
 ```
 
 Now, run `pulumi up` to deploy your new scheduled function.
