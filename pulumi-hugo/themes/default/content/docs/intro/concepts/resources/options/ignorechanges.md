@@ -89,6 +89,10 @@ resources:
 
 One reason you would use the `ignoreChanges` option is to ignore changes in properties that lead to diffs. Another reason is to change the defaults for a property without forcing all existing deployed stacks to update or replace the affected resource. This is common after you’ve imported existing infrastructure provisioned by another method into Pulumi. In these cases, there may be historical drift that you’d prefer to retain, rather than replacing and reconstructing critical parts of your infrastructure.
 
+{{% notes "info" %}}
+The `ignoreChanges` option only applies to resource inputs, not outputs.
+{{% /notes %}}
+
 In addition to passing simple property names, nested properties can also be supplied to ignore changes to a more targeted nested part of the resource's inputs. Here are examples of legal paths that can be passed to specify nested properties of objects and arrays, as well as to escape object keys that contain special characters:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
