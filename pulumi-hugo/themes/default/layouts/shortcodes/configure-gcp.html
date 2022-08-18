@@ -1,7 +1,27 @@
 When developing locally, we recommend that you install the [Google Cloud SDK](https://cloud.google.com/sdk/install) and then [authorize access with a user
 account](https://cloud.google.com/sdk/docs/authorizing#authorizing_with_a_user_account). If `gcloud` is not configured to interact with your Google Cloud project, set it with the
-`config` command using the project's ID: ```bash gcloud config set project
-<YOUR_GCP_PROJECT_ID>
-    ``` Next, Pulumi requires default application credentials to interact with your Google Cloud resources, so run `auth application-default login` command to obtain those
-    credentials. ```bash gcloud auth application-default login ```</YOUR_GCP_PROJECT_ID
->
+`config` command using the project's ID:
+
+<div class="highlight">
+    <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="no-select">$ </span>gcloud config set project your-gcp-project-id</code></pre>
+    <div class="copy-button-container">
+        <pulumi-tooltip
+            ><span class="tooltip-target"
+                ><button class="copy-button"><i class="far fa-copy copy text-xl"></i></button></span
+            ><span class="tooltip-content" role="tooltip"><span slot="content">Copy</span></span></pulumi-tooltip
+        >
+    </div>
+</div>
+
+Next, Pulumi requires default application credentials to interact with your Google Cloud resources, so run `auth application-default login` command to obtain those credentials:
+
+<div class="highlight">
+    <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="no-select">$ </span>gcloud auth application-default login</code></pre>
+    <div class="copy-button-container">
+        <pulumi-tooltip
+            ><span class="tooltip-target"
+                ><button class="copy-button"><i class="far fa-copy copy text-xl"></i></button></span
+            ><span class="tooltip-content" role="tooltip"><span slot="content">Copy</span></span></pulumi-tooltip
+        >
+    </div>
+</div>
