@@ -1,9 +1,9 @@
 When developing locally, we recommend that you install the [Google Cloud SDK](https://cloud.google.com/sdk/install) and then [authorize access with a user
-account](https://cloud.google.com/sdk/docs/authorizing#authorizing_with_a_user_account). If `gcloud` is not configured to interact with your Google Cloud project, set it with the
-`config` command using the project's ID:
+account](https://cloud.google.com/sdk/docs/authorizing#authorizing_with_a_user_account). Next, Pulumi requires default application credentials to interact with your Google Cloud
+resources, so run `auth application-default login` command to obtain those credentials:
 
 <div class="highlight">
-    <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="no-select">$ </span>gcloud config set project your-gcp-project-id</code></pre>
+    <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="no-select">$ </span>gcloud auth application-default login</code></pre>
     <div class="copy-button-container">
         <pulumi-tooltip
             ><span class="tooltip-target"
@@ -13,10 +13,30 @@ account](https://cloud.google.com/sdk/docs/authorizing#authorizing_with_a_user_a
     </div>
 </div>
 
-Next, Pulumi requires default application credentials to interact with your Google Cloud resources, so run `auth application-default login` command to obtain those credentials:
+To configure Pulumi to interact with your Google Cloud project, set it with the `pulumi config` command using the project's ID:
 
 <div class="highlight">
-    <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="no-select">$ </span>gcloud auth application-default login</code></pre>
+    <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="no-select">$ </span>pulumi config set gcp:project your-gcp-project-id</code></pre>
+    <div class="copy-button-container">
+        <pulumi-tooltip
+            ><span class="tooltip-target"
+                ><button class="copy-button"><i class="far fa-copy copy text-xl"></i></button></span
+            ><span class="tooltip-content" role="tooltip"><span slot="content">Copy</span></span></pulumi-tooltip
+        >
+    </div>
+</div>
+
+You may also set your GCP Project via environment variable (listed in order of precedence):
+
+<ul>
+    <li><code class="language-bash" data-lang="bash">GOOGLE_PROJECT</code></li>
+    <li><code class="language-bash" data-lang="bash">GOOGLE_CLOUD_PROJECT</code></li>
+    <li><code class="language-bash" data-lang="bash">GCLOUD_PROJECT</code></li>
+    <li><code class="language-bash" data-lang="bash">CLOUDSDK_CORE_PROJECT</code></li>
+</ul>
+
+<div class="highlight">
+    <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="no-select">$ </span>export GOOGLE_PROJECT=your-gcp-project-id</code></pre>
     <div class="copy-button-container">
         <pulumi-tooltip
             ><span class="tooltip-target"
