@@ -1,0 +1,139 @@
+{{ define "hero" }}
+    <header class="page-hero">
+        <img class="mx-auto mb-6 w-full" src="/images/cloud-engineering-days/cloud-eng-days-hero.png" />
+    </header>
+{{ end }}
+
+{{ define "main" }}
+    <section id="description" class="container mx-auto my-16 text-center">
+        <h5>
+            <b>{{ .Params.title }}</b>&nbsp;{{ .Params.description }}
+        </h5>
+    </section>
+
+    <section id="featured" class="container mx-auto my-0">
+        <div class="benefits-section relative">
+            <div class="flex flex-wrap items-stretch justify-center">
+                {{ range $item := .Params.featured.items }}
+                    <div class="w-full lg:w-1/2 p-4 my-2">
+                        <div class="card h-full relative bg-white">
+                            <div class="text-center flex flex-row justify-center pt-8 rounded-t-xl relative bg-fuchsia-600">
+                                {{ range $presenter := $item.presenters }}
+                                    <div class="text-center mx-4">
+                                        <img class="h-36" src="{{ $presenter.photo }}" alt="{{ $presenter.name }}" />
+                                        <p class="text-white">{{ .name }}</p>
+                                    </div>
+                                {{ end }}
+                            </div>
+                            <div class="px-8 py-8">
+                                <div>
+                                    <h5>{{ $item.title }}</h5>
+                                </div>
+                                <div class="description">
+                                    <p>{{ $item.description }}</p>
+                                </div>
+                                <div class="mt-8">
+                                    <a href="{{ $item.link }}" class="btn-secondary">{{ $item.link_text }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <section id="social-media" class="min-w-full my-0 bg-salmon-600">
+        <div class="container mx-auto py-8">
+            <h4 class="text-center text-white">Join the Conversation</h4>
+            <div class="text-center">
+                <div class="text-center flex flex-row justify-center">
+                    {{ range $item := .Params.media.items }}
+                        <a href="{{ $item.link }}" class="mx-2">
+                            <img src="{{ $item.image }}" alt="{{ $item.name }}" />
+                        </a>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hackathon" class="min-w-full my-8 bg-white">
+        <div class="container mx-auto flex flex-col items-center text-center">
+            <h3 class="text-center text-black mb-8">{{ .Params.hackathon.title }}</h3>
+            <img src="{{ .Params.hackathon.image }}" />
+            <div class="lg:w-2/3">
+                <p>{{ .Params.hackathon.description }}</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="workshops" class="min-w-full my-0 pt-8 bg-black">
+        <div class="container mx-auto">
+            <h3 class="text-center text-white">{{ .Params.workshops.title }}</h3>
+            <div class="flex flex-wrap items-stretch justify-center">
+                {{ range $item := .Params.workshops.items }}
+                    <div class="w-full lg:w-1/2 p-4 my-2">
+                        <div class="card h-full p-1 bg-gradient-to-t from-fuchsia-600 to-orange-600">
+                            <div class="card h-full relative bg-white">
+                                <div class="px-8 py-8">
+                                    <div>
+                                        <h5>{{ $item.title }}</h5>
+                                    </div>
+                                    <div class="description">
+                                        <p>{{ $item.description }}</p>
+                                    </div>
+                                    <div class="mt-8">
+                                        <a href="{{ $item.link }}" target="_blank" class="btn-secondary">Register Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="min-w-full my-0 py-16 mb-8 bg-black">
+        <div class="container mx-auto">
+            <h3 class="text-center text-white">{{ .Params.schedule.title }}</h3>
+            <p class="text-center text-white">{{ .Params.schedule.subtitle }}</p>
+            <div class="flex flex-col align-center">
+                {{ range $item := .Params.schedule.items }}
+                    <div class="w-full flex flex-row p-4 my-2">
+                        <div class="h-full flex flex-row-reverse w-1/2">
+                            <div class="px-8 py-8 lg:w-2/3">
+                                <p class="text-white">{{ $item.datetime }}</p>
+                            </div>
+                        </div>
+                        <div class="w-1/2 border-l-2 border-white">
+                            <div class="px-8">
+                                <h5 class="text-white mb-0">{{ $item.title }}</h5>
+                                <p class="text-white my-0">{{ $item.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            window._zi = { formId: "ed92e322-b149-46c7-8c1c-6f29de9f8fb8", formLoadTimeout: 4000 };
+            var zi = document.createElement("script");
+            zi.type = "text/javascript";
+            zi.async = true;
+            zi.src = "https://ws-assets.zoominfo.com/formcomplete.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(zi, s);
+        })();
+    </script>
+    <section id="registration" class="min-w-full mt-16 mb-16 px-8 flex justify-center">
+        <div class="lg:w-1/2">
+            <h4>Register</h4>
+            <pulumi-hubspot-form form-id="{{ .Params.form.hubspot_form_id }}" go-to-webinar-key="{{ .Params.form.gotowebinar_key }}"></pulumi-hubspot-form>
+        </div>
+    </section>
+{{ end }}
