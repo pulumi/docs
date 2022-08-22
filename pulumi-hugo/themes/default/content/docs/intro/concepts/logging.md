@@ -77,11 +77,11 @@ Pulumi.Log.Error("fatal error");
 
 ```java
 public static void stack(Context ctx) {
-    ctx.log.info("message");
-    ctx.log.info("message", resource);
-    ctx.log.debug("hidden by default");
-    ctx.log.warn("warning");
-    ctx.log.error("fatal error");
+    ctx.log().info("message");
+    ctx.log().info("message", resource);
+    ctx.log().debug("hidden by default");
+    ctx.log().warn("warning");
+    ctx.log().error("fatal error");
 }
 ```
 
