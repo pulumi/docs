@@ -154,3 +154,10 @@ The following topics provide more details on the core concepts for working with 
         <p>Learn how to configure stacks for different deployment scenarios.</p>
     </div>
 </div>
+
+<div class="md:flex flex-row mt-6 mb-6">
+    <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4"><a href="{{< relref "/docs/intro/concepts/resources/functions" >}}"><i class="fas fa-file-alt pr-2"></i>Provider Functions</a></h3>
+        <p>Learn how to use the functions included with Pulumi packages.</p>
+    </div>
+</div>
