@@ -39,16 +39,13 @@ Enabling verbose logging may reveal sensitive information (tokens, credentials..
 your execution environment directly to your cloud provider, and which Pulumi may not be aware of. Before sharing the logs, be careful to audit and redact any sensitive information.
 {{% /notes %}}
 
-```
+```bash
 $ pulumi up --logtostderr --logflow -v=9 2> out.txt
 ```
 
-Individual resource providers may also have flags and environment entries to customize their
-diagnostic logging. For example, for any Pulumi resource providers that expose a Terraform resource
-provider into Pulumi, you can use [`TF_LOG`](https://www.terraform.io/docs/internals/debugging.html)
-set to `TRACE`, `DEBUG`, `INFO`, `WARN` or `ERROR`.
+Diagnostic logging can also be controlled with flags and environment variables of the resource providers. For example, Pulumi providers that use a bridged Terraform provider can make use of the [`TF_LOG`](https://www.terraform.io/docs/internals/debugging.html) environment variable (set to `TRACE`, `DEBUG`, `INFO`, `WARN` or `ERROR`) in order to provide additional diagnostic information.
 
-```
+```bash
 $ TF_LOG=TRACE pulumi up --logtostderr --logflow -v=9 2> out.txt
 ```
 
