@@ -37,8 +37,9 @@ minutes to complete.
 You will need the following tools to complete this tutorial:
 
 - A [Pulumi account and token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}})
-  - If you don't have an account, go to the
-    [signup page](https://app.pulumi.com/signup).
+    - If you don't have an account, go to the [signup page](https://app.pulumi.com/signup).
+- The [Pulumi CLI]({{< ref "/docs/reference/cli" >}})
+    - If you don't have the CLI, go to the [installation page]({{< ref "/docs/get-started/install" >}}).
 - [Docker](https://docs.docker.com/get-docker/)
 - One of the following languages:
     - For the TypeScript/JavaScript version, Node.js 14 or later

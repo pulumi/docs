@@ -33,7 +33,9 @@ How long this tutorial will take depends on your internet connection, reading sp
 You will need the following tools to complete this pathway:
 
 - A [Pulumi account and token]({{< relref "/docs/intro/pulumi-service/accounts#access-tokens" >}})
-  - If you don't have an account, go to the [signup page](https://app.pulumi.com/signup).
+    - If you don't have an account, go to the [signup page](https://app.pulumi.com/signup).
+- The [Pulumi CLI]({{< ref "/docs/reference/cli" >}})
+    - If you don't have the CLI, go to the [installation page]({{< ref "/docs/get-started/install" >}}).
 
 In addition, you should be able to
 
