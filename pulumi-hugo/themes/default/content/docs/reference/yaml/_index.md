@@ -320,6 +320,20 @@ variables:
 
 The expression `${banana}` will have the value `"BaNaNa"`.
 
+##### `Fn::Split`
+
+Splits a string on a delimiter. Arguments are passed as a list, with the first item being the delimiter, and the second item the string to split.
+
+```yaml
+variables:
+    fruits:
+        Fn::Split:
+            - ", "
+            - "apple, orange, banana"
+```
+
+The expression `${fruits}` will be a list containing the values `["apple", "orange", "banana"]`.
+
 ##### `Fn::Select`
 
 Selects one of several options given an index. Arguments are passed as a list, with the first item being the index, 0-based, and the second item a list of expressions to select from.
