@@ -7,7 +7,12 @@ menu:
     weight: 7
 ---
 
-You can use the static `get` function, which is available on all resource types, to look up an existing resource’s ID. The `get` function is different from the `import` function. The difference is that, although the resulting resource object’s state will match the live state from an existing environment, the resource will not be managed by Pulumi. A resource read with the `get` function will never be updated or deleted by Pulumi during an update.
+You can use the static `get` function, which is available on all resource types, to look up an existing resource that is not managed by Pulumi. The `get` function is different from the [`import` CLI command]({{< relref "/docs/reference/cli/pulumi_import" >}}): `pulumi import` is used to bring an existing resource under management by Pulumi. `get` is used to allow the attributes of an existing resource to be used within a Pulumi program. A resource read with the `get` function will never be updated or deleted by Pulumi during an update.
+
+Two values are passed to the `get` function:
+
+1. The **logical name** Pulumi will use to refer to the resource.
+1. The **physical ID** that the resource has in the target cloud.
 
 You can use the `get` function to consume properties from a resource that was provisioned elsewhere. For example, this program reads an existing EC2 Security Group whose ID is `sg-0dfd33cdac25b1ec9` and uses the result as input to create an EC2 Instance that Pulumi will manage:
 
@@ -145,6 +150,4 @@ resources:
 
 {{< /chooser >}}
 
-Two values are passed to the `get` function - the logical name Pulumi will use to refer to the resource, and the physical ID that the resource has in the target cloud.
-
-Importantly, Pulumi will never attempt to modify the security group in this example. It reads back the state from your currently configured cloud account and then uses it as input for the new EC2 Instance.
+Note that Pulumi will never attempt to modify the security group in this example. It queries the attributes of the security group from your cloud account and then uses its name as an input for the new EC2 Instance.
