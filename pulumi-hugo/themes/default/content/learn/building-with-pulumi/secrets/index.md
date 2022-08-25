@@ -36,6 +36,52 @@ are stored in your state file.
 Inside our `my-first-app` program that we have been working with, let's switch
 back to the `dev` stack and set a username and password for MongoDB:
 
+{{% choosable language typescript %}}
+
+```bash
+$ pulumi stack select dev
+
+$ pulumi config set mongoUsername admin
+$ pulumi config set --secret mongoPassword S3cr37
+```
+
+If we list the configuration for our stack, the plain-text value for
+`mongoPassword` will not be printed:
+
+```bash
+$ pulumi config
+KEY               VALUE
+backendPort      3000
+database          cart
+frontendPort     3001
+mongoPassword    [secret]
+mongoUsername    admin
+mongoHost        mongodb://mongo:27017
+mongoPort        27017
+nodeEnvironment  development
+```
+
+This is also encrypted in the associated configuration file:
+
+```bash
+$ cat Pulumi.dev.yaml
+
+config:
+  my-first-app:backendPort: "3000"
+  my-first-app:database: cart
+  my-first-app:frontendPort: "3001"
+  my-first-app:mongoPassword:
+    secure: AAABADQXFlU0mxbTmNyl39UfVg4DdFoL94SCNMX3MkvZhBZjeAM=
+  my-first-app:mongoUsername: admin
+  my-first-app:mongoHost: mongodb://mongo:27017
+  my-first-app:mongoPort: "27017"
+  my-first-app:nodeEnvironment: development
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
 ```bash
 $ pulumi stack select dev
 
@@ -76,6 +122,8 @@ config:
   my-first-app:node_environment: development
 ```
 
+{{% /choosable %}}
+
 We can access the secrets similarly to other configuration data, however we must
 specify that it is a secret. Add this code to {{< langfile >}} inside of `my-first-app`:
 
@@ -87,8 +135,8 @@ specify that it is a secret. Add this code to {{< langfile >}} inside of `my-fir
 const config = new pulumi.Config();
 // ...
 
-const mongoUsername = config.require("mongo_username");
-export const mongoPassword = config.requireSecret("mongo_password");
+const mongoUsername = config.require("mongoUsername");
+export const mongoPassword = config.requireSecret("mongoPassword");
 ```
 
 {{% /choosable %}}
@@ -138,6 +186,12 @@ const mongoContainer = new docker.Container("mongoContainer", {
 });
 ```
 
+Then, we need to update the backend container to use the new authentication. We need to slightly change the value of `mongoHost` first:
+
+```bash
+$ pulumi config set mongoHost mongo
+```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -160,86 +214,13 @@ mongo_container = docker.Container("mongo_container",
                                    ])
 ```
 
-{{% /choosable %}}
-
-{{< chooser language "typescript,python" / >}}
-
-{{% choosable language typescript %}}
-
-We need to have our seed container use the new password to connect. Change the
-`command` in the `dataSeedContainer` resource to look like this:
-
-```typescript
-const dataSeedContainer = new docker.Container("dataSeedContainer", {
-    image: mongoImage.repoDigest,
-    name: "dataSeed",
-    mustRun: false,
-    rm: true,
-    mounts: [
-        {
-            target: "/home/products.json",
-            type: "bind",
-            source: `${process.cwd()}/products.json`,
-        },
-    ],
-    command: [
-        "sh",
-        "-c",
-        pulumi.interpolate`mongoimport --host ${mongoHost} -u ${mongoUsername} -p ${mongoPassword} --authentication admin --db cart --collection products --type json --file /home/products.json --jsonArray`,
-    ],
-    networksAdvanced: [
-        {
-            name: network.name,
-        },
-    ],
-});
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-We need to have our seed container use the new password to connect. Change the
-`command` in the `data_seed_container` resource to look like this:
-
-```python
-data_seed_container = docker.Container("data_seed_container",
-                                       image=mongo_image.repo_digest,
-                                       name="data_seed",
-                                       must_run=False,
-                                       rm=True,
-                                       opts=pulumi.ResourceOptions(depends_on=[backend_container]),
-                                       mounts=[docker.ContainerMountArgs(
-                                           target="/home/products.json",
-                                           type="bind",
-                                           source=f"{os.getcwd()}/products.json"
-                                       )],
-                                       command=[ # This is the changed part!
-                                           "sh", "-c",
-                                           pulumi.Output.concat(
-                                               "mongoimport --host ",
-                                               mongo_host,
-                                               " -u ",
-                                               mongo_username,
-                                               " -p ",
-                                               config.require_secret("mongo_password"),
-                                               " --authenticationDatabase admin --db cart --collection products --type json --file /home/products.json --jsonArray"
-                                           )
-                                       ],
-                                       networks_advanced=[docker.ContainerNetworksAdvancedArgs(
-                                           name=network.name
-                                       )]
-                                       )
-```
-
-{{% /choosable %}}
-
-Finally, we need to update the backend container to use the new authentication.
-We need to slightly change the value of `mongo_host` first:
+Then, we need to update the backend container to use the new authentication. We need to slightly change the value of `mongo_host` first:
 
 ```bash
 $ pulumi config set mongo_host mongo
 ```
+
+{{% /choosable %}}
 
 Then, update the backend container resource as follows:
 
@@ -268,6 +249,13 @@ const backendContainer = new docker.Container("backendContainer", {
         },
     ],
 }, { dependsOn: [ mongoContainer ]});
+```
+
+And finally, add a line at the end of the program to export password as a stack output:
+
+```typescript
+#...
+export const mongoPassword = mongoPassword;
 ```
 
 {{% /choosable %}}

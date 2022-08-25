@@ -83,6 +83,14 @@ const stackRef = new pulumi.StackReference(`${org}/my-first-app/${stack}`)
 export const shopUrl = stackRef.getOutput("url");
 ```
 
+The `org` environment variable is new, as is the `stackRef` declaration. That
+declaration sets up an instance of the `StackReference` class, which needs the
+fully qualified name of the stack as an input. Here, the `org` is the
+organization associated with your account, the `my-first-app` is the name of the
+project you've been working in, and the stack is the stack that you want to
+reference. If you have an individual account, the org is your account name. The
+export then grabs the `url` output from the other stack.
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -99,8 +107,6 @@ stack_ref = pulumi.StackReference(f"{org}/my-first-app/{stack}")
 pulumi.export("shopUrl", stack_ref.get_output("url"))
 ```
 
-{{% /choosable %}}
-
 The `org` environment variable is new, as is the `stack_ref` declaration. That
 declaration sets up an instance of the `StackReference` class, which needs the
 fully qualified name of the stack as an input. Here, the `org` is the
@@ -108,6 +114,8 @@ organization associated with your account, the `my-first-app` is the name of the
 project you've been working in, and the stack is the stack that you want to
 reference. If you have an individual account, the org is your account name. The
 export then grabs the `url` output from the other stack.
+
+{{% /choosable %}}
 
 Set the `org` environment variable, which is the organization associated with
 your account, and change the `<YOURNAME>` to your username/account name for
