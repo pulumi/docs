@@ -16,11 +16,11 @@ aliases: [
 diverse needs across a spectrum of team, application, and infrastructure scenarios. This is very much like how Git
 repos work and, much like Git repos, there are varying approaches to organizing your code within them. That said,
 there are some clear best practices that, when followed, will ensure Pulumi works seamlessly for your situation. This
-article describes some of the most common approaches and when to choose one over another.
+guide describes some of the most common approaches and when to choose one over another.
 
 ## Tradeoffs
 
-Everything described below is on a spectrum of tradeoffs. Remember that each project is a collection of code,
+Everything described within this guide is on a spectrum of tradeoffs. Remember that each project is a collection of code,
 and that each stack is a unit of deployment. Each stack has its own separate configuration and secrets, role-based access controls (RBAC) and policies, and concurrent deployments.
 
 ## Monolithic
@@ -42,7 +42,7 @@ Most users will start a monolithic structure, for a few good reasons:
   Of course, Pulumi supports package managers, so sharing across projects is also possible, but it entails dealing
   with packages which means introducing a loosely-coupled versioning boundary with distinct update cadences.
 
-* **Agility.** All of the above means that using a monolithic approach will almost always lead to the best
+* **Agility.** Simplicity and versioning means that using a monolithic approach will almost always lead to the best
   productivity and therefore agility. For small projects or teams, this is usually the right place to start.
 
 Although a monolithic structure is where most users begin their Pulumi journey, we find that most will ultimately
@@ -70,7 +70,15 @@ different dimensions. This approach has several advantages:
   pieces that can be built independently can increase agility and improve performance, particularly when they
   evolve at different rates and/or are managed by different teams.
 
-Here are a few, non-exhaustive, examples, of how one might go about splitting up a monolithic project structure:
+### Using Stack References with Micro-Stacks
+
+If using the micro-stacks approach you will need a way to share information between stacks. [Stack references]({{< relref "/docs/intro/concepts/stack#stackreferences" >}}) are the Pulumi concepts you will want to use. Stack references allow you to access the outputs of one stack from another stack. Inter-Stack Dependencies allow one stack to reference the outputs of another stack.
+
+To reference values from another stack, create an instance of the StackReference type using the fully qualified name of the stack as an input, and then read exported stack outputs by their name.
+
+## Moving from a Monolithic Project Structure to Micro-Stacks
+
+Here are a few (non-exhaustive) examples of how one might go about splitting up a monolithic project structure:
 
 * Each micro-service in your architecture might get its own project.
 
@@ -83,9 +91,9 @@ Here are a few, non-exhaustive, examples, of how one might go about splitting up
 
 * You may have one or more data tiers that are deployed and independently backed up.
 
-Even with this alternative breakdown, it's likely your stack structure will mirror that described earlier. For
+Even with this alternative breakdown, it's likely your stack structure will mirror a monolithic structure. For
 each project, you are apt to have multiple environments such as production, staging, testing, etc. And, indeed,
-you may have inter-dependencies between your stacks -- something that Pulumi supports in a first-class manner.
+you may have inter-dependencies between your stacks -- something that Pulumi supports in a first-class manner with [stack references]({{< relref "/docs/intro/concepts/stack#stackreferences" >}}).
 
 ## Aligning to Git Repos
 
@@ -104,7 +112,7 @@ its associated Pulumi stack. Read more about
 
 ## Tagging Stacks
 
-Stacks have associated metadata in the form of name/value tags. You can assign custom tags to stacks (when logged into the [Pulumi Service backend]({{< relref "/docs/intro/concepts/state" >}})) to customize how stacks are listed in the [Pulumi Service](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom `environment` tag to each stack, assigning a value of `production` to each production stack, `staging` to each staging stack, etc. Then in the Pulumi Service, you'll be able to group stacks by `Tag: environment`. For more information, see [Stack tags]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}).
+Stacks have associated metadata in the form of name/value [stack tags]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}). You can assign custom tags to stacks (when logged into the [Pulumi Service backend]({{< relref "/docs/intro/concepts/state" >}})) to enable grouping stacks in the [Pulumi Service](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom `environment` tag to each stack, assigning a value of `production` to each production stack, `staging` to each staging stack, etc. Then in the Pulumi Service, you'll be able to group stacks by `Tag: environment`.
 
 ## Examples
 
