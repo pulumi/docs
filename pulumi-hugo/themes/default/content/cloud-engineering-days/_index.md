@@ -7,6 +7,14 @@ meta_image: /images/cloud-engineering-days/ced-website-banner.png
 type: page
 layout: cloud-engineering-days
 
+# information for google events listing
+event_data:
+  name: Cloud Engingeering Days
+  start_date: 2022-11-02T08:00:00-07:00
+  end_date: 2022-11-03T10:15:00-07:00
+  url: "https://www.pulumi.com/cloud-engineering-days/"
+  description: Cloud Engineering Days are free, hands-on learning events for developers and engineers to level up their cloud skills and master the modern cloud. Join our experts for workshops and talks that will teach you the latest software development and infrastructure as code practices that can increase your productivity and level up your output, whether you’re using VMs, serverless, Kubernetes, or even multi-cloud.
+
 description: |
   are free, hands-on learning events for developers and engineers to level up their cloud skills and master the modern cloud. Join our experts for workshops and talks that will teach you the latest software development and infrastructure as code practices that can increase your productivity and level up your output, whether you’re using VMs, serverless, Kubernetes, or even multi-cloud.
 

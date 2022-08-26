@@ -27,6 +27,32 @@
     {{ end }}
 
 
+    <!-- Events info for Google events. -->
+    {{ if .Params.event_data }}
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Event",
+                "name": "{{ .Params.event_data.name }}",
+                "startDate": "{{ .Params.event_data.start_date }}",
+                "endDate": "{{ .Params.event_data.end_date }}",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+                "location": {
+                  "@type": "VirtualLocation",
+                  "url": {{ .Params.event_data.url }}
+                },
+                "description": "{{ .Params.event_data.description }}",
+                "organizer": {
+                  "@type": "Organization",
+                  "name": "Pulumi",
+                  "url": "https://pulumi.com"
+                }
+              }
+        </script>
+    {{ end }}
+
+
     <!--
         Metadata tags for OpenGraph and Twitter.
     -->
