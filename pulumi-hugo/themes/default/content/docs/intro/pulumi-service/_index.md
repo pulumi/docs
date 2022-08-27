@@ -12,7 +12,7 @@ aliases:
 - /docs/intro/console/
 ---
 
-The [Pulumi Service](https://app.pulumi.com) web application automatically manages deployment state and enables collaboration between developers and operators. The Pulumi CLI automatically uses it unless you [explicitly opt out]({{< relref "/docs/intro/concepts/state" >}}).
+The [Pulumi Service](https://app.pulumi.com) web application automatically manages deployment state and enables collaboration between developers and operators. The Pulumi CLI automatically uses the Pulumi Service unless you use a [self-managed backend]({{< relref "/docs/intro/concepts/state" >}}).
 
 ## Getting Started
 

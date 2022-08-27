@@ -12,7 +12,7 @@ aliases:
 
 {{% notes "info" %}}
 The CI/CD integration assistant helps you integrate Pulumi into CI/CD systems for automatically deploying stacks and is only available
-on [Organizations]({{< relref "/docs/intro/pulumi-service/organizations" >}}), not personal accounts.
+to [Organizations]({{< relref "/docs/intro/pulumi-service/organizations" >}}), not personal accounts.
 {{% /notes %}}
 
 <!--more-->
@@ -37,8 +37,7 @@ Here's how the assistant helps teams throughout the Console:
 * The dashboard page shows recently updated stacks. The assistant alerts users by providing a quick navigation link to configure a VCS
 for any stacks that don't have it.
 
-* The **Activity** page for a stack allows users to scan the page quickly and tell which of the updates were run from a
-CI/CD pipeline and which ones were not.
+* The **Activity** page for a stack allows users to scan the page quickly and tell which of the updates were run from a CI/CD pipeline and which ones were not.
 
 ## Using The Same Service For VCS and CI/CD
 

@@ -21,8 +21,7 @@ Organization tokens are available on trials, and Enterprise and Business Critica
 
 Navigate to your organization and then:
 
-1. Select **Settings**.
-1. Navigate to **Access Tokens**.
+1. Navigate to **Settings** > **Access Tokens**.
 1. Select **Create token**.
 
 An Organization Access Token must have a name that is unique among all Organization Access Tokens assigned to it. This allows tokens taking operations on behalf of your organization to be identifiable in the event that one is compromised. This name must be unique even among deleted tokens, in order to maintain the integrity of Audit Log Events which persist the token’s name (even for a deleted token) as part of the event (see below). Any other organization admin can delete this token; it is not owned by the admin which created it.
@@ -39,10 +38,8 @@ An Organization Access Token can be deleted by any organization admin at any tim
 
 From the organization's homepage, follow the same steps as for a Personal Access Token:
 
-1. Select **Settings**.
-1. Navigate to **Access Tokens**.
-1. Select the ellipsis button.
-1. Choose **Delete token**. You will be prompted in a dialog to confirm your choice.
+1. Navigate to **Settings** > **Access Tokens**.
+1. Choose **Delete token** from the action menu. You will be prompted in a dialog to confirm your choice.
 
 If you choose to delete a token, its access will immediately be revoked and all further operations using it will fail as unauthorized.
 

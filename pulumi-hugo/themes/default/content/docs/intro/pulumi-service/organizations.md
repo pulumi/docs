@@ -19,12 +19,10 @@ Organizations are a space for you to collaborate on shared projects and stacks.
 
 ## Organization Pages
 
-| Console Page | Description |
+| Page | Description |
 |--------|--------|
 | Dashboard | An overview of the organization including recently updated stacks, recent activity, and a resource count graph. |
-| Projects | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management]({{< relref "/docs/intro/pulumi-service/projects-and-stacks" >}}). |
-| Members | A list of active members of your Pulumi organization. |
-| Teams | An [Enterprise]({{< relref "/pricing" >}}) feature that provides a way to assign stack permissions to groups of organization members. |
+| All stacks | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management]({{< relref "/docs/intro/pulumi-service/projects-and-stacks" >}}). |
 | Policies | Lists of organization policies and policy groups. Policies allow you to set guardrails to enforce best practices and compliance. |
 | Settings | Organization settings including subscription and payment information and history, Billing Managers, stack permissions, and links to Pulumi's [continuous delivery guides]({{< relref "/docs/guides/continuous-delivery" >}}). |
 
@@ -36,8 +34,7 @@ Learn more about the edition features on the [Pricing Page]({{< relref "/pricing
 
 To create an organization:
 
-1. Select the organization menu at the top of the page.
-1. Select **New organization...**
+1. Select the create organization button at the top of the  navigation.
 1. Provide an organization name, and agree to the terms of service and privacy policy.
 1. Select **Start free trial**.
 
@@ -45,7 +42,7 @@ To create an organization:
 
 To become a member of a Pulumi organization, you must be invited by an existing Pulumi
 organization administrator or submit a request to the administrator for approval.
-In addition, you may also need to be a member of the third-party organization or group backing the Pulumi organization.
+In addition, you also need to be a member of the third-party organization or group backing the Pulumi organization.
 
 For example, to become a member of a Pulumi organization backed by a GitLab Group,
 you must associate a GitLab identity with your Pulumi account, and also
@@ -57,7 +54,7 @@ Pulumi organization administrators can invite new members to an organization.
 
 To invite a new member:
 
-1. Select the members tab.
+1. Navigate to **Settings** > **Members**.
 2. To invite a new member using their email address, select **Invite members**. After the new member is invited, they will receive an email allowing them to accept the invite.
 3. To invite a new member by sharing a link, select **Copy new invite link**. This will copy a link to your clipboard that you can share directly.
 
@@ -71,7 +68,7 @@ The organization menu displays your individual account and all of the organizati
 
 To switch to a different organization:
 
-1. Select the organization  menu at the top of the page.
+1. Select the organization menu at the top of the navigation.
 1. Select your organization name.
 
 ## Organization Roles
@@ -105,8 +102,7 @@ Only organization admins can change the organization identity provider.
 
 To change an organization's identity provider:
 
-1. Navigate to the organization's **Settings**.
-1. Navigate to **Access Management**.
+1. Navigate to **Settings** > **Access Management**.
 1. Select **Change requirements**.
 
 ### GitHub Identity Provider

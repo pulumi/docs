@@ -13,7 +13,7 @@ aliases:
 - /docs/intro/console/projects-and-stacks/
 ---
 
-Projects group stacks together and are folders containing a Pulumi.yaml file.
+Projects group stacks together and contain a Pulumi.yaml file.
 Stacks are isolated, independently configurable instances of a Pulumi program.
 Projects can have as many stacks as you need.
 
@@ -21,7 +21,7 @@ Projects can have as many stacks as you need.
 
 To create a project:
 
-1. Navigate to **Projects**.
+1. Navigate to **All stacks**.
 1. Select **Create project**.
 1. Select a cloud and a language and use the **Next** button.
 1. Optionally, change your project name and project description.
@@ -34,7 +34,7 @@ The Pulumi Service provides fine-grained access controls for stacks. Stack permi
 based on the member's role within the organization, and on their team membership.
 Additionally, any member who creates a stack is granted admin permissions on that stack.
 
-Organization admins can control the stack default permissions at the organization level from the organization's **Settings**.
+Organization admins can control the stack default permissions at the organization level from **Settings** > **General**.
 There are four types of stack permissions: `None`, `Read`, `Write`, and `Admin`.
 [Team permissions]({{< relref "/docs/intro/pulumi-service/teams#team-permissions" >}}) will expand these default permissions.
 
@@ -59,10 +59,21 @@ Stack permissions allow users to perform the following actions:
 
 To view an organization's stacks:
 
-1. Navigate to **Projects**.
+1. Navigate to **All stacks**.
 1. Optionally, adjust the grouping by selecting the **Group By** and **Sort By** controls.
 1. To view a stacks details select the name of the stack.
 1. To view a specific stack update, navigate to **Activity** and select it from the list.
+
+## Stack Favorites
+
+Stack favorites allow you to label specific stacks for quick and easy access. Stack favorites will be dispalyed in the navigation and on your dashboard.
+
+![""](/images/docs/reference/service/stacks-navigation-favorites-card.png)
+
+### Favortie a Stack
+
+1. Navigate to the stack.
+1. Select the star icon next to the stack name.
 
 ### Stack README
 
@@ -71,7 +82,8 @@ To add a README to a stack:
 1. Export a [Stack output](https://www.pulumi.com/learn/building-with-pulumi/stack-outputs) named `readme` that contains your templated Stack README markdown, commonly by reading a file, i.e. `Pulumi.README.md`.
 2. Create a README template for the Stack.
 3. Run `pulumi up` on that Stack.
-4. Open the Pulumi Service UI, navigate to Projects and then the Stack you have updated. Once on the Stack page you will see the README tab with your README file.
+4. Navigate to **All stacks** and then select the stack.
+5. Navigate to **README**.
 
 Examples for adding the Stack Output `readme` to a Pulumi program:
 
@@ -199,7 +211,7 @@ Here is how it looks rendered in the [Pulumi Service UI](https://app.pulumi.com)
 
 To view a stack's details:
 
-1. Navigate to **Projects** and then a specific stack.
+1. Navigate to **All stacks** and then a specific stack.
 1. Navigate to **Activity**.
 1. Review the stack's outputs, configuration values, and tags.
 
@@ -213,12 +225,12 @@ Custom stack tags can help you group and filter your stacks.
 
 To create a custom tag:
 
-1. Navigate to **Projects** and then a specific stack.
+1. Navigate to **All stacks** and then a specific stack.
 1. Select **New tag**.
 
 To modify or delete a custom tag:
 
-1. Navigate to **Projects** and then a specific stack.
+1. Navigate to **All stacks** and then a specific stack.
 1. To modify a custom tag, use the pencil icon.
 1. To delete a custom tag, use the trash can icon.
 
@@ -226,7 +238,7 @@ To modify or delete a custom tag:
 
 To view stack activity:
 
-1. Navigate to **Projects** and then a specific stack.
+1. Navigate to **All stacks** and then a specific stack.
 1. Navigate to **Activity**.
 1. Review insights and operations that were performed on your stack resources during the update.
 1. Navigate to **Changes**, **Timeline**, or **Configuration** for more details.
@@ -249,7 +261,7 @@ The **Configuration** section displays the same configuration details that you c
 
 To view a stack's resources:
 
-1. Navigate to **Projects** and then a specific stack.
+1. Navigate to **All stacks** and then a specific stack.
 1. Navigate to **Resources**.
 1. Select **List View** or **Graph View** to toggle between a list view and a graph view.
 1. Selecting an individual resource from the list or graph view will provide more details.
@@ -283,7 +295,7 @@ Deleting a stack removes the stack entirely from the Pulumi Service, along with 
 
 To delete a stack:
 
-1. Navigate to **Projects** and then a specific stack.
+1. Navigate to **All stacks** and then a specific stack.
 1. Navigate to the stack's **Settings**.
 1. Follow the instructions in the _Danger Zone_.
 

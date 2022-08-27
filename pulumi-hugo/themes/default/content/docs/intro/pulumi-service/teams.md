@@ -15,11 +15,10 @@ aliases:
 
 {{% notes "info" %}}
 Teams are only available to organizations using Pulumi Enterprise Edition and Pulumi Business Critical Edition.
-To learn more about our editions visit our [pricing page]({{< relref "/pricing" >}}).
+To learn more about editions visit the [pricing page]({{< relref "/pricing" >}}).
 {{% /notes %}}
 
-The Pulumi Service offers role-based access control (RBAC) using teams. Teams allow organization admins to assign a set of stack permissions
-to a group of users.
+The Pulumi Service offers role-based access control (RBAC) using teams. Teams allow organization admins to assign a set of stack permissions to a group of users.
 
 ## Creating a Team{#creating-a-team}
 
@@ -27,13 +26,12 @@ By default, all organization admins can create new teams.
 
 To create a team:
 
-1. Navigate to **Teams**.
+1. Navigate to **Settings** > **Teams**.
 1. Select **Create team**.
 
 To give members permission to create teams:
 
-1. Navigate to the organization's **Settings**.
-1. Navigate to **Access Management**.
+1. Navigate to **Settings** > **Access Management**.
 1. Use the toggle to turn on the **Allow organization members to create teams** setting.
 
 ## GitHub-based Teams
@@ -50,8 +48,7 @@ By default only organization admins can create teams.
 
 To allow all members to create teams:
 
-1. Navigate to the organization’s Settings.
-1. Navigate to Access Management.
+1. Navigate to **Settings** > **Access Management**.
 1. Use the toggle to turn on the Allow organization members to create teams setting.
 
 ### Granting Access to Stacks within Teams
@@ -67,5 +64,5 @@ team. By default, any new team members will be assigned the team member role.
 
 To change a team member's role:
 
-1. Navigate to **Teams** and then the specific team.
-1. In the **Members** section use the ellipsis menu item at the end of the table row and select **Change role to**.
+1. Navigate to **Settings** > **Teams** and then the specific team.
+1. In the **Members** section use the action menu item at the end of the table row and select **Change role to**.

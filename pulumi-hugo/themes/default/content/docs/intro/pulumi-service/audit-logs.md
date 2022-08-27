@@ -10,20 +10,18 @@ aliases:
 - /docs/intro/console/auditing/
 ---
 {{% notes "info" %}}
-Audit Logs are only available to organizations using Pulumi Business Critical.
-To learn more about our editions, visit our [pricing page]({{< relref "/pricing" >}}).
+Audit Logs are available to organizations using the Enterprise and Business Critical editions.
+To learn more about editions, visit the [pricing page]({{< relref "/pricing" >}}).
 {{% /notes %}}
 
 ## Overview
 
 Audit logs enable you to track the activity of users within an
-organization. They attempt to answer what a user did, when
-they did it and where. They help answer these questions
-by recording user actions.
+organization. They display what a user did, when
+they did it and where by recording user actions.
 
 Pulumi's audit logs allow you to account for the activity your
-users are taking within your organization. These logs are available to
-organizations on the Pulumi Business Critical Edition. The logs are immutable and
+users are taking within your organization. The logs are immutable and
 and record all user actions. Auditing makes the activity
 of members in an organization attributable.
 The logs capture the UNIX timestamp of the event, the user
