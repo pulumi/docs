@@ -63,8 +63,8 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: "Kat Cosgrove"
-          role: "Staff Developer Advocate, Pulumi"
+        - name: "Lee Briggs"
+          role: "Community Engineer, Pulumi"
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
