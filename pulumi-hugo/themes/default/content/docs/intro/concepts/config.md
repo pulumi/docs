@@ -64,6 +64,28 @@ If `[value]` is not specified when setting a configuration key, the CLI will pro
 $ cat my_key.pub | pulumi config set publicKey
 ```
 
+## Using the Config Flag with `pulumi new`
+
+Configuration keys and values can be passed when using `pulumi new`.
+
+To pass a single key/value config pair use:
+
+```bash
+$ pulumi new template-name --config="key=value"
+```
+
+To pass multiple key/value config pairs use:
+
+```bash
+$ pulumi new template-name --config="key=value" --config="key=value"
+```
+
+And a complete example showing how to pass in the AWS region:
+
+```bash
+$ pulumi new aws-typescript --config="aws:region=us-west-2"
+```
+
 ## Accessing Configuration from Code {#code}
 
 Configuration values can be retrieved using either {{< pulumi-config-get >}} or {{< pulumi-config-require >}}. Using {{< pulumi-config-get >}} will return {{< language-null >}} if the configuration value was not provided, and {{< pulumi-config-require >}} will raise an exception with a helpful error message to prevent the deployment from continuing until the variable has been set using the CLI.
