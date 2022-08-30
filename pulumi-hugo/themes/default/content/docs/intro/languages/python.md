@@ -12,7 +12,7 @@ aliases: ["/docs/reference/python/"]
 
 <img src="/logos/tech/logo-python.svg" align="right" width="150" style="padding:8px; margin-top: -64px">
 
-Pulumi supports programs written in Python 3.6 or later.
+Pulumi supports writing your infrastructure as code in the Python language running on any [supported version](https://devguide.python.org/versions/#versions).
 
 {{< install-python >}}
 

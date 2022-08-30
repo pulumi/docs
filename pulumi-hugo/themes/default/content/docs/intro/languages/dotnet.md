@@ -12,7 +12,9 @@ aliases: ["/dotnet/"]
 
 <img src="/logos/tech/dotnet.png" align="right" width="150" style="padding:8px; margin-top: -64px">
 
-Pulumi supports infrastructure as code using any .NET language. You can use your favorite .NET tools &mdash; such as editors, package managers, build systems, and test frameworks &mdash; to create, deploy, and manage infrastructure on any cloud, including Azure, AWS, and Google Cloud.
+Pulumi supports writing your infrastructure as code in any .NET language programs running on dotnet using any [supported version](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core#lifecycle).
+
+You can use your favorite .NET tools &mdash; such as editors, package managers, build systems, and test frameworks &mdash; to create, deploy, and manage infrastructure on any cloud, including Azure, AWS, and Google Cloud.
 
 <a class="btn" href="https://dotnet.microsoft.com/download" target="_blank" title="Install .NET">Install .NET</a>
 

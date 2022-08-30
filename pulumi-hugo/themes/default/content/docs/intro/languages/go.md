@@ -10,7 +10,7 @@ menu:
 
 <img src="/logos/tech/logo-golang.png" align="right" width="150" style="padding:8px; margin-top: -64px">
 
-Pulumi supports writing your infrastructure as code using the Go language. Go 1.16 or later is required.
+Pulumi supports writing your infrastructure as code in the Go language built for any [supported version](https://go.dev/doc/devel/release#policy).
 
 <a class="btn" href="https://golang.org/doc/install" target="_blank" title="Install Go">Install Go</a>
 
