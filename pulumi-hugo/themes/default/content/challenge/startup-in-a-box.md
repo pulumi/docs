@@ -7,23 +7,37 @@ meta_desc: |
     Build and deploy your very own startup landing site to the cloud, complete with everything you need to get started!
 ---
 
-### Welcome to the Pulumi Challenge!
+## Welcome to the Pulumi Challenge!
 
-### Startup in a Box
+<div class="flex flex-wrap md:mt-12">
+  <div class="w-full md:w-1/2">
+    <h3>Startup in a Box</h3>
+    <p class="pr-12">
+      Thinking about turning that side project into a little something more? Follow along to stand up a website for your startup on Amazon S3 with Cloudfront and Checkly, all using Pulumi. When you're done, we'll send you a fancy drink tumbler with a special Pulumipus on it, just for this Challenge!
+    </p>
+    <h3>Prerequisites</h3>
+    <p>In order to complete this challenge, you'll need a couple things set up in advance.</p>
+    <ul>
+      <li>
+        A <a href="https://app.pulumi.com/signup" target="_blank" rel="noopener noreferrer">Pulumi account</a>
+      </li>
+      <li>
+        The <a href="{{< relref "/docs/get-started/install/" >}}" target="_blank" rel="noopener noreferrer">Pulumi CLI</a>
+      </li>
+      <li>
+        AWS account
+      </li>
+      <li>
+        <a href="https://www.checklyhq.com/" target="_blank" rel="noopener noreferrer">Checkly</a> account
+      </li>
+    </ul>
+  </div>
 
-Thinking about turning that side project into a little something more? Follow along to stand up a website for your startup on Amazon S3 with Cloudfront and Checkly, all using Pulumi. When you're done, we'll send you a fancy drink tumbler with a special Pulumipus on it, just for this Challenge!
-
-### Prerequisites
-
-In order to complete this challenge, you'll need a couple things set up in advance.
-
-* A [Pulumi account](https://app.pulumi.com/signup)
-
-* The [Pulumi CLI]({{< relref "/docs/get-started/install/" >}})
-
-* AWS account
-
-* [Checkly](https://www.checklyhq.com/) account
+  <div class="w-full order-first md:order-last md:w-1/2">
+    <img class="hidden md:block" src="/images/pulumi-challenge-swag-tumbler.png" />
+    <img class="mx-auto my-4 md:hidden" src="/images/pulumi-challenge-swag-tumbler-mobile.png" />
+  </div>
+</div>
 
 ### Challenge
 
