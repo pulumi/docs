@@ -1,0 +1,75 @@
+{{ define "hero" }}{{ partial "hero.html" (dict "title" "Challenges") }}{{ end }}
+{{ define "main" }}
+    <section class="max-w-4xl container mx-auto py-8 px-4 text-center text-lg">
+        <p>
+            Thousands of developers think Pulumi is an amazing IaC tool that increases developer velocity and tames the complexity of modern cloud scale. Try it out for yourself by
+            taking a Pulumi Challenge! You'll build something cool, and we'll send you some super secret swag in return. We promise it's better than a t-shirt.
+        </p>
+    </section>
+
+    <section id="challenges" class="w-full relative overflow-visible">
+        <!-- Only do the 2x2 layout at tablet width (md) and up. -->
+        <ul class="md:flex flex-wrap list-none">
+            <li class="md:w-1/2">
+                <div>
+                    <div class="w-full p-4 my-2">
+                        <div class="card text-center py-16 px-8 relative bg-white">
+                            <h4>Startup in a Box</h4>
+                            <p class="my-8">Build and deploy your very own landing site to the cloud, complete with Cloudfront and Checkly!</p>
+                            <div class="flex flex-col lg:flex-row justify-center items-center">
+                                <div class="my-2 mx-2 w-full lg:w-auto">
+                                    <a href="{{ relref . "/startup-in-a-box" }}" class="w-full block btn-secondary">Start</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="md:w-1/2">
+                <div>
+                    <div class="w-full p-4 my-2">
+                        <div class="card text-center py-16 px-8 relative bg-white">
+                            <h4>One Quickstart to Rule them All</h4>
+                            <p class="my-8">Launching in September!</p>
+                            <div class="flex flex-col lg:flex-row justify-center items-center">
+                                <div class="my-2 mx-2 w-full lg:w-auto">
+                                    <a href="" class="w-full block btn-secondary">Coming Soon</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="md:w-1/2">
+                <div>
+                    <div class="w-full p-4 my-2">
+                        <div class="card text-center py-16 px-8 relative bg-white">
+                            <h4>Overengineering Anything</h4>
+                            <p class="my-8">Launching in October!</p>
+                            <div class="flex flex-col lg:flex-row justify-center items-center">
+                                <div class="my-2 mx-2 w-full lg:w-auto">
+                                    <a href="" class="w-full block btn-secondary">Coming Soon</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="md:w-1/2">
+                <div>
+                    <div class="w-full p-4 my-2">
+                        <div class="card text-center py-16 px-8 relative bg-white">
+                            <h4>Scaling on AWS</h4>
+                            <p class="my-8">Launching in November!</p>
+                            <div class="flex flex-col lg:flex-row justify-center items-center">
+                                <div class="my-2 mx-2 w-full lg:w-auto">
+                                    <a href="" class="w-full block btn-secondary">Coming Soon</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+{{ end }}
