@@ -32,6 +32,17 @@ type: webinars
 external: false
 block_external_search_index: false
 
+# data for Google Events
+event_data:
+  name: Pulumi - Building a Developer Platform with AKS and Cosmos DB
+  start_date: 2022-09-28T09:00:00-07:00
+  end_date: 2022-09-28T10:30:00-07:00
+  url: "https://www.pulumi.com/resources/building-a-developer-platform-with-aks-and-cosmosdb/"
+  description: |
+    When platform teams are planning Cloud Native platforms for their application developers, they often need to decide how to manage persistent storage: either as a MongoDB workload running inside their Kubernetes cluster or as a managed service outside of the cluster.
+
+    In this session, we’ll show you how to set up a platform that includes Azure Kubernetes Service (AKS) with scalable persistent storage provided by Azure Cosmos DB with its API support for MongoDB – and we’ll do it all using Python and Pulumi.
+
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
 url_slug: "building-a-developer-platform-with-aks-and-cosmosdb"

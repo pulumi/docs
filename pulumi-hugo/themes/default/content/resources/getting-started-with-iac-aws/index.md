@@ -32,6 +32,14 @@ type: webinars
 external: false
 block_external_search_index: true
 
+# data for Google Events
+event_data:
+  name: Pulumi - Getting Started with Infrastructure as Code on AWS
+  start_date: 2022-09-12T10:00:00.000-07:00
+  end_date: 2022-09-12T11:00:00.000-07:00
+  url: "https://www.pulumi.com/resources/getting-started-with-iac-aws/"
+  description: In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform. You will be introduced to Pulumi, an infrastructure as code platform, where you can use familiar programming languages to provision modern cloud infrastructure. This workshop is designed to help users completely new to Pulumi to become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and a series of hands on exercises to help you understand the building blocks available in Pulumi.
+
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
 url_slug: "getting-started-with-iac-aws"
