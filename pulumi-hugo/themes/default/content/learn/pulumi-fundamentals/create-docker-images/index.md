@@ -201,7 +201,7 @@ public class App {
         final var stackName = ctx.stackName();
 
         final String backendImageName = "backend";
-        var backendImage = new RemoteImage(
+        final var backendImage = new RemoteImage(
                 backendImageName,
                 RemoteImageArgs.builder()
                         .name(String.format("pulumi/tutorial-pulumi-fundamentals-%s:latest",backendImageName))
@@ -365,14 +365,14 @@ mongo_image = docker.RemoteImage("mongo",
 
 ```java
 final String frontendImageName = "frontend";
-var frontendImage = new RemoteImage(
+final var frontendImage = new RemoteImage(
         frontendImageName,
         RemoteImageArgs.builder()
                 .name(String.format("pulumi/tutorial-pulumi-fundamentals-%s:latest",frontendImageName))
                 .build()
 );
 
-var mongoImage = new RemoteImage(
+final var mongoImage = new RemoteImage(
         "mongoImage",
         RemoteImageArgs.builder()
                 .name("pulumi/tutorial-pulumi-fundamentals-database-local:latest")
@@ -477,7 +477,7 @@ public class App {
         final var stackName = ctx.stackName();
 
         final String backendImageName = "backend";
-        var backendImage = new RemoteImage(
+        final var backendImage = new RemoteImage(
                 backendImageName,
                 RemoteImageArgs.builder()
                         .name(String.format("pulumi/tutorial-pulumi-fundamentals-%s:latest",backendImageName))
@@ -485,14 +485,14 @@ public class App {
         );
 
         final String frontendImageName = "frontend";
-        var frontendImage = new RemoteImage(
+        final var frontendImage = new RemoteImage(
                 frontendImageName,
                 RemoteImageArgs.builder()
                         .name(String.format("pulumi/tutorial-pulumi-fundamentals-%s:latest",frontendImageName))
                         .build()
         );
 
-        var mongoImage = new RemoteImage(
+        final var mongoImage = new RemoteImage(
                 "mongoImage",
                 RemoteImageArgs.builder()
                         .name("pulumi/tutorial-pulumi-fundamentals-database-local:latest")

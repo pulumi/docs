@@ -69,10 +69,10 @@ mongo_port = config.require_int("mongoPort")
 These configuration declarations go in the static `stack()` method:
 
 ```java
-var config = ctx.config();
-var frontendPort = config.requireInteger("frontendPort");
-var backendPort = config.requireInteger("backendPort");
-var mongoPort = config.requireInteger("mongoPort");
+final var config = ctx.config();
+final var frontendPort = config.requireInteger("frontendPort");
+final var backendPort = config.requireInteger("backendPort");
+final var mongoPort = config.requireInteger("mongoPort");
 ```
 
 {{% /choosable %}}
@@ -186,16 +186,16 @@ public class App {
     }
 
     private static void stack(Context ctx) {
-        var config = ctx.config();
-        var frontendPort = config.requireInteger("frontendPort");
-        var backendPort = config.requireInteger("backendPort");
-        var mongoPort = config.requireInteger("mongoPort");
+        final var config = ctx.config();
+        final var frontendPort = config.requireInteger("frontendPort");
+        final var backendPort = config.requireInteger("backendPort");
+        final var mongoPort = config.requireInteger("mongoPort");
 
         final var stackName = ctx.stackName();
 
         // Create our images
         final String backendImageName = "backend";
-        var backendImage = new RemoteImage(
+        final var backendImage = new RemoteImage(
                 backendImageName,
                 RemoteImageArgs.builder()
                         .name(String.format("pulumi/tutorial-pulumi-fundamentals-%s:latest",backendImageName))
@@ -203,19 +203,21 @@ public class App {
         );
 
         final String frontendImageName = "frontend";
-        var frontendImage = new RemoteImage(
+        final var frontendImage = new RemoteImage(
                 frontendImageName,
                 RemoteImageArgs.builder()
                         .name(String.format("pulumi/tutorial-pulumi-fundamentals-%s:latest",frontendImageName))
                         .build()
         );
 
-        var mongoImage = new RemoteImage(
+        final var mongoImage = new RemoteImage(
                 "mongoImage",
                 RemoteImageArgs.builder()
                         .name("pulumi/tutorial-pulumi-fundamentals-database-local:latest")
                         .build()
         );
+    }
+}
 ```
 
 {{% /choosable %}}
@@ -332,7 +334,7 @@ Add this code at the bottom:
 
 ```java
 // Set up a Docker Network
-var network = new Network(
+final var network = new Network(
         "network",
         NetworkArgs.builder()
                 .name(String.format("services-%s",stackName))
@@ -414,7 +416,7 @@ backend_container = docker.Container("backend_container",
 {{% choosable language java %}}
 
 ```java
-var backendContainer = new Container(
+final var backendContainer = new Container(
                 "backendContainer",
                 ContainerArgs.builder()
                         .name(String.format("backend-%s",stackName))
@@ -534,10 +536,10 @@ protocol = config.require("protocol")
 {{% choosable language java %}}
 
 ```java
-var mongoHost = config.require("mongoHost");
-var database = config.require("database");
-var nodeEnvironment = config.require("nodeEnvironment");
-var protocol = config.require("protocol");
+final var mongoHost = config.require("mongoHost");
+final var database = config.require("database");
+final var nodeEnvironment = config.require("nodeEnvironment");
+final var protocol = config.require("protocol");
 ```
 
 {{% /choosable %}}
@@ -634,7 +636,7 @@ mongo_container = docker.Container("mongo_container",
 {{% choosable language java %}}
 
 ```java
-var mongoContainer = new Container(
+final var mongoContainer = new Container(
         "mongoContainer",
         ContainerArgs.builder()
                 .name(String.format("mongo-%s",stackName))
@@ -731,7 +733,7 @@ frontend_container = docker.Container("frontend_container",
 {{% choosable language java %}}
 
 ```java
-var frontendContainer = new Container(
+final var frontendContainer = new Container(
         "frontendContainer",
         ContainerArgs.builder()
                 .name(String.format("frontend-%s",stackName))
@@ -1009,20 +1011,20 @@ public class App {
     }
 
     private static void stack(Context ctx) {
-        var config = ctx.config();
-        var frontendPort = config.requireInteger("frontendPort");
-        var backendPort = config.requireInteger("backendPort");
-        var mongoPort = config.requireInteger("mongoPort");
-        var mongoHost = config.require("mongoHost");
-        var database = config.require("database");
-        var nodeEnvironment = config.require("nodeEnvironment");
-        var protocol = config.require("protocol");
+        final var config = ctx.config();
+        final var frontendPort = config.requireInteger("frontendPort");
+        final var backendPort = config.requireInteger("backendPort");
+        final var mongoPort = config.requireInteger("mongoPort");
+        final var mongoHost = config.require("mongoHost");
+        final var database = config.require("database");
+        final var nodeEnvironment = config.require("nodeEnvironment");
+        final var protocol = config.require("protocol");
 
         final var stackName = ctx.stackName();
 
         // Create our images
         final String backendImageName = "backend";
-        var backendImage = new RemoteImage(
+        final var backendImage = new RemoteImage(
                 backendImageName,
                 RemoteImageArgs.builder()
                         .name(String.format("pulumi/tutorial-pulumi-fundamentals-%s:latest",backendImageName))
@@ -1030,14 +1032,14 @@ public class App {
         );
 
         final String frontendImageName = "frontend";
-        var frontendImage = new RemoteImage(
+        final var frontendImage = new RemoteImage(
                 frontendImageName,
                 RemoteImageArgs.builder()
                         .name(String.format("pulumi/tutorial-pulumi-fundamentals-%s:latest",frontendImageName))
                         .build()
         );
 
-        var mongoImage = new RemoteImage(
+        final var mongoImage = new RemoteImage(
                 "mongoImage",
                 RemoteImageArgs.builder()
                         .name("pulumi/tutorial-pulumi-fundamentals-database-local:latest")
@@ -1045,7 +1047,7 @@ public class App {
         );
 
         // Set up a Docker Network
-        var network = new Network(
+        final var network = new Network(
                 "network",
                 NetworkArgs.builder()
                         .name(String.format("services-%s",stackName))
@@ -1053,7 +1055,7 @@ public class App {
         );
 
         // Container time!
-        var mongoContainer = new Container(
+        final var mongoContainer = new Container(
                 "mongoContainer",
                 ContainerArgs.builder()
                         .name(String.format("mongo-%s",stackName))
@@ -1070,7 +1072,7 @@ public class App {
                         .build()
         );
 
-        var backendContainer = new Container(
+        final var backendContainer = new Container(
                 "backendContainer",
                 ContainerArgs.builder()
                         .name(String.format("backend-%s",stackName))
@@ -1094,7 +1096,7 @@ public class App {
                         .build()
         );
 
-        var frontendContainer = new Container(
+        final var frontendContainer = new Container(
                 "frontendContainer",
                 ContainerArgs.builder()
                         .name(String.format("frontend-%s",stackName))
@@ -1116,7 +1118,6 @@ public class App {
         );
 
         ctx.export("link", Output.of("http://localhost:3001"));
-        return ctx.exports();
     }
 }
 ```
