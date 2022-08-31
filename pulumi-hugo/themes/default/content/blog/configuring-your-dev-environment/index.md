@@ -30,7 +30,7 @@ Before proceeding, you need to answer three questions:
 
 - Which operating system to use for building cloud resources: macOS, Windows, or Linux?
 - Which cloud provider are you using? This guide covers AWS, Azure, and Google Cloud.
-- Which programming language will you use? Pulumi supports Node.js (JavaScript and Typescript), Python 3.6 or higher, Golang, and .NET (C#, F#, and VB).
+- Which programming language will you use? Pulumi supports Node.js (JavaScript and Typescript), Python 3.7 or higher, Golang, and .NET (C#, F#, and VB).
 
 Once you've made these choices, you can follow this guide in a choose-your-own-adventure style.
 
@@ -426,7 +426,7 @@ $ brew install node
 
 {{< chooser os "macos,windows,linux" >}}
 {{% choosable os macos %}}
-MacOS includes Python; however, versions shipped before December 2019 have Python 2.7 installed, which is deprecated. Pulumi requires Python 3.6 or higher. Use brew to install Python, which installs it at `/usr/bin/local/python3`.
+MacOS includes Python; however, versions shipped before December 2019 have Python 2.7 installed, which is deprecated. Pulumi requires Python 3.7 or higher. Use brew to install Python, which installs it at `/usr/bin/local/python3`.
 
 ```bash
 $ brew install python

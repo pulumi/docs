@@ -161,7 +161,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: 3.6
+          python-version: 3.7
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
