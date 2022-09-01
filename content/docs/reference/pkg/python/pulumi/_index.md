@@ -1116,8 +1116,8 @@ Output so that dependent resources can be properly tracked.</p>
 <p>‘func’ is not allowed to make resources.</p>
 <p>‘func’ can return other Outputs.  This can be handy if you have a Output<span class="raw-html-m2r"><SomeVal></span>
 and you want to get a transitive dependency of it.</p>
-<p>This function will be called during execution of a ‘pulumi up’ request.  It may not run
-during ‘pulumi preview’ (as the values of resources are of course may not be known then).</p>
+<p>This function will be called during execution of a <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">up</span></code> request.  It may not run
+during <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">preview</span></code> (as the values of resources are of course may not be known then).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>func</strong> (<em>Callable</em><em>[</em><em>[</em><em>T_co</em><em>]</em><em>,</em><em>Input</em><em>[</em><em>U</em><em>]</em><em>]</em>) – A function that will, given this Output’s value, transform the value to
