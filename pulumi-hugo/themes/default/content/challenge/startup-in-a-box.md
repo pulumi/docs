@@ -43,6 +43,10 @@ meta_image: challenge_cta.png
 
 ### Challenge
 
+Follow along with the steps outlined on this page, or watch this video to complete the challenge.
+
+{{< youtube "NU7uOy273jQ?rel=0" >}}
+
 #### Step 1. Your First Pulumi Program
 
 You will learn how to create a new Pulumi program using our Pulumi templates, specifically for AWS with TypeScript. Create a new directory called `pulumi-challenge` and run the following inside of it:
