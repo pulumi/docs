@@ -26,7 +26,7 @@ The [Pulumi Challenge]({{< relref "/challenge" >}}) is a series of specialized t
 
 ## How it Works
 
-Work through the Challenge tutorial to build a real-world application, personalizing it as you go. You'll learn how Pulumi works to ease integration and infrastructure deployment through providers for major cloud providers, Kubernetes, obervability tools, CI/CD systems, dynamic providers, reusable component resources, and more.
+Work through the Challenge tutorial to build a real-world application, personalizing it as you go. You'll learn how Pulumi works to ease integration and infrastructure deployment through providers for major cloud providers, Kubernetes, observability tools, CI/CD systems, dynamic providers, reusable component resources, and more.
 
 Once a Challenge is complete, our swag provider will kick off and send you the unique item for that Challenge. Every challenge offers something different, so complete them all as we release them!
 
