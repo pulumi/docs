@@ -79,16 +79,16 @@ final var mongoPort = config.requireInteger("mongoPort");
 
 {{% choosable language yaml %}}
 
-These statements go between the `description` and the `resources`.
+These statements go between the `description` and the `resources` where `configuration` and `variables` have been:
 
 ```yaml
 configuration:
   frontendPort:
-    type: Integer
+    type: Number
   backendPort:
-    type: Integer
+    type: Number
   mongoPort:
-    type: Integer
+    type: Number
 variables:
   backendImageName: backend
   frontendImageName: frontend
@@ -225,16 +225,17 @@ public class App {
 {{% choosable language yaml %}}
 
 ```yaml
-name: fundamentals
+name: my_first_app
 runtime: yaml
-description: a yaml test
+description: A minimal Pulumi YAML program
+
 configuration:
   frontendPort:
-    type: Integer
+    type: Number
   backendPort:
-    type: Integer
+    type: Number
   mongoPort:
-    type: Integer
+    type: Number
 variables:
   backendImageName: backend
   frontendImageName: frontend
@@ -247,10 +248,7 @@ resources:
     type: docker:index:RemoteImage
     properties:
       name: pulumi/tutorial-pulumi-fundamentals-frontend:latest
-  mongo-image:
-    type: docker:index:RemoteImage
-    properties:
-      name: pulumi/tutorial-pulumi-fundamentals-database-local:latest
+outputs:       {}
 ```
 
 {{% /choosable %}}
@@ -292,11 +290,13 @@ In the last topic, we built Docker images. Now we want to create Docker
 containers and pass our configuration to them. Our containers will need to
 connect to each other, so we will need to create a
 [`Network`]({{< relref "registry/packages/docker/api-docs/network" >}}), which
-is another resource. Add the following code at the bottom of your program:
+is another resource.
 
 {{< chooser language "typescript,python,java,yaml" / >}}
 
 {{% choosable language typescript %}}
+
+Add the following code at the bottom of your program:
 
 ```typescript
 // create a network!
@@ -308,6 +308,8 @@ const network = new docker.Network("network", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
+Add the following code at the bottom of your program:
 
 ```python
 # create a network!
@@ -345,6 +347,8 @@ final var network = new Network(
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
+
+ Add the following code at the bottom of your `resources` section:
 
 ```yaml
   network:
@@ -449,7 +453,7 @@ final var backendContainer = new Container(
   backend-container:
     type: docker:index:Container
     properties:
-      name: backend-${pulumi.stack}
+      name: ${backendImageName}-${pulumi.stack}
       image: ${backend-image.repoDigest}
       ports:
         - internal: ${backendPort}
@@ -462,7 +466,7 @@ final var backendContainer = new Container(
         ]
       networksAdvanced:
         - name: ${network.name}
-          aliases: ["backend-${pulumi.stack}"]
+          aliases: ["${backendImageName}-${pulumi.stack}"]
     options:
       dependsOn:
         - ${mongo-container}
@@ -762,7 +766,7 @@ final var frontendContainer = new Container(
   frontend-container:
     type: docker:index:Container
     properties:
-      name: frontend-${pulumi.stack}
+      name: ${frontendImageName}-${pulumi.stack}
       image: ${frontend-image.repoDigest}
       ports:
         - internal: ${frontendPort}
@@ -771,11 +775,11 @@ final var frontendContainer = new Container(
         [
           "LISTEN_PORT=${frontendPort}",
           "HTTP_PROXY=backend-${pulumi.stack}:${backendPort}",
-          "PROXY_PROTOCOL=http://"
+          "PROXY_PROTOCOL=${protocol}"
         ]
       networksAdvanced:
         - name: ${network.name}
-          aliases: ["frontend-${pulumi.stack}"]
+          aliases: ["${frontendImageName}-${pulumi.stack}"]
 ```
 
 {{% /choosable %}}
@@ -1127,9 +1131,10 @@ public class App {
 {{% choosable language yaml %}}
 
 ```yaml
-name: fundamentals
+name: my_first_app
 runtime: yaml
-description: a yaml test
+description: A minimal Pulumi YAML program
+
 configuration:
   frontendPort:
     type: Number
@@ -1165,21 +1170,10 @@ resources:
     type: docker:index:Network
     properties:
       name: services-${pulumi.stack}
-  mongo-container:
-    type: docker:index:Container
-    properties:
-      name: mongo-${pulumi.stack}
-      image: ${mongo-image.repoDigest}
-      ports:
-        - internal: ${mongoPort}
-          external: ${mongoPort}
-      networksAdvanced:
-        - name: ${network.name}
-          aliases: ["mongo"]
   backend-container:
     type: docker:index:Container
     properties:
-      name: backend-${pulumi.stack}
+      name: ${backendImageName}-${pulumi.stack}
       image: ${backend-image.repoDigest}
       ports:
         - internal: ${backendPort}
@@ -1192,14 +1186,25 @@ resources:
         ]
       networksAdvanced:
         - name: ${network.name}
-          aliases: ["backend-${pulumi.stack}"]
+          aliases: ["${backendImageName}-${pulumi.stack}"]
     options:
       dependsOn:
         - ${mongo-container}
+  mongo-container:
+    type: docker:index:Container
+    properties:
+      name: mongo-${pulumi.stack}
+      image: ${mongo-image.repoDigest}
+      ports:
+        - internal: ${mongoPort}
+          external: ${mongoPort}
+      networksAdvanced:
+        - name: ${network.name}
+          aliases: ["mongo"]
   frontend-container:
     type: docker:index:Container
     properties:
-      name: frontend-${pulumi.stack}
+      name: ${frontendImageName}-${pulumi.stack}
       image: ${frontend-image.repoDigest}
       ports:
         - internal: ${frontendPort}
@@ -1208,11 +1213,13 @@ resources:
         [
           "LISTEN_PORT=${frontendPort}",
           "HTTP_PROXY=backend-${pulumi.stack}:${backendPort}",
-          "PROXY_PROTOCOL=http://"
+          "PROXY_PROTOCOL=${protocol}"
         ]
       networksAdvanced:
         - name: ${network.name}
-          aliases: ["frontend-${pulumi.stack}"]
+          aliases: ["${frontendImageName}-${pulumi.stack}"]
+outputs:       {}
+
 ```
 
 {{% /choosable %}}

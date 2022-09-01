@@ -156,31 +156,41 @@ This command creates all the files we need, initializes a new stack named `dev`
 The basic project created by `pulumi new` is comprised of multiple files:
 
 - `Pulumi.yaml`: your project's metadata, containing its name and language
-- {{< langfile >}}: your program's main entrypoint file
 
-{{% choosable language typescript %}}
+{{< choosable language typescript >}}
 
-- `package.json`: your project's Node.js dependency information
+<li>{{< langfile >}}: your program's main entrypoint file</li>
+<li><code>package.json</code>: your project's Node.js dependency information</li>
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable language python %}}
+{{< choosable language python >}}
 
-- `requirements.txt`: your project's Python dependency information
-- `venv`: a [virtualenv](https://pypi.org/project/virtualenv/) for your project
+<li>{{< langfile >}}: your program's main entrypoint file</li>
+<li><code>requirements.txt</code>: your project's Python dependency information</li>
+<li><code>venv</code>: a <a href="https://pypi.org/project/virtualenv/">virtualenv</a> for your project</li>
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable language java %}}
+{{< choosable language java >}}
 
-- `settings.gradle`: your project's Gradle settings
-- `app/`: the app directory generated for Java, which includes the following files:
-    - `build.gradle`: your project's build information for Gradle
-    - `src/main/java/my_first_app/`: the directory that holds your main entrypoint file
+<ul>
+<li>{{< langfile >}}: your program's main entrypoint file</li>
+<li><code>settings.gradle</code>: your project's Gradle settings</li>
+<li><code>app/</code>: the app directory generated for Java, which includes the following files:
+<ul>
+<li><code>build.gradle</code>: your project's build information for Gradle</li>
+<li><code>src/main/java/my_first_app/</code>: the directory that holds your main entrypoint file</li>
+</ul>
+</li>
+</ul>
 
-{{% /choosable %}}
+{{< /choosable >}}
 
 {{% choosable language yaml %}}
+
+For YAML, your {{< langfile >}} is also your program's main entrypoint file.
+
 {{% /choosable %}}
 
 Use the command <code>cat</code>{{< langfile >}} to explore the contents of your
@@ -228,14 +238,14 @@ public class App {
 {{% choosable language yaml %}}
 
 ```yaml
-description: ${DESCRIPTION}
+name: my_first_app
 runtime: yaml
-template:
-    description: A minimal Pulumi YAML program
+description: A minimal Pulumi YAML program
+
 configuration: {}
-variables: {}
-resources: {}
-outputs: {}
+variables:     {}
+resources:     {}
+outputs:       {}
 ```
 
 {{% /choosable %}}

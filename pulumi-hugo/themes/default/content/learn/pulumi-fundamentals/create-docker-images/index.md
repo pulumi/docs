@@ -216,14 +216,18 @@ public class App {
 {{% choosable language yaml %}}
 
 ```yaml
-name: fundamentals
+name: my_first_app
 runtime: yaml
 description: A minimal Pulumi YAML program
+
+configuration: {}
+variables:     {}
 resources:
   backend-image:
     type: docker:index:RemoteImage
     properties:
       name: pulumi/tutorial-pulumi-fundamentals-backend:latest
+outputs:       {}
 ```
 
 {{% /choosable %}}
@@ -507,9 +511,12 @@ public class App {
 {{% choosable language yaml %}}
 
 ```yaml
-name: fundamentals
+name: my_first_app
 runtime: yaml
-description: a yaml test
+description: A minimal Pulumi YAML program
+
+configuration: {}
+variables:     {}
 resources:
   backend-image:
     type: docker:index:RemoteImage
@@ -519,10 +526,7 @@ resources:
     type: docker:index:RemoteImage
     properties:
       name: pulumi/tutorial-pulumi-fundamentals-frontend:latest
-  mongo-image:
-    type: docker:index:RemoteImage
-    properties:
-      name: pulumi/tutorial-pulumi-fundamentals-database-local:latest
+outputs:       {}
 ```
 
 {{% /choosable %}}
