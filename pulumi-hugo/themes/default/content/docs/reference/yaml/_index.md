@@ -287,6 +287,7 @@ Calls a function from a package and returns either the whole object or a single 
 | ------------- |---|-------------| -----|---|
 | `Function`    | string | Yes | No | Name of a function to call. |
 | `Arguments`   | map[string]Expression | Yes | Yes | Arguments to pass to the expression, each key is a named argument. |
+| `Options`   	| [Invoke Options](#invoke-options) | No | No | Options for the provider calling the function. |
 | `Return`      | string | No | No | If the function returns an object, a single key may be selected and returned instead with its name. |
 
 ```yaml
@@ -300,10 +301,31 @@ variables:
             values: ["amzn-ami-hvm-*-x86_64-ebs"]
         owners: ["137112412989"]
         mostRecent: true
+      Options:
+        Version: 5.9.0
       Return: id
 ```
 
 The expression `${AmazonLinuxAmi}` will return the AMI ID returned from the [`aws:getAmi`](https://www.pulumi.com/registry/packages/aws/api-docs/getami/) function.
+
+#### Invoke Options
+
+The value of the `options` property of an Fn::Invoke is an object with the following properties.
+
+The  `parent` and `provider` values permit expressions which must use interpolation syntax to reference resources by name. For example:
+
+```yaml
+    options:
+      provider: ${myEksProvider}
+      parent: ${someParentResource}
+```
+
+| Property                  | Type         | Description |
+| ------------------------- |--------------|-------------|
+| `parent`                  | Expression   | Parent specifies a parent for the resource |
+| `provider`                | Expression   | Provider specifies an explicitly configured provider, instead of using the default global provider |
+| `version`                 | string       | Version specifies a provider plugin version that should be used when operating on a resource |
+| `pluginDownloadURL`       | string       | Version specifies a URL that should be used when to download the provider plugin |
 
 ##### `Fn::Join`
 
