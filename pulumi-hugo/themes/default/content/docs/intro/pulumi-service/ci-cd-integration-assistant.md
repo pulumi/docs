@@ -17,46 +17,31 @@ to [Organizations]({{< relref "/docs/intro/pulumi-service/organizations" >}}), n
 
 <!--more-->
 
-A version control system (VCS) provides team collaboration capabilities and ensures that the source code for your Pulumi project is not
-just on a single developer's machine. Using a CI/CD system makes your team more productive, by automatically deploying your Pulumi stacks.
-So that code is delivered to production -- meaning less of a lag between commits and what your end users are seeing.
+A version control system (VCS) provides team collaboration capabilities and ensures that the source code for your Pulumi project
+is not on a single developer's machine.
+Using a CI/CD system makes your team more productive, by automatically deploying your Pulumi stacks.
+The assistant contains a guided experience to help teams configure a VCS as well as automate it with a CI/CD pipeline.
 
-The assistant contains a guided experience to help teams configure a VCS as well as automate it with a
-CI/CD pipeline.
-
-The assistant has two options to help you to get started with integrations:
-
-* Use a single service that provides both a version control system and CI/CD pipelines
-* Or, just get the starter workflow for a CI/CD service of your choice customized for your stack
+The assistant supports using the same service for both version control and CI/CD,
+as well as using different services for version control and CI/CD.
 
 ![Start Workflow Assistant](/images/docs/reference/console/start-workflow-wizard.png)
 
-The assistant also offers best practice hints for stacks that do not have a VCS configuration.
-Here's how the assistant helps teams throughout the Console:
+## Using the CI/CD Assistant
 
-* The dashboard page shows recently updated stacks. The assistant alerts users by providing a quick navigation link to configure a VCS
-for any stacks that don't have it.
+1. Navigate to a stack in a Pulumi Service organization.
+2. Select **Settings** in the top navigation.
+3. Select **Integrations** in the left navigation.
+4. Notice the CI/CD assistance at the top of the page. Note: If you do not see the assistant on this page, it means CI/CD is already setup for the stack.
 
-* The **Activity** page for a stack allows users to scan the page quickly and tell which of the updates were run from a CI/CD pipeline and which ones were not.
-
-## Using The Same Service For VCS and CI/CD
-
-There are several benefits for a team to choose a single service for all of their team collaboration needs.
-This section reviews how the assistant helps your team configure VCS and CI/CD regardless of the VCS or identity provider
-you use to connect to Pulumi.
-
-### Configuring a VCS
-
-VCS configuration applies to the Pulumi project in which your stack is created.
+## VCS Identity Options
 
 {{% notes "info" %}}
 If your identity isn't tied to a VCS service (for example, if you're using SAML or email), you will still be able to get a customized CI/CD
 workflow for your stack.
 {{% /notes %}}
 
-#### VCS Identity Options
-
-Services such as Atlassian Bitbucket, GitHub, GitLab offer both a version control system as well as a CI/CD service.
+VCS configuration applies to the Pulumi project in which your stack is created. Services such as Atlassian Bitbucket, GitHub, GitLab offer both a version control system as well as a CI/CD service.
 
 * Bitbucket offers [Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/)
 * GitHub has [GitHub Actions](https://github.com/features/actions)
@@ -72,7 +57,7 @@ To configure VCS using the CI/CD Assistant:
 1. Follow the VCS configuration instructions and check off the boxes as you complete each step.
 1. After each step, select the **Next** button to move to the next step.
 
-### Configure CI/CD secrets
+## Configure CI/CD secrets
 
 Now that your Pulumi project is configured to use a VCS your team can collaborate with you easily.
 Most importantly, your Pulumi project is safe from accidents on your local machine!
@@ -93,9 +78,9 @@ without needing to leave the page.
 In the following example the assistant is being used to configure a GitHub Actions workflow.
 So the assistant provides a direct link to configure secrets for your workflow.
 
-> See the [Registry]({{< relref "/registry" >}}) page to find the setup page for your cloud provider.
+See the [Registry]({{< relref "/registry" >}}) page to find the setup page for your cloud provider.
 
-### Add the workflow
+## Add the workflow
 
 Once the secrets are configured, the next step gives you the relevant workflow to add to your repository.
 The workflow is customized for the current stack, so you can be sure that you are configuring a workflow that uses
@@ -111,7 +96,7 @@ The workflow configuration provided by the assistant is configured to run a `pul
 Pull request builds help you catch problems _before_ the changes are merged -- a very important consideration for infrastructure
 that is likely hosting services critical to your business.
 
-### Validation
+## Validation
 
 In the previous step, you committed a new workflow configuration by creating a new pull request. This will trigger a new build
 that will run the `pulumi preview` command. Select the **Next** button to validate the CI configuration.
