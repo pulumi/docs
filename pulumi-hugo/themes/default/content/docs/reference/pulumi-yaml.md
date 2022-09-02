@@ -59,7 +59,7 @@ plugins:
 | `description` | optional | Description of the project. | None. |
 | `main` | optional | Path to the Pulumi program. The default is the working directory. | None. |
 | `stackConfigDir` | optional | Config directory location relative to the location of `Pulumi.yaml`. | None. |
-| `backend` | optional | [Backend]({{< relref "/docs/intro/concepts/state" >}}) of the project. | None. |
+| `backend` | optional | [Backend]({{< relref "/docs/intro/concepts/state" >}}) of the project. | [backend options](#backend-options) |
 | `options` | optional | Additional project options. | [options options](#options-options) |
 | `template` | optional | Config to be used when creating new stacks in the project. | [template options](#template-options) |
 | `plugins` | optional | Override for the plugin selection. Intended for use in developing pulumi plugins.  | [plugins options](#plugins-options) |
@@ -83,6 +83,12 @@ The runtime attribute has an additional property called options where you can fu
 #### About `virtualenv`
 
 New Python projects created with `pulumi new` have this option set by default. If not specified, Pulumi will invoke the `python3` command it finds on `$PATH` (falling back to `python`) to run the Python program. To use a virtual environment without the `virtualenv` option, run `pulumi` commands (such as `pulumi up`) from an activated virtual environment shell. Or, if using a tool like [Pipenv](https://github.com/pypa/pipenv), prefix `pulumi` commands with `pipenv run pulumi ...`.
+
+### `backend` options
+
+| Name | Required | Description |
+| - | - | - |
+| `url` | optional | URL is optional field to explicitly set backend url. |
 
 ### `options` options
 
