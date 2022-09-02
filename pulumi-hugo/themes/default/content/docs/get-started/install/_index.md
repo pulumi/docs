@@ -56,6 +56,7 @@ In addition, there are many ways to install Pulumi:
 </div>
 </label>
 <div class="accordion-item-body-no-animation text-base">
+
 You can install Pulumi through the [Homebrew package manager](https://brew.sh/) and using our official
 [Pulumi Homebrew Tap](https://github.com/pulumi/homebrew-tap/)
 
@@ -84,6 +85,7 @@ $ brew upgrade pulumi
 </div>
 </label>
 <div class="accordion-item-body-no-animation text-base">
+
 A Pulumi formula is available on the Community Homebrew. If you do not have the Pulumi tap installed, then you can
 still install Pulumi from homebrew using the command:
 
@@ -104,6 +106,7 @@ $ brew install pulumi
 </div>
 </label>
 <div class="accordion-item-body-no-animation text-base">
+
 You can install Pulumi through the [MacPorts package manager](https://www.macports.org/):
 
 ```bash
@@ -131,6 +134,7 @@ $ sudo port upgrade outdated
 </div>
 </label>
 <div class="accordion-item-body-no-animation text-base">
+
 Alternatively, you can run our installation script.
 
 ```bash
@@ -138,9 +142,11 @@ $ curl -fsSL https://get.pulumi.com | sh
 ```
 
 This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `pulumi` to your path, you will be prompted to add it manually.
+
 See [How to permanently set $PATH on Unix](https://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux-unix) for guidance.
 
 The installer script can be rerun to subsequently install new updates.
+
 </div>
 </div>
 
@@ -154,6 +160,7 @@ The installer script can be rerun to subsequently install new updates.
 </div>
 </label>
 <div class="accordion-item-body-no-animation text-base">
+
 If you do not wish to use the previous options, you can install Pulumi manually.
 
 <!-- markdownlint-disable url -->
@@ -202,6 +209,7 @@ In addition, there are many ways to install Pulumi:
 </div>
 </label>
 <div class="accordion-item-body-no-animation text-base">
+
 To install, run our installation script:
 
 ```bash
@@ -209,7 +217,9 @@ $ curl -fsSL https://get.pulumi.com | sh
 ```
 
 This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `pulumi` to your path, you will be prompted to add it manually.
+
 See [How to permanently set $PATH on Unix](https://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux-unix) for guidance.
+
 </div>
 </div>
 
@@ -223,6 +233,7 @@ See [How to permanently set $PATH on Unix](https://stackoverflow.com/questions/1
 </div>
 </label>
 <div class="accordion-item-body-no-animation text-base">
+
 Alternatively, you can install Pulumi manually. We provide a prebuilt binary for Linux.
 
 <!-- markdownlint-disable url -->
@@ -273,6 +284,7 @@ In addition, there are many ways to install Pulumi:
 </div>
 </label>
 <div class="accordion-item-body-no-animation text-base">
+
 You can install Pulumi using elevated permissions through the [Chocolatey package manager](https://chocolatey.org):
 
 ```powershell
@@ -300,6 +312,7 @@ Subsequent updates can be installed in the usual way:
 </div>
 </label>
 <div class="accordion-item-body-no-animation text-base">
+
 Install Pulumi using the [winget-cli](https://github.com/microsoft/winget-cli/) package manager. This is built-in on Windows 11 and later.
 
 ```powershell
@@ -325,7 +338,11 @@ To update Pulumi to a more recent version:
 </div>
 </label>
 <div class="accordion-item-body-no-animation text-base">
+
+<!-- markdownlint-disable url -->
 Download the latest [Pulumi Installer for Windows x64](https://github.com/pulumi/pulumi-winget/releases/download/{{< latest-version >}}/pulumi-{{< latest-version >}}-windows-x64.msi) and run it like any other installer. It will automatically add Pulumi to the path and make it available machine-wide.
+<!-- markdownlint-enable url -->
+
 </div>
 </div>
 
@@ -339,6 +356,7 @@ Download the latest [Pulumi Installer for Windows x64](https://github.com/pulumi
 </div>
 </label>
 <div class="accordion-item-body-no-animation text-base">
+
 1. Open a new command prompt window (**WIN+R**: `cmd.exe`):
 
 1. Run our installation script:
@@ -348,6 +366,7 @@ Download the latest [Pulumi Installer for Windows x64](https://github.com/pulumi
 ```
 
 This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it to your path.
+
 </div>
 </div>
 
@@ -361,6 +380,7 @@ This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it
 </div>
 </label>
 <div class="accordion-item-body-no-animation text-base">
+
 Alternatively, you can install Pulumi manually using binaries built for Windows x64.
 
 <!-- markdownlint-disable url -->
