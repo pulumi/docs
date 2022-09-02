@@ -2146,3 +2146,164 @@ Timestamp,Name,Login,Event,Description,SourceIP,RequireOrgAdmin,RequireStackAdmi
 2021-04-11T23:09:25Z,First Last,user1,Member Role Changed,"Changed organization role for ""user3"" to admin",192.168.10.11,true,false,false
 2021-04-11T21:09:52Z,First Last,user1,Secret Decrypted,"Decrypted secret value for stack ""demo-aws-ts-webserver/dev-user1"" (cipher text suffix: ""tbpiX4c="")",192.168.10.11,false,false,false
 ```
+
+## Resources Under Management (RUM)
+
+<!-- ###################################################################### -->
+
+### Get Resource Count Summary
+
+```http
+GET /orgs/{organization}/resources/summary?granularity=<granularity>&lookbackDays=<days>
+```
+
+#### Example (hourly)
+
+{{% notes "info" %}}
+If specifying `granularity=hourly`, the maximum `lookbackDays` you can set is `2`
+{{% /notes %}}
+
+```bash
+curl \
+  -h "accept: application/vnd.pulumi+8" \
+  -h "authorization: token $PULUMI_ACCESS_TOKEN" \
+  --compressed \
+  https://api.pulumi.com/api/orgs/{organization}/resources/summary?granularity=hourly&lookbackDays=1
+```
+
+#### Default response (hourly)
+
+```
+Status: 200 OK
+```
+
+```json
+{
+  "summary": [
+    {
+      "year": 2022,
+      "month": 8,
+      "day": 31,
+      "hour": 20,
+      "resources": 27378
+    },
+    "..."
+  ]
+}
+```
+
+#### Example (daily)
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --compressed \
+  https://api.pulumi.com/api/orgs/{organization}/resources/summary?granularity=daily&lookbackDays=2
+```
+
+#### Default response (daily)
+
+```
+Status: 200 OK
+```
+
+```json
+{
+  "summary": [
+    {
+      "year": 2022,
+      "month": 8,
+      "day": 30,
+      "resources": 27379
+    },
+    "..."
+  ]
+}
+```
+
+#### Example (weekly)
+
+```bash
+curl \
+  -h "accept: application/vnd.pulumi+8" \
+  -h "authorization: token $PULUMI_ACCESS_TOKEN" \
+  --compressed \
+  https://api.pulumi.com/api/orgs/{organization}/resources/summary?granularity=weekly&lookbackDays=28
+```
+
+#### Default response (weekly)
+
+```
+Status: 200 OK
+```
+
+```json
+{
+  "summary": [
+    {
+      "year": 2022,
+      "weekNumber": 31,
+      "resources": 26432
+    },
+    "..."
+  ]
+}
+```
+
+#### Example (monthly)
+
+```bash
+curl \
+  -h "accept: application/vnd.pulumi+8" \
+  -h "authorization: token $PULUMI_ACCESS_TOKEN" \
+  --compressed \
+  https://api.pulumi.com/api/orgs/{organization}/resources/summary?granularity=monthly&lookbackDays=90
+```
+
+#### Default response (monthly)
+
+```
+Status: 200 OK
+```
+
+```json
+{
+  "summary": [
+    {
+      "year": 2022,
+      "month": 6,
+      "resources": 24520
+    },
+    "..."
+  ]
+}
+```
+
+#### Example (yearly)
+
+```bash
+curl \
+  -h "accept: application/vnd.pulumi+8" \
+  -h "authorization: token $PULUMI_ACCESS_TOKEN" \
+  --compressed \
+  https://api.pulumi.com/api/orgs/{organization}/resources/summary?granularity=yearly&lookbackDays=730
+```
+
+#### Default response (yearly)
+
+```
+Status: 200 OK
+```
+
+```json
+{
+  "summary": [
+    {
+      "year": 2022,
+      "resources": 24380
+    },
+    "..."
+  ]
+}
+```
