@@ -340,7 +340,7 @@ To update Pulumi to a more recent version:
 <div class="accordion-item-body-no-animation text-base">
 
 <!-- markdownlint-disable url -->
-Download the latest [Pulumi Installer for Windows x64](https://github.com/pulumi/pulumi-winget/releases/download/{{< latest-version >}}/pulumi-{{< latest-version >}}-windows-x64.msi) and run it like any other installer. It will automatically add Pulumi to the path and make it available machine-wide.
+Download the latest [Pulumi Installer for Windows x64](https://github.com/pulumi/pulumi-winget/releases/download/v{{< latest-version >}}/pulumi-{{< latest-version >}}-windows-x64.msi) and run it like any other installer. It will automatically add Pulumi to the path and make it available machine-wide.
 <!-- markdownlint-enable url -->
 
 </div>
