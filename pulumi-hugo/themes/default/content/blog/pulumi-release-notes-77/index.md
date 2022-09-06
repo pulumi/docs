@@ -36,7 +36,7 @@ It has been an action packed July and August here at Pulumi! Below you will find
 
 <!--more-->
 
-If you are curious to see all new functionality, learn more about CLI improvements in the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md) and Pulumi Service features in the [new features blogs]({{< relref "/blog/tag/features">}}).
+If you are curious to see all new functionality, learn more about CLI improvements in the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md) and Pulumi Service features in the [new features blogs](/blog/tag/features).
 
 - Cloud Providers and Packages
   - [New resources in our providers](#new-resources-in-our-providers)
