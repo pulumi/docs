@@ -49,8 +49,6 @@ If you are curious to see all new functionality, learn more about CLI improvemen
   - [Automation API Python parallel inline programs](#automation-api-python-parallel-inline-programs)
   - [getOrganizations from inside a stack](#getorganizations-from-inside-a-stack)
   - [Control logging and tracing within Automation API](#control-logging-and-tracing-within-automation-api)
-  - [Flag to install dependencies on `pulumi convert`](#destroy-pulumi-stacks-outside-project-directory)
-  - [Use `pulumi destroy -s <stack>` outside a Pulumi project dir](#destroy-pulumi-stacks-outside-project-directory)
 - Pulumi Service & Pulumi.com
   - [Team Access Tokens](#team-access-tokens)
   - [Billing Managers](#billing-managers)
