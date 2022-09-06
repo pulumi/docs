@@ -4,15 +4,49 @@
             <div class="dot-background"></div>
         </div>
         <div class="dot-overlay"></div>
-        <div class="home-page-hero-content mt-8">
-            <h1 class="relative">
-                <span class="rainbow-text" data-text="{{ index (.Params.hero.title) 0 }}">{{ index (.Params.hero.title) 0 }}</span><br />
-                <span class="rainbow-text" data-text="{{ index (.Params.hero.title) 1 }}">{{ index (.Params.hero.title) 1 }}</span>
-            </h1>
-            <p class="text-center max-w-3xl leading-7">{{ .Params.hero.description | markdownify }}</p>
-            <div class="overlay-middle mt-8 flex text-center justify-center items-center flex-col md:flex-row">
-                <a class="home-hero-btn-primary mr-0 md:mr-4 mb-3 md:mb-0" href="{{ relref . "/docs/get-started" }}">{{ .Params.hero.cta_text }}</a>
-                <a class="home-hero-btn-secondary btn-secondary px-12 py-4" href="{{ relref . "/docs/get-started/install" }}">Download</a>
+        <div class="container mx-auto lg:flex mt-8">
+            <div class="w-full lg:w-1/2 lg:pr-12 xl:pr-0">
+                <div class="home-page-hero-content">
+                    <h1 class="relative text-left">
+                        <span class="rainbow-text" data-text="{{ index (.Params.hero.title) 0 }}">{{ index (.Params.hero.title) 0 }}</span><br />
+                        <span class="rainbow-text" data-text="{{ index (.Params.hero.title) 1 }}">{{ index (.Params.hero.title) 1 }}</span><br />
+                        <span class="rainbow-text" data-text="{{ index (.Params.hero.title) 2 }}">{{ index (.Params.hero.title) 2 }}</span>
+                    </h1>
+                    <p class="text-center lg:text-left leading-7">{{ .Params.hero.description | markdownify }}</p>
+                    <div class="overlay-middle mt-8 flex text-center justify-center items-center flex-col mx-auto lg:mx-0 md:flex-row">
+                        <a class="home-hero-btn-primary mr-0 md:mr-4 mb-3 md:mb-0" href="{{ relref . "/docs/get-started" }}">{{ .Params.hero.cta_text }}</a>
+                        <a class="home-hero-btn-secondary btn-secondary px-12 py-4" href="{{ relref . "/docs/get-started/install" }}">Download CLI</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2 block lg:flex lg:justify-center p-6">
+                <div>
+                    <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                        <pulumi-choosable type="language" class="highlight" value="typescript">
+                            <img class="mx-auto" src="/images/home/typescript.svg" alt="" />
+                        </pulumi-choosable>
+
+                        <pulumi-choosable type="language" class="highlight" value="python">
+                            <img class="mx-auto" src="/images/home/python.svg" alt="" />
+                        </pulumi-choosable>
+
+                        <pulumi-choosable type="language" class="highlight" value="go">
+                            <img class="mx-auto" src="/images/home/go.svg" alt="" />
+                        </pulumi-choosable>
+
+                        <pulumi-choosable type="language" class="highlight" value="csharp">
+                            <img class="mx-auto" src="/images/home/c-sharp.svg" alt="" />
+                        </pulumi-choosable>
+
+                        <pulumi-choosable type="language" class="highlight" value="java">
+                            <img class="mx-auto" src="/images/home/java.svg" alt="" />
+                        </pulumi-choosable>
+
+                        <pulumi-choosable type="language" class="highlight" value="yaml">
+                            <img class="mx-auto" src="/images/home/yaml.svg" alt="" />
+                        </pulumi-choosable>
+                    </pulumi-chooser>
+                </div>
             </div>
         </div>
     </header>
@@ -22,7 +56,7 @@
     {{ $pageContext := . }}
 
 
-    <section class="container mx-auto mt-12 pt-8">
+    <section class="container mx-auto mt-12">
         <div class="flex flex-col lg:flex-row h-full">
             <div class="w-full lg:w-1/2 mt-16 lg:mt-0 h-full flex items-center justify-center relative overflow-hidden">
                 <div class="slot-machine-overlay">
