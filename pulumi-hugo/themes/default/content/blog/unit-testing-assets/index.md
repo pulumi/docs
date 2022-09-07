@@ -152,7 +152,7 @@ For example, if the file represented by `image.png` isn't a PNG, this test would
 bucket = aws.s3.Bucket('my-bucket')
 
 bucket_obj = aws.s3.BucketObject('my-bucket-obj',
-    bucket=bucket,
+    bucket=bucket.id,
     content_type='image/png',
     source=pulumi.FileAsset('image.png'))
 ```

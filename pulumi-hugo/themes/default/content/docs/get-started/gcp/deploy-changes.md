@@ -231,7 +231,7 @@ Next, allow the contents of your bucket to be viewed anonymously over the Intern
 
 ```python
 bucketIAMBinding = storage.BucketIAMBinding('my-bucket-IAMBinding',
-    bucket=bucket,
+    bucket=bucket.name,
     role="roles/storage.objectViewer",
     members=["allUsers"]
 )
@@ -242,7 +242,7 @@ Also, change the content type of your `index.html` object so that it is served a
 ```python
 bucketObject = storage.BucketObject(
     'index.html',
-    bucket=bucket,
+    bucket=bucket.name,
     content_type='text/html',
     source=pulumi.FileAsset('index.html')
 )

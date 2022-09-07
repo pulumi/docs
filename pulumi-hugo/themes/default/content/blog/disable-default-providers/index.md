@@ -67,7 +67,7 @@ bucketObject = aws.s3.BucketObject(
     "index.html",
     acl="public-read",
     content_type="text/html",
-    bucket=bucket,
+    bucket=bucket.id,
     source=asset.FileAsset("index.html"),
     opts=ResourceOptions(parent=bucket),
 )
