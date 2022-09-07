@@ -30,7 +30,7 @@ type: webinars
 # set the 'block_external_search_index' flag to true so Google does not index
 # the webinar page created.
 external: false
-block_external_search_index: true
+block_external_search_index: false
 
 # data for Google Events
 event_data:
