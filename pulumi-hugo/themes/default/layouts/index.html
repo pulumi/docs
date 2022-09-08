@@ -15,7 +15,12 @@
                     <p class="text-center lg:text-left leading-7">{{ .Params.hero.description | markdownify }}</p>
                     <div class="overlay-middle mt-8 flex text-center justify-center items-center flex-col mx-auto lg:mx-0 md:flex-row">
                         <a class="home-hero-btn-primary mr-0 md:mr-4 mb-3 md:mb-0" href="{{ relref . "/docs/get-started" }}">{{ .Params.hero.cta_text }}</a>
-                        <a class="home-hero-btn-secondary btn-secondary px-12 py-4" href="{{ relref . "/docs/get-started/install" }}">Download CLI</a>
+                        <div class="btn-secondary px-12 py-2 rounded-full cursor-pointer">
+                            <a href="{{ relref . "/docs/get-started/install" }}">
+                                Download<br />
+                                <span>Open Source</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
