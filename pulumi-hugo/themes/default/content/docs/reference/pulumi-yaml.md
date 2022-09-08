@@ -101,7 +101,7 @@ New Python projects created with `pulumi new` have this option set by default. I
 | Name | Required | Description |
 | - | - | - |
 | `description` | optional | Description of the template. |
-| `config` | required | Config to apply to each stack in the project. |
+| `config` | required | Config to request when using this template with `pulumi new`. |
 
 #### `config` options
 
