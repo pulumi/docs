@@ -246,11 +246,11 @@ if err != nil {
 var useast1 = new Aws.Provider("useast1", new Aws.ProviderArgs { Region = "us-east-1" });
 
 // Create an ACM certificate in us-east-1.
-var cert = new Aws.Acm.Certificate("cert", new Aws.Acm.CertifiateArgs
+var cert = new Aws.Acm.Certificate("cert", new Aws.Acm.CertificateArgs
 {
     DomainName = "foo.com",
     ValidationMethod = "EMAIL",
-}, new ResourceArgs { Provider = useast1 });
+}, new CustomResourseOptions { Provider = useast1 });
 
 // Create an ALB listener in the default region that references the ACM certificate created above.
 var listener = new Aws.Lb.Listener("listener", new Aws.Lb.ListenerArgs
