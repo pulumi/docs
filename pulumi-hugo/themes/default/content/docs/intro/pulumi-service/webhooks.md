@@ -4,7 +4,7 @@ meta_desc: An overview of how to use Webhooks within the Pulumi Cloud Service.
 menu:
   intro:
     parent: pulumi-service
-    weight: 9
+    weight: 10
 aliases:
 - /docs/reference/service/webhooks/
 - /docs/console/extensions/webhooks/

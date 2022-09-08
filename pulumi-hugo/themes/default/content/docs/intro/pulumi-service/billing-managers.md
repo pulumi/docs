@@ -4,7 +4,7 @@ meta_desc: Overview of Billing Managers in the Pulumi Service.
 menu:
   intro:
     parent: pulumi-service
-    weight: 11
+    weight: 4
 ---
 
 The Billing Manager role gives customers the ability to have someone in their Pulumi Organization manage billing operations without granting them any additional permissions to view or modify your stacks, policies, or other organizational settings.

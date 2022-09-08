@@ -4,7 +4,7 @@ meta_desc: Overview of Team Access Tokens in the Pulumi Service.
 menu:
   intro:
     parent: pulumi-service
-    weight: 2
+    weight: 6
 ---
 {{% notes "info" %}}
 Team Access Tokens are only available to organizations using Pulumi Enterprise or Pulumi Business Critical.

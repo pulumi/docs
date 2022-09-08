@@ -4,7 +4,7 @@ meta_desc: An overivew of Project and Stack Management within the Pulumi Cloud S
 menu:
   intro:
     parent: pulumi-service
-    weight: 4
+    weight: 7
 aliases:
 - /docs/intro/console/project-and-stack-management/
 - /docs/reference/service/roles-and-access-controls/

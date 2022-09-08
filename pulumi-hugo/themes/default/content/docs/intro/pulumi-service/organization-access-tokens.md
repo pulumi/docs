@@ -4,7 +4,7 @@ meta_desc: Overview of Organization Access Tokens in the Pulumi Service.
 menu:
   intro:
     parent: pulumi-service
-    weight: 2
+    weight: 3
 ---
 
 Organization Access Tokens provide Enterprise and Business Critical customers the opportunity to manage resources and stack operations for their organization independent of a single-user account.
