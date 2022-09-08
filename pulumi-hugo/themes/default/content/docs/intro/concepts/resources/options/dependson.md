@@ -78,7 +78,8 @@ resources:
   res2:
     type: MyResource
     options:
-      dependsOn: ${res1}
+      dependsOn:
+        - ${res1}
 ```
 
 {{% /choosable %}}
