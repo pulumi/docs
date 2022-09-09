@@ -367,17 +367,24 @@ approach will not work, and the only way to workaround the issue is to follow th
 
 ## Recovering from an Interrupted Update {#interrupted-update-recovery}
 
-If the Pulumi CLI is interrupted when performing a deployment, you may see an error message
+If the Pulumi CLI is interrupted when performing a deployment, you may see a warning message
 that looks something like this on your next update:
 
 ```bash
 $ pulumi up
-Previewing update of stack 'interruptedstack'
-error: the current deployment has 1 resource(s) with pending operations:
-  * ...
-
 ...
-error: refusing to proceed
+Diagnostics:
+  pulumi:pulumi:Stack (proj):
+    warning: Attempting to deploy or update resources with 1 pending operations from previous deployment.
+      * urn:pulumi:dev::proj::aws:s3/bucketV2:BucketV2::bucket, interrupted while creating
+    These resources are in an unknown state because the Pulumi CLI was interrupted while waiting for changes to these resources
+    to complete. You should confirm whether or not the operations listed completed successfully by checking the state of the
+    appropriate provider. For example, if you are using AWS, you can confirm using the AWS Console.
+
+    Once you have confirmed the status of the interrupted operations, you can repair your stack using `pulumi refresh` which will refresh the state from the provider you are using and clear the pending operations if there are any.
+
+    Note that `pulumi refresh` will need to be run interactively to clear pending CREATE operations.
+...
 ```
 
 This occurs when the Pulumi CLI fails to complete cleanly. There are a number of ways this
@@ -400,31 +407,8 @@ The currently running update for 'interruptedstack' has been canceled!
 If `pulumi cancel` fails with `error: [400] Bad Request: the update has already completed`, you can safely ignore
 that error and continue with the next step.
 
-You should then export and import your stack. This will clear the stacks's pending operations.
-
-```bash
-$ pulumi stack export | pulumi stack import
-warning: removing pending operation 'creating' on '...' from snapshot
-Import successful.
-```
-
-For every warning the command prints out, you should verify with your cloud provider whether or not the
-operation was successful. If the operation was successful, and a resource was created, you should delete the
-resource using your cloud provider's console, CLI, or SDK.
-
-Finally, you should run `pulumi refresh` to synchronize your stack's state with the true state of your cloud
-resources:
-
-```bash
-$ pulumi refresh
-Refreshing stack 'interruptedstack'
-Performing changes:
-
-   Type  Name  Status     Info
-
-   info: no changes required:
-         12 resources unchanged
-```
+Then run `pulumi refresh` to remove any pending operations cleanly, allowing you to
+resolve any pending operations that Pulumi could not fix unaided.
 
 At this point your stack should be valid, up-to-date, and ready to accept future updates.
 
