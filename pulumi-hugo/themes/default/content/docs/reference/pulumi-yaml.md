@@ -71,9 +71,14 @@ The runtime attribute has an additional property called options where you can fu
 | Name | Use case | Description |
 | - | - | - |
 | `typescript` | Only applicable for the nodejs runtime | Boolean indicating whether to use `ts-node` or not. |
+| `nodeargs` | Only applicable for the nodejs runtime | Arguments to pass to `node`. |
 | `binary` | Applicable for the go, .net, and java runtimes | Path to pre-built executable. |
 | `virtualenv` | Ony applicable for the python runtime | Virtual environment path. |
 | `compiler` | Only applicable for YAML projects | Executable and arguments that emit to standard out. |
+
+#### About `nodeargs`
+
+Arguments specified here are passed to `node` when running the Pulumi program. For example, `nodeargs: "--trace-warnings"` will result in `node` being invoked as `node --trace-warnings`.
 
 #### About `binary`
 
