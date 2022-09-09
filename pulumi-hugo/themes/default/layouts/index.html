@@ -4,8 +4,8 @@
             <div class="dot-background"></div>
         </div>
         <div class="dot-overlay"></div>
-        <div class="container mx-auto lg:flex mt-8">
-            <div class="w-full lg:w-1/2 lg:pr-12 xl:pr-0">
+        <div class="container mx-auto lg:flex mt-8 px-3">
+            <div class="w-full lg:w-1/2 lg:pr-12 xl:pr-0 md:pl-3 xl:pl-0">
                 <div class="home-page-hero-content">
                     <h1 class="relative text-left">
                         <span class="rainbow-text" data-text="{{ index (.Params.hero.title) 0 }}">{{ index (.Params.hero.title) 0 }}</span><br />
@@ -24,7 +24,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full lg:w-1/2 block lg:flex lg:justify-center p-6">
+            <div class="w-full lg:w-1/2 block lg:flex lg:justify-center p-6 md:pl-24 xl:pl-0">
                 <div>
                     <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
                         <pulumi-choosable type="language" class="highlight" value="typescript">
