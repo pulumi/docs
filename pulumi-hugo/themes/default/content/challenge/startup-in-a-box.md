@@ -493,7 +493,7 @@ new checkly.Check("index-page", {
 });
 ```
 
-You'll notice we use `fs.readFileSync` from `fs` again. That's because we're keeping our Checkly code, which is also Node based, inside its own file where it can get good auto-completion and syntax highlightying, rather than storing as a string object within our existing code. Neat, huh? Add the following to `pulumi-challenge/checkly-embed.js`:
+You'll notice we use `fs.readFileSync` from `fs` again. That's because we're keeping our Checkly code, which is also Node based, inside its own file where it can get good auto-completion and syntax highlighting, rather than storing as a string object within our existing code. Neat, huh? Add the following to `pulumi-challenge/checkly-embed.js`:
 
 ```javascript
 const playwright = require("playwright");
