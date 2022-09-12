@@ -1,0 +1,20 @@
+{{ $prefix := .prefix }}
+{{ $languages := split .languages "," }}
+
+
+<span>
+    {{ range $language := $languages }}
+        {{ $templateName := printf "%s-%s" $prefix $language }}
+        <pulumi-choosable type="language" value="{{ $language }}">
+            <a
+                class="text-blue-700"
+                href="https://github.com/pulumi/templates/tree/master/{{ $templateName }}"
+                title="pulumi/templates/{{ $templateName }}"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                pulumi/templates
+            </a>
+        </pulumi-choosable>
+    {{ end }}
+</span>

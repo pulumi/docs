@@ -1,0 +1,13 @@
+{{ $template := .Get "template" }}
+{{ $clouds := split (.Get "clouds") "," }}
+
+
+<div class="tiles mt-4">
+    {{ range $clouds }}
+        <div class="pb-4 md:pr-4 flex-1">
+            <a class="tile px-8 py-6" href="/templates/{{ $template }}/{{ . }}/">
+                <img class="h-10 mx-auto" src="/logos/tech/{{ . }}.svg" alt="AWS" />
+            </a>
+        </div>
+    {{ end }}
+</div>

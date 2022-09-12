@@ -53,10 +53,10 @@ Choose your language runtime to view the API documentation for the Pulumi SDK:
                 .NET
                 <span class="text-xs font-light">(C#, F#, VB)</span>
             </p>
-            <img class="h-12 mx-auto inline" src="/logos/tech/dot-net.svg" alt=".NET">
-            <img class="h-12 mx-auto inline" src="/logos/tech/c-sharp.svg" alt="C#">
-            <img class="h-12 mx-auto inline" src="/logos/tech/f-sharp.svg" alt="F#">
-            <img class="h-12 mx-auto inline" src="/logos/tech/visual-basic.svg" alt="Visual Basic">
+            <img class="h-12 mx-auto inline" src="/logos/tech/dotnet.svg" alt=".NET">
+            <img class="h-12 mx-auto inline" src="/logos/tech/csharp.svg" alt="C#">
+            <img class="h-12 mx-auto inline" src="/logos/tech/fsharp.svg" alt="F#">
+            <img class="h-12 mx-auto inline" src="/logos/tech/visualbasic.svg" alt="Visual Basic">
         </a>
     </div>
     <div class="pb-4 md:pr-4 md:w-1/2">

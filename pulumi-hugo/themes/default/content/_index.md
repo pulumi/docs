@@ -21,7 +21,7 @@ overview:
       - /logos/tech/yaml.svg
       - /logos/tech/python.svg
       - /logos/tech/javascript.svg
-      - /logos/tech/f-sharp.svg
+      - /logos/tech/fsharp.svg
     clouds:
       - /logos/tech/aws.svg
       - /logos/tech/azure-logo.svg
