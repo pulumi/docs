@@ -17,7 +17,7 @@ The AWS Static Website template deploys an HTML-based website on AWS with Pulumi
 
 ## Using this template
 
-To use this template to deploy a website of your own, make sure you've [installed Pulumi]({{< relref "/docs/get-started/install" >}}) and [configured your AWS credentials]({{< relref "/registry/packages/aws/installation-configuration/#credentials" >}}), then create a new [project]({{< relref "/docs/intro/concepts/project" >}}) using the template in your language of choice:
+To use this template to deploy a website of your own, make sure you've [installed Pulumi]({{< relref "/docs/get-started/install" >}}) and [configured your AWS credentials]({{< relref "/registry/packages/aws/installation-configuration#credentials" >}}), then create a new [project]({{< relref "/docs/intro/concepts/project" >}}) using the template in your language of choice:
 
 {{% chooser language "typescript,python,go,csharp,yaml" / %}}
 
