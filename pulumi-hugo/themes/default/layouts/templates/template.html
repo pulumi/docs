@@ -1,22 +1,22 @@
 {{ define "main" }}
-    <div class="layout-{{ .Page.Layout }} container mx-auto flex flex-col md:flex-row items-start mb-32">
-        <div class="hidden lg:block lg:w-3/12 mt-24 sticky-sidebar md:mr-8">
-            <nav class="px-6 py-6 mb-8">
+    <div class="layout-{{ .Page.Layout }} container mx-auto flex flex-col lg:flex-row items-start mb-32">
+        <div class="hidden lg:block lg:w-3/12 mt-24 sticky-sidebar flex-1">
+            <nav class="px-6 pt-2 pb-6 mb-8">
                 {{ partial "templates/left-nav.html" . }}
             </nav>
         </div>
-        <div class="md:w-8/12 lg:w-6/12 my-8 px-4 lg:px-0 max-w-full">
-            <header class="container mx-auto">
+        <div class="lg:w-6/12 my-8 px-4 lg:px-0 w-full">
+            <header>
                 {{ partial "templates/breadcrumb.html" . }}
                 <h1 class="text-5xl mb-0">
                     {{ .Title }}
                 </h1>
             </header>
-            <section class="container mx-auto mt-8 mb-16">
+            <section class="mt-8 mb-16">
                 {{ .Content }}
             </section>
         </div>
-        <div class="hidden md:block lg:w-3/12 md:ml-8 mt-28 sticky-sidebar">
+        <div class="hidden lg:block lg:w-3/12 mt-24 sticky-sidebar flex-1">
             <nav class="px-6 mb-8">
                 {{ partial "templates/right-nav.html" . }}
             </nav>
