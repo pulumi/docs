@@ -1,5 +1,18 @@
 [
   {
+    "version": "v3.40.0",
+    "date": "2022-09-14T21:31:02Z",
+    "downloads": {
+      "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.40.0-linux-x64.tar.gz",
+      "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v3.40.0-linux-arm64.tar.gz",
+      "darwin-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.40.0-darwin-x64.tar.gz",
+      "darwin-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v3.40.0-darwin-arm64.tar.gz",
+      "windows-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.40.0-windows-x64.zip"
+    },
+    "checksums": "https://get.pulumi.com/releases/sdk/pulumi-3.40.0-checksums.txt",
+    "latest": true
+  },
+  {
     "version": "v3.40.0-beta.0-alpha.1662097290",
     "date": "2022-09-02T05:41:09Z",
     "downloads": {
@@ -204,6 +217,18 @@
     "checksums": "https://get.pulumi.com/releases/sdk/pulumi-3.40.0-alpha.1662083162-checksums.txt"
   },
   {
+    "version": "v3.39.4",
+    "date": "2022-09-14T01:41:08Z",
+    "downloads": {
+      "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.39.4-linux-x64.tar.gz",
+      "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v3.39.4-linux-arm64.tar.gz",
+      "darwin-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.39.4-darwin-x64.tar.gz",
+      "darwin-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v3.39.4-darwin-arm64.tar.gz",
+      "windows-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.39.4-windows-x64.zip"
+    },
+    "checksums": "https://get.pulumi.com/releases/sdk/pulumi-3.39.4-checksums.txt"
+  },
+  {
     "version": "v3.39.3",
     "date": "2022-09-08T06:37:46Z",
     "downloads": {
@@ -213,8 +238,7 @@
       "darwin-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v3.39.3-darwin-arm64.tar.gz",
       "windows-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.39.3-windows-x64.zip"
     },
-    "checksums": "https://get.pulumi.com/releases/sdk/pulumi-3.39.3-checksums.txt",
-    "latest": true
+    "checksums": "https://get.pulumi.com/releases/sdk/pulumi-3.39.3-checksums.txt"
   },
   {
     "version": "v3.39.2",
