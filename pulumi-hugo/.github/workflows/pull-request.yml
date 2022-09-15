@@ -46,8 +46,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-      # Temporarily disabled while we investigate OOM errors.
-      # - name: Run a full docs build
-      #   run: make ci-build-full-site
-      #   env:
-      #     NODE_OPTIONS: "--max_old_space_size=4096"

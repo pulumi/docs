@@ -13,10 +13,17 @@
     },
     "devDependencies": {
         "husky": "^8.0.1",
+        "lint-staged": "^13.0.3",
         "prettier": "^2.6.2",
         "prettier-plugin-go-template": "^0.0.13"
     },
     "scripts": {
         "prepare": "husky install"
+    },
+    "lint-staged": {
+        "themes/default/**/*.md": "node ./scripts/lint/lint-markdown.js",
+        "themes/default/**/*.html": "yarn run prettier --write 'themes/default/**/*.html'",
+        "**/*.yaml": "yarn run prettier --write '**/*.yaml'",
+        "**/*.yml": "yarn run prettier --write '**/*.yml'"
     }
 }
