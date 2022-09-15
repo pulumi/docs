@@ -207,20 +207,6 @@ meta_desc: A list of different environment variables the Pulumi CLI supports.
     </dd>
     <dt>
         <span class="font-mono">
-            PULUMI_TEST_MODE
-        </span>
-    </dt>
-    <dd>
-        <p>
-            As of <a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0177-2019-04-17"><code>v0.17.7</code></a>,
-            you can enable a new "test mode" by setting this to<code>true</code> in either the Node.js or Python SDK. This mode allows you
-            to unit test your Pulumi programs without needing to run them using the Pulumi CLI. Read the change log for details
-            on limitations and other environment variables that must be set.
-        </p>
-        <pre><code class="text-xs">PULUMI_TEST_MODE=true</code></pre>
-    </dd>
-    <dt>
-        <span class="font-mono">
             NO_COLOR
         </span>
     </dt>
