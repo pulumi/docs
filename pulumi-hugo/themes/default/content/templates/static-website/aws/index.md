@@ -66,7 +66,7 @@ $ pulumi new static-website-aws-yaml
 
 {{% /choosable %}}
 
-Follow the prompts to complete the new-project wizard. When it's done, you'll have a complete Pulumi project that's ready to deploy and configured with the most common settings. Feel free to inspect the code in {{< langfile >}} for a closer look.
+Follow the prompts to complete the new-project wizard. When it's done, you'll have a finished project that's ready to deploy and configured with the most common settings. Feel free to inspect the code in {{< langfile >}} for a closer look.
 
 ## Deploying the project
 
@@ -213,7 +213,7 @@ Templated projects are meant to be customized, and every web project comes with 
 
 ### Adding a custom domain
 
-Once your website is deployed on AWS, there's a good chance you'll want to give it a domain of its own. For this, you have many options, and they generally fall into one of two categories: using [Amazon Route 53](https://aws.amazon.com/route53/), which is a good choice if your domain is already being managed on AWS, or using a third-party service like [DNSimple](https://dnsimple.com) or [Google Cloud DNS](https://cloud.google.com/dns/). Both options are easily managed with Pulumi.
+Once your website is deployed on AWS, you may want to give it a domain of its own. For this, you have many options, and they generally fall into one of two categories: using [Amazon Route 53](https://aws.amazon.com/route53/), which is a good choice if your domain is already being managed on AWS, or using a third-party service like [DNSimple](https://dnsimple.com) or [Google Cloud DNS](https://cloud.google.com/dns/). Both options are easily managed with Pulumi.
 
 #### Using a Route 53 managed domain
 
@@ -784,7 +784,7 @@ Pulumi supports many third-party DNS providers, all of which are available in th
 
 Integration details vary by provider, so we suggest exploring the Pulumi API documentation of your provider of choice to learn more. [See the Registry]({{< relref "/registry" >}}) for a complete list supported providers.
 
-### Cleaning up
+## Tidying up
 
 You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`]({{< relref "/docs/reference/cli/pulumi_destroy" >}}):
 
