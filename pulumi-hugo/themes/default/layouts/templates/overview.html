@@ -2,16 +2,18 @@
     <div class="layout-{{ .Page.Layout }} container flex flex-col mx-auto mb-32">
         <header class="container mx-auto md:w-10/12 lg:w-6/12 mt-8 px-4 lg:px-0">
             {{ partial "templates/breadcrumb.html" . }}
-            <h1 class="text-5xl mb-0">
+            <h1 class="text-5xl mb-8">
                 {{ .Title }}
             </h1>
             <div>
                 <span class="text-lg">
-                    {{ .Content }}
+                    <p>
+                        {{ .Description | markdownify }}
+                    </p>
                 </span>
             </div>
         </header>
-        <section class="container mx-auto mt-4">
+        <section class="container mx-auto mt-6">
             <ul class="w-full md:flex md:flex-wrap lg:max-w-6xl mx-auto lg:justify-center p-0 list-none">
                 {{ range $page := .Page.CurrentSection.Pages }}
                     <li class="md:w-1/2 lg:w-1/3">
@@ -37,6 +39,14 @@
                     </li>
                 {{ end }}
             </ul>
+        </section>
+        <section class="container mx-auto px-4 lg:px-0">
+            <div class="lg:max-w-3xl mx-auto">
+                <hr class="my-16" />
+                <div class="text-gray-700">
+                    {{ .Content }}
+                </div>
+            </div>
         </section>
     </div>
 {{ end }}
