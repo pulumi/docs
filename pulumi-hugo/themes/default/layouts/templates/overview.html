@@ -15,8 +15,8 @@
             <ul class="w-full md:flex md:flex-wrap lg:max-w-6xl mx-auto lg:justify-center p-0 list-none">
                 {{ range $page := .Page.CurrentSection.Pages }}
                     <li class="md:w-1/2 lg:w-1/3">
-                        <div class="px-4 py-2 w-full">
-                            <div class="shadow-xl rounded-xl bg-white p-4">
+                        <div class="px-4 py-2 w-full h-full">
+                            <div class="shadow-xl rounded-xl bg-white p-4 h-full">
                                 {{ with $page }}
                                     {{ if .Params.meta_image }}
                                         <a class="text-gray-900" href="{{ .RelPermalink }}">

@@ -16,7 +16,7 @@
             <ul class="w-full flex flex-col md:flex-row md:flex-wrap md:justify-center p-0 list-none">
                 {{ range $page := sort $pages ".Params.weight" "asc" }}
                     <li class="md:w-1/2 lg:w-1/3 m-4">
-                        <div class="shadow-xl rounded-xl bg-white p-6 w-full">
+                        <div class="shadow-xl rounded-xl bg-white p-6 w-full h-full">
                             {{ with $page }}
                                 {{ if .Params.meta_image }}
                                     <a href="{{ relref . $page.RelPermalink }}" title="{{ .Title }}">
