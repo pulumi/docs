@@ -79,16 +79,16 @@ $ pulumi up
 When the deployment completes, Pulumi exports the following [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}) values:
 
 originHostname
-: The provider-assigned hostname of the Azure Blob Storage container.
+: The provider-assigned hostname of the Google Cloud Storage bucket.
 
 originURL
-: The fully-qualified HTTP URL of the storage container endpoint.
+: The fully-qualified HTTP URL of the storage bucket endpoint.
 
 cdnHostname
-: The provider-assigned hostname of the Azure CDN. Useful for creating `CNAME` records to associate custom domains.
+: The provider-assigned hostname of the Google Cloud CDN. Useful for creating `CNAME` records to associate custom domains.
 
 cdnURL
-: The fully-qualified HTTPS URL of the Azure CDN.
+: The fully-qualified HTTP URL of the Google Cloud CDN.
 
 Output values like these are useful in many ways, most commonly as inputs for other stacks or related cloud resources. The computed `cdnURL`, for example, can be used from the command line to open the newly deployed website in your favorite web browser:
 
@@ -113,7 +113,7 @@ All of these settings are optional and may be adjusted either by editing the sta
 
 ### Using your own web content
 
-If you already have a static website you'd like to deploy on AWS with Pulumi, you can do so either by replacing placeholder content in the `www` folder or by configuring the stack to point to another folder on your computer with the `path` setting:
+If you already have a static website you'd like to deploy on Google Cloud Platform with Pulumi, you can do so either by replacing placeholder content in the `www` folder or by configuring the stack to point to another folder on your computer with the `path` setting:
 
 ```bash
 $ pulumi config set path ../my-existing-website/build
@@ -130,7 +130,7 @@ $ pulumi destroy
 
 ## Learn more
 
-Congratulations! You're now well on your way to managing a production-grade static website on AWS with Pulumi --- and there's lots more you can do from here:
+Congratulations! You're now well on your way to managing a production-grade static website on Google Cloud with Pulumi --- and there's lots more you can do from here:
 
 * Discover more architecture templates as they're available in [Templates &rarr;]({{< relref "/templates" >}})
 * Dive into the Google Cloud package by exploring the [API docs in the Registry &rarr;]({{< relref "/registry/packages/gcp" >}})
