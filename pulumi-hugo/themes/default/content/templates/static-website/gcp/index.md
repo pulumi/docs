@@ -5,7 +5,7 @@ meta_image: meta.png
 card_desc: Deploy a static website on Google Cloud with Pulumi, Google Cloud Storage, and Google Cloud CDN.
 layout: template
 template:
-    prefix: static-website-google-cloud
+    prefix: static-website-gcp
 cloud:
     name: Google Cloud Platform
     slug: gcp
