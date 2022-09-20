@@ -679,7 +679,7 @@ func (e *emitter) gatherModules(doc *typeDocNode, parentModule string) (*module,
 		}
 
 		// We expect all top-level children to be modules.  (This is why `--mode file` won't work.)
-		if modnode.Kind != typeDocExternalModuleNode {
+		if modnode.Kind != typeDocExternalModuleNode && modnode.Kind != typeDocModuleNode {
 			return nil, errors.Errorf("expected a module, got %s (%s)", modnode.Kind, modnode.Name)
 		}
 
@@ -714,6 +714,10 @@ func (e *emitter) gatherModules(doc *typeDocNode, parentModule string) (*module,
 			// Skip unexported children.
 			isModule := child.Kind == typeDocModuleNode
 			if !isModule && !child.Flags.IsExported {
+				continue
+			}
+
+			if child.Kind == typeDocReferenceNode {
 				continue
 			}
 
@@ -1017,6 +1021,7 @@ const (
 	typeDocTypeAliasNode      typeDocNodeKind = "Type alias"
 	typeDocTypeLiteralNode    typeDocNodeKind = "Type literal"
 	typeDocVariableNode       typeDocNodeKind = "Variable"
+	typeDocReferenceNode      typeDocNodeKind = "Reference"
 )
 
 func (e *moduleEmitter) createLabel(node *typeDocNode, parent *typeDocNode) string {
@@ -1532,6 +1537,14 @@ func (e *moduleEmitter) createTypeLabel(t *typeDocType, indent int) string {
 		}
 		// Otherwise, fall back to returning boolean.
 		return e.createTypeLabel(&typeDocType{Type: typeDocIntrinsicType, Name: "boolean"}, indent)
+	case typeDocConditionalType:
+		return fmt.Sprintf("%s extends %s ? %s : %s",
+			e.createTypeLabel(t.CheckType, indent),
+			e.createTypeLabel(t.ExtendsType, indent),
+			e.createTypeLabel(t.TrueType, indent),
+			e.createTypeLabel(t.FalseType, indent))
+	case typeDocInferredType:
+		return fmt.Sprintf("infer %s", t.Name)
 	default:
 		log.Fatalf("unrecognized type node type: %v\n", t.Type)
 		return ""
@@ -1556,7 +1569,7 @@ func createVisibilityLabel(flags typeDocFlags) string {
 // typeDoc represents a JSON serialized structure that has been output from the `typedoc` program.  I'm sure we are
 // unintentionally sensitive to particular flags, so for reference, we are generally parsing things of the form
 //
-//     $ tsdoc --json docs.json --mode modules --includeDeclarations
+//	$ tsdoc --json docs.json --mode modules --includeDeclarations
 //
 // In particular, passing --mode file will not lead to the correct behavior, due to the way we use module structure.
 type typeDocNode struct {
@@ -1649,6 +1662,14 @@ type typeDocType struct {
 	Target *typeDocType `json:"target,omitempty"`
 	// TargetType is the target type of a predicate, if this is a predicate.
 	TargetType *typeDocType `json:"targetType,omitempty"`
+	// CheckType is the check type of a conditional, if this is a conditional.
+	CheckType *typeDocType `json:"checkType,omitempty"`
+	// ExtendsType is the extends type of a conditional, if this is a conditional.
+	ExtendsType *typeDocType `json:"extendsType,omitempty"`
+	// TrueType is the true type of a conditional, if this is a conditional.
+	TrueType *typeDocType `json:"trueType,omitempty"`
+	// FalseType is the false type of a conditional, if this is a conditional.
+	FalseType *typeDocType `json:"falseType,omitempty"`
 }
 
 type typeDocTypeType string
@@ -1666,6 +1687,8 @@ const (
 	typeDocUnionType         typeDocTypeType = "union"
 	typeDocUnknownType       typeDocTypeType = "unknown"
 	typeDocTypeOperatorType  typeDocTypeType = "typeOperator"
+	typeDocConditionalType   typeDocTypeType = "conditional"
+	typeDocInferredType      typeDocTypeType = "inferred"
 )
 
 type typeDocComment struct {
