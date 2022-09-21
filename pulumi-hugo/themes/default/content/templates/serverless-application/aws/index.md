@@ -2,6 +2,7 @@
 title: AWS Serverless Application
 meta_desc: The AWS Serverless Application template makes it easy to deploy a serverless application on AWS with Pulumi, AWS Lambda functions, and Amazon API Gateway.
 meta_image: meta.png
+card_desc: Deploy a serverless application on AWS with Pulumi, AWS Lambda, and Amazon API Gateway.
 layout: template
 cloud:
   name: Amazon Web Services (AWS)
@@ -23,7 +24,7 @@ To use this template to deploy your own AWS serverless application, make sure yo
 {{% choosable language typescript %}}
 
 ```bash
-$ mkdir aws-serverless-website && cd aws-serverless-website
+$ mkdir my-serverless-app && cd my-serverless-app
 $ pulumi new serverless-aws-typescript
 ```
 
@@ -32,7 +33,7 @@ $ pulumi new serverless-aws-typescript
 {{% choosable language python %}}
 
 ```bash
-$ mkdir aws-serverless-website && cd aws-serverless-website
+$ mkdir my-serverless-app && cd my-serverless-app
 $ pulumi new serverless-aws-python
 ```
 
@@ -41,7 +42,7 @@ $ pulumi new serverless-aws-python
 {{% choosable language go %}}
 
 ```bash
-$ mkdir aws-serverless-website && cd aws-serverless-website
+$ mkdir my-serverless-app && cd my-serverless-app
 $ pulumi new serverless-aws-go
 ```
 
@@ -50,7 +51,7 @@ $ pulumi new serverless-aws-go
 {{% choosable language csharp %}}
 
 ```bash
-$ mkdir aws-serverless-website && cd aws-serverless-website
+$ mkdir my-serverless-app && cd my-serverless-app
 $ pulumi new serverless-aws-csharp
 ```
 
@@ -59,7 +60,7 @@ $ pulumi new serverless-aws-csharp
 {{% choosable language yaml %}}
 
 ```bash
-$ mkdir aws-serverless-website && cd aws-serverless-website
+$ mkdir my-serverless-app && cd my-serverless-app
 $ pulumi new serverless-aws-yaml
 ```
 
