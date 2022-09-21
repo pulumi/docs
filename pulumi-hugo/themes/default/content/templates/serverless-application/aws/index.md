@@ -124,4 +124,4 @@ Congratulations! You're now well on your way to managing  production-grade AWS s
 * Discover more architecture templates in [Templates &rarr;]({{< relref "/templates" >}})
 * Dive into the AWS package by exploring the [API docs in the Registry &rarr;]({{< relref "/registry/packages/aws" >}})
 * Expand your understanding of how Pulumi works in [Pulumi Learn]({{< relref "/learn" >}})
-* Read up on the latest new features [in the Pulumi Blog &rarr;]({{< relref "/blog/tag/serverless" >}})
+* Read up on the latest new features [in the Pulumi Blog &rarr;](/blog/tag/serverless)
