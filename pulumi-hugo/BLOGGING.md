@@ -162,7 +162,9 @@ For best results, we suggest the following specs for the `meta_image`, largely b
 
 Remember to replace the `meta_image` placeholder (or remove the property altogether and delete the placeholder `meta.png` file) before submitting your post.
 
-For help creating your `meta_image`, check out our [Build Your Own Meta Image file](https://www.figma.com/file/TnD7nxjIxVvXq8w0W7awPG/Build-Your-Own-Meta-Image?node-id=0%3A1) in Figma. There you’ll find backgrounds, images, and logos to assemble the `meta_image` for your blog post.
+For help creating your `meta_image`, check out our [Build Your Own Meta Image file](https://www.figma.com/file/TnD7nxjIxVvXq8w0W7awPG/Build-Your-Own-Meta-Image?node-id=0%3A1) in Figma. There you’ll find backgrounds, images, and logos to assemble the `meta_image` for your blog post. 
+
+To use Pulumi's primary brand font Gilroy in your `meta_image`, first [download Gilroy](https://drive.google.com/file/d/1893zFNypEQTvZU0J2Bz5_mVx6xa_7Zxh/view?usp=sharing) and install the file to your local font folder. Then [download the Figma font installer](https://www.figma.com/downloads/) to access your local fonts in Figma.
 
 A few things to keep in mind when designing a `meta image`:
 
