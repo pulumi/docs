@@ -97,9 +97,9 @@ New Python projects created with `pulumi new` have this option set by default. I
 
 ### `options` options
 
-| Name | Required | Description | Default |
-| - | - | - | - |
-| `refresh` | optional | Boolean indicating whether to refresh the state before performing a Pulumi operation. | `true` |
+| Name | Required | Description |
+| - | - | - |
+| `refresh` | optional | Set to `always` to refresh the state before performing a Pulumi operation. |
 
 ### `template` options
 
