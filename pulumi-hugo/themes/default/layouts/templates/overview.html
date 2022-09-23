@@ -18,14 +18,14 @@
                 {{ range $page := .Page.CurrentSection.Pages }}
                     <li class="md:w-1/2 lg:w-1/3">
                         <div class="px-4 py-2 w-full h-full">
-                            <div class="shadow-xl rounded-xl bg-white p-4 h-full">
+                            <div class="shadow-xl rounded-xl bg-white py-4 px-6 h-full border border-gray-200">
                                 {{ with $page }}
                                     {{ if .Params.meta_image }}
                                         <a class="text-gray-900" href="{{ .RelPermalink }}">
-                                            <img class="rounded-t" src="{{ (.Resources.GetMatch .Params.meta_image).RelPermalink }}" alt="{{ .Title }}" />
+                                            <img class="rounded" src="{{ (.Resources.GetMatch .Params.meta_image).RelPermalink }}" alt="{{ .Title }}" />
                                         </a>
                                     {{ end }}
-                                    <h2 class="mt-0">
+                                    <h2 class="mt-4">
                                         <span class="text-2xl">
                                             <a class="text-gray-900" href="{{ .RelPermalink }}">{{ .Title }}</a>
                                         </span>
