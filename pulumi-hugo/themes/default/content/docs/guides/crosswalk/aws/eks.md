@@ -1110,7 +1110,9 @@ def create_role(name):
     "Statement": [{
         "Sid": "AllowAssumeRole",
         "Effect": "Allow",
-        "Principal": "ec2.amazonaws.com",
+        "Principal": {
+            "Service": "ec2.amazonaws.com"
+        },
         "Action": "sts:AssumeRole"
     }]
 }""",
@@ -1223,7 +1225,9 @@ func main() {
     "Statement": [{
         "Sid": "AllowAssumeRole",
         "Effect": "Allow",
-        "Principal": "ec2.amazonaws.com",
+        "Principal": {
+            "Service": "ec2.amazonaws.com"
+        },
 		"Action": "sts:AssumeRole"
     }]
 }
@@ -1379,7 +1383,9 @@ class MyStack : Stack
     ""Statement"": [{
         ""Sid"": ""AllowAssumeRole"",
         ""Effect"": ""Allow"",
-        ""Principal"": ""ec2.amazonaws.com"",
+        ""Principal"": {
+            ""Service"": ""ec2.amazonaws.com""
+        },
 		""Action"": ""sts:AssumeRole""
     }]
 }
