@@ -634,7 +634,7 @@ Now, with this, we can construct new `Random` resource instances, and Pulumi wil
 
 ### Example: GitHub Labels REST API
 
-This example highlights how to make REST API calls to a backing provider to perform CRUD operations. In this case, the backing provider is the GitHub API in this case. Because the resource provider method implementations will be serialized and used in a different process, we keep all the work to initialize the REST client and to make calls to it, local to each function.
+This example highlights how to make REST API calls to a backing provider to perform CRUD operations. In this case, the backing provider is the GitHub API. Because the resource provider method implementations will be serialized and used in a different process, we keep all the work to initialize the REST client and to make calls to it, local to each function.
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
