@@ -9,7 +9,7 @@ date: {{ .Date }}
 
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
-# previews. This field is required or the build will fail the linter test. 
+# previews. This field is required or the build will fail the linter test.
 # Max length is 160 characters.
 meta_desc:
 
@@ -42,7 +42,7 @@ Either way, avoid using images or code samples [in the first 70 words](https://g
 
 ## Writing the Post
 
-For help assembling the content of your post, see [BLOGGING.md](https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md). For general formatting guidelines, see the [Style Guide](https://https://github.com/pulumi/pulumi-hugo/blob/master/STYLE-GUIDE.md).
+For help assembling the content of your post, see [BLOGGING.md](https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md). For general formatting guidelines, see the [Style Guide](https://github.com/pulumi/pulumi-hugo/blob/master/STYLE-GUIDE.md).
 
 ## Code Samples
 
