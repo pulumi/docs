@@ -1,6 +1,6 @@
 ---
 title: Projects and Stacks
-meta_desc: An overivew of Project and Stack Management within the Pulumi Cloud Service.
+meta_desc: An overview of Project and Stack Management within the Pulumi Cloud Service.
 menu:
   intro:
     parent: pulumi-service
@@ -31,7 +31,7 @@ To create a project:
 ## Stack Permissions
 
 The Pulumi Service provides fine-grained access controls for stacks. Stack permissions are
-based on the member's role within the organization, and on their team membership.
+based on the member's role within the organization and their team membership.
 Additionally, any member who creates a stack is granted admin permissions on that stack.
 
 Organization admins can control the stack default permissions at the organization level from **Settings** > **General**.
@@ -61,16 +61,16 @@ To view an organization's stacks:
 
 1. Navigate to **All stacks**.
 1. Optionally, adjust the grouping by selecting the **Group By** and **Sort By** controls.
-1. To view a stacks details select the name of the stack.
+1. To view a stack's details, select the stack's name.
 1. To view a specific stack update, navigate to **Activity** and select it from the list.
 
 ## Stack Favorites
 
-Stack favorites allow you to label specific stacks for quick and easy access. Stack favorites will be dispalyed in the navigation and on your dashboard.
+Stack favorites allow you to label specific stacks for quick and easy access. Stack favorites are displayed in the navigation and on your dashboard.
 
 ![""](/images/docs/reference/service/stacks-navigation-favorites-card.png)
 
-### Favortie a Stack
+### Favorite a Stack
 
 1. Navigate to the stack.
 1. Select the star icon next to the stack name.
@@ -217,7 +217,7 @@ To view a stack's details:
 
 ![Stack outputs and configuration](/images/docs/reference/service/stack-outputs-and-configuration.png)
 
-You can see other details such as who applied the update and when, as well as counts of added, updated, and unchanged resources. If your stack is integrated with a CI/CD pipeline, such as [GitHub Actions]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}), you also see useful links to data like your Git commit hash, mapped branch, and pull request ID.
+You can see other details, such as who applied the update, when, and counts of added, updated, and unchanged resources. If your stack is integrated with a CI/CD pipeline, such as [GitHub Actions]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}), you also see useful links to data like your Git commit hash, mapped branch, and pull request ID.
 
 #### Custom Stack Tags
 
@@ -245,9 +245,9 @@ To view stack activity:
 
 The **Changes** section of activity lets you toggle between different log views:
 
-* _Summary Log_ which lists a summary of changes, counts of affected resources, and update duration
-* _Diff Log_ which displays a diff of the changes (created, updated, or deleted resources), your stack outputs, and the same counts and update duration shown in the Summary Log view.
-* _Diagnostic Log_ which displays warning messages or a description of the operations performed during the update (if any).
+* _Summary Log_ lists a summary of changes, counts of affected resources, and update duration
+* _Diff Log_ displays a diff of the changes (created, updated, or deleted resources), your stack outputs, and the same counts and update duration shown in the Summary Log view.
+* _Diagnostic Log_ displays warning messages or a description of the operations performed during the update (if any).
 
 ![Stack resource graph](/images/docs/reference/service/resource-changes.png)
 
@@ -255,7 +255,7 @@ The **Timeline** section provides a detailed timeline of changes to individual c
 
 ![Stack resource graph timeline](/images/docs/reference/service/timeline.png)
 
-The **Configuration** section displays the same configuration details that you can find in the Stack view for your update.
+The **Configuration** section displays the same configuration details found in the Stack view for your update.
 
 #### Stack Resources
 
@@ -266,7 +266,7 @@ To view a stack's resources:
 1. Select **List View** or **Graph View** to toggle between a list view and a graph view.
 1. Selecting an individual resource from the list or graph view will provide more details.
 
-The list view displays a list of all of the stack's resources including their type, name,
+The list view displays a list of all of the stack's resources, including their type, name,
 status, and link to the associated cloud provider.
 
 ![Stack resource list](/images/docs/reference/service/stack-resource-list.png)
