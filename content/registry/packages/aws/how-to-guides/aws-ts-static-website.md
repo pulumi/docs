@@ -74,7 +74,7 @@ const contentFile = new aws.s3.BucketObject(
 
 The Pulumi program then creates an `aws.cloudfront.Distribution` resource, which will serve
 the contents of the S3 bucket. The CloudFront distribution can be configured to handle
-things like custom error pages, cache TTLs, and so on. If includeWWW is set to true both the
+things like custom error pages, cache TTLs, and so on. If `includeWWW` is set to true both the
 cloudfront distribution and any generated certificate will contain an alias for accessing the site
 from the www subdomain.
 
@@ -157,3 +157,4 @@ the AWS CLI.
 
 This will fail because the program will attempt to create an alias record and certificate for both the targetDomain
 and `www.${targetDomain}` when includeWWW is set to true.
+
