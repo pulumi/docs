@@ -56,7 +56,7 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-09-29T08:00:00-07:00
+    sortable_date: 2022-11-17T08:00:00-07:00
     # Duration of the webinar.
     duration: "90 minutes"
     # Datetime of the webinar.
@@ -67,8 +67,10 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Matt Stratton
-          role: Staff Developer Advocate, Pulumi
+        - name: Josh Kodroff
+          role: Senior Solutions Architect, Pulumi
+        - name: Christian Nunciato
+          role: Technical Content Lead, Pulumi
         - name: Chris Sevilleaja
           role: Senior Developer Advocate, DigitalOcean
 
