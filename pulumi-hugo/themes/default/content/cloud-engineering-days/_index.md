@@ -83,15 +83,35 @@ hackathon:
 workshops:
   title: Cloud Engineering Workshops
   items:
-    - title: Getting Started with Infrastructure as Code on AWS
-      link: /resources/getting-started-with-iac-aws
+    - title: "Pulumi 101: A static site on AWS"
+      link: /resources/pulumi-101-static-site-on-aws/
       description: |
-        In this workshop, you will learn the fundamentals of Infrastructure as Code on AWS through a series of exercises using Pulumi’s Cloud Engineering platform.
+        Learn the basics of Pulumi from projects to components. Use TypeScript and templates to stand up a static site on AWS using S3.
 
-    - title: Getting Started with Infrastructure as Code on Digital Ocean
-      link: /resources/getting-started-with-infrastructure-as-code-on-digital-ocean
+    - title: "Pulumi 101: Serverless containers on GCP"
+      link: /resources/pulumi-101-serverless-containers-gcp
       description: |
-        In this hands-on workshop, you will learn how to stand up basic services using Infrastructure as Code through a series of hands-on labs.
+        Learn the basics of Pulumi from projects to components. Use Python and templates to stand up serverless containers on Cloud Run from Google Cloud.
+    
+    - title: "Building with Containers on Azure"
+      link: /resources/building-containers-azure
+      description: |
+        Explore more about building up a containerized microservices architecture on Azure using infrastructure as code and cloud engineering principles
+
+    - title: "Pulumi 101: Kubernetes on Azure"
+      link: /resources/pulumi-101-kubernetes-on-azure
+      description: |
+        Learn the basics of Pulumi using C# and templates to stand up a small Kubernetes cluster on AKS from Azure.
+    
+    - title: "Serverless Architecture on AWS"
+      link: /resources/serverless-architecture-aws
+      description: |
+        Explore building up a serverless microservices architecture on AWS using infrastructure as code, cloud engineering principles, and TypeScript.
+    
+    - title: "Sharing Code with Pulumi Packages, Abstractions, and More"
+      link: /resources/simpler-pulumi-package-authoring
+      description: |
+        Explore how to start sharing Pulumi code with others. Use Go to build a custom architecture for GCP that we’ll compile down into a shareable library.
 
 schedule:
     title: Schedule at a Glance
