@@ -37,13 +37,13 @@ Google Cloud Bigtable and AWS DynamoDB are both highly-available, scalable, glob
 
 ## Which NoSQL Database is better? Bigtable vs DynamoDB
 
-Choosing a database for your application requires careful consideration of your current and future needs. There are advantages and disadvantages to both Bitable and DynamoDB, but they differ enough that one will have a clear advantage for your specific application.
+Choosing a database for your application requires careful consideration of your current and future needs. There are advantages and disadvantages to both Bigtable and DynamoDB, but they differ enough that one will have a clear advantage for your specific application.
 
 ### Pros and Cons of Bigtable
 
 Bigtable excels at handling massive quantities of data and providing very low latency for both read and write actions on that data. It is also possible to dynamically adjust throughput, by adding more nodes to the Bigtable cluster for times of particularly high demand, then deleting those nodes once normal activity resumes to keep costs down. BigTable also supports SQL-like queries, through the use of BigQuery.
 
-However, unlike DynamoDB, Bigtable does not support auto-scaling without first defining metrics to monitor and scale in response to. It also sacrifices some availability in exchange for consistency, whereas DynamoDB has made the opposite decision. It is exclusive to Google Cloud.
+However, unlike DynamoDB, Bigtable does not support auto-scaling without first defining metrics to monitor and scale in response to. It also sacrifices some availability in exchange for consistency, whereas DynamoDB has made the opposite decision. Bigtable is exclusive to Google Cloud.
 
 ### Pros and Cons of DynamoDB
 
@@ -67,7 +67,7 @@ If you have truly large amounts of data that you will require very fast access t
 
 ## Conclusion
 
-Regardless of which database suits your needs, standing them up shouldn't be a chore. With Pulumi, provisioning either one is a breeze in the programming language of your choce. Try deploying an [AWS Data Service with DynamoDB]({{< relref "/docs/aws/dynamodb/" >}}) or get started with [Google Cloud]({{< relref "/docs/get-started/gcp/" >}})
+Regardless of which database suits your needs, standing them up shouldn't be a chore. With Pulumi, provisioning either one is a breeze in the programming language of your choce. Try deploying an [AWS Data Service with DynamoDB]({{< relref "/docs/aws/dynamodb" >}}) or get started with [Google Cloud]({{< relref "/docs/get-started/gcp" >}})
 
 ## Pulumi Corporation
 

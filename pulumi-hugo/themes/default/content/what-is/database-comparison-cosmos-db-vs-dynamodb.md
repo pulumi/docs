@@ -1,7 +1,7 @@
 ---
 title: "Database Comparison: Cosmos DB vs DynamoDB"
 meta_desc: |
-     Compare noSQL databases Cosmos DB vs DynamoDB. See the similarities and differences between these databases to determine which is best for you.
+     Compare NoSQL databases Cosmos DB vs DynamoDB. See the similarities and differences between these databases to determine which is best for you.
 
 type: what-is
 page_title: "Database Comparison: Cosmos DB vs DynamoDB"
@@ -57,7 +57,7 @@ Cosmos DB is best if you need the wider flexibility of more data models, as well
 
 DynamoDB is best if the rest of your infrastructure is already on AWS or your priority is high performance for low cost over flexibility.
 
-Both Cosmos DB and DynamoDB are quick to stand up when using Pulumi. Try [Cosmos DB]({{< relref "/blog/how-to-build-globally-distributed-applications-with-azure-cosmos-db-and-pulumi/" >}}) and [DynamoDB]({{< relref "/docs/aws/dynamodb" >}}) for yourself!
+Both Cosmos DB and DynamoDB are quick to stand up when using Pulumi. Try [Cosmos DB]({{< relref "/blog/how-to-build-globally-distributed-applications-with-azure-cosmos-db-and-pulumi" >}}) and [DynamoDB]({{< relref "/docs/aws/dynamodb" >}}) for yourself!
 
 ## Pulumi Corporation
 
