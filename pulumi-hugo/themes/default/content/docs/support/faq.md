@@ -30,6 +30,16 @@ name with the organization name. For example:
 $ pulumi stack init acme-corp/widget-server
 ```
 
+### How do I migrate stacks from an individual account to an organization account?
+
+The Pulumi Service allows you to migrate stacks in the `Settings` tab within the Pulumi console.
+
+Navigate to the project containing the stack you wish to migrate, and then select the stack in question.
+
+From there, select the "Settings" tab, and you'll see a "Transfer Stack" button. You can select the organization you wish to transfer to from there.
+
+You can find more information about this process [here](({{< relref "/docs/intro/pulumi-service/projects-and-stacks/#transferring-stacks" >}}))
+
 ## Pulumi Service
 
 ### How does Pulumi store state?
