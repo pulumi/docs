@@ -153,7 +153,6 @@ customer_logos:
     - name: tableau
     - name: fenergo
     - name: univision
-    - name: kavak
     - name: blockfi
     - name: linktree
     - name: materialize
