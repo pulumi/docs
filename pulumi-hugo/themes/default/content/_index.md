@@ -15,7 +15,7 @@ overview:
   logos:
     languages:
       - /logos/tech/typescript.svg
-      - /logos/tech/dot-net.svg
+      - /logos/tech/dotnet.svg
       - /logos/tech/go.svg
       - /logos/tech/java.svg
       - /logos/tech/yaml.svg
