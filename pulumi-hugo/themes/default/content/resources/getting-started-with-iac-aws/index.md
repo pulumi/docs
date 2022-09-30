@@ -59,7 +59,7 @@ main:
     # Webinar title.
     title: "Getting Started with Infrastructure as Code on AWS"
     # URL for embedding a URL for ungated webinars.
-    youtube_url: "https://www.youtube.com/embed/Ap0aLb-RQSc"
+    youtube_url: # "https://www.youtube.com/embed/Ap0aLb-RQSc"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2022-10-12T09:00:00.000-07:00
     # Duration of the webinar.
