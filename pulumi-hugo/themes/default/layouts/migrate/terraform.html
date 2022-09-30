@@ -3,7 +3,12 @@
 {{ end }}
 
 {{ define "main" }}
-    <section id="overview" class="container mx-auto px-2 my-16">
+    <section id="overview" class="container mx-auto px-2 my-4">
+        <div class="flex justify-center rounded-md bg-violet-100">
+            <p class="text-center">
+                ✨ <a href="#migrate"><span class="font-bold">NEW</span> Contact us and we'll migrate your Terraform to a modern language</a>. ✨
+            </p>
+        </div>
         <div class="flex flex-wrap">
             <div class="w-full lg:w-1/2 p-6">
                 <div>
@@ -136,6 +141,24 @@
             </li>
         </ul>
     </section>
-
-    {{ partial "hand-raise-section" . }}
+    <section id="migrate" class="container mx-auto w-full relative overflow-visible py-20 px-4">
+        <div class="flex justify-center mt-24">
+            <div class="card ready-cta w-full rounded-xl p-1 gradient">
+                <div class="flex justify-center rounded-xl bg-violet-100">
+                    <div class="p-8 md:p-16 lg:pt-28 lg:pb-28 inline-flex flex-col items-center">
+                        <h2 class="mb-12 text-center">Need help migrating your Terraform?</h2>
+                        <p class="container mx-auto max-w-3xl text-lg text-center my-8">
+                            We can help you migrate all of your Terraform workspaces as part of your Pulumi Enterprise and Business Critical onboarding. We will convert all your
+                            Terraform HCL to your favorite language and migrate the Terraform state. Contact us to get started.
+                        </p>
+                        <div class="flex flex-col self-stretch items-center lg:justify-between">
+                            <div class="flex flex-col justify-center align-center text-center w-full md:w-2/4 lg:ml-14 lg:mr-14 mb-14 lg:mb-0 z-0">
+                                <a href="{{ relref . "/contact" }}?form=sales" class="btn-primary py-3">Start Migration</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {{ end }}
