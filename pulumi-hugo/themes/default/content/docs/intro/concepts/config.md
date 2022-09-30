@@ -20,7 +20,7 @@ The key-value pairs for any given stack are stored in [your project's stack sett
 You can use both the CLI and the programming model for your Pulumi configuration.
 
 * The CLI offers a `config` command with `set` and `get` subcommands for managing key-value pairs.
-* The programming model offers a `Config` object with various getters and setters for retrieving values.
+* The programming model offers a `Config` object with various getters for retrieving values.
 
 > All shell environment variables are passed to the running program and can be accessed using standard runtime APIs, such as `process.env` in Node.js and `os.environ` in Python, which can also be used for dynamic behavior. Configuration is preferable, however, because it is designed for multi-stack collaborative scenarios.
 
