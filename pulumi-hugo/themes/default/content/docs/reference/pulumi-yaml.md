@@ -30,7 +30,7 @@ stackConfigDir: config/
 backend:
   url: https://pulumi.example.com
 options:
-  refresh: true
+  refresh: always
 template:
   description: An example template
   config:
