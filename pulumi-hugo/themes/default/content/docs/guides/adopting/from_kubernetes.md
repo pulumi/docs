@@ -22,7 +22,7 @@ The Kubernetes package provides the `yaml` module which defines two resource typ
 * `ConfigFile`: deploy a single Kubernetes YAML file
 * `ConfigGroup`: deploy a collection of Kubernetes YAML files together
 
-By defining these resources in code, you can deploy off-the-shelf Kubernetes YAML files without needing to change them. Pulumi understands the full topology of resource objects inside of those YAML files. The examples below show how to do both &mdash; first a single YAML file and then a group of them &mdash; using the standard [Kubernetes Guestbook Application](https://github.com/kubernetes/examples/tree/master/guestbook).
+By defining these resources in code, you can deploy off-the-shelf Kubernetes YAML files without needing to change them. Pulumi understands the full topology of resource objects inside those YAML files. The examples below show how to do both &mdash; first a single YAML file and then a group of them &mdash; using the standard [Kubernetes Guestbook Application](https://github.com/kubernetes/examples/tree/master/guestbook).
 
 ### Deploying a Single Kubernetes YAML File
 
@@ -35,7 +35,7 @@ $ curl -L --remote-name \
     https://raw.githubusercontent.com/kubernetes/examples/master/guestbook/all-in-one/guestbook-all-in-one.yaml
 ```
 
-This Pulumi program uses `ConfigFile` to read that YAML file, provision the resources inside of it, and export the resulting IP addresses:
+This Pulumi program uses `ConfigFile` to read that YAML file, provision the resources inside it, and export the resulting IP addresses:
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
@@ -162,19 +162,20 @@ As we can see here, the `getResource` function lets us retrieve an internal reso
 Running `pulumi up` will deploy the resources and then export the resulting frontend service's auto-assigned cluster IP address:
 
 ```bash
-Updating (dev):
-     Type                              Name          Status
- +   pulumi:pulumi:Stack               k8s-yaml-dev  created
- +   └─ kubernetes:yaml:ConfigFile     guestbook     created
- +      ├─ kubernetes:core:Service     redis-master  created
- +      ├─ kubernetes:core:Service     frontend      created
- +      ├─ kubernetes:apps:Deployment  frontend      created
- +      ├─ kubernetes:core:Service     redis-slave   created
- +      ├─ kubernetes:apps:Deployment  redis-master  created
- +      └─ kubernetes:apps:Deployment  redis-slave   created
+Updating (dev)
+
+     Type                                 Name                 Status
+ +   pulumi:pulumi:Stack                  pulumi-k8s-test-dev  created
+ +   └─ kubernetes:yaml:ConfigFile        guestbook            created
+ +      ├─ kubernetes:core/v1:Service     redis-replica        created
+ +      ├─ kubernetes:core/v1:Service     frontend             created
+ +      ├─ kubernetes:core/v1:Service     redis-master         created
+ +      ├─ kubernetes:apps/v1:Deployment  redis-master         created
+ +      ├─ kubernetes:apps/v1:Deployment  frontend             created
+ +      └─ kubernetes:apps/v1:Deployment  redis-replica        created
 
 Outputs:
-    privateIp: "10.52.254.168"
+    privateIp: "10.110.181.172"
 
 Resources:
     + 8 created
@@ -190,7 +191,7 @@ To deploy the Kubernetes Guestbook Application using a colllection of YAML files
 $ mkdir yaml
 $ pushd yaml
 $ curl -L --remote-name \
-    "https://raw.githubusercontent.com/kubernetes/examples/master/guestbook/{frontend-deployment,frontend-service,redis-master-deployment,redis-master-service,redis-slave-deployment,redis-slave-service}.yaml"
+    "https://raw.githubusercontent.com/kubernetes/examples/master/guestbook/{frontend-deployment,frontend-service,redis-master-deployment,redis-master-service,redis-replica-deployment,redis-replica-service}.yaml"
 $ popd
 ```
 
@@ -328,25 +329,26 @@ class Program
 Running `pulumi up` will deploy all of the resources in all of the YAML files and then export the resulting frontend service's auto-assigned cluster IP address:
 
 ```bash
-Updating (dev):
-     Type                                 Name                               Status
- +   pulumi:pulumi:Stack                  k8s-yaml-group-dev                 created
- +   └─ kubernetes:yaml:ConfigGroup       guestbook                          created
- +      ├─ kubernetes:yaml:ConfigFile     yaml/redis-slave-service.yaml      created
- +      │  └─ kubernetes:core:Service     redis-slave                        created
- +      ├─ kubernetes:yaml:ConfigFile     yaml/redis-master-service.yaml     created
- +      │  └─ kubernetes:core:Service     redis-master                       created
- +      ├─ kubernetes:yaml:ConfigFile     yaml/redis-master-deployment.yaml  created
- +      │  └─ kubernetes:apps:Deployment  redis-master                       created
- +      ├─ kubernetes:yaml:ConfigFile     yaml/frontend-deployment.yaml      created
- +      │  └─ kubernetes:apps:Deployment  frontend                           created
- +      ├─ kubernetes:yaml:ConfigFile     yaml/frontend-service.yaml         created
- +      │  └─ kubernetes:core:Service     frontend                           created
- +      └─ kubernetes:yaml:ConfigFile     yaml/redis-slave-deployment.yaml   created
- +         └─ kubernetes:apps:Deployment  redis-slave                        created
+Updating (dev)
+
+     Type                                    Name                                    Status
+ +   pulumi:pulumi:Stack                     pulumi-k8s-test-dev                     created
+ +   └─ kubernetes:yaml:ConfigGroup          guestbook                               created
+ +      ├─ kubernetes:yaml:ConfigFile        foo-test/redis-replica-service.yaml     created
+ +      │  └─ kubernetes:core/v1:Service     redis-replica                           created
+ +      ├─ kubernetes:yaml:ConfigFile        foo-test/frontend-deployment.yaml       created
+ +      │  └─ kubernetes:apps/v1:Deployment  frontend                                created
+ +      ├─ kubernetes:yaml:ConfigFile        foo-test/redis-master-deployment.yaml   created
+ +      │  └─ kubernetes:apps/v1:Deployment  redis-master                            created
+ +      ├─ kubernetes:yaml:ConfigFile        foo-test/frontend-service.yaml          created
+ +      │  └─ kubernetes:core/v1:Service     frontend                                created
+ +      ├─ kubernetes:yaml:ConfigFile        foo-test/redis-master-service.yaml      created
+ +      │  └─ kubernetes:core/v1:Service     redis-master                            created
+ +      └─ kubernetes:yaml:ConfigFile        foo-test/redis-replica-deployment.yaml  created
+ +         └─ kubernetes:apps/v1:Deployment  redis-replica                           created
 
 Outputs:
-    privateIp: "10.51.254.33"
+    privateIp: "10.108.151.100"
 
 Resources:
     + 14 created
@@ -365,9 +367,9 @@ We discuss and provide examples for each approach in this section.
 
 ### Emulating Helm Charts With Chart Resources
 
-With the [Helm V3]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release" >}}) chart resources, Pulumi renders the templates and applies them directly, much like with `ConfigFile` and `ConfigGroup` shown earlier, which means all provisioning happens client-side using your Kubernetes authentication setup without needing a server-side component.
+With the [Helm V3]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/chart" >}}) chart resources, Pulumi renders the templates and applies them directly, much like with `ConfigFile` and `ConfigGroup` shown earlier, which means all provisioning happens client-side using your Kubernetes authentication setup without needing a server-side component.
 
-The `Chart` resource type provides a number of options to control where to fetch the chart's contents from. This includes:
+The `Release` resource type provides a number of options to control where to fetch the chart's contents from. This includes:
 
 * `chart`: The required chart name (for instance, `"wordpress"`).
 * `repo`: (Optional) The helm repository to pull the chart from (e.g., `"stable"`).
@@ -376,7 +378,7 @@ The `Chart` resource type provides a number of options to control where to fetch
 * `values`: (Optional) A dictionary of named key/value values for Charts with parameters.
 * `fetchOpts`: (Optional) A bag of options to control the fetch behavior.
 
-In addition to those core options, you can specify `transformations` (similar to what is shown [configurations below](#configuration-transformations)), `namePrefix` to control naming, or `namespace` to place all resources inside of a specific Kubernetes namespace. Please refer to the [API reference]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release" >}}) documentation for more details.
+In addition to those core options, you can specify `transformations` (similar to what is shown [configurations below](#configuration-transformations)), `namePrefix` to control naming, or `namespace` to place all resources inside a specific Kubernetes namespace. Please refer to the [API reference]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/chart" >}}) documentation for more details.
 
 #### Provisioning a Helm Chart
 
@@ -389,17 +391,16 @@ To illustrate provisioning a Helm Chart using Pulumi, we will deploy the `wordpr
 ```javascript
 let k8s = require("@pulumi/kubernetes");
 
-// Deploy v9.6.0 version of the wordpress chart.
+// Deploy the latest version of the bitnami/wordpress chart.
 let wordpress = new k8s.helm.v3.Chart("wpdev", {
     fetchOpts: {
         repo: "https://charts.bitnami.com/bitnami"
     },
     chart: "wordpress",
-    version: "9.6.0",
 });
 
 // Export the public IP for WordPress.
-let frontend = wordpress.getResource("v1/Service", "wpdev-wordpress");
+let frontend = wordpress.getResource("v1/Service", "default/wpdev-wordpress");
 module.exports = {
     frontendIp: frontend.status.loadBalancer.ingress[0].ip,
 };
@@ -411,18 +412,16 @@ module.exports = {
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
 
-// Deploy v9.6.0 version of the wordpress chart.
-// Deploy the latest version of the stable/wordpress chart.
+// Deploy the latest version of the bitnami/wordpress chart.
 const wordpress = new k8s.helm.v3.Chart("wpdev", {
     fetchOpts: {
         repo: "https://charts.bitnami.com/bitnami"
     },
     chart: "wordpress",
-    version: "9.6.0",
 });
 
 // Export the public IP for WordPress.
-const frontend = wordpress.getResource("v1/Service", "wpdev-wordpress");
+const frontend = wordpress.getResource("v1/Service", "default/wpdev-wordpress");
 export const frontendIp = frontend.status.loadBalancer.ingress[0].ip;
 ```
 
@@ -433,15 +432,14 @@ export const frontendIp = frontend.status.loadBalancer.ingress[0].ip;
 import pulumi
 from pulumi_kubernetes.helm.v3 import Chart, ChartOpts
 
-# Deploy v9.6.0 version of the wordpress chart.
+# Deploy the latest version of the bitnami/wordpress chart.
 wordpress = Chart('wpdev', ChartOpts(
     fetch_opts={'repo': 'https://charts.bitnami.com/bitnami'},
     chart='wordpress',
-    version='9.6.0',
 ))
 
 # Export the public IP for WordPress.
-frontend = wordpress.get_resource('v1/Service', 'wpdev-wordpress')
+frontend = wordpress.get_resource('v1/Service', 'default/wpdev-wordpress')
 pulumi.export('frontend_ip', frontend.status.load_balancer.ingress[0].ip)
 ```
 
@@ -459,10 +457,9 @@ import (
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
-        // Deploy v9.6.0 version of the wordpress chart.
+        // Deploy the latest version of the bitnami/wordpress chart.
         wordpress, err := helmv3.NewChart(ctx, "wpdev", helmv3.ChartArgs{
             Chart:   pulumi.String("wordpress"),
-            Version: pulumi.String("9.6.0"),
             FetchArgs: helmv3.FetchArgs{
                 Repo: pulumi.String(`https://charts.bitnami.com/bitnami`),
             },
@@ -472,7 +469,7 @@ func main() {
         }
 
         // Export the public IP for WordPress.
-        frontendIP := wordpress.GetResource("v1/Service", "wpdev-wordpress", "").Apply(func(r interface{}) (interface{}, error) {
+        frontendIP := wordpress.GetResource("v1/Service", "default/wpdev-wordpress", "").Apply(func(r interface{}) (interface{}, error) {
             svc := r.(*corev1.Service)
             return svc.Status.LoadBalancer().Ingress().Index(pulumi.Int(0)).Ip(), nil
         })
@@ -502,11 +499,10 @@ class Program
         return Pulumi.Deployment.RunAsync(() =>
         {
 
-            // Deploy v9.6.0 version of the wordpress chart.
+            // Deploy the latest version of the bitnami/wordpress chart.
             var wordpress = new Chart("wpdev", new ChartArgs
             {
                 Chart = "wordpress",
-                Version = "9.6.0",
                 FetchOptions = new ChartFetchArgs
                 {
                     Repo = "https://charts.bitnami.com/bitnami"
@@ -514,7 +510,7 @@ class Program
             });
 
             // Export the public IP for WordPress.
-            var frontend = wordpress.GetResource<Service>("wpdev-wordpress");
+            var frontend = wordpress.GetResource<Service>("default/wpdev-wordpress");
             return new Dictionary<string, object?>
             {
                 { "frontendIp", frontend.Apply(fe => fe.Status.Apply(status => status.LoadBalancer.Ingress[0].Ip)) },
@@ -576,8 +572,8 @@ The `Release` resource type's inputs closely mirror the options supported by the
 * `chart`: The required chart name (for instance, `"wordpress"`). For a local helm chart, a path can be specified instead.
 * `repositoryOpts`: (Optional) Options to configure URL and authentication/authorization information for the hosting Helm repository, if any.
 * `version`: (Optional) The semantic chart version to pull (by default `"latest"`).
-* `values`: (Optional) A dictionary of named key/value values for Charts with parameters.
-* `skipAwait`: (Optional) Whether or not to skip waiting on the availability of all resources installed by the chart. By default, this is set to `false` (i.e. awaits all resources) which allows us to chain dependent resources and execution to the `Release` resource.
+* `values`: (Optional) A dictionary of named key/value pairs for Charts with parameters.
+* `skipAwait`: (Optional) Whether to skip waiting on the availability of all resources installed by the chart. By default, this is set to `false` (i.e. awaits all resources) which allows us to chain dependent resources and execution to the `Release` resource.
 * `timeout`: (Optional) When `skipAwait` is `false`, the amount of time to wait on resources being available. If the timeout expires, the release is marked as `failed`.
 
 For more details on all the supported inputs, please refer to the [API reference documentation]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release/#inputs" >}}).
@@ -602,7 +598,6 @@ const wordpress = new k8s.helm.v3.Release("wpdev", {
     repositoryOpts: {
         repo: "https://charts.bitnami.com/bitnami",
     },
-    version: "9.6.0",
 });
 
 // Get the status field from the wordpress service, and then grab a reference to the spec.
@@ -629,7 +624,6 @@ wordpress = Release(
         repository_opts=RepositoryOptsArgs(
             repo="https://charts.bitnami.com/bitnami",
         ),
-        version="9.6.0",
     ),
 )
 
@@ -656,7 +650,6 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		// Deploy the bitnami/wordpress chart.
 		wordpress, err := helm.NewRelease(ctx, "wpdev", &helm.ReleaseArgs{
-			Version: pulumi.String("9.6.0"),
 			Chart:   pulumi.String("wordpress"),
 			RepositoryOpts: &helm.RepositoryOptsArgs{
 				Repo: pulumi.String("https://charts.bitnami.com/bitnami"),
@@ -709,7 +702,6 @@ class MyStack : Stack
             {
                 Repo = "https://charts.bitnami.com/bitnami"
             },
-            Version = "9.6.0",
         });
 
         // Get the status field from the wordpress service, and then grab a reference to the spec.
@@ -1039,7 +1031,7 @@ yaml
 2 directories, 2 files
 ```
 
-These are typically YAML configuration files so you can now do whatever you'd like with them, such as applying them with `kubectl apply -f ...`. Note that CustomResourceDefinition resources need to be applied first, so they are rendered in a separate subdirectory. (This example doesn’t include any CRDs, so the directory is empty). You could deploy the rendered manifests with kubectl like this:
+These are typically YAML configuration files, so you can now do whatever you'd like with them, such as applying them with `kubectl apply -f ...`. Note that CustomResourceDefinition resources need to be applied first, so they are rendered in a separate subdirectory. (This example doesn’t include any CRDs, so the directory is empty). You could deploy the rendered manifests with kubectl like this:
 
 ```bash
 $ kubectl apply -f "yaml/0-crd"
@@ -1203,4 +1195,4 @@ Although this example shows the YAML `ConfigFile` resource, the same behavior is
 
 ## Provisioning Mixed Configurations
 
-It is possible to provision a combination of native Kubernetes objects, YAML files, Helm Charts, and other cloud resources all together, with dependences between them. For an example of doing so, see [this blog post]({{< relref "/blog/using-helm-and-pulumi-to-define-cloud-native-infrastructure-as-code" >}}) which demonstrates provisioning an Azure Kubernetes cluster, MongoDB-flavored CosmosDB instance, a Kubernetes secret to store the connection information, and a Helm Chart that consumes this secret and connects to the CosmosDB database.
+It is possible to provision a combination of native Kubernetes objects, YAML files, Helm Charts, and other cloud resources all together, with dependencies between them. For an example of doing so, see [this blog post]({{< relref "/blog/using-helm-and-pulumi-to-define-cloud-native-infrastructure-as-code" >}}) which demonstrates provisioning an Azure Kubernetes cluster, MongoDB-flavored CosmosDB instance, a Kubernetes secret to store the connection information, and a Helm Chart that consumes this secret and connects to the CosmosDB database.
