@@ -24,7 +24,7 @@ meta_image: meta.png
 # The content below is meant help you get started and to serve as a guide to work by. Feel free to adjust it needed for your template.
 ---
 
-The $CLOUD $ARCHITECTURE template deploys a $THING on $CLOUD with Pulumi. It uses this resource, this other resource, and probably some other awesome resource to accomplish some particular desirable outcome. The template generates a complete Pulumi program, including $INCLUDED_STUFF, to give you a working project out of the box that you can customize easily and extend to suit your needs.
+The $CLOUD $ARCHITECTURE template creates an infrastructure as code project that deploys a $THING to $CLOUD with Pulumi. It uses this resource, this other resource, and probably some other awesome resource to accomplish some particular desirable outcome. The template generates a complete Pulumi program, including $INCLUDED_STUFF, to give you a working project out of the box that you can customize easily and extend to suit your needs.
 
 ![An architecture diagram of the Pulumi $CLOUD $ARCHITECTURE template](./architecture.png)
 
@@ -203,7 +203,7 @@ A description of the next step.
 
 A description of the other next step.
 
-## Cleaning up
+## Tidying up
 
 You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`]({{< relref "/docs/reference/cli/pulumi_destroy" >}}):
 
@@ -215,7 +215,7 @@ $ pulumi destroy
 
 Congratulations! You're now well on your way to managing a production-grade $THING on $CLOUD with Pulumi --- and there's lots more you can do from here:
 
-* Discover more architecture templates as they're available in [Templates &rarr;]({{< relref "/templates" >}})
+* Discover more architecture templates in [Templates &rarr;]({{< relref "/templates" >}})
 * Dive into the $CLOUD package by exploring the [API docs in the Registry &rarr;]({{< relref "/registry/packages/$CLOUD" >}})
-* Expand your understanding of how Pulumi works in [Architecture &amp; Concepts &rarr;]({{< relref "/docs/intro/concepts" >}})
+* Expand your understanding of how Pulumi works in [Pulumi Learn &rarr;]({{< relref "/learn" >}})
 * Read up on the latest new features [in the Pulumi Blog &rarr;]({{< relref "/blog" >}})
