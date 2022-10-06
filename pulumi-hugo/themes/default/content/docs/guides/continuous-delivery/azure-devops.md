@@ -20,7 +20,7 @@ Pulumi doesn't require any particular arrangement of stacks or workflow to work 
 continuous integration / continuous deployment system. So the steps described here can be
 altered to fit into any existing type of deployment setup.
 
-This page shows you how to use the YAML method to configure your DevOps pipeline, but you can easily adapt
+This page shows you how to use the Pulumi Azure DevOps task extension and the YAML method to configure your DevOps pipeline, but you can easily adapt
 the steps outlined in the sample YAML file below to the Visual Designer as well.
 
 ## Prerequisites
@@ -30,10 +30,83 @@ the steps outlined in the sample YAML file below to the Visual Designer as well.
     - [Installation instructions]({{< relref "/docs/get-started/install" >}}).
 - A git repo with your Azure DevOps project set as the remote URL.
     - To learn more about how to [create a git repo in your DevOps project](https://docs.microsoft.com/en-us/azure/devops/organizations/projects/create-project?view=vsts&tabs=new-nav).
+- Optional, but recommended, the [Pulumi Azure DevOps task extension](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task).
+- Optional for VSCode users, configure intellisense for the task extension as per [Task Extension Intellisense](https://github.com/microsoft/azure-pipelines-vscode#specific-schema)
 
-## Stack and Branch Mappings
+## Pulumi Task Extension for Azure Pipelines {#pulumi-task-extension}
 
-> The names used above are purely for demonstration purposes only. You may choose a naming convention that best suits your organization.
+Pulumi provides a task extension that lets you easily use Pulumi in your CI/CD pipelines. It can be used with the Azure Pipelines wizard UI or the YAML config.
+The task handles installing the Pulumi CLI and running any commands without the need for any scripts.
+
+> Pulumi Task Extension for Azure Pipelines can be used with [any cloud provider](#other-clouds) that Pulumi supports. You are not limited to using it only with Azure.
+
+### Command Summary
+
+Details regarding parameters and options supported by the extension can be found in the [Pulumi CLI]({{<ref "/docs/reference/cli" >}}) documentation.
+
+| Parameter Name | Required? | Parameter Description |
+|----|---|----|
+| stack | Yes | Name of stack being managed. Can be of the form `ORG/STACK` or `ORG/PROJECT/STACK`. |
+| azureSubscription | No | Optionally reference a service connection. If not used, environment variables can be configured with the credentials needed for the applicable Pulumi providers. |
+| command | No | The applicable `pulumi` cli command (e.g. `preview`, `up`, `destroy`) |
+| args | No | Option flags (e.g. `--yes`) that can be passed to the given `pulumi` command. Use space to separate multiple args. |
+| cwd | No | The working directory to run the Pulumi commands. Use this if your Pulumi app is in a different directory. |
+| versionSpec | No | The Pulumi version that should be used. Defaults to the latest version. If you require a specific version then the format is `1.5.0` or if you just need the latest version then `latest` can be used. |
+| createStack | No | Set to `true` if the stack should be created if it does not already exist. Defaults to `false`. |
+| createPrComment | No | Set to `true` to add a comment to your Pull Request (PR). Can only be used in pipelines driven by PRs. Defaults to `false`. See [Log Pulumi Output as PR Comments](#log-pulumi-output-as-pr-comments).
+| useThreadedPrComments | No | Defaults to `true` to always add a comment to the previously-created comments thread. Set to `false` to have each comment added separately.
+
+### Using the Pulumi Task Extension
+
+Install the Pulumi task from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task) to your Azure DevOps organization.
+
+The task requires the use of a service connection, which allows the pipeline to connect to your Azure Subscription. The task also looks for the build variable `pulumi.access.token`, and automatically maps it to the environment variable `PULUMI_ACCESS_TOKEN`, that is used by the CLI for non-interactive logins. You may still use the `env` directive to map any other environment variables you wish to make available to your Pulumi app.
+
+You can get your [Pulumi access token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}}) from [https://app.pulumi.com/account/tokens](https://app.pulumi.com/account/tokens). Here's an example snippet of how you can use the task in your pipeline yaml.
+
+```yaml
+# Lines omitted for brevity.
+...
+...
+  - task: Pulumi@1
+    condition: or(eq(variables['Build.Reason'], 'PullRequest'), eq(variables['Build.Reason'], 'Manual'))
+    inputs:
+      azureSubscription: "My Service Connection"
+      command: "preview"
+      cwd: "infra/"
+      stack: "acmeCorp/acmeProject/acme-ui"
+...
+...
+```
+
+### Log Pulumi Output as PR Comments {#log-pulumi-output-as-pr-comments}
+
+> This feature is only supported for builds triggered by pull requests created in git repositories hosted by Azure DevOps. Repositories hosted by external VCS such as Bitbucket, GitHub, GitLab are not supported at this time.
+
+The Pulumi task supports adding PR comments containing the log output from the Pulumi command that was executed in your build pipeline.
+Your project's build service user will need additional permissions to perform that action. Follow these steps to grant the build service user the `Contribute to pull requests` permission:
+
+- Navigate to the **Project Settings** page and select **Repositories** under the **Repos** heading.
+- Select the repository where you will be using this feature and then select the **Security** tab.
+- Now under the **Users** section find the build service user. If you are using the default build service user,
+the naming convention is `<Project name> Build Service` where `<Project name>` is your project's name.
+- Change the value of `Contribute to pull requests` to `Allow`.
+
+### Using The Pulumi Task Extension With Other Clouds {#other-clouds}
+
+To use the Pulumi Task Extension for Azure Pipelines with other clouds, you can specify the necessary environment variables
+as build variables or link variable groups to your build and release pipelines.
+
+For example, if you are using the [AWS provider]({{< relref "/registry/packages/aws" >}}), you can set the [environment variables]({{< relref "/registry/packages/aws/installation-configuration" >}})
+`AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
+
+## Using Pulumi in Azure DevOps Pipelines
+
+More details on how to use Pulumi - with or without the [Task Extension](#pulumi-task-extension) - are provided below.
+
+### Stack and Branch Mappings
+
+> The names used below are purely for demonstration purposes only. You may choose a naming convention that best suits your organization.
 
 The scripts below act on a hypothetical stack: `acmeCorp/acmeProject/acme-ui`.
 `acme-ui` contains the infrastructure code or `pulumi` program. It also contains an Angular-based SPA.
@@ -62,12 +135,12 @@ The yaml file is used just for configuration values. All of your infrastructure 
 
 For this walkthrough, we will assume a `TypeScript`-based `pulumi` program, which will deploy resources to an Azure Subscription.
 
-### About The `pulumi` Program
+#### About The `pulumi` Program
 
 The code inside `infra/index.ts` creates a resource group, a storage account and a blob container in the storage account. It then `exports` three
 values using the syntax `export const <variable_name> = <value>;`. Learn more about [stack outputs]({{< relref "/docs/intro/concepts/stack#outputs" >}}).
 
-## Build Variables
+### Build Variables
 
 Build variables are an important aspect of any CI/CD pipeline. We will use some pre-defined [system build variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&tabs=yaml%2Cbatch#system-defined-variables) provided
 by the Azure DevOps pipeline to decide whether or not we should run an update on our infrastructure.
@@ -75,55 +148,27 @@ by the Azure DevOps pipeline to decide whether or not we should run an update on
 > Build variable formats differ based on the agent in which your job is running. See [this](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&tabs=yaml%2Cbatch#set-in-script) to learn more about how
 you can access a build variable correctly depending on your agent OS.
 
-### User-Defined Output Variables
+#### User-Defined Output Variables
 
 You can set [job-scoped output variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&tabs=yaml%2Cbatch#set-a-job-scoped-variable-from-a-script) or [multi-job variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&tabs=yaml%2Cbatch#set-an-output-multi-job-variable). In this article, we demonstrate the use of multi-job variables with job dependencies, using the `dependsOn` job constraint.
 
-### Environment Variables
+#### Environment Variables
 
 `pulumi` requires a few environment variables in order to work in a CI/CD environment. More specifically, `PULUMI_ACCESS_TOKEN` is required
 to allow the `pulumi` CLI to perform an unattended login. In addition to this, you will also need to set the cloud provider-specific
 variables. [Azure environment variables]({{< relref "/docs/get-started/azure" >}}).
 
-**Note**: If you are using the [Pulumi task extension](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task) for Azure Pipelines, you don't need to manually configure the environment variables in your pipeline builds. You can use [Service Connections](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops) to centralize access to your Azure subscription(s).
+> If you are using the [Pulumi task extension](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task) for Azure Pipelines, you don't need to manually configure the environment variables in your pipeline builds. You can use [Service Connections](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops) to centralize access to your Azure subscription(s).
 
-## Agents
+### Agents
 
 Azure DevOps allows you to specify a build agent for each of your jobs in your pipeline. You may have a requirement to run certain jobs on a
-Ubuntu agent, and some on a Windows agent. `pulumi` can be installed on these agents by following the directions from [this]({{< relref "/docs/get-started/install" >}}) page.
+Ubuntu agent, and some on a Windows agent. If not using the task extension, `pulumi` can be installed on these agents by following the directions from [this]({{< relref "/docs/get-started/install" >}}) page.
 
-## Setup
+### Setup
 
 For the YAML-driven DevOps pipeline, the repository must contain the `azure-pipelines.yml` in the root of the repo for Azure DevOps to use it automatically.
 The following are samples only. You may choose to structure your configuration any way you like.
-
-### Pulumi Task Extension for Azure Pipelines
-
-We built a task extension that lets you easily use Pulumi in your CI/CD pipelines. It can be used with the Azure Pipelines wizard UI or the YAML config.
-The task handles installing the Pulumi CLI and running any commands without the need for any scripts.
-
-> Pulumi Task Extension for Azure Pipelines can be used with [any cloud provider](#other-clouds) that Pulumi supports. You are not limited to using it only with Azure.
-
-Install the Pulumi task from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task) to your Azure DevOps organization.
-
-The task requires the use of a service connection, which allows the pipeline to connect to your Azure Subscription. The task also looks for the build variable `pulumi.access.token`, and automatically maps it to the environment variable `PULUMI_ACCESS_TOKEN`, that is used by the CLI for non-interactive logins. You may still use the `env` directive to map any other environment variables you wish to make available to your Pulumi app.
-
-You can get your [Pulumi access token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}}) from [https://app.pulumi.com/account/tokens](https://app.pulumi.com/account/tokens). Here's an example snippet of how you can use the task in your pipeline yaml.
-
-```yaml
-# Lines omitted for brevity.
-...
-...
-  - task: Pulumi@1
-    condition: or(eq(variables['Build.Reason'], 'PullRequest'), eq(variables['Build.Reason'], 'Manual'))
-    inputs:
-      azureSubscription: "My Service Connection"
-      command: "preview"
-      cwd: "infra/"
-      stack: "acmeCorp/acmeProject/acme-ui"
-...
-...
-```
 
 ### Sample `azure-pipelines.yml`
 
@@ -396,11 +441,3 @@ echo "##vso[task.setvariable variable=containerName;isOutput=true]$(pulumi stack
 
 popd
 ```
-
-## Using The Pulumi Task Extension With Other Clouds {#other-clouds}
-
-To use the Pulumi Task Extension for Azure Pipelines with other clouds, you can specify the necessary environment variables
-as build variables or link variable groups to your build and release pipelines.
-
-For example, if you are using the [AWS provider]({{< relref "/registry/packages/aws" >}}), you can set the [environment variables]({{< relref "/registry/packages/aws/installation-configuration" >}})
-`AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
