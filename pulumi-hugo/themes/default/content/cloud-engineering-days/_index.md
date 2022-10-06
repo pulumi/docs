@@ -137,14 +137,14 @@ schedule:
           - title: Keynote and Demos
             description: Join Pulumi Co-Founder and CEO, Joe Duffy and CTO Luke Hoban as they discuss the newest innovations in infrastructure as code and modern applications, and how pioneering engineering organizations are using these techniques to ship faster, more reliably, and at greater scale. Joe and Luke will cover new Pulumi features and how you can get started.
             datetime: 8:00 - 9:00 AM PDT
-          - title: Deep Dive into Pulumi Deploy
+          - title: Deep Dive on New Pulumi Features
             description: Introducing the new features of Pulumi that will further help teams tackle scalability challenges, increase developer productivity, and manage multi-cloud complexity.
             datetime: 9:00 - 9:30 AM PDT
           - title: Infrastructure as Software Best Practices
             datetime: 9:30 - 10:00 AM PDT
           - title: Break
             datetime: 10:00 - 10:20 AM PDT
-          - title: Achieving Result with Pulumi Customers
+          - title: Achieving Results with Pulumi Customers
             description: Building a Global Data Platform at Scale, Featuring Fauna, Inc.
             datetime: 10:20 - 11:20 AM PDT
           - title: Under the Hood of Pulumi
