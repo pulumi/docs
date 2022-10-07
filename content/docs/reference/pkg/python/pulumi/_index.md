@@ -1237,6 +1237,28 @@ into one final string. This can be used like so:</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt id="pulumi.Output.format">
+<em class="property">static </em><code class="sig-name descname">format</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">format_string</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>pulumi.output.Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>object<span class="p">, </span>Awaitable<span class="p">[</span>object<span class="p">]</span><span class="p">, </span>pulumi.output.Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>object<span class="p">, </span>Awaitable<span class="p">[</span>object<span class="p">]</span><span class="p">, </span>pulumi.output.Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output<span class="p">[</span>str<span class="p">]</span><a class="headerlink" href="#pulumi.Output.format" title="Permalink to this definition"></a></dt>
+<dd><p>Perform a string formatting operation.</p>
+<p>This has the same semantics as <code class="docutils literal notranslate"><span class="pre">str.format</span></code> except it handles Input types.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>format_string</strong> (<em>Input</em><em>[</em><em>str</em><em>]</em>) – A formatting string</p></li>
+<li><p><strong>args</strong> (<em>Input</em><em>[</em><em>object</em><em>]</em>) – Positional arguments for the format string</p></li>
+<li><p><strong>kwargs</strong> (<em>Input</em><em>[</em><em>object</em><em>]</em>) – Keyword arguments for the format string</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A formatted output string.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a>[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </section>
