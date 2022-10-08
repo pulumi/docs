@@ -3,7 +3,7 @@ name = "Andy De Mars"
 title = "Strategic Account Executive"
 weight = 1
 
-status = "active"
+status = "inactive"
 
 [social]
 linkedin = "andydemars"

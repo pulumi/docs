@@ -3,7 +3,7 @@ name = "Jay Wampold"
 title = "CMO"
 weight = 1
 
-status = "active"
+status = "inactive"
 
 [social]
 linkedin = "jaywampold"
