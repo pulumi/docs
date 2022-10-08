@@ -3,7 +3,7 @@ name = "Paul Stack"
 title = "Engineering Manager"
 weight = 1
 
-status = "active"
+status = "inactive"
 
 [social]
 github = "stack72"
