@@ -46,7 +46,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
         bootDisk: { initializeParams: { image: "debian-cloud/debian-9" } },
         networkInterfaces: [{
             network: network.id,
-            // accessConfigus must includ a single empty config to request an ephemeral IP
+            // accessConfigs must include a single empty config to request an ephemeral IP
             accessConfigs: [{}],
         }],
     });
