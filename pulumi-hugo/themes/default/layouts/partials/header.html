@@ -311,11 +311,11 @@
                                         <li>
                                             <div class="list-title">
                                                 <a href="{{ relref . "/templates" }}">
-                                                    <span class="px-1">
-                                                        <img src="/icons/ruler-triangle.svg" class="inline" />
+                                                    <span>
+                                                        <img src="/icons/square-foot.svg" class="inline opacity-90" />
                                                     </span>
                                                     Templates
-                                                    <div class="list-sub-title">Deploy common architectures on any cloud</div>
+                                                    <div class="list-sub-title ml-0.5">Deploy common architectures on any cloud</div>
                                                 </a>
                                             </div>
                                         </li>
@@ -390,52 +390,119 @@
                     </span>
 
                     <ul class="mobile-menu">
-                        <ul>
-                            <li class="mobile-menu-item whitespace-nowrap"><a href="{{ relref . "/cloud-engineering" }}">Cloud Engineering</a></li>
-                            <li class="mobile-menu-subitem"><a href="{{ relref . "/cloud-engineering" }}">Overview</a></li>
-                            <li class="mobile-menu-subitem"><a href="{{ relref . "/cloud-engineering-days" }}">Cloud Engineering Days 2022</a></li>
-                            <li class="mobile-menu-subitem"><a href="{{ relref . "/solutions" }}">Solutions</a></li>
-                            <li class="mobile-menu-subitem"><a href="{{ relref . "/enterprise" }}">Enterprises</a></li>
-                            <li class="mobile-menu-subitem"><a href="{{ relref . "/case-studies" }}">Case Studies</a></li>
-
-                            <li class="mobile-menu-item"><a href="{{ relref . "/product" }}">Product</a></li>
-                            <li class="mobile-menu-subitem"><a href="{{ relref . "/product" }}">Pulumi Overview</a></li>
-                            <li class="mobile-menu-subitem"><a href="{{ relref . "/docs/reference/pulumi-sdk" }}">SDK & Engine</a></li>
-                            <li class="mobile-menu-subitem"><a href="{{ relref . "/automation" }}">Automation API</a></li>
-                            <li class="mobile-menu-subitem"><a href="{{ relref . "/product/packages" }}">Pulumi Packages</a></li>
-                            <li class="mobile-menu-subitem"><a href="{{ relref . "/product/pulumi-service" }}">Pulumi Service</a></li>
-                            <li class="mobile-menu-subitem"><a href="{{ relref . "/docs/guides/continuous-delivery" }}">CI/CD Integrations</a></li>
-                            <li class="mobile-menu-subitem"><a href="{{ relref . "/crossguard" }}">Policy as Code</a></li>
+                        <ul id="mobile-dropdown">
+                            <div>
+                                <input id="product-mobile-menu" name="nav-menu-checkbox" class="invisible-checkbox" type="checkbox" />
+                                <label id="product-menu-label" for="product-mobile-menu" class="mobile-menu-heading">Product<span class="dropdown-menu-caret"></span></label>
+                                <hr />
+                                <div class="mobile-menu-subitems-product">
+                                    <li>
+                                        <a href="{{ relref . "/product" }}"> <i class="fas fa-folder fa-fw"></i> Pulumi Overview </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ relref . "/docs/reference/pulumi-sdk" }}"> <i class="fas fa-database fa-fw"></i> SDK & Engine </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ relref . "/automation" }}"> <i class="fas fa-cog fa-fw"></i> Automation API </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ relref . "/product/packages" }}"> <i class="fas fa-cubes fa-fw"></i> Pulumi Packages </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ relref . "/product/pulumi-service" }}"> <i class="fas fa-user-cog fa-fw"></i> Pulumi Service </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ relref . "/docs/guides/continuous-delivery" }}"> <i class="fas fa-sync fa-fw"></i> CI/CD Integrations </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ relref . "/crossguard" }}"> <i class="fas fa-file-code fa-fw"></i> Policy as Code </a>
+                                    </li>
+                                    <hr />
+                                </div>
+                            </div>
+                            <div>
+                                <input id="why-pulumi-mobile-menu" name="nav-menu-checkbox" class="invisible-checkbox" type="checkbox" />
+                                <label id="why-pulumi-menu-label" for="why-pulumi-mobile-menu" class="mobile-menu-heading"
+                                    >Why Pulumi?<span class="dropdown-menu-caret"></span
+                                ></label>
+                                <hr />
+                                <div class="mobile-menu-subitems-why-pulumi">
+                                    <li>
+                                        <a href="{{ relref . "/cloud-engineering" }}"> <i class="fas fa-book-open fa-fw"></i> Cloud Engineering </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ relref . "/solutions" }}"> <i class="fas fa-lightbulb fa-fw"></i> Solutions </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ relref . "/enterprise" }}"> <i class="fas fa-building fa-fw"></i> Enterprises </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ relref . "/case-studies" }}"> <i class="fas fa-file fa-fw"></i> Case Studies </a>
+                                    </li>
+                                    <hr />
+                                </div>
+                            </div>
 
                             <li class="mobile-menu-item"><a href="{{ relref . "/pricing" }}">Pricing</a></li>
-
+                            <hr />
                             <li class="mobile-menu-item"><a href="{{ relref . "/docs" }}">Docs</a></li>
+                            <hr />
+                            <div>
+                                <input id="learn-mobile-menu" name="nav-menu-checkbox" class="invisible-checkbox" type="checkbox" />
+                                <label id="learn-menu-label" for="learn-mobile-menu" class="mobile-menu-heading">Learn<span class="dropdown-menu-caret"></span></label>
 
-                            <li class="mobile-menu-item"><a href="#">Learn</a></li>
-                            <li class="mobile-menu-subitem"><a href="{{ relref . "/blog" }}">Blog</a></li>
-                            <li class="mobile-menu-subitem"><a href="{{ relref . "/learn" }}">Learn Pulumi</a></li>
-                            <li class="mobile-menu-subitem"><a href="{{ relref . "/templates" }}">Templates</a></li>
-                            <li class="mobile-menu-subitem"><a href="{{ relref . "/resources" }}">Resources</a></li>
-                            <li class="mobile-menu-subitem"><a href="{{ relref . "/resources#upcoming" }}">Workshops</a></li>
-                            <li class="mobile-menu-subitem"><a href="{{ relref . "/learn/glossary" }}">Cloud Engineering Glossary</a></li>
-                            <li class="mobile-menu-subitem"><a href="{{ relref . "/community" }}">Community</a></li>
+                                <hr />
+                                <div class="mobile-menu-subitems-learn">
+                                    <li>
+                                        <a href="{{ relref . "/cloud-engineering-days" }}"> <i class="fas fa-mountain fa-fw"></i> Cloud Engineering Days 2022 </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ relref . "/blog" }}"> <i class="fas fa-blog fa-fw"></i> Blog </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ relref . "/case-studies" }}"> <i class="fas fa-file fa-fw"></i> Case Studies </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ relref . "/resources#upcoming" }}"> <i class="fas fa-users fa-fw"></i> Workshops </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ relref . "/templates" }}">
+                                            <span> <img src="/icons/square-foot.svg" class="inline h-8 opacity-90" /> </span>Templates
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ relref . "/learn/glossary" }}"> <i class="fas fa-cloud fa-fw"></i> Cloud Engineering Glossary </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ relref . "/learn" }}"> <i class="fas fa-chalkboard-teacher fa-fw"></i> Learn Pulumi </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ relref . "/resources" }}"> <i class="fas fa-cogs fa-fw"></i> Resources </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ relref . "/community" }}"> <i class="fas fa-users fa-fw"></i> Community </a>
+                                    </li>
+                                </div>
+                            </div>
                         </ul>
-                        <div class="flex items-center justify-between py-4 px-2 border-t my-4 mx-2 border-gray-200">
-                            <a href="https://github.com/pulumi/pulumi">GitHub</a>
-                            <a href="https://slack.pulumi.com/">Slack</a>
-                            <a href="{{ relref . "/docs" }}">Docs</a>
-                            <a href="{{ relref . "/registry" }}">Registry</a>
-                            <a href="https://app.pulumi.com/">Sign In</a>
-                        </div>
-                        <div class="text-center bg-violet-600 text-white py-4">
-                            <a
-                                class="block"
-                                data-track="header-get-started-mobile"
-                                href="{{ relref . "/docs/get-started" }}"
-                                title="Get started with Pulumi by creating your first project"
-                            >
-                                Get Started
-                            </a>
+                        <div class="mobile-menu-footer">
+                            <div class="flex items-center justify-between py-4 px-2 border-t my-4 mx-2 border-gray-200">
+                                <a href="https://github.com/pulumi/pulumi">GitHub</a>
+                                <a href="https://slack.pulumi.com/">Slack</a>
+                                <a href="{{ relref . "/docs" }}">Docs</a>
+                                <a href="{{ relref . "/registry" }}">Registry</a>
+                                <a href="https://app.pulumi.com/">Sign In</a>
+                            </div>
+                            <div class="text-center bg-violet-600 text-white get-started">
+                                <a
+                                    class="block"
+                                    data-track="header-get-started-mobile"
+                                    href="{{ relref . "/docs/get-started" }}"
+                                    title="Get started with Pulumi by creating your first project"
+                                >
+                                    Get Started
+                                </a>
+                            </div>
                         </div>
                     </ul>
 
