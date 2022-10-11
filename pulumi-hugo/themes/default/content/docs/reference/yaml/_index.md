@@ -17,7 +17,7 @@ The Pulumi YAML provider supports programs written in YAML or JSON.  In both cas
 
 In many locations within this schema, values may be expressions which computed a value based on the `configuration`, `variables`, or outputs of `resources`.  These expressions can be provided in two ways:
 
-* If an object is provided as a value, and has a key that has the prefix `Fn::`, the object is treated as an expression, and the expression will be resolved to a new value that will be used in place of the object.
+* If an object is provided as a value, and has a key that has the prefix `fn::`, the object is treated as an expression, and the expression will be resolved to a new value that will be used in place of the object.
 * Any string value is interpreted as an interpolation, with `${...}` being replaced by evaluating the expression in the `...`.
 
 The supported expression forms for each of these is detailed below.
@@ -155,7 +155,7 @@ Expressions can be used in several contexts:
 
 Generally speaking, most values permit an expression and exceptions will be documented as not permitting an expression, as above.
 
-In these contexts, any JSON/YAML value may be provided.  If that value is a string, it is interpolated.  If that value is an object, and the object has a key with a prefix of `Fn::`, it is evaluated as an expression.
+In these contexts, any JSON/YAML value may be provided.  If that value is a string, it is interpolated.  If that value is an object, and the object has a key with a prefix of `fn::`, it is evaluated as an expression.
 
 #### Interpolation
 
@@ -239,78 +239,78 @@ The last two lines are equivalent as if the variable were substituted for its va
 
 #### Built-in Functions
 
-In any expression location, an object containing a single key beginning with `Fn::` calls a built-in function.
+In any expression location, an object containing a single key beginning with `fn::` calls a built-in function.
 
-##### `Fn::ToBase64`
+##### `fn::toBase64`
 
 Converts a UTF-8 string into a Base64 encoded string using the [standard encoding](https://pkg.go.dev/encoding/base64#pkg-variables).
 
 ```yaml
 variables:
   greeting:
-    Fn::ToBase64: "Hello, world!"
+    fn::toBase64: "Hello, world!"
 ```
 
 The expression `${greeting}` will return `SGVsbG8sIHdvcmxkIQ==`
 
-##### `Fn::FromBase64`
+##### `fn::fromBase64`
 
 Converts a Base64 encoded string into a UTF-8 string. **This will fail if the result is not a valid UTF-8 string**
 
 ```yaml
 variables:
   greeting:
-    Fn::FromBase64: SGVsbG8sIFdvcmxkIQ==
+    fn::fromBase64: SGVsbG8sIFdvcmxkIQ==
 ```
 
 The expression `${greeting}` will return `Hello, World!`
 
-##### `Fn::ToJSON`
+##### `fn::toJSON`
 
 Converts a value into its JSON representation.
 
 ```yaml
 variables:
   item:
-    Fn::ToJSON:
+    fn::toJSON:
       key1: value1
       key2: 123
 ```
 
 The expression `${item}` will return a JSON value `{ "key1": "value1", "key2": 123 }`.
 
-##### `Fn::Invoke`
+##### `fn::invoke`
 
-Calls a function from a package and returns either the whole object or a single key if given the "Return" property. The schema is:
+Calls a function from a package and returns either the whole object or a single field if given the `return` property. The schema is:
 
-| Property        | Type | Required           | Expression  | Description |
-| ------------- |---|-------------| -----|---|
-| `Function`    | string | Yes | No | Name of a function to call. |
-| `Arguments`   | map[string]Expression | Yes | Yes | Arguments to pass to the expression, each key is a named argument. |
-| `Options`   	| [Invoke Options](#invoke-options) | No | No | Options for the provider calling the function. |
-| `Return`      | string | No | No | If the function returns an object, a single key may be selected and returned instead with its name. |
+| Property    | Type                              | Required | Expression | Description                                                        |
+|-------------|-----------------------------------|----------|------------|--------------------------------------------------------------------|
+| `function`  | string                            | Yes      | No         | Name of a function to call.                                        |
+| `arguments` | map[string]Expression             | Yes      | Yes        | Arguments to pass to the expression, each key is a named argument. |
+| `options`   | [Invoke Options](#invoke-options) | No       | No         | Options for the provider calling the function.                     |
+| `return`    | string                            | No       | No         | Return the value of the field with this name.                      |
 
 ```yaml
 variables:
   AmazonLinuxAmi:
-    Fn::Invoke:
-      Function: aws:getAmi
-      Arguments:
+    fn::invoke:
+      function: aws:getAmi
+      arguments:
         filters:
           - name: name
             values: ["amzn-ami-hvm-*-x86_64-ebs"]
         owners: ["137112412989"]
         mostRecent: true
-      Options:
-        Version: 5.9.0
-      Return: id
+      options:
+        version: 5.9.0
+      return: id
 ```
 
 The expression `${AmazonLinuxAmi}` will return the AMI ID returned from the [`aws:getAmi`](https://www.pulumi.com/registry/packages/aws/api-docs/getami/) function.
 
 #### Invoke Options
 
-The value of the `options` property of an Fn::Invoke is an object with the following properties.
+The value of the `options` property of an fn::invoke is an object with the following properties.
 
 The  `parent` and `provider` values permit expressions which must use interpolation syntax to reference resources by name. For example:
 
@@ -327,14 +327,14 @@ The  `parent` and `provider` values permit expressions which must use interpolat
 | `version`                 | string       | Version specifies a provider plugin version that should be used when operating on a resource |
 | `pluginDownloadURL`       | string       | Version specifies a URL that should be used when to download the provider plugin |
 
-##### `Fn::Join`
+##### `fn::join`
 
 Joins strings together separated by a delimiter. Arguments are passed as a list, with the first item being the delimiter, and the second item a list of expressions to concatenate.
 
 ```yaml
 variables:
     banana:
-        Fn::Join:
+        fn::join:
             - 'NaN'
             - - Ba
               - a
@@ -342,28 +342,28 @@ variables:
 
 The expression `${banana}` will have the value `"BaNaNa"`.
 
-##### `Fn::Split`
+##### `fn::split`
 
 Splits a string on a delimiter. Arguments are passed as a list, with the first item being the delimiter, and the second item the string to split.
 
 ```yaml
 variables:
     fruits:
-        Fn::Split:
+        fn::split:
             - ", "
             - "apple, orange, banana"
 ```
 
 The expression `${fruits}` will be a list containing the values `["apple", "orange", "banana"]`.
 
-##### `Fn::Select`
+##### `fn::select`
 
 Selects one of several options given an index. Arguments are passed as a list, with the first item being the index, 0-based, and the second item a list of expressions to select from.
 
 ```yaml
 variables:
     policyVersion:
-        Fn::Select:
+        fn::select:
             - 1
             - - v1
               - v1.1
@@ -372,55 +372,55 @@ variables:
 
 The expression `${policyVersion}` will have the value `v1.1`.
 
-##### `Fn::*Asset` and `Fn::*Archive`
+##### `fn::*Asset` and `fn::*Archive`
 
 [Assets and Archives]({{< relref "/docs/intro/concepts/assets-archives" >}}) are intrinsic types to Pulumi, like strings and numbers, and some resources may take these as inputs or return them as outputs. The built-ins create each kind of asset or archive. Each takes all take a single string value.
 
 | Built-In      | Argument Type | Description |
 | ------------- |---|------|
-| `Fn::FileAsset` | string | The contents of the asset are read from a file on disk. |
-| `Fn::StringAsset` | string | The contents of the asset are read from a string in memory. |
-| `Fn::RemoteAsset` | string | The contents of the asset are read from an http, https or file URI. |
-| `Fn::FileArchive` | string | The contents of the archive are read from either a folder on disk or a file on disk in one of the supported formats: .tar, .tgz, .tar.gz, .zip or .jar. |
-| `Fn::RemoteArchive` | string | The contents of the asset are read from an http, https or file URI, which must produce an archive of one of the same supported types as FileArchive. |
-| `Fn::AssetArchive` | map | The contents of the archive are read from a map of either Asset or Archive objects, one file or folder respectively per entry in the map.
+| `fn::fileAsset` | string | The contents of the asset are read from a file on disk. |
+| `fn::stringAsset` | string | The contents of the asset are read from a string in memory. |
+| `fn::remoteAsset` | string | The contents of the asset are read from an http, https or file URI. |
+| `fn::fileArchive` | string | The contents of the archive are read from either a folder on disk or a file on disk in one of the supported formats: .tar, .tgz, .tar.gz, .zip or .jar. |
+| `fn::remoteArchive` | string | The contents of the asset are read from an http, https or file URI, which must produce an archive of one of the same supported types as FileArchive. |
+| `fn::assetArchive` | map | The contents of the archive are read from a map of either Asset or Archive objects, one file or folder respectively per entry in the map.
 
 ```yaml
 variables:
   aFile:
-    Fn::FileAsset: ./file.txt
+    fn::fileAsset: ./file.txt
   aString:
-    Fn::StringAsset: Hello, world!
+    fn::stringAsset: Hello, world!
   aRemoteAsset:
-    Fn::RemoteAsset: http://worldclockapi.com/api/json/est/now
+    fn::remoteAsset: http://worldclockapi.com/api/json/est/now
 
   aFileArchive:
-    Fn::FileArchive: ./file.zip
+    fn::fileArchive: ./file.zip
   aRemoteArchive:
-    Fn::RemoteArchive: http://example.com/file.zip
+    fn::remoteArchive: http://example.com/file.zip
   anAssetArchive:
-    Fn::AssetArchive:
+    fn::assetArchive:
       file:
-        Fn::StringAsset: Hello, world!
+        fn::stringAsset: Hello, world!
       folder:
-        Fn::FileArchive: ./folder
+        fn::fileArchive: ./folder
 ```
 
 The expression `${reference}` will have the value of the `outputName` output from the stack `org/project/stack`.
 
-##### `Fn::Secret`
+##### `fn::secret`
 
 Constructs a [Secret]({{< relref "/docs/intro/concepts/secrets" >}}) from an existing value.
 
 ``` yaml
 variables:
   secret:
-    Fn::Secret:
-      Fn::Invoke:
-        Function: my:pkg:GetSecretValue
+    fn::secret:
+      fn::invoke:
+        function: my:pkg:GetSecretValue
 ```
 
-##### `Fn::ReadFile`
+##### `fn::readFile`
 
 Reads a file from disk and returns the contents as a string, must be utf-8. This function has
 special rules for its behavior.
@@ -428,25 +428,25 @@ special rules for its behavior.
 ``` yaml
 variables:
   someText:
-    Fn::ReadFile: ./README.md
+    fn::readFile: ./README.md
 ```
 
 Any subpath of the Pulumi project directory is allowed, whether it is absolute, relative, constant,
 or an expression:
 
-* `Fn::ReadFile: ./README.md`, a relative subpath
-* `Fn::ReadFile: ${pulumi.cwd}/example.txt`, an absolute subpath
-* `Fn::ReadFile: /opt/project-dir/example.json`, an absolute subpath if the program is in /opt/project-dir
+* `fn::readFile: ./README.md`, a relative subpath
+* `fn::readFile: ${pulumi.cwd}/example.txt`, an absolute subpath
+* `fn::readFile: /opt/project-dir/example.json`, an absolute subpath if the program is in /opt/project-dir
 
 Absolute paths to any location are allowed if they are constants:
 
-* `Fn::ReadFile: /etc/lsb-release`
-* `Fn::ReadFile: /usr/share/nginx/html`
-* `Fn::ReadFile: /var/run/secrets/kubernetes.io/serviceaccount/token`
+* `fn::readFile: /etc/lsb-release`
+* `fn::readFile: /usr/share/nginx/html`
+* `fn::readFile: /var/run/secrets/kubernetes.io/serviceaccount/token`
 
 Relative paths that escape the project directory and absolute paths that are non-constant are
 forbidden to prevent path traversals.
 
-* `Fn::ReadFile: ../../etc/shadow`, a relative path that escapes the project
-* `Fn::ReadFile: ${pulumi.cwd}/../../.ssh/id_rsa.pub`, an expression that returns an absolute path
+* `fn::readFile: ../../etc/shadow`, a relative path that escapes the project
+* `fn::readFile: ${pulumi.cwd}/../../.ssh/id_rsa.pub`, an expression that returns an absolute path
    that escapes the project
