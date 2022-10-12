@@ -16,7 +16,7 @@ Deploying a static website often involves provisioning a number of pieces of inf
 
 ## Azure Static Website Component
 
-Pulumi components enable us to create re-usable abstractions that can perform complex tasks all behind a simple interface the user can programmatically interact with. The [Azure Static Website component]({{< relref "/registry/packages/azure-static-website/" >}}) looks to take all of the complexity of getting a static website deployed to Azure and simplify it down to just consuming a simple component and passing it a few input arguments. This component relieves the complexities of this process by allowing you to simply tell the component where your files are located and it will take care of all the rest.
+Pulumi components enable us to create re-usable abstractions that can perform complex tasks all behind a simple interface the user can programmatically interact with. The [Azure Static Website component]({{< relref "/registry/packages/azure-static-website" >}}) looks to take all of the complexity of getting a static website deployed to Azure and simplify it down to just consuming a simple component and passing it a few input arguments. This component relieves the complexities of this process by allowing you to simply tell the component where your files are located and it will take care of all the rest.
 
 **This component does the following:**
 

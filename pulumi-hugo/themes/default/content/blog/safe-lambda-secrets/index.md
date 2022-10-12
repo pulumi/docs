@@ -10,13 +10,13 @@ tags:
     - serverless
 ---
 
-The subject of how to make use of secrets in Lambda Functions comes up a fair bit, and although there seems to be a lot of discussion on where you _should_ store them, the one thing that comes up is that **you should never store the plain text values of secrets in the Lambda Functinon's environment variables**. One such discussion I was having with a customer made me think about how it should be possible to take the secrets that you've got on your [stack config file](https://www.pulumi.com/docs/intro/concepts/config/) and then use them to configure your Lambda Function, with the plain text values going into the Function's environment variables and the encrypted secret values going into AWS' Secrets Manager.
+The subject of how to make use of secrets in Lambda Functions comes up a fair bit, and although there seems to be a lot of discussion on where you _should_ store them, the one thing that comes up is that **you should never store the plain text values of secrets in the Lambda Functinon's environment variables**. One such discussion I was having with a customer made me think about how it should be possible to take the secrets that you've got on your [stack config file](https://www.pulumi.com/docs/intro/concepts/config) and then use them to configure your Lambda Function, with the plain text values going into the Function's environment variables and the encrypted secret values going into AWS' Secrets Manager.
 
 <!--more-->
 
 ## Getting started
 
-I'm going to assume you've already got Pulumi and AWS set up, you're logged into your backend, and you've already created a project and stack. I'm also using the Pulumi Service as my [secrets provider]({{< relref "/docs/intro/concepts/secrets/#configuring-secrets-encryption" >}}).
+I'm going to assume you've already got Pulumi and AWS set up, you're logged into your backend, and you've already created a project and stack. I'm also using the Pulumi Service as my [secrets provider]({{< relref "/docs/intro/concepts/secrets#configuring-secrets-encryption" >}}).
 
 {{% notes type="info" %}}
 Although Lambda Functions are free to deploy, and you get a generous allowance as part of AWS' free tier, storing and accessing secrets is not. You can view the cost on the [AWS Secrets Manager Pricing page](https://aws.amazon.com/secrets-manager/pricing/).
