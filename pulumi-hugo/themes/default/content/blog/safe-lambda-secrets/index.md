@@ -10,7 +10,7 @@ tags:
     - serverless
 ---
 
-The subject of how to make use of secrets in Lambda Functions comes up a fair bit, and although there seems to be a lot of discussion on where you _should_ store them, the one thing that comes up is that **you should never store the plain text values of secrets in the Lambda Functinon's environment variables**. One such discussion I was having with a customer made me think about how it should be possible to take the secrets that you've got on your [stack config file](https://www.pulumi.com/docs/intro/concepts/config) and then use them to configure your Lambda Function, with the plain text values going into the Function's environment variables and the encrypted secret values going into AWS' Secrets Manager.
+The subject of how to make use of secrets in Lambda Functions comes up a fair bit, and although there seems to be a lot of discussion on where you _should_ store them, the one thing that comes up is that **you should never store the plain text values of secrets in the Lambda Function's environment variables**. One such discussion I was having with a customer made me think about how it should be possible to take the secrets that you've got on your [stack config file](https://www.pulumi.com/docs/intro/concepts/config) and then use them to configure your Lambda Function, with the plain text values going into the Function's environment variables and the encrypted secret values going into AWS' Secrets Manager.
 
 <!--more-->
 
@@ -106,7 +106,7 @@ const lambdaconfig = config.requireObject<LambdaConfig>("lambdawithsecrets");
 
 As I said in the beginning, we're going to store the secrets from the stack config in AWS Secrets Manager, and then the ARN of each of the secrets will be stored in the Lambda Function's environment variables.
 
-We're going to create a couple of arrays to store (non-sensitive) information about the Secret resources that we're going to create to use later on. One to hold the `Secret` resources and one to hold te ARNs of the secrets. Due to the fact that it's the `SecretVersion` where we store the secret value, it's pretty safe to store the `Secret`.
+We're going to create a couple of arrays to store (non-sensitive) information about the Secret resources that we're going to create to use later on. One to hold the `Secret` resources and one to hold the ARNs of the secrets. Due to the fact that it's the `SecretVersion` where we store the secret value, it's pretty safe to store the `Secret`.
 
 Next we'll loop through the config's secrets dictionary, grab the values and for each one create a `Secret` and a `SecretValue` resource, and then populate the two arrays with the relevant values.
 
