@@ -1,7 +1,7 @@
 ---
 title: "Accessing Secrets Safely in Lambda Functions"
-date: 2022-10-06T17:19:53+01:00
-meta_desc: Follow along and see how you can use Pulumi to securly store secrets and access them in your Lambda Functions.
+date: 2022-10-12T17:19:53+01:00
+meta_desc: Follow along and see how you can use Pulumi to securely store secrets and access them in your Lambda Functions.
 meta_image: meta.png
 authors:
     - piers-karsenbarg
@@ -74,7 +74,7 @@ import * as aws from "@pulumi/aws";
 
 ### A warning about accessing the configuration
 
-Before we continue, it's worth pointing out the following:
+Before we continue, it's worth pointing out the following (from the [Pulumi documentation on secrets]({{< relref "/docs/intro/concepts/secrets#a-warning-using-secrets-in-code">}}) ):
 
 {{% notes type="warning" %}}
 On `pulumi up`, secret values are decrypted and made available in plaintext at runtime. These may be read through any of the standard `pulumi.Config` getters. While it is possible to read a secret using ordinary non-secret getters, this is almost certainly not what you want. Use the secret variants of the configuration APIs instead since this ensures that all transitive uses of that secret are themselves also marked as secrets.
