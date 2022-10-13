@@ -64,7 +64,7 @@ Leveraging [Automation API]({{< relref "/docs/guides/automation-api" >}}) as the
 
 ### Log Everything
 
-Track key system events such as user and pipeline activity, attempted and restricted activity, and identity and access control changes. Use Pulumi audit logs to simplify this process out of the box. If applicable, we would suggest automatically exporting [Pulumi Audit Logs]({{< relref "/intro/pulumi-service/audit-logs#automated-export" >}}) to your systems.
+Track key system events such as user and pipeline activity, attempted and restricted activity, and identity and access control changes. Use Pulumi audit logs to simplify this process out of the box. If applicable, we would suggest automatically exporting [Pulumi Audit Logs]({{< relref "/docs/intro/pulumi-service/audit-logs#automated-export" >}}) to your systems.
 
 ### Use Tokens
 
