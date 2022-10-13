@@ -53,25 +53,12 @@ featured:
       # - name: Bryce Lampe
       #   photo: /images/team/bryce-lampe.jpg
     
-    
-    - title: Hackathon
-      description: |
-        We are excited to support the open-source community by hosting a World Wide Community Pulumipus Hackathon. This month-long event will bring together developers of all skill levels who are passionate about open source and willing to donate their time and energy into this community.
-      link: /cloud-engineering-days/#hackathon
-      link_text: Learn More
-      presenters:
-        - photo: /images/mascot/pulumipus.svg
-    
     - title: Workshops
       description: |
         Join us for one of our upcoming cloud engineering workshops. Whether you're a seasoned cloud engineer exploring advanced concepts or want to learn the fundamentals of infrastructure as code, we've got workshops for all levels.
       link: /cloud-engineering-days/#workshops
       link_text: Join a Workshop
       presenters:
-      - name: Kat Cosgrove
-        photo: /images/team/kat-cosgrove.jpg
-      - name: David Flanagan
-        photo: /images/team/david-flanagan.jpg
       - name: Laura Santamaria
         photo: /images/team/laura-santamaria.jpg
       - name: Josh Kodroff
@@ -88,12 +75,6 @@ media:
     - name: Slack
       image: /logos/tech/slack.svg
       link: https://slack.pulumi.com/
-
-hackathon:
-  title: Pulumi Worldwide Community Pulumipus Hackathon
-  image: /images/cloud-engineering-days/pulumi-community-hackathon-logo.png
-  description: |
-    We’re pleased to announce the first worldwide Pulumi Community Hackathon. This month-long event kicks off at Cloud Engineering Day and brings together developers of all skill levels who are passionate about open source. Stay tuned for more information in the coming weeks.
 
 workshops:
   title: Cloud Engineering Workshops
@@ -152,8 +133,6 @@ schedule:
             datetime: 11:20 - 11:50 AM PDT
           - title: Closing Comments
             datetime: 11:50 AM - 12:00 PM PDT
-          - title: Hackathon Launch
-            datetime: 12:00 PM PDT
           - title: Workshop Day
             datetime: 1:00 PM PDT
       - date: Thursday, November 3rd
