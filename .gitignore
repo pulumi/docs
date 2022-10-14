@@ -54,11 +54,6 @@ content/docs/reference/pkg/nodejs
 !content/docs/reference/pkg/nodejs/pulumi/pulumi
 !content/docs/reference/pkg/nodejs/pulumi/terraform
 
-content/docs/reference/pkg/python
-!content/docs/reference/pkg/python/pulumi/pulumi_pulumi
-!content/docs/reference/pkg/python/pulumi/pulumi_policy
-!content/docs/reference/pkg/python/pulumi/pulumi_terraform
-
 # Ignore vendored Hugo modules.
 _vendor/
 

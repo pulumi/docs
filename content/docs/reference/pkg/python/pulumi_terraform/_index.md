@@ -7,8 +7,8 @@ notitle: true
 
 {{< resource-docs-alert "terraform" >}}
 
-<div class="section" id="pulumi-terraform">
-<h1>Pulumi Terraform<a class="headerlink" href="#pulumi-terraform" title="Permalink to this headline">¶</a></h1>
+<section id="pulumi-terraform">
+<h1>Pulumi Terraform<a class="headerlink" href="#pulumi-terraform" title="Permalink to this headline"></a></h1>
 <blockquote>
 <div><p>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-terraform">Terraform Provider</a> distributed under
 <a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
@@ -20,4 +20,4 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="state/">state</a></li>
 </ul>
 </div>
-</div>
+</section>
