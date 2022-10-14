@@ -21,12 +21,12 @@
                         <div class="card h-full relative bg-white">
                             <div class="text-center flex flex-row justify-center pt-8 rounded-t-xl relative bg-fuchsia-600">
                                 {{ range $presenter := $item.presenters }}
-                                    <div class="w-1/4 mx-4 text-center">
+                                    <div class="w-1/5 mx-4 text-center">
                                         {{ if .name }}
                                             <img src="{{ $presenter.photo }}" alt="{{ $presenter.name }}" />
                                             <p class="text-white">{{ .name }}</p>
                                         {{ else }}
-                                            <img class="mb-14" src="{{ $presenter.photo }}" />
+                                            <img class="mb-8" src="{{ $presenter.photo }}" />
                                         {{ end }}
                                     </div>
                                 {{ end }}
@@ -46,6 +46,15 @@
                     </div>
                 {{ end }}
             </div>
+        </div>
+    </section>
+
+    <section id="partner-logos" class="min-w-full mt-8 bg-white">
+        <h3 class="text-center">Our Partners</h3>
+        <div class="container mx-auto my-12 flex align-center justify-evenly">
+            {{ range $item := .Params.partners.items }}
+                <img class="object-contain h-16 mb-4" src="{{ $item.logo }}" alt="{{ $item.name }}" />
+            {{ end }}
         </div>
     </section>
 

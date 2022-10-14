@@ -66,8 +66,8 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Piers Karsenbarg
-          role: Customer Engineer, Pulumi
+        - name: Ringo De Smet
+          role: Customer Experience Consultant, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
 

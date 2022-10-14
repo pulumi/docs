@@ -42,17 +42,28 @@ featured:
       presenters:
       - name: Meagan Cojocar
         photo: /images/team/meagan-cojocar.jpg
-      # - name: Luke Hoban
-      #   photo: /images/team/luke-hoban.jpg
       - name: Levi Blackstone
         photo: /images/team/levi-blackstone.jpg
       - name: Casey Huang
         photo: /images/team/casey-huang.jpg
       - name: Mitch Gerdisch
         photo: /images/team/mitch-gerdisch.jpg
-      # - name: Bryce Lampe
-      #   photo: /images/team/bryce-lampe.jpg
+      - name: Bryce Lampe
+        photo: /images/team/bryce-lampe.jpg
     
+    - title: Case Studies
+      description: |
+        Learn from Pulumi customers on how they scaled up their infrastructure velocity and reliability with Pulumi. Infrastructure experts from companies like Fauna, Panther Labs, and Altana AI will present best practices for using Pulumi and infrastructure as code to increase velocity and even build their product platforms.
+      link: /cloud-engineering-days/#registration
+      link_text: Register
+      presenters:
+      - name:
+        photo: /images/cloud-engineering-days/logos/altana.svg
+      - name:
+        photo: /images/cloud-engineering-days/logos/panther.svg
+      - name:
+        photo: /images/cloud-engineering-days/logos/fauna.svg
+
     - title: Workshops
       description: |
         Join us for one of our upcoming cloud engineering workshops. Whether you're a seasoned cloud engineer exploring advanced concepts or want to learn the fundamentals of infrastructure as code, we've got workshops for all levels.
@@ -63,6 +74,19 @@ featured:
         photo: /images/team/laura-santamaria.jpg
       - name: Josh Kodroff
         photo: /images/team/josh-kodroff.jpg
+      - name: Ringo De Smet
+        photo: /images/team/ringo-de-smet.jpg
+      - name: Tushar Shah
+        photo: /images/team/tushar-shah.jpg
+
+partners:
+  items:
+    - name: Google Cloud
+      logo: /images/cloud-engineering-days/logos/google-cloud.png
+    - name: AWS
+      logo: /images/cloud-engineering-days/logos/aws-partner.png
+    - name: Microsoft
+      logo: /images/cloud-engineering-days/logos/microsoft.png
 
 media:
   items:
@@ -84,7 +108,7 @@ workshops:
       description: |
         Learn the basics of Pulumi from projects to components. Use TypeScript and templates to stand up a static site on AWS using S3.
 
-    - title: "Pulumi 101: Serverless containers on GCP"
+    - title: "Pulumi 101: Serverless containers on Google Cloud"
       link: /resources/pulumi-101-serverless-containers-gcp
       description: |
         Learn the basics of Pulumi from projects to components. Use Python and templates to stand up serverless containers on Cloud Run from Google Cloud.
@@ -134,7 +158,7 @@ schedule:
           - title: Closing Comments
             datetime: 11:50 AM - 12:00 PM PDT
           - title: Workshop Day
-            datetime: 1:00 PM PDT
+            datetime: 12:00 PM PDT
       - date: Thursday, November 3rd
         items:
           - title: Workshop Day

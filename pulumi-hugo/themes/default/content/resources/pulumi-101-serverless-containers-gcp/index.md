@@ -1,6 +1,6 @@
 ---
 # Name of the webinar.
-title: "Pulumi 101: Serverless containers on GCP"
+title: "Pulumi 101: Serverless containers on Google Cloud"
 meta_desc: "Learn the basics of Pulumi from projects to components. Use Python and templates to stand up serverless containers on Cloud Run from Google Cloud"
 
 # A featured webinar will display first in the list.
@@ -62,12 +62,12 @@ main:
     description: |
         Learn the basics of Pulumi from projects to components. We’ll use Python and templates to stand up our first bit of infrastructure: A small set of serverless containers on Cloud Run from Google Cloud. Along the way, we’ll learn how infrastructure as code makes updates easier, reduces time to value, and helps you keep your cloud costs down.
 
-        If you want to code along, you’ll need a [free Pulumi SaaS account](https://app.pulumi.com/signup/?utm_source=da&utm_medium=referral&utm_campaign=workshops&utm_content=ced-fall2022-workshops), [the Pulumi CLI](https://www.pulumi.com/docs/get-started/install/?utm_source=da&utm_medium=referral&utm_campaign=workshops&utm_content=ced-fall2022-workshops), [Python 3.9.x](https://www.pulumi.com/docs/intro/languages/python/?utm_source=da&utm_medium=referral&utm_campaign=workshops&utm_content=ced-fall2022-workshops), and a GCP account (free tier is okay).
+        If you want to code along, you’ll need a [free Pulumi SaaS account](https://app.pulumi.com/signup/?utm_source=da&utm_medium=referral&utm_campaign=workshops&utm_content=ced-fall2022-workshops), [the Pulumi CLI](https://www.pulumi.com/docs/get-started/install/?utm_source=da&utm_medium=referral&utm_campaign=workshops&utm_content=ced-fall2022-workshops), [Python 3.9.x](https://www.pulumi.com/docs/intro/languages/python/?utm_source=da&utm_medium=referral&utm_campaign=workshops&utm_content=ced-fall2022-workshops), and a Google Cloud account (free tier is okay).
 
     # The webinar presenters
     presenters:
-        - name: Piers Karsenbarg
-          role: Customer Engineer, Pulumi
+        - name: Tushar Shah
+          role: Senior Customer Engineer, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
 

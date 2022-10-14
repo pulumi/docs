@@ -66,8 +66,8 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: "Laura Santamaria"
-          role: "Developer Advocate, Pulumi"
+        - name: "Aurélien Requiem"
+          role: "Senior Customer Engineer, Pulumi"
 
     # A bullet point list containing what the user will learn during the webinar.
 
