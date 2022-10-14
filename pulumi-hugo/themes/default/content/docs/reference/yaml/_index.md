@@ -64,13 +64,13 @@ The `dependsOn`, `parent`, `provider`, and `providers` values permit expressions
 | `aliases`                 | string[]     | Aliases specifies names that this resource used to have, so that renaming or refactoring doesn’t replace it |
 | `customTimeouts`          | [Custom Timeout](#custom-timeout) | CustomTimeouts overrides the default retry/timeout behavior for resource provisioning |
 | `deleteBeforeReplace`     | bool         | DeleteBeforeReplace  overrides the default create-before-delete behavior when replacing |
-| `dependsOn`               | Expression[] | No | Yes | DependsOn makes this resource explicitly depend on another resource, by name, so that it won't be created before the dependent finishes being created (and the reverse for destruction). Normally, Pulumi automatically tracks implicit dependencies through inputs/outputs, but this can be used when dependencies aren't captured purely from input/output edges.|
+| `dependsOn`               | Expression[] | DependsOn makes this resource explicitly depend on another resource, by name, so that it won't be created before the dependent finishes being created (and the reverse for destruction). Normally, Pulumi automatically tracks implicit dependencies through inputs/outputs, but this can be used when dependencies aren't captured purely from input/output edges.|
 | `ignoreChanges`           | string[]     | IgnoreChanges declares that changes to certain properties should be ignored during diffing |
 | `import`                  | string       | Import adopts an existing resource from your cloud account under the control of Pulumi |
-| `parent`                  | Expression   | No | Yes | Parent specifies a parent for the resource |
+| `parent`                  | Expression   | Parent specifies a parent for the resource |
 | `protect`                 | bool         | Protect prevents accidental deletion of a resource |
-| `provider`                | Expression   | No | Yes | Provider specifies an explicitly configured provider, instead of using the default global provider |
-| `providers`               | map[string]Expression | No | Yes | Map of providers for a resource and its children. |
+| `provider`                | Expression   | Provider specifies an explicitly configured provider, instead of using the default global provider |
+| `providers`               | map[string]Expression | Map of providers for a resource and its children. |
 | `version`                 | string       | Version specifies a provider plugin version that should be used when operating on a resource |
 
 #### Resource Getter
