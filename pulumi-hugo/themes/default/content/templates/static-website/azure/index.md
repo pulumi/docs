@@ -11,7 +11,7 @@ cloud:
     slug: azure
 ---
 
-The Azure Static Website template deploys an HTML website on Microsoft Azure. It uses an [Azure Blob Storage account]({{< relref "/registry/packages/azure-native/api-docs/storage/storageaccount" >}}) for file storage, configures the storage account to host a website, and deploys an [Azure CDN Endpoint]({{< relref "/registry/packages/azure-native/api-docs/cdn/endpoint" >}}) to serve the website with low latency, caching, and HTTPS. The template generates a complete Pulumi program, including placeholder web content, to give you a working project out of the box that you can customize easily and extend to suit your needs.
+The Static Website template creates an infrastructure as code project in your favorite language that deploys an HTML website to Microsoft Azure with Pulumi. It uses an [Azure Blob Storage account]({{< relref "/registry/packages/azure-native/api-docs/storage/storageaccount" >}}) for file storage, configures the storage account to host a website, and deploys an [Azure CDN Endpoint]({{< relref "/registry/packages/azure-native/api-docs/cdn/endpoint" >}}) to serve the website with low latency, caching, and HTTPS. The template generates a complete Pulumi program, including placeholder web content, to give you a working project out of the box that you can customize easily and extend to suit your needs.
 
 ![An architecture diagram of the Pulumi Azure Static Website template](./architecture.png)
 
@@ -132,7 +132,7 @@ $ pulumi destroy
 
 Congratulations! You're now well on your way to managing a production-grade static website on Microsoft Azure with Pulumi --- and there's lots more you can do from here:
 
-* Discover more architecture templates as they're available in [Templates &rarr;]({{< relref "/templates" >}})
+* Discover more architecture templates in [Templates &rarr;]({{< relref "/templates" >}})
 * Dive into the Azure Native package by exploring the [API docs in the Registry &rarr;]({{< relref "/registry/packages/azure-native" >}})
-* Expand your understanding of how Pulumi works in [Architecture &amp; Concepts &rarr;]({{< relref "/docs/intro/concepts" >}})
+* Expand your understanding of how Pulumi works in [Learn Pulumi &rarr;]({{< relref "/learn" >}})
 * Read up on the latest new features [in the Pulumi Blog &rarr;]({{< relref "/blog" >}})

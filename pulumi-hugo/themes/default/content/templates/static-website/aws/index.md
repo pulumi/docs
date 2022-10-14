@@ -11,7 +11,7 @@ cloud:
   slug: aws
 ---
 
-The AWS Static Website template deploys an HTML-based website on AWS with Pulumi. It uses an [Amazon S3 bucket]({{< relref "/registry/packages/aws/api-docs/s3/bucket" >}}) for file storage, configures the bucket to host a website, and deploys an [Amazon CloudFront Distribution]({{< relref "/registry/packages/aws/api-docs/cloudfront/distribution" >}}) to serve the website with low latency, caching, and HTTPS. The template generates a complete Pulumi program, including placeholder web content, to give you a working project out of the box that you can customize easily and extend to suit your needs.
+The Static Website template creates an infrastructure as code project in your favorite language that deploys an HTML website to AWS with Pulumi. It uses an [Amazon S3 bucket]({{< relref "/registry/packages/aws/api-docs/s3/bucket" >}}) for file storage, configures the bucket to host a website, and deploys an [Amazon CloudFront Distribution]({{< relref "/registry/packages/aws/api-docs/cloudfront/distribution" >}}) to serve the website with low latency, caching, and HTTPS. The template generates a complete Pulumi program, including placeholder web content, to give you a working project out of the box that you can customize easily and extend to suit your needs.
 
 ![An architecture diagram of the Pulumi AWS Static Website template](./architecture.png)
 
@@ -796,7 +796,7 @@ $ pulumi destroy
 
 Congratulations! You're now well on your way to managing a production-grade static website on AWS with Pulumi --- and there's lots more you can do from here:
 
-* Discover more architecture templates as they're available in [Templates &rarr;]({{< relref "/templates" >}})
+* Discover more architecture templates in [Templates &rarr;]({{< relref "/templates" >}})
 * Dive into the AWS package by exploring the [API docs in the Registry &rarr;]({{< relref "/registry/packages/aws" >}})
-* Expand your understanding of how Pulumi works in [Architecture &amp; Concepts &rarr;]({{< relref "/docs/intro/concepts" >}})
+* Expand your understanding of how Pulumi works in [Learn Pulumi &rarr;]({{< relref "/learn" >}})
 * Read up on the latest new features [in the Pulumi Blog &rarr;]({{< relref "/blog" >}})

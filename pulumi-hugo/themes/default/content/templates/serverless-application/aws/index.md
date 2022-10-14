@@ -11,7 +11,7 @@ template:
     prefix: serverless-aws
 ---
 
-The AWS Serverless Application template deploys a serverless website to AWS that displays the current time. It deploys an [Amazon S3 bucket]({{< relref "/registry/packages/aws/api-docs/s3/bucket" >}}) for hosting a static website, deploys an [AWS Lambda function]({{< relref "/registry/packages/aws/api-docs/lambda/function" >}}) that runs the business logic, and an [Amazon API Gateway REST API]({{< relref "/registry/packages/aws/api-docs/apigateway/restapi" >}}) that routes requests to HTML content and the Lambda function. The template ships with a placeholder website that displays the current time to give you a working Pulumi project out of the box that you can customize easily and extend to suit your needs.
+The AWS Serverless Application template creates an infrastructure as code project in your favorite language that deploys a serverless application to AWS with Pulumi. It deploys an [Amazon S3 bucket]({{< relref "/registry/packages/aws/api-docs/s3/bucket" >}}) for hosting a static website, deploys an [AWS Lambda function]({{< relref "/registry/packages/aws/api-docs/lambda/function" >}}) that runs the business logic, and an [Amazon API Gateway REST API]({{< relref "/registry/packages/aws/api-docs/apigateway/restapi" >}}) that routes requests to HTML content and the Lambda function. The template ships with a placeholder website that displays the current time to give you a working Pulumi project out of the box that you can customize easily and extend to suit your needs.
 
 ![An architecture diagram of the Pulumi AWS Serverless Website template](./architecture.png)
 
@@ -124,5 +124,5 @@ Congratulations! You're now well on your way to managing  production-grade AWS s
 
 * Discover more architecture templates in [Templates &rarr;]({{< relref "/templates" >}})
 * Dive into the AWS package by exploring the [API docs in the Registry &rarr;]({{< relref "/registry/packages/aws" >}})
-* Expand your understanding of how Pulumi works in [Pulumi Learn]({{< relref "/learn" >}})
+* Expand your understanding of how Pulumi works in [Learn Pulumi]({{< relref "/learn" >}})
 * Read up on the latest new features [in the Pulumi Blog &rarr;](/blog/tag/serverless)
