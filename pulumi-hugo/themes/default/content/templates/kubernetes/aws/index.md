@@ -1,27 +1,20 @@
 ---
 title: "Kubernetes Cluster on AWS"
 layout: template
-
-# Make sure this is description accurate for this template.
 meta_desc: The AWS Kubernetes template makes it easy to deploy a Kubernetes cluster on AWS with Pulumi and Amazon EKS.
-
-# Appears on the cards on template-overview pages.
+meta_image: meta.png
 card_desc: Deploy a Kubernetes cluster on AWS with Pulumi and Amazon EKS.
-
-# Used for generating language-specific links to templates on GitHub. (Example: `static-website-aws`)
 template:
-    prefix: kubernetes-aws
-
-# Used for generating links to sibling templates in the right-hand nav. Slug is this template's parent directory.
+  prefix: kubernetes-aws
+  dirname: my-k8s-cluster
+  languages:
+    - typescript
+    - python
+    - go
+    - yaml
 cloud:
   name: Amazon Web Services
   slug: aws
-
-# Be sure to replace this image. Figma source file:
-# https://www.figma.com/file/lGrSpwbGGmbixEuewMbtkh/Template-Architecture-Diagrams?node-id=15%3A196
-meta_image: meta.png
-
-# The content below is meant help you get started and to serve as a guide to work by. Feel free to adjust it needed for your template.
 ---
 
 The Kubernetes Cluster template creates an infrastructure as code project in your favorite language and deploys a managed Kubernetes cluster to AWS. The architecture includes a VPC with public and private subnets and deploys an [Amazon EKS cluster]({{< relref "/registry/packages/eks/api-docs/cluster" >}}) that provides a managed Kubernetes control plane. Kubernetes worker nodes are deployed on private subnets for improved security. Load balancers created by workloads deployed on the EKS cluster will be automatically created in the public subnets. The template generates a complete infrastructure as code program to give you a working project out of the box that you can customize easily and extend to suit your needs.
@@ -32,52 +25,7 @@ The Kubernetes Cluster template creates an infrastructure as code project in you
 
 To use this template to deploy your own managed Kubernetes cluster, make sure you've [installed Pulumi]({{< relref "/docs/get-started/install" >}}) and [configured your AWS credentials]({{< relref "/registry/packages/aws/installation-configuration#credentials" >}}), then create a new [project]({{< relref "/docs/intro/concepts/project" >}}) using the template in your language of choice:
 
-{{% chooser language "typescript,python,go,yaml" / %}}
-
-{{% choosable language typescript %}}
-
-```bash
-$ mkdir my-k8s-cluster && cd my-k8s-cluster
-$ pulumi new kubernetes-aws-typescript
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```bash
-$ mkdir my-k8s-cluster && cd my-k8s-cluster
-$ pulumi new kubernetes-aws-python
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```bash
-$ mkdir my-k8s-cluster && my-k8s-cluster
-$ pulumi new kubernetes-aws-go
-```
-
-<!-- {{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-```bash
-$ mkdir my-k8s-cluster && cd my-k8s-cluster
-$ pulumi new kubernetes-aws-csharp
-``` -->
-
-{{% /choosable %}}
-
-{{% choosable language yaml %}}
-
-```bash
-$ mkdir my-k8s-cluster && cd my-k8s-cluster
-$ pulumi new kubernetes-aws-yaml
-```
-
-{{% /choosable %}}
+{{< templates/pulumi-new >}}
 
 Follow the prompts to complete the new-project wizard. When it's done, you'll have a complete Pulumi project that's ready to deploy and configured with the most common settings. Feel free to inspect the code in {{< langfile >}} for a closer look.
 

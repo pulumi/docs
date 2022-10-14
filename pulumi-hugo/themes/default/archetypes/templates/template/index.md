@@ -5,21 +5,28 @@ layout: template
 # Make sure this is description accurate for this template.
 meta_desc: The {{ replace .Name "-" " " | title }} template makes it easy to deploy a static website on $CLOUD with Pulumi, some service, and some other cloud service.
 
+# Be sure to replace this image. Figma source file:
+# https://www.figma.com/file/lGrSpwbGGmbixEuewMbtkh/Template-Architecture-Diagrams?node-id=15%3A196
+meta_image: meta.png
+
 # Appears on the cards on template-overview pages.
 card_desc: Deploy a $THING on $CLOUD with Pulumi, some cloud service, and some other cloud service.
 
-# Used for generating language-specific links to templates on GitHub. (Example: `static-website-aws`)
+# Used for generating language-specific CLI commands and links to the templates repo on GitHub.
 template:
-    prefix: architecture-cloud
+  prefix: architecture-cloud
+  dirname: my-project
+  languages:
+    - typescript
+    - python
+    - go
+    - csharp
+    - yaml
 
 # Used for generating links to sibling templates in the right-hand nav. Slug is this template's parent directory.
 cloud:
   name: Amazon Web Services
   slug: aws
-
-# Be sure to replace this image. Figma source file:
-# https://www.figma.com/file/lGrSpwbGGmbixEuewMbtkh/Template-Architecture-Diagrams?node-id=15%3A196
-meta_image: meta.png
 
 # The content below is meant help you get started and to serve as a guide to work by. Feel free to adjust it needed for your template.
 ---

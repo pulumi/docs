@@ -20,7 +20,7 @@
 <div class="inline-flex items-center text-sm">
     <i class="fab fa-github text-lg mr-1.5"></i>
     <span class="whitespace-nowrap flex-1">
-        {{ partial "templates/source-link" (dict "prefix" .Params.template.prefix "languages" "typescript,python,go,csharp,yaml") }}
+        {{ partial "templates/source-link" (dict "prefix" .Params.template.prefix "languages" (delimit .Params.template.languages ",")) }}
     </span>
     <span><i class="text-blue-700 fas fa-external-link-alt text-xs ml-1.5 pb-1"></i></span>
 </div>

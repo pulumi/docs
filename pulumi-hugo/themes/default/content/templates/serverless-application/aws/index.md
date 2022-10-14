@@ -1,14 +1,21 @@
 ---
 title: AWS Serverless Application
+layout: template
 meta_desc: The AWS Serverless Application template makes it easy to deploy a serverless application on AWS with Pulumi, AWS Lambda functions, and Amazon API Gateway.
 meta_image: meta.png
 card_desc: Deploy a serverless application on AWS with Pulumi, AWS Lambda, and Amazon API Gateway.
-layout: template
+template:
+  prefix: serverless-aws
+  dirname: my-serverless-app
+  languages:
+    - typescript
+    - python
+    - go
+    - csharp
+    - yaml
 cloud:
   name: Amazon Web Services (AWS)
   slug: aws
-template:
-    prefix: serverless-aws
 ---
 
 The AWS Serverless Application template creates an infrastructure as code project in your favorite language that deploys a serverless application to AWS with Pulumi. It deploys an [Amazon S3 bucket]({{< relref "/registry/packages/aws/api-docs/s3/bucket" >}}) for hosting a static website, deploys an [AWS Lambda function]({{< relref "/registry/packages/aws/api-docs/lambda/function" >}}) that runs the business logic, and an [Amazon API Gateway REST API]({{< relref "/registry/packages/aws/api-docs/apigateway/restapi" >}}) that routes requests to HTML content and the Lambda function. The template ships with a placeholder website that displays the current time to give you a working Pulumi project out of the box that you can customize easily and extend to suit your needs.
@@ -19,52 +26,7 @@ The AWS Serverless Application template creates an infrastructure as code projec
 
 To use this template to deploy your own AWS serverless application, make sure you've [installed Pulumi]({{< relref "/docs/get-started/install" >}}) and [configured your AWS credentials]({{< relref "/registry/packages/aws/installation-configuration" >}}), then create a new [project]({{< relref "/docs/intro/concepts/project" >}}) using the template in your language of choice.
 
-{{% chooser language "typescript,python,go,csharp,yaml" / %}}
-
-{{% choosable language typescript %}}
-
-```bash
-$ mkdir my-serverless-app && cd my-serverless-app
-$ pulumi new serverless-aws-typescript
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```bash
-$ mkdir my-serverless-app && cd my-serverless-app
-$ pulumi new serverless-aws-python
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```bash
-$ mkdir my-serverless-app && cd my-serverless-app
-$ pulumi new serverless-aws-go
-```
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-```bash
-$ mkdir my-serverless-app && cd my-serverless-app
-$ pulumi new serverless-aws-csharp
-```
-
-{{% /choosable %}}
-
-{{% choosable language yaml %}}
-
-```bash
-$ mkdir my-serverless-app && cd my-serverless-app
-$ pulumi new serverless-aws-yaml
-```
-
-{{% /choosable %}}
+{{< templates/pulumi-new >}}
 
 Follow the prompts to complete the new-project wizard. When it’s done, you’ll have a complete Pulumi project that’s ready to deploy and configured with the most common settings. Feel free to inspect the code in {{< langfile >}} for a closer look.
 

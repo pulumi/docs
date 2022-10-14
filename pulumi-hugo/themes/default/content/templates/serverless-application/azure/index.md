@@ -1,24 +1,21 @@
 ---
-title: "Azure Serverless Application"
+title: Azure Serverless Application
 layout: template
-
-# Make sure this is description accurate for this template.
 meta_desc: The Azure Serverless Template makes it easy to deploy a serverless application on Azure with Pulumi, Azure Functions, and Azure Blob Storage.
-
-# Appears on the cards on template-overview pages.
+meta_image: meta.png
 card_desc: Deploy a serverless application on Azure with Pulumi, Azure Functions, and Azure Blob Storage.
-
-# Used for generating language-specific links to templates on GitHub. (Example: `static-website-aws`)
 template:
-    prefix: serverless-azure
-
-# Used for generating links to sibling templates in the right-hand nav. Slug is this template's parent directory.
+  prefix: serverless-azure
+  dirname: my-serverless-app
+  languages:
+    - typescript
+    - python
+    - go
+    - csharp
+    - yaml
 cloud:
   name: Microsoft Azure
   slug: azure
-
-meta_image: meta.png
-
 ---
 
 The Serverless Application template creates an infrastructure as code project in your favorite language that deploys a serverless application to Azure with Pulumi. It deploys an [Azure Blob Storage account]({{< relref "/registry/packages/azure-native/api-docs/storage/storageaccount" >}}) configured for [static website hosting]({{< relref "/registry/packages/azure-native/api-docs/storage/storageaccountstaticwebsite" >}}) and an [Azure Function]({{< relref "/registry/packages/azure-native/api-docs/web/webappfunction" >}}) written in the same language as the template. The template ships with placeholder content to give you a working project out of the box that you can customize easily and extend to suit your needs.
@@ -29,52 +26,7 @@ The Serverless Application template creates an infrastructure as code project in
 
 To use this template to deploy your own serverless application, make sure you've [installed Pulumi]({{< relref "/docs/get-started/install" >}}) and [configured your Azure credentials]({{< relref "/registry/packages/azure/installation-configuration#credentials" >}}), then create a new [project]({{< relref "/docs/intro/concepts/project" >}}) using the template in your language of choice:
 
-{{% chooser language "typescript,python,go,csharp,yaml" / %}}
-
-{{% choosable language typescript %}}
-
-```bash
-$ mkdir my-serverless-app && cd my-serverless-app
-$ pulumi new serverless-azure-typescript
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```bash
-$ mkdir my-serverless-app && cd my-serverless-app
-$ pulumi new serverless-azure-python
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```bash
-$ mkdir my-serverless-app && cd my-serverless-app
-$ pulumi new serverless-azure-go
-```
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-```bash
-$ mkdir my-serverless-app && cd my-serverless-app
-$ pulumi new serverless-azure-csharp
-```
-
-{{% /choosable %}}
-
-{{% choosable language yaml %}}
-
-```bash
-$ mkdir my-serverless-app && cd my-serverless-app
-$ pulumi new serverless-azure-yaml
-```
-
-{{% /choosable %}}
+{{< templates/pulumi-new >}}
 
 Follow the prompts to complete the new-project wizard. When it's done, you'll have a complete Pulumi project that's ready to deploy and configured with the most common settings. Feel free to inspect the code in {{< langfile >}} for a closer look.
 

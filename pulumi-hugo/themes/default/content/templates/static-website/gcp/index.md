@@ -5,7 +5,14 @@ meta_image: meta.png
 card_desc: Deploy a static website on Google Cloud with Pulumi, Google Cloud Storage, and Google Cloud CDN.
 layout: template
 template:
-    prefix: static-website-gcp
+  prefix: static-website-gcp
+  dirname: my-site
+  languages:
+    - typescript
+    - python
+    - go
+    - csharp
+    - yaml
 cloud:
     name: Google Cloud Platform
     slug: gcp
@@ -19,52 +26,7 @@ The Google Cloud Static Website template creates an infrastructure as code proje
 
 To use this template to deploy a website of your own, make sure you've [installed Pulumi]({{< relref "/docs/get-started/install" >}}) and [configured your Google Cloud credentials]({{< relref "/registry/packages/gcp/installation-configuration#credentials" >}}), then create a new [project]({{< relref "/docs/intro/concepts/project" >}}) using the template in your language of choice:
 
-{{% chooser language "typescript,python,go,csharp,yaml" / %}}
-
-{{% choosable language typescript %}}
-
-```bash
-$ mkdir my-site && cd my-site
-$ pulumi new static-website-gcp-typescript
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```bash
-$ mkdir my-site && cd my-site
-$ pulumi new static-website-gcp-python
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```bash
-$ mkdir my-site && cd my-site
-$ pulumi new static-website-gcp-go
-```
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-```bash
-$ mkdir my-site && cd my-site
-$ pulumi new static-website-gcp-csharp
-```
-
-{{% /choosable %}}
-
-{{% choosable language yaml %}}
-
-```bash
-$ mkdir my-site && cd my-site
-$ pulumi new static-website-gcp-yaml
-```
-
-{{% /choosable %}}
+{{< templates/pulumi-new >}}
 
 Follow the prompts to complete the new-project wizard. When it's done, you'll have a finished project that's ready to deploy and configured with the most common settings. Feel free to inspect the code in {{< langfile >}} for a closer look.
 

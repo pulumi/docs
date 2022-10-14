@@ -1,0 +1,32 @@
+{{/* Generates a language chooser containing commands for `pulumi new`, using
+    frontmatter obtained from the surrounding content file.
+*/}}
+
+{{ $prefix := .Page.Params.template.prefix }}
+{{ $dirname := .Page.Params.template.dirname }}
+{{ $languages := .Page.Params.template.languages }}
+
+
+<div>
+    <pulumi-chooser type="language" options="{{ delimit $languages "," }}"></pulumi-chooser>
+</div>
+
+{{/* The formatting below (specifically what's contained within the `pre` tags) is
+    important because it controls how the code snippet is rendered on-page in terms of line breaks,
+    tabs, spaces, etc. The Prettier formatter mangles this spacing, so the formatting needs to
+    be ignored.
+*/}}
+
+
+<!-- prettier-ignore -->
+{{ range $language := $languages }}
+<div>
+    <pulumi-choosable type="language" values="{{ $language }}">
+        <div class="highlight">
+            <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mkdir {{ $dirname }} <span class="o">&amp;&amp;</span> <span class="nb">cd</span> {{ $dirname }}
+</span></span><span class="line"><span class="cl">$ pulumi new {{ $prefix }}-{{ $language }}
+</span></span></code></pre>
+        </div>
+    </pulumi-choosable>
+</div>
+{{ end }}
