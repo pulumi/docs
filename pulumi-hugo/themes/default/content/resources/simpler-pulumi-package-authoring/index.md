@@ -62,7 +62,7 @@ main:
     description: |
         Let’s explore how to start sharing Pulumi code with others. We’ll use Go to build a custom architecture for GCP that we’ll then compile down into a library we can share with others who work in other languages.
 
-        If you want to code along, you’ll need a [free Pulumi SaaS account](https://app.pulumi.com/signup/?utm_source=da&utm_medium=referral&utm_campaign=workshops&utm_content=ced-fall2022-workshops), [the Pulumi CLI](https://www.pulumi.com/docs/get-started/install/?utm_source=da&utm_medium=referral&utm_campaign=workshops&utm_content=ced-fall2022-workshops), [Go](https://www.pulumi.com/docs/intro/languages/go/?utm_source=da&utm_medium=referral&utm_campaign=workshops&utm_content=ced-fall2022-workshops), and a GCP account (free tier is okay).
+        If you want to code along, you’ll need a [free Pulumi SaaS account](https://app.pulumi.com/signup/), [the Pulumi CLI](https://www.pulumi.com/docs/get-started/install/), [Go](https://www.pulumi.com/docs/intro/languages/go/), and a Google Cloud account (free tier is okay).
 
     # The webinar presenters
     presenters:

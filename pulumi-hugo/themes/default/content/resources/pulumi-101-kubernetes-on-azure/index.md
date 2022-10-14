@@ -62,7 +62,7 @@ main:
     description: |
         Learn the basics of Pulumi from projects to components. We’ll use C# and templates to stand up our first bit of infrastructure: A small Kubernetes cluster on AKS from Azure. Along the way, we’ll learn how infrastructure as code makes updates easier, reduces time to value, and helps you keep your cloud costs down.
 
-        If you want to code along, you’ll need a [free Pulumi SaaS account](https://app.pulumi.com/signup/?utm_source=da&utm_medium=referral&utm_campaign=workshops&utm_content=ced-fall2022-workshops), [the Pulumi CLI](https://www.pulumi.com/docs/get-started/install/?utm_source=da&utm_medium=referral&utm_campaign=workshops&utm_content=ced-fall2022-workshops), [].NET 6+](https://www.pulumi.com/docs/intro/languages/dotnet/?utm_source=da&utm_medium=referral&utm_campaign=workshops&utm_content=ced-fall2022-workshops), and an Azure account (free tier is okay).
+        If you want to code along, you’ll need a [free Pulumi SaaS account](https://app.pulumi.com/signup/), [the Pulumi CLI](https://www.pulumi.com/docs/get-started/install), [.NET 6+](https://www.pulumi.com/docs/intro/languages/dotnet/), and an Azure account (free tier is okay).
 
     # The webinar presenters
     presenters:

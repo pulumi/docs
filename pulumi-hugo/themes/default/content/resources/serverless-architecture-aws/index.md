@@ -62,7 +62,7 @@ main:
     description: |
         Let’s explore more about building up a serverless microservices architecture on AWS using infrastructure as code and cloud engineering principles. We’ll use TypeScript to build up our new architecture, and we’ll explore more about stacks, inputs and outputs, secrets, and more.
 
-        If you want to code along, you’ll need a [free Pulumi SaaS account](https://app.pulumi.com/signup/?utm_source=da&utm_medium=referral&utm_campaign=workshops&utm_content=ced-fall2022-workshops), [the Pulumi CLI](https://www.pulumi.com/docs/get-started/install/?utm_source=da&utm_medium=referral&utm_campaign=workshops&utm_content=ced-fall2022-workshops), [NodeJS](https://www.pulumi.com/docs/intro/languages/javascript/?utm_source=da&utm_medium=referral&utm_campaign=workshops&utm_content=ced-fall2022-workshops), and an AWS account (free tier is okay).
+        If you want to code along, you’ll need a [free Pulumi SaaS account](https://app.pulumi.com/signup/), [the Pulumi CLI](https://www.pulumi.com/docs/get-started/install/), [NodeJS](https://www.pulumi.com/docs/intro/languages/javascript/), and an AWS account (free tier is okay).
 
     # The webinar presenters
     presenters:
