@@ -21,7 +21,7 @@ on:
 jobs:
 
   build-tfgen-provider-docs:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - run: echo "Building ${{ env.PROVIDER_NAME }} docs @ ${{ env.PROVIDER_VERSION }}"
       - if: github.event.action != 'non-resource-provider'

@@ -6,7 +6,7 @@ on:
 jobs:
   do_cleanup:
     name: Do cleanup
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     env:
       GOPATH: ${{ github.workspace }}/go
     steps:

@@ -6,7 +6,7 @@ on:
 jobs:
   merge:
     name: Update tutorials
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: Install Go
         uses: actions/setup-go@v2
