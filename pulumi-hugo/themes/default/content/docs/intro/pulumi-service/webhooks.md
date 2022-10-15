@@ -18,10 +18,10 @@ To try it out, start a [trial](https://app.pulumi.com/site/trial) now.
 {{% /notes %}}
 
 Pulumi Webhooks allow you to notify external services of events
-happening within your Pulumi organization or stack. For example,
+happening within your Pulumi organization. For example,
 you can trigger a notification whenever a stack is updated.
 Whenever an event occurs, Pulumi will send an HTTP `POST` request to
-all registered webhooks. The webhook can then be used to emit some
+all registered webhooks. The webhook can then be used to emit a
 notification, start running integration tests, or even update additional stacks.
 
 Webhooks can be used for pretty much anything you want, and are the foundation
@@ -35,8 +35,8 @@ webhooks will be notified for events happening within each of the organization's
 stacks.
 
 {{% notes "info" %}}
-There are some restrictions for the number of webhooks that can be registered
-when using the Pulumi Team editions. [Contact us]({{< relref "/about#contact-us" >}})
+There are some restrictions on the number of webhooks that can be registered
+when using the Pulumi Team editions. [Contact us]({{< relref "/contact" >}})
 if you need the limit increased.
 {{% /notes %}}
 
@@ -168,12 +168,6 @@ func computeSignature(payload []byte, secret string) string {
 Most payloads contain `user` and `organization` fields. `user` contains the
 identity of the user who triggered the webhook. For example, the person who initiated
 the stack update or performed the action.
-
-{{% notes "warning" %}}
-The Pulumi Webhook payloads are under development, and may be changed from
-time to time. See the [Pulumi Community Slack](https://slack.pulumi.com/) for
-any announcements or changes.
-{{% /notes %}}
 
 ### Stack Creation
 
