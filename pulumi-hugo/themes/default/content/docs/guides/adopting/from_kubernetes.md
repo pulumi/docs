@@ -26,7 +26,7 @@ By defining these resources in code, you can deploy off-the-shelf Kubernetes YAM
 
 ### Deploying a Single Kubernetes YAML File
 
-The `ConfigFile` resource type accepts a `file` parameter that indicates the path or URL to read the YAML configuration from. By default, names are used as-is, however you can specify a `namePrefix` to rewrite the names. One or more `transformations` callbacks can be supplied to arbitrarily rewrite resource configurations on-the-fly before deploying them.
+The `ConfigFile` resource type accepts a `file` parameter that indicates the path or URL to read the YAML configuration from. By default, names are used as-is, however you can specify a `resourcePrefix` to rewrite the names. One or more `transformations` callbacks can be supplied to arbitrarily rewrite resource configurations on-the-fly before deploying them.
 
 To deploy the Kubernetes Guestbook Application using a single YAML file, first download the "all-in-one" configuration:
 
@@ -183,7 +183,7 @@ Resources:
 
 ### Deploying Multiple Kubernetes YAML Files
 
-The `ConfigGroup` resource type is similar to `ConfigFile`. Instead of a single file, it accepts a `files` parameter that contains a list of file paths, file globs, and/or URLs from which to read the YAML configuration from. By default, names are used as-is, however you can specify a `namePrefix` to rewrite the names. One or more `transformations` callbacks can be supplied to arbitrarily rewrite resource configurations on-the-fly before deploying them.
+The `ConfigGroup` resource type is similar to `ConfigFile`. Instead of a single file, it accepts a `files` parameter that contains a list of file paths, file globs, and/or URLs from which to read the YAML configuration from. By default, names are used as-is, however you can specify a `resourcePrefix` to rewrite the names. One or more `transformations` callbacks can be supplied to arbitrarily rewrite resource configurations on-the-fly before deploying them.
 
 To deploy the Kubernetes Guestbook Application using a colllection of YAML files, first create a `yaml` directory and download them into it:
 
@@ -378,7 +378,7 @@ The `Release` resource type provides a number of options to control where to fet
 * `values`: (Optional) A dictionary of named key/value values for Charts with parameters.
 * `fetchOpts`: (Optional) A bag of options to control the fetch behavior.
 
-In addition to those core options, you can specify `transformations` (similar to what is shown [configurations below](#configuration-transformations)), `namePrefix` to control naming, or `namespace` to place all resources inside a specific Kubernetes namespace. Please refer to the [API reference]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/chart" >}}) documentation for more details.
+In addition to those core options, you can specify `transformations` (similar to what is shown [configurations below](#configuration-transformations)), `resourcePrefix` to control naming, or `namespace` to place all resources inside a specific Kubernetes namespace. Please refer to the [API reference]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/chart" >}}) documentation for more details.
 
 #### Provisioning a Helm Chart
 
