@@ -35,7 +35,7 @@ This installer uses Pulumi to deploy the Pulumi service. In this case, one uses 
 To this end, you need to set up the following:
 
 * [Download and install the Pulumi CLI]({{<relref "docs/get-started/install">}}) on your workstation
-* [Login to S3-compatible backend]({{<relref "docs/intro/concepts/state#logging-into-the-aws-s3-backend">}})
+* [Login to S3-compatible backend]({{<relref "docs/intro/concepts/state#aws-s3">}})
 
 ### Deployment Steps
 
@@ -59,7 +59,7 @@ The installer configures the RDS backend database for replication and checkpoint
 
 ### Blob Storage Maintenance
 
-The service automatically creates backups of checkpoint files. However, the customer may want to enable AWS Backup to periodically backup the S3 buckets created by the installer.  
+The service automatically creates backups of checkpoint files. However, the customer may want to enable AWS Backup to periodically backup the S3 buckets created by the installer.
 The buckets will have names of the form:
 
 * `pulumi-checkpoint-XXX`
@@ -67,7 +67,7 @@ The buckets will have names of the form:
 
 ### Updating the EKS Cluster Kubernetes Version
 
-If your EKS-hosted installation was deployed on Kubernetes version 1.19 or later, you can update the `clusterConfig:ClusterVersion` configuration property to the desired version.  
+If your EKS-hosted installation was deployed on Kubernetes version 1.19 or later, you can update the `clusterConfig:ClusterVersion` configuration property to the desired version.
 Then, rerun the `npm run install -- update --` command to update the cluster with the new version.
 
 {{% notes type="info" %}}

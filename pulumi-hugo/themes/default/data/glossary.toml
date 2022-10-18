@@ -21,7 +21,7 @@ link = "/docs/intro/concepts/how-pulumi-works"
 [[entries]]
 term = "Self-hosted"
 description = "Self-hosted in Pulumi applies to on-premise \"behind a firewall\" scenarios, as well as environments hosted within your own AWS, Azure, or GCP account."
-link = "/docs/intro/concepts/state#self-managed-backend"
+link = "/docs/intro/concepts/state#deciding-on-a-state-backend"
 
 [[entries]]
 term = "Pulumi Service"

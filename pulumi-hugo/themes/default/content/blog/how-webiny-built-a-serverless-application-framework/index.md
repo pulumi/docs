@@ -147,7 +147,7 @@ The last piece of the puzzle was storing cloud infrastructure state files. Here 
 
 For local development, users’ cloud infrastructure state files are stored locally within their Webiny project using the [Local Filesystem Backend](https://www.pulumi.com/docs/intro/concepts/state/#logging-into-the-local-filesystem-backend), which we’ve seen worked great for developers.
 
-On the other hand, for ephemeral environments spawned in CI/CD or long-lived environments like staging or production, through our [documentation](https://www.webiny.com/docs/key-topics/ci-cd/cloud-infrastructure-state-files#using-different-backends), we advise our users to use centralized and remote storage by using backends like [Amazon S3](https://www.pulumi.com/docs/intro/concepts/state/#logging-into-the-aws-s3-backend) and even [Pulumi Service (pulumi.com)](https://www.pulumi.com/docs/intro/concepts/state/#logging-into-the-pulumi-service-backend). Both backends have their pros and cons, and we let the users choose the one they want to use.
+On the other hand, for ephemeral environments spawned in CI/CD or long-lived environments like staging or production, through our [documentation](https://www.webiny.com/docs/key-topics/ci-cd/cloud-infrastructure-state-files#using-different-backends), we advise our users to use centralized and remote storage by using backends like [Amazon S3](https://www.pulumi.com/docs/intro/concepts/state/#aws-s3) and even [Pulumi Service (pulumi.com)](https://www.pulumi.com/docs/intro/concepts/state/#logging-into-the-pulumi-service-backend). Both backends have their pros and cons, and we let the users choose the one they want to use.
 
 ## Show Me the Code
 

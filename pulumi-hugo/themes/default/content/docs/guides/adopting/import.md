@@ -147,7 +147,7 @@ class MyStack : Stack
 
 After successfully importing a resource and adding the generated code to your program, you can run `pulumi up` and all subsequent operations
 will behave as though Pulumi provisioned the resource from the outset. The resource is added to the Pulumi
-[state]({{< relref "/docs/intro/concepts/state#state" >}}), and marked as a [protected]({{< relref "/docs/intro/concepts/resources#protect" >}})
+[state]({{< relref "/docs/intro/concepts/state" >}}), and marked as a [protected]({{< relref "/docs/intro/concepts/resources#protect" >}})
 resource (by default) to ensure that imported infrastructure is not accidentally deleted if the user forgets to include the code for the resource in their program before doing a deployment.
 
 ### Pulumi Import Resource Operation
