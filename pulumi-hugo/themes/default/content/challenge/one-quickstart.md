@@ -11,7 +11,7 @@ meta_image: /images/challenge/challenge_cta.png
 ## Welcome to the Pulumi Challenge!
 
 <div class="flex flex-wrap md:mt-12">
-  <div class="w-full md:w-1/2">
+  <div>
     <h3>One Quickstart to Rule them All</h3>
     <p class="pr-12">
       Pulumi Architecture Templates make it quick and easy to get started with a wide variety of clouds, tools, and technologies when you want to try something new but don't want to write boilerplate yourself. It's a great way to get started with Pulumi quickly, no matter what you need to build. Try it for yourself with serverless AWS templates and win some swag in the process!
@@ -36,11 +36,6 @@ meta_image: /images/challenge/challenge_cta.png
       </li>
     </ul>
   </div>
-
-<!--   <div class="w-full order-first md:order-last md:w-1/2">
-    <img class="hidden md:block" src="/images/pulumi-challenge-swag-tumbler.png" />
-    <img class="mx-auto my-4 md:hidden" src="/images/pulumi-challenge-swag-tumbler-mobile.png" />
-  </div> -->
 </div>
 
 ### Challenge
@@ -246,12 +241,18 @@ pulumi-policy>=1.3.0,<2.0.0
 requests
 ```
 
-Execute your policy pack against your Pulumi Program with the following command at the root of your repo to submit for your swag:
+Install the new requirements in the usual way:
+
+```shell
+pip install -r requirements.txt
+```
+
+Then, execute your policy pack against your Pulumi Program with the following command at the root of your repo to submit for your swag:
 
 ```shell
 pulumi preview --policy-pack policy --policy-pack-config swag.json
 ```
 
-Congratulations! You completed the first Pulumi Challenge. If you'd like to tear down all of these resources, run `pulumi destroy -y`. Otherwise, have fun playing around with your new serverless application! Add whatever you like, or try one of the many other Pulumi Architecture Templates. Your swag will be in the mail shortly! Note that you'll only get one piece no matter how many times you submit :)
+Congratulations!. You've completed this Pulumi Challenge. If you'd like to tear down all of these resources, run `pulumi destroy -y`. Otherwise, have fun playing around with your new serverless application! Add whatever you like, or try one of the many other [Pulumi Architecture Templates](/templates). Your swag will be in the mail shortly! Note that you'll only get one piece no matter how many times you submit. :)
 
 Wanna yell it from the rooftops? Write a blog or post a quick video about it? Let us know and we'll send you an extra, super secret piece of swag! Tag us on social media, or email us at [da@pulumi.com](mailto:da@pulumi.com).
