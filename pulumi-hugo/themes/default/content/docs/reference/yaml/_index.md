@@ -30,17 +30,19 @@ The value of `configuration` is an object whose keys are logical names by which 
 | ------------- |---|-------------| -----|---|
 | `type`      | string | No | No | Type is the (required) data type for the parameter. It can be one of: `String`, `Number`, `List<Number>`, or `List<String>`. |
 | `default`      | any | No | No | Default is a value of the appropriate type for the template to use if no value is specified. |
+| `secret`      | bool | No | No | Secret specifies if the config value should be encrypted as a secret. |
 
 ### Resources
 
 The value of `resources` is an object whose keys are logical resource names by which the resource will be referenced in expressions within the program, and whose values which are elements of the schema below.  Each item in this object represents a resource which will be managed by the Pulumi program.
 
-| Property     | Type                                  | Required | Expressions | Description                                                                                         |
-|--------------|---------------------------------------|----------|-------------|-----------------------------------------------------------------------------------------------------|
-| `type`       | string                                | Yes      | No          | Type is the Pulumi type token for this resource.                                                    |
-| `properties` | map[string]Expression                 | No       | Yes         | Properties contains the primary resource-specific keys and values to initialize the resource state. |
-| `options`    | [Resource Options](#resource-options) | No       | No          | Options contains all resource options supported by Pulumi.                                          |
-| `get`        | [Resource Getter](#resource-getter)   | No       | Yes         | A getter function for the resource. Supplying `get` is mutually exclusive to `properties`.          |
+| Property     		| Type                                  | Required | Expressions | Description                                                                                         								 |
+|-------------------|---------------------------------------|----------|-------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| `type`       		| string                                | Yes      | No          | Type is the Pulumi type token for this resource.                                                    								 |
+| `defaultProvider` | bool                					| No       | No          | DefaultProvider specifies if a provider should be used for resources without an explicit one set. Set only on provider resources. |
+| `properties` 		| map[string]Expression                 | No       | Yes         | Properties contains the primary resource-specific keys and values to initialize the resource state. 								 |
+| `options`    		| [Resource Options](#resource-options) | No       | No          | Options contains all resource options supported by Pulumi.                                          								 |
+| `get`        		| [Resource Getter](#resource-getter)   | No       | Yes         | A getter function for the resource. Supplying `get` is mutually exclusive to `properties`.          								 |
 
 #### Resource Options
 
@@ -72,6 +74,9 @@ The `dependsOn`, `parent`, `provider`, and `providers` values permit expressions
 | `provider`                | Expression   | Provider specifies an explicitly configured provider, instead of using the default global provider |
 | `providers`               | map[string]Expression | Map of providers for a resource and its children. |
 | `version`                 | string       | Version specifies a provider plugin version that should be used when operating on a resource |
+| `pluginDownloadURL`                 | string       | PluginDownloadURL specifies a provider plugin download URL  |
+| `replaceOnChanges`                 | string[]       | ReplaceOnChanges specifies if changes to certain properties on a resource should force replacement instead of an in-place update. |
+| `retainOnDelete`                 | bool       | RetainOnDelete causes a resource to be preserved in the cloud even when it is deleted from the Pulumi state.  |
 
 #### Resource Getter
 
