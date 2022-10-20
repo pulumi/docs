@@ -8,7 +8,7 @@ menu:
     weight: 6
 ---
 
-The `ignoreChanges` resource option specifies a list of properties that Pulumi will ignore when it updates existing resources. Any properties specified in this list that are also specified in the resource’s arguments will only be used when creating the resource.
+The `ignoreChanges` resource option specifies a list of properties that Pulumi will ignore when it updates existing resources. Pulumi ignores a property by using the old value from the state instead of the value provided by the Pulumi program when determining whether an update or replace is needed. Ignored properties will still be used from the program when there is no previous value in the state, most importantly when creating the resource.
 
 For instance, in this example, the resource’s prop property "new-value" will be set when Pulumi initially creates the resource, but from then on, any updates will ignore it:
 
@@ -93,6 +93,10 @@ One reason you would use the `ignoreChanges` option is to ignore changes in prop
 The `ignoreChanges` option only applies to resource inputs, not outputs.
 {{% /notes %}}
 
+{{% notes "info" %}}
+The `ignoreChanges` resource option does not apply to inputs to component resources.  If `ignoreChanges` is passed to a component resource, it is up to that component's implementation to decide what if anything it will do.
+{{% /notes %}}
+
 In addition to passing simple property names, nested properties can also be supplied to ignore changes to a more targeted nested part of the resource's inputs. Here are examples of legal paths that can be passed to specify nested properties of objects and arrays, as well as to escape object keys that contain special characters:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
@@ -141,7 +145,3 @@ For example, a property named `NestedResource` would turn into `nestedResource`.
 - `root["key with a ."]`
 - `["root key with \"escaped\" quotes"].nested`
 - `["root key with a ."][100]`
-
-{{% notes type="warning" %}}
-The `ignoreChanges` resource option does not apply to component resources, and will not have the intended effect.
-{{% /notes %}}
