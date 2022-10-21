@@ -37,6 +37,14 @@ sitemap
                 "https://slack.pulumi.com",
             ])
 
+            // Always check using the base URL.
+            .map(url => {
+                const newURL = new URL(url);
+                newURL.hostname = new URL(baseURL).host;
+                newURL.protocol = new URL(baseURL).protocol;
+                return newURL.toString();
+            })
+
             // Sort everything alphabetically.
             .sort();
 

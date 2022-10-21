@@ -24,5 +24,5 @@ do
     echo "-------------------------------------------------------------------------------------------------------------"
     echo ""
 
-    node "$this_path/check-links.js" "$url" "page" 3 || echo -e "$url" >> "$logfile"
+    node "$this_path/check-links.js" "$url" "page" 1 || echo -e "$url" >> "$logfile"
 done

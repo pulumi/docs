@@ -74,6 +74,9 @@ echo "Running tests..."
 echo "Running browser tests on $s3_website_url..."
 ./scripts/run-browser-tests.sh "$s3_website_url"
 
+echo "Checking links on $s3_website_url..."
+./scripts/link-checker/check-links.sh "$s3_website_url"
+
 # At this point, we have a bucket that's suitable for deployment. As a result of this run,
 # we leave a file in the project root indicating the name of the bucket that was generated
 # and the associated commit SHA, and then we upload that file into the bucket as well, for

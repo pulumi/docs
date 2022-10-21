@@ -110,7 +110,9 @@ function getChecker(scope, brokenLinks) {
             requestMethod,
             filterLevel,
             userAgent,
-            excludeInternalLinks: true,
+            excludeInternalLinks: false,
+            excludeExternalLinks: false,
+            excludeLinksToSamePage: true,
             excludedKeywords: [
                 ...getDefaultExcludedKeywords(),
                 "https://www*"
@@ -228,7 +230,11 @@ async function onComplete(brokenLinks) {
             .join("\n");
 
         // Post the results to Slack.
-        await postToSlack("website-notifications", list);
+        // await postToSlack("website-notifications", list);
+
+        console.log("----------------------------------------- START");
+        console.log(list);
+        console.log("----------------------------------------- END");
 
         throw new Error("Finished, but failed with errors. See the log for details.");
     }
