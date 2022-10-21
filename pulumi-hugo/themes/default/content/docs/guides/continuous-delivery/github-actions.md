@@ -80,9 +80,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3.5
         with:
-          node-version: 14.x
+          node-version-file: package.json
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -113,7 +113,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: 3.9
+          python-version: 3.10
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -144,7 +144,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-go@v2
         with:
-          go-version: 1.16.x
+          go-version: 1.18.x
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -173,9 +173,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-dotnet@v1
+      - uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: 3.1.x
+          dotnet-version: 6.0.x
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -216,9 +216,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3.5
         with:
-          node-version: 14.x
+          node-version-file: package.json
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -430,9 +430,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3.5
         with:
-          node-version: 14.x
+          node-version-file: package.json
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -581,9 +581,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3.5
         with:
-          node-version: 14.x
+          node-version-file: package.json
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -743,9 +743,9 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3.5
         with:
-          node-version: 14.x
+          node-version-file: package.json
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -895,12 +895,12 @@ If you previously used GitHub Action v1, the following are changes you should kn
 * `IS_PR_WORKFLOW` is no longer used. GitHub Action v2 (and above) is able to understand if the workflow is a pull_request due to the action type.
 
 * GitHub Action v2 (and above) now runs natively, so the action workflow needs to have the correct environment configured. For
-  example, if you are running a NodeJS (for example) app then you need to ensure that your action has NodeJS available to it:
+  example, if you are running a NodeJS (for example) app then you need to ensure that your action has NodeJS available to it. Specify the [`engines`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#engines) in your `package.json` and configure the workflow using:
 
 ```yaml
-- uses: actions/setup-node@v1
+- uses: actions/setup-node@v3.5
   with:
-    node-version: 14.x
+    node-version-file: package.json
 ```
 
 * A `.pulumi\ci.json` file is no longer used for defining stacks for each branch. You need to use `stack-name` as described above.

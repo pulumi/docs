@@ -181,7 +181,7 @@ The following are samples only. You may choose to structure your configuration a
 jobs:
 - job: infrastructure
   pool:
-    vmImage: 'ubuntu-16.04'
+    vmImage: 'ubuntu-20.04'
   steps:
   - task: Npm@1
     inputs:
@@ -224,7 +224,7 @@ jobs:
   steps:
   - task: NodeTool@0
     inputs:
-      versionSpec: '8.x'
+      versionSpec: '16.x'
     displayName: 'Install Node.js'
   - task: Npm@1
     inputs:
