@@ -50,7 +50,7 @@ featured:
         photo: /images/team/mitch-gerdisch.jpg
       - name: Bryce Lampe
         photo: /images/team/bryce-lampe.jpg
-    
+
     - title: Case Studies
       description: |
         Learn from Pulumi customers on how they scaled up their infrastructure velocity and reliability with Pulumi. Infrastructure experts from companies like Fauna, Panther Labs, and Altana AI will present best practices for using Pulumi and infrastructure as code to increase velocity and even build their product platforms.
@@ -112,7 +112,7 @@ workshops:
       link: /resources/pulumi-101-serverless-containers-gcp
       description: |
         Learn the basics of Pulumi from projects to components. Use Python and templates to stand up serverless containers on Cloud Run from Google Cloud.
-    
+
     - title: "Building with Containers on Azure"
       link: /resources/building-containers-azure
       description: |
@@ -122,16 +122,36 @@ workshops:
       link: /resources/pulumi-101-kubernetes-on-azure
       description: |
         Learn the basics of Pulumi using C# and templates to stand up a small Kubernetes cluster on AKS from Azure.
-    
+
     - title: "Serverless Architecture on AWS"
       link: /resources/serverless-architecture-aws
       description: |
         Explore building up a serverless microservices architecture on AWS using infrastructure as code, cloud engineering principles, and TypeScript.
-    
+
     - title: "Sharing Code with Pulumi Packages, Abstractions, and More"
       link: /resources/simpler-pulumi-package-authoring
       description: |
         Explore how to start sharing Pulumi code with others. Use Go to build a custom architecture for GCP that we’ll compile down into a shareable library.
+
+    - title: "Securing Deployments with Policy as Code"
+      link: /resources/securing-deployments-policy-as-code
+      description: |
+        The Pulumi team will show you how to enforce best practices by creating policies that scale from a single infrastructure stack to your entire organization.
+
+    - title: "Getting Started with Infrastructure as Code on DigitalOcean"
+      link: /resources/getting-started-with-infrastructure-as-code-on-digital-ocean
+      description: |
+        In this hands-on workshop, you will learn how to stand up basic services using Infrastructure as Code through a series of hands-on labs.
+
+    - title: "Getting Started with Infrastructure as Code Azure with Java"
+      link: /resources/getting-started-infrascructure-as-code-azure-java
+      description: |
+        Learn the basics of Azure and Pulumi with a hands-on lab that will take you from deploying a simple static website to deploying a Spring Boot application.
+
+    - title: "Production-Ready Networking on AWS with Python"
+      link: /resources/production-ready-networking-aws-with-python
+      description: |
+        In this workshop you'll learn to apply Infrastructure as Code concepts to build a hub and spoke network topology with an inspection VPC.
 
 schedule:
     title: Schedule at a Glance
