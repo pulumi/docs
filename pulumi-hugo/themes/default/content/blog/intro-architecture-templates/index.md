@@ -18,7 +18,7 @@ One of the most common needs when someone starts a new project on cloud infrastr
 
 ## Best practices for common architectures
 
-While Pulumi allows you to define any architecture for any cloud, we often get asked for opinionated architectures to get started with different cloud-based scenarios. To meet this need, we've started building templates around best-practice architectures like [a serverless architecture on Google Cloud]({{< relref "/templates/serverless-application/gcp/" >}}) or [a container service architecture on AWS]({{< relref "/templates/container-service/aws/" >}}). To give a sense of what these templates are like, let's explore the serverless template for Google Cloud, which uses Cloud Storage and Cloud Functions to deploy a small application that tells the current time.
+While Pulumi allows you to define any architecture for any cloud, we often get asked for opinionated architectures to get started with different cloud-based scenarios. To meet this need, we've started building templates around best-practice architectures like [a serverless architecture on Google Cloud]({{< relref "/templates/serverless-application/gcp" >}}) or [a container service architecture on AWS]({{< relref "/templates/container-service/aws" >}}). To give a sense of what these templates are like, let's explore the serverless template for Google Cloud, which uses Cloud Storage and Cloud Functions to deploy a small application that tells the current time.
 
 ## An example: Google Cloud Functions
 
