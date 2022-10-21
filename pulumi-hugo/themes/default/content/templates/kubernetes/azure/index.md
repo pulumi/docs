@@ -1,15 +1,9 @@
 ---
-title: "Kubernetes Cluster on Azure"
+title: Kubernetes Cluster on Azure
 layout: template
-
-# Make sure this is description accurate for this template.
 meta_desc: The Kubernetes Cluster template makes it easy to deploy a Kubernetes cluster on Azure with Pulumi and Azure Kubernetes Service (AKS).
 meta_image: meta.png
-
-# Appears on the cards on template-overview pages.
 card_desc: Deploy a Kubernetes cluster on Azure with Pulumi and Azure Kubernetes Service (AKS).
-
-# Used for generating language-specific CLI commands and links to the templates repo on GitHub.
 template:
   prefix: kubernetes-azure
   dirname: my-k8s-cluster
@@ -17,13 +11,11 @@ template:
     - typescript
     - python
     - go
+    - csharp
     - yaml
-
-# Used for generating links to sibling templates in the right-hand nav. Slug is this template's parent directory.
 cloud:
   name: Microsoft Azure
   slug: azure
-
 ---
 
 The Kubernetes Cluster template creates an infrastructure as code project in your favorite language and deploys a managed Kubernetes cluster to Azure with Pulumi. The architecture includes an [Azure Virtual Network]({{< relref "registry/packages/azure-native/api-docs/network/virtualnetwork">}}) with three subnets (for future scalability) and deploys an [Azure Kubernetes Service (AKS) cluster]({{< relref "/registry/packages/azure-native/api-docs/containerservice/managedcluster" >}}) that provides a managed Kubernetes control plane. Kubernetes worker nodes are deployed with private IP addresses for improved security and across multiple availability zones for improved resilience. The template gives you a working project out of the box that you can customize easily and extend to suit your needs.

@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes Cluster on AWS"
+title: Kubernetes Cluster on AWS
 layout: template
 meta_desc: The AWS Kubernetes template makes it easy to deploy a Kubernetes cluster on AWS with Pulumi and Amazon EKS.
 meta_image: meta.png
@@ -11,6 +11,7 @@ template:
     - typescript
     - python
     - go
+    - csharp
     - yaml
 cloud:
   name: Amazon Web Services
