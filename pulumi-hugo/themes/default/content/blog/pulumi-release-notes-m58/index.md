@@ -8,6 +8,7 @@ authors:
     - alex-mullans
 tags:
     - features
+    - pulumi-releases
 ---
 
 In this update:
