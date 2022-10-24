@@ -20,6 +20,8 @@ One of the most common needs when someone starts a new project on cloud infrastr
 
 While Pulumi allows you to define any architecture for any cloud, we often get asked for opinionated architectures to get started with different cloud-based scenarios. To meet this need, we've started building templates around best-practice architectures like [a serverless architecture on Google Cloud]({{< relref "/templates/serverless-application/gcp" >}}) or [a container service architecture on AWS]({{< relref "/templates/container-service/aws" >}}). To give a sense of what these templates are like, let's explore the serverless template for Google Cloud, which uses Cloud Storage and Cloud Functions to deploy a small application that tells the current time.
 
+{{< youtube "DaX8weCHO9A?rel=0" >}}
+
 ## An example: Google Cloud Functions
 
 There are a lot of additional components to add to any infrastructure on modern clouds, including roles created through access management. The Google Cloud Serverless Application template defines a number of necessary components:
