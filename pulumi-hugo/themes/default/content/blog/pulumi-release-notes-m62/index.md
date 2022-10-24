@@ -8,6 +8,7 @@ authors:
     - alex-mullans
 tags:
     - features
+    - pulumi-releases
 ---
 
 It's been a busy few weeks at Pulumi, including for some of our community contributors! Read on to see what's new.
