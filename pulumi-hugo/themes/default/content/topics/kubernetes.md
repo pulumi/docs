@@ -3,7 +3,7 @@ title: Kubernetes with Pulumi
 layout: kubernetes
 url: /kubernetes
 
-meta_desc: Pulumi provides a cloud native programming model for Kubernetes deployments and orchestration. Any code, any cloud, any app.
+meta_desc: Pulumi provides a single infrastructure as code workflow for Kubernetes and underlying infrastructure, using general-purpose languages and YAML.
 
 aliases:
   - /cloudnative
@@ -11,10 +11,8 @@ aliases:
 hero:
     title: Kubernetes Superpowers
     body: >
-        Pulumi is the modern platform to manage all of your cloud native infrastructure using
-        familiar engineering tools and workflows. Avoid complex YAML, JSON, and DSLs by using
-        your favorite programming languages and automate deployments to AWS, Azure, GCP,
-        multi-cloud, hybrid and on-premises clusters.
+        Pulumi lets you use a single infrastructure as code workflow for managing cloud native resources and infrastructure with software engineering. Eliminate complex YAML, JSON, and DSLs by using your favorite programming languages and automate deployments to AWS, Azure, Google Coud,
+        and 100+ providers.
     cta_text: See what's new
 
 video_section:
@@ -210,8 +208,9 @@ kubernetes_overview:
     list:
         - Manage Kubernetes clusters on all major cloud providers.
         - Increase productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate Kubernetes clusters, app workloads, or both.
-        - Automate Kubernetes deployments with CI/CD integrations for [Spinnaker](/blog/unlocking-spinnaker-with-pulumi/), [Octopus](/blog/deploying-with-octopus-and-pulumi/), [GitHub Actions](/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/), [GitLab](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/), [Azure DevOps](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/) and [more](/docs/guides/continuous-delivery/).
-        - Seamlessly manage cloud resources with the [Pulumi Kubernetes Operator](/docs/guides/continuous-delivery/pulumi-kubernetes-operator/).
+        - Automate Kubernetes deployments with CI/CD integrations for [Flux](/blog/pulumi-kubernetes-new-2022/#integration-with-flux-sources), [Spinnaker](/blog/unlocking-spinnaker-with-pulumi/), [Octopus](/blog/deploying-with-octopus-and-pulumi/), [GitHub Actions](/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/), [GitLab](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/), [Azure DevOps](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/) and [more](/docs/guides/continuous-delivery/).
+        - Seamlessly manage both Kubernetes and cloud resources using GitOps with the [Pulumi Kubernetes Operator](/docs/guides/continuous-delivery/pulumi-kubernetes-operator/).
+        - Use Kubernetes [Server-Side Apply](/registry/packages/kubernetes/how-to-guides/managing-resources-with-server-side-apply) to safely manage shared Kubernetes resources with Pulumi and your existing controllers.
     cta: Learn More
     cta_url: "/blog/new-kubernetes-superpowers"
 
@@ -275,7 +274,7 @@ detail_sections:
     - title: Continue using the tools you love
       description: |
         Pulumi has first-class support for popular Kubernetes tools, such as Helm, Kustomize,
-        YAML, Secret Managers, Open Policy Agent (OPA) and Custom Resource Definitions (CRDs).
+        YAML, Secret Managers, Open Policy Agent (OPA), Custom Resource Definitions (CRDs), and Server-Side Apply (SSA).
       cta: Learn More
       cta_url: "/blog/new-kubernetes-superpowers"
       items:
@@ -297,7 +296,7 @@ detail_sections:
           - title: Pulumi Kubernetes Operator
             icon: pen
             icon_color: fuchsia
-            description: The Pulumi Kubernetes Operator gives you a Kubernetes controller that deploys cloud infrastructure for you and your team.
+            description: Deploy both Kubernetes resources and cloud infrastructure from within the Kubernetes resource model using a GitOps workflow. Use Pulumi's Flux integration and many other CI/CD integrations.
 
     - title: Kubernetes Best Practices with Pulumi Crosswalk
       description: |
