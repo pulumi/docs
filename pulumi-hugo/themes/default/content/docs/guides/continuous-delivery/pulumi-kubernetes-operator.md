@@ -1,15 +1,19 @@
 ---
 title: Pulumi Kubernetes Operator
 meta_desc: This page details how to use the Pulumi Kubernetes Operator to manage deploying
-           stacks based on commits to specific Git branches.
+           stacks based on commits in git, Kubernetes objects, or Flux sources.
 menu:
     userguides:
         parent: cont_delivery
         weight: 1
 ---
 
-This page details how to use the [Pulumi Kubernetes Operator](https://github.com/pulumi/pulumi-kubernetes-operator) to manage deploying
-[Stacks][stack] based on commits to specific Git branches.
+This page details how to use the [Pulumi Kubernetes
+Operator](https://github.com/pulumi/pulumi-kubernetes-operator) to manage deploying
+[Stacks][stack]. The Pulumi program for a Stack can come from a [Program resource][], from git, or from a [Flux source][flux-source].
+
+[Program resource]: https://github.com/pulumi/pulumi-kubernetes-operator/blob/master/docs/programs.md
+[flux-source]: https://fluxcd.io/flux/components/source/
 
 ## Overview
 
@@ -35,7 +39,7 @@ To work with the operator, we'll need to follow these steps.
 
 ## Deploy the Pulumi Kubernetes Operator
 
-The operator is composed of:
+The operator configuration is composed of:
 
 - A ServiceAccount for identity,
 - A Role and RoleBinding to the ServiceAccount for RBAC, and
@@ -62,7 +66,9 @@ The `Stack` CustomResource (CR) encapsulates a Pulumi project that creates any s
 infrastructure resources such as cloud VMs, object storage, Kubernetes
 clusters, or Kubernetes workloads through API resources.
 
-The Stack uses an existing Git repo, and checks out the repo to deploy a `pulumi up`. The Stack configuration can specify a specific commit SHA or a reference to a branch or tag to track. If a commit is specified, the operator will try to reify the desired state of the stack in the commit until it succeeds. If a branch reference is specified, the Pulumi Kubernetes Operator will periodically poll the branch for any new commits and roll out updates as they are found.
+### Using a git repository
+
+In this scenario, the Stack points at an existing Git repo, and checks out the repo to deploy a `pulumi up`. The Stack configuration can specify a specific commit SHA or a reference to a branch or tag to track. If a commit is specified, the operator will try to reify the desired state of the stack in the commit until it succeeds. If a branch reference is specified, the Pulumi Kubernetes Operator will periodically poll the branch for any new commits and roll out updates as they are found.
 
 In the example below, we're creating a Stack for an existing Pulumi project that provisions
 a simple [NGINX][nginx-stack] Deployment in Kubernetes.
@@ -292,6 +298,121 @@ func main() {
 {{% /chooser %}}
 
 [stacks-use-kubectl]: https://github.com/pulumi/pulumi-kubernetes-operator/blob/master/docs/create-stacks-using-kubectl.md
+
+### Using a Flux source
+
+To refer to a [Flux source][flux-source] rather than polling git directly, use the field
+`.spec.fluxSource` and leave empty all of `.spec.projectRepo`, `.spec.commit`, `.spec.branch`, and
+`.spec.gitAuth`. Here is the TypeScript example from above, adjusted to create a Flux source for the
+git repo, then refer to it from the Stack object. The example assumes you have installed Flux into
+the cluster beforehand.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as k8s from "@pulumi/kubernetes";
+import * as kx from "@pulumi/kubernetesx";
+
+// Get the Pulumi API token.
+const pulumiConfig = new pulumi.Config();
+const pulumiAccessToken = pulumiConfig.requireSecret("pulumiAccessToken")
+
+// Create the API token as a Kubernetes Secret.
+const accessToken = new kx.Secret("accesstoken", {
+    stringData: { accessToken: pulumiAccessToken },
+});
+
+// Create a GitRepository
+const gitrepo = new k8s.apiextensions.CustomResource("nginx-repo", {
+    apiVersion: "toolkit.source.fluxcd.io/v1beta2",
+    kind: "GitRepository",
+    metadata: {},
+    spec: {
+        interval: '5m0s',
+        url: "https://github.com/metral/pulumi-nginx",
+        ref: { commit: "2b0889718d3e63feeb6079ccd5e4488d8601e353" },
+    },
+});
+
+// Create an NGINX deployment in-cluster.
+const mystack = new k8s.apiextensions.CustomResource("my-stack", {
+    apiVersion: 'pulumi.com/v1',
+    kind: 'Stack',
+    spec: {
+        envRefs: {
+            PULUMI_ACCESS_TOKEN: {
+                type: "Secret",
+                secret: {
+                    name: accessToken.metadata.name,
+                    key: "accessToken"
+                },
+            },
+        },
+        stack: "<YOUR_ORG>/nginx/dev",
+        fluxSource: {
+            sourceRef: {
+                apiVersion: "source.toolkit.fluxcd.io/v1beta2",
+                kind: "GitRepository",
+                name: gitrepo.metadata.name,
+            },
+        },
+        destroyOnFinalize: true,
+    }
+});
+```
+
+### Using a Program object
+
+It is also possible to supply a Pulumi YAML program directly as a Kubernetes resource. A Program
+resource is a Pulumi YAML program, wrapped up as a Kubernetes object. The reference for the [Program
+custom resource definition][] details the wrapping; the [reference for Pulumi YAML][] gives all the
+fields that are part of the program itself.
+
+[Program custom resource definition]: https://github.com/pulumi/pulumi-kubernetes-operator/blob/master/docs/programs.md
+[reference for Pulumi YAML]: https://www.pulumi.com/docs/reference/yaml/
+
+Here is an example as a YAML file:
+
+```yaml
+---
+apiVersion: pulumi.com/v1
+kind: Program
+metadata:
+  name: staticwebsite
+program:
+  resources:
+    bucket:
+      type: aws:s3:Bucket
+      properties:
+        website:
+          indexDocument: index.html
+    index.html:
+      type: aws:s3:BucketObject
+      properties:
+        bucket: ${bucket.id}
+        content: <h1>Hello, world!</h1>
+        contentType: text/html
+        acl: public-read
+  outputs:
+    url: http://${bucket.websiteEndpoint}
+```
+
+You can then create a Stack object to deploy the program, by referring to it in the field
+`programRef`:
+
+```yaml
+---
+apiVersion: pulumi.com/v1
+kind: Stack
+metadata:
+  name: staticwebsite
+spec:
+  stack: <YOUR ORG>/staticwebsite/dev
+  programRef:
+    name: staticwebsite
+  destroyOnFinalize: true
+  config:
+    aws:region: us-east-1
+```
 
 ### Stack Settings
 
