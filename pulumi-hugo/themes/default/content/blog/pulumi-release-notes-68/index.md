@@ -33,6 +33,7 @@ authors:
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - features
+    - pulumi-releases
 ---
 
 The team has been busy releasing new features and improvements in the last 3 weeks. Read on to learn about what's new in this release!
