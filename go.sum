@@ -1353,7 +1353,12 @@ github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20221024162512-56ca2d5c4377 
 github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20221024162512-56ca2d5c4377/go.mod h1:081/gGTOxNFBjrLQ3QvsyP34iiWgmmKDtoi5falfsuo=
 github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20221024190345-a11a8feed6c6 h1:ZDhrNXnt8UPXgxtwy4drvH43KkDc51zbN1nvy9qRuYc=
 github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20221024190345-a11a8feed6c6/go.mod h1:081/gGTOxNFBjrLQ3QvsyP34iiWgmmKDtoi5falfsuo=
+<<<<<<< HEAD
 >>>>>>> f9553f2f43 (Re-pin)
+=======
+github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20221024224002-a211e8ba2cb3 h1:pWBX8Ya1vrXuh7Z05HLkeILpPNTV08j9e9PIjxNDKPQ=
+github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20221024224002-a211e8ba2cb3/go.mod h1:081/gGTOxNFBjrLQ3QvsyP34iiWgmmKDtoi5falfsuo=
+>>>>>>> 25bf51d673 (Re-pin)
 github.com/pulumi/registry v0.0.0-20211018002248-032308df8c9b h1:cc9syvwwbJF8OOwiQA806f05ZPo8Y9i6MhQp+DyQ7Gk=
 github.com/pulumi/registry v0.0.0-20211018002248-032308df8c9b/go.mod h1:5njB00aDODdidTJgd4o+FiH7pM9YZ9cqAR0xHEPyq6s=
 github.com/pulumi/registry/themes/default v0.0.0-20210929002709-940e5a1d2c43/go.mod h1:QSvobZqmJMqVmn3BTfSiYkbRKtJHhSA8gotu/pD1a0w=
