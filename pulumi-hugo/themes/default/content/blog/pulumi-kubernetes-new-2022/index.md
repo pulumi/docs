@@ -36,7 +36,7 @@ Together, these open up a wide variety of new ways to apply the Kubernetes Opera
 
 <img align="right" width="120" src="flux-icon.png">
 
-We’re excited to work with [Flux](https://fluxcd.io/), a CNCF project, to bring even richer GitOps support to the Pulumi Kubernetes Operator.  While the Pulumi Kubernetes Operator offers basic GitOps and branch tracking support, it supports only a fraction of the features that the Flux’s SourceController providers. Instead of rebuilding all of these features, we chose to provide rich integration with Flux Sources, enabling Pulumi programs to be provided via Flux, and then handed off to drive infrastructure deployments using the Pulumi Kubernetes Operator `Stack` resource.
+We’re excited to work with [Flux](https://fluxcd.io/), a CNCF project, to bring even richer GitOps support to the Pulumi Kubernetes Operator.  While the Pulumi Kubernetes Operator offers basic GitOps and branch tracking support, it supports only a fraction of the features that Flux’s SourceController provides. Instead of rebuilding all of these features, we chose to provide rich integration with Flux Sources, enabling Pulumi programs to be provided via Flux, and then handed off to drive infrastructure deployments using the Pulumi Kubernetes Operator `Stack` resource.
 
 Using Flux offers a variety of important new features to Pulumi Kubernetes Operator users:
 
