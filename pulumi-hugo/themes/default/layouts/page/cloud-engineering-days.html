@@ -135,7 +135,7 @@
                                 <div class="px-8">
                                     <h5 class="text-white mb-0">{{ $item.title }}</h5>
                                     {{ if $item.description }}
-                                        <p class="text-white my-0">{{ $item.description }}</p>
+                                        <p class="text-white my-0">{{ $item.description | markdownify }}</p>
                                     {{ end }}
                                 </div>
                             </div>

@@ -63,6 +63,8 @@ featured:
         photo: /images/cloud-engineering-days/logos/panther.svg
       - name:
         photo: /images/cloud-engineering-days/logos/fauna.svg
+      - name:
+        photo: /images/cloud-engineering-days/logos/dutchie.svg
 
     - title: Workshops
       description: |
@@ -240,7 +242,11 @@ schedule:
           - title: Break
             datetime: 10:00 - 10:20 AM PDT
           - title: Achieving Results with Pulumi Customers
-            description: Building a Global Data Platform at Scale, Featuring Fauna, Inc.
+            description: |
+              • Building a Global Data Platform at Scale, Featuring Fauna, Inc.  
+              • Creating Business Logic Interfaces with Pulumi's Automation API, Altana  
+              • Migrating from Terraform to Pulumi - How we did it, Panther  
+              • Enabling Kafka Adoption with Pulumi, Dutchie
             datetime: 10:20 - 11:20 AM PDT
           - title: Under the Hood of Pulumi
             description: How Automation API is used
