@@ -28,15 +28,17 @@ import (
 	"github.com/russross/blackfriday/v2"
 )
 
-var langAbbreviations = []string{"js", "ts", "go", "py", "cs", "fs"}
+var langAbbreviations = []string{"js", "ts", "go", "py", "cs", "fs", "java", "yaml"}
 
 var langMap = map[string]string{
-	"js": "JavaScript",
-	"ts": "TypeScript",
-	"go": "Go",
-	"py": "Python",
-	"cs": "C#",
-	"fs": "F#",
+	"js":   "JavaScript",
+	"ts":   "TypeScript",
+	"go":   "Go",
+	"py":   "Python",
+	"cs":   "C#",
+	"fs":   "F#",
+	"yaml": "YAML",
+	"java": "Java",
 }
 
 func main() {
