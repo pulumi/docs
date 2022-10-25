@@ -195,6 +195,7 @@ function getDefaultExcludedKeywords() {
         "example.com",
         "/docs/reference/pkg",
         "/registry/packages/*/api-docs",
+        "/logos/pkg/*.svg",
         "/docs/get-started/install/versions",
         "https://api.pulumi.com/",
         "https://github.com/pulls?",
