@@ -346,8 +346,6 @@ async function getURLsToCheck(base) {
                 // Sort everything alphabetically.
                 .sort();
 
-            console.log({ urls });
-
             // Return the list of URLs to be crawled.
             return urls;
         });
