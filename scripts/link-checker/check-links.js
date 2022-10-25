@@ -1,6 +1,8 @@
-const { SiteChecker, HtmlUrlChecker } = require("broken-link-checker");
+const { HtmlUrlChecker } = require("broken-link-checker");
 const { WebClient, LogLevel } = require('@slack/web-api');
 const httpServer = require("http-server");
+const Sitemapper = require("sitemapper");
+const sitemap = new Sitemapper();
 const path = require("path");
 const fs = require("fs");
 
@@ -9,31 +11,15 @@ const fs = require("fs");
     to check the links (including images, iframes, and client-side redirects) for either an individual page
     or for a whole site. Usage:
 
-    # Check all links on pulumi.com:
-    $ node scripts/check-links.js "https://www.pulumi.com" "site"
-
-    # Check all links on pulumi.com, and retry failed runs up to 3 times:
-    $ node scripts/check-links.js "https://www.pulumi.com" "site" 3
-
-    # Check the links on pulumi.com/docs/get-started/install/versions:
-    $ node scripts/check-links.js "https://www.pulumi.com/docs/get-started/install/versions/" "page"
-
-    # Check the links of a local build (which starts a local server automatically):
-    $ node scripts/check-links.js "local" "site"
-
     # Log successes as well as failures.
-    $ DEBUG=1 node scripts/check-links.js "https://www.pulumi.com" "site"
+    $ DEBUG=1 node scripts/check-links.js "https://www.pulumi.com"
  */
 
-let [ baseURL, checkScope, maxRetries ] = process.argv.slice(2);
+let [ baseURL, maxRetries ] = process.argv.slice(2);
 let retryCount = 0;
 
 if (!baseURL) {
     throw new Error("A baseURL (e.g., 'https://pulumi.com') is required.");
-}
-
-if (!checkScope || !["site", "page"].includes(checkScope)) {
-    throw new Error("A checkScope of either 'site' or 'page' is required.");
 }
 
 if (!maxRetries || Number.isNaN(maxRetries)) {
@@ -60,83 +46,48 @@ bhttp.request = function() {
     return oldRequest.apply(this, arguments);
 };
 
-// If the passed-in url is simply "local", assume that means we should start a server
-// and to test a local build at the usual location. Otherwise, just test the URL.
-if (baseURL === "local") {
-    baseURL = "http://localhost:8888";
-
-    const url = new URL(baseURL);
-    const buildDir = "public";
-
-    // Make sure there's a valid-looking build where one's supposed to be.
-    if (!fs.existsSync(buildDir) || !fs.existsSync(`${path.join(buildDir, "index.html")}`)) {
-        fail(new Error(`There's no build at ${buildDir}. You may need to run 'make build' first.`));
-    }
-
-    // Start a server, then run the checker.
-    httpServer
-        .createServer({
-            root: buildDir,
-        })
-        .listen(url.port, url.hostname, () => {
-            checkLinks();
-        });
-
-} else {
-
-    // Just run the checker.
-    checkLinks();
-}
+// Run.
+checkLinks();
 
 // Runs the checker.
-function checkLinks() {
-    const checker = getChecker(checkScope, []);
+async function checkLinks() {
+    const checker = getChecker([]);
+
+    // Load all URLs.
+    const urls = await getURLsToCheck(baseURL);
+
+    // Start the checker.
     checker.enqueue(baseURL);
+    urls.forEach(url => checker.enqueue(url));
 }
 
-// Returns an instance of either HtmlUrlChecker or SiteChecker.
-function getChecker(scope, brokenLinks) {
-
-    // For details about each of the options used below, see the BLC docs at
-    // https://github.com/stevenvachon/broken-link-checker#options.
-    const requestMethod = "GET";
-    const filterLevel = 1;
+// Returns an instance of either HtmlUrlChecker.
+// https://github.com/stevenvachon/broken-link-checker#htmlurlchecker
+function getChecker(brokenLinks) {
 
     // Specify an alternative user agent, as BLC's default doesn't pass some services' validations.
     const userAgent = "pulumi+blc/0.1";
 
-    if (scope === "page") {
-        const opts = {
-            requestMethod,
-            filterLevel,
-            userAgent,
-            excludeInternalLinks: true,
-            excludedKeywords: [
-                ...getDefaultExcludedKeywords(),
-                "https://www*"
-            ]
-        };
+    // For details about each of the options used below, see the BLC docs at
+    // https://github.com/stevenvachon/broken-link-checker#options.
+    const opts = {
+        requestMethod: "GET",
+        filterLevel: 1,
+        userAgent,
+        excludeInternalLinks: false,
+        excludeExternalLinks: false,
+        excludeLinksToSamePage: true,
+        excludedKeywords: [
+            ...getDefaultExcludedKeywords(),
+            "https://www*"
+        ]
+    };
 
-        // https://github.com/stevenvachon/broken-link-checker#htmlurlchecker
-        return new HtmlUrlChecker(opts, getDefaultHandlers(brokenLinks));
-    }
-
-    if (scope === "site") {
-        const opts = {
-            requestMethod,
-            filterLevel,
-            userAgent,
-            excludedKeywords: getDefaultExcludedKeywords(),
-        };
-
-        // https://github.com/stevenvachon/broken-link-checker#sitechecker
-        return new SiteChecker(opts, getDefaultHandlers(brokenLinks));
-    }
+    return new HtmlUrlChecker(opts, getDefaultHandlers(brokenLinks));
 }
 
-// The set of event handlers common to HTMLUrlCheckers and SiteCheckers.
+// Returns the set of event handlers for HTMLUrlCheckers.
 // https://github.com/stevenvachon/broken-link-checker#htmlurlchecker
-// https://github.com/stevenvachon/broken-link-checker#sitechecker
 function getDefaultHandlers(brokenLinks) {
     return {
         link: (result) => {
@@ -189,18 +140,11 @@ function onLink(result, brokenLinks) {
     }
 }
 
-// Handles BLC 'page' events. For page scope, we fail immediately, since that means the
-// requested page was not found. Otherwise, we just log the failed URL to the running list
-// of broken links.
+// Handles BLC 'page' events.
 function onPage(error, pageURL, brokenLinks) {
     if (error) {
-        if (checkScope === "page") {
-            throw new Error(`Failed to retrieve ${pageURL}: ${error.message}.`);
-        }
-        else {
-            addLink(pageURL, pageURL, error.message, brokenLinks);
-            logLink(pageURL, pageURL, error.message);
-        }
+        addLink(pageURL, pageURL, error.message, brokenLinks);
+        logLink(pageURL, pageURL, error.message);
     }
     else if (process.env.DEBUG) {
         logLink(pageURL, pageURL, "PAGE_OK");
@@ -250,6 +194,7 @@ function getDefaultExcludedKeywords() {
         "example.com",
         "/docs/reference/pkg",
         "/registry/packages/*/api-docs",
+        "/logos/pkg",
         "/docs/get-started/install/versions",
         "https://api.pulumi.com/",
         "https://github.com/pulls?",
@@ -330,7 +275,7 @@ function excludeAcceptable(links) {
 }
 
 // Posts a message to the designated Slack channel.
-function postToSlack(channel, text) {
+async function postToSlack(channel, text) {
     const token = process.env.SLACK_ACCESS_TOKEN;
 
     if (!token) {
@@ -339,7 +284,7 @@ function postToSlack(channel, text) {
     }
 
     const client = new WebClient(token, { logLevel: LogLevel.ERROR });
-    return client.chat.postMessage({
+    return await client.chat.postMessage({
         text,
         channel: `#${channel}`,
         as_user: true,
@@ -369,4 +314,38 @@ function logLink(source, destination, reason) {
 function fail(error) {
     console.error(error.message);
     process.exit(1);
+}
+
+// Start by fetching the sitemap from `baseURL`.
+async function getURLsToCheck(base) {
+    return await sitemap
+        .fetch(`${base}/sitemap.xml`)
+        .then(map => {
+            const urls = map.sites
+
+                // Exclude resource docs, SDK docs, and CLI download pages.
+                .filter(page => !page.match(/\/registry\/packages\/.+\/api-docs\//))
+                .filter(page => !page.match(/\/docs\/reference\/pkg\/nodejs|python\//))
+                .filter(page => !page.match(/\/docs\/get-started\/install\/versions\//))
+
+                // Always check using the supplied baseURL.
+                .map(url => {
+                    const newURL = new URL(url);
+                    const baseURLObj = new URL(base);
+                    newURL.hostname = baseURLObj.hostname;
+                    newURL.protocol = baseURLObj.protocol;
+                    return newURL.toString();
+                })
+
+                // Tack on any additional pages we'd like to check.
+                .concat([
+                    "https://github.com/pulumi/pulumi",
+                ])
+
+                // Sort everything alphabetically.
+                .sort();
+
+            // Return the list of URLs to be crawled.
+            return urls;
+        });
 }
