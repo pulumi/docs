@@ -1840,6 +1840,21 @@ This queries underlying backend and may return stacks not present in the Workspa
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi.automation.LocalWorkspace.install_plugin_from_server">
+<code class="sig-name descname">install_plugin_from_server</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">version</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">server</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.LocalWorkspace.install_plugin_from_server" title="Permalink to this definition"></a></dt>
+<dd><p>Installs a plugin in the Workspace from a remote server, for example a third party plugin.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The name of the plugin to install.</p></li>
+<li><p><strong>version</strong> – The version to install.</p></li>
+<li><p><strong>server</strong> – The server to install from.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi.automation.LocalWorkspace.remove_plugin">
 <code class="sig-name descname">remove_plugin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_range</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kind</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'resource'</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.automation.LocalWorkspace.remove_plugin" title="Permalink to this definition"></a></dt>
 <dd><p>Removes a plugin from the Workspace matching the specified name and version.</p>
