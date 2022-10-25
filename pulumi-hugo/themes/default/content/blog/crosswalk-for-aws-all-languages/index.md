@@ -1,5 +1,5 @@
 ---
-title: "Announcing Crosswalk for AWS in all Pulumi Languages"
+title: "Crosswalk for AWS in all Pulumi Languages"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date this file was generated. Posts with future dates are visible in development,
@@ -26,6 +26,7 @@ authors:
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - features
+    - aws
 
 # See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
@@ -37,9 +38,9 @@ Crosswalk for AWS is a collection of libraries that make it easy to work with AW
 
 Crosswalk for AWS is the easiest way to get started with core compute and application primitives on AWS.  Running a containerized or serverless application on AWS requires just a handful of lines of code. This enables application and service development teams to directly own and manage the infrastructure for their applications. As Crosswalk builds on the primitive building blocks of the AWS platform, you can use 100% of what AWS offers, and can seamlessly move between high-level components and low-level platform primitives, mixing-and-matching as needed.
 
-These libraries use automatic well-architected best practices to make common infrastructure as code tasks in AWS easier and more secure. To date, this library has been available only to Pulumi TypeScript/JavaScript users.
+These libraries use automatic well-architected best practices to make common infrastructure as code tasks in AWS easier and more secure.
 
-Today, we are making Crosswalk for AWS available to users in all Pulumi languages, [TypeScript](https://www.pulumi.com/docs/intro/languages/javascript), [Python](https://www.pulumi.com/docs/intro/languages/python), [.NET](https://www.pulumi.com/docs/intro/languages/dotnet), [Go](https://www.pulumi.com/docs/intro/languages/go), [Java](https://www.pulumi.com/docs/intro/languages/java) and [YAML](https://www.pulumi.com/docs/intro/languages/yaml). The AWSx package now joins the existing API Gateway and EKS packages in the Pulumi Registry, available in all Pulumi languages.
+Crosswalk for AWS is available to users in all Pulumi languages, [TypeScript](https://www.pulumi.com/docs/intro/languages/javascript), [Python](https://www.pulumi.com/docs/intro/languages/python), [.NET](https://www.pulumi.com/docs/intro/languages/dotnet), [Go](https://www.pulumi.com/docs/intro/languages/go), [Java](https://www.pulumi.com/docs/intro/languages/java) and [YAML](https://www.pulumi.com/docs/intro/languages/yaml). The AWSx package now joins the existing API Gateway and EKS packages in the Pulumi Registry, available in all Pulumi languages.
 
 ![Crosswalk for AWS diagram](arch.png)
 
