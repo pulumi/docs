@@ -34,6 +34,26 @@ featured:
       - name: Luke Hoban
         photo: /images/team/luke-hoban.jpg
 
+    - title: Customer Stories
+      description: |
+        Learn from Pulumi customers on how they scaled up their infrastructure velocity and reliability with Pulumi:  
+
+        • Building a Global Data Platform at Scale, featuring Fauna, Inc.  
+        • Creating Business Logic Interfaces with Pulumi’s Automation API, featuring Altana  
+        • Migrating from Terraform to Pulumi - How we did it, featuring Panther  
+        • Enabling Kafka Adoption with Pulumi, featuring Dutchie  
+      link: /cloud-engineering-days/#registration
+      link_text: Register
+      presenters:
+      - name:
+        photo: /images/cloud-engineering-days/logos/altana.svg
+      - name:
+        photo: /images/cloud-engineering-days/logos/panther.svg
+      - name:
+        photo: /images/cloud-engineering-days/logos/fauna.svg
+      - name:
+        photo: /images/cloud-engineering-days/logos/dutchie.svg
+
     - title: Pulumi Demos and Best Practices
       description: |
         New and exciting hands-on, coding-heavy demo sessions. Using Pulumi, you will see how to build, deploy, and manage cloud applications with infrastructure as code, powered by popular programming languages. Pick up new best practices and how software engineering can be applied to tame the complexities of the modern cloud infrastructure.
@@ -50,21 +70,6 @@ featured:
         photo: /images/team/mitch-gerdisch.jpg
       - name: Bryce Lampe
         photo: /images/team/bryce-lampe.jpg
-
-    - title: Case Studies
-      description: |
-        Learn from Pulumi customers on how they scaled up their infrastructure velocity and reliability with Pulumi. Infrastructure experts from companies like Fauna, Panther Labs, and Altana AI will present best practices for using Pulumi and infrastructure as code to increase velocity and even build their product platforms.
-      link: /cloud-engineering-days/#registration
-      link_text: Register
-      presenters:
-      - name:
-        photo: /images/cloud-engineering-days/logos/altana.svg
-      - name:
-        photo: /images/cloud-engineering-days/logos/panther.svg
-      - name:
-        photo: /images/cloud-engineering-days/logos/fauna.svg
-      - name:
-        photo: /images/cloud-engineering-days/logos/dutchie.svg
 
     - title: Workshops
       description: |

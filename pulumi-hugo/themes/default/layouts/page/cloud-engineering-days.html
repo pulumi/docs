@@ -26,7 +26,7 @@
                                             <img src="{{ $presenter.photo }}" alt="{{ $presenter.name }}" />
                                             <p class="text-white">{{ .name }}</p>
                                         {{ else }}
-                                            <img class="mb-8" src="{{ $presenter.photo }}" />
+                                            <img class="mb-16 mt-8" src="{{ $presenter.photo }}" />
                                         {{ end }}
                                     </div>
                                 {{ end }}
@@ -36,7 +36,7 @@
                                     <h5>{{ $item.title }}</h5>
                                 </div>
                                 <div class="description">
-                                    <p>{{ $item.description }}</p>
+                                    <p>{{ $item.description | markdownify }}</p>
                                 </div>
                                 <div class="mt-8">
                                     <a href="{{ $item.link }}" class="btn-secondary">{{ $item.link_text }}</a>
@@ -46,6 +46,35 @@
                     </div>
                 {{ end }}
             </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="min-w-full my-0 py-16 mb-8 bg-black">
+        <div class="container mx-auto">
+            <h3 class="text-center text-white">{{ .Params.schedule.title }}</h3>
+            <p class="text-center text-white">{{ .Params.schedule.subtitle }}</p>
+            {{ range $day := .Params.schedule.days }}
+                <h5 class="text-center text-white mt-8">{{ $day.date }}</h5>
+                <div class="flex flex-col align-center">
+                    {{ range $item := $day.items }}
+                        <div class="w-full flex flex-row p-4 my-2">
+                            <div class="flex flex-row-reverse w-1/2">
+                                <div class="lg:w-1/3 flex flex-col justify-center">
+                                    <p class="text-white">{{ $item.datetime }}</p>
+                                </div>
+                            </div>
+                            <div class="w-1/2 flex flex-col justify-center border-l-2 border-white">
+                                <div class="px-8">
+                                    <h5 class="text-white mb-0">{{ $item.title }}</h5>
+                                    {{ if $item.description }}
+                                        <p class="text-white my-0">{{ $item.description | markdownify }}</p>
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ end }}
         </div>
     </section>
 
@@ -114,35 +143,6 @@
                     </div>
                 {{ end }}
             </div>
-        </div>
-    </section>
-
-    <section id="schedule" class="min-w-full my-0 py-16 mb-8 bg-black">
-        <div class="container mx-auto">
-            <h3 class="text-center text-white">{{ .Params.schedule.title }}</h3>
-            <p class="text-center text-white">{{ .Params.schedule.subtitle }}</p>
-            {{ range $day := .Params.schedule.days }}
-                <h5 class="text-center text-white mt-8">{{ $day.date }}</h5>
-                <div class="flex flex-col align-center">
-                    {{ range $item := $day.items }}
-                        <div class="w-full flex flex-row p-4 my-2">
-                            <div class="flex flex-row-reverse w-1/2">
-                                <div class="lg:w-1/3 flex flex-col justify-center">
-                                    <p class="text-white">{{ $item.datetime }}</p>
-                                </div>
-                            </div>
-                            <div class="w-1/2 flex flex-col justify-center border-l-2 border-white">
-                                <div class="px-8">
-                                    <h5 class="text-white mb-0">{{ $item.title }}</h5>
-                                    {{ if $item.description }}
-                                        <p class="text-white my-0">{{ $item.description | markdownify }}</p>
-                                    {{ end }}
-                                </div>
-                            </div>
-                        </div>
-                    {{ end }}
-                </div>
-            {{ end }}
         </div>
     </section>
 
