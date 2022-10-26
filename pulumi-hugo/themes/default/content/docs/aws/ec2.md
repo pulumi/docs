@@ -77,7 +77,7 @@ const securityGroup = new aws.ec2.SecurityGroup("security-group", {
     ],
 });
 
-// Fine the latest Amazon Linux 2 AMI.
+// Find the latest Amazon Linux 2 AMI.
 const ami = pulumi.output(aws.ec2.getAmi({
     owners: [ "amazon" ],
     mostRecent: true,
