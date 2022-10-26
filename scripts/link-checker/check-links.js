@@ -79,7 +79,6 @@ function getChecker(brokenLinks) {
         excludeLinksToSamePage: true,
         excludedKeywords: [
             ...getDefaultExcludedKeywords(),
-            "https://www*"
         ]
     };
 
