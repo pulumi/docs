@@ -2,6 +2,7 @@
 # Name of the webinar.
 title: "Pulumi in Practice: Cloud Engineering in AWS with Python"
 meta_desc: "In this workshop, we’ll teach you how to provision infrastructure on AWS. You will how to use Pulumi through a series of hands-on exercises using Python."
+redirect_to: /resources/getting-started-with-iac-aws
 
 # A featured webinar will display first in the list.
 featured: false
