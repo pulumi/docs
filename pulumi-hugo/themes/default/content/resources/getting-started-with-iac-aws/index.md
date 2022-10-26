@@ -7,10 +7,10 @@ meta_desc: "In this workshop, you will learn the fundamentals of Infrastructure 
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
-pulumi_tv: true
+pulumi_tv: false
 
 # The preview image will be shown on the list page.
 preview_image: ""
