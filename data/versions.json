@@ -1,5 +1,18 @@
 [
   {
+    "version": "v3.44.2",
+    "date": "2022-10-26T15:00:39Z",
+    "downloads": {
+      "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.44.2-linux-x64.tar.gz",
+      "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v3.44.2-linux-arm64.tar.gz",
+      "darwin-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.44.2-darwin-x64.tar.gz",
+      "darwin-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v3.44.2-darwin-arm64.tar.gz",
+      "windows-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.44.2-windows-x64.zip"
+    },
+    "checksums": "https://get.pulumi.com/releases/sdk/pulumi-3.44.2-checksums.txt",
+    "latest": true
+  },
+  {
     "version": "v3.44.1",
     "date": "2022-10-25T11:38:39Z",
     "downloads": {
@@ -10,7 +23,7 @@
       "windows-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.44.1-windows-x64.zip"
     },
     "checksums": "https://get.pulumi.com/releases/sdk/pulumi-3.44.1-checksums.txt",
-    "latest": true
+    "latest": false
   },
   {
     "version": "v3.44.0",
