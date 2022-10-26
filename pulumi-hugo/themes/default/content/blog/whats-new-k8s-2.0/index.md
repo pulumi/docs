@@ -8,10 +8,10 @@ meta_image: pulumi_k8s.png
 ---
 
 We recently announced the 2.0 release of Pulumi which includes parity for
-[Node.js (JavaScript, TypeScript)]({{< relref "/docs/intro/languages/javascript" >}}), [Python]({{< relref "/docs/intro/languages/python" >}}), [.NET (C#, F#, etc)]({{< relref "/docs/intro/languages/dotnet" >}}) and [Go]({{< relref "/docs/intro/languages/go" >}}),
-and improvements to Kubernetes and dozens of other [supported cloud resource providers]({{< relref "/registry" >}}) and [packages]({{< relref "/docs/reference/pkg#package-documentation" >}}).
+[Node.js (JavaScript, TypeScript)](/docs/intro/languages/javascript), [Python](/docs/intro/languages/python/), [.NET (C#, F#, etc)](/docs/intro/languages/dotnet) and [Go](/docs/intro/languages/go/),
+and improvements to Kubernetes and dozens of other [supported cloud resource providers](/registry/) and [packages](/docs/reference/pkg#package-documentation).
 
-[Kubernetes support]({{< relref "/registry/packages/kubernetes" >}}) in Pulumi spans orchestration of clusters and application
+[Kubernetes support](/registry/packages/kubernetes/) in Pulumi spans orchestration of clusters and application
 workloads. Clusters can be managed by cloud providers or self-managed.
 Workloads use the same [Kubernetes API](https://kubernetes.io/docs/reference/) to create and manage API resources in the
 supported Pulumi languages through packages directly generated from the [OpenAPI specification](https://github.com/kubernetes/kubernetes/tree/master/api/openapi-spec).

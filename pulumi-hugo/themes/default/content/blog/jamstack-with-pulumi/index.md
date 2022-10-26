@@ -86,7 +86,7 @@ Configuring a static website can be complicated when using either the AWS web in
 - [Amazon Route53](https://aws.amazon.com/route53/) to set up the DNS for the website
 - [Amazon Certificate Manager](https://aws.amazon.com/certificate-manager/) for securing the site via HTTPS
 
-Using Pulumi to deploy Infrastructure as Code, we can create and build our infrastructure using either TypeScript or Python. If you haven't installed Pulumi and configured it to work with your AWS credentials, follow the [Getting Started with AWS guide]({{< relref "/docs/get-started/aws" >}}).
+Using Pulumi to deploy Infrastructure as Code, we can create and build our infrastructure using either TypeScript or Python. If you haven't installed Pulumi and configured it to work with your AWS credentials, follow the [Getting Started with AWS guide](/docs/get-started/aws/).
 
 To get started building our infrastructure, we’ll download the Python example for setting up a static website with AWS. There are many [examples on our GitHub repository](https://github.com/pulumi/), but we can clone just the AWS Static Website example using a [sparse checkout](https://git-scm.com/docs/git-sparse-checkout) which clones only the directory we specify,
 
@@ -629,4 +629,4 @@ In a single program, we've created all the cloud resources to deploy our content
 
 Building modern websites is evolving from provider-managed Content Management Systems or user-managed [LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) stacks. Static websites deployed in the cloud are popular because they separate content generation from the infrastructure that serves content. However, building and maintaining cloud infrastructure can be complicated and require multiple steps when using web client for configuration. A website using inexpensive storage such as S3 and serving content via Cloudfront can be deployed, versioned, and maintained using your favorite programming language. The Pulumi [examples repository](https://github.com/pulumi/examples) has many more code samples that demonstrate how to build and deploy cloud infrastructure across different cloud providers, using your favorite programming language.
 
-Learn how to automate your cloud infrastructure with Pulumi's [Getting Started tutorials]({{< relref "/docs/get-started" >}}) and [User Guides]({{< relref "/docs/guides" >}}), or join us on [Slack](https://slack.pulumi.com/) if you have questions.
+Learn how to automate your cloud infrastructure with Pulumi's [Getting Started tutorials](/docs/get-started/) and [User Guides](/docs/guides/), or join us on [Slack](https://slack.pulumi.com/) if you have questions.

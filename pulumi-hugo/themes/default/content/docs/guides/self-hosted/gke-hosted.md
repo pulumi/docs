@@ -24,8 +24,8 @@ This installer uses Pulumi to deploy the Pulumi Service. In this case, one uses 
 
 To this end, you need to set up the following:
 
-* [Download and install the Pulumi CLI]({{<relref "docs/get-started/install">}}) on your workstation
-* [Login to GCP Storage Backend]({{<relref "docs/intro/concepts/state#google-cloud-storage">}})
+* [Download and install the Pulumi CLI](/docs/get-started/install/) on your workstation
+* [Login to GCP Storage Backend](/docs/intro/concepts/state#google-cloud-storage)
 
 ### Deployment Steps
 

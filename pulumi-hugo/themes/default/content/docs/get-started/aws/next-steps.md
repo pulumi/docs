@@ -24,13 +24,13 @@ Dive into Learn Pulumi for a comprehensive walkthrough of key Pulumi concepts in
 
 ## How-to Guides
 
-Explore our how-to guides if you're looking for examples of specific architectures or application stacks. These guides are available in all Pulumi languages and cover many common architectures such as [static websites]({{< relref "/registry/packages/aws-native/how-to-guides/aws-native-ts-s3-folder" >}}), [EC2 virtual machines]({{< relref "/registry/packages/aws/how-to-guides/ec2-webserver" >}}), [EKS clusters]({{< relref "/registry/packages/aws/how-to-guides/aws-ts-eks" >}}), [Fargate containers]({{< relref "/registry/packages/aws/how-to-guides/ecs-fargate" >}}), and [serverless applications]({{< relref "/registry/packages/aws/how-to-guides/rest-api" >}}).
+Explore our how-to guides if you're looking for examples of specific architectures or application stacks. These guides are available in all Pulumi languages and cover many common architectures such as [static websites](/registry/packages/aws-native/how-to-guides/aws-native-ts-s3-folder/), [EC2 virtual machines](/registry/packages/aws/how-to-guides/ec2-webserver/), [EKS clusters](/registry/packages/aws/how-to-guides/aws-ts-eks/), [Fargate containers](/registry/packages/aws/how-to-guides/ecs-fargate/), and [serverless applications](/registry/packages/aws/how-to-guides/rest-api/).
 
 {{< get-started-next-step path="/registry/packages/aws/how-to-guides" label="Explore How-to Guides" ref="gs-aws-guides" >}}
 
 ## How Pulumi Works
 
-Learn how Pulumi works from its architecture to key concepts, including [stacks]({{< relref "/docs/intro/concepts/stack" >}}), [state]({{< relref "/docs/intro/concepts/state" >}}), [configuration]({{< relref "/docs/intro/concepts/config" >}}), and [secrets]({{< relref "/docs/intro/concepts/secrets" >}}).
+Learn how Pulumi works from its architecture to key concepts, including [stacks](/docs/intro/concepts/stack/), [state](/docs/intro/concepts/state/), [configuration](/docs/intro/concepts/config/), and [secrets](/docs/intro/concepts/secrets/).
 
 {{< get-started-next-step path="/docs/intro/concepts" label="Read Documentation" ref="gs-aws-docs" >}}
 

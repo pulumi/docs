@@ -666,7 +666,7 @@ v{{< latest-version >}}
 
 Congratulations! You have a fully configured environment, and you're ready to jump into cloud engineering. You can maintain your development environment using the package manager to add or update your toolset. Your code editor provides a modern development platform that takes advantage of all the advances in software engineering. Your coding experience will be more productive and less frustrating.
 
-What are the next steps? Begin with Pulumi's [Getting Started]({{< relref "/docs/get-started" >}}). You can skip the configuration sections and jump straight into your [first project]({{< relref "/docs/get-started/aws/create-project" >}}). Once you're done with your first project, try out example projects on [Github](https://github.com/pulumi/examples). You can start with simple projects using the `pulumi` CLI, such as deploying a web server on AWS with python.
+What are the next steps? Begin with Pulumi's [Getting Started](/docs/get-started/). You can skip the configuration sections and jump straight into your [first project](/docs/get-started/aws/create-project/). Once you're done with your first project, try out example projects on [Github](https://github.com/pulumi/examples). You can start with simple projects using the `pulumi` CLI, such as deploying a web server on AWS with python.
 
 ```bash
 $ pulumi new https://github.com/pulumi/examples/tree/master/aws-py-webserver
@@ -678,4 +678,4 @@ This command will download the project from Github, create a virtual environment
 $ pulumi new https://github.com/pulumi/examples/tree/master/azure-py-aks
 ```
 
-You can use the examples as a starting point for building your cloud infrastructure and add resources documented on Pulumi's [Registry]({{< relref "/registry" >}}) and [Guides]({{< relref "/docs/guides" >}}).
+You can use the examples as a starting point for building your cloud infrastructure and add resources documented on Pulumi's [Registry](/registry/) and [Guides](/docs/guides/).

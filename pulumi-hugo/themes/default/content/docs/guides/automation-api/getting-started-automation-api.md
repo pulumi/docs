@@ -45,7 +45,7 @@ Install the required language runtime, if you have not already.
 
 ### Obtain a Pulumi access token
 
-You'll need a [Pulumi access token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}}) so that your programs can store the resulting state in the Pulumi Service. The easiest way to obtain such a token is to run `pulumi login` from the command line.
+You'll need a [Pulumi access token](/docs/intro/pulumi-service/accounts#access-tokens) so that your programs can store the resulting state in the Pulumi Service. The easiest way to obtain such a token is to run `pulumi login` from the command line.
 
 ## Define your Pulumi program
 
@@ -373,7 +373,7 @@ A `Stack` object operates within the context of a `Workspace`. A `Workspace` is 
 
 ## Configure your provider plugins
 
-The AWS plugin also needs configuration. You can provide that configuration just as you would with other Pulumi programs: either through [stack configuration]({{< relref "/docs/intro/concepts/config" >}}) or environment variables. In this tutorial, you'll use the `Stack` object to set the AWS region for the AWS provider plugin.
+The AWS plugin also needs configuration. You can provide that configuration just as you would with other Pulumi programs: either through [stack configuration](/docs/intro/concepts/config/) or environment variables. In this tutorial, you'll use the `Stack` object to set the AWS region for the AWS provider plugin.
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 {{% choosable language "javascript,typescript" %}}

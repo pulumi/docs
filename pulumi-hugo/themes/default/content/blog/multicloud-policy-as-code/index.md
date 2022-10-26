@@ -309,10 +309,10 @@ PolicyPack(
 Policy as Code is a powerful tool for protecting and managing your infrastructure. As you can see, Pulumi supports policies for all resources on all clouds. We have examples and articles to get you started with Policy as Code.
 
 - [Policy Pack Examples](https://github.com/pulumi/examples/tree/master/policy-packs)
-- [Get Started with Policy as Code]({{< relref "/docs/guides/crossguard/get-started" >}})
-- [New Policy as Code Capabilities with CrossGuard]({{< relref "/blog/crossguard-2-0" >}})
-- [Automatically Enforcing AWS Resource Tagging Policies]({{< relref "/blog/automatically-enforcing-aws-resource-tagging-policies" >}})
-- [Manage Any Infrastructure with Policy as Code]({{< relref "/blog/automatically-enforcing-aws-resource-tagging-policies" >}})
-- [Enforcing Different Kinds of Policies for Cloud Resources]({{< relref "/blog/enforcing-different-kinds-of-policies-for-cloud-resources" >}})
-- [Running AWS IAM Access Analyzer at Deployment Time]({{< relref "/blog/aws-iam-access-analyzer-and-crossguard" >}})
-- [Authoring CrossGuard Policy with Open Policy Agent (OPA)]({{< relref "/blog/opa-support-for-crossguard" >}})
+- [Get Started with Policy as Code](/docs/guides/crossguard/get-started/)
+- [New Policy as Code Capabilities with CrossGuard](/blog/crossguard-2-0/)
+- [Automatically Enforcing AWS Resource Tagging Policies](/blog/automatically-enforcing-aws-resource-tagging-policies/)
+- [Manage Any Infrastructure with Policy as Code](/blog/automatically-enforcing-aws-resource-tagging-policies/)
+- [Enforcing Different Kinds of Policies for Cloud Resources](/blog/enforcing-different-kinds-of-policies-for-cloud-resources/)
+- [Running AWS IAM Access Analyzer at Deployment Time](/blog/aws-iam-access-analyzer-and-crossguard/)
+- [Authoring CrossGuard Policy with Open Policy Agent (OPA)](/blog/opa-support-for-crossguard)

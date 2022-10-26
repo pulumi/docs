@@ -10,7 +10,7 @@ menu:
 aliases: ["/docs/reference/crosswalk/aws/api-gateway/"]
 ---
 
-<a href="{{< relref "./" >}}">
+<a href="./">
 <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -76,7 +76,7 @@ The path can be parameterized to match specific patterns:
 - A parameterized pattern e.g. `/pets/{petId}` will match child routes such as `/pet/6sxz2j`
 - A wildcard pattern specified with `{proxy+}` e.g. `/parent/{proxy+}` will mach all decendant paths such as `/parent/child/grandchild`
 
-For more complete information about creating Lambda Functions, see the [Pulumi Crosswalk for AWS Lambda documentation]({{< relref "lambda" >}}).
+For more complete information about creating Lambda Functions, see the [Pulumi Crosswalk for AWS Lambda documentation](/docs/guides/crosswalk/aws/lambda/).
 
 {{< chooser language "typescript,python,go" / >}}
 
@@ -403,7 +403,7 @@ The API Gateway `RestAPI` class supports three specific methods of controlling a
 - _Usage plans_ let you provide _API keys_ to customers, and then track and limit usage of your APIs.
 
 Details on each is below. For those not directly supported, all of these capabilities are accessible to you in the
-[AWS package]({{< relref "/registry/packages/aws/api-docs" >}}), and are described in depth in the article
+[AWS package](/registry/packages/aws/api-docs/), and are described in depth in the article
 [Controlling and Managing Access to a REST API in AWS API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-to-api.html).
 
 ### Cognito Authorizers
@@ -510,7 +510,7 @@ You can define a Lambda Authorizer for an Event Handler Route or a Static Route.
 To define an Authorizer, you provide a Lambda that recieves an
 [Authorizer Event](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-lambda-authorizer-input.html)
 and responds with a valid [Authorizer Response](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-lambda-authorizer-output.html).
-See [Pulumi Crosswalk for AWS Lambda]({{< relref "lambda" >}}) for other ways you can define your Lambda for the Authorizer.
+See [Pulumi Crosswalk for AWS Lambda](/docs/guides/crosswalk/aws/lambda/) for other ways you can define your Lambda for the Authorizer.
 
 #### Lambda Request Authorizer
 

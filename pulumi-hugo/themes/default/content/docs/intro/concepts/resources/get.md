@@ -7,7 +7,7 @@ menu:
     weight: 7
 ---
 
-You can use the static `get` function, which is available on all resource types, to look up an existing resource that is not managed by Pulumi. The `get` function is different from the [`import` CLI command]({{< relref "/docs/reference/cli/pulumi_import" >}}): `pulumi import` is used to bring an existing resource under management by Pulumi. `get` is used to allow the attributes of an existing resource to be used within a Pulumi program. A resource read with the `get` function will never be updated or deleted by Pulumi during an update.
+You can use the static `get` function, which is available on all resource types, to look up an existing resource that is not managed by Pulumi. The `get` function is different from the [`import` CLI command](/docs/reference/cli/pulumi_import): `pulumi import` is used to bring an existing resource under management by Pulumi. `get` is used to allow the attributes of an existing resource to be used within a Pulumi program. A resource read with the `get` function will never be updated or deleted by Pulumi during an update.
 
 Two values are passed to the `get` function:
 

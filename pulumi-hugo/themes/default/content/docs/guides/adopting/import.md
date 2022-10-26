@@ -20,15 +20,15 @@ When working with existing resources, there are two primary scenarios:
 * You need to reference existing resources to use as inputs to new resources in Pulumi
 * You need to adopt existing resources under management so they can be managed by Pulumi
 
-For the first situation, consult [the user guide index]({{< relref "/docs/guides/adopting#coexistence" >}}). For the
+For the first situation, consult [the user guide index](/docs/guides/adopting#coexistence). For the
 second, let's now see how to adopt existing resources.
 
 ## Adopting Existing Resources
 
 There are two ways to adopt existing resources so that Pulumi is able to manage subsequent updates to them. The first way is to use the
-[`import`]({{< relref "/docs/reference/cli/pulumi_import" >}}) cli command. This command specifies that a resource defined in
+[`import`](/docs/reference/cli/pulumi_import) cli command. This command specifies that a resource defined in
 your Pulumi program should adopt an existing resource from a cloud provider rather than creating a new one after running `pulumi up`.
-Another way is to use the [`import`]({{< relref "/docs/intro/concepts/resources#import" >}}) resource option.
+Another way is to use the [`import`](/docs/intro/concepts/resources#import) resource option.
 This resource option is defined in your Pulumi program, and like the `import` command, the `import` resource option adopts an existing resource in the cloud provider rather
 creating a new one. Using this option lets you specify
 the `import` behavior inside the Pulumi code for your infrastructure deployment, instead of outside of it in a manual workflow.
@@ -147,7 +147,7 @@ class MyStack : Stack
 
 After successfully importing a resource and adding the generated code to your program, you can run `pulumi up` and all subsequent operations
 will behave as though Pulumi provisioned the resource from the outset. The resource is added to the Pulumi
-[state]({{< relref "/docs/intro/concepts/state" >}}), and marked as a [protected]({{< relref "/docs/intro/concepts/resources#protect" >}})
+[state](/docs/intro/concepts/state/), and marked as a [protected](/docs/intro/concepts/resources#protect)
 resource (by default) to ensure that imported infrastructure is not accidentally deleted if the user forgets to include the code for the resource in their program before doing a deployment.
 
 ### Pulumi Import Resource Operation
@@ -333,7 +333,7 @@ Diagnostics:
 ```
 
 {{% notes type="info" %}}
-**Note:** Because of [auto-naming]({{< relref "/docs/intro/concepts/resources#autonaming" >}}), it's common to accidentally get in a situation where names don't match. For example, if we left off the security group's name, `"my-sg-62a569b"`, in the earlier example, Pulumi would still auto-name the resource, leading to an error `imported resource sg-04aeda9a214730248's property 'name' does not match the existing value`. To fix this problem, make sure to specify names for all resources explicitly.
+**Note:** Because of [auto-naming](/docs/intro/concepts/resources#autonaming), it's common to accidentally get in a situation where names don't match. For example, if we left off the security group's name, `"my-sg-62a569b"`, in the earlier example, Pulumi would still auto-name the resource, leading to an error `imported resource sg-04aeda9a214730248's property 'name' does not match the existing value`. To fix this problem, make sure to specify names for all resources explicitly.
 {{% /notes %}}
 
 ### Bulk Import Operations
@@ -617,9 +617,9 @@ A `Resource` has the following schema:
 | `name`       | `string`        | Yes      | The name of the resource.                                                                                                                                      |
 | `type`       | `Type Token`    | Yes      | The type of the corresponding Pulumi resource.                                                                                                                 |
 | `id`         | `string`        | Yes      | The provider determined ID for this resource type.                                                                                                             |
-| `parent`     | `string`        | No       | The name of the [parent]({{< relref "/docs/intro/concepts/resources/options/parent" >}}) resource. The mentioned name must be present in the `nameTable`.     |
-| `provider`   | `string`        | No       | The name of the [provider]({{< relref "/docs/intro/concepts/resources/options/provider" >}}) resource. The mentioned name must be present in the `nameTable`. |
-| `version`    | `string`        | No       | The [version]({{< relref "/docs/intro/concepts/resources/options/version" >}}) of the provider to use.                                                        |
+| `parent`     | `string`        | No       | The name of the [parent](/docs/intro/concepts/resources/options/parent/) resource. The mentioned name must be present in the `nameTable`.     |
+| `provider`   | `string`        | No       | The name of the [provider](/docs/intro/concepts/resources/options/provider/) resource. The mentioned name must be present in the `nameTable`. |
+| `version`    | `string`        | No       | The [version](/docs/intro/concepts/resources/options/version/) of the provider to use.                                                        |
 | `properties` | `array[string]` | No       | The list of properties to include in the generated code. If unspecified all properties will be included.                                                       |
 
 Check out the video clip below for a demo.

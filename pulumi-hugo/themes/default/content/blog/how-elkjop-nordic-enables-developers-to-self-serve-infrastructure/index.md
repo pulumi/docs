@@ -19,7 +19,7 @@ tags:
 
 ---
 
-At PulumiUP 2022, Tomas Jansson, software architect at Elkjøp Nordic, gave a presentation on how to enable developers to self-service infrastructure by using Pulumi’s [Automation API]({{< relref "/automation" >}}).
+At PulumiUP 2022, Tomas Jansson, software architect at Elkjøp Nordic, gave a presentation on how to enable developers to self-service infrastructure by using Pulumi’s [Automation API](/automation/).
 
 Elkjøp Nordic is the leading consumer electronics retailer in the Nordics. The company sells consumer electronics, mobile phones, computers, white goods, domestic appliances, and services linked to these products both directly to consumers and to businesses. It is an omnichannel retailer and serves customers both online and through more than 400 stores. Elkjøp has retail outlets in Norway, Sweden, Finland and Denmark, and franchise operations in Greenland and Faroe Islands.
 
@@ -43,7 +43,7 @@ Here is an example that shows how a developer can create a repository simply by 
 
 ![Creating a new repository](./create-repo.png)
 
-Tomas determined that the best way to implement self-service infrastructure was with Pulumi and its [Automation API]({{< relref "/automation" >}}). By using Pulumi, he could use standard programming languages to define infrastructure while using familiar software tools like IDEs and test frameworks. Pulumi also natively supports Azure and Kubernetes with 100% coverage of each provider’s APIs and same-day access to new features and updates. Finally, the Pulumi Automation API would enable him to program infrastructure automation directly into his application.
+Tomas determined that the best way to implement self-service infrastructure was with Pulumi and its [Automation API](/automation/). By using Pulumi, he could use standard programming languages to define infrastructure while using familiar software tools like IDEs and test frameworks. Pulumi also natively supports Azure and Kubernetes with 100% coverage of each provider’s APIs and same-day access to new features and updates. Finally, the Pulumi Automation API would enable him to program infrastructure automation directly into his application.
 
 The Pulumi Automation API is a programmatic interface for running Pulumi programs without the Pulumi CLI. Automation API encapsulates the functionality of the CLI (`pulumi up`, `pulumi preview`, `pulumi destroy`, `pulumi stack init`, etc.) but with more flexibility since infrastructure operations can be controlled programmatically.
 
@@ -57,7 +57,7 @@ Here is the workflow for the Elkjøp self-service infrastructure platform.
 
 The self-service platform is a web application that runs the Pulumi Automation API on the server side. The application uses Pulumi to provision and configure every environment resource such as Azure resource groups, Kubernetes namespaces, service principals, and Kubernetes service accounts. Each environment comes with a Git repository that's used by developers to manage their deployments. The Git repositories are the locus of each environment because they store everything needed to deploy changes such as infrastructure code and environment credentials.
 
-Using the Pulumi Automation API, the application creates an Azure resource group, a team in both Azure AD and GitHub, and a new GitHub repository. The application then grants administrative access to the GitHub repo to members of the AD group. In addition to creating a Git repository for each environment, the application uses stack references for each Azure environment to inject the associated credentials into the GitHub Secret Store. These credentials are scoped to each GitHub environment so that developers can only work in their own environment. If a team has multiple environments, each environment has its own credentials so developers can’t, for example, deploy from a test environment to a production environment. Secrets are managed through the [Pulumi Service]({{< relref "/docs/intro/pulumi-service" >}}).
+Using the Pulumi Automation API, the application creates an Azure resource group, a team in both Azure AD and GitHub, and a new GitHub repository. The application then grants administrative access to the GitHub repo to members of the AD group. In addition to creating a Git repository for each environment, the application uses stack references for each Azure environment to inject the associated credentials into the GitHub Secret Store. These credentials are scoped to each GitHub environment so that developers can only work in their own environment. If a team has multiple environments, each environment has its own credentials so developers can’t, for example, deploy from a test environment to a production environment. Secrets are managed through the [Pulumi Service](/docs/intro/pulumi-service/).
 
 Every new repository comes with Pulumi programs that developers can use to deploy their application. GitHub Actions initiate the deployment. When an action triggers, Pulumi reads the credentials that were generated by the self-service application, allowing Pulumi to deploy new Kubernetes or Azure resources to the environment.
 
@@ -73,6 +73,6 @@ Ready to dive into how this works in detail? Watch the demo in the video below s
 
 ## Next steps
 
-After watching the [demo](https://youtu.be/aoa_O-rh5KE?list=PLyy8Vx2ZoWlpcvhSsUXdT5CXjRwAaM_My&t=620) of a self-service infrastructure platform, you can try it out for yourself by checking out the [demo code](https://github.com/mastoj/pulumi-automation-demo). You can also learn more about [Pulumi Automation API]({{< relref "/automation" >}}) in our [documentation]({{< relref "/docs/guides/automation-api" >}}).
+After watching the [demo](https://youtu.be/aoa_O-rh5KE?list=PLyy8Vx2ZoWlpcvhSsUXdT5CXjRwAaM_My&t=620) of a self-service infrastructure platform, you can try it out for yourself by checking out the [demo code](https://github.com/mastoj/pulumi-automation-demo). You can also learn more about [Pulumi Automation API](/automation/) in our [documentation](/docs/guides/automation-api/).
 
-If you’re new to Pulumi, then follow our [getting started guide]({{< relref "/docs/get-started" >}}).
+If you’re new to Pulumi, then follow our [getting started guide](/docs/get-started/).

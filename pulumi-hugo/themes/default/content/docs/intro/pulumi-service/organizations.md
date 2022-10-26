@@ -22,15 +22,15 @@ Organizations are a space for you to collaborate on shared projects and stacks.
 | Page | Description |
 |--------|--------|
 | Dashboard | An overview of the organization including recently updated stacks, recent activity, and a resource count graph. |
-| All stacks | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management]({{< relref "/docs/intro/pulumi-service/projects-and-stacks" >}}). |
+| All stacks | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management](/docs/intro/pulumi-service/projects-and-stacks/). |
 | Policies | Lists of organization policies and policy groups. Policies allow you to set guardrails to enforce best practices and compliance. |
-| Settings | Organization settings including subscription and payment information and history, Billing Managers, stack permissions, and links to Pulumi's [continuous delivery guides]({{< relref "/docs/guides/continuous-delivery" >}}). |
+| Settings | Organization settings including subscription and payment information and history, Billing Managers, stack permissions, and links to Pulumi's [continuous delivery guides](/docs/guides/continuous-delivery/). |
 
 ## Creating an Organization
 
 Creating an organization will start a free trial that has access to all features.
 At the end of the trial, you can choose to move to the Pulumi Team Edition, the Pulumi Enterprise Edition or the Pulumi Business Critical Edition.
-Learn more about the edition features on the [Pricing Page]({{< relref "/pricing" >}}).
+Learn more about the edition features on the [Pricing Page](/pricing/).
 
 To create an organization:
 
@@ -90,8 +90,7 @@ of that GitHub organization may be added to the Pulumi organization. Similarly, 
 someone loses access to the GitHub organization, they will no longer have access to the
 Pulumi organization.
 
-In addition, a Pulumi organization can be backed by a [SAML 2.0 identity provider]({{<
-relref "/docs/guides/saml" >}}).
+In addition, a Pulumi organization can be backed by a [SAML 2.0 identity provider](/docs/guides/saml/).
 
 ### Changing Identity Providers
 
@@ -132,8 +131,7 @@ those users will lose access to Pulumi organization.
 
 To add a Bitbucket-backed organization to Pulumi, an admin of the Atlassian
 Bitbucket workspace
-must first grant the Pulumi Oauth app [read
-access](https://confluence.atlassian.com/bitbucket/oauth-on-bitbucket-cloud-238027431.html#OAuthonBitbucketCloud-Scopes)
+must first grant the Pulumi Oauth app [read access](https://confluence.atlassian.com/bitbucket/oauth-on-bitbucket-cloud-238027431.html#OAuthonBitbucketCloud-Scopes)
 to their Bitbucket account and workspace membership information.
 
 Once the Pulumi organization has been created, the admin can see a list of Bitbucket workspace
@@ -143,9 +141,9 @@ members that they can add or invite to the Pulumi organization.
 
 Pulumi Enterprise and Business Critical provide support for any SAML 2.0-based identity provider.
 
-* [SAML-based configuration guide]({{< relref "/docs/guides/saml" >}})
-* [Azure Active Directory]({{< relref "/docs/guides/saml/aad" >}})
-* [Google Workspace]({{< relref "/docs/guides/saml/gsuite" >}})
-* [Okta]({{< relref "/docs/guides/saml/okta" >}})
+* [SAML-based configuration guide](/docs/guides/saml/)
+* [Azure Active Directory](/docs/guides/saml/aad/)
+* [Google Workspace](/docs/guides/saml/gsuite/)
+* [Okta](/docs/guides/saml/okta/)
 
 Members of SSO organizations can login to Pulumi with the organization name auto-filled in the UI by visiting `https://app.pulumi.com/welcome/<organization-name>/sso`.

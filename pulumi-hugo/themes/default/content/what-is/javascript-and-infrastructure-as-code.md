@@ -29,7 +29,7 @@ customer_logos:
       - ro
 ---
 
-[Infrastructure as Code (IaC)]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) means that you use code to define and manage your infrastructure automatically rather than with manual processes. In a broader sense, IaC enables [cloud engineering]({{< relref "/blog/what-exactly-is-cloud-engineering" >}}) and allows you to effectively apply software engineering practices to your infrastructure. With IaC, you can automatically build, deploy and manage your infrastructure much more effectively and reliably than you can manually. IaC makes your whole infrastructure versionable, [testable]({{< relref "/what-is/how-to-step-up-cloud-infrastructure-testing" >}}) and repeatable.
+[Infrastructure as Code (IaC)](/what-is/what-is-infrastructure-as-code) means that you use code to define and manage your infrastructure automatically rather than with manual processes. In a broader sense, IaC enables [cloud engineering](/blog/what-exactly-is-cloud-engineering/) and allows you to effectively apply software engineering practices to your infrastructure. With IaC, you can automatically build, deploy and manage your infrastructure much more effectively and reliably than you can manually. IaC makes your whole infrastructure versionable, [testable](/what-is/how-to-step-up-cloud-infrastructure-testing/) and repeatable.
 
 People use many different programming languages to implement IaC (for our purposes, we mean infrastructure in the cloud). One of the most widely used is JavaScript.
 
@@ -43,7 +43,7 @@ Node.js has also made it possible for developers to expand their areas of expert
 
 ## JavaScript Infrastructure as Code and Serverless Computing
 
-Many developers now use JavaScript to create IaC, often in [serverless applications]({{< relref "/blog/architecture-as-code-serverless" >}}). Serverless computing (or serverless for short), is an execution model where the cloud provider is responsible for executing a piece of code by dynamically allocating the resources. You are only charged for the resources used to run that code. Typically, some sort of event, such as a http request or a monitoring event, triggers the code. Some of the reasons that Javascript (running in Node.js) is so popular for IaC and serverless apps are:
+Many developers now use JavaScript to create IaC, often in [serverless applications](/blog/architecture-as-code-serverless/). Serverless computing (or serverless for short), is an execution model where the cloud provider is responsible for executing a piece of code by dynamically allocating the resources. You are only charged for the resources used to run that code. Typically, some sort of event, such as a http request or a monitoring event, triggers the code. Some of the reasons that Javascript (running in Node.js) is so popular for IaC and serverless apps are:
 
 - Programmers can use the JavaScript skills they already possess so they become productive right away.
 - Node.js is a very fast runtime.
@@ -61,10 +61,10 @@ The Serverless Framework is another reason for JavaScript’s popularity for ser
 
 There are platforms available that can really boost your productivity when it comes to JavaScript and Infrastructure as Code. Here are a few qualities to look for:
 
-- **Support for Standard Languages.** Of course, you need a platform that [fully supports JavaScript and Node.js]({{< relref "/docs/intro/languages/javascript" >}}).
-- **Multi-cloud support.** Make sure the platform allows you to build, manage and deploy your infrastructure to [any cloud provider]({{< relref "/registry" >}}).
+- **Support for Standard Languages.** Of course, you need a platform that [fully supports JavaScript and Node.js](/docs/intro/languages/javascript/).
+- **Multi-cloud support.** Make sure the platform allows you to build, manage and deploy your infrastructure to [any cloud provider](/registry/).
 - **Improves on the Serverless Framework.** While the Serverless Framework definitely helps with serverless computing, it only helps with that part of your application. Find a platform that lets you adopt a more holistic approach and treats the entire program as cloud-native. You should be able to write entire applications within that platform. Some parts of that application may be serverless functions, but you should also be able to include resources such as containers, databases, and cloud services.
 
 ## Pulumi Corporation
 
-Pulumi's Cloud Engineering Platform unites infrastructure teams, application developers, and compliance teams around a unified software engineering process for delivering modern cloud applications faster and speeding innovation. Pulumi’s open-source tools help infrastructure teams tame the cloud’s complexity with Universal Infrastructure-as-Code using the world’s most popular programming languages and communities, including [Python]({{< relref "/docs/intro/languages/python" >}}), [Node.js (JavaScript, TypeScript)]({{< relref "/docs/intro/languages/javascript" >}}), [Go]({{< relref "/docs/intro/languages/go" >}}), and [].NET (C#, F#, VB)]({{< relref "/docs/intro/languages/dotnet" >}}). [Get started for free today]({{< relref "/docs/get-started" >}}), or check out one of our on-demand workshops on getting started with [Infrastructure as Code and JavaScript]({{< relref "/resources/getting-from-code-to-cloud-with-vscode-and-pulumi" >}}).
+Pulumi's Cloud Engineering Platform unites infrastructure teams, application developers, and compliance teams around a unified software engineering process for delivering modern cloud applications faster and speeding innovation. Pulumi’s open-source tools help infrastructure teams tame the cloud’s complexity with Universal Infrastructure-as-Code using the world’s most popular programming languages and communities, including [Python](/docs/intro/languages/python/), [Node.js (JavaScript, TypeScript)](/docs/intro/languages/javascript), [Go](/docs/intro/languages/go/), and [].NET (C#, F#, VB)](/docs/intro/languages/dotnet). [Get started for free today](/docs/get-started/), or check out one of our on-demand workshops on getting started with [Infrastructure as Code and JavaScript](/resources/getting-from-code-to-cloud-with-vscode-and-pulumi/).

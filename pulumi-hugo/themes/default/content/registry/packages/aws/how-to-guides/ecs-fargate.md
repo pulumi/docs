@@ -8,19 +8,19 @@ layout: how-to-guide
 
 {{< github-buttons "aws-ts-containers" >}}
 
-In this tutorial, we'll build and publish a Docker container to a private Elastic Container Registry (ECR), and spin up a load-balanced Amazon Elastic Container Service (Amazon ECS) Fargate service, all in a handful of lines of code, using [Pulumi Crosswalk for AWS]({{< relref "/docs/guides/crosswalk/aws" >}}).
+In this tutorial, we'll build and publish a Docker container to a private Elastic Container Registry (ECR), and spin up a load-balanced Amazon Elastic Container Service (Amazon ECS) Fargate service, all in a handful of lines of code, using [Pulumi Crosswalk for AWS](/docs/guides/crosswalk/aws/).
 
 ## Prerequisites
 
 1. [Install Docker Engine - Community](https://docs.docker.com/install/)
-1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-1. [Configure Pulumi to use your AWS account]({{< relref "/registry/packages/aws/installation-configuration" >}})
+1. [Install Pulumi](/docs/get-started/install/)
+1. [Configure Pulumi to use your AWS account](/registry/packages/aws/installation-configuration/)
 
 ## Deploy the App
 
 ### Step 1: Create a new project from a template
 
-Create a project directory, `hello-fargate`, and change into it. Run [`pulumi new aws-typescript --name myproject`]({{< relref "/docs/reference/cli/pulumi_new" >}}) to create a new project using the AWS template for TypeScript. Replace `myproject` with your desired project name.
+Create a project directory, `hello-fargate`, and change into it. Run [`pulumi new aws-typescript --name myproject`](/docs/reference/cli/pulumi_new) to create a new project using the AWS template for TypeScript. Replace `myproject` with your desired project name.
 
 Run `pulumi new` to create a new project:
 
@@ -113,7 +113,7 @@ $ pulumi config set aws:region us-east-1
 
 ### Step 7: Preview and deploy your resources
 
-To preview your Pulumi program, run [`pulumi up`]({{< relref "/docs/reference/cli/pulumi_up" >}}). The command shows a preview of the resources that will be created and prompts you to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
+To preview your Pulumi program, run [`pulumi up`](/docs/reference/cli/pulumi_up). The command shows a preview of the resources that will be created and prompts you to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
 
 ```bash
 $ pulumi up
@@ -160,7 +160,7 @@ $ curl $(pulumi stack output frontendURL)
 
 ### Step 9: View container logs (Optional)
 
-To view the runtime logs from the container, use the [`pulumi logs`]({{< relref "/docs/reference/cli/pulumi_logs" >}}) command. To get a log stream, use `pulumi logs --follow`.
+To view the runtime logs from the container, use the [`pulumi logs`](/docs/reference/cli/pulumi_logs) command. To get a log stream, use `pulumi logs --follow`.
 
 ```bash
 $ pulumi logs --follow
@@ -179,7 +179,7 @@ Collecting logs for stack dev since 2021-03-26T10:49:57.000-07:00.
 {{< summary >}}
 <p>
     In this tutorial, we showed you how to write a Pulumi program in Typescript, and leverage
-Pulumi Crosswalk for AWS (via the <a href="{{< relref "/docs/reference/pkg/nodejs/pulumi/awsx"
+Pulumi Crosswalk for AWS (via the <a href="/docs/reference/pkg/nodejs/pulumi/awsx"
 >}}">@pulumi/awsx package</a>) in order to build and publish a Dockerized application to a private
 Elastic Container Registry (ECR), spin up an ECS Fargate cluster, and run a scalable, load balanced
 service.
@@ -190,11 +190,11 @@ service.
 
 For more information about containerized applications on AWS, please read these User Guides:
 
-- [Pulumi Crosswalk for AWS Elastic Container Service (ECS)]({{< relref "/docs/guides/crosswalk/aws/ecs" >}})
-- [Pulumi Crosswalk for AWS Elastic Kubernetes Service (EKS)]({{< relref "/docs/guides/crosswalk/aws/eks" >}})
+- [Pulumi Crosswalk for AWS Elastic Container Service (ECS)](/docs/guides/crosswalk/aws/ecs)
+- [Pulumi Crosswalk for AWS Elastic Kubernetes Service (EKS)](/docs/guides/crosswalk/aws/eks)
 
 For an end-to-end application also includes serverless functions, see the
-[Serverless plus Containers Thumbnailer tutorial]({{< relref "video-thumbnailer" >}}).
+[Serverless plus Containers Thumbnailer tutorial](/registry/packages/aws/how-to-guides/video-thumbnailer/).
 
 For an example application that connects two containers, see the
 [Voting App](https://github.com/pulumi/examples/tree/master/aws-ts-voting-app) sample.

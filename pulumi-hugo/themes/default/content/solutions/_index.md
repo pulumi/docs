@@ -47,7 +47,7 @@ use_cases:
           description: |
             Modernize how your teams provision and manage infrastructure in order to adapt to the changes in technologies (containers, serverless), architectures (distributed), and software release automation associated with the cloud.
 
-            [Learn more about Terraform migration](/solutions/terraform-migration)
+            [Learn more about Terraform migration](/solutions/terraform-migration/)
 
         - name: Greenfield modern applications
           case_studies:
@@ -105,7 +105,7 @@ architectures:
               link: /case-studies/learning-machine
 
         - name: Server-based
-          cta_link: /docs/tutorials/aws/ec2-webserver
+          cta_link: /registry/packages/aws/how-to-guides/ec2-webserver
           cta_text: Learn More
           description: |
             Define and manage cloud infrastructure using server-based architectures, such as compute and database instances.

@@ -19,9 +19,9 @@ To enable the integration with your GitLab project, you will need to ensure you 
 ## Prerequisites
 
 * You must have a GitLab identity associated with your Pulumi account.
-* If you are integrating a GitLab project that is under a group, [add an organization]({{< relref "/docs/intro/pulumi-service/organizations#creating-an-organization" >}})
+* If you are integrating a GitLab project that is under a group, [add an organization](/docs/intro/pulumi-service/organizations#creating-an-organization)
   in Pulumi.
-  * After you add the organization, ensure that it uses GitLab [as its identity provider]({{< relref "/docs/intro/pulumi-service/organizations#changing-identity-providers" >}}).
+  * After you add the organization, ensure that it uses GitLab [as its identity provider](/docs/intro/pulumi-service/organizations#changing-identity-providers).
 
 {{% notes type="warning" %}}
 This feature is currently not compatible with GitLab's [pipelines for merged results](https://docs.gitlab.com/ee/ci/pipelines/pipelines_for_merged_results.html).
@@ -30,7 +30,7 @@ See the [GitLab issue](https://gitlab.com/gitlab-org/gitlab/-/issues/350086) for
 
 ## Configuring the GitLab Webhook
 
-* [Create a Pulumi access token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}}) using the account that you would like the merge request notes to be posted as. Save this token as we will use this momentarily in a following step.
+* [Create a Pulumi access token](/docs/intro/pulumi-service/accounts#access-tokens) using the account that you would like the merge request notes to be posted as. Save this token as we will use this momentarily in a following step.
 * You can configure a Group Hook or a Project Hook. The configuration values you use are the same regardless of where the webhook is registered on GitLab.
 * Configuring a webhook at the Group-level means that you don't have to configure the webhook for every project manually.
 If you only want to configure a webhook for a certain project, then you may do that as well.

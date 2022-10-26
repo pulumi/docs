@@ -21,18 +21,18 @@ If you're already familiar with Terraform, learning Pulumi terminology and comma
 
 | Terraform | Pulumi |
 | --------- | ------ |
-| Workspace | [Stack]({{< relref "/docs/intro/concepts/stack" >}}) |
-| Variables | [Stack Config]({{< relref "/docs/intro/concepts/config" >}}) |
-| Directory | [Project]({{< relref "/docs/intro/concepts/project" >}}) |
-| Module | [Component]({{< relref "/docs/intro/concepts/resources/components" >}}) |
-| Resource | [Resource]({{< relref "/docs/intro/concepts/resources" >}}) |
-| Interpolation | [Interpolation]({{< relref "/docs/intro/concepts/inputs-outputs#outputs-and-strings" >}}) |
-| Run | [Up]({{< relref "/docs/reference/cli/pulumi_up" >}}) |
-| Output Values | [Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) |
-| State | [State]({{< relref "/docs/intro/concepts/state" >}}) |
-| State Version | [Update Events]({{< relref "/docs/reference/service-rest-api#list-update-events" >}}) |
-| Backend | [Backend]({{< relref "/docs/intro/concepts/state" >}}) |
-| Deposed | [Pending Operations]({{< relref "/docs/support/troubleshooting#interrupted-update-recovery" >}}) |
+| Workspace | [Stack](/docs/intro/concepts/stack/) |
+| Variables | [Stack Config](/docs/intro/concepts/config/) |
+| Directory | [Project](/docs/intro/concepts/project/) |
+| Module | [Component](/docs/intro/concepts/resources/components/) |
+| Resource | [Resource](/docs/intro/concepts/resources/) |
+| Interpolation | [Interpolation](/docs/intro/concepts/inputs-outputs#outputs-and-strings) |
+| Run | [Up](/docs/reference/cli/pulumi_up/) |
+| Output Values | [Outputs](/docs/intro/concepts/inputs-outputs/) |
+| State | [State](/docs/intro/concepts/state/) |
+| State Version | [Update Events](/docs/reference/service-rest-api#list-update-events) |
+| Backend | [Backend](/docs/intro/concepts/state/) |
+| Deposed | [Pending Operations](/docs/support/troubleshooting#interrupted-update-recovery) |
 
 ## Commands
 

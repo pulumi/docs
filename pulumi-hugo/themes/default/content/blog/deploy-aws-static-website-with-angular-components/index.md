@@ -16,7 +16,7 @@ tags:
 
 In this blog post, we’re going to use some Angular framework components to assemble a static website and then use Pulumi and its AWS Static Website component to deploy it to AWS. The website is for a café called the Pulumi Café. It will contain two pages, one an About page and the other a Menu page, as well as some navigational pieces.
 
-To follow this example, you need to have both Angular and Pulumi installed. (Here’s a link to the [Pulumi installation instructions]({{< relref "/docs/get-started/aws/begin" >}}).) You’ll also need an AWS account.
+To follow this example, you need to have both Angular and Pulumi installed. (Here’s a link to the [Pulumi installation instructions](/docs/get-started/aws/begin/).) You’ll also need an AWS account.
 
 ## What is Angular?
 
@@ -34,7 +34,7 @@ The AWS Static Website component from Pulumi makes it easy to deploy an AWS S3 s
 
 The great advantage of the AWS Static Website component is that you can have a complete, functioning site in a few minutes. The component encapsulates all the complex logic that an AWS static website requires. Without the component, you would need to spend hours or even days writing and debugging code to get the same result.
 
-If you’re interested in learning more about the component, read [Deploy Static Websites to AWS using 10 lines of YAML]({{< relref "/blog/deploy-aws-static-website-with-yaml" >}}).
+If you’re interested in learning more about the component, read [Deploy Static Websites to AWS using 10 lines of YAML](/blog/deploy-aws-static-website-with-yaml/).
 
 ## The Angular Components
 
@@ -110,9 +110,9 @@ Along with making it simple to deploy your site, Pulumi also makes it easy to pe
 
 If you want to learn more about Pulumi and the AWS Static Website component, here are a few links you might find interesting:
 
-* Along with the [Deploy Static Websites to AWS using 10 lines of YAML]({{< relref "/blog/deploy-aws-static-website-with-yaml" >}}) blog post, take a look at the [AWS Static Website reference page]({{< relref "registry/packages/aws-static-website" >}}).
-* If you want to learn about other Pulumi components, the [registry]({{< relref "/registry" >}}) page catalogs them all.
+* Along with the [Deploy Static Websites to AWS using 10 lines of YAML](/blog/deploy-aws-static-website-with-yaml/) blog post, take a look at the [AWS Static Website reference page](/registry/packages/aws-static-website/).
+* If you want to learn about other Pulumi components, the [registry](/registry/) page catalogs them all.
 * If you want to view more examples of how to use Pulumi, go to the Pulumi [examples](https://github.com/pulumi/examples) repo.
-* If you want to delve deeper into Pulumi, the [Getting Started]({{< relref "/docs/get-started" >}}) guide is a good first step.
-* If you’re interested in learning more about Pulumi concepts, try the [Architecture & Concepts]({{< relref "/docs/intro/concepts" >}}) page.
+* If you want to delve deeper into Pulumi, the [Getting Started](/docs/get-started/) guide is a good first step.
+* If you’re interested in learning more about Pulumi concepts, try the [Architecture & Concepts](/docs/intro/concepts) page.
 * If you want to learn more about Angular, see their [Getting Started](https://angular.io/start) docs.

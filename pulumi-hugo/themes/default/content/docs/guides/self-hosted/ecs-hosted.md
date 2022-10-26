@@ -45,8 +45,8 @@ This installer uses Pulumi to deploy the Pulumi service. In this case, one uses 
 
 To this end, you need to set up the following:
 
-* [Download and install the Pulumi CLI]({{<relref "docs/get-started/install">}}) on your workstation
-* [Login to S3-compatible backend]({{<relref "docs/intro/concepts/state#aws-s3">}})
+* [Download and install the Pulumi CLI](/docs/get-started/install/) on your workstation
+* [Login to S3-compatible backend](/docs/intro/concepts/state#aws-s3)
 
 ### Deployment Steps
 

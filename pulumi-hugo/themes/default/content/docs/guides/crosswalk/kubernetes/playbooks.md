@@ -10,7 +10,7 @@ menu:
     weight: 1
 ---
 
-<a href="{{< relref "./" >}}">
+<a href="./">
     <img src="/images/docs/reference/crosswalk/kubernetes/crosswalk-for-k8s.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -69,7 +69,7 @@ At the core of this architecture is a simple idea: that we should separate resou
 loosely-coupled, independently-manageable sets, based on risk and functionality.
 
 We suggest splitting infrastructure up into (roughly) six [Pulumi
-stacks]({{< relref "/docs/guides/organizing-projects-stacks" >}}) of resources.
+stacks](/docs/guides/organizing-projects-stacks) of resources.
 
 ### 1. Identity
 
@@ -77,8 +77,7 @@ Identities and role definitions for organizations and CI/CD are required before 
 anything. This is a requirement for every production Kubernetes deployment.
 
 By isolating resources into loosely-coupled stacks, we
-can grant minimal permissions based on the [principle of least
-privilege][least-privileged].
+can grant minimal permissions based on the [principle of least privilege][least-privileged].
 
 The identity stack typically contains:
 
@@ -141,18 +140,18 @@ Deploy applications and workloads into the cluster.
 [aws-rds]: https://aws.amazon.com/rds
 [cloud-sql]: https://cloud.google.com/sql/
 [cosmos-db]: https://azure.microsoft.com/en-us/services/cosmos-db/
-[k8s-get-started]: {{< relref "/docs/get-started/kubernetes" >}}
+[k8s-get-started]: /docs/get-started/kubernetes/
 [k8s-api-resources]: https://kubernetes.io/docs/reference/kubernetes-api/
 [aws-sqs]: https://aws.amazon.com/sqs/
-[crosswalk-control-plane]: {{< relref "/docs/guides/crosswalk/kubernetes/control-plane" >}}
-[crosswalk-worker-nodes]: {{< relref "/docs/guides/crosswalk/kubernetes/worker-nodes" >}}
-[crosswalk-try-out-the-cluster]: {{< relref "/docs/guides/crosswalk/kubernetes/try-out-the-cluster" >}}
-[crosswalk-configure-defaults]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-defaults" >}}
-[crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
-[crosswalk-cluster-svcs]: {{< relref "/docs/guides/crosswalk/kubernetes/cluster-services" >}}
-[crosswalk-app-svcs]: {{< relref "/docs/guides/crosswalk/kubernetes/app-services" >}}
-[crosswalk-apps]: {{< relref "/docs/guides/crosswalk/kubernetes/apps" >}}
-[crosswalk-update-worker-nodes]: {{< relref "/docs/guides/crosswalk/kubernetes/update-worker-nodes" >}}
+[crosswalk-control-plane]: /docs/guides/crosswalk/kubernetes/control-plane/
+[crosswalk-worker-nodes]: /docs/guides/crosswalk/kubernetes/worker-nodes/
+[crosswalk-try-out-the-cluster]: /docs/guides/crosswalk/kubernetes/try-out-the-cluster/
+[crosswalk-configure-defaults]: /docs/guides/crosswalk/kubernetes/configure-defaults/
+[crosswalk-configure-access]: /docs/guides/crosswalk/kubernetes/configure-access-control/
+[crosswalk-cluster-svcs]: /docs/guides/crosswalk/kubernetes/cluster-services/
+[crosswalk-app-svcs]: /docs/guides/crosswalk/kubernetes/app-services/
+[crosswalk-apps]: /docs/guides/crosswalk/kubernetes/apps/
+[crosswalk-update-worker-nodes]: /docs/guides/crosswalk/kubernetes/update-worker-nodes/
 [least-privileged]: https://en.wikipedia.org/wiki/Principle_of_least_privilege
-[cw-guides]: {{< relref "/docs/guides/crosswalk/kubernetes/playbooks" >}}
+[cw-guides]: /docs/guides/crosswalk/kubernetes/playbooks/
 <!-- markdownlint-enable url -->

@@ -4,7 +4,7 @@ h1: "Easily Create and Manage AWS EKS Kubernetes Clusters with Pulumi"
 date: "2021-01-28"
 meta_desc: "Use Pulumi to easily deploy new clusters, manage AWS resources, and deploy Kubernetes apps. See how to provision an EKS cluster with a single CLI command."
 meta_image: "pulumi_k8s.png"
-authors: 
+authors:
   - luke-hoban
   - levi-blackstone
 tags:
@@ -26,9 +26,9 @@ Updated January 2021 to include Python, .NET, and Go support.
 {{% /notes %}}
 
 To get started, download the free and open source
-[Pulumi SDK]({{< relref "/docs/get-started/install" >}}), which includes
+[Pulumi SDK](/docs/get-started/install/), which includes
 the `pulumi` CLI we'll use below. If you don't
-have the AWS CLI installed and configured, [set that up too]({{< relref "/registry/packages/aws/installation-configuration" >}}).
+have the AWS CLI installed and configured, [set that up too](/registry/packages/aws/installation-configuration/).
 You'll need AWS credentials to access your AWS account and
 provision resources.
 
@@ -364,7 +364,7 @@ this stack. The stack exports are also published in this same dashboard,
 so that key outputs, like your kubeconfig, are easily available and can be
 shared with other users in your organization.
 
-[Additional management features]({{< relref "/product" >}}), including
+[Additional management features](/product/), including
 RBAC, CI/CD integrations, and rich resource graph visualization, are
 also available via the [Pulumi app](https://app.pulumi.com),
 including Team and Enterprise Editions for production teams of all
@@ -375,10 +375,10 @@ sizes.
 We've seen how Pulumi takes care of the heavy lifting with AWS EKS so that
 you don't have to. You can use Pulumi to easily deploy new clusters,
 managed AWS resources, and Kubernetes apps, all with the same powerful toolchain. Support is
-also available for Azure AKS, [Google GKE]({{< relref "/registry/packages/kubernetes/how-to-guides/gke" >}}),
+also available for Azure AKS, [Google GKE](/registry/packages/kubernetes/how-to-guides/gke/),
 DigitalOcean's Managed Kubernetes, and custom clusters (including Minikube).
 
 For more information:
 
-- [Get started with Pulumi and Kubernetes]({{< relref "/docs/get-started/kubernetes" >}})
-- [Get started with Pulumi and AWS]({{< relref "/docs/get-started/aws" >}})
+- [Get started with Pulumi and Kubernetes](/docs/get-started/kubernetes/)
+- [Get started with Pulumi and AWS](/docs/get-started/aws/)

@@ -67,7 +67,7 @@ First, the platform team [migrated](/tf2pulumi/) its infrastructure from Terrafo
 
 #### Simplifying Kubernetes Deployments
 
-Pulumi also simplified how they manage Kubernetes deployments. It gave them a strongly-typed way of modeling Kubernetes resources with standard languages (e.g., Go) instead of YAML. Using Pulumi’s [native support for Kubernetes](/kubernetes), they could access 100% of Kubernetes’ APIs. They could also build and manage Helm charts and Kubernetes custom resource definitions with Pulumi’s cloud native integrations.
+Pulumi also simplified how they manage Kubernetes deployments. It gave them a strongly-typed way of modeling Kubernetes resources with standard languages (e.g., Go) instead of YAML. Using Pulumi’s [native support for Kubernetes](/kubernetes/), they could access 100% of Kubernetes’ APIs. They could also build and manage Helm charts and Kubernetes custom resource definitions with Pulumi’s cloud native integrations.
 
 #### Building Reusable Cloud Infrastructure
 

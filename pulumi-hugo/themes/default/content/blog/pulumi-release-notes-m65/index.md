@@ -14,17 +14,17 @@ tags:
 With the holiday season approaching, we've been focused on tidying up our products, delivering asks we've heard from you in GitHub and at conferences, and looking ahead to 2022! Read on to learn about what's new this release:
 
 - Pulumi Registry, Pulumi Packages, & integrations
-  - [Helm `Release` resource supports local charts]({{<relref "/blog/pulumi-release-notes-m65#helm-release-resource-supports-local-charts">}})
-  - [New examples for the Kubernetes native provider]({{<relref "/blog/pulumi-release-notes-m65#new-examples-for-the-kubernetes-native-provider">}})
-  - [New resources in the AWS Native provider]({{<relref "/blog/pulumi-release-notes-m65#new-resources-in-the-aws-native-provider">}})
-  - [New resources in the Azure Native provider]({{<relref "/blog/pulumi-release-notes-m65#new-resources-in-the-azure-native-provider">}})
-  - [Support for Kubernetes 1.23]({{<relref "/blog/pulumi-release-notes-m65#support-for-kubernetes-123">}})
+  - [Helm `Release` resource supports local charts](/blog/pulumi-release-notes-m65#helm-release-resource-supports-local-charts)
+  - [New examples for the Kubernetes native provider](/blog/pulumi-release-notes-m65#new-examples-for-the-kubernetes-native-provider)
+  - [New resources in the AWS Native provider](/blog/pulumi-release-notes-m65#new-resources-in-the-aws-native-provider)
+  - [New resources in the Azure Native provider](/blog/pulumi-release-notes-m65#new-resources-in-the-azure-native-provider)
+  - [Support for Kubernetes 1.23](/blog/pulumi-release-notes-m65#support-for-kubernetes-123)
 - Pulumi CLI and core technologies
-  - [Exclude protected resources from `pulumi destroy`]({{<relref "/blog/pulumi-release-notes-m65#exclude-protected-resources-from-pulumi-destroy">}})
-  - [Pulumi Package plugins can now be hosted on GitHub Releases]({{<relref "/blog/pulumi-release-notes-m65#pulumi-package-plugins-can-now-be-hosted-on-github-releases">}})
+  - [Exclude protected resources from `pulumi destroy`](/blog/pulumi-release-notes-m65#exclude-protected-resources-from-pulumi-destroy)
+  - [Pulumi Package plugins can now be hosted on GitHub Releases](/blog/pulumi-release-notes-m65#pulumi-package-plugins-can-now-be-hosted-on-github-releases)
 - Pulumi Service & Pulumi.com
-  - [More ways to share invites to your organization]({{<relref "/blog/pulumi-release-notes-m65#more-ways-to-share-invites-to-your-organization">}})
-  - [Self-Hosted Pulumi Service can disable email sign-up and login]({{<relref "/blog/pulumi-release-notes-m65#self-hosted-pulumi-service-can-disable-email-sign-up-and-login">}})
+  - [More ways to share invites to your organization](/blog/pulumi-release-notes-m65#more-ways-to-share-invites-to-your-organization)
+  - [Self-Hosted Pulumi Service can disable email sign-up and login](/blog/pulumi-release-notes-m65#self-hosted-pulumi-service-can-disable-email-sign-up-and-login)
 
 <!--more-->
 
@@ -32,20 +32,20 @@ With the holiday season approaching, we've been focused on tidying up our produc
 
 ### Helm `Release` resource supports local charts
 
-When you're developing or using a Helm chart stored on your local machine, it can be helpful to use a Pulumi program to deploy and test it. Now, you can! The [`Release`]({{<relref "/registry/packages/kubernetes/api-docs/helm/v3/release">}}) resource's constructor now accepts paths to local Helm charts.
+When you're developing or using a Helm chart stored on your local machine, it can be helpful to use a Pulumi program to deploy and test it. Now, you can! The [`Release`](/registry/packages/kubernetes/api-docs/helm/v3/release) resource's constructor now accepts paths to local Helm charts.
 
 [Learn more in this GitHub issue](https://github.com/pulumi/pulumi-kubernetes/issues/1732)
 
 ### New examples for the Kubernetes native provider
 
-We've added additional examples to our [native provider for Kubernetes]({{<relref "/registry/packages/kubernetes">}}) to make it easier to get started with common resources. Jump into Pulumi Registry with the links below:
+We've added additional examples to our [native provider for Kubernetes](/registry/packages/kubernetes/) to make it easier to get started with common resources. Jump into Pulumi Registry with the links below:
 
-- [Deployment]({{<relref "/registry/packages/kubernetes/api-docs/apps/v1/deployment#example-usage">}})
-- [StatefulSet]({{<relref "/registry/packages/kubernetes/api-docs/apps/v1/statefulset#example-usage">}})
-- [Job]({{<relref "/registry/packages/kubernetes/api-docs/batch/v1/job#example-usage">}})
-- [Pod]({{<relref "/registry/packages/kubernetes/api-docs/core/v1/pod#example-usage">}})
-- [Ingress]({{<relref "/registry/packages/kubernetes/api-docs/networking/v1/ingress#example-usage">}})
-- [Service]({{<relref "/registry/packages/kubernetes/api-docs/core/v1/service#example-usage">}}) - shown below:
+- [Deployment](/registry/packages/kubernetes/api-docs/apps/v1/deployment#example-usage)
+- [StatefulSet](/registry/packages/kubernetes/api-docs/apps/v1/statefulset#example-usage)
+- [Job](/registry/packages/kubernetes/api-docs/batch/v1/job#example-usage)
+- [Pod](/registry/packages/kubernetes/api-docs/core/v1/pod#example-usage)
+- [Ingress](/registry/packages/kubernetes/api-docs/networking/v1/ingress#example-usage)
+- [Service](/registry/packages/kubernetes/api-docs/core/v1/service#example-usage) - shown below:
 
 {{< chooser language "typescript,python,csharp,go" >}}
 
@@ -107,11 +107,11 @@ class MyStack : Stack
         {
             Spec = new Kubernetes.Types.Inputs.Core.V1.ServiceSpecArgs
             {
-                Selector = 
+                Selector =
                 {
                     { "app", "MyApp" },
                 },
-                Ports = 
+                Ports =
                 {
                     new Kubernetes.Types.Inputs.Core.V1.ServicePortArgs
                     {
@@ -183,7 +183,7 @@ As a precaution, we recommend updating to the latest version of the Azure Native
 
 ### Support for Kubernetes 1.23
 
-The Pulumi [Kubernetes native provider]({{<relref "/registry/packages/kubernetes">}}) now supports the latest version of Kubernetes that was released on December 7th: version 1.23. See the [Kubernetes v1.23.0 changelog](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.23.md) to learn about the new Kubernetes features and updates you can use via our Kubernetes native provider.
+The Pulumi [Kubernetes native provider](/registry/packages/kubernetes/) now supports the latest version of Kubernetes that was released on December 7th: version 1.23. See the [Kubernetes v1.23.0 changelog](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.23.md) to learn about the new Kubernetes features and updates you can use via our Kubernetes native provider.
 
 ## Pulumi CLI and core technologies
 
@@ -197,7 +197,7 @@ In some scenarios, you may want to retain certain resources even while destroyin
 
 ### Pulumi Package plugins can now be hosted on GitHub Releases
 
-To [publish a Pulumi Package]({{<relref "/docs/guides/pulumi-packages/how-to-author">}}), you need to publish the resource provided plugin that contains the implementation of your package. Previously, you couldn't use popular release services like GitHub Releases because the `pluginDownloadUrl` format in the Pulumi Packages [schema]({{<relref "/docs/guides/pulumi-packages/schema">}}) was too strict.
+To [publish a Pulumi Package](/docs/guides/pulumi-packages/how-to-author/), you need to publish the resource provided plugin that contains the implementation of your package. Previously, you couldn't use popular release services like GitHub Releases because the `pluginDownloadUrl` format in the Pulumi Packages [schema](/docs/guides/pulumi-packages/schema/) was too strict.
 
 Now, you can construct a `pluginDownloadUrl` with placeholders for `${VERSION}`, `${OS}`, and/or `${ARCH}` (case-sensitive) and these values will be interpolated whenever the Pulumi CLI attempts to download a Pulumi Package's plugin.
 
@@ -215,4 +215,4 @@ Previously, inviting new members to your Pulumi Service organization meant enter
 
 Once you've connected your Self-Hosted Pulumi Service instance with a directory–a SAML directory like Azure Active Directory or a source control directory like GitHub, GitLab, or Bitbucket–you may want to remove the ability for your users to sign in without using that directory. Now, you can by setting the `PULUMI_DISABLE_EMAIL_LOGIN` and `PULUMI_DISABLE_EMAIL_SIGNUP` environment variables to true.
 
-See the [self-hosted setup guide]({{<relref "/docs/guides/self-hosted/components/console#email-identity">}}) for more information.
+See the [self-hosted setup guide](/docs/guides/self-hosted/components/console#email-identity) for more information.

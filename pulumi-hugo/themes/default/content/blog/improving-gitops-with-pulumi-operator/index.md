@@ -59,7 +59,7 @@ Sadly, this is a difficult problem to solve; though not impossible.
 
 ### Pulumi Operator
 
-The Pulumi Operator hit major milestone in October this year, [releasing version 1.0]({{< relref "/blog/pulumi-kubernetes-operator-1-0" >}}).
+The Pulumi Operator hit major milestone in October this year, [releasing version 1.0](/blog/pulumi-kubernetes-operator-1-0/).
 
 The Pulumi Operator allows us to leverage the power of Pulumi at the application team level for GitOps. This bond between Pulumi for building platforms and Pulumi for consuming platforms means we can have a strictly typed exchange of "knowns" between our platform and our application that happens at execution time.
 

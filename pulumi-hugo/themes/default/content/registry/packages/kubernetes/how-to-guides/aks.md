@@ -22,7 +22,7 @@ In this tutorial, you'll use Python to deploy an instance of Azure Kubernetes Se
     ```
 
     * Enter in a Pulumi project name and description.
-    * Enter in a name for the [Pulumi stack]({{< relref "/docs/intro/concepts/stack" >}}), which is an instance of our Pulumi program, and is used to distinguish amongst different development phases and environments of your work streams.
+    * Enter in a name for the [Pulumi stack](/docs/intro/concepts/stack/), which is an instance of our Pulumi program, and is used to distinguish amongst different development phases and environments of your work streams.
     * Enter in the Azure environment to use.
     * Follow the instructions presented to change directories to the newly created Pulumi project and install the dependencies.
 
@@ -178,9 +178,9 @@ In this tutorial, you'll use Python to deploy an instance of Azure Kubernetes Se
     pulumi.export("kubeconfig", kube_config)
     ```
 
-    This example uses the [@pulumi_azure_native]({{< relref "/registry/packages/azure-native" >}}) package to create and manage several Azure resources including a [ManagedCluster]({{< relref "/registry/packages/azure-native/api-docs/containerservice/managedcluster" >}}) resource, which defines your Kubernetes cluster, and a [VirtualNetwork]({{< relref "/registry/packages/azure-native/api-docs/network/virtualnetwork" >}}) resource that contains AKS worker nodes.
+    This example uses the [@pulumi_azure_native](/registry/packages/azure-native) package to create and manage several Azure resources including a [ManagedCluster](/registry/packages/azure-native/api-docs/containerservice/managedcluster/) resource, which defines your Kubernetes cluster, and a [VirtualNetwork](/registry/packages/azure-native/api-docs/network/virtualnetwork/) resource that contains AKS worker nodes.
 
-    In addition, this example uses implicit and explicit dependencies. For example, resource outputs can be used as inputs to imply dependency between resources, but resources like the subnet RoleAssignment are explicitly declared as dependencies using [ResourceOptions]({{< relref "/docs/intro/concepts/resources#options" >}}) and passed to the resource as additional arguments.
+    In addition, this example uses implicit and explicit dependencies. For example, resource outputs can be used as inputs to imply dependency between resources, but resources like the subnet RoleAssignment are explicitly declared as dependencies using [ResourceOptions](/docs/intro/concepts/resources#options) and passed to the resource as additional arguments.
 
 1. To preview and deploy changes, run `pulumi up` and select "yes."
 
@@ -387,7 +387,7 @@ Before moving on, tear down the resources that are part of your stack.
 In this tutorial, you saw how to use Pulumi programs to create and manage cloud resources in Microsoft Azure, using Python and pypi packages. To preview and update infrastructure, use `pulumi up`. To clean up resources, run `pulumi destroy`.
 
 For a follow-up example on how to use Pulumi programs to create a Kubernetes
-apps on your new cluster, see [Kubernetes Tutorial: Getting Started With Pulumi]({{< relref "/registry/packages/kubernetes/how-to-guides/configmap-rollout" >}}).
+apps on your new cluster, see [Kubernetes Tutorial: Getting Started With Pulumi](/registry/packages/kubernetes/how-to-guides/configmap-rollout).
 
 We also encourage you to watch Joe Beda, co-founder of Kubernetes and Heptio,
 take Pulumi for a spin in an episode of [TGIK8s](https://github.com/heptio/tgik).

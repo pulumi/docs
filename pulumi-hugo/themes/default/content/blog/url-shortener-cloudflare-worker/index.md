@@ -43,7 +43,7 @@ Let's see how we can deploy a low-latency serverless URL shortener to Cloudflare
 
 ## Setting Up
 
-You'll need a Pulumi project setup with the [Cloudflare package]({{< relref "/registry/packages/cloudflare" >}}) added to your Pulumi project and an [API token configured]({{< relref "registry/packages/cloudflare/installation-configuration" >}}).
+You'll need a Pulumi project setup with the [Cloudflare package](/registry/packages/cloudflare/) added to your Pulumi project and an [API token configured](/registry/packages/cloudflare/installation-configuration/).
 
 {{% chooser language "typescript,python,go,yaml" / %}}
 
@@ -390,7 +390,7 @@ You could then use the `stdout` output, `${compileWorker.stdout}`, from our loca
 
 ## Hooking Up a Domain
 
-Cloudflare Workers allow us to connect a domain name, instead of using the generated `workers.dev` subdomain. To do so with Pulumi, we need to [create]({{< relref "/registry/packages/cloudflare/api-docs/zone/" >}}) or [fetch]({{< relref "registry/packages/cloudflare/api-docs/getzone/" >}}) a Cloudflare Zone.
+Cloudflare Workers allow us to connect a domain name, instead of using the generated `workers.dev` subdomain. To do so with Pulumi, we need to [create](/registry/packages/cloudflare/api-docs/zone/) or [fetch](/registry/packages/cloudflare/api-docs/getzone/) a Cloudflare Zone.
 
 ### Create a Zone(s)
 

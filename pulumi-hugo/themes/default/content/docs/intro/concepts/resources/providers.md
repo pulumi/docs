@@ -442,8 +442,7 @@ final var myresource = new MyResource("myResource",
 
 ## Disabling Default Providers
 
-While default providers are enabled by default, they [can be disabled]({{< relref
-"/docs/intro/concepts/config#special-configuration-options" >}}) on a per stack basis. Disabling default
+While default providers are enabled by default, they [can be disabled](/docs/intro/concepts/config#special-configuration-options) on a per stack basis. Disabling default
 providers is a good idea if you want to ensure that your programs must be explicit about which provider they
 will use. For example, to disable the `aws` provider, you can run:
 

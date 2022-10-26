@@ -13,8 +13,8 @@ menu:
 
 - A working installation of Octopus or a hosted instance from [https://octopus.com](https://octopus.com).
 - An account in the [Pulumi Service](https://app.pulumi.com).
-- The [latest version of Pulumi]({{< relref "/docs/get-started/install" >}}).
-- Setup a new project and [stack]({{< relref "/docs/intro/concepts/stack" >}}) using one of our [Get Started]({{< relref "/docs/get-started" >}}) guides or by running [`pulumi new`]({{< relref "/docs/reference/cli/pulumi_new" >}})
+- The [latest version of Pulumi](/docs/get-started/install/).
+- Setup a new project and [stack](/docs/intro/concepts/stack/) using one of our [Get Started](/docs/get-started/) guides or by running [`pulumi new`](/docs/reference/cli/pulumi_new)
 and choosing one of the many templates that are available.
 - Optionally, also create a CI pipeline from a source control repository of your choice to be the source of packages. You will learn more about packages and how to create them later in this guide.
 
@@ -25,7 +25,7 @@ For the sake of this walkthrough, we will try to deploy an [AWS example](https:/
 ## Stack and Branch Mappings
 
 The steps below act on a hypothetical stack: `my-org/my-project/aws-ts-hello-fargate`.
-You can create a new stack by running [`pulumi stack init`]({{< relref "/docs/reference/cli/pulumi_stack_init" >}}) from the folder containing the `Pulumi.yaml` file.
+You can create a new stack by running [`pulumi stack init`](/docs/reference/cli/pulumi_stack_init) from the folder containing the `Pulumi.yaml` file.
 
 **Note**: The names used above are purely for demonstration purposes only.
 You may choose a naming convention that best suits your organization.
@@ -34,7 +34,7 @@ You may choose a naming convention that best suits your organization.
 
 ### Infrastructure
 
-Infrastructure in Octopus is represented as environments, deployment targets and workers (tentacles or SSH machines.) You could think of each environment as representing one of your Pulumi stacks. For example, if you are creating cloud infrastructure that represents your dev, staging and prod environments, each of those would typically map to a [Pulumi stack]({{< relref "/docs/intro/concepts/stack" >}}) and you could create an Octopus environment for each of those.
+Infrastructure in Octopus is represented as environments, deployment targets and workers (tentacles or SSH machines.) You could think of each environment as representing one of your Pulumi stacks. For example, if you are creating cloud infrastructure that represents your dev, staging and prod environments, each of those would typically map to a [Pulumi stack](/docs/intro/concepts/stack/) and you could create an Octopus environment for each of those.
 
 In a typical scenario where Pulumi is creating your cloud infrastructure, you will only need to a worker that can run the Pulumi CLI commands against your code package.
 
@@ -64,7 +64,7 @@ Variables can be scoped right down to the environment that can access them. For 
 
 #### PULUMI_ACCESS_TOKEN
 
-To run Pulumi commands non-interactively, you will need to set the env var `PULUMI_ACCESS_TOKEN` as a [project variable](https://octopus.com/docs/deployment-process/variables). To [create a new access token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}}), go the [Access Tokens](https://app.pulumi.com/account/tokens) page in the Pulumi Service.
+To run Pulumi commands non-interactively, you will need to set the env var `PULUMI_ACCESS_TOKEN` as a [project variable](https://octopus.com/docs/deployment-process/variables). To [create a new access token](/docs/intro/pulumi-service/accounts#access-tokens), go the [Access Tokens](https://app.pulumi.com/account/tokens) page in the Pulumi Service.
 
 ### Create the Process
 

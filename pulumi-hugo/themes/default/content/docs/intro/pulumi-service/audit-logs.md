@@ -11,7 +11,7 @@ aliases:
 ---
 {{% notes "info" %}}
 Audit Logs are available to organizations using the Enterprise and Business Critical editions.
-To learn more about editions, visit the [pricing page]({{< relref "/pricing" >}}).
+To learn more about editions, visit the [pricing page](/pricing/).
 {{% /notes %}}
 
 ## Overview
@@ -45,7 +45,7 @@ also filter logs by a particular user by selecting their profile picture.
 ## Automated Export
 
 {{% notes "info" %}}
-This feature is only available on the Pulumi Business Critical Edition. If you don't see it in your organization, [contact sales]({{< relref "/contact?form=sales" >}}).
+This feature is only available on the Pulumi Business Critical Edition. If you don't see it in your organization, [contact sales](/contact?form=sales).
 {{% /notes %}}
 
 To configure the export of audit logs to AWS S3 using the console:
@@ -85,7 +85,7 @@ To export audit logs using the console:
 ### Exporting Audit Logs Using the API
 
 {{% notes "info" %}}
-See [Pulumi Service REST API]({{< relref "/docs/reference/service-rest-api#audit-logs" >}}) for full details of the API endpoint to export audit log events. This API is rate-limited and only intended for occasional use, see automated export section above if you need frequent export.
+See [Pulumi Service REST API](/docs/reference/service-rest-api#audit-logs) for full details of the API endpoint to export audit log events. This API is rate-limited and only intended for occasional use, see automated export section above if you need frequent export.
 {{% /notes %}}
 
 ### Supported Audit Log Formats

@@ -21,7 +21,7 @@ tags:
     - serverless
 ---
 
-If you're familiar with [Amazon API Gateway](https://aws.amazon.com/api-gateway/), you know it's all about making it easier to provision and manage a web API. Maybe you've used it, as I have, with [Crosswalk]({{< relref "/docs/guides/crosswalk/aws" >}}), our AWS extension library, to stand up a REST API and handle requests with AWS Lambda functions:
+If you're familiar with [Amazon API Gateway](https://aws.amazon.com/api-gateway/), you know it's all about making it easier to provision and manage a web API. Maybe you've used it, as I have, with [Crosswalk](/docs/guides/crosswalk/aws/), our AWS extension library, to stand up a REST API and handle requests with AWS Lambda functions:
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
@@ -105,7 +105,7 @@ $ pulumi new aws-python
 
 {{% /choosable %}}
 
-Make sure you [configure your AWS credentials]({{< relref "/registry/packages/aws/installation-configuration" >}}) as well, and when prompted, choose whatever stack name and AWS region work best for you.
+Make sure you [configure your AWS credentials](/registry/packages/aws/installation-configuration/) as well, and when prompted, choose whatever stack name and AWS region work best for you.
 
 {{% notes %}}
 
@@ -115,7 +115,7 @@ In this post, we'll be using [API Gateway V2](https://docs.aws.amazon.com/apigat
 
 ## Create the API gateway and stage
 
-Start by replacing the contents of {{< langfile >}} with the following code to declare a new API Gateway [API]({{< relref "/registry/packages/aws/api-docs/apigatewayv2/api" >}}):
+Start by replacing the contents of {{< langfile >}} with the following code to declare a new API Gateway [API](/registry/packages/aws/api-docs/apigatewayv2/api/):
 
 {{< chooser language "typescript,python" / >}}
 

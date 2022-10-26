@@ -22,12 +22,12 @@ Kubernetes streamlines container deployment and management, making applications 
 
 If you're not familiar with Kubernetes concepts and terminology, the Getting Started with Kubernetes series can help get you up to speed.
 
-- [Getting Started With Kubernetes: Clusters and Nodes]({{< relref "/blog/getting-started-with-k8s-part1" >}})
-- [Getting Started With Kubernetes: Application Basics]({{< relref "/blog/getting-started-with-k8s-part2" >}})
-- [Getting Started With Kubernetes: Advanced Deployment]({{< relref "/blog/getting-started-with-k8s-part3" >}})
-- [Getting Started with Kubernetes: Stateful Applications]({{< relref "/blog/getting-started-with-k8s-part4" >}})
-- [Getting Started With Kubernetes: Networking]({{< relref "/blog/getting-started-with-k8s-part5" >}})
-- [Getting Started With Kubernetes: Day 2]({{< relref "/blog/getting-started-with-k8s-part6" >}})
+- [Getting Started With Kubernetes: Clusters and Nodes](/blog/getting-started-with-k8s-part1)
+- [Getting Started With Kubernetes: Application Basics](/blog/getting-started-with-k8s-part2)
+- [Getting Started With Kubernetes: Advanced Deployment](/blog/getting-started-with-k8s-part3)
+- [Getting Started with Kubernetes: Stateful Applications](/blog/getting-started-with-k8s-part4)
+- [Getting Started With Kubernetes: Networking](/blog/getting-started-with-k8s-part5)
+- [Getting Started With Kubernetes: Day 2](/blog/getting-started-with-k8s-part6)
 
 ## Azure Kubernetes Service
 

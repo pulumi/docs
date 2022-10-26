@@ -27,7 +27,7 @@ development a breeze. In languages with an interactive shell, it's natural to us
 with new APIs. In each of these cases, engineers find value in being able to focus on writing code,
 not typing console commands.
 
-That's why [pulumi watch mode]({{< relref "/blog/pulumi-watch-mode-fast-inner-loop-development-for-cloud-infrastructure" >}})
+That's why [pulumi watch mode](/blog/pulumi-watch-mode-fast-inner-loop-development-for-cloud-infrastructure/)
 exists and is one of my favorite features, and it's why I was disappointed to learn this feature was
 not available to users on Apple Silicon Macs. As a Windows and Linux user, I discovered this while
 root causing a Pulumi provider's failing build to the library used to implement watch mode. Thus
@@ -146,5 +146,5 @@ infrastructure as code. Implementing watch mode in Rust applied that principle t
 maintaining performance, moving the feature to a well-maintained footing, and expanding support to
 every platform Pulumi supports.
 
-Give [`pulumi watch`]({{< relref "/docs/reference/cli/pulumi_watch" >}}) a try with our
-[getting started guide]({{< relref "/docs/get-started" >}})!
+Give [`pulumi watch`](/docs/reference/cli/pulumi_watch) a try with our
+[getting started guide](/docs/get-started/)!

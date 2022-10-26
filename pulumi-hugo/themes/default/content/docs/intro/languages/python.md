@@ -22,22 +22,22 @@ The fastest way to get up and running is to choose from one of the following Get
 
 <div class="tiles mt-4">
     <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="{{< relref "/docs/get-started/aws" >}}?language=python">
+        <a class="tile p-4" href="/docs/get-started/aws/?language=python">
             <img class="h-8 mx-auto" src="/logos/tech/aws.svg" alt="AWS">
         </a>
     </div>
     <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="{{< relref "/docs/get-started/azure" >}}?language=python">
+        <a class="tile p-4" href="/docs/get-started/azure/?language=python">
             <img class="h-8 mx-auto" src="/logos/tech/azure.svg" alt="Azure">
         </a>
     </div>
     <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="{{< relref "/docs/get-started/gcp" >}}?language=python">
+        <a class="tile p-4" href="/docs/get-started/gcp/?language=python">
             <img class="h-8 mx-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
         </a>
     </div>
     <div class="flex-1 pb-4">
-        <a class="tile p-4" href="{{< relref "/docs/get-started/kubernetes" >}}?language=python">
+        <a class="tile p-4" href="/docs/get-started/kubernetes/?language=python">
             <img class="h-8 mx-auto" src="/logos/tech/k8s.svg" alt="Kubernetes">
         </a>
     </div>
@@ -46,13 +46,13 @@ The fastest way to get up and running is to choose from one of the following Get
 ## Pulumi Programming Model
 
 The Pulumi programming model defines the core concepts you will use when creating infrastructure as code programs using
-Pulumi. [Architecture & Concepts]({{< relref "/docs/intro/concepts" >}}) describes these concepts
+Pulumi. [Architecture & Concepts](/docs/intro/concepts) describes these concepts
 with examples available in Python. These concepts are made available to you in the Pulumi SDK.
 
 The Pulumi SDK is available to Python developers as a Pip package distributed on PyPI. To learn more,
-[refer to the Pulumi SDK Reference Guide]({{< relref "/docs/reference/pkg/python/pulumi" >}}).
+[refer to the Pulumi SDK Reference Guide](/docs/reference/pkg/python/pulumi/).
 
-The Pulumi programming model includes a core concept of `Input` and `Output` values, which are used to track how outputs of one resource flow in as inputs to another resource.  This concept is important to understand when getting started with Python and Pulumi, and the [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) documentation is recommended to get a feel for how to work with this core part of Pulumi in common cases.
+The Pulumi programming model includes a core concept of `Input` and `Output` values, which are used to track how outputs of one resource flow in as inputs to another resource.  This concept is important to understand when getting started with Python and Pulumi, and the [Inputs and Outputs](/docs/intro/concepts/inputs-outputs/) documentation is recommended to get a feel for how to work with this core part of Pulumi in common cases.
 
 ## Using Pulumi PyPI Packages {#pypi-packages}
 
@@ -116,7 +116,7 @@ When managing the virtual environment on your own, you'll need to run any `pulum
 
 ### Adding a new dependency {#packages}
 
-There are many [Pulumi Python packages]({{< relref "/docs/reference/pkg" >}}) available.
+There are many [Pulumi Python packages](/docs/reference/pkg/) available.
 
 To install a new dependency in the virtual environment, add an entry to `requirements.txt`, and run the following in your project directory:
 

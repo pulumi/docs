@@ -9,13 +9,13 @@ tags:
   - azure
 ---
 
-Last September, we [announced the beta release of Pulumi Azure NextGen]({{< relref "/blog/announcing-nextgen-azure-provider" >}}): a new Microsoft Azure provider for Pulumi that combines same-day access to the entire [Azure API surface](https://docs.microsoft.com/en-us/rest/api/azure/) with the excellent Pulumi experience you know and love, including version-less resources, auto-naming, and auto-location.
+Last September, we [announced the beta release of Pulumi Azure NextGen](/blog/announcing-nextgen-azure-provider/): a new Microsoft Azure provider for Pulumi that combines same-day access to the entire [Azure API surface](https://docs.microsoft.com/en-us/rest/api/azure/) with the excellent Pulumi experience you know and love, including version-less resources, auto-naming, and auto-location.
 
-Today, we’re excited to announce that this new provider is now the default way to manage Azure resources with Pulumi. We’re also excited to announce its final name: the native Azure provider for Pulumi, or “Azure-Native” for short. You can get started with the new provider using our newly-updated [getting started guide]({{< relref "/docs/get-started/azure" >}}).
+Today, we’re excited to announce that this new provider is now the default way to manage Azure resources with Pulumi. We’re also excited to announce its final name: the native Azure provider for Pulumi, or “Azure-Native” for short. You can get started with the new provider using our newly-updated [getting started guide](/docs/get-started/azure/).
 
 <!--more-->
 
-Already use the [classic Pulumi-Azure provider](https://www.pulumi.com/docs/reference/pkg/azure/)? You can migrate to Azure-Native now using the [migration guide]({{< relref "/registry/packages/azure-native/from-classic" >}}). If you prefer to wait until general availability, stay tuned for updates: we expect to reach general availability in the spring of this year.
+Already use the [classic Pulumi-Azure provider](https://www.pulumi.com/docs/reference/pkg/azure/)? You can migrate to Azure-Native now using the [migration guide](/registry/packages/azure-native/from-classic/). If you prefer to wait until general availability, stay tuned for updates: we expect to reach general availability in the spring of this year.
 
 Alongside this announcement, we’re also formalizing a new concept: a Pulumi “native provider”. A native provider provides functionality mapped directly from the underlying API; in the case of the new Azure Provider, functionality is mapped directly from the Azure Resource Manager API surface. Going forward, you’ll be able to find these next-generation Pulumi providers directly from the name by looking for the “-Native” suffix.
 
@@ -235,7 +235,7 @@ Note that the Azure resources are not affected by this migration.
 
 ## Getting Started
 
-If you are new to Pulumi, follow our [Get Started]({{< relref "/docs/get-started/azure" >}}) guide.
+If you are new to Pulumi, follow our [Get Started](/docs/get-started/azure/) guide.
 
 From now on, the `azure-*` templates will reference the native Azure provider. It's easier to get started than ever:
 

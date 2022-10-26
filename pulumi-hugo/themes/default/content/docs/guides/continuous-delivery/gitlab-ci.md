@@ -25,7 +25,7 @@ altered to fit into any existing type of deployment setup.
 - An account on [https://app.pulumi.com](https://app.pulumi.com) and that you have created a new project.
     - This just means you will sign-in using your GitLab credentials.
     - However, pulumi can be run from anywhere and your infrastructure code itself can be hosted anywhere.
-- The [latest CLI]({{< relref "/docs/get-started/install" >}}).
+- The [latest CLI](/docs/get-started/install/).
 - A bare repo and set the remote URL to be your GitLab project.
 
 ## Stack and Branch Mappings
@@ -37,7 +37,7 @@ The source code for the stack is in a repository in GitLab and uses `TypeScript`
 **Note**: The names used above are purely for demonstration purposes only.
 You may choose a naming convention that best suits your organization.
 
-Alternatively, you can also run `pulumi new [template]` to create a [template project]({{< relref "/docs/reference/cli/pulumi_new" >}}).
+Alternatively, you can also run `pulumi new [template]` to create a [template project](/docs/reference/cli/pulumi_new/).
 
 ## GitLab CI Runners
 
@@ -70,7 +70,7 @@ To use Pulumi within GitLab CI, there are a few environment variables you'll nee
 build.
 
 The first is `PULUMI_ACCESS_TOKEN`, which is required to authenticate with pulumi.com in order to
-perform the preview or update. You can [create a new Pulumi access token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}}) specifically for your
+perform the preview or update. You can [create a new Pulumi access token](/docs/intro/pulumi-service/accounts#access-tokens) specifically for your
 CI/CD job on your [Pulumi Account page](https://app.pulumi.com/account/tokens).
 
 Next, you will also need to set environment variables specific to your cloud resource provider.
@@ -196,6 +196,6 @@ pulumi up --yes
 
 Pulumi now supports enhancing your merge requests with insights into changes to your infrastructure.
 Never miss another unintended change with the infrastructure change summary shown inline with the rest of your
-merge request notes. Learn how to [configure]({{< relref "gitlab-app" >}}) the integration with Pulumi.
+merge request notes. Learn how to [configure](/docs/guides/continuous-delivery/gitlab-app/) the integration with Pulumi.
 
 ![Merge Request Note](/images/docs/guides/continuous-delivery/gitlab-app/merge_request_note.png)

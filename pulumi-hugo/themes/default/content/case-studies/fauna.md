@@ -48,7 +48,7 @@ Fauna’s engineers needed a modern, cloud engineering solution that would meet 
 
 ### Why Pulumi?
 
-Fauna chose Pulumi because it would allow its developers to adopt modern, [cloud engineering](/cloud-engineering) practices out-of-the-box and increase velocity. With Pulumi, developers can build infrastructure as code with standard languages they already know, such as Python, TypeScript/JavaScript, Go, and C#. They can deploy infrastructure changes through existing CI/CD pipelines, just like application code. Finally, they can manage cloud infrastructure and applications with full visibility into every resource, access controls, and Policy as Code.
+Fauna chose Pulumi because it would allow its developers to adopt modern, [cloud engineering](/cloud-engineering/) practices out-of-the-box and increase velocity. With Pulumi, developers can build infrastructure as code with standard languages they already know, such as Python, TypeScript/JavaScript, Go, and C#. They can deploy infrastructure changes through existing CI/CD pipelines, just like application code. Finally, they can manage cloud infrastructure and applications with full visibility into every resource, access controls, and Policy as Code.
 
 ### How Fauna Built Region Groups with Pulumi
 
@@ -76,7 +76,7 @@ Fauna could also easily integrate its secrets manager tool, HashiCorp Vault, wit
 
 ### Future plans
 
-Fauna is using Pulumi's [Automation API]({{< relref "/automation">}}) to manage its quality assurance clusters and plans to extend its use in production clusters to further automate its infrastructure deployment process by running changes through a CI/CD pipeline. Automation API enables Fauna to use the Pulumi engine as an SDK and build applications that dynamically manage infrastructure. Fauna also plans to adopt Pulumi’s [AWS Native Provider]({{< relref "/blog/announcing-aws-native" >}}), which provides 100% coverage of resources in the AWS Cloud Control API and has same-day access to new AWS launches.
+Fauna is using Pulumi's [Automation API](/automation/) to manage its quality assurance clusters and plans to extend its use in production clusters to further automate its infrastructure deployment process by running changes through a CI/CD pipeline. Automation API enables Fauna to use the Pulumi engine as an SDK and build applications that dynamically manage infrastructure. Fauna also plans to adopt Pulumi’s [AWS Native Provider](/blog/announcing-aws-native/), which provides 100% coverage of resources in the AWS Cloud Control API and has same-day access to new AWS launches.
 
 ### How Pulumi Benefits Fauna
 

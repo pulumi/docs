@@ -32,7 +32,7 @@ In this tutorial, we will show you how to deploy a simple webserver using an Ama
 
 ### Step 1: Create a new project from a template
 
-Create a project directory, `webserver`, and change into it. Run [`pulumi new aws-<language> --name myproject`]({{< relref "/docs/reference/cli/pulumi_new" >}}) to create a new project using the AWS template for your chosen language. Replace `myproject` with your desired project name.
+Create a project directory, `webserver`, and change into it. Run [`pulumi new aws-<language> --name myproject`](/docs/reference/cli/pulumi_new) to create a new project using the AWS template for your chosen language. Replace `myproject` with your desired project name.
 
 {{< chooser language "javascript,typescript,python,csharp" / >}}
 
@@ -229,7 +229,7 @@ return await Deployment.RunAsync(() =>
 
 > **Note:** The example configuration is designed to work on most EC2 accounts, with access to a default VPC. For EC2 Classic users, please use t1.micro for `size`.
 
-This example uses the [`ec2` module of the `aws` package]({{< relref "/registry/packages/aws/api-docs/ec2" >}}) to create two resources:
+This example uses the [`ec2` module of the `aws` package](/registry/packages/aws/api-docs/ec2) to create two resources:
 
 | AWS Resource | Description | Resource |
 |--------------|-------------|----------|
@@ -238,7 +238,7 @@ This example uses the [`ec2` module of the `aws` package]({{< relref "/registry/
 
 ### Step 3: Preview and deploy your resources
 
-To preview your Pulumi program, run [`pulumi up`]({{< relref "/docs/reference/cli/pulumi_up" >}}). The command shows a preview of the resources that will be created and prompts you to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
+To preview your Pulumi program, run [`pulumi up`](/docs/reference/cli/pulumi_up). The command shows a preview of the resources that will be created and prompts you to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
 
 ```bash
 Previewing update (webserver-dev):
@@ -288,7 +288,7 @@ To see the full details of the deployment and the resources that are now part of
 
 #### **Pulumi CLI**
 
-To view the provisioned resources on the command line, run [`pulumi stack`]({{< relref "/docs/reference/cli/pulumi_stack" >}}). You'll also see two [stack outputs]({{< relref "/docs/intro/concepts/stack#outputs" >}}) corresponding to the IP and the fully qualified domain name (FQDN) of the EC2 instance we've created.
+To view the provisioned resources on the command line, run [`pulumi stack`](/docs/reference/cli/pulumi_stack). You'll also see two [stack outputs](/docs/intro/concepts/stack#outputs) corresponding to the IP and the fully qualified domain name (FQDN) of the EC2 instance we've created.
 
 ```
 Current stack is webserver-dev:
@@ -543,12 +543,12 @@ In this tutorial, we showed you how to use Pulumi programs to create and manage 
 {{< /summary >}}
 
 <!-- Common links -->
-[EC2 Instance]: {{< relref "/registry/packages/aws/api-docs/ec2/instance" >}}
-[Security Group]: {{< relref "/registry/packages/aws/api-docs/ec2/securitygroup" >}}
+[EC2 Instance]: /registry/packages/aws/api-docs/ec2/instance/
+[Security Group]: /registry/packages/aws/api-docs/ec2/securitygroup/
 <!-- End common links -->
 
 ## Next Steps
 
-- [Containers on ECS Fargate]({{< relref "/registry/packages/aws/how-to-guides/ecs-fargate" >}})
-- [API Gateways and Lambda]({{< relref "/registry/packages/aws/how-to-guides/rest-api" >}})
-- [Serve a Static Website from S3]({{< relref "/registry/packages/aws/how-to-guides/s3-website" >}})
+- [Containers on ECS Fargate](/registry/packages/aws/how-to-guides/ecs-fargate/)
+- [API Gateways and Lambda](/registry/packages/aws/how-to-guides/rest-api/)
+- [Serve a Static Website from S3](/registry/packages/aws/how-to-guides/s3-website/)

@@ -17,7 +17,7 @@ This guide walks you through configuring your Azure Active Directory (Azure AD) 
 
 ## Prerequisites
 
-- [Single Sign-On]({{< relref "sso" >}})
+- [Single Sign-On](/docs/guides/saml/sso/)
 
 ## Configuring Azure AD
 
@@ -99,7 +99,7 @@ download the SAML application's configuration data and then pass that to Pulumi.
 
 1. Sign into the Pulumi Service and navigate to your SAML organization. Navigate to the
   **Settings** tab and then select **Access Management**.
-  
+
 1. Select the **Change Requirements** button and then **SAML SSO**.
 
 1. Open up the XML document you downloaded from the Azure AD portal, and paste its full contents

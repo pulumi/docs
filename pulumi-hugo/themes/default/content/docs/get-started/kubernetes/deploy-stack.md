@@ -55,7 +55,7 @@ Resources:
 Duration: 11s
 ```
 
-The name of the deployment that we exported is shown as a [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}).
+The name of the deployment that we exported is shown as a [stack output](/docs/intro/concepts/stack#outputs).
 
 {{< console-note >}}
 

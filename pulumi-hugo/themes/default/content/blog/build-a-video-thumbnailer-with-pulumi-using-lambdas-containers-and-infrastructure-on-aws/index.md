@@ -47,7 +47,7 @@ If you're on Windows, run this:
     SET "PATH=%PATH%;%USERPROFILE%.pulumiin"
 
 You'll deploy this app to your own AWS account, so follow the steps
-to [configure your AWS account]({{< relref "/registry/packages/aws/installation-configuration" >}}).
+to [configure your AWS account](/registry/packages/aws/installation-configuration/).
 
 Make sure you have [Node.js](https://nodejs.org/en/download/) installed,
 with a version of 6.10.x or later.
@@ -184,8 +184,7 @@ Upload an .mp4 video to your S3 bucket, making sure to encode the
 desired time index in the filename. For instance,
 use `myvideo_00-02.mp4` to extract the frame at 0 minutes and 2 seconds.
 
-You can [use this video of my
-cat](https://github.com/pulumi/examples/blob/master/cloud-js-thumbnailer/sample/cat.mp4),
+You can [use this video of my cat](https://github.com/pulumi/examples/blob/master/cloud-js-thumbnailer/sample/cat.mp4),
 which you should save as `cat_00-01.mp4`.
 
 Upload this video in the S3 console. Or, use the AWS CLI along with

@@ -53,8 +53,7 @@ Resources:
 Duration: 1s
 ```
 
-To delete the stack itself, run [`pulumi stack rm`]({{< relref
-"/docs/reference/cli/pulumi_stack_rm" >}}). Note that this removes the stack
+To delete the stack itself, run [`pulumi stack rm`](/docs/reference/cli/pulumi_stack_rm). Note that this removes the stack
 entirely from the Pulumi Service, along with all of its update history.
 
 Next, we'll look at some next steps.

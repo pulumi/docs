@@ -13,7 +13,7 @@ index: 3
 estimated_time: 15
 meta_image: meta.png
 authors:
-    - santamaria
+    - laura-santamaria
 tags:
     - learn
 links:

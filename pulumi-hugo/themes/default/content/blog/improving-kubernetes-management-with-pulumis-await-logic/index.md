@@ -25,11 +25,11 @@ deployed or created.
 <!--more-->
 
 We've
-[**previously talked about**]({{< relref "kubespy-and-the-lifecycle-of-a-kubernetes-pod-in-four-images" >}})
-how Pulumi [**tracks the status**]({{< relref "kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service" >}})
+[**previously talked about**](/blog/kubespy-and-the-lifecycle-of-a-kubernetes-pod-in-four-images)
+how Pulumi [**tracks the status**](/blog/kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service)
 of Kubernetes resources to provide fine-grained status messages for both
-your [**infrastructure and applications**]({{< relref "how-do-kubernetes-deployments-work-an-adversarial-perspective" >}}).
-Pulumi [**uses a resource graph**]({{< relref "/docs/intro/concepts/how-pulumi-works" >}})
+your [**infrastructure and applications**](/blog/how-do-kubernetes-deployments-work-an-adversarial-perspective).
+Pulumi [**uses a resource graph**](/docs/intro/concepts/how-pulumi-works)
 for orchestration, dependency management, differential updates, and
 cascading rollouts.
 
@@ -48,7 +48,7 @@ Pulumi's sophisticated await logic helps customers with a couple use
 cases:
 
 1) Visualize fine-grained, live, single-view status updates for all of
-the Kubernetes cluster resources belonging to a [**Pulumi stack**]({{< relref "/docs/intro/concepts/stack" >}}). Most applications
+the Kubernetes cluster resources belonging to a [**Pulumi stack**](/docs/intro/concepts/stack). Most applications
 deployed to Kubernetes have a variety of interacting components,
 including Pods, Deployments, Secrets, Persistent Volumes, Config Maps,
 Ingress and more. Rather than requiring multiple commands like
@@ -60,7 +60,7 @@ stacks of cloud resources, simplifying the process of adding new
 applications, or sharing responsibilities between teams.
 
 2) Reliably integrate with
-[**CI/CD systems**]({{< relref "/docs/guides/continuous-delivery" >}}) for infrastructure and
+[**CI/CD systems**](/docs/guides/continuous-delivery) for infrastructure and
 application deployments without requiring hardcoded timeouts, or
 scripting kubectl and parsing the resulting JSON/YAML to detect errors.
 If errors are encountered, Pulumi automatically surfaces the relevant
@@ -109,20 +109,20 @@ interesting edge cases!
 
 If you'd like to learn about Pulumi and how to manage your
 infrastructure and Kubernetes through code,
-[click here to get started today]({{< relref "/docs/get-started" >}}). Pulumi is open source and free to
+[click here to get started today](/docs/get-started/). Pulumi is open source and free to
 use.
 
 If you'd like to go deeper on certain topics, here are some additional
 resources to check out:
 
-- [Overview of Pulumi Kubernetes Scenarios]({{< relref "/topics/kubernetes" >}})
+- [Overview of Pulumi Kubernetes Scenarios](/kubernetes/)
 - Tutorial: Create a Kubernetes cluster on a cloud provider
-  [Amazon EKS]({{< relref "/registry/packages/kubernetes/how-to-guides/eks" >}}),
-  [Google GKE]({{< relref "/registry/packages/kubernetes/how-to-guides/gke" >}}), or
+  [Amazon EKS](/registry/packages/kubernetes/how-to-guides/eks/),
+  [Google GKE](/registry/packages/kubernetes/how-to-guides/gke/), or
   [Azure AKS](https://github.com/pulumi/examples/tree/master/classic-azure-ts-aks-mean)
-- Tutorial: [Operate and deploy to a Kubernetes cluster]({{< relref "/registry/packages/kubernetes/how-to-guides/exposed-deployment" >}})
-- Docs: [Pulumi docs]({{< relref "/docs/reference" >}}), including an
-  [overview of the programming model]({{< relref "/docs/intro/concepts" >}})
+- Tutorial: [Operate and deploy to a Kubernetes cluster](/registry/packages/kubernetes/how-to-guides/exposed-deployment/)
+- Docs: [Pulumi docs](/docs/reference/), including an
+  [overview of the programming model](/docs/intro/concepts/)
 - Video: [Watch Joe Beda take Pulumi for a spin in last week's TGIK](https://www.youtube.com/watch?v=ILMK65YVSKw)
 
 As always, you can check out our code
@@ -134,4 +134,4 @@ any questions, need support, or just want to say hello.
 
 If you'd like to chat with our team, or get hands-on assistance with
 migrating your existing configuration code (including ksonnet programs)
-to Pulumi, please don't hesitate [to drop us a line]({{< relref "/contact.md" >}}).
+to Pulumi, please don't hesitate [to drop us a line](/contact/).

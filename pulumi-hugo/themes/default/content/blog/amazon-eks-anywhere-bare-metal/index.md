@@ -18,7 +18,7 @@ tags:
 
 Some of the largest and most complex deployments that teams manage are hybrid and multi-cloud deployments. Kubernetes is a common component in these deployments because it enables platform teams to provide a common set of services across cloud and on-premises infrastructure and simplifies the process of migrating and scaling workloads as demand fluctuates. Pulumi simplifies these deployment scenarios but teams often need to manage different flavors of Kubernetes for on-premises deployments versus cloud deployments.
 
-We were excited to [support the launch of the Amazon EKS Distro]({{< relref "/blog/amazon-eks-distro" >}}) in 2020 as it promised to help customers standardize their Kubernetes version and its dependencies. When [EKS Anywhere](https://aws.amazon.com/blogs/aws/amazon-eks-anywhere-now-generally-available-to-create-and-manage-kubernetes-clusters-on-premises/) launched last year, the pieces were starting to fall into place to enable consistent tooling for managing Kubernetes across your datacenter and in any cloud.
+We were excited to [support the launch of the Amazon EKS Distro](/blog/amazon-eks-distro/) in 2020 as it promised to help customers standardize their Kubernetes version and its dependencies. When [EKS Anywhere](https://aws.amazon.com/blogs/aws/amazon-eks-anywhere-now-generally-available-to-create-and-manage-kubernetes-clusters-on-premises/) launched last year, the pieces were starting to fall into place to enable consistent tooling for managing Kubernetes across your datacenter and in any cloud.
 
 ## How it works (the short version)
 
@@ -68,7 +68,7 @@ const page = new eksa.metal.Cluster("cluster", {
 
 To use the component, take the following steps:
 
-1. Make sure you’ve followed the steps to [setup Pulumi and AWS]({{< relref "/docs/get-started/aws/begin" >}})
+1. Make sure you’ve followed the steps to [setup Pulumi and AWS](/docs/get-started/aws/begin/)
 
 1. Grab the EKS-A component and example code [on Pulumiverse](https://github.com/pulumiverse/pulumi-aws-eksa).
 

@@ -14,14 +14,14 @@ tags:
 Another great iteration has just wrapped up, so it's time for another edition of the Pulumi release notes! We've been busy smashing bugs across our products (over 100!), but we've also got several new updates across Pulumi providers, the CLI, and the Pulumi Service:
 
 - New and updated cloud providers
-  - [Pulumi Kubernetes Operator supports GitOps workflow]({{< relref "/blog/pulumi-release-notes-m59#pulumi-kubernetes-operator-supports-gitops-workflow" >}})
-  - [12 new resources in the Azure Native provider]({{< relref "/blog/pulumi-release-notes-m59#12-new-resources-in-the-azure-native-provider" >}})
-  - [Google Native: autonaming; easier management of project and region settings]({{< relref "/blog/pulumi-release-notes-m59#google-native-autonaming-easier-management-of-project-and-region-settings" >}})
+  - [Pulumi Kubernetes Operator supports GitOps workflow](/blog/pulumi-release-notes-m59#pulumi-kubernetes-operator-supports-gitops-workflow)
+  - [12 new resources in the Azure Native provider](/blog/pulumi-release-notes-m59#12-new-resources-in-the-azure-native-provider)
+  - [Google Native: autonaming; easier management of project and region settings](/blog/pulumi-release-notes-m59#google-native-autonaming-easier-management-of-project-and-region-settings)
 - Pulumi CLI and core technologies
-  - [Automation API: Select your backend]({{< relref "/blog/pulumi-release-notes-m59#automation-api-select-your-backend" >}})
-  - [Better handling of subtypes in Python]({{< relref "/blog/pulumi-release-notes-m59#better-handling-of-subtypes-in-python" >}})
+  - [Automation API: Select your backend](/blog/pulumi-release-notes-m59#automation-api-select-your-backend)
+  - [Better handling of subtypes in Python](/blog/pulumi-release-notes-m59#better-handling-of-subtypes-in-python)
 - Pulumi Service and Pulumi.com
-  - [Get started with Pulumi, directly from the Pulumi Service]({{< relref "/blog/pulumi-release-notes-m59#get-started-with-pulumi-directly-from-the-pulumi-service" >}})
+  - [Get started with Pulumi, directly from the Pulumi Service](/blog/pulumi-release-notes-m59#get-started-with-pulumi-directly-from-the-pulumi-service)
 
 <!--more-->
 

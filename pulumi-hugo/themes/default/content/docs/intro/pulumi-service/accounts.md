@@ -25,9 +25,9 @@ Your account lets you authenticate with the Pulumi Service, where you can do the
 following:
 
 * Manage your profile settings, including your account password, access tokens, and subscriptions
-* [Add an organization]({{< relref "/docs/intro/pulumi-service/organizations" >}}) backed by Atlassian, GitHub, GitLab, or a SAML
+* [Add an organization](/docs/intro/pulumi-service/organizations/) backed by Atlassian, GitHub, GitLab, or a SAML
   2.0-compatible identity provider, such as Active Directory, Okta, or Google Workspace.
-* [Manage your projects and stacks]({{< relref "/docs/intro/pulumi-service/projects-and-stacks" >}})
+* [Manage your projects and stacks](/docs/intro/pulumi-service/projects-and-stacks/)
 
 ## Profile
 
@@ -71,9 +71,9 @@ For users who signed up with email, you may change your password by:
 
 Use access tokens to sign into the Pulumi Service via the CLI. On this page there is a list of all the access tokens associated with your account, including a description and last used information for each token.
 
-When you run [`pulumi login`]({{< relref "/docs/reference/cli/pulumi_login" >}}) from the command line, you will be prompted for an access token. Once obtained, the access token logs you into the Pulumi Service and lets you interact with the Pulumi service and manage your stacks.
+When you run [`pulumi login`](/docs/reference/cli/pulumi_login) from the command line, you will be prompted for an access token. Once obtained, the access token logs you into the Pulumi Service and lets you interact with the Pulumi service and manage your stacks.
 
-These access tokens have the same permission as your user. If  you instead would like to scope the token to an organization, review the [Organization Access Tokens documentation]({{< relref "/docs/intro/pulumi-service/organization-access-tokens" >}}).
+These access tokens have the same permission as your user. If  you instead would like to scope the token to an organization, review the [Organization Access Tokens documentation](/docs/intro/pulumi-service/organization-access-tokens/).
 
 ![Access tokens](/images/docs/reference/service/access-tokens.png)
 

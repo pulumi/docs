@@ -23,7 +23,7 @@ meta_image: /images/challenge/challenge_cta.png
         A <a href="https://app.pulumi.com/signup" target="_blank" rel="noopener noreferrer">Pulumi account</a>
       </li>
       <li>
-        The <a href="{{< relref "/docs/get-started/install/" >}}" target="_blank" rel="noopener noreferrer">Pulumi CLI</a>
+        The <a href="/docs/get-started/install/" target="_blank" rel="noopener noreferrer">Pulumi CLI</a>
       </li>
       <li>
         AWS account

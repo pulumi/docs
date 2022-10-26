@@ -14,17 +14,17 @@ tags:
 In this update:
 
 - New and updated cloud providers
-  - [Pulumi supports Confluent Cloud]({{< relref "/blog/pulumi-release-notes-m58#pulumi-supports-confluent-cloud" >}})
-  - [GitHub Actions guide in all languages]({{< relref "/blog/pulumi-release-notes-m58#github-actions-guide-in-all-languages" >}})
-  - [Kubernetes: new `skipAwait` option]({{< relref "/blog/pulumi-release-notes-m58#kubernetes-new-skipawait-option" >}})
-  - [10 new resources in the Azure Native provider]({{< relref "/blog/pulumi-release-notes-m58#10-new-resources-in-the-azure-native-provider" >}})
-  - [Google Native provider adds support for enums and more]({{< relref "/blog/pulumi-release-notes-m58#google-native-provider-adds-support-for-enums-and-more" >}})
+  - [Pulumi supports Confluent Cloud](/blog/pulumi-release-notes-m58#pulumi-supports-confluent-cloud)
+  - [GitHub Actions guide in all languages](/blog/pulumi-release-notes-m58#github-actions-guide-in-all-languages)
+  - [Kubernetes: new `skipAwait` option](/blog/pulumi-release-notes-m58#kubernetes-new-skipawait-option)
+  - [10 new resources in the Azure Native provider](/blog/pulumi-release-notes-m58#10-new-resources-in-the-azure-native-provider)
+  - [Google Native provider adds support for enums and more](/blog/pulumi-release-notes-m58#google-native-provider-adds-support-for-enums-and-more)
 - Pulumi CLI and core technologies
-  - [New `replaceOnChanges` resource option]({{< relref "/blog/pulumi-release-notes-m58#new-replaceonchanges-resource-option" >}})
-  - [`pulumi watch` now supports a `--path` option]({{< relref "/blog/pulumi-release-notes-m58#pulumi-watch-now-supports-a---path-option" >}})
-  - [Improved Python performance]({{< relref "/blog/pulumi-release-notes-m58#improved-python-performance" >}})
+  - [New `replaceOnChanges` resource option](/blog/pulumi-release-notes-m58#new-replaceonchanges-resource-option)
+  - [`pulumi watch` now supports a `--path` option](/blog/pulumi-release-notes-m58#pulumi-watch-now-supports-a---path-option)
+  - [Improved Python performance](/blog/pulumi-release-notes-m58#improved-python-performance)
 - Pulumi Service and Pulumi.com
-  - [New usage-based pricing for your whole team]({{< relref "/blog/pulumi-release-notes-m58#new-usage-based-pricing-for-your-whole-team" >}})
+  - [New usage-based pricing for your whole team](/blog/pulumi-release-notes-m58#new-usage-based-pricing-for-your-whole-team)
 
 <!--more-->
 
@@ -109,7 +109,7 @@ class Program
 
 {{< /chooser >}}
 
-Get started in the [Confluent Cloud provider docs]({{< relref "/registry/packages/confluent" >}}).
+Get started in the [Confluent Cloud provider docs](/registry/packages/confluent/).
 
 ### GitHub Actions guide in all languages
 
@@ -243,7 +243,7 @@ jobs:
 
 {{< /chooser >}}
 
-Learn more in the [GitHub Actions User Guide]({{< relref "/docs/guides/continuous-delivery/github-actions" >}})
+Learn more in the [GitHub Actions User Guide](/docs/guides/continuous-delivery/github-actions/)
 
 ### Kubernetes: new `skipAwait` option
 
@@ -310,4 +310,4 @@ We launched Pulumi Team Edition, a new way for teams to adopt and use Pulumi and
 
 ![Screenshot of new pricing tiers from https://pulumi.com/pricing](pricing-page.png)
 
-Learn more in the [pricing announcement blog post]({{< relref "/blog/announcing-new-usage-based-pricing-for-your-whole-team" >}})
+Learn more in the [pricing announcement blog post](/blog/announcing-new-usage-based-pricing-for-your-whole-team/)

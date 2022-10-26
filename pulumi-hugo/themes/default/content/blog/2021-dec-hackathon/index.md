@@ -11,7 +11,7 @@ tags:
     - pulumi-culture
 ---
 
-Pulumi's [hackathon tradition]({{< relref "/blog/multi-lang-hackathon" >}}) continued in the last weeks of 2021 with our 2021 December hackathon. For one solid week, we had teams from across the company focus on improvements across the Pulumi ecosystem, and we brought in people from outside the engineering org to get perspectives on different needs. While there were some projects that were focused on internal work, there were still quite a few open-source projects that we can talk about publicly. We'll get more details from some of those teams over a few more posts. In this post, however, we're going to explore a bit about how we worked.
+Pulumi's [hackathon tradition](/blog/multi-lang-hackathon/) continued in the last weeks of 2021 with our 2021 December hackathon. For one solid week, we had teams from across the company focus on improvements across the Pulumi ecosystem, and we brought in people from outside the engineering org to get perspectives on different needs. While there were some projects that were focused on internal work, there were still quite a few open-source projects that we can talk about publicly. We'll get more details from some of those teams over a few more posts. In this post, however, we're going to explore a bit about how we worked.
 
 ## Setting up for success
 
@@ -30,4 +30,4 @@ During the demo at the end of the hackathon, we asked teams to self-report which
 ---
 We'll have more from each team soon! Keep watch on this space for new posts about hackathon projects.
 
-If you like our way of working and are interested in a new position, we have a lot of positions open right now and will have more in the future! Please head over to our [careers page]({{< relref "/careers" >}}) to find out how to apply.
+If you like our way of working and are interested in a new position, we have a lot of positions open right now and will have more in the future! Please head over to our [careers page](/careers/) to find out how to apply.

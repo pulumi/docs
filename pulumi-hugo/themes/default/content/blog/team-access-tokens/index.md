@@ -16,11 +16,11 @@ tags:
     - pulumi-service
 ---
 
-A few months ago we launched [Organization Access Tokens]({{< relref "/blog/organization-access-tokens" >}}) for the [Pulumi Service]({{< relref "/product/pulumi-service" >}}) and saw overwhelmingly fast adoption from our customer base. Based on this customer demand, and existing customer feedback, we prioritized improvements in the scoping of access tokens. Today, we are launching Team Access Tokens, which allow Organization and Team Admins to create access tokens scoped to a [Pulumi Team]({{< relref "/docs/intro/pulumi-service/teams" >}}). Pulumi Service customers on the Enterprise and Business Critical editions can use Pulumi Teams to set role-based access controls (RBAC) for stacks by enabling Organization administrators to assign a set of stack permissions to a group of users.
+A few months ago we launched [Organization Access Tokens](/blog/organization-access-tokens/) for the [Pulumi Service](/product/pulumi-service/) and saw overwhelmingly fast adoption from our customer base. Based on this customer demand, and existing customer feedback, we prioritized improvements in the scoping of access tokens. Today, we are launching Team Access Tokens, which allow Organization and Team Admins to create access tokens scoped to a [Pulumi Team](/docs/intro/pulumi-service/teams/). Pulumi Service customers on the Enterprise and Business Critical editions can use Pulumi Teams to set role-based access controls (RBAC) for stacks by enabling Organization administrators to assign a set of stack permissions to a group of users.
 
 <!--more-->
 
-Since Pulumi Teams are only available on these editions, Team Access Tokens are also only available to customers on the Enterprise and Business Critical editions of the Pulumi Service. See the [Team Access Tokens]({{< relref "/docs/intro/pulumi-service/team-access-tokens" >}}) documentation for more information on how to use the feature.
+Since Pulumi Teams are only available on these editions, Team Access Tokens are also only available to customers on the Enterprise and Business Critical editions of the Pulumi Service. See the [Team Access Tokens](/docs/intro/pulumi-service/team-access-tokens/) documentation for more information on how to use the feature.
 
 ## See it in action!
 
@@ -28,7 +28,7 @@ Since Pulumi Teams are only available on these editions, Team Access Tokens are 
 
 ## Hear from our customers
 
-[Snowflake]({{< relref "/case-studies/snowflake" >}}), a Pulumi customer, delivers the Data Cloud, a global network where thousands of organizations mobilize data with near-unlimited scale, concurrency, and performance. “Scoping down access tokens will help our Platform team manage Pulumi stacks at scale across multiple departments within Snowflake. When Organization Access Tokens came out we were quick to adopt them internally and intend to adopt Team Access Tokens now as well. Using Pulumi Teams and Team Access Tokens enables us to follow the principle of least privilege.” said Jonas-Taha El Sesiy, Senior Software Engineer at Snowflake.
+[Snowflake](/case-studies/snowflake/), a Pulumi customer, delivers the Data Cloud, a global network where thousands of organizations mobilize data with near-unlimited scale, concurrency, and performance. “Scoping down access tokens will help our Platform team manage Pulumi stacks at scale across multiple departments within Snowflake. When Organization Access Tokens came out we were quick to adopt them internally and intend to adopt Team Access Tokens now as well. Using Pulumi Teams and Team Access Tokens enables us to follow the principle of least privilege.” said Jonas-Taha El Sesiy, Senior Software Engineer at Snowflake.
 
 ## Feature overview
 

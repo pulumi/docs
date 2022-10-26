@@ -11,9 +11,9 @@ tags:
     - packages
 ---
 
-Today we’re excited to announce the availability of Pulumi 3.0, the next major version of the Pulumi open source project, and the foundation for Pulumi’s [Cloud Engineering Platform]({{< relref "/cloud-engineering" >}}).
+Today we’re excited to announce the availability of Pulumi 3.0, the next major version of the Pulumi open source project, and the foundation for Pulumi’s [Cloud Engineering Platform](/cloud-engineering/).
 
-Pulumi offers the most complete [infrastructure as code]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) platform for building, deploying and managing modern cloud infrastructure and applications.  Pulumi enables cloud engineers to use familiar languages to describe their cloud infrastructure - bringing core software engineering tools and practices to bear on managing and getting the maximum value from their cloud platforms of choice - across dozens of cloud and SaaS providers.
+Pulumi offers the most complete [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform for building, deploying and managing modern cloud infrastructure and applications.  Pulumi enables cloud engineers to use familiar languages to describe their cloud infrastructure - bringing core software engineering tools and practices to bear on managing and getting the maximum value from their cloud platforms of choice - across dozens of cloud and SaaS providers.
 
 Pulumi 3.0 includes dozens of significant new features and hundreds of improvements that build on this foundation.  This release includes more than 200 contributions from over 150 members of the Pulumi community, and builds on feedback from working with thousands of Pulumi users and customers over the last year.
 
@@ -29,21 +29,21 @@ Some of the most exciting new features in this release include:
 * **Improved Go and Python SDKs**: Updates to the core Go and Python SDKs make APIs simpler and more consistent, unlock more tooling support, and improve compile times - making it even easier to use all the benefits of your favorite programming language when building and managing cloud infrastructure.
 * **New Integrations and Features in the Pulumi Service**: Alongside Pulumi 3.0, users of the Pulumi Service also now have access to new dashboards for organization-level cloud infrastructure insights, a CI/CD Assistant for easy version control and CI/CD integration with just a few clicks, and new identity, access control, and auditing capabilities.
 
-👉 [Get started]({{< relref "/docs/get-started" >}}) with Pulumi 3.0 today or check out the [Pulumi 3.0 migration guide]({{< relref "/docs/get-started/install/migrating-3.0.md" >}}) to update your existing Pulumi projects to Pulumi 3.0.
+👉 [Get started](/docs/get-started/) with Pulumi 3.0 today or check out the [Pulumi 3.0 migration guide](/docs/get-started/install/migrating-3.0) to update your existing Pulumi projects to Pulumi 3.0.
 
 ## Pulumi Automation API
 
 Pulumi’s Automation API was released in preview last year and is now GA as part of Pulumi 3.0.  It provides an API for embedding Pulumi within your own applications, and supports all Pulumi languages including TypeScript/JavaScript, Python, Go, and C#.  Instead of working with the `pulumi` CLI directly, or writing scripts to execute the CLI within your CI/CD environment, you can now build your own software solutions that build on top of Pulumi’s robust, desired state infrastructure as code deployment engine.  It’s simple to embed Pulumi in your software-defined workflows with just [a few lines of code](https://github.com/pulumi/automation-api-examples).
 
-This opens up so many exciting new opportunities for how your team can manage cloud infrastructure; we’ve seen amazing creativity as Pulumi’s customers and communities have [created solutions]({{< relref "/blog/pulumiup-automation-api-ga#automation-api-in-the-wild" >}}) on top of Automation API.  In addition, Pulumi Automation API powers several other new features like the [Pulumi Kubernetes Operator]({{< relref "/blog/pulumi-kubernetes-operator" >}}), the [Pulumi GitHub Action v3](https://github.com/marketplace/actions/pulumi-cli-action), and [Concourse CI](https://github.com/ringods/pulumi-resource/) support for Pulumi.
+This opens up so many exciting new opportunities for how your team can manage cloud infrastructure; we’ve seen amazing creativity as Pulumi’s customers and communities have [created solutions](/blog/pulumiup-automation-api-ga#automation-api-in-the-wild) on top of Automation API.  In addition, Pulumi Automation API powers several other new features like the [Pulumi Kubernetes Operator](/blog/pulumi-kubernetes-operator/), the [Pulumi GitHub Action v3](https://github.com/marketplace/actions/pulumi-cli-action), and [Concourse CI](https://github.com/ringods/pulumi-resource/) support for Pulumi.
 
-👉 Read more in the [Pulumi Automation API]({{< relref "/blog/pulumiup-automation-api-ga" >}}) blog post.
+👉 Read more in the [Pulumi Automation API](/blog/pulumiup-automation-api-ga/) blog post.
 
 <img width="600" src="automation.png">
 
 ## Native Providers for Azure and Google Cloud
 
-Pulumi offers packages for managing cloud infrastructure in more than 50 cloud and SaaS applications, with more than a dozen new providers added since Pulumi 2.0 including partnerships with [Civo]({{< relref "/registry/packages/civo" >}}), [Venafi]({{< relref "/registry/packages/venafi" >}}), [Okta]({{< relref "/registry/packages/civo" >}}), [Auth0]({{< relref "/registry/packages/auth0" >}}), [Equinix Metal]({{< relref "/registry/packages/equinix-metal" >}}), [Spot Ocean for Azure]({{< relref "/registry/packages/spotinst/api-docs/azure/ocean" >}}), and [Splunk]({{< relref "/registry/packages/splunk" >}}).
+Pulumi offers packages for managing cloud infrastructure in more than 50 cloud and SaaS applications, with more than a dozen new providers added since Pulumi 2.0 including partnerships with [Civo](/registry/packages/civo/), [Venafi](/registry/packages/venafi/), [Okta](/registry/packages/civo/), [Auth0](/registry/packages/auth0/), [Equinix Metal](/registry/packages/equinix-metal/), [Spot Ocean for Azure](/registry/packages/spotinst/api-docs/azure/ocean/), and [Splunk](/registry/packages/splunk/).
 
 For the largest and most widely used cloud providers, we’ve created something new: Pulumi **native providers**, which give you the most complete and consistent interface for the modern cloud. These native providers are automatically generated from cloud provider APIs and resource models that are maintained directly by cloud provider service teams.  This enables native providers to offer 100% API coverage, same-day support for new features, the exact same API designed by the provider service team, and fewer bugs and reliability issues.  This makes native providers the best way to manage infrastructure in the supported cloud platforms, combining the benefits of Pulumi Infrastructure as Code with the resource models and pace of delivery of the cloud provider themselves.
 
@@ -55,13 +55,13 @@ Along with Pulumi 3.0, the new Azure Native provider, originally released in pre
 
 Today, we’re also excited to be releasing a preview of the new Google Cloud Native provider.  This native provider offers 100% coverage of the Google Cloud platform, with 70% more resource properties supported compared to the existing provider. It also supports every version of each supported resource, including alpha, beta, and GA Google Cloud offerings.
 
-👉 Read more in the [Pulumi Native Providers]({{< relref "/blog/pulumiup-native-providers" >}}) blog post and the [Pulumi Google Native Provider]({{< relref "/blog/pulumiup-google-native-provider" >}}) blog post. And of course, we haven’t forgotten AWS - an AWS Native provider is expected later this year.
+👉 Read more in the [Pulumi Native Providers](/blog/pulumiup-native-providers/) blog post and the [Pulumi Google Native Provider](/blog/pulumiup-google-native-provider/) blog post. And of course, we haven’t forgotten AWS - an AWS Native provider is expected later this year.
 
 ## Pulumi Packages and Multi-Language Components
 
 <img align="right" width="220" src="package.png">
 
-Pulumi Packages are the core technology that enables cloud infrastructure resource provisioning to be defined once, and made available to users in all languages supported by Pulumi. If you’ve ever used a cloud provider in Pulumi, you’ve used a Pulumi Package.  With Pulumi 3.0, we are extending Pulumi Packages to also support building and packaging [Pulumi Components]({{< relref "/docs/intro/concepts/resources#components" >}}): higher-level abstractions over cloud infrastructure patterns described as normal Pulumi programs.  This makes it easy to take a Pulumi program that defines a collection of resources and turn it into something reusable: a Pulumi Package that can be published and used by all Pulumi users, across all languages supported by Pulumi.
+Pulumi Packages are the core technology that enables cloud infrastructure resource provisioning to be defined once, and made available to users in all languages supported by Pulumi. If you’ve ever used a cloud provider in Pulumi, you’ve used a Pulumi Package.  With Pulumi 3.0, we are extending Pulumi Packages to also support building and packaging [Pulumi Components](/docs/intro/concepts/resources#components): higher-level abstractions over cloud infrastructure patterns described as normal Pulumi programs.  This makes it easy to take a Pulumi program that defines a collection of resources and turn it into something reusable: a Pulumi Package that can be published and used by all Pulumi users, across all languages supported by Pulumi.
 
 One example of building and packaging Pulumi Components as a Pulumi Package is the [Pulumi EKS](https://github.com/pulumi/pulumi-eks/) package.  We originally released a component for easily building and managing production-ready EKS clusters nearly two years ago, but it was only available for Node.js users of Pulumi as an npm package.  This component has been incredibly popular, as it abstracts away a lot of complexity in all the moving pieces that need to be managed to stand up an EKS cluster across both AWS resources and in-cluster Kubernetes resources.  Recently, we turned this component into a Pulumi Package, making it available to users in Python, Go, and .NET as well, with just a single implementation.  Pulumi EKS is just the first example of applying this technology; there’s a lot more in the works here in the coming months!
 
@@ -142,13 +142,13 @@ class MyStack : Stack
 
 All Pulumi packages define a common Pulumi schema, which describes the resource model the package exposes and can be used to generate language-specific SDKs and documentation. There are several different types of Pulumi Package:
 
-* **Native Pulumi Provider Package**: Use the full features of the Pulumi resource model to create a provider for a new cloud platform. Examples: the [`kubernetes`]({{< relref "/registry/packages/kubernetes" >}}), [`azure-native`]({{< relref "/registry/packages/azure-native/api-docs" >}}), and `google-native` packages.
-* **Bridged Provider Package**:  Take an existing resource provider from another supported ecosystem (like a Terraform provider), and bridge it to be exposed as a Pulumi Package.  Examples:the [`aws`]({{< relref "/registry/packages/aws" >}}), [`tls`]({{< relref "/registry/packages/tls/api-docs" >}}), and [`cloudflare`]({{< relref "/registry/packages/cloudflare/api-docs" >}}) packages.
-* **Component Package**: Write a Pulumi Component in your language of choice and expose it to users in all languages supported by Pulumi.  Example: the [`eks`]({{< relref "/registry/packages/eks/api-docs" >}}) package.
+* **Native Pulumi Provider Package**: Use the full features of the Pulumi resource model to create a provider for a new cloud platform. Examples: the [`kubernetes`](/registry/packages/kubernetes), [`azure-native`](/registry/packages/azure-native/api-docs), and `google-native` packages.
+* **Bridged Provider Package**:  Take an existing resource provider from another supported ecosystem (like a Terraform provider), and bridge it to be exposed as a Pulumi Package.  Examples:the [`aws`](/registry/packages/aws), [`tls`](/registry/packages/tls/api-docs), and [`cloudflare`](/registry/packages/cloudflare/api-docs) packages.
+* **Component Package**: Write a Pulumi Component in your language of choice and expose it to users in all languages supported by Pulumi.  Example: the [`eks`](/registry/packages/eks/api-docs) package.
 
 Together, these options provide a combination of breadth and depth for the kinds of resources and components that can be exposed to Pulumi developers via Pulumi Packages.
 
-👉 Read more in the [Pulumi Packages]({{< relref "/blog/pulumiup-pulumi-packages-multi-language-components" >}}) blog post.
+👉 Read more in the [Pulumi Packages](/blog/pulumiup-pulumi-packages-multi-language-components/) blog post.
 
 ## Improved Go and Python SDKs
 
@@ -156,11 +156,11 @@ Pulumi’s language SDKs bring the power of cloud infrastructure management into
 
 <img align="right" width="120" src="go.png">
 
-For Go users, Pulumi 3.0 reduces binary sizes by 4x and improves build times by up to 3x, leading to a much faster infrastructure development loop. Along with this, the Go APIs for working with Pulumi `Output` values have been simplified to provide a single way of transforming outputs instead of three different options.  This makes the Pulumi Go SDK more consistent and easier to get started with.  You can learn more about these changes in the [Pulumi 3.0 migration guide]({{< relref "/docs/get-started/install/migrating-3.0.md" >}}).
+For Go users, Pulumi 3.0 reduces binary sizes by 4x and improves build times by up to 3x, leading to a much faster infrastructure development loop. Along with this, the Go APIs for working with Pulumi `Output` values have been simplified to provide a single way of transforming outputs instead of three different options.  This makes the Pulumi Go SDK more consistent and easier to get started with.  You can learn more about these changes in the [Pulumi 3.0 migration guide](/docs/get-started/install/migrating-3.0).
 
 <img align="right" width="90" src="py.png">
 
-For Python users, Pulumi 3.0 brings a new, more strongly typed way to provide inputs to cloud resources, ensuring that users get completion lists, type checking, documentation, and more within their IDE of choice.  Along with this, some inconsistencies in input property naming have also been removed; now, all property names follow a consistent and predictable naming convention.  You can learn more about these changes in the [Pulumi 3.0 migration guide]({{< relref "/docs/get-started/install/migrating-3.0.md" >}}).
+For Python users, Pulumi 3.0 brings a new, more strongly typed way to provide inputs to cloud resources, ensuring that users get completion lists, type checking, documentation, and more within their IDE of choice.  Along with this, some inconsistencies in input property naming have also been removed; now, all property names follow a consistent and predictable naming convention.  You can learn more about these changes in the [Pulumi 3.0 migration guide](/docs/get-started/install/migrating-3.0).
 
 <img width="600" src="pythoncompletion.png">
 
@@ -168,13 +168,13 @@ For Python users, Pulumi 3.0 brings a new, more strongly typed way to provide in
 
 In addition to the Pulumi 3.0 open source release, we’re also making available new features for users of the Pulumi Service: the simple and easy to use default backend for all Pulumi users, with additional features for teams and enterprises.
 
-Integrating Pulumi into CI/CD systems is a key step in realizing the full benefits of modern infrastructure as code, and we’ve worked to make this easier than ever. Since 2.0, we’ve added partner integrations with [Spinnaker]({{< relref "/docs/guides/continuous-delivery/spinnaker" >}}), [GitHub Actions]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}) and [CodeFresh]({{< relref "/docs/guides/continuous-delivery/codefresh" >}}) as well as a new [Pulumi Kubernetes Operator]({{< relref "/docs/guides/continuous-delivery/pulumi-kubernetes-operator" >}}).  In addition, we’ve introduced a new [CI/CD Assistant]({{< relref "/docs/intro/pulumi-service/ci-cd-integration-assistant" >}}) to the service to help configure version control and CI/CD integration for your Pulumi projects with just a few clicks.
+Integrating Pulumi into CI/CD systems is a key step in realizing the full benefits of modern infrastructure as code, and we’ve worked to make this easier than ever. Since 2.0, we’ve added partner integrations with [Spinnaker](/docs/guides/continuous-delivery/spinnaker/), [GitHub Actions](/docs/guides/continuous-delivery/github-actions/) and [CodeFresh](/docs/guides/continuous-delivery/codefresh/) as well as a new [Pulumi Kubernetes Operator](/docs/guides/continuous-delivery/pulumi-kubernetes-operator/).  In addition, we’ve introduced a new [CI/CD Assistant](/docs/intro/pulumi-service/ci-cd-integration-assistant) to the service to help configure version control and CI/CD integration for your Pulumi projects with just a few clicks.
 
-For enterprise users, we’ve added several enhancements to SAML SSO and SCIM support.  Pulumi’s SSO support now works seamlessly with [Okta](https://www.pulumi.com/docs/guides/saml/okta/) (as well as Google Identity, Azure Active Directory and more), users and groups can now be synced via [SCIM support]({{< relref "/docs/guides/scim" >}}) in your SAML provider, and new [Team Admin roles]({{< relref "/docs/intro/pulumi-service/teams" >}}) make team management simpler for large organizations.
+For enterprise users, we’ve added several enhancements to SAML SSO and SCIM support.  Pulumi’s SSO support now works seamlessly with [Okta](https://www.pulumi.com/docs/guides/saml/okta/) (as well as Google Identity, Azure Active Directory and more), users and groups can now be synced via [SCIM support](/docs/guides/scim/) in your SAML provider, and new [Team Admin roles](/docs/intro/pulumi-service/teams/) make team management simpler for large organizations.
 
 Lastly, the Pulumi Service now offers a dashboard landing page which brings insights about your infrastructure front-and-center whether you are an individual user, or part of a large organization.
 
-👉 Read more in the [Pulumi CI/CD Assistant]({{< relref "/blog/pulumiup-ci-cd-assistant-all-plans" >}}) blog post and the [SAML SSO and SCIM]({{< relref "/blog/pulumiup-bring-your-whole-team-to-pulumi" >}}) blog post.
+👉 Read more in the [Pulumi CI/CD Assistant](/blog/pulumiup-ci-cd-assistant-all-plans) blog post and the [SAML SSO and SCIM](/blog/pulumiup-bring-your-whole-team-to-pulumi/) blog post.
 
 ![Pulumi Dashboard](dashboard.png)
 
@@ -184,13 +184,13 @@ Pulumi 3.0 is a significant new milestone for the Pulumi project and lays the fo
 
 To learn more about each of the new areas - check out these blog posts with more details:
 
-* [Model and program the cloud with Pulumi native providers]({{< relref "/blog/pulumiup-native-providers" >}})
-* [Google Cloud Native provider: full coverage of Google Cloud]({{< relref "/blog/pulumiup-google-native-provider" >}})
-* [Introducing Pulumi Packages and multi-language Components]({{< relref "/blog/pulumiup-pulumi-packages-multi-language-components" >}})
-* [Build your perfect interface for the cloud: Automation API]({{< relref "/blog/pulumiup-automation-api-ga" >}})
-* [Pulumi CI/CD Integration Assistant available for all plans]({{< relref "/blog/pulumiup-ci-cd-assistant-all-plans" >}})
-* [Easily bring your team to Pulumi with SAML SSO and SCIM]({{< relref "/blog/pulumiup-bring-your-whole-team-to-pulumi" >}})
+* [Model and program the cloud with Pulumi native providers](/blog/pulumiup-native-providers/)
+* [Google Cloud Native provider: full coverage of Google Cloud](/blog/pulumiup-google-native-provider)
+* [Introducing Pulumi Packages and multi-language Components](/blog/pulumiup-pulumi-packages-multi-language-components/)
+* [Build your perfect interface for the cloud: Automation API](/blog/pulumiup-automation-api-ga)
+* [Pulumi CI/CD Integration Assistant available for all plans](/blog/pulumiup-ci-cd-assistant-all-plans)
+* [Easily bring your team to Pulumi with SAML SSO and SCIM](/blog/pulumiup-bring-your-whole-team-to-pulumi/)
 
-You can [get started]({{< relref "/docs/get-started" >}}) with Pulumi 3.0 today, or check out the [Pulumi 3.0 migration guide]({{< relref "/docs/get-started/install/migrating-3.0.md" >}}) to update your existing Pulumi projects to Pulumi 3.0.
+You can [get started](/docs/get-started/) with Pulumi 3.0 today, or check out the [Pulumi 3.0 migration guide](/docs/get-started/install/migrating-3.0) to update your existing Pulumi projects to Pulumi 3.0.
 
 We can't wait to see what you build with Pulumi 3.0!

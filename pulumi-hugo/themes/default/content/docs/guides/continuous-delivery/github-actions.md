@@ -26,7 +26,7 @@ between different environments by merging or directly committing changes.
 Let's see how to get started -- it's easy!
 
 {{% notes type="info" %}}
-Users in organizations can use the [CI/CD Integration Assistant]({{< relref "docs/intro/pulumi-service/ci-cd-integration-assistant" >}}) with GitHub Actions.
+Users in organizations can use the [CI/CD Integration Assistant](/docs/intro/pulumi-service/ci-cd-integration-assistant) with GitHub Actions.
 {{% /notes %}}
 
 ## Pre-Requisites
@@ -41,7 +41,7 @@ for it. There are three ways to do this:
 
 1. [Clone an existing Pulumi example](https://github.com/pulumi/examples)
 2. [Use the New Project wizard](https://app.pulumi.com/site/new-project)
-3. [Download the CLI]({{< relref "/docs/get-started/install" >}}) and run `pulumi new` to
+3. [Download the CLI](/docs/get-started/install/) and run `pulumi new` to
    select a template
 
 ## Creating a Workflow
@@ -338,7 +338,7 @@ jobs:
 
 Now that you've got these two common workflows defined, you'll need to configure your
 secrets. Secrets are exposed as environment variables to the GitHub Actions runtime
-environment. Minimally, you'll need to supply a [Pulumi access token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}})
+environment. Minimally, you'll need to supply a [Pulumi access token](/docs/intro/pulumi-service/accounts#access-tokens)
 to allow the Pulumi CLI to communicate with the Pulumi Service on your behalf, and
 you'll probably want to provide credentials for communicating with your cloud
 provider as well.
@@ -357,10 +357,10 @@ GitHub Action to communicate with the Pulumi service on your behalf.
 Next, add secrets for your cloud credentials, just as you did `PULUMI_ACCESS_TOKEN` above,
 based on your provider of choice. For example:
 
-* `AWS_ACCESS_KEY_ID`, `AWS_REGION` and `AWS_SECRET_ACCESS_KEY` for [AWS]({{< relref "/registry/packages/aws/installation-configuration" >}})
-* `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, and `ARM_TENANT_ID` for [Azure]({{< relref "/registry/packages/azure/installation-configuration" >}})
-* `GOOGLE_CREDENTIALS` for [GCP]({{< relref "/registry/packages/gcp/installation-configuration" >}})
-* `KUBECONFIG` for [Kubernetes]({{< relref "/registry/packages/kubernetes/installation-configuration" >}})
+* `AWS_ACCESS_KEY_ID`, `AWS_REGION` and `AWS_SECRET_ACCESS_KEY` for [AWS](/registry/packages/aws/installation-configuration/)
+* `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, and `ARM_TENANT_ID` for [Azure](/registry/packages/azure/installation-configuration/)
+* `GOOGLE_CREDENTIALS` for [GCP](/registry/packages/gcp/installation-configuration/)
+* `KUBECONFIG` for [Kubernetes](/registry/packages/kubernetes/installation-configuration/)
 
 ## Try It Out!
 
@@ -375,7 +375,7 @@ deployment on the Pulumi Service with more details:
 
 ![Action Logs](/images/docs/reference/gh-actions-logs.png)
 
-For even better Pull Request integration, make sure to also [install our GitHub App]({{< relref "github-app" >}})!
+For even better Pull Request integration, make sure to also [install our GitHub App](/docs/guides/continuous-delivery/github-app/)!
 
 ![Action Pull Requests](/images/docs/reference/gh-actions-prs.png)
 
@@ -390,7 +390,7 @@ the GitHub Actions container directly.
 
 ### Pulumi GitHub App
 
-The [Pulumi GitHub App]({{< relref "github-app" >}}) is something you install on your
+The [Pulumi GitHub App](/docs/guides/continuous-delivery/github-app/) is something you install on your
 GitHub organization. It allows the Pulumi service to leave comments on Pull Requests but does not give it access to your source code.
 
 Once the Pulumi GitHub App is installed, when your GitHub Actions run Pulumi, a summary of

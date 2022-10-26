@@ -104,7 +104,7 @@ Empowering developers to provision infrastructure requires proper authentication
 
 ### Stage 2:  Infrastructure CI/CD
 
-[Infrastructure CI/CD]({{< relref "/solutions/infrastructure-ci-cd" >}}) is the process of automating the testing, provisioning, and management of infrastructure through a software delivery pipeline. Infrastructure CI/CD further automates infrastructure provisioning and management from Stage 1 by building the entire IaC process into a CI/CD pipeline. In Stage 2, all infrastructure updates run through a standard set of unit and integration tests, allowing reduced mean time to resolution, increased reliability, and increased delivery velocity.
+[Infrastructure CI/CD](/solutions/infrastructure-ci-cd) is the process of automating the testing, provisioning, and management of infrastructure through a software delivery pipeline. Infrastructure CI/CD further automates infrastructure provisioning and management from Stage 1 by building the entire IaC process into a CI/CD pipeline. In Stage 2, all infrastructure updates run through a standard set of unit and integration tests, allowing reduced mean time to resolution, increased reliability, and increased delivery velocity.
 
 In modern cloud architectures, the division between application and infrastructure is increasingly blurred. Constructing infrastructure alongside applications and delivering them together creates higher levels of efficiency and reliability. With Pulumi, infrastructure can be modeled with the same programming language used by the application code and delivered through the same CI/CD system. The organizational objective is to deliver software, both the application and infrastructure, daily and scale infrastructure managed as code from tens to thousands of environments.
 
@@ -122,7 +122,7 @@ Enterprises require end-to-end visibility into infrastructure changes in order t
 
 ### Stage 3:  Shared Services Platforms
 
-Stage 3 builds upon the foundations of Stages 1 and 2 by taking automated pipelines for deploying infrastructure managed by code and building a platform with shared resources, self-service components, and automated deployments. [Shared Services Platforms (SSPs)]({{< relref "/solutions/shared-services-platforms" >}}) are an internal company service that allows application developers to request and manage infrastructure environments by themselves. SSPs are the best practice to share common infrastructure and automate the provisioning of infrastructure for development teams. They abstract away the complexity of the cloud for developers, reduce deployment risks through automation, and increase reliability and security through building blocks with centrally enforced policies.
+Stage 3 builds upon the foundations of Stages 1 and 2 by taking automated pipelines for deploying infrastructure managed by code and building a platform with shared resources, self-service components, and automated deployments. [Shared Services Platforms (SSPs)](/solutions/shared-services-platforms) are an internal company service that allows application developers to request and manage infrastructure environments by themselves. SSPs are the best practice to share common infrastructure and automate the provisioning of infrastructure for development teams. They abstract away the complexity of the cloud for developers, reduce deployment risks through automation, and increase reliability and security through building blocks with centrally enforced policies.
 
 In Stage 3, Pulumi makes it easy to model and provision the SSP control plane as well as automate the provisioning of the data plane stacks. SSPs maintain centralized control over security and compliance while developers can directly access and deploy to infrastructure without contacting operations or cluster managers. The organizational objective is to achieve self-service infrastructure without disrupting existing developer workflows.
 
@@ -154,24 +154,24 @@ Organizations of all sizes, from startups to the Global 2000, have chosen Pulumi
 
 ### Snowflake
 
-Snowflake’s platform team enabled its developers to deploy standardized Kubernetes environments across AWS, Azure, and Google Cloud with a self-service platform that’s powered by Pulumi and Golang. [Read the case study]({{< relref "/case-studies/snowflake" >}}).
+Snowflake’s platform team enabled its developers to deploy standardized Kubernetes environments across AWS, Azure, and Google Cloud with a self-service platform that’s powered by Pulumi and Golang. [Read the case study](/case-studies/snowflake/).
 
 ### Mercedes-Benz
 
 Mercedes-Benz Research & Development North America and its platform team enabled developers to deploy standardized Kubernetes environments on Azure with a self-service platform.
-[Read the case study]({{< relref "/case-studies/mercedes-benz" >}}).
+[Read the case study](/case-studies/mercedes-benz/).
 
 ### Atlassian
 
-Atlassian Bitbucket reduced its developers’ time spent on cloud maintenance by 50% through creating a self-service platform that deploys standard development environments for Bitbucket. [Read the case study]({{< relref "/case-studies/atlassian" >}}).
+Atlassian Bitbucket reduced its developers’ time spent on cloud maintenance by 50% through creating a self-service platform that deploys standard development environments for Bitbucket. [Read the case study](/case-studies/atlassian/).
 
 ### Skai
 
-Skai’s DevOps group migrated a core monolith service from its private cloud to AWS, and it refactored its infrastructure codebase to use standard programming languages like Python by using Pulumi. [Read the case study]({{< relref "/blog/kenshoo-migrates-to-aws-with-pulumi" >}}).
+Skai’s DevOps group migrated a core monolith service from its private cloud to AWS, and it refactored its infrastructure codebase to use standard programming languages like Python by using Pulumi. [Read the case study](/blog/kenshoo-migrates-to-aws-with-pulumi/).
 
 ### SANS Institute
 
-SANS Institute’s DevOps team reduced deployment times for a key service by up to 70% by moving from a domain-specific language to Pulumi and implementing software engineering practices like Git and CI/CD. [Read the case study]({{< relref "/case-studies/sans-institute" >}}).
+SANS Institute’s DevOps team reduced deployment times for a key service by up to 70% by moving from a domain-specific language to Pulumi and implementing software engineering practices like Git and CI/CD. [Read the case study](/case-studies/sans-institute/).
 
 ## Conclusion
 

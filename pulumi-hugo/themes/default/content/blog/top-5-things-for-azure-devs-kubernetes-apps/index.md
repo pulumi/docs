@@ -23,9 +23,9 @@ This article reviews the different methods for deploying applications on Azure K
 
 If you're not familiar with deploying applications on Kubernetes, these articles cover the basic and advance cases:
 
-- [Getting Started With Kubernetes: Application Basics]({{< relref "/blog/getting-started-with-k8s-part2" >}})
-- [Getting Started With Kubernetes: Advanced Deployment]({{< relref "/blog/getting-started-with-k8s-part3" >}})
-- [Getting Started with Kubernetes: Stateful Applications]({{< relref "/blog/getting-started-with-k8s-part4" >}})
+- [Getting Started With Kubernetes: Application Basics](/blog/getting-started-with-k8s-part2)
+- [Getting Started With Kubernetes: Advanced Deployment](/blog/getting-started-with-k8s-part3)
+- [Getting Started with Kubernetes: Stateful Applications](/blog/getting-started-with-k8s-part4)
 
 ## Setting up the AKS sandbox
 
@@ -141,7 +141,7 @@ $ docker push pulumipuscontainerregistry.azurecr.io/my-nginx:v1
 
 ### Create a deployment manifest
 
-In the previous example, we deployed NGINX with Helm. Manifests are another way to deploy applications. A manifest contains a `deployment` that defines [`pods`]({{< relref "/blog/getting-started-with-k8s-part2#pods" >}}) that run a containerized application. It also contains [`services`]({{< relref "/blog/getting-started-with-k8s-part2#services" >}}) that route traffic to `pods`.
+In the previous example, we deployed NGINX with Helm. Manifests are another way to deploy applications. A manifest contains a `deployment` that defines [`pods`](/blog/getting-started-with-k8s-part2#pods) that run a containerized application. It also contains [`services`](/blog/getting-started-with-k8s-part2#services) that route traffic to `pods`.
 
 Copy and save the example below to a file named `manifest.yml`.
 
@@ -204,7 +204,7 @@ Use `kubectl get service` to get the load balancer's external IP as we did with 
 
 ## Deploy with Pulumi
 
-The [previous article]({{< relref "/blog/top-5-things-for-azure-devs-kubernetes-infrastructure" >}}) in this series showed how to deploy AKS with code. Starting with the [Python example](https://github.com/pulumi/examples/tree/master/azure-py-aks) from Github and add to it to create a complete solution
+The [previous article](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/) in this series showed how to deploy AKS with code. Starting with the [Python example](https://github.com/pulumi/examples/tree/master/azure-py-aks) from Github and add to it to create a complete solution
 
 ### Create a container registry and custom container
 
@@ -284,7 +284,7 @@ app_svc = k8s.core.v1.Service('my-aks-service',
 pulumi.export('application IP', app_svc.status.apply(lambda status: status.loadbalancer.ingress[0].ip))
 ```
 
-This example provides a sketch of the process to create an AKS cluster and deploy a custom container. For a fully worked example, check out the [`Azure Kubernetes Service (AKS) - Hello World!`]({{< relref "/registry/packages/kubernetes/how-to-guides/aks" >}}) tutorial.
+This example provides a sketch of the process to create an AKS cluster and deploy a custom container. For a fully worked example, check out the [`Azure Kubernetes Service (AKS) - Hello World!`](/registry/packages/kubernetes/how-to-guides/aks) tutorial.
 
 ## Summary
 

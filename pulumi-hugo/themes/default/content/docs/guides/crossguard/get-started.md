@@ -22,7 +22,7 @@ Often organizations want to empower developers to manage their infrastructure ye
 
 Using Policy as Code, users can express business or security rules as functions that are executed against resources in their stacks. Then using CrossGuard, organization administrators can apply these rules to particular stacks within their organization. When policies are executed as part of your Pulumi deployments, any violation will gate or block that update from proceeding.
 
-Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. Learn more about [language support for policies]({{< relref "/docs/guides/crossguard#languages" >}}).
+Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. Learn more about [language support for policies](/docs/guides/crossguard#languages).
 
 ## Terminology
 
@@ -30,13 +30,13 @@ Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be 
 * **Policy** - an individual policy - i.e. “prohibit use of instances larger than t3.medium”.
 * **Enforcement Level** - the impact of a policy violation - i.e. “mandatory” or “advisory”.
 
-Learn more about [Policy as Code core concepts]({{< relref "/docs/guides/crossguard/core-concepts" >}}).
+Learn more about [Policy as Code core concepts](/docs/guides/crossguard/core-concepts/).
 
 ## Creating a Policy Pack
 
 Let's start with authoring your first Policy Pack.
 
-Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. [More information on language support for policies]({{< relref "/docs/guides/crossguard#languages" >}}).
+Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. [More information on language support for policies](/docs/guides/crossguard#languages).
 
 {{< chooser language "typescript,python" >}}
 
@@ -44,7 +44,7 @@ Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be 
 
 1. Install prerequisites.
 
-   * [Install Pulumi]({{< relref "/docs/get-started/install" >}})
+   * [Install Pulumi](/docs/get-started/install/)
    * [Install Node.js](https://nodejs.org/en/download/)
 
 1. Create a directory for your new Policy Pack, and change into it.
@@ -97,7 +97,7 @@ Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be 
 
 1. Install prerequisites.
 
-   * [Install Pulumi]({{< relref "/docs/get-started/install" >}})
+   * [Install Pulumi](/docs/get-started/install/)
    * [Install Python](https://www.python.org/downloads/)
 
 1. Create a directory for your new Policy Pack, and change into it.
@@ -158,7 +158,7 @@ Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be 
 
 {{< /chooser >}}
 
-You can find more example Policy Packs in the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). [Policy Pack best practices]({{< relref "/docs/guides/crossguard/best-practices" >}}) details the best practices for writing a Policy Pack.
+You can find more example Policy Packs in the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). [Policy Pack best practices](/docs/guides/crossguard/best-practices/) details the best practices for writing a Policy Pack.
 
 ### Running Locally {#running-locally}
 
@@ -274,7 +274,7 @@ Now that your Policy Pack is ready to go, let's enforce the pack across your org
 ## Enforcing a Policy Pack
 
 {{% notes type="info" %}}
-Server-side enforcement of policy packs across an organization is only available in **Pulumi Business Critical**. See [pricing]({{<relref "/pricing">}}) for more details.
+Server-side enforcement of policy packs across an organization is only available in **Pulumi Business Critical**. See [pricing](/pricing/) for more details.
 {{% /notes %}}
 
 Once you’ve validated the behavior of your policies, an organization administrator can publish them to the Pulumi Service to be enforced across your organization. Any Pulumi client (a developer’s workstation, CI/CD tool, etc) that interacts with a stack via the Pulumi Service will have policy enforcement during the execution of `preview` and `update`. Policy Packs are versioned by the Pulumi Service so that updated policies can be published and applied as ready and also reverted to previous versions as needed.
@@ -314,4 +314,4 @@ Once you’ve validated the behavior of your policies, an organization administr
 
 ## Next Steps
 
-Now that you have published your first Policy Pack, you now have all the tools needed to enforce compliance amongst your organization. For more example Policy Packs, you can check out the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). You can also find more documentation in the [CrossGuard guide]({{< relref "/docs/guides/crossguard" >}}).
+Now that you have published your first Policy Pack, you now have all the tools needed to enforce compliance amongst your organization. For more example Policy Packs, you can check out the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). You can also find more documentation in the [CrossGuard guide](/docs/guides/crossguard/).

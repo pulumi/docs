@@ -9,11 +9,11 @@ menu:
 
 This document outlines the steps required to configure automatic provisioning/deprovisioning of your users in Pulumi using SCIM 2.0.
 
-Please note that some advanced SCIM features aren't supported yet. For more information, see [Known Limitations]({{< relref "#known-limitations" >}}).
+Please note that some advanced SCIM features aren't supported yet. For more information, see [Known Limitations](#known-limitations).
 
 ## Prerequisites
 
-* Your organization must already be configured to use [SAML SSO]({{< relref "/docs/guides/saml/aad" >}}) with Pulumi.
+* Your organization must already be configured to use [SAML SSO](/docs/guides/saml/aad/) with Pulumi.
 * You must be an admin of your Pulumi organization.
 * (Optional, but highly recommended) You should have more than one admin for your Pulumi organization.
 

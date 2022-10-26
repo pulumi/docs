@@ -12,7 +12,7 @@ CrossGuard is Pulumi's Policy as Code offering. CrossGuard empowers you to set g
 
 Using CrossGuard, organization administrators can apply these rules to particular stacks within their organization. When policies are executed as part of your Pulumi deployments, any violation will gate or block that update from proceeding.
 
-Learn more about [Policy as Code core concepts]({{< relref "/docs/guides/crossguard/core-concepts" >}}).
+Learn more about [Policy as Code core concepts](/docs/guides/crossguard/core-concepts/).
 
 ## Languages
 
@@ -20,25 +20,25 @@ Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be 
 
 |                                                        | Language                                                                     | Status                                                                                                                                        |
 |--------------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| <img src="/logos/tech/logo-ts.png" class="h-10" />     | [TypeScript]({{< relref "/docs/reference/pkg/nodejs/pulumi/policy" >}})      | Stable                                                                                                                                        |
-| <img src="/logos/tech/logo-js.png" class="h-10" />     | [JavaScript]({{< relref "/docs/reference/pkg/nodejs/pulumi/policy" >}})      | Stable                                                                                                                                        |
-| <img src="/logos/tech/logo-python.png" class="h-10" /> | [Python]({{< relref "/docs/reference/pkg/python/pulumi_policy" >}})          | Stable                                                                                                                                        |
-| <img src="/logos/tech/logo-opa.png" class="h-10" />    | [Open Policy Agent (OPA)]({{< relref "/blog/opa-support-for-crossguard" >}}) | Preview                                                                                                                                       |
+| <img src="/logos/tech/logo-ts.png" class="h-10" />     | [TypeScript](/docs/reference/pkg/nodejs/pulumi/policy/)      | Stable                                                                                                                                        |
+| <img src="/logos/tech/logo-js.png" class="h-10" />     | [JavaScript](/docs/reference/pkg/nodejs/pulumi/policy/)      | Stable                                                                                                                                        |
+| <img src="/logos/tech/logo-python.png" class="h-10" /> | [Python](/docs/reference/pkg/python/pulumi_policy/)          | Stable                                                                                                                                        |
+| <img src="/logos/tech/logo-opa.png" class="h-10" />    | [Open Policy Agent (OPA)](/blog/opa-support-for-crossguard) | Preview                                                                                                                                       |
 | <img src="/logos/tech/dotnet.png" class="h-10" />      | .NET                                                                         | On the backlog; please add a 👍 reaction to this [GitHub issue](https://github.com/pulumi/pulumi-policy/issues/229) to register your interest |
 | <img src="/logos/tech/logo-golang.png" class="h-10" /> | Go                                                                           | On the backlog; please add a 👍 reaction to this [GitHub issue](https://github.com/pulumi/pulumi-policy/issues/230) to register your interest |
 
 ## Getting Started
 
-To get started with Pulumi CrossGuard, [download and install Pulumi]({{< relref "/docs/get-started/install" >}}). Afterwards,
-try the [Getting Started tutorial]({{< relref "./get-started" >}}).
+To get started with Pulumi CrossGuard, [download and install Pulumi](/docs/get-started/install/). Afterwards,
+try the [Getting Started tutorial](/docs/get-started/).
 
 ## Pulumi CrossGuard policies for AWS (AWSGuard)
 
-In addition to being able to implement your own CrossGuard policies, we've also created a set of policies that codifies best practices for AWS that you can adopt and use in a Policy Pack. AWSGuard is a configurable library that you can use to enforce best practices for your own Pulumi stacks or organization. [Learn more and get started with AWSGuard]({{< relref "./awsguard" >}}).
+In addition to being able to implement your own CrossGuard policies, we've also created a set of policies that codifies best practices for AWS that you can adopt and use in a Policy Pack. AWSGuard is a configurable library that you can use to enforce best practices for your own Pulumi stacks or organization. [Learn more and get started with AWSGuard](/docs/guides/crossguard/awsguard/).
 
 ## Configuring Policy Packs
 
-Using configurable Policy Packs, you can write flexible policies that can be re-used across your organization. By default, some fields like enforcement level, are configurable. You may also specify configurable variables alongside each policy. [Learn more about configurable Policy Packs]({{< relref "./configuration" >}}).
+Using configurable Policy Packs, you can write flexible policies that can be re-used across your organization. By default, some fields like enforcement level, are configurable. You may also specify configurable variables alongside each policy. [Learn more about configurable Policy Packs](/docs/guides/crossguard/configuration/).
 
 ## Examples
 
@@ -67,4 +67,4 @@ If you're looking for some example Policy Packs, take a look at these:
 
 ## FAQs
 
-Get the answers to some [Frequently Asked Questions]({{< relref "./faq" >}}) about CrossGuard.
+Get the answers to some [Frequently Asked Questions](/docs/guides/crossguard/faq/) about CrossGuard.

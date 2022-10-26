@@ -14,9 +14,9 @@ This page details how to use [JetBrains TeamCity](https://www.jetbrains.com/team
 
 - A working installation of TeamCity
 - An account in the [Pulumi Service](https://app.pulumi.com).
-- [Latest version of Pulumi]({{< relref "/docs/get-started/install" >}}).
-- Setup a new project and [stack]({{< relref "/docs/intro/concepts/stack" >}}) using one of our
-[Get Started]({{< relref "/docs/get-started" >}}) guides or by running [`pulumi new`]({{< relref "/docs/reference/cli/pulumi_new.md" >}})
+- [Latest version of Pulumi](/docs/get-started/install/).
+- Setup a new project and [stack](/docs/intro/concepts/stack/) using one of our
+[Get Started](/docs/get-started/) guides or by running [`pulumi new`](/docs/reference/cli/pulumi_new)
 and choosing one of the many templates that are available.
 
 ## Sample Project
@@ -59,7 +59,7 @@ We are going to create a Build Step with the following parameters:
 `Custom Script`:
 
 ```bash
-yum -y install nodejs  
+yum -y install nodejs
 npm version
 ```
 

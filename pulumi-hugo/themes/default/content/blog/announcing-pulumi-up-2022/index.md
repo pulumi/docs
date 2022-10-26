@@ -9,7 +9,7 @@ tags:
     - pulumi-events
 ---
 
-Calling all cloud engineers! Today we announce the second annual [PulumiUP]({{< relref "/pulumi-up" >}}) virtual conference taking place on May 4, 2022. We will also host the inaugural Pulumi Community Summit on May 5 to virtually assemble the world’s cloud, infrastructure, and Pulumi practitioners of all experience levels (hint: that’s you---all are welcome)! [Register for both events here]({{< relref "/pulumi-up" >}}).
+Calling all cloud engineers! Today we announce the second annual [PulumiUP](/pulumi-up/) virtual conference taking place on May 4, 2022. We will also host the inaugural Pulumi Community Summit on May 5 to virtually assemble the world’s cloud, infrastructure, and Pulumi practitioners of all experience levels (hint: that’s you---all are welcome)! [Register for both events here](/pulumi-up/).
 
 <!--more-->
 
@@ -48,4 +48,4 @@ Stay tuned as we will announce the full agenda and speakers soon on our website 
 
 ## Join us on May 4 and 5!
 
-[Register for PulumiUP and the Community Summit now]({{< relref "/pulumi-up" >}})! We will send you updates on the final agenda and speakers and post-event updates such as session recordings and upcoming events.
+[Register for PulumiUP and the Community Summit now](/pulumi-up/)! We will send you updates on the final agenda and speakers and post-event updates such as session recordings and upcoming events.

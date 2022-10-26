@@ -10,7 +10,7 @@ tags:
 ---
 
 {{% notes type="info" %}}
-The next-generation Azure provider is now [Azure-Native]({{< relref "/blog/full-coverage-of-azure-resources-with-azure-native" >}}).
+The next-generation Azure provider is now [Azure-Native](/blog/full-coverage-of-azure-resources-with-azure-native/).
 {{% /notes %}}
 
 We are excited to announce the beta release of a next generation Microsoft Azure provider for Pulumi. Azure has been a rapidly growing cloud platform among Pulumi users over the last year, and with the next generation Azure provider, we are doubling down on providing the best support possible for the Azure platform in Pulumi. We designed the new provider to expose the entire API surface of Azure to developers and operators, now and forever.
@@ -184,7 +184,7 @@ func main() {
 
 {{% /chooser %}}
 
-API documentation is available at [Azure NextGen API Reference](/docs/reference/pkg/azure-nextgen) and includes more than 1,000 resource examples.
+API documentation is available at [Azure NextGen API Reference](/docs/reference/pkg/azure-nextgen/) and includes more than 1,000 resource examples.
 
 ## Integrated with Azure Ecosystem
 

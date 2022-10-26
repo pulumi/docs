@@ -18,7 +18,7 @@ One of the most common needs when someone starts a new project on cloud infrastr
 
 ## Best practices for common architectures
 
-While Pulumi allows you to define any architecture for any cloud, we often get asked for opinionated architectures to get started with different cloud-based scenarios. To meet this need, we've started building templates around best-practice architectures like [a serverless architecture on Google Cloud]({{< relref "/templates/serverless-application/gcp" >}}) or [a container service architecture on AWS]({{< relref "/templates/container-service/aws" >}}). To give a sense of what these templates are like, let's explore the serverless template for Google Cloud, which uses Cloud Storage and Cloud Functions to deploy a small application that tells the current time.
+While Pulumi allows you to define any architecture for any cloud, we often get asked for opinionated architectures to get started with different cloud-based scenarios. To meet this need, we've started building templates around best-practice architectures like [a serverless architecture on Google Cloud](/templates/serverless-application/gcp/) or [a container service architecture on AWS](/templates/container-service/aws/). To give a sense of what these templates are like, let's explore the serverless template for Google Cloud, which uses Cloud Storage and Cloud Functions to deploy a small application that tells the current time.
 
 {{< youtube "DaX8weCHO9A?rel=0" >}}
 
@@ -64,4 +64,4 @@ indexDocument: The file to use for top-level pages: (index.html)
 
 ## Check them out yourself
 
-There are already a number of templates built, and more are coming over the next weeks and months. We'll be exploring more templates in detail here on the blog and on [PulumiTV](https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw/) in the future. Review all the currently available architecture templates at [our templates page]({{< relref "/templates" >}}). We'd love to hear what you think!
+There are already a number of templates built, and more are coming over the next weeks and months. We'll be exploring more templates in detail here on the blog and on [PulumiTV](https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw/) in the future. Review all the currently available architecture templates at [our templates page](/templates/). We'd love to hear what you think!

@@ -18,13 +18,13 @@ cloud:
   slug: azure
 ---
 
-The Serverless Application template creates an infrastructure as code project in your favorite language that deploys a serverless application to Azure with Pulumi. It deploys an [Azure Blob Storage account]({{< relref "/registry/packages/azure-native/api-docs/storage/storageaccount" >}}) configured for [static website hosting]({{< relref "/registry/packages/azure-native/api-docs/storage/storageaccountstaticwebsite" >}}) and an [Azure Function]({{< relref "/registry/packages/azure-native/api-docs/web/webappfunction" >}}) written in the same language as the template. The template ships with placeholder content to give you a working project out of the box that you can customize easily and extend to suit your needs.
+The Serverless Application template creates an infrastructure as code project in your favorite language that deploys a serverless application to Azure with Pulumi. It deploys an [Azure Blob Storage account](/registry/packages/azure-native/api-docs/storage/storageaccount/) configured for [static website hosting](/registry/packages/azure-native/api-docs/storage/storageaccountstaticwebsite/) and an [Azure Function](/registry/packages/azure-native/api-docs/web/webappfunction/) written in the same language as the template. The template ships with placeholder content to give you a working project out of the box that you can customize easily and extend to suit your needs.
 
 ![An architecture diagram of the Pulumi Azure Serverless Application template](./architecture.png)
 
 ## Using this template
 
-To use this template to deploy your own serverless application, make sure you've [installed Pulumi]({{< relref "/docs/get-started/install" >}}) and [configured your Azure credentials]({{< relref "/registry/packages/azure/installation-configuration#credentials" >}}), then create a new [project]({{< relref "/docs/intro/concepts/project" >}}) using the template in your language of choice:
+To use this template to deploy your own serverless application, make sure you've [installed Pulumi](/docs/get-started/install/) and [configured your Azure credentials](/registry/packages/azure/installation-configuration#credentials), then create a new [project](/docs/intro/concepts/project/) using the template in your language of choice:
 
 {{< templates/pulumi-new >}}
 
@@ -32,13 +32,13 @@ Follow the prompts to complete the new-project wizard. When it's done, you'll ha
 
 ## Deploying the project
 
-The template requires no additional configuration. Once the new project is created, you can deploy it immediately with [`pulumi up`]({{< relref "/docs/reference/cli/pulumi_up" >}}):
+The template requires no additional configuration. Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/reference/cli/pulumi_up):
 
 ```bash
 $ pulumi up
 ```
 
-When the deployment completes, Pulumi exports the following [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}) values:
+When the deployment completes, Pulumi exports the following [stack output](/docs/intro/concepts/stack#outputs) values:
 
 siteURL
 : The HTTP URL of the static website.
@@ -54,7 +54,7 @@ $ open $(pulumi stack output siteURL)
 
 ## Customizing the project
 
-Projects created with the Serverless Application template expose the following [configuration]({{< relref "/docs/intro/concepts/config" >}}) settings:
+Projects created with the Serverless Application template expose the following [configuration](/docs/intro/concepts/config/) settings:
 
 sitePath
 : The path to the folder containing the files of the website. Defaults to `www`, which is the name (and relative path) of the folder included with the template.
@@ -68,7 +68,7 @@ indexDocument
 errorDocument
 : The file to use for error pages. Defaults to `error.html`.
 
-All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`]({{< relref "/docs/reference/cli/pulumi_config_set" >}}).
+All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/reference/cli/pulumi_config_set).
 
 ```bash
 $ pulumi config set sitePath ../my-existing-website/build
@@ -77,7 +77,7 @@ $ pulumi up
 
 ## Tidying up
 
-You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`]({{< relref "/docs/reference/cli/pulumi_destroy" >}}):
+You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/reference/cli/pulumi_destroy):
 
 ```bash
 $ pulumi destroy
@@ -87,7 +87,7 @@ $ pulumi destroy
 
 Congratulations! You're now well on your way to managing a production-grade serverless application on Azure with Pulumi --- and there's lots more you can do from here:
 
-* Discover more architecture templates in [Templates &rarr;]({{< relref "/templates" >}})
-* Dive into the Azure Native package by exploring the [API docs in the Registry &rarr;]({{< relref "/registry/packages/azure-native" >}})
-* Expand your understanding of how Pulumi works in [Learn Pulumi &rarr;]({{< relref "/learn" >}})
+* Discover more architecture templates in [Templates &rarr;](/templates)
+* Dive into the Azure Native package by exploring the [API docs in the Registry &rarr;](/registry/packages/azure-native)
+* Expand your understanding of how Pulumi works in [Learn Pulumi &rarr;](/learn)
 * Read up on the latest new Azure features [in the Pulumi Blog &rarr;](/blog/tag/azure)

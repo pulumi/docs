@@ -13,7 +13,7 @@ aliases:
     - "/eks"
 ---
 
-<a href="{{< relref "./" >}}">
+<a href="./">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -31,11 +31,11 @@ offering a single programming model and deployment workflow that works for your 
 in addition to infrastructure. This support ensures your EKS resources are fully integrated properly with the
 related AWS services. This includes
 
-* [ECR]({{< relref "ecr" >}}) for private container images
-* [ELB]({{< relref "elb" >}}) for load balancing
-* [IAM]({{< relref "iam" >}}) for security
-* [VPC]({{< relref "vpc" >}}) for network isolation
-* [CloudWatch]({{< relref "cloudwatch" >}}) for monitoring
+* [ECR](/docs/guides/crosswalk/aws/ecr/) for private container images
+* [ELB](/docs/guides/crosswalk/aws/elb/) for load balancing
+* [IAM](/docs/guides/crosswalk/aws/iam/) for security
+* [VPC](/docs/guides/crosswalk/aws/vpc/) for network isolation
+* [CloudWatch](/docs/guides/crosswalk/aws/cloudwatch/) for monitoring
 
 Amazon EKS runs up-to-date versions of the open-source Kubernetes software, so you can use all the existing plugins and
 tooling from the Kubernetes community, including Pulumi's support for deploying Helm charts. Applications running on
@@ -725,13 +725,13 @@ class MyStack : Stack
 {{% /choosable %}}
 
 For a full list of options that you may set on your cluster, see the [API documentation](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/eks#ClusterOptions" >}}). Many common cases are described below.
+/docs/reference/pkg/nodejs/pulumi/eks#ClusterOptions). Many common cases are described below.
 
 ## Configuring Your EKS Cluster's Networking
 
 By default, your EKS cluster is put into your region's default VPC. This is a reasonable default, however this is
 configurable if you want specific network isolation or to place your cluster work nodes on private subnets. This works
-in conjunction with [Pulumi Crosswalk for AWS VPC]({{< relref "vpc" >}}) which makes configuring VPCs easier.
+in conjunction with [Pulumi Crosswalk for AWS VPC](/docs/guides/crosswalk/aws/vpc/) which makes configuring VPCs easier.
 
 This example creates a new VPC with private subnets only and creates our EKS cluster inside of it:
 
@@ -900,14 +900,14 @@ is given a default node group, with the instance sizes and counts that you speci
 instances otherwise). The latest version of Kubernetes available is used by default.
 
 If you would like to disable the creation of a default node group, and instead rely on creating your own, pass
-[`skipDefaultNodeGroup`]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks#ClusterOptions-skipDefaultNodeGroup" >}})
+[`skipDefaultNodeGroup`](/docs/reference/pkg/nodejs/pulumi/eks#ClusterOptions-skipDefaultNodeGroup)
 as `true` to the `eks.Cluster` constructor. Additional node groups may then be created by calling
-[the `createNodeGroup` function]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks#Cluster-createNodeGroup" >}}) on
-your EKS cluster, or by [creating an `eks.NodeGroup`]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks#NodeGroup" >}})
+[the `createNodeGroup` function](/docs/reference/pkg/nodejs/pulumi/eks#Cluster-createNodeGroup) on
+your EKS cluster, or by [creating an `eks.NodeGroup`](/docs/reference/pkg/nodejs/pulumi/eks#NodeGroup)
 explicitly. In both cases, you are likely to want to configure IAM roles for your worker nodes explicitly, which can be
 supplied to your EKS cluster using the
-[`instanceRole`]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks#ClusterOptions-instanceRole" >}}) or
-[`instanceRoles`]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks#ClusterOptions-instanceRoles" >}}) properties.
+[`instanceRole`](/docs/reference/pkg/nodejs/pulumi/eks#ClusterOptions-instanceRole) or
+[`instanceRoles`](/docs/reference/pkg/nodejs/pulumi/eks#ClusterOptions-instanceRoles) properties.
 
 For instance, let's say we want to have two node groups: one for our fixed, known workloads, and another that is
 burstable and might use more expensive compute, but which can be scaled down when possible (possibly to zero).
@@ -1495,18 +1495,18 @@ When you create an Amazon EKS cluster, the IAM entity user or role (for example,
 cluster is automatically granted `system:masters` permissions in the cluster's RBAC configuration. To grant additional
 AWS users or roles the ability to interact with your cluster, you must edit the `aws-auth` ConfigMap within Kubernetes.
 
-The [`roleMappings` property]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks#ClusterOptions-roleMappings" >}})
+The [`roleMappings` property](/docs/reference/pkg/nodejs/pulumi/eks#ClusterOptions-roleMappings)
 for your EKS cluster lets you configure custom IAM roles. For example, you can create different IAM roles for cluster
 admins, automation accounts (for CI/CD), and production roles, and supply them to `roleMappings`; this has the effect of
 placing them in the `aws-auth` ConfigMap for your cluster automatically. Pulumi also lets you configure Kubernetes
 objects, so that can also then create the RBAC cluster role bindings in your cluster to tie everything together.
 
 For a complete example of this in action, see
-[Simplifying Kubernetes RBAC in Amazon EKS]({{< relref "simplify-kubernetes-rbac-in-amazon-eks-with-open-source-pulumi-packages" >}}).
+[Simplifying Kubernetes RBAC in Amazon EKS](/blog/simplify-kubernetes-rbac-in-amazon-eks-with-open-source-pulumi-packages/).
 
 ## Deploying Kubernetes Apps to Your EKS Cluster
 
-Pulumi supports the entire Kubernetes object model in the [@pulumi/kubernetes]({{< relref "/registry/packages/kubernetes/api-docs" >}})
+Pulumi supports the entire Kubernetes object model in the [@pulumi/kubernetes](/registry/packages/kubernetes/api-docs)
 package. For more information on these object types, including Deployments, Services, and Pods, see
 [Understanding Kubernetes Objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/).
 
@@ -2029,11 +2029,11 @@ class MyStack : Stack
 {{% /choosable %}}
 
 To ease doing this against an EKS cluster just created, the cluster object itself offers a [`provider` property](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/eks#Cluster-provider" >}}) of type `kubernetes.Provider`, already pre-configured.
+/docs/reference/pkg/nodejs/pulumi/eks#Cluster-provider) of type `kubernetes.Provider`, already pre-configured.
 
 For more information about configuring access to multiple clusters, see [Configure Access to Multiple Clusters](
 https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/) and the
-[Pulumi Kubernetes Setup documentation]({{< relref "/registry/packages/kubernetes/installation-configuration" >}}).
+[Pulumi Kubernetes Setup documentation](/registry/packages/kubernetes/installation-configuration/).
 
 ## Deploying Existing Kubernetes YAML Config to Your EKS Cluster
 
@@ -2041,9 +2041,9 @@ Specifying your Kubernetes object configurations in Pulumi lets you take advanta
 like variables, loops, conditionals, functions, and classes. It is possible, however, to deploy existing Kubernetes
 YAML. The two approaches can be mixed, which is useful when converting an existing project.
 
-The [`ConfigFile` class]({{< relref "/registry/packages/kubernetes/api-docs/yaml/configfile" >}}) can be
+The [`ConfigFile` class](/registry/packages/kubernetes/api-docs/yaml/configfile) can be
 used to deploy a single YAML file, whereas the [`ConfigGroup` class](
-{{< relref "/registry/packages/kubernetes/api-docs/yaml/configgroup" >}}) can deploy
+/registry/packages/kubernetes/api-docs/yaml/configgroup) can deploy
 a collection of files, either from a set of files or in-memory representations.
 
 For example, imagine we have a directory, `yaml/`, containing the full YAML for the [Kubernetes Guestbook application](
@@ -2213,7 +2213,7 @@ class MyStack : Stack
 {{% /choosable %}}
 
 The `ConfigFile` and `ConfigGroup` classes both support a [`transformations` property](
-{{< relref "/registry/packages/kubernetes#transformations_nodejs" >}}) which can be used to ["monkey patch/api-docs"](
+/registry/packages/kubernetes#transformations_nodejs) which can be used to ["monkey patch/api-docs"](
 https://en.wikipedia.org/wiki/Monkey_patch) Kubernetes configuration on the fly. This can be used to rewrite
 configuration to include additional services (like Envoy sidecars), inject tags, and so on.
 
@@ -2728,9 +2728,9 @@ var chart = new Helm.V3.Chart("empty",
 
 ## Using an ECR Container Image from an EKS Kubernetes Deployment
 
-[Pulumi Crosswalk for AWS ECR]({{< relref "ecr" >}}) enables you to build, publish, and consume private Docker
+[Pulumi Crosswalk for AWS ECR](/docs/guides/crosswalk/aws/ecr/) enables you to build, publish, and consume private Docker
 images easily using Amazon's Elastic Container Registry (ECR). The [`aws.ecr.buildAndPushImage` function](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/ecr#buildAndPushImage" >}}) takes a name and a relative location on disk, and will
+/docs/reference/pkg/nodejs/pulumi/awsx/ecr#buildAndPushImage) takes a name and a relative location on disk, and will
 
 * Provision a private ECR registry using that name
 * Build the `Dockerfile` found at the relative location supplied
@@ -2739,7 +2739,7 @@ images easily using Amazon's Elastic Container Registry (ECR). The [`aws.ecr.bui
 
 This makes it easy to version your container images alongside the Kubernetes specifications that consume them.
 
-> *Note:* for more complete examples of building and publishing to _any_ private container registry, including AWS, Azure, Google Cloud, and the Docker Hub, please refer to the article [Build and publish container images to any cloud with Infrastructure as Code]({{< relref "/blog/build-publish-containers-iac" >}}).
+> *Note:* for more complete examples of building and publishing to _any_ private container registry, including AWS, Azure, Google Cloud, and the Docker Hub, please refer to the article [Build and publish container images to any cloud with Infrastructure as Code](/blog/build-publish-containers-iac/).
 
 For example, let's say we have an `app/` directory containing a fully Dockerized application (including a
 `Dockerfile`), and would like to deploy that as a Deployment and Service running in our EKS cluster. This program
@@ -2956,7 +2956,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		
+
 		image, err := ecr.NewImage(ctx, "image", &ecr.ImageArgs{
 			RepositoryId: repo.url,
 			Path: pulumi.String("./app"),
@@ -3106,13 +3106,13 @@ class MyStack : Stack
 
 {{% /choosable %}}
 
-For more information about ECR, see [the Pulumi Crosswalk for AWS ECR documentation]({{< relref "ecr" >}}).
+For more information about ECR, see [the Pulumi Crosswalk for AWS ECR documentation](/docs/guides/crosswalk/aws/ecr/).
 
 ## Additional EKS Resources
 
 For more information about Kubernetes and EKS, see the following:
 
-* [Pulumi Kubernetes API Documentation]({{< relref "/registry/packages/kubernetes/api-docs" >}})
-* [Pulumi EKS API Documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks" >}})
+* [Pulumi Kubernetes API Documentation](/registry/packages/kubernetes/api-docs/)
+* [Pulumi EKS API Documentation](/docs/reference/pkg/nodejs/pulumi/eks/)
 * [Amazon Elastic Kubernetes Service homepage](https://aws.amazon.com/eks/)
 * [Kubernetes Documentation](https://kubernetes.io)

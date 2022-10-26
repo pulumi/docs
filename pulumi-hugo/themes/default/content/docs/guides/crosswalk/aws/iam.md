@@ -11,7 +11,7 @@ menu:
 aliases: ["/docs/reference/crosswalk/aws/iam/"]
 ---
 
-<a href="{{< relref "./" >}}">
+<a href="./">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -20,7 +20,7 @@ and resources securely. Using IAM, you can create and manage AWS users and group
 deny their access to AWS resources.
 
 {{% notes type="info" %}}
-This functionality is available in TypeScript only and as part of the [AWS Classic provider]({{< relref "/registry/packages/aws" >}}).
+This functionality is available in TypeScript only and as part of the [AWS Classic provider](/registry/packages/aws/).
 {{% /notes %}}
 
 ## Overview
@@ -63,7 +63,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html).
 #### Strongly Typed Policy Documents (TypeScript-only)
 
 Pulumi Crosswalk for AWS in TypeScript defines [the `aws.iam.PolicyDocument` interface](
-{{< relref "/registry/packages/aws/api-docs/iam" >}}) to add strong type checking to your policy documents. By using
+/registry/packages/aws/api-docs/iam) to add strong type checking to your policy documents. By using
 this type, we will know at compile time whether we've mistyped an attribute:
 
 ```typescript
@@ -163,7 +163,7 @@ var rolePolicyAttachment = new Iam.RolePolicyAttachment("rpa", new Iam.RolePolic
 {{% /choosable %}}
 
 For a full list of available managed policy ARNs, refer to the
-[API documentation]({{< relref "/registry/packages/aws/api-docs/iam" >}}).
+[API documentation](/registry/packages/aws/api-docs/iam/).
 
 ## Creating IAM Users, Groups, and Roles
 
@@ -175,7 +175,7 @@ relate and how to create and configure them.
 An AWS Identity and Access Management (IAM) user is an entity that you create in AWS to represent the person or
 application that uses it to interact with AWS. A user in AWS consists of a name and credentials.
 
-Use the [`User` resource]({{< relref "/registry/packages/aws/api-docs/iam/user" >}}) to create new
+Use the [`User` resource](/registry/packages/aws/api-docs/iam/user) to create new
 IAM users. This example creates an IAM user and attaches a policy:
 
 {{< chooser language "typescript,python,go,csharp" / >}}
@@ -332,14 +332,14 @@ class MyStack : Stack
 {{% /choosable %}}
 
 For more options available when configuring IAM users, see the [API documentation](
-{{< relref "/registry/packages/aws/api-docs/iam/user" >}}).
+/registry/packages/aws/api-docs/iam/user).
 
 If you'd like to configure non-service account users that can login to the
-AWS console, see [`UserLoginProfile`]({{< relref "/registry/packages/aws/api-docs/iam/userloginprofile" >}}),
-and for creating access keys, see [`AccessKey`]({{< relref "/registry/packages/aws/api-docs/iam/accesskey" >}}).
+AWS console, see [`UserLoginProfile`](/registry/packages/aws/api-docs/iam/userloginprofile),
+and for creating access keys, see [`AccessKey`](/registry/packages/aws/api-docs/iam/accesskey).
 
 If you need to attach a managed policy ARN to your user, use the [`UserPolicyAttachment` resource](
-{{< relref "/registry/packages/aws/api-docs/iam/userpolicyattachment" >}}).
+/registry/packages/aws/api-docs/iam/userpolicyattachment).
 
 Finally, for detailed information about IAM Users, refer to the [AWS documentation](
 https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html).
@@ -353,7 +353,7 @@ and needs administrator privileges, you can assign the appropriate permissions b
 Similarly, if a person changes jobs in your organization, instead of editing that user's permissions, you can remove
 them from the old groups and add them to the appropriate new groups.
 
-Use the [`Group` resource]({{< relref "/registry/packages/aws/api-docs/iam/group" >}}) to manage
+Use the [`Group` resource](/registry/packages/aws/api-docs/iam/group) to manage
 IAM groups. For example, this code creates a new group for an organization's developers, specifies a policy for that
 group, and adds a couple users into it, thereby granting them permissions from the developer group all at once:
 
@@ -547,10 +547,10 @@ class MyStack : Stack
 {{% /choosable %}}
 
 For more information, refer to the API documentation for [groups](
-{{< relref "/registry/packages/aws/api-docs/iam/group" >}}), [group membership](
-{{< relref "/registry/packages/aws/api-docs/iam/groupmembership" >}}), and [group policies](
-{{< relref "/registry/packages/aws/api-docs/iam/grouppolicy" >}}). If you need to attach a managed policy ARN to your group, use the
-[`GroupPolicyAttachment` resource]({{< relref "/registry/packages/aws/api-docs/iam/grouppolicyattachment" >}}).
+/registry/packages/aws/api-docs/iam/group), [group membership](
+/registry/packages/aws/api-docs/iam/groupmembership), and [group policies](
+/registry/packages/aws/api-docs/iam/grouppolicy). If you need to attach a managed policy ARN to your group, use the
+[`GroupPolicyAttachment` resource](/registry/packages/aws/api-docs/iam/grouppolicyattachment).
 
 Finally, for detailed information about IAM Groups, refer to the
 [AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html).
@@ -563,7 +563,7 @@ in AWS. Instead of being uniquely associated with one person, however, a role is
 a role does not have standard long-term credentials such as a password or access keys associated with it. Instead, when
 you assume a role, it provides you with temporary security credentials for your role session.
 
-To manage IAM roles, use the [`Role` resource]({{< relref "/registry/packages/aws/api-docs/iam/role" >}}).
+To manage IAM roles, use the [`Role` resource](/registry/packages/aws/api-docs/iam/role).
 The following example creates a new role with a custom policy document, and also attaches a managed policy afterwards:
 
 {{< chooser language "typescript,python,go,csharp" / >}}
@@ -709,7 +709,7 @@ Roles are often useful for creating [instance profiles](
 https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html), which
 controls the IAM role assumed by compute running inside of your AWS account, whether that be in EC2, ECS, EKS, or
 Lambda, for example. To create one, use the [`InstanceProfile` resource](
-{{< relref "/registry/packages/aws/api-docs/iam/instanceprofile" >}}) and pass in your role:
+/registry/packages/aws/api-docs/iam/instanceprofile) and pass in your role:
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -753,12 +753,12 @@ var profile = new Iam.InstanceProfile("instance-profile", { Role = role.Id });
 {{% /choosable %}}
 
 For specific information about configuring roles, refer to [the API documentation](
-{{< relref "/registry/packages/aws/api-docs/iam/role" >}}). For more general information about IAM Roles, refer to the
+/registry/packages/aws/api-docs/iam/role). For more general information about IAM Roles, refer to the
 [AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html).
 
 ## Additional IAM Resources
 
 For more information about AWS IAM, see the following:
 
-* [Pulumi AWS IAM API Documentation]({{< relref "/registry/packages/aws/api-docs/iam" >}})
+* [Pulumi AWS IAM API Documentation](/registry/packages/aws/api-docs/iam/)
 * [Amazon Identity and Access Management (IAM) homepage](https://aws.amazon.com/iam/)

@@ -12,7 +12,7 @@ aliases:
 
 {{% notes "info" %}}
 The CI/CD integration assistant helps you integrate Pulumi into CI/CD systems for automatically deploying stacks and is only available
-to [Organizations]({{< relref "/docs/intro/pulumi-service/organizations" >}}), not personal accounts.
+to [Organizations](/docs/intro/pulumi-service/organizations/), not personal accounts.
 {{% /notes %}}
 
 <!--more-->
@@ -70,7 +70,7 @@ The **Configure CI/CD** step will help you configure secrets that will be used b
 For supported services, the assistant will provide a convenient link to the respective location
 where you can configure the secrets.
 
-The assistant provides a convenient way to create a [Pulumi access token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}})
+The assistant provides a convenient way to create a [Pulumi access token](/docs/intro/pulumi-service/accounts#access-tokens)
 without needing to leave the page.
 
 ![Pulumi Access Token](/images/docs/reference/console/pulumi-access-token.png)
@@ -78,7 +78,7 @@ without needing to leave the page.
 In the following example the assistant is being used to configure a GitHub Actions workflow.
 So the assistant provides a direct link to configure secrets for your workflow.
 
-See the [Registry]({{< relref "/registry" >}}) page to find the setup page for your cloud provider.
+See the [Registry](/registry/) page to find the setup page for your cloud provider.
 
 ## Add the workflow
 
@@ -104,7 +104,7 @@ that will run the `pulumi preview` command. Select the **Next** button to valida
 Congratulations on configuring a version control system and an automated pipeline for your stack! 🎉
 
 {{% notes "info" %}}
-If your pull request build failed, use the [CI/CD troubleshooting guide]({{< relref "/docs/guides/continuous-delivery/troubleshooting-guide" >}}) to diagnose the issue.
+If your pull request build failed, use the [CI/CD troubleshooting guide](/docs/guides/continuous-delivery/troubleshooting-guide) to diagnose the issue.
 {{% /notes %}}
 
 ## Skip the line and get the workflow directly

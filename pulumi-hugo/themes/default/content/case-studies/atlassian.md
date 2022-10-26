@@ -67,7 +67,7 @@ Pulumi allows developers to build, deploy, and manage cloud infrastructure and a
 
 Mike chose Python to build cloud infrastructure since Bitbucket developers already used Python. He said, “Because all the developers on Bitbucket write Python, they can use all the skills they already have from their day-to-day job to write infrastructure code. There are also safety features you’d expect from a standard programming language. For example, you know if you're referencing something that isn't declared or if you're trying to use a property that doesn't exist.”
 
-Instead of discarding all the code written with the old tool, Mike used [Pulumi's conversion tool]({{< relref "/tf2pulumi" >}}) to assist with the transition. Mike says, “I knew that Pulumi provided an automatic conversion tool, and that helped a lot. I spent one day using the automatic conversion tool and then just spent some time making sure everything looked right. In two days, I was all set.”
+Instead of discarding all the code written with the old tool, Mike used [Pulumi's conversion tool](/tf2pulumi) to assist with the transition. Mike says, “I knew that Pulumi provided an automatic conversion tool, and that helped a lot. I spent one day using the automatic conversion tool and then just spent some time making sure everything looked right. In two days, I was all set.”
 
 As an example of how Pulumi made formerly complex tasks straightforward, Mike says, “With the old tool, spinning up our databases meant we had to have about 20 blocks of code and do a lot of copy and pasting. But with Pulumi, it's Python. So you have a for statement and then you define the names of the databases you want. It's five lines of code. If you want to add a new database, add one line, and you're good to go.”
 
@@ -96,7 +96,7 @@ src="/images/case-studies/bitbucket-cloud-diagram.png" alt="Bitbucket Cloud and 
 
 ### Using the Automation API
 
-The [Pulumi Automation API]({{< relref "/docs/guides/automation-api" >}}) exposes the full power of infrastructure as code through a programmatic interface instead of CLI commands. It exposes Pulumi programs and stacks as strongly-typed and composable building blocks, enabling developers to automate deployments directly from their code at run-time. (A Pulumi program, which is written in your chosen programming language, describes how your cloud infrastructure should be composed.)
+The [Pulumi Automation API](/docs/guides/automation-api/) exposes the full power of infrastructure as code through a programmatic interface instead of CLI commands. It exposes Pulumi programs and stacks as strongly-typed and composable building blocks, enabling developers to automate deployments directly from their code at run-time. (A Pulumi program, which is written in your chosen programming language, describes how your cloud infrastructure should be composed.)
 
 Mike and the rest of the DevSpeed team have found many creative ways to use the Automation API to make changes to their infrastructure easily. One example is that they wanted to update the address of their primary database across all developer environments, which were using a raw address from AWS. Instead, they wanted to update the addresses with something more readable. They used the Automation API to write Python code that would automatically select every running instance and make the change. Next, Mike’s team is looking to use Automation API to automatically deploy and run Bitbucket developer environments as a full integration test.
 

@@ -5,7 +5,7 @@ meta_desc: "Ten reasons why you should deploy modern apps and Kubernetes with Pu
 meta_image: dangerous_pulumi.gif
 authors:
    - levi-blackstone
-   - sophia-parafina 
+   - sophia-parafina
 tags:
     - kubernetes
 ---
@@ -71,7 +71,7 @@ frontendService, err := corev1.NewService(ctx, “frontent”, &corev1.ServiceAr
 
 Pulumi is not just for developers; operators can leverage it to manage Kubernetes clusters, reuse existing YAML manifests and Helm charts, and conveniently manage common configurations like networking, storage, or RBAC. You can even export your Pulumi programs to YAML for portability.
 
-- **Manage Kubernetes clusters** – With Pulumi, you can manage every layer of your stack, from specifying a custom VPC to deploying Kubernetes clusters! [Check out this example]({{< relref "/blog/multicloud-app" >}}) where we create clusters on AWS, AKS, and GKE, and then deploy an app to all of them.
+- **Manage Kubernetes clusters** – With Pulumi, you can manage every layer of your stack, from specifying a custom VPC to deploying Kubernetes clusters! [Check out this example](/blog/multicloud-app/) where we create clusters on AWS, AKS, and GKE, and then deploy an app to all of them.
 
 - **Use existing YAML manifests** – Many of us already have a pile of YAML Kubernetes definitions to manage. Manage these manifests directly; no conversion needed! Pulumi shows detailed previews and allows you to run arbitrary transformations on the YAML before it is applied.
 
@@ -95,9 +95,9 @@ deployment = ConfigFile(
 
 ![Helm support](helm_manifest.gif)
 
-- **Extension libraries** – Our kubernetesx library makes it easier to manage Kubernetes resources by abstracting away a lot of the boilerplate. This dramatically cuts the amount of code you need to write, while still giving you access to the full API surface if you need it. Read about kubernetesx on our [blog] ({{< relref "/blog/introducing-kx" >}}).
+- **Extension libraries** – Our kubernetesx library makes it easier to manage Kubernetes resources by abstracting away a lot of the boilerplate. This dramatically cuts the amount of code you need to write, while still giving you access to the full API surface if you need it. Read about kubernetesx on our [blog] (/blog/introducing-kx).
 
-- **YAML export** – Pulumi lets you [export YAML manifests]({{< relref "/blog/kubernetes-yaml-generation" >}}) from the resource definitions in your program. This can be useful for integrating with other systems that expect Kubernetes YAML.
+- **YAML export** – Pulumi lets you [export YAML manifests](/blog/kubernetes-yaml-generation/) from the resource definitions in your program. This can be useful for integrating with other systems that expect Kubernetes YAML.
 
 ## Conclusion
 

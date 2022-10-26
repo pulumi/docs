@@ -8,9 +8,9 @@ menu:
 ---
 {{% notes "info" %}}
 Team Access Tokens are only available to organizations using Pulumi Enterprise or Pulumi Business Critical.
-To learn more about our editions, visit our [pricing page]({{< relref "/pricing" >}}).
+To learn more about our editions, visit our [pricing page](/pricing/).
 {{% /notes %}}
-Team Access Tokens, like [Organization Access Tokens]({{< relref "/docs/intro/pulumi-service/organization-access-tokens" >}}), provide Enterprise and Business Critical customers the opportunity to manage resources and stack operations for their organization independent of a single-user account. However, Team Access Tokens enable this access to be scoped to the stack access of a [Pulumi Team]({{< relref "/docs/intro/pulumi-service/teams" >}}), rather than to the entire organization's stacks.
+Team Access Tokens, like [Organization Access Tokens](/docs/intro/pulumi-service/organization-access-tokens/), provide Enterprise and Business Critical customers the opportunity to manage resources and stack operations for their organization independent of a single-user account. However, Team Access Tokens enable this access to be scoped to the stack access of a [Pulumi Team](/docs/intro/pulumi-service/teams/), rather than to the entire organization's stacks.
 
 Collectively Organization Access Tokens and Team Access Tokens are referred to as "machine tokens", which are not owned by a real user in your organization. This distinguishes them from Personal Access Tokens.
 
@@ -33,7 +33,7 @@ Team Access Tokens, like Organization Access Tokens, must have a name that is un
 
 Once you name a token, the name is taken forever, even after you delete it. This is in order to maintain the integrity of Audit Log Events which persist the token's name as part of the event (see below). Any other Organization Admin, or a Team Admin for the associated team, can delete the token since they are managed by the team and not by a user.
 
-The creation of any Team Access Token, and the user who performed it, is logged as an [Audit Log]({{< relref "/docs/intro/pulumi-service/audit-logs" >}}) Event.
+The creation of any Team Access Token, and the user who performed it, is logged as an [Audit Log](/docs/intro/pulumi-service/audit-logs/) Event.
 
 ## Viewing Team Access Tokens
 

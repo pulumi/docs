@@ -8,7 +8,7 @@ authors: ["isaac-harris", "david-flanagan"]
 tags: ["aws", "eks", "kubernetes"]
 ---
 
-With the launch of [Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/blogs/aws/amazon-eks-now-generally-available/) in 2017, it is now [easier than ever]({{< relref "/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi" >}}) to build, secure, operate and maintain Kubernetes clusters in the cloud. Notably, EKS removed the need to manage and configure underlying compute resources and scaling for clusters. Further, [EKS Anywhere](https://aws.amazon.com/eks/eks-anywhere/) brings many benefits to hybrid and on-premises deployments.
+With the launch of [Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/blogs/aws/amazon-eks-now-generally-available/) in 2017, it is now [easier than ever](/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi/) to build, secure, operate and maintain Kubernetes clusters in the cloud. Notably, EKS removed the need to manage and configure underlying compute resources and scaling for clusters. Further, [EKS Anywhere](https://aws.amazon.com/eks/eks-anywhere/) brings many benefits to hybrid and on-premises deployments.
 
 These developments have proved to be a huge leap forward in productivity for teams that manage cloud infrastructure, enabling them to focus their efforts on deploying applications to meet the needs of customers and stakeholders.
 
@@ -20,7 +20,7 @@ Common activities for teams managing SSPs include:
 
 - Setting up and managing multiple environments like DEV, TEST, STAGE, and PROD
 - Simplifying platform administration with addons
-- Onboarding Internal Teams via [GitOps]({{< relref "/blog/improving-gitops-with-pulumi-operator" >}})
+- Onboarding Internal Teams via [GitOps](/blog/improving-gitops-with-pulumi-operator/)
 
 Pulumi makes all of these activities easy to automate with built-in secrets management, reusable components, support for end-to-end infrastructure testing, and centralized policy enforcement. We also see new opportunities for simplification in all these activities. We’re excited to be part of the [Amazon EKS Blueprints program](
 https://aws.amazon.com/blogs/containers/bootstrapping-clusters-with-eks-blueprints) to help Pulumi users deliver their platforms and applications faster than ever.
@@ -31,7 +31,7 @@ Here are some examples of how to simplify Kubernetes deployments using EKS Bluep
 
 ## Setting up and managing multiple environments
 
-Pulumi has a concept called [Stacks]({{< relref "/docs/intro/concepts/stack" >}}) that allows you to deploy the same Pulumi program multiple times, with minor variations to account for environmental differences. Leveraging this with our new Pulumi SSP SDK, you can deploy a cluster to multiple environments with very little code.
+Pulumi has a concept called [Stacks](/docs/intro/concepts/stack/) that allows you to deploy the same Pulumi program multiple times, with minor variations to account for environmental differences. Leveraging this with our new Pulumi SSP SDK, you can deploy a cluster to multiple environments with very little code.
 Here’s an example with one of Pulumi’s supported languages, Python.
 
 ```python
@@ -83,7 +83,7 @@ sharedServicesPlatform.clusterAddon({
 });
 ```
 
-Of course, you can easily leverage Pulumi’s integration with a variety of observability tools like [Datadog]({{< relref "/registry/packages/datadog" >}}) and [SumoLogic]({{< relref "/registry/packages/sumologic" >}}) as well.  We will be building more addons over the next few iterations, and we encourage you to reach out on our [Community Slack](https://slack.pulumi.com) and let us know what you’d like to see.
+Of course, you can easily leverage Pulumi’s integration with a variety of observability tools like [Datadog](/registry/packages/datadog/) and [SumoLogic](/registry/packages/sumologic/) as well.  We will be building more addons over the next few iterations, and we encourage you to reach out on our [Community Slack](https://slack.pulumi.com) and let us know what you’d like to see.
 
 ## Onboarding an Internal Team via GitOps
 

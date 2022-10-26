@@ -29,7 +29,7 @@ customer_logos:
       - ro
 ---
 
-Both Cosmos DB and MongoDB are [NoSQL]({{< relref "/learn/glossary/nosql" >}}), or non-relational, databases. This concept means their data is stored in some format other than two-dimensional tables. Some commonly-used formats for NoSQL databases in general are documents, key-value pairs, graphs, and columns, each with different strengths and tradeoffs. Cosmos DB and MongoDB are both highly-available, scalable, globally distributed and fully-managed NoSQL databases.
+Both Cosmos DB and MongoDB are [NoSQL](/learn/glossary/nosql/), or non-relational, databases. This concept means their data is stored in some format other than two-dimensional tables. Some commonly-used formats for NoSQL databases in general are documents, key-value pairs, graphs, and columns, each with different strengths and tradeoffs. Cosmos DB and MongoDB are both highly-available, scalable, globally distributed and fully-managed NoSQL databases.
 
 ### Benefits and Downfalls of Cosmos DB
 
@@ -47,8 +47,8 @@ Teams who are used to relational databases may find MongoDB difficult to get use
 
 Cosmos DB and MongoDB both have strengths and weaknesses that will benefit some teams but hinder others. If your infrastructure is already on Azure, or you need the flexibility of a database that supports multiple data models, Cosmos DB is the stronger offering. If you require support for larger documents and either use another cloud provider or simply want to avoid vendor lock-in, MongoDB is the best choice.
 
-Regardless of which database suits your needs, standing them up shouldn't be a chore. With Pulumi, provisioning either one is a breeze in the programming language of your choce. Try deploying an [AKS (Azure Kubernetes Service) application with Cosmos DB]({{< relref "/registry/packages/azure/how-to-guides/classic-azure-ts-aks-mean" >}}) or get started with [MongoDB Atlas]({{< relref "/docs/get-started" >}})
+Regardless of which database suits your needs, standing them up shouldn't be a chore. With Pulumi, provisioning either one is a breeze in the programming language of your choce. Try deploying an [AKS (Azure Kubernetes Service) application with Cosmos DB](/registry/packages/azure/how-to-guides/classic-azure-ts-aks-mean) or get started with [MongoDB Atlas](/docs/get-started/)
 
 ## Pulumi Corporation
 
-Pulumi's Cloud Engineering Platform unites infrastructure teams, application developers, and compliance teams around a unified software engineering process for delivering modern cloud applications faster and speeding innovation. Pulumi’s open-source tools help infrastructure teams tame the cloud’s complexity with Universal Infrastructure-as-Code using the world’s most popular programming languages and communities, including Python, YAML, Node.js (JavaScript, TypeScript), Go, and .NET (C#, F#, VB). [Get started for free today!]({{< relref "/registry/packages/mongodbatlas" >}})
+Pulumi's Cloud Engineering Platform unites infrastructure teams, application developers, and compliance teams around a unified software engineering process for delivering modern cloud applications faster and speeding innovation. Pulumi’s open-source tools help infrastructure teams tame the cloud’s complexity with Universal Infrastructure-as-Code using the world’s most popular programming languages and communities, including Python, YAML, Node.js (JavaScript, TypeScript), Go, and .NET (C#, F#, VB). [Get started for free today!](/registry/packages/mongodbatlas)

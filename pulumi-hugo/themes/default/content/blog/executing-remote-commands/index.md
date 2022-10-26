@@ -8,7 +8,7 @@ authors: ["david-flanagan"]
 tags: ["kubernetes"]
 ---
 
-We recently announced in our [release blog (66)](https://www.pulumi.com/blog/pulumi-release-notes-66/) a new package: [Command](https://www.pulumi.com/registry/packages/command/). In this article, I want to show you a practical application of this that will allow us to deploy [k3s](https://k3s.io) to a [DigitalOcean](digitalocean.com/products/kubernetes/) droplet. We'll then leverage the Command package to run a remote command to fetch the kubeconfig, generated on the VM, and pull it down to create a Kubernetes provider to deploy nginx.
+We recently announced in our [release blog (66)](https://www.pulumi.com/blog/pulumi-release-notes-66/) a new package: [Command](https://www.pulumi.com/registry/packages/command/). In this article, I want to show you a practical application of this that will allow us to deploy [k3s](https://k3s.io) to a [DigitalOcean](https://digitalocean.com/products/kubernetes/) droplet. We'll then leverage the Command package to run a remote command to fetch the kubeconfig, generated on the VM, and pull it down to create a Kubernetes provider to deploy nginx.
 
 So, let's get started by deploying our Digital Ocean droplet.
 

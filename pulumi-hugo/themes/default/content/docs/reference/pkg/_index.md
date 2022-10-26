@@ -13,7 +13,7 @@ higher-level APIs that make it easier to deliver cloud applications and infrastr
 
 ## Resource Documentation
 
-[Resource]({{< relref "/docs/intro/concepts/programming-model#resource-providers" >}})-level
+[Resource](/docs/intro/concepts/programming-model#resource-providers)-level
 documentation and examples for cloud providers and other services. Whether you're looking
 for details about how to work with a particular resource or just browsing around to
 explore what's possible, you've come to the right place.
@@ -69,22 +69,22 @@ SDK reference documentation, organized by language.
 {{% choosable language "javascript,typescript" %}}
 <dl class="tabular">
     <dt>Pulumi SDK</dt>
-    <dd><a href="{{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi" >}}">@pulumi/pulumi</a></dd>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/pulumi">@pulumi/pulumi</a></dd>
     <dt>Pulumi Policy</dt>
-    <dd><a href="{{< relref "/docs/reference/pkg/nodejs/pulumi/policy" >}}">@pulumi/policy</a></dd>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/policy">@pulumi/policy</a></dd>
     <dt>Pulumi Terraform</dt>
-    <dd><a href="{{< relref "/docs/reference/pkg/nodejs/pulumi/terraform" >}}">@pulumi/terraform</a></dd>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/terraform">@pulumi/terraform</a></dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular">
     <dt>Pulumi SDK</dt>
-    <dd><a href="{{< relref "/docs/reference/pkg/python/pulumi" >}}">pulumi</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi">pulumi</a></dd>
     <dt>Pulumi Policy</dt>
-    <dd><a href="{{< relref "/docs/reference/pkg/python/pulumi_policy" >}}">pulumi_policy</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_policy">pulumi_policy</a></dd>
     <dt>Pulumi Terraform</dt>
-    <dd><a href="{{< relref "/docs/reference/pkg/python/pulumi_terraform" >}}">pulumi_terraform</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_terraform">pulumi_terraform</a></dd>
 </dl>
 {{% /choosable %}}
 
@@ -112,17 +112,17 @@ SDK reference documentation, organized by language.
 <dl class="tabular">
     <dt>AWS Extensions</dt>
     <dd>
-        <a href="{{< relref "/docs/reference/pkg/nodejs/pulumi/awsx" >}}">@pulumi/awsx</a>
+        <a href="/docs/reference/pkg/nodejs/pulumi/awsx">@pulumi/awsx</a>
         <p>Simpler interfaces encapsulating common AWS patterns.</p>
     </dd>
     <dt>AWS EKS Cluster</dt>
     <dd>
-        <a href="{{< relref "/registry/packages/eks/api-docs" >}}">@pulumi/eks</a>
+        <a href="/registry/packages/eks/api-docs">@pulumi/eks</a>
         <p>Simpler interfaces for working with AWS EKS.</p>
     </dd>
     <dt>Kubernetes Extensions</dt>
     <dd>
-        <a href="{{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetesx" >}}">@pulumi/kubernetesx</a>
+        <a href="/docs/reference/pkg/nodejs/pulumi/kubernetesx">@pulumi/kubernetesx</a>
         <span class="ml-2 badge badge-preview">Preview</span>
         <p>Simpler interfaces for working with Kubernetes.</p>
     </dd>
@@ -133,7 +133,7 @@ SDK reference documentation, organized by language.
 <dl class="tabular">
     <dt>AWS EKS Cluster</dt>
     <dd>
-        <a href="{{< relref "/registry/packages/eks/api-docs" >}}">pulumi_eks</a>
+        <a href="/registry/packages/eks/api-docs">pulumi_eks</a>
         <p>Simpler interfaces for working with AWS EKS.</p>
     </dd>
 </dl>
@@ -143,7 +143,7 @@ SDK reference documentation, organized by language.
 <dl class="tabular">
     <dt>AWS EKS Cluster</dt>
     <dd>
-        <a href="{{< relref "/registry/packages/eks/api-docs" >}}">eks</a>
+        <a href="/registry/packages/eks/api-docs">eks</a>
         <p>Simpler interfaces for working with AWS EKS.</p>
     </dd>
 </dl>
@@ -153,7 +153,7 @@ SDK reference documentation, organized by language.
 <dl class="tabular">
     <dt>AWS EKS Cluster</dt>
     <dd>
-        <a href="{{< relref "/registry/packages/eks/api-docs" >}}">Pulumi.Eks</a>
+        <a href="/registry/packages/eks/api-docs">Pulumi.Eks</a>
         <p>Simpler interfaces for working with AWS EKS.</p>
     </dd>
 </dl>
@@ -166,7 +166,7 @@ SDK reference documentation, organized by language.
 <dl class="tabular">
     <dt>Pulumi Cloud Framework</dt>
     <dd>
-        <a href="{{< relref "/docs/reference/pkg/nodejs/pulumi/cloud" >}}">@pulumi/cloud</a>
+        <a href="/docs/reference/pkg/nodejs/pulumi/cloud">@pulumi/cloud</a>
         <span class="ml-2 badge badge-preview">PREVIEW</span>
         <p>A highly productive, cloud-agnostic package for container and serverless programming.</p>
     </dd>

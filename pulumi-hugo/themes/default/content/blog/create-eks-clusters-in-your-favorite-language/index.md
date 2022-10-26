@@ -15,7 +15,7 @@ tags:
     - typescript
 ---
 
-Pulumi's [infrastructure as code]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) tooling combines the programming languages and tools you already know with the full power of cloud
+Pulumi's [infrastructure as code](/what-is/what-is-infrastructure-as-code/) tooling combines the programming languages and tools you already know with the full power of cloud
 infrastructure. But until now, some Pulumi components for cloud infrastructure, like our popular [EKS package] for Amazon's Elastic
 Kubernetes Service, were only available in a subset of the languages supported by Pulumi.
 
@@ -53,9 +53,9 @@ components. That will be in public preview soon, and we're excited for you to tr
 If you haven't yet, try out the new pulumi-eks package with [this walkthrough].
 
 <!-- markdownlint-disable url -->
-[EKS package]: {{< relref "/registry/packages/eks/api-docs" >}}
+[EKS package]: /registry/packages/eks/api-docs/
 [v0.22.0 release]: https://github.com/pulumi/pulumi-eks/releases/tag/v0.22.0
-[manage EKS clusters]: {{< relref "/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi" >}}
+[manage EKS clusters]: /blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi/
 [multi-language components]: https://github.com/pulumi/pulumi/issues/2430
 [this walkthrough]:  https://www.pulumi.com/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi/
 [resources]: https://www.pulumi.com/docs/intro/concepts/resources/

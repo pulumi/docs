@@ -8,7 +8,7 @@ meta_image: "meta.png"
 ---
 
 {{% notes type="warning" %}}
-Some parts of this blog post are out-of-date. Please refer to our [Testing Guide]({{< relref "/docs/guides/testing" >}}) for the updated overview and tutorials.
+Some parts of this blog post are out-of-date. Please refer to our [Testing Guide](/docs/guides/testing/) for the updated overview and tutorials.
 {{% /notes %}}
 
 Testing your infrastructure using familiar tools like Node.js's Mocha
@@ -24,8 +24,7 @@ your infrastructure.
 
 ## Test-Driven Infrastructure
 
-We [previously explored many reasons and solutions](
-{{< relref "/blog/testing-your-infrastructure-as-code-with-pulumi" >}}) for
+We [previously explored many reasons and solutions](/blog/testing-your-infrastructure-as-code-with-pulumi/) for
 testing your infrastructure. In this post, we'll see a very simple approach that
 leverages existing test tools and frameworks. For this blog post, we'll be using
 Node.js with TypeScript, the Mocha test framework, and the Chai assertion library.
@@ -82,7 +81,7 @@ The VPC test is slightly more complex. For the most part, it is simply checking 
 `cluster.core.vpcId` property and ensuring it doesn't equal the default VPC ID, which
 we fetch with `aws.ec2.getVpc`. However, because we might be creating the custom VPC in the
 program itself, it's possible we won't know the ID during previews. (A [preview](
-{{< relref "/docs/reference/cli/pulumi_preview" >}}) is when
+/docs/reference/cli/pulumi_preview) is when
 Pulumi shows you a dry-run of your deployment without actually doing it yet.) That's why
 we check `pulumi.runtime.isDryRun` and let things slide, with a little warning message.
 We could always be conservative and fail the test, but in this case, we'll actually permit the
@@ -108,8 +107,8 @@ export const cluster = new eks.Cluster("my-cluster", {
 ```
 
 > If you want to create a fresh Pulumi project and follow along, simply
-> [install the CLI]({{< relref "/docs/get-started/install" >}}), ensure it is
-> [configured for your AWS account]({{< relref "/registry/packages/aws/installation-configuration" >}}),
+> [install the CLI](/docs/get-started/install/), ensure it is
+> [configured for your AWS account](/registry/packages/aws/installation-configuration/),
 > and run `pulumi new aws-typescript` to create an empty project. Swap out the contents
 > of `index.ts` with the above.
 
@@ -453,9 +452,9 @@ And if we select it, we'll see the complete Mocha test output:
 
 ![Failed Deployment Details](./failed-deployment-details.png)
 
-We could even [use webhooks]({{< relref "/docs/intro/pulumi-service/webhooks" >}}) to
+We could even [use webhooks](/docs/intro/pulumi-service/webhooks/) to
 fire off a Slack alarm so that nobody misses the issue. This is often very helpful in
-unattended scenarios, like [continuous deployment]({{< relref "/docs/guides/continuous-delivery" >}}).
+unattended scenarios, like [continuous deployment](/docs/guides/continuous-delivery/).
 
 Better to catch these things late than never!
 
@@ -508,7 +507,7 @@ a preview, when all of these different states are possible. That has the downsid
 catching problems before they get deployed, however. As with many things, this is a tradeoff.
 
 For a more complete overview of `Output<T>`, please see the
-[Pulumi Programming Model documentation]({{< relref "/docs/intro/concepts/inputs-outputs" >}}).
+[Pulumi Programming Model documentation](/docs/intro/concepts/inputs-outputs/).
 
 ## Next Steps
 
@@ -522,4 +521,4 @@ can be used to enforce a wide array of team standards, best practices, and secur
 guidelines. If you can express it in your favorite test framework, you can check it!
 
 Everything we've seen in this article is open source and free to use --
-[give Pulumi a try today]({{< relref "/docs/get-started" >}}).
+[give Pulumi a try today](/docs/get-started/).

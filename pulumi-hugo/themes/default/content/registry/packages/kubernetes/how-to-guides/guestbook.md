@@ -35,8 +35,8 @@ The code for this tutorial is available on GitHub.
 
 You need to have the Pulumi CLI and a working Kubernetes cluster.
 
-1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-2. [Connect Pulumi to a Kubernetes Cluster]({{< relref "/registry/packages/kubernetes/installation-configuration" >}})
+1. [Install Pulumi](/docs/get-started/install/)
+2. [Connect Pulumi to a Kubernetes Cluster](/registry/packages/kubernetes/installation-configuration/)
 
 ## Running the Guestbook
 
@@ -944,7 +944,7 @@ class Guestbook : Stack
 
 1. (Optional) By default, our frontend Service will be of type `ClusterIP`. This will work on Minikube and similar dev/local clusters; however, for most production Kubernetes clusters, we'll want a `LoadBalancer` Service to ensure a load balancer gets allocated in your target cloud environment.
 
-    The above code uses [configuration]({{< relref "/docs/intro/concepts/config" >}}) to make this parameterizable.
+    The above code uses [configuration](/docs/intro/concepts/config/) to make this parameterizable.
     If you'd like our program to use a load balancer, simply run:
 
     ```shell

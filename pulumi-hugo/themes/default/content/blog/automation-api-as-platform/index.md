@@ -23,7 +23,7 @@ This example demonstrates how to create infrastructure with Automation API and t
 
 ### Infrastructure as a function
 
-We use an `inline` Pulumi program that doesn't require a separate package with `index.ts` and `Pulumi.yaml` files, although they can be authored in an `index.ts` file or imported from another package. The example deploys an AWS S3 website with the context and deployment automation defined in a function. Functions can be [components]({{< relref "/docs/intro/concepts/resources#components" >}}), in this case, a static S3 website. However, they can be more complex, such as a Kubernetes cluster with accompanying containers and AWS resources.
+We use an `inline` Pulumi program that doesn't require a separate package with `index.ts` and `Pulumi.yaml` files, although they can be authored in an `index.ts` file or imported from another package. The example deploys an AWS S3 website with the context and deployment automation defined in a function. Functions can be [components](/docs/intro/concepts/resources#components), in this case, a static S3 website. However, they can be more complex, such as a Kubernetes cluster with accompanying containers and AWS resources.
 
 ```typescript
 const projectName = "pulumi_over_http";
@@ -272,5 +272,5 @@ Automation API enables building your custom cloud platforms. This example has sh
 
 Automation API lets you build and explore new implementation patterns with cloud resources. Check out the other things you can build with Automation API.
 
-- [The Pulumi Automation API - The Next Quantum Leap in IaC]({{< relref "/blog/automation-api" >}})
+- [The Pulumi Automation API - The Next Quantum Leap in IaC](/blog/automation-api/)
 - [Automation API Examples](https://github.com/pulumi/automation-api-examples)

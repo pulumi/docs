@@ -6,7 +6,7 @@ layout: how-to-guide
 
 [Server-Side Apply](https://kubernetes.io/docs/reference/using-api/server-side-apply/) (SSA) is a resource management strategy that was introduced in Kubernetes `v1.18`. Clients using SSA can safely share the management of Kubernetes resources by making the API Server responsible for computing diffs and resolving conflicts.
 
-The [v3.20.0 release](https://github.com/pulumi/pulumi-kubernetes/releases/tag/v3.20.0) of the Pulumi Kubernetes provider added support for managing resources using SSA. This feature is currently opt-in using the `enableServerSideApply` [Provider option]({{< relref "/registry/packages/kubernetes/api-docs/provider">}}), but will become the default in the next major release. Using SSA provides the following benefits:
+The [v3.20.0 release](https://github.com/pulumi/pulumi-kubernetes/releases/tag/v3.20.0) of the Pulumi Kubernetes provider added support for managing resources using SSA. This feature is currently opt-in using the `enableServerSideApply` [Provider option](/registry/packages/kubernetes/api-docs/provider/), but will become the default in the next major release. Using SSA provides the following benefits:
 
 1. Kubernetes resources may be safely managed by more than one controller.
 2. It is now possible to "Upsert" resources; create the resource if it does not exist, or apply the configuration to an existing resource.
@@ -17,7 +17,7 @@ This guide will show you how to enable SSA support and use these features to man
 
 ## Enable Server-Side Apply
 
-Use the `enableServerSideApply` [Provider option]({{< relref "/registry/packages/kubernetes/api-docs/provider">}}) option to enable Server-Side Apply for the Provider. This option can be set in the following ways:
+Use the `enableServerSideApply` [Provider option](/registry/packages/kubernetes/api-docs/provider/) option to enable Server-Side Apply for the Provider. This option can be set in the following ways:
 
 1. Set the stack config explicitly with `pulumi config set kubernetes:enableServerSideApply true`
 2. Set the stack config using an environment variable: `PULUMI_K8S_ENABLE_SERVER_SIDE_APPLY=true`

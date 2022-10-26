@@ -15,7 +15,7 @@ One of our key goals with Pulumi’s Universal Infrastructure as Code platform i
 
 The AWS Cloud Development Kit (CDK) offers a large collection of higher-level libraries (“constructs”) for working with the AWS platform, built by service teams at AWS and by the AWS CDK community. These libraries are available in the same set of general purpose programming languages that Pulumi supports, with the primary difference being that AWS CDK compiles infrastructure programs into CloudFormation. This dependence on CloudFormation limits AWS CDK to being deployed via the CloudFormation deployment service which can slow down deployments and introduce some developer productivity friction due to the impedance mismatch between the program you write and the YAML it gets transpiled into.
 
-With the new [AWS CDK on Pulumi](https://github.com/pulumi/pulumi-cdk) project, available in public preview today, we are opening up the ability to use AWS CDK constructs from within a Pulumi deployment. For users already using AWS CDK, this provides Pulumi as a new option for orchestrating deployments in place of CloudFormation, offering improved deployment speed, integration with the full set of features of the Pulumi Cloud Engineering Platform (like [Policy as Code]({{< relref "/docs/guides/crossguard" >}}), [Audit Logs]({{< relref "/docs/intro/pulumi-service/audit-logs" >}}), Secrets, and much more). And for Pulumi users, they are now able to leverage and benefit from the decades of experience AWS teams and the AWS CDK community have invested in designing well-architected infrastructure patterns through these constructs.
+With the new [AWS CDK on Pulumi](https://github.com/pulumi/pulumi-cdk) project, available in public preview today, we are opening up the ability to use AWS CDK constructs from within a Pulumi deployment. For users already using AWS CDK, this provides Pulumi as a new option for orchestrating deployments in place of CloudFormation, offering improved deployment speed, integration with the full set of features of the Pulumi Cloud Engineering Platform (like [Policy as Code](/docs/guides/crossguard/), [Audit Logs](/docs/intro/pulumi-service/audit-logs/), Secrets, and much more). And for Pulumi users, they are now able to leverage and benefit from the decades of experience AWS teams and the AWS CDK community have invested in designing well-architected infrastructure patterns through these constructs.
 
 Even better, you can also now combine AWS CDK and Pulumi resources in a single Pulumi infrastructure as code project - passing outputs from Pulumi resources into AWS CDK constructs, and outputs from AWS CDK constructs into Pulumi resources. This allows you to work across the more than 80 cloud and SaaS providers that Pulumi offers access to, while still benefiting from high level libraries from the AWS CDK project, and without the hassles of a transpiler.
 
@@ -150,11 +150,11 @@ const stack = new LambdaStack('teststack');
 export const ruleArn = stack.ruleArn;
 ```
 
-Note how the `pulumicdk.asString` and `asOutput` functions are used to convert Pulumi [Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) to AWS CDK [Tokens](https://docs.aws.amazon.com/cdk/v2/guide/tokens.html) and vice-versa to map values out of and into Pulumi.
+Note how the `pulumicdk.asString` and `asOutput` functions are used to convert Pulumi [Outputs](/docs/intro/concepts/inputs-outputs/) to AWS CDK [Tokens](https://docs.aws.amazon.com/cdk/v2/guide/tokens.html) and vice-versa to map values out of and into Pulumi.
 
 ## Building on AWS Native and the AWS Cloud Control API
 
-Last year we released a new [AWS Native]({{< relref "/blog/announcing-aws-native" >}}) Pulumi provider in preview.  The AWS Native provider builds on the new [AWS Cloud Control API](https://aws.amazon.com/blogs/aws/announcing-aws-cloud-control-api/), which offers direct provisioning support for the same resource model supported by AWS CloudFormation.
+Last year we released a new [AWS Native](/blog/announcing-aws-native/) Pulumi provider in preview.  The AWS Native provider builds on the new [AWS Cloud Control API](https://aws.amazon.com/blogs/aws/announcing-aws-cloud-control-api/), which offers direct provisioning support for the same resource model supported by AWS CloudFormation.
 
 The new AWS CDK on Pulumi builds upon AWS Native by converting the CloudFormation resource tree into the corresponding resource definitions from the AWS Native provider.  This provides a high fidelity mapping of each resource into Pulumi.  The coverage provided by AWS Cloud Control API (and thus AWS Native) is not yet complete across the entire breadth of the CloudFormation resource model though, so for some resources, it may be necessary to map them to a resource definition to use via the AWS Classic provider.  This is handled via the `remapCloudControlResource` API which allows providing a custom mapping for a given CloudFormation resource type which is not yet supported in Pulumi AWS Native and AWS Cloud Control.
 
@@ -328,7 +328,7 @@ Duration: 4m51s
 
 Currently AWS CDK on Pulumi is supported only for TypeScript users, due to how the AWS CDK synthesis process (implemented in TypeScript) must be invoked from within the Pulumi program. We are exploring ways to bring this support into other Pulumi (and CDK) languages as part of future updates to the library.
 
-In the meantime, AWS CDK on Pulumi can be used within Component Packages implemented in TypeScript, and exposed to any Pulumi language (including newly supported [Java]({{< relref "./announcing-infrastructure-as-code-with-java-and-pulumi" >}}) and [YAML]({{< relref "./pulumi-yaml" >}})).
+In the meantime, AWS CDK on Pulumi can be used within Component Packages implemented in TypeScript, and exposed to any Pulumi language (including newly supported [Java](/blog/announcing-infrastructure-as-code-with-java-and-pulumi/) and [YAML](/blog/pulumi-yaml/).
 
 ## Summary
 

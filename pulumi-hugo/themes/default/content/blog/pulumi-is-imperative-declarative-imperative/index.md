@@ -17,7 +17,7 @@ It's no surprise that Pulumi is often the tool being debated. What if I tell you
 
 <!--more-->
 
-When we look at our [Frequently Asked Questions]({{< relref "/docs/support/faq#is-pulumi-imperative-or-declarative" >}}), we read the following on the declarative versus imperative topic:
+When we look at our [Frequently Asked Questions](/docs/support/faq#is-pulumi-imperative-or-declarative), we read the following on the declarative versus imperative topic:
 
 > Pulumi is a declarative tool that uses imperative languages to define your end state. The language is used for authoring your program.
 > It’s not used for talking to the cloud provider API.
@@ -34,7 +34,7 @@ Pulumi tries to offer a solution where our customers are only limited by their i
 
 ## Pulumi Architecture
 
-Here is the diagram from our [How Pulumi Works]({{< relref "/docs/intro/concepts/how-pulumi-works" >}}) page:
+Here is the diagram from our [How Pulumi Works](/docs/intro/concepts/how-pulumi-works/) page:
 
 ![Pulumi Architecture](/images/docs/reference/engine-block-diagram.png)
 
@@ -72,8 +72,8 @@ for i in range(10):
 A Pulumi program models the to-be state of your infrastructure. If you read this program, you can find that
 we define 11 resources as our to-be infrastructure:
 
-* 1 [AWS S3]({{< relref "/registry/packages/aws/api-docs/s3/bucket" >}}) bucket
-* 10 [Objects]({{< relref "/registry/packages/aws/api-docs/s3/bucketobject" >}}) in the bucket created in the previous step
+* 1 [AWS S3](/registry/packages/aws/api-docs/s3/bucket/) bucket
+* 10 [Objects](/registry/packages/aws/api-docs/s3/bucketobject/) in the bucket created in the previous step
 
 The stack itself is also modelled as a resource, and it is the parent to all other resources.
 
@@ -108,7 +108,7 @@ While this is definitely an imperative program, there is one important thing to 
 
 Running your program always sends the full resource model to the Pulumi deployment engine regardless of what state your current infrastructure is in.
 
-Our previous example was shown in Python, but recently we also delivered [support for YAML]({{< relref "/docs/intro/languages/yaml" >}}).
+Our previous example was shown in Python, but recently we also delivered [support for YAML](/docs/intro/languages/yaml/).
 The creation of our S3 bucket could be converted to this snippet:
 
 ```yaml
@@ -196,4 +196,4 @@ If the question ever pops up again whether Pulumi is declarative or imperative, 
 * _Pulumi engine_: declarative
 * _Providers_: imperative
 
-To us, it mainly matters if we can solve your infrastructure automation problem. If you still miss something in our offering, we want to [hear from you]({{< relref "/contact" >}})!
+To us, it mainly matters if we can solve your infrastructure automation problem. If you still miss something in our offering, we want to [hear from you](/contact/)!

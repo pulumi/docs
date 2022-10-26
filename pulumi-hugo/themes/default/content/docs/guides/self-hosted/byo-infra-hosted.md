@@ -17,7 +17,7 @@ The BYO infrastructure installer uses Pulumi to deploy the following services on
 * Ingress Controller
 * Pulumi API and Console applications
 
-Prerequisites and configuration for the your infrastructure can be found in the [BYO-Infrastructure Installer README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/byo-infra/README.md)  
+Prerequisites and configuration for the your infrastructure can be found in the [BYO-Infrastructure Installer README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/byo-infra/README.md)
 
 ### Pulumi deploying Pulumi
 
@@ -25,8 +25,8 @@ This installer uses Pulumi to deploy the Pulumi Service. In this case, one uses 
 
 To this end, you need to set up the following:
 
-* [Download and install the Pulumi CLI]({{<relref "docs/get-started/install">}}) on your workstation
-* [Choose a self-managed storage backend]({{<relref "docs/intro/concepts/state">}})
+* [Download and install the Pulumi CLI](/docs/get-started/install/) on your workstation
+* [Choose a self-managed storage backend](/docs/intro/concepts/state/)
 
 ### Deployment Steps
 

@@ -6,7 +6,7 @@ layout: glossary/single
 
 ## Description
 
-[AWS Elastic Container Service](https://aws.amazon.com/ecs/) (ECS) is a managed container orchestration tool. Containers and the parameters necessary to run your application are described in a task definition. That task definition is then used to instantiate a task either by itself, or as part of a service that handles the automated maintenance of those tasks for you. Applications running on ECS are deployed either via [Fargate](/learn/glossary/aws-fargate), a serverless compute platform for containerized applications, or via EC2.
+[AWS Elastic Container Service](https://aws.amazon.com/ecs/) (ECS) is a managed container orchestration tool. Containers and the parameters necessary to run your application are described in a task definition. That task definition is then used to instantiate a task either by itself, or as part of a service that handles the automated maintenance of those tasks for you. Applications running on ECS are deployed either via [Fargate](/learn/glossary/aws-fargate/), a serverless compute platform for containerized applications, or via EC2.
 
 ### Use Cases
 

@@ -33,7 +33,7 @@ tags:
 # for additional details, and please remove these comments before submitting for review.
 ---
 
-Our first release notes since the frenzy of [releases for PulumiUP](/blog/pulumi-universal-iac)! The latest Pulumi updates also include our providers updates, compression of filestate backends, adding --stack to `pulumi about`, adding local policy packs to Automation API and much more! Learn about what's new.
+Our first release notes since the frenzy of [releases for PulumiUP](/blog/pulumi-universal-iac/)! The latest Pulumi updates also include our providers updates, compression of filestate backends, adding --stack to `pulumi about`, adding local policy packs to Automation API and much more! Learn about what's new.
 
  <!--more-->
 - Cloud Providers and Packages
@@ -76,7 +76,7 @@ We released v0.5.2 of Pulumi YAML which included bug fixes, new functions, diagn
 - Add `Fn::FromBase64`
   [#218](https://github.com/pulumi/pulumi-yaml/pull/218)
 
-- Add support for `Fn::ReadFile`, enabling Pulumi Service [Stack README]({{< relref "/blog/stack-readme" >}}) support.
+- Add support for `Fn::ReadFile`, enabling Pulumi Service [Stack README](/blog/stack-readme/) support.
   [#217](https://github.com/pulumi/pulumi-yaml/pull/217)
 
 - Allow `Fn::Join` to take expressions as inputs, previously the second argument had to be a syntactical list.
@@ -86,7 +86,7 @@ As always, please feel free to submit feature requests and bug reports to the [P
 
 ### Add local Policy Packs to Automation API
 
-The Pulumi [Automation API]({{< relref "/docs/guides/automation-api" >}}) is a programmatic interface for running Pulumi programs without the Pulumi CLI. Conceptually, this can be thought of as encapsulating the functionality of the CLI (`pulumi up`, `pulumi preview`, `pulumi destroy`, `pulumi stack init`, and so on.) but with more flexibility. We have now added support for Pulumi [Policy Packs]({{< relref "/docs/guides/crossguard/get-started#creating-a-policy-pack" >}}) can now be run with Automation API by specifying `--policy-pack`.
+The Pulumi [Automation API](/docs/guides/automation-api/) is a programmatic interface for running Pulumi programs without the Pulumi CLI. Conceptually, this can be thought of as encapsulating the functionality of the CLI (`pulumi up`, `pulumi preview`, `pulumi destroy`, `pulumi stack init`, and so on.) but with more flexibility. We have now added support for Pulumi [Policy Packs](/docs/guides/crossguard/get-started#creating-a-policy-pack) can now be run with Automation API by specifying `--policy-pack`.
 
 ### Add --stack to `pulumi about`
 
@@ -149,11 +149,11 @@ You can now use `pulumi convert --language java` to generate programs for Java f
 
 ### Stack READMEs
 
-Users can create [Stack READMEs]({{< relref "/docs/intro/pulumi-service/projects-and-stacks#stack-readme" >}}) in the [Pulumi Service](https://app.pulumi.com) that dynamically update based on [Stack Outputs]({{< relref "/learn/building-with-pulumi/stack-outputs" >}}).
+Users can create [Stack READMEs](/docs/intro/pulumi-service/projects-and-stacks#stack-readme) in the [Pulumi Service](https://app.pulumi.com) that dynamically update based on [Stack Outputs](/learn/building-with-pulumi/stack-outputs/).
 
 A Pulumi Service Stack README is dynamically populated with details from your stack outputs. It does this by interpolating output variables on the stack, such as `${outputs.instances[0].ARN}` so that each stack can construct links to dashboards, shell commands, and other pieces of documentation.
 
-Learn more in the [Stack READMEs blog]({{< relref "/blog/stack-readme" >}})!
+Learn more in the [Stack READMEs blog](/blog/stack-readme/)!
 
 ### SAML/SCIM improvements
 

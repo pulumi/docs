@@ -57,7 +57,7 @@ Resources:
 Duration: 26s
 ```
 
-Remember the output you defined in the previous step? That [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}) can be seen in the `Outputs:` section of your update. You can access your outputs from the CLI by running the `pulumi stack output [property-name]` command. For example you can print the primary key of your bucket with the following command:
+Remember the output you defined in the previous step? That [stack output](/docs/intro/concepts/stack#outputs) can be seen in the `Outputs:` section of your update. You can access your outputs from the CLI by running the `pulumi stack output [property-name]` command. For example you can print the primary key of your bucket with the following command:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 

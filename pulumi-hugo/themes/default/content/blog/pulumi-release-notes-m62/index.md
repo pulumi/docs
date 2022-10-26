@@ -14,11 +14,11 @@ tags:
 It's been a busy few weeks at Pulumi, including for some of our community contributors! Read on to see what's new.
 
 - New and updated cloud providers
-  - [AWS Native Provider, powered by the AWS Cloud Control API]({{< relref "/blog/pulumi-release-notes-m62#aws-native-provider-powered-by-the-aws-cloud-control-api" >}})
-  - [Using AWS Graviton2 processors in AWS Lambda functions]({{< relref "/blog/pulumi-release-notes-m62#using-aws-graviton2-processors-in-aws-lambda-functions" >}})
-  - [New resources in the Azure Native provider]({{< relref "/blog/pulumi-release-notes-m62#new-resources-in-the-azure-native-provider" >}})
+  - [AWS Native Provider, powered by the AWS Cloud Control API](/blog/pulumi-release-notes-m62#aws-native-provider-powered-by-the-aws-cloud-control-api)
+  - [Using AWS Graviton2 processors in AWS Lambda functions](/blog/pulumi-release-notes-m62#using-aws-graviton2-processors-in-aws-lambda-functions)
+  - [New resources in the Azure Native provider](/blog/pulumi-release-notes-m62#new-resources-in-the-azure-native-provider)
 - Pulumi CLI and core technologies
-  - [New project configuration option to refresh before all write operations]({{< relref "/blog/pulumi-release-notes-m62#new-project-configuration-option-to-refresh-before-all-write-operations" >}})
+  - [New project configuration option to refresh before all write operations](/blog/pulumi-release-notes-m62#new-project-configuration-option-to-refresh-before-all-write-operations)
 
 <!--more-->
 
@@ -26,17 +26,17 @@ It's been a busy few weeks at Pulumi, including for some of our community contri
 
 ### AWS Native Provider, powered by the AWS Cloud Control API
 
-Last week, we announced the release of the new [AWS Native]({{< relref "/registry/packages/aws-native" >}}) provider for Pulumi, which is now available in preview. AWS is the most-used cloud provider across the Pulumi ecosystem, and with the new AWS Native provider, we are focused on delivering the best possible support for the AWS platform to all Pulumi users. The AWS Native provider offers same-day support for all new AWS features and releases covered by the newly released AWS Cloud Control API, which typically supports new AWS features on the day of launch.
+Last week, we announced the release of the new [AWS Native](/registry/packages/aws-native/) provider for Pulumi, which is now available in preview. AWS is the most-used cloud provider across the Pulumi ecosystem, and with the new AWS Native provider, we are focused on delivering the best possible support for the AWS platform to all Pulumi users. The AWS Native provider offers same-day support for all new AWS features and releases covered by the newly released AWS Cloud Control API, which typically supports new AWS features on the day of launch.
 
 This release also includes a new tool for migrating existing CloudFormation templates into Pulumi programs in your favorite language, powered by the new AWS Native provider and AWS Cloud Control API, as well as the ability to deploy any 3rd party resources in the CloudFormation Registry, including resources from Atlassian, Datadog, Densify, Dynatrace, Fortinet, New Relic, and Spot by NetApp.
 
-Learn more in the [Announcing AWS Native]({{< relref "/blog/announcing-aws-native" >}}) blog post
+Learn more in the [Announcing AWS Native](/blog/announcing-aws-native/) blog post
 
 ### Using AWS Graviton2 processors in AWS Lambda functions
 
 Last week, AWS launched the ability to use Graviton2 processors with AWS Lambda functions. Using Graviton2 processors gives you access to the improved price performance of that architecture. Pulumi's AWS Classic provider shipped with same-day support for this new functionality.
 
-Learn more in the [AWS Lambda functions blog post]({{< relref "/blog/aws-lambda-functions-powered-by-graviton2" >}})
+Learn more in the [AWS Lambda functions blog post](/blog/aws-lambda-functions-powered-by-graviton2/)
 
 ### New resources in the Azure Native provider
 

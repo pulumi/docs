@@ -9,17 +9,17 @@ weight: 1
 
 ### What are serverless applications?
 
-[Serverless](/serverless) applications use cloud services that feature automatic scaling, built-in high availability, and pay-for-use billing models, allowing you to build and run applications and services without having to provision, scale, and manage any servers yourself.
+[Serverless](/serverless/) applications use cloud services that feature automatic scaling, built-in high availability, and pay-for-use billing models, allowing you to build and run applications and services without having to provision, scale, and manage any servers yourself.
 
-**On [AWS](/aws),** you can build serverless applications using services like AWS Lambda, Amazon API Gateway, and Amazon S3.
+**On [AWS](/aws/),** you can build serverless applications using services like AWS Lambda, Amazon API Gateway, and Amazon S3.
 
-**On [Azure](/azure),** you can build serverless applications using services like Azure Functions.
+**On [Azure](/azure/),** you can build serverless applications using services like Azure Functions.
 
-**On [Google Cloud Platform](/gcp),** you can build serverless applications using services like Google Cloud Functions.
+**On [Google Cloud Platform](/gcp/),** you can build serverless applications using services like Google Cloud Functions.
 
 ### Building and deploying serverless infrastructure on AWS, Azure, and Google Cloud
 
-[Infrastructure as code](/what-is/what-is-infrastructure-as-code) is an efficient and repeatable way of building a serverless application with programming languages and deploying the website to your preferred cloud.
+[Infrastructure as code](/what-is/what-is-infrastructure-as-code/) is an efficient and repeatable way of building a serverless application with programming languages and deploying the website to your preferred cloud.
 
 Pulumi’s open source, infrastructure as code SDK that lets you build and deploy static websites with TypeScript/JavaScript, Python, Go, Java, .NET, and YAML. The main benefits include:
 

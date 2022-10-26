@@ -166,8 +166,7 @@ takes care of that you would normally be responsible for. This includes:
 7. Including the right information in the function so you can interact
     with your other cloud resources in the Pulumi App. Without this, you
     would need to find a way to include that data in each Cloud
-    Function's [environment
-    variables](https://cloud.google.com/functions/docs/env-var) (or just
+    Function's [environment variables](https://cloud.google.com/functions/docs/env-var) (or just
     hardcode them in '1') so that your program can access the rest of
     your cloud infrastructure. In the above example, you can see how you
     can just reference your resources directly (like the PubSub Topic)
@@ -176,11 +175,11 @@ takes care of that you would normally be responsible for. This includes:
     Function when it finally is triggered.
 8. Figuring out a safe and secure way to encode and access secrets for
     your Cloud Function. Here, we can use Pulumi's
-    [Config Secrets]({{< relref "/docs/intro/concepts/config#secrets" >}}) to safely
+    [Config Secrets](/docs/intro/concepts/config#secrets) to safely
     encrypt and manage secrets for your Cloud Function code.
 
 Not to mention that by doing all of that, you can achieve continuous deployment
-[Pulumi and Google Cloud Build]({{< relref "/docs/guides/continuous-delivery/google-cloud-build" >}}).
+[Pulumi and Google Cloud Build](/docs/guides/continuous-delivery/google-cloud-build/).
 
 ## Updating Your Google Functions Code
 
@@ -227,13 +226,13 @@ create, update, and maintain.
 
 To check things out, get started today:
 
-- [Get Started with Pulumi on GCP]({{< relref "/docs/get-started/gcp" >}})
+- [Get Started with Pulumi on GCP](/docs/get-started/gcp/)
 - [Deploy a Minimal Google Cloud Function Application](https://github.com/pulumi/examples/tree/master/gcp-ts-functions)
 
 PS: If you're interested in how Pulumi manages to take a
 JavaScript/TypeScript `=>` function and somehow analyze and transform it
 into a form that Cloud Functions can use, please see our deep dive on
 this topic in:
-[**Lambdas as Lambdas: The magic of simple serverless Functions**]({{< relref "lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}}).
+[**Lambdas as Lambdas: The magic of simple serverless Functions**](/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions).
 We're leveraging the same great programming language and analysis
 framework to power our GCP solution here.

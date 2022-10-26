@@ -30,22 +30,22 @@ The fastest way to get up and running is to choose from one of the following Get
 
 <div class="tiles mt-4">
     <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="{{< relref "/docs/get-started/aws" >}}?language=java">
+        <a class="tile p-4" href="/docs/get-started/aws/?language=java">
             <img class="h-8 mx-auto" src="/logos/tech/aws.svg" alt="AWS">
         </a>
     </div>
     <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="{{< relref "/docs/get-started/azure" >}}?language=java">
+        <a class="tile p-4" href="/docs/get-started/azure/?language=java">
             <img class="h-8 mx-auto" src="/logos/tech/azure.svg" alt="Azure">
         </a>
     </div>
     <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="{{< relref "/docs/get-started/gcp" >}}?language=java">
+        <a class="tile p-4" href="/docs/get-started/gcp/?language=java">
             <img class="h-8 mx-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
         </a>
     </div>
     <div class="flex-1 pb-4">
-        <a class="tile p-4" href="{{< relref "/docs/get-started/kubernetes" >}}?language=java">
+        <a class="tile p-4" href="/docs/get-started/kubernetes/?language=java">
             <img class="h-8 mx-auto" src="/logos/tech/k8s.svg" alt="Kubernetes">
         </a>
     </div>
@@ -70,11 +70,11 @@ $ mkdir myproject && cd myproject
 $ pulumi new java-gradle
 ```
 
-For details around using JAR, please check our docs on [Pulumi.yaml]({{< relref "/docs/reference/pulumi-yaml" >}})
+For details around using JAR, please check our docs on [Pulumi.yaml](/docs/reference/pulumi-yaml/)
 
 {{% /notes %}}
 
-This will create a maven project with a `pom.xml` and a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change) and an `App.java` file in the `src/main/java/myproject` directory containing your program.
+This will create a maven project with a `pom.xml` and a `Pulumi.yaml` [project file](/docs/intro/concepts/project/) containing some minimal metadata about your project (including a name and description which you may wish to change) and an `App.java` file in the `src/main/java/myproject` directory containing your program.
 
 To deploy your infrastructure, run `pulumi up` and Pulumi will build your app using maven (gradle is also supported) and perform the operations needed to deploy the infrastructure you have declared.
 
@@ -130,7 +130,7 @@ The Java Pulumi SDK is available to Go/Java developers in source form on [GitHub
 
 ### Plugin Acquisition
 
-Pulumi will try to auto-detect which [plugins]({{< relref "/docs/reference/cli/pulumi_plugin" >}}?language=java) your program is using by analyzing your Java project dependencies and then auto-install them. For example, if a program references `com.pulumi.aws` it will automatically issue the equivalent of `$ pulumi plugin install resource aws`.
+Pulumi will try to auto-detect which [plugins](/docs/reference/cli/pulumi_plugin/?language=java) your program is using by analyzing your Java project dependencies and then auto-install them. For example, if a program references `com.pulumi.aws` it will automatically issue the equivalent of `$ pulumi plugin install resource aws`.
 
 ### Running Pulumi with Maven and Gradle
 
@@ -156,9 +156,9 @@ application {
 ## Pulumi Programming Model
 
 The Pulumi programming model defines the core concepts you will use when creating infrastructure as code programs using
-Pulumi. [Architecture & Concepts]({{< relref "/docs/intro/concepts" >}}?language=java) describes these concepts
+Pulumi. [Architecture & Concepts](/docs/intro/concepts/?language=java) describes these concepts
 with examples available in Java. These concepts are made available to you in the Pulumi SDK.
 
-The Pulumi programming model includes a core concept of `Output` values, which are used to track how outputs of one resource flow in as inputs to another resource to resolve dependencies. This concept is important to understand when getting started with Pulumi, and the [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}?language=java) documentation is recommended to get a feel for how to work with this core part of Pulumi in common cases.
+The Pulumi programming model includes a core concept of `Output` values, which are used to track how outputs of one resource flow in as inputs to another resource to resolve dependencies. This concept is important to understand when getting started with Pulumi, and the [Inputs and Outputs](/docs/intro/concepts/inputs-outputs/?language=java) documentation is recommended to get a feel for how to work with this core part of Pulumi in common cases.
 
 Unlike other Pulumi languages, Pulumi Java does not have a dedicated `Input<T> = T | Output<T>` type. Instead, when constructing resource arguments, builders have overloads that accept both a `T` and an `Output<T>` value.

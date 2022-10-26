@@ -8,10 +8,10 @@ meta_image: "InfraTesting.png"
 ---
 
 {{% notes type="warning" %}}
-Some parts of this blog post are out-of-date. Please refer to our [Testing Guide]({{< relref "/docs/guides/testing" >}}) for the updated overview and tutorials.
+Some parts of this blog post are out-of-date. Please refer to our [Testing Guide](/docs/guides/testing/) for the updated overview and tutorials.
 {{% /notes %}}
 
-Using Pulumi and general purpose languages for [infrastructure as code]({{< relref "/what-is/what-is-infrastructure-as-code" >}})
+Using Pulumi and general purpose languages for [infrastructure as code](/what-is/what-is-infrastructure-as-code/)
 comes with many benefits: leveraging existing skills and knowledge,
 eliminating boilerplate through abstraction, and using the same
 ecosystem of tools like IDEs and linters that your team already knows
@@ -45,7 +45,7 @@ are a few examples:
   inside of your compute infrastructure, to ensure that it is healthy
   after your infrastructure has been provisioned
 
-As we see, there's a broad spectrum of [infrastructure testing]({{< relref "/what-is/how-to-step-up-cloud-infrastructure-testing" >}})
+As we see, there's a broad spectrum of [infrastructure testing](/what-is/how-to-step-up-cloud-infrastructure-testing/)
 options available. Pulumi has mechanisms available for testing at each point
 along this spectrum. Let's dig in and see how.
 
@@ -549,29 +549,29 @@ domains.
 Pulumi supports your existing CI systems. Here are a few of those
 supported:
 
-- [AWS Code Services]({{< relref "/docs/guides/continuous-delivery/aws-code-services" >}})
-- [Azure DevOps]({{< relref "/docs/guides/continuous-delivery/azure-devops" >}})
-- [CircleCI]({{< relref "/docs/guides/continuous-delivery/circleci" >}})
-- [GitHub Actions]({{< relref "/docs/guides/continuous-delivery/github-actions" >}})
-- [GitLab CI]({{< relref "/docs/guides/continuous-delivery/gitlab-ci" >}})
-- [Google Cloud Build]({{< relref "/docs/guides/continuous-delivery/google-cloud-build" >}})
-- [Travis]({{< relref "/docs/guides/continuous-delivery/travis" >}})
+- [AWS Code Services](/docs/guides/continuous-delivery/aws-code-services/)
+- [Azure DevOps](/docs/guides/continuous-delivery/azure-devops/)
+- [CircleCI](/docs/guides/continuous-delivery/circleci/)
+- [GitHub Actions](/docs/guides/continuous-delivery/github-actions/)
+- [GitLab CI](/docs/guides/continuous-delivery/gitlab-ci/)
+- [Google Cloud Build](/docs/guides/continuous-delivery/google-cloud-build/)
+- [Travis](/docs/guides/continuous-delivery/travis/)
 
 Please refer to the
-[Continuous Delivery documentation]({{< relref "/docs/guides/continuous-delivery" >}})) for a more
+[Continuous Delivery documentation](/docs/guides/continuous-delivery/) for a more
 comprehensive guide.
 
 ## Ephemeral Environments
 
 A very powerful capability this unlocks is the ability to spin up
 ephemeral environments solely for purposes of acceptance testing.
-Pulumi's concept of [projects and stacks]({{< relref "/docs/guides/organizing-projects-stacks" >}}) is
+Pulumi's concept of [projects and stacks](/docs/guides/organizing-projects-stacks/) is
 designed to make it very easy to stand up entirely isolated and
 independent environments, and to tear them down, all in either a few
 easy CLI gestures, or by using the integration testing framework.
 
 If you are using GitHub, Pulumi offers a
-[GitHub App]({{< relref "/docs/guides/continuous-delivery/github-app" >}}) that helps to glue
+[GitHub App](/docs/guides/continuous-delivery/github-app/) that helps to glue
 together your Pull Request workflow with this sort of acceptance testing
 run inside of your CI pipelines. Simply install the App into your GitHub
 repos, and Pulumi in your CI, and your Pull Requests will light up with
@@ -593,4 +593,4 @@ runtime testing. It's easy to run these on demand and harness them in
 your CI system of choice.
 
 Pulumi is open source, free to use, and works with your favorite
-languages and clouds -- [give it a try today]({{< relref "/docs" >}})!
+languages and clouds -- [give it a try today](/docs/)!

@@ -17,7 +17,7 @@ This guide walks you through configuring your Google Workspace (formerly known a
 
 ## Prerequisites
 
-- [Single Sign-On]({{< relref "sso" >}})
+- [Single Sign-On](/docs/guides/saml/sso/)
 
 ## Creating the SAML Application
 
@@ -111,4 +111,4 @@ name of your Pulumi organization.
 
 Google Workspace SAML troubleshooting page: [SAML app error messages](https://support.google.com/a/answer/6301076)
 
-If you need additional assistance, [contact us]({{< relref "/about#contact-us" >}}).
+If you need additional assistance, [contact us](/about#contact-us).

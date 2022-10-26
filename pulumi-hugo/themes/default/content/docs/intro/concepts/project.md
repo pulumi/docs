@@ -81,7 +81,7 @@ The following are other examples of `Pulumi.yaml` files that define project conf
         type: aws:s3:Bucket
     ```
 
-For more information on valid Pulumi project metadata, see [Pulumi Configuration Reference]({{< relref "/docs/reference/pulumi-yaml">}}).
+For more information on valid Pulumi project metadata, see [Pulumi Configuration Reference](/docs/reference/pulumi-yaml/).
 
 ## Paths
 
@@ -224,4 +224,4 @@ For stacks that are actively developed by multiple members of a team, the recomm
 
 When using ephemeral stacks, the stack settings are typically not checked into source control.
 
-For more information about configuration and how this file is managed using the CLI and programming model, refer to [Configuration]({{< relref "/docs/intro/concepts/config" >}}).
+For more information about configuration and how this file is managed using the CLI and programming model, refer to [Configuration](/docs/intro/concepts/config/).

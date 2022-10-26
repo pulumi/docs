@@ -29,19 +29,19 @@ customer_logos:
       - ro
 ---
 
-[Infrastructure as Code]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) (IaC) means that you use code to define and manage your infrastructure automatically rather than with manual processes. In a broader sense, IaC allows you to effectively apply software engineering practices to your infrastructure. With IaC, you can automatically build, deploy and manage your infrastructure much more effectively and reliably than you can manually. IaC makes your whole infrastructure, including your Kubernetes clusters, versionable, testable and repeatable.
+[Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) (IaC) means that you use code to define and manage your infrastructure automatically rather than with manual processes. In a broader sense, IaC allows you to effectively apply software engineering practices to your infrastructure. With IaC, you can automatically build, deploy and manage your infrastructure much more effectively and reliably than you can manually. IaC makes your whole infrastructure, including your Kubernetes clusters, versionable, testable and repeatable.
 
 ## What is Kubernetes?
 
-[Kubernetes]({{< relref "/blog/kubernetes-fundamentals-part-one" >}}) is a container orchestration tool. Modern applications are increasingly built using containers, which are microservices packaged with their dependencies and configurations. Kubernetes is open-source software for deploying and managing those containers. Keeping containerized apps up and running can be complex because they often use many containers deployed across different machines. Kubernetes provides a way to schedule and deploy those containers—at scale. Those words “at scale” are important because they underline the need for IaC. A simple script or a point-and-click approach simply won’t work. Kubernetes demands an automated approach and an automated approach means IaC.
+[Kubernetes](/blog/kubernetes-fundamentals-part-one/) is a container orchestration tool. Modern applications are increasingly built using containers, which are microservices packaged with their dependencies and configurations. Kubernetes is open-source software for deploying and managing those containers. Keeping containerized apps up and running can be complex because they often use many containers deployed across different machines. Kubernetes provides a way to schedule and deploy those containers—at scale. Those words “at scale” are important because they underline the need for IaC. A simple script or a point-and-click approach simply won’t work. Kubernetes demands an automated approach and an automated approach means IaC.
 
 ### The Kubernetes cluster
 
-A [Kubernetes cluster]({{< relref "/blog/kubernetes-fundamentals-part-one#anatomy-of-a-cluster" >}}) is a set of node machines that run containerized applications. If you’re running Kubernetes, you’re running a cluster. At a minimum, a cluster contains a control plane and one or more compute machines, or nodes. The control plane maintains the desired state of the cluster, such as which applications are running and which container images they use. Nodes actually run the applications and workloads.
+A [Kubernetes cluster](/blog/kubernetes-fundamentals-part-one#anatomy-of-a-cluster) is a set of node machines that run containerized applications. If you’re running Kubernetes, you’re running a cluster. At a minimum, a cluster contains a control plane and one or more compute machines, or nodes. The control plane maintains the desired state of the cluster, such as which applications are running and which container images they use. Nodes actually run the applications and workloads.
 
 ### Deployment
 
-A [Deployment]({{< relref "/blog/kubernetes-fundamentals-part-one#deployment" >}}) is an abstraction of your deployment configuration. It specifies what container image your application is running, which version, the environment variables it needs, and so on. A deployment governs another two Kubernetes components: the Pod and the ReplicaSet.
+A [Deployment](/blog/kubernetes-fundamentals-part-one#deployment) is an abstraction of your deployment configuration. It specifies what container image your application is running, which version, the environment variables it needs, and so on. A deployment governs another two Kubernetes components: the Pod and the ReplicaSet.
 
 ### The Kubernetes Pod
 
@@ -82,4 +82,4 @@ Your production environment should be separate from other environments. One way 
 
 ## Learn More
 
-[Pulumi](/) streamlines Kubernetes cluster configuration, management, and app workload deployments to your clusters. With Pulumi infrastructure as code for Kubernetes you can, for example, manage your Kubernetes clusters, automate Kubernetes deployments and increase your productivity by using standard programming languages, IDEs and test frameworks. [Get started for free today]({{< relref "/docs/get-started" >}}), or check out our on-demand workshops for tutorials on [IaC and Kubernetes]({{< relref "/resources/from-zero-to-production-in-kubernetes" >}}).
+[Pulumi](/) streamlines Kubernetes cluster configuration, management, and app workload deployments to your clusters. With Pulumi infrastructure as code for Kubernetes you can, for example, manage your Kubernetes clusters, automate Kubernetes deployments and increase your productivity by using standard programming languages, IDEs and test frameworks. [Get started for free today](/docs/get-started/), or check out our on-demand workshops for tutorials on [IaC and Kubernetes](/resources/from-zero-to-production-in-kubernetes/).

@@ -31,7 +31,7 @@ customer_logos:
 
 ## Biggest Similarities and Differences Between Google Cloud Bigtable and AWS DynamoDB
 
-Both Google Cloud Bigtable and DynamoDB are [NoSQL]({{< relref "/learn/glossary/nosql" >}}), or non-relational, databases. This concept means their data is stored in some format other than two-dimensional tables. Some commonly-used formats for NoSQL databases in general are documents, key-value pairs, graphs, and columns, each with different strengths and tradeoffs.
+Both Google Cloud Bigtable and DynamoDB are [NoSQL](/learn/glossary/nosql/), or non-relational, databases. This concept means their data is stored in some format other than two-dimensional tables. Some commonly-used formats for NoSQL databases in general are documents, key-value pairs, graphs, and columns, each with different strengths and tradeoffs.
 
 Google Cloud Bigtable and AWS DynamoDB are both highly-available, scalable, globally distributed and fully-managed serverless NoSQL databases. Both can function as a key-value store, however DynamoDB additionally supports a document model and Bigtable additionally supports a wide-column store. Both offer two consistency levels: eventual consistency, and immediate consistency.
 
@@ -67,8 +67,8 @@ If you have truly large amounts of data that you will require very fast access t
 
 ## Conclusion
 
-Regardless of which database suits your needs, standing them up shouldn't be a chore. With Pulumi, provisioning either one is a breeze in the programming language of your choce. Try deploying an [AWS Data Service with DynamoDB]({{< relref "/docs/aws/dynamodb" >}}) or get started with [Google Cloud]({{< relref "/docs/get-started/gcp" >}})
+Regardless of which database suits your needs, standing them up shouldn't be a chore. With Pulumi, provisioning either one is a breeze in the programming language of your choce. Try deploying an [AWS Data Service with DynamoDB](/docs/aws/dynamodb/) or get started with [Google Cloud](/docs/get-started/gcp/)
 
 ## Pulumi Corporation
 
-Pulumi's Cloud Engineering Platform unites infrastructure teams, application developers, and compliance teams around a unified software engineering process for delivering modern cloud applications faster and speeding innovation. Pulumi’s open-source tools help infrastructure teams tame the cloud’s complexity with Universal Infrastructure-as-Code using the world’s most popular programming languages and communities, including Python, YAML, Node.js (JavaScript, TypeScript), Go, and .NET (C#, F#, VB). [Get started for free today!]({{< relref "/docs/get-started" >}})
+Pulumi's Cloud Engineering Platform unites infrastructure teams, application developers, and compliance teams around a unified software engineering process for delivering modern cloud applications faster and speeding innovation. Pulumi’s open-source tools help infrastructure teams tame the cloud’s complexity with Universal Infrastructure-as-Code using the world’s most popular programming languages and communities, including Python, YAML, Node.js (JavaScript, TypeScript), Go, and .NET (C#, F#, VB). [Get started for free today!](/docs/get-started)

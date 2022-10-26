@@ -94,7 +94,7 @@ Let's break down the infrastructure piece by piece, starting with setting up con
 $ aws secretsmanager create-secret --name dbpass --secret-string hellosql
 ```
 
-We retrieve the secret with a function that retrieves it as a Pulumi [output]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) and returns it as a string type, which is the type that Aurora MySQL requires for the  `masterpassword` property. This is a little complicated because we use the secret name to retrieve the secret properties with [`getSecret`]({{< relref "/registry/packages/aws/api-docs/secretsmanager" >}}), which returns the secret ARN. Then, we use the ARN to retrieve the password with [`getSecretVersion`]({{< relref "/registry/packages/aws/api-docs/secretsmanager/secretversion" >}}). Note that the function is wrapped in [`async/await`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-1-7.html) because we will need the password before creating the database.
+We retrieve the secret with a function that retrieves it as a Pulumi [output](/docs/intro/concepts/inputs-outputs/) and returns it as a string type, which is the type that Aurora MySQL requires for the  `masterpassword` property. This is a little complicated because we use the secret name to retrieve the secret properties with [`getSecret`](/registry/packages/aws/api-docs/secretsmanager), which returns the secret ARN. Then, we use the ARN to retrieve the password with [`getSecretVersion`](/registry/packages/aws/api-docs/secretsmanager/secretversion). Note that the function is wrapped in [`async/await`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-1-7.html) because we will need the password before creating the database.
 
 ```typescript
 async function getSecret(name: string) {
@@ -165,7 +165,7 @@ The next part creates the VPC, the subnet, a security group for access, and the 
 
 ## Creating the stack
 
-If you're not familiar with the [Pulumi programming model]({{< relref "/docs/intro/concepts/stack" >}}), a `stack` is an instantiation of the infrastructure resources declared in the code. We start with calling the `createOrSelectStack` method from the `LocalWorkSpace` import. This method takes three arguments: a stack name, a project name, and the program to call, which is the `pulumiProgram` function, that creates the infrastructure. The stack installs the required plugins, sets the AWS region, and creates the infrastructure. We can also destroy the stack if we use the destroy argument, e.g., `yarn start destroy`.
+If you're not familiar with the [Pulumi programming model](/docs/intro/concepts/stack/), a `stack` is an instantiation of the infrastructure resources declared in the code. We start with calling the `createOrSelectStack` method from the `LocalWorkSpace` import. This method takes three arguments: a stack name, a project name, and the program to call, which is the `pulumiProgram` function, that creates the infrastructure. The stack installs the required plugins, sets the AWS region, and creates the infrastructure. We can also destroy the stack if we use the destroy argument, e.g., `yarn start destroy`.
 .
 
 ```typescript
@@ -343,6 +343,6 @@ You can download our improved program as a [gist](https://gist.github.com/pulumi
 
 Automation API is currently in alpha and available in Typescript and Go. Check out these resources to learn more.
 
-- [The Pulumi Automation API - The Next Quantum Leap in IaC]({{< relref "/blog/automation-api" >}})
+- [The Pulumi Automation API - The Next Quantum Leap in IaC](/blog/automation-api/)
 - [Automation API Examples](https://github.com/pulumi/automation-api-examples)
-- [Build Self-Service Cloud Infrastructure with Automation API]({{< relref "/blog/automation-api-as-platform" >}})
+- [Build Self-Service Cloud Infrastructure with Automation API](/blog/automation-api-as-platform/)

@@ -19,8 +19,7 @@ preventing you from being productive, you've come to the right place.
 community of users, are there to help. Any and all questions are welcome!
 
 We also encourage everyone to contribute to the [Pulumi open source
-projects](https://github.com/pulumi) by [opening new
-issues](https://github.com/pulumi/pulumi/issues/new) and upvoting existing issues.
+projects](https://github.com/pulumi) by [opening new issues](https://github.com/pulumi/pulumi/issues/new) and upvoting existing issues.
 
 Or email our support team: [support@pulumi.com](mailto:support@pulumi.com).
 
@@ -108,15 +107,15 @@ The method for fixing this issue depends on whether you are using an Intel based
 #### Non-Intel based processor
 
 1. Remove Pulumi - if you're using Homebrew, `brew remove pulumi` to remove Pulumi and `rm -rf ~/.pulumi` to remove plugins and templates.
-1. Download [latest version of Pulumi]({{< relref "/docs/get-started/install/versions" >}}).
+1. Download [latest version of Pulumi](/docs/get-started/install/versions/).
 1. Add Pulumi to path: `export PATH=$PATH:~/.pulumi/bin`
 1. Update packages in your Pulumi program to latest version (for example `npm install @pulumi/aws@latest)
 1. Install Pulumi provider: `arch -x86_64 pulumi plugin install resource {provider_name} v{version}` (where  {provider_name} is the name of the provider, i.e. aws and {version} is the same version number that your package has updated to). `arch` is used to run the selected architecture of a binary, in this case so that you can run the non-ARM64 version of Pulumi on your laptop.
-1. [Login to Pulumi]({{< relref "/docs/intro/concepts/state#logging-into-and-out-of-state-backends" >}}).
+1. [Login to Pulumi](/docs/intro/concepts/state#logging-into-and-out-of-state-backends).
 1. Run a Pulumi preview: `arch -x86_64 pulumi pre`.
 1. Remove Pulumi again `rm -rf ~/.pulumi`.
-1. [Re-install Pulumi]({{< relref "/docs/get-started/install" >}})
-1. [Login to Pulumi]({{< relref "/docs/intro/concepts/state#logging-into-and-out-of-state-backends" >}}).
+1. [Re-install Pulumi](/docs/get-started/install/)
+1. [Login to Pulumi](/docs/intro/concepts/state#logging-into-and-out-of-state-backends).
 1. Run a Pulumi preview to check everything is ok: `pulumi pre`
 
 ### 409 Conflict: Another update is currently in progress. {#conflict}
@@ -127,7 +126,7 @@ Run `pulumi cancel` to cancel the update.
 Warning! If you cancel another person's update, their update will fail immediately.
 {{% /notes %}}
 
-One of the services that the [Pulumi Service]({{< relref "/docs/intro/pulumi-service" >}}) provides is *concurrency control*.
+One of the services that the [Pulumi Service](/docs/intro/pulumi-service/) provides is *concurrency control*.
 The service will allow at most one user to update a particular stack at a time. This is accomplished by using "leases"; whenever a user
 requests an update, they request a "lease" on the stack that gives them the right to update the requested stack.
 The service makes sure that only one person has a lease active at a time.
@@ -189,7 +188,7 @@ The version information for these providers is stored in the deployment for each
 This error can occur when the deployment state for a stack already contains a newer version of a specific provider, but you are trying
 to run a `pulumi up` (or `preview`) command after downgrading the provider dependency in your pulumi program.
 
-This error occurs because the `pulumi` [plugin cache]({{< relref "/docs/reference/cli/pulumi_plugin_ls" >}}) does not have the required version installed.
+This error occurs because the `pulumi` [plugin cache](/docs/reference/cli/pulumi_plugin_ls/) does not have the required version installed.
 This is more likely to occur if you are running `pulumi` in a CI/CD environment, since your plugin cache is likely not saved across builds.
 
 It is okay to have multiple versions of a provider installed and have stacks depend on different provider version. It is only a problem when you
@@ -243,7 +242,7 @@ introduced in Traefik 1.7.0.
 Asynchronous calls are the default in `@pulumi/pulumi>=2.0.0` and the below only applies to programs using the `1.x` SDK.
 
 The warning occurs when invoking a resource function synchronously while also using an
-[explicit provider object]({{< relref "/docs/intro/concepts/resources#providers" >}}) that isn't yet ready to use.
+[explicit provider object](/docs/intro/concepts/resources#providers) that isn't yet ready to use.
 
 For example:
 
@@ -281,7 +280,7 @@ const ids = pulumi.output(aws.ec2.getSubnetIds(..., { parent }));
 
 This is the preferred way to solve this issue. In this form all resource function calls will always execute asynchronously,
 returning their result through a `Promise<...>`. The result of the call is then wrapped into an `Output` so it can easily be
-passed as a resource input and to make it [simple to access properties]({{< relref "/docs/intro/concepts/inputs-outputs#lifting" >}}) off of it.
+passed as a resource input and to make it [simple to access properties](/docs/intro/concepts/inputs-outputs#lifting) off of it.
 
 #### Invoke the resource function asynchronously
 
@@ -294,7 +293,7 @@ const ids = pulumi.output(aws.ec2.getSubnetIds(..., { parent, async: true }));
 
 In this form, the `async: true` flag is passed in which forces `getSubnetIds` to always execute asynchronously.  The result
 of the call is then wrapped into an `Output` so it can easily be passed as a resource input and to make it
-[simple to access properties]({{< relref "/docs/intro/concepts/inputs-outputs#lifting" >}}) off of it.
+[simple to access properties](/docs/intro/concepts/inputs-outputs#lifting) off of it.
 
 #### Register the provider first
 
@@ -344,7 +343,7 @@ const val = stackReference.getOutput("outputName");
 ```
 
 In this form the result of the call is an `Output` (which internally asynchronously retrieves the stack output value).  This can
-easily be passed as a resource input and supports [simple to access properties]({{< relref "/docs/intro/concepts/inputs-outputs#lifting" >}}) off of it.
+easily be passed as a resource input and supports [simple to access properties](/docs/intro/concepts/inputs-outputs#lifting) off of it.
 
 However, because the value is not known synchronously, it is not possible to have the value affect the flow of your application.
 For example if the output value is an array, there is no way to know the length of the array in order to make specific resources
@@ -427,7 +426,7 @@ to manually edit the stack's state to fix the issue.
 
 This is an advanced operation and should be an absolute last resort. We recommend you check-in with the [Pulumi Community Slack](https://slack.pulumi.com) first before editing your snapshot.
 
-If you intend to unprotect or delete a resource, consider using the [`pulumi state`]({{< relref "/docs/reference/cli/pulumi_state" >}}) command instead of editing your state directly. `pulumi state` makes fixes to your state without
+If you intend to unprotect or delete a resource, consider using the [`pulumi state`](/docs/reference/cli/pulumi_state) command instead of editing your state directly. `pulumi state` makes fixes to your state without
 requiring you to edit the JSON representation of your stack's current state.
 
 To get a JSON representation of your stack's current state, export your current stack

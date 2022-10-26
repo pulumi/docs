@@ -10,7 +10,7 @@ tags:
     - virtual machines
 ---
 
-So you want to be an Azure dev and all-around infrastructure wizard? Let's start with the basics, virtual machines! In the [previous article]({{< relref "/blog/top-5-things-for-azure-devs-intro">}}), the common use case for virtual machines is migrating applications from dedicated hardware. You want full control of the machine to install required software for the application or configure storage and networking.
+So you want to be an Azure dev and all-around infrastructure wizard? Let's start with the basics, virtual machines! In the [previous article](/blog/top-5-things-for-azure-devs-intro/), the common use case for virtual machines is migrating applications from dedicated hardware. You want full control of the machine to install required software for the application or configure storage and networking.
 
 Azure provides many ways to create and configure virtual machines ranging from [the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) to [the Azure Portal](https://azure.microsoft.com/en-us/features/azure-portal/). In this article, we'll first create a virtual machine using the portal to understand the requirements and process; then, we'll do it with code using [Pulumi's Azure Native provider](https://www.pulumi.com/registry/packages/azure/), which is built directly from the Azure Resource Manager API.
 
@@ -72,7 +72,7 @@ There's a better way using infrastructure as code and cloud engineering methodol
 
 ## Cloud Engineering to the Rescue!
 
-Creating and provisioning one VM isn't difficult, but migrating a traditional n-tier application often requires multiple virtual machines including those needed for horizontal scaling. This is where infrastructure as code excels. By using [cloud engineering]({{< relref "/blog/what-exactly-is-cloud-engineering" >}}), we can automate [build]({{< relref "/blog/what-exactly-is-cloud-engineering#build" >}}), [deploy]({{< relref "/blog/what-exactly-is-cloud-engineering#deploy" >}}), and [manage]({{< relref "/blog/what-exactly-is-cloud-engineering#manage" >}}) process for any infrastructure or application.
+Creating and provisioning one VM isn't difficult, but migrating a traditional n-tier application often requires multiple virtual machines including those needed for horizontal scaling. This is where infrastructure as code excels. By using [cloud engineering](/blog/what-exactly-is-cloud-engineering/), we can automate [build](/blog/what-exactly-is-cloud-engineering#build), [deploy](/blog/what-exactly-is-cloud-engineering#deploy), and [manage](/blog/what-exactly-is-cloud-engineering#manage) process for any infrastructure or application.
 
 Let's look at an example of deploying a web server using a virtual machine. The complete example is available in either [Python](https://github.com/pulumi/examples/tree/master/azure-py-webserver) or [Typescript](https://github.com/pulumi/examples/tree/master/azure-ts-webserver). We will examine the Python code.
 
@@ -179,7 +179,7 @@ export("public_ip", public_ip_addr.ip_address)
 
 On the face of it, this seems more complex than using the Azure Portal. The critical thing to remember is that this process is reproducible, so if you require additional virtual machines, you can add a loop to create the necessary number of VMs.
 
-But what about provisioning? Because this is code, you can write a [provisioning script](https://github.com/pulumi/examples/blob/master/aws-py-ec2-provisioners/__main__.py) using Pulumi's [dynamic provider]({{< relref "/registry/packages/aws/how-to-guides/aws-py-dynamicresource" >}}) that connects to the webserver, copies files, and executes commands. Here's a code snippet of a dynamic provider that copies files to your VM using `scp`.
+But what about provisioning? Because this is code, you can write a [provisioning script](https://github.com/pulumi/examples/blob/master/aws-py-ec2-provisioners/__main__.py) using Pulumi's [dynamic provider](/registry/packages/aws/how-to-guides/aws-py-dynamicresource/) that connects to the webserver, copies files, and executes commands. Here's a code snippet of a dynamic provider that copies files to your VM using `scp`.
 
 ```python
 # CopyFileProvider implements the resource lifecycle for the CopyFile resource type below.
@@ -224,6 +224,6 @@ class CopyFile(dynamic.Resource):
 
 ## Summary
 
-Although it's relatively simple to create virtual machines using the Azure Portal or the Azure CLI, provisioning and maintaining them manually can be complex and error-prone. If we use code to build, deploy, and manage VMs and applications, we can automate the process making updates and maintenance repeatable processes and reduce errors. We can tear down existing VMs and replace them with updated and provisioned versions using infrastructure as code. This is a lot of information if you're starting your Azure cloud journey, so try something fun and deploy [Minecraft on Azure]({{< relref "/blog/deploying-minecraft-on-azure">}})!
+Although it's relatively simple to create virtual machines using the Azure Portal or the Azure CLI, provisioning and maintaining them manually can be complex and error-prone. If we use code to build, deploy, and manage VMs and applications, we can automate the process making updates and maintenance repeatable processes and reduce errors. We can tear down existing VMs and replace them with updated and provisioned versions using infrastructure as code. This is a lot of information if you're starting your Azure cloud journey, so try something fun and deploy [Minecraft on Azure](/blog/deploying-minecraft-on-azure/)!
 
 ![Minecraft](./image9.png)

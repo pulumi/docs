@@ -25,8 +25,5 @@ program. This means in practice that most Serverless Framework solutions also ne
 AWS CloudFormation -- and that you as a user are left orchestrating changes in multiple systems.
 This often leads to the very "pile of bash scripts" problems that you had sought to solve in the first place.
 
-For a good specific comparison of Pulumi and the Serverless Framework, refer to this example: [the before code using
-the Serverless Framework](
-https://serverless.com/blog/serverless-application-for-long-running-process-fargate-lambda/) takes about 38 pages
-of explanation, including manual steps and AWS CloudFormation; [the after code using Pulumi](
-https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer) is only about 38 lines of code.
+For a good specific comparison of Pulumi and the Serverless Framework, refer to this example: [the before code using the Serverless Framework](https://serverless.com/blog/serverless-application-for-long-running-process-fargate-lambda/) takes about 38 pages
+of explanation, including manual steps and AWS CloudFormation; [the after code using Pulumi](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer) is only about 38 lines of code.

@@ -12,7 +12,7 @@ menu:
 If your team has already provisioned infrastructure using Azure Resource Manager (ARM) Templates, and you'd like to adopt Pulumi, you have three primary strategies you can take:
 
 * [**Coexist**](#referencing-stack-outputs) with resources provisioned by ARM by referencing deployment outputs.
-* [**Import**]({{< relref "import" >}}) existing resources into Pulumi in the usual way.
+* [**Import**](/docs/guides/adopting/import) existing resources into Pulumi in the usual way.
 * [**Convert**](#converting-stacks-and-resources) your deployments to use Pulumi and then incrementally migrate resources.
 
 ## Referencing Stack Outputs
@@ -187,11 +187,11 @@ Let's say you want to migrate from ARM to Pulumi and that simply co-existing sid
 
 Let's see how to actually migrate your ARM-managed resources fully to Pulumi. This requires rewriting the ARM template JSON as your favorite programming language code, either entirely, or one resource at a time. Because you can query deployment outputs and provide parameters in code, you can more easily intermingle ARM-managed resources alongside Pulumi ones. Cyclic dependencies, of course, cannot be expressed, since the entire ARM deployment is seen as one opaque resource to Pulumi.
 
-Our example below will result in a Pulumi program that creates a Storage Account equivalent to the above ARM template example. The example will also use [import]({{< relref "import" >}}) to adopt resources on-the-fly from ARM deployments to Pulumi rather than recreating them.
+Our example below will result in a Pulumi program that creates a Storage Account equivalent to the above ARM template example. The example will also use [import](/docs/guides/adopting/import/) to adopt resources on-the-fly from ARM deployments to Pulumi rather than recreating them.
 
 ### Generate Code with Arm2Pulumi
 
-With the Next Generation Pulumi Azure Provider, it's possible to convert ARM templates into Pulumi program code using [arm2pulumi]({{< relref "/arm2pulumi" >}}). Simply provide your ARM template
+With the Next Generation Pulumi Azure Provider, it's possible to convert ARM templates into Pulumi program code using [arm2pulumi](/arm2pulumi/). Simply provide your ARM template
 and get back a Pulumi program in C#, TypeScript, Python, Go, Java, or YAML.
 
 Let's say you have an existing ARM Template shown below.

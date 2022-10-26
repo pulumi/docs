@@ -15,9 +15,9 @@ That’s quite a lot.
 
 GitHub is good at many things, but a full-on organization management tool it is not.
 
-Have you ever needed your manager to manually enable admin permission on a repo for you?  
-Or have you needed to page the CEO to add you to a team, because your manager was out that day?  
-Have you ever wondered who is on what team? Or which team owns a repo?  
+Have you ever needed your manager to manually enable admin permission on a repo for you?
+Or have you needed to page the CEO to add you to a team, because your manager was out that day?
+Have you ever wondered who is on what team? Or which team owns a repo?
 What if you change teams, or a team changes names? A reorg happens, and the “platform-integrations” team is no more, but we still need to call it that on GitHub because it is the team with all the repository accesses?
 
 When I joined Pulumi in 2021, all of the above happened to me within my first few weeks.
@@ -71,9 +71,7 @@ Pulumi.yaml go.mod  go.sum  main.go
 
 We now have a pulumi project YAML configuration file and the beginnings of a small Go program all set up.
 
-According to the [provider configuration documentation]({{< relref "/registry/packages/github/installation-configuration" >}}), we need to add a properly scoped token, as well as set "pulumi" as our GitHub organization owner.
-
-<!-- {{< relref "/registry/packages/github/installation-configuration" >}} -->
+According to the [provider configuration documentation](/registry/packages/github/installation-configuration/), we need to add a properly scoped token, as well as set "pulumi" as our GitHub organization owner.
 
 ```bash
 $ export GITHUB_TOKEN=YYYYYYYYYYYYYY
@@ -84,9 +82,9 @@ $ export GITHUB_OWNER=pulumi
 
 Now, Pulumi is _great_ at creating new infrastructure from scratch via code. But this wasn’t a from-scratch situation. We had to migrate existing resources---GitHub teams---to Pulumi, without disrupting anyone’s access.
 
-Enter [Pulumi Import]({{< relref "/docs/reference/cli/pulumi_import" >}}).
+Enter [Pulumi Import](/docs/reference/cli/pulumi_import/).
 
-What Pulumi Import does, in a nutshell, is find existing infrastructure by unique ID (in the GitHub provider’s case, the team ID), and add them to a Pulumi Stack. You can find the specific import instructions on the registry documentation for each resource. In this case we want the [GitHub import instructions]({{< relref "/registry/packages/github/api-docs/team#import" >}}).
+What Pulumi Import does, in a nutshell, is find existing infrastructure by unique ID (in the GitHub provider’s case, the team ID), and add them to a Pulumi Stack. You can find the specific import instructions on the registry documentation for each resource. In this case we want the [GitHub import instructions](/registry/packages/github/api-docs/team#import).
 
 ```bash
 $ pulumi import github:index/team:Team animals 1234567
@@ -157,7 +155,7 @@ Resources:
 
 Since `pulumi preview` shows no changes, we now know that our code reflects the existing infrastructure. It’s a bit funny to think about your program working well when it does nothing, but this was a huge first step in preserving existing infrastructure and ensuring all of our coworkers could continue their daily work uninterrupted!
 
-To finish up, we [unprotect the resource]({{< relref "/docs/reference/cli/pulumi_state_unprotect" >}}):
+To finish up, we [unprotect the resource](/docs/reference/cli/pulumi_state_unprotect/):
 
 ```bash
 $ pulumi state unprotect 'urn:pulumi:prod::team-mgmt::github:index/team:Team::animals'
@@ -240,7 +238,7 @@ Child Teams               Child1                  Child2
 (inherit all permissions)
 ```
 
-To establish this relationship, we set a [ParentTeamId]({{< relref "/registry/packages/github/api-docs/team#state_parentteamid_go" >}}) on child teams. First off, we add a new field to our Teams struct:
+To establish this relationship, we set a [ParentTeamId](/registry/packages/github/api-docs/team#state_parentteamid_go) on child teams. First off, we add a new field to our Teams struct:
 
 ```go
 type Team struct {
@@ -260,7 +258,7 @@ Here is where things get a little tricky. Any GitHub Team can have subteams, but
 4. Write the parent team’s ID into the `ParentTeamId field` of each child team.
 5. Do all of the above in a single `pulumi up`.
 
-This is where maintaining infrastructure with Pulumi truly shines. In our code, we can use [Pulumi Apply]({{< relref "/docs/intro/concepts/inputs-outputs#apply" >}}) to hold on to the promise of a parent team ID, and pass this promise into the appropriate field:
+This is where maintaining infrastructure with Pulumi truly shines. In our code, we can use [Pulumi Apply](/docs/intro/concepts/inputs-outputs#apply) to hold on to the promise of a parent team ID, and pass this promise into the appropriate field:
 
 ```go
 func setupTeams(ctx *pulumi.Context, parentTeam *Team) error {
@@ -299,7 +297,7 @@ func setupTeams(ctx *pulumi.Context, parentTeam *Team) error {
 }
 ```
 
-Running this as part of `main.go` will result in beautifully nested teams on the GitHub UI. But with Pulumi, we can do even better. We can set [`pulumi.Parent()`]({{< relref "/docs/intro/concepts/resources/options/parent" >}}) on the child teams:
+Running this as part of `main.go` will result in beautifully nested teams on the GitHub UI. But with Pulumi, we can do even better. We can set [`pulumi.Parent()`](/docs/intro/concepts/resources/options/parent) on the child teams:
 
 ```go
 for _, childTeam := range parentTeam.Teams {
@@ -345,7 +343,7 @@ teams:
      - username: "owlcat"
 ```
 
-A [`TeamMembership` in GitHub]({{< relref "/registry/packages/github/api-docs/teammembership" >}}) is a cross reference between a `Team` and a `User`. Fortunately these do not need to be explicitly imported, as they are merely establishing relationships between GitHub Users and Teams. We can add `TeamMemberships` to the Stack with a `Members` struct, a new `Members[]` field on the `Team` struct, and an extra function. Again, Pulumi lets us use the promised output of the team ID to set the `TeamId` field in the `TeamMembership`:
+A [`TeamMembership` in GitHub](/registry/packages/github/api-docs/teammembership) is a cross reference between a `Team` and a `User`. Fortunately these do not need to be explicitly imported, as they are merely establishing relationships between GitHub Users and Teams. We can add `TeamMemberships` to the Stack with a `Members` struct, a new `Members[]` field on the `Team` struct, and an extra function. Again, Pulumi lets us use the promised output of the team ID to set the `TeamId` field in the `TeamMembership`:
 
 ```go
 type Team struct {
@@ -404,7 +402,7 @@ That’s pretty great so far! While there are many org chart tools, what makes t
 
 ## Add CI
 
-In order for this tool to be used by everyone, we keep code and configuration in a GitHub repository. We can use [Pulumi’s GitHub Action]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}) to run a `pulumi preview` on a pull request, and a `pulumi up` on merge to main.
+In order for this tool to be used by everyone, we keep code and configuration in a GitHub repository. We can use [Pulumi’s GitHub Action](/docs/guides/continuous-delivery/github-actions) to run a `pulumi preview` on a pull request, and a `pulumi up` on merge to main.
 
 Here’s what that looks like on the pull request:
 
@@ -481,7 +479,7 @@ jobs:
          stack-name: pulumi/prod
 ```
 
-Note that we are calling `refresh: true` in both Workflows, which uses [Pulumi Refresh]({{< relref "/docs/reference/cli/pulumi_refresh" >}}) to make sure that the existing GitHub resources are aligned with the resource state in our Stack.
+Note that we are calling `refresh: true` in both Workflows, which uses [Pulumi Refresh](/docs/reference/cli/pulumi_refresh/) to make sure that the existing GitHub resources are aligned with the resource state in our Stack.
 
 Now, anyone with access to the GitHub management repo can:
 
@@ -499,7 +497,7 @@ Shortly after I joined Pulumi, my team was combined with another team. They brou
 
 On GitHub, parent teams pass permissions down to child teams. But what if we wanted permissions to be more granular?
 
-Here's where [`TeamRepositories`]({{< relref "/registry/packages/github/api-docs/teamrepository" >}}) come in. A `TeamRepository` has three fields: a team ID, a repository name, and a permission. Just like `TeamMemberships`, this resource is a link between a `Team` and a `Repository` and does not need to be imported.
+Here's where [`TeamRepositories`](/registry/packages/github/api-docs/teamrepository) come in. A `TeamRepository` has three fields: a team ID, a repository name, and a permission. Just like `TeamMemberships`, this resource is a link between a `Team` and a `Repository` and does not need to be imported.
 
 We gave each team their own config file with permission levels listing repository names:
 

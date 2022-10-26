@@ -192,9 +192,9 @@ PolicyPack(
 
 Policy as Code is an important tool for building a secure and efficient cloud infrastructure. Pulumi lets you efficiently test resources before deployment and entire stacks when deployed. Learn more about what you can do with Policy as Code:
 
-- [Get Started with Policy as Code]({{< relref "/docs/guides/crossguard/get-started" >}})
-- [New Policy as Code Capabilities with CrossGuard]({{< relref "/blog/crossguard-2-0" >}})
-- [Automatically Enforcing AWS Resource Tagging Policies]({{< relref "/blog/automatically-enforcing-aws-resource-tagging-policies" >}})
-- [Manage Any Infrastructure with Policy as Code]({{< relref "/blog/manage-infrastructure-with-pac" >}})
-- [Enforcing Different Kinds of Policies for Cloud Resources]({{< relref "/blog/enforcing-different-kinds-of-policies-for-cloud-resources" >}})
-- [Running AWS IAM Access Analyzer at Deployment Time]({{< relref "/blog/aws-iam-access-analyzer-and-crossguard" >}})
+- [Get Started with Policy as Code](/docs/guides/crossguard/get-started/)
+- [New Policy as Code Capabilities with CrossGuard](/blog/crossguard-2-0/)
+- [Automatically Enforcing AWS Resource Tagging Policies](/blog/automatically-enforcing-aws-resource-tagging-policies/)
+- [Manage Any Infrastructure with Policy as Code](/blog/manage-infrastructure-with-pac/)
+- [Enforcing Different Kinds of Policies for Cloud Resources](/blog/enforcing-different-kinds-of-policies-for-cloud-resources/)
+- [Running AWS IAM Access Analyzer at Deployment Time](/blog/aws-iam-access-analyzer-and-crossguard/)

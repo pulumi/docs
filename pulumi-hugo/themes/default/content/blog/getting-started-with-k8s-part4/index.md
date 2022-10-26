@@ -11,9 +11,9 @@ tags:
 
 This article is the fourth in a series using infrastructure as code to deploy applications with Kubernetes. This series walks you through:
 
-- [Building a Kubernetes cluster on cloud providers]({{< relref "/blog/getting-started-with-k8s-part1" >}})
-- [Basic application deployment]({{< relref "/blog/getting-started-with-k8s-part2" >}})
-- [Advance application deployment and Helm charts]({{< relref "/blog/getting-started-with-k8s-part3" >}})
+- [Building a Kubernetes cluster on cloud providers](/blog/getting-started-with-k8s-part1/)
+- [Basic application deployment](/blog/getting-started-with-k8s-part2/)
+- [Advance application deployment and Helm charts](/blog/getting-started-with-k8s-part3/)
 - Stateful applications
 - Networking
 - “Day 2” activities such as migrating node groups.
@@ -91,5 +91,5 @@ Stateful applications present additional challenges when deployed in Kubernetes.
  In the next series installment, we'll examine Kubernetes networking. Until then, you can learn more about Kubernetes with these resources:
 
 - Watch educational content on [Pulumi TV](https://www.youtube.com/pulumitv)
-- Learn more about Pulumi's [support for Kubernetes]({{< relref "/registry/packages/kubernetes" >}})
-- Practice [Kubernetes Tutorials]({{< relref "/registry/packages/kubernetes/how-to-guides" >}}) using Pulumi
+- Learn more about Pulumi's [support for Kubernetes](/registry/packages/kubernetes/)
+- Practice [Kubernetes Tutorials](/registry/packages/kubernetes/how-to-guides/) using Pulumi

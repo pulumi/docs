@@ -12,7 +12,7 @@ aliases: [
 ]
 ---
 
-[Projects]({{< relref "/docs/intro/concepts/project" >}}) and [stacks]({{< relref "/docs/intro/concepts/stack" >}}) are intentionally flexible so that they can accommodate
+[Projects](/docs/intro/concepts/project/) and [stacks](/docs/intro/concepts/stack/) are intentionally flexible so that they can accommodate
 diverse needs across a spectrum of team, application, and infrastructure scenarios. This is very much like how Git
 repos work and, much like Git repos, there are varying approaches to organizing your code within them. That said,
 there are some clear best practices that, when followed, will ensure Pulumi works seamlessly for your situation. This
@@ -72,7 +72,7 @@ different dimensions. This approach has several advantages:
 
 ### Using Stack References with Micro-Stacks
 
-If using the micro-stacks approach you will need a way to share information between stacks. [Stack references]({{< relref "/docs/intro/concepts/stack#stackreferences" >}}) are the Pulumi concepts you will want to use. Stack references allow you to access the outputs of one stack from another stack. Inter-Stack Dependencies allow one stack to reference the outputs of another stack.
+If using the micro-stacks approach you will need a way to share information between stacks. [Stack references](/docs/intro/concepts/stack#stackreferences) are the Pulumi concepts you will want to use. Stack references allow you to access the outputs of one stack from another stack. Inter-Stack Dependencies allow one stack to reference the outputs of another stack.
 
 To reference values from another stack, create an instance of the StackReference type using the fully qualified name of the stack as an input, and then read exported stack outputs by their name.
 
@@ -93,7 +93,7 @@ Here are a few (non-exhaustive) examples of how one might go about splitting up 
 
 Even with this alternative breakdown, it's likely your stack structure will mirror a monolithic structure. For
 each project, you are apt to have multiple environments such as production, staging, testing, etc. And, indeed,
-you may have inter-dependencies between your stacks -- something that Pulumi supports in a first-class manner with [stack references]({{< relref "/docs/intro/concepts/stack#stackreferences" >}}).
+you may have inter-dependencies between your stacks -- something that Pulumi supports in a first-class manner with [stack references](/docs/intro/concepts/stack#stackreferences).
 
 ## Aligning to Git Repos
 
@@ -108,11 +108,11 @@ structure enables seamless continuous deployment.
 
 In this model, there is a rough correspondence between a Git repo and a Pulumi project, and a Git branch and
 its associated Pulumi stack. Read more about
-[Continuous Delivery]({{< relref "/docs/guides/continuous-delivery" >}}).
+[Continuous Delivery](/docs/guides/continuous-delivery/).
 
 ## Tagging Stacks
 
-Stacks have associated metadata in the form of name/value [stack tags]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}). You can assign custom tags to stacks (when logged into the [Pulumi Service backend]({{< relref "/docs/intro/concepts/state" >}})) to enable grouping stacks in the [Pulumi Service](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom `environment` tag to each stack, assigning a value of `production` to each production stack, `staging` to each staging stack, etc. Then in the Pulumi Service, you'll be able to group stacks by `Tag: environment`.
+Stacks have associated metadata in the form of name/value [stack tags](/docs/intro/concepts/stack#stack-tags). You can assign custom tags to stacks (when logged into the [Pulumi Service backend](/docs/intro/concepts/state/) to enable grouping stacks in the [Pulumi Service](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom `environment` tag to each stack, assigning a value of `production` to each production stack, `staging` to each staging stack, etc. Then in the Pulumi Service, you'll be able to group stacks by `Tag: environment`.
 
 ## Examples
 
@@ -206,7 +206,7 @@ Our example service is made up of an API and a database (RDS, CosmosDB, etc.). O
 
 It's generally a good practice to keep our projects on the smaller side as this helps reduce the effect and impact of a deployment. If you have applications that require different rates of change, it may be useful to split them up into separate repos, aka micro-stacks.
 
-As we consider making our approach even more accessible and robust across teams, we bring in the idea of [Component Resources]({{< relref "/docs/intro/concepts/resources/components" >}}), which are a way to group affiliated resources together according the standard practices of the organization.
+As we consider making our approach even more accessible and robust across teams, we bring in the idea of [Component Resources](/docs/intro/concepts/resources/components/), which are a way to group affiliated resources together according the standard practices of the organization.
 
 Back to our example, our service needs a database and a subnet (or other networking). We can template these resources by creating a component resource, which abstracts these details away from the rest of the program. So now, any time someone needs to use Pulumi to add a standard application, they can call a resource called `Application` with its associated parameters (e.g., the container, parcel, folder). Behind the scenes, everything is being set up according to your organization's standards.
 
@@ -283,7 +283,7 @@ To be clear, each of the applications/services inside our monorepo (including th
 
 ### Other examples
 
-See also the use of multiple projects and stacks in [Crosswalk for Kubernetes]({{< relref "/docs/guides/crosswalk/kubernetes" >}}), which contains a tutorial, reference architecture, and collection of prod-first code examples that demonstrate industry best-practices for using Kubernetes in contexts where an organization of people must ship production applications.
+See also the use of multiple projects and stacks in [Crosswalk for Kubernetes](/docs/guides/crosswalk/kubernetes/), which contains a tutorial, reference architecture, and collection of prod-first code examples that demonstrate industry best-practices for using Kubernetes in contexts where an organization of people must ship production applications.
 
 ## Organizing your project code
 

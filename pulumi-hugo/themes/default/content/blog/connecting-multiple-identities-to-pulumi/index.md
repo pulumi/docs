@@ -10,7 +10,7 @@ meta_image: "multi-id.gif"
 
 
 Hot on the heels of our
-[GitLab sign-in support]({{< relref "welcoming-gitlab-users-to-pulumi" >}}),
+[GitLab sign-in support](/blog/welcoming-gitlab-users-to-pulumi/),
 we've just released support for multiple identities for a single Pulumi
 account in the Pulumi Service. Previously, you could only sign-up
 for a new Pulumi account using a GitHub or GitLab identity. Starting

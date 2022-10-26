@@ -13,13 +13,13 @@ aliases: ["/docs/reference/languages/"]
 
 Pulumi is a multi-language infrastructure as code tool. Each language is as capable as the
 other and supports the entire surface area of all of the clouds available in [Pulumi Registry](
-{{< relref "/registry" >}}).
+/registry).
 
 The following language runtimes are currently supported by Pulumi. Select one to learn more:
 
 <div class="tiles flex-wrap mt-4">
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <a class="tile p-8 pb-16 text-center" href="{{< relref "./javascript" >}}">
+        <a class="tile p-8 pb-16 text-center" href="./javascript">
             <p class="mx-auto text-xl font-semibold link">
                 Node.js
                 <span class="text-xs font-light">(JavaScript, TypeScript)</span>
@@ -30,7 +30,7 @@ The following language runtimes are currently supported by Pulumi. Select one to
         </a>
     </div>
     <div class="pb-4 md:w-1/2">
-        <a class="tile p-8 pb-16 text-center" href="{{< relref "./python" >}}">
+        <a class="tile p-8 pb-16 text-center" href="./python">
             <p class="mx-auto text-xl font-semibold link">
                 Python
             </p>
@@ -38,7 +38,7 @@ The following language runtimes are currently supported by Pulumi. Select one to
         </a>
     </div>
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <a class="tile p-8 pb-16 text-center" href="{{< relref "./go" >}}">
+        <a class="tile p-8 pb-16 text-center" href="./go">
             <p class="mx-auto text-xl font-semibold link">
                 Go
             </p>
@@ -46,7 +46,7 @@ The following language runtimes are currently supported by Pulumi. Select one to
         </a>
     </div>
     <div class="pb-4 md:w-1/2">
-        <a class="tile p-8 pb-16 text-center" href="{{< relref "./dotnet" >}}">
+        <a class="tile p-8 pb-16 text-center" href="./dotnet">
             <p class="mx-auto text-xl font-semibold link">
                 .NET
                 <span class="text-xs font-light">(C#, F#, VB)</span>
@@ -58,7 +58,7 @@ The following language runtimes are currently supported by Pulumi. Select one to
         </a>
     </div>
     <div class="pb-4 md:w-1/2">
-        <a class="tile p-8 pb-16 text-center" href="{{< relref "./java" >}}">
+        <a class="tile p-8 pb-16 text-center" href="./java">
             <p class="mx-auto text-xl font-semibold link">
                 Java
             </p>
@@ -66,7 +66,7 @@ The following language runtimes are currently supported by Pulumi. Select one to
         </a>
     </div>
     <div class="pb-4 md:w-1/2">
-        <a class="tile p-8 pb-16 text-center" href="{{< relref "./yaml" >}}">
+        <a class="tile p-8 pb-16 text-center" href="./yaml">
             <p class="mx-auto text-xl font-semibold link">
                 Pulumi YAML
             </p>
@@ -77,6 +77,6 @@ The following language runtimes are currently supported by Pulumi. Select one to
 
 If your favorite language isn't listed, it may be on its way soon. Pulumi is
 [open source](https://github.com/pulumi/pulumi), and it is possible
-[to add your own language]({{< relref "/docs/support/faq#how-can-i-add-support-for-my-favorite-language" >}}).
-For further questions, [contact us]({{< relref "/docs/support/troubleshooting#contact-us" >}}) and let us
+[to add your own language](/docs/support/faq#how-can-i-add-support-for-my-favorite-language).
+For further questions, [contact us](/docs/support/troubleshooting#contact-us) and let us
 know what you're looking for.

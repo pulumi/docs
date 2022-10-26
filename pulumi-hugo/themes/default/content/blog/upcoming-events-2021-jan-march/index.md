@@ -26,7 +26,7 @@ To kickoff the year we start with a technical session that demonstrates how to c
 
 Taught by Pulumi and Codefresh engineers, you'll receive a thorough understanding of CI/CD and infrastructure as code best practices.
 
-Sign up for [CI/CD Pipelines for Kubernetes Apps with Pulumi & Codefresh]({{< relref "/resources/ci-cd-pipelines-for-kubernetes-apps-with-codefresh" >}}) on January 21, 10:00 AM MST.
+Sign up for [CI/CD Pipelines for Kubernetes Apps with Pulumi & Codefresh](/resources/ci-cd-pipelines-for-kubernetes-apps-with-codefresh) on January 21, 10:00 AM MST.
 
 ## Intro to Pulumi
 
@@ -54,7 +54,7 @@ Feb 9: Intro to Pulumi, 9 AM PST
 Feb 23: Intro to Pulumi, 9 AM PST
 March 9: Intro to Pulumi, 9 AM PST
 
-[Register for a session today.]({{< relref "/resources/introduction-to-pulumi" >}})
+[Register for a session today.](/resources/introduction-to-pulumi/)
 
 ## Deploying Microservices with Pulumi and AWS Lambda
 
@@ -68,7 +68,7 @@ If you're an active Pulumi user and building serverless applications this hands-
 
 Sign up to learn about one of the major cloud technologies.
 
-[Feb 17: Deploying Microservices with Pulumi and AWS Lambda, 9 - 11 AM PST]({{< relref "/resources/deplying-microservices-with-pulumi-and-aws-lambda" >}})
+[Feb 17: Deploying Microservices with Pulumi and AWS Lambda, 9 - 11 AM PST](/resources/deplying-microservices-with-pulumi-and-aws-lambda)
 
 ## Building a Kubernetes Platform in Amazon EKS with Pulumi
 
@@ -82,4 +82,4 @@ Attendees will be guided through the process of provisioning an Amazon EKS clust
 
 Get a solid foundation for provisioning Kubernetes clusters and applications by signing up.
 
-[Feb 24: Building a Kubernetes Platform in Amazon EKS with Pulumi, 9-11am pacific]({{< relref "/resources/building-a-kubernetes-platform-in-amazon-eks" >}})
+[Feb 24: Building a Kubernetes Platform in Amazon EKS with Pulumi, 9-11am pacific](/resources/building-a-kubernetes-platform-in-amazon-eks)

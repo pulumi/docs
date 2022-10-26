@@ -9,11 +9,11 @@ menu:
 
 This document outlines the steps required to help you configure automatic provisioning/deprovisioning of your users and groups in Pulumi using SCIM 2.0.
 
-Please note that some advanced SCIM features aren't supported yet. For more information, see [Known Limitations]({{< relref "#known-limitations" >}}).
+Please note that some advanced SCIM features aren't supported yet. For more information, see [Known Limitations](#known-limitations).
 
 ## Prerequisites
 
-* Your organization must already be configured to use [SAML SSO]({{< relref "/docs/guides/saml/aad" >}}) with Pulumi.
+* Your organization must already be configured to use [SAML SSO](/docs/guides/saml/aad/) with Pulumi.
 * You must be an admin of your Pulumi organization.
 * (Optional, but highly recommended) You should have more than one admin for your Pulumi organization.
 
@@ -48,7 +48,7 @@ To configure the SCIM connector, click the **Provisioning** tab, and then select
 * SCIM connector base URL: `https://api.pulumi.com/scim/v2/{orgName}`, where `{orgName}` must be replaced with your organization’s login name (not display name). If you do not know this, navigate to your SAML settings and look at the SSO URL. It will have your organization’s login name in the URL.
 * Supported provisioning actions: Check **Push New Users** and **Push Profile Updates**.
     {{% notes "info" %}}
-If you also want to support pushing existing Okta groups, the steps in [Setting up Group Provisioning]({{< relref "#groupprovisioning" >}}) describe how to set that up.
+If you also want to support pushing existing Okta groups, the steps in [Setting up Group Provisioning](#groupprovisioning) describe how to set that up.
     {{% /notes %}}
 
 * Unique identifier field for users: Set to `userName`.

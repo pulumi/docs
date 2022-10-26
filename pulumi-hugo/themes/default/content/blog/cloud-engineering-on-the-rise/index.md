@@ -14,9 +14,9 @@ One of the most fulfilling aspects of working at Pulumi is learning how customer
 
 <!--more-->
 
-Pulumi is born from the experiences and needs of teams practicing cloud engineering every day. When we [announced]({{< relref "/blog/pulumi-3-0" >}}) the Pulumi Cloud Engineering Platform in April, CEO & Founder Joe Duffy [talked about](https://www.youtube.com/watch?v=Zko70KVGcgo) bringing cloud engineering to everyone. Over the past year we have seen significant growth in cloud engineering and usage of Pulumi across companies of all industries and sizes, and spanning a diverse spectrum of teams and engineering disciplines. We’re also seeing growing numbers of job postings with “cloud engineer” in the title or which have Pulumi as a requirement or desired skill set.
+Pulumi is born from the experiences and needs of teams practicing cloud engineering every day. When we [announced](/blog/pulumi-3-0/) the Pulumi Cloud Engineering Platform in April, CEO & Founder Joe Duffy [talked about](https://www.youtube.com/watch?v=Zko70KVGcgo) bringing cloud engineering to everyone. Over the past year we have seen significant growth in cloud engineering and usage of Pulumi across companies of all industries and sizes, and spanning a diverse spectrum of teams and engineering disciplines. We’re also seeing growing numbers of job postings with “cloud engineer” in the title or which have Pulumi as a requirement or desired skill set.
 
-Recently, we published several case studies about how teams are applying cloud engineering best practices. Cloud engineers apply standard software engineering practices and tools uniformly across infrastructure management, application development, and security to tame the complexity of delivering and managing modern cloud applications. We’ve published on our [website]({{< relref "/cloud-engineering" >}}) and in this [blog]({{< relref "/blog/infrastructure-testing-concepts" >}}) some of the key cloud engineering best practices that we see broadly across the community, and encourage you to read further to see three stories of cloud engineering in action.
+Recently, we published several case studies about how teams are applying cloud engineering best practices. Cloud engineers apply standard software engineering practices and tools uniformly across infrastructure management, application development, and security to tame the complexity of delivering and managing modern cloud applications. We’ve published on our [website](/cloud-engineering/) and in this [blog](/blog/infrastructure-testing-concepts/) some of the key cloud engineering best practices that we see broadly across the community, and encourage you to read further to see three stories of cloud engineering in action.
 
 These three case studies highlight a small sampling of the many types of companies and teams representing cloud engineers. Some are platform teams at large organizations, like Atlassian, who are responsible for empowering the rest of their developer teams. We also see DevOps teams using cloud engineering, such as at Skai and SANS Institute. There are other types of teams, like full-stack engineers or SREs, which we will share in future posts. All of these teams share a software engineering mindset and make a leveraged impact on the business by increasing speed, automation, reliability, and agility through cloud infrastructure innovation.
 <br>
@@ -42,7 +42,7 @@ Atlassian’s Bitbucket DevSpeed team is responsible for improving developer pro
 - Reduced the time Bitbucket developers spent maintaining their instances from 8 hours per week to fewer than four.
 - Reduced the size and complexity of its infrastructure code compared to its previous infrastructure tool while increasing the code’s clarity.
 
-[Read the full case study→]({{< relref "/case-studies/atlassian" >}})
+[Read the full case study→](/case-studies/atlassian)
 <br>
 <br>
 
@@ -66,7 +66,7 @@ SANS Institute is the global leader in cybersecurity training. Using Pulumi, the
 - Enabled developers to use familiar programming languages and tools, which also helped make their code cleaner and - more uniform, resulting in streamlined pipelines.
 - Helped to identify opportunities in other SANS departments where Pulumi can streamline operations.
 
-[Read the full case study→]({{< relref "/case-studies/sans-institute" >}})
+[Read the full case study→](/case-studies/sans-institute)
 <br>
 <br>
 
@@ -89,8 +89,8 @@ Skai is an independent, global marketing platform for strategy, measurement, and
 - Created modular infrastructure components that enable different teams to collaborate and work on different parts of the infrastructure in parallel.
 - Streamlined the registration and deregistration process for new application instances by integrating Pulumi with its internal IT systems.
 
-[Read the full case study→]({{< relref "/blog/kenshoo-migrates-to-aws-with-pulumi">}})
+[Read the full case study→](/blog/kenshoo-migrates-to-aws-with-pulumi)
 
 ## Summary
 
-Cloud engineers are a fast-growing community made of tens of thousands of members and thousands of companies. They apply standard software engineering practices and tools uniformly across infrastructure management, application development, and security to tame the complexity of delivering and managing modern cloud applications. To illustrate cloud engineering in action, we shared three case studies of teams using cloud engineering in their organizations. Pulumi’s Cloud Engineering Platform was built to enable any organization to adopt cloud engineering best practices out-of-the-box. If you’re starting your cloud engineering journey, try Pulumi for free today with this [Getting Started guide]({{< relref "/docs/get-started">}}).
+Cloud engineers are a fast-growing community made of tens of thousands of members and thousands of companies. They apply standard software engineering practices and tools uniformly across infrastructure management, application development, and security to tame the complexity of delivering and managing modern cloud applications. To illustrate cloud engineering in action, we shared three case studies of teams using cloud engineering in their organizations. Pulumi’s Cloud Engineering Platform was built to enable any organization to adopt cloud engineering best practices out-of-the-box. If you’re starting your cloud engineering journey, try Pulumi for free today with this [Getting Started guide](/docs/get-started/).

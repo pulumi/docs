@@ -13,7 +13,7 @@ menu:
 
 The [Pulumi Policy SDK](https://github.com/pulumi/pulumi-policy) that allows you to express policies and using the local `--policy-pack` flag (as part of the Pulumi CLI) to enforce Policy Packs is also open source.
 
-Pulumi CrossGuard is available to [Pulumi Business Critical]({{< relref "/pricing" >}}) organizations and allows for enforcing Policy Packs across an organization and viewing Policy Pack results in the Pulumi Service.
+Pulumi CrossGuard is available to [Pulumi Business Critical](/pricing/) organizations and allows for enforcing Policy Packs across an organization and viewing Policy Pack results in the Pulumi Service.
 
 ## How do Policy Packs enforced by the service interact with Policy Packs specified by the local Policy Pack flag?
 
@@ -65,7 +65,7 @@ A version can only be used one time and once published the version can never be 
 
 ## How are secrets handled in policies?
 
-Encrypted [secrets]({{< relref "/docs/intro/concepts/secrets#secrets" >}}) are decrypted during previews and updates. Any policy that is run against a stack can access the values in plaintext. It is up to you to treat these values sensitively and only run policies that you trust.
+Encrypted [secrets](/docs/intro/concepts/secrets#secrets) are decrypted during previews and updates. Any policy that is run against a stack can access the values in plaintext. It is up to you to treat these values sensitively and only run policies that you trust.
 
 ## How are dependencies managed with Python Policy Packs?
 
@@ -121,7 +121,7 @@ If you prefer to manage the virtual environment on your own (for example, using 
 runtime: python
 ```
 
-When managing the virtual environment on your own and [running the Policy Pack locally]({{< relref "/docs/guides/crossguard/get-started#authoring-a-policy-pack#running-locally" >}}) against a Pulumi program, you'll need to run any `pulumi` commands (such as `pulumi up`) from an activated virtual environment shell (or, if using a tool like [Pipenv](https://github.com/pypa/pipenv), prefix any `pulumi` commands with `pipenv run pulumi ...`). If the Pulumi program is also Python, both the Policy Pack and Pulumi program can use the same virtual environment.
+When managing the virtual environment on your own and [running the Policy Pack locally](/docs/guides/crossguard/get-started#authoring-a-policy-pack#running-locally) against a Pulumi program, you'll need to run any `pulumi` commands (such as `pulumi up`) from an activated virtual environment shell (or, if using a tool like [Pipenv](https://github.com/pypa/pipenv), prefix any `pulumi` commands with `pipenv run pulumi ...`). If the Pulumi program is also Python, both the Policy Pack and Pulumi program can use the same virtual environment.
 
 Enforced Policy Packs that are published to the Pulumi Service will automatically create a virtual environment, install dependencies in the virtual environment, and use the virtual environment when running against a Pulumi stack.
 

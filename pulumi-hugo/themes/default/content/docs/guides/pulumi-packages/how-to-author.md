@@ -8,12 +8,12 @@ menu:
         weight: 2
 ---
 
-This how-to guide will take you step-by-step through the tasks required to author and publish a Pulumi Package. You can use this guide to create any [type of Pulumi Package]({{<relref "/docs/guides/pulumi-packages#types-of-pulumi-packages">}}): a Native Provider, a provider bridged from an existing Terraform provider, or a Component. This guide assumes you're using GitHub to host your package's source code and GitHub Actions to publish various parts of your package.
+This how-to guide will take you step-by-step through the tasks required to author and publish a Pulumi Package. You can use this guide to create any [type of Pulumi Package](/docs/guides/pulumi-packages#types-of-pulumi-packages): a Native Provider, a provider bridged from an existing Terraform provider, or a Component. This guide assumes you're using GitHub to host your package's source code and GitHub Actions to publish various parts of your package.
 
 ## Prerequisites
 
-- You need to [install Pulumi]({{<relref "/docs/get-started/install">}}).
-- You should be familiar with the Pulumi [Resource and Component model]({{<relref "/docs/intro/concepts/resources">}}).
+- You need to [install Pulumi](/docs/get-started/install/).
+- You should be familiar with the Pulumi [Resource and Component model](/docs/intro/concepts/resources/).
 - Pulumi Packages are multi-language: you can write your package once in either Go, Python, or TypeScript/JavaScript and then make it available to all Pulumi users, even if they use another language. To develop them, you need to have Git, Go, .NET, Python, and TypeScript installed on your system.
 - To follow the whole guide, you need a GitHub account. However, using GitHub is not a requirement; you may still find this guide useful even if you use another system to store your source code.
 
@@ -37,10 +37,10 @@ To get started, click the link for the boilerplate repository template that you 
 
 You should name your repository (and thus, your Pulumi Package) using the following guidelines:
 
-- The name should start with `pulumi-`, like our [`pulumi-aws-native`]({{<relref "/registry/packages/aws-native">}}) AWS Native Provider and our [`pulumi-eks`]({{<relref "/registry/packages/eks">}}) Component for AWS Elastic Kubernetes Service (EKS)
-- If you're naming a **native provider**, use the cloud provider's name and the suffix `-native`, like our [`pulumi-azure-native`]({{<relref "/registry/packages/azure-native">}}) Azure Native Provider
+- The name should start with `pulumi-`, like our [`pulumi-aws-native`](/registry/packages/aws-native) AWS Native Provider and our [`pulumi-eks`](/registry/packages/eks) Component for AWS Elastic Kubernetes Service (EKS)
+- If you're naming a **native provider**, use the cloud provider's name and the suffix `-native`, like our [`pulumi-azure-native`](/registry/packages/azure-native) Azure Native Provider
 - If you're naming a **bridged provider**, re-use the Terraform provider's name but replace the `terraform-provider-` prefix with `pulumi-`
-- If you're naming a **component**, name your package using both the cloud provider whose resources you're building on top of and the resources, like our [`pulumi-aws-apigateway`]({{<relref "/registry/packages/aws-apigateway">}}) Component for AWS API Gateway
+- If you're naming a **component**, name your package using both the cloud provider whose resources you're building on top of and the resources, like our [`pulumi-aws-apigateway`](/registry/packages/aws-apigateway) Component for AWS API Gateway
 
 ## Author your resources or components
 
@@ -48,7 +48,7 @@ See the instructions in your new repository's `README.md` file for specific inst
 
 ## Write documentation
 
-To help others in the Pulumi community use your package, we recommend authoring some documentation. In your repository, there should be a `docs/` folder with a few template pages you can use that correspond to the various tabs on a package page in Pulumi Registry (like [this page for AWS Native]({{<relref "/registry/packages/aws-native">}})). Use the guidance in the following sections to author content in these pages.
+To help others in the Pulumi community use your package, we recommend authoring some documentation. In your repository, there should be a `docs/` folder with a few template pages you can use that correspond to the various tabs on a package page in Pulumi Registry (like [this page for AWS Native](/registry/packages/aws-native/). Use the guidance in the following sections to author content in these pages.
 
 ### Overview, installation, & configuration
 
@@ -63,7 +63,7 @@ A future improvement to Pulumi Packages will enable Pulumi Registry to create th
 
 ### Package metadata
 
-Metadata for your package is generated from the [`schema.json`]({{<relref "/docs/guides/pulumi-packages/schema">}}) in your repository. To make sure your package looks great in Pulumi Registry, ensure you add metadata like:
+Metadata for your package is generated from the [`schema.json`](/docs/guides/pulumi-packages/schema) in your repository. To make sure your package looks great in Pulumi Registry, ensure you add metadata like:
 
 - `displayName`: the friendly name for your package that's displayed throughout Registry
 - `description`: a short description of your package
@@ -81,7 +81,7 @@ Pulumi will interpolate `${VERSION}`, `${OS}` and `${ARCH}` with their respectiv
 
 ### API docs
 
-API docs for your package are automatically generated from the `schema.json` in your repository. Many Pulumi users learn to use a Pulumi Package via the API docs, since they appear automatically in many IDEs' auto-complete and inline documentation features, like Visual Studio Code's IntelliSense feature. Investing in API docs for your package is one of the best ways to improve its usability. Check out the [`pulumi-eks` schema](https://github.com/pulumi/pulumi-eks/blob/master/provider/cmd/pulumi-resource-eks/schema.json) and how it translates to [Pulumi Registry]({{<relref "/registry/packages/eks/api-docs">}}) for an example of great API docs.
+API docs for your package are automatically generated from the `schema.json` in your repository. Many Pulumi users learn to use a Pulumi Package via the API docs, since they appear automatically in many IDEs' auto-complete and inline documentation features, like Visual Studio Code's IntelliSense feature. Investing in API docs for your package is one of the best ways to improve its usability. Check out the [`pulumi-eks` schema](https://github.com/pulumi/pulumi-eks/blob/master/provider/cmd/pulumi-resource-eks/schema.json) and how it translates to [Pulumi Registry](/registry/packages/eks/api-docs/) for an example of great API docs.
 
 ### How-to guides
 
@@ -94,7 +94,7 @@ Once you've authored and tested your package locally, you can publish it to make
 - The npm, NuGet, and Python SDK packages to the [npm Registry](https://npmjs.com), the [NuGet Gallery](https://nuget.org), and the [Python Package Index](https://pypi.org)
 - The Go module to your Git repository, by adding a tag, which we'll explain in the sections below
 - The binary Pulumi resource provider plugin to a binary hosting provider of your choice
-- The package documentation - overview, installation & configuration, API docs, and how-to guides - to [Pulumi Registry]({{<relref "/registry">}})
+- The package documentation - overview, installation & configuration, API docs, and how-to guides - to [Pulumi Registry](/registry/)
 
 Future iterations of this guide will cover how to publish the first three items; for now, these are left as an exercise for the package author.
 

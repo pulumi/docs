@@ -11,17 +11,17 @@ The Cloud Framework for Pulumi lets you program infrastructure and application l
 
 The Cloud Framework must be configured with credentials to deploy and update resources in the target cloud platform.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/cloud" >}}) for complete details of the available Cloud Framework APIs.
+See the [full API documentation](/docs/reference/pkg/nodejs/pulumi/cloud/) for complete details of the available Cloud Framework APIs.
 
-For AWS-specific use cases, see also the [awsx]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx" >}}) library which provides higher-level libraries for working with many AWS services.
+For AWS-specific use cases, see also the [awsx](/docs/reference/pkg/nodejs/pulumi/awsx/) library which provides higher-level libraries for working with many AWS services.
 
 ## Getting Started
 
 The easiest way to start with the Cloud Framework is to follow one of the tutorials:
 
-* [A simple serverless REST API]({{< relref "rest-api" >}}): Deploy cloud-agnostic managed REST API
-* [A simple containerized app]({{< relref "service" >}}): Deploy cloud-agnostic containerized services
-* [Serverless + Containers + Infrastructure]({{< relref "thumbnailer" >}}): Deploy a complete cloud-agnostic application using a combination of buckets, serverless functions and containers.
+* [A simple serverless REST API](/docs/tutorials/cloudfx/rest-api/): Deploy cloud-agnostic managed REST API
+* [A simple containerized app](/docs/tutorials/cloudfx/service/): Deploy cloud-agnostic containerized services
+* [Serverless + Containers + Infrastructure](/docs/tutorials/cloudfx/thumbnailer): Deploy a complete cloud-agnostic application using a combination of buckets, serverless functions and containers.
 
 In addition to the tutorials, several interesting examples are available with instructions:
 
@@ -58,7 +58,7 @@ The Cloud Framework is open source and available in the [pulumi/pulumi-cloud](ht
 
 ## Authentication
 
-Authentication options must be set for the target cloud provider. See the [AWS setup page]({{< relref "/registry/packages/aws/installation-configuration" >}}) for details (more providers for the Cloud Framework coming soon).
+Authentication options must be set for the target cloud provider. See the [AWS setup page](/registry/packages/aws/installation-configuration/) for details (more providers for the Cloud Framework coming soon).
 
 ## Configuration
 

@@ -25,7 +25,7 @@ links:
 Now that we've created our images, we can provision our application with a
 network and containers. First, we're going to add configuration to our Pulumi
 program. Pulumi is a tool to
-[configure]({{< relref "docs/intro/concepts/config" >}}) your infrastructure,
+[configure](/docs/intro/concepts/config/) your infrastructure,
 and that includes being able to configure the different stacks with different
 values. As a result, it makes sense to include the basic configurations as
 variables at the top of your program.
@@ -289,7 +289,7 @@ that use the ports; we only have image resources.
 In the last topic, we built Docker images. Now we want to create Docker
 containers and pass our configuration to them. Our containers will need to
 connect to each other, so we will need to create a
-[`Network`]({{< relref "registry/packages/docker/api-docs/network" >}}), which
+[`Network`](/registry/packages/docker/api-docs/network), which
 is another resource.
 
 {{< chooser language "typescript,python,java,yaml" / >}}
@@ -360,7 +360,7 @@ final var network = new Network(
 {{% /choosable %}}
 
 Define a new
-[`Container`]({{< relref "registry/packages/docker/api-docs/container" >}})
+[`Container`](/registry/packages/docker/api-docs/container)
 resource in your Pulumi program below the `Network` resource, like this:
 
 {{< chooser language "typescript,python,java,yaml" / >}}
@@ -1317,5 +1317,4 @@ a Pulumi project; work on your Pulumi program to build Docker images,
 containers, and networks; and deploy the infrastructure locally with your first
 resource provider. Now, head back to the main page and explore some other
 tutorials to understand more about Pulumi. The best next step to take is to
-explore the [Building with
-Pulumi]({{< relref "learn/building-with-pulumi" >}}) pathway.
+explore the [Building with Pulumi](/learn/building-with-pulumi/) pathway.

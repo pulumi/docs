@@ -12,7 +12,7 @@ tags:
     - import
 ---
 
-Last year, we [introduced a new Pulumi feature]({{< relref "blog/pulumi-import-generate-iac-for-existing-cloud-resources" >}}) that allows you to import existing infrastructure into your Pulumi program. Not only did it bring the resource into the Pulumi state file, but it could generate the source code for your Pulumi program too. Today, we're excited to announce that we've listened to feedback and delivered a plethora of updates and fixes to streamline the import experience; to make it **more useful**, **more convenient**, and **more powerful**.
+Last year, we [introduced a new Pulumi feature](/blog/pulumi-import-generate-iac-for-existing-cloud-resources/) that allows you to import existing infrastructure into your Pulumi program. Not only did it bring the resource into the Pulumi state file, but it could generate the source code for your Pulumi program too. Today, we're excited to announce that we've listened to feedback and delivered a plethora of updates and fixes to streamline the import experience; to make it **more useful**, **more convenient**, and **more powerful**.
 
 At Pulumi, we understand that many cloud engineers and platform teams around the world don't have the luxury of greenfield projects, more often than not we're stuck with the impossible task of "refactoring" or "migrating" existing projects to more modern stacks to help increase team productivity, velocity, and stability. These projects aren't trivial and we want to make it easier for teams and organizations to bring their infrastructure into a cloud engineering world. Oh, and worry not you lucky greenfielders ... even if you just wanna ClickOps your way through some resources and import them into your program; that's gonna work just fine too; we won't tell if you don't 😉.
 
@@ -279,7 +279,7 @@ This section requires some understanding of the Pulumi architecture, but that un
 
 ### The importance of `Provider.Read`
 
-Our import system depends on the ability for a [resource provider]({{< relref "docs/intro/concepts/resources/providers" >}}) to be able to read the existing state of a resource and report back to Pulumi the current value of it's inputs and outputs.
+Our import system depends on the ability for a [resource provider](/docs/intro/concepts/resources/providers/) to be able to read the existing state of a resource and report back to Pulumi the current value of it's inputs and outputs.
 
 This isn't always possible to return accurately. For example if a resource's inputs don't match up 1-to-1 with it's output state and the underlying provider can only read the current output state there's no way for it to always construct the correct input state. There could also be bugs in the provider's `Read` method that result in inaccurate reads. We've designed the import system to be tolerant to these cases, but it does mean we don't expect perfect import results for every resource.
 

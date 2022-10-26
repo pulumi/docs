@@ -38,18 +38,18 @@ tags:
 # for additional details, and please remove these comments before submitting for review.
 ---
 
-Back in September 2021 we announced [public preview]({{< relref "/blog/full-access-to-helm-features-through-new-helm-release-resource-for-kubernetes" >}}) for the Helm Release resource in Pulumi's Kubernetes provider. Over the last few months, we have had a very encouraging uptake in usage and several meaningful discussions with users in the community that have helped shape improvements to this resource. Thanks to this collaboration, we are now pleased to announce that the [Helm Release]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release" >}}) resource is now **GA** (generally available) starting in [v3.15.0](https://github.com/pulumi/pulumi-kubernetes/releases/tag/v3.15.0) of the Pulumi Kubernetes Provider and SDK in all Pulumi supported languages. We are excited to offer yet another tool to Pulumi users to effectively manage their Kubernetes footprint.
+Back in September 2021 we announced [public preview](/blog/full-access-to-helm-features-through-new-helm-release-resource-for-kubernetes/) for the Helm Release resource in Pulumi's Kubernetes provider. Over the last few months, we have had a very encouraging uptake in usage and several meaningful discussions with users in the community that have helped shape improvements to this resource. Thanks to this collaboration, we are now pleased to announce that the [Helm Release](/registry/packages/kubernetes/api-docs/helm/v3/release/) resource is now **GA** (generally available) starting in [v3.15.0](https://github.com/pulumi/pulumi-kubernetes/releases/tag/v3.15.0) of the Pulumi Kubernetes Provider and SDK in all Pulumi supported languages. We are excited to offer yet another tool to Pulumi users to effectively manage their Kubernetes footprint.
 <!--more-->
 
 {{% notes %}}
-The existing [Helm Chart]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/chart">}}) component resource will continue to be supported.
+The existing [Helm Chart](/registry/packages/kubernetes/api-docs/helm/v3/chart/) component resource will continue to be supported.
 {{% /notes %}}
 
 ## What is the Helm Release resource?
 
-The Kubernetes provider has supported a means to deploy [Helm Charts](https://helm.sh/) since [2018]({{< relref "/blog/using-helm-and-pulumi-to-define-cloud-native-infrastructure-as-code">}}) through the [Chart]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/chart">}}) resource. This resource simulates Helm installation by resolving the templates for underlying resources from the chart and installing them on the target Kubernetes environment directly.
+The Kubernetes provider has supported a means to deploy [Helm Charts](https://helm.sh/) since [2018](/blog/using-helm-and-pulumi-to-define-cloud-native-infrastructure-as-code/) through the [Chart](/registry/packages/kubernetes/api-docs/helm/v3/chart/) resource. This resource simulates Helm installation by resolving the templates for underlying resources from the chart and installing them on the target Kubernetes environment directly.
 
-In contrast, the new [Helm Release]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release">}}) resource uses the Helm SDK natively to perform all Helm operations. This comes with some inherent advantages:
+In contrast, the new [Helm Release](/registry/packages/kubernetes/api-docs/helm/v3/release/) resource uses the Helm SDK natively to perform all Helm operations. This comes with some inherent advantages:
 
 1. Support for the full spectrum of Helm features
 2. Ability to import existing Helm releases into Pulumi state
@@ -57,15 +57,15 @@ In contrast, the new [Helm Release]({{< relref "/registry/packages/kubernetes/ap
 
 ## Which Helm Resource Should I Choose?
 
-Both the `Chart` and `Helm Release` resource are complimentary with their own pros and cons. Depending on your use case, one might be a better fit than the other. We now have a [guide to help you choose]({{< relref "/registry/packages/kubernetes/how-to-guides/choosing-the-right-helm-resource-for-your-use-case" >}}) the right resource for your use case.
+Both the `Chart` and `Helm Release` resource are complimentary with their own pros and cons. Depending on your use case, one might be a better fit than the other. We now have a [guide to help you choose](/registry/packages/kubernetes/how-to-guides/choosing-the-right-helm-resource-for-your-use-case/) the right resource for your use case.
 
 ## How Do I Get Started?
 
-If you aren't already familiar with using Pulumi with Kubernetes, head on over to [Pulumi's getting started guide for Kubernetes]({{< relref "/docs/get-started/kubernetes/" >}}) first.
+If you aren't already familiar with using Pulumi with Kubernetes, head on over to [Pulumi's getting started guide for Kubernetes](/docs/get-started/kubernetes/) first.
 
 1. In your chosen Kubernetes Pulumi project, make sure the referenced version of the Pulumi-Kubernetes SDK is at least `v3.15.0`.
-2. Like other Kubernetes resources managed by Pulumi, the target cluster for Helm Release is configured with a [Provider]({{< relref "/registry/packages/kubernetes/api-docs/provider">}}). The default options work for typical cases, and we also provide [advanced configuration options]({{< relref "/registry/packages/kubernetes/api-docs/provider/#helmdriver_nodejs" >}}) for private registries, etc.
-3. Refer to the instructions for your chosen language in the [resource documentation]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release/#create" >}}) to create a Helm Release resource.
+2. Like other Kubernetes resources managed by Pulumi, the target cluster for Helm Release is configured with a [Provider](/registry/packages/kubernetes/api-docs/provider/). The default options work for typical cases, and we also provide [advanced configuration options](/registry/packages/kubernetes/api-docs/provider/#helmdriver_nodejs) for private registries, etc.
+3. Refer to the instructions for your chosen language in the [resource documentation](/registry/packages/kubernetes/api-docs/helm/v3/release/#create) to create a Helm Release resource.
 
 Let's look at a concrete example of Helm Release in action. In the following snippet we install [Redis](https://redis.io/) using the new Helm Release resource:
 
@@ -408,12 +408,12 @@ Thanks to our community of early adopters, we received excellent feedback on the
 
 You can learn more about Helm Release from the following sources:
 
-1. The `Helm Release` [API Reference docs]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release">}}) are an excellent starting point to learn more about the API in each of the supported languages along with code samples.
-2. Our guide on [choosing between the Chart and Release resource for your use case]({{< relref "/registry/packages/kubernetes/how-to-guides/choosing-the-right-helm-resource-for-your-use-case" >}})
+1. The `Helm Release` [API Reference docs](/registry/packages/kubernetes/api-docs/helm/v3/release/) are an excellent starting point to learn more about the API in each of the supported languages along with code samples.
+2. Our guide on [choosing between the Chart and Release resource for your use case](/registry/packages/kubernetes/how-to-guides/choosing-the-right-helm-resource-for-your-use-case/)
 3. One of our sample projects where you can see the Helm `Release` resource in action in any one of Pulumi's supported languages:
-   * [TypeScript]({{< relref "/registry/packages/kubernetes/how-to-guides/kubernetes-ts-helm-release-wordpress" >}})
-   * [Python]({{< relref "/registry/packages/kubernetes/how-to-guides/kubernetes-py-helm-release-wordpress" >}})
-   * [C#]({{< relref "/registry/packages/kubernetes/how-to-guides/kubernetes-cs-helm-release-wordpress" >}})
-   * [Go]({{< relref "/registry/packages/kubernetes/how-to-guides/kubernetes-go-helm-release-wordpress" >}})
+   * [TypeScript](/registry/packages/kubernetes/how-to-guides/kubernetes-ts-helm-release-wordpress/)
+   * [Python](/registry/packages/kubernetes/how-to-guides/kubernetes-py-helm-release-wordpress/)
+   * [C#](/registry/packages/kubernetes/how-to-guides/kubernetes-cs-helm-release-wordpress)
+   * [Go](/registry/packages/kubernetes/how-to-guides/kubernetes-go-helm-release-wordpress/)
 
 If you have questions or run into issues, please don't hesitate to reach out by filing issues on [Github](https://github.com/pulumi/pulumi-kubernetes/issues) or asking questions on [Community Slack](https://slack.pulumi.com). Happy charting!

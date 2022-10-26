@@ -18,7 +18,7 @@ Because mocks don't execute any real work, unit tests run very fast. Also, they 
 
 Unit tests are supported in all existing Pulumi runtimes: Node.js, Python, Go, and .NET.
 
-Let's build a sample test suite. The example uses AWS resources, but the same capabilities and workflow apply to any Pulumi provider. To follow along, complete the [Get Started with AWS]({{< relref "/docs/get-started/aws" >}}) guide to set up a basic Pulumi program in your language of choice.
+Let's build a sample test suite. The example uses AWS resources, but the same capabilities and workflow apply to any Pulumi provider. To follow along, complete the [Get Started with AWS](/docs/get-started/aws/) guide to set up a basic Pulumi program in your language of choice.
 
 ## Sample Program
 
@@ -526,7 +526,7 @@ public static Task<T> GetValueAsync<T>(this Output<T> output)
 This looks like a normal test, with a few noteworthy pieces:
 
 - Since we're querying resource state without doing a deployment, there are many properties whose values will be undefined. This includes any output properties computed by your cloud provider that you did not explicitly return from the mocks. That's fine for these tests&mdash;we're checking for valid inputs anyway.
-- Because all Pulumi resource properties are [outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}})&mdash;since many of them are computed asynchronously&mdash;we need to use the `apply` method to get access to the values.
+- Because all Pulumi resource properties are [outputs](/docs/intro/concepts/inputs-outputs/)&mdash;since many of them are computed asynchronously&mdash;we need to use the `apply` method to get access to the values.
 - Finally, since these outputs are resolved asynchronously, we need to use the framework's built-in asynchronous test capability.
 
 After we've gotten through that setup, we get access to the raw inputs as plain values. The tags property is a map, so we make sure it is (1) defined, and (2) not missing an entry for the `Name` key. This is very basic, but we can check anything!

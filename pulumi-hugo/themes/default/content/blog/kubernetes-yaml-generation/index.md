@@ -9,7 +9,7 @@ authors:
 tags:
     - kubernetes
     - yaml
-    
+
 ---
 
 Stop writing Kubernetes YAML by hand, and start using the power of familiar programming languages! Pulumi can
@@ -90,7 +90,7 @@ const service = deployment.createService({
 });
 ```
 
-Now, run `pulumi update`, and Pulumi renders these resources to YAML. The update process resolves [Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}})
+Now, run `pulumi update`, and Pulumi renders these resources to YAML. The update process resolves [Outputs](/docs/intro/concepts/inputs-outputs/)
 as usual, so that the manifests can include other infrastructure configuration specified in your program. The rendered
 manifests are kept in sync with changes to the program on each update.
 
@@ -129,12 +129,12 @@ to protect the rendered files.
 ## Learn More
 
 If you'd like to learn about Pulumi and how to manage your
-infrastructure and Kubernetes through code, [get started today]({{< relref "/docs/get-started" >}}). Pulumi is open
+infrastructure and Kubernetes through code, [get started today](/docs/get-started/). Pulumi is open
 source and free to use.
 
 For further examples on how to use Pulumi to create Kubernetes
 clusters, or deploy workloads to a cluster, check out the rest of the
-[Kubernetes tutorials]({{< relref "/registry/packages/kubernetes/how-to-guides" >}}).
+[Kubernetes tutorials](/registry/packages/kubernetes/how-to-guides/).
 
 As always, you can check out our code on
 [GitHub](https://github.com/pulumi), follow us on

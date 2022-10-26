@@ -45,7 +45,7 @@ meta_desc: A list of different environment variables the Pulumi CLI supports.
     </dt>
     <dd>
         <p>
-            Sets <a href="{{< relref "/docs/intro/concepts/config" >}}">configuration</a> for <a href="{{< relref "/docs/guides/testing/unit" >}}">unit testing</a>. Must be in JSON format.
+            Sets <a href="/docs/intro/concepts/config">configuration</a> for <a href="/docs/guides/testing/unit">unit testing</a>. Must be in JSON format.
         </p>
         <p>
             <strong>This environment variable is ignored during normal Pulumi operations -- e.g., <code>up</code>, <code>preview</code>, etc.</strong>

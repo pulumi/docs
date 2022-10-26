@@ -15,9 +15,9 @@ aliases:
   - /get-started/
 ---
 
-Pulumi is a [universal infrastructure as code]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) platform that allows you to use familiar programming languages and tools to build, deploy, and manage cloud infrastructure.
+Pulumi is a [universal infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform that allows you to use familiar programming languages and tools to build, deploy, and manage cloud infrastructure.
 
-Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with the [Pulumi Service]({{< relref "/docs/intro/pulumi-service" >}}) to make managing infrastructure secure, reliable, and hassle-free.
+Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with the [Pulumi Service](/docs/intro/pulumi-service/) to make managing infrastructure secure, reliable, and hassle-free.
 
 Select one of the following options to get started:
 
@@ -31,7 +31,7 @@ Select one of the following options to get started:
             <h4><i class="fas fa-folder text-blue-400 pr-2"></i>Starter App</h4>
             <p>If you are new to Pulumi, this guide helps you install Pulumi, configure AWS, and run your first update.</p>
             <div class="flex flex-grow items-end">
-                <a data-track="aws-get-started" href="{{< relref "/docs/get-started/aws" >}}" class="btn btn-primary">Get Started</a>
+                <a data-track="aws-get-started" href="/docs/get-started/aws" class="btn btn-primary">Get Started</a>
             </div>
         </div>
     </div>
@@ -40,7 +40,7 @@ Select one of the following options to get started:
             <h4><i class="fas fa-cubes text-blue-400 pr-2"></i>Kubernetes with EKS</h4>
             <p>Create an EKS cluster that provides a managed Kubernetes control plane.</p>
             <div class="flex flex-grow items-end">
-                <a data-track="aws-kubernetes" href="{{< relref "/templates/kubernetes/aws" >}}" class="btn btn-secondary">Get Started</a>
+                <a data-track="aws-kubernetes" href="/templates/kubernetes/aws" class="btn btn-secondary">Get Started</a>
             </div>
         </div>
     </div>
@@ -49,7 +49,7 @@ Select one of the following options to get started:
             <h4><i class="fas fa-cloud text-blue-400 pr-2"></i>S3 and Cloudfront Website</h4>
             <p>Create a static website hosted in S3 with a CloudFront Distribution to serve the website with caching and HTTPs.</p>
             <div class="flex flex-grow items-end">
-                <a data-track="aws-static-website" href="{{< relref "/templates/static-website/aws" >}}" class="btn btn-secondary">Get Started</a>
+                <a data-track="aws-static-website" href="/templates/static-website/aws" class="btn btn-secondary">Get Started</a>
             </div>
         </div>
     </div>
@@ -58,7 +58,7 @@ Select one of the following options to get started:
             <h4><i class="fas fa-sitemap text-blue-400 pr-2"></i>Full Stack Serverless App</h4>
             <p>Create an API Gateway REST API and a static website that consumes that API.</p>
             <div class="flex flex-grow items-end">
-                <a data-track="aws-serverless" href="{{< relref "/templates/serverless-application/aws" >}}" class="btn btn-secondary">Get Started</a>
+                <a data-track="aws-serverless" href="/templates/serverless-application/aws" class="btn btn-secondary">Get Started</a>
             </div>
         </div>
     </div>
@@ -67,7 +67,7 @@ Select one of the following options to get started:
             <h4><i class="fas fa-tasks text-blue-400 pr-2"></i>Containers with Fargate</h4>
             <p>Run your container on AWS using ECS and Fargate.</p>
             <div class="flex flex-grow items-end">
-                <a data-track="aws-container-service" href="{{< relref "/templates/container-service/aws" >}}" class="btn btn-secondary">Get Started</a>
+                <a data-track="aws-container-service" href="/templates/container-service/aws" class="btn btn-secondary">Get Started</a>
             </div>
         </div>
     </div>
@@ -83,7 +83,7 @@ Select one of the following options to get started:
             <h4><i class="fas fa-folder text-blue-400 pr-2"></i>Starter App</h4>
             <p>If you are new to Pulumi, this guide helps you install Pulumi, configure Azure, and run your first update.</p>
             <div class="flex flex-grow items-end">
-                <a data-track="azure-get-started" href="{{< relref "/docs/get-started/azure" >}}" class="btn btn-primary">Get Started</a>
+                <a data-track="azure-get-started" href="/docs/get-started/azure" class="btn btn-primary">Get Started</a>
             </div>
         </div>
     </div>
@@ -92,7 +92,7 @@ Select one of the following options to get started:
             <h4><i class="fas fa-cloud text-blue-400 pr-2"></i>Static Website with a CDN</h4>
             <p>Create a static website with a Blob storage and a CDN to serve the website with caching and HTTPs.</p>
             <div class="flex flex-grow items-end">
-                <a data-track="azure-static-website" href="{{< relref "/templates/static-website/azure" >}}" class="btn btn-secondary">Get Started</a>
+                <a data-track="azure-static-website" href="/templates/static-website/azure" class="btn btn-secondary">Get Started</a>
             </div>
         </div>
     </div>
@@ -101,7 +101,7 @@ Select one of the following options to get started:
             <h4><i class="fas fa-sitemap text-blue-400 pr-2"></i>Full Stack Serverless App</h4>
             <p>Create a Function App and a static website that consumes that Function.</p>
             <div class="flex flex-grow items-end">
-                <a data-track="azure-serverless" href="{{< relref "/templates/serverless-application/azure" >}}" class="btn btn-secondary">Get Started</a>
+                <a data-track="azure-serverless" href="/templates/serverless-application/azure" class="btn btn-secondary">Get Started</a>
             </div>
         </div>
     </div>
@@ -135,7 +135,7 @@ Select one of the following options to get started:
             <h4><i class="fas fa-folder text-blue-400 pr-2"></i>Starter App</h4>
             <p>If you are new to Pulumi, this guide helps you install Pulumi, configure Google Cloud, and run your first update.</p>
             <div class="flex flex-grow items-end">
-                <a data-track="google-get-started" href="{{< relref "/docs/get-started/gcp" >}}" class="btn btn-primary">Get Started</a>
+                <a data-track="google-get-started" href="/docs/get-started/gcp" class="btn btn-primary">Get Started</a>
             </div>
         </div>
     </div>
@@ -144,7 +144,7 @@ Select one of the following options to get started:
             <h4><i class="fas fa-cloud text-blue-400 pr-2"></i>Static Website with a CDN</h4>
             <p>Create a static website with a Cloud Storage bucket and a CDN to serve the website with caching and HTTPs.</p>
             <div class="flex flex-grow items-end">
-                <a data-track="google-static-website" href="{{< relref "/templates/static-website/gcp" >}}" class="btn btn-secondary">Get Started</a>
+                <a data-track="google-static-website" href="/templates/static-website/gcp" class="btn btn-secondary">Get Started</a>
             </div>
         </div>
     </div>
@@ -153,7 +153,7 @@ Select one of the following options to get started:
             <h4><i class="fas fa-sitemap text-blue-400 pr-2"></i>Full Stack Serverless App</h4>
             <p>Create a Cloud Function and a static website that consumes that function.</p>
             <div class="flex flex-grow items-end">
-                <a data-track="google-serverless" href="{{< relref "/templates/serverless-application/gcp" >}}" class="btn btn-secondary">Get Started</a>
+                <a data-track="google-serverless" href="/templates/serverless-application/gcp" class="btn btn-secondary">Get Started</a>
             </div>
         </div>
     </div>
@@ -187,7 +187,7 @@ Select one of the following options to get started:
             <h4><i class="fas fa-folder text-blue-400 pr-2"></i>Starter App</h4>
             <p>If you are new to Pulumi, this guide helps you install Pulumi, configure the Kubernetes Provider, and run your first update.</p>
             <div class="flex flex-grow items-end">
-                <a data-track="kubernetes-get-started" href="{{< relref "/docs/get-started/kubernetes" >}}" class="btn btn-primary">Get Started</a>
+                <a data-track="kubernetes-get-started" href="/docs/get-started/kubernetes" class="btn btn-primary">Get Started</a>
             </div>
         </div>
     </div>
@@ -196,7 +196,7 @@ Select one of the following options to get started:
             <h4><i class="fas fa-cubes text-blue-400 pr-2"></i>Kubernetes with EKS</h4>
             <p>Create an EKS cluster that provides a managed Kubernetes control plane.</p>
             <div class="flex flex-grow items-end">
-                <a data-track="kubernetes-aws" href="{{< relref "/templates/kubernetes/aws" >}}" class="btn btn-secondary">Get Started</a>
+                <a data-track="kubernetes-aws" href="/templates/kubernetes/aws" class="btn btn-secondary">Get Started</a>
             </div>
         </div>
     </div>
@@ -234,7 +234,7 @@ Or, watch how to do it in this video walkthrough:
     </iframe>
 </div>
 
-See [Registry]({{< relref "/registry" >}}) on how to use other supported clouds.
+See [Registry](/registry/) on how to use other supported clouds.
 
 ## Pulumi Service
 
@@ -248,18 +248,18 @@ The following sections are also useful when first learning how to use Pulumi:
 
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="{{< relref "/docs/intro/concepts" >}}"><i class="fas fa-file-alt pr-2"></i>Architecture & Concepts</a></h3>
+        <h3 class="no-anchor pt-4"><a href="/docs/intro/concepts"><i class="fas fa-file-alt pr-2"></i>Architecture & Concepts</a></h3>
         <p>Get details on the Pulumi programming model and core concepts.</p>
     </div>
     <div class="md:w-1/2 md:ml-4 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="{{< relref "/docs/guides/adopting" >}}"><i class="fas fa-cloud pr-2"></i>Adopting Pulumi</a></h3>
+        <h3 class="no-anchor pt-4"><a href="/docs/guides/adopting"><i class="fas fa-cloud pr-2"></i>Adopting Pulumi</a></h3>
         <p>Learn how to support, migrate, or convert existing cloud infrastructure with Pulumi.</p>
     </div>
 </div>
 
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="w-full border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="{{< relref "/resources/introduction-to-pulumi" >}}"><i class="fas fa-users pr-2"></i>Live Workshops</a></h3>
+        <h3 class="no-anchor pt-4"><a href="/resources/introduction-to-pulumi"><i class="fas fa-users pr-2"></i>Live Workshops</a></h3>
         <p>Deploy your first Pulumi program in a live, instructor-led event.</p>
     </div>
 </div>

@@ -14,14 +14,14 @@ tags:
 Summer is quickly flying by, and we've been hard at work with more new features and updates across the Pulumi ecosystem!
 
 - New and updated cloud providers
-  - [EKS Pulumi Package supports more options for managed node groups]({{< relref "/blog/pulumi-release-notes-m60#eks-pulumi-package-supports-more-options-for-managed-node-groups" >}})
-  - [New resources in the Azure Native provider]({{< relref "/blog/pulumi-release-notes-m60#new-resources-in-the-azure-native-provider" >}})
+  - [EKS Pulumi Package supports more options for managed node groups](/blog/pulumi-release-notes-m60#eks-pulumi-package-supports-more-options-for-managed-node-groups)
+  - [New resources in the Azure Native provider](/blog/pulumi-release-notes-m60#new-resources-in-the-azure-native-provider)
 - Pulumi CLI and core technologies
-  - [Methods for Pulumi Component Packages]({{< relref "/blog/pulumi-release-notes-m60#methods-for-pulumi-component-packages" >}})
-  - [`dependsOn` now works for Pulumi Component Packages, and more]({{< relref "/blog/pulumi-release-notes-m60#dependson-now-works-for-pulumi-component-packages-and-more" >}})
-  - [Aliases can now be used with providers]({{< relref "/blog/pulumi-release-notes-m60#aliases-can-now-be-used-with-providers" >}})
+  - [Methods for Pulumi Component Packages](/blog/pulumi-release-notes-m60#methods-for-pulumi-component-packages)
+  - [`dependsOn` now works for Pulumi Component Packages, and more](/blog/pulumi-release-notes-m60#dependson-now-works-for-pulumi-component-packages-and-more)
+  - [Aliases can now be used with providers](/blog/pulumi-release-notes-m60#aliases-can-now-be-used-with-providers)
 - Pulumi Service and Pulumi.com
-  - [Azure Native resources now link to the Azure Portal]({{< relref "/blog/pulumi-release-notes-m60#azure-native-resources-now-link-to-the-azure-portal" >}})
+  - [Azure Native resources now link to the Azure Portal](/blog/pulumi-release-notes-m60#azure-native-resources-now-link-to-the-azure-portal)
 
 <!--more-->
 
@@ -45,13 +45,13 @@ In this milestone, we shipped Pulumi versions [3.9.0](https://github.com/pulumi/
 
 ### Methods for Pulumi Component Packages
 
-[Pulumi Components]({{< relref "/docs/intro/concepts/resources#components" >}}) often have methods that provide additional functionality associated with an instance of a component. Previously, when [authoring a Pulumi Component Package]({{< relref "/docs/guides/pulumi-packages" >}}), you couldn't make a component's methods available in all languages. Now, with updates to the [Pulumi Packages schema]({{< relref "/docs/guides/pulumi-packages/schema" >}}) and `Provider` interface, you can! We'll have a dedicated blog post out soon with more details on how to use methods in your Pulumi Component Package.
+[Pulumi Components](/docs/intro/concepts/resources#components) often have methods that provide additional functionality associated with an instance of a component. Previously, when [authoring a Pulumi Component Package](/docs/guides/pulumi-packages/), you couldn't make a component's methods available in all languages. Now, with updates to the [Pulumi Packages schema](/docs/guides/pulumi-packages/schema/) and `Provider` interface, you can! We'll have a dedicated blog post out soon with more details on how to use methods in your Pulumi Component Package.
 
 [Learn more in this GitHub issue](https://github.com/pulumi/pulumi/issues/7072)
 
 ### `dependsOn` now works for Pulumi Component Packages, and more
 
-The [`dependsOn` option]({{< relref "/docs/intro/concepts/resources#dependson" >}}) creates a list of explicit dependencies between resources, which can be useful when you need to explicity specify additional dependencies that Pulumi doesn’t know about but must still respect. Previously, `dependsOn` worked differently depending on the language your Pulumi code was written in or when referencing a component inside a Pulumi Component Package. Now, depending on a Pulumi Component Package's component will always wait on all of that component's children, regardless of language. Additionally, you can now pass `Input`s and `Output`s to `dependsOn`, which can be especially useful in Kubernetes and Helm workflows where you need to depend on the output of a resource created by a Helm chart.
+The [`dependsOn` option](/docs/intro/concepts/resources#dependson) creates a list of explicit dependencies between resources, which can be useful when you need to explicity specify additional dependencies that Pulumi doesn’t know about but must still respect. Previously, `dependsOn` worked differently depending on the language your Pulumi code was written in or when referencing a component inside a Pulumi Component Package. Now, depending on a Pulumi Component Package's component will always wait on all of that component's children, regardless of language. Additionally, you can now pass `Input`s and `Output`s to `dependsOn`, which can be especially useful in Kubernetes and Helm workflows where you need to depend on the output of a resource created by a Helm chart.
 
 To see this work in action, check out the [Staged App Rollout Gated by Prometheus Checks](https://github.com/pulumi/examples/tree/ca40203279f393c0c159dadcadc97c6007122997/kubernetes-ts-staged-rollout-with-prometheus) example, where we create a staged rollout (from 3-replica canary -> 10-replica staging) gated by confirming that the P90 response time reported by Prometheus is less than some amount. The relevant code is the last line of this snippet, which lets your Kubernetes deployment depend on a Prometheus resource:
 

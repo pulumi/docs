@@ -7,18 +7,18 @@ menu:
     weight: 7
 ---
 
-All resource input and output values are recorded as [`state`]({{< relref "/docs/intro/concepts/state" >}}), and are stored in the Pulumi Service, a file, or a pluggable provider that you choose. These raw values are usually just server names, configuration settings, and so on. In some cases, however, these values contain sensitive data, such as database passwords or service tokens.
+All resource input and output values are recorded as [`state`](/docs/intro/concepts/state), and are stored in the Pulumi Service, a file, or a pluggable provider that you choose. These raw values are usually just server names, configuration settings, and so on. In some cases, however, these values contain sensitive data, such as database passwords or service tokens.
 
-The Pulumi Service always transmits and stores entire state files securely; however, Pulumi also supports encrypting specific values as “secrets” for extra protection. Encryption ensures that these values never appear as plaintext in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by the Pulumi Service or you can use a [provider of your own choosing]({{< relref "#configuring-secrets-encryption" >}}) instead.
+The Pulumi Service always transmits and stores entire state files securely; however, Pulumi also supports encrypting specific values as “secrets” for extra protection. Encryption ensures that these values never appear as plaintext in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by the Pulumi Service or you can use a [provider of your own choosing](#configuring-secrets-encryption) instead.
 
-To encrypt a configuration setting before runtime, you can use the CLI command [`config set`]({{< relref "/docs/intro/concepts/config#configuration" >}}) command with a [`--secret`]({{< relref "#secrets" >}}) flag. You can also set a secret during runtime. Any [`Output<T>`]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}) value can be marked secret. If an output is a secret, any computed values derived from it—such as those derived through an [`apply`]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}) call —will also be marked secret. All these encrypted values are stored in your state file.
+To encrypt a configuration setting before runtime, you can use the CLI command [`config set`](/docs/intro/concepts/config#configuration) command with a [`--secret`](#secrets) flag. You can also set a secret during runtime. Any [`Output<T>`](/docs/reference/pkg/python/pulumi#outputs-and-inputs) value can be marked secret. If an output is a secret, any computed values derived from it—such as those derived through an [`apply`](/docs/reference/pkg/python/pulumi#outputs-and-inputs) call —will also be marked secret. All these encrypted values are stored in your state file.
 
-An [`Output<T>`]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}) can be marked secret in a number of ways:
+An [`Output<T>`](/docs/reference/pkg/python/pulumi#outputs-and-inputs) can be marked secret in a number of ways:
 
-- By reading a secret from configuration using [`Config.get_secret`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Config.get_secret" >}})  or [`Config.require_secret`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Config.require_secret" >}}).
-- By creating a new secret value with [`Output.secret`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Output.secret" >}}), such as when generating a new random password.
-- By marking a resource as having secret properties using [`additionalSecretOutputs`]({{< relref "/docs/intro/concepts/inputs-outputs" >}}).
-- By computing a secret value by using [`apply`]({{< relref "/docs/reference/pkg/python/pulumi#outputs-and-inputs" >}}) or [`Output.all`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Output.all" >}}) with another secret value.
+- By reading a secret from configuration using [`Config.get_secret`](/docs/reference/pkg/python/pulumi#pulumi.Config.get_secret)  or [`Config.require_secret`](/docs/reference/pkg/python/pulumi#pulumi.Config.require_secret).
+- By creating a new secret value with [`Output.secret`](/docs/reference/pkg/python/pulumi#pulumi.Output.secret), such as when generating a new random password.
+- By marking a resource as having secret properties using [`additionalSecretOutputs`](/docs/intro/concepts/inputs-outputs).
+- By computing a secret value by using [`apply`](/docs/reference/pkg/python/pulumi#outputs-and-inputs) or [`Output.all`](/docs/reference/pkg/python/pulumi#pulumi.Output.all) with another secret value.
 
 As soon as an `Output<T>` is marked secret, the Pulumi engine will encrypt it wherever it is stored.
 
@@ -34,20 +34,20 @@ There are two ways to programmatically create secret values:
 
 {{% choosable language javascript %}}
 
-- Using [`getSecret(key)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret" >}}) or [`requireSecret(key)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret" >}}) when reading a value from config.
-- Calling [`pulumi.secret(value)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#secret" >}}) to construct a secret from an existing value.
+- Using [`getSecret(key)`](/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret) or [`requireSecret(key)`](/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret) when reading a value from config.
+- Calling [`pulumi.secret(value)`](/docs/reference/pkg/nodejs/pulumi/pulumi#secret) to construct a secret from an existing value.
 
 {{% /choosable %}}
 {{% choosable language typescript %}}
 
-- Using [`getSecret(key)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret" >}}) or [`requireSecret(key)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret" >}}) when reading a value from config.
-- Calling [`pulumi.secret(value)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#secret" >}}) to construct a secret from an existing value.
+- Using [`getSecret(key)`](/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret) or [`requireSecret(key)`](/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret) when reading a value from config.
+- Calling [`pulumi.secret(value)`](/docs/reference/pkg/nodejs/pulumi/pulumi#secret) to construct a secret from an existing value.
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
-- Using [`get_secret`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Config.get_secret" >}}) or [`require_secret`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Config.require_secret" >}}) when reading a value from config.
-- Calling [`Output.secret`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Output.secret" >}}) to construct a secret from an existing value.
+- Using [`get_secret`](/docs/reference/pkg/python/pulumi#pulumi.Config.get_secret) or [`require_secret`](/docs/reference/pkg/python/pulumi#pulumi.Config.require_secret) when reading a value from config.
+- Calling [`Output.secret`](/docs/reference/pkg/python/pulumi#pulumi.Output.secret) to construct a secret from an existing value.
 
 {{% /choosable %}}
 {{% choosable language go %}}
@@ -199,14 +199,14 @@ Be careful that you do not pass this plaintext value to code that might expose i
 
 ## Explicitly Marking Resource Outputs as Secrets
 
-It is possible to mark resource outputs as containing secrets. In this case, Pulumi will automatically treat those outputs as secrets and encrypt them in the state file and anywhere they flow to. To do so, use the [`additional secret outputs`]({{< relref "/docs/intro/concepts/resources#additionalsecretoutputs" >}}) option.
+It is possible to mark resource outputs as containing secrets. In this case, Pulumi will automatically treat those outputs as secrets and encrypt them in the state file and anywhere they flow to. To do so, use the [`additional secret outputs`](/docs/intro/concepts/resources#additionalsecretoutputs) option.
 
 ## Encrypted Secrets in Configuration Data {#secrets}
 
 Some configuration data is sensitive, such as database passwords or service tokens. For such cases, passing the `--secret` flag to the `config set` command encrypts the data and stores the resulting ciphertext instead of plaintext.
 
 {{% notes "info" %}}
-By default, the Pulumi CLI uses a per-stack encryption key managed by the Pulumi Service, and a per-value salt, to encrypt values. To use an alternative encryption provider, refer to [Configuring Secrets Encryption]({{< relref "#configuring-secrets-encryption" >}}).
+By default, the Pulumi CLI uses a per-stack encryption key managed by the Pulumi Service, and a per-value salt, to encrypt values. To use an alternative encryption provider, refer to [Configuring Secrets Encryption](#configuring-secrets-encryption).
 {{% /notes %}}
 
 For example, this command sets a configuration variable named `dbPassword` to the plaintext value `S3cr37`:
@@ -431,7 +431,7 @@ On `pulumi up`, secret values are decrypted and made available in plaintext at r
 
 ## Configuring Secrets Encryption
 
-The Pulumi Service automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using `--secret` or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Service that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored. For more details about the concept of state files and backends, refer to [State and Backends]({{< relref "/docs/intro/concepts/state" >}}).
+The Pulumi Service automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using `--secret` or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Service that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored. For more details about the concept of state files and backends, refer to [State and Backends](/docs/intro/concepts/state/).
 
 The default encryption mechanism may be insufficient in the following scenarios:
 
@@ -529,14 +529,14 @@ $ pulumi stack init my-stack \
 
 ### Changing the Secrets Provider for a Stack
 
-To change the secrets provider for an existing stack use the [`pulumi stack change-secrets-provider`]({{< relref "/docs/reference/cli/pulumi_stack_change-secrets-provider" >}}) command.
+To change the secrets provider for an existing stack use the [`pulumi stack change-secrets-provider`](/docs/reference/cli/pulumi_stack_change-secrets-provider) command.
 
 ```bash
 $ pulumi stack change-secrets-provider "<secrets-provider>"
 ```
 
 This will change the encrypted secrets in the provider configuration and the stack's state file to use the new secrets provider.
-The [supported secrets providers]({{< relref "/docs/reference/cli/pulumi_stack_init" >}}) are:
+The [supported secrets providers](/docs/reference/cli/pulumi_stack_init/) are:
 
 - `default`
 - `passphrase`

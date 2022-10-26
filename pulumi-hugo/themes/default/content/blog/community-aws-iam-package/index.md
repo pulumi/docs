@@ -35,7 +35,7 @@ tags:
 
 Building on top of the cloud can be frustrating at times. You will likely run into resources that complicated to create, others that are very tedious to create, and worst of all resources that are complicated and tedious to create. As cloud engineers ourselves, we feel the same pain as our users and strive to build abstractions that make cloud engineering a more productive and pleasant experience.
 
-Recently we released our [Community AWS IAM Package]({{< relref "/registry/packages/aws-iam" >}}) to help deliver on the promise of making the cloud easier to use for every operator, engineer, and user. This package is based on the Terraform AWS IAM Module, so it allows our users to take advantage of battle-tested abstractions. The package also helps transitioning Terraform users by maintaining similar resource names and inputs so they can focus on taking advantage of features of their programming language of choice (TypeScript, JavaScript, Python, Go, .NET, and YAML).
+Recently we released our [Community AWS IAM Package](/registry/packages/aws-iam/) to help deliver on the promise of making the cloud easier to use for every operator, engineer, and user. This package is based on the Terraform AWS IAM Module, so it allows our users to take advantage of battle-tested abstractions. The package also helps transitioning Terraform users by maintaining similar resource names and inputs so they can focus on taking advantage of features of their programming language of choice (TypeScript, JavaScript, Python, Go, .NET, and YAML).
 
 ## Examples
 
@@ -405,20 +405,20 @@ resources:
 
 {{% /choosable %}}
 
-You can find a complete list of supported EKS Policies within the [API Documentation]({{< relref "/registry/packages/aws-iam/api-docs/roleforserviceaccountseks" >}}).
+You can find a complete list of supported EKS Policies within the [API Documentation](/registry/packages/aws-iam/api-docs/roleforserviceaccountseks/).
 
 ### More Use Cases
 
 A few of the other use cases support by the Community AWS IAM package are:
 
-- [Create individual IAM users]({{< relref "/registry/packages/aws-iam/api-docs/user" >}})
-- [Use Groups to Assign Permissions to IAM Users]({{< relref "/registry/packages/aws-iam/api-docs/groupwithpolicies" >}})
-- [Create IAM Policies]({{< relref "/registry/packages/aws-iam/api-docs/policy" >}})
-- [View all supported resources]({{< relref "/registry/packages/aws-iam/api-docs" >}})
+- [Create individual IAM users](/registry/packages/aws-iam/api-docs/user/)
+- [Use Groups to Assign Permissions to IAM Users](/registry/packages/aws-iam/api-docs/groupwithpolicies/)
+- [Create IAM Policies](/registry/packages/aws-iam/api-docs/policy/)
+- [View all supported resources](/registry/packages/aws-iam/api-docs/)
 
 ## Learn More
 
 If you want to learn more about Pulumi and the Community AWS IAM package, here are a few links you might find interesting:
 
-- Read the [AWS IAM documentation]({{< relref "/registry/packages/aws-iam" >}}) to learn more about the package, how to [install and configure]({{< relref "/registry/packages/aws-iam/installation-configuration" >}}) it and use its APIs.
-- If you’re interested in learning more about Pulumi concepts, try the [Architecture & Concepts]({{< relref "/docs/intro/concepts" >}}) page.
+- Read the [AWS IAM documentation](/registry/packages/aws-iam/) to learn more about the package, how to [install and configure](/registry/packages/aws-iam/installation-configuration/) it and use its APIs.
+- If you’re interested in learning more about Pulumi concepts, try the [Architecture & Concepts](/docs/intro/concepts) page.

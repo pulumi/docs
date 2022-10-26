@@ -15,8 +15,8 @@ Helm Chart to a Kubernetes cluster. Pulumi will expand the Helm Chart and submit
 Start by downloading the [example code](https://github.com/pulumi/examples/tree/master/kubernetes-ts-helm-wordpress).
 
 If you haven't already, follow the steps in [Pulumi Installation and
-Setup]({{< relref "/docs/get-started/install" >}}) and [Configuring Pulumi
-Kubernetes]({{< relref "/registry/packages/kubernetes/installation-configuration" >}}) to get set up with
+Setup](/docs/get-started/install) and [Configuring Pulumi
+Kubernetes](/registry/packages/kubernetes/installation-configuration) to get set up with
 Pulumi and Kubernetes.
 
 Now, install dependencies:

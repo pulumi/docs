@@ -58,7 +58,7 @@ The team has been busy releasing new features and improvements in the last 3 wee
 Back in September 2021 we announced public preview for the [Helm Release](https://www.pulumi.com/registry/packages/kubernetes/api-docs/helm/v3/release/) resource in Pulumi’s Kubernetes provider. Over the last few months, we have had a very encouraging uptake in usage and several meaningful discussions with users in the community that have helped shape improvements to this resource. Thanks to this collaboration, we have been able to make the Helm Release resource GA (generally available) in v3.15.0 of the Pulumi Kubernetes Provider and SDK, in all Pulumi supported languages. We are excited to offer yet another tool to Pulumi users to effectively manage their Kubernetes footprint.
 
 
-Learn more in our [Helm release blog post]({{< relref "/blog/helm-release-resource-for-kubernetes-generally-available" >}}) and these GitHub issues:
+Learn more in our [Helm release blog post](/blog/helm-release-resource-for-kubernetes-generally-available/) and these GitHub issues:
 - [Honor namespace specification for all resources installed by Helm Release](https://github.com/pulumi/pulumi-kubernetes/pull/1747)
 - [Make values optional](https://github.com/pulumi/pulumi-kubernetes/pull/1761)
 - [Make RepositoryOpts optional](https://github.com/pulumi/pulumi-kubernetes/pull/1806)
@@ -72,13 +72,13 @@ Pulumi’s previews are an important part of any workflow where you want to see 
 
 As a result, we launched a public preview of Update Plans, a new Pulumi feature which guarantees that operations shown in `pulumi preview` will run on `pulumi up`. Update Plans also help catch any unexpected changes that might happen between when you preview a change and when you apply that change. Update Plans work by saving the results of a `pulumi preview` to a plan file, which enables you to restrict subsequent `pulumi up` operations to only the actions saved in the plan file. This helps you ensure that what you saw in the `pulumi preview` is what will actually happen when you run `pulumi up`.
 
-Learn more in our [blog post on Update Plans]({{< relref "/blog/announcing-public-preview-update-plans" >}}) and in this [Update Plans GitHub issue](https://github.com/pulumi/pulumi/issues/2318).
+Learn more in our [blog post on Update Plans](/blog/announcing-public-preview-update-plans/) and in this [Update Plans GitHub issue](https://github.com/pulumi/pulumi/issues/2318).
 
 
 ### Disable default provider
 
-While default providers are enabled by default, you can now [disable default providers]({{< relref
-"/docs/intro/concepts/config#special-configuration-options" >}}) on a per stack basis. Disabling default
+While default providers are enabled by default, you can now
+[disable default providers](/docs/intro/concepts/config#special-configuration-options) on a per stack basis. Disabling default
 providers is a good idea if you want to ensure that your programs must be explicit about which provider they
 will use. For example, to disable the `aws` provider, you can run:
 
@@ -110,7 +110,7 @@ Now that we have added the ability to take [advantage of a default org](https://
 
 ### Sign-up and sign-in experience revamp
 
-We revamped our sign-in and sign-up process in the Pulumi Service. Our intentions were to make it easier to differentiate and toggle between the sign-in and sign-up experiences. As part of this work we also refreshed the design to align with our public website. Take a look! 
+We revamped our sign-in and sign-up process in the Pulumi Service. Our intentions were to make it easier to differentiate and toggle between the sign-in and sign-up experiences. As part of this work we also refreshed the design to align with our public website. Take a look!
 
 The new Pulumi Service sign-in page:
 

@@ -11,7 +11,7 @@ menu:
 aliases: ["/docs/reference/crosswalk/aws/lambda/"]
 ---
 
-<a href="{{< relref "./" >}}">
+<a href="./">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -22,7 +22,7 @@ takes care of everything required to run and scale your code with high availabil
 automatically trigger from other AWS services or call it directly from any web or mobile app.
 
 {{% notes type="info" %}}
-This functionality is available in TypeScript only and as part of the [AWS Classic provider]({{< relref "/registry/packages/aws" >}}).
+This functionality is available in TypeScript only and as part of the [AWS Classic provider](/registry/packages/aws/).
 {{% /notes %}}
 
 ## Overview
@@ -33,7 +33,7 @@ configuration of the associated AWS resources. This lets you focus on your appli
 worry about boilerplate, and with confidence that the resulting infrastructure automatically uses AWS best practices.
 
 With Pulumi Crosswalk for AWS, event sources are available on all native resource types, including AWS S3, SQS,
-DynamoDB, CloudWatch, Kinesis, and more, in addition to full support for [API Gateway]({{< relref "api-gateway" >}}).
+DynamoDB, CloudWatch, Kinesis, and more, in addition to full support for [API Gateway](/docs/guides/crosswalk/aws/api-gateway/).
 This improves discoverability of event sources in addition to adding strong typing to the event handler
 inputs and outputs that AWS Lambda will deliver to your code.
 
@@ -69,7 +69,7 @@ tbody tr td:first-child {
 
 | AWS Service | Event | Description |
 |-------------|-------|-------------|
-| API Gateway | [awsx.apigateway.API]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/apigateway#API" >}}) | create serverless APIs using a simple approach |
+| API Gateway | [awsx.apigateway.API](/docs/reference/pkg/nodejs/pulumi/awsx/apigateway#API) | create serverless APIs using a simple approach |
 | CloudWatch  | aws.cloudwatch.onSchedule | fire a CloudWatch event on a particular schedule, e.g. a cron expression |
 | CloudWatch  | aws.cloudwatch.EventRule.onEvent | fire an event when a particular CloudWatch event occurs |
 | CloudWatch  | aws.cloudwatch.LogGroup.onEvent | fire an event when a CloudWatch logs event occurs |
@@ -100,7 +100,7 @@ defined -- or even use functions that already exist, and glue them together with
 Because Pulumi provisions and manages resources, updating your functions after creating them is easy. Just edit your
 code, run `pulumi up`, and Pulumi will diff and compute the minimal set of changes it can make to upgrade your code,
 without any downtime required. This is as easy to do by hand as it is in
-[CI/CD]({{< relref "/docs/guides/continuous-delivery" >}}).
+[CI/CD](/docs/guides/continuous-delivery).
 
 ### Register an Event Handler Using a Magic Lambda Function
 
@@ -159,7 +159,7 @@ docsBucket.onObjectCreated("docsHandler", new aws.lambda.CallbackFunction("docsH
 ```
 
 For more information about the properties available on `CallbackFunction`, refer to the [API documentation](
-{{< relref "/registry/packages/aws/api-docs/lambda" >}}).
+/registry/packages/aws/api-docs/lambda).
 
 ### Register an Event Handler by Creating a Lambda Function Resource
 
@@ -224,7 +224,7 @@ instead wanted to use a zipfile we've already packaged, just change code as foll
 // ...
 ```
 
-Using [Pulumi's Asset and Archive classes]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi/asset" >}}), we can
+Using [Pulumi's Asset and Archive classes](/docs/reference/pkg/nodejs/pulumi/pulumi/asset), we can
 fetch code from anywhere -- in-memory, on disk, or even over the network. Pulumi will detect changes in the contents
 of these assets and archives so that when you run `pulumi up`, diffs will be detected and updated.
 
@@ -334,11 +334,11 @@ Lastly, it's possible to use Pulumi stacks to actually break apart your cloud re
 independently deployable pieces. This allows teams to leverage features like RBAC. For instance, it's common for the
 DevOps team to manage the physical cloud resources like queues, topics, and buckets, while the development team
 authors and manages the serverless functions attached to them. For more information on this idea, see
-[Organizing Projects and Stacks]({{< relref "/docs/guides/organizing-projects-stacks" >}})
+[Organizing Projects and Stacks](/docs/guides/organizing-projects-stacks/)
 
 ## Easy Lambda Log Consumption
 
-[Pulumi Crosswalk for AWS CloudWatch]({{< relref "cloudwatch" >}}) ensures that resources have built-in
+[Pulumi Crosswalk for AWS CloudWatch](/docs/guides/crosswalk/aws/cloudwatch/) ensures that resources have built-in
 logging, with easy ways to customize associated policies. Additionally, the `pulumi logs` CLI command allows
 us to monitor logs in realtime from any CloudWatch resources in our program. For Lambda Functions, this means
 we can run `pulumi logs -f` to tail all of the logs for all of our Lambdas in a program.

@@ -10,7 +10,7 @@ menu:
 aliases: ["/docs/reference/crosswalk/aws/"]
 ---
 
-<a href="{{< relref "./" >}}">
+<a href="./">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -21,16 +21,16 @@ Pulumi Crosswalk for AWS is a collection of libraries that use automatic well-ar
 ## Overview
 
 Pulumi Crosswalk for AWS supports "day one" tasks, such as creating your initial container-based workloads using
-[Amazon Elastic Container Service (ECS)]({{< relref "ecs" >}})---including Fargate or [Kubernetes (EKS)](
-{{< relref "eks" >}})---and creating serverless workloads using [Amazon API Gateway]({{< relref "api-gateway" >}}) and [AWS Lambda]({{< relref "lambda" >}}). Secure and cost-conscious defaults are chosen so that simple programs automatically use best practices for the underlying infrastructure, enabling better productivity with confidence.
+[Amazon Elastic Container Service (ECS)](/docs/guides/crosswalk/aws/ecs)---including Fargate or [Kubernetes (EKS)](
+eks)---and creating serverless workloads using [Amazon API Gateway](/docs/guides/crosswalk/aws/api-gateway/) and [AWS Lambda](/docs/guides/crosswalk/aws/lambda/). Secure and cost-conscious defaults are chosen so that simple programs automatically use best practices for the underlying infrastructure, enabling better productivity with confidence.
 
 Pulumi Crosswalk for AWS also supports "day two and beyond" tasks, such as scaling your workload, securing and
-integrating it with your existing infrastructure, or going to production in multiple complex environments. This includes [Amazon Virtual Private Cloud (VPC)]({{< relref "vpc" >}}) for network isolation, [AWS Auto Scaling](
-{{< relref "autoscaling" >}}) for dynamic scaling, and [AWS Identity and Access Management (IAM)]({{< relref "iam" >}}) for
+integrating it with your existing infrastructure, or going to production in multiple complex environments. This includes [Amazon Virtual Private Cloud (VPC)](/docs/guides/crosswalk/aws/vpc) for network isolation, [AWS Auto Scaling](
+autoscaling) for dynamic scaling, and [AWS Identity and Access Management (IAM)](/docs/guides/crosswalk/aws/iam) for
 securing your infrastructure.
 
 For example, this program builds and publishes a Dockerized application to a private [Elastic Container Registry (ECR)](
-{{< relref "ecr" >}}), spins up an ECS Fargate cluster, and runs a scalable, load balanced service, all in
+ecr), spins up an ECS Fargate cluster, and runs a scalable, load balanced service, all in
 response to a single `pulumi up` command line invocation:
 
 {{< chooser language "typescript,python,csharp" / >}}
@@ -180,41 +180,41 @@ This example uses the default VPC and reasonable security defaults, but supports
 
 ## Getting Started
 
-To get started with Pulumi Crosswalk for AWS, [download and install Pulumi]({{< relref "/docs/get-started/install" >}}), and [configure it to work with your AWS account]({{< relref "/registry/packages/aws/installation-configuration" >}}). Afterwards,
-[try the Getting Started tutorial]({{< relref "/registry/packages/aws/how-to-guides/ecs-fargate" >}}) or select one of the
+To get started with Pulumi Crosswalk for AWS, [download and install Pulumi](/docs/get-started/install/), and [configure it to work with your AWS account](/registry/packages/aws/installation-configuration/). Afterwards,
+[try the Getting Started tutorial](/registry/packages/aws/how-to-guides/ecs-fargate/) or select one of the
 relevant User Guides to get started:
 
 ### Containers
 
-* [Elastic Container Service (ECS)]({{< relref "ecs" >}})
-* [Elastic Kubernetes Service (EKS)]({{< relref "eks" >}})
-* [Elastic Container Registry (ECR)]({{< relref "ecr" >}})
+* [Elastic Container Service (ECS)](ecs)
+* [Elastic Kubernetes Service (EKS)](eks)
+* [Elastic Container Registry (ECR)](ecr)
 
 ### Serverless
 
-* [Lambda]({{< relref "lambda" >}})
-* [API Gateway]({{< relref "api-gateway" >}})
+* [Lambda](lambda/)
+* [API Gateway](api-gateway/)
 
 ### Monitoring
 
-* [CloudWatch]({{< relref "cloudwatch" >}})
+* [CloudWatch](cloudwatch/)
 
 ### Core Infrastructure
 
-* [Auto Scaling]({{< relref "autoscaling" >}})
-* [Elastic Load Balancing (ELB)]({{< relref "elb" >}})
-* [Identity and Access Management (IAM)]({{< relref "iam" >}})
-* [Virtual Private Cloud (VPC)]({{< relref "vpc" >}})
+* [Auto Scaling](autoscaling/)
+* [Elastic Load Balancing (ELB)](elb)
+* [Identity and Access Management (IAM)](iam)
+* [Virtual Private Cloud (VPC)](vpc)
 
 ### Continuous Deployment
 
-* [Using Pulumi from AWS Code Services]({{< relref "/docs/guides/continuous-delivery/aws-code-services" >}})
+* [Using Pulumi from AWS Code Services](/docs/guides/continuous-delivery/aws-code-services/)
 
 ### Other AWS Services
 
 Pulumi supports the entirety of the AWS platform. If your favorite service isn't listed above, check out:
 
-* [AWS Index of Services]({{< relref "aws-index-of-services" >}})
+* [AWS Index of Services](aws-index-of-services/)
 
 ## Frequently Asked Questions (FAQ)
 
@@ -231,14 +231,14 @@ Pulumi Crosswalk for AWS is available for all supported Pulumi languages.
 ### What Packages Define Pulumi Crosswalk for AWS?
 
 Because Pulumi Crosswalk for AWS is a broader "brand" for our framework spanning multiple packages, there isn't
-a single package that contains everything. The [`@pulumi/aws`]({{< relref "/registry/packages/aws/api-docs" >}}),
-[`@pulumi/awsx`]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx" >}}), and
-[`@pulumi/eks`]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks" >}}) packages each has an important role to play.
+a single package that contains everything. The [`@pulumi/aws`](/registry/packages/aws/api-docs),
+[`@pulumi/awsx`](/docs/reference/pkg/nodejs/pulumi/awsx), and
+[`@pulumi/eks`](/docs/reference/pkg/nodejs/pulumi/eks) packages each has an important role to play.
 
 ### Is Pulumi Crosswalk for AWS Free to Use?
 
 Yes, Pulumi Crosswalk for AWS is completely open source and free to use, along with the Individual Edition of Pulumi.
-[Pulumi's commercial offerings]({{< relref "/pricing" >}}) already fully support Pulumi Crosswalk for AWS.
+[Pulumi's commercial offerings](/pricing) already fully support Pulumi Crosswalk for AWS.
 
 If you would like to contribute to the packages, please see the relevant repo on GitHub: [`pulumi/pulumi-aws`](
 https://github.com/pulumi/pulumi-aws), [`pulumi/pulumi-awsx`](https://github.com/pulumi/pulumi-awsx), or
@@ -267,4 +267,4 @@ functionality is available in that namesoace.
 
 ### Is Support or Training Available for Pulumi Crosswalk for AWS?
 
-Yes! Please fill out [this form]({{< relref "/contact.md" >}}) and a Pulumi team member will be in touch.
+Yes! Please fill out [this form](/contact/) and a Pulumi team member will be in touch.

@@ -10,7 +10,7 @@ tags:
 - Python
 ---
 
-General-purpose languages enable [Infrastructure as Software]({{< relref "/what-is/what-is-infrastructure-as-software" >}}) -- bringing tested toolchains and best practices to building infrastructure, e.g., languages, IDEs, testing, debugging, componentization, packaging, and versioning. Available in public preview, Pulumi's Automation API is a robust programmatic layer on top of Pulumi's infrastructure engine. It exposes Pulumi programs and stacks as strongly-typed and composable building blocks. Automation API allows you to embed the Pulumi engine inside your software projects so you can build software automation around entire infrastructure provisioning processes that normally require humans to operate.
+General-purpose languages enable [Infrastructure as Software](/what-is/what-is-infrastructure-as-software/) -- bringing tested toolchains and best practices to building infrastructure, e.g., languages, IDEs, testing, debugging, componentization, packaging, and versioning. Available in public preview, Pulumi's Automation API is a robust programmatic layer on top of Pulumi's infrastructure engine. It exposes Pulumi programs and stacks as strongly-typed and composable building blocks. Automation API allows you to embed the Pulumi engine inside your software projects so you can build software automation around entire infrastructure provisioning processes that normally require humans to operate.
 
 Today, we are excited to announce Python support for this powerful feature, opening up a world of possibilities for Python developers.
 
@@ -18,7 +18,7 @@ Today, we are excited to announce Python support for this powerful feature, open
 
 ## Enabling Cloud Engineering
 
-The Automation API is a subpackage in Pulumi’s language-specific SDKs that provides a programmable interface for creating and managing [Stacks]({{< relref "/docs/intro/concepts/stack" >}}) and performing infrastructure updates, refresh, previews, and destroy. You can define a Pulumi program as a function within your codebase and use methods to get and set configuration parameters programmatically. The Automation API uses a gRPC interface to execute programs that control and communicate with the core Pulumi engine.
+The Automation API is a subpackage in Pulumi’s language-specific SDKs that provides a programmable interface for creating and managing [Stacks](/docs/intro/concepts/stack/) and performing infrastructure updates, refresh, previews, and destroy. You can define a Pulumi program as a function within your codebase and use methods to get and set configuration parameters programmatically. The Automation API uses a gRPC interface to execute programs that control and communicate with the core Pulumi engine.
 
 To use Automation API, install the Pulumi CLI, which bundles and distributes the core engine. Today it’s available for [Python](https://github.com/pulumi/pulumi/tree/master/sdk/python/lib/pulumi/automation), [TypeScript/JavaScript](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/automation) and [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/auto), with support for [C#](https://github.com/pulumi/pulumi/compare/auto/dotnet) under active development.
 
@@ -152,7 +152,7 @@ See the full database deployment and migration Automation API program in [Python
 
 To get started with Automation API check out these links and watch our video.
 
-- [Python documentation]({{< relref "/docs/reference/pkg/python/pulumi#module-pulumi.x.automation" >}})
+- [Python documentation](/docs/reference/pkg/python/pulumi#module-pulumi.x.automation)
 - [Automation API examples](https://github.com/pulumi/automation-api-examples#python-examples)
 
 {{< youtube "8XFjqzX9ZK4" >}}

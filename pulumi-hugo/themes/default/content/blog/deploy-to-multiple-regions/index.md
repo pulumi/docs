@@ -30,7 +30,7 @@ This is normally very convenient and aligns with how we want to configure our pr
 * Situations where we want to provision resources in many places for performance, scalability, or resilience purposes.
 * Highly programmatic scenarios where some configuration might be fetched dynamically from an external resource.
 
-In all of these cases, thankfully Pulumi has an answer: [explicit provider configuration]({{< relref "/docs/intro/concepts/resources/providers#explicit-provider-configuration" >}}).
+In all of these cases, thankfully Pulumi has an answer: [explicit provider configuration](/docs/intro/concepts/resources/providers#explicit-provider-configuration).
 
 ## How Explicit Provider Configuration Works
 
@@ -165,7 +165,7 @@ resources:
 
 {{% /choosable %}}
 
-This overrides the default of using whatever was set at the CLI, and will instead use the programmatically configured settings. Note also that anything you can set at the CLI is available, not just the region. You can see the full settings available in the package's registry documentation for its `Provider` class (for instance, the [AWS Provider]({{< relref "/registry/packages/aws/api-docs/provider" >}}).
+This overrides the default of using whatever was set at the CLI, and will instead use the programmatically configured settings. Note also that anything you can set at the CLI is available, not just the region. You can see the full settings available in the package's registry documentation for its `Provider` class (for instance, the [AWS Provider](/registry/packages/aws/api-docs/provider/).
 
 ## Multi-Region Deployment In Action!
 

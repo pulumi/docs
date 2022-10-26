@@ -13,7 +13,7 @@ Pulumi makes it easy to author your Kubernetes configuration in your choice of l
 
 Pulumi also enables you to render the Kubernetes objects in your program into YAML which eases adoption in the opposite direction: you can use Pulumi to author your configuration, getting the benefits of general-purpose and familiar programming languages, while still being able to deploy the resulting YAML with existing toolchains like `kubectl` or your CI/CD vendor's Kubernetes support.
 
-> To learn more about Pulumi's Kubernetes support, see [the Kubernetes Overview]({{< relref "/registry/packages/kubernetes" >}}) or jump straight in with [the Getting Started Guide]({{< relref "/docs/get-started/kubernetes" >}}).
+> To learn more about Pulumi's Kubernetes support, see [the Kubernetes Overview](/registry/packages/kubernetes/) or jump straight in with [the Getting Started Guide](/docs/get-started/kubernetes/).
 
 ## Deploying Kubernetes YAML
 
@@ -367,7 +367,7 @@ We discuss and provide examples for each approach in this section.
 
 ### Emulating Helm Charts With Chart Resources
 
-With the [Helm V3]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/chart" >}}) chart resources, Pulumi renders the templates and applies them directly, much like with `ConfigFile` and `ConfigGroup` shown earlier, which means all provisioning happens client-side using your Kubernetes authentication setup without needing a server-side component.
+With the [Helm V3](/registry/packages/kubernetes/api-docs/helm/v3/chart/) chart resources, Pulumi renders the templates and applies them directly, much like with `ConfigFile` and `ConfigGroup` shown earlier, which means all provisioning happens client-side using your Kubernetes authentication setup without needing a server-side component.
 
 The `Release` resource type provides a number of options to control where to fetch the chart's contents from. This includes:
 
@@ -378,7 +378,7 @@ The `Release` resource type provides a number of options to control where to fet
 * `values`: (Optional) A dictionary of named key/value values for Charts with parameters.
 * `fetchOpts`: (Optional) A bag of options to control the fetch behavior.
 
-In addition to those core options, you can specify `transformations` (similar to what is shown [configurations below](#configuration-transformations)), `resourcePrefix` to control naming, or `namespace` to place all resources inside a specific Kubernetes namespace. Please refer to the [API reference]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/chart" >}}) documentation for more details.
+In addition to those core options, you can specify `transformations` (similar to what is shown [configurations below](#configuration-transformations)), `resourcePrefix` to control naming, or `namespace` to place all resources inside a specific Kubernetes namespace. Please refer to the [API reference](/registry/packages/kubernetes/api-docs/helm/v3/chart/) documentation for more details.
 
 #### Provisioning a Helm Chart
 
@@ -565,7 +565,7 @@ $ curl http://$(pulumi stack output frontendIp)
 
 ### Natively installing Helm Charts as Releases
 
-The [Helm Release]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release">}})) resource (GA as of [v3.15.0](https://github.com/pulumi/pulumi-kubernetes/releases/tag/v3.15.0) of the Pulumi Kubernetes Provider) is another option for installing Charts. In this case, the Pulumi Kubernetes provider uses an embedded version of the Helm SDK to provide full-fidelity support for managing [`Helm Releases`](https://helm.sh/docs/glossary/#release).
+The [Helm Release](/registry/packages/kubernetes/api-docs/helm/v3/release/) resource (GA as of [v3.15.0](https://github.com/pulumi/pulumi-kubernetes/releases/tag/v3.15.0) of the Pulumi Kubernetes Provider) is another option for installing Charts. In this case, the Pulumi Kubernetes provider uses an embedded version of the Helm SDK to provide full-fidelity support for managing [`Helm Releases`](https://helm.sh/docs/glossary/#release).
 
 The `Release` resource type's inputs closely mirror the options supported by the Helm CLI and deviate slightly from the API supported by the `Chart` resources. Some key options are highlighted here:
 
@@ -576,9 +576,9 @@ The `Release` resource type's inputs closely mirror the options supported by the
 * `skipAwait`: (Optional) Whether to skip waiting on the availability of all resources installed by the chart. By default, this is set to `false` (i.e. awaits all resources) which allows us to chain dependent resources and execution to the `Release` resource.
 * `timeout`: (Optional) When `skipAwait` is `false`, the amount of time to wait on resources being available. If the timeout expires, the release is marked as `failed`.
 
-For more details on all the supported inputs, please refer to the [API reference documentation]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release/#inputs" >}}).
+For more details on all the supported inputs, please refer to the [API reference documentation](/registry/packages/kubernetes/api-docs/helm/v3/release/#inputs).
 
-Unlike `Chart` resource types, `Release` doesn't include references to the underlying Kubernetes resources created during the installation. As a result, only the `Release` resource is stored in Pulumi state by default. The `Release` resource type includes the [`ReleaseStatus`]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release/#releasestatus" >}}) as an output type. The following example shows how to retrieve resources managed by a Release.
+Unlike `Chart` resource types, `Release` doesn't include references to the underlying Kubernetes resources created during the installation. As a result, only the `Release` resource is stored in Pulumi state by default. The `Release` resource type includes the [`ReleaseStatus`](/registry/packages/kubernetes/api-docs/helm/v3/release/#releasestatus) as an output type. The following example shows how to retrieve resources managed by a Release.
 
 #### Installing a Helm Release
 
@@ -752,13 +752,13 @@ The Helm Release resource also supports importing existing Helm releases by usin
 ## Converting Kubernetes YAML
 
 In addition to deploying Kubernetes YAML via the methods above, you can also convert Kubernetes YAML to Pulumi program code using `kube2pulumi`. `kube2pulumi` will take your YAML manifest and
-convert it into the language of your choice. You can get started using `kube2pulumi` either by [installing the binary](https://github.com/pulumi/kube2pulumi#building-and-installation) or via the [web interface]({{< relref "/kube2pulumi" >}}).
+convert it into the language of your choice. You can get started using `kube2pulumi` either by [installing the binary](https://github.com/pulumi/kube2pulumi#building-and-installation) or via the [web interface](/kube2pulumi/).
 
 ## Rendering Kubernetes YAML
 
 While Pulumi has excellent support for deploying and updating Kubernetes resources on a cluster, Pulumi also offers the ability to render YAML to make it easier to integrate into existing workflows. This gives you the ability to author Kubernetes configuration using general-purpose programming languages, consume libraries, and easily mix in infrastructure configuration (e.g., managed database endpoints, object storage, etc.), all in the same program.
 
-To render YAML during a `pulumi up` rather than have Pulumi perform the deployment against your cluster as it does by default, set the `renderYamlToDirectory` property on [an explicit Kubernetes provider]({{< relref "/docs/intro/concepts/resources#explicit-provider-configuration" >}}) object.
+To render YAML during a `pulumi up` rather than have Pulumi perform the deployment against your cluster as it does by default, set the `renderYamlToDirectory` property on [an explicit Kubernetes provider](/docs/intro/concepts/resources#explicit-provider-configuration) object.
 
 This example provisions a simple load-balanced NGINX service using a general purpose language but renders the output to YAML:
 
@@ -1195,4 +1195,4 @@ Although this example shows the YAML `ConfigFile` resource, the same behavior is
 
 ## Provisioning Mixed Configurations
 
-It is possible to provision a combination of native Kubernetes objects, YAML files, Helm Charts, and other cloud resources all together, with dependencies between them. For an example of doing so, see [this blog post]({{< relref "/blog/using-helm-and-pulumi-to-define-cloud-native-infrastructure-as-code" >}}) which demonstrates provisioning an Azure Kubernetes cluster, MongoDB-flavored CosmosDB instance, a Kubernetes secret to store the connection information, and a Helm Chart that consumes this secret and connects to the CosmosDB database.
+It is possible to provision a combination of native Kubernetes objects, YAML files, Helm Charts, and other cloud resources all together, with dependencies between them. For an example of doing so, see [this blog post](/blog/using-helm-and-pulumi-to-define-cloud-native-infrastructure-as-code/) which demonstrates provisioning an Azure Kubernetes cluster, MongoDB-flavored CosmosDB instance, a Kubernetes secret to store the connection information, and a Helm Chart that consumes this secret and connects to the CosmosDB database.

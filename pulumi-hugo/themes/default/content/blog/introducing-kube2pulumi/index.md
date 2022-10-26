@@ -23,7 +23,7 @@ abstraction. Pulumi also supports [Helm], [Kustomize], and [YAML], but these too
 programming language. With `kube2pulumi`, you can realize these benefits without manual conversion work upfront.
 
 If you want to try it out right now in your browser, head over to our [Kubernetes to Pulumi Converter]!
-[![Kubernetes to Pulumi Converter](kube2pulumi.png)]({{< relref "/kube2pulumi" >}})
+[![Kubernetes to Pulumi Converter](kube2pulumi.png)](/kube2pulumi)
 
 Otherwise, keep reading as we check out an example of `kube2pulumi` in action, and then take a closer look at the
 generated code.
@@ -400,12 +400,12 @@ Pulumi gives you Kubernetes superpowers, and you decide how to use them!
 ## Learn More
 
 If you'd like to learn about Pulumi and how to manage your
-infrastructure and Kubernetes through code, [get started today]({{< relref "/docs/get-started" >}}). Pulumi is open
+infrastructure and Kubernetes through code, [get started today](/docs/get-started/). Pulumi is open
 source and free to use.
 
 For further examples on how to use Pulumi to create Kubernetes
 clusters, or deploy workloads to a cluster, check out the rest of the
-[Kubernetes tutorials]({{< relref "/registry/packages/kubernetes/how-to-guides" >}}).
+[Kubernetes tutorials](/registry/packages/kubernetes/how-to-guides/).
 
 As always, you can check out our code on
 [GitHub](https://github.com/pulumi), follow us on
@@ -416,10 +416,10 @@ any questions, need support, or just want to say hello.
 
 <!-- markdownlint-disable url -->
 [kube2pulumi]: https://github.com/pulumi/kube2pulumi
-[Kustomize]: {{< relref "/registry/packages/kubernetes/api-docs/kustomize/directory" >}}
-[Helm]: {{< relref "/registry/packages/kubernetes/api-docs/helm/v3/chart" >}}
-[Kubernetes to Pulumi Converter]: {{< relref "/kube2pulumi" >}}
-[Pulumi Kubernetes Operator]: {{< relref "/blog/pulumi-kubernetes-operator" >}}
-[YAML]: {{< relref "/registry/packages/kubernetes/api-docs/yaml/configgroup" >}}
+[Kustomize]: /registry/packages/kubernetes/api-docs/kustomize/directory/
+[Helm]: /registry/packages/kubernetes/api-docs/helm/v3/chart/
+[Kubernetes to Pulumi Converter]: /kube2pulumi/
+[Pulumi Kubernetes Operator]: /blog/pulumi-kubernetes-operator/
+[YAML]: /registry/packages/kubernetes/api-docs/yaml/configgroup/
 [130 lines of YAML]: https://github.com/pulumi/pulumi-kubernetes-operator/tree/master/deploy/yaml
 <!-- markdownlint-enable url -->

@@ -4,12 +4,12 @@ meta_desc: This tutorial will teach you how to build and deploy a Dockerized app
 aliases: ["/docs/quickstart/cloudfx/tutorial-service/"]
 ---
 
-In this tutorial, we'll use JavaScript to build and deploy a simple container using the [`@pulumi/cloud`]({{< relref "/docs/reference/pkg/nodejs/pulumi/cloud" >}}) framework.  This example can be deployed to AWS (on either Fargate or ECS) or to Azure (on ACI).  By authoring our infrastructure using the `@pulumi/cloud` framework, it can be deployed transparently to either cloud (with support for other clouds on the roadmap). The [code for this tutorial](https://github.com/pulumi/examples/tree/master/cloud-js-containers) is available on GitHub.
+In this tutorial, we'll use JavaScript to build and deploy a simple container using the [`@pulumi/cloud`](/docs/reference/pkg/nodejs/pulumi/cloud) framework.  This example can be deployed to AWS (on either Fargate or ECS) or to Azure (on ACI).  By authoring our infrastructure using the `@pulumi/cloud` framework, it can be deployed transparently to either cloud (with support for other clouds on the roadmap). The [code for this tutorial](https://github.com/pulumi/examples/tree/master/cloud-js-containers) is available on GitHub.
 
 ## Prerequisites
 
-1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-1. Configure [AWS]({{< relref "/registry/packages/aws/installation-configuration" >}}) and/or [Azure]({{< relref "/registry/packages/azure/installation-configuration" >}}) credentials
+1. [Install Pulumi](/docs/get-started/install/)
+1. Configure [AWS](/registry/packages/aws/installation-configuration/) and/or [Azure](/registry/packages/azure/installation-configuration/) credentials
 
 ## Serve an HTML file in an NGINX container
 
@@ -42,7 +42,7 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
     exports.url = service.defaultEndpoint.apply(e => `http://${e.hostname}`);
     ```
 
-    This example uses [cloud.Service]({{< relref "/docs/reference/pkg/nodejs/pulumi/cloud#Service" >}}), which is a high-level, convenient interface for building containers and provisioning a container service on your target cloud.
+    This example uses [cloud.Service](/docs/reference/pkg/nodejs/pulumi/cloud#Service), which is a high-level, convenient interface for building containers and provisioning a container service on your target cloud.
 
 1. Create a subfolder `app` with the following files:
 
@@ -148,6 +148,6 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
 
 ## Next steps
 
-For an end-to-end application also includes serverless functions, see the [Serverless and Container Thumbnailer]({{< relref "thumbnailer" >}}) tutorial.
+For an end-to-end application also includes serverless functions, see the [Serverless and Container Thumbnailer](/docs/tutorials/cloudfx/thumbnailer/) tutorial.
 
 For an example application that connects two containers, see the [Voting App](https://github.com/pulumi/examples/tree/master/cloud-ts-voting-app) TypeScript sample.

@@ -23,13 +23,13 @@ Dive into Learn Pulumi for a comprehensive walkthrough of key Pulumi concepts in
 
 ## How-to Guides
 
-Explore our how-to guides if you're looking for examples of specific architectures or application stacks. These guides are available in all Pulumi languages and cover creating managed Kubernetes clusters across all major cloud providers ([AWS]({{< relref "/registry/packages/kubernetes/how-to-guides/eks" >}}), [Azure]({{< relref "/registry/packages/kubernetes/how-to-guides/aks" >}}), [Google Cloud]({{< relref "/registry/packages/kubernetes/how-to-guides/gke" >}})) as well as deploying app workloads on running Kubernetes clusters ([WordPress Helm Chart]({{< relref "/registry/packages/kubernetes/how-to-guides/wordpress-chart" >}}), [Stateless App Deployment]({{< relref "/registry/packages/kubernetes/how-to-guides/stateless-app" >}})).
+Explore our how-to guides if you're looking for examples of specific architectures or application stacks. These guides are available in all Pulumi languages and cover creating managed Kubernetes clusters across all major cloud providers ([AWS](/registry/packages/kubernetes/how-to-guides/eks/), [Azure](/registry/packages/kubernetes/how-to-guides/aks/), [Google Cloud](/registry/packages/kubernetes/how-to-guides/gke/) as well as deploying app workloads on running Kubernetes clusters ([WordPress Helm Chart](/registry/packages/kubernetes/how-to-guides/wordpress-chart/), [Stateless App Deployment](/registry/packages/kubernetes/how-to-guides/stateless-app/).
 
 {{< get-started-next-step path="/registry/packages/kubernetes/how-to-guides" label="Explore How-to Guides" ref="gs-k8s-guides" >}}
 
 ## How Pulumi Works
 
-Learn how Pulumi works from its architecture to key concepts, including [stacks]({{< relref "/docs/intro/concepts/stack" >}}), [state]({{< relref "/docs/intro/concepts/state" >}}), [configuration]({{< relref "/docs/intro/concepts/config" >}}), and [secrets]({{< relref "/docs/intro/concepts/secrets" >}}).
+Learn how Pulumi works from its architecture to key concepts, including [stacks](/docs/intro/concepts/stack/), [state](/docs/intro/concepts/state/), [configuration](/docs/intro/concepts/config/), and [secrets](/docs/intro/concepts/secrets/).
 
 {{< get-started-next-step path="/docs/intro/concepts" label="Read Documentation" ref="gs-k8s-docs" >}}
 

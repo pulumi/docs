@@ -265,6 +265,27 @@ const opts = {
         // Allow indentation in unordered lists.
         MD007: false,
     },
+    customRules: [
+        {
+            names: ["relref"],
+            description: "Hugo relrefs are no longer supported. Use standard [Markdown](/links) instead",
+            tags: ["hugo-relref"],
+            function: (params, onError) => {
+                params.tokens
+                    .filter(token => {
+                        return token.type === "inline";
+                    })
+                    .forEach(inline => {
+                        const line = inline.content;
+                        if (line.match(/{{<[ ]?relref ".+"[ ]?>}}/)) {
+                            onError({
+                                lineNumber: inline.lineNumber,
+                            });
+                        }
+                    });
+            },
+        },
+    ],
 };
 
 // Lint the markdown files.

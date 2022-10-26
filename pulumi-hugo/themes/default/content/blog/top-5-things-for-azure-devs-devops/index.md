@@ -20,7 +20,7 @@ DevOps processes rely on tooling to automate delivering and maintaining applicat
 
 ## Azure Pipelines
 
-Azure Pipelines is a Continuous Integration/Continuous Delivery (CI/CD) system that builds and tests code. A key practice of DevOps is Continuous Integration (CI), which merges and tests code automatically. CI catches bugs with [automated testing]({{< relref "/blog/infrastructure-testing-concepts" >}}) before software is released, which decreases the cost to fix. The Azure DevOps Build process produces artifacts that drive small and frequent deployments. Continuous Delivery (CD) tests and deploys the artifacts in test or production environments. The automated release process updates existing systems with patches, bug fixes, and new features.
+Azure Pipelines is a Continuous Integration/Continuous Delivery (CI/CD) system that builds and tests code. A key practice of DevOps is Continuous Integration (CI), which merges and tests code automatically. CI catches bugs with [automated testing](/blog/infrastructure-testing-concepts/) before software is released, which decreases the cost to fix. The Azure DevOps Build process produces artifacts that drive small and frequent deployments. Continuous Delivery (CD) tests and deploys the artifacts in test or production environments. The automated release process updates existing systems with patches, bug fixes, and new features.
 
 CI/CD systems store environment-specific configurations for every artifact produced. They use this information to perform any changes to the environment when software is deployed. For example, these systems can refresh database connections or restart services on a deployment.
 
@@ -142,8 +142,8 @@ jobs:
           cwd: "./"
 ```
 
-You can chain tasks to run the build process, including building and deploying applications in the same pipeline. The Pulumi [Continuous Delivery User Guide]({{< relref "/docs/guides/continuous-delivery/azure-devops" >}}) provides an in-depth walkthrough for configuring an Azure pipeline.
+You can chain tasks to run the build process, including building and deploying applications in the same pipeline. The Pulumi [Continuous Delivery User Guide](/docs/guides/continuous-delivery/azure-devops/) provides an in-depth walkthrough for configuring an Azure pipeline.
 
 ## Summary
 
-As a developer on a DevOps team, you may not be the person to configure a pipeline. However, it's a good cloud engineering practice to understand how your application is built and deployed. Although we focus on Azure, the Pulumi task extension works with many other CI/CD systems. Check out our [User Guides]({{< relref "/docs/guides/continuous-delivery" >}}) for all the CI/CD systems Pulumi supports.
+As a developer on a DevOps team, you may not be the person to configure a pipeline. However, it's a good cloud engineering practice to understand how your application is built and deployed. Although we focus on Azure, the Pulumi task extension works with many other CI/CD systems. Check out our [User Guides](/docs/guides/continuous-delivery/) for all the CI/CD systems Pulumi supports.

@@ -15,7 +15,7 @@ love it, but unfortunately it's quite a big leap from `docker run` to
 running your container in a production-ready environment.
 
 We recently wrote a blog post about
-[using AWS Fargate to run your docker containers with our open source packages]({{< relref "get-started-with-docker-on-aws-fargate-using-pulumi" >}}).
+[using AWS Fargate to run your docker containers with our open source packages](/blog/get-started-with-docker-on-aws-fargate-using-pulumi/).
 In this blog post we're going to focus on another interesting aspect of
 Pulumi: being able to re-use your infrastructure code for both
 development and production!
@@ -25,7 +25,7 @@ development and production!
 
 In addition to the number of cloud and infrastructure providers that
 Pulumi supports, Pulumi also supports
-[defining Docker resources]({{< relref "/registry/packages/docker/api-docs" >}})
+[defining Docker resources](/registry/packages/docker/api-docs/)
 in code. Let's look at this code snippet of Pulumi TypeScript code:
 
     // This program encodes a complete application: a container running Redis Commander,
@@ -172,20 +172,20 @@ disrupting our development environment!
 
 We often say on this blog that Pulumi is "infrastructure as code", and
 that sentence is definitely true, but I prefer calling it
-"[infrastructure as software]({{< relref "/what-is/what-is-infrastructure-as-software" >}})"
+"[infrastructure as software](/what-is/what-is-infrastructure-as-software/)"
 instead. The distinction is subtle, but in
 my mind Pulumi brings to the realm of infrastructure the variety of
 tools we already use for software engineering:
 
 1. Abstraction, encapsulation, and code reuse for infrastructure and
    applications
-2. [Testing]({{< relref "/blog/testing-your-infrastructure-as-code-with-pulumi" >}}),
+2. [Testing](/blog/testing-your-infrastructure-as-code-with-pulumi/),
    both unit and integration
 3. IDEs and tools for detecting errors extremely early in a developer's
    inner loop, instead of at deployment time
 
 Pulumi is open source, free to use, and works today with
-[a variety of clouds]({{< relref "/registry" >}}) and bring a little more
+[a variety of clouds](/registry/) and bring a little more
 software and less code into your infrastructure! If you'd like to see
 more about this particular code demo,
 [check out my DockerCon EU 2018 talk](https://www.youtube.com/watch?v=EbsE4p3uCu0)

@@ -10,7 +10,7 @@ menu:
 aliases: ["/docs/reference/crosswalk/aws/ecr/"]
 ---
 
-<a href="{{< relref "./" >}}">
+<a href="./">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -23,7 +23,7 @@ about scaling the underlying infrastructure, while hosting your images in a high
 ## Overview
 
 Pulumi Crosswalk for AWS ECR makes the provisioning of new ECR repositories as simple as one line of code,
-integrates with Pulumi Crosswalk for AWS [ECS]({{< relref "ecs" >}}) and [EKS]({{< relref "eks" >}}) to ease
+integrates with Pulumi Crosswalk for AWS [ECS](/docs/guides/crosswalk/aws/ecs/) and [EKS](/docs/guides/crosswalk/aws/eks/) to ease
 deployment of new application containers to your ECS, "Fargate", and/or Kubernetes clusters, and even supports
 building and deploying Docker images from your developer desktop or CI/CD workflows.
 
@@ -449,7 +449,7 @@ class Program
 
 {{% /choosable %}}
 
-For information about ECS, refer to the [Pulumi Crosswalk for AWS ECS documentation]({{< relref "ecs" >}}). For
+For information about ECS, refer to the [Pulumi Crosswalk for AWS ECS documentation](/docs/guides/crosswalk/aws/ecs/). For
 information about consuming ECR images from ECS services specifically, see
 [Using Amazon ECR Images with Amazon ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_ECS.html).
 
@@ -689,7 +689,7 @@ class Program
 
 {{% /choosable %}}
 
-For information about EKS, refer to the [Pulumi Crosswalk for AWS EKS documentation]({{< relref "eks" >}}).
+For information about EKS, refer to the [Pulumi Crosswalk for AWS EKS documentation](/docs/guides/crosswalk/aws/eks/).
 
 ### IAM Permissions Required to use ECR
 
@@ -714,7 +714,7 @@ policy permissions to access your Amazon ECR registry. The following example def
 }
 ```
 
-See the [Pulumi Crosswalk for AWS IAM documentation]({{< relref "iam" >}}) for instructions on how to manage
+See the [Pulumi Crosswalk for AWS IAM documentation](/docs/guides/crosswalk/aws/iam/) for instructions on how to manage
 such policies.
 
 ## Managing Container Image Lifecycles using Policies

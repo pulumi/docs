@@ -31,7 +31,7 @@ Our Server-Side Apply support adds several new capabilities:
 2. "Upsert" support; create a resource if it does not exist, or update the existing resource with specified changes.
 3. Diffs no longer depend on the `last-applied-configuration` annotation, which fixes a number of open issues in the provider.
 
-For additional details on each of these changes, see the [how-to guide for Server-Side Apply]({{< relref "/registry/packages/kubernetes/how-to-guides/managing-resources-with-server-side-apply">}}).
+For additional details on each of these changes, see the [how-to guide for Server-Side Apply](/registry/packages/kubernetes/how-to-guides/managing-resources-with-server-side-apply/).
 
 Now, let's take a look at some practical examples that take advantage of these improvements.
 
@@ -751,10 +751,10 @@ metadata:
 ```
 
 {{% notes type="info" %}}
-Use the [retainOnDelete option]({{< relref "docs/intro/concepts/resources/options/retainOnDelete">}}) if you don't want to delete the shared resource when a stack is destroyed.
+Use the [retainOnDelete option](/docs/intro/concepts/resources/options/retainondelete/) if you don't want to delete the shared resource when a stack is destroyed.
 {{% /notes %}}
 
 ## Give it a try!
 
-To get started with these improvements, check out our [how-to guide for Server-Side Apply]({{< relref "/registry/packages/kubernetes/how-to-guides/managing-resources-with-server-side-apply">}}).
+To get started with these improvements, check out our [how-to guide for Server-Side Apply](/registry/packages/kubernetes/how-to-guides/managing-resources-with-server-side-apply/).
 If you run into any issues, you can reach out to us on [Community Slack](https://slack.pulumi.com) with your questions on the #kubernetes channel, or file an issue on the [pulumi-kubernetes repo](https://github.com/pulumi/pulumi-kubernetes/issues).

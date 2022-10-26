@@ -194,8 +194,8 @@ Policy tests run on the entire stack are integration tests. We have two policies
 
 ## Next Steps
 
-After working with Pulumi to build-out our data lake and implementing robust, end-to-end testing, the team is now moving towards Continuous Integration and Continuous Delivery (CI/CD) using AWS CodePipeline. We are also looking forward to Pulumi’s new policy-as-code framework, CrossGuard, to set guardrails on infrastructure and enforce compliance - further advancing the team’s QA and security goals.  
+After working with Pulumi to build-out our data lake and implementing robust, end-to-end testing, the team is now moving towards Continuous Integration and Continuous Delivery (CI/CD) using AWS CodePipeline. We are also looking forward to Pulumi’s new policy-as-code framework, CrossGuard, to set guardrails on infrastructure and enforce compliance - further advancing the team’s QA and security goals.
 
 ## Conclusion
 
-Testing is just one of the superpowers that Pulumi 2.0 delivers. For more information, see our [Testing User Guide]({{< relref "/docs/guides/testing" >}}) and [worked examples](https://github.com/pulumi/examples#testing) on GitHub in the language of your choice.
+Testing is just one of the superpowers that Pulumi 2.0 delivers. For more information, see our [Testing User Guide](/docs/guides/testing/) and [worked examples](https://github.com/pulumi/examples#testing) on GitHub in the language of your choice.

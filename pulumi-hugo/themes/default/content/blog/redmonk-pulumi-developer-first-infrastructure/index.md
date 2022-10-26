@@ -32,7 +32,7 @@ In the second half of the discussion, the two discuss what developer-first infra
 
 Joe describes five principles of developer-first infrastructure that make developers' lives easier when building on the cloud.
 
-1. [Cloud Engineering]({{< relref "/cloud-engineering" >}})
+1. [Cloud Engineering](/cloud-engineering/)
 1. Harmonized Applications and Infrastructure
 1. Beyond "Lift and Shift"
 1. Secure and Observable By-Construction
@@ -58,4 +58,4 @@ Finally, Joe dives into the best practices of developer-first infrastructure:
 
 ## Next steps
 
-Developer-first infrastructure means empowering developers to build and deploy modern cloud applications and infrastructure through the use of software engineering practices that tame modern cloud complexity. If you feel inspired after viewing the Pulumi/RedMonk discussion video, then consider applying developer-first principles and practices for your next greenfield project or application using an infrastructure as code tool like [Pulumi]({{< relref "/docs/get-started" >}}). You can also [watch Joe Duffy's presentation](https://www.youtube.com/watch?v=SQRM0r5U1js) on developer-first infrastructure from the Cloud Engineering Summit to learn more about developer-first.
+Developer-first infrastructure means empowering developers to build and deploy modern cloud applications and infrastructure through the use of software engineering practices that tame modern cloud complexity. If you feel inspired after viewing the Pulumi/RedMonk discussion video, then consider applying developer-first principles and practices for your next greenfield project or application using an infrastructure as code tool like [Pulumi](/docs/get-started/). You can also [watch Joe Duffy's presentation](https://www.youtube.com/watch?v=SQRM0r5U1js) on developer-first infrastructure from the Cloud Engineering Summit to learn more about developer-first.

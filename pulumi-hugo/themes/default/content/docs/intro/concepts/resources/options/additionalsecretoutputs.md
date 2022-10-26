@@ -8,7 +8,7 @@ menu:
     weight: 1
 ---
 
-The `additionalSecretOutputs` resource option specifies a list of named output properties that should be treated as [secrets]({{< relref "/docs/intro/concepts/secrets" >}}), which means they will be encrypted. It augments the list of values that Pulumi detects, based on secret inputs to the resource.
+The `additionalSecretOutputs` resource option specifies a list of named output properties that should be treated as [secrets](/docs/intro/concepts/secrets/), which means they will be encrypted. It augments the list of values that Pulumi detects, based on secret inputs to the resource.
 
 This example ensures that the password generated for a database resource is an encrypted secret:
 

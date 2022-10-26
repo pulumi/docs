@@ -11,7 +11,7 @@ menu:
 aliases: ["/docs/reference/crosswalk/aws/vpc/"]
 ---
 
-<a href="{{< relref "./" >}}">
+<a href="./">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -38,11 +38,11 @@ used for strong network isolation between endpoints and resources that are other
 
 ## Managing VPCs
 
-The [VPC resource]({{< relref "/registry/packages/aws/api-docs/ec2/vpc" >}}) class provides full access to the
-AWS VPC API, and [aws.ec2]({{< relref "/registry/packages/aws/api-docs/ec2" >}}) the entire AWS EC2 API. Using
+The [VPC resource](/registry/packages/aws/api-docs/ec2/vpc/) class provides full access to the
+AWS VPC API, and [aws.ec2](/registry/packages/aws/api-docs/ec2/) the entire AWS EC2 API. Using
 these packages, you can configure all aspects of AWS networks for your applications and infrastructure.
 
-The [awsx.ec2.Vpc]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/ec2#Vpc" >}}) class encapsulates a complete
+The [awsx.ec2.Vpc](/docs/reference/pkg/nodejs/pulumi/awsx/ec2#Vpc) class encapsulates a complete
 configuration of an AWS network, including the actual VPC itself, in addition to public and/or private subnets, route
 tables, and gateways, across multiple availability zones. It is designed to be easier to use, with reasonable defaults,
 and follows AWS's own best practices, with configurability for advanced scenarios. The two can be used together.
@@ -1084,11 +1084,11 @@ raw resource so that you can code directly to the underlying AWS resource types,
 
 For information about configuring each of these resources, refer to each type's API documentation:
 
-* [Vpc]({{< relref "/registry/packages/aws/api-docs/ec2/vpc" >}})
-* [Subnet]({{< relref "/registry/packages/aws/api-docs/ec2/subnet" >}})
-* [InternetGateway]({{< relref "/registry/packages/aws/api-docs/ec2/internetgateway" >}})
-* [NatGateway]({{< relref "/registry/packages/aws/api-docs/ec2/natgateway" >}})
-* [SecurityGroup]({{< relref "/registry/packages/aws/api-docs/ec2/securitygroup" >}})
+* [Vpc](/registry/packages/aws/api-docs/ec2/vpc/)
+* [Subnet](/registry/packages/aws/api-docs/ec2/subnet/)
+* [InternetGateway](/registry/packages/aws/api-docs/ec2/internetgateway/)
+* [NatGateway](/registry/packages/aws/api-docs/ec2/natgateway/)
+* [SecurityGroup](/registry/packages/aws/api-docs/ec2/securitygroup/)
 
 These resources can be independently allocated, just as with the `Vpc` class shown above. They will need to be
 connected together manually, however, which can provide greater flexibility but at a greater implementation cost.

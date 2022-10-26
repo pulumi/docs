@@ -7,7 +7,7 @@ authors: ["vova-ivanov"]
 tags: ["aws", "typescript", "containers", "kubernetes", "docker"]
 ---
 
-In this blog post, we return to the PERN application we previously [migrated to Kubernetes]({{< relref "/blog/deploying-a-pern-stack-application-to-aws" >}}) and replace the PostgreSQL database with MongoDB. Although it might seem like a difficult task initially, the straightforward design of Pulumi and Kubernetes allows us to easily transition the application form a PERN stack to a MERN one.
+In this blog post, we return to the PERN application we previously [migrated to Kubernetes](/blog/deploying-a-pern-stack-application-to-aws/) and replace the PostgreSQL database with MongoDB. Although it might seem like a difficult task initially, the straightforward design of Pulumi and Kubernetes allows us to easily transition the application form a PERN stack to a MERN one.
 
 <!--more-->
 
@@ -175,7 +175,7 @@ app.get("/voting", async (request, response) => {
 app.post("/voting/:id", async (request, response) => {
   const { id } = request.params;
   console.log("Casting vote for: " + id);
-  
+
   Choice.findById(id, function(error, result) {
     if (!result) {
       response.status(404).send("Choice not found");

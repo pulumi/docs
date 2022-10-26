@@ -12,7 +12,7 @@ hero:
         SDK enables you to build, deploy, and manage your AWS infrastructure faster
         and with more confidence, using modern programming languages and software engineering
         practices. Leverage the full expressivity of general-purpose languages ([TypeScript/JavaScript](/docs/intro/languages/javascript/),
-        [Python](/docs/intro/languages/python/), [Go](/docs/intro/languages/go/), [C#](/docs/intro/languages/dotnet/), [Java](/docs/intro/languages/java/))
+        [Python](/docs/intro/languages/python/), [Go](/docs/intro/languages/go/), [C#](/docs/intro/languages/dotnet/), [Java](/docs/intro/languages/java/)
         or use markup languages (e.g., [YAML](/docs/intro/languages/yaml/), CUE) to build any cloud architecture including containers, serverless, and server-based.
 
 awsx:

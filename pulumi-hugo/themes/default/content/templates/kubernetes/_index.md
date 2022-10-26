@@ -16,15 +16,15 @@ weight: 99
 
 [Kubernetes (k8s)](/kubernetes) is an open source container management and orchestration project. It enables infrastructure engineers and platform teams to deploy and run container services at scale with a control plane that schedules, deploys, and scales containers throughout their lifecycle using a desired state model. The benefits of using k8s include its portability across multiple environments and clouds, high scalability, and extensibility via an ecosystem of extensions and plugins.
 
-**On [AWS](/aws),** you can use Kubernetes with Amazon Elastic Kubernetes Service (EKS).
+**On [AWS](/aws/),** you can use Kubernetes with Amazon Elastic Kubernetes Service (EKS).
 
-**On [Azure](/azure),** you can use Kubernetes with Azure Kubernetes Service (AKS).
+**On [Azure](/azure/),** you can use Kubernetes with Azure Kubernetes Service (AKS).
 
-**On [Google Cloud Platform](/gcp),** you can use Kubernetes with Google Kubernetes Engine (GKE).
+**On [Google Cloud Platform](/gcp/),** you can use Kubernetes with Google Kubernetes Engine (GKE).
 
 ### Building and deploying Kubernetes clusters on AWS, Azure, and Google Cloud
 
-[Infrastructure as code](/what-is/what-is-infrastructure-as-code) is an efficient and repeatable way of building Kubernetes clusters and their infrastructure with programming languages and deploying them to your preferred cloud.
+[Infrastructure as code](/what-is/what-is-infrastructure-as-code/) is an efficient and repeatable way of building Kubernetes clusters and their infrastructure with programming languages and deploying them to your preferred cloud.
 
 Pulumi’s open source, infrastructure as code SDK lets you build and deploy Kubernetes and cloud infrastructure with TypeScript/JavaScript, Python, Go, Java, .NET, and YAML. The main benefits include:
 

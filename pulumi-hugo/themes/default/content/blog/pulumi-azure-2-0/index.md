@@ -26,7 +26,7 @@ This article outlines the most significant changes:
 - Configuring custom timeouts
 - How to migrate and where to get help if needed
 
-The provider release is not directly related to our [Pulumi 2.0 plans]({{< relref "/blog/pulumi-2020-update" >}}).
+The provider release is not directly related to our [Pulumi 2.0 plans](/blog/pulumi-2020-update/).
 
 ## Improvements in Azure Storage
 
@@ -129,7 +129,7 @@ You shouldn't need this ability often, but it can be a lifesaver when you do.
 
 ## Explicit Adoption
 
-Pulumi comes with a way [to adopt existing cloud resources]({{< relref "/blog/adopting-existing-cloud-resources-into-pulumi" >}}) by specifying `import` options.
+Pulumi comes with a way [to adopt existing cloud resources](/blog/adopting-existing-cloud-resources-into-pulumi/) by specifying `import` options.
 
 With the 1.x versions of the Azure provider, some resources could become adopted *accidentally*: if a name would match an existing resource, the upsert operation could succeed, and Pulumi would start managing the existing resource.
 

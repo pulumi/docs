@@ -43,8 +43,8 @@ code as an included class.
 ## Running the App
 
 Follow the steps in
-[Pulumi Installation and Setup]({{< relref "/docs/get-started/install" >}}) and
-[Configuring Pulumi Kubernetes]({{< relref "/docs/get-started/kubernetes" >}})
+[Pulumi Installation and Setup](/docs/get-started/install/) and
+[Configuring Pulumi Kubernetes](/docs/get-started/kubernetes/)
 to get setup with Pulumi and Kubernetes.
 
 > *Note*: The code in this repo assumes you are deploying to a cluster
@@ -165,5 +165,5 @@ and comprehension for building cloud stacks.
 Find out more:
 
 - Get the [example code on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-jenkins)
-- Read the docs on [Kubernetes]({{< relref "/registry/packages/kubernetes/api-docs" >}})
-- See the tutorial on [building components]({{< relref "/registry/packages/aws/how-to-guides/s3-folder-component" >}})
+- Read the docs on [Kubernetes](/registry/packages/kubernetes/api-docs/)
+- See the tutorial on [building components](/registry/packages/aws/how-to-guides/s3-folder-component/)

@@ -11,8 +11,8 @@ tags:
 {{% notes type="warning" %}}
 This blog post is outdated and no longer accurate.
 We have updated our pricing structure in response to user feedback.
-Learn all about it in our new blog post: [Announcing New Usage-Based Pricing For Your Whole Team]({{< relref "/blog/announcing-new-usage-based-pricing-for-your-whole-team" >}}).
-Or visit our [Pricing Page]({{< relref "/pricing" >}})
+Learn all about it in our new blog post: [Announcing New Usage-Based Pricing For Your Whole Team](/blog/announcing-new-usage-based-pricing-for-your-whole-team/).
+Or visit our [Pricing Page](/pricing/)
 for more details about pricing.
 {{% /notes %}}
 
@@ -43,8 +43,7 @@ pricing made it difficult to plan and budget for future growth, and that
 it unintentionally penalized certain architectural decisions. The new
 per user model should be more affordable and predictable.
 
-Here is a summary of the resulting options. For full details, [view our
-pricing page]({{< relref "/pricing" >}}).
+Here is a summary of the resulting options. For full details, [view our pricing page](/pricing/).
 
 <style>
 /* Just use CSS rather than whatever customization the Markdown processor exposes. */
@@ -62,7 +61,7 @@ All editions offer a 14-day free trial, no credit card
 required. If you need a longer trial period, want to discuss potential proof of
 concept projects, or are interested in advanced capabilities, such as
 large numbers of seats, Training, or Support, please [contact
-us]({{< relref "/contact.md" >}}).
+us](/contact).
 
 We remain committed to fostering a vibrant open source community while
 also delivering a robust production service that teams of all sizes are
@@ -83,7 +82,7 @@ structure:
 To get started, simply sign up for free using your identity provider of
 choice (ideally the same one your organization will be backed by). From
 there, create an organization that your team members will use. To use
-the free Community Edition, just [download the CLI]({{< relref "/docs/get-started" >}}) and
+the free Community Edition, just [download the CLI](/docs/get-started/) and
 sign into the free tier of the service when it prompts you.
 
 ### What is an organization?
@@ -110,14 +109,14 @@ facilities, including RBAC for advanced policy controls.
 Yes! We designed the editions to make it easy to get started with Team
 Starter, and once you've outgrown it, upgrading to Team Pro is a single
 click away. To upgrade to Enterprise, please [contact
-us]({{< relref "/contact.md" >}}).
+us](/contact).
 
 ### I'm an existing customer on a per stack plan -- what do I do?
 
 We are in the process of reaching out to all existing customers to offer
 a switch to one of the new plans. If you haven't heard from us yet,
 please don't hesitate to [drop us a
-line]({{< relref "/contact.md" >}}). If now isn't the right time to change
+line](/contact). If now isn't the right time to change
 for your team, however, don't worry — we are happy to honor your
 existing subscription terms.
 
@@ -125,7 +124,7 @@ existing subscription terms.
 
 We are always happy to discuss the best way to ensure Pulumi can work
 for your team. To talk with a leader at the company, please simply [fill
-out the contact us form]({{< relref "/contact.md" >}}) and we'll be
+out the contact us form](/contact) and we'll be
 in touch.
 
 ### What payment options do you accept?
@@ -137,4 +136,4 @@ your organization's Settings page.
 
 For annual subscriptions, we also offer invoicing that is payable with
 bank transfer or check. To discuss those options in more detail, please
-[contact us]({{< relref "/contact.md" >}}).
+[contact us](/contact/).

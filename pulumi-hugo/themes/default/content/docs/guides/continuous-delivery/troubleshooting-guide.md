@@ -15,7 +15,7 @@ The type of failure you experience is likely related to one of these steps.
 
 In order to run a Pulumi command, the following are required:
 
-* A [Pulumi access token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}}) for the account you wish to use.
+* A [Pulumi access token](/docs/intro/pulumi-service/accounts#access-tokens) for the account you wish to use.
 [Create a token](https://app.pulumi.com/account/tokens) by logging in with the appropriate account.
 * A stack that you would like to update the automated pipeline.
 * Pulumi CLI available in the system `PATH`.
@@ -39,7 +39,7 @@ running the `pulumi` command can access the env var.
 
 ### Stack Name
 
-> Learn about [stacks]({{< relref "/docs/intro/concepts/stack" >}}) and their [configuration]({{< relref "/docs/intro/concepts/config" >}}).
+> Learn about [stacks](/docs/intro/concepts/stack/) and their [configuration](/docs/intro/concepts/config/).
 
 A stack represents a specific configuration state for your infrastructure resources. For a typical CI pipeline, the stack must have been created
 beforehand using the `pulumi stack init` command and in the **appropriate organization**.
@@ -64,24 +64,24 @@ beforehand using the `pulumi stack init` command and in the **appropriate organi
 
   For example, for a stack named `production`, the `Pulumi.production.yaml` file must exist alongside the `Pulumi.yaml`.
   If your Pulumi app is in a different folder, you can use the `--cwd` flag with almost every `pulumi` command.
-  Learn more about the [global flags]({{< relref "/docs/reference/cli#options" >}}).
+  Learn more about the [global flags](/docs/reference/cli#options).
 
 ### Installing the Pulumi CLI
 
 Depending on the CI service, there may be a few ways to install the Pulumi CLI. The following CI systems have native extensions that provide
 an easy-to-use mechanism for installing and running the various `pulumi` commands.
 
-* [Azure Pipelines Task Extension](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task) - [Azure Guide]({{< relref "azure-devops" >}})
-* GitHub Actions - [JavaScript Action](https://github.com/pulumi/action-install-pulumi-cli), [Docker Action](https://github.com/pulumi/actions) - [GitHub Actions Guide]({{< relref "github-actions" >}})
+* [Azure Pipelines Task Extension](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task) - [Azure Guide](/docs/guides/continuous-delivery/azure-devops/)
+* GitHub Actions - [JavaScript Action](https://github.com/pulumi/action-install-pulumi-cli), [Docker Action](https://github.com/pulumi/actions) - [GitHub Actions Guide](/docs/guides/continuous-delivery/github-actions/)
 
 > Pulumi CLI is now pre-installed on GitHub Actions runners. However, if you need to install a specific version, you can always use one of the aforementioned actions.
 
-* [CircleCI Orb](https://circleci.com/developer/orbs/orb/compute/pulumi) - [CircleCI Guide]({{< relref "circleci" >}})
-* [Octopus Deploy Step Template](https://library.octopus.com/step-templates/76296cd1-7d8c-47e8-b33f-027ecd3ff6b5/actiontemplate-run-pulumi-(linux)) - [Octopus Deploy Guide]({{< relref "octopus-deploy" >}})
-* [Spinnaker Plugin](https://github.com/pulumi/spinnaker-preconfigured-job-plugin) - [Spinnaker Guide]({{< relref "spinnaker" >}})
+* [CircleCI Orb](https://circleci.com/developer/orbs/orb/compute/pulumi) - [CircleCI Guide](/docs/guides/continuous-delivery/circleci/)
+* [Octopus Deploy Step Template](https://library.octopus.com/step-templates/76296cd1-7d8c-47e8-b33f-027ecd3ff6b5/actiontemplate-run-pulumi-(linux)) - [Octopus Deploy Guide](/docs/guides/continuous-delivery/octopus-deploy/)
+* [Spinnaker Plugin](https://github.com/pulumi/spinnaker-preconfigured-job-plugin) - [Spinnaker Guide](/docs/guides/continuous-delivery/spinnaker/)
 
 If you are using a CI system that does not have a native extension for installing the CLI, you can always run an inline script step
-to [install the CLI manually]({{< relref "/docs/get-started/install" >}}).
+to [install the CLI manually](/docs/get-started/install/).
 
 #### Tips
 
@@ -121,13 +121,13 @@ when you run `pulumi preview` or `pulumi update --yes`.
 * For `nodejs` and `python` runtimes, add a step prior to running any `pulumi` commands to restore the dependencies.
 * For `dotnet` and `go` runtimes, the dependencies are restored for you automatically when you run `pulumi preview` or `pulumi update --yes`.
 * There is an exception to restoring dependencies automatically for `.NET` when you use a private package feed. You must ensure that the
-package(s) from the private feed are accessible or you can use a [pre-built binary]({{< relref "/docs/intro/concepts/project" >}})) with Pulumi to avoid rebuilding your `.NET` solution again.
+package(s) from the private feed are accessible or you can use a [pre-built binary](/docs/intro/concepts/project/) with Pulumi to avoid rebuilding your `.NET` solution again.
 
 > Note that if you do choose to use a pre-built binary, you will need to install the necessary Pulumi plugins manually using `pulumi plugin install`.
 
 * You might be caching the library dependencies but not the Pulumi plugins. Some services offer dependency caching by capturing a specific folder and restoring
 that folder when your pipeline executes. However, note that Pulumi dependencies have a post-install step that also pulls-down
-a [plugin]({{< relref "/docs/intro/concepts/how-pulumi-works#resource-providers" >}}) binary from our CDN. So be sure to cache the plugins path as well.
+a [plugin](/docs/intro/concepts/how-pulumi-works#resource-providers) binary from our CDN. So be sure to cache the plugins path as well.
 
   If in doubt about problems encountered during execution, clear out all caches and restore dependencies from scratch.
 
@@ -161,7 +161,7 @@ In almost all cases, specifying the credentials through environment variables wi
 
 * Check that there are not typos in the name of the environment variables.
 
-> Refer to the cloud providers in the [Registry]({{< relref "/registry" >}}) docs and the respective setup pages for each to find the correct
+> Refer to the cloud providers in the [Registry](/registry/) docs and the respective setup pages for each to find the correct
 environment variables to use.
 
 #### Still need help?

@@ -36,7 +36,7 @@ Additionally, any member who creates a stack is granted admin permissions on tha
 
 Organization admins can control the stack default permissions at the organization level from **Settings** > **General**.
 There are four types of stack permissions: `None`, `Read`, `Write`, and `Admin`.
-[Team permissions]({{< relref "/docs/intro/pulumi-service/teams#team-permissions" >}}) will expand these default permissions.
+[Team permissions](/docs/intro/pulumi-service/teams#team-permissions) will expand these default permissions.
 
 Stack permissions allow users to perform the following actions:
 
@@ -217,7 +217,7 @@ To view a stack's details:
 
 ![Stack outputs and configuration](/images/docs/reference/service/stack-outputs-and-configuration.png)
 
-You can see other details, such as who applied the update, when, and counts of added, updated, and unchanged resources. If your stack is integrated with a CI/CD pipeline, such as [GitHub Actions]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}), you also see useful links to data like your Git commit hash, mapped branch, and pull request ID.
+You can see other details, such as who applied the update, when, and counts of added, updated, and unchanged resources. If your stack is integrated with a CI/CD pipeline, such as [GitHub Actions](/docs/guides/continuous-delivery/github-actions/), you also see useful links to data like your Git commit hash, mapped branch, and pull request ID.
 
 #### Custom Stack Tags
 
@@ -301,4 +301,4 @@ To delete a stack:
 
 ## Related Blogs
 
-* [Building New Pulumi Projects and Stacks From Templates]({{< ref "/blog/building-new-pulumi-projects-and-stacks-from-templates" >}})
+* [Building New Pulumi Projects and Stacks From Templates](/blog/building-new-pulumi-projects-and-stacks-from-templates/)

@@ -7,7 +7,7 @@ authors: ["vova-ivanov"]
 tags: ["aws", "typescript", "containers", "kubernetes", "docker"]
 ---
 
-In this blog post, we will explore and demonstrate the advantages of Kubernetes by converting and deploying our [PERN application]({{< relref "/blog/deploying-a-pern-stack-application-to-aws" >}}) to Amazon EKS. With the help of Pulumi, the process becomes greatly simplified and allows us to focus more on the big picture of designing our cloud architecture.
+In this blog post, we will explore and demonstrate the advantages of Kubernetes by converting and deploying our [PERN application](/blog/deploying-a-pern-stack-application-to-aws/) to Amazon EKS. With the help of Pulumi, the process becomes greatly simplified and allows us to focus more on the big picture of designing our cloud architecture.
 
 <!--more-->
 

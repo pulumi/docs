@@ -35,7 +35,7 @@ To work with the operator, we'll need to follow these steps.
 - [Concurrent Updates on the Same Stack](#concurrent-updates-on-the-same-stack)
 
 [k8s-ext-pattern]: https://kubernetes.io/docs/concepts/extend-kubernetes/operator/
-[stack]: {{< relref "/docs/intro/concepts/stack" >}}
+[stack]: /docs/intro/concepts/stack/
 
 ## Deploy the Pulumi Kubernetes Operator
 
@@ -82,8 +82,8 @@ the [default, ambient kubeconfig credentials][default-kubeconfig].
 The role permissions for the operator can be adjusted to control what in-cluster API resources are allowed.
 
 [nginx-stack]: https://github.com/metral/pulumi-nginx/blob/master/index.ts
-[k8s-provider]: {{< relref "/registry/packages/kubernetes/api-docs/provider" >}}
-[default-kubeconfig]: {{< relref "/registry/packages/kubernetes/installation-configuration#steps" >}}
+[k8s-provider]: /registry/packages/kubernetes/api-docs/provider/
+[default-kubeconfig]: /registry/packages/kubernetes/installation-configuration/#setup
 
 Choose your preferred language below, or check out [Create Pulumi Stacks using kubectl][stacks-use-kubectl].
 
@@ -419,7 +419,7 @@ spec:
 Stack CustomResources provide the following properties to configure the Stack update run:
 
 - The first is the access token secret (`PULUMI_ACCESS_TOKEN`), which is required to authenticate with pulumi.com to
-  perform the update. You can create a new [Pulumi access token]({{< ref "/docs/intro/pulumi-service/accounts#access-tokens" >}})
+  perform the update. You can create a new [Pulumi access token](/docs/intro/pulumi-service/accounts#access-tokens)
   specifically for your CI/CD job on your [Pulumi Account page](https://app.pulumi.com/account/tokens).
 - Environment variables for the Stack that are sourced from Kubernetes ConfigMaps and/or Secrets. Examples include
   cloud provider credentials and other application settings.

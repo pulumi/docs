@@ -8,7 +8,7 @@ menu:
     weight: 11
 ---
 
-The `providers` resource option sets a map of providers for the resource and its children. This map is combined with resource parent's `providers` map. If no value is provided, the providers map is identical to the parent's providers map. When determining which provider to use for a resource, the `providers` map is used if [provider]({{< relref "provider" >}}) is not supplied.
+The `providers` resource option sets a map of providers for the resource and its children. This map is combined with resource parent's `providers` map. If no value is provided, the providers map is identical to the parent's providers map. When determining which provider to use for a resource, the `providers` map is used if [provider](/docs/intro/concepts/resources/options/provider/) is not supplied.
 
 {{< chooser language "javascript,typescript,python,go,yaml" >}}
 

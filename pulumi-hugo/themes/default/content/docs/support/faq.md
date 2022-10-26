@@ -38,7 +38,7 @@ To transfer a stack from your individual account to an organization, navigate to
 
 From there, select the Settings tab, and you'll see a Transfer Stack button. You can select the organization you wish to transfer to from there.
 
-To learn more about this process, see [Transferring Stacks](({{< relref "/docs/intro/pulumi-service/projects-and-stacks#transferring-stacks" >}})).
+To learn more about this process, see [Transferring Stacks](/docs/intro/pulumi-service/projects-and-stacks#transferring-stacks).
 
 ## Pulumi Service
 
@@ -48,7 +48,7 @@ Pulumi needs to store the result of operations. On creation of a Pulumi resource
 
 ### How does Pulumi depend on the Pulumi Service?
 
-Pulumi uses the Pulumi Service to store information about the current state of your application, which is used during updates, previews, and destroys as the source of truth for the current state of your cloud resources. We refer to this state as the "checkpoint" for your application. In addition, the Pulumi Service ensures that for a given stack, only a single update is running at once (so, if you and someone else are collaborating on a stack together, it ensures that you both don't update the same stack at the same time.) Once your stack has been deployed, it has no dependency on the Pulumi Service. To learn more about how the Pulumi engine uses pulumi.com, see [How Pulumi Works]({{< relref "/docs/intro/concepts/how-pulumi-works" >}}).
+Pulumi uses the Pulumi Service to store information about the current state of your application, which is used during updates, previews, and destroys as the source of truth for the current state of your cloud resources. We refer to this state as the "checkpoint" for your application. In addition, the Pulumi Service ensures that for a given stack, only a single update is running at once (so, if you and someone else are collaborating on a stack together, it ensures that you both don't update the same stack at the same time.) Once your stack has been deployed, it has no dependency on the Pulumi Service. To learn more about how the Pulumi engine uses pulumi.com, see [How Pulumi Works](/docs/intro/concepts/how-pulumi-works/).
 
 ### What happens if app.pulumi.com is down?
 
@@ -62,7 +62,7 @@ Using the Pulumi service with Pulumi provide a good combination of usability, sa
 
 When you use Pulumi without the Pulumi Service, the checkpoint for your stack is stored locally or in your own external self-managed state storage. If that file is lost or outdated, Pulumi can no longer operate on your stack. To collaborate with others on your stack, you must host this file yourself and protect against conflicting updates to it. If you use your own checkpoint file, the Pulumi Service features, such as the deployment history and resource view, will not be available.
 
-To use Pulumi without the Pulumi Service, log in using `pulumi login --local` or by logging in to an alternative backend. For more information, read more at [State and Backends]({{< relref "/docs/intro/concepts/state" >}}).
+To use Pulumi without the Pulumi Service, log in using `pulumi login --local` or by logging in to an alternative backend. For more information, read more at [State and Backends](/docs/intro/concepts/state/).
 
 ### How can I go back to using the Pulumi Service?
 
@@ -91,17 +91,17 @@ Pulumi resources have different logical names and physical names. The logical na
 
 To ensure that as many logical Pulumi resources and stacks can be stood up side-by-side without them conflicting, Pulumi automatically creates each resource's name by combining the logical name with a random suffix appended afterwards. This approach to auto-naming also ensures Pulumi can replace resources with less downtime, by creating the replacement before needing to delete the old resource. In practice, both of these provide significant benefits. This means, however, that your resource's physical name will typically look like `my-bucket-d7c2fa0` instead of `my-bucket`.
 
-You can disable this [auto-naming]({{< relref "/docs/intro/concepts/resources#autonaming" >}}) on a per-resource basis if this isn't right for you. Doing so lets you have precise physical names without random suffixes, but also means you lose the two benefits named above.
+You can disable this [auto-naming](/docs/intro/concepts/resources#autonaming) on a per-resource basis if this isn't right for you. Doing so lets you have precise physical names without random suffixes, but also means you lose the two benefits named above.
 
 ## Secrets
 
 ### Are my secrets ever visible?
 
-Pulumi provides primitives so you can enforce your [secrets]({{< relref "/docs/intro/concepts/secrets#secrets" >}}) are stored in a secure manner in the CLI, state file and Pulumi Service. During an update, your secrets will be decrypted in memory and visible to your Pulumi program. It is your responsibility to ensure that you do not persist them outside of Pulumi without securing them.
+Pulumi provides primitives so you can enforce your [secrets](/docs/intro/concepts/secrets#secrets) are stored in a secure manner in the CLI, state file and Pulumi Service. During an update, your secrets will be decrypted in memory and visible to your Pulumi program. It is your responsibility to ensure that you do not persist them outside of Pulumi without securing them.
 
 ### How does Pulumi manage secrets?
 
-When you set a [configuration]({{< relref "/docs/intro/concepts/config" >}}) value, you may pass `--secret` to `pulumi config set` which causes the value to be encrypted so it can be safely persisted in `Pulumi.<stack-name>.yaml`. For every stack the Pulumi service manages a unique encryption key, which it uses to encrypt secrets for that stack (and this is configurable to use your own custom secrets provider). Because a different key is used for each stack, encrypting the same value across two different stacks will lead to different encrypted strings being stored in the `Pulumi.<stack-name>.yaml` files. This also means that you cannot copy an encrypted value from one file to another using a text editor. Instead, you must use `pulumi config set`.
+When you set a [configuration](/docs/intro/concepts/config/) value, you may pass `--secret` to `pulumi config set` which causes the value to be encrypted so it can be safely persisted in `Pulumi.<stack-name>.yaml`. For every stack the Pulumi service manages a unique encryption key, which it uses to encrypt secrets for that stack (and this is configurable to use your own custom secrets provider). Because a different key is used for each stack, encrypting the same value across two different stacks will lead to different encrypted strings being stored in the `Pulumi.<stack-name>.yaml` files. This also means that you cannot copy an encrypted value from one file to another using a text editor. Instead, you must use `pulumi config set`.
 
 When you run a preview, update or destroy, pulumi decrypts this data. It is plain text during the execution of your deployment, and any part of your Pulumi program may access it using the Pulumi config object.
 

@@ -15,13 +15,13 @@ in your chosen language. In addition to the core Pulumi SDK, there are additiona
 helper libraries for features such as policy as code.
 
 > For a conceptual overview of how to use the primitives available in these libraries,
-> please see [Architecture & Concepts]({{< relref "/docs/intro/concepts" >}}).
+> please see [Architecture & Concepts](/docs/intro/concepts).
 
 Choose your language runtime to view the API documentation for the Pulumi SDK:
 
 <div class="tiles flex-wrap mt-4">
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <a class="tile p-8 pb-16 text-center" href="{{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi" >}}">
+        <a class="tile p-8 pb-16 text-center" href="/docs/reference/pkg/nodejs/pulumi/pulumi">
             <p class="mx-auto text-xl font-semibold link">
                 Node.js
                 <span class="text-xs font-light">(JavaScript, TypeScript)</span>
@@ -32,7 +32,7 @@ Choose your language runtime to view the API documentation for the Pulumi SDK:
         </a>
     </div>
     <div class="pb-4 md:w-1/2">
-        <a class="tile p-8 pb-16 text-center" href="{{< relref "/docs/reference/pkg/python/pulumi" >}}">
+        <a class="tile p-8 pb-16 text-center" href="/docs/reference/pkg/python/pulumi">
             <p class="mx-auto text-xl font-semibold link">
                 Python
             </p>

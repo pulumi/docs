@@ -13,14 +13,14 @@ aliases:
 ---
 
 This document walks through the important aspects of configuring any SAML (Security Assertion Markup Language) 2.0 identity provider to work
-with the [Pulumi Service]({{< relref "/docs/intro/pulumi-service" >}}).
+with the [Pulumi Service](/docs/intro/pulumi-service/).
 
 > For a specific example, refer to one of our integration guides:
 >
-> - [Azure Active Directory]({{< relref "aad" >}})
-> - [Google Workspace]({{< relref "gsuite" >}})
-> - [Okta]({{< relref "okta" >}})
-> - [OneLogin]({{< relref "onelogin" >}})
+> - [Azure Active Directory](/docs/guides/saml/aad/)
+> - [Google Workspace](/docs/guides/saml/gsuite/)
+> - [Okta](/docs/guides/saml/okta/)
+> - [OneLogin](/docs/guides/saml/onelogin/)
 
 ## Terminology
 
@@ -122,7 +122,7 @@ If your IdP does not support an emailAddress Name ID Format identifier but suppo
 
 ### The IdP signing certificate expired and I can't login to Pulumi anymore
 
-[Contact us]({{< relref "/about#contact-us" >}}) for assistance with getting the IdP metadata XML updated.
+[Contact us](/about#contact-us) for assistance with getting the IdP metadata XML updated.
 
 ### An SSO binding was not found in the XML. Contact your SSO provider.
 

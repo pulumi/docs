@@ -93,7 +93,7 @@ DevOps teams have taken it upon themselves to become those DSL experts, but are 
 
 ## Pulumi Provides a Cloud Native Programming Model
 
-Using familiar languages changes everything. [The Pulumi Cloud Development Platform]({{< relref "/product" >}}) is a combination of tools, libraries, runtime, and service that delivers a consistent development and operational control plane for cloud native infrastructure.
+Using familiar languages changes everything. [The Pulumi Cloud Development Platform](/product/) is a combination of tools, libraries, runtime, and service that delivers a consistent development and operational control plane for cloud native infrastructure.
 
 At the center of Pulumi is an open source cloud object model, coupled with an evaluation runtime that understands how to take programs written in any language, understand the cloud resources necessary to execute them, and then plan and manage those resources in a robust way. This cloud runtime and object model is inherently language- and cloud-neutral, enabling Pulumi to support many languages and clouds rapidly.
 
@@ -298,7 +298,7 @@ By using Pulumi, Learning Machine were able to reduce 25,000 LoC of ad-hoc scrip
 
 **The rapid pace of evolution of the cloud, combined with the shift to ephemeral infrastructure, and the connection of application code and infrastructure code, demands a different view of cloud development and devops.**
 
-Pulumi provides a platform to deliver cloud native [infrastructure as code]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) for any technology, any cloud, and any language:
+Pulumi provides a platform to deliver cloud native [infrastructure as code](/what-is/what-is-infrastructure-as-code/) for any technology, any cloud, and any language:
 
 * Making multi-cloud, multi-technology targeting a reality with a consistent programming model in familiar languages.
 * Using the existing power of familiar programming languages to cloud native infrastructure and application delivery for huge productivity and collaboration gains.

@@ -18,7 +18,7 @@ We've seen a number of user questions over the years about keeping resources aft
 
 ## Retain on delete
 
-We [now support](https://github.com/pulumi/pulumi/releases/tag/v3.25.0) a new resource option [retain on delete]({{< relref "docs/intro/concepts/resources/options/retainOnDelete" >}}) that allows you to specify this case to the engine.
+We [now support](https://github.com/pulumi/pulumi/releases/tag/v3.25.0) a new resource option [retain on delete](/docs/intro/concepts/resources/options/retainondelete/) that allows you to specify this case to the engine.
 
 When a resource marked with `RetainOnDelete` is deleted or replaced by a Pulumi update, the resource is removed from the Pulumi state but Pulumi does not delete the actual resource in the cloud. That is, it won't call through to the resource provider's `Delete` function. This is the similar to AWS CloudFormation's [Retain DeletionPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html).
 
@@ -62,4 +62,4 @@ const bucket = new aws.s3.Bucket("bucket", {
 });
 ```
 
-Read more about retain on delete in our [docs]({{< relref "docs/intro/concepts/resources/options/retainOnDelete" >}}). Let us know how you get on with this new feature at our community [Slack](https://slack.pulumi.com/)!
+Read more about retain on delete in our [docs](/docs/intro/concepts/resources/options/retainondelete/). Let us know how you get on with this new feature at our community [Slack](https://slack.pulumi.com/)!

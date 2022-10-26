@@ -12,20 +12,20 @@ tags:
     - pulumi-releases
 ---
 
-It's been another exciting few weeks here at Pulumi! We've caught our breath from [Cloud Engineering Summit]({{<relref "/cloud-engineering-summit">}}) (don't forget to check out the talks if you haven't yet!) and we're back to adding new value and highly-requested fixes across the Pulumi Cloud Engineering Platform. Read on to learn about new providers, new enhancements to the core Pulumi experience, and more!
+It's been another exciting few weeks here at Pulumi! We've caught our breath from [Cloud Engineering Summit](/cloud-engineering-summit/) (don't forget to check out the talks if you haven't yet!) and we're back to adding new value and highly-requested fixes across the Pulumi Cloud Engineering Platform. Read on to learn about new providers, new enhancements to the core Pulumi experience, and more!
 
 - Pulumi Registry, Pulumi Packages, & integrations
-  - [`dependsOn` can now await a fully-deployed Helm `Chart` resource]({{<relref "/blog/pulumi-release-notes-m64#dependson-can-now-await-a-fully-deployed-helm-chart-resource">}})
-  - [New provider: Elastic Cloud]({{<relref "/blog/pulumi-release-notes-m64#new-provider-elastic-cloud">}})
-  - [AWS Native provider supports auto-naming]({{<relref "/blog/pulumi-release-notes-m64#aws-native-provider-supports-auto-naming">}})
-  - [New resources in the AWS Native provider]({{<relref "/blog/pulumi-release-notes-m64#new-resources-in-the-aws-native-provider">}})
-  - [New resources in the Azure Native provider]({{<relref "/blog/pulumi-release-notes-m64#new-resources-in-the-azure-native-provider">}})
+  - [`dependsOn` can now await a fully-deployed Helm `Chart` resource](/blog/pulumi-release-notes-m64#dependson-can-now-await-a-fully-deployed-helm-chart-resource)
+  - [New provider: Elastic Cloud](/blog/pulumi-release-notes-m64#new-provider-elastic-cloud)
+  - [AWS Native provider supports auto-naming](/blog/pulumi-release-notes-m64#aws-native-provider-supports-auto-naming)
+  - [New resources in the AWS Native provider](/blog/pulumi-release-notes-m64#new-resources-in-the-aws-native-provider)
+  - [New resources in the Azure Native provider](/blog/pulumi-release-notes-m64#new-resources-in-the-azure-native-provider)
 - Pulumi CLI and core technologies
-  - [Functions now support outputs]({{<relref "/blog/pulumi-release-notes-m64#functions-now-support-outputs">}})
-  - [`--json` flag for `pulumi {update|destroy|preview|refresh}`]({{<relref "/blog/pulumi-release-notes-m64#--json-flag-for-pulumi-updatedestroypreviewrefresh">}})
-  - [Python 3.6 support will be deprecated soon]({{<relref "/blog/pulumi-release-notes-m64#python-36-support-will-be-deprecated-soon">}})
+  - [Functions now support outputs](/blog/pulumi-release-notes-m64#functions-now-support-outputs)
+  - [`--json` flag for `pulumi {update|destroy|preview|refresh}`](/blog/pulumi-release-notes-m64#--json-flag-for-pulumi-updatedestroypreviewrefresh)
+  - [Python 3.6 support will be deprecated soon](/blog/pulumi-release-notes-m64#python-36-support-will-be-deprecated-soon)
 - Pulumi Service & Pulumi.com
-  - [Set the default organization for newly-created stacks]({{<relref "/blog/pulumi-release-notes-m64#new-resources-in-the-azure-native-provider">}})
+  - [Set the default organization for newly-created stacks](/blog/pulumi-release-notes-m64#new-resources-in-the-azure-native-provider)
 
 <!--more-->
 
@@ -33,7 +33,7 @@ It's been another exciting few weeks here at Pulumi! We've caught our breath fro
 
 ### `dependsOn` can now await a fully-deployed Helm `Chart` resource
 
-Pulumi's [`dependsOn` option]({{<relref "/docs/intro/concepts/resources#dependson">}}) enables you to write programs that deploy resources in a specific order. Previously, using this option with a Helm `Chart` resource could be confusing because Pulumi would consider the resource ready once it had registered the chart, even if Helm was still deploying some of the resources defined by the chart. Now, you can depend on a new `ready` attribute that will ensure that none of the dependent resources are deployed until the chart is deployed. For example, the code sample below creates an NGINX Ingress Controller and then creates a Kubernetes `ConfigMap` that depends on the controller being fully deployed.
+Pulumi's [`dependsOn` option](/docs/intro/concepts/resources#dependson) enables you to write programs that deploy resources in a specific order. Previously, using this option with a Helm `Chart` resource could be confusing because Pulumi would consider the resource ready once it had registered the chart, even if Helm was still deploying some of the resources defined by the chart. Now, you can depend on a new `ready` attribute that will ensure that none of the dependent resources are deployed until the chart is deployed. For example, the code sample below creates an NGINX Ingress Controller and then creates a Kubernetes `ConfigMap` that depends on the controller being fully deployed.
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -56,14 +56,14 @@ new k8s.core.v1.ConfigMap("foo", {
 ```
 
 {{% notes type="info" %}}
-This change impacts the older Helm [`Chart`]({{<relref "/registry/packages/kubernetes/api-docs/helm/v3/chart">}}) resource. The new Helm [`Release`]({{<relref "/registry/packages/kubernetes/api-docs/helm/v3/release">}}) resource always waits for the Helm chart to be fully deployed.
+This change impacts the older Helm [`Chart`](/registry/packages/kubernetes/api-docs/helm/v3/chart) resource. The new Helm [`Release`](/registry/packages/kubernetes/api-docs/helm/v3/release) resource always waits for the Helm chart to be fully deployed.
 {{% /notes %}}
 
 [Learn more about `dependsOn` and Helm charts in this GitHub issue](https://github.com/pulumi/pulumi-kubernetes/issues/861)
 
 ### New provider: Elastic Cloud
 
-You can now provision Elastic Cloud resources like ElasticSearch using Pulumi! Visit the [`ElasticCloud (EC)` provider on Pulumi Registry]({{<relref "/registry/packages/ec">}}) to get started. The example below shows how you can create an Elastic Cloud deployment in just a few lines of code:
+You can now provision Elastic Cloud resources like ElasticSearch using Pulumi! Visit the [`ElasticCloud (EC)` provider on Pulumi Registry](/registry/packages/ec) to get started. The example below shows how you can create an Elastic Cloud deployment in just a few lines of code:
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
@@ -194,7 +194,7 @@ class Program
 
 ### AWS Native provider supports auto-naming
 
-Most Pulumi providers support [auto-naming for resources]({{<relref "/docs/intro/concepts/resources#autonaming">}}), which makes it easier to have multiple stacks of the same Pulumi program by avoiding naming conflicts, among other benefits. Now, our AWS Native provider joins the club with full auto-naming support.
+Most Pulumi providers support [auto-naming for resources](/docs/intro/concepts/resources#autonaming), which makes it easier to have multiple stacks of the same Pulumi program by avoiding naming conflicts, among other benefits. Now, our AWS Native provider joins the club with full auto-naming support.
 
 [Learn more about AWS auto-naming in this GitHub issue](https://github.com/pulumi/pulumi-aws-native/issues/156)
 
@@ -214,7 +214,7 @@ In this milestone, we shipped Pulumi version [3.17.0](https://github.com/pulumi/
 
 When creating complex infrastructure, it's common to pass information about one resource to a function provided by another resource. Previously, doing this in Pulumi required you to use `apply` to get the information from the first resource and pass it into the function. Now, we've simplified the process so you can reference outputs directly from the function—no `apply` needed. To take advantage of these changes, make sure you've updated to the latest versions of Pulumi and the providers you're using.
 
-[Learn more in the "Functions now accept outputs" blog post]({{<relref "/blog/functions-accept-outputs">}})
+[Learn more in the "Functions now accept outputs" blog post](/blog/functions-accept-outputs)
 
 ### `--json` flag for `pulumi {update|destroy|preview|refresh}`
 

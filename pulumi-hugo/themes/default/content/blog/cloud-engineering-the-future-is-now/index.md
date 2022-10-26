@@ -37,6 +37,6 @@ Finally, the panel looked backward at the impact and legacy of devops. The panel
 
 ## Summary
 
-Thank you for attending PulumiUP! Your response to the [Pulumi 3.0 release]({{< relref "/blog/pulumi-3-0" >}}) was overwhelming. If you didn't have the chance to catch PulumiUP on launch day, you can watch the entire event.
+Thank you for attending PulumiUP! Your response to the [Pulumi 3.0 release](/blog/pulumi-3-0/) was overwhelming. If you didn't have the chance to catch PulumiUP on launch day, you can watch the entire event.
 
 {{< youtube "Zko70KVGcgo?rel=0" >}}

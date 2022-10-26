@@ -12,8 +12,7 @@ the obvious question is "Where to start?". We hear you, and so we've
 built some new features to help you scaffold your app and program the
 cloud even faster than before.
 
-In this post, we'll look at how to use `pulumi new` and our [selection
-of templates](https://github.com/pulumi/templates) to build your Pulumi
+In this post, we'll look at how to use `pulumi new` and our [selection of templates](https://github.com/pulumi/templates) to build your Pulumi
 app. <!--more--> There is template support for:
 
 - AWS, Microsoft Azure, Google Cloud, Kubernetes, and OpenStack in
@@ -81,6 +80,6 @@ We hope you like these helpers. If you're keen to get stuck in:
 - [Join the Slack conversation](https://slack.pulumi.com) - it's
   heating up in there.
 - Try out the [many examples we have](https://app.pulumi.com), and
-  [dive into the docs]({{< relref "/docs/reference" >}}).
+  [dive into the docs](/docs/reference/).
 - [Submit new templates as PRs](https://github.com/pulumi/templates) -
   contribution == t-shirts at least.

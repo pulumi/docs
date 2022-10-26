@@ -291,7 +291,7 @@ some of those outputs are provided by the provider after everything has loaded,
 booted, or otherwise has come online. More on outputs later.
 
 In our case here, the Docker
-[`RemoteImage`]({{< relref "/registry/packages/docker/api-docs/remoteimage" >}}) resource
+[`RemoteImage`](/registry/packages/docker/api-docs/remoteimage) resource
 takes the following inputs:
 
 {{% choosable language python %}}

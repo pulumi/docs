@@ -29,11 +29,9 @@ marrying it with all the amazing innovation in cloud containers,
 orchestrators, managed data and AI services, and serverless
 capabilities.
 
-The best part of this journey has been hearing from our [passionate
-community](https://slack.pulumi.com/). Thousands of engineers, and
+The best part of this journey has been hearing from our [passionate community](https://slack.pulumi.com/). Thousands of engineers, and
 hundreds of companies, have created and deployed cloud applications and
-infrastructure using Pulumi. We are proud to be [an open source
-company](https://github.com/pulumi/pulumi), and thrive on the daily
+infrastructure using Pulumi. We are proud to be [an open source company](https://github.com/pulumi/pulumi), and thrive on the daily
 collaboration and evolution of the platform.
 
 And we're just getting started! Today we are thrilled to announce that
@@ -129,7 +127,7 @@ vSphere and OpenStack. Our delivery platform works great with your
 favorite CI systems. Expect to see continued growth in all of these
 areas, in addition to new clouds, languages, and integrations.
 
-Today we launched [the Team Edition]({{< relref "/pricing" >}}) for our
+Today we launched [the Team Edition](/pricing/) for our
 SaaS delivery platform. This includes many features that you, the cloud engineering
 community, told us you need to better operationalize Pulumi within your
 teams. We already have many happy customers using these features
@@ -137,17 +135,17 @@ successfully for organizations big and small. Expect to see a steady
 stream of improvements, in addition to Enterprise Edition capabilities
 for the largest of organizations needing on-premises, advanced security,
 and custom identity. Please always [let us
-know]({{< relref "/contact.md" >}}) how we can better meet your
+know](/contact) how we can better meet your
 needs.
 
 This new round of funding will allow us to strengthen our commitment to
 open source and community, increase our R&D velocity, and also scale our
 business to enable organizations of all sizes to successfully achieve
 cloud engineering within their teams. We are [hiring in all areas of the
-company]({{< relref "/careers" >}}) as we enter this next exciting
+company](/careers) as we enter this next exciting
 chapter of the company.
 
-[Download Pulumi]({{< relref "/docs/get-started/install" >}}) -- we
+[Download Pulumi](/docs/get-started/install/) -- we
 can't wait to see all the great things you build next with Pulumi!
 
 Joe & Eric

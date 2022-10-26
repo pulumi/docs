@@ -7,7 +7,7 @@ authors: ["vova-ivanov"]
 tags: ["aws", "python", "containers", "docker", "mysql"]
 ---
 
-In this blog post, we will finish swapping out the frontend and backend of our [Python AWS application]({{< relref "/blog/creating-a-python-aws-application-using-flask-and-redis" >}}). Although Flask and Redis are different from Django and MySQL in many ways, the underlying infrastructure behind their deployment is nonetheless very similar, and can be effortlessly updated as we transition from one to the other.
+In this blog post, we will finish swapping out the frontend and backend of our [Python AWS application](/blog/creating-a-python-aws-application-using-flask-and-redis/). Although Flask and Redis are different from Django and MySQL in many ways, the underlying infrastructure behind their deployment is nonetheless very similar, and can be effortlessly updated as we transition from one to the other.
 
 <!--more-->
 
@@ -132,7 +132,7 @@ django_admin_password = config.require_secret("django-admin-password")
 django_secret_key = config.require_secret("django-secret-key")
 ```
 
-After setting up the imports and configurations, we create an ECS Cluster, VPC, Subnet, RDS instance, and several other items. All the components are identical to the ones in the [first]({{< relref "/blog/creating-a-python-aws-application-using-flask-and-redis" >}}) and [second]({{< relref "/blog/deploying-mysql-schemas-using-dynamic-providers" >}}) blog posts, and the full code can be seen in this example's [github repository](https://github.com/pulumi/examples/tree/master/aws-py-django-voting-app).
+After setting up the imports and configurations, we create an ECS Cluster, VPC, Subnet, RDS instance, and several other items. All the components are identical to the ones in the [first](/blog/creating-a-python-aws-application-using-flask-and-redis/) and [second](/blog/deploying-mysql-schemas-using-dynamic-providers/) blog posts, and the full code can be seen in this example's [github repository](https://github.com/pulumi/examples/tree/master/aws-py-django-voting-app).
 
 ```python
 app_cluster = aws.ecs.Cluster(...)

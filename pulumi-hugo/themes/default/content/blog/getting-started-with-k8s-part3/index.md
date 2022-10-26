@@ -16,8 +16,8 @@ Welcome to the third article in a series using infrastructure as code to deploy 
 
 This series walks you through:
 
-- [Building a Kubernetes cluster on cloud providers]({{< relref "/blog/getting-started-with-k8s-part1" >}})
-- [Basic application deployment]({{< relref "/blog/getting-started-with-k8s-part2" >}})
+- [Building a Kubernetes cluster on cloud providers](/blog/getting-started-with-k8s-part1/)
+- [Basic application deployment](/blog/getting-started-with-k8s-part2/)
 - Advance application deployment and Helm charts
 - Stateful applications
 - Networking
@@ -219,7 +219,7 @@ Although we encapsulate the deployment in a single large script, we can improve 
 
 ## Deploying Guestbook as a Component
 
-We can abstract objects, such as Deployments and Services, into components to create our resources. [ComponentResource]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#ComponentResource" >}}) is Pulumi construct or resource that can aggregate other resources into a combined resource. Let’s take a look at how we implement the [Guestbook with components](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook/components).
+We can abstract objects, such as Deployments and Services, into components to create our resources. [ComponentResource](/docs/reference/pkg/nodejs/pulumi/pulumi#ComponentResource) is Pulumi construct or resource that can aggregate other resources into a combined resource. Let’s take a look at how we implement the [Guestbook with components](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook/components).
 
 The Kubernetes [GuestBook](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/) is a canonical example of a stateless application. It consists of multiple PHP frontend services backed by Redis replicas and a lead Redis database to store guestbook entries. In the previous example, we created a Deployment and a Service for each microservice in the application. Although this is a valid pattern for deploying an application in Kubernetes, it doesn’t take full advantage of the capabilities of infrastructure as code.
 
@@ -368,5 +368,5 @@ Using a Helm chart to deploy an application is the simplest solution if it’s a
 This article demonstrated three ways to deploy an application in Kubernetes. The applications we examined are primarily stateless with no persistent storage or volumes. In the next installment, we’ll examine [stateful services](https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/) that require persistent storage such as a database. Until the next post, learn more about Kubernetes with these resources.
 
 - Watch educational content on [Pulumi TV](https://www.youtube.com/pulumitv)
-- Learn more about Pulumi's [support for Kubernetes]({{< relref "/registry/packages/kubernetes" >}})
-- Practice [Kubernetes Tutorials]({{< relref "/registry/packages/kubernetes/how-to-guides" >}}) using Pulumi
+- Learn more about Pulumi's [support for Kubernetes](/registry/packages/kubernetes/)
+- Practice [Kubernetes Tutorials](/registry/packages/kubernetes/how-to-guides/) using Pulumi

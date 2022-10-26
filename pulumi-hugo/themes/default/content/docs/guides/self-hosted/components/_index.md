@@ -11,11 +11,11 @@ aliases:
 ---
 
 {{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the Self-Hosted Pulumi Service, sign up for the [30 day trial]({{< relref "/product/self-hosted#self-hosted-trial" >}}) or [contact us]({{< relref "/contact.md" >}}).
+Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the Self-Hosted Pulumi Service, sign up for the [30 day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
 {{% /notes %}}
 
 | Component | Repository |
 | --------- | ---------- |
-| [API]({{< relref "api" >}}) | [https://hub.docker.com/r/pulumi/service/](https://hub.docker.com/r/pulumi/service/) |
-| [Web console]({{< relref "console" >}}) |	[https://hub.docker.com/r/pulumi/console/](https://hub.docker.com/r/pulumi/console/) |
+| [API](/docs/guides/self-hosted/components/api/) | [https://hub.docker.com/r/pulumi/service/](https://hub.docker.com/r/pulumi/service/) |
+| [Web console](/docs/guides/self-hosted/console/) |	[https://hub.docker.com/r/pulumi/console/](https://hub.docker.com/r/pulumi/console/) |
 | Migrations | [https://hub.docker.com/r/pulumi/migrations/](https://hub.docker.com/r/pulumi/migrations/) |

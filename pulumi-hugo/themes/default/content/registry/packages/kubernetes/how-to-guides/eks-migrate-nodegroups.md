@@ -458,16 +458,16 @@ Pulumi updates through CI/CD.
 
 For a follow-up example on how to further use Pulumi to create Kubernetes
 clusters, or deploy workloads to a cluster, check out the rest of the
-[Kubernetes tutorials]({{< relref "/registry/packages/kubernetes/how-to-guides" >}}).
+[Kubernetes tutorials](/registry/packages/kubernetes/how-to-guides/).
 
 <!-- markdownlint-disable url -->
 [example-gh]: https://github.com/pulumi/examples/tree/master/aws-ts-eks-migrate-nodegroups
-[stack]: {{< relref "/docs/intro/concepts/stack" >}}
+[stack]: /docs/intro/concepts/stack/
 [eks-amis]: https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
 [ingress-nginx]: https://github.com/kubernetes/ingress-nginx
 [echoserver]: https://github.com/kubernetes-retired/contrib/blob/master/ingress/echoheaders/echo-app.yaml
-[stack-outputs]: {{< relref "/docs/intro/concepts/programming-model#stack-outputs" >}}
-[pulumi-config]: {{< relref "/docs/intro/concepts/config" >}}
+[stack-outputs]: /docs/intro/concepts/programming-model/#stack-outputs
+[pulumi-config]: /docs/intro/concepts/config/
 [external-dns]: https://github.com/kubernetes-incubator/external-dns
 [pod-lifecycle]: https://kubernetes.io/docs/concepts/workloads/pods/pod/#termination-of-pods
 [k8s-run-stateless]: https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment
@@ -483,8 +483,8 @@ clusters, or deploy workloads to a cluster, check out the rest of the
 [k8s-jenkins]: https://kubernetes.io/blog/2018/04/30/zero-downtime-deployment-kubernetes-jenkins
 [eks-amis]: https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
 [version-skew]: https://kubernetes.io/docs/setup/release/version-skew-policy/#supported-version-skew
-[pulumi-urn]: {{< relref "/docs/intro/concepts/programming-model#urns" >}}
-[pulumi-auto-naming]: {{< relref "/docs/intro/concepts/programming-model#autonaming" >}}
+[pulumi-urn]: /docs/intro/concepts/programming-model/#urns
+[pulumi-auto-naming]: /docs/intro/concepts/programming-model/#autonaming
 [sigterm]: https://www.gnu.org/software/libc/manual/html_node/Termination-Signals.html
 [initial-update]: #create-an-eks-cluster-deploy-workloads
 [hey-load-testing]: https://github.com/rakyll/hey

@@ -76,7 +76,7 @@ Let’s take a look at *iptables*, which is a common case. Each node has a [kube
 
 Iptables use fewer system resources because traffic is handled by [Linux netfilter](https://www.netfilter.org/), a packet filtering framework inside the Linux kernel. This means that routing traffic doesn’t require switching between the user space where Kubernetes is running and makes use of the host system's kernel network stack, which also makes it more reliable.
 
-In iptables mode, if the first Pod selected fails to respond, the connection fails. You can use readiness probes to tell kube-proxy which pods are healthy as in this [example]({{< relref "/blog/getting-started-with-k8s-part4#configure-the-mariadb-container" >}}).
+In iptables mode, if the first Pod selected fails to respond, the connection fails. You can use readiness probes to tell kube-proxy which pods are healthy as in this [example](/blog/getting-started-with-k8s-part4#configure-the-mariadb-container).
 
 There are other methods of Pod to Service networking, such as:
 
@@ -169,7 +169,7 @@ The goal of this article is to provide an overview of the Kubernetes Networking 
 
 Each article in this series is intended to be independent of each other. However, we build upon concepts introduced in previous articles. If some concepts or terminology are unfamiliar, I encourage reading the earlier articles:
 
-- [Building a Kubernetes cluster on cloud providers]({{< relref "/blog/getting-started-with-k8s-part1" >}})
-- [Basic application deployment]({{< relref "blog/getting-started-with-k8s-part2" >}})
-- [Advance application deployment and Helm charts]({{< relref "/blog/getting-started-with-k8s-part3" >}})
-- [Stateful applications]({{< relref "/blog/getting-started-with-k8s-part4" >}})
+- [Building a Kubernetes cluster on cloud providers](/blog/getting-started-with-k8s-part1/)
+- [Basic application deployment](/blog/getting-started-with-k8s-part2/)
+- [Advance application deployment and Helm charts](/blog/getting-started-with-k8s-part3/)
+- [Stateful applications](/blog/getting-started-with-k8s-part4/)

@@ -42,7 +42,7 @@ Automatic **horizontal scaling** solves the problem. At any point in time, sever
 
 The deployment artifact is just the code packaged as a zip archive and uploaded to Blob Storage. **Scale Controller** is an internal Azure component that observes the target queue and allocates Function App instances based on the queue length fluctuations. Each instance bootstraps itself with a zip file, connects to the queue, and pulls messages to process.
 
-The cloud provider manages all the components of the system, so developers can focus on writing business logic code. It can be [as simple as a JavaScript callback]({{< relref "/blog/ten-pearls-with-azure-functions-in-pulumi" >}}):
+The cloud provider manages all the components of the system, so developers can focus on writing business logic code. It can be [as simple as a JavaScript callback](/blog/ten-pearls-with-azure-functions-in-pulumi/):
 
 ``` ts
 queue.onEvent("MyHandler", async (context, msg) => {
@@ -52,7 +52,7 @@ queue.onEvent("MyHandler", async (context, msg) => {
 
 ## KEDA
 
-Over the last few years, Kubernetes has gained traction across many industries. KEDA is provides a way to design and run event-driven applications inside a Kubernetes cluster. KEDA implements the [autoscaling]({{< relref "/what-is/what-is-cloud-infrastructure-autoscaling" >}}) components in terms of Kubernetes tools.
+Over the last few years, Kubernetes has gained traction across many industries. KEDA is provides a way to design and run event-driven applications inside a Kubernetes cluster. KEDA implements the [autoscaling](/what-is/what-is-cloud-infrastructure-autoscaling/) components in terms of Kubernetes tools.
 
 The target Function App is packaged together with the Azure Functions runtime into a custom **Docker image** and published to a **registry**. A Kubernetes **deployment** utilizes that image and configures the parameters to connect it to the target event source (for instance, a queue):
 

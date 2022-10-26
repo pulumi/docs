@@ -10,7 +10,7 @@ tags:
     - cloud engineering
 ---
 
-In the [previous article]({{< relref "/blog/infrastructure-testing-concepts">}}) we discussed how to apply software testing methodologies to cloud engineering. We also examined testing regimes starting from the testing pyramid to the trophy and honeycomb models of testing better suited to distributed and cloud architectures. These testing regimes include three types of tests suited for cloud architectures:
+In the [previous article](/blog/infrastructure-testing-concepts/) we discussed how to apply software testing methodologies to cloud engineering. We also examined testing regimes starting from the testing pyramid to the trophy and honeycomb models of testing better suited to distributed and cloud architectures. These testing regimes include three types of tests suited for cloud architectures:
 
 - unit tests for testing methods and functions within a service
 - property tests for validating specified service outputs
@@ -20,7 +20,7 @@ In this article, we'll do a deep dive into each of these testing methods.
 
 <!--more-->
 
-Cloud engineering testing differs from application testing because multiple dependencies between components can have high latency. Let's examine these dependencies using an [example application](https://github.com/pulumi/examples/tree/master/aws-ts-stackreference-architecture) composed of an application layer, a database layer, and a network layer. We can visualize these dependencies with Pulumi's resource graph.The graph is constructed from the [inputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) needed to create a resource.
+Cloud engineering testing differs from application testing because multiple dependencies between components can have high latency. Let's examine these dependencies using an [example application](https://github.com/pulumi/examples/tree/master/aws-ts-stackreference-architecture) composed of an application layer, a database layer, and a network layer. We can visualize these dependencies with Pulumi's resource graph.The graph is constructed from the [inputs](/docs/intro/concepts/inputs-outputs/) needed to create a resource.
 
 The resource graph for the application layer shows many dependencies. The application deploys containers in AWS Fargate, which are instantiated with an application service that requires a service definition with many inputs.
 
@@ -118,7 +118,7 @@ Because `web-secgrp` has port 22 open to all IP addresses, we can expect it to f
 
 ## Integration testing
 
-Integration testing requires deploying resources in either a test environment or an ephemeral environment. In this [integration testing example](https://github.com/pulumi/examples/tree/master/testing-integration-py), we'll deploy a single resource using Pulumi's [Automation API]({{< relref "/docs/guides/automation-api" >}}). Spinning up [ephemeral environments]({{< relref "/docs/guides/testing/integration#ephemeral-environments" >}}) for integration testing is an excellent use for the Automation API, which provides a programmatic interface for building infrastructure without a CLI or web-based console.
+Integration testing requires deploying resources in either a test environment or an ephemeral environment. In this [integration testing example](https://github.com/pulumi/examples/tree/master/testing-integration-py), we'll deploy a single resource using Pulumi's [Automation API](/docs/guides/automation-api/). Spinning up [ephemeral environments](/docs/guides/testing/integration#ephemeral-environments) for integration testing is an excellent use for the Automation API, which provides a programmatic interface for building infrastructure without a CLI or web-based console.
 
 In this simple example, we'll use Automation API to create an S3 bucket and perform a set of tests that include:
 
@@ -127,7 +127,7 @@ In this simple example, we'll use Automation API to create an S3 bucket and perf
 - delete the file
 - delete the stack with the bucket
 
-The following code sets up the Pulumi [stack]({{< relref "/docs/intro/concepts/" >}}) and S3 bucket with Automation API. It's interesting to note that the tests don't import the Pulumi AWS SDK and uses a combination of Python's built-in `unittest` framework and Amazon's [`boto3`](https://aws.amazon.com/sdk-for-python/) Python library. This illustrates the extensibility and flexibility of infrastructure as code by letting developers choose the tools and SDKs.
+The following code sets up the Pulumi [stack](/docs/intro/concepts/) and S3 bucket with Automation API. It's interesting to note that the tests don't import the Pulumi AWS SDK and uses a combination of Python's built-in `unittest` framework and Amazon's [`boto3`](https://aws.amazon.com/sdk-for-python/) Python library. This illustrates the extensibility and flexibility of infrastructure as code by letting developers choose the tools and SDKs.
 
 ```python
 import os
@@ -168,4 +168,4 @@ When we run the test, it creates the stack and resource, runs the tests, and tea
 
 ## Summary
 
-Although distributed infrastructure presents some unique challenges because of its asynchronous nature, we can perform efficient and automated testing. Whether it is unit and property testing that uses mocks and stubs or integration testing that requires deployed resources, infrastructure as code lets you use familiar testing frameworks and SDKs. Moreover, Pulumi's Automation API makes it simple to create stacks and spin up ephemeral infrastructure for integration testing. Learn more about [infrastructure testing]({{< relref "/what-is/how-to-step-up-cloud-infrastructure-testing" >}}) with [Pulumi's Testing User Guide]({{< relref "/docs/guides/testing" >}}) and get hands-on with our [testing examples](https://github.com/pulumi/examples/#testing).
+Although distributed infrastructure presents some unique challenges because of its asynchronous nature, we can perform efficient and automated testing. Whether it is unit and property testing that uses mocks and stubs or integration testing that requires deployed resources, infrastructure as code lets you use familiar testing frameworks and SDKs. Moreover, Pulumi's Automation API makes it simple to create stacks and spin up ephemeral infrastructure for integration testing. Learn more about [infrastructure testing](/what-is/how-to-step-up-cloud-infrastructure-testing/) with [Pulumi's Testing User Guide](/docs/guides/testing) and get hands-on with our [testing examples](https://github.com/pulumi/examples/#testing).

@@ -129,7 +129,7 @@ variables:
 Provider functions are exposed in each language as regular functions, in two variations:
 
  1. a function that accepts plain arguments (strings and so on) and returns a Promise, or blocks until the result is available; and,
- 2. a function that accepts `Input` values and returns an [Output]({{< relref "/docs/intro/concepts/inputs-outputs" >}}).
+ 2. a function that accepts `Input` values and returns an [Output](/docs/intro/concepts/inputs-outputs/).
 
 The documentation for a provider function will tell you the name and signature for each of the variations.
 
@@ -145,7 +145,7 @@ Each function and method also accepts "invoke options", either as an object or a
 | pluginDownloadURL | Download the provider plugin from this URL. The download URL is otherwise inferred from the provider package. |
 | _async_ | _This option is deprecated and will be removed in a future release_ |
 
-The `parent` option has a similar purpose to the [parent option]({{< relref "/docs/intro/concepts/resources/options/parent" >}}) used when creating a resource. The parent is consulted when determining the provider to use.
+The `parent` option has a similar purpose to the [parent option](/docs/intro/concepts/resources/options/parent/) used when creating a resource. The parent is consulted when determining the provider to use.
 
 The `provider` option gives an explicit provider to use when running the invoked function. This is useful, for example, if you want to invoke a function in each of a set of AWS regions.
 

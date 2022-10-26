@@ -35,7 +35,7 @@ tags:
 
 Creating a website on AWS with an S3 bucket is a fairly straightforward task. You just need to create an S3 bucket, configure it to be a website, and add your content, right?
 
-Unfortunately getting your content into a bucket is only a part of the story. To get your website ready to handle traffic, you will want to associate a domain name and likely want to use a CDN, like Cloudfront, to help with performance. The [AWS Static Website Package]({{< relref "/registry/packages/aws-static-website" >}}) makes it easy for you to associate a domain and stand up a CDN with only a few arguments.
+Unfortunately getting your content into a bucket is only a part of the story. To get your website ready to handle traffic, you will want to associate a domain name and likely want to use a CDN, like Cloudfront, to help with performance. The [AWS Static Website Package](/registry/packages/aws-static-website/) makes it easy for you to associate a domain and stand up a CDN with only a few arguments.
 
 {{% chooser language "yaml,typescript,python,go,csharp" / %}}
 
@@ -374,7 +374,7 @@ return await Deployment.RunAsync(() =>
 
 Now that your website has atomic deployments enabled and you have solved the issue where your assets and dependencies might not be available, you still have to tackle the beast that is your CDN cache. You will need a way to tell the CDN that there is new content and to stop serving the old content.
 
-You could just rely on the cached content expiring but as stated earlier that can still lead in some cases to missing assets. The AWS Static Website Package handles communicating to the CDN that there is new content by provisioning a [Cloudfront Function]({{< relref "/registry/packages/aws/api-docs/cloudfront/function" >}}) that adds a unique build identifier to the CDN’s cache key.
+You could just rely on the cached content expiring but as stated earlier that can still lead in some cases to missing assets. The AWS Static Website Package handles communicating to the CDN that there is new content by provisioning a [Cloudfront Function](/registry/packages/aws/api-docs/cloudfront/function/) that adds a unique build identifier to the CDN’s cache key.
 
 ```js
 function handler(event){
@@ -619,4 +619,4 @@ return await Deployment.RunAsync(() =>
 
 Now when you run a `pulumi up` you will provision a new bucket, sync your content, associate the bucket to your CDN, update the Cloudfront Function so the CDN knows to fetch new content, and lastly keep your previous bucket around in case you need to rollback.
 
-Deploying and managing a static website should be easy and the AWS Static Website Package makes it so you can focus more time on generating great content and less time on the internals on your website. For more information on the AWS Static Website Package you can visit the [documentation]({{< relref "/registry/packages/aws-static-website" >}}) or via the code directly on [Github](https://github.com/pulumi/pulumi-aws-static-website).
+Deploying and managing a static website should be easy and the AWS Static Website Package makes it so you can focus more time on generating great content and less time on the internals on your website. For more information on the AWS Static Website Package you can visit the [documentation](/registry/packages/aws-static-website/) or via the code directly on [Github](https://github.com/pulumi/pulumi-aws-static-website).

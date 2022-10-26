@@ -40,7 +40,7 @@ key_features:
                 icon: puzzle
                 icon_color: yellow
                 description:
-                    Build and share cloud infrastructure with reusable [Pulumi Packages](/product/packages), which
+                    Build and share cloud infrastructure with reusable [Pulumi Packages](/product/packages/), which
                     encapsulate your cloud architectures and best practices.
 
         - description: Deploy cloud infrastructure and applications together

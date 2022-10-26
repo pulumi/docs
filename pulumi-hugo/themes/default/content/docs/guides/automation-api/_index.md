@@ -20,7 +20,7 @@ Automation API requires the Pulumi CLI to be installed and available in your `PA
 
 ## Getting started
 
-To learn how to use Automation API, see [Getting Started with Automation API]({{< relref "/docs/guides/automation-api/getting-started-automation-api.md" >}}).
+To learn how to use Automation API, see [Getting Started with Automation API](/docs/guides/automation-api/getting-started-automation-api/).
 
 ## Examples
 
@@ -85,7 +85,7 @@ Like all of Pulumi, Automation API is available in multiple languages, so you ca
 | ------------------------------------------------------ | ----------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | <img src="/logos/tech/logo-ts.png" class="h-10" />     | [TypeScript](/docs/reference/pkg/nodejs/pulumi/pulumi/automation/) | Stable                                                            |
 | <img src="/logos/tech/logo-js.png" class="h-10" />     | [JavaScript](/docs/reference/pkg/nodejs/pulumi/pulumi/automation/) | Stable                                                            |
-| <img src="/logos/tech/logo-python.png" class="h-10" /> | [Python]({{< relref "/docs/reference/pkg/python/pulumi/#module-pulumi.automation" >}}) | Stable                                                           |
+| <img src="/logos/tech/logo-python.png" class="h-10" /> | [Python](/docs/reference/pkg/python/pulumi/#module-pulumi.automation) | Stable                                                           |
 | <img src="/logos/tech/dotnet.png" class="h-10" />      | [.NET](/docs/reference/pkg/dotnet/Pulumi.Automation/Pulumi.Automation.html) | Stable |
 | <img src="/logos/tech/logo-golang.png" class="h-10" /> | [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/auto?tab=doc) | Stable |
 

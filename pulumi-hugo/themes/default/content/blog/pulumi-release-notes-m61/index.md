@@ -14,17 +14,17 @@ tags:
 It's been a busy few weeks at Pulumi, including for some of our community contributors! Read on to see what's new.
 
 - New and updated cloud providers
-  - [New Helm Release resource for Kubernetes]({{< relref "/blog/pulumi-release-notes-m61#new-helm-release-resource-for-kubernetes" >}})
-  - [New providers: MinIO and Snowflake]({{< relref "/blog/pulumi-release-notes-m61#new-providers-minio-and-snowflake" >}})
-  - [New resources in the Azure Native provider]({{< relref "/blog/pulumi-release-notes-m61#new-resources-in-the-azure-native-provider" >}})
+  - [New Helm Release resource for Kubernetes](/blog/pulumi-release-notes-m61#new-helm-release-resource-for-kubernetes)
+  - [New providers: MinIO and Snowflake](/blog/pulumi-release-notes-m61#new-providers-minio-and-snowflake)
+  - [New resources in the Azure Native provider](/blog/pulumi-release-notes-m61#new-resources-in-the-azure-native-provider)
 - Pulumi CLI and core technologies
-  - [New `pulumi about` command for easier troubleshooting]({{< relref "/blog/pulumi-release-notes-m61#new-pulumi-about-command-for-easier-troubleshooting" >}})
-  - [`pulumi config set` hides secret values]({{< relref "/blog/pulumi-release-notes-m61#pulumi-config-set-hides-secret-values" >}})
-  - [Dynamic providers in Python can now given a custom name]({{< relref "/blog/pulumi-release-notes-m61#dynamic-providers-in-python-can-now-given-a-custom-name" >}})
-  - [Automation API in .NET can use plugin installation options `exact` and `server`]({{< relref "/blog/pulumi-release-notes-m61#automation-api-in-net-can-use-plugin-installation-options-exact-and-server" >}})
-  - [Schema checker for Pulumi Packages]({{< relref "/blog/pulumi-release-notes-m61#schema-checker-for-pulumi-packages" >}})
+  - [New `pulumi about` command for easier troubleshooting](/blog/pulumi-release-notes-m61#new-pulumi-about-command-for-easier-troubleshooting)
+  - [`pulumi config set` hides secret values](/blog/pulumi-release-notes-m61#pulumi-config-set-hides-secret-values)
+  - [Dynamic providers in Python can now given a custom name](/blog/pulumi-release-notes-m61#dynamic-providers-in-python-can-now-given-a-custom-name)
+  - [Automation API in .NET can use plugin installation options `exact` and `server`](/blog/pulumi-release-notes-m61#automation-api-in-net-can-use-plugin-installation-options-exact-and-server)
+  - [Schema checker for Pulumi Packages](/blog/pulumi-release-notes-m61#schema-checker-for-pulumi-packages)
 - Pulumi Service and Pulumi.com
-  - [Organization invites now send you to the correct identity provider]({{< relref "/blog/pulumi-release-notes-m61#organization-invites-now-send-you-to-the-correct-identity-provider" >}})
+  - [Organization invites now send you to the correct identity provider](/blog/pulumi-release-notes-m61#organization-invites-now-send-you-to-the-correct-identity-provider)
 
 <!--more-->
 
@@ -34,7 +34,7 @@ It's been a busy few weeks at Pulumi, including for some of our community contri
 
 Pulumi's existing Helm `Chart` resource provides support for deploying Helm charts via templating the chart and deploying it as Pulumi resources.  This means that some features of Helm that are not availabe via Helm templating do not behave quite the same using the Pulumi Helm `Chart` resource as they do when deployed via the `helm` CLI itself - for example features like [Helm lifecycle hooks](https://helm.sh/docs/topics/charts_hooks/) and handling sub-charts and [dependencies](https://helm.sh/docs/topics/charts/#chart-dependencies). As Helm and its usage evolved over the years, Pulumi users using the `Chart` resource have noted that in many cases they would like a resource that provides the exact same behave as the `helm` CLI, but can be orchestrated as part of a Pulumi deployment.
 
-The new [Helm `Release`]({{< relref "/registry/packages/kubernetes/api-docs/helm/v3/release" >}}) resource provides Pulumi users more options to choose the right tool for their use-case. In contrast to the existing Helm `Chart` integration, which is implemented as a Component Resource that extracts the corresponding Kubernetes resources' manifests from the chart and installs them as if they were individually specified in the Pulumi user program, the new Helm `Release` resource uses the Helm SDK directly to perform the deployment, providing the exact same behavior as a corresponding `helm` CLI deployment.
+The new [Helm `Release`](/registry/packages/kubernetes/api-docs/helm/v3/release) resource provides Pulumi users more options to choose the right tool for their use-case. In contrast to the existing Helm `Chart` integration, which is implemented as a Component Resource that extracts the corresponding Kubernetes resources' manifests from the chart and installs them as if they were individually specified in the Pulumi user program, the new Helm `Release` resource uses the Helm SDK directly to perform the deployment, providing the exact same behavior as a corresponding `helm` CLI deployment.
 
 You can get started with the Helm Release resource in versions [v3.7.0](https://github.com/pulumi/pulumi-kubernetes/releases/tag/v3.7.0) and higher of the Pulumi Kubernetes Provider and SDK in all Pulumi supported languages.For example, in the following snippet we  install Redis through a Helm Chart:
 
@@ -357,13 +357,13 @@ class MyStack : Stack
 
 {{< /chooser >}}
 
-Learn more in the [announcement blog post]({{< relref "/blog/full-access-to-helm-features-through-new-helm-release-resource-for-kubernetes" >}})
+Learn more in the [announcement blog post](/blog/full-access-to-helm-features-through-new-helm-release-resource-for-kubernetes/)
 
 ### New providers: MinIO and Snowflake
 
 You can now use Pulumi's modern infrastructure-as-code solution to manage new resources! Our new provider for MinIO gives you access to the full range of high-performance, S3-compatible object storage offered by [MinIO](https://min.io). Likewise, our new provider for Snowflake lets you create and manage many of the data engineering, data lake, data warehouse, and other data resources in [Snowflake's](https://snowflake.com) data cloud.
 
-Learn more in the [MinIO]({{< relref "/registry/packages/minio">}}) and [Snowflake]({{< relref "/registry/packages/snowflake">}}) provider docs
+Learn more in the [MinIO](/registry/packages/minio/) and [Snowflake](/registry/packages/snowflake/) provider docs
 
 ### New resources in the Azure Native provider
 
@@ -408,7 +408,7 @@ Thanks [@jancespivo](https://github.com/jancespivo) for contributing this change
 
 ### Automation API in .NET can use plugin installation options `exact` and `server`
 
-When running Pulumi interactively, you can use the [`pulumi plugin install` command]({{< relref "/docs/reference/cli/pulumi_plugin_install" >}}) to manually install plugins required by your program, possibly from a server where you host your own plugins. You can now do the same task in the .NET Automation API:
+When running Pulumi interactively, you can use the [`pulumi plugin install` command](/docs/reference/cli/pulumi_plugin_install) to manually install plugins required by your program, possibly from a server where you host your own plugins. You can now do the same task in the .NET Automation API:
 
 ```csharp
 await workspace.InstallPluginAsync("myplugin", "v0.0.1", options: new PluginInstallOptions
@@ -423,7 +423,7 @@ Thanks [@orionstudt](https://github.com/orionstudt) for contributing this change
 
 ### Schema checker for Pulumi Packages
 
-When authoring a Pulumi Package, it can be helpful to validate that your [schema]({{< relref "/docs/guides/pulumi-packages/schema" >}}) is correct. Now, you can validate your schema by running the [`pulumi schema check` command]({{< relref "/docs/reference/cli/pulumi_schema_check" >}}).
+When authoring a Pulumi Package, it can be helpful to validate that your [schema](/docs/guides/pulumi-packages/schema/) is correct. Now, you can validate your schema by running the [`pulumi schema check` command](/docs/reference/cli/pulumi_schema_check).
 
 [Learn more in this GitHub PR](https://github.com/pulumi/pulumi/pull/7865)
 

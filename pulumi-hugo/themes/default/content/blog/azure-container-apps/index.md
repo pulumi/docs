@@ -13,7 +13,7 @@ Today, Microsoft [announced](https://aka.ms/containerapps/ignite-blog) a new gen
 
 Container Apps are designed to abstract infrastructure management with flexible serverless containers. Developers can run containers at scale without the burden of standing up and managing a Kubernetes cluster manually.
 
-We are happy to announce same-day support for Azure Container Apps in the Pulumi [Azure Native Provider](/registry/packages/azure-native), which covers 100% of the Azure Resource Manager APIs and gives you highest fidelity integration with Azure's resources.
+We are happy to announce same-day support for Azure Container Apps in the Pulumi [Azure Native Provider](/registry/packages/azure-native/), which covers 100% of the Azure Resource Manager APIs and gives you highest fidelity integration with Azure's resources.
 
 <!--more-->
 
@@ -488,7 +488,7 @@ This post shows how to use Pulumi to build a container image and publish it as a
 
 ### Further steps
 
-- [Get Started with Pulumi for Azure today.]({{<relref "/docs/get-started/azure">}})
+- [Get Started with Pulumi for Azure today.](/docs/get-started/azure/)
 - [Read about Azure Container Apps announcement.](https://aka.ms/containerapps/ignite-blog)
 
 #### Complete Azure Container Apps example

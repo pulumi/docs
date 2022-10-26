@@ -20,11 +20,11 @@ of these are complementary and can be used together, whereas some are "either or
 
 Here are several useful comparisons that will help you understand Pulumi's place in the cloud tooling ecosystem:
 
-* [Hashicorp Terraform]({{< relref "/docs/intro/vs/terraform" >}})
-* [Cloud Templates (AWS CloudFormation, etc.)]({{< relref "/docs/intro/vs/cloud-templates" >}})
-* [Cloud Template Transpilers (AWS CDK, etc.)]({{< relref "/docs/intro/vs/cloud-template-transpilers" >}})
-* [Cloud SDKs (AWS Boto, etc.)]({{< relref "/docs/intro/vs/cloud-sdks" >}})
-* [Serverless Framework]({{< relref "/docs/intro/vs/serverless" >}})
-* [Kubernetes YAML and DSLs]({{< relref "/docs/intro/vs/k8s-yaml-dsls" >}})
-* [Chef, Puppet, Ansible, Salt, etc.]({{< relref "/docs/intro/vs/chef-puppet-etc" >}})
-* [Custom Solutions]({{< relref "/docs/intro/vs/custom" >}})
+* [Hashicorp Terraform](/docs/intro/vs/terraform/)
+* [Cloud Templates (AWS CloudFormation, etc.)](/docs/intro/vs/cloud-templates)
+* [Cloud Template Transpilers (AWS CDK, etc.)](/docs/intro/vs/cloud-template-transpilers)
+* [Cloud SDKs (AWS Boto, etc.)](/docs/intro/vs/cloud-sdks)
+* [Serverless Framework](/docs/intro/vs/serverless/)
+* [Kubernetes YAML and DSLs](/docs/intro/vs/k8s-yaml-dsls/)
+* [Chef, Puppet, Ansible, Salt, etc.](/docs/intro/vs/chef-puppet-etc/)
+* [Custom Solutions](/docs/intro/vs/custom/)

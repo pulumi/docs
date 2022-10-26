@@ -23,13 +23,13 @@ Dive into Learn Pulumi for a comprehensive walkthrough of key Pulumi concepts in
 
 ## How-to Guides
 
-Explore our how-to guides if you're looking for examples of specific architectures or application stacks. These guides are available in all Pulumi languages and cover many common architectures such as [GKE clusters]({{< relref "/registry/packages/gcp/how-to-guides/gcp-ts-gke-hello-world" >}}), [Cloud Run containers]({{< relref "/registry/packages/gcp/how-to-guides/gcp-ts-cloudrun" >}}), and [Cloud Function HTTP endpoints]({{< relref "/registry/packages/gcp/how-to-guides/gcp-ts-functions" >}}).
+Explore our how-to guides if you're looking for examples of specific architectures or application stacks. These guides are available in all Pulumi languages and cover many common architectures such as [GKE clusters](/registry/packages/gcp/how-to-guides/gcp-ts-gke-hello-world/), [Cloud Run containers](/registry/packages/gcp/how-to-guides/gcp-ts-cloudrun/), and [Cloud Function HTTP endpoints](/registry/packages/gcp/how-to-guides/gcp-ts-functions/).
 
 {{< get-started-next-step path="/registry/packages/gcp/how-to-guides" label="Explore How-to Guides" ref="gs-gcp-guides" >}}
 
 ## How Pulumi Works
 
-Learn how Pulumi works from its architecture to key concepts, including [stacks]({{< relref "/docs/intro/concepts/stack" >}}), [state]({{< relref "/docs/intro/concepts/state" >}}), [configuration]({{< relref "/docs/intro/concepts/config" >}}), and [secrets]({{< relref "/docs/intro/concepts/secrets" >}}).
+Learn how Pulumi works from its architecture to key concepts, including [stacks](/docs/intro/concepts/stack/), [state](/docs/intro/concepts/state/), [configuration](/docs/intro/concepts/config/), and [secrets](/docs/intro/concepts/secrets/).
 
 {{< get-started-next-step path="/docs/intro/concepts" label="Read Documentation" ref="gs-gcp-docs" >}}
 

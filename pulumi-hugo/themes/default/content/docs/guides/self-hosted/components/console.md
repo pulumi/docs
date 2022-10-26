@@ -9,9 +9,9 @@ meta_desc: Pulumi Service is one of the components required for self-hosting Pul
 ---
 
 {{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the Self-Hosted Pulumi Service, sign up for the [30 day trial]({{< relref "/product/self-hosted#self-hosted-trial" >}}) or [contact us]({{< relref "/contact.md" >}}).
+Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the Self-Hosted Pulumi Service, sign up for the [30 day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
 
-To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends]({{< relref "/docs/intro/concepts/state" >}}).
+To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/intro/concepts/state/).
 {{% /notes %}}
 
 The Pulumi Service allows users to view the stacks they have created and see any past activities recorded for those stacks. It also allows you to manage RBAC for your users.
@@ -37,7 +37,7 @@ You can run this container on the same host that your API container is running o
 ## What's In The Container?
 
 {{% notes type="info" %}}
-The container image repository is private. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Pulumi Service.
+The container image repository is private. [Contact us](/contact/) if you would like to evaluate the Self-Hosted Pulumi Service.
 {{% /notes %}}
 
 The Console container runs a web server using a Node 10-based image.
@@ -64,7 +64,7 @@ The following are the core environment variables that are required at a minimum.
 | Variable Name | Description |
 | ------------- | ----------- |
 | RECAPTCHA_SITE_KEY | Used for password reset requests by users. [Create a new reCaptcha v2](https://www.google.com/recaptcha/admin). |
-| SAML_SSO_ENABLED | Default is `false`. Set to `true` to enable the SAML SSO signin/signup option. Before enabling, make sure you have completed the steps in the [Enabling SAML SSO]({{< relref "saml-sso" >}}) guide. |
+| SAML_SSO_ENABLED | Default is `false`. Set to `true` to enable the SAML SSO signin/signup option. Before enabling, make sure you have completed the steps in the [Enabling SAML SSO](/docs/guides/self-hosted/saml-sso/) guide. |
 
 ### GitHub OAuth
 
@@ -93,8 +93,8 @@ The following are the core environment variables that are required at a minimum.
 
 | Variable Name | Description |
 | ------------- | ----------- |
-| PULUMI_HIDE_EMAIL_LOGIN | When `true`, hides the email identity as a login option but does not disable the API handler. To disable the API handler for email logins set the API container environment variable `PULUMI_DISABLE_EMAIL_LOGIN`. Refer to the API container [environment variables]({{< relref "/docs/guides/self-hosted/components/api#other-env-vars" >}}) for more information. |
-| PULUMI_HIDE_EMAIL_SIGNUP | When `true` hides the email identity as a signup option but does not disable the API handler. To disable the API handler for email signups set the API container environment variable `PULUMI_DISABLE_EMAIL_SIGNUP`. Refer to the API container [environment variables]({{< relref "/docs/guides/self-hosted/components/api#other-env-vars" >}}) for more information. |
+| PULUMI_HIDE_EMAIL_LOGIN | When `true`, hides the email identity as a login option but does not disable the API handler. To disable the API handler for email logins set the API container environment variable `PULUMI_DISABLE_EMAIL_LOGIN`. Refer to the API container [environment variables](/docs/guides/self-hosted/components/api#other-env-vars) for more information. |
+| PULUMI_HIDE_EMAIL_SIGNUP | When `true` hides the email identity as a signup option but does not disable the API handler. To disable the API handler for email signups set the API container environment variable `PULUMI_DISABLE_EMAIL_SIGNUP`. Refer to the API container [environment variables](/docs/guides/self-hosted/components/api#other-env-vars) for more information. |
 
 ### TLS Environment Variables
 

@@ -16,7 +16,7 @@ This guide walks you through configuring OneLogin as a SAML SSO identity provide
 
 ## Prerequisites
 
-- [Single Sign-On]({{< relref "sso" >}})
+- [Single Sign-On](/docs/guides/saml/sso/)
 
 ## Creating the OneLogin Application
 
@@ -112,4 +112,4 @@ name of your Pulumi organization.
 
 ## Troubleshooting
 
-If you run into any troubles configuring OneLogin, signing into Pulumi, or need some assistance, [contact us]({{< relref "/about#contact-us" >}}).
+If you run into any troubles configuring OneLogin, signing into Pulumi, or need some assistance, [contact us](/about#contact-us).

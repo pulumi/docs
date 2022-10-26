@@ -41,15 +41,15 @@ tags:
 Over the holidays we have been releasing new features and improvements. Read on to learn about what's new in this release!
 
 - Cloud Providers and Packages
-  - [New `Command` package]({{< relref "/blog/pulumi-release-notes-66#new-command-package" >}})
-  - [Support pulumi import for Kubernetes CRDs]({{< relref "/blog/pulumi-release-notes-66#support-pulumi-import-for-kubernetes-crds" >}})
-  - [Various improvements to Helm Release]({{< relref "/blog/pulumi-release-notes-66#various-improvements-to-helm-release" >}})
+  - [New `Command` package](/blog/pulumi-release-notes-66#new-command-package)
+  - [Support pulumi import for Kubernetes CRDs](/blog/pulumi-release-notes-66#support-pulumi-import-for-kubernetes-crds)
+  - [Various improvements to Helm Release](/blog/pulumi-release-notes-66#various-improvements-to-helm-release)
 - Pulumi CLI and core technologies
-  - [Support using native ES modules as Pulumi scripts]({{< relref "/blog/pulumi-release-notes-66#support-using-native-es-modules-as-pulumi-scripts" >}})
-  - [Support packages with plugins hosted in any third-party location]({{< relref "/blog/pulumi-release-notes-66#support-packages-with-plugins-hosted-in-any-third-party-location" >}})
-  - [State locking default enabled]({{< relref "/blog/pulumi-release-notes-66#state-locking-default-enabled" >}})
+  - [Support using native ES modules as Pulumi scripts](/blog/pulumi-release-notes-66#support-using-native-es-modules-as-pulumi-scripts)
+  - [Support packages with plugins hosted in any third-party location](/blog/pulumi-release-notes-66#support-packages-with-plugins-hosted-in-any-third-party-location)
+  - [State locking default enabled](/blog/pulumi-release-notes-66#state-locking-default-enabled)
 - Pulumi Service
-  - [Audit logging for third-party secrets managers]({{< relref "/blog/pulumi-release-notes-66#audit-logging-for-third-party-secrets-managers" >}})
+  - [Audit logging for third-party secrets managers](/blog/pulumi-release-notes-66#audit-logging-for-third-party-secrets-managers)
 
 <!--more-->
 
@@ -57,16 +57,16 @@ Over the holidays we have been releasing new features and improvements. Read on 
 
 ### New `Command` package
 
-As part of creating or updating infrastructure, it is often necessary to run scripts and/or commands. In order to improve this experience we released a new [Pulumi Command package]({{< relref "/registry/packages/command" >}}) in the Pulumi Registry which enables users to run scripts locally or remotely on a target VM as part of the Pulumi resource lifecycle.
+As part of creating or updating infrastructure, it is often necessary to run scripts and/or commands. In order to improve this experience we released a new [Pulumi Command package](/registry/packages/command/) in the Pulumi Registry which enables users to run scripts locally or remotely on a target VM as part of the Pulumi resource lifecycle.
 
 This new package is supported in all Pulumi languages.
 
 The Command package supports quite a few common patterns involving local and remote scripts execution, such as:
-- [A simple local resource (random)]({{< relref "registry/packages/command#a-simple-local-resource-random" >}})
-- [Remote provisioning of an EC2 instance]({{< relref "/registry/packages/command#remote-provisioning-of-an-ec2-instance" >}})
-- [Invoking a Lambda during a Pulumi deployment]({{< relref "/registry/packages/command#invoking-a-lambda-during-pulumi-deployment" >}})
-- [Using local.Command with curl to manage an external REST API]({{< relref "/registry/packages/command#using-localcommand-with-curl-to-manage-external-rest-api" >}})
-- [Graceful cleanup of workloads in a Kubernetes cluster]({{< relref "/registry/packages/command#graceful-cleanup-of-workloads-in-a-kubernetes-cluster" >}})
+- [A simple local resource (random)](/registry/packages/command#a-simple-local-resource-random)
+- [Remote provisioning of an EC2 instance](/registry/packages/command#remote-provisioning-of-an-ec2-instance)
+- [Invoking a Lambda during a Pulumi deployment](/registry/packages/command#invoking-a-lambda-during-pulumi-deployment)
+- [Using local.Command with curl to manage an external REST API](/registry/packages/command#using-localcommand-with-curl-to-manage-external-rest-api)
+- [Graceful cleanup of workloads in a Kubernetes cluster](/registry/packages/command#graceful-cleanup-of-workloads-in-a-kubernetes-cluster)
 
 Learn more in the [Command package GitHub issue](https://github.com/pulumi/pulumi/issues/99)
 
@@ -116,6 +116,6 @@ We [previously added](https://github.com/pulumi/pulumi/pull/2697) support for se
 
 ### Audit logging for third-party secrets managers
 
-Previously secret decryption [Audit Log]({{< relref "/docs/intro/pulumi-service/audit-logs" >}}) events were only logged for users using the Pulumi Service secrets provider. Now users who use the Pulumi Service for their state but a third-party secrets provider (AWS KMS, Azure KeyVault, HashiCorp Vault, etc.) will have a log of these events.
+Previously secret decryption [Audit Log](/docs/intro/pulumi-service/audit-logs/) events were only logged for users using the Pulumi Service secrets provider. Now users who use the Pulumi Service for their state but a third-party secrets provider (AWS KMS, Azure KeyVault, HashiCorp Vault, etc.) will have a log of these events.
 
 [Learn more in this GitHub issue](https://github.com/pulumi/pulumi/issues/8563).

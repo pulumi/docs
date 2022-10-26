@@ -15,7 +15,7 @@ tags:
 
 The Azure cloud platform includes over 200 products and cloud services. Wherever you are in your Microsoft cloud engineering journey, you should be familiar with these top 5 cloud tasks that are essential building blocks commonly used to deploy applications and infrastructure to the Azure cloud.
 
-In this series of articles, we'll go in-depth on [virtual machines]({{< relref "/blog/top-5-things-for-azure-devs-vm">}}), [Azure Functions]({{< relref "/blog/top-5-things-for-azure-devs-serverless">}}), [static websites]({{< relref "/blog/top-5-things-for-azure-devs-static-websites">}}), [building an Azure Kubernetes Service cluster]({{< relref "/blog/top-5-things-for-azure-devs-kubernetes-infrastructure">}}) and [deploying applications on AKS]({{< relref "/blog/top-5-things-for-azure-devs-kubernetes-apps">}}), and [DevOps with Azure App Service]({{< relref "/blog/top-5-things-for-azure-devs-devops">}}).
+In this series of articles, we'll go in-depth on [virtual machines](/blog/top-5-things-for-azure-devs-vm/), [Azure Functions](/blog/top-5-things-for-azure-devs-serverless/), [static websites](/blog/top-5-things-for-azure-devs-static-websites/), [building an Azure Kubernetes Service cluster](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/) and [deploying applications on AKS](/blog/top-5-things-for-azure-devs-kubernetes-apps/), and [DevOps with Azure App Service](/blog/top-5-things-for-azure-devs-devops/).
 
 <!--more-->
 
@@ -76,7 +76,7 @@ Azure provides many ways to deploy an AKS cluster, including:
 - [Azure portal](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough-portal)
 - [Azure Resource Manager templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview)
 - [Bicep](https://github.com/Azure/bicep)
-- [Infrastructure as Code]({{< relref "/registry/packages/azure-native/how-to-guides/azure-cs-aks" >}})
+- [Infrastructure as Code](/registry/packages/azure-native/how-to-guides/azure-cs-aks/)
 
 When you deploy an AKS Cluster, the worker nodes and Kubernetes master are configured with a basic configuration. You can additionally configure networking, storage, monitoring, and policies. We'll cover configuring AKS in this series.
 
@@ -87,7 +87,7 @@ Deploying applications on AKS is equally flexible, and you can deploy using:
 - [kubectl](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-strong-app-management-strong-) and YAML manifests
 - [Helm](https://docs.microsoft.com/en-us/azure/aks/kubernetes-helm), an open-source Kubernetes packaging tool
 - [Azure Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/apps/cd/deploy-aks?view=azure-devops&tabs=java)
-[Infrastructure as Code]({{< relref "/registry/packages/kubernetes/how-to-guides/configmap-rollout" >}})
+[Infrastructure as Code](/registry/packages/kubernetes/how-to-guides/configmap-rollout/)
 
 We'll examine these options and do a deep dive on application deployment in a follow-up article.
 

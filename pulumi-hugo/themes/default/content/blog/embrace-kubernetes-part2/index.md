@@ -10,7 +10,7 @@ tags:
 
 ---
 
-In the [first article]({{< relref "/blog/embrace-kubernetes-part1" >}}) in this series,  we gave you some questions to help you and others at your company decide if Kubernetes is right for you. In this post, we’ll give you an example of where Kubernetes can be a good fit.
+In the [first article](/blog/embrace-kubernetes-part1/) in this series,  we gave you some questions to help you and others at your company decide if Kubernetes is right for you. In this post, we’ll give you an example of where Kubernetes can be a good fit.
 
 <!--more-->
 
@@ -66,4 +66,4 @@ Implementing a Kubernetes solution is not an overnight change. It's common to ru
 
 ## Learn More
 
-If you’ve looked at [Get Started with Kubernetes]({{< relref "/docs/get-started/kubernetes" >}}) and want to learn more about how Pulumi can help you with your implementation, take a look at [Kubernetes Overview]({{< relref "/registry/packages/kubernetes" >}}) and [Getting Started with Kubernetes: Application Basics]({{< relref "/blog/getting-started-with-k8s-part2" >}}).
+If you’ve looked at [Get Started with Kubernetes](/docs/get-started/kubernetes/) and want to learn more about how Pulumi can help you with your implementation, take a look at [Kubernetes Overview](/registry/packages/kubernetes/) and [Getting Started with Kubernetes: Application Basics](/blog/getting-started-with-k8s-part2).

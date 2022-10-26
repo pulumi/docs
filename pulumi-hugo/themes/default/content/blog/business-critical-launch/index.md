@@ -42,18 +42,18 @@ The Pulumi Cloud Engineering Platform enables organizations to build, deploy, an
 
 Pulumi adoption continues to accelerate across enterprises around the world with more than one million downloads per month. These enterprise customers have specific requirements, like advanced security and compliance features, premium support, and self-hosting options. Today, the Pulumi Business Critical Edition joins our existing offerings, the Pulumi Team Edition and the Pulumi Enterprise Edition, to meet these customers' needs. We are thrilled to be launching a new offering that enables us to support the most sophisticated production workloads in the modern cloud.
 
-Existing customers of Pulumi Team and Enterprise Editions are unaffected by these changes. Customers who are looking to expand to leverage the features of Pulumi Business Critical Edition can [contact us]({{< relref "/contact" >}}) to get started. New customers trialing Pulumi for their organization will get access to all of the features of Business Critical Edition during their 14 day trial.
+Existing customers of Pulumi Team and Enterprise Editions are unaffected by these changes. Customers who are looking to expand to leverage the features of Pulumi Business Critical Edition can [contact us](/contact/) to get started. New customers trialing Pulumi for their organization will get access to all of the features of Business Critical Edition during their 14 day trial.
 
-Full details of our Pulumi Service editions can be found on [our pricing page]({{< relref "/pricing" >}}).
+Full details of our Pulumi Service editions can be found on [our pricing page](/pricing/).
 
 ![Pricing Page](editions.svg)
 
 The Pulumi Business Critical edition includes everything in the Pulumi Enterprise Edition, plus:
 
-- [Organization policies and enforcement]({{< relref "/docs/guides/crossguard" >}})
-- [Self-hosting available]({{< relref "/docs/guides/self-hosted" >}})
-- [Cross-domain identity (SCIM)]({{< relref "/docs/guides/scim" >}})
-- [Automatic export of audit logs]({{< relref "docs/intro/pulumi-service/audit-logs#automated-export" >}})
+- [Organization policies and enforcement](/docs/guides/crossguard/)
+- [Self-hosting available](/docs/guides/self-hosted/)
+- [Cross-domain identity (SCIM)](/docs/guides/scim)
+- [Automatic export of audit logs](/docs/intro/pulumi-service/audit-logs#automated-export)
 - 24 x 7 support included
 - Premium training, onboarding and certain professional services
 
@@ -62,11 +62,11 @@ Policy as Code (CrossGuard), a Business Critical feature:
 
 ## Self-Hosted Pulumi Service
 
-We are also announcing today a 30 day trial for self-hosting the [Pulumi Service]({{< relref "/product/pulumi-service" >}}). Self-Hosted Pulumi Service allows you to deploy and manage the Pulumi Service on your own infrastructure, either in the cloud or on-premises.  Self-hosting is an option for organizations that need to maintain complete control over hosting, network isolation, identity, and data ownership in order to satisfy segment-specific compliance requirements. It can take time to install and configure a self-hosted product in your desired deployment option, and we want to make sure there is enough time to assess the product. This is why we have launched a 30 day trial, instead of 14 day like the Pulumi Service. Sign up today for the 30 day trial on our [Self-Hosted Pulumi Service page]({{< relref "/product/self-hosted" >}}).
+We are also announcing today a 30 day trial for self-hosting the [Pulumi Service](/product/pulumi-service/). Self-Hosted Pulumi Service allows you to deploy and manage the Pulumi Service on your own infrastructure, either in the cloud or on-premises.  Self-hosting is an option for organizations that need to maintain complete control over hosting, network isolation, identity, and data ownership in order to satisfy segment-specific compliance requirements. It can take time to install and configure a self-hosted product in your desired deployment option, and we want to make sure there is enough time to assess the product. This is why we have launched a 30 day trial, instead of 14 day like the Pulumi Service. Sign up today for the 30 day trial on our [Self-Hosted Pulumi Service page](/product/self-hosted/).
 
 ![Self-Hosted Screenshot](self-hosted.png)
 
-The Self-Hosted Pulumi Service can be installed in any on-premises or cloud provider environment. It can also run in air-gapped environments without access to the Internet, including those with the most demanding compliance needs such as FedRAMP. In concert with the launch of the 30 day trial, we have made the [deployment reference architectures](https://github.com/pulumi/pulumi-self-hosted-installers) public. For assistance setting up your environment or if you don’t see your desired deployment option, [contact us]({{< relref "/contact" >}}).  Full details on self-hosting the Pulumi Service can be found in our [Self-Hosted Pulumi Service documentation]({{< relref "/docs/guides/self-hosted" >}}).
+The Self-Hosted Pulumi Service can be installed in any on-premises or cloud provider environment. It can also run in air-gapped environments without access to the Internet, including those with the most demanding compliance needs such as FedRAMP. In concert with the launch of the 30 day trial, we have made the [deployment reference architectures](https://github.com/pulumi/pulumi-self-hosted-installers) public. For assistance setting up your environment or if you don’t see your desired deployment option, [contact us](/contact/).  Full details on self-hosting the Pulumi Service can be found in our [Self-Hosted Pulumi Service documentation](/docs/guides/self-hosted/).
 
 ## Pulumi in the Amazon Web Services (AWS) Marketplace
 
@@ -76,4 +76,4 @@ In concert with the new Pulumi Business Critical Edition and Self-Hosted Pulumi 
 
 We hope the new Pulumi Business Critical Edition, Self-Hosted Pulumi Service trial, and AWS Marketplace listing make it easier for your organization to adopt and scale your Cloud Engineering practices using the Pulumi Service.
 
-All editions of the Pulumi Service, including Business Critical and Self-Hosted, are immediately available. Enterprises can [contact us]({{< relref "/contact" >}}) to discuss which product experiences might be best suited to their needs. Enterprises can choose to deploy Pulumi on their own or take advantage of Pulumi’s Business Critical Edition onboarding program.
+All editions of the Pulumi Service, including Business Critical and Self-Hosted, are immediately available. Enterprises can [contact us](/contact/) to discuss which product experiences might be best suited to their needs. Enterprises can choose to deploy Pulumi on their own or take advantage of Pulumi’s Business Critical Edition onboarding program.

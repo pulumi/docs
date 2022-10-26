@@ -93,14 +93,13 @@ of the system.
 I hope this short introduction to how state works, especially with
 infrastructure-as-code platforms, helps get you on your way! If you want to read
 more about state with Pulumi (and get some nifty diagrams), head to
-[State and Backends]({{< relref "/docs/intro/concepts/state" >}}). Until
+[State and Backends](/docs/intro/concepts/state/). Until
 next time!
 
 ---
 
 Leslie Lamport has some fantastic, free resources and videos about the formal
-specifications in TLA+, which he created, at [his site on
-TLA+](http://lamport.azurewebsites.net/tla/tla.html). I'm a huge fan.
+specifications in TLA+, which he created, at [his site on TLA+](http://lamport.azurewebsites.net/tla/tla.html). I'm a huge fan.
 
 Also, if you want to watch a short video on state to get a better sense of the
 physics example, head on over to

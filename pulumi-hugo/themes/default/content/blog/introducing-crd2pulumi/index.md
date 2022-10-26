@@ -370,7 +370,7 @@ class MyStack : Stack
                     }
                 }
             }
-        );  
+        );
     }
 }
 
@@ -450,12 +450,12 @@ If you'd like to try `crd2pulumi` today, head to the [release page] and download
 operating system.
 
 If you'd like to learn about Pulumi and how to manage your
-infrastructure and Kubernetes through code, [get started today]({{< relref "/docs/get-started" >}}). Pulumi is open
+infrastructure and Kubernetes through code, [get started today](/docs/get-started/). Pulumi is open
 source and free to use.
 
 For further examples on how to use Pulumi to create Kubernetes
 clusters, or deploy workloads to a cluster, check out the rest of the
-[Kubernetes tutorials]({{< relref "/registry/packages/kubernetes/how-to-guides" >}}).
+[Kubernetes tutorials](/registry/packages/kubernetes/how-to-guides/).
 
 As always, you can check out our code on
 [GitHub](https://github.com/pulumi), follow us on
@@ -465,12 +465,12 @@ join our [Community Slack](https://slack.pulumi.com/) channel if you have
 any questions, need support, or just want to say hello.
 
 <!-- markdownlint-disable url -->
-[apiextensions package]: {{< relref "/registry/packages/kubernetes/api-docs/apiextensions" >}}
+[apiextensions package]: /registry/packages/kubernetes/api-docs/apiextensions/
 [crd2pulumi]: https://github.com/pulumi/crd2pulumi
 [cert-manager]: https://github.com/jetstack/cert-manager/tree/master/deploy/crds
 [CronTab CRD]: https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/#create-a-customresourcedefinition
-[CustomResource]: {{< relref "/registry/packages/kubernetes/api-docs/apiextensions/customresource" >}}
-[CustomResourceDefinition]: {{< relref "/registry/packages/kubernetes/api-docs/apiextensions/v1/customresourcedefinition" >}}
+[CustomResource]: /registry/packages/kubernetes/api-docs/apiextensions/customresource/
+[CustomResourceDefinition]: /registry/packages/kubernetes/api-docs/apiextensions/v1/customresourcedefinition/
 [Istio]: https://github.com/istio/istio/tree/0321da58ca86fc786fb03a68afd29d082477e4f2/manifests/charts/base/crds
 [real-world cert-manager example]: https://docs.cert-manager.io/en/release-0.7/tasks/issuing-certificates/index.html#creating-certificate-resources
 [release page]: https://github.com/pulumi/crd2pulumi/releases

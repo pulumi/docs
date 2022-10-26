@@ -13,7 +13,7 @@ Since we first launched Pulumi 4 years ago, a core point of differentiation betw
 
 Our goal though has always been to offer the broadest range of programming language options to empower __*every*__ cloud builder so that they could benefit from the best of Pulumi’s Infrastructure as Code platform.
 
-Today, we are excited to launch [Pulumi YAML]({{< relref "/docs/intro/languages/yaml" >}}), a simple YAML-based interface to the entirety of the Pulumi Infrastructure as Code platform.
+Today, we are excited to launch [Pulumi YAML](/docs/intro/languages/yaml/), a simple YAML-based interface to the entirety of the Pulumi Infrastructure as Code platform.
 
 <!--more-->
 
@@ -24,10 +24,10 @@ Pulumi YAML is a great option for smaller scale cloud infrastructure use cases. 
 * Providing a simple interface to a complex set of high-level cloud components built with existing general-purpose Pulumi languages.
 * Systems which will generate infrastructure as code definitions programmatically -- such as self-service provisioning portals.
 
-Like all other Pulumi languages, Pulumi YAML programs have access to all the core features of Pulumi’s infrastructure-as-code tooling, including native providers, secrets management, stack references, Pulumi Packages, and all the features of the Pulumi Service.  Critically, Pulumi YAML programs can interoperate seamlessly with the rest of the Pulumi ecosystem, consuming the outputs of other Pulumi programs and using Pulumi components built in existing Pulumi languages.  If the complexity of your Pulumi YAML projects increases, the new `pulumi convert` feature, enabled by the underlying [Pulumi CrossCode]({{< relref "/crosscode" >}}) technology, can be used to convert your Pulumi YAML program into your favorite general purpose Pulumi language.
+Like all other Pulumi languages, Pulumi YAML programs have access to all the core features of Pulumi’s infrastructure-as-code tooling, including native providers, secrets management, stack references, Pulumi Packages, and all the features of the Pulumi Service.  Critically, Pulumi YAML programs can interoperate seamlessly with the rest of the Pulumi ecosystem, consuming the outputs of other Pulumi programs and using Pulumi components built in existing Pulumi languages.  If the complexity of your Pulumi YAML projects increases, the new `pulumi convert` feature, enabled by the underlying [Pulumi CrossCode](/crosscode/) technology, can be used to convert your Pulumi YAML program into your favorite general purpose Pulumi language.
 
 {{% notes type="info" %}}
-Watch our recent workshop: Introduction to Infrastructure as Code with YAML. In this workshop you'll learn how to build, configure and deploy a modern application using Docker. [Watch On-Demand]({{< relref "/resources/introduction-to-infrastructure-as-code-with-yaml" >}})
+Watch our recent workshop: Introduction to Infrastructure as Code with YAML. In this workshop you'll learn how to build, configure and deploy a modern application using Docker. [Watch On-Demand](/resources/introduction-to-infrastructure-as-code-with-yaml/)
 {{% /notes %}}
 
 {{< youtube "QFCkubMhY3U" >}}
@@ -187,7 +187,7 @@ The following example highlights the use of a variety of Pulumi features via Pul
 * __Config__: Specify the Pulumi configuration parameters and their defaults
 * __Variables__: Use Pulumi function invokes to get data from the cloud provider for use in constructing resources.
 * __Providers__:  Create resource providers to connect to specific instances of a target cloud, like an Azure account or in this case a Docker registry.
-* __Resource Options__: Pass any Pulumi [Resource Option]({{< relref "/docs/intro/concepts/resources/options" >}}) to a resource definition, to define replacement behavior, resource protection, secret outputs and more.
+* __Resource Options__: Pass any Pulumi [Resource Option](/docs/intro/concepts/resources/options/) to a resource definition, to define replacement behavior, resource protection, secret outputs and more.
 * __Multiple Providers__:  Pass outputs from Azure resources into Docker resources, and outputs from Docker resources back into Azure resources to orchestrate a complete application deployment.
 
 ```yaml
@@ -444,4 +444,4 @@ From here, you can adopt more features available in Pulumi Python - loops and co
 
 We are really excited to be introducing YAML to the collection of languages supported by Pulumi’s Universal Infrastructure as Code platform.  With the addition of Pulumi YAML, every cloud builder now has a great option for deploying cloud infrastructure using Pulumi.  All of the benefits of Pulumi are available from YAML - the richest Native Providers for major cloud platforms, a wide range of higher-level components in the Pulumi Registry, deep support for secrets, infrastructure refactoring with `aliases`, a long tail of Cloud and SaaS providers, enforcement of Policy as Code and Audit Logs for all deployments in the Pulumi Service, and so much more.  Because you can use components built with other Pulumi languages, the interface to Pulumi YAML can be kept simple, allowing platform teams to define simple interfaces to their cloud infrastructure platform.  But if and when the Pulumi YAML does get more complex than is appropriate for YAML, the `pulumi convert` command provides an easy path to continue to get the full benefits of Pulumi’s general purpose programming language options.
 
-The Pulumi YAML language support is open source at [https://github.com/pulumi/pulumi-yaml](https://github.com/pulumi/pulumi-yaml), and YAML examples are available for all packages and cloud providers in the [Pulumi Registry]({{< relref "/registry" >}}). You can get started with Pulumi YAML today in the [Pulumi Getting Started]({{< relref "/docs/get-started" >}}) guide and the [Pulumi YAML language docs]({{< relref "/docs/intro/languages/yaml" >}}).  We can’t wait to see what you build!
+The Pulumi YAML language support is open source at [https://github.com/pulumi/pulumi-yaml](https://github.com/pulumi/pulumi-yaml), and YAML examples are available for all packages and cloud providers in the [Pulumi Registry](/registry/). You can get started with Pulumi YAML today in the [Pulumi Getting Started](/docs/get-started/) guide and the [Pulumi YAML language docs](/docs/intro/languages/yaml/).  We can’t wait to see what you build!

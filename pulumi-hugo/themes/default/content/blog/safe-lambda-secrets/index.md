@@ -16,7 +16,7 @@ The subject of how to make use of secrets in Lambda Functions comes up a fair bi
 
 ## Getting started
 
-I'm going to assume you've already got Pulumi and AWS set up, you're logged into your backend, and you've already created a project and stack. I'm also using the Pulumi Service as my [secrets provider]({{< relref "/docs/intro/concepts/secrets#configuring-secrets-encryption" >}}).
+I'm going to assume you've already got Pulumi and AWS set up, you're logged into your backend, and you've already created a project and stack. I'm also using the Pulumi Service as my [secrets provider](/docs/intro/concepts/secrets#configuring-secrets-encryption).
 
 {{% notes type="info" %}}
 Although Lambda Functions are free to deploy, and you get a generous allowance as part of AWS' free tier, storing and accessing secrets is not. You can view the cost on the [AWS Secrets Manager Pricing page](https://aws.amazon.com/secrets-manager/pricing/).
@@ -24,7 +24,7 @@ Although Lambda Functions are free to deploy, and you get a generous allowance a
 
 ## Structured configuration
 
-We're going to start by adding settings, both secret and plaintext, to our [stack configuration]({{< relref "/docs/intro/concepts/config" >}}), in a [structured way]({{< relref "/docs/intro/concepts/config#structured-configuration" >}}). We're going to add these settings as a dictionary so we can use the names as the variable names in our Lambda Function.
+We're going to start by adding settings, both secret and plaintext, to our [stack configuration](/docs/intro/concepts/config/), in a [structured way](/docs/intro/concepts/config#structured-configuration). We're going to add these settings as a dictionary so we can use the names as the variable names in our Lambda Function.
 
 First we add two settings in plaintext that are going to be used as environment variables in our lambda:
 
@@ -63,7 +63,7 @@ there are several things I want to point out:
 
 ## Writing our Pulumi program
 
-Next we're going to start updating our `index.ts` file. Everything from now on can be copied and pasted in order into the file, and [I'll post the entire contents at the end]({{< relref "#complete-code" >}}).
+Next we're going to start updating our `index.ts` file. Everything from now on can be copied and pasted in order into the file, and [I'll post the entire contents at the end](#complete-code).
 
 As we're only going to use the Pulumi and the AWS NPM packages you can replace everything in the file with the following:
 
@@ -74,7 +74,7 @@ import * as aws from "@pulumi/aws";
 
 ### A warning about accessing the configuration
 
-Before we continue, it's worth pointing out the following (from the [Pulumi documentation on secrets]({{< relref "/docs/intro/concepts/secrets#a-warning-using-secrets-in-code">}}) ):
+Before we continue, it's worth pointing out the following (from the [Pulumi documentation on secrets](/docs/intro/concepts/secrets#a-warning-using-secrets-in-code) ):
 
 {{% notes type="warning" %}}
 On `pulumi up`, secret values are decrypted and made available in plaintext at runtime. These may be read through any of the standard `pulumi.Config` getters. While it is possible to read a secret using ordinary non-secret getters, this is almost certainly not what you want. Use the secret variants of the configuration APIs instead since this ensures that all transitive uses of that secret are themselves also marked as secrets.
@@ -556,6 +556,6 @@ export const lambdaName = lambda.name;
 
 This post describes one of the ways that you can securely access secrets in your Lambda Functions by adding secrets to your stack config, uploading them to AWS Secrets Manager and then accessing them in your functions, all without exposing the plaintext values. There are other ways, but I think this is one of the neatest.
 
-Of course you can use other tools to manage your secrets, such as [Azure Key Vault]({{< relref "/registry/packages/azure-native/api-docs/keyvault" >}}), [Google Cloud Secret Manager]({{< relref "/registry/packages/gcp/api-docs/secretmanager/" >}}) or [Hashicorp Vault]({{< relref "/registry/packages/vault" >}}), getting the path to the key back from the resource and using it in the same way as we used the ARN from the Secret.
+Of course you can use other tools to manage your secrets, such as [Azure Key Vault](/registry/packages/azure-native/api-docs/keyvault/), [Google Cloud Secret Manager](/registry/packages/gcp/api-docs/secretmanager/) or [Hashicorp Vault](/registry/packages/vault/), getting the path to the key back from the resource and using it in the same way as we used the ARN from the Secret.
 
-If you'd like more information on how you can use Pulumi to securely and easily deploy your cloud infrastructure using modern programming languages, [get in touch and ask us how]({{< relref "/contact" >}}).
+If you'd like more information on how you can use Pulumi to securely and easily deploy your cloud infrastructure using modern programming languages, [get in touch and ask us how](/contact/).

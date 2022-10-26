@@ -10,7 +10,7 @@ tags:
    - aws
 ---
 
-We are excited to announce the release of the new [AWS Native]({{< relref "/registry/packages/aws-native" >}}) provider for Pulumi, which is available today in preview. AWS is the most-used cloud provider across the Pulumi ecosystem, and with the new AWS Native provider, we are focused on delivering the best possible support for the AWS platform to all Pulumi users.
+We are excited to announce the release of the new [AWS Native](/registry/packages/aws-native/) provider for Pulumi, which is available today in preview. AWS is the most-used cloud provider across the Pulumi ecosystem, and with the new AWS Native provider, we are focused on delivering the best possible support for the AWS platform to all Pulumi users.
 
 Pulumi Native Providers like AWS Native are a new type of Pulumi Package that give you the most complete and consistent interface for the modern cloud. Pulumi native providers bring the full power of the top cloud providers to the Pulumi Cloud Engineering Platform, with faster updates and more complete coverage than any other infrastructure as code offering.
 
@@ -21,7 +21,7 @@ The AWS Native provider offers same-day support for all new AWS features and rel
 This release also includes a new tool for migrating existing CloudFormation templates into Pulumi programs in your favorite language, powered by the new AWS Native provider and AWS Cloud Control API, as well as the ability to deploy any 3rd party resources in the CloudFormation Registry, including resources from Atlassian, Datadog, Densify, Dynatrace, Fortinet, New Relic, and Spot by NetApp.
 
 {{% notes type="info" %}}
-To learn how AWS built the Cloud Control API, and many other great topics, [watch the replay of Cloud Engineering Summit 2021]({{< relref "/cloud-engineering-summit/replay" >}}) with speakers from each of the major cloud providers as well as 40+ leaders and practitioners from across the industry.
+To learn how AWS built the Cloud Control API, and many other great topics, [watch the replay of Cloud Engineering Summit 2021](/cloud-engineering-summit/replay/) with speakers from each of the major cloud providers as well as 40+ leaders and practitioners from across the industry.
 {{% /notes %}}
 
 {{< youtube "oKxaZCyu2OQ" >}}

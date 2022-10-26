@@ -44,11 +44,11 @@ Here's the full set of steps in our series, walking through the creation of a se
 to deploy AWS resources using Pulumi:
 
 - [Create a dedicated IAM User for your CI/CD](#create-new-iam-user)
-- [Provide the IAM User’s credentials to your CI/CD system]({{< relref "/blog/managing-aws-credentials-on-cicd-part-2#providing-iam-credentials" >}})
-- [Comparison with using hosted secret managers]({{< relref "/blog/managing-aws-credentials-on-cicd-part-2#using-a-secrets-service" >}})
-- [Automate Rotating and Revoking AWS Credentials]({{< relref "/blog/managing-aws-credentials-on-cicd-part-2#automating-key-rotation" >}})
-- [Assuming IAM Roles for performing updates]({{< relref "/blog/managing-aws-credentials-on-cicd-part-3#assuming-iam-roles" >}})
-- [Securing sensitive data using Pulumi]({{< relref "/blog/managing-aws-credentials-on-cicd-part-3#secrets-in-pulumi" >}})
+- [Provide the IAM User’s credentials to your CI/CD system](/blog/managing-aws-credentials-on-cicd-part-2#providing-iam-credentials)
+- [Comparison with using hosted secret managers](/blog/managing-aws-credentials-on-cicd-part-2#using-a-secrets-service)
+- [Automate Rotating and Revoking AWS Credentials](/blog/managing-aws-credentials-on-cicd-part-2#automating-key-rotation)
+- [Assuming IAM Roles for performing updates](/blog/managing-aws-credentials-on-cicd-part-3#assuming-iam-roles)
+- [Securing sensitive data using Pulumi](/blog/managing-aws-credentials-on-cicd-part-3#secrets-in-pulumi)
 
 ## Create a dedicated IAM User for your CI/CD {#create-new-iam-user}
 

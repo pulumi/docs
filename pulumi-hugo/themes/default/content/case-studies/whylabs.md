@@ -51,7 +51,7 @@ Andy Dang is a Lead Engineer and a co-founder of WhyLabs. He first heard about P
 
 ## Adopting Cloud Engineering Best Practices with Pulumi
 
-Moving to Pulumi allowed WhyLabs to adopt cloud engineering best practices out-of-the-box. [Cloud engineering]({{< relref "/cloud-engineering" >}}) teams apply standard software engineering practices and tools uniformly across infrastructure management, application development, and security to tame the complexity of delivering and managing modern cloud applications. Key advantages for WhyLabs were that they could:
+Moving to Pulumi allowed WhyLabs to adopt cloud engineering best practices out-of-the-box. [Cloud engineering](/cloud-engineering/) teams apply standard software engineering practices and tools uniformly across infrastructure management, application development, and security to tame the complexity of delivering and managing modern cloud applications. Key advantages for WhyLabs were that they could:
 
 - Use a general-purpose, strongly-typed language to define and configure infrastructure as code while using standard software development tools.
 - Shift infrastructure development left by incorporating more frequent testing during the authoring stage and before production.
@@ -77,7 +77,7 @@ Pulumi allows the infrastructure code review process to fit naturally within the
 
 ### Test and Deploy
 
-Since infrastructure is software with Pulumi, it can be tested like software through a CI/CD pipeline. WhyLabs uses Pulumi and GitLab to run automated [unit tests]({{< relref "/docs/guides/testing/unit" >}}) on infrastructure and [Policy as Code]({{< relref "/crossguard" >}}) tests that check for common human errors such as leaving an S3 bucket open to the public. The pipeline also runs [integration tests]({{< relref "/docs/guides/testing/integration" >}}) that can detect issues with the stack early in the development process by provisioning ephemeral environments. Furthermore, WhyLabs developers can use Pulumi to deploy private environments to test their logic, enabling them to iterate on complex cloud environments without causing issues to the production environment.
+Since infrastructure is software with Pulumi, it can be tested like software through a CI/CD pipeline. WhyLabs uses Pulumi and GitLab to run automated [unit tests](/docs/guides/testing/unit/) on infrastructure and [Policy as Code](/crossguard/) tests that check for common human errors such as leaving an S3 bucket open to the public. The pipeline also runs [integration tests](/docs/guides/testing/integration/) that can detect issues with the stack early in the development process by provisioning ephemeral environments. Furthermore, WhyLabs developers can use Pulumi to deploy private environments to test their logic, enabling them to iterate on complex cloud environments without causing issues to the production environment.
 
 ### Security
 

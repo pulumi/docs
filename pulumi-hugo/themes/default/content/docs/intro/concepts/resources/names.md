@@ -7,11 +7,11 @@ menu:
     weight: 1
 ---
 
-Each resources in Pulumi has a [logical name]({{< relref "#logicalname" >}}) and a [physical name]({{< relref "#autonaming" >}}).  The logical name is how the resource is known inside Pulumi, and establishes a notion of identity within Pulumi even when the physical resource might need to change (for example, during a replacement).  The physical name is the name used for the resource in the cloud provider that a Pulumi program is deploying to.
+Each resources in Pulumi has a [logical name](#logicalname) and a [physical name](#autonaming).  The logical name is how the resource is known inside Pulumi, and establishes a notion of identity within Pulumi even when the physical resource might need to change (for example, during a replacement).  The physical name is the name used for the resource in the cloud provider that a Pulumi program is deploying to.
 
-Pulumi [auto-names]({{< relref "#autonaming" >}}) most resource by default, using the logical name and a random suffix to construct a unique physical name for a resource.  Users can provide explicit names to override this default.
+Pulumi [auto-names](#autonaming) most resource by default, using the logical name and a random suffix to construct a unique physical name for a resource.  Users can provide explicit names to override this default.
 
-Each resource also has a [Uniform Resource Name (URN)]({{< relref "#urns" >}}) which is a unique name derived from both the logical name of the resource and the type of the resource and, in the case of components, its parents.
+Each resource also has a [Uniform Resource Name (URN)](#urns) which is a unique name derived from both the logical name of the resource and the type of the resource and, in the case of components, its parents.
 
 ## Logical Names {#logicalname}
 
@@ -83,7 +83,7 @@ to refer to it. There are no distinct variable names, as there are in other lang
 The logical name you specify during resource creation is used in two ways:
 
 - As a default prefix for the resource’s physical name, assigned by the cloud provider.
-- To construct the [Universal Resource Name (URN)]({{< relref "#urns" >}}) used to track the resource across updates.
+- To construct the [Universal Resource Name (URN)](#urns) used to track the resource across updates.
 
 Pulumi uses the logical name to track the identity of a resource through multiple deployments of the same program and uses it to choose between creating new resources or updating existing ones.
 
@@ -178,7 +178,7 @@ resources:
 
 {{< /chooser >}}
 
-If the `name` property is not available on a resource, consult the [Registry]({{< relref "/registry" >}}) for the specific resource you are creating. Some resources use a different property to override auto-naming. For instance, the `aws.s3.Bucket` type uses the property `bucket` instead of name. Other resources, such as `aws.kms.Key`, do not have physical names and use other auto-generated IDs to uniquely identify them.
+If the `name` property is not available on a resource, consult the [Registry](/registry/) for the specific resource you are creating. Some resources use a different property to override auto-naming. For instance, the `aws.s3.Bucket` type uses the property `bucket` instead of name. Other resources, such as `aws.kms.Key`, do not have physical names and use other auto-generated IDs to uniquely identify them.
 
 Overriding auto-naming makes your project susceptible to naming collisions. As a result, for resources that may need to be replaced, you should specify `deleteBeforeReplace: true` in the resource’s options. This option ensures that old resources are deleted before new ones are created, which will prevent those collisions.
 
@@ -267,7 +267,7 @@ resources:
 
 Each resource is assigned a [Uniform Resource Name (URN)](https://en.wikipedia.org/wiki/Uniform_Resource_Name) that uniquely identifies that resource globally. Unless you are writing a tool, you will seldom need to interact with an URN directly, but it is fundamental to how Pulumi works so it’s good to have a general understanding of it.
 
-The URN is automatically constructed from the project name, stack name, resource name, resource type, and the types of all the parent resources (in the case of [component resources]({{< relref "components" >}})).
+The URN is automatically constructed from the project name, stack name, resource name, resource type, and the types of all the parent resources (in the case of [component resources](/docs/intro/concepts/resources/components/).
 
 The following is an example of a URN:
 
@@ -288,7 +288,7 @@ Any change to the URN of a resource causes the old and new resources to be treat
 Both of these operations will lead to a different URN, and thus require the `create` and `delete` operations instead of an `update` or `replace` operation that you would use for an existing resource. In other words, be careful when you change a resource’s name.
 
 {{% notes "info" %}}
-If you’d like to rename a resource without destroying the old one, refer to the [aliases]({{< relref "options/aliases" >}}) resource option.
+If you’d like to rename a resource without destroying the old one, refer to the [aliases](/docs/intro/concepts/resources/options/aliases/) resource option.
 {{% /notes %}}
 
 Resources constructed as children of a component resource should ensure their names are unique across multiple instances of the component resource. In general, the name of the component resource instance itself (the `name` parameter passed into the component resource constructor) should be used as part of the name of the child resources.

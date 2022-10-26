@@ -15,7 +15,7 @@ tags:
 ---
 
 Every Pulumi program is deployed to a stack. A stack is an isolated,
-independently [configurable]({{< relref "/docs/intro/concepts/config" >}})
+independently [configurable](/docs/intro/concepts/config/)
 instance of a Pulumi program. Stacks are commonly used to denote different
 phases of development (such as `development`, `staging`, and `production`) or
 feature branches (such as `feature-x-dev`).

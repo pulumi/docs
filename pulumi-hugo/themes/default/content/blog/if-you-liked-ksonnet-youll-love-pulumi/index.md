@@ -132,20 +132,20 @@ Another fun example is
 ## Learn More
 
 If you'd like to learn about Pulumi and how to manage your
-infrastructure and Kubernetes through code, [click here to get started today]({{< relref "/docs/get-started" >}}). Pulumi is open source and free to
+infrastructure and Kubernetes through code, [click here to get started today](/docs/get-started/). Pulumi is open source and free to
 use.
 
 If you'd like to go deeper on certain topics, here are some additional
 resources to check out:
 
-- [Overview of Pulumi Kubernetes Scenarios]({{< relref "/topics/kubernetes" >}})
+- [Overview of Pulumi Kubernetes Scenarios](/kubernetes/)
 - Tutorial: Create a Kubernetes cluster on a cloud provider
-  [Amazon EKS]({{< relref "/registry/packages/kubernetes/how-to-guides/eks" >}}),
-  [Google GKE]({{< relref "/registry/packages/kubernetes/how-to-guides/gke" >}}), or
+  [Amazon EKS](/registry/packages/kubernetes/how-to-guides/eks/),
+  [Google GKE](/registry/packages/kubernetes/how-to-guides/gke/), or
   [Azure AKS](https://github.com/pulumi/examples/tree/master/classic-azure-ts-aks-mean)
-- Tutorial: [Operate and deploy to a Kubernetes cluster]({{< relref "/registry/packages/kubernetes/how-to-guides/exposed-deployment" >}})
-- Docs: [Pulumi docs]({{< relref "/docs/reference" >}}), including an
-  [overview of the programming model]({{< relref "/docs/intro/concepts" >}})
+- Tutorial: [Operate and deploy to a Kubernetes cluster](/registry/packages/kubernetes/how-to-guides/exposed-deployment/)
+- Docs: [Pulumi docs](/docs/reference/), including an
+  [overview of the programming model](/docs/intro/concepts/)
 - Video: In February, we were honored to have Joe Beda
 [show where Pulumi fits in on his TGIK livestream](https://www.youtube.com/watch?v=ILMK65YVSKw),
 highlighting how to use your favorite language and consistent workflows to create,
@@ -161,4 +161,4 @@ any questions, need support, or just want to say hello.
 
 If you'd like to chat with our team, or get hands-on assistance with
 migrating your existing configuration code (including ksonnet programs)
-to Pulumi, please don't hesitate to [drop us a line]({{< relref "/contact.md" >}}).
+to Pulumi, please don't hesitate to [drop us a line](/contact/).

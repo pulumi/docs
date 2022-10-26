@@ -10,7 +10,7 @@ menu:
 If your infrastructure was provisioned with Terraform, there are a number of options that will help you adopt Pulumi.
 
 * **Coexist** with resources provisioned by Terraform by referencing a `.tfstate` file.
-* **Import** existing resources into Pulumi [in the usual way]({{< relref "import" >}}) or using the `tf2pulumi` to adopt all resources from an existing `.tfstate` file.
+* **Import** existing resources into Pulumi [in the usual way](/docs/guides/adopting/import/) or using the `tf2pulumi` to adopt all resources from an existing `.tfstate` file.
 * **Convert** any Terraform HCL to Pulumi code using `tf2pulumi`.
 
 This range of techniques helps to either temporarily or permanently use Pulumi alongside Terraform, in addition to fully migrating existing infrastructure to Pulumi.
@@ -396,7 +396,7 @@ class MyStack : Stack
 
 {{< /chooser >}}
 
-Notice also that we've used [Pulumi secrets]({{< relref "/docs/intro/concepts/secrets" >}}) to ensure the Terraform Cloud or Enterprise token is secure and encrypted.
+Notice also that we've used [Pulumi secrets](/docs/intro/concepts/secrets/) to ensure the Terraform Cloud or Enterprise token is secure and encrypted.
 
 The full list of available backends are as follows:
 
@@ -414,15 +414,15 @@ The full list of available backends are as follows:
 * AWS S3 (`"s3"`)
 * Swift (`"swift"`)
 
-Refer to the API documentation for these libraries for full details on configuration options for each backend type: [Node.js (JavaScript or TypeScript)]({{< relref "/docs/reference/pkg/nodejs/pulumi/terraform/state#RemoteStateReference" >}}) or [Python]({{< relref "/docs/reference/pkg/python/pulumi_terraform/state" >}}).
+Refer to the API documentation for these libraries for full details on configuration options for each backend type: [Node.js (JavaScript or TypeScript)](/docs/reference/pkg/nodejs/pulumi/terraform/state#RemoteStateReference) or [Python](/docs/reference/pkg/python/pulumi_terraform/state/).
 
 ## Converting Terraform HCL to Pulumi
 
-The [`tf2pulumi`](https://github.com/pulumi/tf2pulumi) tool can convert existing Terraform source code written in the HashiCorp Configuration Language (HCL) into Pulumi source code. In addition to converting source code, this tool also offers the option to [automatically insert import IDs]({{< relref "import" >}}), so that you can also import state during the conversion. This ensures live resources are brought under the control of Pulumi as well as letting you deploy and manage new copies of that infrastructure.
+The [`tf2pulumi`](https://github.com/pulumi/tf2pulumi) tool can convert existing Terraform source code written in the HashiCorp Configuration Language (HCL) into Pulumi source code. In addition to converting source code, this tool also offers the option to [automatically insert import IDs](/docs/guides/adopting/import/), so that you can also import state during the conversion. This ensures live resources are brought under the control of Pulumi as well as letting you deploy and manage new copies of that infrastructure.
 
 ### How to Use the Tool
 
-To use this tool, [first install it](https://github.com/pulumi/tf2pulumi#building-and-installation) or [try it out online]({{< relref "/tf2pulumi" >}}).
+To use this tool, [first install it](https://github.com/pulumi/tf2pulumi#building-and-installation) or [try it out online](/tf2pulumi/).
 
 Next, `cd` into a Terraform project you'd like to convert. Create a new Pulumi project:
 
@@ -505,7 +505,7 @@ Next, set the `importFromStatefile` config setting on your project to a valid lo
 $ pulumi config set importFromStatefile ./terraform.tfstate
 ```
 
-After doing this, the first `pulumi up` for a new stack with this configuration variable set will import instead of create all of the resources defined in the code. Once imported, the existing resources in your cloud provider can now be managed by Pulumi going forward. See the [Importing Infrastructure User Guide]({{< relref "import" >}}) for more details on importing existing resources.
+After doing this, the first `pulumi up` for a new stack with this configuration variable set will import instead of create all of the resources defined in the code. Once imported, the existing resources in your cloud provider can now be managed by Pulumi going forward. See the [Importing Infrastructure User Guide](/docs/guides/adopting/import/) for more details on importing existing resources.
 
 ### Limitations
 
@@ -513,4 +513,4 @@ While the majority of Terraform constructs are supported, there are some known g
 
 ### Example Conversion
 
-For an example of a full end-to-end conversion, including some improvements made possible after the conversion is finished, see the blog post, [From Terraform to Infrastructure as Software]({{< relref "/blog/from-terraform-to-infrastructure-as-software" >}}).
+For an example of a full end-to-end conversion, including some improvements made possible after the conversion is finished, see the blog post, [From Terraform to Infrastructure as Software](/blog/from-terraform-to-infrastructure-as-software/).

@@ -157,7 +157,7 @@ body {
 }
 ```
 
-Your `normalize.css` can be copied from [this respository](github.com/necolas/normalize.css), and the expected `background.jpg` can be downloaded from [this repository](https://github.com/katcosgrove/cloud-systems-101/blob/main/part-one/website/background.jpg).
+Your `normalize.css` can be copied from [this respository](https://github.com/necolas/normalize.css), and the expected `background.jpg` can be downloaded from [this repository](https://github.com/katcosgrove/cloud-systems-101/blob/main/part-one/website/background.jpg).
 
 To see what this looks like before we deploy it, we're going to use a tool called `live-server`. This isn't a real, functional webserver, but it's a useful tool during development for static websites. It will reload automatically when a change is detected, so you don't have to wait for deploys.
 

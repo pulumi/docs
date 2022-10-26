@@ -19,7 +19,7 @@ The implicit `pulumi:pulumi:Stack` resource is itself a component resource that 
 
 ## Authoring a New Component Resource
 
-To author a new component, either in a program or for a reusable library, create a subclass of [`ComponentResource`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.ComponentResource" >}}). Inside of its constructor, chain to the base constructor, passing its type string, name, arguments, and options. Also inside of its constructor, allocate any child resources, passing the [`parent`]({{< relref "options/parent" >}}) option as appropriate to ensure component resource children are parented correctly.
+To author a new component, either in a program or for a reusable library, create a subclass of [`ComponentResource`](/docs/reference/pkg/python/pulumi#pulumi.ComponentResource). Inside of its constructor, chain to the base constructor, passing its type string, name, arguments, and options. Also inside of its constructor, allocate any child resources, passing the [`parent`](/docs/intro/concepts/resources/options/parent) option as appropriate to ensure component resource children are parented correctly.
 
 Here’s a simple component example:
 
@@ -115,11 +115,11 @@ class MyComponent extends ComponentResource {
 
 Upon creating a new instance of MyComponent, the call to the base constructor (using `super/base`) registers the component resource instance with the Pulumi engine. This records the resource’s state and tracks it across program deployments so that you see diffs during updates just like with a regular resource (even though component resources have no provider logic associated with them). Since all resources must have a name, a component resource constructor should accept a name and pass it to super.
 
-If you wish to have full control over one of the custom resource’s lifecycle in your component resource—including running specific code when a resource has been updated or deleted—you should look into [`dynamic providers`]({{< relref "dynamic-providers" >}}). These let you create full-blown resource abstractions in your language of choice.
+If you wish to have full control over one of the custom resource’s lifecycle in your component resource—including running specific code when a resource has been updated or deleted—you should look into [`dynamic providers`](/docs/intro/concepts/resources/dynamic-providers). These let you create full-blown resource abstractions in your language of choice.
 
 A component resource must register a unique type name with the base constructor. In the example, the registration is `pkg:index:MyComponent`. To reduce the potential of other type name conflicts, this name contains the package and module name, in addition to the type: `<package>:<module>:<type>`. These names are namespaced alongside non-component resources, such as aws:lambda:Function.
 
-For more information about component resources, see the [Pulumi Components tutorial]({{< relref "/registry/packages/aws/how-to-guides/s3-folder-component" >}}).
+For more information about component resources, see the [Pulumi Components tutorial](/registry/packages/aws/how-to-guides/s3-folder-component/).
 
 ## Creating Child Resources
 
@@ -257,7 +257,7 @@ The call to `registerOutputs` also tells Pulumi that the resource is done regist
 
 ## Inheriting Resource Providers
 
-One option all resources have is the ability to pass an [explicit resource provider]({{< relref "providers">}}) to supply explicit configuration settings. For instance, you may want to ensure that all AWS resources are created in a different region than the globally configured region. In the case of component resources, the challenge is that these providers must flow from parent to children.
+One option all resources have is the ability to pass an [explicit resource provider](/docs/intro/concepts/resources/providers/) to supply explicit configuration settings. For instance, you may want to ensure that all AWS resources are created in a different region than the globally configured region. In the case of component resources, the challenge is that these providers must flow from parent to children.
 
 To allow this, component resources accept a `providers` option that custom resources don’t have. This value contains a map from the provider name to the explicit provider instance to use for the component resource. The map is used by a component resource to fetch the proper `provider` object to use for any child resources. This example overrides the globally configured AWS region and sets it to us-east-1. Note that `myk8s` is the name of the Kubernetes provider.
 

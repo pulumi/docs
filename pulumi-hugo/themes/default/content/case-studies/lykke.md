@@ -35,7 +35,7 @@ Lykke originally built a monolithic stack with a wide variety of components. The
 
 ## Solution: Pulumi Universal Infrastructure-as-Code and Cloud Best Practices
 
-Lykke engineering head Damian Hickey had been aware of Pulumi since the company launched in 2017 and decided to deploy the new infrastructure using [Pulumi's collection of libraries]({{< relref "/crosswalk/aws" >}}) that model AWS infrastructure patterns using well-architected best practices. This allowed him to design and manage infrastructure within his development team, rather than building a dedicated ops team. Pulumi's libraries also provided Lykke with built-in Well Architected patterns and best practices - helping the team move new applications into production faster.
+Lykke engineering head Damian Hickey had been aware of Pulumi since the company launched in 2017 and decided to deploy the new infrastructure using [Pulumi's collection of libraries](/crosswalk/aws) that model AWS infrastructure patterns using well-architected best practices. This allowed him to design and manage infrastructure within his development team, rather than building a dedicated ops team. Pulumi's libraries also provided Lykke with built-in Well Architected patterns and best practices - helping the team move new applications into production faster.
 
 With Pulumi, Damian’s team quickly set up their infrastructure without having to learn a new, proprietary programming language. In addition to creating their own abstractions, models, and best-practice files, Lykke was also able to take advantage of pre-built templates and libraries available right out of the box.
 
@@ -47,7 +47,7 @@ One of the biggest considerations for the team was cost management. Pulumi helpe
 
 Pulumi also helped the team to configure services like Amazon VPC using only a dozen lines of code - something that required 10x more configuration with other IaC tools. The code review process also became faster, with infrastructure changes taking hours, rather than days to deliver.
 
-Within a month of adopting Pulumi, Lykke deployed core supporting infrastructure for a new product. By improving overall productivity for their development team, Lykke was able to deliver the new product to production customers in a matter of months. Lykke is also adopting a comprehensive approach to infrastructure policy using Pulumi’s [Policy as Code]({{< relref "/crossguard" >}}) framework. This ensures that internal security, compliance and cost management policies are automatically enforced through policy-as-code.
+Within a month of adopting Pulumi, Lykke deployed core supporting infrastructure for a new product. By improving overall productivity for their development team, Lykke was able to deliver the new product to production customers in a matter of months. Lykke is also adopting a comprehensive approach to infrastructure policy using Pulumi’s [Policy as Code](/crossguard/) framework. This ensures that internal security, compliance and cost management policies are automatically enforced through policy-as-code.
 
 ## Next steps
 
@@ -63,7 +63,7 @@ Pulumi’s cloud engineering platform brings infrastructure, developer, and secu
 
 Check out the following articles to get started:
 
-- [AWS Identity and Access Management with Pulumi]({{< relref "/docs/guides/crosswalk/aws/iam" >}})
-- [AWS Lambda with Pulumi]({{< relref "/docs/guides/crosswalk/aws/lambda" >}})
-- [Get Started with Pulumi Policy as Code]({{< relref "/docs/guides/crossguard/get-started" >}})
-- [Get Started with Kubernetes with Pulumi]({{< relref "/docs/guides/crosswalk/kubernetes" >}})
+- [AWS Identity and Access Management with Pulumi](/docs/guides/crosswalk/aws/iam/)
+- [AWS Lambda with Pulumi](/docs/guides/crosswalk/aws/lambda/)
+- [Get Started with Pulumi Policy as Code](/docs/guides/crossguard/get-started/)
+- [Get Started with Kubernetes with Pulumi](/docs/guides/crosswalk/kubernetes/)

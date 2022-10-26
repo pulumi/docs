@@ -31,7 +31,7 @@ customer_logos:
 
 ## Cosmos DB vs DynamoDB: What Are The Similarities?
 
-Both Cosmos DB and DynamoDB are [NoSQL]({{< relref "/learn/glossary/nosql" >}}), or non-relational, databases. This concept means their data is stored in some format other than two-dimensional tables. Some commonly-used formats for NoSQL databases in general are documents, key-value pairs, graphs, and columns, each with different strengths and tradeoffs.
+Both Cosmos DB and DynamoDB are [NoSQL](/learn/glossary/nosql/), or non-relational, databases. This concept means their data is stored in some format other than two-dimensional tables. Some commonly-used formats for NoSQL databases in general are documents, key-value pairs, graphs, and columns, each with different strengths and tradeoffs.
 
 Cosmos DB and DynamoDB are both highly-available, scalable, globally distributed and fully-managed serverless NoSQL databases. Both function as document&ndash; or key-value&ndash;based databases.
 
@@ -57,8 +57,8 @@ Cosmos DB is best if you need the wider flexibility of more data models, as well
 
 DynamoDB is best if the rest of your infrastructure is already on AWS or your priority is high performance for low cost over flexibility.
 
-Both Cosmos DB and DynamoDB are quick to stand up when using Pulumi. Try [Cosmos DB]({{< relref "/blog/how-to-build-globally-distributed-applications-with-azure-cosmos-db-and-pulumi" >}}) and [DynamoDB]({{< relref "/docs/aws/dynamodb" >}}) for yourself!
+Both Cosmos DB and DynamoDB are quick to stand up when using Pulumi. Try [Cosmos DB](/blog/how-to-build-globally-distributed-applications-with-azure-cosmos-db-and-pulumi/) and [DynamoDB](/docs/aws/dynamodb/) for yourself!
 
 ## Pulumi Corporation
 
-Pulumi's Cloud Engineering Platform unites infrastructure teams, application developers, and compliance teams around a unified software engineering process for delivering modern cloud applications faster and speeding innovation. Pulumi’s open-source tools help infrastructure teams tame the cloud’s complexity with Universal Infrastructure-as-Code using the world’s most popular programming languages and communities, including Python, YAML, Node.js (JavaScript, TypeScript), Go, and .NET (C#, F#, VB). [Get started for free today!]({{< relref "/docs/get-started" >}})
+Pulumi's Cloud Engineering Platform unites infrastructure teams, application developers, and compliance teams around a unified software engineering process for delivering modern cloud applications faster and speeding innovation. Pulumi’s open-source tools help infrastructure teams tame the cloud’s complexity with Universal Infrastructure-as-Code using the world’s most popular programming languages and communities, including Python, YAML, Node.js (JavaScript, TypeScript), Go, and .NET (C#, F#, VB). [Get started for free today!](/docs/get-started)

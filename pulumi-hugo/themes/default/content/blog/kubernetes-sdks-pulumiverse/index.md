@@ -40,7 +40,7 @@ While this is a huge unblocker for working with Kubernetes, we can do better.
 
 ## crd2pulumi
 
-Back in August, 2020, we published [crd2pulumi]({{< relref "/blog/introducing-crd2pulumi" >}}). `crd2pulumi` allows you to generate a Pulumi SDK for any Kubernetes Custom Resource. Now, when you want to start using cert-manager, Ambassador, Linkerd, or any other project within the Kubernetes and Cloud Native space; you can download the CRD YAML and run `crd2pulumi`, which will generate the SDK for whatever supported language you wish. Neat?
+Back in August, 2020, we published [crd2pulumi](/blog/introducing-crd2pulumi/). `crd2pulumi` allows you to generate a Pulumi SDK for any Kubernetes Custom Resource. Now, when you want to start using cert-manager, Ambassador, Linkerd, or any other project within the Kubernetes and Cloud Native space; you can download the CRD YAML and run `crd2pulumi`, which will generate the SDK for whatever supported language you wish. Neat?
 
 I've been using this approach for the past year and it's the easiest way to provide that rich interface to developers, but the repetition can become a little frustrating. For every new project that I was working on, I'd need to build out the same automation and there's also the maintenance burden of ensuring the SDK is up to date with the latest version deployed to the cluster.
 

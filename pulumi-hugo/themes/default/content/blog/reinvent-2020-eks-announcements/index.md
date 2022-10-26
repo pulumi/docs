@@ -19,7 +19,7 @@ Amazon announced several Elastic Kubernetes Service feature releases and updates
 
 First and foremost is the release of Amazon EKS Distro, also called EKS Anywhere. This is the same Kubernetes distro available to Amazon EKS customers on AWS as an open-source project. You can take advantage of a fully supported Kubernetes distribution built from open source with version aligned dependency updates and Common Vulnerabilities and Exposures (CVE) patches. Notifications for patches are sent from Amazon Simple Notification Service (SNS) with support for backported patches. Read more about [EKS Distro](https://aws.amazon.com/blogs/opensource/introducing-amazon-eks-distro/) here.
 
-You can create a cluster using kubeadm, kops, or tools such as Pulumi. Learn more about creating infrastructure with EKS Distro and Pulumi on our [blog]({{< relref "/blog/amazon-eks-distro" >}}).
+You can create a cluster using kubeadm, kops, or tools such as Pulumi. Learn more about creating infrastructure with EKS Distro and Pulumi on our [blog](/blog/amazon-eks-distro/).
 
 ## Logging support for AWS Fargate
 
@@ -38,5 +38,5 @@ Spot Instances are deeply discounted On-Demand EC2 instances. EKS now supports u
 Previously, to use Spot Instances, you had to manually configure EC2 Auto Scaling groups and upgrade the Spot nodes to the current version of Kubernetes. You can now set capacity type as SPOT and the EC2 instance types when creating a managed node group. The managed node group will provision and manage Spot nodes automatically according to best practices. You can create the node group through the EKS console, the EKS API, and eksctl. To learn more about configuring EKS node groups with Spot Instance, read the [blog](https://aws.amazon.com/blogs/containers/amazon-eks-now-supports-provisioning-and-managing-ec2-spot-instances-in-managed-node-groups/).
 
 {{% notes %}}
-Want some hands-on training with EKS? Join our workshop on Thursday, December 10th where you will create a production-ready EKS cluster, install add-ons to prepare your cluster for developers, and finally ship an application to your cluster. [Register Now]({{< relref "/resources/building-a-kubernetes-platform-in-amazon-eks" >}})
+Want some hands-on training with EKS? Join our workshop on Thursday, December 10th where you will create a production-ready EKS cluster, install add-ons to prepare your cluster for developers, and finally ship an application to your cluster. [Register Now](/resources/building-a-kubernetes-platform-in-amazon-eks/)
 {{% /notes %}}

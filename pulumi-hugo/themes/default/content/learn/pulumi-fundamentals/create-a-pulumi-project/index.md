@@ -22,7 +22,7 @@ a project represents a Pulumi _program_ that, when run, declares the desired
 infrastructure for Pulumi to manage. The program has corresponding _stacks_, or
 isolated, independently configurable instances of your Pulumi program. We'll
 talk more about stacks later in the [Building with
-Pulumi]({{< relref "/learn/building-with-pulumi" >}}) pathway.
+Pulumi](/learn/building-with-pulumi) pathway.
 
 ## Create a directory
 

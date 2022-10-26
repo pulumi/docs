@@ -9,11 +9,11 @@ tags:
     - native-providers
 ---
 
-Today at [PulumiUP]({{< relref "/pulumi-up" >}}), we announced the public preview of our Google Cloud Native provider. Google Cloud usage amongst Pulumi users has grown rapidly in the past year and Google Cloud has been adding [new features and updates almost every day](https://cloud.google.com/blog/products/gcp). The new native provider gives Pulumi users the best support possible for Google Cloud in Pulumi.
+Today at [PulumiUP](/pulumi-up/), we announced the public preview of our Google Cloud Native provider. Google Cloud usage amongst Pulumi users has grown rapidly in the past year and Google Cloud has been adding [new features and updates almost every day](https://cloud.google.com/blog/products/gcp). The new native provider gives Pulumi users the best support possible for Google Cloud in Pulumi.
 
 <!--more-->
 
-The Google Cloud Native provider works directly with the Google Cloud APIs, as surfaced by the [Google API Discovery Service](https://developers.google.com/discovery/), instead of depending on a handwritten layer like other current infrastructure as code technologies. This new approach is similar to that which we've taken for our [Kubernetes]({{<relref "/registry/packages/kubernetes">}}) and [Azure Native]({{<relref "/registry/packages/azure">}}) providers and ensures higher quality and complete coverage of the resources available in GCP.
+The Google Cloud Native provider works directly with the Google Cloud APIs, as surfaced by the [Google API Discovery Service](https://developers.google.com/discovery/), instead of depending on a handwritten layer like other current infrastructure as code technologies. This new approach is similar to that which we've taken for our [Kubernetes](/registry/packages/kubernetes/) and [Azure Native](/registry/packages/azure/) providers and ensures higher quality and complete coverage of the resources available in GCP.
 
 ## Full API coverage
 
@@ -21,7 +21,7 @@ Google Cloud Native covers 100% of the resources available in the Google Cloud A
 
 ![Chart comparing resources (466 in GCP, 508 in Google Native) and properties (5,071 in GCP, 8,638 in Google Native)](gcp-resource-chart.svg)
 
-Like our [other native providers]({{< relref "/blog/pulumiup-native-providers" >}}), the new SDKs include 100% coverage of Google Cloud resources.
+Like our [other native providers](/blog/pulumiup-native-providers/), the new SDKs include 100% coverage of Google Cloud resources.
 
 ## Always up-to-date
 
@@ -35,7 +35,7 @@ Excited about a new service announced by Google? Chances are it’s already in t
 
 ## Every language
 
-Google Cloud Native is available in public preview today for all Pulumi languages. Because it's built on the [Pulumi Packages]({{< relref "/blog/pulumiup-pulumi-packages-multi-language-components" >}}) technology, every update to Google Cloud Native is available in all languages on the day of release. The new Google Cloud Native SDKs are [open source on GitHub](https://github.com/pulumi/pulumi-google-native/) and available on [npm](https://www.npmjs.com/package/@pulumi/google-native), [NuGet.org](https://www.nuget.org/packages/Pulumi.GoogleNative/), [PyPI](https://pypi.org/project/pulumi-google-native/), and [Go modules](https://pkg.go.dev/github.com/pulumi/pulumi-google-native/sdk/go/google#section-directories).
+Google Cloud Native is available in public preview today for all Pulumi languages. Because it's built on the [Pulumi Packages](/blog/pulumiup-pulumi-packages-multi-language-components/) technology, every update to Google Cloud Native is available in all languages on the day of release. The new Google Cloud Native SDKs are [open source on GitHub](https://github.com/pulumi/pulumi-google-native/) and available on [npm](https://www.npmjs.com/package/@pulumi/google-native), [NuGet.org](https://www.nuget.org/packages/Pulumi.GoogleNative/), [PyPI](https://pypi.org/project/pulumi-google-native/), and [Go modules](https://pkg.go.dev/github.com/pulumi/pulumi-google-native/sdk/go/google#section-directories).
 
 {{< chooser language "typescript,python,go,csharp" >}}
 
@@ -157,7 +157,7 @@ class Program
 
 {{< /chooser >}}
 
-API documentation is available in our [API reference]({{< relref "/registry/packages/google-native/api-docs">}}).
+API documentation is available in our [API reference](/registry/packages/google-native/api-docs/).
 
 ## Works side-by-side with the existing Pulumi GCP Provider
 
@@ -216,5 +216,5 @@ The preview of the Google Cloud Native provider is ready for you to try. It’s 
 
 The Google Cloud Native announcement is just one part of Pulumi’s Cloud Engineering Platform. Watch the PulumiUP event for more.
 
-👉 [PulumiUP]({{< relref "/pulumi-up" >}})
-👉 [Google Cloud Native API reference]({{< relref "/registry/packages/google-native/api-docs" >}})
+👉 [PulumiUP](/pulumi-up/)
+👉 [Google Cloud Native API reference](/registry/packages/google-native/api-docs/)

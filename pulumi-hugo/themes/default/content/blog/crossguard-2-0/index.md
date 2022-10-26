@@ -9,7 +9,7 @@ tags:
    - "Policy as Code"
 ---
 
-In a [previous blog post]({{< relref "/blog/announcing-crossguard-preview" >}}), I introduced CrossGuard, Pulumi's Policy as Code solution. As part of our [2.0 release]({{< relref "/blog/pulumi-2-0" >}}), CrossGuard is now generally available and has some awesome new features to improve the user experience around managing Policy Packs.
+In a [previous blog post](/blog/announcing-crossguard-preview/), I introduced CrossGuard, Pulumi's Policy as Code solution. As part of our [2.0 release](/blog/pulumi-2-0/), CrossGuard is now generally available and has some awesome new features to improve the user experience around managing Policy Packs.
 
 <!--more-->
 
@@ -41,7 +41,7 @@ By default, the `enable` and `disable` commands use an organization's default Po
 
 Policies now have access to more information about the resources under review. With access to the options, parent, and dependencies of a resource, you can now write even more thorough policies.
 
-You may access a [resource's options]({{< relref "/docs/intro/concepts/resources#options" >}}) via the `ResourceValidationArgs` parameter. In the below example, we enforce that all DynamoDB tables be `protected` to prevent data loss.
+You may access a [resource's options](/docs/intro/concepts/resources#options) via the `ResourceValidationArgs` parameter. In the below example, we enforce that all DynamoDB tables be `protected` to prevent data loss.
 
 ```typescript
 new PolicyPack("aws-policies", {
@@ -178,8 +178,8 @@ Configuration allows organization administrators to quickly and easily tweak Pol
 
 We've invested in improving the user experience for authoring and managing policy. Whether you're an enterprise customer or an open source user, you can get started by taking CrossGuard for a spin.
 
-* [Getting Started with Pulumi]({{< relref "/docs/get-started" >}})
-* [Getting Started with CrossGuard]({{< relref "/docs/guides/crossguard/get-started" >}})
+* [Getting Started with Pulumi](/docs/get-started/)
+* [Getting Started with CrossGuard](/docs/guides/crossguard/get-started/)
 * [Example Policy Packs](https://github.com/pulumi/examples/tree/master/policy-packs)
 
 The Getting Started with Policy as Code webinar recording is also a excellent resource for seeing these features in action.

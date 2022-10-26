@@ -15,7 +15,7 @@ aliases:
 
 {{% notes "info" %}}
 Teams are only available to organizations using Pulumi Enterprise Edition and Pulumi Business Critical Edition.
-To learn more about editions visit the [pricing page]({{< relref "/pricing" >}}).
+To learn more about editions visit the [pricing page](/pricing/).
 {{% /notes %}}
 
 The Pulumi Service offers role-based access control (RBAC) using teams. Teams allow organization admins to assign a set of stack permissions to a group of users.

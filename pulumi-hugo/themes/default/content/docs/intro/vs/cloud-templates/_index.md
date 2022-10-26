@@ -17,4 +17,4 @@ While these template-based solutions are often easy to get started with, they ca
 
 Unlike many of these provider-specific services, Pulumi is [open source](https://github.com/pulumi/pulumi) and community-driven. To learn more about how Pulumi compares to some of these services in detail, see the following comparison docs:
 
-* [Pulumi vs. AWS CloudFormation]({{< relref "/docs/intro/vs/cloud-templates/cloudformation" >}})
+* [Pulumi vs. AWS CloudFormation](/docs/intro/vs/cloud-templates/cloudformation/)

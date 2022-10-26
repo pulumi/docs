@@ -59,7 +59,7 @@ plugins:
 | `description` | optional | Description of the project. | None. |
 | `main` | optional | Path to the Pulumi program. The default is the working directory. | None. |
 | `stackConfigDir` | optional | Config directory location relative to the location of `Pulumi.yaml`. | None. |
-| `backend` | optional | [Backend]({{< relref "/docs/intro/concepts/state" >}}) of the project. | [backend options](#backend-options) |
+| `backend` | optional | [Backend](/docs/intro/concepts/state/) of the project. | [backend options](#backend-options) |
 | `options` | optional | Additional project options. | [options options](#options-options) |
 | `template` | optional | Config to be used when creating new stacks in the project. | [template options](#template-options) |
 | `plugins` | optional | Override for the plugin selection. Intended for use in developing pulumi plugins.  | [plugins options](#plugins-options) |

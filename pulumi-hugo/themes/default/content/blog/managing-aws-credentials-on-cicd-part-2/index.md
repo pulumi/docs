@@ -24,16 +24,16 @@ This article is the second part of a series on best practices for securely manag
 
 Posts in this series:
 
-- [Create a dedicated IAM User for your CI/CD]({{< relref "/blog/managing-aws-credentials-on-cicd-part-1#create-new-iam-user" >}})
-- [Provide the IAM User’s credentials to your CI/CD system]({{< relref "/blog/managing-aws-credentials-on-cicd-part-2#providing-iam-credentials" >}})
-- [Comparison with using hosted secret managers]({{< relref "/blog/managing-aws-credentials-on-cicd-part-2#using-a-secrets-service" >}})
-- [Automate Rotating and Revoking AWS Credentials]({{< relref "/blog/managing-aws-credentials-on-cicd-part-2#automating-key-rotation" >}})
-- [Assuming IAM Roles for performing updates]({{< relref "/blog/managing-aws-credentials-on-cicd-part-3#assuming-iam-roles" >}})
-- [Securing sensitive data using Pulumi]({{< relref "/blog/managing-aws-credentials-on-cicd-part-3#secrets-in-pulumi" >}})
+- [Create a dedicated IAM User for your CI/CD](/blog/managing-aws-credentials-on-cicd-part-1#create-new-iam-user)
+- [Provide the IAM User’s credentials to your CI/CD system](/blog/managing-aws-credentials-on-cicd-part-2#providing-iam-credentials)
+- [Comparison with using hosted secret managers](/blog/managing-aws-credentials-on-cicd-part-2#using-a-secrets-service)
+- [Automate Rotating and Revoking AWS Credentials](/blog/managing-aws-credentials-on-cicd-part-2#automating-key-rotation)
+- [Assuming IAM Roles for performing updates](/blog/managing-aws-credentials-on-cicd-part-3#assuming-iam-roles)
+- [Securing sensitive data using Pulumi](/blog/managing-aws-credentials-on-cicd-part-3#secrets-in-pulumi)
 
 ## Provide IAM credentials to your CI/CD system {#providing-iam-credentials}
 
-In the [first post]({{< relref "/blog/managing-aws-credentials-on-cicd-part-1">}}) in our series, we created a dedicated IAM User to perform updates to AWS resources within your CI/CD system. The next step is to pass the AWS access keys for that user to your CI/CD system.
+In the [first post](/blog/managing-aws-credentials-on-cicd-part-1/) in our series, we created a dedicated IAM User to perform updates to AWS resources within your CI/CD system. The next step is to pass the AWS access keys for that user to your CI/CD system.
 
 We need to take great caution. [AWS's documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) states, **"Do not provide your access keys to a third party"**.
 
@@ -103,7 +103,7 @@ First, it creates a new access key and pushes the new value out. On the next ite
 
 ### Periodically Invoking an AWS Lambda
 
-The heart of the application is triggering it to execute on a fixed interval. Thankfully this is super-easy to do using Pulumi since it allows you to seamlessly blend your "cloud infrastructure" with "code" in a natural way. The user guide for Pulumi Crosswalk for AWS has more information on [serverless eventing]({{< relref "/docs/guides/crosswalk/aws/lambda" >}})
+The heart of the application is triggering it to execute on a fixed interval. Thankfully this is super-easy to do using Pulumi since it allows you to seamlessly blend your "cloud infrastructure" with "code" in a natural way. The user guide for Pulumi Crosswalk for AWS has more information on [serverless eventing](/docs/guides/crosswalk/aws/lambda/)
 if you would like to learn more.
 
 The following snippet is the core part of the credential rotator app. We define a function to handle the logic of key rotation in `rotateIAMUserKeys`. Then we create an AWS Lambda resource
@@ -133,7 +133,7 @@ const triggerSchedule = aws.cloudwatch.onSchedule(
     "keyRotatorScheduler", "rate(1 hour)", lambdaCallbackFn);
 ```
 
-When writing reusable infrastructure components in Pulumi however, it is helpful to organize things into a [custom resource]({{< ref "/docs/intro/concepts/resources#custom-resources" >}}).
+When writing reusable infrastructure components in Pulumi however, it is helpful to organize things into a [custom resource](/docs/intro/concepts/resources#custom-resources).
 
 For example, we can bundle together the AWS Lambda, CloudWatcn schedule, and the associated IAM policies into a single conceptual resource `AccessKeyRotator`. Bundling resources allows for the code reuse.
 
@@ -180,7 +180,7 @@ const demoTravisCIPusher = new CredentialPusher(
 
 ### Demo
 
-To demonstrate the access keys rotation, we can examine the log files generated from AWS Lambda. These can be accessed from the command-line using the [`pulumi logs`]({{< ref "/docs/reference/cli/pulumi_logs" >}}) command.
+To demonstrate the access keys rotation, we can examine the log files generated from AWS Lambda. These can be accessed from the command-line using the [`pulumi logs`](/docs/reference/cli/pulumi_logs) command.
 
 Here's a summary of the output for clarity:
 
