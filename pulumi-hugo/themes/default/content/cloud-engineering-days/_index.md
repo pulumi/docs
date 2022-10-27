@@ -41,7 +41,7 @@ featured:
         • Building a Global Data Platform at Scale, featuring Fauna, Inc.  
         • Creating Business Logic Interfaces with Pulumi’s Automation API, featuring Altana  
         • Migrating from CloudFormation to Pulumi - How we did it, featuring Panther  
-        • Enabling Kafka Adoption with Pulumi, featuring Dutchie  
+        • Enabling Kafka Adoption with Pulumi and Confluent Cloud, featuring Dutchie  
       link: /cloud-engineering-days/#registration
       link_text: Register
       presenters:
@@ -251,7 +251,7 @@ schedule:
               • Building a Global Data Platform at Scale, Featuring Fauna, Inc.  
               • Creating Business Logic Interfaces with Pulumi's Automation API, Altana  
               • Migrating from CloudFormation to Pulumi - How we did it, Panther  
-              • Enabling Kafka Adoption with Pulumi, Dutchie
+              • Enabling Kafka Adoption with Pulumi and Confluent Cloud, Dutchie
             datetime: 10:20 - 11:20 AM PDT
           - title: Under the Hood of Pulumi
             description: How Automation API is used
