@@ -489,6 +489,15 @@ As of Pulumi CLI v3.33.1, instead of specifying the AWS Profile using the `AWS_P
 1. By alias: `awskms://alias/ExampleAlias?region=us-east-1&awssdk=v2&profile=qa`.
 1. By ARN: `awskms:///arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34bc-56ef-1234567890ab?region=us-east-1&awssdk=v2&profile=prod`.
 {{% /notes %}}
+{{% notes "info" %}}
+As of Pulumi CLI v3.41.1, this secrets backend supports [encryption context](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context) by setting `context_{key}={value}` in the query string.
+Encryption context can be used in [IAM policies conditions](https://docs.aws.amazon.com/kms/latest/developerguide/policy-conditions.html#conditions-kms-encryption-context) and it appears in Cloudtrail logs.
+
+For example, take a look at `awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1&awssdk=v2&profile=dev&context_project=myproject&context_environment=staging`.
+
+The encryption context here is `{"project": "myproject", "environment": "staging"}`. Together with an appropriate IAM policy with conditions, one can grant some user permissions only to
+encrypt/decrypt secrets for `staging` environment of the `myproject` project.
+{{% /notes %}}
 
 #### Azure Key Vault
 
