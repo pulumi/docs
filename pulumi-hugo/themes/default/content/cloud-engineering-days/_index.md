@@ -36,12 +36,12 @@ featured:
 
     - title: Customer Stories
       description: |
-        Learn from Pulumi customers on how they scaled up their infrastructure velocity and reliability with Pulumi:  
+        Learn from Pulumi customers on how they scaled up their infrastructure velocity and reliability with Pulumi:
 
-        • Building a Global Data Platform at Scale, featuring Fauna, Inc.  
-        • Creating Business Logic Interfaces with Pulumi’s Automation API, featuring Altana  
-        • Migrating from CloudFormation to Pulumi - How we did it, featuring Panther  
-        • Enabling Kafka Adoption with Pulumi and Confluent Cloud, featuring Dutchie  
+        • Building a Global Data Platform at Scale, featuring Fauna, Inc.
+        • Creating Business Logic Interfaces with Pulumi’s Automation API, featuring Altana
+        • Migrating from CloudFormation to Pulumi - How we did it, featuring Panther
+        • Enabling Kafka Adoption with Pulumi and Confluent Cloud, featuring Dutchie
       link: /cloud-engineering-days/#registration
       link_text: Register
       presenters:
@@ -230,6 +230,16 @@ workshops:
       description: |
         In this workshop you'll learn to apply Infrastructure as Code concepts to build a hub and spoke network topology with an inspection VPC.
 
+    - title: "Building Virtual Networks with Pulumi and Tailscale"
+      link: /resources/building-virtual-networks-with-pulumi-and-tailscale
+      description: |
+        This workshop will demonstrate how to securely connect end-user devices and cloud resources using infrastructure as code written in real programming languages.
+
+    - title: "Deploying and Managing Kafka with Pulumi and Confluent"
+      link: /resources/deploying-and-managing-kafka-with-pulumi-and-confluent
+      description: |
+        In this session, we’ll introduce you to Apache Kafka—a community distributed event streaming platform capable of handling trillions of events a day.
+
 schedule:
     title: Schedule at a Glance
     subtitle: Can't make this time? Register and we'll share the on-demand version when it is available
@@ -248,9 +258,9 @@ schedule:
             datetime: 10:00 - 10:20 AM PDT
           - title: Achieving Results with Pulumi Customers
             description: |
-              • Building a Global Data Platform at Scale, Featuring Fauna, Inc.  
-              • Creating Business Logic Interfaces with Pulumi's Automation API, Altana  
-              • Migrating from CloudFormation to Pulumi - How we did it, Panther  
+              • Building a Global Data Platform at Scale, Featuring Fauna, Inc.
+              • Creating Business Logic Interfaces with Pulumi's Automation API, Altana
+              • Migrating from CloudFormation to Pulumi - How we did it, Panther
               • Enabling Kafka Adoption with Pulumi and Confluent Cloud, Dutchie
             datetime: 10:20 - 11:20 AM PDT
           - title: Under the Hood of Pulumi
