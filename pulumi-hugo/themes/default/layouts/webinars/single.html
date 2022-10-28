@@ -75,7 +75,11 @@
                                 sessions="{{ .Params.multiple | jsonify }}"
                             ></pulumi-webinar-form-select>
                         {{ else }}
-                            <pulumi-hubspot-form form-id="{{ .Params.form.hubspot_form_id }}" go-to-webinar-key="{{ .Params.form.gotowebinar_key }}"></pulumi-hubspot-form>
+                            <pulumi-hubspot-form
+                                form-id="{{ .Params.form.hubspot_form_id }}"
+                                go-to-webinar-key="{{ .Params.form.gotowebinar_key }}"
+                                salesforce-campaign-id="{{ .Params.form.salesforce_campaign_id }}"
+                            ></pulumi-hubspot-form>
                         {{ end }}
                     {{ end }}
                 </div>
