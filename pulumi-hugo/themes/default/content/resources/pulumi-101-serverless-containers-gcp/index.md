@@ -68,6 +68,8 @@ main:
     presenters:
         - name: Tushar Shah
           role: Senior Customer Engineer, Pulumi
+        - name: Jay Smith
+          role: Senior Customer Engineer, Google Cloud
 
     # A bullet point list containing what the user will learn during the webinar.
 

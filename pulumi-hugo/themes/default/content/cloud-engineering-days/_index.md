@@ -85,6 +85,8 @@ featured:
         photo: /images/team/ringo-de-smet.jpg
       - name: Tushar Shah
         photo: /images/team/tushar-shah.jpg
+      - name: Jay Smith
+        photo: /images/cloud-engineering-days/guests/jay-smith.jpg
 
 partners:
   items:
@@ -136,6 +138,10 @@ speakers:
     photo: /images/team/tushar-shah.jpg
     title: Sr. Customer Engineer
     company: Pulumi
+  - name: Jay Smith
+    photo: /images/cloud-engineering-days/guests/jay-smith.jpg
+    title: Sr. Customer Engineer
+    company: Google Cloud
   - name: Collin James
     photo: /images/cloud-engineering-days/guests/collin-james.jpg
     title: Software Architect
