@@ -248,17 +248,17 @@ def should_generate_multimodule(module):
     return all_modules != ["config"]
 
 
-def build_sphinx(ctx: Context):
+def build_sphinx(ctx: Context, builder: str, outdir: str):
     """
     build_sphinx invokes Sphinx on the inputs that we generated in `generate_sphinx_files`.
 
     :param Context ctx: The current context.
     """
     check_call(["sphinx-build", "-j", "auto", "-b",
-                "json", ctx.tempdir, ctx.outdir])
+                builder, ctx.tempdir, outdir])
 
 
-def transform_sphinx_output_to_markdown(ctx: Context):
+def transform_sphinx_output_to_markdown(ctx: Context, md_temp_dir: str, md_out_dir: str):
     """
     Transforms the Sphinx output in `ctx.outdir` to markdown by post-processing the JSON output by Sphinx. The directory
     structure written by this function mirrors the `reference/pkg` directory in the docs repo, so that `reference/pkg`
@@ -266,8 +266,8 @@ def transform_sphinx_output_to_markdown(ctx: Context):
 
     :param Context ctx: The current context.
     """
-    out_base = create_dir(ctx.mdoutdir, "python")
-    base_json = path.join(ctx.outdir, "providers")
+    out_base = create_dir(md_out_dir, "python")
+    base_json = path.join(md_temp_dir, "providers")
     pulumi_pkg = Provider(name="Pulumi SDK", package_name="pulumi",
                           pulumi_provider_name="pulumi", terraform_provider_name="")
     for provider in ctx.input.providers + [pulumi_pkg]:
@@ -379,14 +379,15 @@ def block_external_search_index(provider: str):
     return provider not in indexables
 
 def main():
-    if len(sys.argv) > 3:
-        print("usage: python -m pydocgen <output_dir> [package_override]")
+    if len(sys.argv) > 4:
+        print("usage: python -m pydocgen <html_output_dir> <md_output_dir> [package_override]")
         exit(1)
 
     output_directory = sys.argv[1]
+    md_output_directory = sys.argv[2]
     package_override = ""
-    if len(sys.argv) == 3:
-        package_override = sys.argv[2]
+    if len(sys.argv) == 4:
+        package_override = sys.argv[3]
 
     docs_input = read_input("pulumi-docs.json", package_override)
     env = Environment(
@@ -394,21 +395,20 @@ def main():
         autoescape=select_autoescape(['html', 'xml']))
 
     tempdir = tempfile.mkdtemp()
-    outdir = tempfile.mkdtemp()
-    mdoutdir = output_directory
+    md_temp_dir = tempfile.mkdtemp()
+    outdir = output_directory
     ctx = Context(template_env=env, input=docs_input,
-                  tempdir=tempdir, outdir=outdir, mdoutdir=mdoutdir)
+                  tempdir=tempdir, outdir=outdir, mdoutdir=md_output_directory)
 
     try:
         print("Generating Sphinx input...")
         generate_sphinx_files(ctx)
         print("Running Sphinx...")
-        build_sphinx(ctx)
+        build_sphinx(ctx, "html", output_directory)
+        build_sphinx(ctx, "json", md_temp_dir)
         print("Transforming Sphinx output into Markdown...")
-        transform_sphinx_output_to_markdown(ctx)
+        transform_sphinx_output_to_markdown(ctx, md_temp_dir, md_output_directory)
         print("Done!")
     finally:
         if path.exists(tempdir):
             shutil.rmtree(tempdir)
-        if path.exists(outdir):
-            shutil.rmtree(outdir)
