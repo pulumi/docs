@@ -10,19 +10,23 @@ The Pulumi YAML provider supports programs written in YAML or JSON.  In both cas
 
 | Property        | Type | Required           | Expression  | Description |
 | ------------- |---|-------------| -----|---|
-| `configuration`      | map[string]Configuration | No | No | Configuration specifies the [Pulumi config](/docs/intro/concepts/config/) inputs to the deployment. |
+| `config`      | [config options](/docs/reference/pulumi-yaml/#config-options) | No | No | Config specifies the [Pulumi config](/docs/intro/concepts/config/) inputs to the deployment. |
 | `resources`      | map[string]Resource | No | No | Resources declares the [Pulumi resources](/docs/intro/concepts/resources/) that will be deployed and managed by the program |
 | `variables`      | map[string]Expression | No | Yes | Variables specifies intermediate values of the program, the values of variables are expressions that can be re-used. |
 | `outputs`      | map[string]Expression | No | Yes | Outputs specifies the [Pulumi stack outputs](/docs/intro/concepts/stack#outputs) of the program and how they are computed from the `resources` is a value of the appropriate type for the template to use if no value is specified. |
 
-In many locations within this schema, values may be expressions which computed a value based on the `configuration`, `variables`, or outputs of `resources`.  These expressions can be provided in two ways:
+In many locations within this schema, values may be expressions which computed a value based on the `config`, `variables`, or outputs of `resources`.  These expressions can be provided in two ways:
 
 * If an object is provided as a value, and has a key that has the prefix `fn::`, the object is treated as an expression, and the expression will be resolved to a new value that will be used in place of the object.
 * Any string value is interpreted as an interpolation, with `${...}` being replaced by evaluating the expression in the `...`.
 
 The supported expression forms for each of these is detailed below.
 
-### Configuration
+### Config
+
+`config` is a map of config property keys to either values or structured declarations ([see here](/docs/reference/pulumi-yaml/#config-options)).
+
+In beta, Pulumi YAML projects used the `configuration` key. This will eventually be deprecated; switching from `configuration` to `config` will not break existing projects.
 
 The value of `configuration` is an object whose keys are logical names by which the config input will be referenced in expressions within the program, and whose values are elements of the schema below.  Each item in this object represents an independent config input. Either `type` or `default` is required.
 
