@@ -57,6 +57,7 @@ plugins:
 | `name` | required | Name of the project containing alphanumeric characters, hyphens, underscores, and periods. | None. |
 | `runtime` | required | Installed language runtime of the project: `nodejs`, `python`, `go`, `dotnet`, `java` or `yaml`. | [runtime options](#runtime-options)
 | `description` | optional | Description of the project. | None. |
+| `config` | optional | Project level config (Added in v3.44). | [config options](#config-options) |
 | `main` | optional | Path to the Pulumi program. The default is the working directory. | None. |
 | `stackConfigDir` | optional | Config directory location relative to the location of `Pulumi.yaml`. | None. |
 | `backend` | optional | [Backend](/docs/intro/concepts/state/) of the project. | [backend options](#backend-options) |
@@ -97,6 +98,31 @@ Arguments specified here are passed to `node` when running the Pulumi program. F
 
 New Python projects created with `pulumi new` have this option set by default. If not specified, Pulumi will invoke the `python3` command it finds on `$PATH` (falling back to `python`) to run the Python program. To use a virtual environment without the `virtualenv` option, run `pulumi` commands (such as `pulumi up`) from an activated virtual environment shell. Or, if using a tool like [Pipenv](https://github.com/pypa/pipenv), prefix `pulumi` commands with `pipenv run pulumi ...`.
 
+### `config` options
+
+`config` is a map of config property keys to either values or structured declarations.
+
+Non-object values are allowed to be set directly. Anything more complex must be defined using the structured
+schema declaration, or the nested value declaration both shown below.
+
+#### Values
+
+| Name | Required | Description |
+| - | - | - |
+| `value` | required | The value of this configuration property. |
+
+#### Schemas
+
+Schemas are only valid for project property keys. For setting the value of a provider configuration either use a direct value, or the nested value declaration shown above.
+
+| Name | Required | Description |
+| - | - | - |
+| `type` | required | The type of this config property, either `string`, `boolean`, `integer`, or `array`. |
+| `description` | optional | A description for this config property. |
+| `secret` | optional | True if this config property should be a secure secret value. |
+| `default` | optional | The default value for this config property, must match the given type. |
+| `items` | required if `type` is `array` | A nested structured declaration of the type of the items in the array. |
+
 ### `backend` options
 
 | Name | Required | Description |
@@ -116,7 +142,7 @@ New Python projects created with `pulumi new` have this option set by default. I
 | `description` | optional | Description of the template. |
 | `config` | required | Config to request when using this template with `pulumi new`. |
 
-#### `config` options
+#### `config`
 
 | Name | Required | Description |
 | - | - | - |
