@@ -1,4 +1,10 @@
 [[releases]]
+date = "2nd November 2022"
+title = "Pulumi Launches Deployments: The Fastest Way to Go from Code to Cloud"
+summary = "New Deployments-as-a-Service technology lets engineers manage ten times more infrastructure, unlocking innovation and scaling in the cloud"
+url = "https://info.pulumi.com/press-release/pulumi-launches-deployments"
+
+[[releases]]
 date = "4th May 2022"
 title = "Pulumi Infrastructure as Code Goes Universal"
 summary = "Pulumi CrossCode and support for new languages provides universal authoring of infrastructure using all popular programming languages and universal translation from any cloud format"

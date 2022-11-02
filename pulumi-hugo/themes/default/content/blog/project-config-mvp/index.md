@@ -1,6 +1,6 @@
 ---
 title: "Simpler configuration management with project level config"
-date: 2022-11-02
+date: 2022-11-02T06:00:00-07:00
 meta_desc: The introduction of project level config makes infrastructure configuration even easier with Pulumi.
 meta_image: meta.png
 authors:
