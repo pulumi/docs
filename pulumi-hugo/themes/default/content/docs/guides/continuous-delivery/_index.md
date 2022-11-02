@@ -61,6 +61,10 @@ Pulumi can easily integrate into any continuous integration/continuous delivery 
         <img src="/logos/tech/ci-cd/octopus-deploy.svg" alt="Octopus Deploy">
         <h4 class="no-anchor">Octopus Deploy</h4>
     </a>
+    <a href="/docs/intro/pulumi-service/deployments">
+        <img src="/logos/brand/avatar-on-white.png" alt="Pulumi Deployments">
+        <h4 class="no-anchor">Pulumi Deployments</h4>
+    </a>
     <a href="/docs/guides/continuous-delivery/pulumi-kubernetes-operator">
         <img src="/logos/tech/ci-cd/kubernetes.png" alt="Pulumi Kubernetes Operator">
         <h4 class="no-anchor">Pulumi Kubernetes Operator</h4>

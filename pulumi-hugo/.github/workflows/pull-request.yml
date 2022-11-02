@@ -3,7 +3,7 @@ on:
   pull_request:
     branches:
       - master
-      - may4-announce
+      - ced/tuesday-night
 jobs:
   preview:
     # Only run this job for events that originate on this repository.

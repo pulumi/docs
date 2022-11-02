@@ -4,7 +4,7 @@ meta_desc: "This is a guide on how to audit your organization's infrastructure a
 menu:
   intro:
     parent: pulumi-service
-    weight: 9
+    weight: 10
 aliases:
 - /docs/intro/console/collaboration/auditing/
 - /docs/intro/console/auditing/

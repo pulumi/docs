@@ -36,6 +36,7 @@ The following examples demonstrate how to use Automation API in various use case
 * [Cross-Language Program - ts-node](https://github.com/pulumi/automation-api-examples/blob/main/nodejs/crossLanguage-tsnode)
 * [Pulumi Over HTTP - tsc + node](https://github.com/pulumi/automation-api-examples/blob/main/nodejs/pulumiOverHttp-ts)
 * [Database Migration - tsc + node](https://github.com/pulumi/automation-api-examples/blob/main/nodejs/databaseMigration-ts)
+* [Remote Deployment - ts-node](https://github.com/pulumi/automation-api-examples/blob/main/nodejs/remoteDeployment-tsnode)
 
 {{% /choosable %}}
 {{% choosable language javascript %}}
@@ -51,6 +52,7 @@ The following examples demonstrate how to use Automation API in various use case
 * [Database Migration](https://github.com/pulumi/automation-api-examples/blob/main/python/database_migration)
 * [Pulumi Over HTTP](https://github.com/pulumi/automation-api-examples/blob/main/python/pulumi_over_http)
 * [Pulumi via Jupyter Notebook](https://github.com/pulumi/automation-api-examples/blob/main/python/pulumi_via_jupyter)
+* [Remote Deployment](https://github.com/pulumi/automation-api-examples/blob/main/python/remote_deployment)
 
 {{% /choosable %}}
 {{% choosable language go %}}
@@ -62,6 +64,7 @@ The following examples demonstrate how to use Automation API in various use case
 * [Pulumi Over HTTP](https://github.com/pulumi/automation-api-examples/blob/main/go/pulumi_over_http)
 * [Database Migration](https://github.com/pulumi/automation-api-examples/blob/main/go/database_migration)
 * [Git Repo](https://github.com/pulumi/automation-api-examples/blob/main/go/git_repo_program)
+* [Remote Deployment](https://github.com/pulumi/automation-api-examples/blob/main/go/remote_deployment)
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
@@ -70,6 +73,7 @@ The following examples demonstrate how to use Automation API in various use case
 * [Local Program](https://github.com/pulumi/automation-api-examples/blob/main/dotnet/LocalProgram)
 * [Cross-Language Program](https://github.com/pulumi/automation-api-examples/blob/main/dotnet/CrossLanguage)
 * [Database Migration](https://github.com/pulumi/automation-api-examples/blob/main/dotnet/DatabaseMigration)
+* [Remote Deployment](https://github.com/pulumi/automation-api-examples/blob/main/dotnet/RemoteDeployment)
 
 {{% /choosable %}}
 

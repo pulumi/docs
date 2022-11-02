@@ -27,11 +27,19 @@ To enable a broad range of runtime customization the API defines a `Workspace` i
 
 ### LocalWorkspace
 
-The `LocalWorkspace` class is the default (and currently the only) implementation of `Workspace`. This implementation relies on `Pulumi.yaml` and `Pulumi.[stack].yaml` as the intermediate format for Project and Stack settings. Modifying `ProjectSettings` will alter the Workspace `Pulumi.yaml` file, and setting config on a Stack will modify the `Pulumi.[stack].yaml` file. This is identical to the behavior of Pulumi CLI driven workspaces.
+The `LocalWorkspace` class is the default implementation of `Workspace`. This implementation relies on `Pulumi.yaml` and `Pulumi.[stack].yaml` as the intermediate format for Project and Stack settings. Modifying `ProjectSettings` will alter the Workspace `Pulumi.yaml` file, and setting config on a Stack will modify the `Pulumi.[stack].yaml` file. This is identical to the behavior of Pulumi CLI driven workspaces.
+
+### RemoteWorkspace
+
+The `RemoteWorkspace` class represents a workspace for running Pulumi operations remotely via Pulumi Deployments where the program is located in a remote Git repository.
 
 ## Stack
 
 The `Stack` class represents an isolated, independently configurable instance of a Pulumi program. `Stack` exposes methods for the full pulumi lifecycle (`up`/`preview`/`refresh`/`destroy`), as well as managing configuration. Multiple Stacks are commonly used to denote different phases of development (such as development, staging and production) or feature branches (such as feature-x-dev, jane-feature-x-dev). You can learn more about stacks in the [intro docs](/docs/intro/concepts/stack/).
+
+## RemoteStack
+
+The `RemoteStack` class represents an isolated, independently configurable instance of a Pulumi program. `RemoteStack` exposes methods for the full pulumi lifecycle (`up`/`preview`/`refresh`/`destroy`) for running these remotely from a remote workspace.
 
 ## Local Program
 

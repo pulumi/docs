@@ -21,6 +21,10 @@ event_data:
 description: |
   are free, hands-on learning events for developers and engineers to level up their cloud skills and master the modern cloud. Join our experts for workshops and talks that will teach you the latest software development and infrastructure as code practices that can increase your productivity and level up your output, whether you’re using VMs, serverless, Kubernetes, or even multi-cloud.
 
+join:
+  link: https://tulu.la/chat/ces-00002e/lobby-0002g6
+  link_text: Join Now
+
 featured:
   items:
     - title: Opening Keynote and Welcome

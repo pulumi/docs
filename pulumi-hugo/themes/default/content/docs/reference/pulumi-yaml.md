@@ -5,7 +5,7 @@ meta_desc: Documentation of the settings that are valid for the Pulumi project f
 menu:
   reference:
     name: Project File
-    weight: 5
+    weight: 6
 ---
 
 The `Pulumi.yaml` project file specifies metadata about your project, such as the project name and language runtime for your project.

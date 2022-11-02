@@ -1,8 +1,6 @@
 {{ define "hero" }}
     <header class="page-hero">
-        <a href="#registration">
-            <img class="mx-auto mb-6 w-full" src="/images/cloud-engineering-days/cloud-eng-days-hero.png" />
-        </a>
+        <img class="mx-auto mb-6 w-full" src="/images/cloud-engineering-days/ced-hero-no-button.png" />
     </header>
 {{ end }}
 
@@ -11,6 +9,12 @@
         <h5>
             <b>{{ .Params.title }}</b>&nbsp;{{ .Params.description }}
         </h5>
+    </section>
+
+    <section id="join" class="container mx-auto my-16 text-center">
+        <div>
+            <a href="{{ .Params.join.link }}" class="btn-lg p-12 bg-black text-white">{{ .Params.join.link_text }}</a>
+        </div>
     </section>
 
     <section id="featured" class="container mx-auto my-0">
@@ -119,7 +123,7 @@
         </div>
     </section>
 
-    <section id="workshops" class="min-w-full my-0 pt-8 bg-black">
+    <section id="workshops" class="min-w-full mb-8 pt-8 bg-black">
         <div class="container mx-auto">
             <h3 class="text-center text-white">{{ .Params.workshops.title }}</h3>
             <div class="flex flex-wrap items-stretch justify-center">
@@ -143,24 +147,6 @@
                     </div>
                 {{ end }}
             </div>
-        </div>
-    </section>
-
-    <script>
-        (function () {
-            window._zi = { formId: "ed92e322-b149-46c7-8c1c-6f29de9f8fb8", formLoadTimeout: 4000 };
-            var zi = document.createElement("script");
-            zi.type = "text/javascript";
-            zi.async = true;
-            zi.src = "https://ws-assets.zoominfo.com/formcomplete.js";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(zi, s);
-        })();
-    </script>
-    <section id="registration" class="min-w-full mt-16 mb-16 px-8 flex justify-center">
-        <div class="lg:w-1/2">
-            <h4>Register</h4>
-            <pulumi-hubspot-form form-id="{{ .Params.form.hubspot_form_id }}" go-to-webinar-key="{{ .Params.form.gotowebinar_key }}"></pulumi-hubspot-form>
         </div>
     </section>
 {{ end }}

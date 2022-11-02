@@ -5,7 +5,7 @@ meta_desc: An overview of how to use the "Deploy with Pulumi" button to easily
 menu:
   intro:
     parent: pulumi-service
-    weight: 11
+    weight: 12
 aliases:
  - /docs/reference/service/pulumi-button/
  - /docs/console/extensions/pulumi-button/

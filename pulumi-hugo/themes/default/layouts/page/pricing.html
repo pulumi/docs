@@ -8,9 +8,9 @@
         <p class="max-w-3xl mx-auto mt-6">
             {{/* prettier-ignore-start */}}
         The <a class="underline" href="{{ relref . " /product/pulumi-service" }}">Pulumi Service</a> is the easiest way to adopt
-        Pulumi <a class="underline" href="https://github.com/pulumi/pulumi">open source</a>.
-        <p>Prefer to manage your own
-        <a class="text-blue-600 underline" href="{{ relref . "/docs/intro/concepts/state#using-a-self-managed-backend" }}"> state storage backend</a>?
+        Pulumi's <a class="underline" href="https://github.com/pulumi/pulumi">open source SDK</a>.
+        <p>Prefer to manage your own state storage backend?
+        <a class="text-blue-600 underline" href="{{ relref . "/docs/intro/concepts/state#using-a-self-managed-backend" }}"> Learn more</a>.
         </p>
             {{/* prettier-ignore-end */}}
         </p>
@@ -44,12 +44,6 @@
                                     <li>
                                         <span>
                                             <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                            <span>Any cloud and language</span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span>
-                                            <i class="fa fa-check pricing-checkmark mr-2"></i>
                                             <span>1 member</span>
                                         </span>
                                     </li>
@@ -62,7 +56,19 @@
                                     <li>
                                         <span>
                                             <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                            <span>Unlimited deployments</span>
+                                            <span>Unlimited updates</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                            <span
+                                                ><a href="{{ relref . " /docs/intro/pulumi-service/deployments" }}" class="underline">Hosted deployments</a>
+                                                <pulumi-tooltip>
+                                                    <i class="w-8 fas fa-info-circle text-blue-600"></i>
+                                                    <span slot="content"> This feature is in preview.</span>
+                                                </pulumi-tooltip>
+                                            </span>
                                         </span>
                                     </li>
                                 </ul>
@@ -94,12 +100,6 @@
                                             <li>
                                                 <span>
                                                     <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                    <span>Any cloud and language</span>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
                                                     <span>1 member</span>
                                                 </span>
                                             </li>
@@ -112,7 +112,19 @@
                                             <li>
                                                 <span>
                                                     <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                    <span>Unlimited deployments</span>
+                                                    <span>Unlimited updates</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span
+                                                        ><a href="{{ relref . " /docs/intro/pulumi-service/deployments" }}" class="underline">Hosted deployments</a>
+                                                        <pulumi-tooltip>
+                                                            <i class="w-8 fas fa-info-circle text-blue-600"></i>
+                                                            <span slot="content"> This feature is in preview and is available at no additional cost during the preview.</span>
+                                                        </pulumi-tooltip>
+                                                    </span>
                                                 </span>
                                             </li>
                                         </ul>
@@ -152,13 +164,13 @@
                                             <li>
                                                 <span>
                                                     <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                    <span>Unlimited stacks</span>
+                                                    <span>5 concurrent updates</span>
                                                 </span>
                                             </li>
                                             <li>
                                                 <span>
                                                     <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                    <span>5 concurrent updates</span>
+                                                    <span>Unlimited stacks</span>
                                                 </span>
                                             </li>
                                             <li>
@@ -937,7 +949,7 @@
 
                 <div class="compare-plans-table-row-container">
                     <div class="compare-plans-table-row-item">
-                        <span>Unlimited deployments</span>
+                        <span>Unlimited updates</span>
                     </div>
                     <div class="compare-plans-table-row-item">
                         <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
@@ -992,6 +1004,30 @@
                 <div class="compare-plans-table-row-container">
                     <div class="compare-plans-table-row-item">
                         <span><a class="compare-table-link" href="{{ relref . " /docs/reference/service-rest-api/" }}">REST API</a></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                    <div class="compare-plans-table-row-item">
+                        <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                    </div>
+                </div>
+
+                <div class="compare-plans-table-row-container">
+                    <div class="compare-plans-table-row-item">
+                        <span>
+                            <a class="compare-table-link" href="{{ relref . " /docs/intro/pulumi-service/deployments" }}">Hosted deployments</a>
+                            <pulumi-tooltip>
+                                <i class="w-8 fas fa-info-circle text-blue-600"></i>
+                                <span slot="content"> This feature is in preview and is available at no additional cost during the preview.</span>
+                            </pulumi-tooltip>
+                        </span>
                     </div>
                     <div class="compare-plans-table-row-item">
                         <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>

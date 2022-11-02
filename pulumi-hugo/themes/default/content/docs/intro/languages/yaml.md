@@ -16,12 +16,6 @@ Pulumi supports writing your infrastructure as code using Pulumi YAML. Pulumi YA
 configuration language designed to make describing infrastructure as simple as possible. It supports
 managing infrastructure on any cloud, including Azure, AWS, and Google Cloud.
 
-{{% notes "info" %}}
-Pulumi YAML is currently in preview. Feedback is greatly appreciated!
-
-Please post any Bug Reports or Feature Requests in [GitHub Issues](https://github.com/pulumi/pulumi-yaml/issues/new/choose).
-{{% /notes %}}
-
 ## Getting Started
 
 The fastest way to get up and running is to choose from one of the following Getting Started guides:
