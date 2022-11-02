@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Workspace
    ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -82,34 +82,6 @@ installation, environment configuration ($PULUMI_HOME), and creation, deletion, 
     <div class="level1"><span class="xref">Workspace</span></div>
       <div class="level2"><a class="xref" href="Pulumi.Automation.LocalWorkspace.html">LocalWorkspace</a></div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">System.IDisposable</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Automation.html">Pulumi.Automation</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Automation.dll</h6>
   <h5 id="Pulumi_Automation_Workspace_syntax">Syntax</h5>
@@ -119,7 +91,7 @@ installation, environment configuration ($PULUMI_HOME), and creation, deletion, 
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_EnvironmentVariables_" data-uid="Pulumi.Automation.Workspace.EnvironmentVariables*"></a>
   <h4 id="Pulumi_Automation_Workspace_EnvironmentVariables" data-uid="Pulumi.Automation.Workspace.EnvironmentVariables">EnvironmentVariables</h4>
@@ -128,7 +100,7 @@ installation, environment configuration ($PULUMI_HOME), and creation, deletion, 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract IDictionary&lt;string, string&gt; EnvironmentVariables { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract IDictionary&lt;string, string?&gt;? EnvironmentVariables { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,13 +112,41 @@ installation, environment configuration ($PULUMI_HOME), and creation, deletion, 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L68">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Workspace_Logger_" data-uid="Pulumi.Automation.Workspace.Logger*"></a>
+  <h4 id="Pulumi_Automation_Workspace_Logger" data-uid="Pulumi.Automation.Workspace.Logger">Logger</h4>
+  <div class="markdown level1 summary"><p>A custom logger instance that will be used for the action. Note that it will only be used
+if <a class="xref" href="Pulumi.Automation.Workspace.html#Pulumi_Automation_Workspace_Program">Program</a> is also provided.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract ILogger? Logger { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ILogger</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_Program_" data-uid="Pulumi.Automation.Workspace.Program*"></a>
   <h4 id="Pulumi_Automation_Workspace_Program" data-uid="Pulumi.Automation.Workspace.Program">Program</h4>
@@ -175,7 +175,7 @@ If none is specified, the stack will refer to <a class="xref" href="Pulumi.Autom
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_PulumiHome_" data-uid="Pulumi.Automation.Workspace.PulumiHome*"></a>
   <h4 id="Pulumi_Automation_Workspace_PulumiHome" data-uid="Pulumi.Automation.Workspace.PulumiHome">PulumiHome</h4>
@@ -186,7 +186,7 @@ This customizes the location of $PULUMI_HOME where metadata is stored and plugin
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract string PulumiHome { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract string? PulumiHome { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -198,13 +198,13 @@ This customizes the location of $PULUMI_HOME where metadata is stored and plugin
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_PulumiVersion_" data-uid="Pulumi.Automation.Workspace.PulumiVersion*"></a>
   <h4 id="Pulumi_Automation_Workspace_PulumiVersion" data-uid="Pulumi.Automation.Workspace.PulumiVersion">PulumiVersion</h4>
@@ -231,18 +231,18 @@ This customizes the location of $PULUMI_HOME where metadata is stored and plugin
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_SecretsProvider_" data-uid="Pulumi.Automation.Workspace.SecretsProvider*"></a>
   <h4 id="Pulumi_Automation_Workspace_SecretsProvider" data-uid="Pulumi.Automation.Workspace.SecretsProvider">SecretsProvider</h4>
   <div class="markdown level1 summary"><p>The secrets provider to use for encryption and decryption of stack secrets.</p>
 <p>
-See: https://www.pulumi.com/docs/intro/concepts/config/#available-encryption-providers
+See: https://www.pulumi.com/docs/intro/concepts/secrets/#available-encryption-providers
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract string SecretsProvider { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract string? SecretsProvider { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -254,13 +254,13 @@ See: https://www.pulumi.com/docs/intro/concepts/config/#available-encryption-pro
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_WorkDir_" data-uid="Pulumi.Automation.Workspace.WorkDir*"></a>
   <h4 id="Pulumi_Automation_Workspace_WorkDir" data-uid="Pulumi.Automation.Workspace.WorkDir">WorkDir</h4>
@@ -289,7 +289,7 @@ See: https://www.pulumi.com/docs/intro/concepts/config/#available-encryption-pro
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L191">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L200">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_CreateStackAsync_" data-uid="Pulumi.Automation.Workspace.CreateStackAsync*"></a>
   <h4 id="Pulumi_Automation_Workspace_CreateStackAsync_System_String_" data-uid="Pulumi.Automation.Workspace.CreateStackAsync(System.String)">CreateStackAsync(String)</h4>
@@ -328,16 +328,16 @@ See: https://www.pulumi.com/docs/intro/concepts/config/#available-encryption-pro
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L200">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L209">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_CreateStackAsync_" data-uid="Pulumi.Automation.Workspace.CreateStackAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_CreateStackAsync_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.CreateStackAsync(System.String,System.Threading.CancellationToken)">CreateStackAsync(String, CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_CreateStackAsync_System_String_CancellationToken_" data-uid="Pulumi.Automation.Workspace.CreateStackAsync(System.String,CancellationToken)">CreateStackAsync(String, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Creates and sets a new stack with the specified stack name, failing if one already exists.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -362,7 +362,7 @@ See: https://www.pulumi.com/docs/intro/concepts/config/#available-encryption-pro
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token.</p>
 </td>
@@ -379,7 +379,7 @@ See: https://www.pulumi.com/docs/intro/concepts/config/#available-encryption-pro
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -401,7 +401,7 @@ See: https://www.pulumi.com/docs/intro/concepts/config/#available-encryption-pro
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L311">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L341">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_Dispose_" data-uid="Pulumi.Automation.Workspace.Dispose*"></a>
   <h4 id="Pulumi_Automation_Workspace_Dispose" data-uid="Pulumi.Automation.Workspace.Dispose">Dispose()</h4>
@@ -412,10 +412,10 @@ See: https://www.pulumi.com/docs/intro/concepts/config/#available-encryption-pro
     <pre><code class="lang-csharp hljs">public virtual void Dispose()</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L237">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L246">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_ExportStackAsync_" data-uid="Pulumi.Automation.Workspace.ExportStackAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_ExportStackAsync_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.ExportStackAsync(System.String,System.Threading.CancellationToken)">ExportStackAsync(String, CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_ExportStackAsync_System_String_CancellationToken_" data-uid="Pulumi.Automation.Workspace.ExportStackAsync(System.String,CancellationToken)">ExportStackAsync(String, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Exports the deployment state of the stack.</p>
 <p>
 This can be combined with ImportStackAsync to edit a
@@ -424,7 +424,7 @@ stack&apos;s state (such as recovery from failed deployments).
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task&lt;StackDeployment&gt; ExportStackAsync(string stackName, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task&lt;StackDeployment&gt; ExportStackAsync(string stackName, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -442,7 +442,7 @@ stack&apos;s state (such as recovery from failed deployments).
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -458,22 +458,22 @@ stack&apos;s state (such as recovery from failed deployments).
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Automation.StackDeployment.html">StackDeployment</a>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Automation.StackDeployment.html">StackDeployment</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_GetAllConfigAsync_" data-uid="Pulumi.Automation.Workspace.GetAllConfigAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_GetAllConfigAsync_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.GetAllConfigAsync(System.String,System.Threading.CancellationToken)">GetAllConfigAsync(String, CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_GetAllConfigAsync_System_String_CancellationToken_" data-uid="Pulumi.Automation.Workspace.GetAllConfigAsync(System.String,CancellationToken)">GetAllConfigAsync(String, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Returns the config map for the specified stack name, scoped to the current Workspace.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task&lt;ImmutableDictionary&lt;string, ConfigValue&gt;&gt; GetAllConfigAsync(string stackName, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task&lt;ImmutableDictionary&lt;string, ConfigValue&gt;&gt; GetAllConfigAsync(string stackName, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -492,7 +492,7 @@ stack&apos;s state (such as recovery from failed deployments).
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token.</p>
 </td>
@@ -509,23 +509,23 @@ stack&apos;s state (such as recovery from failed deployments).
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="Pulumi.Automation.ConfigValue.html">ConfigValue</a>&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="Pulumi.Automation.ConfigValue.html">ConfigValue</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L124">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_GetConfigAsync_" data-uid="Pulumi.Automation.Workspace.GetConfigAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_GetConfigAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.GetConfigAsync(System.String,System.String,System.Threading.CancellationToken)">GetConfigAsync(String, String, CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_GetConfigAsync_System_String_System_String_CancellationToken_" data-uid="Pulumi.Automation.Workspace.GetConfigAsync(System.String,System.String,CancellationToken)">GetConfigAsync(String, String, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Returns the value associated with the specified stack name and key, scoped
 to the Workspace.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task&lt;ConfigValue&gt; GetConfigAsync(string stackName, string key, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task&lt;ConfigValue&gt; GetConfigAsync(string stackName, string key, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -550,7 +550,7 @@ to the Workspace.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token.</p>
 </td>
@@ -567,22 +567,22 @@ to the Workspace.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Automation.ConfigValue.html">ConfigValue</a>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Automation.ConfigValue.html">ConfigValue</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_GetProjectSettingsAsync_" data-uid="Pulumi.Automation.Workspace.GetProjectSettingsAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_GetProjectSettingsAsync_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.GetProjectSettingsAsync(System.Threading.CancellationToken)">GetProjectSettingsAsync(CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_GetProjectSettingsAsync_CancellationToken_" data-uid="Pulumi.Automation.Workspace.GetProjectSettingsAsync(CancellationToken)">GetProjectSettingsAsync(CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Returns project settings for the current project if any.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task&lt;ProjectSettings&gt; GetProjectSettingsAsync(CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task&lt;ProjectSettings&gt; GetProjectSettingsAsync(CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -595,7 +595,7 @@ to the Workspace.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -611,22 +611,22 @@ to the Workspace.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Automation.ProjectSettings.html">ProjectSettings</a>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Automation.ProjectSettings.html">ProjectSettings</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L181">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L190">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_GetStackAsync_" data-uid="Pulumi.Automation.Workspace.GetStackAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_GetStackAsync_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.GetStackAsync(System.Threading.CancellationToken)">GetStackAsync(CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_GetStackAsync_CancellationToken_" data-uid="Pulumi.Automation.Workspace.GetStackAsync(CancellationToken)">GetStackAsync(CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Returns a summary of the currently selected stack, if any.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;StackSummary&gt; GetStackAsync(CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual async Task&lt;StackSummary&gt; GetStackAsync(CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -639,7 +639,7 @@ to the Workspace.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -655,22 +655,22 @@ to the Workspace.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Automation.StackSummary.html">StackSummary</a>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Automation.StackSummary.html">StackSummary</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L295">View Source</a>
   </span>
-  <a id="Pulumi_Automation_Workspace_GetStackSettingsAsync_" data-uid="Pulumi.Automation.Workspace.GetStackSettingsAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_GetStackSettingsAsync_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.GetStackSettingsAsync(System.String,System.Threading.CancellationToken)">GetStackSettingsAsync(String, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Returns stack settings for the stack matching the specified stack name if any.</p>
+  <a id="Pulumi_Automation_Workspace_GetStackOutputsAsync_" data-uid="Pulumi.Automation.Workspace.GetStackOutputsAsync*"></a>
+  <h4 id="Pulumi_Automation_Workspace_GetStackOutputsAsync_System_String_CancellationToken_" data-uid="Pulumi.Automation.Workspace.GetStackOutputsAsync(System.String,CancellationToken)">GetStackOutputsAsync(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Gets the current set of Stack outputs from the last <a class="xref" href="Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_UpAsync_Pulumi_Automation_UpOptions_CancellationToken_">UpAsync(UpOptions, CancellationToken)</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task&lt;StackSettings&gt; GetStackSettingsAsync(string stackName, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task&lt;ImmutableDictionary&lt;string, OutputValue&gt;&gt; GetStackOutputsAsync(string stackName, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -689,7 +689,7 @@ to the Workspace.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token.</p>
 </td>
@@ -706,16 +706,67 @@ to the Workspace.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Automation.StackSettings.html">StackSettings</a>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="Pulumi.Automation.OutputValue.html">OutputValue</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L245">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L94">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Workspace_GetStackSettingsAsync_" data-uid="Pulumi.Automation.Workspace.GetStackSettingsAsync*"></a>
+  <h4 id="Pulumi_Automation_Workspace_GetStackSettingsAsync_System_String_CancellationToken_" data-uid="Pulumi.Automation.Workspace.GetStackSettingsAsync(System.String,CancellationToken)">GetStackSettingsAsync(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Returns stack settings for the stack matching the specified stack name if any.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Task&lt;StackSettings&gt; GetStackSettingsAsync(string stackName, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">stackName</span></td>
+        <td><p>The name of the stack.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Automation.StackSettings.html">StackSettings</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L254">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_ImportStackAsync_" data-uid="Pulumi.Automation.Workspace.ImportStackAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_ImportStackAsync_System_String_Pulumi_Automation_StackDeployment_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.ImportStackAsync(System.String,Pulumi.Automation.StackDeployment,System.Threading.CancellationToken)">ImportStackAsync(String, StackDeployment, CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_ImportStackAsync_System_String_Pulumi_Automation_StackDeployment_CancellationToken_" data-uid="Pulumi.Automation.Workspace.ImportStackAsync(System.String,Pulumi.Automation.StackDeployment,CancellationToken)">ImportStackAsync(String, StackDeployment, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Imports the specified deployment state into a pre-existing stack.</p>
 <p>
 This can be combined with ExportStackAsync to edit a
@@ -724,7 +775,7 @@ stack&apos;s state (such as recovery from failed deployments).
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task ImportStackAsync(string stackName, StackDeployment state, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task ImportStackAsync(string stackName, StackDeployment state, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -747,7 +798,7 @@ stack&apos;s state (such as recovery from failed deployments).
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -763,22 +814,22 @@ stack&apos;s state (such as recovery from failed deployments).
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L254">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L263">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_InstallPluginAsync_" data-uid="Pulumi.Automation.Workspace.InstallPluginAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_InstallPluginAsync_System_String_System_String_Pulumi_Automation_PluginKind_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.InstallPluginAsync(System.String,System.String,Pulumi.Automation.PluginKind,System.Threading.CancellationToken)">InstallPluginAsync(String, String, PluginKind, CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_InstallPluginAsync_System_String_System_String_Pulumi_Automation_PluginKind_CancellationToken_" data-uid="Pulumi.Automation.Workspace.InstallPluginAsync(System.String,System.String,Pulumi.Automation.PluginKind,CancellationToken)">InstallPluginAsync(String, String, PluginKind, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Installs a plugin in the Workspace, for example to use cloud providers like AWS or GCP.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task InstallPluginAsync(string name, string version, PluginKind kind = PluginKind.Resource, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public Task InstallPluginAsync(string name, string version, PluginKind kind, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -809,7 +860,7 @@ stack&apos;s state (such as recovery from failed deployments).
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token.</p>
 </td>
@@ -826,22 +877,22 @@ stack&apos;s state (such as recovery from failed deployments).
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L268">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L274">View Source</a>
   </span>
-  <a id="Pulumi_Automation_Workspace_ListPluginsAsync_" data-uid="Pulumi.Automation.Workspace.ListPluginsAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_ListPluginsAsync_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.ListPluginsAsync(System.Threading.CancellationToken)">ListPluginsAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Returns a list of all plugins installed in the Workspace.</p>
+  <a id="Pulumi_Automation_Workspace_InstallPluginAsync_" data-uid="Pulumi.Automation.Workspace.InstallPluginAsync*"></a>
+  <h4 id="Pulumi_Automation_Workspace_InstallPluginAsync_System_String_System_String_Pulumi_Automation_PluginKind_Pulumi_Automation_PluginInstallOptions_CancellationToken_" data-uid="Pulumi.Automation.Workspace.InstallPluginAsync(System.String,System.String,Pulumi.Automation.PluginKind,Pulumi.Automation.PluginInstallOptions,CancellationToken)">InstallPluginAsync(String, String, PluginKind, PluginInstallOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Installs a plugin in the Workspace, for example to use cloud providers like AWS or GCP.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task&lt;ImmutableList&lt;PluginInfo&gt;&gt; ListPluginsAsync(CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task InstallPluginAsync(string name, string version, PluginKind kind = PluginKind.Resource, PluginInstallOptions options = null, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -854,7 +905,76 @@ stack&apos;s state (such as recovery from failed deployments).
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the plugin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">version</span></td>
+        <td><p>The version of the plugin e.g. &quot;v1.0.0&quot;.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Automation.PluginKind.html">PluginKind</a></td>
+        <td><span class="parametername">kind</span></td>
+        <td><p>The kind of plugin e.g. &quot;resource&quot;.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Automation.PluginInstallOptions.html">PluginInstallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Any additional plugin installation options.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L288">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Workspace_ListPluginsAsync_" data-uid="Pulumi.Automation.Workspace.ListPluginsAsync*"></a>
+  <h4 id="Pulumi_Automation_Workspace_ListPluginsAsync_CancellationToken_" data-uid="Pulumi.Automation.Workspace.ListPluginsAsync(CancellationToken)">ListPluginsAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Returns a list of all plugins installed in the Workspace.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Task&lt;ImmutableList&lt;PluginInfo&gt;&gt; ListPluginsAsync(CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -870,16 +990,16 @@ stack&apos;s state (such as recovery from failed deployments).
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Immutable.ImmutableList</span>&lt;<a class="xref" href="Pulumi.Automation.PluginInfo.html">PluginInfo</a>&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">ImmutableList</span>&lt;<a class="xref" href="Pulumi.Automation.PluginInfo.html">PluginInfo</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L229">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L238">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_ListStacksAsync_" data-uid="Pulumi.Automation.Workspace.ListStacksAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_ListStacksAsync_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.ListStacksAsync(System.Threading.CancellationToken)">ListStacksAsync(CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_ListStacksAsync_CancellationToken_" data-uid="Pulumi.Automation.Workspace.ListStacksAsync(CancellationToken)">ListStacksAsync(CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Returns all stacks created under the current project.</p>
 <p>
 This queries underlying backend and may return stacks not present in the Workspace (as Pulumi.{stack}.yaml files).
@@ -887,7 +1007,7 @@ This queries underlying backend and may return stacks not present in the Workspa
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task&lt;ImmutableList&lt;StackSummary&gt;&gt; ListStacksAsync(CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task&lt;ImmutableList&lt;StackSummary&gt;&gt; ListStacksAsync(CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -900,7 +1020,7 @@ This queries underlying backend and may return stacks not present in the Workspa
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -916,16 +1036,16 @@ This queries underlying backend and may return stacks not present in the Workspa
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Immutable.ImmutableList</span>&lt;<a class="xref" href="Pulumi.Automation.StackSummary.html">StackSummary</a>&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">ImmutableList</span>&lt;<a class="xref" href="Pulumi.Automation.StackSummary.html">StackSummary</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_PostCommandCallbackAsync_" data-uid="Pulumi.Automation.Workspace.PostCommandCallbackAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_PostCommandCallbackAsync_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.PostCommandCallbackAsync(System.String,System.Threading.CancellationToken)">PostCommandCallbackAsync(String, CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_PostCommandCallbackAsync_System_String_CancellationToken_" data-uid="Pulumi.Automation.Workspace.PostCommandCallbackAsync(System.String,CancellationToken)">PostCommandCallbackAsync(String, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Hook executed after every command. Called with the stack name.</p>
 <p>
 An extensibility point to perform workspace cleanup (CLI operations may create/modify a Pulumi.stack.yaml).
@@ -935,7 +1055,7 @@ An extensibility point to perform workspace cleanup (CLI operations may create/m
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task PostCommandCallbackAsync(string stackName, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task PostCommandCallbackAsync(string stackName, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -954,7 +1074,7 @@ An extensibility point to perform workspace cleanup (CLI operations may create/m
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token.</p>
 </td>
@@ -971,22 +1091,22 @@ An extensibility point to perform workspace cleanup (CLI operations may create/m
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L171">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L180">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_RefreshConfigAsync_" data-uid="Pulumi.Automation.Workspace.RefreshConfigAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_RefreshConfigAsync_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.RefreshConfigAsync(System.String,System.Threading.CancellationToken)">RefreshConfigAsync(String, CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_RefreshConfigAsync_System_String_CancellationToken_" data-uid="Pulumi.Automation.Workspace.RefreshConfigAsync(System.String,CancellationToken)">RefreshConfigAsync(String, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Gets and sets the config map used with the last update for the stack matching the specified stack name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task&lt;ImmutableDictionary&lt;string, ConfigValue&gt;&gt; RefreshConfigAsync(string stackName, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task&lt;ImmutableDictionary&lt;string, ConfigValue&gt;&gt; RefreshConfigAsync(string stackName, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1005,7 +1125,7 @@ An extensibility point to perform workspace cleanup (CLI operations may create/m
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token.</p>
 </td>
@@ -1022,22 +1142,22 @@ An extensibility point to perform workspace cleanup (CLI operations may create/m
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="Pulumi.Automation.ConfigValue.html">ConfigValue</a>&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="Pulumi.Automation.ConfigValue.html">ConfigValue</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L164">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L173">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_RemoveAllConfigAsync_" data-uid="Pulumi.Automation.Workspace.RemoveAllConfigAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_RemoveAllConfigAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.RemoveAllConfigAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">RemoveAllConfigAsync(String, IEnumerable&lt;String&gt;, CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_RemoveAllConfigAsync_System_String_IEnumerable_System_String__CancellationToken_" data-uid="Pulumi.Automation.Workspace.RemoveAllConfigAsync(System.String,IEnumerable{System.String},CancellationToken)">RemoveAllConfigAsync(String, IEnumerable&lt;String&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Removes all values in the provided key collection from the config map for the specified stack name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task RemoveAllConfigAsync(string stackName, IEnumerable&lt;string&gt; keys, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task RemoveAllConfigAsync(string stackName, IEnumerable&lt;string&gt; keys, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1056,13 +1176,13 @@ An extensibility point to perform workspace cleanup (CLI operations may create/m
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">keys</span></td>
         <td><p>The collection of keys to remove from the underlying config map.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token.</p>
 </td>
@@ -1079,22 +1199,22 @@ An extensibility point to perform workspace cleanup (CLI operations may create/m
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L156">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_RemoveConfigAsync_" data-uid="Pulumi.Automation.Workspace.RemoveConfigAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_RemoveConfigAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.RemoveConfigAsync(System.String,System.String,System.Threading.CancellationToken)">RemoveConfigAsync(String, String, CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_RemoveConfigAsync_System_String_System_String_CancellationToken_" data-uid="Pulumi.Automation.Workspace.RemoveConfigAsync(System.String,System.String,CancellationToken)">RemoveConfigAsync(String, String, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Removes the specified key-value pair from the provided stack's config.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task RemoveConfigAsync(string stackName, string key, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task RemoveConfigAsync(string stackName, string key, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1119,7 +1239,7 @@ An extensibility point to perform workspace cleanup (CLI operations may create/m
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token.</p>
 </td>
@@ -1136,22 +1256,22 @@ An extensibility point to perform workspace cleanup (CLI operations may create/m
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L263">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L283">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_RemovePluginAsync_" data-uid="Pulumi.Automation.Workspace.RemovePluginAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_RemovePluginAsync_System_String_System_String_Pulumi_Automation_PluginKind_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.RemovePluginAsync(System.String,System.String,Pulumi.Automation.PluginKind,System.Threading.CancellationToken)">RemovePluginAsync(String, String, PluginKind, CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_RemovePluginAsync_System_Nullable_System_String__System_Nullable_System_String__Pulumi_Automation_PluginKind_CancellationToken_" data-uid="Pulumi.Automation.Workspace.RemovePluginAsync(System.Nullable{System.String},System.Nullable{System.String},Pulumi.Automation.PluginKind,CancellationToken)">RemovePluginAsync(Nullable&lt;String&gt;, Nullable&lt;String&gt;, PluginKind, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Removes a plugin from the Workspace matching the specified name and version.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task RemovePluginAsync(string name = null, string versionRange = null, PluginKind kind = PluginKind.Resource, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task RemovePluginAsync(string? name = null, string? versionRange = null, PluginKind kind = PluginKind.Resource, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1164,13 +1284,13 @@ An extensibility point to perform workspace cleanup (CLI operations may create/m
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">name</span></td>
         <td><p>The optional name of the plugin.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">versionRange</span></td>
         <td><p>The optional semver range to check when removing plugins matching the given name e.g. &quot;1.0.0&quot;, &quot;&gt;1.0.0&quot;.</p>
 </td>
@@ -1182,7 +1302,7 @@ An extensibility point to perform workspace cleanup (CLI operations may create/m
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token.</p>
 </td>
@@ -1199,22 +1319,22 @@ An extensibility point to perform workspace cleanup (CLI operations may create/m
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L222">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L231">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_RemoveStackAsync_" data-uid="Pulumi.Automation.Workspace.RemoveStackAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_RemoveStackAsync_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.RemoveStackAsync(System.String,System.Threading.CancellationToken)">RemoveStackAsync(String, CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_RemoveStackAsync_System_String_CancellationToken_" data-uid="Pulumi.Automation.Workspace.RemoveStackAsync(System.String,CancellationToken)">RemoveStackAsync(String, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Deletes the stack and all associated configuration and history.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task RemoveStackAsync(string stackName, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task RemoveStackAsync(string stackName, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1233,7 +1353,7 @@ An extensibility point to perform workspace cleanup (CLI operations may create/m
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token.</p>
 </td>
@@ -1250,16 +1370,16 @@ An extensibility point to perform workspace cleanup (CLI operations may create/m
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_SaveProjectSettingsAsync_" data-uid="Pulumi.Automation.Workspace.SaveProjectSettingsAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_SaveProjectSettingsAsync_Pulumi_Automation_ProjectSettings_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.SaveProjectSettingsAsync(Pulumi.Automation.ProjectSettings,System.Threading.CancellationToken)">SaveProjectSettingsAsync(ProjectSettings, CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_SaveProjectSettingsAsync_Pulumi_Automation_ProjectSettings_CancellationToken_" data-uid="Pulumi.Automation.Workspace.SaveProjectSettingsAsync(Pulumi.Automation.ProjectSettings,CancellationToken)">SaveProjectSettingsAsync(ProjectSettings, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Overwrites the settings for the current project.</p>
 <p>
 There can only be a single project per workspace. Fails if new project name does not match old.
@@ -1267,7 +1387,7 @@ There can only be a single project per workspace. Fails if new project name does
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task SaveProjectSettingsAsync(ProjectSettings settings, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task SaveProjectSettingsAsync(ProjectSettings settings, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1286,7 +1406,7 @@ There can only be a single project per workspace. Fails if new project name does
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token.</p>
 </td>
@@ -1303,22 +1423,22 @@ There can only be a single project per workspace. Fails if new project name does
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_SaveStackSettingsAsync_" data-uid="Pulumi.Automation.Workspace.SaveStackSettingsAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_SaveStackSettingsAsync_System_String_Pulumi_Automation_StackSettings_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.SaveStackSettingsAsync(System.String,Pulumi.Automation.StackSettings,System.Threading.CancellationToken)">SaveStackSettingsAsync(String, StackSettings, CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_SaveStackSettingsAsync_System_String_Pulumi_Automation_StackSettings_CancellationToken_" data-uid="Pulumi.Automation.Workspace.SaveStackSettingsAsync(System.String,Pulumi.Automation.StackSettings,CancellationToken)">SaveStackSettingsAsync(String, StackSettings, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Overwrite the settings for the stack matching the specified stack name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task SaveStackSettingsAsync(string stackName, StackSettings settings, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task SaveStackSettingsAsync(string stackName, StackSettings settings, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1343,7 +1463,7 @@ There can only be a single project per workspace. Fails if new project name does
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token.</p>
 </td>
@@ -1360,13 +1480,13 @@ There can only be a single project per workspace. Fails if new project name does
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L207">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L216">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_SelectStackAsync_" data-uid="Pulumi.Automation.Workspace.SelectStackAsync*"></a>
   <h4 id="Pulumi_Automation_Workspace_SelectStackAsync_System_String_" data-uid="Pulumi.Automation.Workspace.SelectStackAsync(System.String)">SelectStackAsync(String)</h4>
@@ -1405,7 +1525,7 @@ There can only be a single project per workspace. Fails if new project name does
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1427,10 +1547,10 @@ There can only be a single project per workspace. Fails if new project name does
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L215">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L224">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_SelectStackAsync_" data-uid="Pulumi.Automation.Workspace.SelectStackAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_SelectStackAsync_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.SelectStackAsync(System.String,System.Threading.CancellationToken)">SelectStackAsync(String, CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_SelectStackAsync_System_String_CancellationToken_" data-uid="Pulumi.Automation.Workspace.SelectStackAsync(System.String,CancellationToken)">SelectStackAsync(String, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Selects and sets an existing stack matching the stack name, failing if none exists.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1455,7 +1575,7 @@ There can only be a single project per workspace. Fails if new project name does
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token.</p>
 </td>
@@ -1472,16 +1592,16 @@ There can only be a single project per workspace. Fails if new project name does
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_SerializeArgsForOpAsync_" data-uid="Pulumi.Automation.Workspace.SerializeArgsForOpAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_SerializeArgsForOpAsync_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.SerializeArgsForOpAsync(System.String,System.Threading.CancellationToken)">SerializeArgsForOpAsync(String, CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_SerializeArgsForOpAsync_System_String_CancellationToken_" data-uid="Pulumi.Automation.Workspace.SerializeArgsForOpAsync(System.String,CancellationToken)">SerializeArgsForOpAsync(String, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Hook to provide additional args to every CLI command before they are executed.</p>
 <p>
 Provided with a stack name, returns an array of args to append to an invoked command <code>[&quot;--config=...&quot;, ]</code>.
@@ -1491,7 +1611,7 @@ Provided with a stack name, returns an array of args to append to an invoked com
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task&lt;ImmutableList&lt;string&gt;&gt; SerializeArgsForOpAsync(string stackName, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task&lt;ImmutableList&lt;string&gt;&gt; SerializeArgsForOpAsync(string stackName, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1510,7 +1630,7 @@ Provided with a stack name, returns an array of args to append to an invoked com
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token.</p>
 </td>
@@ -1527,22 +1647,22 @@ Provided with a stack name, returns an array of args to append to an invoked com
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Immutable.ImmutableList</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">ImmutableList</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L148">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L157">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_SetAllConfigAsync_" data-uid="Pulumi.Automation.Workspace.SetAllConfigAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_SetAllConfigAsync_System_String_System_Collections_Generic_IDictionary_System_String_Pulumi_Automation_ConfigValue__System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.SetAllConfigAsync(System.String,System.Collections.Generic.IDictionary{System.String,Pulumi.Automation.ConfigValue},System.Threading.CancellationToken)">SetAllConfigAsync(String, IDictionary&lt;String, ConfigValue&gt;, CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_SetAllConfigAsync_System_String_IDictionary_System_String_Pulumi_Automation_ConfigValue__CancellationToken_" data-uid="Pulumi.Automation.Workspace.SetAllConfigAsync(System.String,IDictionary{System.String,Pulumi.Automation.ConfigValue},CancellationToken)">SetAllConfigAsync(String, IDictionary&lt;String, ConfigValue&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Sets all values in the provided config map for the specified stack name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task SetAllConfigAsync(string stackName, IDictionary&lt;string, ConfigValue&gt; configMap, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task SetAllConfigAsync(string stackName, IDictionary&lt;string, ConfigValue&gt; configMap, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1561,13 +1681,13 @@ Provided with a stack name, returns an array of args to append to an invoked com
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="Pulumi.Automation.ConfigValue.html">ConfigValue</a>&gt;</td>
+        <td><span class="xref">IDictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="Pulumi.Automation.ConfigValue.html">ConfigValue</a>&gt;</td>
         <td><span class="parametername">configMap</span></td>
         <td><p>The config map to upsert against the existing config.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token.</p>
 </td>
@@ -1584,22 +1704,22 @@ Provided with a stack name, returns an array of args to append to an invoked com
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L140">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L149">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_SetConfigAsync_" data-uid="Pulumi.Automation.Workspace.SetConfigAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_SetConfigAsync_System_String_System_String_Pulumi_Automation_ConfigValue_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.SetConfigAsync(System.String,System.String,Pulumi.Automation.ConfigValue,System.Threading.CancellationToken)">SetConfigAsync(String, String, ConfigValue, CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_SetConfigAsync_System_String_System_String_Pulumi_Automation_ConfigValue_CancellationToken_" data-uid="Pulumi.Automation.Workspace.SetConfigAsync(System.String,System.String,Pulumi.Automation.ConfigValue,CancellationToken)">SetConfigAsync(String, String, ConfigValue, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Sets the specified key-value pair in the provided stack's config.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task SetConfigAsync(string stackName, string key, ConfigValue value, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task SetConfigAsync(string stackName, string key, ConfigValue value, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1630,7 +1750,7 @@ Provided with a stack name, returns an array of args to append to an invoked com
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token.</p>
 </td>
@@ -1647,22 +1767,22 @@ Provided with a stack name, returns an array of args to append to an invoked com
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L176">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L185">View Source</a>
   </span>
   <a id="Pulumi_Automation_Workspace_WhoAmIAsync_" data-uid="Pulumi.Automation.Workspace.WhoAmIAsync*"></a>
-  <h4 id="Pulumi_Automation_Workspace_WhoAmIAsync_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.Workspace.WhoAmIAsync(System.Threading.CancellationToken)">WhoAmIAsync(CancellationToken)</h4>
+  <h4 id="Pulumi_Automation_Workspace_WhoAmIAsync_CancellationToken_" data-uid="Pulumi.Automation.Workspace.WhoAmIAsync(CancellationToken)">WhoAmIAsync(CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Returns the currently authenticated user.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task&lt;WhoAmIResult&gt; WhoAmIAsync(CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task&lt;WhoAmIResult&gt; WhoAmIAsync(CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1675,7 +1795,7 @@ Provided with a stack name, returns an array of args to append to an invoked com
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -1691,15 +1811,11 @@ Provided with a stack name, returns an array of args to append to an invoked com
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Automation.WhoAmIResult.html">WhoAmIResult</a>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Pulumi.Automation.WhoAmIResult.html">WhoAmIResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">System.IDisposable</span>
-  </div>
 </article>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
@@ -1707,7 +1823,7 @@ Provided with a stack name, returns an array of args to append to an invoked com
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/Workspace.cs/#L24" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
@@ -1725,7 +1841,7 @@ Provided with a stack name, returns an array of args to append to an invoked com
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright 2016-2021, Pulumi Corporation.
+            Copyright 2016-2022, Pulumi Corporation.
             
           </div>
         </div>

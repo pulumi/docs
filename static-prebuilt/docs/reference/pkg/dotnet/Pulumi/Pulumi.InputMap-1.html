@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class InputMap&lt;V&gt;
    ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -105,7 +105,7 @@ this form:
     <div class="level1"><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, V&gt;&gt;</div>
     <div class="level2"><span class="xref">InputMap&lt;V&gt;</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><span class="xref">System.Collections.IEnumerable</span></div>
     <div><span class="xref">System.Collections.Generic.IAsyncEnumerable</span>&lt;<a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.String</span>, V&gt;&gt;&gt;</div>
@@ -138,7 +138,7 @@ this form:
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
   <h5 id="Pulumi_InputMap_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class InputMap&lt;V&gt; : Input&lt;ImmutableDictionary&lt;string, V&gt;&gt;, IInput, IEnumerable, IAsyncEnumerable&lt;Input&lt;KeyValuePair&lt;string, V&gt;&gt;&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class InputMap&lt;V&gt; : Input&lt;ImmutableDictionary&lt;string, V&gt;&gt;, IEnumerable, IAsyncEnumerable&lt;Input&lt;KeyValuePair&lt;string, V&gt;&gt;&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -158,7 +158,7 @@ this form:
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_InputMap_1__ctor_" data-uid="Pulumi.InputMap`1.#ctor*"></a>
   <h4 id="Pulumi_InputMap_1__ctor" data-uid="Pulumi.InputMap`1.#ctor">InputMap()</h4>
@@ -171,7 +171,7 @@ this form:
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_InputMap_1_Item_" data-uid="Pulumi.InputMap`1.Item*"></a>
   <h4 id="Pulumi_InputMap_1_Item_System_String_" data-uid="Pulumi.InputMap`1.Item(System.String)">Item[String]</h4>
@@ -216,7 +216,36 @@ this form:
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L64">View Source</a>
+  </span>
+  <a id="Pulumi_InputMap_1_Add_" data-uid="Pulumi.InputMap`1.Add*"></a>
+  <h4 id="Pulumi_InputMap_1_Add_Pulumi_InputMap__0__" data-uid="Pulumi.InputMap`1.Add(Pulumi.InputMap{`0})">Add(InputMap&lt;V&gt;)</h4>
+  <div class="markdown level1 summary"><p>Note: this is non-standard convenience for use with collection initializers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(InputMap&lt;V&gt; values)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.InputMap-1.html">InputMap</a>&lt;V&gt;</td>
+        <td><span class="parametername">values</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_InputMap_1_Add_" data-uid="Pulumi.InputMap`1.Add*"></a>
   <h4 id="Pulumi_InputMap_1_Add_System_String_Pulumi_Input__0__" data-uid="Pulumi.InputMap`1.Add(System.String,Pulumi.Input{`0})">Add(String, Input&lt;V&gt;)</h4>
@@ -249,7 +278,35 @@ this form:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L69">View Source</a>
+  </span>
+  <a id="Pulumi_InputMap_1_AddRange_" data-uid="Pulumi.InputMap`1.AddRange*"></a>
+  <h4 id="Pulumi_InputMap_1_AddRange_Pulumi_InputMap__0__" data-uid="Pulumi.InputMap`1.AddRange(Pulumi.InputMap{`0})">AddRange(InputMap&lt;V&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddRange(InputMap&lt;V&gt; values)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.InputMap-1.html">InputMap</a>&lt;V&gt;</td>
+        <td><span class="parametername">values</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_InputMap_1_GetAsyncEnumerator_" data-uid="Pulumi.InputMap`1.GetAsyncEnumerator*"></a>
   <h4 id="Pulumi_InputMap_1_GetAsyncEnumerator_System_Threading_CancellationToken_" data-uid="Pulumi.InputMap`1.GetAsyncEnumerator(System.Threading.CancellationToken)">GetAsyncEnumerator(CancellationToken)</h4>
@@ -257,7 +314,7 @@ this form:
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncEnumerator&lt;Input&lt;KeyValuePair&lt;string, V&gt;&gt;&gt; GetAsyncEnumerator(CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public async IAsyncEnumerator&lt;Input&lt;KeyValuePair&lt;string, V&gt;&gt;&gt; GetAsyncEnumerator(CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -292,7 +349,7 @@ this form:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_InputMap_1_Merge_" data-uid="Pulumi.InputMap`1.Merge*"></a>
   <h4 id="Pulumi_InputMap_1_Merge_Pulumi_InputMap__0__Pulumi_InputMap__0__" data-uid="Pulumi.InputMap`1.Merge(Pulumi.InputMap{`0},Pulumi.InputMap{`0})">Merge(InputMap&lt;V&gt;, InputMap&lt;V&gt;)</h4>
@@ -351,7 +408,7 @@ both input maps.</p>
   <h3 id="operators">Operators
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_InputMap_1_op_Implicit_" data-uid="Pulumi.InputMap`1.op_Implicit*"></a>
   <h4 id="Pulumi_InputMap_1_op_Implicit_Pulumi_Output_System_Collections_Generic_Dictionary_System_String__0____Pulumi_InputMap__0_" data-uid="Pulumi.InputMap`1.op_Implicit(Pulumi.Output{System.Collections.Generic.Dictionary{System.String,`0}})~Pulumi.InputMap{`0}">Implicit(Output&lt;Dictionary&lt;String, V&gt;&gt; to InputMap&lt;V&gt;)</h4>
@@ -394,7 +451,7 @@ both input maps.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_InputMap_1_op_Implicit_" data-uid="Pulumi.InputMap`1.op_Implicit*"></a>
   <h4 id="Pulumi_InputMap_1_op_Implicit_Pulumi_Output_System_Collections_Generic_IDictionary_System_String__0____Pulumi_InputMap__0_" data-uid="Pulumi.InputMap`1.op_Implicit(Pulumi.Output{System.Collections.Generic.IDictionary{System.String,`0}})~Pulumi.InputMap{`0}">Implicit(Output&lt;IDictionary&lt;String, V&gt;&gt; to InputMap&lt;V&gt;)</h4>
@@ -437,7 +494,7 @@ both input maps.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_InputMap_1_op_Implicit_" data-uid="Pulumi.InputMap`1.op_Implicit*"></a>
   <h4 id="Pulumi_InputMap_1_op_Implicit_Pulumi_Output_System_Collections_Immutable_ImmutableDictionary_System_String__0____Pulumi_InputMap__0_" data-uid="Pulumi.InputMap`1.op_Implicit(Pulumi.Output{System.Collections.Immutable.ImmutableDictionary{System.String,`0}})~Pulumi.InputMap{`0}">Implicit(Output&lt;ImmutableDictionary&lt;String, V&gt;&gt; to InputMap&lt;V&gt;)</h4>
@@ -480,7 +537,7 @@ both input maps.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_InputMap_1_op_Implicit_" data-uid="Pulumi.InputMap`1.op_Implicit*"></a>
   <h4 id="Pulumi_InputMap_1_op_Implicit_System_Collections_Generic_Dictionary_System_String__0___Pulumi_InputMap__0_" data-uid="Pulumi.InputMap`1.op_Implicit(System.Collections.Generic.Dictionary{System.String,`0})~Pulumi.InputMap{`0}">Implicit(Dictionary&lt;String, V&gt; to InputMap&lt;V&gt;)</h4>
@@ -523,7 +580,7 @@ both input maps.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_InputMap_1_op_Implicit_" data-uid="Pulumi.InputMap`1.op_Implicit*"></a>
   <h4 id="Pulumi_InputMap_1_op_Implicit_System_Collections_Immutable_ImmutableDictionary_System_String__0___Pulumi_InputMap__0_" data-uid="Pulumi.InputMap`1.op_Implicit(System.Collections.Immutable.ImmutableDictionary{System.String,`0})~Pulumi.InputMap{`0}">Implicit(ImmutableDictionary&lt;String, V&gt; to InputMap&lt;V&gt;)</h4>
@@ -568,7 +625,7 @@ both input maps.</p>
   <h3 id="eii">Explicit Interface Implementations
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_InputMap_1_System_Collections_IEnumerable_GetEnumerator_" data-uid="Pulumi.InputMap`1.System#Collections#IEnumerable#GetEnumerator*"></a>
   <h4 id="Pulumi_InputMap_1_System_Collections_IEnumerable_GetEnumerator" data-uid="Pulumi.InputMap`1.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
@@ -623,7 +680,7 @@ both input maps.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L42" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputMap.cs/#L43" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
@@ -641,7 +698,7 @@ both input maps.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright 2016-2021, Pulumi Corporation.
+            Copyright 2016-2022, Pulumi Corporation.
             
           </div>
         </div>

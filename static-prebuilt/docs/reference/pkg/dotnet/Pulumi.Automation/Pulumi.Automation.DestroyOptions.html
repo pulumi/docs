@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DestroyOptions
    ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
   
   <h1 id="Pulumi_Automation_DestroyOptions" data-uid="Pulumi.Automation.DestroyOptions" class="text-break">Class DestroyOptions
   </h1>
-  <div class="markdown level0 summary"><p>Options controlling the behavior of an <a class="xref" href="Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_DestroyAsync_Pulumi_Automation_DestroyOptions_System_Threading_CancellationToken_">DestroyAsync(DestroyOptions, CancellationToken)</a> operation.</p>
+  <div class="markdown level0 summary"><p>Options controlling the behavior of an <see cref="!:WorkspaceStack.DestroyAsync(DestroyOptions, System.Threading.CancellationToken)"></see> operation.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -91,6 +91,12 @@
       <a class="xref" href="Pulumi.Automation.UpdateOptions.html#Pulumi_Automation_UpdateOptions_Target">UpdateOptions.Target</a>
     </div>
     <div>
+      <a class="xref" href="Pulumi.Automation.UpdateOptions.html#Pulumi_Automation_UpdateOptions_PolicyPacks">UpdateOptions.PolicyPacks</a>
+    </div>
+    <div>
+      <a class="xref" href="Pulumi.Automation.UpdateOptions.html#Pulumi_Automation_UpdateOptions_PolicyPackConfigs">UpdateOptions.PolicyPackConfigs</a>
+    </div>
+    <div>
       <a class="xref" href="Pulumi.Automation.UpdateOptions.html#Pulumi_Automation_UpdateOptions_OnStandardOutput">UpdateOptions.OnStandardOutput</a>
     </div>
     <div>
@@ -100,25 +106,25 @@
       <a class="xref" href="Pulumi.Automation.UpdateOptions.html#Pulumi_Automation_UpdateOptions_OnEvent">UpdateOptions.OnEvent</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <a class="xref" href="Pulumi.Automation.UpdateOptions.html#Pulumi_Automation_UpdateOptions_Color">UpdateOptions.Color</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <a class="xref" href="Pulumi.Automation.UpdateOptions.html#Pulumi_Automation_UpdateOptions_LogFlow">UpdateOptions.LogFlow</a>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <a class="xref" href="Pulumi.Automation.UpdateOptions.html#Pulumi_Automation_UpdateOptions_LogVerbosity">UpdateOptions.LogVerbosity</a>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <a class="xref" href="Pulumi.Automation.UpdateOptions.html#Pulumi_Automation_UpdateOptions_LogToStdErr">UpdateOptions.LogToStdErr</a>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <a class="xref" href="Pulumi.Automation.UpdateOptions.html#Pulumi_Automation_UpdateOptions_Tracing">UpdateOptions.Tracing</a>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <a class="xref" href="Pulumi.Automation.UpdateOptions.html#Pulumi_Automation_UpdateOptions_Debug">UpdateOptions.Debug</a>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <a class="xref" href="Pulumi.Automation.UpdateOptions.html#Pulumi_Automation_UpdateOptions_Json">UpdateOptions.Json</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Automation.html">Pulumi.Automation</a></h6>
@@ -130,7 +136,34 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/DestroyOptions.cs/#L12">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/DestroyOptions.cs/#L15">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_DestroyOptions_ShowSecrets_" data-uid="Pulumi.Automation.DestroyOptions.ShowSecrets*"></a>
+  <h4 id="Pulumi_Automation_DestroyOptions_ShowSecrets" data-uid="Pulumi.Automation.DestroyOptions.ShowSecrets">ShowSecrets</h4>
+  <div class="markdown level1 summary"><p>Show config secrets when they appear.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? ShowSecrets { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/DestroyOptions.cs/#L10">View Source</a>
   </span>
   <a id="Pulumi_Automation_DestroyOptions_TargetDependents_" data-uid="Pulumi.Automation.DestroyOptions.TargetDependents*"></a>
   <h4 id="Pulumi_Automation_DestroyOptions_TargetDependents" data-uid="Pulumi.Automation.DestroyOptions.TargetDependents">TargetDependents</h4>
@@ -162,7 +195,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/DestroyOptions.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/DestroyOptions.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
@@ -180,7 +213,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright 2016-2021, Pulumi Corporation.
+            Copyright 2016-2022, Pulumi Corporation.
             
           </div>
         </div>

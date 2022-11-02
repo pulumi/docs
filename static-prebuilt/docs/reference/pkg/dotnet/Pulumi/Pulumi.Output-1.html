@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Output&lt;T&gt;
    ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -72,10 +72,10 @@
   </h1>
   <div class="markdown level0 summary"><p><a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s are a key part of how Pulumi tracks dependencies between <a class="xref" href="Pulumi.Resource.html">Resource</a>s. Because the values of outputs are not available until resources are
 created, these are represented using the special <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s type, which
-internally represents two things:</p>
-<ol><li></li><li></li></ol>
+internally represents two things: an eventually available value of the output and
+the dependency on the source(s) of the output value.
 In fact, <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s is quite similar to <span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>.
-Additionally, they carry along dependency information.
+Additionally, they carry along dependency information.</p>
 <p>
 The output properties of all resource objects in Pulumi have type <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>.
 </div>
@@ -105,15 +105,12 @@ The output properties of all resource objects in Pulumi have type <a class="xref
     <div>
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.html">Pulumi</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
   <h5 id="Pulumi_Output_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class Output&lt;T&gt; : IOutput</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class Output&lt;T&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,7 +130,7 @@ The output properties of all resource objects in Pulumi have type <a class="xref
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output.cs/#L191">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output.cs/#L222">View Source</a>
   </span>
   <a id="Pulumi_Output_1_Apply_" data-uid="Pulumi.Output`1.Apply*"></a>
   <h4 id="Pulumi_Output_1_Apply__1_System_Func__0___0__" data-uid="Pulumi.Output`1.Apply``1(System.Func{`0,``0})">Apply&lt;U&gt;(Func&lt;T, U&gt;)</h4>
@@ -192,7 +189,7 @@ The output properties of all resource objects in Pulumi have type <a class="xref
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output.cs/#L203">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output.cs/#L234">View Source</a>
   </span>
   <a id="Pulumi_Output_1_Apply_" data-uid="Pulumi.Output`1.Apply*"></a>
   <h4 id="Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Input___0___" data-uid="Pulumi.Output`1.Apply``1(System.Func{`0,Pulumi.Input{``0}})">Apply&lt;U&gt;(Func&lt;T, Input&lt;U&gt;&gt;)</h4>
@@ -251,7 +248,7 @@ The output properties of all resource objects in Pulumi have type <a class="xref
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output.cs/#L235">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output.cs/#L266">View Source</a>
   </span>
   <a id="Pulumi_Output_1_Apply_" data-uid="Pulumi.Output`1.Apply*"></a>
   <h4 id="Pulumi_Output_1_Apply__1_System_Func__0_Pulumi_Output___0___" data-uid="Pulumi.Output`1.Apply``1(System.Func{`0,Pulumi.Output{``0}})">Apply&lt;U&gt;(Func&lt;T, Output&lt;U&gt;&gt;)</h4>
@@ -329,7 +326,7 @@ then).
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output.cs/#L197">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output.cs/#L228">View Source</a>
   </span>
   <a id="Pulumi_Output_1_Apply_" data-uid="Pulumi.Output`1.Apply*"></a>
   <h4 id="Pulumi_Output_1_Apply__1_System_Func__0_System_Threading_Tasks_Task___0___" data-uid="Pulumi.Output`1.Apply``1(System.Func{`0,System.Threading.Tasks.Task{``0}})">Apply&lt;U&gt;(Func&lt;T, Task&lt;U&gt;&gt;)</h4>
@@ -388,7 +385,7 @@ then).
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output.cs/#L166">View Source</a>
   </span>
   <a id="Pulumi_Output_1_Create_" data-uid="Pulumi.Output`1.Create*"></a>
   <h4 id="Pulumi_Output_1_Create_System_Threading_Tasks_Task__0__" data-uid="Pulumi.Output`1.Create(System.Threading.Tasks.Task{`0})">Create(Task&lt;T&gt;)</h4>
@@ -430,6 +427,34 @@ then).
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output.cs/#L363">View Source</a>
+  </span>
+  <a id="Pulumi_Output_1_ToString_" data-uid="Pulumi.Output`1.ToString*"></a>
+  <h4 id="Pulumi_Output_1_ToString" data-uid="Pulumi.Output`1.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
 </article>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
@@ -437,7 +462,7 @@ then).
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output.cs/#L137" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output.cs/#L138" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
@@ -455,7 +480,7 @@ then).
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright 2016-2021, Pulumi Corporation.
+            Copyright 2016-2022, Pulumi Corporation.
             
           </div>
         </div>

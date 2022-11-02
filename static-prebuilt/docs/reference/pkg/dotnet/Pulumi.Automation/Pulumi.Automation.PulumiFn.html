@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PulumiFn
    ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,43 +78,19 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">PulumiFn</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Automation.html">Pulumi.Automation</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Automation.dll</h6>
   <h5 id="Pulumi_Automation_PulumiFn_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class PulumiFn</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class PulumiFn : object</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/PulumiFn.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/PulumiFn.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Automation_PulumiFn_Create_" data-uid="Pulumi.Automation.PulumiFn.Create*"></a>
-  <h4 id="Pulumi_Automation_PulumiFn_Create_System_Action_" data-uid="Pulumi.Automation.PulumiFn.Create(System.Action)">Create(Action)</h4>
+  <h4 id="Pulumi_Automation_PulumiFn_Create_Action_" data-uid="Pulumi.Automation.PulumiFn.Create(Action)">Create(Action)</h4>
   <div class="markdown level1 summary"><p>Creates an inline (in process) pulumi program.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -133,7 +109,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><span class="xref">Action</span></td>
         <td><span class="parametername">program</span></td>
         <td><p>A pulumi program.</p>
 </td>
@@ -156,16 +132,16 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/PulumiFn.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/PulumiFn.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Automation_PulumiFn_Create_" data-uid="Pulumi.Automation.PulumiFn.Create*"></a>
-  <h4 id="Pulumi_Automation_PulumiFn_Create_System_Func_System_Collections_Generic_IDictionary_System_String_System_Object___" data-uid="Pulumi.Automation.PulumiFn.Create(System.Func{System.Collections.Generic.IDictionary{System.String,System.Object}})">Create(Func&lt;IDictionary&lt;String, Object&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Creates an inline (in process) pulumi program.</p>
+  <h4 id="Pulumi_Automation_PulumiFn_Create_Func_CancellationToken_Task_IDictionary_System_String_System_Nullable_System_Object_____" data-uid="Pulumi.Automation.PulumiFn.Create(Func{CancellationToken,Task{IDictionary{System.String,System.Nullable{System.Object}}}})">Create(Func&lt;CancellationToken, Task&lt;IDictionary&lt;String, Nullable&lt;Object&gt;&gt;&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates an asynchronous inline (in process) pulumi program.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static PulumiFn Create(Func&lt;IDictionary&lt;string, object&gt;&gt; program)</code></pre>
+    <pre><code class="lang-csharp hljs">public static PulumiFn Create(Func&lt;CancellationToken, Task&lt;IDictionary&lt;string, object?&gt;&gt;&gt; program)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,7 +154,97 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Func</span>&lt;<span class="xref">CancellationToken</span>, <span class="xref">Task</span>&lt;<span class="xref">IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Nullable</span>&lt;<span class="xref">System.Object</span>&gt;&gt;&gt;&gt;</td>
+        <td><span class="parametername">program</span></td>
+        <td><p>An asynchronous pulumi program that takes in a <see cref="!:CancellationToken"></see> and returns an output.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Automation.PulumiFn.html">PulumiFn</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/PulumiFn.cs/#L44">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_PulumiFn_Create_" data-uid="Pulumi.Automation.PulumiFn.Create*"></a>
+  <h4 id="Pulumi_Automation_PulumiFn_Create_Func_CancellationToken_Task__" data-uid="Pulumi.Automation.PulumiFn.Create(Func{CancellationToken,Task})">Create(Func&lt;CancellationToken, Task&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates an asynchronous inline (in process) pulumi program.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PulumiFn Create(Func&lt;CancellationToken, Task&gt; program)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">CancellationToken</span>, <span class="xref">Task</span>&gt;</td>
+        <td><span class="parametername">program</span></td>
+        <td><p>An asynchronous pulumi program that takes in a <see cref="!:CancellationToken"></see>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Automation.PulumiFn.html">PulumiFn</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/PulumiFn.cs/#L74">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_PulumiFn_Create_" data-uid="Pulumi.Automation.PulumiFn.Create*"></a>
+  <h4 id="Pulumi_Automation_PulumiFn_Create_Func_IDictionary_System_String_System_Nullable_System_Object____" data-uid="Pulumi.Automation.PulumiFn.Create(Func{IDictionary{System.String,System.Nullable{System.Object}}})">Create(Func&lt;IDictionary&lt;String, Nullable&lt;Object&gt;&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates an inline (in process) pulumi program.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PulumiFn Create(Func&lt;IDictionary&lt;string, object?&gt;&gt; program)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Nullable</span>&lt;<span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td><span class="parametername">program</span></td>
         <td><p>A pulumi program that returns an output.</p>
 </td>
@@ -201,16 +267,16 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/PulumiFn.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/PulumiFn.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Automation_PulumiFn_Create_" data-uid="Pulumi.Automation.PulumiFn.Create*"></a>
-  <h4 id="Pulumi_Automation_PulumiFn_Create_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Collections_Generic_IDictionary_System_String_System_Object____" data-uid="Pulumi.Automation.PulumiFn.Create(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Collections.Generic.IDictionary{System.String,System.Object}}})">Create(Func&lt;CancellationToken, Task&lt;IDictionary&lt;String, Object&gt;&gt;&gt;)</h4>
+  <h4 id="Pulumi_Automation_PulumiFn_Create_Func_Task_IDictionary_System_String_System_Nullable_System_Object_____" data-uid="Pulumi.Automation.PulumiFn.Create(Func{Task{IDictionary{System.String,System.Nullable{System.Object}}}})">Create(Func&lt;Task&lt;IDictionary&lt;String, Nullable&lt;Object&gt;&gt;&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates an asynchronous inline (in process) pulumi program.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static PulumiFn Create(Func&lt;CancellationToken, Task&lt;IDictionary&lt;string, object&gt;&gt;&gt; program)</code></pre>
+    <pre><code class="lang-csharp hljs">public static PulumiFn Create(Func&lt;Task&lt;IDictionary&lt;string, object?&gt;&gt;&gt; program)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -223,97 +289,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.CancellationToken</span>, <span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
-        <td><span class="parametername">program</span></td>
-        <td><p>An asynchronous pulumi program that takes in a <span class="xref">System.Threading.CancellationToken</span> and returns an output.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Pulumi.Automation.PulumiFn.html">PulumiFn</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/PulumiFn.cs/#L41">View Source</a>
-  </span>
-  <a id="Pulumi_Automation_PulumiFn_Create_" data-uid="Pulumi.Automation.PulumiFn.Create*"></a>
-  <h4 id="Pulumi_Automation_PulumiFn_Create_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__" data-uid="Pulumi.Automation.PulumiFn.Create(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task})">Create(Func&lt;CancellationToken, Task&gt;)</h4>
-  <div class="markdown level1 summary"><p>Creates an asynchronous inline (in process) pulumi program.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static PulumiFn Create(Func&lt;CancellationToken, Task&gt; program)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.CancellationToken</span>, <span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
-        <td><span class="parametername">program</span></td>
-        <td><p>An asynchronous pulumi program that takes in a <span class="xref">System.Threading.CancellationToken</span>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Pulumi.Automation.PulumiFn.html">PulumiFn</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/PulumiFn.cs/#L34">View Source</a>
-  </span>
-  <a id="Pulumi_Automation_PulumiFn_Create_" data-uid="Pulumi.Automation.PulumiFn.Create*"></a>
-  <h4 id="Pulumi_Automation_PulumiFn_Create_System_Func_System_Threading_Tasks_Task_System_Collections_Generic_IDictionary_System_String_System_Object____" data-uid="Pulumi.Automation.PulumiFn.Create(System.Func{System.Threading.Tasks.Task{System.Collections.Generic.IDictionary{System.String,System.Object}}})">Create(Func&lt;Task&lt;IDictionary&lt;String, Object&gt;&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Creates an asynchronous inline (in process) pulumi program.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static PulumiFn Create(Func&lt;Task&lt;IDictionary&lt;string, object&gt;&gt;&gt; program)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><span class="xref">Func</span>&lt;<span class="xref">Task</span>&lt;<span class="xref">IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Nullable</span>&lt;<span class="xref">System.Object</span>&gt;&gt;&gt;&gt;</td>
         <td><span class="parametername">program</span></td>
         <td><p>An asynchronous pulumi program that returns an output.</p>
 </td>
@@ -336,10 +312,10 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/PulumiFn.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/PulumiFn.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Automation_PulumiFn_Create_" data-uid="Pulumi.Automation.PulumiFn.Create*"></a>
-  <h4 id="Pulumi_Automation_PulumiFn_Create_System_Func_System_Threading_Tasks_Task__" data-uid="Pulumi.Automation.PulumiFn.Create(System.Func{System.Threading.Tasks.Task})">Create(Func&lt;Task&gt;)</h4>
+  <h4 id="Pulumi_Automation_PulumiFn_Create_Func_Task__" data-uid="Pulumi.Automation.PulumiFn.Create(Func{Task})">Create(Func&lt;Task&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates an asynchronous inline (in process) pulumi program.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -358,7 +334,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
+        <td><span class="xref">Func</span>&lt;<span class="xref">Task</span>&gt;</td>
         <td><span class="parametername">program</span></td>
         <td><p>An asynchronous pulumi program.</p>
 </td>
@@ -381,7 +357,62 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/PulumiFn.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/PulumiFn.cs/#L122">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_PulumiFn_Create_" data-uid="Pulumi.Automation.PulumiFn.Create*"></a>
+  <h4 id="Pulumi_Automation_PulumiFn_Create_IServiceProvider_Type_" data-uid="Pulumi.Automation.PulumiFn.Create(IServiceProvider,Type)">Create(IServiceProvider, Type)</h4>
+  <div class="markdown level1 summary"><p>Creates an inline (in process) pulumi program via a traditional <a class="xref" href="../Pulumi/Pulumi.Stack.html">Stack</a> implementation.</p>
+<p>
+    When invoked, a new stack instance will be resolved based
+    on the provided <code data-dev-comment-type="paramref" class="paramref">stackType</code> type parameter
+    using the <code data-dev-comment-type="paramref" class="paramref">serviceProvider</code>.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PulumiFn Create(IServiceProvider serviceProvider, Type stackType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IServiceProvider</span></td>
+        <td><span class="parametername">serviceProvider</span></td>
+        <td><p>The service provider that will be used to resolve an instance of type <code data-dev-comment-type="paramref" class="paramref">stackType</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">stackType</span></td>
+        <td><p>The stack type, which must derive from <a class="xref" href="../Pulumi/Pulumi.Stack.html">Stack</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Automation.PulumiFn.html">PulumiFn</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/PulumiFn.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Automation_PulumiFn_Create_" data-uid="Pulumi.Automation.PulumiFn.Create*"></a>
   <h4 id="Pulumi_Automation_PulumiFn_Create__1" data-uid="Pulumi.Automation.PulumiFn.Create``1">Create&lt;TStack&gt;()</h4>
@@ -425,10 +456,10 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/PulumiFn.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/PulumiFn.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Automation_PulumiFn_Create_" data-uid="Pulumi.Automation.PulumiFn.Create*"></a>
-  <h4 id="Pulumi_Automation_PulumiFn_Create__1_System_IServiceProvider_" data-uid="Pulumi.Automation.PulumiFn.Create``1(System.IServiceProvider)">Create&lt;TStack&gt;(IServiceProvider)</h4>
+  <h4 id="Pulumi_Automation_PulumiFn_Create__1_IServiceProvider_" data-uid="Pulumi.Automation.PulumiFn.Create``1(IServiceProvider)">Create&lt;TStack&gt;(IServiceProvider)</h4>
   <div class="markdown level1 summary"><p>Creates an inline (in process) pulumi program via a traditional <a class="xref" href="../Pulumi/Pulumi.Stack.html">Stack</a> implementation.</p>
 <p>
     When invoked, a new stack instance will be resolved based
@@ -452,9 +483,10 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.IServiceProvider</span></td>
+        <td><span class="xref">IServiceProvider</span></td>
         <td><span class="parametername">serviceProvider</span></td>
-        <td></td>
+        <td><p>The service provider that will be used to resolve an instance of <code data-dev-comment-type="typeparamref" class="typeparamref">TStack</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -496,7 +528,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/PulumiFn.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/PulumiFn.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
@@ -514,7 +546,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright 2016-2021, Pulumi Corporation.
+            Copyright 2016-2022, Pulumi Corporation.
             
           </div>
         </div>

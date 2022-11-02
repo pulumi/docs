@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct Union&lt;T0, T1&gt;
    ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,7 +80,7 @@ For example, a <a class="xref" href="Pulumi.Resource.html">Resource</a> property
 or a <span class="xref">System.String</span> can be represented as <code>Output&lt;int, string></code>.  The <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> version of this is <a class="xref" href="Pulumi.InputUnion-2.html">InputUnion&lt;T0, T1&gt;</a>.
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Pulumi.Union-2.html">Union</a>&lt;T0, T1&gt;&gt;</div>
   </div>
@@ -100,7 +100,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
   <h5 id="Pulumi_Union_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Union&lt;T0, T1&gt; : IEquatable&lt;Union&lt;T0, T1&gt;&gt;, IUnion</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly struct Union&lt;T0, T1&gt; : IEquatable&lt;Union&lt;T0, T1&gt;&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,7 +124,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_Union_2_AsT0_" data-uid="Pulumi.Union`2.AsT0*"></a>
   <h4 id="Pulumi_Union_2_AsT0" data-uid="Pulumi.Union`2.AsT0">AsT0</h4>
@@ -132,7 +132,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T0 AsT0 { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly T0 AsT0 { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,7 +150,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Union_2_AsT1_" data-uid="Pulumi.Union`2.AsT1*"></a>
   <h4 id="Pulumi_Union_2_AsT1" data-uid="Pulumi.Union`2.AsT1">AsT1</h4>
@@ -158,7 +158,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T1 AsT1 { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly T1 AsT1 { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,7 +176,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Union_2_IsT0_" data-uid="Pulumi.Union`2.IsT0*"></a>
   <h4 id="Pulumi_Union_2_IsT0" data-uid="Pulumi.Union`2.IsT0">IsT0</h4>
@@ -184,7 +184,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsT0 { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly bool IsT0 { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -202,7 +202,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Union_2_IsT1_" data-uid="Pulumi.Union`2.IsT1*"></a>
   <h4 id="Pulumi_Union_2_IsT1" data-uid="Pulumi.Union`2.IsT1">IsT1</h4>
@@ -210,7 +210,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsT1 { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly bool IsT1 { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -228,7 +228,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Union_2_Value_" data-uid="Pulumi.Union`2.Value*"></a>
   <h4 id="Pulumi_Union_2_Value" data-uid="Pulumi.Union`2.Value">Value</h4>
@@ -236,7 +236,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object Value { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly object Value { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -256,7 +256,74 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L57">View Source</a>
+  </span>
+  <a id="Pulumi_Union_2_Bimap_" data-uid="Pulumi.Union`2.Bimap*"></a>
+  <h4 id="Pulumi_Union_2_Bimap__2_System_Func__0___0__System_Func__1___1__" data-uid="Pulumi.Union`2.Bimap``2(System.Func{`0,``0},System.Func{`1,``1})">Bimap&lt;TResult0, TResult1&gt;(Func&lt;T0, TResult0&gt;, Func&lt;T1, TResult1&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Union&lt;TResult0, TResult1&gt; Bimap&lt;TResult0, TResult1&gt;(Func&lt;T0, TResult0&gt; mapFunc0, Func&lt;T1, TResult1&gt; mapFunc1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T0, TResult0&gt;</td>
+        <td><span class="parametername">mapFunc0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, TResult1&gt;</td>
+        <td><span class="parametername">mapFunc1</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Union-2.html">Union</a>&lt;TResult0, TResult1&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult1</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Union_2_Equals_" data-uid="Pulumi.Union`2.Equals*"></a>
   <h4 id="Pulumi_Union_2_Equals_Pulumi_Union__0__1__" data-uid="Pulumi.Union`2.Equals(Pulumi.Union{`0,`1})">Equals(Union&lt;T0, T1&gt;)</h4>
@@ -264,7 +331,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(Union&lt;T0, T1&gt; union)</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly bool Equals(Union&lt;T0, T1&gt; union)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -299,7 +366,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_Union_2_Equals_" data-uid="Pulumi.Union`2.Equals*"></a>
   <h4 id="Pulumi_Union_2_Equals_System_Object_" data-uid="Pulumi.Union`2.Equals(System.Object)">Equals(Object)</h4>
@@ -307,7 +374,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+    <pre><code class="lang-csharp hljs">public override readonly bool Equals(object obj)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -344,7 +411,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.ValueType.Equals(System.Object)</span></div>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Union_2_FromT0_" data-uid="Pulumi.Union`2.FromT0*"></a>
   <h4 id="Pulumi_Union_2_FromT0__0_" data-uid="Pulumi.Union`2.FromT0(`0)">FromT0(T0)</h4>
@@ -387,7 +454,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Union_2_FromT1_" data-uid="Pulumi.Union`2.FromT1*"></a>
   <h4 id="Pulumi_Union_2_FromT1__1_" data-uid="Pulumi.Union`2.FromT1(`1)">FromT1(T1)</h4>
@@ -430,7 +497,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Union_2_GetHashCode_" data-uid="Pulumi.Union`2.GetHashCode*"></a>
   <h4 id="Pulumi_Union_2_GetHashCode" data-uid="Pulumi.Union`2.GetHashCode">GetHashCode()</h4>
@@ -438,7 +505,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+    <pre><code class="lang-csharp hljs">public override readonly int GetHashCode()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -458,7 +525,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.ValueType.GetHashCode()</span></div>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Union_2_MapT0_" data-uid="Pulumi.Union`2.MapT0*"></a>
   <h4 id="Pulumi_Union_2_MapT0__1_System_Func__0___0__" data-uid="Pulumi.Union`2.MapT0``1(System.Func{`0,``0})">MapT0&lt;TResult&gt;(Func&lt;T0, TResult&gt;)</h4>
@@ -466,7 +533,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Union&lt;TResult, T1&gt; MapT0&lt;TResult&gt;(Func&lt;T0, TResult&gt; mapFunc)</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly Union&lt;TResult, T1&gt; MapT0&lt;TResult&gt;(Func&lt;T0, TResult&gt; mapFunc)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -516,7 +583,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Union_2_MapT1_" data-uid="Pulumi.Union`2.MapT1*"></a>
   <h4 id="Pulumi_Union_2_MapT1__1_System_Func__1___0__" data-uid="Pulumi.Union`2.MapT1``1(System.Func{`1,``0})">MapT1&lt;TResult&gt;(Func&lt;T1, TResult&gt;)</h4>
@@ -524,7 +591,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Union&lt;T0, TResult&gt; MapT1&lt;TResult&gt;(Func&lt;T1, TResult&gt; mapFunc)</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly Union&lt;T0, TResult&gt; MapT1&lt;TResult&gt;(Func&lt;T1, TResult&gt; mapFunc)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -574,7 +641,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Union_2_Match_" data-uid="Pulumi.Union`2.Match*"></a>
   <h4 id="Pulumi_Union_2_Match__1_System_Func__0___0__System_Func__1___0__" data-uid="Pulumi.Union`2.Match``1(System.Func{`0,``0},System.Func{`1,``0})">Match&lt;TResult&gt;(Func&lt;T0, TResult&gt;, Func&lt;T1, TResult&gt;)</h4>
@@ -582,7 +649,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TResult Match&lt;TResult&gt;(Func&lt;T0, TResult&gt; f0, Func&lt;T1, TResult&gt; f1)</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly TResult Match&lt;TResult&gt;(Func&lt;T0, TResult&gt; f0, Func&lt;T1, TResult&gt; f1)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -637,7 +704,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Union_2_Switch_" data-uid="Pulumi.Union`2.Switch*"></a>
   <h4 id="Pulumi_Union_2_Switch_System_Action__0__System_Action__1__" data-uid="Pulumi.Union`2.Switch(System.Action{`0},System.Action{`1})">Switch(Action&lt;T0&gt;, Action&lt;T1&gt;)</h4>
@@ -645,7 +712,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Switch(Action&lt;T0&gt; f0, Action&lt;T1&gt; f1)</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly void Switch(Action&lt;T0&gt; f0, Action&lt;T1&gt; f1)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -670,7 +737,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Union_2_ToString_" data-uid="Pulumi.Union`2.ToString*"></a>
   <h4 id="Pulumi_Union_2_ToString" data-uid="Pulumi.Union`2.ToString">ToString()</h4>
@@ -678,7 +745,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+    <pre><code class="lang-csharp hljs">public override readonly string ToString()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -698,7 +765,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.ValueType.ToString()</span></div>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Union_2_TryPickT0_" data-uid="Pulumi.Union`2.TryPickT0*"></a>
   <h4 id="Pulumi_Union_2_TryPickT0__0___1__" data-uid="Pulumi.Union`2.TryPickT0(`0@,`1@)">TryPickT0(out T0, out T1)</h4>
@@ -706,7 +773,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryPickT0(out T0 value, out T1 remainder)</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly bool TryPickT0(out T0 value, out T1 remainder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -746,7 +813,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Union_2_TryPickT1_" data-uid="Pulumi.Union`2.TryPickT1*"></a>
   <h4 id="Pulumi_Union_2_TryPickT1__1___0__" data-uid="Pulumi.Union`2.TryPickT1(`1@,`0@)">TryPickT1(out T1, out T0)</h4>
@@ -754,7 +821,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryPickT1(out T1 value, out T0 remainder)</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly bool TryPickT1(out T1 value, out T0 remainder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -796,7 +863,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
   <h3 id="operators">Operators
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Union_2_op_Implicit_" data-uid="Pulumi.Union`2.op_Implicit*"></a>
   <h4 id="Pulumi_Union_2_op_Implicit__0__Pulumi_Union__0__1_" data-uid="Pulumi.Union`2.op_Implicit(`0)~Pulumi.Union{`0,`1}">Implicit(T0 to Union&lt;T0, T1&gt;)</h4>
@@ -839,7 +906,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Union_2_op_Implicit_" data-uid="Pulumi.Union`2.op_Implicit*"></a>
   <h4 id="Pulumi_Union_2_op_Implicit__1__Pulumi_Union__0__1_" data-uid="Pulumi.Union`2.op_Implicit(`1)~Pulumi.Union{`0,`1}">Implicit(T1 to Union&lt;T0, T1&gt;)</h4>
@@ -892,7 +959,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L29" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Union.cs/#L31" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
@@ -910,7 +977,7 @@ or a <span class="xref">System.String</span> can be represented as <code>Output&
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright 2016-2021, Pulumi Corporation.
+            Copyright 2016-2022, Pulumi Corporation.
             
           </div>
         </div>
