@@ -46,8 +46,8 @@ The stack **must** exist before a deployment can be created for it. If you attem
 
 A deployment request consists of two main pieces, a [Source](#Source) and an [Operation](#Operation).
 
-* The [Source](#Source) defines where the source code for your project is located. Currently, only git repos are supported.
-* The [Operation](#Operation) defines how the Pulumi project is to be executed (i.e. the Pulumi operation to execute and any associated context it requires).
+* The [Source](#source) defines where the source code for your project is located. Currently, only git repos are supported.
+* The [Operation](#operation) defines how the Pulumi project is to be executed (i.e. the Pulumi operation to execute and any associated context it requires).
 
 #### Example
 

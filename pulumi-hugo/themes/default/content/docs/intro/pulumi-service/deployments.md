@@ -10,25 +10,12 @@ menu:
 {{% notes "info" %}}
 Pulumi Deployments is currently in preview. [Request access](/product/pulumi-deployments) to use this feature.
 
-Please post any bug Reports or feature requests in the [Service Requests repo](https://github.com/pulumi/service-requests/issues/new/choose).
+Please post any bug reports or feature requests in the [Service Requests repo](https://github.com/pulumi/service-requests/issues/new/choose).
 {{% /notes %}}
 
 Pulumi Deployments is a Pulumi Service feature that automates the execution of your Pulumi programs in a secure, hosted environment. Deploy any stack with a click of a button, `git push`, or API call. Available in preview today.
 
 You can use this feature on your Pulumi individual account or in a Pulumi organization.
-
-**Table of contents:**
-
-- [Click-to-deploy in the Console](#click-to-deploy-in-the-console)
-- [Git push-to-deploy from GitHub](#git-push-to-deploy-from-github)
-  - [GitHub App Installation](#github-app-installation)
-  - [Deployment Settings](#deployment-settings)
-  - [Create a Deployment](#create-a-deployment)
-- [Programmatic deployments via the Pulumi Service REST API](#programmatic-deployments-via-the-pulumi-service-rest-api)
-  - [Pulumi Deployments REST API Documentation](#pulumi-deployments-rest-api-documentation)
-  - [Pulumi Deployments REST API Specs](#pulumi-deployments-rest-api-specs)
-- [Automation via the Pulumi Automation API](#automation-via-the-pulumi-automation-api)
-  - [Automation API Examples](#automation-api-examples)
 
 ## Click-to-deploy in the Console
 
