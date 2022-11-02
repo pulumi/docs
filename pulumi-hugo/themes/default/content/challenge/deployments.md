@@ -14,7 +14,7 @@ meta_image: /images/challenge/challenge_cta.png
   <div>
     <h3>Deployments Mini-Challenge</h3>
     <p class="pr-12">
-      Pulumi Deployments is a new Deployments-as-a-Service technology through which Pulumi fully manages the execution of infrastructure as code programs for users of the platform. One feature of Pulumi Deployments is "Git Push to Deploy", which allows you to connect a Git repo and drive deployments on any push. Pulumi Deployments helps you ship infrastructure faster and manage 10x the scale. <br><br>In this mini-challenge, you will create a project in the Pulumi Service console to select an <a href=/templates/" target="_blank" rel="noopener noreferrer">Architecture Template</a>, create a Pulumi program, connect GitHub to Pulumi Deployments, and initiate a stack update through the Pulumi Service. To receive swag for completing the challenge, write a blog or post a quick video about it. Tag us on social media or email us at <a href=mailto:da@pulumi.com>da@pulumi.com</a>, and we will send you the swag.
+      <a href="/product/pulumi-deployments/" target="_blank" rel="noopener noreferrer">Pulumi Deployments</a> is a new Deployments-as-a-Service technology through which Pulumi fully manages the execution of infrastructure as code programs for users of the platform. One feature of Pulumi Deployments is "Git Push to Deploy", which allows you to connect a Git repo and drive deployments on any push. Pulumi Deployments helps you ship infrastructure faster and manage 10x the scale. <br><br>In this mini-challenge, you will create a project in the Pulumi Service console to select an <a href=/templates/" target="_blank" rel="noopener noreferrer">Architecture Template</a>, create a Pulumi program, connect GitHub to Pulumi Deployments, and initiate a stack update through the Pulumi Service. To receive swag for completing the challenge, write a blog or post a quick video about it. Tag us on social media or email us at <a href=mailto:da@pulumi.com>da@pulumi.com</a>, and we will send you the swag.
     </p>
     <h3>Prerequisites</h3>
     <p>In order to complete this challenge, you'll need a couple things set up in advance.</p>
@@ -24,6 +24,9 @@ meta_image: /images/challenge/challenge_cta.png
       </li>
       <li>
         The <a href="/docs/get-started/install/" target="_blank" rel="noopener noreferrer">Pulumi CLI</a>
+      </li>
+      <li>
+        The <a href="/product/pulumi-deployments/" target="_blank" rel="noopener noreferrer">Pulumi Deployments</a> preview enabled
       </li>
       <li>
           <a href="https://www.python.org/downloads/">Python 3.9 or higher</a>
