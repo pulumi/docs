@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CustomResourceOptions
    ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -113,6 +113,15 @@
     </div>
     <div>
       <a class="xref" href="Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_Urn">ResourceOptions.Urn</a>
+    </div>
+    <div>
+      <a class="xref" href="Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_ReplaceOnChanges">ResourceOptions.ReplaceOnChanges</a>
+    </div>
+    <div>
+      <a class="xref" href="Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_PluginDownloadURL">ResourceOptions.PluginDownloadURL</a>
+    </div>
+    <div>
+      <a class="xref" href="Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_RetainOnDelete">ResourceOptions.RetainOnDelete</a>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
@@ -246,7 +255,15 @@ properties of <code data-dev-comment-type="paramref" class="paramref">options2</
 A new instance will always be returned.
 <p>
 Conceptually property merging follows these basic rules:
-<ol><li></li><li></li><li></li></ol>
+<ol><li>
+If the property is a collection, the final value will be a collection containing the
+values from each options object.
+</li><li>
+Simple scalar values from <code data-dev-comment-type="paramref" class="paramref">options2</code> (i.e. <span class="xref">System.String</span>s,
+<span class="xref">System.Int32</span>s, <span class="xref">System.Boolean</span>s) will replace the values of <code data-dev-comment-type="paramref" class="paramref">options1</code>.
+</li><li>
+<span class="xref">null</span> values in <code data-dev-comment-type="paramref" class="paramref">options2</code> will be ignored.
+</li></ol>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -315,7 +332,7 @@ Conceptually property merging follows these basic rules:
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright 2016-2021, Pulumi Corporation.
+            Copyright 2016-2022, Pulumi Corporation.
             
           </div>
         </div>

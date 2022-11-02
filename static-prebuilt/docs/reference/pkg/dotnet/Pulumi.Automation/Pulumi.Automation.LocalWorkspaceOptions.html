@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LocalWorkspaceOptions
    ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,40 +81,16 @@ and environment variables to pass through to every command.</p>
       <div class="level2"><a class="xref" href="Pulumi.Automation.InlineProgramArgs.html">InlineProgramArgs</a></div>
       <div class="level2"><a class="xref" href="Pulumi.Automation.LocalProgramArgs.html">LocalProgramArgs</a></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Automation.html">Pulumi.Automation</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Automation.dll</h6>
   <h5 id="Pulumi_Automation_LocalWorkspaceOptions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class LocalWorkspaceOptions</code></pre>
+    <pre><code class="lang-csharp hljs">public class LocalWorkspaceOptions : object</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspaceOptions.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspaceOptions.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Automation_LocalWorkspaceOptions_EnvironmentVariables_" data-uid="Pulumi.Automation.LocalWorkspaceOptions.EnvironmentVariables*"></a>
   <h4 id="Pulumi_Automation_LocalWorkspaceOptions_EnvironmentVariables" data-uid="Pulumi.Automation.LocalWorkspaceOptions.EnvironmentVariables">EnvironmentVariables</h4>
@@ -124,7 +100,7 @@ Pulumi command.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IDictionary&lt;string, string&gt; EnvironmentVariables { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;string, string?&gt;? EnvironmentVariables { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -136,13 +112,41 @@ Pulumi command.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspaceOptions.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspaceOptions.cs/#L42">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_LocalWorkspaceOptions_Logger_" data-uid="Pulumi.Automation.LocalWorkspaceOptions.Logger*"></a>
+  <h4 id="Pulumi_Automation_LocalWorkspaceOptions_Logger" data-uid="Pulumi.Automation.LocalWorkspaceOptions.Logger">Logger</h4>
+  <div class="markdown level1 summary"><p>A custom logger instance that will be used for inline programs. Note that it will only be used
+if <a class="xref" href="Pulumi.Automation.LocalWorkspaceOptions.html#Pulumi_Automation_LocalWorkspaceOptions_Program">Program</a> is also provided.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILogger? Logger { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ILogger</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspaceOptions.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Automation_LocalWorkspaceOptions_Program_" data-uid="Pulumi.Automation.LocalWorkspaceOptions.Program*"></a>
   <h4 id="Pulumi_Automation_LocalWorkspaceOptions_Program" data-uid="Pulumi.Automation.LocalWorkspaceOptions.Program">Program</h4>
@@ -171,7 +175,7 @@ If none is specified, the stack will refer to <a class="xref" href="Pulumi.Autom
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspaceOptions.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspaceOptions.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_Automation_LocalWorkspaceOptions_ProjectSettings_" data-uid="Pulumi.Automation.LocalWorkspaceOptions.ProjectSettings*"></a>
   <h4 id="Pulumi_Automation_LocalWorkspaceOptions_ProjectSettings" data-uid="Pulumi.Automation.LocalWorkspaceOptions.ProjectSettings">ProjectSettings</h4>
@@ -179,7 +183,7 @@ If none is specified, the stack will refer to <a class="xref" href="Pulumi.Autom
 <p>
 If provided when initializing <a class="xref" href="Pulumi.Automation.LocalWorkspace.html">LocalWorkspace</a> a project settings
 file will be written to when the workspace is initialized via
-<a class="xref" href="Pulumi.Automation.LocalWorkspace.html#Pulumi_Automation_LocalWorkspace_SaveProjectSettingsAsync_Pulumi_Automation_ProjectSettings_System_Threading_CancellationToken_">SaveProjectSettingsAsync(ProjectSettings, CancellationToken)</a>.
+<see cref="!:LocalWorkspace.SaveProjectSettingsAsync(Automation.ProjectSettings, System.Threading.CancellationToken)"></see>.
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -202,7 +206,7 @@ file will be written to when the workspace is initialized via
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspaceOptions.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspaceOptions.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_Automation_LocalWorkspaceOptions_PulumiHome_" data-uid="Pulumi.Automation.LocalWorkspaceOptions.PulumiHome*"></a>
   <h4 id="Pulumi_Automation_LocalWorkspaceOptions_PulumiHome" data-uid="Pulumi.Automation.LocalWorkspaceOptions.PulumiHome">PulumiHome</h4>
@@ -211,7 +215,7 @@ file will be written to when the workspace is initialized via
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string PulumiHome { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? PulumiHome { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -223,24 +227,24 @@ file will be written to when the workspace is initialized via
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspaceOptions.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspaceOptions.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_Automation_LocalWorkspaceOptions_SecretsProvider_" data-uid="Pulumi.Automation.LocalWorkspaceOptions.SecretsProvider*"></a>
   <h4 id="Pulumi_Automation_LocalWorkspaceOptions_SecretsProvider" data-uid="Pulumi.Automation.LocalWorkspaceOptions.SecretsProvider">SecretsProvider</h4>
   <div class="markdown level1 summary"><p>The secrets provider to user for encryption and decryption of stack secrets.</p>
 <p>
-See: https://www.pulumi.com/docs/intro/concepts/config/#available-encryption-providers
+See: https://www.pulumi.com/docs/intro/concepts/secrets/#available-encryption-providers
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string SecretsProvider { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? SecretsProvider { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -252,13 +256,13 @@ See: https://www.pulumi.com/docs/intro/concepts/config/#available-encryption-pro
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspaceOptions.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspaceOptions.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Automation_LocalWorkspaceOptions_StackSettings_" data-uid="Pulumi.Automation.LocalWorkspaceOptions.StackSettings*"></a>
   <h4 id="Pulumi_Automation_LocalWorkspaceOptions_StackSettings" data-uid="Pulumi.Automation.LocalWorkspaceOptions.StackSettings">StackSettings</h4>
@@ -266,12 +270,12 @@ See: https://www.pulumi.com/docs/intro/concepts/config/#available-encryption-pro
 <p>
 If provided when initializing <a class="xref" href="Pulumi.Automation.LocalWorkspace.html">LocalWorkspace</a> stack settings
 file(s) will be written to when the workspace is initialized via
-<a class="xref" href="Pulumi.Automation.LocalWorkspace.html#Pulumi_Automation_LocalWorkspace_SaveStackSettingsAsync_System_String_Pulumi_Automation_StackSettings_System_Threading_CancellationToken_">SaveStackSettingsAsync(String, StackSettings, CancellationToken)</a>.
+<see cref="!:LocalWorkspace.SaveStackSettingsAsync(string, Automation.StackSettings, System.Threading.CancellationToken)"></see>.
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IDictionary&lt;string, StackSettings&gt; StackSettings { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;string, StackSettings&gt;? StackSettings { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,13 +287,13 @@ file(s) will be written to when the workspace is initialized via
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="Pulumi.Automation.StackSettings.html">StackSettings</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IDictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="Pulumi.Automation.StackSettings.html">StackSettings</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspaceOptions.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspaceOptions.cs/#L17">View Source</a>
   </span>
   <a id="Pulumi_Automation_LocalWorkspaceOptions_WorkDir_" data-uid="Pulumi.Automation.LocalWorkspaceOptions.WorkDir*"></a>
   <h4 id="Pulumi_Automation_LocalWorkspaceOptions_WorkDir" data-uid="Pulumi.Automation.LocalWorkspaceOptions.WorkDir">WorkDir</h4>
@@ -298,7 +302,7 @@ file(s) will be written to when the workspace is initialized via
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string WorkDir { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? WorkDir { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -310,7 +314,7 @@ file(s) will be written to when the workspace is initialized via
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -322,7 +326,7 @@ file(s) will be written to when the workspace is initialized via
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspaceOptions.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspaceOptions.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
@@ -340,7 +344,7 @@ file(s) will be written to when the workspace is initialized via
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright 2016-2021, Pulumi Corporation.
+            Copyright 2016-2022, Pulumi Corporation.
             
           </div>
         </div>

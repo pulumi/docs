@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class InputUnion&lt;T0, T1&gt;
    ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -108,7 +108,7 @@ example, it might potentially be an <span class="xref">System.Int32</span> some 
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
   <h5 id="Pulumi_InputUnion_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class InputUnion&lt;T0, T1&gt; : Input&lt;Union&lt;T0, T1&gt;&gt;, IInput</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class InputUnion&lt;T0, T1&gt; : Input&lt;Union&lt;T0, T1&gt;&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,7 +132,7 @@ example, it might potentially be an <span class="xref">System.Int32</span> some 
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputUnion.cs/#L14">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputUnion.cs/#L13">View Source</a>
   </span>
   <a id="Pulumi_InputUnion_2__ctor_" data-uid="Pulumi.InputUnion`2.#ctor*"></a>
   <h4 id="Pulumi_InputUnion_2__ctor" data-uid="Pulumi.InputUnion`2.#ctor">InputUnion()</h4>
@@ -145,7 +145,7 @@ example, it might potentially be an <span class="xref">System.Int32</span> some 
   <h3 id="operators">Operators
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputUnion.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputUnion.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_InputUnion_2_op_Implicit_" data-uid="Pulumi.InputUnion`2.op_Implicit*"></a>
   <h4 id="Pulumi_InputUnion_2_op_Implicit__0__Pulumi_InputUnion__0__1_" data-uid="Pulumi.InputUnion`2.op_Implicit(`0)~Pulumi.InputUnion{`0,`1}">Implicit(T0 to InputUnion&lt;T0, T1&gt;)</h4>
@@ -188,7 +188,7 @@ example, it might potentially be an <span class="xref">System.Int32</span> some 
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputUnion.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputUnion.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_InputUnion_2_op_Implicit_" data-uid="Pulumi.InputUnion`2.op_Implicit*"></a>
   <h4 id="Pulumi_InputUnion_2_op_Implicit__1__Pulumi_InputUnion__0__1_" data-uid="Pulumi.InputUnion`2.op_Implicit(`1)~Pulumi.InputUnion{`0,`1}">Implicit(T1 to InputUnion&lt;T0, T1&gt;)</h4>
@@ -231,7 +231,7 @@ example, it might potentially be an <span class="xref">System.Int32</span> some 
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputUnion.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputUnion.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_InputUnion_2_op_Implicit_" data-uid="Pulumi.InputUnion`2.op_Implicit*"></a>
   <h4 id="Pulumi_InputUnion_2_op_Implicit_Pulumi_Output__0___Pulumi_InputUnion__0__1_" data-uid="Pulumi.InputUnion`2.op_Implicit(Pulumi.Output{`0})~Pulumi.InputUnion{`0,`1}">Implicit(Output&lt;T0&gt; to InputUnion&lt;T0, T1&gt;)</h4>
@@ -274,7 +274,7 @@ example, it might potentially be an <span class="xref">System.Int32</span> some 
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputUnion.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputUnion.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_InputUnion_2_op_Implicit_" data-uid="Pulumi.InputUnion`2.op_Implicit*"></a>
   <h4 id="Pulumi_InputUnion_2_op_Implicit_Pulumi_Output__1___Pulumi_InputUnion__0__1_" data-uid="Pulumi.InputUnion`2.op_Implicit(Pulumi.Output{`1})~Pulumi.InputUnion{`0,`1}">Implicit(Output&lt;T1&gt; to InputUnion&lt;T0, T1&gt;)</h4>
@@ -296,6 +296,92 @@ example, it might potentially be an <span class="xref">System.Int32</span> some 
     <tbody>
       <tr>
         <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;T1&gt;</td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.InputUnion-2.html">InputUnion</a>&lt;T0, T1&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputUnion.cs/#L33">View Source</a>
+  </span>
+  <a id="Pulumi_InputUnion_2_op_Implicit_" data-uid="Pulumi.InputUnion`2.op_Implicit*"></a>
+  <h4 id="Pulumi_InputUnion_2_op_Implicit_Pulumi_Output_Pulumi_Union__0__1____Pulumi_InputUnion__0__1_" data-uid="Pulumi.InputUnion`2.op_Implicit(Pulumi.Output{Pulumi.Union{`0,`1}})~Pulumi.InputUnion{`0,`1}">Implicit(Output&lt;Union&lt;T0, T1&gt;&gt; to InputUnion&lt;T0, T1&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator InputUnion&lt;T0, T1&gt;(Output&lt;Union&lt;T0, T1&gt;&gt; value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Union-2.html">Union</a>&lt;T0, T1&gt;&gt;</td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.InputUnion-2.html">InputUnion</a>&lt;T0, T1&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputUnion.cs/#L24">View Source</a>
+  </span>
+  <a id="Pulumi_InputUnion_2_op_Implicit_" data-uid="Pulumi.InputUnion`2.op_Implicit*"></a>
+  <h4 id="Pulumi_InputUnion_2_op_Implicit_Pulumi_Union__0__1___Pulumi_InputUnion__0__1_" data-uid="Pulumi.InputUnion`2.op_Implicit(Pulumi.Union{`0,`1})~Pulumi.InputUnion{`0,`1}">Implicit(Union&lt;T0, T1&gt; to InputUnion&lt;T0, T1&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator InputUnion&lt;T0, T1&gt;(Union&lt;T0, T1&gt; value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Union-2.html">Union</a>&lt;T0, T1&gt;</td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
@@ -339,7 +425,7 @@ example, it might potentially be an <span class="xref">System.Int32</span> some 
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputUnion.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputUnion.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
@@ -357,7 +443,7 @@ example, it might potentially be an <span class="xref">System.Int32</span> some 
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright 2016-2021, Pulumi Corporation.
+            Copyright 2016-2022, Pulumi Corporation.
             
           </div>
         </div>

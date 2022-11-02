@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DeploymentInstance
    ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -106,12 +106,12 @@
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
   <h5 id="Pulumi_DeploymentInstance_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class DeploymentInstance : IDeployment</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class DeploymentInstance</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/DeploymentInstance.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/DeploymentInstance.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_DeploymentInstance_IsDryRun_" data-uid="Pulumi.DeploymentInstance.IsDryRun*"></a>
   <h4 id="Pulumi_DeploymentInstance_IsDryRun" data-uid="Pulumi.DeploymentInstance.IsDryRun">IsDryRun</h4>
@@ -133,6 +133,33 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/DeploymentInstance.cs/#L30">View Source</a>
+  </span>
+  <a id="Pulumi_DeploymentInstance_OrganizationName_" data-uid="Pulumi.DeploymentInstance.OrganizationName*"></a>
+  <h4 id="Pulumi_DeploymentInstance_OrganizationName" data-uid="Pulumi.DeploymentInstance.OrganizationName">OrganizationName</h4>
+  <div class="markdown level1 summary"><p>Returns the current organization name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string OrganizationName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -194,7 +221,211 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/DeploymentInstance.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/DeploymentInstance.cs/#L89">View Source</a>
+  </span>
+  <a id="Pulumi_DeploymentInstance_Call_" data-uid="Pulumi.DeploymentInstance.Call*"></a>
+  <h4 id="Pulumi_DeploymentInstance_Call_System_String_Pulumi_CallArgs_Pulumi_Resource_Pulumi_CallOptions_" data-uid="Pulumi.DeploymentInstance.Call(System.String,Pulumi.CallArgs,Pulumi.Resource,Pulumi.CallOptions)">Call(String, CallArgs, Resource, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Same as <a class="xref" href="Pulumi.DeploymentInstance.html#Pulumi_DeploymentInstance_Call__1_System_String_Pulumi_CallArgs_Pulumi_Resource_Pulumi_CallOptions_">Call&lt;T&gt;(String, CallArgs, Resource, CallOptions)</a>, however the return value is ignored.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Call(string token, CallArgs args, Resource self = null, CallOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">token</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.CallArgs.html">CallArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Resource.html">Resource</a></td>
+        <td><span class="parametername">self</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/DeploymentInstance.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_DeploymentInstance_Call_" data-uid="Pulumi.DeploymentInstance.Call*"></a>
+  <h4 id="Pulumi_DeploymentInstance_Call__1_System_String_Pulumi_CallArgs_Pulumi_Resource_Pulumi_CallOptions_" data-uid="Pulumi.DeploymentInstance.Call``1(System.String,Pulumi.CallArgs,Pulumi.Resource,Pulumi.CallOptions)">Call&lt;T&gt;(String, CallArgs, Resource, CallOptions)</h4>
+  <div class="markdown level1 summary"><p>Dynamically calls the function '<code data-dev-comment-type="paramref" class="paramref">token</code>', which is offered by a
+provider plugin.</p>
+<p>
+The result of <a class="xref" href="Pulumi.DeploymentInstance.html#Pulumi_DeploymentInstance_Call__1_System_String_Pulumi_CallArgs_Pulumi_Resource_Pulumi_CallOptions_">Call&lt;T&gt;(String, CallArgs, Resource, CallOptions)</a> will be a <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a> resolved to the
+result value of the provider plugin.
+<p>
+The <code data-dev-comment-type="paramref" class="paramref">args</code> inputs can be a bag of computed values(including, `T`s,
+<span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>s, <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s etc.).
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;T&gt; Call&lt;T&gt;(string token, CallArgs args, Resource self = null, CallOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">token</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.CallArgs.html">CallArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Resource.html">Resource</a></td>
+        <td><span class="parametername">self</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.CallOptions.html">CallOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/DeploymentInstance.cs/#L50">View Source</a>
+  </span>
+  <a id="Pulumi_DeploymentInstance_Invoke_" data-uid="Pulumi.DeploymentInstance.Invoke*"></a>
+  <h4 id="Pulumi_DeploymentInstance_Invoke__1_System_String_Pulumi_InvokeArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.DeploymentInstance.Invoke``1(System.String,Pulumi.InvokeArgs,Pulumi.InvokeOptions)">Invoke&lt;T&gt;(String, InvokeArgs, InvokeOptions)</h4>
+  <div class="markdown level1 summary"><p>Dynamically invokes the function '<code data-dev-comment-type="paramref" class="paramref">token</code>', which is offered by a
+provider plugin.</p>
+<p>
+The result of <a class="xref" href="Pulumi.DeploymentInstance.html#Pulumi_DeploymentInstance_Invoke__1_System_String_Pulumi_InvokeArgs_Pulumi_InvokeOptions_">Invoke&lt;T&gt;(String, InvokeArgs, InvokeOptions)</a> will be a <a class="xref" href="Pulumi.Output.html">Output</a> resolved to the
+result value of the provider plugin.
+<p>
+Similar to the earlier <a class="xref" href="Pulumi.DeploymentInstance.html#Pulumi_DeploymentInstance_InvokeAsync_System_String_Pulumi_InvokeArgs_Pulumi_InvokeOptions_">InvokeAsync(String, InvokeArgs, InvokeOptions)</a>, but supports passing input values
+and returns an Output value.
+<p>
+The <code data-dev-comment-type="paramref" class="paramref">args</code> inputs can be a bag of computed values(including, `T`s,
+<span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>s, <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s etc.).
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;T&gt; Invoke&lt;T&gt;(string token, InvokeArgs args, InvokeOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">token</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.InvokeArgs.html">InvokeArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.InvokeOptions.html">InvokeOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/DeploymentInstance.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_DeploymentInstance_InvokeAsync_" data-uid="Pulumi.DeploymentInstance.InvokeAsync*"></a>
   <h4 id="Pulumi_DeploymentInstance_InvokeAsync_System_String_Pulumi_InvokeArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.DeploymentInstance.InvokeAsync(System.String,Pulumi.InvokeArgs,Pulumi.InvokeOptions)">InvokeAsync(String, InvokeArgs, InvokeOptions)</h4>
@@ -249,7 +480,7 @@ return value is ignored.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/DeploymentInstance.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/DeploymentInstance.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_DeploymentInstance_InvokeAsync_" data-uid="Pulumi.DeploymentInstance.InvokeAsync*"></a>
   <h4 id="Pulumi_DeploymentInstance_InvokeAsync__1_System_String_Pulumi_InvokeArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.DeploymentInstance.InvokeAsync``1(System.String,Pulumi.InvokeArgs,Pulumi.InvokeOptions)">InvokeAsync&lt;T&gt;(String, InvokeArgs, InvokeOptions)</h4>
@@ -349,7 +580,7 @@ The <code data-dev-comment-type="paramref" class="paramref">args</code> inputs c
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright 2016-2021, Pulumi Corporation.
+            Copyright 2016-2022, Pulumi Corporation.
             
           </div>
         </div>

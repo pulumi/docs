@@ -40,7 +40,7 @@
     "overwrite": [],
     "dest": "../static-prebuilt/docs/reference/pkg/dotnet",
     "globalMetadata": {
-      "_appFooter": "Copyright 2016-2021, Pulumi Corporation."
+      "_appFooter": "Copyright 2016-2022, Pulumi Corporation."
     },
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
