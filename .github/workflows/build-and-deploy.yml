@@ -48,6 +48,7 @@ jobs:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_OPTIONS: "--max_old_space_size=4096"
+          GOPROXY: proxy.golang.org
 
       - name: Archive test results
         uses: actions/upload-artifact@v2
