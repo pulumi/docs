@@ -58,19 +58,19 @@ $ open $(pulumi stack output cdnURL)
 Projects created with the Kubernetes template expose the following [configuration](/docs/intro/concepts/config/) settings:
 
 minClusterSize
-: The minimum number of nodes allowed in your cluster. Defaults to `3`.
+: The minimum number of nodes to allow in the cluster. Defaults to `3`.
 
 maxClusterSize
-: The maximum number of nodes allowed in your cluster. Defaults to `6`.
+: The maximum number of nodes to allow in the cluster. Defaults to `6`.
 
 desiredClusterSize
-: The desired number of nodes in your cluster. Defaults to `3`.
+: The desired number of nodes in the cluster. Defaults to `3`.
 
 eksNodeInstanceType
-: The EC2 instance type used to run your nodes. Defaults to `t2.medium`.
+: The EC2 instance type to use for the nodes. Defaults to `t2.medium`.
 
 vpcNetworkCidr
-: The IPv4 address for your VPC in a CIDR block. Defaults to `10.0.0.0/16`.
+: The network CIDR to use for the VPC. Defaults to `10.0.0.0/16`.
 
 All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`).
 or by changing their values with [`pulumi config set`](/docs/reference/cli/pulumi_config_set).
