@@ -38,7 +38,7 @@
                         {{/* The /blog/_index.md file unfortunately shows up in the list, so we skip it. */}}
                     {{ else }}
                         <li class="my-4 leading-snug">
-                            <a data-track="recent-post" class="text-sm" href="{{ $post.Permalink }}">{{ $post.Title }}</a>
+                            <a data-track="recent-post" class="text-sm" href="{{ $post.RelPermalink }}">{{ $post.Title }}</a>
                         </li>
                     {{ end }}
                 {{ end }}
@@ -60,7 +60,7 @@
                         <a
                             data-track="blog-tag-{{ $tag | urlize }}"
                             class="tag tag-blog text-xs {{ if eq (lower $tag) (urlize ((lower $.Title))) }}active{{ end }}"
-                            href="{{ .Page.Permalink }}"
+                            href="{{ .Page.RelPermalink }}"
                         >
                             {{ $tag }}
                         </a>

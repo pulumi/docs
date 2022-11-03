@@ -6,10 +6,10 @@
 
         <span class="flex items-center">
             {{ if $authorData }}
-                <a data-track="{{ $authorData.name | urlize }}-img" class="rounded-full p-1 bg-blue-200 mr-2" href="{{ $authorPage.Permalink }}">
+                <a data-track="{{ $authorData.name | urlize }}-img" class="rounded-full p-1 bg-blue-200 mr-2" href="{{ $authorPage.RelPermalink }}">
                     <img class="w-8 rounded-full" src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" title="{{ $authorData.name }}" />
                 </a>
-                <a data-track="{{ $authorData.name | urlize }}-name" class="mr-2 hover:text-gray-800" href="{{ $authorPage.Permalink }}">{{ $authorData.name }}</a>
+                <a data-track="{{ $authorData.name | urlize }}-name" class="mr-2 hover:text-gray-800" href="{{ $authorPage.RelPermalink }}">{{ $authorData.name }}</a>
             {{ end }}
         </span>
     {{ end }}
