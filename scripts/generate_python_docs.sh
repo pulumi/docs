@@ -16,9 +16,10 @@ pushd "tools/pydocgen"
 pipenv --python 3
 pipenv install
 
+pipenv run pip install sphinx-rtd-theme
+
 if [ -z "${REPO_OVERRIDE:-}" ]; then
     echo "Building all Python docs..."
-    pipenv run pip install sphinx-rtd-theme
     # Install the Python package for all the providers.
     for PACKAGE in "${PACKAGES[@]}" ; do \
         pipenv run pip install "${PACKAGE}"
