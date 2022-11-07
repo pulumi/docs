@@ -601,6 +601,8 @@ const url2: Output<string> = pulumi.interpolate `http://${hostname}:${port}/`;
 ```python
 # concat takes a list of args and concatenates all of them into a single output:
 url = Output.concat("http://", hostname, ":", port, "/")
+# format takes a template string and a list of args or keyword args and formats the string, expanding outputs correctly:
+url2 = Output.format("http://{0}:{1}/", hostname, port);
 ```
 
 {{% /choosable %}}
