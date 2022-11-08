@@ -208,7 +208,7 @@ const securityGroup = new aws.ec2.SecurityGroup("secgrp", {
     // Add ingress and egress rules as required
 });
 
-const cluster = new awsx.ecs.Cluster("custom", { vpc });
+const cluster = new aws.ecs.Cluster("custom", { vpc });
 
 const nginx = new awsx.ecs.FargateService("nginx", {
     networkConfiguration: {
