@@ -1,0 +1,11 @@
+id = "denis-willett"
+name = "Denis Willett, PhD"
+title = "Software Engineer and Data Scientist"
+weight = 1
+
+status = "guest"
+
+[social]
+github = "deniswillett"
+linkedin = "deniswillett"
+twitter = ""
