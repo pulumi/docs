@@ -109,5 +109,5 @@ See the Pulumi [Service REST API docs](https://www.pulumi.com/docs/reference/ser
 
 | Action |  |
 |--------|------|
-| Get Audit Log Events (JSON) | ✅ |
-| Export Audit Log Events (CSV or CEF) | ✅ |
+| Get Audit Log Events (JSON) |  |
+| Export Audit Log Events (CSV or CEF) |  |
