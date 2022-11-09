@@ -736,7 +736,7 @@ const sg = new aws.ec2.SecurityGroup("webserver-sg", {
     fromPort: 443,
     toPort: 443,
     protocol: "tcp",
-    cidrBlocks: ["0.0.0.0"],
+    cidrBlocks: ["0.0.0.0/0"],
   }],
   egress: [{
     fromPort: 0,
