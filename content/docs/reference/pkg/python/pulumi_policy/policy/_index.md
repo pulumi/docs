@@ -1,0 +1,507 @@
+---
+title: Module policy
+title_tag: Module policy | Package pulumi_policy | Python SDK
+linktitle: policy
+notitle: true
+---
+
+{{< resource-docs-alert "policy" >}}
+
+<section id="module-pulumi_policy.policy">
+<span id="policy"></span><h1>policy<a class="headerlink" href="#module-pulumi_policy.policy" title="Permalink to this headline"></a></h1>
+<dl class="py class">
+<dt id="pulumi_policy.policy.Enum">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">Enum</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.policy.Enum" title="Permalink to this definition"></a></dt>
+<dd><p>Generic enumeration.</p>
+<p>Derive from this class to define new enumerations.</p>
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.Enum.name">
+<code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_policy.policy.Enum.name" title="Permalink to this definition"></a></dt>
+<dd><p>The name of the Enum member.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.Enum.value">
+<code class="sig-name descname">value</code><a class="headerlink" href="#pulumi_policy.policy.Enum.value" title="Permalink to this definition"></a></dt>
+<dd><p>The value of the Enum member.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_policy.policy.isawaitable">
+<code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">isawaitable</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">object</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.policy.isawaitable" title="Permalink to this definition"></a></dt>
+<dd><p>Return true if object can be passed to an <code class="docutils literal notranslate"><span class="pre">await</span></code> expression.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_policy.policy.signature">
+<code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">signature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em>, <em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">follow_wrapped</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">globals</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locals</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eval_str</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.policy.signature" title="Permalink to this definition"></a></dt>
+<dd><p>Get a signature object for the passed callable.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_policy.policy.NamedTuple">
+<code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">NamedTuple</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">typename</span></em>, <em class="sig-param"><span class="n">fields</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">/</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.policy.NamedTuple" title="Permalink to this definition"></a></dt>
+<dd><p>Typed version of namedtuple.</p>
+<p>Usage in Python versions &gt;= 3.6:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">NamedTuple</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
+</pre></div>
+</div>
+<p>This is equivalent to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Employee</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Employee&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The resulting class has an extra <strong>annotations</strong> attribute, giving a
+dict that maps field names to types.  (The field names are also in
+the _fields attribute, which is part of the namedtuple API.)
+Alternative equivalent keyword syntax is also accepted:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Employee</span> <span class="o">=</span> <span class="n">NamedTuple</span><span class="p">(</span><span class="s1">&#39;Employee&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In Python versions &lt;= 3.5 use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Employee</span> <span class="o">=</span> <span class="n">NamedTuple</span><span class="p">(</span><span class="s1">&#39;Employee&#39;</span><span class="p">,</span> <span class="p">[(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">)])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_policy.policy.cast">
+<code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">cast</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">typ</span></em>, <em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.policy.cast" title="Permalink to this definition"></a></dt>
+<dd><p>Cast a value to a type.</p>
+<p>This returns the value unchanged.  To the type checker this
+signals that the return value has the designated type, but at
+runtime we intentionally don’t check anything (we want this
+to be as fast as possible).</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_policy.policy.ABC">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">ABC</code><a class="headerlink" href="#pulumi_policy.policy.ABC" title="Permalink to this definition"></a></dt>
+<dd><p>Helper class that provides a standard way to create an ABC using
+inheritance.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_policy.policy.deserialize_properties">
+<code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">deserialize_properties</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">props</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><a class="headerlink" href="#pulumi_policy.policy.deserialize_properties" title="Permalink to this definition"></a></dt>
+<dd><p>Deserializes properties from a gRPC call result.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="pulumi_policy.policy.UnknownValueError">
+<em class="property">exception </em><code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">UnknownValueError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">unknown_type_sentinel</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">props</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.policy.UnknownValueError" title="Permalink to this definition"></a></dt>
+<dd><p>Exception raised to indicate that a property we attempted to access in some cloud resource is
+unknown. For example, during preview, some resource fields (such as an allocated IP address)
+can’t be known until the update is executed; an attempt to access such a field will result in
+this exception.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_policy.policy.unknown_checking_proxy">
+<code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">unknown_checking_proxy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">props</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><a class="headerlink" href="#pulumi_policy.policy.unknown_checking_proxy" title="Permalink to this definition"></a></dt>
+<dd><p>Takes a set of resource inputs, and returns a wrapped version that
+intercepts all property accesses to check if they are unknown, raising an <code class="docutils literal notranslate"><span class="pre">UnknownValueError</span></code> if
+so. For example, if the resource inputs contains a reference to an IP address that can’t be known
+until the resource has been initialized by the cloud provider, this value would be unknown during
+<code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">preview</span></code>, and only filled in during the update.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_policy.policy.PolicyPack">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">PolicyPack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">policies</span><span class="p">:</span> <span class="n">List<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.Policy" title="pulumi_policy.policy.Policy">pulumi_policy.policy.Policy</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">enforcement_level</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.EnforcementLevel" title="pulumi_policy.policy.EnforcementLevel">pulumi_policy.policy.EnforcementLevel</a><span class="p">, </span>None<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_config</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Dict<span class="p">[</span>str<span class="p">, </span>Union<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.EnforcementLevel" title="pulumi_policy.policy.EnforcementLevel">pulumi_policy.policy.EnforcementLevel</a><span class="p">, </span>Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.policy.PolicyPack" title="Permalink to this definition"></a></dt>
+<dd><p>A policy pack contains one or more policies to enforce.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the policy pack.</p></li>
+<li><p><strong>policies</strong> (<em>List</em><em>[</em><a class="reference internal" href="#pulumi_policy.policy.Policy" title="pulumi_policy.policy.Policy"><em>Policy</em></a><em>]</em>) – The policies associated with a policy pack.</p></li>
+<li><p><strong>enforcement_level</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi_policy.policy.EnforcementLevel" title="pulumi_policy.policy.EnforcementLevel"><em>EnforcementLevel</em></a><em>]</em>) – Indicates what to do on policy
+violation, e.g., block deployment but allow override with
+proper permissions. This is the default used for all policies in the policy pack.
+Individual policies can override.</p></li>
+<li><p><strong>Union</strong><strong>[</strong><strong>'EnforcementLevel'</strong><strong>, </strong><strong>Dict</strong><strong>[</strong><strong>str</strong><strong>, </strong><strong>Any</strong><strong>]</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>initial_config</strong> (<em>Optional</em><em>[</em><em>Dict</em><em>[</em><em>str</em><em>,</em>) – Initial
+configuration for the policy pack. Allows specifying configuration programmatically from reusable
+policy libraries.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_policy.policy.EnforcementLevel">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">EnforcementLevel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.policy.EnforcementLevel" title="Permalink to this definition"></a></dt>
+<dd><p>Indicates the impact of a policy violation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_policy.policy.PolicyConfigSchema">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">PolicyConfigSchema</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">properties</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">required</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>None<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.policy.PolicyConfigSchema" title="Permalink to this definition"></a></dt>
+<dd><p>Represents the configuration schema for a policy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Dict</strong><strong>[</strong><strong>str</strong><strong>, </strong><strong>Any</strong><strong>]</strong><strong>] </strong><strong>properties</strong> (<em>Dict</em><em>[</em><em>str</em><em>,</em>) – The policy’s configuration properties.</p></li>
+<li><p><strong>required</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em>) – The configuration properties that are required.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyConfigSchema.properties">
+<code class="sig-name descname">properties</code><em class="property">: Dict<span class="p">[</span>str<span class="p">, </span>Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></em><a class="headerlink" href="#pulumi_policy.policy.PolicyConfigSchema.properties" title="Permalink to this definition"></a></dt>
+<dd><p>The policy’s configuration properties.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyConfigSchema.required">
+<code class="sig-name descname">required</code><em class="property">: Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>None<span class="p">]</span></em><a class="headerlink" href="#pulumi_policy.policy.PolicyConfigSchema.required" title="Permalink to this definition"></a></dt>
+<dd><p>The configuration properties that are required.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_policy.policy.Policy">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">enforcement_level</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.EnforcementLevel" title="pulumi_policy.policy.EnforcementLevel">pulumi_policy.policy.EnforcementLevel</a><span class="p">, </span>None<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config_schema</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.PolicyConfigSchema" title="pulumi_policy.policy.PolicyConfigSchema">pulumi_policy.policy.PolicyConfigSchema</a><span class="p">, </span>None<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.policy.Policy" title="Permalink to this definition"></a></dt>
+<dd><p>A policy function that returns true if a resource definition violates some policy (e.g., “no
+public S3 buckets”), and a set of metadata useful for generating helpful messages when the policy
+is violated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – An ID for the policy. Must be unique within the current policy set.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – A brief description of the policy rule. e.g., “S3 buckets should have
+default encryptionenabled.”</p></li>
+<li><p><strong>enforcement_level</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi_policy.policy.EnforcementLevel" title="pulumi_policy.policy.EnforcementLevel"><em>EnforcementLevel</em></a><em>]</em>) – Indicates what to do on policy violation,
+e.g., block deployment but allow override with proper permissions.</p></li>
+<li><p><strong>config_schema</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi_policy.policy.PolicyConfigSchema" title="pulumi_policy.policy.PolicyConfigSchema"><em>PolicyConfigSchema</em></a><em>]</em>) – This policy’s configuration schema.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.Policy.name">
+<code class="sig-name descname">name</code><em class="property">: str</em><a class="headerlink" href="#pulumi_policy.policy.Policy.name" title="Permalink to this definition"></a></dt>
+<dd><p>An ID for the policy. Must be unique within the current policy set.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.Policy.description">
+<code class="sig-name descname">description</code><em class="property">: str</em><a class="headerlink" href="#pulumi_policy.policy.Policy.description" title="Permalink to this definition"></a></dt>
+<dd><p>A brief description of the policy rule. e.g., “S3 buckets should have default encryption
+enabled.”</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.Policy.enforcement_level">
+<code class="sig-name descname">enforcement_level</code><em class="property">: Optional<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.EnforcementLevel" title="pulumi_policy.policy.EnforcementLevel">pulumi_policy.policy.EnforcementLevel</a><span class="p">, </span>None<span class="p">]</span></em><a class="headerlink" href="#pulumi_policy.policy.Policy.enforcement_level" title="Permalink to this definition"></a></dt>
+<dd><p>Indicates what to do on policy violation, e.g., block deployment but allow override with
+proper permissions.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.Policy.config_schema">
+<code class="sig-name descname">config_schema</code><em class="property">: Optional<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.PolicyConfigSchema" title="pulumi_policy.policy.PolicyConfigSchema">pulumi_policy.policy.PolicyConfigSchema</a><span class="p">, </span>None<span class="p">]</span></em><a class="headerlink" href="#pulumi_policy.policy.Policy.config_schema" title="Permalink to this definition"></a></dt>
+<dd><p>This policy’s configuration schema.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt id="pulumi_policy.policy.ReportViolation">
+<code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">ReportViolation</code><a class="headerlink" href="#pulumi_policy.policy.ReportViolation" title="Permalink to this definition"></a></dt>
+<dd><p>ReportViolation is the callback signature used to report policy violations.
+The first param is the violation message and the second is an optional
+urn of the resource to associate with the violations.</p>
+<p>alias of Callable[[str, Optional[str, None]], None]</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_policy.policy.ResourceValidationArgs">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">ResourceValidationArgs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_type</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">props</span><span class="p">:</span> <span class="n">Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">urn</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pulumi_policy.policy.PolicyResourceOptions" title="pulumi_policy.policy.PolicyResourceOptions">pulumi_policy.policy.PolicyResourceOptions</a></span></em>, <em class="sig-param"><span class="n">provider</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.PolicyProviderResource" title="pulumi_policy.policy.PolicyProviderResource">pulumi_policy.policy.PolicyProviderResource</a><span class="p">, </span>None<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">, </span>None<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.policy.ResourceValidationArgs" title="Permalink to this definition"></a></dt>
+<dd><p>ResourceValidationArgs is the argument bag passed to a resource validation.</p>
+<dl class="py method">
+<dt id="pulumi_policy.policy.ResourceValidationArgs.get_config">
+<code class="sig-name descname">get_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><a class="headerlink" href="#pulumi_policy.policy.ResourceValidationArgs.get_config" title="Permalink to this definition"></a></dt>
+<dd><p>Returns configuration for the policy.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.ResourceValidationArgs.resource_type">
+<code class="sig-name descname">resource_type</code><em class="property">: str</em><a class="headerlink" href="#pulumi_policy.policy.ResourceValidationArgs.resource_type" title="Permalink to this definition"></a></dt>
+<dd><p>The type of the resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.ResourceValidationArgs.props">
+<code class="sig-name descname">props</code><em class="property">: Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></em><a class="headerlink" href="#pulumi_policy.policy.ResourceValidationArgs.props" title="Permalink to this definition"></a></dt>
+<dd><p>The inputs of the resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.ResourceValidationArgs.urn">
+<code class="sig-name descname">urn</code><em class="property">: str</em><a class="headerlink" href="#pulumi_policy.policy.ResourceValidationArgs.urn" title="Permalink to this definition"></a></dt>
+<dd><p>The URN of the resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.ResourceValidationArgs.name">
+<code class="sig-name descname">name</code><em class="property">: str</em><a class="headerlink" href="#pulumi_policy.policy.ResourceValidationArgs.name" title="Permalink to this definition"></a></dt>
+<dd><p>The name of the resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.ResourceValidationArgs.opts">
+<code class="sig-name descname">opts</code><em class="property">: <a class="reference internal" href="#pulumi_policy.policy.PolicyResourceOptions" title="pulumi_policy.policy.PolicyResourceOptions">pulumi_policy.policy.PolicyResourceOptions</a></em><a class="headerlink" href="#pulumi_policy.policy.ResourceValidationArgs.opts" title="Permalink to this definition"></a></dt>
+<dd><p>The options of the resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.ResourceValidationArgs.provider">
+<code class="sig-name descname">provider</code><em class="property">: Optional<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.PolicyProviderResource" title="pulumi_policy.policy.PolicyProviderResource">pulumi_policy.policy.PolicyProviderResource</a><span class="p">, </span>None<span class="p">]</span></em><a class="headerlink" href="#pulumi_policy.policy.ResourceValidationArgs.provider" title="Permalink to this definition"></a></dt>
+<dd><p>The provider of the resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_policy.policy.PolicyResourceOptions">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">PolicyResourceOptions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">protect</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">ignore_changes</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">delete_before_replace</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">, </span>None<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">aliases</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">custom_timeouts</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pulumi_policy.policy.PolicyCustomTimeouts" title="pulumi_policy.policy.PolicyCustomTimeouts">pulumi_policy.policy.PolicyCustomTimeouts</a></span></em>, <em class="sig-param"><span class="n">additional_secret_outputs</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.policy.PolicyResourceOptions" title="Permalink to this definition"></a></dt>
+<dd><p>PolicyResourceOptions is the bag of settings that control a resource’s behavior.</p>
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyResourceOptions.protect">
+<code class="sig-name descname">protect</code><em class="property">: bool</em><a class="headerlink" href="#pulumi_policy.policy.PolicyResourceOptions.protect" title="Permalink to this definition"></a></dt>
+<dd><p>When set to true, protect ensures this resource cannot be deleted.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyResourceOptions.ignore_changes">
+<code class="sig-name descname">ignore_changes</code><em class="property">: List<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#pulumi_policy.policy.PolicyResourceOptions.ignore_changes" title="Permalink to this definition"></a></dt>
+<dd><p>Ignore changes to any of the specified properties.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyResourceOptions.delete_before_replace">
+<code class="sig-name descname">delete_before_replace</code><em class="property">: Optional<span class="p">[</span>bool<span class="p">, </span>None<span class="p">]</span></em><a class="headerlink" href="#pulumi_policy.policy.PolicyResourceOptions.delete_before_replace" title="Permalink to this definition"></a></dt>
+<dd><p>When set to true, indicates that this resource should be deleted before
+its replacement is created when replacement is necessary.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyResourceOptions.aliases">
+<code class="sig-name descname">aliases</code><em class="property">: List<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#pulumi_policy.policy.PolicyResourceOptions.aliases" title="Permalink to this definition"></a></dt>
+<dd><p>Additional URNs that should be aliased to this resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyResourceOptions.custom_timeouts">
+<code class="sig-name descname">custom_timeouts</code><em class="property">: <a class="reference internal" href="#pulumi_policy.policy.PolicyCustomTimeouts" title="pulumi_policy.policy.PolicyCustomTimeouts">pulumi_policy.policy.PolicyCustomTimeouts</a></em><a class="headerlink" href="#pulumi_policy.policy.PolicyResourceOptions.custom_timeouts" title="Permalink to this definition"></a></dt>
+<dd><p>Custom timeouts for resource create, update, and delete operations.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyResourceOptions.additional_secret_outputs">
+<code class="sig-name descname">additional_secret_outputs</code><em class="property">: List<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#pulumi_policy.policy.PolicyResourceOptions.additional_secret_outputs" title="Permalink to this definition"></a></dt>
+<dd><p>Outputs that should always be treated as secrets.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_policy.policy.PolicyCustomTimeouts">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">PolicyCustomTimeouts</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">create_seconds</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">update_seconds</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">delete_seconds</span><span class="p">:</span> <span class="n">float</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.policy.PolicyCustomTimeouts" title="Permalink to this definition"></a></dt>
+<dd><p>Custom timeout options.</p>
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyCustomTimeouts.create_seconds">
+<code class="sig-name descname">create_seconds</code><em class="property">: float</em><a class="headerlink" href="#pulumi_policy.policy.PolicyCustomTimeouts.create_seconds" title="Permalink to this definition"></a></dt>
+<dd><p>The create resource timeout.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyCustomTimeouts.update_seconds">
+<code class="sig-name descname">update_seconds</code><em class="property">: float</em><a class="headerlink" href="#pulumi_policy.policy.PolicyCustomTimeouts.update_seconds" title="Permalink to this definition"></a></dt>
+<dd><p>The update resource timeout.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyCustomTimeouts.delete_seconds">
+<code class="sig-name descname">delete_seconds</code><em class="property">: float</em><a class="headerlink" href="#pulumi_policy.policy.PolicyCustomTimeouts.delete_seconds" title="Permalink to this definition"></a></dt>
+<dd><p>The delete resource timeout.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_policy.policy.PolicyProviderResource">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">PolicyProviderResource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_type</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">props</span><span class="p">:</span> <span class="n">Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">urn</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.policy.PolicyProviderResource" title="Permalink to this definition"></a></dt>
+<dd><p>Information about the provider.</p>
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyProviderResource.resource_type">
+<code class="sig-name descname">resource_type</code><em class="property">: str</em><a class="headerlink" href="#pulumi_policy.policy.PolicyProviderResource.resource_type" title="Permalink to this definition"></a></dt>
+<dd><p>The type of the provider resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyProviderResource.props">
+<code class="sig-name descname">props</code><em class="property">: Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></em><a class="headerlink" href="#pulumi_policy.policy.PolicyProviderResource.props" title="Permalink to this definition"></a></dt>
+<dd><p>The properties of the provider resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyProviderResource.urn">
+<code class="sig-name descname">urn</code><em class="property">: str</em><a class="headerlink" href="#pulumi_policy.policy.PolicyProviderResource.urn" title="Permalink to this definition"></a></dt>
+<dd><p>The URN of the provider resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyProviderResource.name">
+<code class="sig-name descname">name</code><em class="property">: str</em><a class="headerlink" href="#pulumi_policy.policy.PolicyProviderResource.name" title="Permalink to this definition"></a></dt>
+<dd><p>The name of the provider resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt id="pulumi_policy.policy.ResourceValidation">
+<code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">ResourceValidation</code><a class="headerlink" href="#pulumi_policy.policy.ResourceValidation" title="Permalink to this definition"></a></dt>
+<dd><p>ResourceValidation is the callback signature for a <code class="docutils literal notranslate"><span class="pre">ResourceValidationPolicy</span></code>. A resource validation
+is passed <code class="docutils literal notranslate"><span class="pre">args</span></code> with more information about the resource and a <code class="docutils literal notranslate"><span class="pre">ReportViolation</span></code> callback that can be
+used to report a policy violation. <code class="docutils literal notranslate"><span class="pre">ReportViolation</span></code> can be called multiple times to report multiple
+violations against the same resource. <code class="docutils literal notranslate"><span class="pre">ReportViolation</span></code> must be passed a message about the violation.
+The <code class="docutils literal notranslate"><span class="pre">ReportViolation</span></code> signature accepts an optional <code class="docutils literal notranslate"><span class="pre">urn</span></code> argument, which is ignored when validating
+resources (the <code class="docutils literal notranslate"><span class="pre">urn</span></code> of the resource being validated is always used).</p>
+<p>alias of Callable[[pulumi_policy.policy.ResourceValidationArgs, Callable[[str, Optional[str, None]], None]], Optional[Awaitable, None]]</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_policy.policy.ResourceValidationPolicy">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">ResourceValidationPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">validate</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.ResourceValidationArgs" title="pulumi_policy.policy.ResourceValidationArgs">pulumi_policy.policy.ResourceValidationArgs</a><span class="p">, </span>Callable<span class="p">[</span><span class="p">[</span>str<span class="p">, </span>Optional<span class="p">[</span>str<span class="p">, </span>None<span class="p">]</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span><span class="p">, </span>Optional<span class="p">[</span>Awaitable<span class="p">, </span>None<span class="p">]</span><span class="p">]</span><span class="p">, </span>List<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.ResourceValidationArgs" title="pulumi_policy.policy.ResourceValidationArgs">pulumi_policy.policy.ResourceValidationArgs</a><span class="p">, </span>Callable<span class="p">[</span><span class="p">[</span>str<span class="p">, </span>Optional<span class="p">[</span>str<span class="p">, </span>None<span class="p">]</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span><span class="p">, </span>Optional<span class="p">[</span>Awaitable<span class="p">, </span>None<span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enforcement_level</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.EnforcementLevel" title="pulumi_policy.policy.EnforcementLevel">pulumi_policy.policy.EnforcementLevel</a><span class="p">, </span>None<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config_schema</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.PolicyConfigSchema" title="pulumi_policy.policy.PolicyConfigSchema">pulumi_policy.policy.PolicyConfigSchema</a><span class="p">, </span>None<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.policy.ResourceValidationPolicy" title="Permalink to this definition"></a></dt>
+<dd><p>ResourceValidationPolicy is a policy that validates a resource definition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – An ID for the policy. Must be unique within the current policy set.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – A brief description of the policy rule. e.g., “S3 buckets should have
+default encryptionenabled.”</p></li>
+<li><p><strong>List</strong><strong>[</strong><strong>ResourceValidation</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>validate</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><em>ResourceValidation</em><em>,</em>) – A callback function
+that validates if a resource definition violates a policy (e.g. “S3 buckets can’t be public”).
+A single callback function can be specified, or multiple functions, which are called in order.</p></li>
+<li><p><strong>enforcement_level</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi_policy.policy.EnforcementLevel" title="pulumi_policy.policy.EnforcementLevel"><em>EnforcementLevel</em></a><em>]</em>) – Indicates what to do on policy violation,
+e.g., block deployment but allow override with proper permissions.</p></li>
+<li><p><strong>config_schema</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi_policy.policy.PolicyConfigSchema" title="pulumi_policy.policy.PolicyConfigSchema"><em>PolicyConfigSchema</em></a><em>]</em>) – This policy’s configuration schema.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_policy.policy.PolicyResource">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">PolicyResource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_type</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">props</span><span class="p">:</span> <span class="n">Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">urn</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pulumi_policy.policy.PolicyResourceOptions" title="pulumi_policy.policy.PolicyResourceOptions">pulumi_policy.policy.PolicyResourceOptions</a></span></em>, <em class="sig-param"><span class="n">provider</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.PolicyProviderResource" title="pulumi_policy.policy.PolicyProviderResource">pulumi_policy.policy.PolicyProviderResource</a><span class="p">, </span>None<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.PolicyResource" title="pulumi_policy.policy.PolicyResource">pulumi_policy.policy.PolicyResource</a><span class="p">, </span>None<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">dependencies</span><span class="p">:</span> <span class="n">List<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.PolicyResource" title="pulumi_policy.policy.PolicyResource">pulumi_policy.policy.PolicyResource</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">property_dependencies</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>List<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.PolicyResource" title="pulumi_policy.policy.PolicyResource">pulumi_policy.policy.PolicyResource</a><span class="p">]</span><span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.policy.PolicyResource" title="Permalink to this definition"></a></dt>
+<dd><p>PolicyResource represents a resource in the stack.</p>
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyResource.resource_type">
+<code class="sig-name descname">resource_type</code><em class="property">: str</em><a class="headerlink" href="#pulumi_policy.policy.PolicyResource.resource_type" title="Permalink to this definition"></a></dt>
+<dd><p>The type of the resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyResource.props">
+<code class="sig-name descname">props</code><em class="property">: Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></em><a class="headerlink" href="#pulumi_policy.policy.PolicyResource.props" title="Permalink to this definition"></a></dt>
+<dd><p>The outputs of the resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyResource.urn">
+<code class="sig-name descname">urn</code><em class="property">: str</em><a class="headerlink" href="#pulumi_policy.policy.PolicyResource.urn" title="Permalink to this definition"></a></dt>
+<dd><p>The URN of the resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyResource.name">
+<code class="sig-name descname">name</code><em class="property">: str</em><a class="headerlink" href="#pulumi_policy.policy.PolicyResource.name" title="Permalink to this definition"></a></dt>
+<dd><p>The name of the resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyResource.opts">
+<code class="sig-name descname">opts</code><em class="property">: <a class="reference internal" href="#pulumi_policy.policy.PolicyResourceOptions" title="pulumi_policy.policy.PolicyResourceOptions">pulumi_policy.policy.PolicyResourceOptions</a></em><a class="headerlink" href="#pulumi_policy.policy.PolicyResource.opts" title="Permalink to this definition"></a></dt>
+<dd><p>The options of the resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyResource.provider">
+<code class="sig-name descname">provider</code><em class="property">: Optional<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.PolicyProviderResource" title="pulumi_policy.policy.PolicyProviderResource">pulumi_policy.policy.PolicyProviderResource</a><span class="p">, </span>None<span class="p">]</span></em><a class="headerlink" href="#pulumi_policy.policy.PolicyResource.provider" title="Permalink to this definition"></a></dt>
+<dd><p>The provider of the resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyResource.parent">
+<code class="sig-name descname">parent</code><em class="property">: Optional<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.PolicyResource" title="pulumi_policy.policy.PolicyResource">pulumi_policy.policy.PolicyResource</a><span class="p">, </span>None<span class="p">]</span></em><a class="headerlink" href="#pulumi_policy.policy.PolicyResource.parent" title="Permalink to this definition"></a></dt>
+<dd><p>An optional parent that this resource belongs to.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyResource.dependencies">
+<code class="sig-name descname">dependencies</code><em class="property">: List<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.PolicyResource" title="pulumi_policy.policy.PolicyResource">pulumi_policy.policy.PolicyResource</a><span class="p">]</span></em><a class="headerlink" href="#pulumi_policy.policy.PolicyResource.dependencies" title="Permalink to this definition"></a></dt>
+<dd><p>The dependencies of the resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.PolicyResource.property_dependencies">
+<code class="sig-name descname">property_dependencies</code><em class="property">: Dict<span class="p">[</span>str<span class="p">, </span>List<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.PolicyResource" title="pulumi_policy.policy.PolicyResource">pulumi_policy.policy.PolicyResource</a><span class="p">]</span><span class="p">]</span></em><a class="headerlink" href="#pulumi_policy.policy.PolicyResource.property_dependencies" title="Permalink to this definition"></a></dt>
+<dd><p>The set of dependencies that affect each property.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_policy.policy.StackValidationArgs">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">StackValidationArgs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resources</span><span class="p">:</span> <span class="n">List<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.PolicyResource" title="pulumi_policy.policy.PolicyResource">pulumi_policy.policy.PolicyResource</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">, </span>None<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.policy.StackValidationArgs" title="Permalink to this definition"></a></dt>
+<dd><p>StackValidationArgs is the argument bag passed to a stack validation.</p>
+<dl class="py method">
+<dt id="pulumi_policy.policy.StackValidationArgs.get_config">
+<code class="sig-name descname">get_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><a class="headerlink" href="#pulumi_policy.policy.StackValidationArgs.get_config" title="Permalink to this definition"></a></dt>
+<dd><p>Returns configuration for the policy.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_policy.policy.StackValidationArgs.resources">
+<code class="sig-name descname">resources</code><em class="property">: List<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.PolicyResource" title="pulumi_policy.policy.PolicyResource">pulumi_policy.policy.PolicyResource</a><span class="p">]</span></em><a class="headerlink" href="#pulumi_policy.policy.StackValidationArgs.resources" title="Permalink to this definition"></a></dt>
+<dd><p>The resources in the stack.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt id="pulumi_policy.policy.StackValidation">
+<code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">StackValidation</code><a class="headerlink" href="#pulumi_policy.policy.StackValidation" title="Permalink to this definition"></a></dt>
+<dd><p>StackValidation is the callback signature for a <code class="docutils literal notranslate"><span class="pre">StackValidationPolicy</span></code>. A stack validation is passed
+<code class="docutils literal notranslate"><span class="pre">args</span></code> with more information about the stack and a <code class="docutils literal notranslate"><span class="pre">report_violation</span></code> callback that can be used to
+report a policy violation. <code class="docutils literal notranslate"><span class="pre">report_violation</span></code> can be called multiple times to report multiple violations
+against the stack. <code class="docutils literal notranslate"><span class="pre">report_violation</span></code> must be passed a message about the violation, and an optional <code class="docutils literal notranslate"><span class="pre">urn</span></code>
+to a resource in the stack that’s in violation of the policy. Not specifying a <code class="docutils literal notranslate"><span class="pre">urn</span></code> indicates the
+overall stack is in violation of the policy.</p>
+<p>alias of Callable[[pulumi_policy.policy.StackValidationArgs, Callable[[str, Optional[str, None]], None]], Optional[Awaitable, None]]</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_policy.policy.StackValidationPolicy">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_policy.policy.</code><code class="sig-name descname">StackValidationPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">validate</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.StackValidationArgs" title="pulumi_policy.policy.StackValidationArgs">pulumi_policy.policy.StackValidationArgs</a><span class="p">, </span>Callable<span class="p">[</span><span class="p">[</span>str<span class="p">, </span>Optional<span class="p">[</span>str<span class="p">, </span>None<span class="p">]</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span><span class="p">, </span>Optional<span class="p">[</span>Awaitable<span class="p">, </span>None<span class="p">]</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enforcement_level</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.EnforcementLevel" title="pulumi_policy.policy.EnforcementLevel">pulumi_policy.policy.EnforcementLevel</a><span class="p">, </span>None<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config_schema</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#pulumi_policy.policy.PolicyConfigSchema" title="pulumi_policy.policy.PolicyConfigSchema">pulumi_policy.policy.PolicyConfigSchema</a><span class="p">, </span>None<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_policy.policy.StackValidationPolicy" title="Permalink to this definition"></a></dt>
+<dd><p>StackValidationPolicy is a policy that validates a stack.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – An ID for the policy. Must be unique within the current policy set.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – A brief description of the policy rule. e.g., “S3 buckets should have
+default encryptionenabled.”</p></li>
+<li><p><strong>validate</strong> (<em>Optional</em><em>[</em><em>StackValidation</em><em>]</em>) – A callback function that validates if a stack violates a policy.</p></li>
+<li><p><strong>enforcement_level</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi_policy.policy.EnforcementLevel" title="pulumi_policy.policy.EnforcementLevel"><em>EnforcementLevel</em></a><em>]</em>) – Indicates what to do on policy violation,
+e.g., block deployment but allow override with proper permissions.</p></li>
+<li><p><strong>config_schema</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi_policy.policy.PolicyConfigSchema" title="pulumi_policy.policy.PolicyConfigSchema"><em>PolicyConfigSchema</em></a><em>]</em>) – This policy’s configuration schema.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>

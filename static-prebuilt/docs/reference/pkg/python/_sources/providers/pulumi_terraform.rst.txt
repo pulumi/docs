@@ -12,4 +12,16 @@ Pulumi Terraform
 
 .. toctree::
     
+    pulumi_terraform/__all__
+    pulumi_terraform/__builtins__
+    pulumi_terraform/__cached__
+    pulumi_terraform/__doc__
+    pulumi_terraform/__file__
+    pulumi_terraform/__loader__
+    pulumi_terraform/__name__
+    pulumi_terraform/__package__
+    pulumi_terraform/__path__
+    pulumi_terraform/__spec__
+    pulumi_terraform/importlib
+    pulumi_terraform/pkg
     pulumi_terraform/state

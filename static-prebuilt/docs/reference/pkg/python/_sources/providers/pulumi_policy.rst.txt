@@ -19,3 +19,17 @@ Pulumi Policy
     pulumi_policy/StackValidation
     pulumi_policy/StackValidationArgs
     pulumi_policy/StackValidationPolicy
+    pulumi_policy/__all__
+    pulumi_policy/__builtins__
+    pulumi_policy/__cached__
+    pulumi_policy/__doc__
+    pulumi_policy/__file__
+    pulumi_policy/__loader__
+    pulumi_policy/__name__
+    pulumi_policy/__package__
+    pulumi_policy/__path__
+    pulumi_policy/__spec__
+    pulumi_policy/deserialize
+    pulumi_policy/policy
+    pulumi_policy/proxy
+    pulumi_policy/version

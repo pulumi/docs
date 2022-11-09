@@ -212,7 +212,7 @@ def generate_module(ctx, provider, import_path, output_path, use_provider_metada
         return
 
     # If there are submodules, run through each one and render module templates for each one.
-    all_modules = getattr(module, "__all__")
+    all_modules = dir(module)
     # Skip the "config" submodule - it can't be imported.
     all_modules = list(filter(lambda mod: mod != "config", all_modules))
     print(f"{provider.package_name + import_path: <50} -> {output_path}/{module_name}.rst")

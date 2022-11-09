@@ -291,7 +291,7 @@ currently-constructing resource depends on the given resources.</p></li>
 <li><p><strong>provider</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em>) – An optional provider to use for this resource’s CRUD operations.
 If no provider is supplied, the default provider for the resource’s package will be used. The default
 provider is pulled from the providers field, then the parent’s provider bag.</p></li>
-<li><p><strong>ProviderResource</strong><strong>]</strong><strong>, </strong><strong>List</strong><strong>[</strong><strong>ProviderResource</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>providers</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – An optional set of
+<li><p><strong>ProviderResource</strong><strong>]</strong><strong>, </strong><strong>List</strong><strong>[</strong><strong>ProviderResource</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>providers</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><a class="reference internal" href="pulumi_policy/proxy.html#pulumi_policy.proxy.Mapping" title="pulumi_policy.proxy.Mapping"><em>Mapping</em></a><em>[</em><em>str</em><em>,</em>) – An optional set of
 providers to use for this resource and child resources. Keyed by package name (e.g. “aws”), or just
 provided as a list. In the latter case, the package name will be retrieved from the provider itself.
 Note: Only a list should be used. Mapping keys are not respected.</p></li>

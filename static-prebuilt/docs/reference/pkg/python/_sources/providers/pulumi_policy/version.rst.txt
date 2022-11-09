@@ -1,0 +1,8 @@
+version
+====================================
+
+
+.. automodule:: pulumi_policy.version
+    :ignore-module-all:
+    :members:
+    :imported-members:
