@@ -25,7 +25,7 @@ main:
     machine.
 
   sortable_date: 2022-11-10T18:00:00.000Z
-  duration: 90 minutes
+  duration: 60 minutes
   presenters:
     - name: Laura Santamaria
       role: Developer Advocate, Pulumi
@@ -36,7 +36,7 @@ main:
 event_data:
   name: "Pulumi 101: Fundamentals with Java and Docker"
   start_date: 2022-11-10T18:00:00.000Z
-  end_date: 2022-11-10T19:30:00.000Z
+  end_date: 2022-11-10T19:00:00.000Z
   description: |
     Learn the basics of Pulumi from projects to components. We’ll use
     Java and Docker to build, configure, and deploy a real-life, modern
