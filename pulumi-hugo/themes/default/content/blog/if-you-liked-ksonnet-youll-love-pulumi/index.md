@@ -2,7 +2,7 @@
 title: "If you liked ksonnet, you'll love Pulumi!"
 date: "2019-02-13"
 meta_desc: "Like ksonnet, Pulumi provides complete access to the raw Kubernetes API, and supports additional features like modules/imports, components, functions, and more."
-meta_image: "kube-update.gif"
+meta_image: "kube-update.webp"
 authors: ["mike-metral"]
 tags: ["Kubernetes", "cloud-native"]
 ---
@@ -115,7 +115,7 @@ Unlike with ksonnet though, Pulumi programs are deployed using the
 is making toward being complete (as well as feedback when things go
 wrong!).
 
-![KubeUpdate](./kube-update.gif)
+![KubeUpdate](./kube-update.webp)
 
 And finally, a major area where Pulumi goes beyond ksonnet in scope, it
 works with public and private cloud resources as well as

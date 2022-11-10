@@ -82,7 +82,7 @@ const bucket = new aws.s3.Bucket("my-bucket", {
 });
 ```
 
-![Demo of Policy as Code](pac-demo.gif)
+![Demo of Policy as Code](pac-demo.webp)
 
 While this is a simple demonstration of what you can do with Policy as Code, the framework is very flexible and supports much more complex policies. Our [AWSGuard library](https://github.com/pulumi/pulumi-awsguard) is a great example of how you can use Policy as Code to write configurable policies.
 

@@ -67,7 +67,7 @@ this information in the CLI experience. See
 on the subject, or [try it out](/kubernetes/) for
 yourself!
 
-![status-rich](./status-rich.gif)
+![status-rich](./status-rich.webp)
 
 ## A real-time view of a Service's life
 

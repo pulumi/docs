@@ -217,7 +217,7 @@ Multi-region infrastructure build outs become a breeze, as workloads can be easi
 
 Whether you use the built-in cloud delivery workflows like Push to Deploy, or build your own custom platform with the REST API and Remote Automation API, you get full observability into every deployment. Anyone in your organization can view updates status, update logs, and the full history of deployments.
 
-![Update Logs in the Pulumi Service](update-logs.gif)
+![Update Logs in the Pulumi Service](update-logs.webp)
 
 You can build platform automation without worrying about how you’ll surface the results across your product, engineering, and infrastructure teams.
 

@@ -257,7 +257,7 @@ return await Deployment.RunAsync(() =>
 
 With atomic deployments enabled a new bucket will be provisioned, your content is added via a sync command, and finally once your new bucket is built the old bucket is deleted.
 
-![Gif of creating and updating a atomically deployed website](atomic-deployment.gif)
+![Gif of creating and updating a atomically deployed website](atomic-deployment.webp)
 
 #### Rollback
 

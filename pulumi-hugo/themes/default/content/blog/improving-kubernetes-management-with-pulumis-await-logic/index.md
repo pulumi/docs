@@ -2,7 +2,7 @@
 title: "Improving Kubernetes Management with Pulumi's Await Logic"
 date: "2019-03-05"
 meta_desc: "In this post, we discuss await logic, which allows users to have better visibility into the state of Kubernetes resources as they're created and deployed."
-meta_image: "status-rich.gif"
+meta_image: "status-rich.webp"
 authors: ["levi-blackstone"]
 tags: ["Kubernetes"]
 ---
@@ -42,7 +42,7 @@ the resource status has been verified by the await logic.
 You can see an example of what this looks like in practice in the
 screencast below:
 
-![status-rich](./status-rich.gif)
+![status-rich](./status-rich.webp)
 
 Pulumi's sophisticated await logic helps customers with a couple use
 cases:

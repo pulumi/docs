@@ -19,7 +19,7 @@ we’re introducing the [Kubernetes Extensions (kx) library][kx-repo] for Pulumi
 designed to simplify the declaration of Kubernetes resources, and make the API easier for
 everyone to use.
 
-![kx + watch mode](kx.gif)
+![kx + watch mode](kx.webp)
 
 ## Kubernetes YAML: The cloud assembly language
 

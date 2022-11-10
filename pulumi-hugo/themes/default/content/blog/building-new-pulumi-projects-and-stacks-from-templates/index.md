@@ -2,7 +2,7 @@
 title: "Building new Pulumi projects and stacks from templates"
 date: "2018-10-01"
 meta_desc: "This blog shows how to build Pulumi projects and stacks from templates."
-meta_image: "new-project-ui-1.gif"
+meta_image: "new-project-ui-1.webp"
 authors: ["marc-holmes"]
 tags: ["features"]
 ---
@@ -28,7 +28,7 @@ Head over to <https://app.pulumi.com> and - supposing you're logged in -
 you'll be presented with the usual homepage. But now we've added a
 shiny new 'Add New Project' button. Here's how that works:
 
-![new-project-ui-1](./new-project-ui-1.gif)
+![new-project-ui-1](./new-project-ui-1.webp)
 
 - Clicking the 'Add New Project' button takes you to a series of
   available templates - essentially a matrix of cloud provider and
