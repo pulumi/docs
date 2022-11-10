@@ -2,3 +2,5 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 yarn run lint-staged
+
+./scripts/lint/check-file-size.sh
