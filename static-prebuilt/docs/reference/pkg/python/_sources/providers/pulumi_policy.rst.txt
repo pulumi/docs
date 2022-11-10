@@ -2,20 +2,7 @@ Pulumi Policy
 ====================================
 
 
-.. toctree::
-    
-    pulumi_policy/EnforcementLevel
-    pulumi_policy/Policy
-    pulumi_policy/PolicyConfigSchema
-    pulumi_policy/PolicyCustomTimeouts
-    pulumi_policy/PolicyPack
-    pulumi_policy/PolicyProviderResource
-    pulumi_policy/PolicyResource
-    pulumi_policy/PolicyResourceOptions
-    pulumi_policy/ReportViolation
-    pulumi_policy/ResourceValidation
-    pulumi_policy/ResourceValidationArgs
-    pulumi_policy/ResourceValidationPolicy
-    pulumi_policy/StackValidation
-    pulumi_policy/StackValidationArgs
-    pulumi_policy/StackValidationPolicy
+.. automodule:: pulumi_policy
+    :ignore-module-all:
+    :members:
+    :imported-members:

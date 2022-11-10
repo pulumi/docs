@@ -21,6 +21,7 @@ is "hard" (read: time-consuming for the author).
 
 import glob
 import importlib
+import inspect
 import keyword
 import json
 from os import path, mkdir
@@ -244,8 +245,13 @@ def should_generate_multimodule(module):
 
     # Even if this module does define __all__, if its only submodule is config, treat it as a single-page module.
     # Config is not a "real" submodule - Sphinx can't import it and there are no docs to generate for it.
-    all_modules = getattr(module, "__all__")
-    return all_modules != ["config"]
+    modules = []
+    for name in getattr(module, "__all__"):
+        attr = getattr(module, name)
+        if inspect.ismodule(attr) and name != "config":
+            modules.append(name)
+
+    return len(modules) > 0
 
 
 def build_sphinx(ctx: Context, builder: str, outdir: str):
