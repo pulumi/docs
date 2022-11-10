@@ -42,7 +42,7 @@ We're excited to deliver one of the most [requested features from the community]
 
 See below what the experience looks like in the Pulumi Service:
 
-![Gif of tokens navigation](nav-org-tokens.webp)
+![Gif of tokens navigation](nav-org-tokens.gif)
 
 Users can now create an Organization Access Token in the Pulumi Service, give it a unique human-readable name (i.e. jenkins-ci-dev) and then use it to gain access to their Pulumi Service Organization. Only Organization Admins can create and manage Organization Access Tokens. As a security consideration for our customers, Organization Access Tokens cannot create other Organization Access Tokens. When a token is created they are provided a one-time token value. These tokens can only be deleted as an explicit action, either by clicking a button in the console or calling an API to delete the token. Creating or deleting an Organization Access Token will be logged as an event in the [Audit Logs](/docs/intro/pulumi-service/audit-logs/).
 

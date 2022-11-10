@@ -169,22 +169,22 @@ Using the provided constants, you can avoid referring back to the documentation 
 
 {{% choosable language typescript %}}
 
-![ENUM_TYPESCRIPT](ts-enum.webp)
+![ENUM_TYPESCRIPT](ts-enum.gif)
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
-![ENUM_PYTHON](python-enum.webp)
+![ENUM_PYTHON](python-enum.gif)
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
-![ENUM_CSHARP](csharp-enum.webp)
+![ENUM_CSHARP](csharp-enum.gif)
 
 {{% /choosable %}}
 {{% choosable language go %}}
 
-![ENUM_GO](go-enum.webp)
+![ENUM_GO](go-enum.gif)
 
 {{% /choosable %}}
 
