@@ -172,7 +172,7 @@ With Pulumi Deployments, you can run a Pulumi infrastructure as code action (a p
 5. **Remote Automation API** - Our strongly typed infrastructure orchestration technology can now run deployments remotely in the cloud.
 
 Click to Deploy
-![Click to Refresh in Service](refresh.png)
+![Click to Refresh in Service](deploy-actions.png)
 
 Pulumi Deployments removes the cloud as a bottleneck and unlocks it as an accelerant for your business. It is available in preview today. Deployments are free during the preview, with usage-based pricing to come. Check out these resources to get started today:
 

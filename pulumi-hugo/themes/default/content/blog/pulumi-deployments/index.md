@@ -61,7 +61,7 @@ You can ensure that every environment and every commit is automatically validate
 
 Sometimes infrastructure requires ad-hoc operations. You may want to run a refresh to rectify some cloud state changes:
 
-![Running a Pulumi Refresh in the Pulumi Service](refresh.png)
+![Running a Pulumi Refresh in the Pulumi Service](refresh.gif)
 
 Whatever the situation calls for, you can easily update, refresh, and modify infrastructure with the click of a button in the Pulumi Service console.
 
