@@ -210,7 +210,7 @@ Yes! You will be able to use the Pulumi Service Provider. You can configure the 
 1. Via the `PULUMI_BACKEND_URL` environment variable. You'll want to set it to the API URL of the service.
 2. Via the `pulumiservice:apiUrl` configuration value.
 
-The default URL for the provider is: <https://api.pulumi.com>.
+The default URL for the provider is: https<nolink>://api.pulumi.com.
 
 ## What's next?
 

@@ -47,7 +47,7 @@ As an early stage start-up at the time, we needed a low-cost solution (free) whi
 
 Metabase is a Business Intelligence Tool that enables you to visualize and collaborate using data from a variety of databases. You do not need to understand the underlying database’s query language, SQL for example, because Metabase provides a UI to interact with your data. You can however drop into a query editor at any moment to perform more advanced queries.
 
-Metabase provides you with two options to run <a href="https://www.metabase.com/blog/how-to-run-metabase-in-production/" target="_blank" rel="noopener noreferrer">Metabase in production <i class="text-xs fas fa-external-link-alt"></i></a>, Open Source (self-managed) and Enterprise (managed). The main difference between the two is that with Open Source you have to manage the infrastructure yourself, whereas with Enterprise, Metabase will manage the infrastructure for you for a fee.
+Metabase provides you with two options to run <a href="https://www.metabase.com/blog/how-to-run-metabase-in-production" target="_blank" rel="noopener noreferrer">Metabase in production <i class="text-xs fas fa-external-link-alt"></i></a>, Open Source (self-managed) and Enterprise (managed). The main difference between the two is that with Open Source you have to manage the infrastructure yourself, whereas with Enterprise, Metabase will manage the infrastructure for you for a fee.
 
 ## Deploying Metabase to production
 

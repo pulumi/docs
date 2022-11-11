@@ -41,7 +41,7 @@ Stop by the [Civo](https://www.civo.com/) booth for live sessions on how to get 
 
 ### Cockroach Labs — Build What you Dream
 
-[CockroachDB](https://www.cockroachlabs.com/)'s presence this year at KubeCon (both physical and virtual) is primarily a charitable one (if you attend in person, visit booth P16, where for each badge scanned they'll donate $3 to either Black Girls Code, Women Who Code, the Cancer Research Institute, or UNICEF for Ukrainian relief). Visit their booth ([or book a meeting here](https://www.cockroachlabs.com/guides/kubecon-emea-2022/)) to see demos and architecture overviews that relate what they’ve learned from building a multi-region, managed distributed SQL database offering on Kubernetes.
+[CockroachDB](https://www.cockroachlabs.com/)'s presence this year at KubeCon (both physical and virtual) is primarily a charitable one (if you attend in person, visit booth P16, where for each badge scanned they'll donate $3 to either Black Girls Code, Women Who Code, the Cancer Research Institute, or UNICEF for Ukrainian relief). Visit their booth to see demos and architecture overviews that relate what they’ve learned from building a multi-region, managed distributed SQL database offering on Kubernetes.
 
 ### Fairwinds — Kubernetes Governance and Security
 

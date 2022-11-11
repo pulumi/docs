@@ -36,7 +36,7 @@ repository is open source so we do not need to enter a `Username` and `Password`
 proceed to the next step.
 
 TeamCity will tell us if it can successfully connect to the repository. If it can, then it will ask us to name this project
-and to create a [build configuration](https://www.jetbrains.com/help/teamcity/build-configuration.html) name. We are going to
+and to create a [build configuration](https://www.jetbrains.com/help/teamcity/creating-and-editing-build-configurations.html) name. We are going to
 name the project `Examples` and we will create a build configuration called `Tutorial`. We can then `Proceed` to the next step.
 We can click the link that says `configure build steps manually` and then can start creating our project.
 

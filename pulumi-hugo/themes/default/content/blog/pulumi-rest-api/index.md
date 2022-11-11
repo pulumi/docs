@@ -20,7 +20,7 @@ Pulumi provides a lot of functionality out of the box. But we understand that mo
 
 ## Manage Stacks, Updates, Teams, and More
 
-The Pulumi REST API is available at <https://api.pulumi.com> and includes functionality to interact with and manipulate any kind of metadata managed by Pulumi. That includes:
+The Pulumi REST API is available at https<nolink>://api.pulumi.com and includes functionality to interact with and manipulate any kind of metadata managed by Pulumi. That includes:
 
 * **Projects and Stacks**
     * List all projects and stacks for a user or organization
