@@ -44,10 +44,11 @@ The stack **must** exist before a deployment can be created for it. If you attem
 
 {{% /notes %}}
 
-A deployment request consists of two main pieces, a [Source](#Source) and an [Operation](#Operation).
+A deployment request consists of three main pieces, an [ExecutorContext](#ExecutorContext) a [SourceContext](#SourceContext) and an [OperationContext](#OperationContext).
 
-* The [Source](#source) defines where the source code for your project is located. Currently, only git repos are supported.
-* The [Operation](#operation) defines how the Pulumi project is to be executed (i.e. the Pulumi operation to execute and any associated context it requires).
+* The [ExecutorContext](#ExecutorContext) defines information about the executor where the Pulumi operation is executed.
+* The [SourceContext](#SourceContext) defines where the source code for your project is located. Currently, only git repos are supported.
+* The [OperationContext](#OperationContext) defines how the Pulumi project is to be executed (i.e. the Pulumi operation to execute and any associated context it requires).
 
 #### Example
 
@@ -82,7 +83,33 @@ curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PUL
 }'
 ```
 
-#### Source
+#### ExecutorContext
+
+The executor context defines information about the executor where the Pulumi operation is executed. If unspecified, the default [pulumi/pulumi](https://hub.docker.com/r/pulumi/pulumi) image is used.
+
+* **executorImage** (Optional[string]): Allows overriding the default executor image with a custom image.
+
+Image requirements:
+
+* It must be a unix-based image which includes `curl`.
+* It must include the `pulumi` CLI in its `$PATH`.
+* It must include the required SDK runtime(s) for your Pulumi program.
+
+{{% notes "info" %}}
+
+Using a custom image may result in slower execution due to time spent pulling the image.
+
+{{% /notes %}}
+
+##### Example
+
+```json
+{
+    "executorImage": "pulumi/pulumi-nodejs:latest"
+}
+```
+
+#### SourceContext
 
 The source for your deployment request contains information about where the source code for your project is located. Currently, only git repos are supported as a source.
 
@@ -178,13 +205,26 @@ Secret types should have the following structure:
 }
 ```
 
-#### Operation
+#### OperationContext
 
 The operation context of your deployment request describes the Pulumi operation to execute and any associated context it requires such as pre-run commands and environment variables.
 
 * **operation** (string): The Pulumi command to execute (`update`, `preview`, `refresh`, `destroy`).
 * **preRunCommands** (Optional[list[string]]): A list of commands to run before the Pulumi command is executed.
 * **environmentVariables** (Optional[map[string]EnvironmentVariable]): A list of environment variables to set for the operation.
+
+{{% notes "info" %}}
+
+The following environment variables are used internally by Pulumi Deployments, and therefore should not be used as they will be overwritten:
+
+* `PULUMI_CI_BUILD_URL`
+* `PULUMI_CI_SYSTEM`
+* `PULUMI_CI_BUILD_NUMBER`
+* `PULUMI_CI_BUILD_ID`
+* `PULUMI_ACCESS_TOKEN`
+* `PULUMI_BACKEND_URL`
+
+{{% /notes %}}
 
 `EnvironmentVariable` types can have either of the following structures:
 
