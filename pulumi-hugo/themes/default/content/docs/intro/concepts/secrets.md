@@ -226,7 +226,7 @@ dbPassword                 [secret]
 
 Similarly, if our program attempts to print the value of `dbPassword` to the console-either intentionally or accidentally-Pulumi will mask it out:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -279,6 +279,18 @@ ctx.log().info(String.format("Password: %s", config.require("dbPassword")));
 ```
 
 {{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+config:
+  dbPassword:
+    type: string
+    secret: true
+outputs:
+    password: ${dbPassword}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -310,7 +322,7 @@ $ pulumi config set --secret dbPassword S3cr37 # set an encrypted secret value
 
 Use the following code to access these configuration values in your Pulumi program:
 
-{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language javascript %}}
 
@@ -408,6 +420,18 @@ public class App {
         var dbPassword = config.requireSecret("dbPassword");
     }
 }
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+config:
+  name:
+    type: string
+  dbPassword:
+    type: string
+    secret: true
 ```
 
 {{% /choosable %}}
