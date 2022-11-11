@@ -10,15 +10,12 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/pkg/errors"
-
-	"github.com/spf13/cobra"
-
 	"github.com/ghodss/yaml"
-
 	"github.com/golang/glog"
-
+	"github.com/hashicorp/hcl/v2"
+	"github.com/pkg/errors"
 	"github.com/pulumi/docs/tools/resourcedocsgen/pkg"
+	"github.com/spf13/cobra"
 
 	docsgen "github.com/pulumi/pulumi/pkg/v3/codegen/docs"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/dotnet"
@@ -67,7 +64,14 @@ func getPulumiPackageFromSchema(docsOutDir string) (*pschema.Package, error) {
 
 	pulPkg, err := pschema.ImportSpec(*mainSpec, nil)
 	if err != nil {
-		return nil, errors.Wrapf(err, "error importing package spec: %v", err)
+		if dErr, ok := err.(hcl.Diagnostics); ok {
+			writer := hcl.NewDiagnosticTextWriter(os.Stderr, nil, 80, true)
+			wErr := writer.WriteDiagnostics(dErr)
+			if wErr != nil {
+				err = wErr
+			}
+		}
+		return nil, fmt.Errorf("importing package spec: %w", err)
 	}
 
 	docsgen.Initialize(tool, pulPkg)
