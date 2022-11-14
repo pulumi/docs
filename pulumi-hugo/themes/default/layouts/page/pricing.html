@@ -146,10 +146,10 @@
 
                                     <div class="h-20">
                                         <div class="text-black text-2xl lg:text-xl xl:text-2xl flex items-center lg:whitespace-nowrap">
-                                            150k free credits /
-                                            <div class="m-0 text-xs mt-1 flex flex-col pl-1"><span>every</span><span>month</span></div>
+                                            $1 /
+                                            <div class="m-0 text-xs mt-1 flex flex-col pl-1"><span>2000</span><span>credits</span></div>
                                         </div>
-                                        <p class="m-0">Then <a class="underline" href="#faq-pricing">$0.00025/credit</a></p>
+                                        <p class="m-0"><a class="underline" href="#faq-pricing">150k free credits included</a></p>
                                     </div>
 
                                     <div class="flex-grow">
@@ -158,7 +158,7 @@
                                             <li>
                                                 <span>
                                                     <i class="fa fa-check pricing-checkmark mr-2"></i>
-                                                    <span>Up to 15 members</span>
+                                                    <span>Up to 10 members</span>
                                                 </span>
                                             </li>
                                             <li>
@@ -232,6 +232,12 @@
                                                 <span>
                                                     <i class="fa fa-check pricing-checkmark mr-2"></i>
                                                     <span>Commitment discounts</span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <i class="fa fa-check pricing-checkmark mr-2"></i>
+                                                    <span>Existing IaC conversion included</span>
                                                 </span>
                                             </li>
                                             <li>
@@ -413,7 +419,7 @@
 
                 <div class="accordion-item-body-no-animation text-base">
                     <p>
-                        A Pulumi Credit is the price for managing one resource for one hour. If using the Team Edition, each credit costs $0.00025. For billing purposes, we count
+                        A Pulumi Credit is the price for managing one resource for one hour. If using the Team Edition, each credit costs $0.0005. For billing purposes, we count
                         any resource that's declared in a Pulumi program. This includes
                         <a class="underline" href="{{ relref . " /docs/intro/concepts/resources#custom-resources" }}">provider resources</a> (e.g., an Amazon S3 bucket),
                         <a class="underline" href="{{ relref . " /docs/intro/concepts/resources#components" }}">component resources</a>
@@ -439,15 +445,15 @@
                     <p>
                         Hourly usage is measured in the number of Pulumi Credits, and you are billed one Pulumi Credit to manage one
                         <a class="underline" href="{{ relref . " /docs/intro/concepts/resources" }}">resource</a>
-                        for one hour. Each credit costs $0.00025 USD.
+                        for one hour. Each credit costs $0.0005 USD.
                     </p>
                     <p>
                         Each month you get 150,000 free Pulumi Credits (roughly 200 resources), so you only pay for the credits used beyond that amount in a given month. Free
                         credits do not roll over from month to month.
                     </p>
                     <p>
-                        Example: If you manage 625 resources with Pulumi every month, you will use 450,000 Pulumi Credits each month. Your monthly bill would be $75 USD = (450,000
-                        total credits - 150,000 free credits) * $0.00025.
+                        Example: If you manage 625 resources with Pulumi every month, you will use 450,000 Pulumi Credits each month. Your monthly bill would be $150 USD = (450,000
+                        total credits - 150,000 free credits) * $0.0005.
                     </p>
 
                     <img class="mt-16" src="/images/pricing/team-edition-cost.png" />
@@ -489,7 +495,7 @@
                         >
                         <ul>
                             <li>Estimated resources: 9</li>
-                            <li>Estimated monthly cost without applying free credits: $1.64 USD / 6,570 credits</li>
+                            <li>Estimated monthly cost without applying free credits: $3.28 USD / 6,570 credits</li>
                             <li>
                                 This scenario is a stack with an Amazon API Gateway, an AWS Lambda event handler, and associated IAM roles. View the
                                 <a class="underline" href="https://github.com/pulumi/examples/tree/master/aws-ts-apigatewayv2-http-api">code</a> for this scenario here.
@@ -500,7 +506,7 @@
                         <a class="underline" href="https://github.com/pulumi/examples/tree/master/aws-py-eks"><b>Amazon EKS running in a VPC</b></a>
                         <ul>
                             <li>Estimated resources: 20</li>
-                            <li>Estimated monthly cost without applying free credits: $3.65 USD / 14,600 credits</li>
+                            <li>Estimated monthly cost without applying free credits: $7.30 USD / 14,600 credits</li>
                             <li>
                                 This scenario is a stack with an Amazon VPC (including subnets, internet gateway, security groups, and route table), Amazon EKS cluster and node
                                 group, and associated IAM roles. View the <a class="underline" href="https://github.com/pulumi/examples/tree/master/aws-py-eks">code</a> for this
@@ -516,7 +522,7 @@
                         >
                         <ul>
                             <li>Estimated resources: 24</li>
-                            <li>Estimated monthly cost without applying free credits: $4.38 USD / 17,520 credits</li>
+                            <li>Estimated monthly cost without applying free credits: $8.76 USD / 17,520 credits</li>
                             <li>
                                 This scenario is a stack with an Amazon VPC (including subnets, security groups, and route table associations), Amazon ECS (including cluster and
                                 service, load balancer resources, and IAM resources), and Amazon RDS (including RDS instance and subnet group). Each group of resources (VPC, ECS,
@@ -883,7 +889,7 @@
                         <span>1</span>
                     </div>
                     <div class="compare-plans-table-row-item">
-                        <span>Up to 15</span>
+                        <span>Up to 10</span>
                     </div>
                     <div class="compare-plans-table-row-item">
                         <span>Unlimited</span>
