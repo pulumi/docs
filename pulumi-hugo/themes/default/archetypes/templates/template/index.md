@@ -37,7 +37,7 @@ The $CLOUD $ARCHITECTURE template creates an infrastructure as code project in y
 
 ## Using this template
 
-To use this template to deploy your own $THING, make sure you've [installed Pulumi]({{< relref "/docs/get-started/install" >}}) and [configured your $CLOUD credentials]({{< relref "/registry/packages/$CLOUD/installation-configuration#credentials" >}}), then create a new [project]({{< relref "/docs/intro/concepts/project" >}}) using the template in your language of choice:
+To use this template to deploy your own $THING, make sure you've [installed Pulumi](/docs/get-started/install/) and [configured your $CLOUD credentials](/registry/packages/$CLOUD/installation-configuration/#credentials), then create a new [project](/docs/intro/concepts/project/) using the template in your language of choice:
 
 {{< templates/pulumi-new >}}
 
@@ -45,13 +45,13 @@ Follow the prompts to complete the new-project wizard. When it's done, you'll ha
 
 ## Deploying the project
 
-The template requires no additional configuration. Once the new project is created, you can deploy it immediately with [`pulumi up`]({{< relref "/docs/reference/cli/pulumi_up" >}}):
+The template requires no additional configuration. Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/reference/cli/pulumi_up/):
 
 ```bash
 $ pulumi up
 ```
 
-When the deployment completes, Pulumi exports the following [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}) values:
+When the deployment completes, Pulumi exports the following [stack output](/docs/intro/concepts/stack/#outputs) values:
 
 someOutput
 : The provider-assigned property of the widget resource.
@@ -67,7 +67,7 @@ $ open $(pulumi stack output cdnURL)
 
 ## Customizing the project
 
-Projects created with the $ARCHITECTURE template expose the following [configuration]({{< relref "/docs/intro/concepts/config" >}}) settings:
+Projects created with the $ARCHITECTURE template expose the following [configuration](/docs/intro/concepts/config/) settings:
 
 someProp
 : The description of the property. Defaults to `someValue`.
@@ -75,7 +75,7 @@ someProp
 otherProp
 : The file to use for top-level pages. Defaults to `otherValue`.
 
-All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`]({{< relref "/docs/reference/cli/pulumi_config_set" >}}) as shown below.
+All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/reference/cli/pulumi_config_set/) as shown below.
 
 ### Changing a config value
 
@@ -167,7 +167,7 @@ A description of the other next step.
 
 ## Tidying up
 
-You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`]({{< relref "/docs/reference/cli/pulumi_destroy" >}}):
+You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/reference/cli/pulumi_destroy/):
 
 ```bash
 $ pulumi destroy
@@ -177,7 +177,7 @@ $ pulumi destroy
 
 Congratulations! You're now well on your way to managing a production-grade $THING on $CLOUD with Pulumi --- and there's lots more you can do from here:
 
-* Discover more architecture templates in [Templates &rarr;]({{< relref "/templates" >}})
-* Dive into the $CLOUD package by exploring the [API docs in the Registry &rarr;]({{< relref "/registry/packages/$CLOUD" >}})
-* Expand your understanding of how Pulumi works in [Learn Pulumi &rarr;]({{< relref "/learn" >}})
-* Read up on the latest new features [in the Pulumi Blog &rarr;](/blog)
+* Discover more architecture templates in [Templates &rarr;](/templates/)
+* Dive into the $CLOUD package by exploring the [API docs in the Registry &rarr;](/registry/packages/$CLOUD/)
+* Expand your understanding of how Pulumi works in [Learn Pulumi &rarr;](/learn/)
+* Read up on the latest new features [in the Pulumi Blog &rarr;](/blog/)
