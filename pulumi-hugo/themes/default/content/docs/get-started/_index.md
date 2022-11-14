@@ -27,49 +27,70 @@ Select one of the following options to get started:
 
 <div class="tiles flex-wrap justify-center items-stretch mt-4">
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-            <h4><i class="fas fa-folder text-blue-400 pr-2"></i>Starter App</h4>
-            <p>If you are new to Pulumi, this guide helps you install Pulumi, configure AWS, and run your first update.</p>
-            <div class="flex flex-grow items-end">
-                <a data-track="aws-get-started" href="/docs/get-started/aws" class="btn btn-primary">Get Started</a>
+        <a data-track="aws-get-started" href="/docs/get-started/aws/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-folder text-blue-400 pr-2"></i>Starter</h4>
+                <p>If you are new to Pulumi, this guide helps you install Pulumi, configure AWS, and run your first update.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-primary">Get Started</div>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-            <h4><i class="fas fa-cubes text-blue-400 pr-2"></i>Kubernetes with EKS</h4>
-            <p>Create an EKS cluster that provides a managed Kubernetes control plane.</p>
-            <div class="flex flex-grow items-end">
-                <a data-track="aws-kubernetes" href="/templates/kubernetes/aws" class="btn btn-secondary">Get Started</a>
+        <a data-track="aws-container-service" href="/templates/container-service/aws/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-tasks text-blue-400 pr-2"></i>Containers with Fargate</h4>
+                <p>Run your container on AWS using ECS and Fargate.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-            <h4><i class="fas fa-cloud text-blue-400 pr-2"></i>S3 and Cloudfront Website</h4>
-            <p>Create a static website hosted in S3 with a CloudFront Distribution to serve the website with caching and HTTPs.</p>
-            <div class="flex flex-grow items-end">
-                <a data-track="aws-static-website" href="/templates/static-website/aws" class="btn btn-secondary">Get Started</a>
+        <a data-track="aws-kubernetes" href="/templates/kubernetes/aws/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-cubes text-blue-400 pr-2"></i>Amazon Elastic Kubernetes Service (EKS)</h4>
+                <p>Create an EKS cluster that provides a managed Kubernetes control plane.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-            <h4><i class="fas fa-sitemap text-blue-400 pr-2"></i>Full Stack Serverless App</h4>
-            <p>Create an API Gateway REST API and a static website that consumes that API.</p>
-            <div class="flex flex-grow items-end">
-                <a data-track="aws-serverless" href="/templates/serverless-application/aws" class="btn btn-secondary">Get Started</a>
+        <a data-track="aws-static-website" href="/templates/static-website/aws/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-cloud text-blue-400 pr-2"></i>S3 and Cloudfront Website</h4>
+                <p>Create a static website hosted in S3 with a CloudFront Distribution to serve the website with caching and HTTPs.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-            <h4><i class="fas fa-tasks text-blue-400 pr-2"></i>Containers with Fargate</h4>
-            <p>Run your container on AWS using ECS and Fargate.</p>
-            <div class="flex flex-grow items-end">
-                <a data-track="aws-container-service" href="/templates/container-service/aws" class="btn btn-secondary">Get Started</a>
+        <a data-track="aws-serverless" href="/templates/serverless-application/aws/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-sitemap text-blue-400 pr-2"></i>Serverless with API Gateway</h4>
+                <p>Create an API Gateway REST API and a static website that consumes that API.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
             </div>
-        </div>
+        </a>
+    </div>
+    <div class="pb-4 md:pr-4 md:w-1/2">
+        <a data-track="aws-vm" href="/templates/virtual-machine/aws/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-server text-blue-400 pr-2"></i>EC2</h4>
+                <p>Create an Amazon EC2 for the virtual machine and VPC for the virtual network.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
+            </div>
+        </a>
     </div>
 </div>
 
@@ -79,50 +100,77 @@ Select one of the following options to get started:
 
 <div class="tiles flex-wrap justify-center items-stretch mt-4">
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-            <h4><i class="fas fa-folder text-blue-400 pr-2"></i>Starter App</h4>
-            <p>If you are new to Pulumi, this guide helps you install Pulumi, configure Azure, and run your first update.</p>
-            <div class="flex flex-grow items-end">
-                <a data-track="azure-get-started" href="/docs/get-started/azure" class="btn btn-primary">Get Started</a>
+        <a data-track="azure-get-started" href="/docs/get-started/azure/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-folder text-blue-400 pr-2"></i>Starter</h4>
+                <p>If you are new to Pulumi, this guide helps you install Pulumi, configure Azure, and run your first update.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-primary">Get Started</div>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-            <h4><i class="fas fa-cloud text-blue-400 pr-2"></i>Static Website with a CDN</h4>
-            <p>Create a static website with a Blob storage and a CDN to serve the website with caching and HTTPs.</p>
-            <div class="flex flex-grow items-end">
-                <a data-track="azure-static-website" href="/templates/static-website/azure" class="btn btn-secondary">Get Started</a>
+        <a data-track="azure-container" href="/templates/container-service/azure/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-tasks text-blue-400 pr-2"></i>Containers on Azure</h4>
+                <p>
+                    Create an Azure Container Instances (ACI) for running containers and an Azure Container Registry that stores the container image.
+                </p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-            <h4><i class="fas fa-sitemap text-blue-400 pr-2"></i>Full Stack Serverless App</h4>
-            <p>Create a Function App and a static website that consumes that Function.</p>
-            <div class="flex flex-grow items-end">
-                <a data-track="azure-serverless" href="/templates/serverless-application/azure" class="btn btn-secondary">Get Started</a>
+        <a data-track="azure-kubernetes" href="/templates/kubernetes/azure/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-cubes text-blue-400 pr-2"></i>Azure Kubernetes Service (AKS)</h4>
+                <p>
+                    Create an Azure Virtual Network with three subnets and deploy an Azure Kubernetes Service (AKS) cluster.
+                </p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
             </div>
-        </div>
-    </div>
-    <!--<div class="pb-4 md:pr-4 md:w-1/2">
-        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-            <h4><i class="fas fa-cubes text-blue-400 pr-2"></i>Kubernetes on Azure</h4>
-            <p>Coming soon! In the meantime you can select the link below to view a full list of Azure examples.</p>
-            <div class="flex flex-grow items-end">
-                <a data-track="azure-kubernetes-examples" href="https://github.com/pulumi/examples#azure" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View examples</a>
-            </div>
-        </div>
+        </a>
     </div>
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-            <h4><i class="fas fa-tasks text-blue-400 pr-2"></i>Containers on Azure</h4>
-            <p>Coming soon! In the meantime you can select the link below to view a full list of Azure examples.</p>
-            <div class="flex flex-grow items-end">
-                <a data-track="azure-container-examples" href="https://github.com/pulumi/examples#azure" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View examples</a>
+        <a data-track="azure-static-website" href="/templates/static-website/azure/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-cloud text-blue-400 pr-2"></i>Static Website with a CDN</h4>
+                <p>Create a static website with a Blob storage and a CDN to serve the website with caching and HTTPs.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
             </div>
-        </div>
-    </div>-->
+        </a>
+    </div>
+    <div class="pb-4 md:pr-4 md:w-1/2">
+        <a data-track="azure-serverless" href="/templates/serverless-application/azure/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-sitemap text-blue-400 pr-2"></i>Full Stack Serverless App</h4>
+                <p>Create a Function App and a static website that consumes that Function.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="pb-4 md:pr-4 md:w-1/2">
+        <a data-track="azure-vm" href="/templates/virtual-machine/azure/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-server text-blue-400 pr-2"></i>Virtual Machine</h4>
+                <p>
+                    Create an Azure Virtual Machine and Azure Virtual Network for the virtual network.
+                </p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
+            </div>
+        </a>
+    </div>
 </div>
 
 {{< /choosable >}}
@@ -131,50 +179,77 @@ Select one of the following options to get started:
 
 <div class="tiles flex-wrap justify-center items-stretch mt-4">
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-            <h4><i class="fas fa-folder text-blue-400 pr-2"></i>Starter App</h4>
-            <p>If you are new to Pulumi, this guide helps you install Pulumi, configure Google Cloud, and run your first update.</p>
-            <div class="flex flex-grow items-end">
-                <a data-track="google-get-started" href="/docs/get-started/gcp" class="btn btn-primary">Get Started</a>
+        <a data-track="google-get-started" href="/docs/get-started/gcp/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-folder text-blue-400 pr-2"></i>Starter</h4>
+                <p>If you are new to Pulumi, this guide helps you install Pulumi, configure Google Cloud, and run your first update.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-primary">Get Started</div>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-            <h4><i class="fas fa-cloud text-blue-400 pr-2"></i>Static Website with a CDN</h4>
-            <p>Create a static website with a Cloud Storage bucket and a CDN to serve the website with caching and HTTPs.</p>
-            <div class="flex flex-grow items-end">
-                <a data-track="google-static-website" href="/templates/static-website/gcp" class="btn btn-secondary">Get Started</a>
+        <a data-track="google-container" href="/templates/container-service/gcp/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-tasks text-blue-400 pr-2"></i>Google Cloud Run</h4>
+                <p>
+                    Use Google Cloud Run for running containers on serverless compute and Artifact Registry for storing container images.
+                </p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-            <h4><i class="fas fa-sitemap text-blue-400 pr-2"></i>Full Stack Serverless App</h4>
-            <p>Create a Cloud Function and a static website that consumes that function.</p>
-            <div class="flex flex-grow items-end">
-                <a data-track="google-serverless" href="/templates/serverless-application/gcp" class="btn btn-secondary">Get Started</a>
+        <a data-track="google-kubernetes" href="/templates/kubernetes/gcp/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-cubes text-blue-400 pr-2"></i>Google Kubernetes Engine (GKE)</h4>
+                <p>
+                    Create a VPC network with a subnet and deploy a Google Kubernetes Engine (GKE) cluster.
+                </p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
             </div>
-        </div>
-    </div>
-    <!--<div class="pb-4 md:pr-4 md:w-1/2">
-        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-            <h4><i class="fas fa-cubes text-blue-400 pr-2"></i>Kubernetes on Google Cloud</h4>
-            <p>Coming soon! In the meantime you can select the link below to view a full list of Google Cloud examples.</p>
-            <div class="flex flex-grow items-end">
-                <a data-track="google-kubernetes-examples" href="https://github.com/pulumi/examples#gcp" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View examples</a>
-            </div>
-        </div>
+        </a>
     </div>
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-            <h4><i class="fas fa-tasks text-blue-400 pr-2"></i>Containers on Google Cloud</h4>
-            <p>Coming soon! In the meantime you can select the link below to view a full list of Google Cloud examples.</p>
-            <div class="flex flex-grow items-end">
-                <a data-track="google-container-examples" href="https://github.com/pulumi/examples#gcp" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View examples</a>
+        <a data-track="google-static-website" href="/templates/static-website/gcp/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-cloud text-blue-400 pr-2"></i>Static Website with a CDN</h4>
+                <p>Create a static website with a Cloud Storage bucket and a CDN to serve the website with caching and HTTPs.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
             </div>
-        </div>
-    </div>-->
+        </a>
+    </div>
+    <div class="pb-4 md:pr-4 md:w-1/2">
+        <a data-track="google-serverless" href="/templates/serverless-application/gcp/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-sitemap text-blue-400 pr-2"></i>Full Stack Serverless App</h4>
+                <p>Create a Cloud Function and a static website that consumes that function.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="pb-4 md:pr-4 md:w-1/2">
+        <a data-track="google-vm" href="/templates/virtual-machine/gcp/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-server text-blue-400 pr-2"></i>Virtual Machine</h4>
+                <p>
+                    Use Compute Engine to create a virtual machine and virtual network.
+                </p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
+            </div>
+        </a>
+    </div>
 </div>
 
 {{< /choosable >}}
@@ -183,48 +258,82 @@ Select one of the following options to get started:
 
 <div class="tiles flex-wrap justify-center items-stretch mt-4">
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-            <h4><i class="fas fa-folder text-blue-400 pr-2"></i>Starter App</h4>
-            <p>If you are new to Pulumi, this guide helps you install Pulumi, configure the Kubernetes Provider, and run your first update.</p>
-            <div class="flex flex-grow items-end">
-                <a data-track="kubernetes-get-started" href="/docs/get-started/kubernetes" class="btn btn-primary">Get Started</a>
+        <a data-track="kubernetes-get-started" href="/docs/get-started/kubernetes/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-folder text-blue-400 pr-2"></i>Starter</h4>
+                <p>If you are new to Pulumi, this guide helps you install Pulumi, configure the Kubernetes Provider, and run your first update.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-primary">Get Started</div>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-            <h4><i class="fas fa-cubes text-blue-400 pr-2"></i>Kubernetes with EKS</h4>
-            <p>Create an EKS cluster that provides a managed Kubernetes control plane.</p>
-            <div class="flex flex-grow items-end">
-                <a data-track="kubernetes-aws" href="/templates/kubernetes/aws" class="btn btn-secondary">Get Started</a>
+        <a data-track="kubernetes-helm" href="/templates/kubernetes-application/helm-chart/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-cloud text-blue-400 pr-2"></i>Helm Chart</h4>
+                <p>Deploy a Helm chart to an existing cluster using Pulumi.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
             </div>
-        </div>
-    </div>
-    <!--<div class="pb-4 md:pr-4 md:w-1/2">
-        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-            <h4><i class="fas fa-cubes text-blue-400 pr-2"></i>Kubernetes on Azure</h4>
-            <p>Coming soon! In the meantime you can select the link below to view a full list of Kubernetes examples.</p>
-            <div class="flex flex-grow items-end">
-                <a data-track="kubernetes-azure-examples" href="https://github.com/pulumi/examples#kubernetes" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View examples</a>
-            </div>
-        </div>
+        </a>
     </div>
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
-            <h4><i class="fas fa-cubes text-blue-400 pr-2"></i>Kubernetes on Google Cloud</h4>
-            <p>Coming soon! In the meantime you can select the link below to view a full list of Kubernetes examples.</p>
-            <div class="flex flex-grow items-end">
-                <a data-track="kubernetes-google-examples" href="https://github.com/pulumi/examples#kubernetes" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View examples</a>
+        <a data-track="kubernetes-web-app" href="/templates/kubernetes-application/web-application/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-sitemap text-blue-400 pr-2"></i>Web App</h4>
+                <p>Deploy and example web application into an existing Kubernetes cluster.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
             </div>
-        </div>
-    </div>-->
+        </a>
+    </div>
+    <div class="pb-4 md:pr-4 md:w-1/2">
+        <a data-track="kubernetes-aws" href="/templates/kubernetes/aws" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-cubes text-blue-400 pr-2"></i>Amazon Elastic Kubernetes Service (EKS)</h4>
+                <p>Create an EKS cluster that provides a managed Kubernetes control plane.</p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="pb-4 md:pr-4 md:w-1/2">
+        <a data-track="kubernetes-azure" href="/templates/kubernetes/azure/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-cubes text-blue-400 pr-2"></i>Azure Kubernetes Service (AKS)</h4>
+                <p>
+                    Create an Azure Virtual Network with three subnets and deploy an Azure Kubernetes Service (AKS) cluster.
+                </p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="pb-4 md:pr-4 md:w-1/2">
+        <a data-track="kubernetes-google" href="/templates/kubernetes/gcp/" class="tile h-full">
+            <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                <h4 class="no-anchor"><i class="fas fa-cubes text-blue-400 pr-2"></i>Google Kubernetes Engine (GKE)</h4>
+                <p>
+                    Create a VPC network with a subnet and deploy a Google Kubernetes Engine (GKE) cluster.
+                </p>
+                <div class="flex flex-grow items-end">
+                    <div class="btn btn-secondary">Get Started</div>
+                </div>
+            </div>
+        </a>
+    </div>
 </div>
 
 {{< /choosable >}}
 
 Or, watch how to do it in this video walkthrough:
 
-<div class="rounded-md shadow border border-gray-300 w-3/4" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
+<div class="rounded-md shadow border border-gray-300 w-3/4 mx-auto my-4" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
     <iframe
         src="//www.youtube.com/embed/6f8KF6UGN7g?rel=0"
         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
