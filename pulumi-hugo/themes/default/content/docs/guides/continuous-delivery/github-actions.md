@@ -93,7 +93,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: preview
-          stack-name: dev
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.  
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
@@ -124,7 +124,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: preview
-          stack-name: dev
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
@@ -155,7 +155,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: preview
-          stack-name: dev
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
@@ -185,7 +185,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: preview
-          stack-name: dev
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
@@ -229,7 +229,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: up
-          stack-name: dev
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
@@ -262,7 +262,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: up
-          stack-name: dev
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
@@ -295,7 +295,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: up
-          stack-name: dev
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
@@ -327,7 +327,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: up
-          stack-name: dev
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
@@ -443,7 +443,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: preview
-          stack-name: dev
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
           comment-on-pr: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
@@ -476,7 +476,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: preview
-          stack-name: dev
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
           comment-on-pr: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
@@ -509,7 +509,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: preview
-          stack-name: dev
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
           comment-on-pr: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
@@ -541,7 +541,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: preview
-          stack-name: dev
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
           comment-on-pr: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
@@ -595,7 +595,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: preview
-          stack-name: dev
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
           comment-on-pr: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           work-dir: infra
@@ -632,7 +632,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: preview
-          stack-name: dev
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
           comment-on-pr: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           work-dir: infra
@@ -669,7 +669,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: preview
-          stack-name: dev
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
           comment-on-pr: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           work-dir: infra
@@ -704,7 +704,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: preview
-          stack-name: dev
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
           comment-on-pr: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           work-dir: infra
@@ -757,7 +757,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: preview
-          stack-name: dev
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
           comment-on-pr: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           work-dir: infra
@@ -795,7 +795,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: preview
-          stack-name: dev
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
           comment-on-pr: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           work-dir: infra
@@ -833,7 +833,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: preview
-          stack-name: dev
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
           comment-on-pr: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           work-dir: infra
@@ -869,7 +869,7 @@ jobs:
       - uses: pulumi/actions@v3
         with:
           command: preview
-          stack-name: dev
+          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
           comment-on-pr: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           work-dir: infra
