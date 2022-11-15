@@ -212,6 +212,20 @@ The operation context of your deployment request describes the Pulumi operation 
 * **operation** (string): The Pulumi command to execute (`update`, `preview`, `refresh`, `destroy`).
 * **preRunCommands** (Optional[list[string]]): A list of commands to run before the Pulumi command is executed.
 * **environmentVariables** (Optional[map[string]EnvironmentVariable]): A list of environment variables to set for the operation.
+* **options** (Optional[OperationContextOptions]): Options is a bag of settings that allows you to set or override default behavior.
+
+`OperationContextOptions` has the following structure:
+
+* **skipInstallDependencies**: Allows you to skip the automated dependency installation. You can then customize your dependency installation step in `preRunCommands`.
+
+`EnvironmentVariable` types can have either of the following structures:
+
+```json
+  "key": {
+    "secret": "value" <-- secret environment variable
+  },
+  "key": "value" <-- plaintext environment variable
+```
 
 {{% notes "info" %}}
 
@@ -226,21 +240,11 @@ The following environment variables are used internally by Pulumi Deployments, a
 
 {{% /notes %}}
 
-`EnvironmentVariable` types can have either of the following structures:
-
-```json
-  "key": {
-    "secret": "value" <-- secret environment variable
-  },
-  "key": "value" <-- plaintext environment variable
-```
-
-##### Example
+##### Examples
 
 ```json
 {
   "preRunCommands": [
-    "npm install -g yarn",
     "go get sigs.k8s.io/kind@v0.16.0"
   ],
   "operation": "update",
@@ -250,6 +254,27 @@ The following environment variables are used internally by Pulumi Deployments, a
     "MY_PASSWORD": {
       "secret": "my-secret-password"
     }
+  }
+}
+```
+
+Override default dependency installation step
+
+```json
+{
+  "preRunCommands": [
+    "poetry install"
+  ],
+  "operation": "update",
+  "environmentVariables": {
+    "AWS_REGION": "us-east-2",
+    "CUSTOM_VARIABLE": "foo",
+    "MY_PASSWORD": {
+      "secret": "my-secret-password"
+    }
+  },
+  "options": {
+    "skipInstallDependencies": true
   }
 }
 ```
