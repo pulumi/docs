@@ -162,7 +162,7 @@ For best results, we suggest the following specs for the `meta_image`, largely b
 
 Remember to replace the `meta_image` placeholder (or remove the property altogether and delete the placeholder `meta.png` file) before submitting your post.
 
-For help creating your `meta_image`, check out our [Build Your Own Meta Image file](https://www.figma.com/file/TnD7nxjIxVvXq8w0W7awPG/Build-Your-Own-Meta-Image?node-id=0%3A1) in Figma. There you’ll find backgrounds, images, and logos to assemble the `meta_image` for your blog post. 
+For help creating your `meta_image`, check out our [Build Your Own Meta Image file](https://www.figma.com/file/TnD7nxjIxVvXq8w0W7awPG/Build-Your-Own-Meta-Image?node-id=0%3A1) in Figma. There you’ll find backgrounds, images, and logos to assemble the `meta_image` for your blog post.
 
 To use Pulumi's primary brand font Gilroy in your `meta_image`, first [download Gilroy](https://drive.google.com/file/d/1893zFNypEQTvZU0J2Bz5_mVx6xa_7Zxh/view?usp=sharing) and install the file to your local font folder. Then [download the Figma font installer](https://www.figma.com/downloads/) to access your local fonts in Figma.
 
@@ -183,6 +183,14 @@ To embed a YouTube video, you can use Hugo's built-in [`youtube` shortcode](http
 
 For videos belonging to the [Pulumi YouTube channel](https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw), you'll usually want to append the `?rel=0` query parameter as well (as above), which tells YouTube to limit the suggestions it makes at the end of a video to those from the same YouTube channel. [Learn more about player parameters here](https://developers.google.com/youtube/player_parameters).
 
+#### Animated GIFs
+
+GIFs are welcome, but should be optimized. In general, animated GIFs should be no more than 1200 pixels wide and 3 MB in size. If you need help optimizing your GIF, consider [Gifsicle](https://www.lcdf.org/gifsicle/); it's available through Homebrew and has an easy-to-use command-line API. For example, to resize (e.g., downscale) and optimize a GIF in place:
+
+```bash
+gifsicle ./my-animation.gif --resize-width=1200 --optimize=3 --batch
+```
+
 #### Tweets
 
 There's a Hugo [shortcode for Tweets](https://gohugo.io/content-management/shortcodes/#tweet), too, which accepts a Tweet ID, accessible [from its permalink](https://twitter.com/jcreed/status/1147203941609984002):
@@ -199,7 +207,7 @@ When you're ready to submit your post for review, issue a Pull Request against t
 
 ## Publicize your blog
 
-When you create an awesome blog post, we want to make sure it reaches as many people as possible. 
+When you create an awesome blog post, we want to make sure it reaches as many people as possible.
 After your Pull Request is approved, but before merge/publication date, reach out in #blogs so that Marketing can broadcast your publication via social media.
 
 ## A Note on Dates and Scheduling for Future Publishing
