@@ -263,15 +263,12 @@ Override default dependency installation step
 ```json
 {
   "preRunCommands": [
-    "poetry install"
+      "curl -sSL https://install.python-poetry.org | python3",
+      "poetry install"
   ],
   "operation": "update",
   "environmentVariables": {
-    "AWS_REGION": "us-east-2",
-    "CUSTOM_VARIABLE": "foo",
-    "MY_PASSWORD": {
-      "secret": "my-secret-password"
-    }
+      "POETRY_HOME": "/usr/local"
   },
   "options": {
     "skipInstallDependencies": true
