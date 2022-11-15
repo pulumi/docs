@@ -11,12 +11,6 @@
         </h5>
     </section>
 
-    <section id="join" class="container mx-auto my-16 text-center">
-        <div>
-            <a href="{{ .Params.join.link }}" class="btn-lg p-12 bg-black text-white">{{ .Params.join.link_text }}</a>
-        </div>
-    </section>
-
     <section id="featured" class="container mx-auto my-0">
         <div class="benefits-section relative">
             <div class="flex flex-wrap items-stretch justify-center">
@@ -42,9 +36,11 @@
                                 <div class="description">
                                     <p>{{ $item.description | markdownify }}</p>
                                 </div>
-                                <div class="mt-8">
-                                    <a href="{{ $item.link }}" class="btn-secondary">{{ $item.link_text }}</a>
-                                </div>
+                                {{ if $item.link }}
+                                    <div class="mt-8">
+                                        <a href="{{ $item.link }}" class="btn-secondary">{{ $item.link_text }}</a>
+                                    </div>
+                                {{ end }}
                             </div>
                         </div>
                     </div>
@@ -139,7 +135,7 @@
                                         <p>{{ $item.description }}</p>
                                     </div>
                                     <div class="mt-8">
-                                        <a href="{{ $item.link }}" target="_blank" class="btn-secondary">Register Now</a>
+                                        <a href="{{ $item.link }}" target="_blank" class="btn-secondary btn-disabled">{{ $item.link_text }}</a>
                                     </div>
                                 </div>
                             </div>

@@ -30,8 +30,6 @@ featured:
     - title: Opening Keynote and Welcome
       description: |
         Join Pulumi Co-Founder and CEO, Joe Duffy and CTO Luke Hoban as they discuss the newest innovations in infrastructure as code and modern applications, and how pioneering engineering organizations are using these techniques to ship faster, more reliably, and at greater scale. Joe and Luke will cover new Pulumi features and how you can get started.
-      link: /cloud-engineering-days/#registration
-      link_text: Register
       presenters:
       - name: Joe Duffy
         photo: /images/team/joe-duffy.jpg
@@ -42,12 +40,10 @@ featured:
       description: |
         Learn from Pulumi customers on how they scaled up their infrastructure velocity and reliability with Pulumi:
 
-        • Building a Global Data Platform at Scale, featuring Fauna, Inc.
-        • Creating Business Logic Interfaces with Pulumi’s Automation API, featuring Altana
-        • Migrating from CloudFormation to Pulumi - How we did it, featuring Panther
-        • Enabling Kafka Adoption with Pulumi and Confluent Cloud, featuring Dutchie
-      link: /cloud-engineering-days/#registration
-      link_text: Register
+        • Building a Global Data Platform at Scale, featuring Fauna, Inc.  
+        • Creating Business Logic Interfaces with Pulumi’s Automation API, featuring Altana  
+        • Migrating from CloudFormation to Pulumi - How we did it, featuring Panther  
+        • Enabling Kafka Adoption with Pulumi and Confluent Cloud, featuring Dutchie  
       presenters:
       - name:
         photo: /images/cloud-engineering-days/logos/altana.svg
@@ -61,8 +57,6 @@ featured:
     - title: Pulumi Demos and Best Practices
       description: |
         New and exciting hands-on, coding-heavy demo sessions. Using Pulumi, you will see how to build, deploy, and manage cloud applications with infrastructure as code, powered by popular programming languages. Pick up new best practices and how software engineering can be applied to tame the complexities of the modern cloud infrastructure.
-      link: /cloud-engineering-days/#registration
-      link_text: Register
       presenters:
       - name: Meagan Cojocar
         photo: /images/team/meagan-cojocar.jpg
@@ -192,61 +186,73 @@ workshops:
   items:
     - title: "Pulumi 101: A static site on AWS"
       link: /resources/pulumi-101-static-site-on-aws/
+      link_text: Recording Coming Soon
       description: |
         Learn the basics of Pulumi from projects to components. Use TypeScript and templates to stand up a static site on AWS using S3.
 
     - title: "Pulumi 101: Serverless containers on Google Cloud"
       link: /resources/pulumi-101-serverless-containers-gcp
+      link_text: Recording Coming Soon
       description: |
         Learn the basics of Pulumi from projects to components. Use Python and templates to stand up serverless containers on Cloud Run from Google Cloud.
 
     - title: "Building with Containers on Azure"
       link: /resources/building-containers-azure
+      link_text: Recording Coming Soon
       description: |
         Explore more about building up a containerized microservices architecture on Azure using infrastructure as code and cloud engineering principles
 
     - title: "Pulumi 101: Kubernetes on Azure"
       link: /resources/pulumi-101-kubernetes-on-azure
+      link_text: Recording Coming Soon
       description: |
         Learn the basics of Pulumi using C# and templates to stand up a small Kubernetes cluster on AKS from Azure.
 
     - title: "Serverless Architecture on AWS"
       link: /resources/serverless-architecture-aws
+      link_text: Recording Coming Soon
       description: |
         Explore building up a serverless microservices architecture on AWS using infrastructure as code, cloud engineering principles, and TypeScript.
 
     - title: "Sharing Code with Pulumi Packages, Abstractions, and More"
       link: /resources/simpler-pulumi-package-authoring
+      link_text: Recording Coming Soon
       description: |
         Explore how to start sharing Pulumi code with others. Use Go to build a custom architecture for GCP that we’ll compile down into a shareable library.
 
     - title: "Securing Deployments with Policy as Code"
       link: /resources/securing-deployments-policy-as-code
+      link_text: Register Now
       description: |
         The Pulumi team will show you how to enforce best practices by creating policies that scale from a single infrastructure stack to your entire organization.
 
     - title: "Getting Started with Infrastructure as Code on DigitalOcean"
       link: /resources/getting-started-with-infrastructure-as-code-on-digital-ocean
+      link_text: Register Now
       description: |
         In this hands-on workshop, you will learn how to stand up basic services using Infrastructure as Code through a series of hands-on labs.
 
     - title: "Getting Started with Infrastructure as Code Azure with Java"
       link: /resources/getting-started-infrascructure-as-code-azure-java
+      link_text: Register Now
       description: |
         Learn the basics of Azure and Pulumi with a hands-on lab that will take you from deploying a simple static website to deploying a Spring Boot application.
 
     - title: "Production-Ready Networking on AWS with Python"
       link: /resources/production-ready-networking-aws-with-python
+      link_text: Register Now
       description: |
         In this workshop you'll learn to apply Infrastructure as Code concepts to build a hub and spoke network topology with an inspection VPC.
 
     - title: "Building Virtual Networks with Pulumi and Tailscale"
       link: /resources/building-virtual-networks-with-pulumi-and-tailscale
+      link_text: Register Now
       description: |
         This workshop will demonstrate how to securely connect end-user devices and cloud resources using infrastructure as code written in real programming languages.
 
     - title: "Deploying and Managing Kafka with Pulumi and Confluent"
       link: /resources/deploying-and-managing-kafka-with-pulumi-and-confluent
+      link_text: Register Now
       description: |
         In this session, we’ll introduce you to Apache Kafka—a community distributed event streaming platform capable of handling trillions of events a day.
 
@@ -268,10 +274,10 @@ schedule:
             datetime: 10:00 - 10:20 AM PDT
           - title: Achieving Results with Pulumi Customers
             description: |
-              • Building a Global Data Platform at Scale, Featuring Fauna, Inc.
-              • Creating Business Logic Interfaces with Pulumi's Automation API, Altana
-              • Migrating from CloudFormation to Pulumi - How we did it, Panther
-              • Enabling Kafka Adoption with Pulumi and Confluent Cloud, Dutchie
+              • Building a Global Data Platform at Scale, Featuring Fauna, Inc.  
+              • Creating Business Logic Interfaces with Pulumi's Automation API, Altana  
+              • Migrating from CloudFormation to Pulumi - How we did it, Panther  
+              • Enabling Kafka Adoption with Pulumi and Confluent Cloud, Dutchie  
             datetime: 10:20 - 11:20 AM PDT
           - title: Under the Hood of Pulumi
             description: How Automation API is used
