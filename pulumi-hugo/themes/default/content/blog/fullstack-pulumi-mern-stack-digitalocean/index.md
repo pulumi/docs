@@ -23,7 +23,7 @@ MERN-stack apps are three-tier web apps built with [MongoDB](https://www.mongodb
 
 Still, once I'm _finished_ building my app, I'm often faced with a whole other problem: figuring out how to get the app off of my laptop and onto the web.
 
-The cloud hasn't made this an easy task for developers. Choosing a cloud provider, deciding which resources to use (and how to use them), setting up networking, debugging permissions, navigating billing, and all the rest, can be overwhelming---and that's before you've given a single thought to anything having to do with automation or infrastructure as code. What we want, I think, is to be able to focus on our apps, and we're ready to ship, push our code to a repository and wait patiently for a URL to emerge that we can paste into a browser and have everything _just work_.
+The cloud hasn't made this an easy task for developers. Choosing a cloud provider, deciding which resources to use (and how to use them), setting up networking, debugging permissions, navigating billing, and all the rest, can be overwhelming---and that's before you've given a single thought to anything having to do with automation or infrastructure as code. What we want, I think, is to be able to focus on our apps, and when we're ready to ship, push our code to a repository and wait patiently for a URL to emerge that we can paste into a browser and have everything _just work_.
 
 Which is why I was so delighted when I discovered [DigitalOcean's App Platform](https://www.digitalocean.com/products/app-platform).
 
@@ -95,7 +95,7 @@ Now let's have a look at how to go about deploying this stuff.
 
 Earlier I mentioned that every cloud provider handles application deployment a little differently, sometimes in multiple ways, and that's true for DigitalOcean as well. You _could_ deploy the front end as a [DigitalOcean Space](https://www.digitalocean.com/products/spaces), or both the front end and back end (and even the database) as a [DigitalOcean Droplet](https://www.digitalocean.com/products/droplets). But given the shape of this application, the best fit is really is [App Platform](https://docs.digitalocean.com/products/app-platform/concepts/), for several reasons.
 
-One is that because App Platform apps are comprised these high-level [_components_](https://docs.digitalocean.com/products/app-platform/concepts/)---abstractions like [static site](https://docs.digitalocean.com/products/app-platform/how-to/manage-static-sites/), [service](https://docs.digitalocean.com/products/app-platform/how-to/manage-services/), and [database](https://docs.digitalocean.com/products/app-platform/how-to/manage-databases/)---it's pretty much purpose-built for an application like this one, and DigitalOcean customizes the deployment of each component based according to its type. Static websites are distributed and cached on DigitalOcean's CDN, services are packaged and delivered as containers (with its [Kubernetes](https://www.digitalocean.com/products/kubernetes) platform), and databases are deployed as configurable managed services. All of this means you're not only able to stay focused on the application itself, but you're able to scale each one of these components up or down however you like, and even delegate your front-end and back-end build processes to DigitalOcean to be handled in response to commits on one or more external Git repositories.
+One is that because App Platform apps are comprised of these high-level [_components_](https://docs.digitalocean.com/products/app-platform/concepts/)---abstractions like [static site](https://docs.digitalocean.com/products/app-platform/how-to/manage-static-sites/), [service](https://docs.digitalocean.com/products/app-platform/how-to/manage-services/), and [database](https://docs.digitalocean.com/products/app-platform/how-to/manage-databases/)---it's pretty much purpose-built for an application like this one, and DigitalOcean customizes the deployment of each component based on its type. Static websites are distributed and cached on DigitalOcean's CDN, services are packaged and delivered as containers (with its [Kubernetes](https://www.digitalocean.com/products/kubernetes) platform), and databases are deployed as configurable managed services. All of this means you're not only able to stay focused on the application itself, but you're able to scale each one of these components up or down however you like, and even delegate your front-end and back-end build processes to DigitalOcean to be handled in response to commits on one or more external Git repositories.
 
 App Platform apps can be configured in one of two ways: manually, by configuring their components individually in the DigitalOcean web console, or programmatically, in the form of an App Platform [_spec_](https://docs.digitalocean.com/products/app-platform/reference/app-spec/), a JSON document submitted over DigitalOcean's [REST API](https://docs.digitalocean.com/reference/api/api-reference/#tag/Apps). In our case, we'll indirectly go the latter route, using Pulumi with the [DigitalOcean provider package](/registry/packages/digitalocean/) to define an app spec comprised of three components:
 
@@ -210,7 +210,7 @@ Next, add a few lines to [declare the managed MongoDB cluster](https://docs.digi
 // Our MongoDB cluster (currently just one node).
 const cluster = new digitalocean.DatabaseCluster("cluster", {
     engine: "mongodb",
-    version: "4",
+    version: "5",
     region,
     size: digitalocean.DatabaseSlug.DB_1VPCU1GB,
     nodeCount: 1,
@@ -233,7 +233,7 @@ const db = new digitalocean.DatabaseDb("db", {
 # Our MongoDB cluster (currently just one node).
 cluster = digitalocean.DatabaseCluster("cluster", digitalocean.DatabaseClusterArgs(
     engine = "mongodb",
-    version = "4",
+    version = "5",
     region = region,
     size = digitalocean.DatabaseSlug.D_B_1_VPCU1_GB,
     node_count = 1
@@ -243,7 +243,7 @@ cluster = digitalocean.DatabaseCluster("cluster", digitalocean.DatabaseClusterAr
 db = digitalocean.DatabaseDb("db", digitalocean.DatabaseDbArgs(
     name = "grocery-list",
     cluster_id = cluster.id
-));
+))
 ```
 
 {{% /choosable %}}
@@ -304,18 +304,12 @@ const app = new digitalocean.App("app", {
 
                 // To connect to MongoDB, the service needs a DATABASE_URL, which
                 // is conveniently exposed as an environment variable thanks to its
-                // membership in this app spec (below). The CA_CERT value enables
-                // a secure connection between API service and database.
+                // membership in this app spec (below).
                 envs: [
                     {
                         key: "DATABASE_URL",
                         scope: "RUN_AND_BUILD_TIME",
                         value: "${db.DATABASE_URL}",
-                    },
-                    {
-                        key: "CA_CERT",
-                        scope: "RUN_AND_BUILD_TIME",
-                        value: "${db.CA_CERT}",
                     },
                 ],
             },
@@ -380,7 +374,7 @@ app = digitalocean.App("app", digitalocean.AppArgs(
                     branch = branch,
                     deploy_on_push = True
                 ),
-                source_dir = "/frontend",
+                source_dir = "/backend",
                 build_command = "npm install && npm run build",
                 run_command = "npm start",
                 http_port = 8000,
@@ -395,18 +389,12 @@ app = digitalocean.App("app", digitalocean.AppArgs(
 
                 # To connect to MongoDB, the service needs a DATABASE_URL, which
                 # is conveniently exposed as an environment variable because the
-                # database belongs to the app (see below). The CA_CERT allows for
-                # a secure connection between API service and database.
+                # database belongs to the app (see below).
                 envs = [
                     digitalocean.AppSpecServiceEnvArgs(
                         key = "DATABASE_URL",
                         scope = "RUN_AND_BUILD_TIME",
                         value = "${db.DATABASE_URL}"
-                    ),
-                    digitalocean.AppSpecServiceEnvArgs(
-                        key = "CA_CERT",
-                        scope = "RUN_AND_BUILD_TIME",
-                        value = "${db.CA_CERT}"
                     )
                 ]
             )
@@ -627,9 +615,15 @@ And finally, try scaling the service by bumping the `instanceCount` from `1` to 
 
 {{% /choosable %}}
 
+Set the instance count with `pulumi config`:
+
 ```bash
 $ pulumi config set service_instance_count 2
+```
 
+Then deploy the new app spec with a final `pulumi up`:
+
+```bash
 $ pulumi up
 
 Updating (dev)
