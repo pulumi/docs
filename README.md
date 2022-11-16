@@ -27,10 +27,10 @@ Our TypeScript documentation is generated directly from source using [TypeDoc](h
 In order to run the documentation generators, you'll need to install some additional Go-based tools as well:
 
 ```bash
-go get -u github.com/cbroglie/mustache
-go get -u github.com/gobuffalo/packr
-go get -u github.com/pkg/errors
-go get -u github.com/russross/blackfriday/v2
+go install github.com/cbroglie/mustache@latest
+go install github.com/gobuffalo/packr@latest
+go install github.com/pkg/errors@latest
+go install github.com/russross/blackfriday/v2@latest
 ```
 ### Makefile
 
