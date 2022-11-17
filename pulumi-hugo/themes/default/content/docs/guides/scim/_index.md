@@ -19,4 +19,5 @@ To set up synchronization between Pulumi and your SAML 2.0 identity provider, re
 
 - [Azure Active Directory](/docs/guides/scim/azuread/)
 - [Okta](/docs/guides/scim/okta/)
+- [OneLogin](/docs/guides/scim/onelogin/)
 - [FAQ](/docs/guides/scim/faq/)
