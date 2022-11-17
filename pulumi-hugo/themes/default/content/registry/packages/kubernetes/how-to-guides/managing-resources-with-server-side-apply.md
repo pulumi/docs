@@ -15,6 +15,16 @@ The [v3.20.0 release](https://github.com/pulumi/pulumi-kubernetes/releases/tag/v
 
 This guide will show you how to enable SSA support and use these features to manage Kubernetes resources.
 
+## Prerequisites
+
+Server-Side Apply support requires `patch` permission on the Kubernetes cluster for all operations, including previews.
+Previews use the `dry-run` mode of the `patch` operation to compute a preview diff, and *will not* modify the
+state of your cluster. The following upstream documentation links have more information about the Kubernetes dry run
+feature:
+
+* [Kubernetes dry-run](https://kubernetes.io/docs/reference/using-api/api-concepts/#dry-run)
+* [dry-run authorization requirements](https://kubernetes.io/docs/reference/using-api/api-concepts/#dry-run-authorization)
+
 ## Enable Server-Side Apply
 
 Use the `enableServerSideApply` [Provider option](/registry/packages/kubernetes/api-docs/provider/) option to enable Server-Side Apply for the Provider. This option can be set in the following ways:
