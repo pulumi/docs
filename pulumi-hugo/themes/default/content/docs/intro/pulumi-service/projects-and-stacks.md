@@ -278,16 +278,23 @@ dependencies. Select an individual resource to view its list of properties and d
 
 ## Transferring Stacks
 
-Stack admins can transfer their stacks between personal accounts and organizations or between organizations.
+Stack admins can transfer individual stacks between personal accounts and organizations or between organizations. Organization admins can transfer stacks in bulk.
 
 If transferring to an organization, the **Allow organization members to create stacks and transfer stacks to this organization**
 setting must be turned on from the **Access Management** page in the organization's settings.
 
-To transfer a stack:
+To transfer an individual stack:
 
 1. Navigate to the stack, and then the stack's **Settings**.
 1. Select **Transfer stack**.
 1. Provide the personal account or organization name and select **Transfer**.
+
+To transfer stacks in bulk:
+
+1. Navigate to the **Stacks** page.
+1. Select **Transfer stacks**.
+1. Choose the **Transfer destination** from the dropdown.
+1. Tick the stacks you'd like to transfer and select **Transfer stacks**.
 
 ## Deleting a Stack
 
