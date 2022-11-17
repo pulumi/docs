@@ -33,9 +33,9 @@ So let's build ourselves a MERN app and deploy it on DigitalOcean with Pulumi. G
 
 ## First steps: setting up {#setting-up}
 
-The code for this walkthrough is [available as a template repository on GitHub](https://github.com/cnunciato/fullstack-pulumi-mern-digitalocean), so if you want to follow along (and you should!), you should grab a copy of your own to work with by forking the repository or creating a new one from the template. Once you've done that, you should also:
+The code for this walkthrough is [available as a template repository on GitHub](https://github.com/pulumi/fullstack-pulumi-mern-digitalocean), so if you want to follow along (and you should!), you should grab a copy of your own to work with by forking the repository or creating a new one from the template. Once you've done that, you should also:
 
-* [Clone the repository](https://github.com/cnunciato/fullstack-pulumi-mern-digitalocean) to your local machine.
+* [Clone the repository](https://github.com/pulumi/fullstack-pulumi-mern-digitalocean) to your local machine.
 * [Install Pulumi](/docs/get-started/install/) and [Node.js](https://nodejs.org/).
 * [Sign into DigitalOcean](https://cloud.digitalocean.com/) and obtain a [personal access token](https://cloud.digitalocean.com/account/api/tokens) with read-write permissions.
 * Grant DigitalOcean access to your GitHub repository by [visiting the Apps page](https://cloud.digitalocean.com/apps), choosing Create App, and following the steps to install DigitalOcean's GitHub app.
@@ -664,7 +664,7 @@ Duration: 19s
 
 ## Wrapping up, and next steps
 
-Hopefully this gives you a sense of the kinds of things you can do with Pulumi and DigitalOcean---and I definitely encourage you to spend a little time with the [App Platform docs](https://docs.digitalocean.com/products/app-platform/) to dig a bit deeper into some of these concepts and explore a few others we weren't able to cover. You'll find the [full source for this walkthrough on GitHub](https://github.com/cnunciato/fullstack-pulumi-mern-digitalocean), of course, with [`finished` branch](https://github.com/cnunciato/fullstack-pulumi-mern-digitalocean/tree/finished) containing the completed Pulumi program for reference.
+Hopefully this gives you a sense of the kinds of things you can do with Pulumi and DigitalOcean---and I definitely encourage you to spend a little time with the [App Platform docs](https://docs.digitalocean.com/products/app-platform/) to dig a bit deeper into some of these concepts and explore a few others we weren't able to cover. You'll find the [full source for this walkthrough on GitHub](https://github.com/pulumi/fullstack-pulumi-mern-digitalocean), of course, with [`finished` branch](https://github.com/pulumi/fullstack-pulumi-mern-digitalocean/tree/finished) containing the completed Pulumi program for reference.
 
 From here, you might think about:
 
