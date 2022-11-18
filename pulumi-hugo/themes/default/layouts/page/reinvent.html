@@ -1,0 +1,125 @@
+{{ define "hero" }}
+    {{ partial "hero.html" (dict "title" .Params.title) }}
+{{ end }}
+
+{{ define "main" }}
+    <section id="ctas" class="container mx-auto my-16 text-center">
+        <h2>Meet with us at Booth 739!</h2>
+
+        <div class="my-16">
+            <div class="lg:flex lg:flex-wrap justify-center items-stretch">
+                <!--<div class="lg:w-1/2 px-3 py-6">
+                    <div class="card text-center p-6 relative h-full">
+                        <div class="icon-section">
+                            {{ partial "color-icon.html" (dict "icon" "code" "icon_color" "blue") }}
+                        </div>
+                        <div>
+                            <h5>Announcing Pulumi Crosswalk for AWS v1.0</h5>
+                        </div>
+                        <div class="description">
+                            <p>Explore our multi-language library of well-architected AWS infrastructure patterns for rapid cloud development. Check it out on <a href="https://github.com/pulumi/pulumi-awsx" target="_blank">GitHub <i class="fab fa-github"></i></a></p>
+                        </div>
+                        <div class="card-cta-btn">
+                            <a href="{{ relref . "/blog/introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws" }}" class="btn-primary">Read the Blog</a>
+                        </div>
+                    </div>
+                </div>-->
+
+                <div class="lg:w-1/2 px-3 py-6">
+                    <div class="card text-center p-6 relative h-full">
+                        <div class="icon-section">
+                            {{ partial "color-icon.html" (dict "icon" "team" "icon_color" "salmon") }}
+                        </div>
+                        <div>
+                            <h5>Want to schedule a time to meet?</h5>
+                        </div>
+                        <div class="description">
+                            <p>Meet with our team in-person at AWS reInvent. Use the link below to schedule some time.</p>
+                        </div>
+                        <div class="card-cta-btn">
+                            <a href="https://pulumicorporation.orhygiea.com/c/thayden" class="btn-primary">Meet with us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 px-3 py-6">
+                    <div class="card text-center p-6 relative h-full">
+                        <div class="icon-section">
+                            {{ partial "color-icon.html" (dict "icon" "code" "icon_color" "blue") }}
+                        </div>
+                        <div>
+                            <h5>Join the Pulumi Challenge</h5>
+                        </div>
+                        <div class="description">
+                            <p>Try Pulumi out for yourself by taking a Pulumi Challenge! You'll build something cool, and we'll send you some super secret swag in return.</p>
+                        </div>
+                        <div class="card-cta-btn">
+                            <a href="{{ relref . "/challenge" }}" class="btn-primary">Pulumi Challenge</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 px-3 py-6">
+                    <div class="card text-center p-6 relative h-full">
+                        <div class="icon-section">
+                            {{ partial "color-icon.html" (dict "icon" "program" "icon_color" "yellow") }}
+                        </div>
+                        <div>
+                            <h5>Pulumi Templates</h5>
+                        </div>
+                        <div class="description">
+                            <p>
+                                Pulumi templates are the fastest way to deploy infrastructure to AWS, Azure, and Google Cloud. After deploying, you can easily modify the
+                                infrastructure by updating the code in TypeScript, Python, Go, Java, .NET/C#, or YAML.
+                            </p>
+                        </div>
+                        <div class="card-cta-btn">
+                            <a href="{{ relref . "/challenge" }}" target="_blank" rel="noopener noreferrer" class="btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="circleci-event" class="max-w-4xl mx-auto text-center relative mb-16 px-6 lg:px-0">
+        <div class="shape-background pulumi-service-screenshot">
+            <div class="shape-container">
+                <div class="circle-right"></div>
+                <div class="circle-left"></div>
+            </div>
+        </div>
+
+        <div class="card bg-white text-center p-8 relative h-full">
+            <img class="mx-auto h-28" src="/images/reinvent/beer-park.png" />
+            <div class="my-8">
+                <h5>Join us on Tuesday, November 30th from 6-9pm</h5>
+                <h3>Sky’s the Limit, Beer Park, Las Vegas</h3>
+            </div>
+            <a href="https://www.circlecievents.com/ccireinvent-signup/" target="_blank" class="btn-secondary">Register</a>
+        </div>
+    </section>
+
+    <section id="hiring" class="container mx-auto my-16">
+        <div class="max-w-3xl mx-auto">
+            <h2>Join the team</h2>
+            <div class="text-base text-left mb-8">
+                <p>
+                    Pulumi is reinventing how people build modern cloud applications, with a unique platform that combines deep systems and infrastructure innovation with elegant
+                    programming models and developer tools.
+                </p>
+                <p>
+                    Our team is a diverse and talented group of individuals, with backgrounds in distributed cloud systems, programming languages, developer tools, and operating
+                    systems, from companies from all corners of the industry. Our culture is one of technical excellence, passion for teamwork, and customer obsession.
+                </p>
+                <p>
+                    While we have a fabulous office in downtown Seattle, Pulumi cares about the health, safety and happiness of our employees, and we've been a fully remote company
+                    since March, 2020. We've learned and grown as a company this year, and &mdash; unless otherwise specified &mdash; all of our open positions are remote. We will
+                    continue to collaborate and grow from different locations, and are committed to making sure our team is successful from their home offices.
+                </p>
+                <h3 class="mb-0">Open Positions</h3>
+                <pulumi-greenhouse-jobs-list></pulumi-greenhouse-jobs-list>
+            </div>
+        </div>
+    </section>
+{{ end }}
