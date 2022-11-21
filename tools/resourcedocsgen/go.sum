@@ -1609,8 +1609,9 @@ github.com/pulumi/pulumi-yaml v0.5.5/go.mod h1:erKneF31b8HYQFuy+B3RileYsaIDSzl32
 github.com/pulumi/pulumi-yaml v0.5.9/go.mod h1:rJCp0HXvJGG+hs40wII9yYxuCeBBr2+e8FytW0YnINM=
 github.com/pulumi/pulumi-yaml v0.5.10/go.mod h1:vxV5TdH3Xk5HRHNftcDXSbsZFJcJY9ME6k4zD+xw9OY=
 github.com/pulumi/pulumi-yaml v1.0.1/go.mod h1:vxV5TdH3Xk5HRHNftcDXSbsZFJcJY9ME6k4zD+xw9OY=
-github.com/pulumi/pulumi-yaml v1.0.2 h1:8fuoFNJlYJm1ni1Fff8QsIvef3E+ilroTPDrYKyy088=
 github.com/pulumi/pulumi-yaml v1.0.2/go.mod h1:FKly+y0x5onXHEZALNnFglr6ZZnro4Y/jlN4sYLKYeM=
+github.com/pulumi/pulumi-yaml v1.0.3 h1:JDRQfGcQYxwJETIepa7T3B7wTV7Bk2P7uApmWvQZeL4=
+github.com/pulumi/pulumi-yaml v1.0.3/go.mod h1:KLFTyADnoNoPU9djMyRvXymrTH2SCBg9wnXaapuggEA=
 github.com/pulumi/pulumi/pkg/v3 v3.26.0/go.mod h1:L9E+MXe05AbrSmX1GjX3jIrVNpE2RrauKEjME+BNzi4=
 github.com/pulumi/pulumi/pkg/v3 v3.31.1-0.20220429232336-81582c4dcb93/go.mod h1:bO/BHZJoG2Mm8C3dxP414vLPvjxFfsetPE3Ep7Ffgro=
 github.com/pulumi/pulumi/pkg/v3 v3.32.1/go.mod h1:TNPDg+H4Mzy5ldOJNpkzqPYTuYH8ehorPFtnQd3pRUU=
@@ -1627,8 +1628,9 @@ github.com/pulumi/pulumi/pkg/v3 v3.40.1/go.mod h1:Of6sFHjTHQGIFqUoXOu2fG/H+HzR4b
 github.com/pulumi/pulumi/pkg/v3 v3.42.1-0.20221010121757-adef574983fa/go.mod h1:613f45hSUcSIc7Z3XpSyzFLk+SHZcE8tdffbs3D0xYY=
 github.com/pulumi/pulumi/pkg/v3 v3.44.2/go.mod h1:ZPmdEFaa4IT0RWIvLxP61SidP91X+WRtpvIXP+fENkE=
 github.com/pulumi/pulumi/pkg/v3 v3.46.0/go.mod h1:ac2TXo6SE0H+1iJyp3JttNE8wmuTU0XF/UcuAtYW3Rs=
-github.com/pulumi/pulumi/pkg/v3 v3.46.2-0.20221115133355-972e1e819083 h1:YQmNWfl5ytMqlTM0rTnjZ1qLqFuvTdAUHA/CiKo9sYs=
-github.com/pulumi/pulumi/pkg/v3 v3.46.2-0.20221115133355-972e1e819083/go.mod h1:IxfSjI/xi6/QJRNbnnTdDJQShikbY3ro5tT5OdSlUhA=
+github.com/pulumi/pulumi/pkg/v3 v3.46.1/go.mod h1:Rebr+SHHGtTu2w7VURQZDEUYDhtvjECoovIfh9TYHQU=
+github.com/pulumi/pulumi/pkg/v3 v3.47.1 h1:3SmU/ulPtnxJP5eCaE7gcWIra7/KNKTTwreeQnHxApw=
+github.com/pulumi/pulumi/pkg/v3 v3.47.1/go.mod h1:mw+rkEBo8h/57R1YBZFM/Lw4wTbiXnpwvRxktI4Q12M=
 github.com/pulumi/pulumi/sdk/v3 v3.26.0/go.mod h1:VsxW+TGv2VBLe/MeqsAr9r0zKzK/gbAhFT9QxYr24cY=
 github.com/pulumi/pulumi/sdk/v3 v3.28.0/go.mod h1:Oe6AnW5MjJE5X2UJeqeXm1Al7qahdLVhIPeiKuoqxAw=
 github.com/pulumi/pulumi/sdk/v3 v3.31.0/go.mod h1:hGo/+AL1L4sPL9Ukd/i5bNFM3WHs3dHcA+GKEW7M3RA=
@@ -1653,8 +1655,8 @@ github.com/pulumi/pulumi/sdk/v3 v3.42.1-0.20221010121757-adef574983fa/go.mod h1:
 github.com/pulumi/pulumi/sdk/v3 v3.44.2/go.mod h1:N5jL+cw5KiOeMn9bwvRuPQEAhbE3KPq2wSb/Kw+6HuY=
 github.com/pulumi/pulumi/sdk/v3 v3.46.0/go.mod h1:n5EPRVFDh+EFwYZ+oaZmEtwgVN1A6NnI82B7ks/bmTU=
 github.com/pulumi/pulumi/sdk/v3 v3.46.1/go.mod h1:n5EPRVFDh+EFwYZ+oaZmEtwgVN1A6NnI82B7ks/bmTU=
-github.com/pulumi/pulumi/sdk/v3 v3.46.2-0.20221115133355-972e1e819083 h1:s8ooFOFtPfarQWYnzymm14k9HrEvsIFcmxvAfiRfoSo=
-github.com/pulumi/pulumi/sdk/v3 v3.46.2-0.20221115133355-972e1e819083/go.mod h1:n5EPRVFDh+EFwYZ+oaZmEtwgVN1A6NnI82B7ks/bmTU=
+github.com/pulumi/pulumi/sdk/v3 v3.47.1 h1:PkKlP4RK85u87b0qujM6hS6BJJ2KOo9KCbJGow+TPvg=
+github.com/pulumi/pulumi/sdk/v3 v3.47.1/go.mod h1:n5EPRVFDh+EFwYZ+oaZmEtwgVN1A6NnI82B7ks/bmTU=
 github.com/pulumi/schema-tools v0.1.0/go.mod h1:feL1siLWdcCNUm+irXoHyNHbGaqoX7pfYojpGZe2ziY=
 github.com/pulumi/terraform-diff-reader v0.0.0-20201211191010-ad4715e9285e/go.mod h1:sZ9FUzGO+yM41hsQHs/yIcj/Y993qMdBxBU5mpDmAfQ=
 github.com/rakyll/embedmd v0.0.0-20171029212350-c8060a0752a2/go.mod h1:7jOTMgqac46PZcF54q6l2hkLEG8op93fZu61KmxWDV4=
