@@ -27,14 +27,20 @@ join:
 
 featured:
   items:
-    - title: Opening Keynote and Welcome
+    - title: Pulumi Demos and Best Practices
       description: |
-        Join Pulumi Co-Founder and CEO, Joe Duffy and CTO Luke Hoban as they discuss the newest innovations in infrastructure as code and modern applications, and how pioneering engineering organizations are using these techniques to ship faster, more reliably, and at greater scale. Joe and Luke will cover new Pulumi features and how you can get started.
+        New and exciting hands-on, coding-heavy demo sessions. Using Pulumi, you will see how to build, deploy, and manage cloud applications with infrastructure as code, powered by popular programming languages. Pick up new best practices and how software engineering can be applied to tame the complexities of the modern cloud infrastructure.
       presenters:
-      - name: Joe Duffy
-        photo: /images/team/joe-duffy.jpg
-      - name: Luke Hoban
-        photo: /images/team/luke-hoban.jpg
+      - name: Meagan Cojocar
+        photo: /images/team/meagan-cojocar.jpg
+      - name: Levi Blackstone
+        photo: /images/team/levi-blackstone.jpg
+      - name: Casey Huang
+        photo: /images/team/casey-huang.jpg
+      - name: Mitch Gerdisch
+        photo: /images/team/mitch-gerdisch.jpg
+      - name: Bryce Lampe
+        photo: /images/team/bryce-lampe.jpg
 
     - title: Customer Stories
       description: |
@@ -53,38 +59,6 @@ featured:
         photo: /images/cloud-engineering-days/logos/fauna.svg
       - name:
         photo: /images/cloud-engineering-days/logos/dutchie.svg
-
-    - title: Pulumi Demos and Best Practices
-      description: |
-        New and exciting hands-on, coding-heavy demo sessions. Using Pulumi, you will see how to build, deploy, and manage cloud applications with infrastructure as code, powered by popular programming languages. Pick up new best practices and how software engineering can be applied to tame the complexities of the modern cloud infrastructure.
-      presenters:
-      - name: Meagan Cojocar
-        photo: /images/team/meagan-cojocar.jpg
-      - name: Levi Blackstone
-        photo: /images/team/levi-blackstone.jpg
-      - name: Casey Huang
-        photo: /images/team/casey-huang.jpg
-      - name: Mitch Gerdisch
-        photo: /images/team/mitch-gerdisch.jpg
-      - name: Bryce Lampe
-        photo: /images/team/bryce-lampe.jpg
-
-    - title: Workshops
-      description: |
-        Join us for one of our upcoming cloud engineering workshops. Whether you're a seasoned cloud engineer exploring advanced concepts or want to learn the fundamentals of infrastructure as code, we've got workshops for all levels.
-      link: /cloud-engineering-days/#workshops
-      link_text: Join a Workshop
-      presenters:
-      - name: Laura Santamaria
-        photo: /images/team/laura-santamaria.jpg
-      - name: Josh Kodroff
-        photo: /images/team/josh-kodroff.jpg
-      - name: Ringo De Smet
-        photo: /images/team/ringo-de-smet.jpg
-      - name: Tushar Shah
-        photo: /images/team/tushar-shah.jpg
-      - name: Jay Smith
-        photo: /images/cloud-engineering-days/guests/jay-smith.jpg
 
 partners:
   items:
@@ -186,55 +160,55 @@ workshops:
   items:
     - title: "Pulumi 101: A static site on AWS"
       link: /resources/pulumi-101-static-site-on-aws/
-      link_text: Recording Coming Soon
+      link_text: View Recording
       description: |
         Learn the basics of Pulumi from projects to components. Use TypeScript and templates to stand up a static site on AWS using S3.
 
     - title: "Pulumi 101: Serverless containers on Google Cloud"
       link: /resources/pulumi-101-serverless-containers-gcp
-      link_text: Recording Coming Soon
+      link_text: View Recording
       description: |
         Learn the basics of Pulumi from projects to components. Use Python and templates to stand up serverless containers on Cloud Run from Google Cloud.
 
     - title: "Building with Containers on Azure"
       link: /resources/building-containers-azure
-      link_text: Recording Coming Soon
+      link_text: View Recording
       description: |
         Explore more about building up a containerized microservices architecture on Azure using infrastructure as code and cloud engineering principles
 
     - title: "Pulumi 101: Kubernetes on Azure"
       link: /resources/pulumi-101-kubernetes-on-azure
-      link_text: Recording Coming Soon
+      link_text: View Recording
       description: |
         Learn the basics of Pulumi using C# and templates to stand up a small Kubernetes cluster on AKS from Azure.
 
     - title: "Serverless Architecture on AWS"
       link: /resources/serverless-architecture-aws
-      link_text: Recording Coming Soon
+      link_text: View Recording
       description: |
         Explore building up a serverless microservices architecture on AWS using infrastructure as code, cloud engineering principles, and TypeScript.
 
     - title: "Sharing Code with Pulumi Packages, Abstractions, and More"
       link: /resources/simpler-pulumi-package-authoring
-      link_text: Recording Coming Soon
+      link_text: View Recording
       description: |
         Explore how to start sharing Pulumi code with others. Use Go to build a custom architecture for GCP that we’ll compile down into a shareable library.
 
     - title: "Securing Deployments with Policy as Code"
       link: /resources/securing-deployments-policy-as-code
-      link_text: Register Now
+      link_text: Recording Coming Soon
       description: |
         The Pulumi team will show you how to enforce best practices by creating policies that scale from a single infrastructure stack to your entire organization.
 
     - title: "Getting Started with Infrastructure as Code on DigitalOcean"
       link: /resources/getting-started-with-infrastructure-as-code-on-digital-ocean
-      link_text: Register Now
+      link_text: Recording Coming Soon
       description: |
         In this hands-on workshop, you will learn how to stand up basic services using Infrastructure as Code through a series of hands-on labs.
 
     - title: "Getting Started with Infrastructure as Code Azure with Java"
       link: /resources/getting-started-infrascructure-as-code-azure-java
-      link_text: Register Now
+      link_text: Recording Coming Soon
       description: |
         Learn the basics of Azure and Pulumi with a hands-on lab that will take you from deploying a simple static website to deploying a Spring Boot application.
 
