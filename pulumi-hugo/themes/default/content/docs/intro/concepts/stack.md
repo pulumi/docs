@@ -77,7 +77,7 @@ dev                                       n/a                      n/a
 ## Generate an update plan
 
 {{% notes type="warning" %}}
-Update plans are currently in experimental preview and will only show up in `--help` if the environment variable `PULUMI_EXPERIMENTAL` is set to `true`.
+[Update plans](/docs/intro/concepts/plans/) are currently in experimental preview and will only show up in `--help` if the environment variable `PULUMI_EXPERIMENTAL` is set to `true`.
 {{% /notes %}}
 
 To preview an update of the currently selected stack and save that plan run `pulumi preview --save-plan=plan.json`. The operation uses the latest [configuration values](/docs/intro/concepts/config/) for the active stack.
