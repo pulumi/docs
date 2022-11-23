@@ -18,6 +18,7 @@ main:
 
     If you want to code along, you’ll need a [free Pulumi SaaS account](https://app.pulumi.com/signup/), [the Pulumi CLI](/docs/get-started/install), and an AWS account (free tier).
   title: Automating Infrastructure as Code Workflows
+  youtube_url: "https://www.youtube.com/embed/Df_UQ1CD06A?rel=0"
   sortable_date: 2022-11-17T18:00:00.000Z
 event_data:
   name: Automating Infrastructure as Code Workflows
@@ -35,10 +36,10 @@ form:
   salesforce_campaign_id: 701Du0000009P96IAE
   gotowebinar_key: ""
 featured: false
-pre_recorded: false
+pre_recorded: true
 pulumi_tv: false
 unlisted: false
-gated: true
+gated: false
 type: webinars
 external: false
 block_external_search_index: false

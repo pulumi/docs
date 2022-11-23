@@ -10,6 +10,7 @@ hero:
 
 main:
   title: "Pulumi 101: Fundamentals with Java and Docker"
+  youtube_url: "https://www.youtube.com/embed/UuZZ1iAKFgQ?rel=0"
   description: |
     Learn the basics of Pulumi from projects to components. We’ll use
     Java and Docker to build, configure, and deploy a real-life, modern
@@ -54,11 +55,11 @@ form:
   salesforce_campaign_id: 701Du0000009P91IAE
 
 featured: false
-pre_recorded: false
+pre_recorded: true
 pulumi_tv: false
 preview_image: ""
 unlisted: false
-gated: true
+gated: false
 type: webinars
 external: false
 block_external_search_index: false
