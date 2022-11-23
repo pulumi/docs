@@ -1,7 +1,7 @@
 ---
-title: "Google Cloud Functions in Python deployed with Go | Go"
-h1: "Google Cloud Functions in Python deployed with Go"
-linktitle: "Google Cloud Functions in Python deployed with Go"
+title: "Google Cloud Functions in Go deployed with Go | Go"
+h1: "Google Cloud Functions in Go deployed with Go"
+linktitle: "Google Cloud Functions in Go deployed with Go"
 no_edit_this_page: true
 cloud: gcp
 language: go
@@ -69,3 +69,4 @@ To deploy your infrastructure, follow the below steps.
     pulumi destroy --yes
     pulumi stack rm --yes
     ```
+
