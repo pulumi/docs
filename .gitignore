@@ -44,16 +44,6 @@ cypress/screenshots
 origin-bucket-metadata.json
 redirects.txt
 
-# Ignore language-specific SDK docs for providers.
-content/docs/reference/pkg/nodejs
-!content/docs/reference/pkg/nodejs/pulumi/awsx
-!content/docs/reference/pkg/nodejs/pulumi/cloud
-!content/docs/reference/pkg/nodejs/pulumi/eks
-!content/docs/reference/pkg/nodejs/pulumi/kunernetesx
-!content/docs/reference/pkg/nodejs/pulumi/policy
-!content/docs/reference/pkg/nodejs/pulumi/pulumi
-!content/docs/reference/pkg/nodejs/pulumi/terraform
-
 # Ignore vendored Hugo modules.
 _vendor/
 

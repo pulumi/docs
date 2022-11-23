@@ -15,8 +15,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TOOL_TYPEDOC="$SCRIPT_DIR/../node_modules/.bin/typedoc"
 
 PULUMI_DOC_TMP=`mktemp -d`
-PULUMI_DOC_BASE=./content/docs/reference/pkg/nodejs/pulumi
-PULUMI_DOC_DATA_BASE=./data/pkg/nodejs/pulumi
+PULUMI_DOC_BASE="$SCRIPT_DIR/../content/docs/reference/pkg/nodejs/pulumi"
+PULUMI_DOC_DATA_BASE="$SCRIPT_DIR/../data/pkg/nodejs/pulumi"
 
 # Set this to 1 to run all generation in parallel.
 PARALLEL=0
@@ -70,14 +70,14 @@ generate_docs() {
         popd
         echo -e "\033[0;93mGenerating pulumi.com API docs\033[0m"
         pushd ./tools/tscdocgen
-        echo -e "go run *.go" "../../${PKGPATH}" "$1" "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" "${PULUMI_DOC_DATA_BASE}" "$PKG_REPO_DIR" $HEAD_COMMIT
-        go run *.go "../../${PKGPATH}" "$1" "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" "${PULUMI_DOC_DATA_BASE}" "$PKG_REPO_DIR" $HEAD_COMMIT
+        echo -e "go run *.go" "$SCRIPT_DIR/../${PKGPATH}" "$1" "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" "${PULUMI_DOC_DATA_BASE}" "$PKG_REPO_DIR" $HEAD_COMMIT
+        go run *.go "$SCRIPT_DIR/../${PKGPATH}" "$1" "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" "${PULUMI_DOC_DATA_BASE}" "$PKG_REPO_DIR" $HEAD_COMMIT
         popd
     fi
 }
 
 REPOS=(
-    "awsx,pulumi-awsx/nodejs/awsx"
+    "awsx,pulumi-awsx/sdk/nodejs"
     "cloud,pulumi-cloud/api"
     "eks,pulumi-eks/nodejs/eks"
     "kubernetesx,pulumi-kubernetesx/nodejs/kubernetesx"

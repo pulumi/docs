@@ -425,6 +425,16 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, gitSha string, ro
 		return err
 	}
 
+	// If this is the awsx package, and it's a classic module, try to find the README in the repo root's
+	// awsx-classic dir.
+	if !root && e.pkg == "@pulumi/awsx" && os.IsNotExist(err) && strings.HasPrefix(name, "classic/") {
+		readme = filepath.Join(e.srcdir, "..", "..", "awsx-"+name, "README.md")
+		pkgcomm, err = ioutil.ReadFile(readme)
+		if err != nil && !os.IsNotExist(err) {
+			return err
+		}
+	}
+
 	modEmitter := newModuleEmitter(e, mod)
 
 	// Now build an index of files and members.
@@ -1022,6 +1032,7 @@ const (
 	typeDocTypeLiteralNode    typeDocNodeKind = "Type literal"
 	typeDocVariableNode       typeDocNodeKind = "Variable"
 	typeDocReferenceNode      typeDocNodeKind = "Reference"
+	typeDocNamespaceNode      typeDocNodeKind = "Namespace"
 )
 
 func (e *moduleEmitter) createLabel(node *typeDocNode, parent *typeDocNode) string {
@@ -1060,6 +1071,8 @@ func (e *moduleEmitter) createLabel(node *typeDocNode, parent *typeDocNode) stri
 			return "const"
 		}
 		return "let"
+	case typeDocNamespaceNode:
+		return "namespace"
 
 	// For others, we will generate a full signature.
 	case typeDocCallSigNode, typeDocConstructorSigNode:
@@ -1545,6 +1558,8 @@ func (e *moduleEmitter) createTypeLabel(t *typeDocType, indent int) string {
 			e.createTypeLabel(t.FalseType, indent))
 	case typeDocInferredType:
 		return fmt.Sprintf("infer %s", t.Name)
+	case typeDocIndexedAccessType:
+		return "" // TODO
 	default:
 		log.Fatalf("unrecognized type node type: %v\n", t.Type)
 		return ""
@@ -1689,6 +1704,7 @@ const (
 	typeDocTypeOperatorType  typeDocTypeType = "typeOperator"
 	typeDocConditionalType   typeDocTypeType = "conditional"
 	typeDocInferredType      typeDocTypeType = "inferred"
+	typeDocIndexedAccessType typeDocTypeType = "indexedAccess"
 )
 
 type typeDocComment struct {
