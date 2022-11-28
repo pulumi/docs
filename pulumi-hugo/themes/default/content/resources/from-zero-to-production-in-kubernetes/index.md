@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "From Zero to Production in Kubernetes"
-meta_desc: "Join David Flanagan & Elijah Zupancic and go from zero to production on Kubernetes by using Python to build abstractions that make getting to production easier."
+meta_desc: "Join Pulumi & NGINX and go from zero to production on Kubernetes by using Python to build abstractions that make getting to production easier."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -16,7 +16,7 @@ pulumi_tv: false
 preview_image: ""
 
 # Webinars with unlisted as true will not be shown on the webinar list
-unlisted: true
+unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
@@ -50,7 +50,7 @@ main:
     # URL for embedding a URL for ungated webinars.
     #youtube_url: "https://www.youtube.com/embed/L-8uzn6AdHM"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-05-10T09:00:00-07:00
+    sortable_date: 2023-01-18T09:00:00-08:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.
@@ -64,8 +64,8 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: David Flanagan
-          role: Staff Developer Advocate, Pulumi
+        - name: Josh Kodroff
+          role: Senior Solutions Architect, Pulumi
         - name: Elijah Zupancic
           role: Solutions Architect, NGINX
         - name: Jason Schmidt
@@ -79,6 +79,6 @@ main:
 
 # The right hand side form section.
 form:
-    # HubSpot form id.
-    hubspot_form_id: 2e4343b3-5108-4b0b-9361-59674be99e91
+    salesforce_campaign_id: "701Du0000009YQcIAM"
+    hubspot_form_id: "2c4b8842-c297-425b-9123-32b694e85153"
 ---
