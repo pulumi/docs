@@ -65,11 +65,11 @@
         <div class="container mx-auto py-6">
             <div class="flex flex-wrap justify-center align-center">
                 <div class="w-full lg:w-1/2 text-center lg:text-left">
-                    <h4>Universal Infrastructure as Code</h4>
+                    <h5>Universal Infrastructure as Code</h5>
                     <p>Every cloud, every language, every architecture, every builder</p>
                 </div>
 
-                <div class="w-full lg:w-1/2 mt-4">
+                <div class="w-full lg:w-1/2 mt-2">
                     <home-slots
                         image-class="h-16 mx-auto"
                         left-items="{{ delimit .Params.overview.logos.clouds "," }}"
@@ -81,25 +81,16 @@
         </div>
     </section>
 
-    <!-- Benefits -->
-    <section class="container mx-auto my-12 lg:my-24 relative">
-        <h2 class="text-center">{{ .Params.benefits.title }}</h2>
-        <div class="benefits-section relative">
-            <div class="shape-background home-benefits-section">
-                <div class="shape-container">
-                    <div class="circle-left"></div>
-                    <div class="circle-right"></div>
-                </div>
-            </div>
-            {{ range $item := .Params.benefits.items }}
-                <div class="benefits-item card z-10 bg-white">
-                    <div class="icon-section">
-                        {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
-                    </div>
-                    <div>
+    <section class="container mx-auto text-center overflow-hidden px-3 mt-6 pb-24">
+        <h2 class="rainbow-text mb-12">Import <span class="font-bold">joy</span> into your cloud infrastructure</h2>
+        <div class="flex flex-col lg:flex-row justify-center items-stretch px-6 lg:px-0">
+            {{ range $item := .Params.use_cases }}
+                <div class="w-full lg:w-1/3">
+                    <div class="card p-10 mx-4 text-center bg-white z-10 h-full my-6 lg:my-0">
+                        <div>
+                            {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                        </div>
                         <h5>{{ $item.title }}</h5>
-                    </div>
-                    <div class="description">
                         <p>{{ $item.description | markdownify }}</p>
                     </div>
                 </div>
@@ -111,7 +102,7 @@
         <div class="shape-background home-build-section">
             <div class="shape-container">
                 <div class="circle-left"></div>
-                <div class="circle-center"></div>
+                <!--<div class="circle-center"></div>-->
                 <div class="circle-right"></div>
             </div>
         </div>
@@ -161,18 +152,55 @@
                     </pulumi-chooser>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="flex flex-col lg:flex-row justify-center items-stretch my-8 lg:my-32 px-6 lg:px-0">
-                {{ range $item := .Params.use_cases }}
-                    <div class="card p-10 mx-4 text-center bg-white z-10 h-full my-6 lg:my-0">
-                        <div>
-                            {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+    <!-- Logos -->
+    <section class="container mx-auto text-center overflow-hidden px-3 mt-24">
+        <h3 class="text-center mb-10">{{ .Params.customer_logos.title }}</h3>
+
+        <div class="w-full order-first pb-16 items-center justify-center hidden lg:block">
+            <pulumi-swiper slides="6" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
+                {{ range $logos := .Params.customer_logos.logos }}
+                    <pulumi-swipeable>
+                        <div class="w-full h-full">
+                            {{ range $logo := $logos }}
+                                <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
+                                    {{ if $logo.link }}
+                                        <a class="w-full h-full" href="{{ relref $pageContext $logo.link }}">
+                                            {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
+                                        </a>
+                                    {{ else }}
+                                        {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
+                                    {{ end }}
+                                </div>
+                            {{ end }}
                         </div>
-                        <h5>{{ $item.title }}</h5>
-                        <p>{{ $item.description | markdownify }}</p>
-                    </div>
+                    </pulumi-swipeable>
                 {{ end }}
-            </div>
+            </pulumi-swiper>
+        </div>
+
+        <div class="w-full order-first pb-16 items-center justify-center lg:hidden">
+            <pulumi-swiper slides="3" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
+                {{ range $logos := .Params.customer_logos.logos }}
+                    <pulumi-swipeable>
+                        <div class="w-full h-full">
+                            {{ range $logo := $logos }}
+                                <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
+                                    {{ if $logo.link }}
+                                        <a class="w-full h-full" href="{{ relref $pageContext $logo.link }}">
+                                            {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
+                                        </a>
+                                    {{ else }}
+                                        {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
+                                    {{ end }}
+                                </div>
+                            {{ end }}
+                        </div>
+                    </pulumi-swipeable>
+                {{ end }}
+            </pulumi-swiper>
         </div>
     </section>
 
@@ -243,10 +271,33 @@
         </div>
     </section>
 
-    <!-- Logos -->
-    <section class="container mx-auto text-center my-0 mb-16 lg:my-24 overflow-hidden px-3">
-        <div class="mb-16">
-            <h3>Atlassian reduced time spent on maintenance by 50%</h3>
+    <!-- Benefits -->
+    <section class="container mx-auto my-12 lg:my-24 relative">
+        <h2 class="text-center">{{ .Params.benefits.title }}</h2>
+        <div class="benefits-section relative">
+            <div class="shape-background home-benefits-section">
+                <div class="shape-container">
+                    <div class="circle-left"></div>
+                    <div class="circle-right"></div>
+                </div>
+            </div>
+            {{ range $item := .Params.benefits.items }}
+                <div class="benefits-item card z-10 bg-white">
+                    <div class="icon-section">
+                        {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
+                    </div>
+                    <div>
+                        <h5>{{ $item.title }}</h5>
+                    </div>
+                    <div class="description">
+                        <p>{{ $item.description | markdownify }}</p>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+
+        <div class="my-16">
+            <h3 class="text-center">Atlassian reduced time spent on maintenance by 50%</h3>
             <div class="max-w-2xl mx-auto text-center">
                 <div class="max-w-xs mx-auto">
                     {{ partial "customer-logo.html" (dict "logo" "atlassian") }}
@@ -262,43 +313,6 @@
                     <a class="btn-secondary" href="{{ relref . "/case-studies" }}">See more case studies</a>
                 </div>
             </div>
-        </div>
-
-        <h3 class="text-center mb-10 hidden lg:block">{{ .Params.customer_logos.title }}</h3>
-        <h6 class="text-center mb-10 lg:hidden">{{ .Params.customer_logos.title }}</h6>
-        <div class="w-full order-first pb-16 items-center justify-center lg:hidden">
-            <pulumi-swiper slides="3" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
-                {{ range $logo := .Params.customer_logos.logos }}
-                    <pulumi-swipeable>
-                        <div class="p-4 flex flex-col flex-grow items-end h-24 justify-center">
-                            {{ if $logo.link }}
-                                <a href="{{ relref $pageContext $logo.link }}">
-                                    {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
-                                </a>
-                            {{ else }}
-                                {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
-                            {{ end }}
-                        </div>
-                    </pulumi-swipeable>
-                {{ end }}
-            </pulumi-swiper>
-        </div>
-        <div class="w-full order-first pb-16 items-center justify-center lg:block hidden">
-            <pulumi-swiper slides="6" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
-                {{ range $logo := .Params.customer_logos.logos }}
-                    <pulumi-swipeable>
-                        <div class="p-8 flex flex-col flex-grow items-end h-24 justify-center">
-                            {{ if $logo.link }}
-                                <a href="{{ relref $pageContext $logo.link }}">
-                                    {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
-                                </a>
-                            {{ else }}
-                                {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
-                            {{ end }}
-                        </div>
-                    </pulumi-swipeable>
-                {{ end }}
-            </pulumi-swiper>
         </div>
     </section>
 

@@ -54,20 +54,23 @@ build:
       description: Define and consume patterns and practices to reduce boilerplate.
 
 use_cases:
-  - title: All architectures welcome
-    icon: nodes
+  - title: Write your configuration quickly
+    icon: code
     icon_color: purple
-    description: "Choose from over 60 cloud providers, including public, private, and hybrid architectures."
+    description: |
+      Speed up your inner dev loop with statement completion, real-time type checking, and interactive documentation directly in your IDE.
 
-  - title: Modernize your approach
-    icon: download-from-cloud
-    icon_color: yellow
-    description: "Adopt serverless, containers, and managed services, and bring them closer to development."
-
-  - title: Adopt Kubernetes
+  - title: Ship your applications faster
     icon: guage
-    icon_color: salmon
-    description: "Get up and running with clusters, supporting infrastructure, and application workloads."
+    icon_color: yellow
+    description: |
+      Integrate Pulumi directly with your CI/CD provider to deliver your applications and infrastructure with more confidence and transparency.
+
+  - title: Doing more with less
+    icon: rocketship
+    icon_color: blue
+    description: |
+      You can use the [Automation API](/automation/) to create tooling that help you and your engineers manage **10x the amount of resources** versus traditional tooling.
 
 deploy:
   title: Deploy
@@ -130,38 +133,43 @@ benefits:
 customer_logos:
   title: Leading engineering organizations are building with Pulumi
   logos:
-    - name: mercedes-benz
-      link: /case-studies/mercedes-benz
-    - name: sans
-      link: /case-studies/sans-institute
-    - name: snowflake
-      link: /case-studies/snowflake
-    - name: credijusto
-      link: /case-studies/credijusto
-    - name: skai
-      link: /blog/kenshoo-migrates-to-aws-with-pulumi
-    - name: lemonade
-      link: /case-studies/lemonade
-    - name: panther-labs
-      link: /case-studies/panther-labs
-    - name: sourcegraph
-      link: /case-studies/sourcegraph
-    - name: whylabs
-      link: /case-studies/whylabs
-    - name: webflow
-    - name: cockroach-labs
-    - name: tableau
-    - name: fenergo
-    - name: univision
-    - name: blockfi
-    - name: linktree
-    - name: materialize
-    - name: anitian
-    - name: clearsale
-    - name: ware2go
-    - name: meta
-    - name: angellist
-    - name: bluenile
+    - - name: mercedes-benz
+        link: /case-studies/mercedes-benz
+      - name: sans
+        link: /case-studies/sans-institute
+      - name: snowflake
+        link: /case-studies/snowflake
+    - - name: credijusto
+        link: /case-studies/credijusto
+      - name: skai
+        link: /blog/kenshoo-migrates-to-aws-with-pulumi
+      - name: lemonade
+        link: /case-studies/lemonade
+    - - name: panther-labs
+        link: /case-studies/panther-labs
+      - name: sourcegraph
+        link: /case-studies/sourcegraph
+      - name: whylabs
+        link: /case-studies/whylabs
+    - - name: webflow
+      - name: cockroach-labs
+      - name: washington-trust
+    - - name: qi
+      - name: univision
+      - name: petcolove
+    - - name: linktree
+      - name: materialize
+      - name: anitian
+    - - name: clearsale
+      - name: ware2go
+      - name: meta
+    - - name: angellist
+      - name: bluenile
+      - name: dutchie
+    - - name: gusto
+      - name: cisess
+        link: /blog/managing-multi-cloud-open-data-noaa
+      - name: altana
 
 
 get_started:
