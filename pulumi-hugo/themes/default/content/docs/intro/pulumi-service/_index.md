@@ -27,7 +27,7 @@ You can create an unlimited number of stacks, encrypt configuration and resource
 
 The following editions are also available as upgrade options:
 
-* **Pulumi Team** is ideal for teams of up to 15 members and provides the basics of infrastructure as code in popular languages, enabling teams to ship faster.
+* **Pulumi Team** is ideal for teams of up to 10 members and provides the basics of infrastructure as code in popular languages, enabling teams to ship faster.
 
 * **Pulumi Enterprise** is ideal for large teams and organizations in production. It offers an unlimited number of members and teams and provides full cloud engineering capabilities.
 
