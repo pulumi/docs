@@ -8,6 +8,7 @@ menu:
 aliases:
 - /docs/intro/console/extensions/
 - /docs/intro/console/extensions/ci-cd-integration-assistant/
+- /docs/intro/console/ci-cd-integration-assistant/
 ---
 
 {{% notes "info" %}}
