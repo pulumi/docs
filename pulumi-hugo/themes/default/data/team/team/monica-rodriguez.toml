@@ -1,0 +1,11 @@
+id = "monica-rodriguez"
+name = "Monica Rodriguez"
+title = "Senior Product Manager"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "mnlumi"
+linkedin = "seemonicago"
