@@ -656,7 +656,7 @@ and can even refer to a `Dockerfile` on disk so you do not need to build and pub
 it separately ahead of time. This makes it very easy to use private registrations for your ECS workloads.
 
 For example, specifying a `path` will run a `docker build` in that path, push the result up to the ECR repository that specified in the first argument, and then pass
-the private ECR repostory path to the container:
+the private ECR repository path to the container:
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language "javascript,typescript" %}}
