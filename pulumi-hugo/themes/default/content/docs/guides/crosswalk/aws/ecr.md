@@ -35,18 +35,16 @@ https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html) to act
 
 To create a new ECR repository, allocate an instance of the `awsx.ecr.Repository` class:
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
-{{% choosable language typescript %}}
+{{% choosable language "javascript,typescript" %}}
 
 ```typescript
+import * as pulumi from "@pulumi/pulumi";
 import * as awsx from "@pulumi/awsx";
 
-// Create a repository.
-const repo = new awsx.ecr.Repository("my-repo");
-
-// And publish its URL, so we can push to it if we'd like.
-export const url = repo.url;
+const repository = new awsx.ecr.Repository("repository", {});
+export const url = repository.url;
 ```
 
 {{% /choosable %}}
@@ -57,11 +55,32 @@ export const url = repo.url;
 import pulumi
 import pulumi_awsx as awsx
 
-# Create a repository.
-repo = awsx.ecr.Repository("my-repo");
+repository = awsx.ecr.Repository("repository")
+pulumi.export("url", repository.url)
+```
 
-# And publish its URL, so we can push to it if we'd like.
-pulumi.export("url", repo.url)
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ecr"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		repository, err := ecr.NewRepository(ctx, "repository", nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("url", repository.Url)
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}
@@ -70,24 +89,61 @@ pulumi.export("url", repo.url)
 
 ```csharp
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using Pulumi;
-using Ecr = Pulumi.Awsx.Ecr;
+using Awsx = Pulumi.Awsx;
 
-class MyStack : Stack
+return await Deployment.RunAsync(() =>
 {
-    public MyStack()
+    var repository = new Awsx.Ecr.Repository("repository");
+
+    return new Dictionary<string, object?>
     {
-        var repo = new Repository("my-repo");
-        this.Url = repo.url;
-    }
-    [Output] public Output<string> Url { get; set; }
-}
+        ["url"] = repository.Url,
+    };
+});
+```
 
-class Program
-{
-    static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package generated_program;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.awsx.ecr.Repository;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var repository = new Repository("repository");
+
+        ctx.export("url", repository.url());
+    }
 }
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  repository:
+    type: awsx:ecr:Repository
+outputs:
+  url: ${repository.url}
 ```
 
 {{% /choosable %}}
@@ -100,12 +156,12 @@ Updating (dev):
 
      Type                           Name               Status
  +   pulumi:pulumi:Stack            crosswalk-aws-dev  created
- +   ├─ awsx:ecr:Repository         my-repo            created
- +   │  └─ aws:ecr:Repository       my-repo            created
- +   └─ aws:ecr:LifecyclePolicy     my-repo            created
+ +   ├─ awsx:ecr:Repository         repository         created
+ +   │  └─ aws:ecr:Repository       repository         created
+ +   └─ aws:ecr:LifecyclePolicy     repository         created
 
 Outputs:
-    url: "012345678901.dkr.ecr.us-west-2.amazonaws.com/my-repo-e2fe830"
+    url: "012345678901.dkr.ecr.us-west-2.amazonaws.com/repository-e2fe830"
 
 Resources:
     + 4 created
@@ -189,24 +245,22 @@ Afterwards, we can then pull the image from the registry by authenticating and p
 Instead of using the Docker CLI directly, Pulumi supports building, publishing, and consuming Docker images
 entirely from code. This lets you version and deploy container changes easily alongside the supporting infrastructure.
 
-The ECR repository class has a `buildAndPushImage` function that does this in one go:
+In the following example, creating an `Image` resource will build an image from the "./app" directory (relative to our project and containing Dockerfile), and publish it to our ECR repository provisioned above.
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
-{{% choosable language typescript %}}
+{{% choosable language "javascript,typescript" %}}
 
 ```typescript
+import * as pulumi from "@pulumi/pulumi";
 import * as awsx from "@pulumi/awsx";
 
-// Create a repository.
-const repo = new awsx.ecr.Repository("my-repo");
-
-// Build an image from the "./app" directory (relative to our project and containing Dockerfile),
-// and publish it to our ECR repository provisioned above.
+const repository = new awsx.ecr.Repository("repository", {});
 const image = new awsx.ecr.Image("image", {
-    repositoryUrl: repo.url,
+    repositoryUrl: repository.url,
     path: "./app",
 });
+export const url = repository.url;
 ```
 
 {{% /choosable %}}
@@ -217,12 +271,42 @@ const image = new awsx.ecr.Image("image", {
 import pulumi
 import pulumi_awsx as awsx
 
-// Create a repository.
-repo = awsx.ecr.Repository("my-repo");
-
+repository = awsx.ecr.Repository("repository")
 image = awsx.ecr.Image("image",
-                       repository_url=repo.url,
-                       path="./app")
+    repository_url=repository.url,
+    path="./app")
+pulumi.export("url", repository.url)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ecr"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		repository, err := ecr.NewRepository(ctx, "repository", nil)
+		if err != nil {
+			return err
+		}
+		_, err = ecr.NewImage(ctx, "image", &ecr.ImageArgs{
+			RepositoryUrl: repository.Url,
+			Path:          pulumi.String("./app"),
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("url", repository.Url)
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}
@@ -231,28 +315,79 @@ image = awsx.ecr.Image("image",
 
 ```csharp
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using Pulumi;
-using Ecr = Pulumi.Awsx.Ecr;
+using Awsx = Pulumi.Awsx;
 
-class MyStack : Stack
+return await Deployment.RunAsync(() =>
 {
-    public MyStack()
-    {
-        var repo = new Repository("my-repo");
+    var repository = new Awsx.Ecr.Repository("repository");
 
-        var image = new Image("image", new ImageArgs
-        {
-            RepositoryUrl = repo.Url,
-            Path = "./app",
-        });
+    var image = new Awsx.Ecr.Image("image", new()
+    {
+        RepositoryUrl = repository.Url,
+        Path = "./app",
+    });
+
+    return new Dictionary<string, object?>
+    {
+        ["url"] = repository.Url,
+    };
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package generated_program;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.awsx.ecr.Repository;
+import com.pulumi.awsx.ecr.Image;
+import com.pulumi.awsx.ecr.ImageArgs;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var repository = new Repository("repository");
+
+        var image = new Image("image", ImageArgs.builder()
+            .repositoryUrl(repository.url())
+            .path("./app")
+            .build());
+
+        ctx.export("url", repository.url());
     }
 }
+```
 
-class Program
-{
-    static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
-}
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  repository:
+    type: awsx:ecr:Repository
+  image:
+    type: awsx:ecr:Image
+    properties:
+      repositoryUrl: ${repository.url}
+      path: "./app"
+outputs:
+  url: ${repository.url}
 ```
 
 {{% /choosable %}}
@@ -304,49 +439,37 @@ defaults to `latest`). The container instances require IAM permissions which are
 
 To use your private repository from an ECS task definition, reference it like so:
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
-{{% choosable language typescript %}}
+{{% choosable language "javascript,typescript" %}}
 
 ```typescript
-import * as awsx from "@pulumi/awsx";
+import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
+import * as awsx from "@pulumi/awsx";
 
-// Create a repository.
-const repo = new awsx.ecr.Repository("my-repo");
-
-// Build an image from the "./app" directory (relative to our project and containing Dockerfile),
-// and publish it to our ECR repository provisioned above.
+const repository = new awsx.ecr.Repository("repository", {});
 const image = new awsx.ecr.Image("image", {
-    repositoryUrl: repo.url,
+    repositoryUrl: repository.url,
     path: "./app",
-})
-
-// Create an ECS Cluster
-const cluster = new aws.ecs.Cluster("default-cluster");
-
-// // Create a load balancer on port 80 and spin up two instances of Nginx.
-const lb = new awsx.lb.ApplicationLoadBalancer("nginx-lb");
-
-const service = new awsx.ecs.FargateService("my-service", {
+});
+const cluster = new aws.ecs.Cluster("cluster", {});
+const lb = new awsx.lb.ApplicationLoadBalancer("lb", {});
+const service = new awsx.ecs.FargateService("service", {
     cluster: cluster.arn,
+    assignPublicIp: true,
     taskDefinitionArgs: {
         container: {
             image: image.imageUri,
             cpu: 512,
             memory: 128,
             essential: true,
-            portMappings: [
-                {
-                    containerPort: 80,
-                    targetGroup: lb.defaultTargetGroup,
-                },
-            ],
+            portMappings: [{
+                targetGroup: lb.defaultTargetGroup,
+            }],
         },
     },
 });
-
-// Export the load balancer's address so that it's easy to access.
 export const url = lb.loadBalancer.dnsName;
 ```
 
@@ -359,34 +482,92 @@ import pulumi
 import pulumi_aws as aws
 import pulumi_awsx as awsx
 
-repo = awsx.ecr.Repository("my-repo");
-
+repository = awsx.ecr.Repository("repository")
 image = awsx.ecr.Image("image",
-                       repository_url=repo.url,
-                       path="./app")
-
-
-cluster = aws.ecs.Cluster("default-cluster")
-
-lb = awsx.lb.ApplicationLoadBalancer("nginx-lb")
-
+    repository_url=repository.url,
+    path="./app")
+cluster = aws.ecs.Cluster("cluster")
+lb = awsx.lb.ApplicationLoadBalancer("lb")
 service = awsx.ecs.FargateService("service",
-                                  cluster=cluster.arn,
-                                  task_definition_args=awsx.ecs.FargateServiceTaskDefinitionArgs(
-                                      containers={
-                                          "nginx": awsx.ecs.TaskDefinitionContainerDefinitionArgs(
-                                              image=image.image_uri,
-                                              memory=128,
-                                              port_mappings=[awsx.ecs.TaskDefinitionPortMappingArgs(
-                                                  container_port=80,
-                                                  target_group=lb.default_target_group,
-                                              )]
-                                          )
-                                      }
-                                  ))
-
+    cluster=cluster.arn,
+    assign_public_ip=True,
+    task_definition_args=awsx.ecs.FargateServiceTaskDefinitionArgs(
+        container=awsx.ecs.TaskDefinitionContainerDefinitionArgs(
+            image=image.image_uri,
+            cpu=512,
+            memory=128,
+            essential=True,
+            port_mappings=[awsx.ecs.TaskDefinitionPortMappingArgs(
+                target_group=lb.default_target_group,
+            )],
+        ),
+    ))
 pulumi.export("url", lb.load_balancer.dns_name)
+```
 
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ecs"
+	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/lb"
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ecr"
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ecs"
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/lb"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		repository, err := ecr.NewRepository(ctx, "repository", nil)
+		if err != nil {
+			return err
+		}
+		image, err := ecr.NewImage(ctx, "image", &ecr.ImageArgs{
+			RepositoryUrl: repository.Url,
+			Path:          pulumi.String("./app"),
+		})
+		if err != nil {
+			return err
+		}
+		cluster, err := ecs.NewCluster(ctx, "cluster", nil)
+		if err != nil {
+			return err
+		}
+		lb, err := lb.NewApplicationLoadBalancer(ctx, "lb", nil)
+		if err != nil {
+			return err
+		}
+		_, err = ecs.NewFargateService(ctx, "service", &ecs.FargateServiceArgs{
+			Cluster:        cluster.Arn,
+			AssignPublicIp: pulumi.Bool(true),
+			TaskDefinitionArgs: &ecs.FargateServiceTaskDefinitionArgs{
+				Container: &ecs.TaskDefinitionContainerDefinitionArgs{
+					Image:     image.ImageUri,
+					Cpu:       pulumi.Int(512),
+					Memory:    pulumi.Int(128),
+					Essential: pulumi.Bool(true),
+					PortMappings: []ecs.TaskDefinitionPortMappingArgs{
+						&ecs.TaskDefinitionPortMappingArgs{
+							TargetGroup: lb.DefaultTargetGroup,
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("url", lb.LoadBalancer.ApplyT(func(loadBalancer *lb.LoadBalancer) (string, error) {
+			return loadBalancer.DnsName, nil
+		}).(pulumi.StringOutput))
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}
@@ -395,56 +576,154 @@ pulumi.export("url", lb.load_balancer.dns_name)
 
 ```csharp
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using Pulumi;
-using Pulumi.Awsx.Ecs.Inputs;
 using Aws = Pulumi.Aws;
-using Ecr = Pulumi.Awsx.Ecr;
-using Ecs = Pulumi.Awsx.Ecs;
-using Lb = Pulumi.Awsx.Lb;
+using Awsx = Pulumi.Awsx;
 
-class MyStack : Stack
+return await Deployment.RunAsync(() =>
 {
-    public MyStack()
+    var repository = new Awsx.Ecr.Repository("repository");
+
+    var image = new Awsx.Ecr.Image("image", new()
     {
-        var repo = new Ecr.Repository("my-repo");
+        RepositoryUrl = repository.Url,
+        Path = "./app",
+    });
 
-        var image = new Ecr.Image("image", new Ecr.ImageArgs
+    var cluster = new Aws.Ecs.Cluster("cluster");
+
+    var lb = new Awsx.Lb.ApplicationLoadBalancer("lb");
+
+    var service = new Awsx.Ecs.FargateService("service", new()
+    {
+        Cluster = cluster.Arn,
+        AssignPublicIp = true,
+        TaskDefinitionArgs = new Awsx.Ecs.Inputs.FargateServiceTaskDefinitionArgs
         {
-            RepositoryUrl = repo.Url,
-            Path = "./app",
-        });
-
-        var cluster = new Aws.Ecs.Cluster("demo-cluster");
-
-        var lb = new Lb.ApplicationLoadBalancer("nginx-lb");
-
-        var service = new Ecs.FargateService("my-service", new Ecs.FargateServiceArgs
-        {
-            Cluster = cluster.Arn,
-            TaskDefinitionArgs = new FargateServiceTaskDefinitionArgs
+            Container = new Awsx.Ecs.Inputs.TaskDefinitionContainerDefinitionArgs
             {
-                Container = new TaskDefinitionContainerDefinitionArgs
+                Image = image.ImageUri,
+                Cpu = 512,
+                Memory = 128,
+                Essential = true,
+                PortMappings = new[]
                 {
-                    Memory = 128,
-                    Cpu = 512,
-                    Image = image.ImageUri,
-                    Essential = true,
-                    PortMappings = new TaskDefinitionPortMappingArgs
+                    new Awsx.Ecs.Inputs.TaskDefinitionPortMappingArgs
                     {
-                        ContainerPort = 80,
                         TargetGroup = lb.DefaultTargetGroup,
-                    }
-                }
-            }
-        });
+                    },
+                },
+            },
+        },
+    });
+
+    return new Dictionary<string, object?>
+    {
+        ["url"] = lb.LoadBalancer.Apply(loadBalancer => loadBalancer.DnsName),
+    };
+});
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package generated_program;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.awsx.ecr.Repository;
+import com.pulumi.awsx.ecr.Image;
+import com.pulumi.awsx.ecr.ImageArgs;
+import com.pulumi.aws.ecs.Cluster;
+import com.pulumi.awsx.lb.ApplicationLoadBalancer;
+import com.pulumi.awsx.ecs.FargateService;
+import com.pulumi.awsx.ecs.FargateServiceArgs;
+import com.pulumi.awsx.ecs.inputs.FargateServiceTaskDefinitionArgs;
+import com.pulumi.awsx.ecs.inputs.TaskDefinitionContainerDefinitionArgs;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var repository = new Repository("repository");
+
+        var image = new Image("image", ImageArgs.builder()
+            .repositoryUrl(repository.url())
+            .path("./app")
+            .build());
+
+        var cluster = new Cluster("cluster");
+
+        var lb = new ApplicationLoadBalancer("lb");
+
+        var service = new FargateService("service", FargateServiceArgs.builder()
+            .cluster(cluster.arn())
+            .assignPublicIp(true)
+            .taskDefinitionArgs(FargateServiceTaskDefinitionArgs.builder()
+                .container(TaskDefinitionContainerDefinitionArgs.builder()
+                    .image(image.imageUri())
+                    .cpu(512)
+                    .memory(128)
+                    .essential(true)
+                    .portMappings(TaskDefinitionPortMappingArgs.builder()
+                        .targetGroup(lb.defaultTargetGroup())
+                        .build())
+                    .build())
+                .build())
+            .build());
+
+        ctx.export("url", lb.loadBalancer().applyValue(loadBalancer -> loadBalancer.dnsName()));
     }
 }
+```
 
-class Program
-{
-    static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
-}
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: scratch-yaml
+description: A Pulumi YAML program to deploy a serverless application on AWS
+runtime: yaml
+resources:
+  repository:
+    type: awsx:ecr:Repository
+  image:
+    type: awsx:ecr:Image
+    properties:
+      repositoryUrl: ${repository.url}
+      path: "./app"
+  cluster:
+    type: aws:ecs:Cluster
+  lb:
+    type: awsx:lb:ApplicationLoadBalancer
+  service:
+    type: awsx:ecs:FargateService
+    properties:
+      cluster: ${cluster.arn}
+      assignPublicIp: true
+      taskDefinitionArgs:
+        container:
+          image: ${image.imageUri}
+          cpu: 512
+          memory: 128
+          essential: true
+          portMappings:
+            - targetGroup: ${lb.defaultTargetGroup}
+outputs:
+  url: ${lb.loadBalancer.dnsName}
 ```
 
 {{% /choosable %}}
@@ -457,53 +736,81 @@ information about consuming ECR images from ECS services specifically, see
 
 To use your private repository from a Kubernetes service, such as one using EKS, reference it like so:
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
-{{% choosable language typescript %}}
+{{% choosable language "javascript,typescript" %}}
 
 ```typescript
+import * as pulumi from "@pulumi/pulumi";
 import * as awsx from "@pulumi/awsx";
 import * as eks from "@pulumi/eks";
-import * as k8s from "@pulumi/kubernetes";
+import * as kubernetes from "@pulumi/kubernetes";
 
-// Build and publish to an ECR registry.
-const repo = new awsx.ecr.Repository("my-repo");
-const image = repo.buildAndPushImage("./app");
-
-// Create a new EKS cluster.
-const cluster = new eks.Cluster("cluster");
-
-// Create a NGINX Deployment and load balanced Service, running our app.
 const appName = "my-app";
-const appLabels = { appClass: appName };
-const deployment = new k8s.apps.v1.Deployment(`${appName}-dep`, {
-    metadata: { labels: appLabels },
+const repository = new awsx.ecr.Repository("repository", {});
+const image = new awsx.ecr.Image("image", {
+    repositoryUrl: repository.url,
+    path: "./app",
+});
+const cluster = new eks.Cluster("cluster", {});
+const clusterProvider = new kubernetes.Provider("clusterProvider", {
+    kubeconfig: cluster.kubeconfig,
+    enableServerSideApply: true,
+});
+const deployment = new kubernetes.apps.v1.Deployment("deployment", {
+    metadata: {
+        labels: {
+            appClass: appName,
+        },
+    },
     spec: {
         replicas: 2,
-        selector: { matchLabels: appLabels },
+        selector: {
+            matchLabels: {
+                appClass: appName,
+            },
+        },
         template: {
-            metadata: { labels: appLabels },
+            metadata: {
+                labels: {
+                    appClass: appName,
+                },
+            },
             spec: {
                 containers: [{
                     name: appName,
-                    image, // **Use the image built above**
-                    ports: [{ name: "http", containerPort: 80 }]
+                    image: image.imageUri,
+                    ports: [{
+                        name: "http",
+                        containerPort: 80,
+                    }],
                 }],
-            }
-        }
+            },
+        },
     },
-}, { provider: cluster.provider });
-const service = new k8s.core.v1.Service(`${appName}-svc`, {
-    metadata: { labels: appLabels },
+}, {
+    provider: clusterProvider,
+});
+const service = new kubernetes.core.v1.Service("service", {
+    metadata: {
+        labels: {
+            appClass: appName,
+        },
+    },
     spec: {
         type: "LoadBalancer",
-        ports: [{ port: 80, targetPort: "http" }],
-        selector: appLabels,
+        selector: {
+            appClass: appName,
+        },
+        ports: [{
+            port: 80,
+            targetPort: "http",
+        }],
     },
-}, { provider: cluster.provider });
-
-// Export the URL for the load balanced service.
-export const url = service.status.loadBalancer.ingress[0].hostname;
+}, {
+    provider: clusterProvider,
+});
+export const url = service.status.apply(status => status?.loadBalancer?.ingress?.[0]?.hostname);
 ```
 
 {{% /choosable %}}
@@ -513,64 +820,179 @@ export const url = service.status.loadBalancer.ingress[0].hostname;
 ```python
 import pulumi
 import pulumi_awsx as awsx
-from pulumi_kubernetes.apps.v1 import Deployment, DeploymentSpecArgs
-from pulumi_kubernetes.core.v1 import (
-    ContainerArgs,
-    ContainerPortArgs,
-    PodSpecArgs,
-    PodTemplateSpecArgs,
-    Service,
-    ServicePortArgs,
-    ServiceSpecArgs,
-)
-from pulumi_kubernetes.meta.v1 import LabelSelectorArgs, ObjectMetaArgs
+import pulumi_eks as eks
+import pulumi_kubernetes as kubernetes
 
-repo = awsx.ecr.Repository("my-repo");
-
+app_name = "my-app"
+repository = awsx.ecr.Repository("repository")
 image = awsx.ecr.Image("image",
-                       repository_url=repo.url,
-                       path="./app")
-
-app_labels = {
-    "appName": "my-app",
-}
-
-deployment = Deployment(
-    "my-deployment",
-    spec=DeploymentSpecArgs(
-        selector=LabelSelectorArgs(
-            match_labels=app_labels,
-        ),
+    repository_url=repository.url,
+    path="./app")
+cluster = eks.Cluster("cluster")
+cluster_provider = kubernetes.Provider("clusterProvider",
+    kubeconfig=cluster.kubeconfig,
+    enable_server_side_apply=True)
+deployment = kubernetes.apps.v1.Deployment("deployment",
+    metadata=kubernetes.meta.v1.ObjectMetaArgs(
+        labels={
+            "appClass": app_name,
+        },
+    ),
+    spec=kubernetes.apps.v1.DeploymentSpecArgs(
         replicas=2,
-        template=PodTemplateSpecArgs(
-            metadata=ObjectMetaArgs(
-                labels=app_labels,
+        selector=kubernetes.meta.v1.LabelSelectorArgs(
+            match_labels={
+                "appClass": app_name,
+            },
+        ),
+        template=kubernetes.core.v1.PodTemplateSpecArgs(
+            metadata=kubernetes.meta.v1.ObjectMetaArgs(
+                labels={
+                    "appClass": app_name,
+                },
             ),
-            spec=PodSpecArgs(
-                containers=[ContainerArgs(
-                    name="my-app",
+            spec=kubernetes.core.v1.PodSpecArgs(
+                containers=[kubernetes.core.v1.ContainerArgs(
+                    name=app_name,
                     image=image.image_uri,
-                    ports=[ContainerPortArgs(
+                    ports=[kubernetes.core.v1.ContainerPortArgs(
+                        name="http",
                         container_port=80,
-                        name="http"
                     )],
                 )],
             ),
         ),
-    ))
-
-service = Service(
-    "svc",
-    metadata=ObjectMetaArgs(
-        labels=app_labels
     ),
-    spec=ServiceSpecArgs(
-        ports=[ServicePortArgs(
+    opts=pulumi.ResourceOptions(provider=cluster_provider))
+service = kubernetes.core.v1.Service("service",
+    metadata=kubernetes.meta.v1.ObjectMetaArgs(
+        labels={
+            "appClass": app_name,
+        },
+    ),
+    spec=kubernetes.core.v1.ServiceSpecArgs(
+        type="LoadBalancer",
+        selector={
+            "appClass": app_name,
+        },
+        ports=[kubernetes.core.v1.ServicePortArgs(
             port=80,
             target_port="http",
         )],
-        selector=app_labels
-    ))
+    ),
+    opts=pulumi.ResourceOptions(provider=cluster_provider))
+pulumi.export("url", service.status.load_balancer.ingress[0].hostname)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ecr"
+	"github.com/pulumi/pulumi-eks/sdk/go/eks"
+	"github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes"
+	appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/apps/v1"
+	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
+	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/meta/v1"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		appName := "my-app"
+		repository, err := ecr.NewRepository(ctx, "repository", nil)
+		if err != nil {
+			return err
+		}
+		image, err := ecr.NewImage(ctx, "image", &ecr.ImageArgs{
+			RepositoryUrl: repository.Url,
+			Path:          pulumi.String("./app"),
+		})
+		if err != nil {
+			return err
+		}
+		cluster, err := eks.NewCluster(ctx, "cluster", nil)
+		if err != nil {
+			return err
+		}
+		clusterProvider, err := kubernetes.NewProvider(ctx, "clusterProvider", &kubernetes.ProviderArgs{
+			Kubeconfig:            cluster.Kubeconfig.AsStringPtrOutput(),
+			EnableServerSideApply: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = appsv1.NewDeployment(ctx, "deployment", &appsv1.DeploymentArgs{
+			Metadata: &metav1.ObjectMetaArgs{
+				Labels: pulumi.StringMap{
+					"appClass": pulumi.String(appName),
+				},
+			},
+			Spec: &appsv1.DeploymentSpecArgs{
+				Replicas: pulumi.Int(2),
+				Selector: &metav1.LabelSelectorArgs{
+					MatchLabels: pulumi.StringMap{
+						"appClass": pulumi.String(appName),
+					},
+				},
+				Template: &corev1.PodTemplateSpecArgs{
+					Metadata: &metav1.ObjectMetaArgs{
+						Labels: pulumi.StringMap{
+							"appClass": pulumi.String(appName),
+						},
+					},
+					Spec: &corev1.PodSpecArgs{
+						Containers: corev1.ContainerArray{
+							&corev1.ContainerArgs{
+								Name:  pulumi.String(appName),
+								Image: image.ImageUri,
+								Ports: corev1.ContainerPortArray{
+									&corev1.ContainerPortArgs{
+										Name:          pulumi.String("http"),
+										ContainerPort: pulumi.Int(80),
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+		}, pulumi.Provider(clusterProvider))
+		if err != nil {
+			return err
+		}
+		service, err := corev1.NewService(ctx, "service", &corev1.ServiceArgs{
+			Metadata: &metav1.ObjectMetaArgs{
+				Labels: pulumi.StringMap{
+					"appClass": pulumi.String(appName),
+				},
+			},
+			Spec: &corev1.ServiceSpecArgs{
+				Type: pulumi.String("LoadBalancer"),
+				Selector: pulumi.StringMap{
+					"appClass": pulumi.String(appName),
+				},
+				Ports: corev1.ServicePortArray{
+					&corev1.ServicePortArgs{
+						Port:       pulumi.Int(80),
+						TargetPort: pulumi.Any("http"),
+					},
+				},
+			},
+		}, pulumi.Provider(clusterProvider))
+		if err != nil {
+			return err
+		}
+		ctx.Export("url", service.Status.ApplyT(func(status corev1.ServiceStatus) (*string, error) {
+			return status.LoadBalancer.Ingress[0].Hostname, nil
+		}).(pulumi.StringPtrOutput))
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}
@@ -579,112 +1001,291 @@ service = Service(
 
 ```csharp
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using Pulumi;
-using Pulumi.Awsx.Ecs.Inputs;
-using Pulumi.Kubernetes.Types.Inputs.Apps.V1;
-using Pulumi.Kubernetes.Types.Inputs.Core.V1;
-using Pulumi.Kubernetes.Types.Inputs.Meta.V1;
-using Ecr = Pulumi.Awsx.Ecr;
-using Ecs = Pulumi.Awsx.Ecs;
-using K8s = Pulumi.Kubernetes;
-using CoreV1 = Pulumi.Kubernetes.Core.V1;
-using AppsV1 = Pulumi.Kubernetes.Apps.V1;
+using Awsx = Pulumi.Awsx;
+using Eks = Pulumi.Eks;
+using Kubernetes = Pulumi.Kubernetes;
 
-class MyStack : Stack
+return await Deployment.RunAsync(() =>
 {
-    public MyStack()
+    var appName = "my-app";
+
+    var repository = new Awsx.Ecr.Repository("repository");
+
+    var image = new Awsx.Ecr.Image("image", new()
     {
-        var repo = new Ecr.Repository("my-repo");
+        RepositoryUrl = repository.Url,
+        Path = "./app",
+    });
 
-        var image = new Ecr.Image("image", new Ecr.ImageArgs
+    var cluster = new Eks.Cluster("cluster");
+
+    var clusterProvider = new Kubernetes.Provider("clusterProvider", new()
+    {
+        KubeConfig = cluster.Kubeconfig,
+        EnableServerSideApply = true,
+    });
+
+    var deployment = new Kubernetes.Apps.V1.Deployment("deployment", new()
+    {
+        Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
         {
-            RepositoryUrl = repo.Url,
-            Path = "./app",
-        });
-
-        var cluster = new Eks.Cluster("eks-cluster")
-
-        var appLabels = new InputMap<string>
-        {
-            {"appClass", "my-app"}
-        };
-
-        var deployment = new AppsV1.Deployment("app-dep", new DeploymentArgs
-        {
-            Metadata = new ObjectMetaArgs
+            Labels =
             {
-                Labels = appLabels
+                { "appClass", appName },
             },
-            Spec = new DeploymentSpecArgs
+        },
+        Spec = new Kubernetes.Types.Inputs.Apps.V1.DeploymentSpecArgs
+        {
+            Replicas = 2,
+            Selector = new Kubernetes.Types.Inputs.Meta.V1.LabelSelectorArgs
             {
-                Selector = new LabelSelectorArgs
+                MatchLabels =
                 {
-                    MatchLabels = appLabels
+                    { "appClass", appName },
                 },
-                Replicas = 2,
-                Template = new PodTemplateSpecArgs
+            },
+            Template = new Kubernetes.Types.Inputs.Core.V1.PodTemplateSpecArgs
+            {
+                Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
                 {
-                    Metadata = new ObjectMetaArgs
+                    Labels =
                     {
-                        Labels = appLabels
+                        { "appClass", appName },
                     },
-                    Spec = new PodSpecArgs
+                },
+                Spec = new Kubernetes.Types.Inputs.Core.V1.PodSpecArgs
+                {
+                    Containers = new[]
                     {
-                        Containers =
+                        new Kubernetes.Types.Inputs.Core.V1.ContainerArgs
                         {
-                            new ContainerArgs
+                            Name = appName,
+                            Image = image.ImageUri,
+                            Ports = new[]
                             {
-                                Name = "my-app",
-                                Image = "image.imageUri,
-                                Ports =
+                                new Kubernetes.Types.Inputs.Core.V1.ContainerPortArgs
                                 {
-                                    new DeploymentPortArgs
-                                    {
-                                        Name = "http",
-                                        ContainerPort = 80,
-                                    },
+                                    Name = "http",
+                                    ContainerPortValue = 80,
                                 },
-                            }
-                        }
-                    }
-                }
-            },
-        }, new CustomResourceOptions
-        {
-            Provider = cluster.Provider,
-        });
-
-        var service = new CoreV1.Service("app-service", new ServiceArgs
-        {
-            Metadata = new ObjectMetaArgs
-            {
-                Labels = appLabels,
-            },
-            Spec = new ServiceSpecArgs
-            {
-                Type = "LoadBalancer",
-                Ports =
-                {
-                    new ServicePortArgs
-                    {
-                        Port = 80,
-                        TargetPort = "http"
+                            },
+                        },
                     },
                 },
-                Selector = appLabels,
             },
-        }, new CustomResourceOptions
+        },
+    }, new CustomResourceOptions
+    {
+        Provider = clusterProvider,
+    });
+
+    var service = new Kubernetes.Core.V1.Service("service", new()
+    {
+        Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
         {
-            Provider = cluster.Provider,
-        });
+            Labels =
+            {
+                { "appClass", appName },
+            },
+        },
+        Spec = new Kubernetes.Types.Inputs.Core.V1.ServiceSpecArgs
+        {
+            Type = "LoadBalancer",
+            Selector =
+            {
+                { "appClass", appName },
+            },
+            Ports = new[]
+            {
+                new Kubernetes.Types.Inputs.Core.V1.ServicePortArgs
+                {
+                    Port = 80,
+                    TargetPort = "http",
+                },
+            },
+        },
+    }, new CustomResourceOptions
+    {
+        Provider = clusterProvider,
+    });
+
+    return new Dictionary<string, object?>
+    {
+        ["url"] = service.Status.Apply(status => status?.LoadBalancer?.Ingress[0]?.Hostname),
+    };
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package generated_program;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.awsx.ecr.Repository;
+import com.pulumi.awsx.ecr.Image;
+import com.pulumi.awsx.ecr.ImageArgs;
+import com.pulumi.eks.Cluster;
+import com.pulumi.kubernetes.Provider;
+import com.pulumi.kubernetes.ProviderArgs;
+import com.pulumi.kubernetes.apps_v1.Deployment;
+import com.pulumi.kubernetes.apps_v1.DeploymentArgs;
+import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.kubernetes.apps_v1.inputs.DeploymentSpecArgs;
+import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
+import com.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
+import com.pulumi.kubernetes.core_v1.inputs.PodSpecArgs;
+import com.pulumi.kubernetes.core_v1.Service;
+import com.pulumi.kubernetes.core_v1.ServiceArgs;
+import com.pulumi.kubernetes.core_v1.inputs.ServiceSpecArgs;
+import com.pulumi.resources.CustomResourceOptions;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        final var appName = "my-app";
+
+        var repository = new Repository("repository");
+
+        var image = new Image("image", ImageArgs.builder()
+            .repositoryUrl(repository.url())
+            .path("./app")
+            .build());
+
+        var cluster = new Cluster("cluster");
+
+        var clusterProvider = new Provider("clusterProvider", ProviderArgs.builder()
+            .kubeconfig(cluster.kubeconfig())
+            .enableServerSideApply(true)
+            .build());
+
+        var deployment = new Deployment("deployment", DeploymentArgs.builder()
+            .metadata(ObjectMetaArgs.builder()
+                .labels(Map.of("appClass", appName))
+                .build())
+            .spec(DeploymentSpecArgs.builder()
+                .replicas(2)
+                .selector(LabelSelectorArgs.builder()
+                    .matchLabels(Map.of("appClass", appName))
+                    .build())
+                .template(PodTemplateSpecArgs.builder()
+                    .metadata(ObjectMetaArgs.builder()
+                        .labels(Map.of("appClass", appName))
+                        .build())
+                    .spec(PodSpecArgs.builder()
+                        .containers(ContainerArgs.builder()
+                            .name(appName)
+                            .image(image.imageUri())
+                            .ports(ContainerPortArgs.builder()
+                                .name("http")
+                                .containerPort(80)
+                                .build())
+                            .build())
+                        .build())
+                    .build())
+                .build())
+            .build(), CustomResourceOptions.builder()
+                .provider(clusterProvider)
+                .build());
+
+        var service = new Service("service", ServiceArgs.builder()
+            .metadata(ObjectMetaArgs.builder()
+                .labels(Map.of("appClass", appName))
+                .build())
+            .spec(ServiceSpecArgs.builder()
+                .type("LoadBalancer")
+                .selector(Map.of("appClass", appName))
+                .ports(ServicePortArgs.builder()
+                    .port(80)
+                    .targetPort("http")
+                    .build())
+                .build())
+            .build(), CustomResourceOptions.builder()
+                .provider(clusterProvider)
+                .build());
+
+        ctx.export("url", service.status().applyValue(status -> status.loadBalancer().ingress()[0].hostname()));
     }
 }
+```
 
-class Program
-{
-    static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
-}
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+variables:
+  appName: my-app
+resources:
+  repository:
+    type: awsx:ecr:Repository
+  image:
+    type: awsx:ecr:Image
+    properties:
+      repositoryUrl: ${repository.url}
+      path: "./app"
+  cluster:
+    type: eks:Cluster
+  clusterProvider:
+    type: pulumi:providers:kubernetes
+    properties:
+      kubeconfig: ${cluster.kubeconfig}
+      enableServerSideApply: true
+  deployment:
+    type: kubernetes:apps/v1:Deployment
+    properties:
+      metadata:
+        labels:
+          appClass: ${appName}
+      spec:
+        replicas: 2
+        selector:
+          matchLabels:
+            appClass: ${appName}
+        template:
+          metadata:
+            labels:
+              appClass: ${appName}
+          spec:
+            containers:
+              - name: ${appName}
+                image: ${image.imageUri}
+                ports:
+                  - name: http
+                    containerPort: 80
+    options:
+      provider: ${clusterProvider}
+  service:
+    type: kubernetes:core/v1:Service
+    properties:
+      metadata:
+        labels:
+          appClass: ${appName}
+      spec:
+        type: LoadBalancer
+        selector:
+          appClass: ${appName}
+        ports:
+          - port: 80
+            targetPort: http
+    options:
+      provider: ${clusterProvider}
+outputs:
+  url: ${service.status.loadBalancer.ingress[0].hostname}
 ```
 
 {{% /choosable %}}
