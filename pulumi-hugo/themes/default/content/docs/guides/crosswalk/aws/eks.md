@@ -123,7 +123,7 @@ using System.Collections.Generic;
 using Pulumi;
 using Eks = Pulumi.Eks;
 
-return await Deployment.RunAsync(() => 
+return await Deployment.RunAsync(() =>
 {
     // Create an EKS cluster with the default configuration.
     var cluster = new Eks.Cluster("cluster");
@@ -522,7 +522,7 @@ using Pulumi;
 using Eks = Pulumi.Eks;
 using Kubernetes = Pulumi.Kubernetes;
 
-return await Deployment.RunAsync(() => 
+return await Deployment.RunAsync(() =>
 {
     // Create an EKS cluster with the default configuration.
     var cluster = new Eks.Cluster("cluster");
@@ -537,7 +537,7 @@ return await Deployment.RunAsync(() =>
     {
         Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
         {
-            Labels = 
+            Labels =
             {
                 { "appClass", "my-deployment" },
             },
@@ -547,7 +547,7 @@ return await Deployment.RunAsync(() =>
             Replicas = 2,
             Selector = new Kubernetes.Types.Inputs.Meta.V1.LabelSelectorArgs
             {
-                MatchLabels = 
+                MatchLabels =
                 {
                     { "appClass", "my-deployment" },
                 },
@@ -556,7 +556,7 @@ return await Deployment.RunAsync(() =>
             {
                 Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
                 {
-                    Labels = 
+                    Labels =
                     {
                         { "appClass", "my-deployment" },
                     },
@@ -591,7 +591,7 @@ return await Deployment.RunAsync(() =>
     {
         Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
         {
-            Labels = 
+            Labels =
             {
                 { "appClass", "my-deployment" },
             },
@@ -607,7 +607,7 @@ return await Deployment.RunAsync(() =>
                     TargetPort = "http",
                 },
             },
-            Selector = 
+            Selector =
             {
                 { "appClass", "my-deployment" },
             },
@@ -667,12 +667,12 @@ public class App {
         // Create an EKS cluster with the default configuration.
         var cluster = new Cluster("cluster");
 
-        var eksProvider = new Provider("eksProvider", ProviderArgs.builder()        
+        var eksProvider = new Provider("eksProvider", ProviderArgs.builder()
             .kubeconfig(cluster.kubeconfigJson())
             .build());
 
         // Deploy a small canary service (NGINX), to test that the cluster is working.
-        var myDeployment = new Deployment("myDeployment", DeploymentArgs.builder()        
+        var myDeployment = new Deployment("myDeployment", DeploymentArgs.builder()
             .metadata(ObjectMetaArgs.builder()
                 .labels(Map.of("appClass", "my-deployment"))
                 .build())
@@ -701,7 +701,7 @@ public class App {
                 .provider(eksProvider)
                 .build());
 
-        var myService = new Service("myService", ServiceArgs.builder()        
+        var myService = new Service("myService", ServiceArgs.builder()
             .metadata(ObjectMetaArgs.builder()
                 .labels(Map.of("appClass", "my-deployment"))
                 .build())
@@ -910,7 +910,7 @@ using System.Collections.Generic;
 using Pulumi;
 using Eks = Pulumi.Eks;
 
-return await Deployment.RunAsync(() => 
+return await Deployment.RunAsync(() =>
 {
     // Create an EKS cluster with a modified configuration.
     var cluster = new Eks.Cluster("cluster", new()
@@ -957,11 +957,11 @@ public class App {
 
     public static void stack(Context ctx) {
         // Create an EKS cluster with a modified configuration.
-        var cluster = new Cluster("cluster", ClusterArgs.builder()        
+        var cluster = new Cluster("cluster", ClusterArgs.builder()
             .desiredCapacity(5)
             .minSize(3)
             .maxSize(5)
-            .enabledClusterLogTypes(            
+            .enabledClusterLogTypes(
                 "api",
                 "audit",
                 "authenticator")
@@ -1100,7 +1100,7 @@ using Pulumi;
 using Awsx = Pulumi.Awsx;
 using Eks = Pulumi.Eks;
 
-return await Deployment.RunAsync(() => 
+return await Deployment.RunAsync(() =>
 {
     // Create a VPC for our cluster.
     var vpc = new Awsx.Ec2.Vpc("vpc");
@@ -1149,7 +1149,7 @@ public class App {
         var vpc = new Vpc("vpc");
 
         // Create an EKS cluster inside of the VPC.
-        var cluster = new Cluster("cluster", ClusterArgs.builder()        
+        var cluster = new Cluster("cluster", ClusterArgs.builder()
             .vpcId(vpc.vpcId())
             .publicSubnetIds(vpc.publicSubnetIds())
             .privateSubnetIds(vpc.privateSubnetIds())
@@ -1466,7 +1466,7 @@ using Pulumi;
 using Aws = Pulumi.Aws;
 using Eks = Pulumi.Eks;
 
-return await Deployment.RunAsync(() => 
+return await Deployment.RunAsync(() =>
 {
     var managedPolicyArns = new[]
     {
@@ -1529,7 +1529,7 @@ return await Deployment.RunAsync(() =>
         MinSize = 1,
         MaxSize = 3,
         SpotPrice = "1",
-        Labels = 
+        Labels =
         {
             { "ondemand", "true" },
         },
@@ -1543,7 +1543,7 @@ return await Deployment.RunAsync(() =>
         DesiredCapacity = 1,
         MinSize = 1,
         MaxSize = 2,
-        Labels = 
+        Labels =
         {
             { "preemptible", "true" },
         },
@@ -1605,30 +1605,30 @@ public class App {
                 )))
             ));
 
-        var role1 = new Role("role1", RoleArgs.builder()        
+        var role1 = new Role("role1", RoleArgs.builder()
             .assumeRolePolicy(assumeRolePolicy)
             .managedPolicyArns(managedPolicyArns)
             .build());
 
-        var role2 = new Role("role2", RoleArgs.builder()        
+        var role2 = new Role("role2", RoleArgs.builder()
             .assumeRolePolicy(assumeRolePolicy)
             .managedPolicyArns(managedPolicyArns)
             .build());
 
-        var instanceProfile1 = new InstanceProfile("instanceProfile1", InstanceProfileArgs.builder()        
+        var instanceProfile1 = new InstanceProfile("instanceProfile1", InstanceProfileArgs.builder()
             .role(role1.name())
             .build());
 
-        var instanceProfile2 = new InstanceProfile("instanceProfile2", InstanceProfileArgs.builder()        
+        var instanceProfile2 = new InstanceProfile("instanceProfile2", InstanceProfileArgs.builder()
             .role(role2.name())
             .build());
 
-        var cluster = new Cluster("cluster", ClusterArgs.builder()        
+        var cluster = new Cluster("cluster", ClusterArgs.builder()
             .skipDefaultNodeGroup(true)
             .instanceRoles(List.of(role1, role2))
             .build());
 
-        var fixedNodeGroup = new NodeGroupV2("fixedNodeGroup", NodeGroupV2Args.builder()        
+        var fixedNodeGroup = new NodeGroupV2("fixedNodeGroup", NodeGroupV2Args.builder()
             .cluster(cluster)
             .instanceType("t2.medium")
             .desiredCapacity(2)
@@ -1639,7 +1639,7 @@ public class App {
             .instanceProfile(instanceProfile1)
             .build());
 
-        var spotNodeGroup = new NodeGroupV2("spotNodeGroup", NodeGroupV2Args.builder()        
+        var spotNodeGroup = new NodeGroupV2("spotNodeGroup", NodeGroupV2Args.builder()
             .cluster(cluster)
             .instanceType("t2.medium")
             .desiredCapacity(1)
@@ -1979,14 +1979,14 @@ using System.Collections.Generic;
 using Pulumi;
 using Kubernetes = Pulumi.Kubernetes;
 
-return await Deployment.RunAsync(() => 
+return await Deployment.RunAsync(() =>
 {
     // Create an NGINX Deployment and load balanced Service.
     var myDeployment = new Kubernetes.Apps.V1.Deployment("my-deployment", new()
     {
         Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
         {
-            Labels = 
+            Labels =
             {
                 { "appClass", "my-deployment" },
             },
@@ -1996,7 +1996,7 @@ return await Deployment.RunAsync(() =>
             Replicas = 2,
             Selector = new Kubernetes.Types.Inputs.Meta.V1.LabelSelectorArgs
             {
-                MatchLabels = 
+                MatchLabels =
                 {
                     { "appClass", "my-deployment" },
                 },
@@ -2005,7 +2005,7 @@ return await Deployment.RunAsync(() =>
             {
                 Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
                 {
-                    Labels = 
+                    Labels =
                     {
                         { "appClass", "my-deployment" },
                     },
@@ -2037,7 +2037,7 @@ return await Deployment.RunAsync(() =>
     {
         Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
         {
-            Labels = 
+            Labels =
             {
                 { "appClass", "my-deployment" },
             },
@@ -2053,7 +2053,7 @@ return await Deployment.RunAsync(() =>
                     TargetPort = "http",
                 },
             },
-            Selector = 
+            Selector =
             {
                 { "appClass", "my-deployment" },
             },
@@ -2102,7 +2102,7 @@ public class App {
 
     public static void stack(Context ctx) {
         // Create an NGINX Deployment and load balanced Service.
-        var myDeployment = new Deployment("myDeployment", DeploymentArgs.builder()        
+        var myDeployment = new Deployment("myDeployment", DeploymentArgs.builder()
             .metadata(ObjectMetaArgs.builder()
                 .labels(Map.of("appClass", "my-deployment"))
                 .build())
@@ -2129,7 +2129,7 @@ public class App {
                 .build())
             .build());
 
-        var myService = new Service("myService", ServiceArgs.builder()        
+        var myService = new Service("myService", ServiceArgs.builder()
             .metadata(ObjectMetaArgs.builder()
                 .labels(Map.of("appClass", "my-deployment"))
                 .build())
@@ -2666,7 +2666,7 @@ using Pulumi;
 using Eks = Pulumi.Eks;
 using Kubernetes = Pulumi.Kubernetes;
 
-return await Deployment.RunAsync(() => 
+return await Deployment.RunAsync(() =>
 {
     var cluster = new Eks.Cluster("cluster");
 
@@ -2682,7 +2682,7 @@ return await Deployment.RunAsync(() =>
             Repo = "https://charts.bitnami.com/bitnami",
         },
         Chart = "wordpress",
-        Values = 
+        Values =
         {
             { "wordpressBlogName", "My Cool Kubernetes Blog!" },
         },
@@ -2727,11 +2727,11 @@ public class App {
     public static void stack(Context ctx) {
         var cluster = new Cluster("cluster");
 
-        var eksProvider = new Provider("eksProvider", ProviderArgs.builder()        
+        var eksProvider = new Provider("eksProvider", ProviderArgs.builder()
             .kubeconfig(cluster.kubeconfigJson())
             .build());
 
-        var wordpress = new Release("wordpress", ReleaseArgs.builder()        
+        var wordpress = new Release("wordpress", ReleaseArgs.builder()
             .repositoryOpts(RepositoryOptsArgs.builder()
                 .repo("https://charts.bitnami.com/bitnami")
                 .build())
@@ -2825,7 +2825,7 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
-return await Deployment.RunAsync(() => 
+return await Deployment.RunAsync(() =>
 {
     var helm = new Kubernetes.Helm.V3.Release("helm", new()
     {
@@ -2845,7 +2845,7 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        var helm = new Release("helm", ReleaseArgs.builder()        
+        var helm = new Release("helm", ReleaseArgs.builder()
             .chart("https://charts.bitnami.com/bitnami/wordpress-15.2.17.tgz")
             .build());
 
