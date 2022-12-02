@@ -49,14 +49,19 @@ cd atlas-fargate
 pulumi stack init dev
 ```
 
-You will also need to export your AWS and MongoDB Cloud credentials and your AWS region (e.g., us-west-2). To access your MongoDB Cloud credentials, go to the __Organization Access Manager__ panel and the __API Keys__ tab. If you don't have any API keys, please click Create API Key and select _Organization Project Creator_ under Organization Permissions.
+You will also need to export your AWS and MongoDB Cloud credentials. To access your MongoDB Cloud credentials, go to the __Organization Access Manager__ panel and the __API Keys__ tab. If you don't have any API keys, please click Create API Key and select _Organization Project Creator_ under Organization Permissions.
 
 ```shell
 export AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_ID>
 export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
-export AWS_REGION=<YOUR_AWS_REGION>
 export MONGODB_ATLAS_PUBLIC_KEY=<YOUR_PUBLIC_KEY>
 export MONGODB_ATLAS_PRIVATE_KEY=<YOUR_PRIVATE_KEY>
+```
+
+Lastly, you will need to set your AWS region (e.g., us-west-2) in your Pulumi configuration.
+
+```shell
+pulumi config set aws:region <YOUR_AWS_REGION>
 ```
 
 #### Step 2. Provision containers on AWS Fargate
@@ -244,7 +249,7 @@ service = awsx.ecs.FargateService(
 
 #### Step 5. Validate endpoints
 
-Run `pulumi up` and select yes to update the stack. Go to the `app url` export to validate that the endpoints of your deployed infrastructure is working. You can now add, delete, and check off items because the application is now able to connect to your newly created Atlas database.
+Run `pulumi up` and select yes to update the stack. Go to the `app_url` export to validate that the endpoints of your deployed infrastructure is working. You can now add, delete, and check off items because the application is now able to connect to your newly created Atlas database.
 
 ![A screenshot of the grocery list app](/images/challenge/grocery_list.png)
 
