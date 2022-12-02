@@ -77,7 +77,8 @@ frontend_image = awsx.ecr.Image(
     repository_url=repo.url,
     path="./app/frontend")
 
-# Build and publish our application from /app/frontend and /app/backend as container images to the ECR repository
+# Build and publish our application from /app/frontend and /app/backend
+# as container images to the ECR repository
 backend_image = awsx.ecr.Image(
     "grocery_backend_image",
     repository_url=repo.url,
@@ -189,7 +190,8 @@ mongo_user = mongodb.DatabaseUser("db_user",
     scopes=[
         mongodb.DatabaseUserScopeArgs(
             # Extracts the cluster name to add to database scopes
-            name=Output.all(mongo_cluster.srv_address).apply(lambda v: re.split("\.|\/\/", v[0])[1]),
+            name=Output.all(mongo_cluster.srv_address).apply(
+                lambda v: re.split("\.|\/\/", v[0])[1]),
             type="CLUSTER",
         ),
     ],
@@ -209,7 +211,7 @@ pulumi config set dbPassword [value] --secret
 
 Before you update the stack, you need to pass the URL of the database to the backend container so it can connect to it. Add the highlighted into the FargateService code.
 
-```python {.line-numbers hl_lines=["26-30"]}
+```python {.line-numbers hl_lines=["26-31"]}
 service = awsx.ecs.FargateService(
     "grocery-service",
     cluster=cluster.arn,
@@ -238,7 +240,8 @@ service = awsx.ecs.FargateService(
                 environment=[{
                     "name":"DATABASE_URL",
                     "value":Output.format("mongodb+srv://{0}:{1}@{2}", db_username, db_password,
-                                Output.all(mongo_cluster.srv_address).apply(lambda v: v[0].split("//"))[1])
+                                Output.all(mongo_cluster.srv_address).apply(
+                                    lambda v: v[0].split("//"))[1])
                 }],
             ),
         }
