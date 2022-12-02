@@ -61,30 +61,16 @@ These are not required but are recommended if you plan on interacting with your 
 
 To create a new EKS cluster, allocate an instance of an `eks.Cluster` class in your Pulumi program:
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-const eks = require("@pulumi/eks");
-
-// Create an EKS cluster with the default configuration.
-const cluster = new eks.Cluster("my-cluster");
-
-// Export the cluster's kubeconfig.
-module.exports = {
-    kubeconfig: cluster.kubeconfig,
-};
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
+import * as pulumi from "@pulumi/pulumi";
 import * as eks from "@pulumi/eks";
 
 // Create an EKS cluster with the default configuration.
-const cluster = new eks.Cluster("my-cluster");
+const cluster = new eks.Cluster("cluster", {});
 
 // Export the cluster's kubeconfig.
 export const kubeconfig = cluster.kubeconfig;
@@ -98,10 +84,10 @@ import pulumi
 import pulumi_eks as eks
 
 # Create an EKS cluster with the default configuration.
-cluster = eks.Cluster('my-cluster')
+cluster = eks.Cluster("cluster")
 
 # Export the cluster's kubeconfig.
-pulumi.export('kubeconfig', cluster.kubeconfig)
+pulumi.export("kubeconfig", cluster.kubeconfig)
 ```
 
 {{% /choosable %}}
@@ -118,11 +104,10 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		// Create an EKS cluster with the default configuration.
-		cluster, err := eks.NewCluster(ctx, "my-cluster", nil)
+		cluster, err := eks.NewCluster(ctx, "cluster", nil)
 		if err != nil {
 			return err
 		}
-
 		// Export the cluster's kubeconfig.
 		ctx.Export("kubeconfig", cluster.Kubeconfig)
 		return nil
@@ -134,23 +119,65 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Collections.Generic;
 using Pulumi;
-using Pulumi.Eks;
+using Eks = Pulumi.Eks;
 
-class MyStack : Stack
+return await Deployment.RunAsync(() => 
 {
-    public MyStack()
-    {
-        // Create an EKS cluster with the default configuration.
-        var cluster = new Cluster("my-cluster");
+    // Create an EKS cluster with the default configuration.
+    var cluster = new Eks.Cluster("cluster");
 
+    return new Dictionary<string, object?>
+    {
         // Export the cluster's kubeconfig.
-        this.Kubeconfig = cluster.Kubeconfig;
+        ["kubeconfig"] = cluster.Kubeconfig,
+    };
+});
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.eks.Cluster;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
     }
 
-    [Output]
-    public Output<object> Kubeconfig { get; set; }
+    public static void stack(Context ctx) {
+        // Create an EKS cluster with the default configuration.
+        var cluster = new Cluster("cluster");
+
+        // Export the cluster's kubeconfig.
+        ctx.export("kubeconfig", cluster.kubeconfig());
+    }
 }
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  # Create an EKS cluster with the default configuration.
+  cluster:
+    type: eks:Cluster
+outputs:
+  # Export the cluster's kubeconfig.
+  kubeconfig: ${cluster.kubeconfig}
+
 ```
 
 {{% /choosable %}}
@@ -231,98 +258,78 @@ Any existing tools will work here, including `kubectl`, Helm, and other CI/CD pr
 to define Kubernetes application-level objects and configuration in code too. For instance, we can deploy a canary
 to our EKS cluster in the same program if we want to test that it is working as part of `pulumi up`:
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-const eks = require("@pulumi/eks");
-const k8s = require("@pulumi/kubernetes");
-
-// Create an EKS cluster with the default configuration.
-const cluster = new eks.Cluster("my-cluster");
-
-// Deploy a small canary service (NGINX), to test that the cluster is working.
-const appName = "my-app";
-const appLabels = { appClass: appName };
-const deployment = new k8s.apps.v1.Deployment(`${appName}-dep`, {
-    metadata: { labels: appLabels },
-    spec: {
-        replicas: 2,
-        selector: { matchLabels: appLabels },
-        template: {
-            metadata: { labels: appLabels },
-            spec: {
-                containers: [{
-                    name: appName,
-                    image: "nginx",
-                    ports: [{ name: "http", containerPort: 80 }]
-                }],
-            }
-        }
-    },
-}, { provider: cluster.provider });
-const service = new k8s.core.v1.Service(`${appName}-svc`, {
-    metadata: { labels: appLabels },
-    spec: {
-        type: "LoadBalancer",
-        ports: [{ port: 80, targetPort: "http" }],
-        selector: appLabels,
-    },
-}, { provider: cluster.provider });
-
-module.exports = {
-    // Export the URL for the load balanced service.
-    url: service.status.loadBalancer.ingress[0].hostname,
-    // Export the cluster's kubeconfig.
-    kubeconfig: cluster.kubeconfig,
-};
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
+import * as pulumi from "@pulumi/pulumi";
 import * as eks from "@pulumi/eks";
-import * as k8s from "@pulumi/kubernetes";
+import * as kubernetes from "@pulumi/kubernetes";
 
 // Create an EKS cluster with the default configuration.
-const cluster = new eks.Cluster("my-cluster");
+const cluster = new eks.Cluster("cluster", {});
+const eksProvider = new kubernetes.Provider("eks-provider", {kubeconfig: cluster.kubeconfigJson});
 
 // Deploy a small canary service (NGINX), to test that the cluster is working.
-const appName = "my-app";
-const appLabels = { appClass: appName };
-const deployment = new k8s.apps.v1.Deployment(`${appName}-dep`, {
-    metadata: { labels: appLabels },
+const myDeployment = new kubernetes.apps.v1.Deployment("my-deployment", {
+    metadata: {
+        labels: {
+            appClass: "my-deployment",
+        },
+    },
     spec: {
         replicas: 2,
-        selector: { matchLabels: appLabels },
+        selector: {
+            matchLabels: {
+                appClass: "my-deployment",
+            },
+        },
         template: {
-            metadata: { labels: appLabels },
+            metadata: {
+                labels: {
+                    appClass: "my-deployment",
+                },
+            },
             spec: {
                 containers: [{
-                    name: appName,
+                    name: "my-deployment",
                     image: "nginx",
-                    ports: [{ name: "http", containerPort: 80 }]
+                    ports: [{
+                        name: "http",
+                        containerPort: 80,
+                    }],
                 }],
-            }
-        }
+            },
+        },
     },
-}, { provider: cluster.provider });
-const service = new k8s.core.v1.Service(`${appName}-svc`, {
-    metadata: { labels: appLabels },
+}, {
+    provider: eksProvider,
+});
+const myService = new kubernetes.core.v1.Service("my-service", {
+    metadata: {
+        labels: {
+            appClass: "my-deployment",
+        },
+    },
     spec: {
         type: "LoadBalancer",
-        ports: [{ port: 80, targetPort: "http" }],
-        selector: appLabels,
+        ports: [{
+            port: 80,
+            targetPort: "http",
+        }],
+        selector: {
+            appClass: "my-deployment",
+        },
     },
-}, { provider: cluster.provider });
-
-// Export the URL for the load balanced service.
-export const url = service.status.loadBalancer.ingress[0].hostname;
+}, {
+    provider: eksProvider,
+});
 
 // Export the cluster's kubeconfig.
 export const kubeconfig = cluster.kubeconfig;
+// Export the URL for the load balanced service.
+export const url = myService.status.apply(status => status?.loadBalancer?.ingress[0]?.hostname);
 ```
 
 {{% /choosable %}}
@@ -331,39 +338,66 @@ export const kubeconfig = cluster.kubeconfig;
 ```python
 import pulumi
 import pulumi_eks as eks
-import pulumi_kubernetes as k8s
+import pulumi_kubernetes as kubernetes
 
 # Create an EKS cluster with the default configuration.
-cluster = eks.Cluster('my-cluster');
-
+cluster = eks.Cluster("cluster")
+eks_provider = kubernetes.Provider("eks-provider", kubeconfig=cluster.kubeconfig_json)
 # Deploy a small canary service (NGINX), to test that the cluster is working.
-app_name = 'my-app'
-app_labels = { 'app': app_name }
-deployment = k8s.apps.v1.Deployment(f'{app_name}-dep',
-    spec = k8s.apps.v1.DeploymentSpecArgs(
-        selector = k8s.meta.v1.LabelSelectorArgs(match_labels = app_labels),
-        replicas = 2,
-        template = k8s.core.v1.PodTemplateSpecArgs(
-            metadata = k8s.meta.v1.ObjectMetaArgs(labels = app_labels),
-            spec = k8s.core.v1.PodSpecArgs(containers = [
-                k8s.core.v1.ContainerArgs(name = app_name, image = 'nginx')
-            ]),
+my_deployment = kubernetes.apps.v1.Deployment("my-deployment",
+    metadata=kubernetes.meta.v1.ObjectMetaArgs(
+        labels={
+            "appClass": "my-deployment",
+        },
+    ),
+    spec=kubernetes.apps.v1.DeploymentSpecArgs(
+        replicas=2,
+        selector=kubernetes.meta.v1.LabelSelectorArgs(
+            match_labels={
+                "appClass": "my-deployment",
+            },
         ),
-    ), opts = pulumi.ResourceOptions(provider = cluster.provider)
-)
-service = k8s.core.v1.Service(f'{app_name}-svc',
-    spec = k8s.core.v1.ServiceSpecArgs(
-        type = 'LoadBalancer',
-        selector = app_labels,
-        ports = [ k8s.core.v1.ServicePortArgs(port = 80) ],
-    ), opts = pulumi.ResourceOptions(provider = cluster.provider)
-)
-
-# Export the URL for the load balanced service.
-pulumi.export('url', service.status.load_balancer.ingress[0].hostname)
+        template=kubernetes.core.v1.PodTemplateSpecArgs(
+            metadata=kubernetes.meta.v1.ObjectMetaArgs(
+                labels={
+                    "appClass": "my-deployment",
+                },
+            ),
+            spec=kubernetes.core.v1.PodSpecArgs(
+                containers=[kubernetes.core.v1.ContainerArgs(
+                    name="my-deployment",
+                    image="nginx",
+                    ports=[kubernetes.core.v1.ContainerPortArgs(
+                        name="http",
+                        container_port=80,
+                    )],
+                )],
+            ),
+        ),
+    ),
+    opts=pulumi.ResourceOptions(provider=eks_provider))
+my_service = kubernetes.core.v1.Service("my-service",
+    metadata=kubernetes.meta.v1.ObjectMetaArgs(
+        labels={
+            "appClass": "my-deployment",
+        },
+    ),
+    spec=kubernetes.core.v1.ServiceSpecArgs(
+        type="LoadBalancer",
+        ports=[kubernetes.core.v1.ServicePortArgs(
+            port=80,
+            target_port="http",
+        )],
+        selector={
+            "appClass": "my-deployment",
+        },
+    ),
+    opts=pulumi.ResourceOptions(provider=eks_provider))
 
 # Export the cluster's kubeconfig.
-pulumi.export('kubeconfig', cluster.kubeconfig)
+pulumi.export("kubeconfig", cluster.kubeconfig)
+# Export the URL for the load balanced service.
+pulumi.export("url", my_service.status.load_balancer.ingress[0].hostname)
 ```
 
 {{% /choosable %}}
@@ -373,11 +407,8 @@ pulumi.export('kubeconfig', cluster.kubeconfig)
 package main
 
 import (
-	"encoding/json"
-	"fmt"
-
 	"github.com/pulumi/pulumi-eks/sdk/go/eks"
-	k8s "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes"
+	"github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes"
 	appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/apps/v1"
 	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
 	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/meta/v1"
@@ -387,79 +418,84 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		// Create an EKS cluster with the default configuration.
-		cluster, err := eks.NewCluster(ctx, "my-cluster", nil)
+		cluster, err := eks.NewCluster(ctx, "cluster", nil)
 		if err != nil {
 			return err
 		}
-
-		// Create a Kubernetes provider using the new cluster's Kubeconfig.
-		prov, err := k8s.NewProvider(ctx, "eksProvider", &k8s.ProviderArgs{
-			Kubeconfig: cluster.Kubeconfig.ApplyT(
-				func(config interface{}) (string, error) {
-					b, err := json.Marshal(config)
-					if err != nil {
-						return "", err
-					}
-					return string(b), nil
-				}).(pulumi.StringOutput),
+		eksProvider, err := kubernetes.NewProvider(ctx, "eks-provider", &kubernetes.ProviderArgs{
+			Kubeconfig: cluster.KubeconfigJson,
 		})
 		if err != nil {
 			return err
 		}
-
 		// Deploy a small canary service (NGINX), to test that the cluster is working.
-		appName := "my-app"
-		appLabels := pulumi.StringMap{"app": pulumi.String(appName)}
-		_, err = appsv1.NewDeployment(ctx,
-			fmt.Sprintf("%s-dep", appName),
-			&appsv1.DeploymentArgs{
-				Spec: &appsv1.DeploymentSpecArgs{
-					Selector: &metav1.LabelSelectorArgs{MatchLabels: appLabels},
-					Replicas: pulumi.Int(2),
-					Template: &corev1.PodTemplateSpecArgs{
-						Metadata: &metav1.ObjectMetaArgs{Labels: appLabels},
-						Spec: &corev1.PodSpecArgs{
-							Containers: corev1.ContainerArray{
-								&corev1.ContainerArgs{
-									Name:  pulumi.String(appName),
-									Image: pulumi.String("nginx"),
+		_, err = appsv1.NewDeployment(ctx, "my-deployment", &appsv1.DeploymentArgs{
+			Metadata: &metav1.ObjectMetaArgs{
+				Labels: pulumi.StringMap{
+					"appClass": pulumi.String("my-deployment"),
+				},
+			},
+			Spec: &appsv1.DeploymentSpecArgs{
+				Replicas: pulumi.Int(2),
+				Selector: &metav1.LabelSelectorArgs{
+					MatchLabels: pulumi.StringMap{
+						"appClass": pulumi.String("my-deployment"),
+					},
+				},
+				Template: &corev1.PodTemplateSpecArgs{
+					Metadata: &metav1.ObjectMetaArgs{
+						Labels: pulumi.StringMap{
+							"appClass": pulumi.String("my-deployment"),
+						},
+					},
+					Spec: &corev1.PodSpecArgs{
+						Containers: corev1.ContainerArray{
+							&corev1.ContainerArgs{
+								Name:  pulumi.String("my-deployment"),
+								Image: pulumi.String("nginx"),
+								Ports: corev1.ContainerPortArray{
+									&corev1.ContainerPortArgs{
+										Name:          pulumi.String("http"),
+										ContainerPort: pulumi.Int(80),
+									},
 								},
 							},
 						},
 					},
 				},
 			},
-			pulumi.Provider(prov),
-		)
-		if err != nil {
-			return nil
-		}
-		service, err := corev1.NewService(ctx,
-			fmt.Sprintf("%s-svc", appName),
-			&corev1.ServiceArgs{
-				Spec: &corev1.ServiceSpecArgs{
-					Type:     pulumi.String("LoadBalancer"),
-					Selector: appLabels,
-					Ports: corev1.ServicePortArray{
-						&corev1.ServicePortArgs{
-							Port: pulumi.Int(80),
-						},
-					},
-				},
-			},
-			pulumi.Provider(prov),
-		)
+		}, pulumi.Provider(eksProvider))
 		if err != nil {
 			return err
 		}
-
-		// Export the URL for the load balanced service.
-		ctx.Export("url", service.Status.ApplyT(func(status interface{}) string {
-			return *status.(*corev1.ServiceStatus).LoadBalancer.Ingress[0].Hostname
-		}))
-
+		myService, err := corev1.NewService(ctx, "my-service", &corev1.ServiceArgs{
+			Metadata: &metav1.ObjectMetaArgs{
+				Labels: pulumi.StringMap{
+					"appClass": pulumi.String("my-deployment"),
+				},
+			},
+			Spec: &corev1.ServiceSpecArgs{
+				Type: pulumi.String("LoadBalancer"),
+				Ports: corev1.ServicePortArray{
+					&corev1.ServicePortArgs{
+						Port:       pulumi.Int(80),
+						TargetPort: pulumi.Any("http"),
+					},
+				},
+				Selector: pulumi.StringMap{
+					"appClass": pulumi.String("my-deployment"),
+				},
+			},
+		}, pulumi.Provider(eksProvider))
+		if err != nil {
+			return err
+		}
 		// Export the cluster's kubeconfig.
 		ctx.Export("kubeconfig", cluster.Kubeconfig)
+		// Export the URL for the load balanced service.
+		ctx.Export("url", myService.Status.ApplyT(func(status interface{}) (string, error) {
+			return *status.(*corev1.ServiceStatus).LoadBalancer.Ingress[0].Hostname, nil
+		}).(pulumi.StringOutput))
 		return nil
 	})
 }
@@ -469,83 +505,273 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
-using K8s = Pulumi.Kubernetes;
-using K8sApps = Pulumi.Kubernetes.Apps.V1;
-using K8sAppsArgs = Pulumi.Kubernetes.Types.Inputs.Apps.V1;
-using K8sCore = Pulumi.Kubernetes.Core.V1;
-using K8sCoreArgs = Pulumi.Kubernetes.Types.Inputs.Core.V1;
-using K8sMeta = Pulumi.Kubernetes.Meta.V1;
-using K8sMetaArgs = Pulumi.Kubernetes.Types.Inputs.Meta.V1;
-using Newtonsoft.Json;
-using Pulumi;
-using Pulumi.Eks;
-using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
+using Pulumi;
+using Eks = Pulumi.Eks;
+using Kubernetes = Pulumi.Kubernetes;
 
-class MyStack : Stack
+return await Deployment.RunAsync(() => 
 {
-    public MyStack()
+    // Create an EKS cluster with the default configuration.
+    var cluster = new Eks.Cluster("cluster");
+
+    var eksProvider = new Kubernetes.Provider("eks-provider", new()
     {
-        // Create an EKS cluster with the default configuration.
-        var cluster = new Cluster("my-cluster");
+        KubeConfig = cluster.KubeconfigJson,
+    });
 
-		// Create a Kubernetes provider using the new cluster's Kubeconfig.
-        var eksProvider = new K8s.Provider("eksProvider", new K8s.ProviderArgs {
-            KubeConfig = cluster.Kubeconfig.Apply(JsonConvert.SerializeObject)
-        });
-
-		// Deploy a small canary service (NGINX), to test that the cluster is working.
-        var appName = "my-app";
-        var appLabels = new Dictionary<string, string>{ { "app", appName } }.ToImmutableDictionary();
-        var deployment = new K8sApps.Deployment(
-            String.Format("{0}-dep", appName),
-            new K8sAppsArgs.DeploymentArgs {
-                Spec = new K8sAppsArgs.DeploymentSpecArgs {
-                    Selector = new K8sMetaArgs.LabelSelectorArgs { MatchLabels = appLabels },
-                    Replicas = 2,
-                    Template = new K8sCoreArgs.PodTemplateSpecArgs {
-                        Metadata = new K8sMetaArgs.ObjectMetaArgs { Labels = appLabels },
-                        Spec = new K8sCoreArgs.PodSpecArgs {
-                            Containers = {
-                                new K8sCoreArgs.ContainerArgs {
-                                    Name = appName,
-                                    Image = "nginx",
+    // Deploy a small canary service (NGINX), to test that the cluster is working.
+    var myDeployment = new Kubernetes.Apps.V1.Deployment("my-deployment", new()
+    {
+        Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+        {
+            Labels = 
+            {
+                { "appClass", "my-deployment" },
+            },
+        },
+        Spec = new Kubernetes.Types.Inputs.Apps.V1.DeploymentSpecArgs
+        {
+            Replicas = 2,
+            Selector = new Kubernetes.Types.Inputs.Meta.V1.LabelSelectorArgs
+            {
+                MatchLabels = 
+                {
+                    { "appClass", "my-deployment" },
+                },
+            },
+            Template = new Kubernetes.Types.Inputs.Core.V1.PodTemplateSpecArgs
+            {
+                Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+                {
+                    Labels = 
+                    {
+                        { "appClass", "my-deployment" },
+                    },
+                },
+                Spec = new Kubernetes.Types.Inputs.Core.V1.PodSpecArgs
+                {
+                    Containers = new[]
+                    {
+                        new Kubernetes.Types.Inputs.Core.V1.ContainerArgs
+                        {
+                            Name = "my-deployment",
+                            Image = "nginx",
+                            Ports = new[]
+                            {
+                                new Kubernetes.Types.Inputs.Core.V1.ContainerPortArgs
+                                {
+                                    Name = "http",
+                                    ContainerPortValue = 80,
                                 },
                             },
                         },
                     },
                 },
             },
-            new CustomResourceOptions { Provider = eksProvider }
-        );
-        var service = new K8sCore.Service(
-            String.Format("{0}-svc", appName),
-            new K8sCoreArgs.ServiceArgs {
-                Spec = new K8sCoreArgs.ServiceSpecArgs {
-                    Type = "LoadBalancer",
-                    Selector = appLabels,
-                    Ports = {
-                        new K8sCoreArgs.ServicePortArgs { Port = 80 },
-                    },
+        },
+    }, new CustomResourceOptions
+    {
+        Provider = eksProvider,
+    });
+
+    var myService = new Kubernetes.Core.V1.Service("my-service", new()
+    {
+        Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+        {
+            Labels = 
+            {
+                { "appClass", "my-deployment" },
+            },
+        },
+        Spec = new Kubernetes.Types.Inputs.Core.V1.ServiceSpecArgs
+        {
+            Type = "LoadBalancer",
+            Ports = new[]
+            {
+                new Kubernetes.Types.Inputs.Core.V1.ServicePortArgs
+                {
+                    Port = 80,
+                    TargetPort = "http",
                 },
             },
-            new CustomResourceOptions { Provider = eksProvider }
-        );
+            Selector = 
+            {
+                { "appClass", "my-deployment" },
+            },
+        },
+    }, new CustomResourceOptions
+    {
+        Provider = eksProvider,
+    });
 
-		// Export the URL for the load balanced service.
-        this.Url = service.Status.Apply((status) =>
-            status.LoadBalancer.Ingress[0].Hostname);
-
+    return new Dictionary<string, object?>
+    {
         // Export the cluster's kubeconfig.
-        this.Kubeconfig = cluster.Kubeconfig;
+        ["kubeconfig"] = cluster.Kubeconfig,
+        // Export the URL for the load balanced service.
+        ["url"] = myService.Status.Apply(status => status?.LoadBalancer?.Ingress[0]?.Hostname),
+    };
+});
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.eks.Cluster;
+import com.pulumi.kubernetes.Provider;
+import com.pulumi.kubernetes.ProviderArgs;
+import com.pulumi.kubernetes.apps.v1.Deployment;
+import com.pulumi.kubernetes.apps.v1.DeploymentArgs;
+import com.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs;
+import com.pulumi.kubernetes.apps.v1.inputs.DeploymentSpecArgs;
+import com.pulumi.kubernetes.meta.v1.inputs.LabelSelectorArgs;
+import com.pulumi.kubernetes.core.v1.inputs.PodTemplateSpecArgs;
+import com.pulumi.kubernetes.core.v1.inputs.ServicePortArgs;
+import com.pulumi.kubernetes.core.v1.inputs.ContainerArgs;
+import com.pulumi.kubernetes.core.v1.inputs.ContainerPortArgs;
+import com.pulumi.kubernetes.core.v1.inputs.PodSpecArgs;
+import com.pulumi.kubernetes.core.v1.Service;
+import com.pulumi.kubernetes.core.v1.ServiceArgs;
+import com.pulumi.kubernetes.core.v1.inputs.ServiceSpecArgs;
+import com.pulumi.resources.CustomResourceOptions;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
     }
 
-    [Output]
-    public Output<string> Url { get; set; }
-    [Output]
-    public Output<object> Kubeconfig { get; set; }
+    public static void stack(Context ctx) {
+        // Create an EKS cluster with the default configuration.
+        var cluster = new Cluster("cluster");
+
+        var eksProvider = new Provider("eksProvider", ProviderArgs.builder()        
+            .kubeconfig(cluster.kubeconfigJson())
+            .build());
+
+        // Deploy a small canary service (NGINX), to test that the cluster is working.
+        var myDeployment = new Deployment("myDeployment", DeploymentArgs.builder()        
+            .metadata(ObjectMetaArgs.builder()
+                .labels(Map.of("appClass", "my-deployment"))
+                .build())
+            .spec(DeploymentSpecArgs.builder()
+                .replicas(2)
+                .selector(LabelSelectorArgs.builder()
+                    .matchLabels(Map.of("appClass", "my-deployment"))
+                    .build())
+                .template(PodTemplateSpecArgs.builder()
+                    .metadata(ObjectMetaArgs.builder()
+                        .labels(Map.of("appClass", "my-deployment"))
+                        .build())
+                    .spec(PodSpecArgs.builder()
+                        .containers(ContainerArgs.builder()
+                            .name("my-deployment")
+                            .image("nginx")
+                            .ports(ContainerPortArgs.builder()
+                                .name("http")
+                                .containerPort(80)
+                                .build())
+                            .build())
+                        .build())
+                    .build())
+                .build())
+            .build(), CustomResourceOptions.builder()
+                .provider(eksProvider)
+                .build());
+
+        var myService = new Service("myService", ServiceArgs.builder()        
+            .metadata(ObjectMetaArgs.builder()
+                .labels(Map.of("appClass", "my-deployment"))
+                .build())
+            .spec(ServiceSpecArgs.builder()
+                .type("LoadBalancer")
+                .ports(ServicePortArgs.builder()
+                    .port(80)
+                    .targetPort("http")
+                    .build())
+                .selector(Map.of("appClass", "my-deployment"))
+                .build())
+            .build(), CustomResourceOptions.builder()
+                .provider(eksProvider)
+                .build());
+
+        // Export the cluster's kubeconfig.
+        ctx.export("kubeconfig", cluster.kubeconfig());
+        // Export the URL for the load balanced service.
+        ctx.export("url", myService.status()
+            .applyValue(status -> status.orElseThrow().loadBalancer().orElseThrow())
+            .applyValue(status -> status.ingress().get(0).hostname().orElseThrow()));
+    }
 }
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  # Create an EKS cluster with the default configuration.
+  cluster:
+    type: eks:Cluster
+  eks-provider:
+    type: pulumi:providers:kubernetes
+    properties:
+      kubeconfig: ${cluster.kubeconfigJson}
+  # Deploy a small canary service (NGINX), to test that the cluster is working.
+  my-deployment:
+    type: kubernetes:apps/v1:Deployment
+    properties:
+      metadata:
+        labels:
+          appClass: my-deployment
+      spec:
+        replicas: 2
+        selector:
+          matchLabels:
+            appClass: my-deployment
+        template:
+          metadata:
+            labels:
+              appClass: my-deployment
+          spec:
+            containers:
+              - name: my-deployment
+                image: nginx
+                ports:
+                  - name: http
+                    containerPort: 80
+    options:
+      provider: ${eks-provider}
+  my-service:
+    type: kubernetes:core/v1:Service
+    properties:
+      metadata:
+        labels:
+          appClass: my-deployment
+      spec:
+        type: LoadBalancer
+        ports:
+          - port: 80
+            targetPort: http
+        selector:
+          appClass: my-deployment
+    options:
+      provider: ${eks-provider}
+outputs:
+  # Export the cluster's kubeconfig.
+  kubeconfig: ${cluster.kubeconfig}
+  # Export the URL for the load balanced service.
+  url: ${my-service.status.loadBalancer.ingress[0].hostname}
 ```
 
 {{% /choosable %}}
@@ -583,39 +809,16 @@ The above example showed using the default settings for your EKS cluster. It is 
 arguments to the constructor. For instance, this example changes the desired capacity and enables certain cluster
 logging types:
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-const eks = require("@pulumi/eks");
-
-// Create an EKS cluster with the default configuration.
-const cluster = new eks.Cluster("my-cluster", {
-    desiredCapacity: 5,
-    minSize: 3,
-    maxSize: 5,
-    enabledClusterLogTypes: [
-        "api",
-        "audit",
-        "authenticator",
-    ],
-});
-
-// Export the cluster's kubeconfig.
-module.exports = {
-    kubeconfig: cluster.kubeconfig,
-};
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
+import * as pulumi from "@pulumi/pulumi";
 import * as eks from "@pulumi/eks";
 
-// Create an EKS cluster with the default configuration.
-const cluster = new eks.Cluster("my-cluster", {
+// Create an EKS cluster with a modified configuration.
+const cluster = new eks.Cluster("cluster", {
     desiredCapacity: 5,
     minSize: 3,
     maxSize: 5,
@@ -637,22 +840,19 @@ export const kubeconfig = cluster.kubeconfig;
 import pulumi
 import pulumi_eks as eks
 
-# Create an EKS cluster with the default configuration.
-cluster = eks.Cluster('my-cluster',
-    eks.ClusterArgs(
-        desired_capacity = 5,
-        min_size = 3,
-        max_size = 5,
-        enabled_cluster_log_types = [
-            'api',
-            'audit',
-            'authenticator'
-        ]
-    )
-)
+# Create an EKS cluster with a modified configuration.
+cluster = eks.Cluster("cluster",
+    desired_capacity=5,
+    min_size=3,
+    max_size=5,
+    enabled_cluster_log_types=[
+        "api",
+        "audit",
+        "authenticator",
+    ])
 
 # Export the cluster's kubeconfig.
-pulumi.export('kubeconfig', cluster.kubeconfig)
+pulumi.export("kubeconfig", cluster.kubeconfig)
 ```
 
 {{% /choosable %}}
@@ -668,8 +868,8 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		// Create an EKS cluster with the default configuration.
-		cluster, err := eks.NewCluster(ctx, "my-cluster", &eks.ClusterArgs{
+		// Create an EKS cluster with a modified configuration.
+		cluster, err := eks.NewCluster(ctx, "cluster", &eks.ClusterArgs{
 			DesiredCapacity: pulumi.Int(5),
 			MinSize:         pulumi.Int(3),
 			MaxSize:         pulumi.Int(5),
@@ -694,32 +894,95 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Collections.Generic;
 using Pulumi;
-using Pulumi.Eks;
+using Eks = Pulumi.Eks;
 
-class MyStack : Stack
+return await Deployment.RunAsync(() => 
 {
-    public MyStack()
+    // Create an EKS cluster with a modified configuration.
+    var cluster = new Eks.Cluster("cluster", new()
     {
-        // Create an EKS cluster with the default configuration.
-        var cluster = new Cluster("my-cluster", new ClusterArgs {
-            DesiredCapacity = 5,
-            MinSize = 3,
-            MaxSize = 5,
-            EnabledClusterLogTypes = {
-                "api",
-                "audit",
-                "authenticator",
-            },
-        });
+        DesiredCapacity = 5,
+        MinSize = 3,
+        MaxSize = 5,
+        EnabledClusterLogTypes = new[]
+        {
+            "api",
+            "audit",
+            "authenticator",
+        },
+    });
 
+    return new Dictionary<string, object?>
+    {
         // Export the cluster's kubeconfig.
-        this.Kubeconfig = cluster.Kubeconfig;
+        ["kubeconfig"] = cluster.Kubeconfig,
+    };
+});
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.eks.Cluster;
+import com.pulumi.eks.ClusterArgs;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
     }
 
-    [Output]
-    public Output<object> Kubeconfig { get; set; }
+    public static void stack(Context ctx) {
+        // Create an EKS cluster with a modified configuration.
+        var cluster = new Cluster("cluster", ClusterArgs.builder()        
+            .desiredCapacity(5)
+            .minSize(3)
+            .maxSize(5)
+            .enabledClusterLogTypes(            
+                "api",
+                "audit",
+                "authenticator")
+            .build());
+
+        // Export the cluster's kubeconfig.
+        ctx.export("kubeconfig", cluster.kubeconfig());
+    }
 }
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+name: eks-yaml
+description: A minimal Pulumi YAML program
+runtime: yaml
+resources:
+  # Create an EKS cluster with a modified configuration.
+  cluster:
+    type: eks:Cluster
+    properties:
+      desiredCapacity: 5
+      minSize: 3
+      maxSize: 5
+      enabledClusterLogTypes:
+      - api
+      - audit
+      - authenticator
+outputs:
+  # Export the cluster's kubeconfig.
+  kubeconfig: ${cluster.kubeconfig}
 ```
 
 {{% /choosable %}}
@@ -735,44 +998,21 @@ in conjunction with [Pulumi Crosswalk for AWS VPC](/docs/guides/crosswalk/aws/vp
 
 This example creates a new VPC with private subnets only and creates our EKS cluster inside of it:
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-const awsx = require("@pulumi/awsx");
-const eks = require("@pulumi/eks");
-
-// Create a VPC for our cluster.
-const vpc = new awsx.ec2.Vpc("my-vpc");
-
-// Create an EKS cluster inside of the VPC.
-const cluster = new eks.Cluster("my-cluster", {
-    vpcId: vpc.id,
-    publicSubnetIds: vpc.publicSubnetIds,
-    privateSubnetIds: vpc.privateSubnetIds,
-    nodeAssociatePublicIpAddress: false,
-});
-
-// Export the cluster's kubeconfig.
-module.exports = {
-    cluster.kubeconfig,
-};
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
+import * as pulumi from "@pulumi/pulumi";
 import * as awsx from "@pulumi/awsx";
 import * as eks from "@pulumi/eks";
 
 // Create a VPC for our cluster.
-const vpc = new awsx.ec2.Vpc("my-vpc");
+const vpc = new awsx.ec2.Vpc("vpc", {});
 
 // Create an EKS cluster inside of the VPC.
-const cluster = new eks.Cluster("my-cluster", {
-    vpcId: vpc.id,
+const cluster = new eks.Cluster("cluster", {
+    vpcId: vpc.vpcId,
     publicSubnetIds: vpc.publicSubnetIds,
     privateSubnetIds: vpc.privateSubnetIds,
     nodeAssociatePublicIpAddress: false,
@@ -787,23 +1027,21 @@ export const kubeconfig = cluster.kubeconfig;
 
 ```python
 import pulumi
+import pulumi_awsx as awsx
 import pulumi_eks as eks
 
-# Create or lookup a VPC for our cluster.
-vpc = ...
+# Create a VPC for our cluster.
+vpc = awsx.ec2.Vpc("vpc")
 
-# Create an EKS cluster inside of our VPC.
-cluster = eks.Cluster('my-cluster',
-    eks.ClusterArgs(
-        vpc_id = vpc.id,
-        public_subnet_ids = vpc.public_subnet_ids,
-        private_subnet_ids = vpc.private_subnet_ids,
-        node_associate_public_ip_address = False,
-    )
-)
+# Create an EKS cluster inside of the VPC.
+cluster = eks.Cluster("cluster",
+    vpc_id=vpc.vpc_id,
+    public_subnet_ids=vpc.public_subnet_ids,
+    private_subnet_ids=vpc.private_subnet_ids,
+    node_associate_public_ip_address=False)
 
 # Export the cluster's kubeconfig.
-pulumi.export('kubeconfig', cluster.kubeconfig)
+pulumi.export("kubeconfig", cluster.kubeconfig)
 ```
 
 {{% /choosable %}}
@@ -813,21 +1051,25 @@ pulumi.export('kubeconfig', cluster.kubeconfig)
 package main
 
 import (
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
 	"github.com/pulumi/pulumi-eks/sdk/go/eks"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		// Create or lookup a VPC for our cluster.
-		vpc := ...
+		// Create a VPC for our cluster.
+		vpc, err := ec2.NewVpc(ctx, "vpc", nil)
+		if err != nil {
+			return err
+		}
 
-		// Create an EKS cluster with the default configuration.
-		cluster, err := eks.NewCluster(ctx, "my-cluster", &eks.ClusterArgs{
-			VpcId:                        vpc.ID,
+		// Create an EKS cluster inside of the VPC.
+		cluster, err := eks.NewCluster(ctx, "cluster", &eks.ClusterArgs{
+			VpcId:                        vpc.VpcId,
 			PublicSubnetIds:              vpc.PublicSubnetIds,
 			PrivateSubnetIds:             vpc.PrivateSubnetIds,
-			NodeAssociatePublicIpAddress: pulumi.Bool(false),
+			NodeAssociatePublicIpAddress: pulumi.BoolRef(false),
 		})
 		if err != nil {
 			return err
@@ -844,31 +1086,93 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Collections.Generic;
 using Pulumi;
-using Pulumi.Eks;
+using Awsx = Pulumi.Awsx;
+using Eks = Pulumi.Eks;
 
-class MyStack : Stack
+return await Deployment.RunAsync(() => 
 {
-    public MyStack()
+    // Create a VPC for our cluster.
+    var vpc = new Awsx.Ec2.Vpc("vpc");
+
+    // Create an EKS cluster inside of the VPC.
+    var cluster = new Eks.Cluster("cluster", new()
     {
-        // Create or lookup a VPC for our cluster.
-        var vpc = ...;
+        VpcId = vpc.VpcId,
+        PublicSubnetIds = vpc.PublicSubnetIds,
+        PrivateSubnetIds = vpc.PrivateSubnetIds,
+        NodeAssociatePublicIpAddress = false,
+    });
 
-        // Create an EKS cluster with the default configuration.
-        var cluster = new Cluster("my-cluster", new ClusterArgs {
-            VpcId = vpc.Id,
-            PublicSubnetIds = vpc.PublicSubnetIds,
-            PrivateSubnetIds = vpc.PrivateSubnetIds,
-            NodeAssociatePublicIpAddress = false,
-        });
+    // Export the cluster's kubeconfig.
+    return new Dictionary<string, object?>
+    {
+        ["kubeconfig"] = cluster.Kubeconfig,
+    };
+});
+```
 
-        // Export the cluster's kubeconfig.
-        this.Kubeconfig = cluster.Kubeconfig;
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.awsx.ec2.Vpc;
+import com.pulumi.eks.Cluster;
+import com.pulumi.eks.ClusterArgs;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
     }
 
-    [Output]
-    public Output<object> Kubeconfig { get; set; }
+    public static void stack(Context ctx) {
+        // Create a VPC for our cluster.
+        var vpc = new Vpc("vpc");
+
+        // Create an EKS cluster inside of the VPC.
+        var cluster = new Cluster("cluster", ClusterArgs.builder()        
+            .vpcId(vpc.vpcId())
+            .publicSubnetIds(vpc.publicSubnetIds())
+            .privateSubnetIds(vpc.privateSubnetIds())
+            .nodeAssociatePublicIpAddress(false)
+            .build());
+
+        // Export the cluster's kubeconfig.
+        ctx.export("kubeconfig", cluster.kubeconfig());
+    }
 }
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  # Create a VPC for our cluster.
+  vpc:
+    type: awsx:ec2:Vpc
+  # Create an EKS cluster within the VPC.
+  cluster:
+    type: eks:Cluster
+    properties:
+      vpcId: ${vpc.vpcId}
+      publicSubnetIds: ${vpc.publicSubnetIds}
+      privateSubnetIds: ${vpc.privateSubnetIds}
+      nodeAssociatePublicIpAddress: false
+outputs:
+  # Export the cluster's kubeconfig.
+  kubeconfig: ${cluster.kubeconfig}
+
 ```
 
 {{% /choosable %}}
@@ -901,107 +1205,18 @@ instances otherwise). The latest version of Kubernetes available is used by defa
 
 If you would like to disable the creation of a default node group, and instead rely on creating your own, pass
 [`skipDefaultNodeGroup`](/docs/reference/pkg/nodejs/pulumi/eks#ClusterOptions-skipDefaultNodeGroup)
-as `true` to the `eks.Cluster` constructor. Additional node groups may then be created by calling
-[the `createNodeGroup` function](/docs/reference/pkg/nodejs/pulumi/eks#Cluster-createNodeGroup) on
-your EKS cluster, or by [creating an `eks.NodeGroup`](/docs/reference/pkg/nodejs/pulumi/eks#NodeGroup)
-explicitly. In both cases, you are likely to want to configure IAM roles for your worker nodes explicitly, which can be
-supplied to your EKS cluster using the
-[`instanceRole`](/docs/reference/pkg/nodejs/pulumi/eks#ClusterOptions-instanceRole) or
+as `true` to the `eks.Cluster` constructor. Additional node groups may then be created by
+[creating an `eks.NodeGroupV2`](/docs/reference/pkg/nodejs/pulumi/eks#NodeGroupV2) explicitly. In both cases, you
+are likely to want to configure IAM roles for your worker nodes explicitly, which can besupplied to your EKS cluster
+using the [`instanceRole`](/docs/reference/pkg/nodejs/pulumi/eks#ClusterOptions-instanceRole) or
 [`instanceRoles`](/docs/reference/pkg/nodejs/pulumi/eks#ClusterOptions-instanceRoles) properties.
 
 For instance, let's say we want to have two node groups: one for our fixed, known workloads, and another that is
 burstable and might use more expensive compute, but which can be scaled down when possible (possibly to zero).
 We would skip the default node group, and create our own node groups:
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-const aws = require("@pulumi/aws");
-const eks = require("@pulumi/eks");
-
-/**
- * Per NodeGroup IAM: each NodeGroup will bring its own, specific instance role and profile.
- */
-
-const managedPolicyArns: string[] = [
-    "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
-    "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
-    "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
-];
-
-// Creates a role and attaches the EKS worker node IAM managed policies. Used a few times below,
-// to create multiple roles, so we use a function to avoid repeating ourselves.
-export function createRole(name: string): aws.iam.Role {
-    const role = new aws.iam.Role(name, {
-        assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({
-            Service: "ec2.amazonaws.com",
-        }),
-    });
-
-    let counter = 0;
-    for (const policy of managedPolicyArns) {
-        // Create RolePolicyAttachment without returning it.
-        const rpa = new aws.iam.RolePolicyAttachment(`${name}-policy-${counter++}`,
-            { policyArn: policy, role: role },
-        );
-    }
-
-    return role;
-}
-
-// Now create the roles and instance profiles for the two worker groups.
-const role1 = createRole("my-worker-role1");
-const role2 = createRole("my-worker-role2");
-const instanceProfile1 = new aws.iam.InstanceProfile("my-instance-profile1", {role: role1});
-const instanceProfile2 = new aws.iam.InstanceProfile("my-instance-profile2", {role: role2});
-
-// Create an EKS cluster with many IAM roles to register with the cluster auth.
-const cluster = new eks.Cluster("my-cluster", {
-    skipDefaultNodeGroup: true,
-    instanceRoles: [ role1, role2 ],
-});
-
-// Now create multiple node groups, each using a different instance profile for each role.
-
-// First, create a node group for fixed compute.
-const fixedNodeGroup = cluster.createNodeGroup("my-cluster-ng1", {
-    instanceType: "t2.medium",
-    desiredCapacity: 2,
-    minSize: 1,
-    maxSize: 3,
-    labels: {"ondemand": "true"},
-    instanceProfile: instanceProfile1,
-});
-
-// Now create a preemptible node group, using spot pricing, for our variable, ephemeral workloads.
-const spotNodeGroup = new eks.NodeGroup("my-cluster-ng2", {
-    cluster: cluster,
-    instanceType: "t2.medium",
-    desiredCapacity: 1,
-    spotPrice: "1",
-    minSize: 1,
-    maxSize: 2,
-    labels: {"preemptible": "true"},
-    taints: {
-        "special": {
-            value: "true",
-            effect: "NoSchedule",
-        },
-    },
-    instanceProfile: instanceProfile2,
-}, {
-    providers: { kubernetes: cluster.provider},
-});
-
-// Export the cluster's kubeconfig.
-module.exports = {
-    kubeconfig: cluster.kubeconfig,
-};
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -1515,85 +1730,68 @@ state and what is desired, and then drive the API server to bring your desired s
 
 For example, this program creates a simple load balanced NGINX service, exporting its URL:
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-const k8s = require("@pulumi/kubernetes");
-
-// Create an NGINX Deployment and load balanced Service.
-const appName = "my-app";
-const appLabels = { appClass: appName };
-const deployment = new k8s.apps.v1.Deployment(`${appName}-dep`, {
-    metadata: { labels: appLabels },
-    spec: {
-        replicas: 2,
-        selector: { matchLabels: appLabels },
-        template: {
-            metadata: { labels: appLabels },
-            spec: {
-                containers: [{
-                    name: appName,
-                    image: "nginx",
-                    ports: [{ name: "http", containerPort: 80 }]
-                }],
-            }
-        }
-    },
-});
-const service = new k8s.core.v1.Service(`${appName}-svc`, {
-    metadata: { labels: appLabels },
-    spec: {
-        type: "LoadBalancer",
-        ports: [{ port: 80, targetPort: "http" }],
-        selector: appLabels,
-    },
-});
-
-// Export the URL for the load balanced service.
-module.exports = {
-    url: service.status.loadBalancer.ingress[0].hostname,
-};
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
-import * as k8s from "@pulumi/kubernetes";
+import * as pulumi from "@pulumi/pulumi";
+import * as kubernetes from "@pulumi/kubernetes";
 
 // Create an NGINX Deployment and load balanced Service.
-const appName = "my-app";
-const appLabels = { appClass: appName };
-const deployment = new k8s.apps.v1.Deployment(`${appName}-dep`, {
-    metadata: { labels: appLabels },
+const myDeployment = new kubernetes.apps.v1.Deployment("my-deployment", {
+    metadata: {
+        labels: {
+            appClass: "my-deployment",
+        },
+    },
     spec: {
         replicas: 2,
-        selector: { matchLabels: appLabels },
+        selector: {
+            matchLabels: {
+                appClass: "my-deployment",
+            },
+        },
         template: {
-            metadata: { labels: appLabels },
+            metadata: {
+                labels: {
+                    appClass: "my-deployment",
+                },
+            },
             spec: {
                 containers: [{
-                    name: appName,
+                    name: "my-deployment",
                     image: "nginx",
-                    ports: [{ name: "http", containerPort: 80 }]
+                    ports: [{
+                        name: "http",
+                        containerPort: 80,
+                    }],
                 }],
-            }
-        }
+            },
+        },
     },
 });
-const service = new k8s.core.v1.Service(`${appName}-svc`, {
-    metadata: { labels: appLabels },
+const myService = new kubernetes.core.v1.Service("my-service", {
+    metadata: {
+        labels: {
+            appClass: "my-deployment",
+        },
+    },
     spec: {
         type: "LoadBalancer",
-        ports: [{ port: 80, targetPort: "http" }],
-        selector: appLabels,
+        ports: [{
+            port: 80,
+            targetPort: "http",
+        }],
+        selector: {
+            appClass: "my-deployment",
+        },
     },
 });
 
 // Export the URL for the load balanced service.
-export const url = service.status.loadBalancer.ingress[0].hostname;
+export const url = myService.status.apply(status => status?.loadBalancer?.ingress[0]?.hostname);
+
 ```
 
 {{% /choosable %}}
@@ -1601,33 +1799,59 @@ export const url = service.status.loadBalancer.ingress[0].hostname;
 
 ```python
 import pulumi
-import pulumi_kubernetes as k8s
+import pulumi_kubernetes as kubernetes
 
 # Create an NGINX Deployment and load balanced Service.
-app_name = 'my-app'
-app_labels = { 'app': app_name }
-deployment = k8s.apps.v1.Deployment(f'{app_name}-dep',
-    spec = k8s.apps.v1.DeploymentSpecArgs(
-        selector = k8s.meta.v1.LabelSelectorArgs(match_labels = app_labels),
-        replicas = 2,
-        template = k8s.core.v1.PodTemplateSpecArgs(
-            metadata = k8s.meta.v1.ObjectMetaArgs(labels = app_labels),
-            spec = k8s.core.v1.PodSpecArgs(containers = [
-                k8s.core.v1.ContainerArgs(name = 'nginx', image = 'nginx')
-            ]),
+my_deployment = kubernetes.apps.v1.Deployment("my-deployment",
+    metadata=kubernetes.meta.v1.ObjectMetaArgs(
+        labels={
+            "appClass": "my-deployment",
+        },
+    ),
+    spec=kubernetes.apps.v1.DeploymentSpecArgs(
+        replicas=2,
+        selector=kubernetes.meta.v1.LabelSelectorArgs(
+            match_labels={
+                "appClass": "my-deployment",
+            },
         ),
-    )
-)
-service = k8s.core.v1.Service(f'{app_name}-svc',
-    spec = k8s.core.v1.ServiceSpecArgs(
-        type = 'LoadBalancer',
-        selector = app_labels,
-        ports = [ k8s.core.v1.ServicePortArgs(port = 80) ],
-    )
-)
+        template=kubernetes.core.v1.PodTemplateSpecArgs(
+            metadata=kubernetes.meta.v1.ObjectMetaArgs(
+                labels={
+                    "appClass": "my-deployment",
+                },
+            ),
+            spec=kubernetes.core.v1.PodSpecArgs(
+                containers=[kubernetes.core.v1.ContainerArgs(
+                    name="my-deployment",
+                    image="nginx",
+                    ports=[kubernetes.core.v1.ContainerPortArgs(
+                        name="http",
+                        container_port=80,
+                    )],
+                )],
+            ),
+        ),
+    ))
+my_service = kubernetes.core.v1.Service("my-service",
+    metadata=kubernetes.meta.v1.ObjectMetaArgs(
+        labels={
+            "appClass": "my-deployment",
+        },
+    ),
+    spec=kubernetes.core.v1.ServiceSpecArgs(
+        type="LoadBalancer",
+        ports=[kubernetes.core.v1.ServicePortArgs(
+            port=80,
+            target_port="http",
+        )],
+        selector={
+            "appClass": "my-deployment",
+        },
+    ))
 
 # Export the URL for the load balanced service.
-pulumi.export('url', service.status.load_balancer.ingress[0].hostname)
+pulumi.export("url", my_service.status.load_balancer.ingress[0].hostname)
 ```
 
 {{% /choosable %}}
@@ -1637,9 +1861,6 @@ pulumi.export('url', service.status.load_balancer.ingress[0].hostname)
 package main
 
 import (
-	"fmt"
-
-	k8s "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes"
 	appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/apps/v1"
 	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
 	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/meta/v1"
@@ -1648,54 +1869,73 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-        // Create an NGINX Deployment and load balanced Service.
-		appName := "my-app"
-		appLabels := pulumi.StringMap{"app": pulumi.String(appName)}
-		_, err = appsv1.NewDeployment(ctx,
-			fmt.Sprintf("%s-dep", appName),
-			&appsv1.DeploymentArgs{
-				Spec: &appsv1.DeploymentSpecArgs{
-					Selector: &metav1.LabelSelectorArgs{MatchLabels: appLabels},
-					Replicas: pulumi.Int(2),
-					Template: &corev1.PodTemplateSpecArgs{
-						Metadata: &metav1.ObjectMetaArgs{Labels: appLabels},
-						Spec: &corev1.PodSpecArgs{
-							Containers: corev1.ContainerArray{
-								&corev1.ContainerArgs{
-									Name:  pulumi.String("nginx"),
-									Image: pulumi.String("nginx"),
+		// Create an NGINX Deployment and load balanced Service.
+		_, err := appsv1.NewDeployment(ctx, "my-deployment", &appsv1.DeploymentArgs{
+			Metadata: &metav1.ObjectMetaArgs{
+				Labels: pulumi.StringMap{
+					"appClass": pulumi.String("my-deployment"),
+				},
+			},
+			Spec: &appsv1.DeploymentSpecArgs{
+				Replicas: pulumi.Int(2),
+				Selector: &metav1.LabelSelectorArgs{
+					MatchLabels: pulumi.StringMap{
+						"appClass": pulumi.String("my-deployment"),
+					},
+				},
+				Template: &corev1.PodTemplateSpecArgs{
+					Metadata: &metav1.ObjectMetaArgs{
+						Labels: pulumi.StringMap{
+							"appClass": pulumi.String("my-deployment"),
+						},
+					},
+					Spec: &corev1.PodSpecArgs{
+						Containers: corev1.ContainerArray{
+							&corev1.ContainerArgs{
+								Name:  pulumi.String("my-deployment"),
+								Image: pulumi.String("nginx"),
+								Ports: corev1.ContainerPortArray{
+									&corev1.ContainerPortArgs{
+										Name:          pulumi.String("http"),
+										ContainerPort: pulumi.Int(80),
+									},
 								},
 							},
 						},
 					},
 				},
 			},
-		)
-		if err != nil {
-			return nil
-		}
-		service, err := corev1.NewService(ctx,
-			fmt.Sprintf("%s-svc", appName),
-			&corev1.ServiceArgs{
-				Spec: &corev1.ServiceSpecArgs{
-					Type:     pulumi.String("LoadBalancer"),
-					Selector: appLabels,
-					Ports: corev1.ServicePortArray{
-						&corev1.ServicePortArgs{
-							Port: pulumi.Int(80),
-						},
-					},
-				},
-			},
-		)
+		})
 		if err != nil {
 			return err
 		}
-
+		myService, err := corev1.NewService(ctx, "my-service", &corev1.ServiceArgs{
+			Metadata: &metav1.ObjectMetaArgs{
+				Labels: pulumi.StringMap{
+					"appClass": pulumi.String("my-deployment"),
+				},
+			},
+			Spec: &corev1.ServiceSpecArgs{
+				Type: pulumi.String("LoadBalancer"),
+				Ports: corev1.ServicePortArray{
+					&corev1.ServicePortArgs{
+						Port:       pulumi.Int(80),
+						TargetPort: pulumi.Any("http"),
+					},
+				},
+				Selector: pulumi.StringMap{
+					"appClass": pulumi.String("my-deployment"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
 		// Export the URL for the load balanced service.
-		ctx.Export("url", service.Status.ApplyT(func(status interface{}) string {
-			return *status.(*corev1.ServiceStatus).LoadBalancer.Ingress[0].Hostname
-		}))
+		ctx.Export("url", myService.Status.ApplyT(func(status interface{}) (string, error) {
+			return *status.(*corev1.ServiceStatus).LoadBalancer.Ingress[0].Hostname, nil
+		}).(pulumi.StringOutput))
+		return nil
 	})
 }
 ```
@@ -1704,64 +1944,231 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
-using K8sApps = Pulumi.Kubernetes.Apps.V1;
-using K8sAppsArgs = Pulumi.Kubernetes.Types.Inputs.Apps.V1;
-using K8sCore = Pulumi.Kubernetes.Core.V1;
-using K8sCoreArgs = Pulumi.Kubernetes.Types.Inputs.Core.V1;
-using K8sMetaArgs = Pulumi.Kubernetes.Types.Inputs.Meta.V1;
-using Pulumi;
-using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
+using Pulumi;
+using Kubernetes = Pulumi.Kubernetes;
 
-class MyStack : Stack
+return await Deployment.RunAsync(() => 
 {
-    public MyStack()
+    // Create an NGINX Deployment and load balanced Service.
+    var myDeployment = new Kubernetes.Apps.V1.Deployment("my-deployment", new()
     {
-        // Create an NGINX Deployment and load balanced Service.
-        var appName = "my-app";
-        var appLabels = new Dictionary<string, string>{ { "app", appName } }.ToImmutableDictionary();
-        var deployment = new K8sApps.Deployment(
-            String.Format("{0}-dep", appName),
-            new K8sAppsArgs.DeploymentArgs {
-                Spec = new K8sAppsArgs.DeploymentSpecArgs {
-                    Selector = new K8sMetaArgs.LabelSelectorArgs { MatchLabels = appLabels },
-                    Replicas = 2,
-                    Template = new K8sCoreArgs.PodTemplateSpecArgs {
-                        Metadata = new K8sMetaArgs.ObjectMetaArgs { Labels = appLabels },
-                        Spec = new K8sCoreArgs.PodSpecArgs {
-                            Containers = {
-                                new K8sCoreArgs.ContainerArgs {
-                                    Name = appName,
-                                    Image = "nginx",
+        Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+        {
+            Labels = 
+            {
+                { "appClass", "my-deployment" },
+            },
+        },
+        Spec = new Kubernetes.Types.Inputs.Apps.V1.DeploymentSpecArgs
+        {
+            Replicas = 2,
+            Selector = new Kubernetes.Types.Inputs.Meta.V1.LabelSelectorArgs
+            {
+                MatchLabels = 
+                {
+                    { "appClass", "my-deployment" },
+                },
+            },
+            Template = new Kubernetes.Types.Inputs.Core.V1.PodTemplateSpecArgs
+            {
+                Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+                {
+                    Labels = 
+                    {
+                        { "appClass", "my-deployment" },
+                    },
+                },
+                Spec = new Kubernetes.Types.Inputs.Core.V1.PodSpecArgs
+                {
+                    Containers = new[]
+                    {
+                        new Kubernetes.Types.Inputs.Core.V1.ContainerArgs
+                        {
+                            Name = "my-deployment",
+                            Image = "nginx",
+                            Ports = new[]
+                            {
+                                new Kubernetes.Types.Inputs.Core.V1.ContainerPortArgs
+                                {
+                                    Name = "http",
+                                    ContainerPortValue = 80,
                                 },
                             },
                         },
                     },
                 },
-            }
-        );
-        var service = new K8sCore.Service(
-            String.Format("{0}-svc", appName),
-            new K8sCoreArgs.ServiceArgs {
-                Spec = new K8sCoreArgs.ServiceSpecArgs {
-                    Type = "LoadBalancer",
-                    Selector = appLabels,
-                    Ports = {
-                        new K8sCoreArgs.ServicePortArgs { Port = 80 },
-                    },
-                },
-            }
-        );
+            },
+        },
+    });
 
-		// Export the URL for the load balanced service.
-        this.Url = service.Status.Apply((status) =>
-            status.LoadBalancer.Ingress[0].Hostname);
+    var myService = new Kubernetes.Core.V1.Service("my-service", new()
+    {
+        Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+        {
+            Labels = 
+            {
+                { "appClass", "my-deployment" },
+            },
+        },
+        Spec = new Kubernetes.Types.Inputs.Core.V1.ServiceSpecArgs
+        {
+            Type = "LoadBalancer",
+            Ports = new[]
+            {
+                new Kubernetes.Types.Inputs.Core.V1.ServicePortArgs
+                {
+                    Port = 80,
+                    TargetPort = "http",
+                },
+            },
+            Selector = 
+            {
+                { "appClass", "my-deployment" },
+            },
+        },
+    });
+
+    // Export the URL for the load balanced service.
+    return new Dictionary<string, object?>
+    {
+        ["url"] = myService.Status.Apply(status => status?.LoadBalancer?.Ingress[0]?.Hostname),
+    };
+});
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+package generated_program;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.kubernetes.apps.v1.Deployment;
+import com.pulumi.kubernetes.apps.v1.DeploymentArgs;
+import com.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs;
+import com.pulumi.kubernetes.apps.v1.inputs.DeploymentSpecArgs;
+import com.pulumi.kubernetes.meta.v1.inputs.LabelSelectorArgs;
+import com.pulumi.kubernetes.core.v1.inputs.PodTemplateSpecArgs;
+import com.pulumi.kubernetes.core.v1.inputs.ServicePortArgs;
+import com.pulumi.kubernetes.core.v1.inputs.ContainerArgs;
+import com.pulumi.kubernetes.core.v1.inputs.ContainerPortArgs;
+import com.pulumi.kubernetes.core.v1.inputs.PodSpecArgs;
+import com.pulumi.kubernetes.core.v1.Service;
+import com.pulumi.kubernetes.core.v1.ServiceArgs;
+import com.pulumi.kubernetes.core.v1.inputs.ServiceSpecArgs;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
     }
 
-    [Output]
-    public Output<string> Url { get; set; }
+    public static void stack(Context ctx) {
+        // Create an NGINX Deployment and load balanced Service.
+        var myDeployment = new Deployment("myDeployment", DeploymentArgs.builder()        
+            .metadata(ObjectMetaArgs.builder()
+                .labels(Map.of("appClass", "my-deployment"))
+                .build())
+            .spec(DeploymentSpecArgs.builder()
+                .replicas(2)
+                .selector(LabelSelectorArgs.builder()
+                    .matchLabels(Map.of("appClass", "my-deployment"))
+                    .build())
+                .template(PodTemplateSpecArgs.builder()
+                    .metadata(ObjectMetaArgs.builder()
+                        .labels(Map.of("appClass", "my-deployment"))
+                        .build())
+                    .spec(PodSpecArgs.builder()
+                        .containers(ContainerArgs.builder()
+                            .name("my-deployment")
+                            .image("nginx")
+                            .ports(ContainerPortArgs.builder()
+                                .name("http")
+                                .containerPort(80)
+                                .build())
+                            .build())
+                        .build())
+                    .build())
+                .build())
+            .build());
+
+        var myService = new Service("myService", ServiceArgs.builder()        
+            .metadata(ObjectMetaArgs.builder()
+                .labels(Map.of("appClass", "my-deployment"))
+                .build())
+            .spec(ServiceSpecArgs.builder()
+                .type("LoadBalancer")
+                .ports(ServicePortArgs.builder()
+                    .port(80)
+                    .targetPort("http")
+                    .build())
+                .selector(Map.of("appClass", "my-deployment"))
+                .build())
+            .build());
+
+        // Export the URL for the load balanced service.
+        ctx.export("url", myService.status()
+            .applyValue(status -> status.orElseThrow().loadBalancer().orElseThrow())
+            .applyValue(status -> status.ingress().get(0).hostname().orElseThrow()));
+    }
 }
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+name: eks-yaml
+description: A minimal Pulumi YAML program
+runtime: yaml
+resources:
+  # Deploy an NGINX deployment and load balanced service.
+  my-deployment:
+    type: kubernetes:apps/v1:Deployment
+    properties:
+      metadata:
+        labels:
+          appClass: my-deployment
+      spec:
+        replicas: 2
+        selector:
+          matchLabels:
+            appClass: my-deployment
+        template:
+          metadata:
+            labels:
+              appClass: my-deployment
+          spec:
+            containers:
+              - name: my-deployment
+                image: nginx
+                ports:
+                  - name: http
+                    containerPort: 80
+  my-service:
+    type: kubernetes:core/v1:Service
+    properties:
+      metadata:
+        labels:
+          appClass: my-deployment
+      spec:
+        type: LoadBalancer
+        ports:
+          - port: 80
+            targetPort: http
+        selector:
+          appClass: my-deployment
+outputs:
+  # Export the URL for the load balanced service.
+  url: ${my-service.status.loadBalancer.ingress[0].hostname}
 ```
 
 {{% /choosable %}}
