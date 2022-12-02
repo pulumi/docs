@@ -1,6 +1,6 @@
 {{ define "hero" }}
     <div class="container mx-auto">
-        <img src="/images/challenge/challenge_banner.png" alt="Pulumi Challenge banner image." />
+        <img src="{{ or .Params.banner_image "/images/challenge/challenge_banner.png" }}" alt="Pulumi Challenge banner image." />
     </div>
 {{ end }}
 
