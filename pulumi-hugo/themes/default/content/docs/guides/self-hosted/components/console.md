@@ -40,7 +40,7 @@ You can run this container on the same host that your API container is running o
 The container image repository is private. [Contact us](/contact/) if you would like to evaluate the Self-Hosted Pulumi Service.
 {{% /notes %}}
 
-The Console container runs a web server using a Node 10-based image.
+The Console container runs a web server using a Node 18-based image.
 
 ### Server
 
