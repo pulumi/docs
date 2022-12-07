@@ -7,7 +7,7 @@ require (
 	github.com/golang/glog v1.0.0
 	github.com/hashicorp/hcl/v2 v2.14.0
 	github.com/pkg/errors v0.9.1
-	github.com/pulumi/pulumi/pkg/v3 v3.47.1
-	github.com/pulumi/pulumi/sdk/v3 v3.47.1
+	github.com/pulumi/pulumi/pkg/v3 v3.48.1-0.20221207184326-0d336e5fa996
+	github.com/pulumi/pulumi/sdk/v3 v3.48.1-0.20221207184326-0d336e5fa996
 	github.com/spf13/cobra v1.5.0
 )
