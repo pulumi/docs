@@ -48,14 +48,14 @@ See the instructions in your new repository's `README.md` file for specific inst
 
 ## Write documentation
 
-To help others in the Pulumi community use your package, we recommend authoring some documentation. In your repository, there should be a `docs/` folder with a few template pages you can use that correspond to the various tabs on a package page in Pulumi Registry (like [this page for AWS Native](/registry/packages/aws-native/). Use the guidance in the following sections to author content in these pages.
+We recommend authoring documentation to help others in the Pulumi community use your package. In your repository, there should be a `docs/` folder with a few template pages you can use that correspond to the various tabs on a package page in Pulumi Registry (like the [AWS Native](/registry/packages/aws-native/) package). Use the guidance in the following sections to author content in these pages.
 
 ### Overview, installation, & configuration
 
 Specifically, you should author a few pages:
 
-1. `_index.md`, which will be shown on the Overview tab for your package. The Overview is a great place to include a description of what your package does, a simple example, and any other details that you want prospective users of your package to know in order to be successful.
-1. `installation-configuration.md`, which will be shown on the Installation & Configuration tab for your package. Use this page to describe any details of how to set up your package, including authenticating to a cloud provider, and to list the configuration options that can be used with your package.
+1. `_index.md`, which will be shown on the Overview tab for your package. The title of this page should match the package display name and is the heading shown on the package detail page. The Overview is a great place to include a description of what your package does, a simple example, and any other details that you want prospective users of your package to know to be successful.
+1. `installation-configuration.md`, which will be shown on your package's Installation & Configuration tab. Use this page to describe how to set up your package, including authenticating to a cloud provider, and to list the configuration options that can be used with your package. The title of this page should be in the form `<Package display name> Installation & Configuration`.
 
 {{% notes type="info" %}}
 A future improvement to Pulumi Packages will enable Pulumi Registry to create the contents for the Overview tab of your package directly from a `README.md` in the root of your package's repository. Until then, we recommend keeping the contents of `README.md` and `_index.md` similar or the same, save for the YAML metadata/front-matter that's in `_index.md`.
@@ -65,9 +65,9 @@ A future improvement to Pulumi Packages will enable Pulumi Registry to create th
 
 Metadata for your package is generated from the [`schema.json`](/docs/guides/pulumi-packages/schema) in your repository. To make sure your package looks great in Pulumi Registry, ensure you add metadata like:
 
-- `displayName`: the friendly name for your package that's displayed throughout Registry
-- `description`: a short description of your package
-- `logoUrl`: a web-accessible URL to a logo for your package (ideally an SVG); we recommend using the githubrawcontent.com URL for a logo stored in your package's repository
+- `displayName`: the friendly name for your package displayed on the Registry's browse page; this name should match the title of the `_index.md` file.
+- `description`: a short description of your package; it should include the package name
+- `logoUrl`: a web-accessible URL to a logo for your package (ideally an SVG); we recommend using the githubrawcontent.com URL for a logo stored in your package's repository; all surrounding whitespace should be removed from the logo, and wordmarks are preferred
 - `publisher`: your personal/company name, as you'd like it to be shown on Registry
 - `keywords`:
   - `category/CATEGORY`: replace `CATEGORY` with one of `cloud`, `database`, `infrastructure`, `monitoring`, `network`, `utility`, `versioncontrol`
