@@ -12,7 +12,7 @@ jobs:
           MERGE_LABELS: automation/merge
           MERGE_METHOD: squash
           MERGE_REMOVE_LABELS: automation/merge
-          MERGE_RETRIES: "30"
+          MERGE_RETRIES: "50"
           MERGE_RETRY_SLEEP: "60000"
           UPDATE_LABELS: automation/update
           UPDATE_METHOD: rebase
