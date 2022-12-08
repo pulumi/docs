@@ -145,3 +145,5 @@ For example, a property named `NestedResource` would turn into `nestedResource`.
 - `root["key with a ."]`
 - `["root key with \"escaped\" quotes"].nested`
 - `["root key with a ."][100]`
+- `root.array[*].field`
+- `root.array["*"].field`
