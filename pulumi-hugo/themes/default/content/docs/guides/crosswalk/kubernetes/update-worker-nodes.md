@@ -1,5 +1,6 @@
 ---
-title: Update the Worker Nodes
+title_tag: Updating Kubernetes Worker Nodes | Crosswalk
+title: Updating Kubernetes Worker Nodes
 meta_desc: This page provides a guide on how to update Kubernetes Worker Nodes
            with Pulumi.
 menu:
@@ -44,8 +45,9 @@ The full code for this stack is on [GitHub](https://github.com/pulumi/kubernetes
 
 We'll examine how to:
 
-* [Update an Existing Node Group](#update-an-existing-node-group)
-* [Migrate to a New Node Group](#migrate-to-a-new-node-group)
+- [Overview](#overview)
+  - [Update an Existing Node Group](#update-an-existing-node-group)
+  - [Migrate to a New Node Group](#migrate-to-a-new-node-group)
 
 ### Update an Existing Node Group
 

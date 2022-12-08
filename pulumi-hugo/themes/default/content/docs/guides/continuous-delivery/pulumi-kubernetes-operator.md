@@ -1,5 +1,7 @@
 ---
-title: Pulumi Kubernetes Operator
+title_tag: Using Pulumi Kubernetes Operator | CI/CD
+title: Using Pulumi Kubernetes Operator
+linktitle: Pulumi Kubernetes Operator
 meta_desc: This page details how to use the Pulumi Kubernetes Operator to manage deploying
            stacks based on commits in git, Kubernetes objects, or Flux sources.
 menu:
@@ -30,6 +32,9 @@ To work with the operator, we'll need to follow these steps.
 - [Overview](#overview)
 - [Deploy the Pulumi Kubernetes Operator](#deploy-the-pulumi-kubernetes-operator)
 - [Create a Stack CustomResource](#create-a-stack-customresource)
+  - [Using a git repository](#using-a-git-repository)
+  - [Using a Flux source](#using-a-flux-source)
+  - [Using a Program object](#using-a-program-object)
   - [Stack Settings](#stack-settings)
   - [Extended Examples](#extended-examples)
 - [Concurrent Updates on the Same Stack](#concurrent-updates-on-the-same-stack)

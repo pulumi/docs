@@ -1,5 +1,7 @@
 ---
-title: Travis CI
+title_tag: Using Travis CI | CI/CD
+title: Using Travis CI
+linktitle: Travis CI
 meta_desc: This page details how to use Travis CI to manage deploying
            staging and production stacks based on commits to specific Git branches.
 menu:

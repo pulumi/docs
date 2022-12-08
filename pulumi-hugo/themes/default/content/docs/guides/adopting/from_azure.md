@@ -1,5 +1,5 @@
 ---
-title: "From Azure Resource Manager (ARM)"
+title: "Migrating from Azure Resource Manager"
 meta_desc: Migrate your existing Azure Resource Manager (ARM) templates and/or coexist with existing deployments.
 menu:
   userguides:

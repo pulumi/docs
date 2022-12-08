@@ -1,4 +1,5 @@
 ---
+title_tag: Pulumi API | Self-Hosting Pulumi
 title: Pulumi API
 menu:
     userguides:

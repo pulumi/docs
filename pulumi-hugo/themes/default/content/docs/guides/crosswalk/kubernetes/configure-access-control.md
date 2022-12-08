@@ -1,5 +1,6 @@
 ---
-title: Configure Kubernetes Access Control
+title_tag: Configuring Kubernetes Access Control | Crosswalk
+title: Configuring Kubernetes Access Control
 meta_desc: This page will walk you through how to configure Kubernetes
            access control on AWS, Azure, and GCP.
 menu:
@@ -66,7 +67,8 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 We'll examine how to:
 
-* [Configure RBAC Authorization](#configure-rbac-authorization)
+- [Overview](#overview)
+- [Configure RBAC Authorization](#configure-rbac-authorization)
 
 ## Configure RBAC Authorization
 

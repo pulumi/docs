@@ -1,5 +1,6 @@
 ---
-title: CrossGuard Core Concepts
+title_tag: Core Concepts | CrossGuard
+title: Core Concepts
 meta_desc: This page contains an overview of core concepts when interacting with Pulumi CrossGuard and
            Policy Pack.
 linktitle: Core Concepts

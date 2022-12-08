@@ -1,5 +1,7 @@
 ---
-title: Pulumi GitLab Integration
+title_tag: Using Pulumi GitLab Integration | CI/CD
+title: Using Pulumi GitLab Integration
+linktitle: Pulumi GitLab Integration
 meta_desc: Integrate the results of Pulumi stack previews to GitLab Merge Requests. It
            will show you any potential infrastructure changes on Merge Requests.
 menu:

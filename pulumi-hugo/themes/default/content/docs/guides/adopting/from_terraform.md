@@ -1,5 +1,5 @@
 ---
-title: "From Terraform"
+title: "Migrating from Terraform"
 meta_desc: Migrate your existing Terraform HCL and/or coexist with existing workspaces.
 menu:
   userguides:

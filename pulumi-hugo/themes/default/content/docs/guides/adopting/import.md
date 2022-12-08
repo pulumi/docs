@@ -1,5 +1,5 @@
 ---
-title: "Importing Infrastructure"
+title: "Importing Existing Cloud Infrastructure"
 meta_desc: Learn how to import existing cloud infrastructure into Pulumi no matter how it was provisioned.
 menu:
   userguides:

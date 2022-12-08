@@ -1,5 +1,5 @@
 ---
-title: "Adopting Pulumi"
+title: "Migrating to Pulumi"
 meta_desc: Migrate from an existing infrastructure management solution to Pulumi.
 menu:
   userguides:

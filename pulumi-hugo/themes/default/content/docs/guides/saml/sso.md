@@ -1,5 +1,6 @@
 ---
-title: Single Sign-on with SAML (SSO)
+title_tag: Configuring SAML | SAML SSO
+title: Configuring SAML
 meta_desc:
   This page provides a walkthrough important aspects of configuring any SAML
   (Security Assertion Markup Language) 2.0 identity provider.

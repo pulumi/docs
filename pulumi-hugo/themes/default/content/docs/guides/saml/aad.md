@@ -1,5 +1,6 @@
 ---
-title: Azure Active Directory
+title_tag: Configuring Azure Active Directory | SAML SSO
+title: Configuring Azure Active Directory
 meta_desc: This page provides a walkthrough important aspects of configuring
            Azure Active Directory (Azure AD) as a SAML SSO identity provider (IDP).
 menu:

@@ -1,11 +1,12 @@
 ---
-title: BYO-Infra-Hosted Install
+title_tag: BYO-Infra Install | Self-Hosting Pulumi
+title: BYO-Infra Install
 menu:
     userguides:
         parent: self_hosted
         identifier: self_hosted_byo_infra_hosted_install
         weight: 40
-meta_desc: Installer for deploying the self-hosted Pulumi Service on your own K8s, MySQL and S3-compatible infrastructure.
+meta_desc: Installer and installation instructions for deploying the self-hosted Pulumi Service on your own K8s, MySQL and S3-compatible infrastructure.
 ---
 
 The [BYO-Infrastructure Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/byo-infra) installer is used to deploy the self-hosted Pulumi Service on your own K8s, MySQL and S3-compatible infrastructure.

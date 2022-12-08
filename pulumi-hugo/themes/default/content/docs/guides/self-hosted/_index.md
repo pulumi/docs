@@ -1,5 +1,5 @@
 ---
-title: Self-Hosted Pulumi Service
+title: Self-Hosting the Pulumi Service
 menu:
     userguides:
         identifier: self_hosted

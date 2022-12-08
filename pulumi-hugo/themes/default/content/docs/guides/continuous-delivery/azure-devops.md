@@ -1,5 +1,7 @@
 ---
-title: Azure DevOps
+title_tag: Using Azure DevOps | CI/CD
+title: Using Azure DevOps
+linktitle: Azure DevOps
 meta_desc: This page details how to use Azure DevOps to manage deploying stacks based on
            commits to specific Git branches, and based on the build reason.
 menu:

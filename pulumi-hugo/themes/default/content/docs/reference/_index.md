@@ -1,5 +1,5 @@
 ---
-title: Reference
+title: Reference Documentation
 meta_desc: A collection of reference documentation for the Pulumi CLI and Cloud Services.
 menu:
   reference:

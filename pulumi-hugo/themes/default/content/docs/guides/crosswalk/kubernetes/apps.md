@@ -1,5 +1,6 @@
 ---
-title: Deploy Kubernetes Apps
+title_tag: Deploying Kubernetes Apps | Crosswalk
+title: Deploying Kubernetes Apps
 meta_desc: This page gives you an overview on how to deploy Kubernetes applications to different cloud providers.
 menu:
   userguides:
@@ -53,17 +54,18 @@ The full code for the apps is on [GitHub][gh-repo-stack].
 
 Check out how to:
 
-* [Build and Deploy a Container](#build-and-deploy-a-container)
-* [Deploy a Pod with a Sidecar](#deploy-a-pod-with-a-sidecar)
-* [Deploy a Helm Chart](#deploy-a-helm-chart)
-* [Deploy Wordpress](#deploy-wordpress)
-* [Create a Deployment with a Secret](#create-a-deployment-with-a-secret)
-* [Perform a ConfigMap Rollout on a Deployment](#perform-a-configmap-rollout-on-a-deployment)
-* [Deploy a Job](#deploy-a-job)
-* [Deploy a DaemonSet](#deploy-a-daemonset)
-* [Deploy a CronJob](#deploy-a-cronjob)
-* [Deploy a StatefulSet](#deploy-a-statefulset)
-* [Learn More](#learn-more)
+- [Overview](#overview)
+- [Build and Deploy a Container](#build-and-deploy-a-container)
+- [Deploy a Pod with a Sidecar](#deploy-a-pod-with-a-sidecar)
+- [Deploy a Helm Chart](#deploy-a-helm-chart)
+- [Deploy Wordpress](#deploy-wordpress)
+- [Create a Deployment with a Secret](#create-a-deployment-with-a-secret)
+- [Perform a ConfigMap Rollout on a Deployment](#perform-a-configmap-rollout-on-a-deployment)
+- [Deploy a Job](#deploy-a-job)
+- [Deploy a DaemonSet](#deploy-a-daemonset)
+- [Deploy a CronJob](#deploy-a-cronjob)
+- [Deploy a StatefulSet](#deploy-a-statefulset)
+- [Learn More](#learn-more)
 
 ## Build and Deploy a Container
 

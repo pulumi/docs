@@ -1,6 +1,7 @@
 ---
-title: Kubernetes Identity
-meta_desc: An overview of cloud identity providers when using Kubernetes.
+title_tag: Kubernetes Identity & Access Management | Crosswalk
+title: Kubernetes Identity & Access Management
+meta_desc: An overview of cloud identity and access management providers when using Kubernetes.
 no_on_this_page: true
 linktitle: Identity
 ---

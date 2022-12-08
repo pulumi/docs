@@ -1,4 +1,5 @@
 ---
+title_tag: Pulumi Service | Self-Hosting Pulumi
 title: Pulumi Service
 menu:
     userguides:

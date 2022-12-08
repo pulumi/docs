@@ -1,5 +1,7 @@
 ---
-title: Jenkins Pipeline
+title_tag: Setting Up A Jenkins Pipeline | CI/CD
+title: Setting Up A Jenkins Pipeline
+linktitle: Jenkins
 meta_desc: This document will help you setup a Jenkins Pipeline to deploy a sample app to Azure using Pulumi.
 menu:
     userguides:

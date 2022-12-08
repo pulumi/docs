@@ -1,5 +1,6 @@
 ---
-title: Kubernetes FAQ
+title_tag: Kubernetes FAQs | Crosswalk
+title: Kubernetes FAQs
 meta_desc: A collection of common questions about Kubernetes usage with Pulumi.
 linktitle: FAQ
 ---

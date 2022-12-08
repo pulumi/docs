@@ -1,6 +1,6 @@
 ---
-title: "How to create an AWS Kinesis data service with Pulumi"
-meta_desc: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
+title: "Creating an AWS Kinesis Data Service with Pulumi"
+meta_desc: "Learn how to use Pulumi to define an AWS Kinesis resource which can then be deployed to AWS and managed as infrastructure as code."
 meta_image: "/images/docs/service/aws-kinesis.png"
 
 service: "Kinesis"

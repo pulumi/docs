@@ -1,4 +1,5 @@
 ---
+title_tag: Authoring & Publishing | Pulumi Packages
 title: Authoring & Publishing
 meta_desc: "Learn how to create a Pulumi Package: create a Native Provider, author a Component, or bridge a Terraform provider into the Pulumi ecosystem."
 menu:

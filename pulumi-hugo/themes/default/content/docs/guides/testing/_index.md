@@ -1,5 +1,5 @@
 ---
-title: Testing
+title: Automated Testing of Pulumi Programs
 meta_desc: "Guide to automated testing of Pulumi programs: unit testing, property testing, integration testing."
 menu:
     userguides:

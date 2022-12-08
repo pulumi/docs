@@ -1,5 +1,5 @@
 ---
-title: Continuous Delivery for Cloud Resources
+title: Continuous Delivery for Cloud Resources Guides
 h1: Continuous Delivery
 linktitle: Continuous Delivery
 meta_desc: Pulumi's approach to infrastructure as code is great for CI/CD because it uses source code to model cloud resources and integrates into any CI/CD system.

@@ -1,6 +1,6 @@
 ---
-title: "How to create an AWS Simple Queue Service (SQS) with Pulumi"
-meta_desc: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
+title: "Creating an AWS SQS with Pulumi"
+meta_desc: "Learn how to use Pulumi to define an AWS SQS resource which can then be deployed to AWS and managed as infrastructure as code."
 meta_image: "/images/docs/service/aws-sqs.png"
 
 service: "SQS"

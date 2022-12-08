@@ -1,5 +1,6 @@
 ---
-title: "AWS CloudWatch Metrics, Logs, Alarms, and Dashboards"
+title_tag: "Using AWS CloudWatch | Crosswalk"
+title: Using AWS CloudWatch
 meta_desc: Pulumi Crosswalk for AWS CloudWatch help you operationally understand and manage your AWS CloudWatch metrics, resources and applications.
 linktitle: CloudWatch
 menu:

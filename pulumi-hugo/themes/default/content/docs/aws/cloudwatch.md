@@ -1,6 +1,6 @@
 ---
-title: "How to create an AWS CloudWatch monitoring service"
-meta_desc: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
+title: "Creating an AWS CloudWatch Monitoring Service"
+meta_desc: "Learn how to use Pulumi to define an AWS CloudWatch resource which can then be deployed to AWS and managed as infrastructure as code."
 meta_image: "/images/docs/service/aws-cloudwatch.png"
 
 service: "CloudWatch"

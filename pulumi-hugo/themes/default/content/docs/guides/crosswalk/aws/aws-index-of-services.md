@@ -1,4 +1,5 @@
 ---
+title_tag: AWS Index of Services | Crosswalk
 title: AWS Index of Services
 meta_desc: Pulumi Crosswalk for AWS supports all AWS services. This page provides a complete list of supported services.
 menu:

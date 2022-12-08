@@ -1,5 +1,7 @@
 ---
-title: Octopus Deploy
+title_tag: Integrating Octopus Deploy | CI/CD
+title: Integrating Octopus Deploy
+linktitle: Octopus Deploy
 meta_desc: This page gives an overview of how to integrate Octopus Deploy with a Pulumi program.
 menu:
     userguides:

@@ -1,5 +1,5 @@
 ---
-title: "From AWS CloudFormation"
+title: "Migrating From AWS Cloud Formation"
 meta_desc: Migrate your existing AWS CloudFormation JSON/YAML and/or coexist with existing stacks.
 menu:
   userguides:

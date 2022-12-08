@@ -1,5 +1,6 @@
 ---
-title: Add Support for CI/CD Systems
+title_tag: Adding Support for CI/CD Systems | CI/CD
+title: Adding Support for CI/CD Systems
 meta_desc: This guide walks you through how you can configure your CI/CD environment manually
            to surface data in the Pulumi Service.
 menu:
