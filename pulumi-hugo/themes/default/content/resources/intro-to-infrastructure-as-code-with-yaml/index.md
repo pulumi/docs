@@ -4,10 +4,10 @@ hero:
   image: /icons/containers.svg
   title: Intro to Infrastructure as Code with YAML
 main:
-  duration: 90 minutes
+  duration: 60 minutes
   presenters:
-    - name: Laura Santamaria
-      role: Developer Advocate, Pulumi
+    - name: Scott Lowe
+      role: Sr. Technical Content Engineer, Pulumi
   learn:
     - How to use YAML with Pulumi.
     - How to provision Docker containers with Pulumi.

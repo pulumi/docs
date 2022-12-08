@@ -4,7 +4,7 @@ hero:
   image: /icons/containers.svg
   title: Intro to Infrastructure as Code with TypeScript
 main:
-  duration: 90 minutes
+  duration: 60 minutes
   presenters:
     - name: Scott Lowe
       role: Sr. Technical Content Engineer, Pulumi

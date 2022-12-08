@@ -7,7 +7,7 @@ meta_desc: "Explore how to start sharing Pulumi code with others. Use Go to buil
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: true
+pre_recorded: false
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -51,9 +51,9 @@ main:
     # Webinar title.
     title: "Sharing Code with Pulumi Packages, Abstractions, and More"
     # URL for embedding a URL for ungated webinars.
-    youtube_url: https://www.youtube.com/embed/X-vZZybUdxc?rel=0
+    youtube_url:
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-11-03T09:10:00.000-07:00
+    sortable_date: 2022-12-22T09:10:00.000-07:00
     # Duration of the webinar.
     duration: "60 minutes"
     # Datetime of the webinar.
@@ -74,7 +74,8 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: "080c65c7-d07c-4ba5-abbd-04e481daf02e"
+    hubspot_form_id: "4a110ab8-ced7-4adf-969c-d24f462b1e68"
+    salesforce_campaign_id: 701Du0000009P9LIAU
 
 aws_only: false
 ---
