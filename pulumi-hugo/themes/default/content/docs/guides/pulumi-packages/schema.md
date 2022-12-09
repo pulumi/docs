@@ -218,6 +218,7 @@ An object or resource property.
 | `language`                                  | [`map[PropertyLanguage]`](#propertylanguage) | No       | Language specifies additional language-specific data about the property.                                                      |
 | `secret`                                    | `boolean`                                    | No       | Secret specifies if the property is secret (default false).                                                                   |
 | `replaceOnChanges`                          | `boolean`                                    | No       | ReplaceOnChanges specifies if the associated object should be updated with a replace operation instead of a update operation. |
+| `willReplaceOnChanges`                      | `boolean`                                    | No       | WillReplaceOnChanges indiciates that the provider will replace the resource when this property is changed. |
 
 ### EnumValue
 
