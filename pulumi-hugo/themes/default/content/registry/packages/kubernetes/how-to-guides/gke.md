@@ -390,7 +390,7 @@ In this tutorial, we saw how to use Pulumi programs to create and launch a
 Managed Kubernetes cluster on GCP GKE.
 
 For a follow-up example on how to use Pulumi programs to create a Kubernetes
-apps on your new cluster, see [Kubernetes Tutorial: Getting Started With Pulumi](configmap-rollout).
+apps on your new cluster, see [Kubernetes Tutorial: App Rollout via ConfigMap Data Change](/registry/packages/kubernetes/how-to-guides/kubernetes-ts-configmap-rollout/).
 
 We also encourage you to watch Joe Beda, co-founder of Kubernetes and Heptio,
 take Pulumi for a spin in an episode of [TGIK8s](https://github.com/heptio/tgik).
