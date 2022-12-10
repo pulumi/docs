@@ -2,7 +2,7 @@
 title: "Google Cloud Functions in Python deployed with C | C#"
 h1: "Google Cloud Functions in Python deployed with C"
 linktitle: "Google Cloud Functions in Python deployed with C"
-meta_desc: "Google Cloud Functions in Python deployed with C how-to guide using cs"
+meta_desc: "Google Cloud Functions in Python deployed with C How-to Guide using C#"
 no_edit_this_page: true
 cloud: gcp
 language: cs

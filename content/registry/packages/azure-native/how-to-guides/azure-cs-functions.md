@@ -2,7 +2,7 @@
 title: "Azure Functions on a Linux App Service Plan | C#"
 h1: "Azure Functions on a Linux App Service Plan"
 linktitle: "Azure Functions on a Linux App Service Plan"
-meta_desc: "Azure Functions on a Linux App Service Plan how-to guide using cs"
+meta_desc: "Azure Functions on a Linux App Service Plan How-to Guide using C#"
 no_edit_this_page: true
 cloud: azure
 language: cs

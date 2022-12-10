@@ -2,7 +2,7 @@
 title: "Exposing a Deployment with a Public IP Address | TypeScript"
 h1: "Exposing a Deployment with a Public IP Address"
 linktitle: "Exposing a Deployment with a Public IP Address"
-meta_desc: "Exposing a Deployment with a Public IP Address how-to guide using ts"
+meta_desc: "Exposing a Deployment with a Public IP Address How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: kubernetes
 language: ts

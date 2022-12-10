@@ -2,7 +2,7 @@
 title: "Google Cloud Functions in Python and Go Deployed with TypeScript | TypeScript"
 h1: "Google Cloud Functions in Python and Go Deployed with TypeScript"
 linktitle: "Google Cloud Functions in Python and Go Deployed with TypeScript"
-meta_desc: "Google Cloud Functions in Python and Go Deployed with TypeScript how-to guide using ts"
+meta_desc: "Google Cloud Functions in Python and Go Deployed with TypeScript How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: gcp
 language: ts

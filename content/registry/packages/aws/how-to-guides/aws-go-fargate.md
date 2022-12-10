@@ -2,7 +2,7 @@
 title: "NGINX on AWS ECS Fargate using Go IaC | Go"
 h1: "NGINX on AWS ECS Fargate using Go IaC"
 linktitle: "NGINX on AWS ECS Fargate using Go IaC"
-meta_desc: "NGINX on AWS ECS Fargate using Go IaC how-to guide using go"
+meta_desc: "NGINX on AWS ECS Fargate using Go IaC How-to Guide using Go"
 no_edit_this_page: true
 cloud: aws
 language: go

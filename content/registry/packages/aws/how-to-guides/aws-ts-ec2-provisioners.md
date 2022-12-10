@@ -2,7 +2,7 @@
 title: "AWS WebServer with Manual Provisioning | TypeScript"
 h1: "AWS WebServer with Manual Provisioning"
 linktitle: "AWS WebServer with Manual Provisioning"
-meta_desc: "AWS WebServer with Manual Provisioning how-to guide using ts"
+meta_desc: "AWS WebServer with Manual Provisioning How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws
 language: ts

@@ -2,7 +2,7 @@
 title: "Host a Static Website on Amazon S3 with the AWS Native Provider | TypeScript"
 h1: "Host a Static Website on Amazon S3 with the AWS Native Provider"
 linktitle: "Host a Static Website on Amazon S3 with the AWS Native Provider"
-meta_desc: "Host a Static Website on Amazon S3 with the AWS Native Provider how-to guide using ts"
+meta_desc: "Host a Static Website on Amazon S3 with the AWS Native Provider How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws-native
 language: ts

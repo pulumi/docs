@@ -2,7 +2,7 @@
 title: "Azure Stream Analytics | TypeScript"
 h1: "Azure Stream Analytics"
 linktitle: "Azure Stream Analytics"
-meta_desc: "Azure Stream Analytics how-to guide using ts"
+meta_desc: "Azure Stream Analytics How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: classic-azure
 language: ts

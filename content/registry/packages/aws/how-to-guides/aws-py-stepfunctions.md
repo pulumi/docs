@@ -2,7 +2,7 @@
 title: "AWS Step Functions | Python"
 h1: "AWS Step Functions"
 linktitle: "AWS Step Functions"
-meta_desc: "AWS Step Functions how-to guide using py"
+meta_desc: "AWS Step Functions How-to Guide using Python"
 no_edit_this_page: true
 cloud: aws
 language: py

@@ -2,7 +2,7 @@
 title: "API Gateway V2 to EventBridge | Python"
 h1: "API Gateway V2 to EventBridge"
 linktitle: "API Gateway V2 to EventBridge"
-meta_desc: "API Gateway V2 to EventBridge how-to guide using py"
+meta_desc: "API Gateway V2 to EventBridge How-to Guide using Python"
 no_edit_this_page: true
 cloud: aws
 language: py

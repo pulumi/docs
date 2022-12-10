@@ -2,7 +2,7 @@
 title: "Video Thumbnailer Using AWS Lambda | TypeScript"
 h1: "Video Thumbnailer Using AWS Lambda"
 linktitle: "Video Thumbnailer Using AWS Lambda"
-meta_desc: "Video Thumbnailer Using AWS Lambda how-to guide using ts"
+meta_desc: "Video Thumbnailer Using AWS Lambda How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws
 language: ts

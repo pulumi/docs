@@ -2,7 +2,7 @@
 title: "Google Cloud Functions | TypeScript"
 h1: "Google Cloud Functions"
 linktitle: "Google Cloud Functions"
-meta_desc: "Google Cloud Functions how-to guide using ts"
+meta_desc: "Google Cloud Functions How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: gcp
 language: ts

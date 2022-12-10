@@ -2,7 +2,7 @@
 title: "Ruby on Rails Server Using Amazon EC2 | TypeScript"
 h1: "Ruby on Rails Server Using Amazon EC2"
 linktitle: "Ruby on Rails Server Using Amazon EC2"
-meta_desc: "Ruby on Rails Server Using Amazon EC2 how-to guide using ts"
+meta_desc: "Ruby on Rails Server Using Amazon EC2 How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws
 language: ts

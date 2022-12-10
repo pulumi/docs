@@ -2,7 +2,7 @@
 title: "Web Server Using Compute Engine | Python"
 h1: "Web Server Using Compute Engine"
 linktitle: "Web Server Using Compute Engine"
-meta_desc: "Web Server Using Compute Engine how-to guide using py"
+meta_desc: "Web Server Using Compute Engine How-to Guide using Python"
 no_edit_this_page: true
 cloud: gcp
 language: py

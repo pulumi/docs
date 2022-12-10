@@ -2,7 +2,7 @@
 title: "Managing Secrets and Secure Access in Azure Applications | C#"
 h1: "Managing Secrets and Secure Access in Azure Applications"
 linktitle: "Managing Secrets and Secure Access in Azure Applications"
-meta_desc: "Managing Secrets and Secure Access in Azure Applications how-to guide using cs"
+meta_desc: "Managing Secrets and Secure Access in Azure Applications How-to Guide using C#"
 no_edit_this_page: true
 cloud: classic-azure
 language: cs

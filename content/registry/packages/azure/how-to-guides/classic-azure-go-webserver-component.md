@@ -2,7 +2,7 @@
 title: "Web Server Component Using Azure Virtual Machine | Go"
 h1: "Web Server Component Using Azure Virtual Machine"
 linktitle: "Web Server Component Using Azure Virtual Machine"
-meta_desc: "Web Server Component Using Azure Virtual Machine how-to guide using go"
+meta_desc: "Web Server Component Using Azure Virtual Machine How-to Guide using Go"
 no_edit_this_page: true
 cloud: classic-azure
 language: go

@@ -2,7 +2,7 @@
 title: "Deploy two App Services - Front web app with VNet injection and Back web app with a Private Endpoint | TypeScript"
 h1: "Deploy two App Services - Front web app with VNet injection and Back web app with a Private Endpoint"
 linktitle: "Deploy two App Services - Front web app with VNet injection and Back web app with a Private Endpoint"
-meta_desc: "Deploy two App Services - Front web app with VNet injection and Back web app with a Private Endpoint how-to guide using ts"
+meta_desc: "Deploy two App Services - Front web app with VNet injection and Back web app with a Private Endpoint How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: azure
 language: ts

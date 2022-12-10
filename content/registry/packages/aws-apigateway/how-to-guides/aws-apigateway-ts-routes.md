@@ -2,7 +2,7 @@
 title: "Routes in API Gateway | TypeScript"
 h1: "Routes in API Gateway"
 linktitle: "Routes in API Gateway"
-meta_desc: "Routes in API Gateway how-to guide using ts"
+meta_desc: "Routes in API Gateway How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws-apigateway
 language: ts

@@ -2,7 +2,7 @@
 title: "Azure Kubernetes Service (AKS) Cluster and Helm Chart | Go"
 h1: "Azure Kubernetes Service (AKS) Cluster and Helm Chart"
 linktitle: "Azure Kubernetes Service (AKS) Cluster and Helm Chart"
-meta_desc: "Azure Kubernetes Service (AKS) Cluster and Helm Chart how-to guide using go"
+meta_desc: "Azure Kubernetes Service (AKS) Cluster and Helm Chart How-to Guide using Go"
 no_edit_this_page: true
 cloud: azure
 language: go

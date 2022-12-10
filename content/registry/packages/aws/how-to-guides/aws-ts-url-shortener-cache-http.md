@@ -2,7 +2,7 @@
 title: "Serverless URL Shortener with Redis Cache and HttpServer | TypeScript"
 h1: "Serverless URL Shortener with Redis Cache and HttpServer"
 linktitle: "Serverless URL Shortener with Redis Cache and HttpServer"
-meta_desc: "Serverless URL Shortener with Redis Cache and HttpServer how-to guide using ts"
+meta_desc: "Serverless URL Shortener with Redis Cache and HttpServer How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws
 language: ts

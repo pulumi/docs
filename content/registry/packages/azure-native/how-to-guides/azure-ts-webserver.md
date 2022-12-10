@@ -2,7 +2,7 @@
 title: "Web Server Using Azure Virtual Machine | TypeScript"
 h1: "Web Server Using Azure Virtual Machine"
 linktitle: "Web Server Using Azure Virtual Machine"
-meta_desc: "Web Server Using Azure Virtual Machine how-to guide using ts"
+meta_desc: "Web Server Using Azure Virtual Machine How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: azure
 language: ts

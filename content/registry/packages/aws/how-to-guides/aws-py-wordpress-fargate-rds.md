@@ -2,7 +2,7 @@
 title: "WordPress Site in AWS Fargate with RDS DB Backend | Python"
 h1: "WordPress Site in AWS Fargate with RDS DB Backend"
 linktitle: "WordPress Site in AWS Fargate with RDS DB Backend"
-meta_desc: "WordPress Site in AWS Fargate with RDS DB Backend how-to guide using py"
+meta_desc: "WordPress Site in AWS Fargate with RDS DB Backend How-to Guide using Python"
 no_edit_this_page: true
 cloud: aws
 language: py

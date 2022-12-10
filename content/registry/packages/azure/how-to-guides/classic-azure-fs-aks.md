@@ -2,7 +2,7 @@
 title: "Azure Kubernetes Service (AKS) Cluster | F#"
 h1: "Azure Kubernetes Service (AKS) Cluster"
 linktitle: "Azure Kubernetes Service (AKS) Cluster"
-meta_desc: "Azure Kubernetes Service (AKS) Cluster how-to guide using fs"
+meta_desc: "Azure Kubernetes Service (AKS) Cluster How-to Guide using F#"
 no_edit_this_page: true
 cloud: classic-azure
 language: fs

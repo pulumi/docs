@@ -2,7 +2,7 @@
 title: "WordPress Site in AWS Fargate with RDS DB Backend | TypeScript"
 h1: "WordPress Site in AWS Fargate with RDS DB Backend"
 linktitle: "WordPress Site in AWS Fargate with RDS DB Backend"
-meta_desc: "WordPress Site in AWS Fargate with RDS DB Backend how-to guide using ts"
+meta_desc: "WordPress Site in AWS Fargate with RDS DB Backend How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws
 language: ts

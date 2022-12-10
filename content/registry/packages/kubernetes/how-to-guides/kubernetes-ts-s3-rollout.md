@@ -2,7 +2,7 @@
 title: "App Rollout via Data Change in Amazon S3 | TypeScript"
 h1: "App Rollout via Data Change in Amazon S3"
 linktitle: "App Rollout via Data Change in Amazon S3"
-meta_desc: "App Rollout via Data Change in Amazon S3 how-to guide using ts"
+meta_desc: "App Rollout via Data Change in Amazon S3 How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: kubernetes
 language: ts

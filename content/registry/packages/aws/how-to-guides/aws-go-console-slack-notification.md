@@ -2,7 +2,7 @@
 title: "AWS Console Change Slack Notifier in Go | Go"
 h1: "AWS Console Change Slack Notifier in Go"
 linktitle: "AWS Console Change Slack Notifier in Go"
-meta_desc: "AWS Console Change Slack Notifier in Go how-to guide using go"
+meta_desc: "AWS Console Change Slack Notifier in Go How-to Guide using Go"
 no_edit_this_page: true
 cloud: aws
 language: go

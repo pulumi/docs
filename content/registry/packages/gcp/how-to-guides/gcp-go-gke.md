@@ -2,7 +2,7 @@
 title: "Google Kubernetes Engine (GKE) Cluster | Go"
 h1: "Google Kubernetes Engine (GKE) Cluster"
 linktitle: "Google Kubernetes Engine (GKE) Cluster"
-meta_desc: "Google Kubernetes Engine (GKE) Cluster how-to guide using go"
+meta_desc: "Google Kubernetes Engine (GKE) Cluster How-to Guide using Go"
 no_edit_this_page: true
 cloud: gcp
 language: go

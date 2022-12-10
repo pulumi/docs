@@ -2,7 +2,7 @@
 title: "Azure WebServer with Manual Provisioning | TypeScript"
 h1: "Azure WebServer with Manual Provisioning"
 linktitle: "Azure WebServer with Manual Provisioning"
-meta_desc: "Azure WebServer with Manual Provisioning how-to guide using ts"
+meta_desc: "Azure WebServer with Manual Provisioning How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: classic-azure
 language: ts

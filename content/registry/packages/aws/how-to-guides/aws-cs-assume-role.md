@@ -2,7 +2,7 @@
 title: "AWS Resources Using AssumeRole | C#"
 h1: "AWS Resources Using AssumeRole"
 linktitle: "AWS Resources Using AssumeRole"
-meta_desc: "AWS Resources Using AssumeRole how-to guide using cs"
+meta_desc: "AWS Resources Using AssumeRole How-to Guide using C#"
 no_edit_this_page: true
 cloud: aws
 language: cs

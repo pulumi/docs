@@ -2,7 +2,7 @@
 title: "Google Cloud Functions in Python and Go deployed | Python"
 h1: "Google Cloud Functions in Python and Go deployed"
 linktitle: "Google Cloud Functions in Python and Go deployed"
-meta_desc: "Google Cloud Functions in Python and Go deployed how-to guide using py"
+meta_desc: "Google Cloud Functions in Python and Go deployed How-to Guide using Python"
 no_edit_this_page: true
 cloud: gcp
 language: py

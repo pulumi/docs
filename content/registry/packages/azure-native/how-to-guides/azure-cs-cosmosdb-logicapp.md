@@ -2,7 +2,7 @@
 title: "Azure Cosmos DB, an API Connection, and a Logic App | C#"
 h1: "Azure Cosmos DB, an API Connection, and a Logic App"
 linktitle: "Azure Cosmos DB, an API Connection, and a Logic App"
-meta_desc: "Azure Cosmos DB, an API Connection, and a Logic App how-to guide using cs"
+meta_desc: "Azure Cosmos DB, an API Connection, and a Logic App How-to Guide using C#"
 no_edit_this_page: true
 cloud: azure
 language: cs

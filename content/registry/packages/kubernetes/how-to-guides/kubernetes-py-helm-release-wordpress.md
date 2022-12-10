@@ -2,7 +2,7 @@
 title: "WordPress Helm Chart Deployed Using Helm Release Resource | Python"
 h1: "WordPress Helm Chart Deployed Using Helm Release Resource"
 linktitle: "WordPress Helm Chart Deployed Using Helm Release Resource"
-meta_desc: "WordPress Helm Chart Deployed Using Helm Release Resource how-to guide using py"
+meta_desc: "WordPress Helm Chart Deployed Using Helm Release Resource How-to Guide using Python"
 no_edit_this_page: true
 cloud: kubernetes
 language: py

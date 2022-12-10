@@ -2,7 +2,7 @@
 title: "Dockerized App Using ECS, ECR, and Fargate | TypeScript"
 h1: "Dockerized App Using ECS, ECR, and Fargate"
 linktitle: "Dockerized App Using ECS, ECR, and Fargate"
-meta_desc: "Dockerized App Using ECS, ECR, and Fargate how-to guide using ts"
+meta_desc: "Dockerized App Using ECS, ECR, and Fargate How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws
 language: ts

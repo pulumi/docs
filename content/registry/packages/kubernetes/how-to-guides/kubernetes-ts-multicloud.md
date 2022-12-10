@@ -2,7 +2,7 @@
 title: "Kubernetes Application Deployed To Multiple Clusters | TypeScript"
 h1: "Kubernetes Application Deployed To Multiple Clusters"
 linktitle: "Kubernetes Application Deployed To Multiple Clusters"
-meta_desc: "Kubernetes Application Deployed To Multiple Clusters how-to guide using ts"
+meta_desc: "Kubernetes Application Deployed To Multiple Clusters How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: kubernetes
 language: ts

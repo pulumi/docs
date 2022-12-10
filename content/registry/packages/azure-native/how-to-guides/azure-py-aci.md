@@ -2,7 +2,7 @@
 title: "Azure Container Instances on Linux | Python"
 h1: "Azure Container Instances on Linux"
 linktitle: "Azure Container Instances on Linux"
-meta_desc: "Azure Container Instances on Linux how-to guide using py"
+meta_desc: "Azure Container Instances on Linux How-to Guide using Python"
 no_edit_this_page: true
 cloud: azure
 language: py

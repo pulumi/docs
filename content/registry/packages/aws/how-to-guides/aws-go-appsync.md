@@ -2,7 +2,7 @@
 title: "GraphQL Endpoint in AWS AppSync (in Go) | Go"
 h1: "GraphQL Endpoint in AWS AppSync (in Go)"
 linktitle: "GraphQL Endpoint in AWS AppSync (in Go)"
-meta_desc: "GraphQL Endpoint in AWS AppSync (in Go) how-to guide using go"
+meta_desc: "GraphQL Endpoint in AWS AppSync (in Go) How-to Guide using Go"
 no_edit_this_page: true
 cloud: aws
 language: go

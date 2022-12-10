@@ -2,7 +2,7 @@
 title: "App Rollout via ConfigMap Data Change | Go"
 h1: "App Rollout via ConfigMap Data Change"
 linktitle: "App Rollout via ConfigMap Data Change"
-meta_desc: "App Rollout via ConfigMap Data Change how-to guide using go"
+meta_desc: "App Rollout via ConfigMap Data Change How-to Guide using Go"
 no_edit_this_page: true
 cloud: kubernetes
 language: go

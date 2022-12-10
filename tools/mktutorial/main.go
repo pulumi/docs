@@ -171,9 +171,11 @@ func gatherTutorials(root string) ([]tutorial, error) {
 
 		// Add the language to the page title to avoid duplicate titles.
 		var title string
+		var metaDescription string
 
 		if val, ok := langMap[language]; ok {
 			title = fmt.Sprintf("%s | %s", h1, val)
+			metaDescription = fmt.Sprintf("%s How-to Guide using %s", h1, val)
 		}
 
 		// Great! We have a new tutorial. Append it and let's move on to the next one.
@@ -183,7 +185,7 @@ func gatherTutorials(root string) ([]tutorial, error) {
 			H1:    h1,
 			// LinkTitle is the display text for the breadcrumb control.
 			LinkTitle:         h1,
-			MetaDesc:          fmt.Sprintf("%s how-to guide using %s", h1, language),
+			MetaDesc:          metaDescription,
 			Cloud:             cloud,
 			Language:          language,
 			Body:              cleanMarkdownBody(name, string(body)),

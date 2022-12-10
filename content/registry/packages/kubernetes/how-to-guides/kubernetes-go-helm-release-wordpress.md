@@ -2,7 +2,7 @@
 title: "Wordpress Helm Chart Deployed Using Helm Release Resource | Go"
 h1: "Wordpress Helm Chart Deployed Using Helm Release Resource"
 linktitle: "Wordpress Helm Chart Deployed Using Helm Release Resource"
-meta_desc: "Wordpress Helm Chart Deployed Using Helm Release Resource how-to guide using go"
+meta_desc: "Wordpress Helm Chart Deployed Using Helm Release Resource How-to Guide using Go"
 no_edit_this_page: true
 cloud: kubernetes
 language: go

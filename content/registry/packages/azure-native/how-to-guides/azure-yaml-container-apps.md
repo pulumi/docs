@@ -2,7 +2,7 @@
 title: "Azure Container Apps | YAML"
 h1: "Azure Container Apps"
 linktitle: "Azure Container Apps"
-meta_desc: "Azure Container Apps how-to guide using yaml"
+meta_desc: "Azure Container Apps How-to Guide using YAML"
 no_edit_this_page: true
 cloud: azure
 language: yaml

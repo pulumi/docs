@@ -2,7 +2,7 @@
 title: "AWS Web Server Component | JavaScript"
 h1: "AWS Web Server Component"
 linktitle: "AWS Web Server Component"
-meta_desc: "AWS Web Server Component how-to guide using js"
+meta_desc: "AWS Web Server Component How-to Guide using JavaScript"
 no_edit_this_page: true
 cloud: aws
 language: js

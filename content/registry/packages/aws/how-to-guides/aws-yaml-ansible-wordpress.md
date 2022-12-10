@@ -2,7 +2,7 @@
 title: "Deploy Wordpress to AWS EC2 using Pulumi and Ansible | YAML"
 h1: "Deploy Wordpress to AWS EC2 using Pulumi and Ansible"
 linktitle: "Deploy Wordpress to AWS EC2 using Pulumi and Ansible"
-meta_desc: "Deploy Wordpress to AWS EC2 using Pulumi and Ansible how-to guide using yaml"
+meta_desc: "Deploy Wordpress to AWS EC2 using Pulumi and Ansible How-to Guide using YAML"
 no_edit_this_page: true
 cloud: aws
 language: yaml

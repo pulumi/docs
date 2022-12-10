@@ -2,7 +2,7 @@
 title: "Todo App Using Azure App Service with SQL Database and Integrated with Azure DevOps | TypeScript"
 h1: "Todo App Using Azure App Service with SQL Database and Integrated with Azure DevOps"
 linktitle: "Todo App Using Azure App Service with SQL Database and Integrated with Azure DevOps"
-meta_desc: "Todo App Using Azure App Service with SQL Database and Integrated with Azure DevOps how-to guide using ts"
+meta_desc: "Todo App Using Azure App Service with SQL Database and Integrated with Azure DevOps How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: classic-azure
 language: ts

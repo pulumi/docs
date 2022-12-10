@@ -2,7 +2,7 @@
 title: "Deploy Cloud Run instance connected to Cloud SQL | Python"
 h1: "Deploy Cloud Run instance connected to Cloud SQL"
 linktitle: "Deploy Cloud Run instance connected to Cloud SQL"
-meta_desc: "Deploy Cloud Run instance connected to Cloud SQL how-to guide using py"
+meta_desc: "Deploy Cloud Run instance connected to Cloud SQL How-to Guide using Python"
 no_edit_this_page: true
 cloud: gcp
 language: py

@@ -2,7 +2,7 @@
 title: "Web Server Using Azure Virtual Machine with ComponentResource | Python"
 h1: "Web Server Using Azure Virtual Machine with ComponentResource"
 linktitle: "Web Server Using Azure Virtual Machine with ComponentResource"
-meta_desc: "Web Server Using Azure Virtual Machine with ComponentResource how-to guide using py"
+meta_desc: "Web Server Using Azure Virtual Machine with ComponentResource How-to Guide using Python"
 no_edit_this_page: true
 cloud: classic-azure
 language: py

@@ -2,7 +2,7 @@
 title: "Multiple Azure Kubernetes Service (AKS) Clusters | TypeScript"
 h1: "Multiple Azure Kubernetes Service (AKS) Clusters"
 linktitle: "Multiple Azure Kubernetes Service (AKS) Clusters"
-meta_desc: "Multiple Azure Kubernetes Service (AKS) Clusters how-to guide using ts"
+meta_desc: "Multiple Azure Kubernetes Service (AKS) Clusters How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: azure
 language: ts

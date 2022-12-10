@@ -2,7 +2,7 @@
 title: "Secure Static Website Using Amazon S3, CloudFront, Route53, and Certificate Manager | Python"
 h1: "Secure Static Website Using Amazon S3, CloudFront, Route53, and Certificate Manager"
 linktitle: "Secure Static Website Using Amazon S3, CloudFront, Route53, and Certificate Manager"
-meta_desc: "Secure Static Website Using Amazon S3, CloudFront, Route53, and Certificate Manager how-to guide using py"
+meta_desc: "Secure Static Website Using Amazon S3, CloudFront, Route53, and Certificate Manager How-to Guide using Python"
 no_edit_this_page: true
 cloud: aws
 language: py

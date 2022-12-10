@@ -2,7 +2,7 @@
 title: "Azure Synapse Workspace and Pools | C#"
 h1: "Azure Synapse Workspace and Pools"
 linktitle: "Azure Synapse Workspace and Pools"
-meta_desc: "Azure Synapse Workspace and Pools how-to guide using cs"
+meta_desc: "Azure Synapse Workspace and Pools How-to Guide using C#"
 no_edit_this_page: true
 cloud: azure
 language: cs

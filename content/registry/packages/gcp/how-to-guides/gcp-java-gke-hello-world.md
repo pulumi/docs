@@ -2,7 +2,7 @@
 title: "Google Kubernetes Engine (GKE) Cluster | Java"
 h1: "Google Kubernetes Engine (GKE) Cluster"
 linktitle: "Google Kubernetes Engine (GKE) Cluster"
-meta_desc: "Google Kubernetes Engine (GKE) Cluster how-to guide using java"
+meta_desc: "Google Kubernetes Engine (GKE) Cluster How-to Guide using Java"
 no_edit_this_page: true
 cloud: gcp
 language: java

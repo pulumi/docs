@@ -2,7 +2,7 @@
 title: "AWS WebServer with Manual Provisioning (in Python) | Python"
 h1: "AWS WebServer with Manual Provisioning (in Python)"
 linktitle: "AWS WebServer with Manual Provisioning (in Python)"
-meta_desc: "AWS WebServer with Manual Provisioning (in Python) how-to guide using py"
+meta_desc: "AWS WebServer with Manual Provisioning (in Python) How-to Guide using Python"
 no_edit_this_page: true
 cloud: aws
 language: py

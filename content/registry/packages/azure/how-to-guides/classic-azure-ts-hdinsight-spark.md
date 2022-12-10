@@ -2,7 +2,7 @@
 title: "Spark on Azure HDInsight | TypeScript"
 h1: "Spark on Azure HDInsight"
 linktitle: "Spark on Azure HDInsight"
-meta_desc: "Spark on Azure HDInsight how-to guide using ts"
+meta_desc: "Spark on Azure HDInsight How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: classic-azure
 language: ts

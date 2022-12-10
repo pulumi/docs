@@ -2,7 +2,7 @@
 title: "Azure Container Instances on Linux | TypeScript"
 h1: "Azure Container Instances on Linux"
 linktitle: "Azure Container Instances on Linux"
-meta_desc: "Azure Container Instances on Linux how-to guide using ts"
+meta_desc: "Azure Container Instances on Linux How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: azure
 language: ts

@@ -2,7 +2,7 @@
 title: "AWS Resources | Python"
 h1: "AWS Resources"
 linktitle: "AWS Resources"
-meta_desc: "AWS Resources how-to guide using py"
+meta_desc: "AWS Resources How-to Guide using Python"
 no_edit_this_page: true
 cloud: aws
 language: py

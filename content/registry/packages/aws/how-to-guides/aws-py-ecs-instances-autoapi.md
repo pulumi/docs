@@ -2,7 +2,7 @@
 title: "AWS ECS with Container Instances and Delete Orchestration | Python"
 h1: "AWS ECS with Container Instances and Delete Orchestration"
 linktitle: "AWS ECS with Container Instances and Delete Orchestration"
-meta_desc: "AWS ECS with Container Instances and Delete Orchestration how-to guide using py"
+meta_desc: "AWS ECS with Container Instances and Delete Orchestration How-to Guide using Python"
 no_edit_this_page: true
 cloud: aws
 language: py

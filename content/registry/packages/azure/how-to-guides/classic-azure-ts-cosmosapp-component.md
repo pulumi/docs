@@ -2,7 +2,7 @@
 title: "Reusable Component to Create Globally-distributed Applications with Azure Cosmos DB | TypeScript"
 h1: "Reusable Component to Create Globally-distributed Applications with Azure Cosmos DB"
 linktitle: "Reusable Component to Create Globally-distributed Applications with Azure Cosmos DB"
-meta_desc: "Reusable Component to Create Globally-distributed Applications with Azure Cosmos DB how-to guide using ts"
+meta_desc: "Reusable Component to Create Globally-distributed Applications with Azure Cosmos DB How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: classic-azure
 language: ts

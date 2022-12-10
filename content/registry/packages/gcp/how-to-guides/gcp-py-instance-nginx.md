@@ -2,7 +2,7 @@
 title: "Nginx Server Using Compute Engine | Python"
 h1: "Nginx Server Using Compute Engine"
 linktitle: "Nginx Server Using Compute Engine"
-meta_desc: "Nginx Server Using Compute Engine how-to guide using py"
+meta_desc: "Nginx Server Using Compute Engine How-to Guide using Python"
 no_edit_this_page: true
 cloud: gcp
 language: py

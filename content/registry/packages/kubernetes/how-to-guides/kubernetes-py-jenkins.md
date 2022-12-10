@@ -2,7 +2,7 @@
 title: "Continuous Integration with Jenkins | Python"
 h1: "Continuous Integration with Jenkins"
 linktitle: "Continuous Integration with Jenkins"
-meta_desc: "Continuous Integration with Jenkins how-to guide using py"
+meta_desc: "Continuous Integration with Jenkins How-to Guide using Python"
 no_edit_this_page: true
 cloud: kubernetes
 language: py

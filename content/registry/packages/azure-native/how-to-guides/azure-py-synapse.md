@@ -2,7 +2,7 @@
 title: "Azure Synapse Workspace and Pools | Python"
 h1: "Azure Synapse Workspace and Pools"
 linktitle: "Azure Synapse Workspace and Pools"
-meta_desc: "Azure Synapse Workspace and Pools how-to guide using py"
+meta_desc: "Azure Synapse Workspace and Pools How-to Guide using Python"
 no_edit_this_page: true
 cloud: azure
 language: py

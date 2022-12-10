@@ -2,7 +2,7 @@
 title: "Automate the rotation of a secret for resources that use one set of authentication credentials | C#"
 h1: "Automate the rotation of a secret for resources that use one set of authentication credentials"
 linktitle: "Automate the rotation of a secret for resources that use one set of authentication credentials"
-meta_desc: "Automate the rotation of a secret for resources that use one set of authentication credentials how-to guide using cs"
+meta_desc: "Automate the rotation of a secret for resources that use one set of authentication credentials How-to Guide using C#"
 no_edit_this_page: true
 cloud: azure
 language: cs

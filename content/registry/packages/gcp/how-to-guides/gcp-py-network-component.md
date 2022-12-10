@@ -2,7 +2,7 @@
 title: "Google Cloud Network and Instance with ComponentResource | Python"
 h1: "Google Cloud Network and Instance with ComponentResource"
 linktitle: "Google Cloud Network and Instance with ComponentResource"
-meta_desc: "Google Cloud Network and Instance with ComponentResource how-to guide using py"
+meta_desc: "Google Cloud Network and Instance with ComponentResource How-to Guide using Python"
 no_edit_this_page: true
 cloud: gcp
 language: py

@@ -2,7 +2,7 @@
 title: "Amazon EKS Cluster | Python"
 h1: "Amazon EKS Cluster"
 linktitle: "Amazon EKS Cluster"
-meta_desc: "Amazon EKS Cluster how-to guide using py"
+meta_desc: "Amazon EKS Cluster How-to Guide using Python"
 no_edit_this_page: true
 cloud: aws
 language: py

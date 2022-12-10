@@ -2,7 +2,7 @@
 title: "AWS F# Lambda Web Server | F#"
 h1: "AWS F# Lambda Web Server"
 linktitle: "AWS F# Lambda Web Server"
-meta_desc: "AWS F# Lambda Web Server how-to guide using fs"
+meta_desc: "AWS F# Lambda Web Server How-to Guide using F#"
 no_edit_this_page: true
 cloud: aws
 language: fs

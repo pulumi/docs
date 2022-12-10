@@ -2,7 +2,7 @@
 title: "Azure Kubernetes Service (AKS) Cluster using the native Azure Provider | Python"
 h1: "Azure Kubernetes Service (AKS) Cluster using the native Azure Provider"
 linktitle: "Azure Kubernetes Service (AKS) Cluster using the native Azure Provider"
-meta_desc: "Azure Kubernetes Service (AKS) Cluster using the native Azure Provider how-to guide using py"
+meta_desc: "Azure Kubernetes Service (AKS) Cluster using the native Azure Provider How-to Guide using Python"
 no_edit_this_page: true
 cloud: azure
 language: py

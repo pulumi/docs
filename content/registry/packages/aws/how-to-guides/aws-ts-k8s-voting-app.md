@@ -2,7 +2,7 @@
 title: "Kubernetes Voting App | TypeScript"
 h1: "Kubernetes Voting App"
 linktitle: "Kubernetes Voting App"
-meta_desc: "Kubernetes Voting App how-to guide using ts"
+meta_desc: "Kubernetes Voting App How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws
 language: ts
