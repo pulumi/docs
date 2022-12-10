@@ -2,6 +2,7 @@
 title: "Containerized Ruby on Rails App Delivery on GCP | TypeScript"
 h1: "Containerized Ruby on Rails App Delivery on GCP"
 linktitle: "Containerized Ruby on Rails App Delivery on GCP"
+meta_desc: "Containerized Ruby on Rails App Delivery on GCP how-to guide using ts"
 no_edit_this_page: true
 cloud: gcp
 language: ts

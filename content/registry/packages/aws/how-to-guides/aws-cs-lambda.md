@@ -2,6 +2,7 @@
 title: "AWS C# Lambda | C#"
 h1: "AWS C# Lambda"
 linktitle: "AWS C# Lambda"
+meta_desc: "AWS C# Lambda how-to guide using cs"
 no_edit_this_page: true
 cloud: aws
 language: cs

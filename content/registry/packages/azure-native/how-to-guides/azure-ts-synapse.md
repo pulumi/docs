@@ -2,6 +2,7 @@
 title: "Azure Synapse Workspace and Pools | TypeScript"
 h1: "Azure Synapse Workspace and Pools"
 linktitle: "Azure Synapse Workspace and Pools"
+meta_desc: "Azure Synapse Workspace and Pools how-to guide using ts"
 no_edit_this_page: true
 cloud: azure
 language: ts

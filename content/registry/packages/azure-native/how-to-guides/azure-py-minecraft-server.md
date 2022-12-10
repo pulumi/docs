@@ -2,6 +2,7 @@
 title: "Minecraft Server Using an Azure Virtual Machine | Python"
 h1: "Minecraft Server Using an Azure Virtual Machine"
 linktitle: "Minecraft Server Using an Azure Virtual Machine"
+meta_desc: "Minecraft Server Using an Azure Virtual Machine how-to guide using py"
 no_edit_this_page: true
 cloud: azure
 language: py

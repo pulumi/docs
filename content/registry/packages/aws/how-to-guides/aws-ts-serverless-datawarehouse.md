@@ -2,6 +2,7 @@
 title: "Serverless Datawarehouse | TypeScript"
 h1: "Serverless Datawarehouse"
 linktitle: "Serverless Datawarehouse"
+meta_desc: "Serverless Datawarehouse how-to guide using ts"
 no_edit_this_page: true
 cloud: aws
 language: ts

@@ -2,6 +2,7 @@
 title: "AWS Resources Using AssumeRole | TypeScript"
 h1: "AWS Resources Using AssumeRole"
 linktitle: "AWS Resources Using AssumeRole"
+meta_desc: "AWS Resources Using AssumeRole how-to guide using ts"
 no_edit_this_page: true
 cloud: aws
 language: ts

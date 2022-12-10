@@ -2,6 +2,7 @@
 title: "Azure Virtual Data Center (VDC) | Python"
 h1: "Azure Virtual Data Center (VDC)"
 linktitle: "Azure Virtual Data Center (VDC)"
+meta_desc: "Azure Virtual Data Center (VDC) how-to guide using py"
 no_edit_this_page: true
 cloud: azure
 language: py

@@ -2,6 +2,7 @@
 title: "Managing Secrets and Secure Access in Azure Applications | Python"
 h1: "Managing Secrets and Secure Access in Azure Applications"
 linktitle: "Managing Secrets and Secure Access in Azure Applications"
+meta_desc: "Managing Secrets and Secure Access in Azure Applications how-to guide using py"
 no_edit_this_page: true
 cloud: classic-azure
 language: py

@@ -2,6 +2,7 @@
 title: "Spark on Azure HDInsight | Python"
 h1: "Spark on Azure HDInsight"
 linktitle: "Spark on Azure HDInsight"
+meta_desc: "Spark on Azure HDInsight how-to guide using py"
 no_edit_this_page: true
 cloud: classic-azure
 language: py

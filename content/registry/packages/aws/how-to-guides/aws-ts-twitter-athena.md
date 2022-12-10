@@ -2,6 +2,7 @@
 title: "Twitter Search in Athena | TypeScript"
 h1: "Twitter Search in Athena"
 linktitle: "Twitter Search in Athena"
+meta_desc: "Twitter Search in Athena how-to guide using ts"
 no_edit_this_page: true
 cloud: aws
 language: ts

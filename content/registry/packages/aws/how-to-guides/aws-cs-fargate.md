@@ -2,6 +2,7 @@
 title: "Dockerized ASP.NET App on AWS ECS Fargate | C#"
 h1: "Dockerized ASP.NET App on AWS ECS Fargate"
 linktitle: "Dockerized ASP.NET App on AWS ECS Fargate"
+meta_desc: "Dockerized ASP.NET App on AWS ECS Fargate how-to guide using cs"
 no_edit_this_page: true
 cloud: aws
 language: cs

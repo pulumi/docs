@@ -2,6 +2,7 @@
 title: "ECS Anywhere | TypeScript"
 h1: "ECS Anywhere"
 linktitle: "ECS Anywhere"
+meta_desc: "ECS Anywhere how-to guide using ts"
 no_edit_this_page: true
 cloud: aws
 language: ts

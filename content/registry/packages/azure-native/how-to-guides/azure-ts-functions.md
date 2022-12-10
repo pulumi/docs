@@ -2,6 +2,7 @@
 title: "Deploying Azure Functions | TypeScript"
 h1: "Deploying Azure Functions"
 linktitle: "Deploying Azure Functions"
+meta_desc: "Deploying Azure Functions how-to guide using ts"
 no_edit_this_page: true
 cloud: azure
 language: ts

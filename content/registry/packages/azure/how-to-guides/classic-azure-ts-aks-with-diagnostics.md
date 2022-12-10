@@ -2,6 +2,7 @@
 title: "Azure Kubernetes Service (AKS) Cluster with Diagnostics | TypeScript"
 h1: "Azure Kubernetes Service (AKS) Cluster with Diagnostics"
 linktitle: "Azure Kubernetes Service (AKS) Cluster with Diagnostics"
+meta_desc: "Azure Kubernetes Service (AKS) Cluster with Diagnostics how-to guide using ts"
 no_edit_this_page: true
 cloud: classic-azure
 language: ts

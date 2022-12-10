@@ -2,6 +2,7 @@
 title: "Zero Downtime Migration of EKS Node Groups | TypeScript"
 h1: "Zero Downtime Migration of EKS Node Groups"
 linktitle: "Zero Downtime Migration of EKS Node Groups"
+meta_desc: "Zero Downtime Migration of EKS Node Groups how-to guide using ts"
 no_edit_this_page: true
 cloud: aws
 language: ts

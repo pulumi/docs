@@ -2,6 +2,7 @@
 title: "Amazon EKS Cluster | YAML"
 h1: "Amazon EKS Cluster"
 linktitle: "Amazon EKS Cluster"
+meta_desc: "Amazon EKS Cluster how-to guide using yaml"
 no_edit_this_page: true
 cloud: aws
 language: yaml

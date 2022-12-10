@@ -2,6 +2,7 @@
 title: "Serverless REST API | TypeScript"
 h1: "Serverless REST API"
 linktitle: "Serverless REST API"
+meta_desc: "Serverless REST API how-to guide using ts"
 no_edit_this_page: true
 cloud: aws
 language: ts

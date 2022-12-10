@@ -2,6 +2,7 @@
 title: "StackReference Example | Python"
 h1: "StackReference Example"
 linktitle: "StackReference Example"
+meta_desc: "StackReference Example how-to guide using py"
 no_edit_this_page: true
 cloud: aws
 language: py

@@ -2,6 +2,7 @@
 title: "Easy container example | TypeScript"
 h1: "Easy container example"
 linktitle: "Easy container example"
+meta_desc: "Easy container example how-to guide using ts"
 no_edit_this_page: true
 cloud: aws
 language: ts

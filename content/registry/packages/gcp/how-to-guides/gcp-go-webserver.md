@@ -2,6 +2,7 @@
 title: "Web Server Using Compute Engine | Go"
 h1: "Web Server Using Compute Engine"
 linktitle: "Web Server Using Compute Engine"
+meta_desc: "Web Server Using Compute Engine how-to guide using go"
 no_edit_this_page: true
 cloud: gcp
 language: go

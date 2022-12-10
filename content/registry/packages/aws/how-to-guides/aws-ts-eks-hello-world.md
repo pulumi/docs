@@ -2,6 +2,7 @@
 title: "Amazon EKS Cluster: Hello World! | TypeScript"
 h1: "Amazon EKS Cluster: Hello World!"
 linktitle: "Amazon EKS Cluster: Hello World!"
+meta_desc: "Amazon EKS Cluster: Hello World! how-to guide using ts"
 no_edit_this_page: true
 cloud: aws
 language: ts

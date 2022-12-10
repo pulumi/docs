@@ -2,6 +2,7 @@
 title: "WordPress Helm Chart | TypeScript"
 h1: "WordPress Helm Chart"
 linktitle: "WordPress Helm Chart"
+meta_desc: "WordPress Helm Chart how-to guide using ts"
 no_edit_this_page: true
 cloud: kubernetes
 language: ts

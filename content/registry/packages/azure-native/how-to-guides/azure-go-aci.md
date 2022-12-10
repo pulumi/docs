@@ -2,6 +2,7 @@
 title: "Azure Container Instances on Linux | Go"
 h1: "Azure Container Instances on Linux"
 linktitle: "Azure Container Instances on Linux"
+meta_desc: "Azure Container Instances on Linux how-to guide using go"
 no_edit_this_page: true
 cloud: azure
 language: go

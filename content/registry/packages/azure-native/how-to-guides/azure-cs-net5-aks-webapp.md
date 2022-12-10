@@ -2,6 +2,7 @@
 title: "Deploy Containerized Web Applications using the native Azure Provider, .NET 5, and C# 9 | C#"
 h1: "Deploy Containerized Web Applications using the native Azure Provider, .NET 5, and C# 9"
 linktitle: "Deploy Containerized Web Applications using the native Azure Provider, .NET 5, and C# 9"
+meta_desc: "Deploy Containerized Web Applications using the native Azure Provider, .NET 5, and C# 9 how-to guide using cs"
 no_edit_this_page: true
 cloud: azure
 language: cs

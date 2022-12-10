@@ -2,6 +2,7 @@
 title: "Azure Bot Service with Application Insights | C#"
 h1: "Azure Bot Service with Application Insights"
 linktitle: "Azure Bot Service with Application Insights"
+meta_desc: "Azure Bot Service with Application Insights how-to guide using cs"
 no_edit_this_page: true
 cloud: classic-azure
 language: cs

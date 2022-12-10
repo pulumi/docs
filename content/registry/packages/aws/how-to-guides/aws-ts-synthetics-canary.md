@@ -2,6 +2,7 @@
 title: "Deploy AWS Synthetics Canary Using a Local Script | TypeScript"
 h1: "Deploy AWS Synthetics Canary Using a Local Script"
 linktitle: "Deploy AWS Synthetics Canary Using a Local Script"
+meta_desc: "Deploy AWS Synthetics Canary Using a Local Script how-to guide using ts"
 no_edit_this_page: true
 cloud: aws
 language: ts

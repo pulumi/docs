@@ -2,6 +2,7 @@
 title: "Azure Container Instances on Linux | C#"
 h1: "Azure Container Instances on Linux"
 linktitle: "Azure Container Instances on Linux"
+meta_desc: "Azure Container Instances on Linux how-to guide using cs"
 no_edit_this_page: true
 cloud: azure
 language: cs

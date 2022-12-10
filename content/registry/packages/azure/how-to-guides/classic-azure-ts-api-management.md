@@ -2,6 +2,7 @@
 title: "Azure API Management | TypeScript"
 h1: "Azure API Management"
 linktitle: "Azure API Management"
+meta_desc: "Azure API Management how-to guide using ts"
 no_edit_this_page: true
 cloud: classic-azure
 language: ts

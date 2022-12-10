@@ -2,6 +2,7 @@
 title: "AWS Step Functions with the AWS Native Provider | TypeScript"
 h1: "AWS Step Functions with the AWS Native Provider"
 linktitle: "AWS Step Functions with the AWS Native Provider"
+meta_desc: "AWS Step Functions with the AWS Native Provider how-to guide using ts"
 no_edit_this_page: true
 cloud: aws-native
 language: ts

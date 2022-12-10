@@ -2,6 +2,7 @@
 title: "Static Website Using Azure Blob Storage and CDN | Python"
 h1: "Static Website Using Azure Blob Storage and CDN"
 linktitle: "Static Website Using Azure Blob Storage and CDN"
+meta_desc: "Static Website Using Azure Blob Storage and CDN how-to guide using py"
 no_edit_this_page: true
 cloud: azure
 language: py

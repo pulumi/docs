@@ -2,6 +2,7 @@
 title: "API Gateway V1 to EventBridge | TypeScript"
 h1: "API Gateway V1 to EventBridge"
 linktitle: "API Gateway V1 to EventBridge"
+meta_desc: "API Gateway V1 to EventBridge how-to guide using ts"
 no_edit_this_page: true
 cloud: aws
 language: ts

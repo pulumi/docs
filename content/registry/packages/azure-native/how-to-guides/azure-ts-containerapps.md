@@ -2,6 +2,7 @@
 title: "Azure Container Apps | TypeScript"
 h1: "Azure Container Apps"
 linktitle: "Azure Container Apps"
+meta_desc: "Azure Container Apps how-to guide using ts"
 no_edit_this_page: true
 cloud: azure
 language: ts

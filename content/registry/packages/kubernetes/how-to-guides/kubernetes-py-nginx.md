@@ -2,6 +2,7 @@
 title: "Stateless Application Using a Deployment | Python"
 h1: "Stateless Application Using a Deployment"
 linktitle: "Stateless Application Using a Deployment"
+meta_desc: "Stateless Application Using a Deployment how-to guide using py"
 no_edit_this_page: true
 cloud: kubernetes
 language: py

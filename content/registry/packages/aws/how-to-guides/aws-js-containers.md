@@ -2,6 +2,7 @@
 title: "ECS Fargate Containers | JavaScript"
 h1: "ECS Fargate Containers"
 linktitle: "ECS Fargate Containers"
+meta_desc: "ECS Fargate Containers how-to guide using js"
 no_edit_this_page: true
 cloud: aws
 language: js

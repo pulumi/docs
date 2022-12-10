@@ -2,6 +2,7 @@
 title: "Scheduled Function on AWS | TypeScript"
 h1: "Scheduled Function on AWS"
 linktitle: "Scheduled Function on AWS"
+meta_desc: "Scheduled Function on AWS how-to guide using ts"
 no_edit_this_page: true
 cloud: aws
 language: ts

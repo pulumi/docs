@@ -2,6 +2,7 @@
 title: "Web Server Using Azure Virtual Machine | C#"
 h1: "Web Server Using Azure Virtual Machine"
 linktitle: "Web Server Using Azure Virtual Machine"
+meta_desc: "Web Server Using Azure Virtual Machine how-to guide using cs"
 no_edit_this_page: true
 cloud: classic-azure
 language: cs

@@ -2,6 +2,7 @@
 title: "Azure App Service Running Docker Containers on Linux | TypeScript"
 h1: "Azure App Service Running Docker Containers on Linux"
 linktitle: "Azure App Service Running Docker Containers on Linux"
+meta_desc: "Azure App Service Running Docker Containers on Linux how-to guide using ts"
 no_edit_this_page: true
 cloud: azure
 language: ts

@@ -2,6 +2,7 @@
 title: "Google Kubernetes Engine (GKE) with a Canary Deployment | TypeScript"
 h1: "Google Kubernetes Engine (GKE) with a Canary Deployment"
 linktitle: "Google Kubernetes Engine (GKE) with a Canary Deployment"
+meta_desc: "Google Kubernetes Engine (GKE) with a Canary Deployment how-to guide using ts"
 no_edit_this_page: true
 cloud: gcp
 language: ts

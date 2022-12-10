@@ -2,6 +2,7 @@
 title: "Google Cloud Functions in Python | Python"
 h1: "Google Cloud Functions in Python"
 linktitle: "Google Cloud Functions in Python"
+meta_desc: "Google Cloud Functions in Python how-to guide using py"
 no_edit_this_page: true
 cloud: gcp
 language: py

@@ -2,6 +2,7 @@
 title: "Voting app Using Redis and Flask | Python"
 h1: "Voting app Using Redis and Flask"
 linktitle: "Voting app Using Redis and Flask"
+meta_desc: "Voting app Using Redis and Flask how-to guide using py"
 no_edit_this_page: true
 cloud: aws
 language: py

@@ -2,6 +2,7 @@
 title: "AWS API Gateway V2 HTTP API Quickstart | TypeScript"
 h1: "AWS API Gateway V2 HTTP API Quickstart"
 linktitle: "AWS API Gateway V2 HTTP API Quickstart"
+meta_desc: "AWS API Gateway V2 HTTP API Quickstart how-to guide using ts"
 no_edit_this_page: true
 cloud: aws
 language: ts

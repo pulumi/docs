@@ -2,6 +2,7 @@
 title: "Multiple Azure Kubernetes Service (AKS) Clusters | C#"
 h1: "Multiple Azure Kubernetes Service (AKS) Clusters"
 linktitle: "Multiple Azure Kubernetes Service (AKS) Clusters"
+meta_desc: "Multiple Azure Kubernetes Service (AKS) Clusters how-to guide using cs"
 no_edit_this_page: true
 cloud: azure
 language: cs

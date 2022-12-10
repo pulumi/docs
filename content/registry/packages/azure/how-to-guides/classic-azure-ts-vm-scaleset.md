@@ -2,6 +2,7 @@
 title: "Azure VM Scale Sets | TypeScript"
 h1: "Azure VM Scale Sets"
 linktitle: "Azure VM Scale Sets"
+meta_desc: "Azure VM Scale Sets how-to guide using ts"
 no_edit_this_page: true
 cloud: classic-azure
 language: ts

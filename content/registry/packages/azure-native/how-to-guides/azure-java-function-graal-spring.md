@@ -2,6 +2,7 @@
 title: "Azure Function with Spring Boot Native and GraalVM | Java"
 h1: "Azure Function with Spring Boot Native and GraalVM"
 linktitle: "Azure Function with Spring Boot Native and GraalVM"
+meta_desc: "Azure Function with Spring Boot Native and GraalVM how-to guide using java"
 no_edit_this_page: true
 cloud: azure
 language: java

@@ -2,6 +2,7 @@
 title: "Lambda-backed REST API | TypeScript"
 h1: "Lambda-backed REST API"
 linktitle: "Lambda-backed REST API"
+meta_desc: "Lambda-backed REST API how-to guide using ts"
 no_edit_this_page: true
 cloud: aws
 language: ts

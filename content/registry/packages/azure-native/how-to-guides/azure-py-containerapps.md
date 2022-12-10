@@ -2,6 +2,7 @@
 title: "Azure Container Apps | Python"
 h1: "Azure Container Apps"
 linktitle: "Azure Container Apps"
+meta_desc: "Azure Container Apps how-to guide using py"
 no_edit_this_page: true
 cloud: azure
 language: py

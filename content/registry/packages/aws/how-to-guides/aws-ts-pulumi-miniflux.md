@@ -2,6 +2,7 @@
 title: "Run an RSS Service with Miniflux | TypeScript"
 h1: "Run an RSS Service with Miniflux"
 linktitle: "Run an RSS Service with Miniflux"
+meta_desc: "Run an RSS Service with Miniflux how-to guide using ts"
 no_edit_this_page: true
 cloud: aws
 language: ts

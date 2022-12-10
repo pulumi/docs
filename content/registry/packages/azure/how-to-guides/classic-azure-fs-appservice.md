@@ -2,6 +2,7 @@
 title: "Azure App Service with SQL Database and Application Insights | F#"
 h1: "Azure App Service with SQL Database and Application Insights"
 linktitle: "Azure App Service with SQL Database and Application Insights"
+meta_desc: "Azure App Service with SQL Database and Application Insights how-to guide using fs"
 no_edit_this_page: true
 cloud: classic-azure
 language: fs

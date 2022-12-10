@@ -2,6 +2,7 @@
 title: "eks-minimal | Java"
 h1: "eks-minimal"
 linktitle: "eks-minimal"
+meta_desc: "eks-minimal how-to guide using java"
 no_edit_this_page: true
 cloud: aws
 language: java

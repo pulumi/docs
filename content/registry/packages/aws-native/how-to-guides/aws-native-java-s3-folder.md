@@ -2,6 +2,7 @@
 title: "Host a Static Website on Amazon S3 with the AWS Native Provider | Java"
 h1: "Host a Static Website on Amazon S3 with the AWS Native Provider"
 linktitle: "Host a Static Website on Amazon S3 with the AWS Native Provider"
+meta_desc: "Host a Static Website on Amazon S3 with the AWS Native Provider how-to guide using java"
 no_edit_this_page: true
 cloud: aws-native
 language: java

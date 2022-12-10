@@ -2,6 +2,7 @@
 title: "Wordpress Helm Chart Deployed Using Helm Release Resource | TypeScript"
 h1: "Wordpress Helm Chart Deployed Using Helm Release Resource"
 linktitle: "Wordpress Helm Chart Deployed Using Helm Release Resource"
+meta_desc: "Wordpress Helm Chart Deployed Using Helm Release Resource how-to guide using ts"
 no_edit_this_page: true
 cloud: kubernetes
 language: ts

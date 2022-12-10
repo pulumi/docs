@@ -2,6 +2,7 @@
 title: "AWS Resources | TypeScript"
 h1: "AWS Resources"
 linktitle: "AWS Resources"
+meta_desc: "AWS Resources how-to guide using ts"
 no_edit_this_page: true
 cloud: aws
 language: ts

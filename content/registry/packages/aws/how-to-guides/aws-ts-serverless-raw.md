@@ -2,6 +2,7 @@
 title: "Serverless C# App | TypeScript"
 h1: "Serverless C# App"
 linktitle: "Serverless C# App"
+meta_desc: "Serverless C# App how-to guide using ts"
 no_edit_this_page: true
 cloud: aws
 language: ts

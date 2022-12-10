@@ -2,6 +2,7 @@
 title: "Demo of Integrating the native Azure Pulumi provider with the Microsoft Azure SDK | C#"
 h1: "Demo of Integrating the native Azure Pulumi provider with the Microsoft Azure SDK"
 linktitle: "Demo of Integrating the native Azure Pulumi provider with the Microsoft Azure SDK"
+meta_desc: "Demo of Integrating the native Azure Pulumi provider with the Microsoft Azure SDK how-to guide using cs"
 no_edit_this_page: true
 cloud: azure
 language: cs

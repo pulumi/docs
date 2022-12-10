@@ -2,6 +2,7 @@
 title: "Azure Functions in All Supported Languages | TypeScript"
 h1: "Azure Functions in All Supported Languages"
 linktitle: "Azure Functions in All Supported Languages"
+meta_desc: "Azure Functions in All Supported Languages how-to guide using ts"
 no_edit_this_page: true
 cloud: azure
 language: ts

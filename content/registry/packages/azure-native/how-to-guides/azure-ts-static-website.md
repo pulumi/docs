@@ -2,6 +2,7 @@
 title: "Static Website Using Azure Blob Storage and CDN | TypeScript"
 h1: "Static Website Using Azure Blob Storage and CDN"
 linktitle: "Static Website Using Azure Blob Storage and CDN"
+meta_desc: "Static Website Using Azure Blob Storage and CDN how-to guide using ts"
 no_edit_this_page: true
 cloud: azure
 language: ts

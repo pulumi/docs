@@ -2,6 +2,7 @@
 title: "Azure CDN Custom Domain Dynamic Provider | TypeScript"
 h1: "Azure CDN Custom Domain Dynamic Provider"
 linktitle: "Azure CDN Custom Domain Dynamic Provider"
+meta_desc: "Azure CDN Custom Domain Dynamic Provider how-to guide using ts"
 no_edit_this_page: true
 cloud: classic-azure
 language: ts

@@ -2,6 +2,7 @@
 title: "GCP Instance | Go"
 h1: "GCP Instance"
 linktitle: "GCP Instance"
+meta_desc: "GCP Instance how-to guide using go"
 no_edit_this_page: true
 cloud: gcp
 language: go

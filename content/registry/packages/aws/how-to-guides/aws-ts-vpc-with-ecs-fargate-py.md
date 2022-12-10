@@ -2,6 +2,7 @@
 title: "Using Pulumi for NGINX on AWS ECS Fargate using Python with a vpc built in Typescript | TypeScript"
 h1: "Using Pulumi for NGINX on AWS ECS Fargate using Python with a vpc built in Typescript"
 linktitle: "Using Pulumi for NGINX on AWS ECS Fargate using Python with a vpc built in Typescript"
+meta_desc: "Using Pulumi for NGINX on AWS ECS Fargate using Python with a vpc built in Typescript how-to guide using ts"
 no_edit_this_page: true
 cloud: aws
 language: ts

@@ -2,6 +2,7 @@
 title: "Simple and Component-based Kubernetes Guestbook Apps | TypeScript"
 h1: "Simple and Component-based Kubernetes Guestbook Apps"
 linktitle: "Simple and Component-based Kubernetes Guestbook Apps"
+meta_desc: "Simple and Component-based Kubernetes Guestbook Apps how-to guide using ts"
 no_edit_this_page: true
 cloud: kubernetes
 language: ts

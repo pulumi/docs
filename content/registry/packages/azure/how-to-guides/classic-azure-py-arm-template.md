@@ -2,6 +2,7 @@
 title: "Azure Resource Manager (ARM) Template | Python"
 h1: "Azure Resource Manager (ARM) Template"
 linktitle: "Azure Resource Manager (ARM) Template"
+meta_desc: "Azure Resource Manager (ARM) Template how-to guide using py"
 no_edit_this_page: true
 cloud: classic-azure
 language: py
