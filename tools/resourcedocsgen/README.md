@@ -72,4 +72,5 @@ To update to latest pulumi/pulumi use
 ```
 go get -u github.com/pulumi/pulumi/pkg/v3
 go get -u github.com/pulumi/pulumi/sdk/v3
+go mod tidy
 ```
