@@ -183,7 +183,7 @@ func gatherTutorials(root string) ([]tutorial, error) {
 			H1:    h1,
 			// LinkTitle is the display text for the breadcrumb control.
 			LinkTitle:         h1,
-			MetaDesc:          fmt.Sprintf("%s how-to guide using %s", h1, cloud),
+			MetaDesc:          fmt.Sprintf("%s how-to guide using %s", h1, language),
 			Cloud:             cloud,
 			Language:          language,
 			Body:              cleanMarkdownBody(name, string(body)),
