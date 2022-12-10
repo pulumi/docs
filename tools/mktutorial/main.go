@@ -169,7 +169,7 @@ func gatherTutorials(root string) ([]tutorial, error) {
 			continue
 		}
 
-		// Add the language to the page title to avoid duplicate titles.
+		// Add the language to the page title and meta descriptions to avoid duplicates.
 		var title string
 		var metaDescription string
 
