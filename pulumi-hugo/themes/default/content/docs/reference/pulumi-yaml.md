@@ -15,14 +15,14 @@ The `Pulumi.yaml` project file specifies metadata about your project, such as th
 ### Example project file with only required attributes
 
 ```yaml
-name: Example Pulumi project file with only requires attributes
+name: Example Pulumi project file with only required attributes
 runtime: nodejs
 ```
 
 ### Example project file with all possible attributes
 
 ```yaml
-name: Example Pulumi project file will all possible attributes
+name: Example Pulumi project file with all possible attributes
 runtime: yaml
 description: An example project
 main: example-project/
@@ -41,7 +41,7 @@ template:
 plugins:
   providers:
     name: aws
-    path: ../.../bin
+    path: ../../bin
   languages:
     name: yaml
     path: ../../../pulumi-yaml/bin
