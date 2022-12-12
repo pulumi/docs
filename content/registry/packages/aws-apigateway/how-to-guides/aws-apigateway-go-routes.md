@@ -2,6 +2,7 @@
 title: "Routes in API Gateway | Go"
 h1: "Routes in API Gateway"
 linktitle: "Routes in API Gateway"
+meta_desc: "Routes in API Gateway How-to Guide using Go"
 no_edit_this_page: true
 cloud: aws-apigateway
 language: go

@@ -2,6 +2,7 @@
 title: "Slackbot for Posting Slack Mention Notifications | TypeScript"
 h1: "Slackbot for Posting Slack Mention Notifications"
 linktitle: "Slackbot for Posting Slack Mention Notifications"
+meta_desc: "Slackbot for Posting Slack Mention Notifications How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: gcp
 language: ts

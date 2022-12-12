@@ -2,6 +2,7 @@
 title: "AWS C# EKS Cluster | C#"
 h1: "AWS C# EKS Cluster"
 linktitle: "AWS C# EKS Cluster"
+meta_desc: "AWS C# EKS Cluster How-to Guide using C#"
 no_edit_this_page: true
 cloud: aws
 language: cs

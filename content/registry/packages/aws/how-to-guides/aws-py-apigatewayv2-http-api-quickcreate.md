@@ -2,6 +2,7 @@
 title: "AWS API Gateway V2 HTTP API Quickstart | Python"
 h1: "AWS API Gateway V2 HTTP API Quickstart"
 linktitle: "AWS API Gateway V2 HTTP API Quickstart"
+meta_desc: "AWS API Gateway V2 HTTP API Quickstart How-to Guide using Python"
 no_edit_this_page: true
 cloud: aws
 language: py

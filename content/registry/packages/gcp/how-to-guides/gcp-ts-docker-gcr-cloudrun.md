@@ -2,6 +2,7 @@
 title: "Docker Build and Push to GCR and Deploy to Google Cloud Run using separate projects | TypeScript"
 h1: "Docker Build and Push to GCR and Deploy to Google Cloud Run using separate projects"
 linktitle: "Docker Build and Push to GCR and Deploy to Google Cloud Run using separate projects"
+meta_desc: "Docker Build and Push to GCR and Deploy to Google Cloud Run using separate projects How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: gcp
 language: ts

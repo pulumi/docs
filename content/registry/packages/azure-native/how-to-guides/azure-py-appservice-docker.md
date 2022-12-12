@@ -2,6 +2,7 @@
 title: "Azure App Service Running Docker Containers on Linux | Python"
 h1: "Azure App Service Running Docker Containers on Linux"
 linktitle: "Azure App Service Running Docker Containers on Linux"
+meta_desc: "Azure App Service Running Docker Containers on Linux How-to Guide using Python"
 no_edit_this_page: true
 cloud: azure
 language: py

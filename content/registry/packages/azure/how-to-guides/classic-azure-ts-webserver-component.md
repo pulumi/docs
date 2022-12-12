@@ -2,6 +2,7 @@
 title: "Web Server Component Using Azure Virtual Machine | TypeScript"
 h1: "Web Server Component Using Azure Virtual Machine"
 linktitle: "Web Server Component Using Azure Virtual Machine"
+meta_desc: "Web Server Component Using Azure Virtual Machine How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: classic-azure
 language: ts

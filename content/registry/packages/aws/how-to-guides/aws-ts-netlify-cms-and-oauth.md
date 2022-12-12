@@ -2,6 +2,7 @@
 title: "About the CMS and OAuth | TypeScript"
 h1: "About the CMS and OAuth"
 linktitle: "About the CMS and OAuth"
+meta_desc: "About the CMS and OAuth How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws
 language: ts

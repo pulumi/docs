@@ -2,6 +2,7 @@
 title: "AWS Resources (in Go) | Go"
 h1: "AWS Resources (in Go)"
 linktitle: "AWS Resources (in Go)"
+meta_desc: "AWS Resources (in Go) How-to Guide using Go"
 no_edit_this_page: true
 cloud: aws
 language: go

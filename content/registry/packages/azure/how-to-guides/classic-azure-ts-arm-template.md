@@ -2,6 +2,7 @@
 title: "Azure Resource Manager (ARM) Template | TypeScript"
 h1: "Azure Resource Manager (ARM) Template"
 linktitle: "Azure Resource Manager (ARM) Template"
+meta_desc: "Azure Resource Manager (ARM) Template How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: classic-azure
 language: ts

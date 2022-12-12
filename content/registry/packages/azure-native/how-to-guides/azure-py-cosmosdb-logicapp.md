@@ -2,6 +2,7 @@
 title: "Azure Cosmos DB, an API Connection, and a Logic App | Python"
 h1: "Azure Cosmos DB, an API Connection, and a Logic App"
 linktitle: "Azure Cosmos DB, an API Connection, and a Logic App"
+meta_desc: "Azure Cosmos DB, an API Connection, and a Logic App How-to Guide using Python"
 no_edit_this_page: true
 cloud: azure
 language: py

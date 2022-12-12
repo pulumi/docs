@@ -2,6 +2,7 @@
 title: "Web Server Using Amazon EC2 (in Go) | Go"
 h1: "Web Server Using Amazon EC2 (in Go)"
 linktitle: "Web Server Using Amazon EC2 (in Go)"
+meta_desc: "Web Server Using Amazon EC2 (in Go) How-to Guide using Go"
 no_edit_this_page: true
 cloud: aws
 language: go

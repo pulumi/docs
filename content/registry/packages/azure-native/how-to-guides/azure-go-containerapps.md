@@ -2,6 +2,7 @@
 title: "Azure Container Apps | Go"
 h1: "Azure Container Apps"
 linktitle: "Azure Container Apps"
+meta_desc: "Azure Container Apps How-to Guide using Go"
 no_edit_this_page: true
 cloud: azure
 language: go

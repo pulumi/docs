@@ -2,6 +2,7 @@
 title: "Multiple Azure Kubernetes Service (AKS) Clusters | Go"
 h1: "Multiple Azure Kubernetes Service (AKS) Clusters"
 linktitle: "Multiple Azure Kubernetes Service (AKS) Clusters"
+meta_desc: "Multiple Azure Kubernetes Service (AKS) Clusters How-to Guide using Go"
 no_edit_this_page: true
 cloud: classic-azure
 language: go

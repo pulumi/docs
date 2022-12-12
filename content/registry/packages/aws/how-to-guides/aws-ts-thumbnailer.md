@@ -2,6 +2,7 @@
 title: "Video Thumbnailer Using AWS Fargate | TypeScript"
 h1: "Video Thumbnailer Using AWS Fargate"
 linktitle: "Video Thumbnailer Using AWS Fargate"
+meta_desc: "Video Thumbnailer Using AWS Fargate How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws
 language: ts

@@ -2,6 +2,7 @@
 title: "Static Website on Amazon S3 | Go"
 h1: "Static Website on Amazon S3"
 linktitle: "Static Website on Amazon S3"
+meta_desc: "Static Website on Amazon S3 How-to Guide using Go"
 no_edit_this_page: true
 cloud: aws
 language: go

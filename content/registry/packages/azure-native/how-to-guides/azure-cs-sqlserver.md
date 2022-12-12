@@ -2,6 +2,7 @@
 title: "A SQLServer on Azure PaaS | C#"
 h1: "A SQLServer on Azure PaaS"
 linktitle: "A SQLServer on Azure PaaS"
+meta_desc: "A SQLServer on Azure PaaS How-to Guide using C#"
 no_edit_this_page: true
 cloud: azure
 language: cs

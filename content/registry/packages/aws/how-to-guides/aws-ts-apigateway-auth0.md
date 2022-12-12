@@ -2,6 +2,7 @@
 title: "Secure Serverless REST API Using Auth0 | TypeScript"
 h1: "Secure Serverless REST API Using Auth0"
 linktitle: "Secure Serverless REST API Using Auth0"
+meta_desc: "Secure Serverless REST API Using Auth0 How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws
 language: ts

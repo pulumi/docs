@@ -2,6 +2,7 @@
 title: "GraphQL Endpoint in AWS AppSync | Python"
 h1: "GraphQL Endpoint in AWS AppSync"
 linktitle: "GraphQL Endpoint in AWS AppSync"
+meta_desc: "GraphQL Endpoint in AWS AppSync How-to Guide using Python"
 no_edit_this_page: true
 cloud: aws
 language: py

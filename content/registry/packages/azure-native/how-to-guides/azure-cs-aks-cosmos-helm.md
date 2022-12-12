@@ -2,6 +2,7 @@
 title: "A Helm chart deployed to AKS that stores TODOs in an Azure Cosmos DB MongoDB API | C#"
 h1: "A Helm chart deployed to AKS that stores TODOs in an Azure Cosmos DB MongoDB API"
 linktitle: "A Helm chart deployed to AKS that stores TODOs in an Azure Cosmos DB MongoDB API"
+meta_desc: "A Helm chart deployed to AKS that stores TODOs in an Azure Cosmos DB MongoDB API How-to Guide using C#"
 no_edit_this_page: true
 cloud: azure
 language: cs

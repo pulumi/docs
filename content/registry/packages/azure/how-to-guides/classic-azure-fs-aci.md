@@ -2,6 +2,7 @@
 title: "Custom Docker Image running in Azure Container Instances | F#"
 h1: "Custom Docker Image running in Azure Container Instances"
 linktitle: "Custom Docker Image running in Azure Container Instances"
+meta_desc: "Custom Docker Image running in Azure Container Instances How-to Guide using F#"
 no_edit_this_page: true
 cloud: classic-azure
 language: fs

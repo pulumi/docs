@@ -2,6 +2,7 @@
 title: "Create a Slackbot for Posting Mention Notifications | Python"
 h1: "Create a Slackbot for Posting Mention Notifications"
 linktitle: "Create a Slackbot for Posting Mention Notifications"
+meta_desc: "Create a Slackbot for Posting Mention Notifications How-to Guide using Python"
 no_edit_this_page: true
 cloud: aws
 language: py

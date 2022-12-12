@@ -2,6 +2,7 @@
 title: "Voting app Using Redis and Flask | TypeScript"
 h1: "Voting app Using Redis and Flask"
 linktitle: "Voting app Using Redis and Flask"
+meta_desc: "Voting app Using Redis and Flask How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws
 language: ts

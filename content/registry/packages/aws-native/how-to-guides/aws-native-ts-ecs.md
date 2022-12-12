@@ -2,6 +2,7 @@
 title: "Create an ECS cluster on AWS with the AWS Native Provider | TypeScript"
 h1: "Create an ECS cluster on AWS with the AWS Native Provider"
 linktitle: "Create an ECS cluster on AWS with the AWS Native Provider"
+meta_desc: "Create an ECS cluster on AWS with the AWS Native Provider How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws-native
 language: ts

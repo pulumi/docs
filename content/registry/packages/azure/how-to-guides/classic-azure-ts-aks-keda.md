@@ -2,6 +2,7 @@
 title: "Azure Kubernetes Service (AKS) Cluster and Azure Functions with KEDA | TypeScript"
 h1: "Azure Kubernetes Service (AKS) Cluster and Azure Functions with KEDA"
 linktitle: "Azure Kubernetes Service (AKS) Cluster and Azure Functions with KEDA"
+meta_desc: "Azure Kubernetes Service (AKS) Cluster and Azure Functions with KEDA How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: classic-azure
 language: ts

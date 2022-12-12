@@ -2,6 +2,7 @@
 title: "Continuous Integration with Jenkins | TypeScript"
 h1: "Continuous Integration with Jenkins"
 linktitle: "Continuous Integration with Jenkins"
+meta_desc: "Continuous Integration with Jenkins How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: kubernetes
 language: ts

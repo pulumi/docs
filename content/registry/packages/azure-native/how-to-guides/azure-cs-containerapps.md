@@ -2,6 +2,7 @@
 title: "Azure Container Apps | C#"
 h1: "Azure Container Apps"
 linktitle: "Azure Container Apps"
+meta_desc: "Azure Container Apps How-to Guide using C#"
 no_edit_this_page: true
 cloud: azure
 language: cs

@@ -2,6 +2,7 @@
 title: "AWS Golang EKS Cluster | Go"
 h1: "AWS Golang EKS Cluster"
 linktitle: "AWS Golang EKS Cluster"
+meta_desc: "AWS Golang EKS Cluster How-to Guide using Go"
 no_edit_this_page: true
 cloud: aws
 language: go

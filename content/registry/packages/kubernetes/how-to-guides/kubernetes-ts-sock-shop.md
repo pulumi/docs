@@ -2,6 +2,7 @@
 title: "Sock Shop Pulumi Demo | TypeScript"
 h1: "Sock Shop Pulumi Demo"
 linktitle: "Sock Shop Pulumi Demo"
+meta_desc: "Sock Shop Pulumi Demo How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: kubernetes
 language: ts

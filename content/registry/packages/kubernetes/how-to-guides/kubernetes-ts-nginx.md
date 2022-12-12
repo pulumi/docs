@@ -2,6 +2,7 @@
 title: "Stateless Application Using a Deployment | TypeScript"
 h1: "Stateless Application Using a Deployment"
 linktitle: "Stateless Application Using a Deployment"
+meta_desc: "Stateless Application Using a Deployment How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: kubernetes
 language: ts

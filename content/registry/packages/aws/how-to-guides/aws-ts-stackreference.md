@@ -2,6 +2,7 @@
 title: "StackReference Example | TypeScript"
 h1: "StackReference Example"
 linktitle: "StackReference Example"
+meta_desc: "StackReference Example How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws
 language: ts
