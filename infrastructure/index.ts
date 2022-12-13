@@ -158,6 +158,9 @@ const baseCacheBehavior = {
     maxTtl: fiveMinutes,
 
     lambdaFunctionAssociations,
+
+    // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-response-headers-policies.html#managed-response-headers-policies-security
+    responseHeadersPolicyId: "67f7725c-6f97-4210-82d7-5512b31e9d03", // SecurityHeadersPolicy
 };
 
 // domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
