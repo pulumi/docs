@@ -1,7 +1,6 @@
 ---
-title: ".NET (C#, VB, F#)"
-meta_desc: An overview of how to use .NET languages like C# and F# for infrastructure as code
-           on any cloud (AWS, Azure, GCP, Kubernetes, etc.).
+title: "How to Use .NET (C#, VB, F#) for Pulumi"
+meta_desc: An overview of how to use .NET languages like C# and F# with Pulumi for infrastructure as code on any cloud (AWS, Azure, GCP, Kubernetes, etc.).
 menu:
   intro:
     parent: languages

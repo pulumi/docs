@@ -1,6 +1,7 @@
 ---
+title_tag: "Intro to Pulumi: Resources"
 title: "Resources"
-meta_desc: An in depth look at Pulumi resources and their usage.
+meta_desc: Resources represent the fundamental units that make up your cloud infrastructure. Learn how Pulumi resources work and how to use them in this guide.
 menu:
   intro:
     identifier: resources

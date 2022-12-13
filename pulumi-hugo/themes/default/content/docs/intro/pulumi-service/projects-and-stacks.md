@@ -1,6 +1,7 @@
 ---
-title: Projects and Stacks
-meta_desc: An overview of Project and Stack Management within the Pulumi Cloud Service.
+title_tag: "Pulumi Service: Project and Stack Management"
+title: "Project and Stack Management"
+meta_desc: Learn how to manage projects and stacks in the Pulumi Service, including creating a project and managing stack permissions.
 menu:
   intro:
     parent: pulumi-service

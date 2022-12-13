@@ -1,7 +1,6 @@
 ---
-title: "Pulumi YAML"
-meta_desc: |
-  An overview of how to use the Pulumi YAML config languages for infrastructure as code on any cloud (AWS, Azure, GCP, Kubernetes, etc.).
+title: "How to use Pulumi YAML"
+meta_desc: An overview of how to use the Pulumi YAML config languages for infrastructure as code on any cloud (AWS, Azure, GCP, Kubernetes, etc.).
 menu:
   intro:
     parent: languages

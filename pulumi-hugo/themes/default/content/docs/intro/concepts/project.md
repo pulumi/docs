@@ -1,6 +1,7 @@
 ---
+title_tag: "Intro to Pulumi: Projects"
 title: "Projects"
-meta_desc: An in depth look at Pulumi projects and their usage.
+meta_desc: A Pulumi project is any folder which contains a Pulumi.yaml file. Learn about how to use Pulumi projects, as well as example use cases.
 menu:
   intro:
     parent: concepts

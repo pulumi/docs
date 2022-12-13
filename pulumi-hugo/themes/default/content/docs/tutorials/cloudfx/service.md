@@ -1,6 +1,6 @@
 ---
-title: Build & Deploy Docker to AWS or Azure
-meta_desc: This tutorial will teach you how to build and deploy a Dockerized application to AWS or Azure.
+title: "How to Build a Container Using Cloud Framework"
+meta_desc: "This tutorial will teach you how to build and deploy a simple Dockerized application to AWS or Azure using Pulumi Cloud Framework."
 aliases: ["/docs/quickstart/cloudfx/tutorial-service/"]
 ---
 

@@ -1,6 +1,7 @@
 ---
+title_tag: "Intro to Pulumi: Inputs and Outputs"
 title: "Inputs and Outputs"
-meta_desc: An in depth look at Pulumi Inputs and Outputs and their usage.
+meta_desc: Resource properties are treated specially in Pulumi, both for purposes of input and output. Learn how to work with inputs and outputs in this guide.
 menu:
   intro:
     parent: concepts

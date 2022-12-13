@@ -1,7 +1,6 @@
 ---
-title: Pulumi vs. Cloud SDKs (AWS Boto, etc.)
-meta_desc: This page gives an overview of the major differences between Pulumi and
-           Cloud SDKs (AWS Boto, etc.).
+title: Pulumi vs. Cloud SDKs (AWS Boto)
+meta_desc: Learn about the major differences between Pulumi and cloud SDKs like AWS Boto and more.
 linktitle: Cloud SDKs
 menu:
   intro:

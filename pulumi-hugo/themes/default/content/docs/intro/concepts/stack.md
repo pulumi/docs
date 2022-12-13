@@ -1,6 +1,7 @@
 ---
+title_tag: "Intro to Pulumi: Stacks"
 title: "Stacks"
-meta_desc: An in depth look at Pulumi Stacks and their usage.
+meta_desc: Every Pulumi program is deployed to a stack and a project can have as many stacks as you need. Learn more about Pulumi stacks and how to use them.
 menu:
   intro:
     parent: concepts

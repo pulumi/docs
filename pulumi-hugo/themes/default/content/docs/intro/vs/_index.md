@@ -1,7 +1,6 @@
 ---
-title: Compare Pulumi to...
-meta_desc: This page gives an overivew of the major differences between Pulumi and
-           infrastructure as code solutions.
+title: Pulumi Compared to Alternatives
+meta_desc: Learn how Pulumi compares with alternative infrastructure as code solutions that may share overlapping capabilities. 
 linktitle: Compare Pulumi to...
 menu:
   intro:

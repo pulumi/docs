@@ -1,6 +1,6 @@
 ---
 title: Pulumi vs. Serverless Framework
-meta_desc: Pulumi allows for a more holistic approach than the Serverless Framework, writing entire applications using an infrastructure-as-code approach.
+meta_desc: Learn about the major differences between Pulumi and the Serverless Framework, and how Pulumi offers a more holistic approach to writing applications.
 linktitle: Serverless Framework
 menu:
   intro:

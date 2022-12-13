@@ -1,4 +1,5 @@
 ---
+title_tag: "CustomTimeouts Resource Option"
 title: "CustomTimeouts"
 meta_desc: The customTimeouts resource option specifies the default retry/timeout behavior for resource provisioning.
 menu:

@@ -1,7 +1,6 @@
 ---
-title: "Python"
-meta_desc: An overview of how to use Python for infrastructure as code
-           on any cloud (AWS, Azure, GCP, Kubernetes, etc.).
+title: "How to Use Pulumi with Python"
+meta_desc: An overview of how to use Python with Pulumi for infrastructure as code on any cloud (AWS, Azure, GCP, Kubernetes, etc.).
 menu:
   intro:
     parent: languages

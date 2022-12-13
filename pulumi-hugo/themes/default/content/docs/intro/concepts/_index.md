@@ -1,6 +1,7 @@
 ---
-title: Architecture & Concepts
-meta_desc: This page describes the primary concepts behind the Pulumi infrastructure as code platform.
+title_tag: "Intro to Pulumi: Architecture & Concepts"
+title: "Architecture & Concepts"
+meta_desc: Learn about the basic overall structure and major components of Pulumi here, along with an example of how to create an AWS EC2 security group.
 menu:
   intro:
     identifier: concepts

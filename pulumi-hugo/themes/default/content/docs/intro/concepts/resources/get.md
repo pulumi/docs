@@ -1,6 +1,7 @@
 ---
-title: "Getter Functions"
-meta_desc: Each Pulumi resource has a `get` function to get a reference to an exissting instance of the resource.
+title_tag: "Intro to Pulumi: Get Functions"
+title: "Get Functions"
+meta_desc: Each Pulumi resource has a `get` function to get a reference to an existing instance of the resource. Learn more about these `get` functions in this guide.
 menu:
   intro:
     parent: resources

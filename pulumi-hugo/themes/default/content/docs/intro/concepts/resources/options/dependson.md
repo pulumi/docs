@@ -1,4 +1,5 @@
 ---
+title_tag: "DependsOn Resource Option"
 title: "DependsOn"
 meta_desc: The dependsOn resource option specifies additional resource dependencies in addition to those in the dependency graph.
 menu:

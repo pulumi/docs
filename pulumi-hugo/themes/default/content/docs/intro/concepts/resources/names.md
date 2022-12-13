@@ -1,6 +1,7 @@
 ---
+title_tag: "Intro to Pulumi: Resource Names"
 title: "Resource Names"
-meta_desc: A resource in Pulumi has a logical name (in Pulumi) and a physical name (in the cloud provider).
+meta_desc: A resource in Pulumi has a logical name (in Pulumi) and a physical name (in the cloud provider). Learn more about resource names and how to use them here.
 menu:
   intro:
     parent: resources

@@ -1,5 +1,6 @@
 ---
-title: Languages
+title_tag: "Intro to Pulumi: Supported Languages"
+title: "Supported Languages"
 meta_desc: An overview of how to use Node.js, Python, Go, .NET, Java, and YAML when writing cloud applications for AWS, Azure, Google Cloud, Kubernetes, etc.
 menu:
   intro:

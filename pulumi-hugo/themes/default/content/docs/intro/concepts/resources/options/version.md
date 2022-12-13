@@ -1,4 +1,5 @@
 ---
+title_tag: "Version Resource Option"
 title: "Version"
 meta_desc: The version resource option specifies a provider version to use when operating on a resource.
 menu:

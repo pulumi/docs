@@ -1,7 +1,6 @@
 ---
-title: "Multi-Cloud Containers and Serverless"
-meta_desc: Learn how to build a video thumbnailer using serverless, containers, and cloud
-           infrastructure.
+title: "How to Build a Video Thumbnail Extractor"
+meta_desc: "Learn how to build a video thumbnail extractor using serverless, containers, and cloud infrastructure in this tutorial."
 aliases: ["/docs/quickstart/cloudfx/tutorial-thumbnailer/"]
 ---
 

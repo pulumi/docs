@@ -1,6 +1,6 @@
 ---
 title: Pulumi vs. Cloud Templates
-meta_desc: An index of the differences between Pulumi and cloud templating solutions like AWS CloudFormation and Microsoft Azure Resource Manager (ARM).
+meta_desc: Learn about the major differences between Pulumi and cloud templating solutions like AWS CloudFormation and Microsoft Azure Resource Manager (ARM).
 linktitle: Cloud Templates
 aliases:
     - /docs/reference/vs/cloud_templates/

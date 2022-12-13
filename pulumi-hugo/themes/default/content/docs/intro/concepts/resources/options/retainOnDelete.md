@@ -1,4 +1,5 @@
 ---
+title_tag: "RetainOnDelete Resource Option"
 title: "RetainOnDelete"
 meta_desc: The `retainOnDelete` resource option marks a resource to be retained during a delete operation.
 menu:

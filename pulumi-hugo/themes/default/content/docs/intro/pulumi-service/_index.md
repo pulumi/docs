@@ -1,6 +1,6 @@
 ---
-title: Pulumi Service
-meta_desc: An overview of the Pulumi Service web application.
+title: Overview of The Pulumi Service
+meta_desc: The Pulumi Service web application automatically manages deployment state and enables collaboration between developers and operators.
 menu:
   intro:
     identifier: pulumi-service

@@ -1,4 +1,5 @@
 ---
+title_tag: "AdditionalSecretOutputs Resource Option"
 title: "AdditionalSecretOutputs"
 meta_desc: The additionalSecretOutputs resource option specifies a list of named output properties that should be treated as secrets.
 menu:

@@ -1,7 +1,6 @@
 ---
-title: "Node.js (JavaScript, TypeScript)"
-meta_desc: An overview of how to use Node.js languages like JavaScript and TypeScript for
-           infrastructure as code on any cloud (AWS, Azure, GCP, Kubernetes, etc.).
+title: "How to Use Pulumi with Node.js (TypeScript)"
+meta_desc: Learn how to use Node.js languages like JavaScript and TypeScript with Pulumi for infrastructure as code on any cloud (AWS, Azure, GCP, Kubernetes, etc.).
 menu:
   intro:
     parent: languages

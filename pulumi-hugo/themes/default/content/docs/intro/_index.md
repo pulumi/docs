@@ -1,6 +1,6 @@
 ---
-title: Intro to Pulumi
-meta_desc: Get an in-depth intro to Pulumi, and learn how it enables you to program the cloud.
+title: What is Pulumi?
+meta_desc: Get an in-depth intro to Pulumi, a modern infrastructure as code platform, and learn how it enables you to program the cloud.
 menu:
   intro:
     name: Overview

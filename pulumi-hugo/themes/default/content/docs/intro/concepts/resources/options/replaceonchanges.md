@@ -1,4 +1,5 @@
 ---
+title_tag: "ReplaceOnChanges Resource Option"
 title: "ReplaceOnChanges"
 meta_desc: The replaceOnChanges resource option indicates that changes to properties on a resource should force a replacement instead of an in-place update.
 menu:

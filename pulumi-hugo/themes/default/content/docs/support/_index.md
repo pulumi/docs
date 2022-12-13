@@ -1,5 +1,6 @@
 ---
-title: Documentation Support
+title_tag: Documentation Support
+title: Support
 meta_desc: Pulumi is here to help! Try reviewing our troubleshooting or FAQ docs, or reach out to support.
 menu:
   support:

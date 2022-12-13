@@ -1,6 +1,6 @@
 ---
 title: Pulumi vs. AWS CDK
-meta_desc: Pulumi and AWS CDK are alike in some ways, but different in many others. We've created this document to help you better understand how they compare.
+meta_desc: Pulumi and AWS Cloud Development Kit (CDK) share some similarities, but there are many key differences. Learn about these major differences here.
 linktitle: AWS CDK
 menu:
   intro:

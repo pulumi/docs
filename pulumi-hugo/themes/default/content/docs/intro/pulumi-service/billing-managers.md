@@ -1,6 +1,7 @@
 ---
+title_tag: "Pulumi Service: Billing Managers"
 title: "Billing Managers"
-meta_desc: Overview of Billing Managers in the Pulumi Service.
+meta_desc: The Billing Manager role gives customers the ability to have someone in their Pulumi Organization manage billing operations. Learn more about this role here.
 menu:
   intro:
     parent: pulumi-service

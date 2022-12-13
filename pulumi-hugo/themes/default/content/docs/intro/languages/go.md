@@ -1,7 +1,6 @@
 ---
-title: "Go"
-meta_desc: An overview of how to use the Go language for infrastructure as code
-           on any cloud (AWS, Azure, GCP, Kubernetes, etc.).
+title: "How to Use Go for Pulumi"
+meta_desc: An overview of how to use the Go language with Pulumi for infrastructure as code on any cloud (AWS, Azure, GCP, Kubernetes, etc.).
 menu:
   intro:
     parent: languages

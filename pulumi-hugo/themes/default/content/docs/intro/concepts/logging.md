@@ -1,5 +1,6 @@
 ---
-title: "Logging"
+title_tag: "Intro to Pulumi: Logging"
+title: "Loggine"
 meta_desc: An overview of the Pulumi logging functionality used for debugging and diagnostics.
 menu:
   intro:
