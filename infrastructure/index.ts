@@ -70,6 +70,12 @@ const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {
     website: {
         indexDocument: "index.html",
     },
+    corsRules: [{
+        allowedMethods: [
+            "GET",
+        ],
+        allowedOrigins: ["*"],
+    }],
 });
 
 // Optionally create a fallback bucket for serving the website directly out of S3 when necessary.
