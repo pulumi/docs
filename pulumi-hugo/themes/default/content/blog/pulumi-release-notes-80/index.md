@@ -89,7 +89,7 @@ When you modify a resource the Pulumi CLI will display the time elapsed so you c
 
 [![Watch it in action](https://asciinema.org/a/XHYWenULkugoY57kStsadcBH8.svg)](https://asciinema.org/a/XHYWenULkugoY57kStsadcBH8)
 
-👉  Learn more in the [Elapsed Time per Resource blog post](blog/pulumi-cli-time-elapsed) and in the [resource creation times GitHub issue](https://github.com/pulumi/pulumi/issues/10534).
+👉  Learn more in the [Elapsed Time per Resource blog post](/blog/pulumi-cli-time-elapsed) and in the [resource creation times GitHub issue](https://github.com/pulumi/pulumi/issues/10534).
 
 ### Automation API NodeJS parallel inline programs
 
