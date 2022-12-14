@@ -3171,3 +3171,5 @@ github.com/pulumi/theme v0.0.0-20221212191246-d8c9ccd48bc9 h1:V3qGFL7u1XU7o5duL8
 github.com/pulumi/theme v0.0.0-20221212191246-d8c9ccd48bc9/go.mod h1:Ksr+ztEgwxDLYFRalb0SYu4WcGROgnF35iILealOMno=
 github.com/pulumi/theme v0.0.0-20221212233240-164b90446d56 h1:kWQZW0+PPy8l1quk6IdwCydK+1GfRAiSezEK3CzLjU4=
 github.com/pulumi/theme v0.0.0-20221212233240-164b90446d56/go.mod h1:Ksr+ztEgwxDLYFRalb0SYu4WcGROgnF35iILealOMno=
+github.com/pulumi/theme v0.0.0-20221214194142-d255deee0790 h1:yTFwpocomD1BiaCoJtMhdvYjUG6JcL5lR+mJHv6MC+M=
+github.com/pulumi/theme v0.0.0-20221214194142-d255deee0790/go.mod h1:Ksr+ztEgwxDLYFRalb0SYu4WcGROgnF35iILealOMno=
