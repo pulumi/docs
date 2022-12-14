@@ -960,3 +960,280 @@ resources:
 {{% /choosable %}}
 
 {{< /chooser >}}
+
+## Handle Field Conflicts on Existing Resources
+
+After a resource is deployed to the cluster, it is possible for other controllers to start managing it. Thanks
+to the power of SSA, it is possible to see a detailed record of which controller last changed every field for
+the resource. An additional benefit of this fine-grained tracking is the ability to deliberately resolve conflicts
+rather than inadvertently overwriting changes made by another controller. Let's look at some common examples of field
+conflicts, and how to resolve them.
+
+### Cert Manager
+
+Cert-manager is a common example of an operator that mutates other cluster resources. Consider the following sequence
+of events:
+
+1. Deploy the cert-manager operator.
+2. Deploy a `ValidatingWebhookConfiguration` resource "X" using Pulumi with the `cert-manager.io/inject-ca-from`
+annotation set.
+3. The cert-manager operator updates "X" by setting the `webhooks[*].clientConfig.caBundle` field(s). This field is now
+managed by cert-manager rather than by Pulumi, and doesn't match Pulumi's configuration.
+4. Run another Pulumi update, and the field conflict is detected.
+
+Pulumi provides a way to ignore changes for particular fields using the [ignoreChanges resource option](/docs/intro/concepts/resources/options/ignoreChanges/).
+Set this resource option on resource "X" to tell Pulumi to ignore changes to this field since another controller is
+managing it.
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language javascript %}}
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+const res = new ValidatingWebhookConfiguration("res",
+    { prop: "new-value" },
+    { ignoreChanges: ["webhooks[*].clientConfig", "webhooks[*].namespaceSelector"] });
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+res = ValidatingWebhookConfiguration("res",
+    prop="new-value",
+    opts=ResourceOptions(ignore_changes=["webhooks[*].clientConfig", "webhooks[*].namespaceSelector"]))
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+res, _ := NewValidatingWebhookConfiguration(ctx, "res",
+    &ValidatingWebhookConfigurationArgs{Prop: "new-value"},
+    pulumi.IgnoreChanges([]string{"webhooks[*].clientConfig", "webhooks[*].namespaceSelector"}))
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var res = new ValidatingWebhookConfiguration("res",
+    new ValidatingWebhookConfigurationArgs { Prop = "new-value" },
+    new CustomResourceOptions { IgnoreChanges = { "webhooks[*].clientConfig", "webhooks[*].namespaceSelector" } });
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var res = new ValidatingWebhookConfiguration("res",
+    ValidatingWebhookConfigurationArgs.builder()
+        .prop("new-value")
+        .build(),
+    CustomResourceOptions.builder()
+        .ignoreChanges("webhooks[*].clientConfig")
+        .ignoreChanges("webhooks[*].namespaceSelector")
+        .build());
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  res:
+    type: ValidatingWebhookConfiguration
+    properties:
+      prop: new-value
+    options:
+      ignoreChanges:
+        - webhooks[*].clientConfig
+        - webhooks[*].namespaceSelector
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+### Helm Charts
+
+Although any resource can be updated by multiple controllers, it is particularly common for Helm charts that are
+deployed by Pulumi. Consider the following sequence of events:
+
+1. Deploy a chart using Pulumi. This chart contains a resource "X" plus an operator that will update "X".
+2. Once the chart is deployed, the operator starts running and makes an update to resource "X". The updated field is now
+managed by a different controller, and the value does not match Pulumi's configuration.
+3. Run another Pulumi update, and the field conflict is detected.
+
+Pulumi provides a way to ignore changes for particular fields using the [ignoreChanges resource option](/docs/intro/concepts/resources/options/ignoreChanges/).
+Normally we could set the resource option directly, but since the Helm component is managing the resources on our
+behalf, we need to use a transformation to accomplish this.
+
+{{< chooser language "typescript,python,go,csharp" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as k8s from "@pulumi/kubernetes";
+
+const kruise = new k8s.helm.v3.Chart("kruise", {
+    chart: "kruise",
+    version: "1.3.0",
+    fetchOpts:{
+        repo: "https://openkruise.github.io/charts/",
+    },
+}, {
+    transformations: [
+        // Ignore changes that will be overwritten by the kruise-manager deployment.
+        args => {
+            if (args.type === "kubernetes:admissionregistration.k8s.io/v1:ValidatingWebhookConfiguration" ||
+                args.type === "kubernetes:admissionregistration.k8s.io/v1:MutatingWebhookConfiguration") {
+                return {
+                    props: args.props,
+                    opts: pulumi.mergeOptions(args.opts, {
+                        ignoreChanges: ["metadata.annotations.template", "webhooks[*].clientConfig"],
+                    })
+                }
+            }
+            return undefined;
+        }
+    ],
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+from pulumi import ResourceOptions, ResourceTransformationArgs, ResourceTransformationResult
+from pulumi_kubernetes.helm.v3 import Chart, ChartOpts, FetchOpts
+
+
+# Ignore changes that will be overwritten by the kruise-manager deployment.
+def ignore_changes(args: ResourceTransformationArgs):
+    if args.type_ == "kubernetes:admissionregistration.k8s.io/v1:ValidatingWebhookConfiguration" or
+        args.type_ == "kubernetes:admissionregistration.k8s.io/v1:MutatingWebhookConfiguration":
+        return ResourceTransformationResult(
+            props=args.props,
+            opts=ResourceOptions.merge(args.opts, ResourceOptions(
+                ignore_changes=[
+                    "metadata.annotations.template",
+                    "webhooks[*].clientConfig",
+                ],
+            )))
+
+
+kruise = Chart(
+    "kruise",
+    ChartOpts(
+        chart="kruise",
+        version="1.3.0",
+        fetch_opts=FetchOpts(
+            repo="https://openkruise.github.io/charts/",
+        ),
+    ),
+    opts=ResourceOptions(
+        transformations=[ignore_changes],
+    )
+)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+    "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/helm/v3"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := helm.NewChart(ctx, "kruise", helm.ChartArgs{
+			Chart:   pulumi.String("kruise"),
+			Version: pulumi.String("1.3.0"),
+			FetchArgs: helm.FetchArgs{
+				Repo: pulumi.String("https://openkruise.github.io/charts/"),
+			},
+		}, pulumi.Transformations([]pulumi.ResourceTransformation{
+            // Ignore changes that will be overwritten by the kruise-manager deployment.
+            func(args *pulumi.ResourceTransformationArgs) *pulumi.ResourceTransformationResult {
+				if args.Type == "kubernetes:admissionregistration.k8s.io/v1:ValidatingWebhookConfiguration" ||
+					args.Type == "kubernetes:admissionregistration.k8s.io/v1:MutatingWebhookConfiguration" {
+					return &pulumi.ResourceTransformationResult{
+						Props: args.Props,
+						Opts: append(args.Opts, pulumi.IgnoreChanges([]string{
+							"metadata.annotations.template",
+							"webhooks[*].clientConfig",
+						})),
+					}
+				}
+				return nil
+			},
+		}))
+		if err != nil {
+			return err
+		}
+
+        return nil
+    })
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Kubernetes.Helm;
+using Pulumi.Kubernetes.Helm.V3;
+
+return await Deployment.RunAsync(() =>
+{
+    var kruise = new Chart("kruise", new ChartArgs
+    {
+        Chart = "kruise",
+        Version = "1.3.0",
+        FetchOptions = new ChartFetchArgs
+        {
+            Repo = "https://openkruise.github.io/charts/"
+        },
+    }, new ComponentResourceOptions
+    {
+        ResourceTransformations =
+        {
+            // Ignore changes that will be overwritten by the kruise-manager deployment.
+            args =>
+            {
+                if (args.Resource.GetResourceType() == "kubernetes:admissionregistration.k8s.io/v1:ValidatingWebhookConfiguration" ||
+                    args.Resource.GetResourceType() == "kubernetes:admissionregistration.k8s.io/v1:MutatingWebhookConfiguration")
+                {
+                    var options = CustomResourceOptions.Merge(
+                        (CustomResourceOptions) args.Options,
+                        new CustomResourceOptions {
+                            IgnoreChanges = {"metadata.annotations.template", "webhooks[*].clientConfig"}
+                        });
+                    return new ResourceTransformationResult(args.Args, options);
+                }
+
+                return null;
+            }
+        }
+    });
+});
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
