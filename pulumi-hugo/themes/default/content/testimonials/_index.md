@@ -39,7 +39,7 @@ messages:
       link: https://www.linkedin.com/feed/update/urn:li:activity:6993614249331765250?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A6993614249331765250%2C6993718113632411648%29
       source: linkedin
     -
-      message: "Continuing on my thread about @PulumiCorp from a while ago: holy shit I am a convert. I needed to setup a staging environment that was mostly identical to prod, and once I trued up our Pulumi stack with AWS, it took minutes to do this. How have I lived without this until now?"
+      message: "Continuing on my thread about @PulumiCorp from a while ago: holy **** I am a convert. I needed to setup a staging environment that was mostly identical to prod, and once I trued up our Pulumi stack with AWS, it took minutes to do this. How have I lived without this until now?"
       author: "@krangarajan\n"
       link: https://twitter.com/krangarajan/status/1580618068203479040
       source: twitter
