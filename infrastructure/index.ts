@@ -221,6 +221,10 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
 
     defaultCacheBehavior: {
         ...baseCacheBehavior,
+        // the policy ID of the AWS managed policy, CORS-S3-Origin, it includes the headers that enable cross-origin
+        // resource sharing (CORS) requests when the content origin is an S3 bucket.
+        // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-origin-request-policies.html
+        originRequestPolicyId: "88a5eaf4-2fd4-4709-b370-b4c650ea3fcf",
     },
 
     orderedCacheBehaviors: [
