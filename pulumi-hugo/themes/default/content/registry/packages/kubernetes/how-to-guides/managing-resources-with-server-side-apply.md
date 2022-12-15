@@ -972,7 +972,7 @@ If you encounter a field conflict, there are several options for resolving the c
 
 1. Overwrite conflicts by using the `patchForce` option. This option can be enabled either by setting an annotation, or
    by using the `PULUMI_K8S_ENABLE_PATCH_FORCE` environment variable.
-2. Use the [ignoreChanges resource option](/docs/intro/concepts/resources/options/ignoreChanges/) to skip the update
+2. Use the [ignoreChanges resource option](/docs/intro/concepts/resources/options/ignorechanges/) to skip the update
    for the conflicting field.
 3. Transfer ownership of the conflicting field to another field manager. See the [upstream documentation](https://kubernetes.io/docs/reference/using-api/server-side-apply/#transferring-ownership)
    for additional information about this approach.
@@ -1198,7 +1198,7 @@ annotation set.
 managed by cert-manager rather than by Pulumi, and doesn't match Pulumi's configuration.
 4. Run another Pulumi update, and the field conflict is detected.
 
-Pulumi provides a way to ignore changes for particular fields using the [ignoreChanges resource option](/docs/intro/concepts/resources/options/ignoreChanges/).
+Pulumi provides a way to ignore changes for particular fields using the [ignoreChanges resource option](/docs/intro/concepts/resources/options/ignorechanges/).
 Set this resource option on resource "X" to tell Pulumi to ignore changes to this field since another controller is
 managing it.
 
@@ -1285,7 +1285,7 @@ deployed by Pulumi. Consider the following sequence of events:
 managed by a different controller, and the value does not match Pulumi's configuration.
 3. Run another Pulumi update, and the field conflict is detected.
 
-Pulumi provides a way to ignore changes for particular fields using the [ignoreChanges resource option](/docs/intro/concepts/resources/options/ignoreChanges/).
+Pulumi provides a way to ignore changes for particular fields using the [ignoreChanges resource option](/docs/intro/concepts/resources/options/ignorechanges/).
 Normally we could set the resource option directly, but since the Helm component is managing the resources on our
 behalf, we need to use a transformation to accomplish this.
 
