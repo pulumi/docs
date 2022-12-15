@@ -1,5 +1,6 @@
 ---
-title: Overview of The Pulumi Service
+title_tag: "Overview of The Pulumi Service"
+title: "Pulumi Service"
 meta_desc: The Pulumi Service web application automatically manages deployment state and enables collaboration between developers and operators.
 menu:
   intro:

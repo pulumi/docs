@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi Service: Accounts Overview"
-title: "Accounts Overview"
+title: "Accounts"
 meta_desc: Learn how to create and manage a personal account in the Pulumi Cloud Service in this guide.
 menu:
   intro:
@@ -68,13 +68,13 @@ For users who signed up with email, you may change your password by:
 1. Navigate to **Settings** > **Account security**
 1. Reset your password. Your password must be at least ten characters long.
 
-## Access Tokens
+## Personal Access Tokens
 
-Use access tokens to sign into the Pulumi Service via the CLI. On this page there is a list of all the access tokens associated with your account, including a description and last used information for each token.
+Use access tokens to sign into the Pulumi Service via the CLI. On this page there is a list of all your personal access tokens, including a description and last used information for each token.
 
 When you run [`pulumi login`](/docs/reference/cli/pulumi_login) from the command line, you will be prompted for an access token. Once obtained, the access token logs you into the Pulumi Service and lets you interact with the Pulumi service and manage your stacks.
 
-These access tokens have the same permission as your user. If  you instead would like to scope the token to an organization, review the [Organization Access Tokens documentation](/docs/intro/pulumi-service/organization-access-tokens/).
+These access tokens have the same permission as your user. If  you instead would like to scope the token to an organization, use [Organization Access Tokens](/docs/intro/pulumi-service/organization-access-tokens/).
 
 ![Access tokens](/images/docs/reference/service/access-tokens.png)
 
@@ -82,17 +82,15 @@ These access tokens have the same permission as your user. If  you instead would
 
 To create an access token:
 
-1. Use the organization selector to choose your individual account.
-1. Navigate to **Settings** > **Access tokens**.
+1. Select **Personal access tokens** from the user menu.
 1. Select **Create token**.
 
 ### Deleting Personal Access Tokens
 
 To delete an access token:
 
-1. Use the organization selector to choose your individual account.
-1. Navigate to **Settings** > **Access tokens**.
-1. Use the trash can icon to delete a token.
+1. Select **Personal access tokens** from the user menu.
+1. Select **Delete token** from the 3-dot menu at the end of the table row.
 
 ## Subscription
 
