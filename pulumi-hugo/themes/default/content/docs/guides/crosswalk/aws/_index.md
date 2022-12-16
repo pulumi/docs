@@ -32,49 +32,37 @@ For example, this program builds and publishes a Dockerized application to a pri
 ecr), spins up an ECS Fargate cluster, and runs a scalable, load balanced service, all in
 response to a single `pulumi up` command line invocation:
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
-{{% choosable language typescript %}}
+{{% choosable language "javascript,typescript" %}}
 
 ```typescript
-import * as awsx from "@pulumi/awsx";
+import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
+import * as awsx from "@pulumi/awsx";
 
-// Create a repository.
-const repo = new awsx.ecr.Repository("my-repo");
-
-// Build an image from the "./app" directory (relative to our project and containing Dockerfile),
-// and publish it to our ECR repository provisioned above.
+const repository = new awsx.ecr.Repository("repository", {});
 const image = new awsx.ecr.Image("image", {
-    repositoryUrl: repo.url,
+    repositoryUrl: repository.url,
     path: "./app",
-})
-
-// Create an ECS Cluster
-const cluster = new aws.ecs.Cluster("default-cluster");
-
-// Create a load balancer on port 80 and spin up two instances of Nginx.
-const lb = new awsx.lb.ApplicationLoadBalancer("nginx-lb");
-
-const service = new awsx.ecs.FargateService("my-service", {
+});
+const cluster = new aws.ecs.Cluster("cluster", {});
+const lb = new awsx.lb.ApplicationLoadBalancer("lb", {});
+const service = new awsx.ecs.FargateService("service", {
     cluster: cluster.arn,
+    assignPublicIp: true,
     taskDefinitionArgs: {
         container: {
             image: image.imageUri,
             cpu: 512,
             memory: 128,
             essential: true,
-            portMappings: [
-                {
-                    containerPort: 80,
-                    targetGroup: lb.defaultTargetGroup,
-                },
-            ],
+            portMappings: [{
+                targetGroup: lb.defaultTargetGroup,
+            }],
         },
     },
 });
-
-// Export the load balancer's address so that it's easy to access.
 export const url = lb.loadBalancer.dnsName;
 ```
 
@@ -87,32 +75,92 @@ import pulumi
 import pulumi_aws as aws
 import pulumi_awsx as awsx
 
-repo = awsx.ecr.Repository("my-repo");
-
+repository = awsx.ecr.Repository("repository")
 image = awsx.ecr.Image("image",
-                       repository_url=repo.url,
-                       path="./app")
-
-cluster = aws.ecs.Cluster("default-cluster")
-
-lb = awsx.lb.ApplicationLoadBalancer("nginx-lb")
-
+    repository_url=repository.url,
+    path="./app")
+cluster = aws.ecs.Cluster("cluster")
+lb = awsx.lb.ApplicationLoadBalancer("lb")
 service = awsx.ecs.FargateService("service",
-                                  cluster=cluster.arn,
-                                  task_definition_args=awsx.ecs.FargateServiceTaskDefinitionArgs(
-                                      containers={
-                                          "nginx": awsx.ecs.TaskDefinitionContainerDefinitionArgs(
-                                              image=image.image_uri,
-                                              memory=128,
-                                              port_mappings=[awsx.ecs.TaskDefinitionPortMappingArgs(
-                                                  container_port=80,
-                                                  target_group=lb.default_target_group,
-                                              )]
-                                          )
-                                      }
-                                  ))
-
+    cluster=cluster.arn,
+    assign_public_ip=True,
+    task_definition_args=awsx.ecs.FargateServiceTaskDefinitionArgs(
+        container=awsx.ecs.TaskDefinitionContainerDefinitionArgs(
+            image=image.image_uri,
+            cpu=512,
+            memory=128,
+            essential=True,
+            port_mappings=[awsx.ecs.TaskDefinitionPortMappingArgs(
+                target_group=lb.default_target_group,
+            )],
+        ),
+    ))
 pulumi.export("url", lb.load_balancer.dns_name)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ecs"
+	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/lb"
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ecr"
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ecs"
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/lb"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		repository, err := ecr.NewRepository(ctx, "repository", nil)
+		if err != nil {
+			return err
+		}
+		image, err := ecr.NewImage(ctx, "image", &ecr.ImageArgs{
+			RepositoryUrl: repository.Url,
+			Path:          pulumi.String("./app"),
+		})
+		if err != nil {
+			return err
+		}
+		cluster, err := ecs.NewCluster(ctx, "cluster", nil)
+		if err != nil {
+			return err
+		}
+		lb, err := lb.NewApplicationLoadBalancer(ctx, "lb", nil)
+		if err != nil {
+			return err
+		}
+		_, err = ecs.NewFargateService(ctx, "service", &ecs.FargateServiceArgs{
+			Cluster:        cluster.Arn,
+			AssignPublicIp: pulumi.Bool(true),
+			TaskDefinitionArgs: &ecs.FargateServiceTaskDefinitionArgs{
+				Container: &ecs.TaskDefinitionContainerDefinitionArgs{
+					Image:     image.ImageUri,
+					Cpu:       pulumi.Int(512),
+					Memory:    pulumi.Int(128),
+					Essential: pulumi.Bool(true),
+					PortMappings: []ecs.TaskDefinitionPortMappingArgs{
+						&ecs.TaskDefinitionPortMappingArgs{
+							TargetGroup: lb.DefaultTargetGroup,
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("url", lb.LoadBalancer.ApplyT(func(loadBalancer *lb.LoadBalancer) (string, error) {
+			return loadBalancer.DnsName, nil
+		}).(pulumi.StringOutput))
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}
@@ -121,56 +169,154 @@ pulumi.export("url", lb.load_balancer.dns_name)
 
 ```csharp
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using Pulumi;
-using Pulumi.Awsx.Ecs.Inputs;
 using Aws = Pulumi.Aws;
-using Ecr = Pulumi.Awsx.Ecr;
-using Ecs = Pulumi.Awsx.Ecs;
-using Lb = Pulumi.Awsx.Lb;
+using Awsx = Pulumi.Awsx;
 
-class MyStack : Stack
+return await Deployment.RunAsync(() =>
 {
-    public MyStack()
+    var repository = new Awsx.Ecr.Repository("repository");
+
+    var image = new Awsx.Ecr.Image("image", new()
     {
-        var repo = new Ecr.Repository("my-repo");
+        RepositoryUrl = repository.Url,
+        Path = "./app",
+    });
 
-        var image = new Ecr.Image("image", new Ecr.ImageArgs
+    var cluster = new Aws.Ecs.Cluster("cluster");
+
+    var lb = new Awsx.Lb.ApplicationLoadBalancer("lb");
+
+    var service = new Awsx.Ecs.FargateService("service", new()
+    {
+        Cluster = cluster.Arn,
+        AssignPublicIp = true,
+        TaskDefinitionArgs = new Awsx.Ecs.Inputs.FargateServiceTaskDefinitionArgs
         {
-            RepositoryUrl = repo.Url,
-            Path = "./app",
-        });
-
-        var cluster = new Aws.Ecs.Cluster("demo-cluster");
-
-        var lb = new Lb.ApplicationLoadBalancer("nginx-lb");
-
-        var service = new Ecs.FargateService("my-service", new Ecs.FargateServiceArgs
-        {
-            Cluster = cluster.Arn,
-            TaskDefinitionArgs = new FargateServiceTaskDefinitionArgs
+            Container = new Awsx.Ecs.Inputs.TaskDefinitionContainerDefinitionArgs
             {
-                Container = new TaskDefinitionContainerDefinitionArgs
+                Image = image.ImageUri,
+                Cpu = 512,
+                Memory = 128,
+                Essential = true,
+                PortMappings = new[]
                 {
-                    Memory = 128,
-                    Cpu = 512,
-                    Image = image.ImageUri,
-                    Essential = true,
-                    PortMappings = new TaskDefinitionPortMappingArgs
+                    new Awsx.Ecs.Inputs.TaskDefinitionPortMappingArgs
                     {
-                        ContainerPort = 80,
                         TargetGroup = lb.DefaultTargetGroup,
-                    }
-                }
-            }
-        });
+                    },
+                },
+            },
+        },
+    });
+
+    return new Dictionary<string, object?>
+    {
+        ["url"] = lb.LoadBalancer.Apply(loadBalancer => loadBalancer.DnsName),
+    };
+});
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package generated_program;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.awsx.ecr.Repository;
+import com.pulumi.awsx.ecr.Image;
+import com.pulumi.awsx.ecr.ImageArgs;
+import com.pulumi.aws.ecs.Cluster;
+import com.pulumi.awsx.lb.ApplicationLoadBalancer;
+import com.pulumi.awsx.ecs.FargateService;
+import com.pulumi.awsx.ecs.FargateServiceArgs;
+import com.pulumi.awsx.ecs.inputs.FargateServiceTaskDefinitionArgs;
+import com.pulumi.awsx.ecs.inputs.TaskDefinitionContainerDefinitionArgs;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var repository = new Repository("repository");
+
+        var image = new Image("image", ImageArgs.builder()
+            .repositoryUrl(repository.url())
+            .path("./app")
+            .build());
+
+        var cluster = new Cluster("cluster");
+
+        var lb = new ApplicationLoadBalancer("lb");
+
+        var service = new FargateService("service", FargateServiceArgs.builder()
+            .cluster(cluster.arn())
+            .assignPublicIp(true)
+            .taskDefinitionArgs(FargateServiceTaskDefinitionArgs.builder()
+                .container(TaskDefinitionContainerDefinitionArgs.builder()
+                    .image(image.imageUri())
+                    .cpu(512)
+                    .memory(128)
+                    .essential(true)
+                    .portMappings(TaskDefinitionPortMappingArgs.builder()
+                        .targetGroup(lb.defaultTargetGroup())
+                        .build())
+                    .build())
+                .build())
+            .build());
+
+        ctx.export("url", lb.loadBalancer().applyValue(loadBalancer -> loadBalancer.dnsName()));
     }
 }
+```
 
-class Program
-{
-    static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
-}
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: scratch-yaml
+description: A Pulumi YAML program to deploy a serverless application on AWS
+runtime: yaml
+resources:
+  repository:
+    type: awsx:ecr:Repository
+  image:
+    type: awsx:ecr:Image
+    properties:
+      repositoryUrl: ${repository.url}
+      path: "./app"
+  cluster:
+    type: aws:ecs:Cluster
+  lb:
+    type: awsx:lb:ApplicationLoadBalancer
+  service:
+    type: awsx:ecs:FargateService
+    properties:
+      cluster: ${cluster.arn}
+      assignPublicIp: true
+      taskDefinitionArgs:
+        container:
+          image: ${image.imageUri}
+          cpu: 512
+          memory: 128
+          essential: true
+          portMappings:
+            - targetGroup: ${lb.defaultTargetGroup}
+outputs:
+  url: ${lb.loadBalancer.dnsName}
 ```
 
 {{% /choosable %}}
@@ -237,8 +383,8 @@ Pulumi Crosswalk for AWS is available for all supported Pulumi languages.
 
 Because Pulumi Crosswalk for AWS is a broader "brand" for our framework spanning multiple packages, there isn't
 a single package that contains everything. The [`@pulumi/aws`](/registry/packages/aws/api-docs),
-[`@pulumi/awsx`](/docs/reference/pkg/nodejs/pulumi/awsx), and
-[`@pulumi/eks`](/docs/reference/pkg/nodejs/pulumi/eks) packages each has an important role to play.
+[`@pulumi/awsx`](/registry/packages/awsx/api-docs/), [`@pulumi/aws-apigateway`](/registry/packages/aws-apigateway/api-docs/) and
+[`@pulumi/eks`](/registry/packages/eks/api-docs/) packages each has an important role to play.
 
 ### Is Pulumi Crosswalk for AWS Free to Use?
 
@@ -246,7 +392,7 @@ Yes, Pulumi Crosswalk for AWS is completely open source and free to use, along w
 [Pulumi's commercial offerings](/pricing) already fully support Pulumi Crosswalk for AWS.
 
 If you would like to contribute to the packages, please see the relevant repo on GitHub: [`pulumi/pulumi-aws`](
-https://github.com/pulumi/pulumi-aws), [`pulumi/pulumi-awsx`](https://github.com/pulumi/pulumi-awsx), or
+https://github.com/pulumi/pulumi-aws), [`pulumi/pulumi-awsx`](https://github.com/pulumi/pulumi-awsx) [`pulumi/pulumi-aws-apigateway`](https://github.com/pulumi/pulumi-aws-apigateway/), or
 [`pulumi/eks`](https://github.com/pulumi/pulumi-eks). Issues and Pull Requests are welcome!
 
 ### If I'm an Existing User, What Has Changed?
