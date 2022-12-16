@@ -29,11 +29,11 @@ The Pulumi API is one of the components required for self-hosting the Pulumi Ser
 
 ## Minimum System Requirements
 
-| Type | Properties | Notes |
-| ---- | ---------- | ----- |
-| Compute | 2 CPU cores w/ 8 GB memory | |
-| Storage | 20GB SSD |  For MySQL data.<br><br>**Note**: By default, the installation uses a single data path via `PULUMI_DATA_PATH` to map both the SQL data volume and the object storage path. Specify a volume for the `db` container as required. |
-| Storage | 200GB SSD |  For Object Storage.<br><br>**Note**: By default, the installation uses a single data path via `PULUMI_DATA_PATH` to map both the SQL data volume and the object storage path. A dedicated path can be set via env var `PULUMI_LOCAL_OBJECTS` for the `api` container. |
+| Type    | Properties                 | Notes                                                                                                                                                                                                                                                                 |
+|---------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Compute | 2 CPU cores w/ 8 GB memory |                                                                                                                                                                                                                                                                       |
+| Storage | 20GB SSD                   | For MySQL data.<br><br>**Note**: By default, the installation uses a single data path via `PULUMI_DATA_PATH` to map both the SQL data volume and the object storage path. Specify a volume for the `db` container as required.                                        |
+| Storage | 200GB SSD                  | For Object Storage.<br><br>**Note**: By default, the installation uses a single data path via `PULUMI_DATA_PATH` to map both the SQL data volume and the object storage path. A dedicated path can be set via env var `PULUMI_LOCAL_OBJECTS` for the `api` container. |
 
 > **Note**: The storage recommendations for the Object Storage can be lesser than 200GB depending on your organization size and the expected usage.
 
@@ -47,13 +47,13 @@ This container runs an HTTP server which provides the APIs needed by the Console
 
 #### Function Mode
 
-It's possible to split apart the HTTP Server from the Background Jobs functionality to distribute reponsibility across multiple instances. The function mode determines the mode in which the server runs based upon the env variable `PULUMI_API_CONTAINER_MODE`. If this value is not defined, or doesn't match a valid option, then it defaults to `FULL`.
+It's possible to split apart the HTTP Server from the Background Jobs functionality to distribute responsibility across multiple instances. The function mode determines the mode in which the server runs based upon the env variable `PULUMI_API_CONTAINER_MODE`. If this value is not defined, or doesn't match a valid option, then it defaults to `FULL`.
 
-| Variable Name | Description                  |
-| ------------- | ---------------------------- |
-|	FULL          | Pulumi API & Background Jobs (Default) |
-| API           | Only Pulumi API              |
-| JOBS          | Only Background Jobs         |
+| Variable Name | Description                            |
+|---------------|----------------------------------------|
+| FULL          | Pulumi API & Background Jobs (Default) |
+| API           | Only Pulumi API                        |
+| JOBS          | Only Background Jobs                   |
 
 ## Environment Variables for Core Infrastructure
 
@@ -61,13 +61,13 @@ The core infrastructure components to successfully run the API service are the d
 Depending on your requirements, you can configure additional (optional) identity services as well as enhanced security
 between the API and the database.
 
-| Variable Name | Description |
-| ------------- | ----------- |
-| PULUMI_LICENSE_KEY | The license key value. A JWT string.<br><br>**Note**: Be sure to enclose the value in single-quotes. |
-| PULUMI_DATABASE_ENDPOINT | The database server endpoint in the format `host:port`. This should be a MySQL 5.6 server. |
-| PULUMI_DATABASE_NAME | The name of the database on the database server. |
-| PULUMI_API_DOMAIN | The internet or network-local domain using which the API service can be reached, e.g. `pulumiapi.acmecorp.com`. Default is `localhost:8080`. |
-| PULUMI_CONSOLE_DOMAIN | The internet or network-local domain using which the Console can be reached, e.g. `pulumiconsole.acmecorp.com`. Default is `localhost:3000`. |
+| Variable Name            | Description                                                                                                                                  |
+|--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| PULUMI_LICENSE_KEY       | The license key value. A JWT string.<br><br>**Note**: Be sure to enclose the value in single-quotes.                                         |
+| PULUMI_DATABASE_ENDPOINT | The database server endpoint in the format `host:port`. This should be a MySQL 5.6 server.                                                   |
+| PULUMI_DATABASE_NAME     | The name of the database on the database server.                                                                                             |
+| PULUMI_API_DOMAIN        | The internet or network-local domain using which the API service can be reached, e.g. `pulumiapi.acmecorp.com`. Default is `localhost:8080`. |
+| PULUMI_CONSOLE_DOMAIN    | The internet or network-local domain using which the Console can be reached, e.g. `pulumiconsole.acmecorp.com`. Default is `localhost:3000`. |
 
 ## Object storage
 
@@ -77,9 +77,9 @@ state (checkpoint) and the policy pack must use different buckets on the same ob
 
 ### Local storage
 
-| Variable Name | Description |
-| ------------- | ----------- |
-| PULUMI_LOCAL_OBJECTS | Folder path for persisting state for stacks. Ensure that this path is highly available, and backed-up regularly. Only use this if you want the service to persist objects to a local path. |
+| Variable Name                         | Description                                                                                                                                                                                           |
+|---------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PULUMI_LOCAL_OBJECTS                  | Folder path for persisting state for stacks. Ensure that this path is highly available, and backed-up regularly. Only use this if you want the service to persist objects to a local path.            |
 | PULUMI_POLICY_PACK_LOCAL_HTTP_OBJECTS | Folder path for persisting published policy packs. Ensure that this path is highly available, and backed-up regularly. Only use this if you want the service to persist policy packs to a local path. |
 
 ### AWS S3
@@ -91,21 +91,23 @@ If your Minio configuration doesn't require a region, you should still specify t
 any valid AWS region name. For example, `us-west-2`.
 {{% /notes %}}
 
-| Variable Name | Description |
-| ------------- | ----------- |
-| PULUMI_CHECKPOINT_BLOB_STORAGE_ENDPOINT | The storage endpoint for persisting stack state/checkpoint. The value takes the format: `s3://<bucket-name>`. The `s3://` scheme also supports query-params. See the GoCloud docs for an [example](https://gocloud.dev/howto/blob/#s3-compatible) of the query-params. |
-| PULUMI_POLICY_PACK_BLOB_STORAGE_ENDPOINT | The storage endpoint for persisting published policy packs. The value takes the format: `s3://<bucket-name>`. Similar to `PULUMI_CHECKPOINT_BLOB_STORAGE_ENDPOINT`, this also supports query-params. |
-| PULUMI_ENGINE_EVENTS_BLOB_STORAGE_ENDPOINT | The storage endpoint for persisting large engine events. We recommend configuring this value to improve performance and reduce the size of the MySQL database. The value takes the format: `s3://<bucket-name>`. Similar to `PULUMI_CHECKPOINT_BLOB_STORAGE_ENDPOINT`, this also supports query-params. |
+| Variable Name                                 | Description                                                                                                                                                                                                                                                                                             |
+|-----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PULUMI_CHECKPOINT_BLOB_STORAGE_ENDPOINT       | The storage endpoint for persisting stack state/checkpoint. The value takes the format: `s3://<bucket-name>`. The `s3://` scheme also supports query-params. See the GoCloud docs for an [example](https://gocloud.dev/howto/blob/#s3-compatible) of the query-params.                                  |
+| PULUMI_POLICY_PACK_BLOB_STORAGE_ENDPOINT      | The storage endpoint for persisting published policy packs. The value takes the format: `s3://<bucket-name>`. Similar to `PULUMI_CHECKPOINT_BLOB_STORAGE_ENDPOINT`, this also supports query-params.                                                                                                    |
+| PULUMI_ENGINE_EVENTS_BLOB_STORAGE_ENDPOINT    | The storage endpoint for persisting large engine events. We recommend configuring this value to improve performance and reduce the size of the MySQL database. The value takes the format: `s3://<bucket-name>`. Similar to `PULUMI_CHECKPOINT_BLOB_STORAGE_ENDPOINT`, this also supports query-params. |
+| PULUMI_SERVICE_METADATA_BLOB_STORAGE_ENDPOINT | The storage endpoint for persisting large config values. We recommend configuring this value if your programs use configuration values exceeding 64kb. The value takes the format: `s3://<bucket-name.`. Similar to `PULUMI_CHECKPOINT_BLOB_STORAGE_ENDPOINT`, this also supports query-params.         |
 
 ### Azure Storage
 
-| Variable Name | Description |
-| ------------- | ----------- |
-| PULUMI_CHECKPOINT_BLOB_STORAGE_ENDPOINT | The storage endpoint for persisting stack state/checkpoint. The value takes the format: `azblob://<blob-container>`. |
-| PULUMI_POLICY_PACK_BLOB_STORAGE_ENDPOINT | The storage endpoint for persisting published policy packs. The value takes the format: `azblob://<blob-container>`. |
-| PULUMI_ENGINE_EVENTS_BLOB_STORAGE_ENDPOINT | The storage endpoint for persisting large engine events. We recommend configuring this value to improve performance and reduce the size of the MySQL database. The value takes the format: `azblob://<blob-container>`. |
-| AZURE_STORAGE_ACCOUNT | The name of the Azure storage account where the blob containers for checkpoint and policy pack have been created. See [Cloud Provider Authentication](#azure) for additional configuration options for Azure. |
-| AZURE_STORAGE_KEY | (Optional) The primary or secondary storage key for the storage account. You only need to specify this if you are _not_ using Azure MSI. |
+| Variable Name                                 | Description                                                                                                                                                                                                             |
+|-----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PULUMI_CHECKPOINT_BLOB_STORAGE_ENDPOINT       | The storage endpoint for persisting stack state/checkpoint. The value takes the format: `azblob://<blob-container>`.                                                                                                    |
+| PULUMI_POLICY_PACK_BLOB_STORAGE_ENDPOINT      | The storage endpoint for persisting published policy packs. The value takes the format: `azblob://<blob-container>`.                                                                                                    |
+| PULUMI_ENGINE_EVENTS_BLOB_STORAGE_ENDPOINT    | The storage endpoint for persisting large engine events. We recommend configuring this value to improve performance and reduce the size of the MySQL database. The value takes the format: `azblob://<blob-container>`. |
+| PULUMI_SERVICE_METADATA_BLOB_STORAGE_ENDPOINT | The storage endpoint for persisting large config values. We recommend configuring this value if your programs use configuration values exceeding 64kb. The value takes the format: `azblob://<bucket-name.`.            |
+| AZURE_STORAGE_ACCOUNT                         | The name of the Azure storage account where the blob containers for checkpoint and policy pack have been created. See [Cloud Provider Authentication](#azure) for additional configuration options for Azure.           |
+| AZURE_STORAGE_KEY                             | (Optional) The primary or secondary storage key for the storage account. You only need to specify this if you are _not_ using Azure MSI.                                                                                |
 
 ## Encryption services
 
@@ -114,14 +116,14 @@ You only need to configure one of the support services.
 
 ### Local keys
 
-| Variable Name | Description |
-| ------------- | ----------- |
+| Variable Name     | Description                                                                                                         |
+|-------------------|---------------------------------------------------------------------------------------------------------------------|
 | PULUMI_LOCAL_KEYS | Folder path that contains a random 32-byte key. Ensure that this path is highly available, and backed-up regularly. |
 
 ### AWS KMS
 
-| Variable Name | Description |
-| ------------- | ----------- |
+| Variable Name  | Description                                       |
+|----------------|---------------------------------------------------|
 | PULUMI_KMS_KEY | ARN for the AWS KMS customer master key resource. |
 
 ### Azure KeyVault
@@ -132,11 +134,11 @@ active. The API service never has access to the private key material of the key 
 uses the public key for encryption. The API will request KeyVault to decrypt a cipher text.
 {{% /notes %}}
 
-| Variable Name | Description |
-| ------------- | ----------- |
-| PULUMI_AZURE_KV_URI | Azure KeyVault URI. For example, `https://<vault-name>.vault.azure.net`. |
-| PULUMI_AZURE_KV_KEY_NAME | The name of the key in KeyVault. The key must be an RSA key type. We recommend a key size of 2048 for most cases. The key operations must support `Encrypt` and `Decrypt`. Otherwise, the service will fail to start. |
-| PULUMI_AZURE_KV_KEY_VERSION | The version of the key that the service should use. Note: All previous versions of the key must remain enabled. |
+| Variable Name               | Description                                                                                                                                                                                                           |
+|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PULUMI_AZURE_KV_URI         | Azure KeyVault URI. For example, `https://<vault-name>.vault.azure.net`.                                                                                                                                              |
+| PULUMI_AZURE_KV_KEY_NAME    | The name of the key in KeyVault. The key must be an RSA key type. We recommend a key size of 2048 for most cases. The key operations must support `Encrypt` and `Decrypt`. Otherwise, the service will fail to start. |
+| PULUMI_AZURE_KV_KEY_VERSION | The version of the key that the service should use. Note: All previous versions of the key must remain enabled.                                                                                                       |
 
 ## Cloud Provider Authentication
 
@@ -146,13 +148,13 @@ These settings are required if you are running the Pulumi Service on one of thes
 
 For more information about authenticating with AWS services, see the AWS SDK [docs](https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/guide_credentials_environment.html).
 
-| Variable Name | Description |
-| ------------- | ----------- |
-| AWS_REGION | The region where the dependent AWS services used by Pulumi Service have been created. For example, the KMS key must exist in this region. Similarly, if you are using RDS, then there must be a writable cluster in this region. |
-| AWS_ACCESS_KEY_ID | The AWS access key ID. |
-| AWS_SECRET_ACCESS_KEY | The AWS secret key. |
-| AWS_PROFILE | The AWS profile. |
-| AWS_ROLE_ARN | The AWS role ARN to assume using the base access keys. |
+| Variable Name         | Description                                                                                                                                                                                                                      |
+|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| AWS_REGION            | The region where the dependent AWS services used by Pulumi Service have been created. For example, the KMS key must exist in this region. Similarly, if you are using RDS, then there must be a writable cluster in this region. |
+| AWS_ACCESS_KEY_ID     | The AWS access key ID.                                                                                                                                                                                                           |
+| AWS_SECRET_ACCESS_KEY | The AWS secret key.                                                                                                                                                                                                              |
+| AWS_PROFILE           | The AWS profile.                                                                                                                                                                                                                 |
+| AWS_ROLE_ARN          | The AWS role ARN to assume using the base access keys.                                                                                                                                                                           |
 
 ### Azure
 
@@ -163,36 +165,36 @@ if you would like to use a self-managed Service Principal (aka AAD client creden
 Azure Storage account key using the `AZURE_STORAGE_KEY` env var.
 {{% /notes %}}
 
-| Variable Name | Description |
-| ------------- | ----------- |
-| AZURE_CLIENT_ID | Client ID of the Azure Managed System Identity or the self-managed Service Principal (SP) that should be used for both Azure KeyVault and Storage. The MSI or the SP must have access to Key Management operations (`Get`, `Encrypt` and `Decrypt`) of the KeyVault you plan to use. |
-| AZURE_CLIENT_SECRET | (Optional) Client secret of the Azure SP. |
-| AZURE_TENANT_ID | (Optional) Tenant ID of the Azure SP. |
-| AZURE_SUBSCRIPTION_ID | (Optional) Subscription ID of the Azure AP. |
-| AZURE_STORAGE_DOMAIN | (Optional) The custom domain for your storage domain, if any. If this is not provided, the default Azure public domain "blob.core.windows.net" will be used. |
+| Variable Name         | Description                                                                                                                                                                                                                                                                          |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| AZURE_CLIENT_ID       | Client ID of the Azure Managed System Identity or the self-managed Service Principal (SP) that should be used for both Azure KeyVault and Storage. The MSI or the SP must have access to Key Management operations (`Get`, `Encrypt` and `Decrypt`) of the KeyVault you plan to use. |
+| AZURE_CLIENT_SECRET   | (Optional) Client secret of the Azure SP.                                                                                                                                                                                                                                            |
+| AZURE_TENANT_ID       | (Optional) Tenant ID of the Azure SP.                                                                                                                                                                                                                                                |
+| AZURE_SUBSCRIPTION_ID | (Optional) Subscription ID of the Azure AP.                                                                                                                                                                                                                                          |
+| AZURE_STORAGE_DOMAIN  | (Optional) The custom domain for your storage domain, if any. If this is not provided, the default Azure public domain "blob.core.windows.net" will be used.                                                                                                                         |
 
 ### GitLab OAuth
 
 Only required if using GitLab as the backing identity provider for your organization.
 
-| Variable Name | Description |
-| ------------- | ----------- |
-| GITLAB_OAUTH_ID | GitLab OAuth app client ID. It is used for GitLab OAuth sign in. [Create a new GitLab OAuth app](https://gitlab.com/profile/applications). |
-| GITLAB_OAUTH_SECRET | GitLab OAuth app client secret. See above to create a new GitLab OAuth app. |
+| Variable Name         | Description                                                                                                                                      |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| GITLAB_OAUTH_ID       | GitLab OAuth app client ID. It is used for GitLab OAuth sign in. [Create a new GitLab OAuth app](https://gitlab.com/profile/applications).       |
+| GITLAB_OAUTH_SECRET   | GitLab OAuth app client secret. See above to create a new GitLab OAuth app.                                                                      |
 | GITLAB_OAUTH_ENDPOINT | The domain for your GitLab instance. It defaults to `https://gitlab.com`, which should be used unless you are running GitLab on a custom domain. |
 
 ## Other Environment Variables {#other-env-vars}
 
-| Variable Name | Description |
-| ------------- | ----------- |
-| GITHUB_OAUTH_ENDPOINT | Used for GitHub API calls. |
-| PULUMI_DATABASE_USER_NAME | Name of the database user the Pulumi Service connects as. Leave default unless you are having trouble connecting to your database.
-| PULUMI_DATABASE_USER_PASSWORD | Password of the database user the Pulumi Service connects as. Leave default unless you are having trouble connecting to your database.
-| PULUMI_DISABLE_EMAIL_LOGIN | When `true` the API will disallow logins using the email/password identity. To hide the email login option from the Console refer to the [email identity configuration](/docs/guides/self-hosted/components/console#email-identity) for the Console. |
-| PULUMI_DISABLE_EMAIL_SIGNUP | When `true` the API will disallow signups using the email/password identity. To hide the email signup option from the Console refer to the [email identity configuration](/docs/guides/self-hosted/components/console#email-identity) for the Console. |
-| RECAPTCHA_SECRET_KEY | reCAPTCHA secret key for self-service password reset. Create a [site key and a secret key from Google](https://www.google.com/recaptcha/admin). |
-| SAML_CERTIFICATE_PUBLIC_KEY | Public key used by the [IdP](/docs/reference/glossary#idp) to sign SAML assertions. Learn how to [set SAML_CERTIFICATE_PUBLIC_KEY](/docs/guides/self-hosted/saml-sso/). |
-| SAML_CERTIFICATE_PRIVATE_KEY | Private key used by Pulumi to validate the SAML assertions sent by the IdP. Learn how to [set SAML_CERTIFICATE_PRIVATE_KEY](/docs/guides/self-hosted/saml-sso/). |
+| Variable Name                 | Description                                                                                                                                                                                                                                            |
+|-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GITHUB_OAUTH_ENDPOINT         | Used for GitHub API calls.                                                                                                                                                                                                                             |
+| PULUMI_DATABASE_USER_NAME     | Name of the database user the Pulumi Service connects as. Leave default unless you are having trouble connecting to your database.                                                                                                                     |
+| PULUMI_DATABASE_USER_PASSWORD | Password of the database user the Pulumi Service connects as. Leave default unless you are having trouble connecting to your database.                                                                                                                 |
+| PULUMI_DISABLE_EMAIL_LOGIN    | When `true` the API will disallow logins using the email/password identity. To hide the email login option from the Console refer to the [email identity configuration](/docs/guides/self-hosted/components/console#email-identity) for the Console.   |
+| PULUMI_DISABLE_EMAIL_SIGNUP   | When `true` the API will disallow signups using the email/password identity. To hide the email signup option from the Console refer to the [email identity configuration](/docs/guides/self-hosted/components/console#email-identity) for the Console. |
+| RECAPTCHA_SECRET_KEY          | reCAPTCHA secret key for self-service password reset. Create a [site key and a secret key from Google](https://www.google.com/recaptcha/admin).                                                                                                        |
+| SAML_CERTIFICATE_PUBLIC_KEY   | Public key used by the [IdP](/docs/reference/glossary#idp) to sign SAML assertions. Learn how to [set SAML_CERTIFICATE_PUBLIC_KEY](/docs/guides/self-hosted/saml-sso/).                                                                                |
+| SAML_CERTIFICATE_PRIVATE_KEY  | Private key used by Pulumi to validate the SAML assertions sent by the IdP. Learn how to [set SAML_CERTIFICATE_PRIVATE_KEY](/docs/guides/self-hosted/saml-sso/).                                                                                       |
 
 ## TLS Environment Variables
 
@@ -221,24 +223,24 @@ openssl \
 
 The service is configurable to enable connections to the backend SQL database over TLS. The following environment variables are _all_ required to connect to the database using TLS. If these variables are set the service will establish connections to the database using TLS, otherwise the service will default to connecting without TLS. The same ports will be used for communication to the database regardless of whether TLS is configured or not.
 
-| Variable Name            | Description                                                                                                   |
-|--------------------------|---------------------------------------------------------------------------------------------------------------|
+| Variable Name            | Description                                                                                                                                                                                                                         |
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | DATABASE_CA_CERTIFICATE  | The CA certificate used to establish TLS connections with the database. This certificate must be PEM encoded. This must be set to the value of the certificate itself and _not_ a filepath to the location of the certificate file. |
-| DATABASE_MIN_TLS_VERSION | The minimum TLS version to use for database connections (must be in \<major>.\<minor> format, e.g. `1.2`).    |
+| DATABASE_MIN_TLS_VERSION | The minimum TLS version to use for database connections (must be in \<major>.\<minor> format, e.g. `1.2`).                                                                                                                          |
 
 #### Migrations
 
 The database migrations container is configurable to enable connections to the database over TLS. To use TLS, the following environment variable must be set. The default is to not use TLS.
 
-| Variable Name            | Description                                                                                                   |
-|--------------------------|---------------------------------------------------------------------------------------------------------------|
-| DATABASE_CA_CERTIFICATE  | The CA certificate used to establish TLS connections with the database. This certificate must be PEM encoded. This must be set to the value of the certificate itself and _not_ a filepath to the location of the certificate file. |
-| MYSQL_ROOT_USERNAME      | The root username to log in to the MySQL database. Defaults to `root`. |
-| MYSQL_ROOT_PASSWORD      | The root user password to log in to the MySQL database. |
-| MYSQL_ALLOW_EMPTY_PASSWORD    | Set to `true` to allow the container to be started with a blank password for the root user. |
-| PULUMI_DATABASE_ENDPOINT      | The database server endpoint in the format `host:port`. This should be a MySQL 5.6 server. |
-| PULUMI_DATABASE_PING_ENDPOINT | The database server endpoint to ping for availability before login. |
-| RUN_MIGRATIONS_EXTERNALLY     | Request for migrations to be run against an external database. |
+| Variable Name                 | Description                                                                                                                                                                                                                         |
+|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| DATABASE_CA_CERTIFICATE       | The CA certificate used to establish TLS connections with the database. This certificate must be PEM encoded. This must be set to the value of the certificate itself and _not_ a filepath to the location of the certificate file. |
+| MYSQL_ROOT_USERNAME           | The root username to log in to the MySQL database. Defaults to `root`.                                                                                                                                                              |
+| MYSQL_ROOT_PASSWORD           | The root user password to log in to the MySQL database.                                                                                                                                                                             |
+| MYSQL_ALLOW_EMPTY_PASSWORD    | Set to `true` to allow the container to be started with a blank password for the root user.                                                                                                                                         |
+| PULUMI_DATABASE_ENDPOINT      | The database server endpoint in the format `host:port`. This should be a MySQL 5.6 server.                                                                                                                                          |
+| PULUMI_DATABASE_PING_ENDPOINT | The database server endpoint to ping for availability before login.                                                                                                                                                                 |
+| RUN_MIGRATIONS_EXTERNALLY     | Request for migrations to be run against an external database.                                                                                                                                                                      |
 
 ## Audit Logs
 
