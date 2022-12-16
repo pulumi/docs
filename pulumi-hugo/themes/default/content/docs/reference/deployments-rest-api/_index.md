@@ -210,7 +210,13 @@ Secret types should have the following structure:
 The operation context of your deployment request describes the Pulumi operation to execute and any associated context it requires such as pre-run commands and environment variables.
 
 * **operation** (string): The Pulumi command to execute (`update`, `preview`, `refresh`, `destroy`).
-* **preRunCommands** (Optional[list[string]]): A list of commands to run before the Pulumi command is executed.
+* **preRunCommands** (Optional[list[string]]): A list of commands to run before the Pulumi command is executed. Each command is run in a separate subshell. A command may export environment variables by writing
+  them as `NAME=value` pairs to a file named `PULUMI_ENV`. For example, a pre-run command could set the `HELLO` environment variable to `world` as follows:
+
+  ```sh
+  echo HELLO=world >PULUMI_ENV
+  ```
+
 * **environmentVariables** (Optional[map[string]EnvironmentVariable]): A list of environment variables to set for the operation.
 * **options** (Optional[OperationContextOptions]): Options is a bag of settings that allows you to set or override default behavior.
 
