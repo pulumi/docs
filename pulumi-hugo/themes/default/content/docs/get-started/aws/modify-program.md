@@ -151,7 +151,7 @@ public class App {
 
             // Create an S3 Bucket object
             new BucketObject("index.html", BucketObjectArgs.builder()
-                .bucket(bucket.getId())
+                .bucket(bucket.id())
                 .source(new FileAsset("index.html"))
                 .build()
             );
