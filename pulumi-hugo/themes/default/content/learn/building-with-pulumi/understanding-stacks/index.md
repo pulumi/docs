@@ -25,23 +25,10 @@ stack for you when you start a new project using the `pulumi new` command.
 
 ## Create a stack
 
-{{% choosable language typescript %}}
-
-To create a new stack, we use the command `pulumi stack init stackName`. This
-command creates an empty stack `stackName` and sets it as the _active_ stack.
+To create a new stack, we use the command `pulumi stack init name`. This
+command creates an empty stack `name` and sets it as the _active_ stack.
 The project that the stack is associated with is determined by finding the
 nearest `Pulumi.yaml` file.
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-To create a new stack, we use the command `pulumi stack init stack_name`. This
-command creates an empty stack `stack_name` and sets it as the _active_ stack.
-The project that the stack is associated with is determined by finding the
-nearest `Pulumi.yaml` file.
-
-{% /choosable %}}
 
 The stack name must be unique within a project. Stack names may only contain
 alphanumeric characters, hyphens, underscores, or periods.
