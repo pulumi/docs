@@ -40,9 +40,9 @@ the major cloud providers to build with Pulumi.
 
 ## Verify your application
 
-Let's explore what app we're deploying on the infrastructure we're creating. Open up the [pulumi/tutorial-pulumi-fundamentals repo](https://github.com/pulumi/tutorial-pulumi-fundamentals). Let's explore the contents of the `app/` directory. There is a backend, a frontend, and a data directory. All three directories contain a `Dockerfile` that builds the application images.
+Let's explore what app we're deploying on the infrastructure we're creating. Open up the [pulumi/tutorial-pulumi-fundamentals repo](https://github.com/pulumi/tutorial-pulumi-fundamentals). In this repository, there is a `backend` directory, a `frontend` directory, and a `data` directory. Each directory contains a `Dockerfile` that builds the image for that portion of the application.
 
-Let's examine the backend `Dockerfile` in `app/backend/Dockerfile`:
+Let's examine the backend `Dockerfile` in `backend/Dockerfile`:
 
 ```docker
 FROM node:14
@@ -63,13 +63,12 @@ This `Dockerfile` copies the REST backend into the Docker filesystem, installs
 the dependencies, and builds the image. Note that port 3000 must be open on your
 host machine.
 
-## Build your Docker Image with Pulumi
+## Pull a Docker Image with Pulumi
 
 {{% choosable language typescript %}}
 
 Before we start writing our Pulumi program, we need to install the right
-provider. In this case, we want to use the `@pulumi/docker` provider for Node.js,
-our language host. Let's to install the provider now:
+provider. In this case, we want to use the `@pulumi/docker` provider for Node.js, our language host. Let's install the provider now:
 
 ```bash
 cd ../
@@ -95,6 +94,30 @@ pip3 install pulumi_docker
 You should see output showing the provider package being installed, just like
 for any Python package install. Add the package to the `requirements.txt` file
 by adding `pulumi_docker` on a new line at the end of the file.
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+Before we start writing our Pulumi program, we need to install the right providers. In this case, we just need to add the Docker provider to our `go.mod` and `main.go` files. Change the `go.mod` file so that the `require` section looks like this:
+
+```go
+require (
+    github.com/pulumi/pulumi-docker/sdk/v3 v3.6.1
+    github.com/pulumi/pulumi/sdk/v3 v3.44.2
+)
+```
+
+Next, add it to the `import` line in `main.go`:
+
+```go
+import (
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+    "github.com/pulumi/pulumi-docker/sdk/v3/go/docker"
+)
+```
+
+After making these changes, run `go mod tidy` in your terminal. From here, Pulumi will automatically download and install the necessary Go providers the first time we execute the Pulumi program with `pulumi preview` or `pulumi up`.
 
 {{% /choosable %}}
 
@@ -137,13 +160,12 @@ application {
 
 {{% /choosable %}}
 
-Back inside your Pulumi program, let's build your first Docker image. Remember
+Back inside your Pulumi program, let's pull your first Docker image. Remember
 that a Pulumi program is the code that defines the desired state of your
 infrastructure using a general-purpose programming language. In this case, we're
-using {{< langhost >}}, so our main file is {{< langfile >}}. Inside your program's
-{{< langfile >}} file, use any editor to add the following code:
+using {{< langhost >}}, so our main file is {{< langfile >}}. Inside your program's {{< langfile >}} file, use any editor to add the following code:
 
-{{< chooser language "typescript,python,java,yaml" / >}}
+{{< chooser language "typescript,python,go,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -153,8 +175,9 @@ import * as docker from "@pulumi/docker";
 
 const stack = pulumi.getStack();
 
+// Pull the backend image
 const backendImageName = "backend";
-const backend = new docker.RemoteImage(`${backendImageName}`, {
+const backend = new docker.RemoteImage(`${backendImageName}Image`, {
     name: "pulumi/tutorial-pulumi-fundamentals-backend:latest",
 });
 ```
@@ -170,11 +193,40 @@ import pulumi_docker as docker
 
 stack = pulumi.get_stack()
 
-# build our backend image!
+# Pull the backend image
 backend_image_name = "backend"
-backend = docker.RemoteImage("backend",
+backend = docker.RemoteImage(f"{backend_image_name}_image",
                              name="pulumi/tutorial-pulumi-fundamentals-backend:latest"
                             )
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+    "github.com/pulumi/pulumi-docker/sdk/v3/go/docker"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        // Pull the backend image
+        backendImageName := "backend"
+        backendImage, err := docker.NewRemoteImage(ctx, fmt.Sprintf("%v-image", backendImageName), &docker.RemoteImageArgs{
+			Name: pulumi.String("pulumi/tutorial-pulumi-fundamentals-backend:latest"),
+		})
+		if err != nil {
+			return err
+		}
+        ctx.Export("backendDockerImage", backendImage.Name)
+
+        return nil
+    })
+}
 ```
 
 {{% /choosable %}}
@@ -200,6 +252,7 @@ public class App {
 
         final var stackName = ctx.stackName();
 
+        // Pull the backend image
         final String backendImageName = "backend";
         final var backendImage = new RemoteImage(
                 backendImageName,
@@ -223,6 +276,7 @@ description: A minimal Pulumi YAML program
 configuration: {}
 variables:     {}
 resources:
+  # Pull the backend image
   backend-image:
     type: docker:index:RemoteImage
     properties:
@@ -234,31 +288,31 @@ outputs:       {}
 
 {{% choosable language typescript %}}
 
-In this file, we import the main Pulumi package and the Docker provider. Then, we figure out which stack we're operating against, and populate the `stack` variable for later use. When we build our backend image, we give it a name in our stack as "backend" before passing some arguments to the Docker provider. The Docker provider uses the `name` argument to pull a remote image for us to use.
+In this file, we import the main Pulumi package and the Docker provider. Then, we figure out which stack we're operating against, and populate the `stack` variable for later use. When we pull our backend image, we give it a name in our stack as "backendImage" before passing some arguments to the Docker provider. The Docker provider uses the `name` argument to pull a remote image for us to use.
 
-Notice that we're mixing in some language constructs in here like `process.cwd()`.
-With Pulumi, we have access to the full language ecosystem, including built-ins and
-third-party libraries. Pulumi also has typing support, so you can use the tools
-in your favorite IDE, like completion, to verify that you're using the correct
-types for any inputs you're using. Pretty cool!
+Notice that we're mixing in some language constructs in here like string interpolation. With Pulumi, we have access to the full language ecosystem, including built-ins and third-party libraries. Pulumi also has typing support, so you can use the tools in your favorite IDE, like completion, to verify that you're using the correct types for any inputs you're using. Pretty cool!
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-In this file, we import the main Pulumi package and the Docker provider. Then, we figure out which stack we're operating against, and populate the `stack` variable for later use. When we build our backend image, we give it a name in our stack as "backend" before passing some arguments to the Docker provider. The Docker provider uses the `name` argument to pull a remote image for us to use.
+In this file, we import the main Pulumi package and the Docker provider. Then, we figure out which stack we're operating against, and populate the `stack` variable for later use. When we pull our backend image, we give it a name in our stack as "backend_image" before passing some arguments to the Docker provider. The Docker provider uses the `name` argument to pull a remote image for us to use.
 
-Notice that we're mixing in some language constructs in here like `os.getcwd()`.
-With Pulumi, we have access to the full language ecosystem, including
-third-party libraries. Pulumi also has typing support, so you can use the tools
-in your favorite IDE, like completion, to verify that you're using the correct
-types for any inputs you're using. Pretty cool!
+Notice that we're mixing in some Python constructs in here like f-strings (string interpolation). With Pulumi, we have access to the full language ecosystem, including third-party libraries. Pulumi also has typing support, so you can use the tools in your favorite IDE, like completion, to verify that you're using the correct types for any inputs you're using. Pretty cool!
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+In this file, we import the main Pulumi package and the Docker provider. Then, we pull the backend image, using the `backendImageName` variable and supplying the name of the remote image to pull. The Docker provider uses the `Name` argument to supply the name of the remote image for us to use. The `ctx.Export` statement is only there to satisfy Go's requirement that every variable defined must be referenced elsewhere; we'll end up removing it later.
+
+Notice that we're mixing in some language constructs here like `fmt.Sprintf()`. With Pulumi, we have access to the full language ecosystem, including all the functionality found in Go's standard library. Pulumi also has typing support, so you can use the tools in your favorite IDE, like completion, to verify you're using the correct types for any inputs you're using. Pretty cool!
 
 {{% /choosable %}}
 
 {{% choosable language java %}}
 
-In this file, we import the main Pulumi package and the Docker provider. Then, we figure out which stack we're operating against, and populate the `stackName` variable for later use. When we build our backend image, we give it a name in our stack as "backend" before passing some arguments to the Docker provider. The Docker provider uses the `name` argument to pull a remote image for us to use.
+In this file, we import the main Pulumi package and the Docker provider. Then, we figure out which stack we're operating against, and populate the `stackName` variable for later use. When we pull our backend image, we give it a name in our stack as "backend" before passing some arguments to the Docker provider. The Docker provider uses the `name` argument to pull a remote image for us to use.
 
 Notice that we're mixing in some language constructs in here like `String.format`. With Pulumi, we have access to the full language ecosystem, including third-party libraries. Pulumi also has typing support, so you can use the tools in your favorite IDE, like completion, to verify that you're using the correct types for any inputs you're using. Pretty cool!
 
@@ -277,10 +331,10 @@ Note that it make take a bit before you get any output because Docker is doing a
 lot of work in the background before it connects to Pulumi. Be patient!
 {{% /notes %}}
 
-Pulumi should build your Docker image. First, though, it
+Pulumi should pull your Docker image. First, though, it
 gives you a preview of the changes you'll be making to the stack and asks if the
 changes appear okay to you. You'll need to reply "yes" to the prompt to actually
-build the image. After the command finishes, you will see your image if you run
+pull the image. After the command finishes, you will see your image if you run
 the command `docker images` or `docker image ls` (depending on your preference).
 
 Let's dig a bit deeper into the code and explore the various Pulumi concepts.
@@ -308,6 +362,14 @@ takes the following inputs:
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+
+- a Pulumi context: typically represented by the variable `ctx`
+- an unnamed string: a name for the resource we are creating
+- `Name`: the name of the remote image to pull down
+
+{{% /choosable %}}
+
 {{% choosable language java %}}
 
 - an unnamed string: a name for the resource we are creating
@@ -329,19 +391,19 @@ other pieces of our application.
 Our application includes a frontend client and MongoDB. We'll add them to the
 program, so add this code after the previous fragment.
 
-{{< chooser language "typescript,python,java,yaml" / >}}
+{{< chooser language "typescript,python,go,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
 ```typescript
-// build our frontend image!
+// Pull the frontend image
 const frontendImageName = "frontend";
-const frontend = new docker.RemoteImage(`${frontendImageName}`, {
+const frontend = new docker.RemoteImage(`${frontendImageName}Image`, {
     name: "pulumi/tutorial-pulumi-fundamentals-frontend:latest",
 });
 
-// build our mongodb image!
-const mongoImage = new docker.RemoteImage("mongo", {
+// Pull the MongoDB image
+const mongoImage = new docker.RemoteImage("mongoImage", {
     name: "pulumi/tutorial-pulumi-fundamentals-database-local:latest",
 });
 ```
@@ -351,16 +413,41 @@ const mongoImage = new docker.RemoteImage("mongo", {
 {{% choosable language python %}}
 
 ```python
-# build our frontend image!
+# Pull the frontend image
 frontend_image_name = "frontend"
-frontend = docker.RemoteImage("frontend",
+frontend = docker.RemoteImage(f"{frontend_image_name}_image",
                               name="pulumi/tutorial-pulumi-fundamentals-frontend:latest"
                              )
 
-# build our mongodb image!
-mongo_image = docker.RemoteImage("mongo",
+# Pull the MongoDB image
+mongo_image = docker.RemoteImage("mongo_image",
                                  name="pulumi/tutorial-pulumi-fundamentals-database-local:latest"
                                 )
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+// Pull the frontend image
+frontendImageName := "frontend"
+frontendImage, err := docker.NewRemoteImage(ctx, fmt.Sprintf("%v-image", frontendImageName), &docker.RemoteImageArgs{
+	Name: pulumi.String("pulumi/tutorial-pulumi-fundamentals-frontend:latest"),
+})
+if err != nil {
+	return err
+}
+ctx.Export("frontendDockerImage", frontendImage.Name)
+
+// Pull the MongoDB image
+mongoImage, err := docker.NewRemoteImage(ctx, "mongo-image", &docker.RemoteImageArgs{
+	Name: pulumi.String("pulumi/tutorial-pulumi-fundamentals-database-local:latest"),
+})
+if err != nil {
+	return err
+}
+ctx.Export("mongoDockerImage", mongoImage.Name)
 ```
 
 {{% /choosable %}}
@@ -368,6 +455,7 @@ mongo_image = docker.RemoteImage("mongo",
 {{% choosable language java %}}
 
 ```java
+// Pull the frontend image
 final String frontendImageName = "frontend";
 final var frontendImage = new RemoteImage(
         frontendImageName,
@@ -376,6 +464,7 @@ final var frontendImage = new RemoteImage(
                 .build()
 );
 
+// Pull the MongoDB image
 final var mongoImage = new RemoteImage(
         "mongoImage",
         RemoteImageArgs.builder()
@@ -389,19 +478,26 @@ final var mongoImage = new RemoteImage(
 {{% choosable language yaml %}}
 
 ```yaml
-  frontend-image:
+# Pull the frontend image
+frontend-image:
+  type: docker:index:RemoteImage
+  properties:
+    name: pulumi/tutorial-pulumi-fundamentals-frontend:latest
+
+# Pull the MongoDB image
+mongo-image:
     type: docker:index:RemoteImage
     properties:
-      name: pulumi/tutorial-pulumi-fundamentals-frontend:latest
+      name: pulumi/tutorial-pulumi-fundamentals-database-local:latest
 ```
 
 {{% /choosable %}}
 
-We build the frontend client and the populated MongoDB database image the same way we built the backend.
+We pull the frontend client and the populated MongoDB database images the same way we pulled the backend image.
 
 Compare your program now to this complete program before we move forward:
 
-{{< chooser language "typescript,python,java,yaml" / >}}
+{{< chooser language "typescript,python,go,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -411,19 +507,20 @@ import * as docker from "@pulumi/docker";
 
 const stack = pulumi.getStack();
 
+// Pull the backend image
 const backendImageName = "backend";
-const backend = new docker.RemoteImage(`${backendImageName}`, {
+const backend = new docker.RemoteImage(`${backendImageName}Image`, {
     name: "pulumi/tutorial-pulumi-fundamentals-backend:latest",
 });
 
-// build our frontend image!
+// Pull the frontend image
 const frontendImageName = "frontend";
-const frontend = new docker.RemoteImage(`${frontendImageName}`, {
+const frontend = new docker.RemoteImage(`${frontendImageName}Image`, {
     name: "pulumi/tutorial-pulumi-fundamentals-frontend:latest",
 });
 
-// build our mongodb image!
-const mongoImage = new docker.RemoteImage("mongo", {
+// Pull the MongoDB image
+const mongoImage = new docker.RemoteImage("mongoImage", {
     name: "pulumi/tutorial-pulumi-fundamentals-database-local:latest",
 });
 ```
@@ -433,28 +530,77 @@ const mongoImage = new docker.RemoteImage("mongo", {
 {{% choosable language python %}}
 
 ```python
-import os
 import pulumi
 import pulumi_docker as docker
 
 stack = pulumi.get_stack()
 
-# build our backend image!
+# Pull the backend image
 backend_image_name = "backend"
-backend = docker.RemoteImage("backend",
+backend = docker.RemoteImage(f"{backend_image_name}_image",
                              name="pulumi/tutorial-pulumi-fundamentals-backend:latest"
                             )
 
-# build our frontend image!
+# Pull the frontend image
 frontend_image_name = "frontend"
-frontend = docker.RemoteImage("frontend",
+frontend = docker.RemoteImage(f"{frontend_image_name}_image",
                               name="pulumi/tutorial-pulumi-fundamentals-frontend:latest"
                              )
 
-# build our mongodb image!
-mongo_image = docker.RemoteImage("mongo",
+# Pull the MongoDB image
+mongo_image = docker.RemoteImage("mongo_image",
                                  name="pulumi/tutorial-pulumi-fundamentals-database-local:latest"
                                 )
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-docker/sdk/v3/go/docker"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+        // Pull the backend image
+		backendImageName := "backend"
+		backendImage, err := docker.NewRemoteImage(ctx, fmt.Sprintf("%v-image", backendImageName), &docker.RemoteImageArgs{
+			Name: pulumi.String("pulumi/tutorial-pulumi-fundamentals-backend:latest"),
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("backendDockerImage", backendImage.Name)
+
+        // Pull the frontend image
+		frontendImageName := "frontend"
+		frontendImage, err := docker.NewRemoteImage(ctx, fmt.Sprintf("%v-image", frontendImageName), &docker.RemoteImageArgs{
+			Name: pulumi.String("pulumi/tutorial-pulumi-fundamentals-frontend:latest"),
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("frontendDockerImage", frontendImage.Name)
+
+        // Pull the MongoDB image
+        mongoImage, err := docker.NewRemoteImage(ctx, "mongo-image", &docker.RemoteImageArgs{
+			Name: pulumi.String("pulumi/tutorial-pulumi-fundamentals-database-local:latest"),
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("mongoDockerImage", mongoImage.Name)
+
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}
@@ -480,6 +626,7 @@ public class App {
 
         final var stackName = ctx.stackName();
 
+        // Pull the backend image
         final String backendImageName = "backend";
         final var backendImage = new RemoteImage(
                 backendImageName,
@@ -488,6 +635,7 @@ public class App {
                         .build()
         );
 
+        // Pull the frontend image
         final String frontendImageName = "frontend";
         final var frontendImage = new RemoteImage(
                 frontendImageName,
@@ -496,6 +644,7 @@ public class App {
                         .build()
         );
 
+        // Pull the MongoDB image
         final var mongoImage = new RemoteImage(
                 "mongoImage",
                 RemoteImageArgs.builder()
@@ -518,14 +667,23 @@ description: A minimal Pulumi YAML program
 configuration: {}
 variables:     {}
 resources:
+  # Pull the backend image
   backend-image:
     type: docker:index:RemoteImage
     properties:
       name: pulumi/tutorial-pulumi-fundamentals-backend:latest
+
+  # Pull the frontend image
   frontend-image:
     type: docker:index:RemoteImage
     properties:
       name: pulumi/tutorial-pulumi-fundamentals-frontend:latest
+
+  # Pull the MongoDB image
+  mongo-image:
+    type: docker:index:RemoteImage
+    properties:
+      name: pulumi/tutorial-pulumi-fundamentals-database-local:latest
 outputs:       {}
 ```
 
@@ -533,7 +691,7 @@ outputs:       {}
 
 If your code looks the same, great! Otherwise, update yours to match this code.
 
-Now, run `pulumi up` to build all of the images that we'll need.
+Now, run `pulumi up` to pull all of the images that we'll need.
 
 {{% notes type="info" %}}
 Note that, in the future, you don't need to run `pulumi up` in stages like this
