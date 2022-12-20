@@ -8,8 +8,8 @@ authors:
 tags:
     - kubernetes
     - packages
-    - cloud-engineering
     - typescript
+    - multi-cloud
 ---
 
 In this article we'll show you how to use Pulumi Components and the Pulumi Automation API to make golden path
@@ -24,8 +24,10 @@ provisioning, on multiple different clouds, as well as your product service itse
 There's a lot of configuration fine-tuning and manual repetition that is required when bringing up Kubernetes clusters
 on different clouds.
 
-This article is a written summary of our [KubeCrash live demo](https://www.youtube.com/watch?v=co6ByyRh0_I).
+This article is a written summary of our KubeCrash live demo, see it below.
 Please find the [repository with the full version of the code here.](https://github.com/pulumi/demo-kubecrash-2022)
+
+{{< youtube "co6ByyRh0_I?rel=0" >}}
 
 ## Part One: Create a component
 
