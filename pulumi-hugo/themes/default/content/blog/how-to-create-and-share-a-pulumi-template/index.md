@@ -11,7 +11,7 @@ tags:
     - aws
 ---
 
-Last month, we released our first set of [architecture templates](/templates/) --- configurable Pulumi projects designed to make it easy to bootstrap new stacks for common cloud architectures like [static websites](/templates/static-websites/), [containers](/templates/container-service/), [virtual machines](/templates/virtual-machine/), and [Kubernetes clusters](/templates/kubernetes/). Architecture templates are a great way to get a new project up and running quickly, and they've already grown quite popular with our users, several of whom have asked if whether it's possible to create templates of their own.
+Last month, we released our first set of [architecture templates](/templates/) --- configurable Pulumi projects designed to make it easy to bootstrap new stacks for common cloud architectures like [static websites](/templates/static-website/), [containers](/templates/container-service/), [virtual machines](/templates/virtual-machine/), and [Kubernetes clusters](/templates/kubernetes/). Architecture templates are a great way to get a new project up and running quickly, and they've already grown quite popular with our users, several of whom have asked if whether it's possible to create templates of their own.
 
 It's not only possible, it's surprisingly easy! So in this post, I'll show you how. It all starts with a Pulumi project --- a template is really just a Pulumi project with a few extra lines of config --- so we'll start with one of those, add a few resources, and turn the project into a template. When it's ready to go, we'll test it out locally, and then finally, we'll publish it so that anyone with Pulumi can use our template to kickstart their own projects.
 
@@ -259,7 +259,7 @@ Let's finish things off by publishing your template so others can use it. As bef
 $ pulumi destroy --yes --remove
 ```
 
-## Step 4: Publish the template {#publish}
+## Step 5: Publish the template {#publish}
 
 A moment ago, when you tested your first template, you did so by pointing Pulumi to the template's path on your local filesystem. Before that, when you ran `pulumi new aws-yaml`, you instructed Pulumi (implicitly) to fetch the source of the template over HTTPS from the official [pulumi/templates repository on GitHub](https://github.com/pulumi/templates). So to make your template available to others, all you have to do publish it to a file path or Git URL that's accessible by the Pulumi CLI.
 
