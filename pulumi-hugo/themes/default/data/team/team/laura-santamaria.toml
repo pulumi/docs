@@ -1,9 +1,9 @@
 id = "laura-santamaria"
 name = "Laura Santamaria"
-title = "Developer Advocate"
+title = "Senior Developer Advocate"
 weight = 1
 
-status = "active"
+status = "inactive"
 role = "developer-advocate"
 
 [social]

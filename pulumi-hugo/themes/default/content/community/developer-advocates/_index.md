@@ -4,6 +4,7 @@ meta_desc: The Developer Advocate Team at Pulumi is here to help you understand 
 layout: developer-advocates/list
 aliases:
     - /developer-advocates/
+redirect_to: /community
 menu:
     header:
         weight: 7
