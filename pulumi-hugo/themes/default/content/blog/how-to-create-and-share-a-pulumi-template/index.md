@@ -291,7 +291,7 @@ Embedding these buttons yourself is easy --- just use one of the snippets below,
 
 ```html
 <a href="https://app.pulumi.com/new?template={template-url}">
-    <img src"https://get.pulumi.com/new/button.svg" title="Deploy with Pulumi">
+    <img src="https://get.pulumi.com/new/button.svg" title="Deploy with Pulumi">
 </a>
 ```
 
