@@ -125,6 +125,8 @@ variables:
 
 {{% /choosable %}}
 
+You'll end up using these configuration values later, passing them as environment variables to the containers.
+
 Your Pulumi program should now match this code:
 
 {{< chooser language "typescript,python,go,java,yaml" / >}}
@@ -387,12 +389,7 @@ that use the ports; we only have image resources.
 
 ## Create a Container resource
 
-In the last topic, we retrieved Docker images from a remote registry. Now we
-want to create Docker
-containers and pass our configuration to them. Our containers will need to
-connect to each other, so we will need to create a
-[`Network`](/registry/packages/docker/api-docs/network), which
-is another resource.
+In the last topic, we retrieved Docker images from a remote registry. Now we want to create Docker containers and pass these containers the configuration values we just defined. Our containers will need to connect to each other, so we will need to create a [`Network`](/registry/packages/docker/api-docs/network), which is another resource.
 
 {{< chooser language "typescript,python,go,java,yaml" / >}}
 
@@ -665,10 +662,7 @@ It is important to note something here. In the `Container` resource, we are refe
 
 {{% /choosable %}}
 
-The backend container also requires environment variables to connect to the
-mongo container and set the node environment for Express.js. These are set in
-`./app/backend/src/.env`. Like before we can set them using `pulumi config` on
-the command line:
+It's also important to note the backend container requires some environment variables to connect to the Mongo container and to set the Node environment for Express.js. These are set in the `backend/src/.env` file in the [tutorial-pulumi-fundamentals](https://github.com/pulumi/tutorial-pulumi-fundamentals/tree/main/backend) repository. We don't want to hardcode these values; we want them to be configurable. To do that, we'll need to define some additional configuration values. Like before, we can set them using `pulumi config` on the command line:
 
 ```bash
 pulumi config set mongoHost mongodb://mongo:27017
@@ -678,7 +672,7 @@ pulumi config set protocol http://
 ```
 
 Then, we need to add them to the top of our program with the rest of the
-configuration variables.
+configuration values.
 
 {{< chooser language "typescript,python,go,java,yaml" / >}}
 
@@ -740,6 +734,8 @@ protocol:
 ```
 
 {{% /choosable %}}
+
+All these configuration values are set as required, meaning if you forget to set them with `pulumi config set`, then `pulumi up` will report an error.
 
 {{% choosable language typescript %}}
 
