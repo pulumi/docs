@@ -310,7 +310,7 @@ If you want to enforce that no resource should use a default provider, you would
 configuration file:
 
 ```yaml
-pulumi:disable-default-providers: [“*”]
+pulumi:disable-default-providers: ["*"]
 ```
 
 Now that you can [disable the default provider][dis-def-prov], you don’t have to worry about all of the possible unexpected consequences
