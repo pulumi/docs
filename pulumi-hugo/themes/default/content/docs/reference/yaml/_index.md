@@ -459,3 +459,23 @@ forbidden to prevent path traversals.
 * `fn::readFile: ../../etc/shadow`, a relative path that escapes the project
 * `fn::readFile: ${pulumi.cwd}/../../.ssh/id_rsa.pub`, an expression that returns an absolute path
    that escapes the project
+
+#### Built-in variables
+
+Built-in variables accessible within any Pulumi YAML program.
+
+##### `pulumi`
+
+The built-in `pulumi` variable contains three properties, which can be useful for retrieving information
+about your current workspace.
+
+```yaml
+    variables:
+      cwd: ${pulumi.cwd}
+      project: ${pulumi.cwd}
+      stack: ${pulumi.stack}
+```
+
+* `${pulumi.cwd}` retrieves the current working directory
+* `${pulumi.project}` retrieves the current project
+* `${pulumi.stack}` retrieves the current stack
