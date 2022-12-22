@@ -13,6 +13,11 @@ meta_image: /images/challenge/challenge_cta.png
 <div class="flex flex-wrap md:mt-12">
   <div>
     <h3>One Quickstart to Rule them All</h3>
+    <div class="flex justify-center rounded-md bg-violet-100">
+            <p class="text-center">
+                ✨ The challenge is now over and no swag will be sent on completion, but feel free to continue testing your skills with this challenge ✨
+            </p>
+    </div>
     <p class="pr-12">
       Pulumi Architecture Templates make it quick and easy to get started with a wide variety of clouds, tools, and technologies when you want to try something new but don't want to write boilerplate yourself. It's a great way to get started with Pulumi quickly, no matter what you need to build. Try it for yourself with serverless AWS templates and win some swag in the process!
     </p>

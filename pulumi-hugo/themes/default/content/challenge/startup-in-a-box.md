@@ -13,6 +13,11 @@ meta_image: /images/challenge/challenge_cta.png
 <div class="flex flex-wrap md:mt-12">
   <div class="w-full md:w-1/2">
     <h3>Startup in a Box</h3>
+        <div class="flex justify-center rounded-md bg-violet-100">
+            <p class="text-center">
+                ✨ The challenge is now over and no swag will be sent on completion, but feel free to continue testing your skills with this challenge ✨
+            </p>
+    </div>
     <p class="pr-12">
       Thinking about turning that side project into a little something more? Follow along to stand up a website for your startup on Amazon S3 with Cloudfront and Checkly, all using Pulumi. When you're done, we'll send you a fancy drink tumbler with a special Pulumipus on it, just for this Challenge!
     </p>
