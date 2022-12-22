@@ -34,7 +34,7 @@ the stack outputs from the program we just created.
 
 Let's start by making our new Pulumi program in a new directory:
 
-{{< chooser language "typescript, python" / >}}
+{{< chooser language "typescript,python,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -56,6 +56,16 @@ $ pulumi new python -y
 
 {{% /choosable %}}
 
+{{% choosable language yaml %}}
+
+```bash
+$ mkdir my-second-app
+$ cd my-second-app
+$ pulumi new yaml -y
+```
+
+{{% /choosable %}}
+
 Let's go ahead and create a `staging` stack here as well:
 
 ```bash
@@ -67,7 +77,7 @@ Now comes the fun part! Let's add a little code to pull in the values from the
 
 Add this code to the {{< langfile >}} file inside of `my-second-app`.
 
-{{< chooser language "typescript,python" / >}}
+{{< chooser language "typescript,python,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -108,6 +118,39 @@ pulumi.export("shopUrl", stack_ref.get_output("url"))
 ```
 
 The `org` environment variable is new, as is the `stack_ref` declaration. That
+declaration sets up an instance of the `StackReference` class, which needs the
+fully qualified name of the stack as an input. Here, the `org` is the
+organization associated with your account, the `my-first-app` is the name of the
+project you've been working in, and the stack is the stack that you want to
+reference. If you have an individual account, the org is your account name. The
+export then grabs the `url` output from the other stack.
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: my-second-app
+runtime: yaml
+description: A minimal Pulumi YAML program
+
+config:
+  org: string
+
+variables:
+  firstStackName: ${org}/my-first-app/${pulumi.stack}
+
+resources:
+  stackRef:
+    type: pulumi:pulumi:StackReference
+    properties:
+      name: ${firstStackName}
+
+outputs:
+  shopUrl: ${stackRef.outputs["url"]}
+```
+
+The `org` environment variable is new, as is the `stackRef` declaration. That
 declaration sets up an instance of the `StackReference` class, which needs the
 fully qualified name of the stack as an input. Here, the `org` is the
 organization associated with your account, the `my-first-app` is the name of the
