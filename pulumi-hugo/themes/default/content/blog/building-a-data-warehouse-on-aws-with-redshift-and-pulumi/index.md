@@ -21,7 +21,7 @@ Of course, the volume of data _you_ care about is probably a lot more modest. Bu
 
 A data warehouse is a specialized database that's purpose built for gathering and analyzing data. Unlike general-purpose databases like MySQL or PostgreSQL, which are designed to meet the real-time performance and transactional needs of applications, a data warehouse is designed to collect and process the data produced by those applications, collectively and over time, to help you gain insight from it. Examples of data-warehouse products include [Snowflake](https://www.snowflake.com/en/data-cloud/workloads/data-warehouse/), [Google BigQuery](https://cloud.google.com/bigquery/), [Azure Synapse Analytics](https://azure.microsoft.com/en-us/products/synapse-analytics), and [Amazon Redshift](https://aws.amazon.com/redshift/) --- all of which, incidentally, are easily managed with Pulumi.
 
-Today, though, we're going to focus on Amazon Redshift. Specifically, we're going to walk through the process of writing a Pulumi program that provisions a single-node Redshift [cluster](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html) in an [Amazon VPC](https://aws.amazon.com/vpc/), then we'll load some sample data into the warehouse from Amazon S3. We'll load this data manually at first, just to get a sense of how everything works when it's all wired up, and then later, in a follow-up post, we'll go a step further and weave in some automation to load the data on a schedule.
+Today, though, we're going to focus on Amazon Redshift. Specifically, we're going to walk through the process of writing a Pulumi program that provisions a single-node Redshift [cluster](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html) in an [Amazon VPC](https://aws.amazon.com/vpc/), then we'll load some sample data into the warehouse from Amazon S3. We'll load this data manually at first, just to get a sense of how everything works when it's all wired up, and then later, [in a follow-up post](/blog/redshift-etl-with-pulumi-and-aws-glue/), we'll go a step further and weave in some automation to load the data on a schedule.
 
 Let's get going!
 
@@ -133,7 +133,7 @@ events_bucket = s3.Bucket("events", s3.BucketArgs(
 
 {{% /choosable %}}
 
-Next, define a new VPC and the associated network resources for the Redshift cluster. Since the aim is to launch the cluster into a VPC (providing the network isolation we need to keep the cluster from being accessed over the internet), you'll define the VPC first, then define a private subnet within it, and then finally designate a [Redshift subnet group](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-cluster-subnet-groups.html) to allow to tell AWS where to provision the cluster:
+Next, define a new VPC and the associated network resources for the Redshift cluster. Since the aim is to launch the cluster into a VPC (providing the network isolation we need to keep the cluster from being accessed over the internet), you'll define the VPC first, then define a private subnet within it, and then finally designate a [Redshift subnet group](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-cluster-subnet-groups.html) to tell AWS where to provision the cluster:
 
 {{< chooser language "typescript,python" />}}
 
@@ -483,6 +483,6 @@ Instead, what you'll ultimately want is some process by which your data can be _
 
 The good news is that with the data warehouse up and running, you're well on your way already. The bad news is that Redshift alone won't finish the job for you. Redshift is just the destination --- the target of your ETL pipeline-to-be. The pipeline itself still needs to be written.
 
-So in the _next_ post, we'll do that: We'll take what we've done here, add a few more components with Pulumi and [AWS Glue](https://aws.amazon.com/glue/), and wire it all up with a few magical lines of Python scripting.
+So [in the _next_ post](/blog/building-a-data-warehouse-on-aws-with-redshift-and-pulumi/), we'll do that: We'll take what we've done here, add a few more components with Pulumi and [AWS Glue](https://aws.amazon.com/glue/), and wire it all up with a few magical lines of Python scripting.
 
 Until then, happy coding --- and stay tuned!
