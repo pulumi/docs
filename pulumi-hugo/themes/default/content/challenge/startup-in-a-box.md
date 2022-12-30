@@ -11,45 +11,31 @@ meta_image: /images/challenge/challenge_cta.png
 ## Welcome to the Pulumi Challenge!
 
 <div class="flex flex-wrap md:mt-12">
-  <div class="w-full md:w-1/2">
-    <h3>Startup in a Box</h3>
-        <div class="flex justify-center rounded-md bg-violet-100">
-            <p class="text-center">
-                ✨ The challenge is now over and no swag will be sent on completion, but feel free to continue testing your skills with this challenge ✨
-            </p>
-    </div>
-    <p class="pr-12">
-      Thinking about turning that side project into a little something more? Follow along to stand up a website for your startup on Amazon S3 with Cloudfront and Checkly, all using Pulumi. When you're done, we'll send you a fancy drink tumbler with a special Pulumipus on it, just for this Challenge!
-    </p>
-    <h3>Prerequisites</h3>
-    <p>In order to complete this challenge, you'll need a couple things set up in advance.</p>
-    <ul>
-      <li>
-        A <a href="https://app.pulumi.com/signup" target="_blank" rel="noopener noreferrer">Pulumi account</a>
-      </li>
-      <li>
-        The <a href="/docs/get-started/install/" target="_blank" rel="noopener noreferrer">Pulumi CLI</a>
-      </li>
-      <li>
-        AWS account
-      </li>
-      <li>
-        <a href="https://www.checklyhq.com/" target="_blank" rel="noopener noreferrer">Checkly</a> account
-      </li>
-    </ul>
-  </div>
-
-  <div class="w-full order-first md:order-last md:w-1/2">
-    <img class="hidden md:block" src="/images/pulumi-challenge-swag-tumbler.png" />
-    <img class="mx-auto my-4 md:hidden" src="/images/pulumi-challenge-swag-tumbler-mobile.png" />
-  </div>
+  <h3>Startup in a Box</h3>
+  <p class="pr-12">
+    Thinking about turning that side project into a little something more? Follow along to stand up a website for your startup on Amazon S3 with Cloudfront and Checkly, all using Pulumi.
+  </p>
+  <h3>Prerequisites</h3>
+  <p>In order to complete this challenge, you'll need a couple things set up in advance.</p>
+  <ul>
+    <li>
+      A <a href="https://app.pulumi.com/signup" target="_blank" rel="noopener noreferrer">Pulumi account</a>
+    </li>
+    <li>
+      The <a href="/docs/get-started/install/" target="_blank" rel="noopener noreferrer">Pulumi CLI</a>
+    </li>
+    <li>
+      AWS account
+    </li>
+    <li>
+      <a href="https://www.checklyhq.com/" target="_blank" rel="noopener noreferrer">Checkly</a> account
+    </li>
+  </ul>
 </div>
 
 ### Challenge
 
-Follow along with the steps outlined on this page, or watch this video to complete the challenge.
-
-{{< youtube "NU7uOy273jQ?rel=0" >}}
+Follow along with the steps outlined on this page.
 
 #### Step 1. Your First Pulumi Program
 
@@ -513,86 +499,8 @@ expect(await page.title()).toBe("Pulumi Challenge");
 await browser.close();
 ```
 
-#### Step 7. Introducing the Dynamic Swag Provider
+Congratulations! You completed the first Pulumi Challenge. If you’d like to tear down all of these resources, run `pulumi destroy`. Otherwise, enjoy the new website!
 
-Everyone likes SWAG and we want to give you some for completing this challenge. To do so, we're going to handle this via Pulumi with a Dynamic Provider. Create a new directory and file at `pulumi-challenge/swag-provider/index.ts`:
+Wanna yell it from the rooftops? Write a blog or post a quick video about it? Let us know and we’ll send you a super secret piece of swag!* Tag us on social media, or email us at [da@pulumi.com](mailto:da@pulumi.com).
 
-For this dynamic provider, we can only use CommonJS modules. For making an HTTP request, we can use `got` version `11.8.0`:
-
-```shell
-npm install got@11.8.0
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-
-const submittionUrl: string =
-  "https://hooks.airtable.com/workflows/v1/genericWebhook/apptZjyaJx5J2BVri/wflmg3riOP6fPjCII/wtr3RoDcz3mTizw3C";
-
-interface SwagInputs {
-  name: string;
-  email: string;
-  address: string;
-  size: "XS" | "S" | "M" | "L" | "XL" | "XXL" | "XXXL";
-}
-
-interface SwagCreateResponse {
-  success: boolean;
-}
-
-interface SwagOutputs extends SwagInputs {
-  id: string;
-}
-
-class SwagProvider implements pulumi.dynamic.ResourceProvider {
-  private name: string;
-
-  constructor(name: string) {
-    this.name = name;
-  }
-
-  async create(props: SwagInputs): Promise<pulumi.dynamic.CreateResult> {
-    const got = (await import("got")).default;
-
-    let data = await got
-      .post(submittionUrl, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        json: {
-          ...props,
-        },
-      })
-      .json<SwagCreateResponse>();
-
-    return { id: props.email, outs: props };
-  }
-}
-
-export class Swag extends pulumi.dynamic.Resource {
-  constructor(
-    name: string,
-    props: SwagInputs,
-    opts?: pulumi.CustomResourceOptions
-  ) {
-    super(new SwagProvider(name), name, props, opts);
-  }
-}
-```
-
-Now, add this final block to `pulumi-challenge/index.ts` and run `pulumi up`. Enjoy your SWAG!
-
-```typescript
-import { Swag } from "./swag-provider";
-
-const swag = new Swag("your-startup", {
-  name: "YOUR NAME",
-  email: "YOUR EMAIL",
-  address: "YOUR ADDRESS",
-  size: SIZE,
-});
-```
-
-Congratulations! You completed the first Pulumi Challenge. If you'd like to tear down all of these resources, run `pulumi destroy`. Otherwise, enjoy the new website! Change it around and make it your own. Your swag will be in the mail shortly!
-
-Wanna yell it from the rooftops? Write a blog or post a quick video about it? Let us know and we'll send you an extra, super secret piece of swag! Tag us on social media, or email us at [da@pulumi.com](mailto:da@pulumi.com).
+*Swag only available for U.S. shipping
