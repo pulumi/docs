@@ -2,6 +2,7 @@
 # Name of the webinar.
 title: "Get Started with Infrastructure as Code on Azure with Java"
 meta_desc: "Learn the basics of Azure and Pulumi with a hands-on lab that will take you from deploying a simple static website to deploying a Spring Boot application."
+meta_image: /images/get-started-azure-with-java.png
 
 # A featured webinar will display first in the list.
 featured: false
