@@ -469,6 +469,10 @@ This approach is easier to read and write and does not lose any important depend
 
 In JavaScript and TypeScript, a ‘lifted’ property access on an `Output<T>` that wraps undefined produces another `Output<T>` with the undefined value instead of throwing or producing a ‘faulted’ `Output<T>`. In other words, lifted property accesses behave like the [`?.` (optional chaining operator)](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#optional-chaining) in JavaScript and TypeScript. This behavior makes it much easier to form a chain of property accesses on an `Output<T>`.
 
+{{< chooser language "javascript,typescript" >}}
+
+{{% choosable language javascript %}}
+
 ```javascript
 let certValidation = new aws.route53.Record("cert_validation", {
   records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
@@ -480,7 +484,10 @@ let certValidation = new aws.route53.Record("cert_validation", {
                            .apply(dvo => dvo ? dvo[0] : undefined)
                            .apply(o => o ? o.resourceRecordValue : undefined)],
 ```
+{{% /choosable %}}
 
+{{% choosable language typescript %}}
+    
 ```typescript
 let certValidation = new aws.route53.Record("cert_validation", {
   records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
@@ -492,7 +499,9 @@ let certValidation = new aws.route53.Record("cert_validation", {
                            .apply(dvo => dvo ? dvo[0] : undefined)
                            .apply(o => o ? o.resourceRecordValue : undefined)],
 ```
+{{% /choosable %}}
 
+{{< /chooser >}}
 ## Working with Outputs and Strings {#outputs-and-strings}
 
 Outputs that contain strings cannot be used directly in operations such as string concatenation. String interpolation lets you more easily build a string out of various output values, without needing {{< pulumi-apply >}} or [Output.all](/docs/reference/pkg/python/pulumi#pulumi.Output.all). You can use string interpolation to export a stack output, provide a dynamically computed string as a new resource argument, or even for diagnostic purposes.
