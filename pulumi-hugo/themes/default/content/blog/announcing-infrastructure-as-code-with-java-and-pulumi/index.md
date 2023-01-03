@@ -1,8 +1,8 @@
 ---
-title: "Announcing Infrastructure as Code with Java and Pulumi"
+title: "Infrastructure as Code with Java and Pulumi"
 date: 2022-05-04T06:59:00-07:00
 draft: false
-meta_desc: Learn about Pulumi's new support for Java and JVM languages, which enable you to use infrastructure as code on any cloud with the JVM ecosystem.
+meta_desc: Learn about Pulumi's support for Java and JVM languages, which enable you to use Infrastructure As Code on any Cloud with the JVM ecosystem.
 meta_image: meta.png
 authors:
     - mikhail-shilkov
@@ -12,15 +12,11 @@ tags:
     - infrastructure-as-code
 ---
 
-Today we are excited to announce the preview of Java support for all of your modern infrastructure as code needs. This announcement means that you can build, deploy, and manage your infrastructure, on any cloud&mdash;including all of AWS, Azure, Google Cloud, Kubernetes, Oracle Cloud, and more&mdash;using Java and other JVM languages. This brings the entire cloud to your fingertips without ever having to leave your code editor, while using production-ready infrastructure as code techniques.
-
-<!--more-->
-
 Infrastructure has become a core part of application development as modern cloud capabilities such as microservices, containers, serverless, and data stores define your application's architecture. The term "infrastructure" covers all of the cloud resources your application needs to run. Modern architectures require thinking deeply about infrastructure while building your application, instead of treating it as an afterthought. Pulumi's approach helps developers, infrastructure engineers, and platform teams work together to leverage everything the modern cloud has to offer.
 
-Pulumi has worked with hundreds of companies to get cloud applications into production, and Java has quickly risen to become one of the most frequently requested features by the community. Today we are thrilled to make Pulumi for Java available for your cloud engineering needs.
+Pulumi has worked with hundreds of companies to get cloud applications into production, and Java has quickly risen to become one of the most frequently requested features by the community. Pulumi is an open source product, and we are grateful to our awesome community members who bootstrapped Pulumi for Java last year and were instrumental in helping us with this public preview. Thank you to [Paweł Prażak](https://twitter.com/pawelprazak) and his [VirtusLab](https://virtuslab.com) colleagues!
 
-Pulumi is an open source product, and we are grateful to our awesome community members who bootstrapped Pulumi for Java last year and were instrumental in helping us with this public preview. Thank you to [Paweł Prażak](https://twitter.com/pawelprazak) and his [VirtusLab](https://virtuslab.com) colleagues!
+Pulumi supports Java for all of your modern infrastructure as code needs, this means you can build, deploy, and manage your infrastructure on any cloud&mdash;including all of AWS, Azure, Google Cloud, Kubernetes, Oracle Cloud, and more&mdash;using Java and other JVM languages. With Pulumi, you will have the entire cloud at your fingertips without ever having to leave your code editor, while using production-ready infrastructure as code techniques.
 
 ## What is Pulumi?
 
@@ -113,7 +109,7 @@ Pulumi unlocks access to the entire JVM ecosystem&mdash;something that's easy to
 
 ## Join the community and get started
 
-Today we've released the first preview of Pulumi for Java, including support for the entire breadth of services in AWS, Azure, Google Cloud, and more. To give Pulumi a try, visit the [Pulumi for Java docs](https://www.pulumi.com/docs/intro/languages/java/).
+The first preview of Pulumi for Java includes support for the entire breadth of services in AWS, Azure, Google Cloud, and more. Give Pulumi a try, visit the [Pulumi for Java docs](https://www.pulumi.com/docs/intro/languages/java/).
 
 There you will find several instructions on installing and getting started with Pulumi for Java. The following resources provide additional useful information:
 
@@ -123,12 +119,9 @@ There you will find several instructions on installing and getting started with 
 
 - [General Pulumi overview (concepts and architecture)](https://www.pulumi.com/docs/intro/concepts/)
 
-- [Overview of premium Pulumi features for teams and Enterprises](https://www.pulumi.com/pricing/)
-
 Although Pulumi for Java is listed in "preview" status, it supports all of the most essential Pulumi programming model features (and the rest is on its way). Our goal is to gather feedback over the next few weeks, and we will be working hard to improve the Java experience across the board, including more examples and better documentation.
 
-Please [join the community in Slack](https://slack.pulumi.com/) to discuss your scenarios, ideas, and to get any needed assistance from the team and other end users. Pulumi is [open source on GitHub](https://github.com/pulumi/pulumi) and you can find the Java plugin at [pulumi/pulumi-java](https://github.com/pulumi/pulumi-java).
-
-There is an [Introduction to Infrastructure as Code in Java](https://www.pulumi.com/resources/introduction-to-infrastructure-as-code/) coming up on May 5th.
+Pulumi is [open source on GitHub](https://github.com/pulumi/pulumi) and you can find the Java plugin at [pulumi/pulumi-java](https://github.com/pulumi/pulumi-java).
+And you're welcome to [join the community in Slack](https://slack.pulumi.com/) to discuss your scenarios, ideas, and to get any needed assistance from the team and other end users.
 
 We look forward to seeing the new and amazing cloud applications you build with Pulumi for Java!

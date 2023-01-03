@@ -484,10 +484,11 @@ let certValidation = new aws.route53.Record("cert_validation", {
                            .apply(dvo => dvo ? dvo[0] : undefined)
                            .apply(o => o ? o.resourceRecordValue : undefined)],
 ```
+
 {{% /choosable %}}
 
 {{% choosable language typescript %}}
-    
+
 ```typescript
 let certValidation = new aws.route53.Record("cert_validation", {
   records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
@@ -499,9 +500,11 @@ let certValidation = new aws.route53.Record("cert_validation", {
                            .apply(dvo => dvo ? dvo[0] : undefined)
                            .apply(o => o ? o.resourceRecordValue : undefined)],
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
+
 ## Working with Outputs and Strings {#outputs-and-strings}
 
 Outputs that contain strings cannot be used directly in operations such as string concatenation. String interpolation lets you more easily build a string out of various output values, without needing {{< pulumi-apply >}} or [Output.all](/docs/reference/pkg/python/pulumi#pulumi.Output.all). You can use string interpolation to export a stack output, provide a dynamically computed string as a new resource argument, or even for diagnostic purposes.
