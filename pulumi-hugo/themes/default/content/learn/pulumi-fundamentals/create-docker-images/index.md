@@ -63,6 +63,10 @@ This `Dockerfile` copies the REST backend into the Docker filesystem, installs
 the dependencies, and builds the image. Note that port 3000 must be open on your
 host machine.
 
+{{% notes type="info" %}}
+For the purposes of this topic, we've already built the images. We are showing the code for the application here just for completeness; you won't actually need to do anything with this code.
+{{% /notes %}}
+
 ## Pull a Docker Image with Pulumi
 
 {{% choosable language typescript %}}
