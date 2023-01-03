@@ -183,6 +183,15 @@ Only required if using GitLab as the backing identity provider for your organiza
 | GITLAB_OAUTH_SECRET   | GitLab OAuth app client secret. See above to create a new GitLab OAuth app.                                                                      |
 | GITLAB_OAUTH_ENDPOINT | The domain for your GitLab instance. It defaults to `https://gitlab.com`, which should be used unless you are running GitLab on a custom domain. |
 
+## Sending Emails
+
+| Variable Name | Description |
+| ------------- | ----------- |
+| SMTP_SERVER | Location of the SMTP server to use for sending notification emails. (must be in \<host>:\<port> format, e.g. `smtp.domain.com:465`) |
+| SMTP_USERNAME | Name of the SMTP user the Pulumi Service connects as. |
+| SMTP_PASSWORD | Password of the SMTP user the Pulumi Service connects as. |
+| SMTP_GENERIC_SENDER | Sender information used as `FROM:` for outgoing emails. |
+
 ## Other Environment Variables {#other-env-vars}
 
 | Variable Name                 | Description                                                                                                                                                                                                                                            |
