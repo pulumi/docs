@@ -257,10 +257,10 @@ resources:
       accountName: ${sa.name}
       containerName: ${staticWebsite.containerName}
       source:
-        Fn::FileAsset: ./index.html
+        fn::fileAsset: ./index.html
       contentType: text/html
       blobName: index.html
-      type: block
+      type: Block
 ```
 
 {{% /choosable %}}
