@@ -12,7 +12,7 @@ layout: how-to-guide
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/mktutorial. -->
 
 <p class="mb-4 flex">
-    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/aws-ts-stepfunctions" target="_blank">
+    <a class="flex flex-wrap items-center rounded-md text-lg text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 45px; font-family: 'Gilroy'; " href="https://github.com/pulumi/examples/tree/master/aws-ts-stepfunctions" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View Code</span>
     </a>
     <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/blob/master/aws-ts-stepfunctions/README.md" target="_blank">
@@ -23,7 +23,7 @@ layout: how-to-guide
 
 A basic example that demonstrates using AWS Step Functions with a Lambda function.
 
-This example also utilizes our [Stack Readme](https://www.pulumi.com/docs/intro/pulumi-service/projects-and-stacks/#stack-readme) feature. You can view the stack readme by going to the console by running `pulumi console` and clicking on the README tab. See the [`ts-readme`](../ts-readme/) example for a more detailed example
+This example also utilizes our [Stack Readme](https://www.pulumi.com/docs/intro/pulumi-service/projects-and-stacks/#stack-readme) feature. You can view the stack readme by going to the console by running `pulumi console` and selecting the README tab. See the [`stack-readme-ts`](https://github.com/pulumi/examples/tree/master/stack-readme-ts) example for a more detailed example.
 
 ```
 # Create and configure a new stack
@@ -42,3 +42,4 @@ $ aws stepfunctions start-execution --state-machine-arn $(pulumi stack output st
 # Remove the app
 $ pulumi destroy
 ```
+
