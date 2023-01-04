@@ -66,3 +66,11 @@ Once your `pulumi/pulumi` PR is merged, you should update the pseudo-version tha
 go get -u github.com/pulumi/pulumi/pkg/v3@<commit hash>
 go get -u github.com/pulumi/pulumi/sdk/v3@<commit hash>
 ```
+
+To update to latest pulumi/pulumi use
+
+```
+go get -u github.com/pulumi/pulumi/pkg/v3
+go get -u github.com/pulumi/pulumi/sdk/v3
+go mod tidy
+```

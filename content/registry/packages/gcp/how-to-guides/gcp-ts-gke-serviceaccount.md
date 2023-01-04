@@ -2,6 +2,7 @@
 title: "Google Kubernetes Engine (GKE) Cluster with Service Account | TypeScript"
 h1: "Google Kubernetes Engine (GKE) Cluster with Service Account"
 linktitle: "Google Kubernetes Engine (GKE) Cluster with Service Account"
+meta_desc: "Google Kubernetes Engine (GKE) Cluster with Service Account How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: gcp
 language: ts

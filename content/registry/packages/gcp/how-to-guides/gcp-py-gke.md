@@ -2,6 +2,7 @@
 title: "Google Kubernetes Engine (GKE) with a Canary Deployment | Python"
 h1: "Google Kubernetes Engine (GKE) with a Canary Deployment"
 linktitle: "Google Kubernetes Engine (GKE) with a Canary Deployment"
+meta_desc: "Google Kubernetes Engine (GKE) with a Canary Deployment How-to Guide using Python"
 no_edit_this_page: true
 cloud: gcp
 language: py

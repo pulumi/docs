@@ -2,6 +2,7 @@
 title: "AWS API Gateway V2 HTTP API | TypeScript"
 h1: "AWS API Gateway V2 HTTP API"
 linktitle: "AWS API Gateway V2 HTTP API"
+meta_desc: "AWS API Gateway V2 HTTP API How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws
 language: ts

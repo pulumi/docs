@@ -2,6 +2,7 @@
 title: "Post AWS SQS Messages to Slack using Serverless Lambdas | JavaScript"
 h1: "Post AWS SQS Messages to Slack using Serverless Lambdas"
 linktitle: "Post AWS SQS Messages to Slack using Serverless Lambdas"
+meta_desc: "Post AWS SQS Messages to Slack using Serverless Lambdas How-to Guide using JavaScript"
 no_edit_this_page: true
 cloud: aws
 language: js

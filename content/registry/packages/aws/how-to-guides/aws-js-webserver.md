@@ -2,6 +2,7 @@
 title: "Web Server Using Amazon EC2 | JavaScript"
 h1: "Web Server Using Amazon EC2"
 linktitle: "Web Server Using Amazon EC2"
+meta_desc: "Web Server Using Amazon EC2 How-to Guide using JavaScript"
 no_edit_this_page: true
 cloud: aws
 language: js

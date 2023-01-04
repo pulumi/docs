@@ -2,6 +2,7 @@
 title: "Wordpress Helm Chart | Go"
 h1: "Wordpress Helm Chart"
 linktitle: "Wordpress Helm Chart"
+meta_desc: "Wordpress Helm Chart How-to Guide using Go"
 no_edit_this_page: true
 cloud: kubernetes
 language: go

@@ -2,6 +2,7 @@
 title: "Exposing a Deployment with a Public IP Address | Go"
 h1: "Exposing a Deployment with a Public IP Address"
 linktitle: "Exposing a Deployment with a Public IP Address"
+meta_desc: "Exposing a Deployment with a Public IP Address How-to Guide using Go"
 no_edit_this_page: true
 cloud: kubernetes
 language: go

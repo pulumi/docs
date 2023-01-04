@@ -2,6 +2,7 @@
 title: "Pulumi Webhook Handler | TypeScript"
 h1: "Pulumi Webhook Handler"
 linktitle: "Pulumi Webhook Handler"
+meta_desc: "Pulumi Webhook Handler How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws
 language: ts

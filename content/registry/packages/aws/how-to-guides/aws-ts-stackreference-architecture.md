@@ -2,6 +2,7 @@
 title: "AWS StackReference Architecture | TypeScript"
 h1: "AWS StackReference Architecture"
 linktitle: "AWS StackReference Architecture"
+meta_desc: "AWS StackReference Architecture How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws
 language: ts

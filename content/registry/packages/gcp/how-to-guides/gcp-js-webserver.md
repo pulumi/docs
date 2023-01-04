@@ -2,6 +2,7 @@
 title: "Web Server Using Compute Engine | JavaScript"
 h1: "Web Server Using Compute Engine"
 linktitle: "Web Server Using Compute Engine"
+meta_desc: "Web Server Using Compute Engine How-to Guide using JavaScript"
 no_edit_this_page: true
 cloud: gcp
 language: js

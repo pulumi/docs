@@ -2,6 +2,7 @@
 title: "GraphQL Endpoint in AWS AppSync | TypeScript"
 h1: "GraphQL Endpoint in AWS AppSync"
 linktitle: "GraphQL Endpoint in AWS AppSync"
+meta_desc: "GraphQL Endpoint in AWS AppSync How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws
 language: ts

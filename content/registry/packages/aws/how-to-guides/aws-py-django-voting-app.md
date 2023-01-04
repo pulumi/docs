@@ -2,6 +2,7 @@
 title: "Voting app Using Django and MySQL | Python"
 h1: "Voting app Using Django and MySQL"
 linktitle: "Voting app Using Django and MySQL"
+meta_desc: "Voting app Using Django and MySQL How-to Guide using Python"
 no_edit_this_page: true
 cloud: aws
 language: py

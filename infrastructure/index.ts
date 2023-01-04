@@ -70,6 +70,12 @@ const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {
     website: {
         indexDocument: "index.html",
     },
+    corsRules: [{
+        allowedMethods: [
+            "GET",
+        ],
+        allowedOrigins: ["*"],
+    }],
 });
 
 // Optionally create a fallback bucket for serving the website directly out of S3 when necessary.
@@ -158,6 +164,9 @@ const baseCacheBehavior = {
     maxTtl: fiveMinutes,
 
     lambdaFunctionAssociations,
+
+    // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-response-headers-policies.html#managed-response-headers-policies-security
+    responseHeadersPolicyId: "67f7725c-6f97-4210-82d7-5512b31e9d03", // SecurityHeadersPolicy
 };
 
 // domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
@@ -224,6 +233,17 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             pathPattern: "/uploads/*",
             defaultTtl: oneHour,
             maxTtl: oneHour,
+            forwardedValues: {
+                cookies: {
+                    forward: "none",
+                },
+                queryString: false,
+                headers: [
+                    "Origin",
+                    "Access-Control-Request-Headers",
+                    "Access-Control-Request-Method",
+                ],
+            },
         },
         {
             ...baseCacheBehavior,

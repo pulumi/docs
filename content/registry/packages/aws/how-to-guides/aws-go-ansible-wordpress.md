@@ -2,6 +2,7 @@
 title: "Deploy Wordpress to AWS EC2 using Pulumi and Ansible | Go"
 h1: "Deploy Wordpress to AWS EC2 using Pulumi and Ansible"
 linktitle: "Deploy Wordpress to AWS EC2 using Pulumi and Ansible"
+meta_desc: "Deploy Wordpress to AWS EC2 using Pulumi and Ansible How-to Guide using Go"
 no_edit_this_page: true
 cloud: aws
 language: go

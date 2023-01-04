@@ -2,6 +2,7 @@
 title: "Setup AWS Secrets manager | Python"
 h1: "Setup AWS Secrets manager"
 linktitle: "Setup AWS Secrets manager"
+meta_desc: "Setup AWS Secrets manager How-to Guide using Python"
 no_edit_this_page: true
 cloud: aws
 language: py

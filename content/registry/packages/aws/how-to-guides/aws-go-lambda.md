@@ -2,6 +2,7 @@
 title: "AWS Golang Lambda | Go"
 h1: "AWS Golang Lambda"
 linktitle: "AWS Golang Lambda"
+meta_desc: "AWS Golang Lambda How-to Guide using Go"
 no_edit_this_page: true
 cloud: aws
 language: go

@@ -2,6 +2,7 @@
 title: "Azure App Service with SQL Database and Application Insights | YAML"
 h1: "Azure App Service with SQL Database and Application Insights"
 linktitle: "Azure App Service with SQL Database and Application Insights"
+meta_desc: "Azure App Service with SQL Database and Application Insights How-to Guide using YAML"
 no_edit_this_page: true
 cloud: azure
 language: yaml

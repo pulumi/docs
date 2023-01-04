@@ -2,6 +2,7 @@
 title: "App Rollout via ConfigMap Data Change | TypeScript"
 h1: "App Rollout via ConfigMap Data Change"
 linktitle: "App Rollout via ConfigMap Data Change"
+meta_desc: "App Rollout via ConfigMap Data Change How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: kubernetes
 language: ts

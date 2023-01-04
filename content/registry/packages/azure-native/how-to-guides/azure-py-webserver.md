@@ -2,6 +2,7 @@
 title: "Web Server Using Azure Virtual Machine | Python"
 h1: "Web Server Using Azure Virtual Machine"
 linktitle: "Web Server Using Azure Virtual Machine"
+meta_desc: "Web Server Using Azure Virtual Machine How-to Guide using Python"
 no_edit_this_page: true
 cloud: azure
 language: py

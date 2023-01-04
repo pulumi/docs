@@ -2,6 +2,7 @@
 title: "Azure Kubernetes Service (AKS) Cluster using the native Azure Provider | TypeScript"
 h1: "Azure Kubernetes Service (AKS) Cluster using the native Azure Provider"
 linktitle: "Azure Kubernetes Service (AKS) Cluster using the native Azure Provider"
+meta_desc: "Azure Kubernetes Service (AKS) Cluster using the native Azure Provider How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: azure
 language: ts

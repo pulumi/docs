@@ -2,6 +2,7 @@
 title: "Lambda-backed API Gateway | Python"
 h1: "Lambda-backed API Gateway"
 linktitle: "Lambda-backed API Gateway"
+meta_desc: "Lambda-backed API Gateway How-to Guide using Python"
 no_edit_this_page: true
 cloud: aws
 language: py

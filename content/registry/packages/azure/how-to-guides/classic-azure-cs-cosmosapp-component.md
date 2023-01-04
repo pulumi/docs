@@ -2,6 +2,7 @@
 title: "Reusable Component to Create Globally-distributed Applications with Azure Cosmos DB | C#"
 h1: "Reusable Component to Create Globally-distributed Applications with Azure Cosmos DB"
 linktitle: "Reusable Component to Create Globally-distributed Applications with Azure Cosmos DB"
+meta_desc: "Reusable Component to Create Globally-distributed Applications with Azure Cosmos DB How-to Guide using C#"
 no_edit_this_page: true
 cloud: classic-azure
 language: cs

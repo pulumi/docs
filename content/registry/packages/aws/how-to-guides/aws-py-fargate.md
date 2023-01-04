@@ -2,6 +2,7 @@
 title: "NGINX on AWS ECS Fargate using Python | Python"
 h1: "NGINX on AWS ECS Fargate using Python"
 linktitle: "NGINX on AWS ECS Fargate using Python"
+meta_desc: "NGINX on AWS ECS Fargate using Python How-to Guide using Python"
 no_edit_this_page: true
 cloud: aws
 language: py

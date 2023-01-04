@@ -2,6 +2,7 @@
 title: "Static Website Using Azure Blob Storage and CDN | YAML"
 h1: "Static Website Using Azure Blob Storage and CDN"
 linktitle: "Static Website Using Azure Blob Storage and CDN"
+meta_desc: "Static Website Using Azure Blob Storage and CDN How-to Guide using YAML"
 no_edit_this_page: true
 cloud: azure
 language: yaml

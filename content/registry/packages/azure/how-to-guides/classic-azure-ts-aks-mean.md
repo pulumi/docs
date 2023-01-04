@@ -2,6 +2,7 @@
 title: "Azure Kubernetes Service (AKS) App Using CosmosDB | TypeScript"
 h1: "Azure Kubernetes Service (AKS) App Using CosmosDB"
 linktitle: "Azure Kubernetes Service (AKS) App Using CosmosDB"
+meta_desc: "Azure Kubernetes Service (AKS) App Using CosmosDB How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: classic-azure
 language: ts

@@ -2,6 +2,7 @@
 title: "Using Amazon EFS with AWS Lambda | TypeScript"
 h1: "Using Amazon EFS with AWS Lambda"
 linktitle: "Using Amazon EFS with AWS Lambda"
+meta_desc: "Using Amazon EFS with AWS Lambda How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws
 language: ts

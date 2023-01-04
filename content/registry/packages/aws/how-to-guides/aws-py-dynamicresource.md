@@ -2,6 +2,7 @@
 title: "Pulumi Python Dynamic Resource demonstration | Python"
 h1: "Pulumi Python Dynamic Resource demonstration"
 linktitle: "Pulumi Python Dynamic Resource demonstration"
+meta_desc: "Pulumi Python Dynamic Resource demonstration How-to Guide using Python"
 no_edit_this_page: true
 cloud: aws
 language: py

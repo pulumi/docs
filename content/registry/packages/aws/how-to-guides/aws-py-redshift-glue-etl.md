@@ -2,6 +2,7 @@
 title: "ETL pipeline with Amazon Redshift and AWS Glue | Python"
 h1: "ETL pipeline with Amazon Redshift and AWS Glue"
 linktitle: "ETL pipeline with Amazon Redshift and AWS Glue"
+meta_desc: "ETL pipeline with Amazon Redshift and AWS Glue How-to Guide using Python"
 no_edit_this_page: true
 cloud: aws
 language: py

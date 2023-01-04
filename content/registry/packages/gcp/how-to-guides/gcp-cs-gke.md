@@ -2,6 +2,7 @@
 title: "Google Kubernetes Engine (GKE) Cluster | C#"
 h1: "Google Kubernetes Engine (GKE) Cluster"
 linktitle: "Google Kubernetes Engine (GKE) Cluster"
+meta_desc: "Google Kubernetes Engine (GKE) Cluster How-to Guide using C#"
 no_edit_this_page: true
 cloud: gcp
 language: cs

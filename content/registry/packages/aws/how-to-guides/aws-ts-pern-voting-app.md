@@ -2,6 +2,7 @@
 title: "PERN Stack Voting App | TypeScript"
 h1: "PERN Stack Voting App"
 linktitle: "PERN Stack Voting App"
+meta_desc: "PERN Stack Voting App How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: aws
 language: ts
