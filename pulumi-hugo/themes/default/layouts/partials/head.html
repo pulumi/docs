@@ -267,7 +267,7 @@
     {{ end }}
 
     {{/* Tests to enforce required frontmatter for certain content types. */}}
-    {{ if and (eq .Type "blog") .IsPage }}
+    {{ if and (eq .Type "blog") (eq .BundleType "leaf") .IsPage }}
         {{ if not .Params.authors }}
             {{ errorf "Blog posts require authors: %s" .File.Path }}
         {{ else }}

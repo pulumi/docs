@@ -45,21 +45,23 @@
             </ul>
         </div>
         <hr class="my-8" />
-        <ul class="list-none p-0 mb-4 inline-flex flex-wrap text-xs">
-            {{/* Only show the top N blog tags. We create a dict of them first so they're in alphabetical order. */}}
-            {{/* Note, we could have just deleted the other tags, but this will change over time. Also, we want */}}
-            {{/* to preserve the metadata -- some day we might even have a "View More ..." link at the bottom... */}}
-            {{ $topTags := dict }}
-            {{ range first 40 .Site.Taxonomies.tags.ByCount }}
-                {{ $topTags = merge $topTags (dict .Name .Count) }}
-            {{ end }}
-            {{ range $tag, $_ := .Site.Taxonomies.tags }}
-                {{ $count := index $topTags $tag }}
-                {{ if gt $count 0 }}
+
+        {{/* Only show the top N blog tags. This lists releases first, then features, then most popular descendingly. */}}
+
+        {{ $allTags := .Site.Taxonomies.tags.ByCount }}
+        {{ $releases := where $allTags "Name" "pulumi-releases" }}
+        {{ $features := where $allTags "Name" "features" }}
+        {{ $others := where $allTags "Name" "not in" "pulumi-releases features" }}
+
+
+        <ul class="list-none p-0 mb-2 inline-flex flex-wrap text-xs">
+            {{ range $i, $tagInfo := (slice $releases $features (first 40 $others)) }}
+                {{ range $tagInfo }}
+                    {{ $tag := .Name }}
                     <li>
                         <a
                             data-track="blog-tag-{{ $tag | urlize }}"
-                            class="tag tag-blog text-xs {{ if eq (lower $tag) (urlize ((lower $.Title))) }}active{{ end }}"
+                            class="tag tag-blog text-xs m-1 {{ if eq (lower $tag) (urlize ((lower $.Title))) }}active{{ end }}"
                             href="{{ .Page.RelPermalink }}"
                         >
                             {{ $tag }}
@@ -68,6 +70,7 @@
                 {{ end }}
             {{ end }}
         </ul>
+        <a class="text-blue-600 text-sm block m-1 mb-4" href="{{ relref . "/blog/tag" }}">All blog tags &rarr;</a>
     </div>
 
     <div class="lg:hidden pb-4">
