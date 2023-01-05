@@ -246,6 +246,36 @@ The following environment variables are used internally by Pulumi Deployments, a
 
 {{% /notes %}}
 
+* **oidc** (Optional[OIDCConfiguration]): Allows the deployment to exchange an OIDC token for short-term credentials from a cloud provider.
+
+`OIDCConfiguration` has the following structure:
+
+* **aws** (Optional[AWSOIDCConfiguration]): Configures OIDC for AWS.
+* **azure** (Optional[AzureOIDCConfiguration]): Configures OIDC for Azure.
+* **gcp**: (Optional[GCPOIDCConfiguration]): Configures OIDC for GCP.
+
+`AWSOIDCConfiguration` has the following structure:
+
+* **duration** (Optional[string]): The duration of the assume-role session in "XhYmZs" format.
+* **policyArns** (Optional[list[string]]): A set of IAM policy ARNs that further restrict the assume-role session.
+* **roleArn** (string): The ARN of the role to assume using the OIDC token.
+* **sessionName** (string): The name of the assume-role session.
+
+`AzureOIDCConfiguration` has the following structure:
+
+* **clientId** (string): The client ID of the federated workload identity.
+* **tenantId** (string): The tenant ID of the federated workload identity.
+* **subscriptionId** (string): The ID of the subscription to use.
+
+`GCPOIDCConfiguration` has the following structure:
+
+* **projectId** (string): The numerical ID of the GCP project.
+* **region** (Optional[string]): The region of the GCP project.
+* **workloadPoolId** (string): The ID of the workload pool to use.
+* **providerId** (string): The ID of the identity provider associated with the workload pool.
+* **serviceAccount** (string): The email address of the service account to use.
+* **tokenLifetime** (Optional[string]): The lifetime of the temporary credentials in "XhYmZs" format.
+
 ##### Examples
 
 ```json
@@ -264,7 +294,7 @@ The following environment variables are used internally by Pulumi Deployments, a
 }
 ```
 
-Override default dependency installation step
+Override default dependency installation step:
 
 ```json
 {
@@ -281,6 +311,21 @@ Override default dependency installation step
   }
 }
 ```
+
+Use OIDC with AWS:
+
+{
+  "operation": "refresh",
+  "environmentVariables": {
+    "AWS_REGION": "us-west-2"
+  },
+  "oidc": {
+    "aws": {
+      "roleArn": "arn:aws:iam::123456789000:role/pulumi-deploy-role",
+      "sessionName": "pulumi-deploy-session"
+    }
+  }
+}
 
 {{% notes "info" %}}
 
