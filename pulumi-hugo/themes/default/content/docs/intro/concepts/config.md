@@ -174,9 +174,9 @@ public static void stack(Context ctx) {
 {{% choosable language yaml %}}
 
 ```yaml
-configuration:
+config:
   name:
-    type: String
+    type: string
   lucky:
     default: 42
 outputs:
