@@ -20,7 +20,7 @@ To create the GCP Workload Identity Provider, see the [relevant GCP documentatio
 
 When following the instructions in the documentation:
 
-* For the provider issuer, use `https://api.pulumi.com/deploy`
+* For the provider issuer, use `https://api.pulumi.com/oidc`
 * For the audience, use the name of your organization
 * Recall the [format of the subject claim](/docs/guides/oidc/#overview) when adding attribute conditions that check the value of the `google.subject` attribute
 

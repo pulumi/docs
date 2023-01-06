@@ -18,7 +18,7 @@ This document outlines the steps required to configure Pulumi Deployments to use
 
 To add the Pulumi Service as an OIDC provider for IAM, see the [relevant AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc.html).
 
-* For the provider URL, use `https://api.pulumi.com/deploy`
+* For the provider URL, use `https://api.pulumi.com/oidc`
 * For the audience, use the name of your organization
 
 ## Configuring the IAM Role and Trust Policy
