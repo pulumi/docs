@@ -21,44 +21,37 @@ event_data:
 description: |
   are free, hands-on learning events for developers and engineers to level up their cloud skills and master the modern cloud. Join our experts for workshops and talks that will teach you the latest software development and infrastructure as code practices that can increase your productivity and level up your output, whether you’re using VMs, serverless, Kubernetes, or even multi-cloud.
 
-join:
-  link: https://tulu.la/chat/ces-00002e/lobby-0002g6
-  link_text: Join Now
-
-featured:
+customer_stories:
   items:
-    - title: Pulumi Demos and Best Practices
-      description: |
-        New and exciting hands-on, coding-heavy demo sessions. Using Pulumi, you will see how to build, deploy, and manage cloud applications with infrastructure as code, powered by popular programming languages. Pick up new best practices and how software engineering can be applied to tame the complexities of the modern cloud infrastructure.
-      presenters:
-      - name: Meagan Cojocar
-        photo: /images/team/meagan-cojocar.jpg
-      - name: Levi Blackstone
-        photo: /images/team/levi-blackstone.jpg
-      - name: Casey Huang
-        photo: /images/team/casey-huang.jpg
-      - name: Mitch Gerdisch
-        photo: /images/team/mitch-gerdisch.jpg
-      - name: Bryce Lampe
-        photo: /images/team/bryce-lampe.jpg
+    - title: Enabling Kafka Adoption with Pulumi and Confluent Cloud
+      description: Event streaming technology can be transformative but often difficult to adopt. In this talk, Collin James, Engineering Leader and Software Architect at Dutchie, describes how a small team has enabled Kafka adoption by creating a monorepo of Pulumi projects that manage resources on Confluent Cloud
+      banner: /images/cloud-engineering-days/customer_banners/dutchie.png
+      link: /resources/enabling-kafka-adoption-pulumi-and-confluent-cloud
+    - title: Creating Business Logic Interfaces with Automation API
+      description: After automating infrastructure with Pulumi, how do you operationalize it? Dan Swartz, Altana's Principal Software Engineer, discusses how Pulumi's automation API can be integrated into a self-service application to codify your business logic and provide a richer operational experience for your organization.
+      banner: /images/cloud-engineering-days/customer_banners/altana.png
+      link: /resources/creating-business-logic-interfaces-automation-api
+    - title: Migrating from CloudFormation to Pulumi
+      description: Dennis Webb, Staff Software Engineer at Panther, describes best practices and his team's journey to move their infrastructure code from CloudFormation to Pulumi. He provides tips and insights to teams considering modernizing their own infrastructure.
+      banner: /images/cloud-engineering-days/customer_banners/panther.png
+      link: /resources/migrating-from-cloudformation-to-pulumi
+    - title: Building a Global Data Platform at Scale
+      description: At Fauna, availability is a top priority. It informs how we build everything, including our infrastructure. I'll discuss how we balance complexity and safety in our infrastructure as code to build, maintain, and scale FaunaDB. They use AWS and Python but soon will use the multi-cloud ability.
+      banner: /images/cloud-engineering-days/customer_banners/fauna.png
+      link: /resources/building-a-global-data-platform-at-scale
 
-    - title: Customer Stories
-      description: |
-        Learn from Pulumi customers on how they scaled up their infrastructure velocity and reliability with Pulumi:
-
-        • Building a Global Data Platform at Scale, featuring Fauna, Inc.  
-        • Creating Business Logic Interfaces with Pulumi’s Automation API, featuring Altana  
-        • Migrating from CloudFormation to Pulumi - How we did it, featuring Panther  
-        • Enabling Kafka Adoption with Pulumi and Confluent Cloud, featuring Dutchie  
-      presenters:
-      - name:
-        photo: /images/cloud-engineering-days/logos/altana.svg
-      - name:
-        photo: /images/cloud-engineering-days/logos/panther.svg
-      - name:
-        photo: /images/cloud-engineering-days/logos/fauna.svg
-      - name:
-        photo: /images/cloud-engineering-days/logos/dutchie.svg
+recommended:
+  title: Recommended Sessions
+  items:
+    - image: /images/cloud-engineering-days/thumbnails/pulumi-deployments.png
+      alt-text: "Tech Talk: Deep Dive on Pulumi Deployments"
+      link: /resources/deep-dive-on-pulumi-deployments
+    - image: /images/cloud-engineering-days/thumbnails/automation-api.png
+      alt-text: "Tech Talk: Pulumi Automation API Under the Hood"
+      link: /resources/automation-api-under-the-hood
+    - image: /images/cloud-engineering-days/thumbnails/infrastructure-best-practices.png
+      alt-text: "Tech Talk: Infrastructure as Software Best Practices"
+      link: /resources/infrastructure-as-software-best-practices
 
 partners:
   items:

@@ -1,6 +1,6 @@
 {{ define "hero" }}
     <header class="page-hero">
-        <img class="mx-auto mb-6 w-full" src="/images/cloud-engineering-days/ced-hero-post-summit.png" />
+        <img class="mx-auto mb-6 w-full" src="/images/cloud-engineering-days/ced-hero-final.png" />
     </header>
 {{ end }}
 
@@ -9,15 +9,14 @@
         <h5>
             <b>Opening Keynote - Founder/CEO Joe Duffy and CTO Luke Hoban</b>
         </h5>
-        >
-        <div class="w-3/4 mx-auto" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
+        <div class="w-3/4 mx-auto py-8" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
             <iframe
                 src="https://www.youtube.com/embed/9B19Vuaq40A?rel=0"
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
                 allowfullscreen=""
             ></iframe>
         </div>
-        <div class="text-left">
+        <div class="py-8 text-left">
             <p>
                 Joe Duffy and Luke Hoban discuss the newest innovations in infrastructure as code and modern applications and how pioneering engineering organizations use these
                 techniques to ship faster, more reliably, and at a greater scale.
@@ -41,23 +40,26 @@
         </div>
     </section>
 
-    <section id="featured" class="container mx-auto my-0">
+    <div class="page-hero">
+        <div class="dot-background-container">
+            <div class="dot-background"></div>
+        </div>
+        <div class="dot-overlay"></div>
+        <div class="page-hero-title">
+            <h2 class="py-8">
+                <span><span class="rainbow-text">Customer Stories</span></span>
+            </h2>
+        </div>
+    </div>
+
+    <section id="customer_stories" class="container mx-auto my-0">
         <div class="benefits-section relative">
             <div class="flex flex-wrap items-stretch justify-center">
-                {{ range $item := .Params.featured.items }}
+                {{ range $item := .Params.customer_stories.items }}
                     <div class="w-full lg:w-1/2 p-4 my-2">
                         <div class="card h-full relative bg-white">
-                            <div class="text-center flex flex-row justify-center pt-8 rounded-t-xl relative bg-fuchsia-600">
-                                {{ range $presenter := $item.presenters }}
-                                    <div class="w-1/5 mx-4 text-center">
-                                        {{ if .name }}
-                                            <img src="{{ $presenter.photo }}" alt="{{ $presenter.name }}" />
-                                            <p class="text-white">{{ .name }}</p>
-                                        {{ else }}
-                                            <img class="mb-16 mt-8" src="{{ $presenter.photo }}" />
-                                        {{ end }}
-                                    </div>
-                                {{ end }}
+                            <div class="text-center flex flex-row justify-center relative">
+                                <img class="mx-auto w-full rounded-t-xl" src="{{ $item.banner }}" />
                             </div>
                             <div class="px-8 py-8">
                                 <div>
@@ -68,7 +70,7 @@
                                 </div>
                                 {{ if $item.link }}
                                     <div class="mt-8">
-                                        <a href="{{ $item.link }}" class="btn-secondary">{{ $item.link_text }}</a>
+                                        <a href="{{ $item.link }}" class="btn-secondary">Watch Now</a>
                                     </div>
                                 {{ end }}
                             </div>
@@ -79,7 +81,18 @@
         </div>
     </section>
 
-    <section id="workshops" class="min-w-full pt-8 bg-black">
+    <section id="recommended" class="min-w-full pb-16 pt-8 mt-8 bg-salmon-200">
+        <div class="container mx-auto">
+            <h3 class="text-center">{{ .Params.recommended.title }}</h3>
+            <div class="flex flex-wrap flex-row justify-center">
+                {{ range $item := .Params.recommended.items }}
+                    <a href="{{ $item.link }}"><img class="h-64 p-8" src="{{ $item.image }}" /></a>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <section id="workshops" class="min-w-full py-8 bg-black">
         <div class="container mx-auto">
             <h3 class="text-center text-white">{{ .Params.workshops.title }}</h3>
             <div class="flex flex-wrap items-stretch justify-center">
@@ -130,7 +143,7 @@
         </div>
     </section>
 
-    <section id="speakers" class="my-8 text-center min-w-full">
+    <section id="speakers" class="my-8 pb-8 text-center min-w-full">
         <h3>Speakers</h3>
         <div class="flex flex-wrap justify-center mx-16">
             {{ range $speaker := .Params.speakers }}
