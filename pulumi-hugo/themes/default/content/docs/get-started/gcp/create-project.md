@@ -44,7 +44,6 @@ $ pulumi new gcp-python
 {{% choosable language go %}}
 
 ```bash
-# from within your $GOPATH
 $ mkdir quickstart && cd quickstart
 $ pulumi new gcp-go
 ```

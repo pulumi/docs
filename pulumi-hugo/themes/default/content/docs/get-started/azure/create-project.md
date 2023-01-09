@@ -44,7 +44,6 @@ $ pulumi new azure-csharp
 {{% choosable language go %}}
 
 ```bash
-# from within your $GOPATH
 $ mkdir quickstart && cd quickstart
 $ pulumi new azure-go
 ```
