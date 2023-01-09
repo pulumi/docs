@@ -100,10 +100,22 @@ By default, when you create a new Pulumi organization, it uses the Pulumi identi
 
 Only organization admins can change the organization identity provider.
 
+Organization members must first add the new identity provider to their individual accounts before changing the organization identity provider, or members will be locked out of the organization.
+
 To change an organization's identity provider:
 
 1. Navigate to **Settings** > **Access Management**.
 1. Select **Change requirements**.
+
+### Disconnecting Identity Providers
+
+In order to disconnect an identity provider you need to select another identity provider. This is also true for SAML SSO. To remove SAML SSO configuration, selected a new identity provider.
+
+Organization members must first add the new identity provider to their individual accounts before changing the organization identity provider, or members will be locked out of the organization.
+
+1. Navigate to **Settings** > **Access Management**.
+1. Select **Change requirements**.
+1. Select a new identity provider.
 
 ### GitHub Identity Provider
 
