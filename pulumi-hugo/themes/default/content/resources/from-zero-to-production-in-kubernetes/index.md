@@ -66,10 +66,10 @@ main:
     presenters:
         - name: Josh Kodroff
           role: Senior Solutions Architect, Pulumi
-        - name: Elijah Zupancic
-          role: Solutions Architect, NGINX
+        - name: Damian Curry
+          role: Business Development Technical Director, F5/NGINX
         - name: Jason Schmidt
-          role: Solutions Architect, NGINX
+          role: Senior Solutions Architect, F5/NGINX
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
