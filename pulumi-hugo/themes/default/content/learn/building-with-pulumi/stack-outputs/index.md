@@ -110,8 +110,7 @@ First, we need to define the configuration. We have already set this in the
 $ pulumi stack select dev
 ```
 
-Now, run the following command to get the values for this stack's configuration
-configuration:
+Now, run the following command to get the values for this stack's configuration:
 
 {{% choosable language typescript %}}
 
