@@ -74,11 +74,34 @@ The [`pulumi new`](/docs/reference/cli/pulumi_new) command creates a new Pulumi 
 
 After logging in, the CLI will proceed with walking you through creating a new project.
 
-First, you will be asked for a project name and description. Hit `ENTER` to accept the default values or specify new values.
+First, you will be asked for a **project name** and **project description**. Hit `ENTER` to accept the default values or specify new values.
 
-Next, you will be asked for the name of a stack. Hit `ENTER` to accept the default value of `dev`.
+```
+This command will walk you through creating a new Pulumi project.
+
+Enter a value or leave blank to accept the (default), and press <ENTER>.
+Press ^C at any time to quit.
+
+project name: (quickstart)
+project description: (A minimal Azure Native Pulumi program)
+Created project 'quickstart'
+```
+
+Next, you will be asked for a **stack name**. Hit `ENTER` to accept the default value of `dev`.
+
+```
+Please enter your desired stack name.
+To create a stack in an organization, use the format <org-name>/<stack-name> (e.g. `acmecorp/dev`).
+stack name: (dev)
+Created stack 'dev'
+```
 
 For Azure projects, you will be prompted for the Azure location. You can accept the default value of `WestUS` or choose another location.
+
+```
+azure-native:location: The Azure location to use: (WestUS2)
+Saved config
+```
 
 To list all available locations, use the `az account list-locations` command.
 

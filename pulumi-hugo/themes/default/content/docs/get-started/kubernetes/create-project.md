@@ -78,6 +78,8 @@ $ pulumi new kubernetes-yaml
 
 After logging in, the CLI will proceed with walking you through creating a new project.
 
+First, you will be asked for a **project name** and **project description**. Hit `ENTER` to accept the default values or specify new values.
+
 ```
 This command will walk you through creating a new Pulumi project.
 
@@ -87,14 +89,16 @@ Press ^C at any time to quit.
 project name: (quickstart)
 project description: (A minimal Kubernetes Pulumi program)
 Created project 'quickstart'
+```
 
+Next, you will be asked for a **stack name**. You can hit `ENTER` to accept the default value of `dev`.
+
+```
+Please enter your desired stack name.
+To create a stack in an organization, use the format <org-name>/<stack-name> (e.g. `acmecorp/dev`).
 stack name: (dev)
 Created stack 'dev'
 ```
-
-First, you will be asked for a project name and description. Hit `ENTER` to accept the default values or specify new values.
-
-Next, you will be asked for the name of a stack. You can hit `ENTER` to accept the default value of `dev`.
 
 > What are [projects](/docs/intro/concepts/project/) and [stacks](/docs/intro/concepts/stack/)? Pulumi projects and stacks let you organize Pulumi code. Consider a Pulumi _project_ to be analogous to a GitHub repo---a single place for code---and a _stack_ to be an instance of that code with a separate configuration. For instance, _Project Foo_ may have multiple stacks for different development environments (Dev, Test, or Prod), or perhaps for different cloud configurations (geographic region for example). See [Organizing Projects and Stacks](/docs/guides/organizing-projects-stacks/) for some best practices on organizing your Pulumi projects and stacks.
 
