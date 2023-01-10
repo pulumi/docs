@@ -41,7 +41,7 @@ obtained from the identity provider you used when signing up.
 To edit your profile information:
 
 1. Select your profile picture.
-1. Select **Settings**.
+1. Select **Account settings**.
 1. Use the **Edit profile** button.
 1. Save your changes.
 
