@@ -212,7 +212,7 @@ outputs:
 
 From the CLI, you can then use [`pulumi stack output url`](/docs/reference/cli/pulumi_stack_output) to get the value and incorporate into other scripts or tools.
 
-The value of a stack export can be a regular value, an [Output](/docs/intro/concepts/inputs-outputs/), or a `Promise` (effectively, the same as an [Input](/docs/intro/concepts/inputs-outputs/). The actual values are resolved after `pulumi up` completes.
+The value of a stack export can be a regular value, an [Output](/docs/intro/concepts/inputs-outputs/), or a `Promise` (effectively, the same as an [Input](/docs/intro/concepts/inputs-outputs/)). The actual values are resolved after `pulumi up` completes.
 
 Stack exports are effectively JSON serialized, though quotes are removed when exporting strings.
 
