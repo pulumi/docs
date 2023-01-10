@@ -119,27 +119,33 @@
 
     {{ if .IsHome }}
         <title>{{ .Site.Title }}</title>
-    {{ else if .Params.title_tag }}
-        <!-- Using the title frontmatter value to override the default title string that Swiftype pulls in. -->
-        <meta class="swiftype" name="title" data-type="string" content="{{ .Params.title_tag }}" />
-        <title>{{ .Params.title_tag }} | Pulumi</title>
     {{ else if .Title }}
+        {{ $title := .Title }}
+        {{ if .Params.title_tag }}
+            {{ $title = .Params.title_tag }}
+        {{ end }}
+
+
         <!-- For blog posts that come up in Swiftype result sets, denote that the links are blog posts by adding a "Blog" prefix to the title. -->
         {{ if and (eq .Type "blog") .IsPage }}
-            <meta class="swiftype" name="title" data-type="string" content="Blog: {{ .Title }}" />
+            <meta class="swiftype" name="title" data-type="string" content="Blog: {{ $title }}" />
         {{ else if and (eq .Type "registry") .IsPage }}
-            <meta class="swiftype" name="title" data-type="string" content="Registry: {{ .Title }}" />
+            <meta class="swiftype" name="title" data-type="string" content="Registry: {{ $title }}" />
         {{ else }}
-            <meta class="swiftype" name="title" data-type="string" content="{{ .Title }}" />
+            <meta class="swiftype" name="title" data-type="string" content="{{ $title }}" />
         {{ end }}
 
 
         <!-- The blog tags, specifically the tag lists, end up clashing with other page titles on the website. We
              add "Blog" to the title so that the titles no longer clash. -->
         {{ if and (eq .Type "blog") .IsPage }}
-            <title>{{ .Title }} | Pulumi Blog</title>
+            <title>{{ $title }} | Pulumi Blog</title>
+        {{ else if eq .Type "docs" }}
+            <title>{{ $title }} | Pulumi Docs</title>
+        {{ else if eq .Type "registry" }}
+            <title>{{ $title }} | Pulumi Registry</title>
         {{ else }}
-            <title>{{ .Title }} | Pulumi</title>
+            <title>{{ $title }} | Pulumi</title>
         {{ end }}
     {{ else if not (or .Params.redirect_to .Params.private) }}
         <!--
