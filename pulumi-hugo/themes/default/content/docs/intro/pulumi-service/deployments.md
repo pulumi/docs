@@ -83,9 +83,9 @@ A list of API specifications for preview:
 
 - Each Pulumi Organization and Individual accounts have a limit of 10 concurrent Deployments
 - Deployments are queued, meaning a stack will only have 1 Deployment running at a time
-- An update ran through a Pulumi Deployment will timeout after 2 hours of update time
+- An update ran through a Pulumi Deployment will time out after 2 hours of update time
 - Deployment logs are retained for 90 days
-- Deployments are ran on a t3.large EC2 instance in an isolated AWS account
+- Deployments are run on a t3.large EC2 instance in an isolated AWS account
 - Secret environment variables are encrypted end-to-end
 
 ## Automation via the Pulumi Automation API

@@ -294,7 +294,7 @@ The following environment variables are used internally by Pulumi Deployments, a
 }
 ```
 
-Override default dependency installation step:
+Override default dependency installation step to use poetry:
 
 ```json
 {
@@ -312,8 +312,29 @@ Override default dependency installation step:
 }
 ```
 
+Override default dependency installation step to use a different version of node:
+
+```json
+{
+  "preRunCommands": [
+    "node --version",
+    "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash",
+    ". ~/.bashrc && nvm use 17 && yarn"
+  ],
+  "operation": "update",
+  "environmentVariables": {
+    "NVM_DIR": "/usr/local/bin",
+    "NODE_VERSION": "17"
+  },
+  "options": {
+    "skipInstallDependencies": true
+  }
+}
+```
+
 Use OIDC with AWS:
 
+```json
 {
   "operation": "refresh",
   "environmentVariables": {
@@ -326,6 +347,7 @@ Use OIDC with AWS:
     }
   }
 }
+```
 
 {{% notes "info" %}}
 
