@@ -27,6 +27,16 @@
     {{ end }}
 
 
+    <!--
+        We use taxonomy pages for tags and authors for our blog posts. These
+        pages end up cannibalising other pages on our site that rank for key terms.
+        To avoid this, we add the `noidex` tag to tell search engines not index taxonomy pages.
+    -->
+    {{ if .Data.Singular }}
+        <meta name="robots" content="noindex" />
+    {{ end }}
+
+
     <!-- Events info for Google events. -->
     {{ if .Params.event_data }}
         <script type="application/ld+json">
