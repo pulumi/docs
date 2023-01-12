@@ -28,7 +28,7 @@ illustrate how stack outputs work, we will set some stack outputs manually:
 
 At the end of the {{< langfile >}} file of `my-first-app`, add the following line:
 
-{{< chooser language "typescript,python,yaml" / >}}
+{{< chooser language "typescript,python,go,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -46,14 +46,24 @@ pulumi.export("url", f"http://localhost:{frontend_port}")
 
 {{% /choosable %}}
 
-{{% choosable language yaml %}}
+{{% choosable language go %}}
 
-At the end of the file, replace the existing `outputs: {}` line with this code:
+```go
+ctx.Export("url", pulumi.Sprintf("http://localhost:%v", frontendPort))
+```
+
+Note that you'll want to insert this just before the last `return nil` statement.
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
 
 ```yaml
 outputs:
   url: http://localhost:${frontendPort}
 ```
+
+Replace the existing `outputs: {}` line with this code.
 
 {{% /choosable %}}
 
@@ -205,6 +215,54 @@ config:
   my-first-app:mongo_host: mongodb://mongo:27017
   my-first-app:mongo_port: "27017"
   my-first-app:node_environment: development
+  my-first-app:protocol: http://
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```bash
+$ pulumi config
+KEY              VALUE
+backendPort      3000
+database         cart
+frontendPort     3001
+mongoHost        mongodb://mongo:27017
+mongoPort        27017
+nodeEnvironment  development
+protocol         http://
+```
+
+Let's set the configuration for the `staging` stack. We'll use the same values as `dev`, except the `frontendPort` will be set to `3002`.
+
+```bash
+$ pulumi stack select staging
+
+$ pulumi config set frontendPort 3002
+$ pulumi config set backendPort 3000
+$ pulumi config set mongoPort 27017
+$ pulumi config set mongoHost mongodb://mongo:27017
+$ pulumi config set database cart
+$ pulumi config set nodeEnvironment development
+$ pulumi config set protocol http://
+```
+
+You should have two new files in your directory now: `Pulumi.dev.yaml` and
+`Pulumi.staging.yaml`. If you take a look at them, you'll see each one has the
+value for `frontendPort` set (along with some other values we set in the
+Fundamentals tutorial):
+
+```bash
+$ cat Pulumi.staging.yaml
+
+config:
+  my-first-app:backendPort: "3000"
+  my-first-app:database: cart
+  my-first-app:frontendPort: "3002"
+  my-first-app:mongoHost: mongodb://mongo:27017
+  my-first-app:mongoPort: "27017"
+  my-first-app:nodeEnvironment: development
   my-first-app:protocol: http://
 ```
 

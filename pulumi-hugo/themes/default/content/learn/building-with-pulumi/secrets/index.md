@@ -123,6 +123,50 @@ config:
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+
+```bash
+$ pulumi stack select dev
+
+$ pulumi config set mongoUsername admin
+$ pulumi config set --secret mongoPassword S3cr37
+```
+
+If we list the configuration for our stack, the plain-text value for
+`mongoPassword` will not be printed:
+
+```bash
+$ pulumi config
+KEY               VALUE
+backendPort      3000
+database          cart
+frontendPort     3001
+mongoPassword    [secret]
+mongoUsername    admin
+mongoHost        mongodb://mongo:27017
+mongoPort        27017
+nodeEnvironment  development
+```
+
+This is also encrypted in the associated configuration file:
+
+```bash
+$ cat Pulumi.dev.yaml
+
+config:
+  my-first-app:backendPort: "3000"
+  my-first-app:database: cart
+  my-first-app:frontendPort: "3001"
+  my-first-app:mongoPassword:
+    secure: AAABADQXFlU0mxbTmNyl39UfVg4DdFoL94SCNMX3MkvZhBZjeAM=
+  my-first-app:mongoUsername: admin
+  my-first-app:mongoHost: mongodb://mongo:27017
+  my-first-app:mongoPort: "27017"
+  my-first-app:nodeEnvironment: development
+```
+
+{{% /choosable %}}
+
 {{% choosable language yaml %}}
 
 ```bash
@@ -168,9 +212,9 @@ config:
 {{% /choosable %}}
 
 We can access the secrets similarly to other configuration data, however we must
-specify that it is a secret. Add this code to {{< langfile >}} inside of `my-first-app`:
+specify that it is a secret. Modify the code in {{< langfile >}} inside of `my-first-app` to contain these changes:
 
-{{< chooser language "typescript,python,yaml" / >}}
+{{< chooser language "typescript,python,go,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -197,6 +241,18 @@ mongo_password = config.require_secret("mongo_password")
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+
+```go
+cfg := config.New(ctx, "")
+// ...
+protocol := cfg.Require("protocol")
+mongoUsername := cfg.Require("mongoUsername")
+mongoPassword = cfg.requireSecret("mongoPassword")
+```
+
+{{% /choosable %}}
+
 {{% choosable language yaml %}}
 
 ```yaml
@@ -216,7 +272,7 @@ let's go ahead and make sure when our `mongo` container is created, it has the
 correct username and password. Update the container definition to use the `envs`
 input property to set environment variables for the database username and password:
 
-{{< chooser language "typescript,python,yaml" / >}}
+{{< chooser language "typescript,python,go,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -279,6 +335,41 @@ $ pulumi config set mongo_host mongo
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+
+```go
+mongoContainer, err := docker.NewContainer(ctx, "mongo-container", &docker.ContainerArgs{
+	Name:  pulumi.String(fmt.Sprintf("mongo-%v", ctx.Stack())),
+	Image: mongoImage.RepoDigest,
+	Ports: &docker.ContainerPortArray{
+		&docker.ContainerPortArgs{
+			Internal: pulumi.Int(mongoPort),
+			External: pulumi.Int(mongoPort),
+		},
+	},
+	Envs: pulumi.StringArray{
+		pulumi.String(fmt.Sprintf("MONGO_INITDB_ROOT_USERNAME=%v", mongoUsername)),
+		pulumi.String(fmt.Sprintf("MONGO_INITDB_ROOT_PASSWORD=%v", mongoPassword)),
+	},
+	NetworksAdvanced: &docker.ContainerNetworksAdvancedArray{
+		&docker.ContainerNetworksAdvancedArgs{
+			Name: network.Name,
+			Aliases: pulumi.StringArray{
+				pulumi.String("mongo"),
+			},
+		},
+	},
+})
+```
+
+Then, we need to update the backend container to use the new authentication. We need to slightly change the value of `mongoHost` first:
+
+```bash
+$ pulumi config set mongoHost mongo
+```
+
+{{% /choosable %}}
+
 {{% choosable language yaml %}}
 
 ```yaml
@@ -311,7 +402,7 @@ $ pulumi config set mongoHost mongo
 
 Then, update the backend container resource as follows:
 
-{{< chooser language "typescript,python,yaml" / >}}
+{{< chooser language "typescript,python,go,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -387,6 +478,45 @@ pulumi.export("mongo_password", mongo_password)
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+
+```go
+_, err = docker.NewContainer(ctx, "backend-container", &docker.ContainerArgs{
+	Name:  pulumi.String(fmt.Sprintf("backend-%v", ctx.Stack())),
+	Image: backendImage.RepoDigest,
+	Ports: &docker.ContainerPortArray{
+		&docker.ContainerPortArgs{
+			Internal: pulumi.Int(backendPort),
+			External: pulumi.Int(backendPort),
+		},
+	},
+	Envs: pulumi.StringArray{
+		pulumi.String(fmt.Sprintf("DATABASE_HOST=mongodb://%v:%v@%v:%v", mongoUsername, mongoPassword, mongoHost, mongoPort)),
+		pulumi.String(fmt.Sprintf("DATABASE_NAME=%v?authSource=admin", database)),
+		pulumi.String(fmt.Sprintf("NODE_ENV=%v", nodeEnvironment)),
+	},
+	NetworksAdvanced: &docker.ContainerNetworksAdvancedArray{
+		&docker.ContainerNetworksAdvancedArgs{
+			Name: network.Name,
+			Aliases: pulumi.StringArray{
+				pulumi.String(fmt.Sprintf("backend-%v", ctx.Stack())),
+			},
+		},
+	},
+}, pulumi.DependsOn([]pulumi.Resource{
+	mongoContainer,
+}))
+```
+
+And finally, add a line before the `return nil` statement at the end to export the password as a stack output:
+
+```go
+// ...
+ctx.Export("mongoPassword", mongoPassword)
+```
+
+{{% /choosable %}}
+
 {{% choosable language yaml %}}
 
 ```yaml
@@ -442,6 +572,15 @@ S3cr37
 
 ```bash
 $ pulumi stack output mongo_password --show-secrets
+S3cr37
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```bash
+$ pulumi stack output mongoPassword --show-secrets
 S3cr37
 ```
 
