@@ -908,7 +908,7 @@ const frontendContainer = new docker.Container("frontendContainer", {
         },
     ],
     envs: [
-        `LISTEN_PORT=${frontendPort}`,
+        `PORT=${frontendPort}`,
         `HTTP_PROXY=backend-${stack}:${backendPort}`,
         `PROXY_PROTOCOL=${protocol}`
     ],
@@ -934,7 +934,7 @@ frontend_container = docker.Container("frontend_container",
                                           external=frontend_port
                                       )],
                                       envs=[
-                                          f"LISTEN_PORT={frontend_port}",
+                                          f"PORT={frontend_port}",
                                           f"HTTP_PROXY=backend-{stack}:{backend_port}",
                                           f"PROXY_PROTOCOL={protocol}"
                                       ],
@@ -960,7 +960,7 @@ _, err = docker.NewContainer(ctx, "frontend-container", &docker.ContainerArgs{
 		},
 	},
 	Envs: pulumi.StringArray{
-		pulumi.String(fmt.Sprintf("LISTEN_PORT=%v", frontendPort)),
+		pulumi.String(fmt.Sprintf("PORT=%v", frontendPort)),
 		pulumi.String(fmt.Sprintf("HTTP_PROXY=backend-%v:%v", ctx.Stack(), backendPort)),
 		pulumi.String(fmt.Sprintf("PROXY_PROTOCOL=%v", protocol)),
 	},
@@ -1002,7 +1002,7 @@ final var frontendContainer = new Container(
                         .external(frontendPort)
                         .build())
                 .envs(List.of(
-                        String.format("LISTEN_PORT=%d",frontendPort),
+                        String.format("PORT=%d",frontendPort),
                         String.format("HTTP_PROXY=backend-%s:%d",stackName,backendPort),
                         String.format("PROXY_PROTOCOL=%s",protocol)
                 ))
@@ -1029,7 +1029,7 @@ frontend-container:
         external: ${frontendPort}
     envs:
       [
-        "LISTEN_PORT=${frontendPort}",
+        "PORT=${frontendPort}",
         "HTTP_PROXY=backend-${pulumi.stack}:${backendPort}",
         "PROXY_PROTOCOL=${protocol}"
       ]
@@ -1139,7 +1139,7 @@ const frontendContainer = new docker.Container("frontendContainer", {
         },
     ],
     envs: [
-        `LISTEN_PORT=${frontendPort}`,
+        `PORT=${frontendPort}`,
         `HTTP_PROXY=backend-${stack}:${backendPort}`,
         `PROXY_PROTOCOL=${protocol}`
     ],
@@ -1232,7 +1232,7 @@ frontend_container = docker.Container("frontend_container",
                                           external=frontend_port
                                       )],
                                       envs=[
-                                          f"LISTEN_PORT={frontend_port}",
+                                          f"PORT={frontend_port}",
                                           f"HTTP_PROXY=backend-{stack}:{backend_port}",
                                           f"PROXY_PROTOCOL={protocol}"
                                       ],
@@ -1369,7 +1369,7 @@ func main() {
 				},
 			},
 			Envs: pulumi.StringArray{
-				pulumi.String(fmt.Sprintf("LISTEN_PORT=%v", frontendPort)),
+				pulumi.String(fmt.Sprintf("PORT=%v", frontendPort)),
 				pulumi.String(fmt.Sprintf("HTTP_PROXY=backend-%v:%v", ctx.Stack(), backendPort)),
 				pulumi.String(fmt.Sprintf("PROXY_PROTOCOL=%v", protocol)),
 			},
@@ -1520,7 +1520,7 @@ public class App {
                                 .build()
                         )
                         .envs(List.of(
-                                String.format("LISTEN_PORT=%d",frontendPort),
+                                String.format("PORT=%d",frontendPort),
                                 String.format("HTTP_PROXY=backend-%s:%d",stackName,backendPort),
                                 String.format("PROXY_PROTOCOL=%s",protocol)
                         ))
@@ -1637,7 +1637,7 @@ resources:
           external: ${frontendPort}
       envs:
         [
-          "LISTEN_PORT=${frontendPort}",
+          "PORT=${frontendPort}",
           "HTTP_PROXY=backend-${pulumi.stack}:${backendPort}",
           "PROXY_PROTOCOL=${protocol}"
         ]
