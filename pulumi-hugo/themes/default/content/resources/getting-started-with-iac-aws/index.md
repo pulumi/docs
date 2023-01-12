@@ -7,7 +7,7 @@ meta_desc: "In this workshop, you will learn the fundamentals of Infrastructure 
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: true
+pre_recorded: false
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -35,8 +35,8 @@ block_external_search_index: false
 # data for Google Events
 event_data:
   name: Pulumi - Getting Started with Infrastructure as Code on AWS
-  start_date: 2022-10-12T09:00:00.000-07:00
-  end_date: 2022-10-12T10:00:00.000-07:00
+  start_date: 2023-02-02T09:00:00.000-07:00
+  end_date: 2023-02-02T10:00:00.000-07:00
   url: "https://www.pulumi.com/resources/getting-started-with-iac-aws/"
   description: In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform. You will be introduced to Pulumi, an infrastructure as code platform, where you can use familiar programming languages to provision modern cloud infrastructure. This workshop is designed to help users completely new to Pulumi to become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and a series of hands on exercises to help you understand the building blocks available in Pulumi.
 
@@ -59,13 +59,13 @@ main:
     # Webinar title.
     title: "Getting Started with Infrastructure as Code on AWS"
     # URL for embedding a URL for ungated webinars.
-    youtube_url: "https://www.youtube.com/embed/Ap0aLb-RQSc"
+    youtube_url: #"https://www.youtube.com/embed/Ap0aLb-RQSc"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2022-10-12T09:00:00.000-07:00
+    sortable_date: 2023-02-02T09:00:00.000-07:00
     # Duration of the webinar.
     duration: "60 minutes"
     # Datetime of the webinar.
-    datetime: "9/12/2022 09:00am - 10:00am PT"
+    datetime: "2/2/2023 09:00am - 10:00am PT"
     # Description of the webinar.
     description: "In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform. You will be introduced to Pulumi, an infrastructure as code platform, where you can use familiar programming languages to provision modern cloud infrastructure. This workshop is designed to help users completely new to Pulumi to become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and a series of hands on exercises to help you understand the building blocks available in Pulumi."
 
@@ -84,7 +84,8 @@ main:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: "51ed8f59-4897-4e7e-91b5-649e46fe6733"
+    hubspot_form_id: "b5206c33-26dc-41dc-9c2f-09e9af949afd"
+    salesforce_campaign_id: "701Du0000009l8TIAQ"
 
 aws_only: true
 ---
