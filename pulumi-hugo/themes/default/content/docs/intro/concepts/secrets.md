@@ -16,10 +16,10 @@ To encrypt a configuration setting before runtime, you can use the CLI command [
 
 An [`Output<T>`](/docs/reference/pkg/python/pulumi#outputs-and-inputs) can be marked secret in a number of ways:
 
-- By reading a secret from configuration using [`Config.get_secret`](/docs/reference/pkg/python/pulumi#pulumi.Config.get_secret)  or [`Config.require_secret`](/docs/reference/pkg/python/pulumi#pulumi.Config.require_secret).
-- By creating a new secret value with [`Output.secret`](/docs/reference/pkg/python/pulumi#pulumi.Output.secret), such as when generating a new random password.
+- By reading a secret from configuration using {{< pulumi-config-getsecret >}} or {{< pulumi-config-requiresecret >}}.
+- By creating a new secret value with {{< pulumi-secret-new >}}, such as when generating a new random password.
 - By marking a resource as having secret properties using [`additionalSecretOutputs`](/docs/intro/concepts/inputs-outputs).
-- By computing a secret value by using [`apply`](/docs/reference/pkg/python/pulumi#outputs-and-inputs) or [`Output.all`](/docs/reference/pkg/python/pulumi#pulumi.Output.all) with another secret value.
+- By computing a secret value by using [`apply`](/docs/reference/pkg/python/pulumi#outputs-and-inputs) or {{< pulumi-all >}} with another secret value.
 
 As soon as an `Output<T>` is marked secret, the Pulumi engine will encrypt it wherever it is stored.
 
