@@ -200,7 +200,7 @@ To configure credentials and authorize access, please see the [AWS Session docum
 This backend also supports [alternative object storage servers with AWS S3 compatible REST APIs](https://en.wikipedia.org/wiki/Amazon_S3#S3_API_and_competing_services), including [Minio](https://www.minio.io/), [Ceph](https://ceph.io/), or [SeaweedFS](https://github.com/chrislusf/seaweedfs). To use such a server, you may pass `endpoint`, `disableSSL`, and `s3ForcePathStyle` querystring parameters to your `<backend-url>`, as follows:
 
 ```sh
-$ pulumi login s3://<bucket-name>?endpoint=my.minio.local:8080&disableSSL=true&s3ForcePathStyle=true
+$ pulumi login 's3://<bucket-name>?endpoint=my.minio.local:8080&disableSSL=true&s3ForcePathStyle=true'
 ```
 
 ### Azure Blob Storage
