@@ -53,11 +53,3 @@ jobs:
         with:
           file_pattern: go.*
           commit_message: Update go.mod
-
-      - name: Merge into release
-        uses: everlytic/branch-merge@1.1.2
-        with:
-          github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
-          source_ref: ${{ github.ref }}
-          target_branch: release
-          commit_message_template: "[Automated] Merge {source_ref} into {target_branch}"
