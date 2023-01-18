@@ -1,0 +1,31 @@
+pulumi-choosable {
+    // All choosables are hidden unless active.
+    > div:first-child {
+        &:not(.active) {
+            display: none;
+        }
+    }
+
+    // Choosable elements are block by default, since that's the likeliest case. To
+    // override this behavior, just apply the local Tailwind utility class "inline".
+    display: block;
+
+    .code-mode-dark pre.chroma {
+        @apply bg-gray-900;
+    }
+
+    pre.chroma {
+        @apply mt-0 bg-gray-100;
+    }
+
+    .highlight,
+    .chroma {
+        // @apply border-transparent;
+    }
+
+    .copy-button-container {
+        .no-copy & {
+            display: none;
+        }
+    }
+}

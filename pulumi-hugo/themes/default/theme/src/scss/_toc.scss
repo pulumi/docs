@@ -1,0 +1,87 @@
+$toc-header-spacing: 5px;
+
+#left-nav {
+    scroll-behavior: smooth;
+}
+
+.toc {
+    @apply text-sm pb-8;
+
+    a {
+        @apply text-blue-800;
+
+        &:hover {
+            @apply text-blue-700;
+        }
+    }
+
+    .active {
+        @apply font-semibold;
+    }
+
+    h5 {
+        @apply font-body font-semibold text-base text-blue-800;
+
+        a {
+            &:hover {
+                @apply text-blue-700;
+            }
+        }
+    }
+
+    ul {
+        @apply list-none p-0;
+    }
+
+    .toc-header {
+        width: fit-content;
+        padding-right: $toc-header-spacing;
+        margin-left: -$toc-header-spacing;
+
+        a {
+            margin-left: $toc-header-spacing;
+        }
+
+        &.active {
+            background-color: #dbdef7;
+            transition: background-color 2.5s;
+
+            a {
+                &::before {
+                    @apply bg-blue-800;
+                    content: "";
+                    position: absolute;
+                    width: 3px;
+                    height: 24px;
+                    left: 9px;
+                }
+            }
+        }
+    }
+}
+
+.sidenav-topic {
+    @apply mb-2;
+}
+
+.sidenav-subsection {
+    @apply mb-2 ml-4 text-sm;
+}
+
+.sidenav-parent {
+    @apply mb-2;
+}
+
+.toggleButton {
+    @apply text-gray-500 ml-1 cursor-pointer;
+}
+
+.toggle > .collapsed,
+.toggleVisible > .expanded {
+    @apply visible;
+}
+
+.toggle > .expanded,
+.toggleVisible > .collapsed {
+    @apply hidden;
+}

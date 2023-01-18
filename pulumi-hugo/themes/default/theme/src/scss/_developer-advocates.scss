@@ -1,0 +1,149 @@
+.developer-advocate-talks button {
+    &.is-selected {
+        @apply font-bold text-black relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            left: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
+        }
+    }
+
+    &:not(.is-selected) {
+        @apply font-normal text-gray-700;
+    }
+}
+
+.developer-advocate-nav {
+    width: 250px;
+
+    @apply border border-black border-solid rounded;
+    &:hover {
+        background-color: $black;
+        color: $white;
+    }
+    li {
+        @apply my-0;
+        a {
+            @apply block w-full text-black;
+
+            &:hover {
+                font-weight: bold;
+                color: $black;
+            }
+        }
+    }
+
+    li:not(.dropdown-item) {
+        @apply flex items-center;
+
+        .dropdown-title {
+            @apply pl-4 pr-8;
+        }
+
+        &:hover {
+            .dropdown-title {
+                background-color: $black;
+                color: $white;
+            }
+        }
+
+        &.header-nav-item-drop-down {
+            @apply relative cursor-pointer;
+
+            .header-nav-drop-down-menu {
+                @apply w-full absolute hidden min-w-max pt-6 top-2 z-10;
+
+                ul {
+                    @apply bg-white text-left rounded shadow-xl py-2 whitespace-nowrap border border-black;
+
+                    li {
+                        @apply my-1;
+                    }
+
+                    a {
+                        &:hover {
+                            @apply opacity-100;
+                        }
+                    }
+                }
+            }
+
+            .dropdown-menu-caret {
+                @apply w-0 h-0 my-1 absolute right-2;
+                content: "";
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 5px solid black;
+            }
+
+            &:hover {
+                .dropdown-menu-caret {
+                    transform: rotate(180deg);
+                    border-top: 5px solid white;
+                }
+
+                .header-nav-drop-down-menu {
+                    @apply block;
+                }
+            }
+        }
+    }
+}
+
+.developer-advocate-social {
+    @apply text-black;
+
+    &.twitter {
+        color: #08a0e9;
+    }
+
+    &.linkedin {
+        color: #0274b3;
+    }
+}
+
+.developer-advocates-giveaway {
+    .submitted-message {
+        @apply font-display font-bold text-lg text-center;
+    }
+
+    img {
+        width: 100px;
+
+        @screen sm {
+            width: 150px;
+        }
+    }
+}
+
+.developer-advocates-contact-us-container {
+    box-shadow: 0px 6px 36px rgba(0, 0, 0, 0.1);
+
+    .developer-advocates-contact-us {
+        .submitted-message {
+            height: 500px;
+            @apply flex justify-center items-center font-display font-bold text-xl text-center;
+        }
+
+        .hs-lastname {
+            @apply mt-4;
+
+            @screen sm {
+                @apply mt-0;
+            }
+        }
+    }
+}
+
+.developer-advocate-blog-posts {
+    // Handles case of a blog img that is sized differently than the meta Pulumipus
+    // images used in the majority of cases.
+    img {
+        max-height: 111px;
+    }
+}

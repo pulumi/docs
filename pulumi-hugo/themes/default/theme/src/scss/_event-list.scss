@@ -1,0 +1,127 @@
+$tab-width: 180px;
+
+.pulumi-event-list-container {
+    .scroll-container {
+        width: 110px;
+
+        button {
+            width: 110px;
+
+            i:hover {
+                @apply text-black;
+            }
+        }
+
+        @screen xl {
+            @apply hidden;
+        }
+    }
+
+    #event-list-filter-nav {
+        @apply flex text-base py-2 p-0;
+
+        @screen xl {
+            max-width: calc($tab-width * 6);
+        }
+
+        list-style: none !important;
+
+        @screen md {
+            @apply text-base py-0;
+        }
+
+        overflow-x: scroll;
+        // Don't show a scrollbar, because we have our own custom implementation with buttons.
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        li {
+            @apply flex-grow border-solid border-b-2 border-transparent;
+            min-width: $tab-width;
+
+            > a {
+                @apply block py-2 px-4 font-normal text-lg text-center text-gray-700 no-underline;
+
+                @screen md {
+                    @apply py-4;
+                }
+            }
+
+            &:hover {
+                @apply border-gray-600;
+
+                > a {
+                    @apply text-black;
+                }
+            }
+        }
+
+        // On initial load without a target in the url, the all tab should be active.
+        li[data-filter-name="all"] {
+            @include gradient-border;
+
+            > a {
+                @apply font-semibold text-black;
+            }
+        }
+    }
+}
+
+@each $filter-name in "all" "featured" "upcoming" "videos" "pulumitv" "whitepapers" "livestreams" {
+    ##{$filter-name}:target {
+        @if $filter-name != "all" {
+            ~ .event-list-filter li[data-filter-name="all"] {
+                @apply flex-grow border-solid border-b-2 border-transparent;
+                border-image-source: none;
+
+                > a {
+                    @apply font-normal text-gray-600;
+                }
+
+                &:hover {
+                    @apply border-gray-600;
+
+                    > a {
+                        @apply text-black;
+                    }
+                }
+            }
+
+            ~ h3[data-filter-title="all"] {
+                @apply hidden;
+            }
+        }
+
+        ~ .event-list-filter li[data-filter-name="#{$filter-name}"] {
+            @include gradient-border;
+
+            > a {
+                @apply font-semibold text-black;
+            }
+        }
+
+        ~ h3[data-filter-title="#{$filter-name}"] {
+            @apply block;
+        }
+
+        // When the page is loaded without a hash in the URL (a selected filter) we load
+        // all the elements in the list and mark the 'all' filter as active. Because in this
+        // case all the elements are visible and are not rendered with a 'hidden' class, we need
+        // to apply the 'hidden' class to all the elements in the list. Then we will apply the
+        // 'block' class to the elements containing the selected filter.
+        ~ ul li {
+            @apply hidden;
+        }
+
+        ~ ul li[data-filters~="#{$filter-name}"] {
+            @apply block;
+        }
+    }
+}
+
+.event-list-item {
+    article {
+        height: 320px;
+    }
+}

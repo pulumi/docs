@@ -1,0 +1,91 @@
+@import "../../../../src/scss/colors";
+
+.api-doc-nav {
+    width: 100%;
+    max-width: 375px;
+
+    .filter-help-text {
+        font-size: 14px;
+    }
+
+    .no-results {
+        font-size: 14px;
+    }
+
+    .loading {
+        .loading-icon {
+            margin-right: 1rem;
+        }
+    }
+
+    .navigation-header {
+        font-family: var(--heading-font);
+        font-weight: 400;
+        font-size: 18px;
+        color: $black;
+        margin-top: 0;
+        margin-bottom: 14px;
+    }
+
+    .input-container {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 20px;
+        width: 100%;
+
+        .clear-container {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            top: 0;
+            right: 0;
+            height: 100%;
+        }
+
+        .clear-filter-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 18px;
+            width: 18px;
+            font-size: xx-small;
+            background: map-get($gray, 300);
+            color: map-get($gray, 500);
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            padding: 0px;
+        }
+
+        .navigation-filter-input {
+            font-family: "Gilroy";
+            font-size: 16px;
+            height: 20px;
+            width: 90%;
+            border-radius: 4px;
+            border: 1px solid $black;
+            padding: 10px;
+            margin-top: 0;
+            box-sizing: content-box;
+
+            &:focus {
+                outline-color: $brand-blue;
+            }
+        }
+    }
+
+    .nav-tree {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .nav-tree {
+        display: block;
+    }
+
+    .filter-and-nav-tree {
+        margin-right: 12px;
+    }
+}

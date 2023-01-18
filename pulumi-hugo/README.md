@@ -21,7 +21,7 @@ We build the Pulumi website statically with Hugo, manage our Node.js dependencie
 
 Alternatively you can use the [devcontainer environment](https://code.visualstudio.com/docs/remote/create-dev-container) included in this repo. Open this folder in [VS Code](https://code.visualstudio.com/) and run the `Remote-Containers: Reopen in container` command in the [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette).
 
-Within the container you can run the various make commands explained below. Port 1313 is forwarded into the container so you can use your normal browser to access the results of `make serve` at http://localhost:1313.
+Within the container you can run the various make commands explained below. Port 1313 is forwarded into the container so you can use your normal browser to access the results of `make serve` or `make serve-all` at http://localhost:1313.
 
 ## Installing prerequisites
 
@@ -37,6 +37,12 @@ Once you've run `make ensure` successfully, you're ready to run the development 
 
 ```
 make serve
+```
+
+If you are planning on making CSS or JS changes you will need to run:
+
+```
+make serve-all
 ```
 
 You can browse the development server at http://localhost:1313, and any changes you make to content or layouts should be reloaded automatically.
@@ -79,12 +85,12 @@ We used to recommend using `{{ relref }}` for these links, which are checked in 
 
 * All hand-authored content and documentation, including top-level pages, guides, blog posts, and some tutorials
 * Most Hugo module components, including archetypes, layouts, partials, shortcodes, data, etc.
+* All the SCSS, TS, and Stencil files used to build our CSS/JSS assets.
 
 You'll find all of these files in `themes/default`.
 
 ### What's not in this repo
 
-* CSS and JavaScript. You'll find these at https://github.com/pulumi/theme.
 * Generated documentation for the Pulumi CLI and SDK. You'll find this at https://github.com/pulumi/docs.
 * Generated tutorials. You'll find these at https://github.com/pulumi/examples).
 * Templates used for generating resource documentation. You'll find these at https://github.com/pulumi/pulumi.

@@ -1,0 +1,336 @@
+@tailwind base;
+@tailwind components;
+
+@import "colors";
+@import "mixins";
+
+@import "accordion";
+@import "animation";
+@import "api-nodejs";
+@import "api-python";
+@import "api-symbol";
+@import "automation-api";
+@import "badges";
+@import "benefits";
+@import "breadcrumb";
+@import "buttons";
+@import "card";
+@import "cloud-engineering";
+@import "code";
+@import "container";
+@import "copy-button";
+@import "continuous-delivery";
+@import "customer-logo";
+@import "developer-advocates";
+@import "event-list";
+@import "fonts";
+@import "footer";
+@import "glossary";
+@import "header";
+@import "hero";
+@import "hubspot";
+@import "icons";
+@import "learn";
+@import "lists";
+@import "no-select";
+@import "on-this-page";
+@import "notes";
+@import "packages";
+@import "pagination";
+@import "pricing";
+@import "product";
+@import "pulumi-deployments";
+@import "pulumi-up";
+@import "search";
+@import "section-nav";
+@import "self-hosted";
+@import "shape-backgrounds";
+@import "slot-machine";
+@import "tables";
+@import "tiles";
+@import "toc";
+@import "toggle";
+@import "tooltip";
+@import "404";
+
+@import "components/banner";
+@import "components/chooser";
+@import "components/choosable";
+@import "components/convert";
+@import "components/filter-select";
+@import "components/greenhouse-jobs-list";
+@import "components/install";
+@import "components/resource-links";
+@import "components/examples";
+@import "components/audio";
+@import "components/swiper";
+@import "components/slot-machine";
+@import "components/pulumi-tertiary-nav";
+@import "components/tabs";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply font-display text-gray-800 mb-2;
+
+    &:not(:first-child) {
+        // Don't apply top margin when one's being specified.
+        &:not([class*="mt-"]):not([class*="m-"]) {
+            @apply mt-8;
+        }
+    }
+}
+
+h1 {
+    @apply text-4xl;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    @apply text-2xl;
+}
+
+h4 {
+    @apply text-xl;
+}
+
+h5 {
+    @apply text-lg;
+}
+
+h6 {
+    @apply text-sm;
+}
+
+p {
+    @apply mb-4 leading-normal my-4;
+}
+
+body {
+    @apply font-body text-gray-800;
+
+    figure {
+        figcaption {
+            clear: left;
+            margin: 0.75em 0;
+            text-align: center;
+            font-style: italic;
+            line-height: 1.5em;
+        }
+    }
+}
+
+.nav-main {
+    a {
+        @include transition;
+    }
+}
+
+main {
+    @apply text-gray-800;
+
+    p,
+    li,
+    blockquote,
+    table {
+        a {
+            @apply text-blue-600 break-words;
+
+            &:hover {
+                @apply text-blue-700;
+
+                .section-docs &,
+                .section-blog &,
+                .section-authors &,
+                .section-tags & {
+                    @apply underline;
+                }
+            }
+        }
+
+        strong {
+            @apply font-semibold;
+        }
+    }
+
+    ul,
+    ol {
+        @apply pl-5;
+    }
+
+    ul {
+        @apply list-disc;
+    }
+
+    ol {
+        @apply list-decimal;
+    }
+
+    li {
+        @apply my-2 leading-normal;
+    }
+
+    blockquote {
+        @apply border-l-4 rounded border-blue-100 px-4 py-1 text-sm my-4;
+
+        p {
+            @apply my-1 leading-relaxed;
+        }
+    }
+}
+
+.section-docs {
+    .footer-dots-container {
+        @apply hidden;
+    }
+}
+
+.link {
+    @apply text-blue-700;
+}
+
+.tag {
+    @apply text-sm lowercase border border-blue-200 rounded py-1 px-2 mr-1;
+
+    &.tag-blog {
+        @apply bg-gray-100 text-blue-600;
+
+        &:hover {
+            @apply border-blue-300 text-blue-700 no-underline;
+        }
+
+        &.active {
+            @apply border-blue-600 bg-blue-600 text-white;
+
+            &:hover {
+                @apply text-white;
+            }
+        }
+    }
+}
+
+.popup-overlay {
+    @apply flex w-full h-full fixed inset-0 z-50;
+    background-color: rgba(44, 44, 44, 0.6);
+}
+
+.transition-all {
+    @include transition(all);
+
+    &-200 {
+        @include transition($duration: 200ms);
+    }
+}
+
+.github-widget {
+    > span {
+        @apply flex;
+    }
+}
+
+// Custom css for the Calendly iframe we use on the event registration pages.
+#calendly-widget {
+    min-width: 270px;
+    height: 600px;
+
+    @screen md {
+        min-width: 320px;
+        height: 750px;
+    }
+
+    .booking-container {
+        background-color: green;
+        max-width: initial !important;
+    }
+}
+
+$sitenav-height: 90px;
+
+// A 16px offset makes it easier to position elements below the nav when it's pinned.
+$sitenav-offset: calc($sitenav-height + 16px);
+
+// This little trick prepends anchor targets with a pseudoelement that the browser picks
+// up as the anchor target, allowing us to position the actual target below the fixed
+// navbar. Only necessary at medium and up.
+@screen md {
+    :target {
+        &::before {
+            content: " ";
+            display: block;
+            height: $sitenav-offset;
+            margin-top: -$sitenav-offset;
+        }
+    }
+}
+
+.sticky-sidebar {
+    @screen lg {
+        @apply sticky self-start overflow-y-auto;
+        max-height: 90vh;
+        top: $sitenav-offset;
+
+        // Registry's nav isn't sticky, so we don't need to position sidebars in relation to it.
+        .section-registry & {
+            @apply top-8;
+        }
+    }
+}
+
+.resource-deprecated {
+    @apply text-yellow-700 py-2 px-4 rounded border border-yellow-600;
+}
+
+.aws-reinvent-blog-image {
+    img {
+        @apply mb-0;
+
+        @screen lg {
+            @apply mb-8;
+        }
+    }
+}
+
+.section-docs {
+    // Hide the language-specific SDK-docs tables until we've removed them from the provider builds.
+    main .container dl.package-details + p + dl.tabular {
+        @apply hidden;
+    }
+    // Hide input and output type notes as well.
+    #supporting-types ~ h4 ~ div pulumi-choosable .active blockquote {
+        @apply hidden;
+    }
+}
+
+// New Styles
+.rainbow-text {
+    background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+
+    text-shadow: none;
+}
+
+#architectures {
+    @apply text-center;
+
+    h2 {
+        @apply pl-2 pr-2 inline;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+.blog-list-description {
+    // Make the min height of the section equal to the anchor-wrapped image
+    // and padding, so the border isn't misaligned on items with shorter descriptions.
+    min-height: 178px;
+}
+
+@tailwind utilities;

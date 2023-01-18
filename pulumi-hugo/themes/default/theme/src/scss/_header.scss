@@ -1,0 +1,507 @@
+.top-nav-bar {
+    @apply text-sm;
+
+    @screen lg {
+        @apply pt-6 pb-3 px-4;
+    }
+
+    .top-nav-container {
+        @apply flex flex-col mx-auto;
+
+        @screen lg {
+            @apply flex-row;
+        }
+
+        ul li {
+            white-space: nowrap;
+        }
+
+        .top-nav-banner-cta-container {
+            @apply w-full text-right;
+
+            @screen lg {
+                @apply flex-grow justify-start mt-0 text-left mr-4;
+            }
+
+            .top-nav-banner-cta {
+                @apply px-3 py-2 text-left;
+
+                @screen lg {
+                    @apply rounded inline-block;
+                }
+
+                // TODO: update color
+                background-color: rgba(77, 91, 217, 0.15);
+
+                .top-nav-banner-cta-text {
+                    // TODO: update color
+                    color: #4d5bd9;
+                }
+            }
+        }
+    }
+
+    // The nav bar will be pinned on mobile but not on desktop.
+    &.registry,
+    &.docs {
+        @apply sticky z-auto bg-gray-850 -top-px;
+
+        @screen md {
+            @apply relative;
+        }
+
+        &.is-pinned {
+            @apply shadow;
+
+            @screen md {
+                @apply shadow-none;
+            }
+        }
+
+        .logo-nav-button {
+            @apply flex flex-row block cursor-pointer items-center;
+        }
+
+        .logo-nav-menu {
+            @apply w-full bg-gray-850 pt-2 -ml-2 text-white font-display z-50;
+            top: 44px; // Height of the nav bar at screens below large.
+
+            @screen md {
+                @apply w-auto absolute rounded rounded-t-none pb-2 ml-0 pt-0;
+            }
+
+            @screen lg {
+                top: 53px; // Height of the nav bar at screens large+.
+            }
+
+            li {
+                @apply text-lg text-white;
+
+                a {
+                    @apply block px-4 py-2;
+
+                    &:hover {
+                        @apply underline;
+                    }
+                }
+            }
+        }
+
+        .get-started-header-button {
+            @apply hidden;
+
+            @screen lg {
+                @apply flex items-center justify-center;
+                margin-left: 30px;
+                width: 136px;
+                height: 33px;
+                padding: 8px 16px;
+
+                border: 1px solid theme("colors.violet.600");
+                border-radius: 20px;
+                box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
+
+                &:hover,
+                &:active {
+                    background: linear-gradient(90deg, #be5188 0%, #805ac3 100%) border-box;
+                    border-color: transparent;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+}
+
+.logo-nav-bg-mask {
+    @apply bg-transparent z-40 absolute w-full h-full;
+}
+
+.header-container {
+    @apply z-40 bg-white py-6;
+    top: -1px;
+
+    @screen lg {
+        @apply py-3 mt-0;
+    }
+
+    &.is-pinned {
+        @apply sticky shadow;
+    }
+
+    .logo-container {
+        @apply px-4 pb-2;
+
+        @screen lg {
+            @apply flex items-center justify-start pl-0;
+        }
+    }
+
+    .cta-container {
+        @apply hidden z-10;
+
+        @screen lg {
+            @apply flex items-center justify-end;
+        }
+
+        .header-btn-primary {
+            @include gradient-button;
+            @apply py-3 px-6;
+
+            @screen xl {
+                @apply text-lg;
+            }
+        }
+    }
+
+    .desktop-menu {
+        @apply hidden;
+
+        @screen lg {
+            @apply flex items-center flex-grow justify-evenly mx-8;
+
+            li {
+                a {
+                    @apply block w-full;
+                }
+            }
+
+            li:not(.header-dropdown-item) {
+                @apply flex items-center;
+
+                a {
+                    @apply block px-4 my-1 transition-all;
+                }
+
+                .dropdown-title {
+                    @apply pl-4 pr-8;
+                }
+
+                &:hover {
+                    a,
+                    .dropdown-title {
+                        color: $brand-violet;
+                    }
+                }
+
+                &.header-nav-item-drop-down {
+                    @apply relative cursor-pointer;
+
+                    .header-nav-drop-down-menu {
+                        @apply w-full absolute hidden pt-6 mt-2 top-0 z-20;
+                        min-width: fit-content;
+                        ul {
+                            @apply bg-white text-left rounded shadow-3xl p-5 whitespace-nowrap;
+                            min-width: fit-content;
+                            div { 
+                                .header-nav-drop-down-heading {
+                                    @apply font-medium;
+                                }
+                                .header-nav-drop-down-sub-heading {
+                                    @include gradient-border;
+                                    @apply pt-1 pb-4 pr-5 text-xs;
+                                }
+                                
+                            }
+
+                            .header-nav-one-col-drop-down {
+                                @apply pt-1;
+                            }
+
+                            .header-nav-two-col-drop-down {
+                                @apply flex flex-wrap w-full pt-2;
+                                li {
+                                    @apply pl-1 pr-2 py-2 flex-col w-1/2;
+                                }
+                            }
+                            
+                            li {
+                                @apply px-1 py-2 flex-col;
+                                flex: 50%;
+
+                                .list-title {
+                                    @apply px-0 text-base text-left w-full font-medium;
+                                }
+
+                                .list-sub-title {
+                                    @apply text-xs text-left w-full whitespace-normal;
+                                    padding-left: 30px;
+                                }
+
+                                &:hover {
+                                    @apply font-semibold;
+                                    a {
+                                        @apply font-semibold;
+                                        color: $brand-violet;
+                                        .list-sub-title {
+                                            color: theme("colors.gray.800");
+                                        }
+                                    }
+                                }
+                            }
+
+                            a {
+                                @apply px-0;
+                                color: theme("colors.gray.800");
+                                i {
+                                    min-width: 1.5rem;
+                                    color:theme("colors.gray.700");
+                                }
+                            }
+                        }
+                    }
+
+                    .product {
+                        min-width: 70ch;
+                        @apply -left-24;
+                        @screen xl {
+                            @apply left-0;
+                        }
+                    }
+
+                    .learn {
+                        @apply -right-48;
+                        min-width: 69ch;
+                    }
+
+                    .dropdown-menu-caret {
+                        @apply w-0 h-0 m-1 absolute right-2;
+                        content: "";
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        border-top: 5px solid black;
+                    }
+
+                    &:hover {
+                        .dropdown-menu-caret {
+                            transform: rotate(180deg);
+                            @apply opacity-50;
+                        }
+
+                        .header-nav-drop-down-menu {
+                            @apply block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mobile-menu-toggle {
+        @apply hidden;
+    }
+
+    .mobile-menu-toggle:checked + .mobile-menu-icon {
+        .mobile-menu-closed {
+            @apply hidden;
+        }
+
+        .mobile-menu-open {
+            @apply block;
+        }
+    }
+
+    .mobile-menu {
+        // The 'pb-16' is used to pad the bottom of the container so
+        // the CTA button does not get cut off.
+        @apply hidden w-full h-screen pb-16;
+        
+        @screen lg {
+            @apply hidden;
+        }
+        
+        ul {
+            @apply m-4 overflow-y-auto;
+            height: calc(100vh - 305px);
+
+            div {
+                @apply flex flex-wrap;
+                &:not(:first-of-type) {
+                    @apply mt-4;
+                }
+            }
+
+            hr {
+                @apply mt-4;
+                flex-basis: 100%;
+            }
+
+            li {
+                a {
+                    @apply block;
+                    margin-left: 1.1rem;
+                }
+            }
+            
+            .mobile-menu-item {
+                @apply text-2xl font-display text-gray-800 mt-4;
+                a {
+                    @apply ml-3.5;
+                }
+            }
+
+            .mobile-menu-heading {
+                @apply flex text-2xl font-display text-gray-800;
+
+                &:not(:first-of-type) {
+                    @apply mt-6;
+                }
+            }
+            
+            [class*="mobile-menu-subitems-"] {
+                @apply mt-2 text-base hidden;
+                flex-basis: 100%;
+                a {
+                    @apply text-xl font-medium text-gray-700 mt-4;
+                    color: theme("colors.gray.800");
+                    i {
+                        min-width: 2rem;
+                        color: theme("colors.gray.700");
+                    }
+                }
+            }
+
+            .dropdown-menu-caret {
+                @apply block w-0 h-0 m-1 relative left-2 top-3;
+                content: "";
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 5px solid black;
+            }
+
+            .invisible-checkbox {
+                opacity: 0%;
+            }
+
+            #why-pulumi-mobile-menu:checked ~ {
+                .mobile-menu-subitems-why-pulumi {
+                    @apply block;
+                }
+                .mobile-menu-heading {
+                    color: $brand-violet;
+                }
+                label > span.dropdown-menu-caret {
+                    @apply opacity-50;
+                    transform: rotate(180deg);
+                }
+            }
+
+            #product-mobile-menu:checked ~ {
+                .mobile-menu-subitems-product {
+                    @apply block;
+                }
+                .mobile-menu-heading {
+                    color: $brand-violet;
+                }
+                label > span.dropdown-menu-caret {
+                    @apply opacity-50;
+                    transform: rotate(180deg);
+                }
+            }
+
+            #learn-mobile-menu:checked ~ {
+                .mobile-menu-subitems-learn {
+                    @apply block;
+                }
+    
+                .mobile-menu-heading {
+                    color: $brand-violet;
+                }
+
+                label > span.dropdown-menu-caret {
+                    @apply opacity-50;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    .mobile-menu-toggle:checked + .mobile-menu-icon + .mobile-menu {
+        @apply block;
+
+        @screen lg {
+            @apply hidden;
+        }
+    }
+    
+    .mobile-menu-footer {
+        @apply block w-full h-screen overflow-y-auto;
+        .get-started {
+            @apply flex flex-col h-16 items-center;
+            a {
+                @apply flex h-full w-full justify-center items-center;
+            }
+
+        }
+        @screen lg {
+            @apply hidden;
+        }
+    }
+
+    .mobile-menu-icon {
+        @apply absolute right-4;
+
+        @screen lg {
+            @apply hidden;
+        }
+
+        label {
+            @apply cursor-pointer;
+        }
+    }
+}
+
+.registry-hero, .docs-hero {
+    @apply w-full flex relative flex-col justify-center;
+
+    .dot-overlay {
+        top: 0px;
+        @apply w-full h-full absolute;
+        z-index: -1;
+        background: linear-gradient(to top, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0.5004551991695115) 100%);
+    }
+
+    .header-hero-title {
+        @screen md {
+            @apply items-center;
+        }
+
+        .title-icon,
+        .title-text-content {
+            @apply text-lg text-gray-800 bg-white bg-opacity-70;
+
+            @screen md {
+                @apply text-2xl;
+            }
+        }
+
+        .title-text-content {
+            @apply font-display font-bold mb-0 ml-4;
+        }
+    }
+}
+
+.header-pinned-container {
+    width: 315px;
+    .get-started-pinned-search-container {
+        width: 136px;
+        .get-started-pinned-search-button {
+            @apply flex items-center justify-center text-violet-600 text-sm;
+            height: 33px;
+
+            padding: 8px 16px;
+
+            border: 1px solid theme("colors.violet.600");
+            border-radius: 20px;
+            width: max-content;
+
+            &:hover,
+            &:active {
+                background: linear-gradient(90deg, #be5188 0%, #805ac3 100%) border-box;
+                color: $white;
+                box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
+                border-color: transparent;
+                border-radius: 20px;
+            }
+        }
+    }
+}

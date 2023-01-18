@@ -1,0 +1,116 @@
+@import "colors";
+
+// Override the default styles of the Swiftype input field.
+.st-default-search-input {
+    display: block !important;
+    width: 100% !important;
+    font-size: 1rem !important;
+    padding: 1rem !important;
+    padding-left: 2.5rem !important;
+    border-radius: 0.25rem !important;
+    border-color: map-get($gray, 400) !important;
+    font-family: "Inter" !important;
+    background: none !important;
+
+    &::placeholder {
+        color: map-get($gray, 600) !important;
+    }
+
+    @include transition;
+
+    &.docs, &.registry {
+        border-color: map-get($blue, 300) !important;
+        &:focus {
+            border-color: map-get($blue, 600) !important;
+        }
+    }
+
+    @screen md {
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+}
+
+.section-blog {
+    .st-default-search-input {
+        font-size: 0.875rem !important;
+        padding: 0.75rem !important;
+        padding-left: 2.5rem !important;
+        border-radius: 0.25rem !important;
+    }   
+}
+
+// Override the default styles of the Swiftype autocomplete results container.
+.st-default-autocomplete {
+    z-index: 40 !important; /* z-40 */
+
+    // Swiftype's JS imperatively positions the autocomplete container in relation to the top-left
+    // corner of the document, which is okay if your search box scrolls with the page, but since ours
+    // scrolls and sticks independently of the main content pane, this doesn't work. Overriding the
+    // top and left settings allows the container to be positioned absolutely in place.
+    top: auto !important;
+    left: auto !important;
+
+    .st-query-present {
+        .st-ui-result {
+            .st-ui-type-heading {
+                font-size: 0.75rem !important; /* text-xs */
+                color: $brand-blue !important; /* text-blue-600 */
+                margin-bottom: 4px !important;
+            }
+            .st-ui-type-detail {
+                color: #4a5568 !important; /* text-gray-600 */
+            }
+        }
+    }
+}
+
+// Override the default styles of the results overlay.
+.st-ui-container {
+    @screen lg {
+        top: 80px !important;
+    }
+
+    .st-query-present, .st-query-not-present {
+        span.st-ui-type-heading, .st-ui-pagination-link {
+            color: $brand-blue !important;
+        }
+    }
+}
+
+.search-header {
+    @apply justify-center;
+
+    @screen md {
+        @apply justify-between;
+    }
+
+    @screen lg {
+        @apply mx-auto justify-start;
+    }
+
+    .search-container {
+        @apply flex-grow;
+
+        @screen md {
+            @apply flex-grow-0 justify-start;
+        }
+
+        .search-widget {
+            @apply w-full px-4;
+
+            @screen md {
+                width: 450px;
+            }
+
+            @screen lg {
+                width: 600px;
+            }
+
+            @screen xl {
+                @apply px-0;
+                width: 800px;
+            }
+        }
+    }
+}

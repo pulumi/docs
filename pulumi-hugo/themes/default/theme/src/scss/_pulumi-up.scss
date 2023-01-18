@@ -1,0 +1,451 @@
+// 2022 PulumiUP styles.
+body.section-pulumi-up {
+    &.disable-scroll {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .pulumi-up-stars {
+        @apply absolute w-full h-full top-0 left-0;
+        z-index: -1;
+
+        background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 5px), radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px),
+            radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 5px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 5px);
+        background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+        background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: white;
+    }
+
+    .white-background {
+        @apply bg-white;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p:not(.pulumiup-card-top-date),
+        a:not(.btn-primary) {
+            color: black;
+        }
+    }
+
+    .btn-pulumiup-card {
+        @apply px-3;
+
+        background-color: #feda4a;
+        border-radius: 5px;
+    }
+
+    .header-container .logo-container {
+        .normal-logo {
+            @apply hidden;
+        }
+
+        .dark-logo {
+            @apply block;
+        }
+    }
+
+    background: radial-gradient(circle at left, #1f0b20 0, black 100%);
+
+    main,
+    .top-nav-bar,
+    .header-container,
+    .footer {
+        background-color: transparent;
+
+        a,
+        p,
+        .header-nav-item-drop-down {
+            color: white;
+        }
+
+        .top-nav-banner-cta {
+            --tw-bg-opacity: 1;
+            background-color: rgb(47 48 50 / var(--tw-bg-opacity));
+
+            .top-nav-banner-cta-text {
+                color: white !important;
+            }
+        }
+
+        .header-nav-drop-down-menu ul {
+            --tw-bg-opacity: 1;
+            background-color: rgb(47 48 50 / var(--tw-bg-opacity))  !important;
+        }
+
+        .header-nav-drop-down-menu a {
+            color: white !important;
+            i {
+                color: white !important;
+            }
+        }
+        .header-nav-drop-down-menu a:hover{
+            color: $brand-violet !important;
+        }
+
+        .list-sub-title {
+            color: white !important;
+        }
+
+        .mobile-menu-heading {
+            color: white !important;
+        }
+
+        [class*="mobile-menu-subitems-"] {
+            a {
+                color: white !important;
+                i {
+                    color: white !important;
+                }
+            }
+        }
+    }
+
+    .top-nav-bar,
+    .header-container {
+        @apply bg-black;
+    }
+
+    .fade {
+        @apply absolute w-full top-0 left-0;
+
+        min-height: 10vh;
+        background-image: linear-gradient(0deg, transparent, black 75%);
+        z-index: 1;
+    }
+
+    .star-wars {
+        @apply relative text-justify container mx-auto;
+
+        justify-content: center;
+        height: 40vh;
+        font-family: "Pathway Gothic One", sans-serif;
+        font-size: 500%;
+        font-weight: 600;
+        line-height: 150%;
+        perspective: 400px;
+
+        h1,
+        p {
+            color: #feda4a;
+        }
+
+        .title-animation {
+            @apply text-center;
+
+            .title-part {
+                @apply my-0 leading-none;
+                font-family: "StarWars", "sans-serif";
+                letter-spacing: 6px;
+
+                @screen lg {
+                    animation: title-fade 46s ease-out;
+                }
+            }
+
+            .subtitle {
+                @apply mt-4 mb-0 text-xl;
+                color: white;
+                letter-spacing: 6px;
+
+                @screen lg {
+                    animation: move-byline 48s linear;
+                }
+            }
+        }
+
+        @keyframes title-fade {
+            0% {
+                opacity: 0;
+                transform: scale(1.5) translateY(-0.75em);
+            }
+            86% {
+                opacity: 0;
+                transform: scale(1.5) translateY(-0.75em);
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes move-byline {
+            0% {
+                opacity: 0;
+            }
+            95% {
+                opacity: 0;
+            }
+            96% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+
+    .crawl {
+        @apply relative hidden;
+
+        top: 99999px;
+        transform-origin: 50% 100%;
+        animation: crawl 60s linear;
+
+        @screen lg {
+            @apply block;
+        }
+    }
+
+    .crawl > .title {
+        @apply text-center;
+
+        font-size: 90%;
+    }
+
+    .crawl > .title h1 {
+        margin: 0 0 100px;
+        text-transform: uppercase;
+    }
+
+    @keyframes crawl {
+        0% {
+            top: 200px;
+            transform: rotateX(20deg) translateZ(0);
+        }
+        100% {
+            top: -6000px;
+            transform: rotateX(25deg) translateZ(-2500px);
+        }
+    }
+
+    .pulumiup-overview-date-block {
+        @apply inline-block px-6;
+
+        background-color: #feda4a;
+        transform: skewX(-45deg);
+
+        p {
+            @apply text-lg font-bold py-2 px-8 m-0;
+
+            color: black;
+            transform: skewX(45deg);
+        }
+    }
+
+    .date-countdown-container {
+        margin-bottom: -4rem;
+    }
+
+    .date-countdown p {
+        color: black;
+        text-shadow: none;
+    }
+
+    .why-attend {
+        div[class^="icon-"], div[class*=" icon-"] {
+            width: 3rem;
+            height: 3rem;
+            padding: 0.6rem;
+
+            svg {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+}
+
+// 2021 PulumiUP styles (can remove after page is updated).
+$blue400: theme("colors.blue.400");
+$blue700: theme("colors.blue.700");
+$blue900: theme("colors.blue.900");
+
+$green400: theme("colors.green.400");
+$green700: theme("colors.green.700");
+$green900: theme("colors.green.900");
+
+$orange400: theme("colors.orange.400");
+$orange600: theme("colors.orange.600");
+$orange700: theme("colors.orange.700");
+$orange900: theme("colors.orange.900");
+
+// Neon Animation found on Codepen
+// https://codepen.io/Trinca/pen/NAvpWa
+.neon-container {
+    @apply text-center align-middle;
+}
+
+@mixin neon-sign-defaults($fontSize: 4rem, $cursive: true) {
+    @if $cursive {
+        font-family: "Vibur";
+    }
+    font-size: $fontSize;
+}
+
+@mixin neon-sign-animation($light, $medium, $dark, $pulseTime, $name) {
+    animation: unquote($name) $pulseTime linear infinite;
+
+    @keyframes #{$name} {
+        0%,
+        100% {
+            text-shadow: 0 0 30px, 0 0 2px, 0 0 1em $medium, 0 0 0.5em $medium, 0 0 0.1em $medium, 0 10px 3px #000;
+            color: $light;
+        }
+        50% {
+            text-shadow: 0 0 20px, 0 0 2px, 0 0 1em $dark, 0 0 0.5em $dark, 0 0 0.1em $dark, 0 10px 3px #000;
+            color: $medium;
+        }
+    }
+}
+
+@mixin neon-sign($light, $medium, $dark, $fontSize, $name, $animate: true, $cursive: true, $pulseTime: 3s) {
+    @include neon-sign-defaults($fontSize, $cursive);
+    @if $animate {
+        @include neon-sign-animation($light, $medium, $dark, $pulseTime, $name);
+    }
+
+    color: $light !important;
+    text-shadow: 0 0 15px, 0 0 2px, 0 0 1em $medium, 0 0 0.5em $medium, 0 0 0.1em $medium, 0 10px 3px #000;
+}
+
+.blue-neon-sign-xl {
+    @include neon-sign($blue400, $blue700, $blue900, 3rem, "blue-neon-sign-xl-pulse");
+
+    @screen lg {
+        @include neon-sign($blue400, $blue700, $blue900, 9rem, "blue-neon-sign-xl-pulse");
+    }
+}
+
+.green-neon-sign-xl {
+    @include neon-sign($green400, $green700, $green900, 3rem, "green-neon-sign-xl-pulse", true, true, 4s);
+
+    @screen lg {
+        @include neon-sign($green400, $green700, $green900, 9rem, "green-neon-sign-xl-pulse", true, true, 4s);
+    }
+}
+
+.orange-neon {
+    border-radius: 0.25rem;
+    border-color: $orange600;
+    box-shadow: 0 0 15px, 0 0 2px, 0 0 1em $orange600, 0 0 0.5em $orange600, 0 0 0.1em $orange600;
+}
+
+.date-countdown {
+    @apply w-full text-center font-body;
+}
+
+%dialog-box {
+    @apply relative p-8 w-full text-white;
+    border-radius: 1rem;
+
+    &:before {
+        @apply bg-gray-900 absolute uppercase text-center p-0 px-4 text-3xl;
+        content: attr(data-title);
+        left: 50%;
+        top: -0.9em;
+        transform: translateX(-50%);
+    }
+}
+
+@mixin dialog-box($color: #05d5fc) {
+    @extend %dialog-box;
+    border: 0.2em solid $color;
+    box-shadow: inset 0 0 0.4em $color, 0 0 0.4em $color;
+
+    &:before {
+        color: $color;
+        text-shadow: 0 0 0.4em $color;
+    }
+}
+
+.pulumi-up-video-section {
+    box-shadow: 0 0 3em black;
+
+    .pulumiup-video {
+        @apply w-full;
+        @screen lg {
+            margin-top: -10%;
+        }
+    }
+
+    .pulumiup-title {
+        @apply w-full absolute top-0;
+
+        @screen lg {
+            @apply w-auto;
+            left: 25%;
+        }
+    }
+}
+
+.neon-callout-box-green {
+    @include dialog-box($green400);
+}
+
+.neon-callout-box-blue {
+    @include dialog-box($blue400);
+}
+
+.neon-callout-box-orange {
+    @include dialog-box($orange400);
+}
+
+.speaker-name-orange {
+    @include neon-sign($orange400, $orange700, $orange900, 2rem, "speaker-name-orange", false);
+}
+
+.section-title-blue {
+    @include neon-sign($blue400, $blue700, $blue900, 1.75rem, "section-title-blue", false, false);
+}
+
+.section-title-green {
+    @include neon-sign($green400, $green700, $green900, 1.75rem, "section-title-green", false, false);
+}
+
+.section-title-green-link {
+    @include neon-sign($green400, $green700, $green900, 1.75rem, "section-title-green", false, false);
+
+    &:hover {
+        @apply underline text-green-400;
+    }
+}
+
+.section-title-orange-link {
+    @include neon-sign($orange400, $orange700, $orange900, 1.75rem, "section-title-orange", false, false);
+
+    &:hover {
+        @apply underline text-orange-400;
+    }
+}
+
+.plot-cast-title {
+    @include neon-sign($blue400, $blue700, $blue900, 1.25rem, "plot-cast-name", false, false);
+}
+
+.speaker-image {
+    @apply rounded-full p-1 bg-violet-400;
+
+    img {
+        @apply w-24 rounded-full;
+    }
+}
+
+.coming-soon-sign {
+    @apply inline-block p-4;
+    @include neon-sign($green400, $green700, $green900, 2.25rem, "coming-soon-sign", false);
+}

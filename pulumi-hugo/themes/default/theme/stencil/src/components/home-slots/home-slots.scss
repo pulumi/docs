@@ -1,0 +1,27 @@
+home-slots {
+  .slot-container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+
+    .item-container {
+      width: 25%;
+      text-align: center;
+
+      img {
+        animation: fadeIn 500ms;
+      }
+    }
+
+    .separator-container {
+      width: 12.5%;
+      text-align: center;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+}

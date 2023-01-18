@@ -1,0 +1,114 @@
+@import "../../../../src/scss/colors";
+
+.symbol-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.symbol {
+    height: 14px;
+    width: 14px;
+    border-width: 1px;
+    border-style: solid;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin-right: 6px;
+
+    &.module,
+    &.function,
+    &.resource {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    &.module {
+        border-color: map-get($green, 700);
+
+        &:before {
+            content: "M";
+            color: map-get($green, 700);
+            font-size: 9px;
+            font-weight: 700;
+        }
+    }
+
+    &.function {
+        border-color: red;
+
+        &:before {
+            content: "F";
+            color: red;
+            font-size: 9px;
+            font-weight: 700;
+        }
+    }
+
+    &.resource {
+        border-color: map-get($blue, 700);
+
+        &:before {
+            content: "R";
+            color: map-get($blue, 700);
+            font-size: 9px;
+            font-weight: 700;
+        }
+    }
+}
+
+$base-ch-width-xl: 24ch;
+$base-ch-width-l: 12ch;
+
+.nav-tree-item a {
+    width: 100%;
+    // Because of many CSS subtleties with the base Microsoft FAST component used
+    // for the nav tree, using percentage or inherited width does not work accurately
+    // here.  Instead, we need to set the width specifically to the number of characters
+    // that can be shown.  This number is based on the depth of the tree item (since deeper items
+    // are indented more), and the screen size (which changes the overall space available to the nav).
+    @media (max-width: 1279px) {
+        &.depth-0 {
+            max-width: $base-ch-width-l;
+        }
+        &.depth-1 {
+            max-width: $base-ch-width-l - 2;
+        }
+
+        &.depth-2 {
+            max-width: $base-ch-width-l - 4;
+        }
+    }
+    @media (min-width: 1280px) {
+        &.depth-0 {
+            max-width: $base-ch-width-xl;
+        }
+        &.depth-1 {
+            max-width: $base-ch-width-xl - 2;
+        }
+
+        &.depth-2 {
+            max-width: $base-ch-width-xl - 4;
+        }
+    }
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.content-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.link-container {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

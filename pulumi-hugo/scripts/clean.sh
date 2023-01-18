@@ -8,6 +8,7 @@ hugo mod clean
 rm -rf _vendor
 rm -rf public
 rm -rf node_modules
+rm -rf themes/default/theme/node_modules
 
 for dir in themes/* ; do
     pushd $dir

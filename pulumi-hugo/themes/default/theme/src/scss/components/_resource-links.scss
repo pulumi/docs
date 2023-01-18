@@ -1,0 +1,16 @@
+pulumi-resource-links{
+    .container {
+        @apply mb-6;
+    }
+    .heading {
+        @apply text-sm font-semibold mt-6 pb-0.5;
+        color: map-get($gray, 700);
+    }
+    .links {
+        @apply text-sm pt-2 pl-4;
+        color: #2e3872;
+        a:hover {
+            color: #414ebc;
+        }
+    }
+}

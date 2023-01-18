@@ -1,0 +1,30 @@
+.on-this-page {
+    @apply pt-1 pb-2 hidden;
+
+    h4 {
+        @apply text-blue-800 font-semibold font-body text-sm cursor-pointer;
+        .contents-heading {
+            color: map-get($gray, 700);
+        }
+    }
+
+    ul {
+        @apply p-0 pl-4 list-none;
+        // Extra padding for H3s.
+        li {
+            @apply truncate;
+
+            &.active {
+                @apply font-semibold text-gray-800;
+            }
+
+            &.h3 {
+                @apply ml-2;
+            }
+
+            a {
+                @apply text-blue-800;
+            }
+        }
+    }
+}

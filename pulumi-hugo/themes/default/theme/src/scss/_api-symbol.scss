@@ -1,0 +1,69 @@
+// need to ignore PurgeCSS here because PurgeCSS runs before the API Docs files get bundled into
+//  pulumi/docs/public/, so it looks like these CSS classes are unused and they get pruned
+/* purgecss start ignore */
+$size-small: 9px;
+$size-medium: 16px;
+$size-large: 24px;
+
+.api-symbol {
+    height: calc($size-small + 5px);
+    width: calc($size-small + 5px);
+    font-size: $size-small;
+    border-width: 1px;
+    border-style: solid;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin-right: 6px;
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:before {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // Ensure height and width match the parent, with accounting for the border.
+        height: calc($size-small + 5px - 2px);
+        width: calc($size-small + 5px - 2px);
+    }
+}
+
+.api-symbol--small {
+    height: calc($size-small + 8px);
+    width: calc($size-small + 8px);
+    font-size: $size-small;
+}
+
+.api-symbol--large {
+    height: calc($size-large + 8px);
+    width: calc($size-large + 8px);
+    font-size: $size-large;
+}
+
+.api-symbol--module {
+    @apply text-green-700;
+    @apply border-green-700;
+
+    &:before {
+        content: "M";
+    }
+}
+
+.api-symbol--function {
+    @apply text-red-700;
+    @apply border-red-700;
+
+    &:before {
+        content: "F";
+    }
+}
+
+.api-symbol--resource {
+    @apply text-blue-700;
+    @apply border-blue-700;
+
+    &:before {
+        content: "R";
+    }
+}
+/* purgecss end ignore */
