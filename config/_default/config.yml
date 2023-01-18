@@ -36,6 +36,7 @@ security:
       - ASSET_BUNDLE_ID
       - REPO_THEME_PATH
       - PULUMI_CONVERT_URL
+      - GITHUB_TOKEN
 
 disableKinds:
   - category
