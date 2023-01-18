@@ -959,6 +959,15 @@ outputs:
 
 {{% /chooser %}}
 
+## Migration from AWSx 0.x to 1.0
+
+Before version 1, AWSx only supported components in TypeScript. All the existing components from the 0.x releases are now available in the `classic` namespace. The `classic` namespace will remain until the next major version release but will only receive updates for critical security fixes.
+
+If you're currently using v0.x and want to upgrade to v1.x you can:
+
+1. Change references from `@pulumi/awsx` to `@pulumi/awsx/classic` to maintain existing behaviour.
+2. Refactor to replace the classic components with the new top-level components. This may require additional code changes and resource re-creation.
+
 ## What’s Next?
 
 Crosswalk for AWS is free and open source, and you can [get started](https://www.pulumi.com/docs/guides/crosswalk/aws) today.
