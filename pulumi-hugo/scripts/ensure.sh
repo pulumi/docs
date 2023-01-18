@@ -36,3 +36,4 @@ fi
 echo "Installing Node.js modules..."
 yarn install
 yarn --cwd ./themes/default/theme install
+yarn --cwd ./themes/default/theme/stencil install

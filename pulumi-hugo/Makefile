@@ -34,7 +34,7 @@ serve-assets:
 	yarn --cwd ./themes/default/theme run start
 
 .PHONY: serve-all
-serve:
+serve-all:
 	./node_modules/.bin/concurrently --kill-others -r "./scripts/serve.sh" "yarn --cwd ./themes/default/theme run start"
 
 .PHONY: build-assets
