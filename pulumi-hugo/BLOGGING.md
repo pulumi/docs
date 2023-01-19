@@ -220,6 +220,7 @@ Because the website is deployed in response to a commit to pulumi/docs `master`,
 - [ ] Spell and grammar check. Consider using a service such as [Grammarly](http://grammarly.com).
 - [ ] Check for a break `<!--more-->` after the first paragraph, and ensure that your post's introduction looks right on the blog home page.
 - [ ] Check that your meta_image appears properly on the blog home page. Do not use animated GIFs for preview images.
+- [ ] Check that your meta_image is using the current Pulumi logo.
 - [ ] Preview locally. Check formatting, links, and images for appearance.
 - [ ] Use the [Twitter card validator](https://cards-dev.twitter.com/validator) to check the how the blog appears in a tweet (use the preview provided in the PR).
 - [ ] Reach out in #blogs to make Marketing aware that your post is about to go live!
