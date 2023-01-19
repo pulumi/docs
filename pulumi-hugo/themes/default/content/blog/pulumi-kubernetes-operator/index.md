@@ -125,10 +125,11 @@ const mystack = new k8s.apiextensions.CustomResource("my-stack", {
     kind: 'Stack',
     spec: {
         accessTokenSecret: accessToken.metadata.name,
-        stack: "<YOUR_ORG>/nginx/dev",
+        stack: "<YOUR_ORG>/k8s-nginx/dev",
         initOnCreate: true,
-        projectRepo: "https://github.com/metral/pulumi-nginx",
-        commit: "2b0889718d3e63feeb6079ccd5e4488d8601e353",
+        projectRepo: "https://github.com/pulumi/examples",
+        repoDir: "kubernetes-ts-nginx",
+        commit: "e2e5eb426dbf5b57c50bba0f8eb54fe982ceddb1",
         destroyOnFinalize: true,
     }
 });
@@ -154,10 +155,11 @@ my_stack = apiextensions.CustomResource("my-stack",
     kind="Stack",
     spec={
         "access_token_secret": access_token.metadata["name"],
-        "stack": "<YOUR_ORG>/nginx/dev",
+        "stack": "<YOUR_ORG>/k8s-nginx/dev",
         "init_on_create": True,
-        "project_repo": "https://github.com/metral/pulumi-nginx",
-        "commit": "2b0889718d3e63feeb6079ccd5e4488d8601e353",
+        "project_repo": "https://github.com/pulumi/examples",
+        "repo_dir: "kubernetes-ts-nginx",
+        "commit": "e2e5eb426dbf5b57c50bba0f8eb54fe982ceddb1",
         "destroy_on_finalize": True,
     }
 )
@@ -226,10 +228,11 @@ class MyStack : Stack
             Spec = new StackSpecArgs
             {
                 AccessTokenSecret = accessToken.Metadata.Apply(m => m.Name),
-                Stack = "<YOUR_ORG>/nginx/dev",
+                Stack = "<YOUR_ORG>/k8s-nginx/dev",
                 InitOnCreate = true,
-                ProjectRepo = "https://github.com/metral/pulumi-nginx",
-                Commit = "2b0889718d3e63feeb6079ccd5e4488d8601e353",
+                ProjectRepo = "https://github.com/pulumi/examples",
+                RepoDir = "kubernetes-ts-nginx",
+                Commit = "e2e5eb426dbf5b57c50bba0f8eb54fe982ceddb1",
                 DestroyOnFinalize = true,
             }
         });
@@ -274,10 +277,11 @@ func main() {
             OtherFields: kubernetes.UntypedArgs{
                 "spec": map[string]interface{}{
                     "accessTokenSecret": accessToken.Metadata.Name(),
-                    "stack":             "<YOUR_ORG>/nginx/dev",
+                    "stack":             "<YOUR_ORG>/k8s-nginx/dev",
                     "initOnCreate":      true,
-                    "projectRepo":       "https://github.com/metral/pulumi-nginx",
-                    "commit":            "2b0889718d3e63feeb6079ccd5e4488d8601e353",
+                    "projectRepo":       "https://github.com/pulumi/examples",
+                    "repoDir":           "kubernetes-ts-nginx",
+                    "commit":            "e2e5eb426dbf5b57c50bba0f8eb54fe982ceddb1",
                     "destroyOnFinalize": true,
                 },
             },
@@ -660,7 +664,7 @@ Kubernetes [tutorials](https://www.pulumi.com/docs/tutorials/kubernetes/) to div
 with users and the Pulumi team.
 
 [pulumi-k8s-op]: https://github.com/pulumi/pulumi-kubernetes-operator
-[pulumi-k8s-nginx]: https://github.com/metral/pulumi-nginx
+[pulumi-k8s-nginx]: https://github.com/pulumi/examples/tree/master/kubernetes-ts-nginx
 [pulumi-aws-eks]: https://github.com/metral/pulumi-aws-eks
 [p-examples]: https://github.com/pulumi/examples
 [stack]: /docs/intro/concepts/stack/

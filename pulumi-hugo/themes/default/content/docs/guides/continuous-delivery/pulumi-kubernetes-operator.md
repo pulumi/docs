@@ -86,7 +86,7 @@ the [default, ambient kubeconfig credentials][default-kubeconfig].
 
 The role permissions for the operator can be adjusted to control what in-cluster API resources are allowed.
 
-[nginx-stack]: https://github.com/metral/pulumi-nginx/blob/master/index.ts
+[nginx-stack]: https://github.com/pulumi/examples/blob/master/kubernetes-ts-nginx/index.ts
 [k8s-provider]: /registry/packages/kubernetes/api-docs/provider/
 [default-kubeconfig]: /registry/packages/kubernetes/installation-configuration/#setup
 
@@ -123,9 +123,10 @@ const mystack = new k8s.apiextensions.CustomResource("my-stack", {
                 },
             },
         },
-        stack: "<YOUR_ORG>/nginx/dev",
-        projectRepo: "https://github.com/metral/pulumi-nginx",
-        commit: "2b0889718d3e63feeb6079ccd5e4488d8601e353",
+        stack: "<YOUR_ORG>/k8s-nginx/dev",
+        projectRepo: "https://github.com/pulumi/examples",
+        repoDir: "kubernetes-ts-nginx",
+        commit: "e2e5eb426dbf5b57c50bba0f8eb54fe982ceddb1",
         // branch: "refs/heads/master", // Alternatively, track master branch.
         destroyOnFinalize: true,
     }
@@ -160,9 +161,10 @@ my_stack = apiextensions.CustomResource("my-stack",
                 }
             },
         },
-        "stack": "<YOUR_ORG>/nginx/dev",
-        "projectRepo": "https://github.com/metral/pulumi-nginx",
-        "commit": "2b0889718d3e63feeb6079ccd5e4488d8601e353",
+        "stack": "<YOUR_ORG>/k8s-nginx/dev",
+        "projectRepo": "https://github.com/pulumi/examples",
+        "repoDir": "kubernetes-ts-nginx",
+        "commit": "e2e5eb426dbf5b57c50bba0f8eb54fe982ceddb1",
         # branch: "refs/heads/master", # Alternatively, track master branch.
         "destroyOnFinalize": True,
     }
@@ -229,10 +231,11 @@ class MyStack : Stack
             Spec = new StackSpecArgs
             {
                 AccessTokenSecret = accessToken.Metadata.Apply(m => m.Name),
-                Stack = "<YOUR_ORG>/nginx/dev",
+                Stack = "<YOUR_ORG>/k8s-nginx/dev",
                 InitOnCreate = true,
-                ProjectRepo = "https://github.com/metral/pulumi-nginx",
-                Commit = "2b0889718d3e63feeb6079ccd5e4488d8601e353",
+                ProjectRepo = "https://github.com/pulumi/examples",
+                RepoDir = "kubernetes-ts-nginx",
+                Commit = "e2e5eb426dbf5b57c50bba0f8eb54fe982ceddb1",
                 // branch: "refs/heads/master", // Alternatively, track master branch.
                 DestroyOnFinalize = true,
             }
@@ -285,9 +288,10 @@ func main() {
 							},
 						},
 					},
-					"stack":             "<YOUR_ORG>/nginx/dev",
-					"projectRepo":       "https://github.com/metral/pulumi-nginx",
-					"commit":            "2b0889718d3e63feeb6079ccd5e4488d8601e353",
+					"stack":             "<YOUR_ORG>/k8s-nginx/dev",
+					"projectRepo":       "https://github.com/pulumi/examples",
+                    "repoDir":           "kubernetes-ts-nginx",
+					"commit":            "e2e5eb426dbf5b57c50bba0f8eb54fe982ceddb1",
 					// "branch":         "refs/heads/master", // Alternatively, track master branch.
 					"destroyOnFinalize": true,
 				},
@@ -333,8 +337,8 @@ const gitrepo = new k8s.apiextensions.CustomResource("nginx-repo", {
     metadata: {},
     spec: {
         interval: '5m0s',
-        url: "https://github.com/metral/pulumi-nginx",
-        ref: { commit: "2b0889718d3e63feeb6079ccd5e4488d8601e353" },
+        url: "https://github.com/pulumi/examples",
+        ref: { commit: "e2e5eb426dbf5b57c50bba0f8eb54fe982ceddb1" },
     },
 });
 
@@ -352,7 +356,7 @@ const mystack = new k8s.apiextensions.CustomResource("my-stack", {
                 },
             },
         },
-        stack: "<YOUR_ORG>/nginx/dev",
+        stack: "<YOUR_ORG>/k8s-nginx/dev",
         fluxSource: {
             sourceRef: {
                 apiVersion: "source.toolkit.fluxcd.io/v1beta2",
