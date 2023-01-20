@@ -13,14 +13,6 @@ aliases: ["/docs/reference/javascript/"]
 
 Pulumi supports writing your infrastructure as code in any JavaScript language running on Node.js using any of the [Current, Active and Maintenance LTS versions](https://nodejs.org/en/about/releases/).
 
-{{% notes type="warning" %}}
-While we expect _most_ uses of Pulumi to work on 19.2 and higher our function serialization doesn't currently handle those versions due to internal V8 changes.
-
-See [the GitHub issue](https://github.com/pulumi/pulumi/issues/11488) for tracking this.
-
-Due to this we're not currently testing on 19.2 and as such don't consider it fully supported.
-{{% /notes %}}
-
 Because programs are just JavaScript, you may elect to write them in any manner you'd normally write Node.js programs.
 That includes TypeScript, CoffeeScript, or Babel, in addition to your favorite tools such as build systems, linters, or
 test frameworks.
