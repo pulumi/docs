@@ -393,7 +393,7 @@ the GitHub Actions container directly.
 ### Pulumi GitHub App
 
 The [Pulumi GitHub App](/docs/guides/continuous-delivery/github-app/) is something you install on your
-GitHub organization. It allows the Pulumi service to leave comments on Pull Requests but does not give it access to your source code.
+GitHub organization. It allows the Pulumi service to leave comments on Pull Requests.
 
 Once the Pulumi GitHub App is installed, when your GitHub Actions run Pulumi, a summary of
 any resource changes will be left on the Pull Request, as well as links to the Pulumi
