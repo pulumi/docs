@@ -6,29 +6,17 @@
 // Default configuration:
 // https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 
-// This doesn't work for some reason, but should:
-//
-// const { color } = require("@pulumi/facet");
-// const defaultTheme = require("tailwindcss/defaultTheme");
-
-// const brand = {
-//     yellow: color.brand.yellow,
-//     salmon: color.brand.salmon,
-//     fuchsia: color.brand.fuchsia,
-//     purple: color.brand.purple,
-//     violet: color.brand.violet,
-//     blue: color.brand.blue,
-// };
+const { global } = require("./tokens.json");
 
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 const brand = {
-    yellow: "#f7bf2a",
-    salmon: "#f26e7e",
-    fuchsia: "#bd4c85",
-    purple: "#8a3391",
-    violet: "#805ac3",
-    blue: "#4d5bd9",
+    yellow: global.colors.brand.yellow.value,
+    salmon: global.colors.brand.salmon.value,
+    fuchsia: global.colors.brand.fuchsia.value,
+    purple: global.colors.brand.purple.value,
+    violet: global.colors.brand.violet.value,
+    blue: global.colors.brand.blue.value,
 };
 
 const white = defaultTheme.colors.white;
@@ -36,124 +24,124 @@ const black = defaultTheme.colors.black;
 const transparent = defaultTheme.colors.transparent;
 
 const red = {
-    100: "#fff5f5",
-    200: "#fed7d7",
-    300: "#feb2b2",
-    400: "#fc8181",
-    500: "#f56565",
-    600: "#e53e3e",
-    700: "#c53030",
-    800: "#9b2c2c",
-    900: "#742a2a",
+    100: global.colors.red["100"].value,
+    200: global.colors.red["200"].value,
+    300: global.colors.red["300"].value,
+    400: global.colors.red["400"].value,
+    500: global.colors.red["500"].value,
+    600: global.colors.red["600"].value,
+    700: global.colors.red["700"].value,
+    800: global.colors.red["800"].value,
+    900: global.colors.red["900"].value,
 };
 
 const gray = {
-    100: "#f9f9fa",
-    200: "#f2f2f4",
-    300: "#e5e5e9",
-    400: "#d8d9df",
-    500: "#bebfc9",
-    600: "#8e8f97",
-    700: "#5f6065",
-    800: "#2f3032",
-    850: "#2b2b2c",
-    900: "#131314",
+    100: global.colors.gray["100"].value,
+    200: global.colors.gray["200"].value,
+    300: global.colors.gray["300"].value,
+    400: global.colors.gray["400"].value,
+    500: global.colors.gray["500"].value,
+    600: global.colors.gray["600"].value,
+    700: global.colors.gray["700"].value,
+    800: global.colors.gray["800"].value,
+    850: global.colors.gray["850"].value,
+    900: global.colors.gray["900"].value,
 };
 
 const yellow = {
-    100: "#fef9ea",
-    200: "#fdf2d4",
-    300: "#fce5aa",
-    400: "#fad97f",
-    500: "#f9cc55",
+    100: global.colors.yellow["100"].value,
+    200: global.colors.yellow["200"].value,
+    300: global.colors.yellow["300"].value,
+    400: global.colors.yellow["400"].value,
+    500: global.colors.yellow["500"].value,
     600: brand.yellow,
-    700: "#c69922",
-    800: "#947319",
-    900: "#634c11",
+    700: global.colors.yellow["700"].value,
+    800: global.colors.yellow["800"].value,
+    900: global.colors.yellow["900"].value,
 };
 
 const salmon = {
-    100: "#fef1f2",
-    200: "#fce2e5",
-    300: "#fac5cb",
-    400: "#f7a8b2",
-    500: "#f58b98",
+    100: global.colors.salmon["100"].value,
+    200: global.colors.salmon["200"].value,
+    300: global.colors.salmon["300"].value,
+    400: global.colors.salmon["400"].value,
+    500: global.colors.salmon["500"].value,
     600: brand.salmon,
-    700: "#c25865",
-    800: "#91424c",
-    900: "#612c32",
+    700: global.colors.salmon["700"].value,
+    800: global.colors.salmon["800"].value,
+    900: global.colors.salmon["900"].value,
 };
 
 const fuchsia = {
-    100: "#f8edf3",
-    200: "#f2dbe7",
-    300: "#e5b7ce",
-    400: "#d794b6",
-    500: "#ca709d",
+    100: global.colors.fuchsia["100"].value,
+    200: global.colors.fuchsia["200"].value,
+    300: global.colors.fuchsia["300"].value,
+    400: global.colors.fuchsia["400"].value,
+    500: global.colors.fuchsia["500"].value,
     600: brand.fuchsia,
-    700: "#973d6a",
-    800: "#712e50",
-    900: "#4c1e35",
+    700: global.colors.fuchsia["700"].value,
+    800: global.colors.fuchsia["800"].value,
+    900: global.colors.fuchsia["900"].value,
 };
 
 const purple = {
-    100: "#f3ebf4",
-    200: "#e8d6e9",
-    300: "#d0add3",
-    400: "#b985bd",
-    500: "#a15ca7",
+    100: global.colors.purple["100"].value,
+    200: global.colors.purple["200"].value,
+    300: global.colors.purple["300"].value,
+    400: global.colors.purple["400"].value,
+    500: global.colors.purple["500"].value,
     600: brand.purple,
-    700: "#6e2974",
-    800: "#531f57",
-    900: "#37143a",
+    700: global.colors.purple["700"].value,
+    800: global.colors.purple["800"].value,
+    900: global.colors.purple["900"].value,
 };
 
 const violet = {
-    100: "#f2eff9",
-    200: "#e6def3",
-    300: "#ccbde7",
-    400: "#b39cdb",
-    500: "#997bcf",
+    100: global.colors.violet["100"].value,
+    200: global.colors.violet["200"].value,
+    300: global.colors.violet["300"].value,
+    400: global.colors.violet["400"].value,
+    500: global.colors.violet["500"].value,
     600: brand.violet,
-    700: "#66489c",
-    800: "#4d3675",
-    900: "#33244e",
+    700: global.colors.violet["700"].value,
+    800: global.colors.violet["800"].value,
+    900: global.colors.violet["900"].value,
 };
 
 const blue = {
-    100: "#edeffb",
-    200: "#dbdef7",
-    300: "#b8bdf0",
-    400: "#949de8",
-    500: "#717ce1",
+    100: global.colors.blue["100"].value,
+    200: global.colors.blue["200"].value,
+    300: global.colors.blue["300"].value,
+    400: global.colors.blue["400"].value,
+    500: global.colors.blue["500"].value,
     600: brand.blue,
-    700: "#3e49ae",
-    800: "#2e3782",
-    900: "#1f2457",
+    700: global.colors.blue["700"].value,
+    800: global.colors.blue["800"].value,
+    900: global.colors.blue["900"].value,
 };
 
 const orange = {
-    100: "#fff7eb",
-    200: "#fde6c4",
-    300: "#fad49e",
-    400: "#f6ba7e",
-    500: "#ee975c",
-    600: "#e17d47",
-    700: "#d86131",
-    800: "#ba4a2c",
-    900: "#993d29",
+    100: global.colors.orange["100"].value,
+    200: global.colors.orange["200"].value,
+    300: global.colors.orange["300"].value,
+    400: global.colors.orange["400"].value,
+    500: global.colors.orange["500"].value,
+    600: global.colors.orange["600"].value,
+    700: global.colors.orange["700"].value,
+    800: global.colors.orange["800"].value,
+    900: global.colors.orange["900"].value,
 };
 
 const green = {
-    100: "#e0fff2",
-    200: "#b2fbe0",
-    300: "#81eeca",
-    400: "#4ce1b4",
-    500: "#2fc89f",
-    600: "#25a78b",
-    700: "#1d8673",
-    800: "#19675b",
-    900: "#155148",
+    100: global.colors.green["100"].value,
+    200: global.colors.green["200"].value,
+    300: global.colors.green["300"].value,
+    400: global.colors.green["400"].value,
+    500: global.colors.green["500"].value,
+    600: global.colors.green["600"].value,
+    700: global.colors.green["700"].value,
+    800: global.colors.green["800"].value,
+    900: global.colors.green["900"].value,
 };
 
 module.exports = {
@@ -161,13 +149,13 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                display: ["Gilroy", ...defaultTheme.fontFamily.sans],
-                body: ["Inter", ...defaultTheme.fontFamily.sans],
-                mono: ["Roboto Mono", ...defaultTheme.fontFamily.mono],
+                display: [global.typography.fontFamilies.display.value, ...defaultTheme.fontFamily.sans],
+                body: [global.typography.fontFamilies.body.value, ...defaultTheme.fontFamily.sans],
+                mono: [global.typography.fontFamilies.mono.value, ...defaultTheme.fontFamily.mono],
             },
             boxShadow: {
-                '3xl': '0 35px 70px -20px rgba(0, 0, 0, 0.5)',
-              }
+                "3xl": "0 35px 70px -20px rgba(0, 0, 0, 0.5)",
+            },
         },
         colors: {
             white,
