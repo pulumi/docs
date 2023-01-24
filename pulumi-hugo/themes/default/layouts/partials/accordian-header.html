@@ -1,4 +1,10 @@
-<input type="checkbox" class="absolute hidden" id="{{ .text }}" />
+{{ if eq .checked "true" }}
+    <input type="checkbox" class="absolute hidden" id="{{ .text }}" checked="checked" />
+{{ else }}
+    <input type="checkbox" class="absolute hidden" id="{{ .text }}" />
+{{ end }}
+
+
 <label for="{{ .text }}" class="accordion-label">
     {{ if eq .large_header true }}
         <h5 class="mt-2 w-2/3">{{ .text }}</h5>

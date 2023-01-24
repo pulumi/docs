@@ -65,8 +65,8 @@
         <div class="container mx-auto py-6">
             <div class="flex flex-wrap justify-center align-center">
                 <div class="w-full lg:w-1/2 text-center lg:text-left">
-                    <h5>Universal Infrastructure as Code</h5>
-                    <p>Every cloud, every language, every architecture, every builder</p>
+                    <h5>Infrastructure as Code for Engineers</h5>
+                    <p>Every cloud, every language, every architecture, every engineer</p>
                 </div>
 
                 <div class="w-full lg:w-1/2 mt-2">
@@ -81,36 +81,22 @@
         </div>
     </section>
 
-    <section class="container mx-auto text-center overflow-hidden px-3 mt-6 pb-24">
-        <h2 class="rainbow-text mb-12">Import <span class="font-bold">joy</span> into your cloud infrastructure</h2>
-        <div class="flex flex-col lg:flex-row justify-center items-stretch px-6 lg:px-0">
-            {{ range $item := .Params.use_cases }}
-                <div class="w-full lg:w-1/3">
-                    <div class="card p-10 mx-4 text-center bg-white z-10 h-full my-6 lg:my-0">
-                        <div>
-                            {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
-                        </div>
-                        <h5>{{ $item.title }}</h5>
-                        <p>{{ $item.description | markdownify }}</p>
-                    </div>
-                </div>
-            {{ end }}
-        </div>
+    <section class="container mx-auto mt-10 mb-16 text-center">
+        <h2 class="rainbow-text">Import <span class="font-bold">joy</span> into your cloud infrastructure</h2>
     </section>
 
     <section class="mb-8 mt-12 lg:mt-0 lg:mb-24 px-6 lg:px-0 relative">
         <div class="shape-background home-build-section">
             <div class="shape-container">
                 <div class="circle-left"></div>
-                <!--<div class="circle-center"></div>-->
                 <div class="circle-right"></div>
             </div>
         </div>
 
         <div class="container mx-auto">
             <div class="flex flex-col lg:flex-row">
-                <div class="w-full lg:w-1/2 lg:mr-32 z-10 px-8 rounded">
-                    <h2>{{ .Params.build.title }}</h2>
+                <div class="w-full lg:w-1/2 lg:mr-32 z-10 px-8 rounded pt-8">
+                    <h3>{{ .Params.build.title }}</h3>
                     <p class="text-lg">{{ .Params.build.description | markdownify }}</p>
 
                     {{ range $item := .Params.build.items }}
@@ -119,36 +105,32 @@
                     {{ end }}
 
 
-                    <div class="mt-16">
-                        {{ partial "cta/primary-get-started" . }}
+                    <h4 class="mt-16">{{ .Params.templates.title }}</h4>
+                    <p class="text-lg">
+                        {{ .Params.templates.description }}
+                    </p>
+                    <div class="tiles flex-wrap">
+                        <!-- {{ partial "cta/primary-get-started" . }} -->
+                        {{ range .Params.templates.links }}
+                            <div class="md:w-1/2 p-3">
+                                <a href="{{ .url }}" class="tile p-3">
+                                    <h6 class="m-0">
+                                        <i class="fas fa-{{ .icon }} text-blue-400 pr-2"></i>
+                                        {{ .label }}
+                                    </h6>
+                                </a>
+                            </div>
+                        {{ end }}
                     </div>
                 </div>
 
-                <div class="w-full lg:w-1/2 flex items-start justify-center mt-12 lg:mt-0">
+                <div class="w-full lg:w-1/2 mt-12 lg:mt-0">
                     <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
-                        <pulumi-choosable type="language" class="highlight" value="typescript">
-                            <img src="/images/home/typescript.svg" alt="" />
-                        </pulumi-choosable>
-
-                        <pulumi-choosable type="language" class="highlight" value="python">
-                            <img src="/images/home/python.svg" alt="" />
-                        </pulumi-choosable>
-
-                        <pulumi-choosable type="language" class="highlight" value="go">
-                            <img src="/images/home/go.svg" alt="" />
-                        </pulumi-choosable>
-
-                        <pulumi-choosable type="language" class="highlight" value="csharp">
-                            <img src="/images/home/c-sharp.svg" alt="" />
-                        </pulumi-choosable>
-
-                        <pulumi-choosable type="language" class="highlight" value="java">
-                            <img src="/images/home/java.svg" alt="" />
-                        </pulumi-choosable>
-
-                        <pulumi-choosable type="language" class="highlight" value="yaml">
-                            <img src="/images/home/yaml.svg" alt="" />
-                        </pulumi-choosable>
+                        {{ range $item := .Params.build.code }}
+                            <pulumi-choosable type="language" class="highlight" value="{{ $item.language }}">
+                                {{ partial "code" (dict "lang" $item.language "code" $item.code "mode" "dark") }}
+                            </pulumi-choosable>
+                        {{ end }}
                     </pulumi-chooser>
                 </div>
             </div>
@@ -221,7 +203,7 @@
                 <img class="rounded-xl shadow-2xl" src="/images/home/deploy-graphic.svg" alt="Pulumi Pipeline" />
             </div>
             <div class="w-full lg:w-1/2 order-first lg:order-last lg:ml-32 z-10 bg-white px-8 rounded">
-                <h2>{{ .Params.deploy.title }}</h2>
+                <h3>{{ .Params.deploy.title }}</h3>
                 <p class="text-lg">{{ .Params.deploy.description | markdownify }}</p>
 
                 {{ range $item := .Params.deploy.items }}
@@ -251,7 +233,7 @@
 
         <div class="container mx-auto flex flex-col lg:flex-row">
             <div class="w-full lg:w-1/2 lg:mr-32 z-10 bg-white px-8 rounded">
-                <h2>{{ .Params.manage.title }}</h2>
+                <h3>{{ .Params.manage.title }}</h3>
                 <p class="text-lg">{{ .Params.manage.description | markdownify }}</p>
 
                 {{ range $item := .Params.manage.items }}
@@ -260,8 +242,22 @@
                 {{ end }}
 
 
-                <div class="mt-16">
-                    {{ partial "cta/primary-get-started" . }}
+                <h4 class="mt-16">{{ .Params.templates.title }}</h4>
+                <p class="text-lg">
+                    {{ .Params.templates.description }}
+                </p>
+                <div class="tiles flex-wrap">
+                    <!-- {{ partial "cta/primary-get-started" . }} -->
+                    {{ range .Params.templates.links }}
+                        <div class="md:w-1/2 p-3">
+                            <a href="{{ .url }}" class="tile p-3">
+                                <h6 class="m-0">
+                                    <i class="fas fa-{{ .icon }} text-blue-400 pr-2"></i>
+                                    {{ .label }}
+                                </h6>
+                            </a>
+                        </div>
+                    {{ end }}
                 </div>
             </div>
 
@@ -271,29 +267,49 @@
         </div>
     </section>
 
-    <!-- Benefits -->
-    <section class="container mx-auto my-12 lg:my-24 relative">
-        <h2 class="text-center">{{ .Params.benefits.title }}</h2>
-        <div class="benefits-section relative">
-            <div class="shape-background home-benefits-section">
-                <div class="shape-container">
-                    <div class="circle-left"></div>
-                    <div class="circle-right"></div>
+    <section class="container mx-auto my-16 text-center px-3">
+        <div class="card bg-violet-200 p-6 rounded-2xl">
+            <h2 class="rainbow-text">Do more with less</h2>
+            <p class="text-xl max-w-3xl mx-auto">
+                Use Pulumi's Automation API to create tooling that helps you and your engineers manage <span class="font-bold">10x the amount of resources</span> versus traditional
+                tooling.
+            </p>
+
+            <div class="flex flex-wrap text-left">
+                <div class="w-full lg:w-1/3 p-6 lg:mt-4">
+                    <p class="text-lg">
+                        What if IaC was a library and not just a CLI? Pulumi Automation API is the industry's first and only fully programmable infrastructure as code technology.
+                    </p>
+                    <p class="text-lg">
+                        With Automation API, you can embed Pulumi right into your application code to drive complex deployment workflows programmatically. Build command-line tools,
+                        desktop applications, self-service infrastructure portals, and more, all in your language of choice &mdash; without having to "shell out" to another CLI.
+                        CLI tool to behind a HTTP API to a custom PaaS.
+                    </p>
+                    <p class="text-lg">Automation API enables you and your company to scale 10x the amount of infrastructure managed per engineer.</p>
+                </div>
+
+                <div class="w-full lg:w-2/3 p-6">
+                    <div class="card p-6 bg-white">
+                        <h4 class="my-0">Examples</h4>
+                        <ul class="list-none p-0">
+                            {{ range $i, $e := .Params.automation_api_examples }}
+                                <li class="accordion-item pb-3 border-b-2">
+                                    {{ if eq $i 0 }}
+                                        {{ partial "accordian-header" (dict "text" $e.name "checked" "true") }}
+                                    {{ else }}
+                                        {{ partial "accordian-header" (dict "text" $e.name) }}
+                                    {{ end }}
+
+
+                                    <div class="accordion-item-body-no-animation text-sm">
+                                        {{ $e.text | markdownify }}
+                                    </div>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </div>
                 </div>
             </div>
-            {{ range $item := .Params.benefits.items }}
-                <div class="benefits-item card z-10 bg-white">
-                    <div class="icon-section">
-                        {{ partial "color-icon.html" (dict "icon" $item.icon "icon_color" $item.icon_color) }}
-                    </div>
-                    <div>
-                        <h5>{{ $item.title }}</h5>
-                    </div>
-                    <div class="description">
-                        <p>{{ $item.description | markdownify }}</p>
-                    </div>
-                </div>
-            {{ end }}
         </div>
 
         <div class="my-16">
@@ -370,21 +386,38 @@
             </pulumi-swiper>
         </div>
         <div class="large-container mx-auto absolute top-0 left-0 pt-16 hidden lg:block">
-            <pulumi-swiper slides="3" centered-slides="true" initial-slide="3" loop="true" autoplay="true" autoplay-delay="4000" speed="1000">
+            <pulumi-swiper slides="3" centered-slides="true" initial-slide="3" loop="true" autoplay="false" autoplay-delay="4000" speed="1000">
                 {{ range $tweet := .Params.get_started.tweets }}
                     <pulumi-swipeable>
                         <div class="w-full px-4 text-left">
-                            <div class="flex flex-col card p-6 bg-white h-64">
+                            <div class="flex flex-col card p-6 bg-white h-72">
                                 <p class="flex-grow mt-0">{{ $tweet.text }}</p>
-                                <div class="flex items-center w-full">
+                                <div class="flex items-center w-full pb-1">
                                     <a href="{{ $tweet.link }}" target="_blank" rel="noopener noreferrer">
                                         <!-- If the browser fails to load the Twitter avatar, just hide it. -->
-                                        <img class="rounded-full border-none w-12 h-12 mr-4" src="{{ $tweet.avatar }}" onerror="$(this).hide();" />
+                                        <div class="rounded-full border-none w-12 h-12 mr-4 overflow-hidden">
+                                            <img src="{{ $tweet.avatar }}" onerror="$(this).hide();" />
+                                        </div>
                                     </a>
                                     <a href="{{ $tweet.link }}" class="flex-grow text-gray-600 hover:text-gray-600 hover:underline" target="_blank" rel="noopener noreferrer">
                                         {{ $tweet.username }}
                                     </a>
-                                    <img src="/logos/tech/twitter.svg" alt="Twitter" />
+
+                                    {{ if eq $tweet.source "twitter" }}
+                                        <img class="w-8 h-8" src="/logos/tech/twitter.svg" alt="Twitter" />
+                                    {{ end }}
+
+                                    {{ if eq $tweet.source "reddit" }}
+                                        <img class="w-8 h-8" src="/logos/tech/reddit.svg" alt="Reddit" />
+                                    {{ end }}
+
+                                    {{ if eq $tweet.source "linkedin" }}
+                                        <img class="w-8 h-8" src="/logos/tech/linkedin.svg" alt="LinkedIn" />
+                                    {{ end }}
+
+                                    {{ if eq $tweet.source "blog" }}
+                                        <i class="fas fa-blog text-gray-500 text-2xl"></i>
+                                    {{ end }}
                                 </div>
                             </div>
                         </div>

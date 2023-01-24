@@ -170,7 +170,7 @@ $ pulumi new serverless-azure-yaml
 
 ## Pulumi to the Cloud
 
-Each of these commands will generate some boilerplate for you, and includes defaults you can accept or modify (such as the name of the project, or the application directory). Run `pulumi up` from this directory, ensuring that you've connected the [Pulumi CLI](/docs/get-started) to your preferred cloud provider, and your starting point is online, ready for you to sub in your own application code. For the purposes of this demonstration, I've accepted the defaults. I've also left the provided application and function code in place. Let's examine what Pulumi creates for us here, using Python for AWS, Go for GCP, and Typescript for Azure.
+Each of these commands will generate some boilerplate for you, and includes defaults you can accept or modify (such as the name of the project, or the application directory). Run `pulumi up` from this directory, ensuring that you've connected the [Pulumi CLI](/docs/get-started/) to your preferred cloud provider, and your starting point is online, ready for you to sub in your own application code. For the purposes of this demonstration, I've accepted the defaults. I've also left the provided application and function code in place. Let's examine what Pulumi creates for us here, using Python for AWS, Go for GCP, and Typescript for Azure.
 
 {{% chooser cloud "aws,gcp,azure" / %}}
 
@@ -496,4 +496,4 @@ In addition to the Pulumi code above, each template includes a simple website th
 
 From here, you're ready to drop in your own application code. Pulumi has already handled the boring work for you, complying with best practices from the beginning so you only have to worry about building your own application, not how to get the infrastructure online!
 
-[Pulumi Architecture Templates](/templates) exist for a variety of applications and common use-cases, including containerized applications and kubernetes, with more being added over time. Keep an eye out for new additions and ways to make engineering for the cloud less painful!
+[Pulumi Architecture Templates](/templates/) exist for a variety of applications and common use-cases, including containerized applications and kubernetes, with more being added over time. Keep an eye out for new additions and ways to make engineering for the cloud less painful!
