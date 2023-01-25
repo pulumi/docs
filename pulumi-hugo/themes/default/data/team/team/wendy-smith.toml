@@ -3,7 +3,7 @@ name = "Wendy Smith"
 title = "Senior Director of Field Marketing"
 weight = 1
 
-status = "active"
+status = "inactive"
 
 [social]
 twitter = "wamazonsmith"
