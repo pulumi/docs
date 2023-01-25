@@ -18,6 +18,7 @@ The current stable version of Pulumi is **{{< latest-version >}}**.
         </tr>
     </thead>
     <tbody>
+        {{< changelog-table-row version="3.53.1" date="2023-01-25" showChecksum="true" >}}
         {{< changelog-table-row version="3.53.0" date="2023-01-25" showChecksum="true" >}}
         {{< changelog-table-row version="3.52.1" date="2023-01-20" showChecksum="true" >}}
         {{< changelog-table-row version="3.52.0" date="2023-01-18" showChecksum="true" >}}
