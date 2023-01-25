@@ -1,7 +1,8 @@
 id = "engin-diri"
 name = "Engin Diri"
-status = "guest"
-role = "puluminary"
+status = "active"
+title = "Customer Experience Architect"
+weight = 1
 [social]
 github = "dirien"
 twitter = "_ediri"
