@@ -1,5 +1,7 @@
 ---
-title: "How to Use Pulumi with Python"
+title: Python
+title_tag: How to use Python with Pulumi
+h1: How to use Python with Pulumi
 meta_desc: An overview of how to use Python with Pulumi for infrastructure as code on any cloud (AWS, Azure, GCP, Kubernetes, etc.).
 menu:
   intro:

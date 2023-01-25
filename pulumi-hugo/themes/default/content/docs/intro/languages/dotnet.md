@@ -1,5 +1,7 @@
 ---
-title: "How to Use .NET (C#, VB, F#) for Pulumi"
+title: .NET (C#, VB, F#)
+title_tag: How to use .NET (C#, VB, F#) with Pulumi
+h1: How to use .NET (C#, VB, F#) with Pulumi
 meta_desc: An overview of how to use .NET languages like C# and F# with Pulumi for infrastructure as code on any cloud (AWS, Azure, GCP, Kubernetes, etc.).
 menu:
   intro:
