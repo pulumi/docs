@@ -45,6 +45,8 @@ jobs:
             echo 'NEW_COMMITS<<EOF' >> $GITHUB_ENV
             node scripts/get-module-diff-details.js >> $GITHUB_ENV
             echo 'EOF' >> $GITHUB_ENV
+        env:
+          GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
 
       - name: Create a pull request
         uses: peter-evans/create-pull-request@v3
