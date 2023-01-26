@@ -88,7 +88,7 @@ import pulumi_awsx as awsx
 
 vpc = awsx.ec2.DefaultVpc("default-vpc")
 
-pulumi.export("vpc_id", vpc.vpc_id)
+pulumi.export("vpcId", vpc.vpc_id)
 ```
 
 {{% /choosable %}}
@@ -189,7 +189,7 @@ import pulumi_awsx as awsx
 
 vpc = awsx.ec2.Vpc("custom")
 
-pulumi.export("vpc_id", vpc.vpc_id)
+pulumi.export("vpcId", vpc.vpc_id)
 pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
 pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
 ```
@@ -336,7 +336,7 @@ import pulumi_awsx as awsx
 
 vpc = awsx.ec2.Vpc("custom", cidr_block="172.16.8.0/24")
 
-pulumi.export("vpc_id", vpc.vpc_id)
+pulumi.export("vpcId", vpc.vpc_id)
 pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
 pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
 ```
@@ -426,7 +426,7 @@ import pulumi_awsx as awsx
 
 vpc = awsx.ec2.Vpc("custom", number_of_availability_zones=4)
 
-pulumi.export("vpc_id", vpc.vpc_id)
+pulumi.export("vpcId", vpc.vpc_id)
 pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
 pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
 ```
@@ -528,7 +528,7 @@ vpc = awsx.ec2.Vpc("custom", subnet_specs=[
   )
 ])
 
-pulumi.export("vpc_id", vpc.vpc_id)
+pulumi.export("vpcId", vpc.vpc_id)
 pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
 pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
 ```
@@ -643,7 +643,7 @@ import pulumi_awsx as awsx
 vpc = awsx.ec2.Vpc("custom", nat_gateways=awsx.ec2.NatGatewayConfigurationArgs(
     strategy=awsx.ec2.NatGatewayStrategy.SINGLE))
 
-pulumi.export("vpc_id", vpc.vpc_id)
+pulumi.export("vpcId", vpc.vpc_id)
 pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
 pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
 ```
@@ -787,7 +787,7 @@ allow_tls = aws.ec2.SecurityGroup("allowTls",
                                     cidr_blocks=["0.0.0.0/0"],
                                   )])
 
-pulumi.export("vpc_id", vpc.vpc_id)
+pulumi.export("vpcId", vpc.vpc_id)
 pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
 pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
 ```
@@ -941,7 +941,7 @@ server = aws.ec2.Instance("webserver-www",
                           ami=ami.id,
                           subnet_id=vpc.public_subnet_ids.apply(lambda id: id[0]))
 
-pulumi.export("vpc_id", vpc.vpc_id)
+pulumi.export("vpcId", vpc.vpc_id)
 pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
 pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
 ```
