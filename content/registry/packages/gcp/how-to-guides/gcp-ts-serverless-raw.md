@@ -1,8 +1,8 @@
 ---
-title: "Google Cloud Functions in Python and Go Deployed with TypeScript | TypeScript"
-h1: "Google Cloud Functions in Python and Go Deployed with TypeScript"
-linktitle: "Google Cloud Functions in Python and Go Deployed with TypeScript"
-meta_desc: "Google Cloud Functions in Python and Go Deployed with TypeScript How-to Guide using TypeScript"
+title: "Google Cloud Functions in Python, Go, and TypeScript Deployed with TypeScript | TypeScript"
+h1: "Google Cloud Functions in Python, Go, and TypeScript Deployed with TypeScript"
+linktitle: "Google Cloud Functions in Python, Go, and TypeScript Deployed with TypeScript"
+meta_desc: "Google Cloud Functions in Python, Go, and TypeScript Deployed with TypeScript How-to Guide using TypeScript"
 no_edit_this_page: true
 cloud: gcp
 language: ts
@@ -22,7 +22,7 @@ layout: how-to-guide
 </p>
 
 
-This example deploys two Google Cloud Functions. "Hello World" functions are implemented in Python and Go. Pulumi program is implemented in TypeScript.
+This example deploys three Google Cloud Functions. "Hello World" functions are implemented in Python, Go, and TypeScript. Pulumi program is implemented in TypeScript.
 
 ```bash
 # Create and configure a new stack
@@ -48,8 +48,15 @@ $ curl $(pulumi stack output pythonEndpoint)
 "Hello World!"
 $ curl $(pulumi stack output goEndpoint)
 "Hello World!"
+$ curl $(pulumi stack output tsEndpoint)
+"Hello World!"
 
 # Remove the app
 $ pulumi destroy
 ```
+
+## TypeScript Notes
+
+In the `typescriptfunc` folder you'll notice more than a function. Some configuration is needed to inform GCP how to build TypeScript for the Node.js runtime environment. See [this example from Google for more details](https://github.com/GoogleCloudPlatform/functions-framework-nodejs/blob/master/docs/typescript.md).
+
 
