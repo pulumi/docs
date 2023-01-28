@@ -73,6 +73,8 @@ echo "Running tests..."
 
 echo "Running browser tests on $s3_website_url..."
 
+# Retry test on failure since it is a bit flaky sometimes when running the browser tests
+# immediately after the site is deployed to the bucket and may not available right away.
 MAX_RETRIES=3
 RETRY_COUNT=0
 while true; do
