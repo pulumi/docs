@@ -72,7 +72,25 @@ aws s3 cp "$build_dir/latest-version" "${destination_bucket_uri}/latest-version"
 echo "Running tests..."
 
 echo "Running browser tests on $s3_website_url..."
-./scripts/run-browser-tests.sh "$s3_website_url"
+
+MAX_RETRIES=3
+RETRY_COUNT=0
+while true; do
+    ./scripts/run-browser-tests.sh "$s3_website_url"
+    exit_code=$?
+    if [ $exit_code -ne 0 ]; then
+        RETRY_COUNT=$((RETRY_COUNT+1))
+        if [ $RETRY_COUNT -eq $MAX_RETRIES ]; then
+            echo "Error: Browser tests failed after 3 retries"
+            exit $exit_code
+        else
+            echo "Error: Retrying browser tests in 10 seconds..."
+            sleep 10
+        fi
+    else
+        break
+    fi
+done
 
 # At this point, we have a bucket that's suitable for deployment. As a result of this run,
 # we leave a file in the project root indicating the name of the bucket that was generated
