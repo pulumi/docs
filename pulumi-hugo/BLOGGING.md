@@ -22,7 +22,7 @@ proceed to the next section.
 
 1. Move onto a new branch for your blog post using `git checkout -b initials/your-blog-post` (replace initials with your initials, and replace your-blog-post with the name of your blog post).
 
-2. Resist the temptation to copy-and-tweak an existing post! Instead, run the following
+1. Resist the temptation to copy-and-tweak an existing post! Instead, run the following
 command into the terminal (at the root of the project). This will generate a new file,
 including all the required frontmatter parameters.
 
@@ -72,10 +72,10 @@ including all the required frontmatter parameters.
    - **Technology/scenario tags:** Similar to feature tags, but focused on user scenarios. Today, that means `cloud-engineering`, `cloud-native`, `containers`, `data-and-analytics`, `development-environment`, `github-actions`, `kubernetes`, `serverless`.
    - **Language tags:** Any post that is language/ecosystem specific should have one or more of `.net`, `go`, `javascript`, `python`, `typescript`.
 
-**Canonical link**
-If you are posting a blog that originated somewhere else (for example, a syndicated community post) you will want to add the setting `canonical_url` for the URL where the blog post originated.
+   **Canonical link**
+   If you are posting a blog that originated somewhere else (for example, a syndicated community post) you will want to add the setting `canonical_url` for the URL where the blog post originated.
 
-3. If you don't already have a [TOML](https://github.com/toml-lang/toml) file [in the `team` directory](https://github.com/pulumi/docs/tree/master/data/team/team) of the repo, create one now. For Pulumi employees, that file should look something like this:
+1. If you don't already have a [TOML](https://github.com/toml-lang/toml) file [in the `team` directory](https://github.com/pulumi/pulumi-hugo/tree/master/themes/default/data/team/team) of the repo, create one now. For Pulumi employees, that file should look something like this (your `id` can be any string, but we recommend `firstname-lastname`):
 
    ```
    id = "christian-nunciato"
@@ -101,7 +101,9 @@ If you are posting a blog that originated somewhere else (for example, a syndica
 
    The `social` section, and the items within it, are optional.
 
-   Once your team-member file's been created, update the new post's `authors` property to refer to your team member `id` string. If you're still running the development server, you should see the change reflected in the browser immediately.
+   Once your team-member file's been created, add your author image at [`themes/default/static/images/team`](https://github.com/pulumi/pulumi-hugo/tree/master/themes/default/static/images/team). The image should be a square JPG (400x400 max) named with your author `id` (e.g., `christian-nunciato.jpg`).
+
+   Update the new post's `authors` property to use your author `id`. If you're still running the development server, you should see the change reflected in the browser immediately.
 
 ## Write Your Post
 
