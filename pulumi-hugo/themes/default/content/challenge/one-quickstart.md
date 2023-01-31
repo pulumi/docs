@@ -260,4 +260,4 @@ pulumi preview --policy-pack policy --policy-pack-config swag.json
 
 Congratulations!. You've completed this Pulumi Challenge. If you'd like to tear down all of these resources, run `pulumi destroy -y`. Otherwise, have fun playing around with your new serverless application! Add whatever you like, or try one of the many other [Pulumi Architecture Templates](/templates/). Your swag will be in the mail shortly! Note that you'll only get one piece no matter how many times you submit. :)
 
-Wanna yell it from the rooftops? Write a blog or post a quick video about it? Let us know and we'll send you an extra, super secret piece of swag! Tag us on social media, or email us at [da@pulumi.com](mailto:da@pulumi.com).
+Wanna yell it from the rooftops? Write a blog or post a quick video about it, send us the URL, and we'll send you a super secret piece of swag! Tag us on social media or email us at [da@pulumi.com](mailto:da@pulumi.com).

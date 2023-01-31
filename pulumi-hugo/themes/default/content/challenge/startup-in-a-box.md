@@ -849,6 +849,6 @@ After adding this code, go ahead and run `pulumi up`. Depending on which cloud p
 
 Congratulations! You completed the first Pulumi Challenge. If you'd like to tear down all of these resources, run `pulumi destroy`. Otherwise, enjoy the new website!
 
-Wanna yell it from the rooftops? Write a blog or post a quick video about it? Let us know and we'll send you a super secret piece of swag!&ast; Tag us on social media, or email us at [da@pulumi.com](mailto:da@pulumi.com).
+Wanna yell it from the rooftops? Write a blog or post a quick video about it, send us the URL, and we'll send you a super secret piece of swag! Tag us on social media or email us at [da@pulumi.com](mailto:da@pulumi.com).
 
 &ast; Swag only available for U.S. shipping
