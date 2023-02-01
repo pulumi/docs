@@ -89,9 +89,9 @@ $ pulumi new aws-typescript --config="aws:region=us-west-2"
 
 ## Accessing Configuration from Code {#code}
 
-Configuration values can be retrieved using either {{< pulumi-config-get >}} or {{< pulumi-config-require >}}. Using {{< pulumi-config-get >}} will return {{< language-null >}} if the configuration value was not provided, and {{< pulumi-config-require >}} will raise an exception with a helpful error message to prevent the deployment from continuing until the variable has been set using the CLI.
+Configuration values can be retrieved for a given stack using either {{< pulumi-config-get >}} or {{< pulumi-config-require >}}. Using {{< pulumi-config-get >}} will return {{< language-null >}} if the configuration value was not provided, and {{< pulumi-config-require >}} will raise an exception with a helpful error message to prevent the deployment from continuing until the variable has been set using the CLI.
 
-The following example uses an empty constructor. If you are writing code that will be imported into a broader project, such as your own library of components, you should pass your library's name to the constructor. This string is used as a namespace for all configuration keys. Similarly, if you want to access the config of another library, such as the config for a standard library like `aws`, you should also pass the library's name to the constructor. The default constructor automatically uses the current project for that namespace.
+Configuration methods operate on a particular namespace, which by default is the name of the current project. Passing an empty constructor to {{< pulumi-config >}}, as in the following example, sets it up to read values set without an explicit namespace (e.g., `pulumi config set name Joe`):
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
@@ -181,6 +181,189 @@ config:
     default: 42
 outputs:
   stdout: Hello, ${name} -- I see your lucky number is ${lucky}!
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+To access a namespaced configuration value, such as one set for a provider library like `aws`, you must pass the library's name to the constructor. For example, to retrieve the configured value of `aws:region`:
+
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+let awsConfig = new pulumi.Config("aws");
+let awsRegion = awsConfig.require("region");
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+let awsConfig = new pulumi.Config("aws");
+let awsRegion = awsConfig.require("region");
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+aws_config = pulumi.Config("aws");
+aws_region = aws_config.require("region");
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+awsConfig := config.New(ctx, "aws")
+awsRegion := awsConfig.Require("region")
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var awsConfig = new Pulumi.Config("aws");
+var awsRegion = awsConfig.Require("region");
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var awsConfig = ctx.config("aws");
+var awsRegion = awsConfig.require("region");
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+variables:
+  awsRegion: ${aws:region}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+Similarly, if you are writing code that will be imported into a broader project, such as your own library of [Pulumi components](/docs/intro/concepts/resources/components/), you should instead pass your library's name to the {{< pulumi-config >}} constructor to limit the scope of the query to values prefixed with the name of your library:
+
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+class MyComponent extends pulumi.ComponentResource {
+    constructor(name: string, args = {}, opts: pulumi.ComponentResourceOptions = {}) {
+        super("mylib:index:MyComponent", name, args, opts);
+
+        // Read settings from the 'mylib' namespace (e.g., 'mylib:name').
+        const config = new pulumi.Config("mylib");
+        const name = config.require("name");
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language javascript %}}
+
+```javascript
+class MyComponent extends pulumi.ComponentResource {
+    constructor(name, args, opts) {
+        super("mylib:index:MyComponent", name, args, opts);
+
+        // Read settings from the 'mylib' namespace (e.g., 'mylib:name').
+        const config = new pulumi.Config("mylib");
+        const name = config.require("name");
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+class MyComponent(pulumi.ComponentResource):
+    def __init__(self, name, opts = None):
+        super().__init__("mylib:index:MyComponent", name, None, opts)
+
+        # Read settings from the 'mylib' namespace (e.g., 'mylib:name').
+        config = pulumi.Config("mylib")
+        name = config.require("name")
+
+        # ...
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+type MyComponent struct {
+    pulumi.ResourceState
+}
+
+func NewMyComponent(ctx *pulumi.Context, name string, opts ...pulumi.ResourceOption) (*MyComponent, error) {
+    myComponent := &MyComponent{}
+    err := ctx.RegisterComponentResource("mylib:index:MyComponent", name, myComponent, opts...)
+    if err != nil {
+        return nil, err
+    }
+
+    // Read settings from the 'mylib' namespace (e.g., 'mylib:name').
+    conf := config.New(ctx, "mylib")
+    name := conf.Require("name")
+
+    // ...
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+class MyComponent : Pulumi.ComponentResource
+{
+    public MyComponent(string name, ComponentResourceOptions opts)
+        : base("mylib:index:MyComponent", name, opts)
+    {
+
+        // Read settings from the 'mylib' namespace (e.g., 'mylib:name').
+        var config = new Pulumi.Config("mylib");
+        var name = config.Require("name");
+
+        // ...
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+import com.pulumi.resources.ComponentResource;
+import com.pulumi.resources.ComponentResourceOptions;
+
+class MyComponent extends ComponentResource {
+    public MyComponent(String name, ComponentResourceOptions opts) {
+        super("mylib:index:MyComponent", name, null, opts);
+
+        // Read settings from the 'mylib' namespace (e.g., 'mylib:name').
+        var config = ctx.config("mylib");
+        var name = config.require("name");
+
+        // ...
+    }
+}
 ```
 
 {{% /choosable %}}
