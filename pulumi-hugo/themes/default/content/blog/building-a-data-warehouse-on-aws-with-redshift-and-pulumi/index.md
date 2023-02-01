@@ -483,6 +483,6 @@ Instead, what you'll ultimately want is some process by which your data can be _
 
 The good news is that with the data warehouse up and running, you're well on your way already. The bad news is that Redshift alone won't finish the job for you. Redshift is just the destination --- the target of your ETL pipeline-to-be. The pipeline itself still needs to be written.
 
-So [in the _next_ post](/blog/building-a-data-warehouse-on-aws-with-redshift-and-pulumi/), we'll do that: We'll take what we've done here, add a few more components with Pulumi and [AWS Glue](https://aws.amazon.com/glue/), and wire it all up with a few magical lines of Python scripting.
+So [in the _next_ post](/blog/redshift-etl-with-pulumi-and-aws-glue/), we'll do that: We'll take what we've done here, add a few more components with Pulumi and [AWS Glue](https://aws.amazon.com/glue/), and wire it all up with a few magical lines of Python scripting.
 
 Until then, happy coding --- and stay tuned!
