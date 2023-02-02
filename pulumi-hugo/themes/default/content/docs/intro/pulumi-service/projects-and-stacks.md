@@ -304,8 +304,8 @@ Deleting a stack removes the stack entirely from the Pulumi Service, along with 
 To delete a stack:
 
 1. Navigate to **All stacks** and then a specific stack.
-1. Navigate to the stack's **Settings**.
-1. Follow the instructions in the _Danger Zone_.
+1. Navigate to the stack's **Settings** and then **Options**.
+1. If you have no resources in the stack use the **Delete stack** button, otherwise use the provided CLI commands.
 
 ## Related Blogs
 
