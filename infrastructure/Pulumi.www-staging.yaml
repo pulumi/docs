@@ -1,0 +1,10 @@
+config:
+  aws:region: us-west-2
+  www.pulumi.com:certificateArn: arn:aws:acm:us-east-1:372027080554:certificate/13fc6de7-4287-4c70-8afc-dd83bd9584f5
+  www.pulumi.com:addSecurityHeaders: "true"
+  www.pulumi.com:doEdgeRedirects: "true"
+  www.pulumi.com:originBucketNameOverride: "www-staging-pulumi"
+  www.pulumi.com:pathToOriginBucketMetadata: ../origin-bucket-metadata.json
+  www.pulumi.com:websiteDomain: www-staging.pulumi.com
+  www.pulumi.com:websiteLogsBucketName: www-staging.pulumi.com-logs
+  www.pulumi.com:makeFallbackBucket: "true"

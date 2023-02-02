@@ -14,7 +14,7 @@ const config = {
     // websiteLogsBucketName is the name of the S3 bucket used for storing access logs.
     websiteLogsBucketName: stackConfig.require("websiteLogsBucketName"),
     // ACM certificate for the target domain. Must be in the us-east-1 region.
-    certificateArn: stackConfig.require("certificateArn"),
+    // certificateArn: stackConfig.require("certificateArn"),
     // redirectDomain is the domain to use for any redirects.
     redirectDomain: stackConfig.get("redirectDomain") || undefined,
     // originBucketNameOverride is an optional value that can be used to manually pin the
@@ -171,15 +171,15 @@ const baseCacheBehavior = {
 
 // domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
 // domain name to be used to access the website must be listed here.
-const domainAliases = [];
+// const domainAliases = [];
 
 // websiteDomain is the A record for the website bucket associated with the website.
-domainAliases.push(config.websiteDomain);
+// domainAliases.push(config.websiteDomain);
 
 // redirectDomain is the domain to use for fully-qualified 301 redirects.
-if (config.redirectDomain) {
-     domainAliases.push(config.redirectDomain);
-}
+// if (config.redirectDomain) {
+//      domainAliases.push(config.redirectDomain);
+// }
 
 // distributionArgs configures the CloudFront distribution. Relevant documentation:
 // https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html
@@ -188,7 +188,7 @@ if (config.redirectDomain) {
 const distributionArgs: aws.cloudfront.DistributionArgs = {
     enabled: true,
 
-    aliases: domainAliases,
+    aliases: [],
 
     // We only specify one origin for this distribution: the S3 content bucket.
     origins: [
@@ -345,7 +345,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
 
     // CloudFront certs must be in us-east-1, just like API Gateway.
     viewerCertificate: {
-        acmCertificateArn: config.certificateArn,
+        cloudfrontDefaultCertificate: true,
+        // acmCertificateArn: config.certificateArn,
         sslSupportMethod: "sni-only",
         minimumProtocolVersion: "TLSv1.2_2018",
     },
@@ -390,32 +391,32 @@ function getDomainAndSubdomain(domain: string): { subdomain: string, parentDomai
     };
 }
 
-// Creates a new Route53 DNS record pointing the domain to the CloudFront distribution.
-async function createAliasRecord(
-        targetDomain: string, distribution: aws.cloudfront.Distribution): Promise<aws.route53.Record> {
+// // Creates a new Route53 DNS record pointing the domain to the CloudFront distribution.
+// async function createAliasRecord(
+//         targetDomain: string, distribution: aws.cloudfront.Distribution): Promise<aws.route53.Record> {
 
-    const domainParts = getDomainAndSubdomain(targetDomain);
-    const hostedZone = await aws.route53.getZone({ name: domainParts.parentDomain });
-    return new aws.route53.Record(
-        targetDomain,
-        {
-            name: domainParts.subdomain,
-            zoneId: hostedZone.zoneId,
-            type: "A",
-            aliases: [
-                {
-                    name: distribution.domainName,
-                    zoneId: distribution.hostedZoneId,
-                    evaluateTargetHealth: true,
-                },
-            ],
-        },
-        {
-            protect: true,
-        });
-}
+//     const domainParts = getDomainAndSubdomain(targetDomain);
+//     const hostedZone = await aws.route53.getZone({ name: domainParts.parentDomain });
+//     return new aws.route53.Record(
+//         targetDomain,
+//         {
+//             name: domainParts.subdomain,
+//             zoneId: hostedZone.zoneId,
+//             type: "A",
+//             aliases: [
+//                 {
+//                     name: distribution.domainName,
+//                     zoneId: distribution.hostedZoneId,
+//                     evaluateTargetHealth: true,
+//                 },
+//             ],
+//         },
+//         {
+//             protect: true,
+//         });
+// }
 
-[...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
+// [...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
 
 export const uploadsBucketName = uploadsBucket.bucket;
 export const originBucketWebsiteDomain = originBucket.websiteDomain;
