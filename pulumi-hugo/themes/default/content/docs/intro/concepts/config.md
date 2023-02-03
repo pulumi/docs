@@ -490,6 +490,72 @@ public static void stack(Context ctx) {
 
 {{< /chooser >}}
 
+## Project Level Configuration
+
+There are cases where configuration for more than one stack in a given project is the same. For example, `aws:region` may be the same across multiple or all stacks in a project. Project level configuration (also sometimes referred to as hieararchical configuration) allows setting configuration at the project level instead of having to repeat the configuration setting in each stack's configuration file.
+
+### Setting Project Level Configuration
+
+Project level configuration is defined inside the project folder's `Pulumi.yaml` file using one's favorite editor.
+
+{{% notes "info" %}}
+At this time, the `pulumi config set` command does not support project level configuration. Therefore the configuration values are entered directly in the `Pulumi.yaml` file. Also, project level configuration only supports clear text configuration. Support for [pulumi config](https://github.com/pulumi/pulumi/issues/12041) and [project-level secrets](https://github.com/pulumi/pulumi/issues/11549) and other features are planned.
+{{% /notes %}}
+
+Project level configuration supports both simple and structured configuraion as described in the sections above. However, structured config needs to include a `value` keyword. The following example shows what the project level configuration (inside `Pulumi.yaml`) looks like based on the examples shown above.
+
+```
+config:
+  aws:region: us-east-1
+  name: BroomeLLC
+  data:
+    value:
+      active: true
+      nums:
+      - 10
+      - 20
+      - 30
+```
+
+When project level configuration is set as such, the stacks will consume the project level configuration settings by default unless stack-specific configuration overrides the project-level settings.
+
+### Project and Stack Configuration Scope
+
+Stack level configuration using the same key supercedes the project level configuration for that key. For example, if, given the above project level configuration example, one had a `Pulumi.dev.yaml` file containing:
+
+```
+config:
+  aws:region: us-east-2
+  name: MopLLC
+```
+
+Then the `dev` stack would be deployed in `us-east-2` instead of `us-east-1` and the `name` configuration value would be `MopLLC` instead of `BroomeLLC` defined in the project configuration.
+
+### Strongly Typed Configuration
+
+The project level configuration can also be used to define type specifications for stack level configuration, including setting defaults. This enables commands like `pulumi preview` to throw an error if a stack level configuration value is not of the correct type.
+
+For example, given this in the `Pulumi.yaml` file:
+
+```
+config:
+    name:
+        type: string
+        description: Base name to use for resources.
+        default: BroomeLLC
+    subnets:
+        type: array
+        description: Array of subnets to create.
+        items:
+            type: string
+```
+
+The stacks will default to using `BroomeLLC` for the name configuration item. And the `pulumi` cli will throw an error if the stack configuration file contains a `name` property set to, say, an integer. Similarly, if the stack configuration file has a `subnets` property and it is not defined as an array of strings, the `pulumi` cli will throw an error.
+
+{{% notes "info" %}}
+At this time, configuration specifications are not supported for structured configuration.
+{{% /notes %}}
+
 ## Provider Configuration Options
 
 There are three ways to configure providers:
