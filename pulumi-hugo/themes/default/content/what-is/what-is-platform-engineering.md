@@ -1,11 +1,12 @@
 ---
-title: What is platform engineering?
+title: What is Platform Engineering? And why developers and companies want it
+allow_long_title: true
 meta_desc: |
     Understand what platform engineering is, along with the main benefits and importance
     for modern application development.
 
 type: what-is
-page_title: What is platform engineering?
+page_title: What is Platform Engineering? And why developers and companies want it
 
 customer_logos:
   title: Leading engineering organizations are building with Pulumi
