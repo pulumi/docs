@@ -33,9 +33,9 @@ jobs:
     needs: [all]
     steps:
       - name: Slack Notification
-        uses: rtCamp/action-slack-notify@v2
+        uses: sean1588/action-slack-notify@master
         env:
-          SLACK_CHANNEL: docs-ops
+          SLACK_CHANNEL: sean-ops-test
           SLACK_COLOR: "#F54242"
           SLACK_MESSAGE: "link checker failure in pulumi/docs repo :meow_sad:"
           SLACK_USERNAME: docsbot
