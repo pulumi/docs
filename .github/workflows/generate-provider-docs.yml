@@ -134,7 +134,7 @@ jobs:
     needs: [build-tfgen-provider-docs]
     steps:
       - name: Slack Notification
-        uses: rtCamp/action-slack-notify@v2
+        uses: docker://sholung/action-slack-notify:v2.3.0
         env:
           SLACK_CHANNEL: docs-ops
           SLACK_COLOR: "#F54242"
