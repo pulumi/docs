@@ -35,7 +35,7 @@ jobs:
     needs: [all]
     steps:
       - name: Slack Notification
-        uses: sean1588/action-slack-notify@v2.3.0
+        uses: docker://sholung/action-slack-notify:v2.3.0
         env:
           SLACK_CHANNEL: sean-ops-test
           SLACK_COLOR: "#F54242"
