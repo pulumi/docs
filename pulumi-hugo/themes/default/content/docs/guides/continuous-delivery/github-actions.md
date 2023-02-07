@@ -573,7 +573,7 @@ project directory. For example:
 
 {{% choosable language typescript %}}
 
-```diff
+```yaml
 name: Pulumi
 on:
   - pull_request
@@ -608,7 +608,7 @@ jobs:
 {{% /choosable %}}
 {{% choosable language python %}}
 
-```diff
+```yaml
 name: Pulumi
 on:
   - pull_request
@@ -645,7 +645,7 @@ jobs:
 {{% /choosable %}}
 {{% choosable language go %}}
 
-```diff
+```yaml
 name: Pulumi
 on:
   - pull_request
@@ -682,7 +682,7 @@ jobs:
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
-```diff
+```yaml
 name: Pulumi
 on:
   - pull_request
@@ -733,7 +733,7 @@ as follows:
 
 {{% choosable language typescript %}}
 
-```diff
+```yaml
 name: Pulumi
 on:
   - pull_request
@@ -771,7 +771,7 @@ jobs:
 {{% /choosable %}}
 {{% choosable language python %}}
 
-```diff
+```yaml
 name: Pulumi
 on:
   - pull_request
@@ -809,7 +809,7 @@ jobs:
 {{% /choosable %}}
 {{% choosable language go %}}
 
-```diff
+```yaml
 name: Pulumi
 on:
   - pull_request
@@ -847,7 +847,7 @@ jobs:
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
-```diff
+```yaml
 name: Pulumi
 on:
   - pull_request
