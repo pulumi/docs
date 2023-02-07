@@ -53,7 +53,38 @@ This bit of info is serious. If you missed it, bad things could happen.
 ## Paragraphs and Line Breaks
 
 * Keep paragraphs short, rarely use 4 or more sentences in a single paragraph.
-* When writing paragraphs, keep the entire paragraph on a single line and use "soft wrapping" in your IDE/editor to avoid a horizontal scroll. By keeping all content on a single line, PR reviewers will be able to use GitHub's suggestion feature, which allows the reviewer to directly suggest a change to the content and allows authors to directly incorporate the suggestion into their PR if desired. For details on GitHub's suggestion feature, see [Incorporating feedback in your pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request).
+
+* When writing paragraphs and long sentences,
+  use [semantic line breaks](https://sembr.org/) judiciously
+  to aid your peers in reviewing and editing the text.
+  Avoid writing really long lines,
+  and don't "reflow" paragraphs in your editor.
+
+    As a demonstration, consider the following three samples.
+
+    ```plain
+    This is a pargraph all on one line. This paragraph is easy to edit because you can suggest changes to the whole paragraph in one go. However, it's difficult to review because if any line or word in this sentence changes, the entire line is considered changed.
+
+    This pargraph is split across multiple lines, but it has been run through
+    the editor's reflow function. This makes it especially difficult to review
+    and edit because a change to any line can require the following lines to be
+    reflown. That's hard to suggest changes for during a code review.
+
+    This pargraph uses semantic line breaks.
+    Line breaks are introduced between sentences,
+    and where appropriate, even within sentences.
+    This makes it easy to review and edit individual sentences or clauses.
+    When something in a sentence changes,
+    the lines that follow it don't get touched.
+    ```
+
+    Historical note:
+    A large amount of our existing documentation puts paragraphs on one line
+    (the format used by the first of the samples above).
+    Don't rewrite entire files to follow this recommendation.
+    That's a lot of effort in editing and reviewing with questionable benefit.
+    Instead, fix paragraphs as you change them,
+    and over time our documentation will evolve to conform.
 
 ## Blockquotes
 
