@@ -11,7 +11,7 @@
             <h2>{{ .title }}</h2>
             <p class="text-left">{{ .description | markdownify }}</p>
             <div class="mt-8">
-                <a href="#registration" class="btn-secondary">Join the Preview</a>
+                <a href="/docs/intro/pulumi-service/deployments" class="btn-secondary">Get Started</a>
             </div>
         {{ end }}
     </section>
@@ -39,7 +39,7 @@
             <iframe src="{{ .Params.preview.youtube_url }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""></iframe>
         </div>
         <div class="mt-16">
-            <a href="#registration" class="btn-secondary">Join the Preview</a>
+            <a href="/docs/intro/pulumi-service/deployments/" class="btn-secondary">Get Started</a>
         </div>
     </section>
 
@@ -64,16 +64,6 @@
                     </div>
                 </div>
             {{ end }}
-        </div>
-    </section>
-
-    <section id="registration" class="max-w-5xl mx-auto text-center my-16 px-6">
-        <h4>Sign up for the preview</h4>
-        <div class="mb-8">Pulumi Deployments is available in preview. To get started, sign up below.</div>
-        <div>
-            <div id="webinarRegistrationForm" class="mt-10 md:mt-0 md:mx-8 bg-gray-200 rounded p-6 text-left pulumi-deployments">
-                <pulumi-hubspot-form form-id="{{ .Params.form.hubspot_form_id }}" go-to-webinar-key="{{ .Params.form.gotowebinar_key }}" />
-            </div>
         </div>
     </section>
 
