@@ -9,7 +9,7 @@ menu:
 ---
 
 {{% notes "info" %}}
-Pulumi Deployments is currently in preview. [Request access](/product/pulumi-deployments) to use this feature.
+Pulumi Deployments is currently in preview.
 
 Please post any bug reports or feature requests in the [Service Requests repo](https://github.com/pulumi/service-requests/issues/new/choose).
 {{% /notes %}}

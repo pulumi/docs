@@ -5,7 +5,7 @@ layout: pulumi-deployments
 meta_desc: Pulumi Deployments is a new feature that automates the execution of Pulumi programs on your behalf.
 
 overview:
-    title: Sign up for the Pulumi Deployments Preview
+    title: The fastest way to go from code to cloud
     description: |
         [Pulumi Deployments](/docs/intro/pulumi-service/deployments) is a new feature that automates the execution of your Pulumi programs in a secure, hosted environment. Deploy any stack with a click of a button, `git push`, or API call. Available in preview today.
 
