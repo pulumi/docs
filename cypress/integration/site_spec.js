@@ -6,7 +6,7 @@ describe("www.pulumi.com", () => {
             cy.visit("/");
         });
 
-        it("loads and applies CSS", () => {
+        it("loads and applies CSS", { retries: 3 }, () => {
             // Checking the computed background-color value validates that the CSS bundle
             // was properly loaded and applied.
             cy.get(".header-container")
@@ -14,7 +14,7 @@ describe("www.pulumi.com", () => {
                 .should("equal", "rgb(255, 255, 255)");
         });
 
-        it("loads and applies JavaScript", () => {
+        it("loads and applies JavaScript", { retries: 3 }, () => {
             // Checking the carousel validates that the JS bundle was loaded and applied
             // (excluding Stencil components, which are bundled separately).
             cy.get(".header-container")
