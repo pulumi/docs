@@ -6,6 +6,8 @@ menu:
   reference:
     name: Project File
     weight: 6
+aliases:
+  - /docs/reference/pulumi-yaml/
 ---
 
 The `Pulumi.yaml` project file specifies metadata about your project, such as the project name and language runtime for your project.
