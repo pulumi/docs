@@ -850,14 +850,14 @@ dep = Deployment('nginx-dep',
             'metadata': { 'labels': labels },
             'spec': { 'containers': [{ 'name': 'nginx', 'image': 'nginx' }] },
         },
-    }, __opts__=ResourceOptions(provider=render_provider)
+    }, opts=ResourceOptions(provider=render_provider)
 )
 svc = Service('nginx-svc',
     spec={
         'type': 'LoadBalancer',
         'selector': labels,
         'ports': [{'port': 80}],
-    }, __opts__=ResourceOptions(provider=render_provider)
+    }, opts=ResourceOptions(provider=render_provider)
 )
 ```
 

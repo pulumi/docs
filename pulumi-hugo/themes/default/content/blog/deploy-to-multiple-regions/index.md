@@ -111,7 +111,7 @@ const buck = new aws.s3.Bucket("my-bucket", {
 ```python
 buck = aws.s3.Bucket('my-bucket',
     # ...
-    __opts__=pulumi.ResourceOptions(provider=aws_west_2)
+    opts=pulumi.ResourceOptions(provider=aws_west_2)
 )
 ```
 
@@ -486,7 +486,7 @@ primary_db = aws.rds.Instance('primary',
     password=db_password.result,
     backup_retention_period=retention_period,
     skip_final_snapshot=True,
-    __opts__=pulumi.ResourceOptions(provider=us_provider)
+    opts=pulumi.ResourceOptions(provider=us_provider)
 )
 ```
 
@@ -587,7 +587,7 @@ secondary_db = aws.rds.Instance("secondary",
     replicate_source_db=primary_db.arn,
     backup_retention_period=retention_period,
     skip_final_snapshot=True,
-    __opts__=pulumi.ResourceOptions(provider=eu_provider)
+    opts=pulumi.ResourceOptions(provider=eu_provider)
 )
 ```
 

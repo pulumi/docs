@@ -184,7 +184,7 @@ useast1 = aws.Provider("useast1", region="us-east-1")
 cert = aws.acm.Certificate("cert",
     domain_name="foo.com",
     validation_method="EMAIL",
-    __opts__=pulumi.ResourceOptions(provider=useast1))
+    opts=pulumi.ResourceOptions(provider=useast1))
 
 # Create an ALB listener in the default region that references the ACM certificate created above.
 listener = aws.lb.Listener("listener",
@@ -351,8 +351,8 @@ let myResource = new MyResource("myResource", { providers: { aws: useast1, kuber
 ```python
 class MyResource(pulumi.ComponentResource):
     def __init__(self, name, opts):
-        instance = aws.ec2.Instance("instance", ..., __opts__=pulumi.ResourceOptions(parent=self))
-        pod = kubernetes.core.v1.Pod("pod", ..., __opts__=pulumi.ResourceOptions(parent=self))
+        instance = aws.ec2.Instance("instance", ..., opts=pulumi.ResourceOptions(parent=self))
+        pod = kubernetes.core.v1.Pod("pod", ..., opts=pulumi.ResourceOptions(parent=self))
 
 useast1 = aws.Provider("useast1", region="us-east-1")
 myk8s = kubernetes.Provider("myk8s", context="test-ci")
