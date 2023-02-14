@@ -1,9 +1,9 @@
 ---
 title: Virtual Machine on Google Cloud
 layout: template
-meta_desc: The Virtual Machine template makes it easy to deploy a virtual machine on Google Cloud with Pulumi and Google Compute Engine. 
+meta_desc: The Virtual Machine template makes it easy to deploy a virtual machine on Google Cloud with Pulumi and Google Compute Engine.
 meta_image: meta.png
-card_desc: Deploy a virtual machine on Google Cloud with Pulumi and Google Compute Engine. 
+card_desc: Deploy a virtual machine on Google Cloud with Pulumi and Google Compute Engine.
 template:
     prefix: vm-gcp
     dirname: my-virtual-machine
@@ -18,7 +18,7 @@ cloud:
   slug: gcp
 ---
 
-The Virtual Machine template creates an infrastructure as code project in your favorite language that deploys a virtul machine to Google Cloud. You can then use the virtual machine to build your own web application, backend service, or database. The architecture includes Compute Engine for the virtual machine and the virtual network. The template generates a complete Pulumi program, including a simple HTTP server, to give you a working project out of the box that you can customize easily and extend to suit your needs.
+The Virtual Machine template creates an infrastructure as code project in your favorite language that deploys a virtual machine to Google Cloud. You can then use the virtual machine to build your own web application, backend service, or database. The architecture includes Compute Engine for the virtual machine and the virtual network. The template generates a complete Pulumi program, including a simple HTTP server, to give you a working project out of the box that you can customize easily and extend to suit your needs.
 
 ![An architecture diagram of the Pulumi $CLOUD $ARCHITECTURE template](./architecture.png)
 

@@ -1,9 +1,9 @@
 ---
 title: Virtual Machine on Azure
 layout: template
-meta_desc: The Virtual Machine template makes it easy to deploy a virtual machine on Azure with Pulumi and Azure Virtual Machines. 
+meta_desc: The Virtual Machine template makes it easy to deploy a virtual machine on Azure with Pulumi and Azure Virtual Machines.
 meta_image: meta.png
-card_desc: Deploy a virtual machine on Azure with Pulumi and Azure Virtual Machines. 
+card_desc: Deploy a virtual machine on Azure with Pulumi and Azure Virtual Machines.
 template:
     prefix: vm-azure
     dirname: my-virtual-machine
@@ -18,7 +18,7 @@ cloud:
   slug: azure
 ---
 
-The Virtual Machine template creates an infrastructure as code project in your favorite language that deploys a virtul machine to Azure. You can then use the virtual machine to build your own web application, backend service, or database. The architecture includes Azure Virtual Machines for the virtual machine and Azure Virtual Network for the virtual network. The template generates a complete Pulumi program, including a simple HTTP server, to give you a working project out of the box that you can customize easily and extend to suit your needs.
+The Virtual Machine template creates an infrastructure as code project in your favorite language that deploys a virtual machine to Azure. You can then use the virtual machine to build your own web application, backend service, or database. The architecture includes Azure Virtual Machines for the virtual machine and Azure Virtual Network for the virtual network. The template generates a complete Pulumi program, including a simple HTTP server, to give you a working project out of the box that you can customize easily and extend to suit your needs.
 
 ![An architecture diagram of the Pulumi $CLOUD $ARCHITECTURE template](./architecture.png)
 
