@@ -1,5 +1,10 @@
 id = "tomas-jansson"
 name = "Tomas Jansson"
-title = "Software Architect"
+title = "Principal Software Engineer"
 company = "Elkjop Nordic"
 status = "guest"
+role = "puluminary"
+[social]
+github = "mastoj"
+twitter = "TomasJansson"
+linkedin = "TomasJansson"
