@@ -1,10 +1,10 @@
 {{ define "hero" }}
     <header class="page-hero">
         <div class="dot-background-container" style="background-color: #cff1fb">
-            <img class="mx-auto w-full" src="/images/kubecon/kubecon-hero-2023.png" />
+            <img class="mx-auto w-full md:h-full hidden md:block" src="/images/kubecon/kubecon-hero-2023.png" />
         </div>
         <div class="page-hero-title">
-            <h1 class="small-title w-1/3">
+            <h1 class="small-title w-2/3 md:w-1/3">
                 <span><span style="font-size: 2.5rem" data-text="{{ .Params.title }}">{{ .Params.title }}</span></span>
             </h1>
         </div>
