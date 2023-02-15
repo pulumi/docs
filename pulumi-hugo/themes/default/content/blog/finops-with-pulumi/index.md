@@ -16,7 +16,7 @@ meta_desc: FinOps must know. What is FinOps? Who is responsible, and what are th
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
+meta_image: FinOps automation policy check tag cloud resource label.png
 
 # At least one author is required. The values in this list correspond with the `id`
 # properties of the team member files at /data/team/team. Create a file for yourself
@@ -30,6 +30,7 @@ tags:
     - finops
     - policy-as-code
     - cloud-engineering
+    - automation-api
 
 # See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
@@ -91,13 +92,13 @@ Getting started with a FinOps usually falls to the resource owners or Cloud Engi
 
 Implementing Tag Policy is the best first action to take. Tags are the set of required cloud metadata tags for any resources provisioned by your organization.  While not every resource in every cloud may be tagged, most are. Getting into the practice early will help you maintain accountability for what you are running, demystify your cloud bills as they grow larger, and help update the application architecture or make cost-effective product decisions long-term.
 
-### A basic Tag Policy for FinOps will include:
+### A Basic Tag Policy for FinOps will include:
 
-**1. Owner** - the person responsible for this resource that you would contact if you had to (e.g., johndoe@pulumi.com)
-**2. Origin** - the pipeline, process, and/or system through which this came to be (e.g., ArgoCD, Jenkins, Pulumi)
-**3. Business Unit** - the team responsible typically maps to the cost center associated (e.g., Sales, Engineering)
-**4. Environment** - the teams/customers this deployment services (e.g., Dev, Staging, Production)
-**5. Application Component** - the part of the application that this resource serves (e.g., data pipeline, authentication, front end)*
+1. **Owner** - the person responsible for this resource that you would contact if you had to (e.g., johndoe@pulumi.com)
+2. **Origin** - the pipeline, process, and/or system through which this came to be (e.g., ArgoCD, Jenkins, Pulumi)
+3. **Business Unit** - the team responsible typically maps to the cost center associated (e.g., Sales, Engineering)
+4. **Environment** - the teams/customers this deployment services (e.g., Dev, Staging, Production)
+5. **Application Component** - the part of the application that this resource serves (e.g., data pipeline, authentication, front end)*
 
 You will now be able to report on and manage resources in those tag groups.  It’s advisable that you do not create too many required tags, or it will quickly get difficult to manage and it increases the likelihood of multiple tags applying, which reduces the insightfulness of the data.
 
