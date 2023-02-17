@@ -160,7 +160,7 @@ For best results, we suggest the following specs for the `meta_image`, largely b
 
 | Aspect Ratio | Recommended Size | Format | Background               |
 | ------------ | ---------------- | ------ | ------------------------ |
-| 2:1          | 1200×600         | PNG    | Opaque (No Transparency) |
+| 2:1          | 1200×628         | PNG    | Opaque (No Transparency) |
 
 Remember to replace the `meta_image` placeholder (or remove the property altogether and delete the placeholder `meta.png` file) before submitting your post.
 
