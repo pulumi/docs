@@ -14,7 +14,7 @@ aliases:
 - /docs/console/continuous-delivery/github-app/
 ---
 
-[Pulumi's GitHub app](https://github.com/apps/pulumi) displays the results of Pulumi stack update previews in pull requests and enables automatic stack deployments via [Pulumi Deployments](/docs/intro/pulumi-service/deployments/). Once installed and
+Pulumi's GitHub app displays the results of Pulumi stack update previews in pull requests and enables automatic stack deployments via [Pulumi Deployments](/docs/intro/pulumi-service/deployments/). Once installed and
 configured, it will show you any potential infrastructure changes on Pull Requests and commit checks. You can also configure `git push` to deploy workflows that update your stacks whenever a pull request is merged.
 
 ## Features
@@ -33,8 +33,6 @@ This provides even more detail about any resource changes, including the full up
 ![Results on GitHub Check](/images/docs/github-app/checks-detail.png)
 
 ## Installation and Configuration
-
-Follow the instructions to install the Pulumi GitHub App. While it can be installed via [GitHub](https://github.com/apps/pulumi), it is recommended to install it using the steps below to ensure everything is setup correctly.
 
 1. [Sign in to your Pulumi account.](https://app.pulumi.com/signin)
 2. Ensure you have selected the Pulumi organization you wish to use with the GitHub app by choosing it in the Organization drop-down.
