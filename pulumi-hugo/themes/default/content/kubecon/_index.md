@@ -1,6 +1,7 @@
 ---
 title: KubeCon + CloudNativeCon 2023
 meta_desc: Join Pulumi at Kubecon EU 2023 to learn about the latest developments in infrastructure as code, Kubernetes, observability, and cloud-native computing.
+meta_image: /images/kubecon/kubecon-meta.png
 type: page
 layout: kubecon
 
