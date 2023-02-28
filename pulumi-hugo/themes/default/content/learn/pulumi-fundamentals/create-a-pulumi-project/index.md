@@ -45,7 +45,7 @@ for you to create a new one by hand. The `pulumi new` command-line interface
 you need, so let's use that command. The `-y` flag answers "yes" to the prompts to
 create a default project:
 
-{{< chooser language "typescript,python,go,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -67,6 +67,14 @@ $ pulumi new python -y
 
 ```bash
 $ pulumi new go -y
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```bash
+$ pulumi new csharp -y
 ```
 
 {{% /choosable %}}
@@ -136,6 +144,26 @@ Created project 'my-first-app'
 
 Installing dependencies...
 # ...
+
+Finished installing dependencies
+
+Your new project is ready to go! ✨
+
+To perform an initial deployment, run 'pulumi up'
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```bash
+Created project 'my_first_app'
+
+Created stack 'dev'
+
+Installing dependencies...
+
+#...
 
 Finished installing dependencies
 

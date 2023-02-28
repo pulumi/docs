@@ -28,7 +28,7 @@ illustrate how stack outputs work, we will set some stack outputs manually:
 
 At the end of the {{< langfile >}} file of `my-first-app`, add the following line:
 
-{{< chooser language "typescript,python,go,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -41,7 +41,7 @@ export const url = pulumi.interpolate`http://localhost:${frontendPort}`;
 {{% choosable language python %}}
 
 ```python
-pulumi.export("url", f"http://localhost:{frontend_port}")
+pulumi.export("url", pulumi.format("http://localhost:{0}", frontend_port))
 ```
 
 {{% /choosable %}}
@@ -53,6 +53,19 @@ ctx.Export("url", pulumi.Sprintf("http://localhost:%v", frontendPort))
 ```
 
 Note that you'll want to insert this just before the last `return nil` statement.
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+return new Dictionary<string, object?>
+{
+    ["url"] = Output.Format($"http://localhost:{frontendPort}")
+};
+```
+
+Add this return statement to the end of the deployment function.
 
 {{% /choosable %}}
 
