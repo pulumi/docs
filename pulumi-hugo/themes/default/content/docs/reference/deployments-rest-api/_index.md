@@ -120,7 +120,7 @@ The source for your deployment request contains information about where the sour
 * **gitAuth** (Optional[object]): The authentication information for the git repo. If not specified, the repo is assumed to be public. Only one type is supported at a time.
   * **accessToken** (Secret): The access token to use
     * **sshAuth** (Optional[object]): SSHAuth is the authentication information for the git repo
-        * **privateKey** (Secret): The private key to use
+        * **sshPrivateKey** (Secret): The private key to use
         * **password** (Optional[Secret]): The password to use
     * **basicAuth** (Optional[object]): Basic auth information
         * **userName** (string): The username to use for authentication
@@ -173,7 +173,7 @@ Secret types should have the following structure:
     "repoDir": "aws-ts-s3-folder",
     "gitAuth": {
       "sshAuth": {
-        "privateKey": {
+        "sshPrivateKey": {
           "secret": "myPrivateKey"
         },
         "password": {
