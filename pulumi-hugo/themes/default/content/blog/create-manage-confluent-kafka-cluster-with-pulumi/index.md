@@ -148,7 +148,7 @@ const topic = new confluent.KafkaTopic("orders", {
 });
 ```
 
-Now that you have your topic, you need to create a consumer service account and give that account permissions to write to the topic, again using the credentials of your cluster admin account:
+Now that you have your topic, you need to create a producer service account and give that account permissions to write to the topic, again using the credentials of your cluster admin account:
 
 ```typescript
 const producerAccount = new confluent.ServiceAccount("producer", {
@@ -280,6 +280,10 @@ After a short wait, your cluster is up and running, and you are ready to test yo
 ## Testing
 
 To simulate your producer and consumer, you can use the [Confluent CLI](https://docs.confluent.io/confluent-cli/current/overview.html) to send messages to and read messages from your topic. You will use the values of your Pulumi stack outputs to formulate the command.
+
+{{% notes type="info" %}}
+Make sure you run the `confluent login` command first if you have not yet done so. At the time of writing, failure to do so will lead to misleading error messages from the Confluent CLI. The `confluent login` command will need to be run periodically as the token it generates expires after a few hours.
+{{% /notes %}}
 
 To simulate a message producer, you can send messages to your Kafka topic with the following command:
 
