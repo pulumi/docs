@@ -27,12 +27,12 @@ authors:
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - containers
-    - docker   
+    - docker
     - providers
 
 ---
 
-The Pulumi Docker Provider has been a top Pulumi provider since it launched in 2018. It can be used to provision any of the resources available in Docker, including managing containers, images, networks, volumes and more.  
+The Pulumi Docker Provider has been a top Pulumi provider since it launched in 2018. It can be used to provision any of the resources available in Docker, including managing containers, images, networks, volumes and more.
 
 One of the most heavily used features of this provider is the `docker.Image` resource, which enables Pulumi users to build and (optionally) push a local Docker context (like an application folder), to a registry as part of a Pulumi deployment. Today we are excited to announce a set of improvements to the Pulumi Docker Provider Image Resource driven by the feedback we have received from our community. This set of improvements includes:
 
@@ -62,9 +62,54 @@ We announced [Pulumi YAML and Pulumi Java](https://www.pulumi.com/blog/pulumi-un
 
 ### Migrating to 4.0
 
-```typescript
+The 4.0 version of the Docker provider consists of a significant overhaul of the Image Resource.
+These changes are mainly a result of either the way Pulumi generates language SDKs from a schematized resource, or of migrating to using the docker-go client library instead of invoking the Docker CLI.
+A few additional changes are about streamlining the resource properties available.
 
-...
+#### Inputs
+
+`LocalImageName`: Deprecated. Use `ImageName` in conjunction with `SkipPush:true`.
+
+`Build`: No longer a required input. No longer accepts a string for a custom build context. Use `Build.Context` instead.
+
+`ExtraOptions`: Deprecated. This was a way to pass arbitrary CLI flags to the Docker CLI.
+These are being implemented as top-level fields; currently available are:
+
+* `Build.Platform` - note that this can only take a single value currently, not a list of target platforms.
+* `Build.Target`
+* `Build.CacheFrom` - no longer accepts a boolean. Specify explicitly in images list:
+  * `Build.CacheFrom.Images` - replaces `Build.CacheFrom.Stages`, with updated functionality (a list of images to use as build cache)
+
+`Env`: Deprecated. This field’s use case was mainly for passing `DOCKER_BUILDKIT=1` to the CLI invocation of docker build. Use `Build.BuilderVersion` instead. You do not need to specify `Build.BuilderVersion` if you are running in Buildkit mode, which is the default.
+
+`ImageName`: Must be of fully qualified repository format, i.e. `registry.domain.abc/repositoryname/image`. The tag will be inferred as `:latest` unless otherwise specified. `Docker.io` will no longer be automatically inferred.
+
+#### Outputs
+
+`Id`: Deprecated. Use `ImageName` for a unique identifier.
+
+`Digest`: Deprecated as of an older version of pulumi-docker 3.6; this removes it entirely.
+
+#### Language specific package type updates
+
+**Dotnet:**
+
+```csharp
+Docker.ImageRegistry → Docker.Inputs.RegistryArgs
+Docker.DockerBuild → Docker.Inputs.DockerBuildArgs
+```
+
+**Go:**
+
+```go
+docker.ImageRegistry → docker.Registry
+```
+
+**Python:**
+
+```python
+DockerBuild → DockerBuildArgs
+ImageRegistry → RegistryArgs
 ```
 
 The Docker Provider Image Resource has everything you need to build, run, and push Docker images for any container registry. Try it out today!
