@@ -86,6 +86,10 @@ Visit the [examples repo](https://github.com/pulumi/automation-api-examples) for
 
 Like all of Pulumi, Automation API is available in multiple languages, so you can create applications that use it in TypeScript/JavaScript, Python, Go, and C#.
 
+{{% notes type="info" %}}
+Automation API supports cross-language implementations where it runs in a program of a different language than the Pulumi programs it manages.
+{{% /notes %}}
+
 |                                                        | Language                                                                | Status                                                            |
 | ------------------------------------------------------ | ----------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | <img src="/logos/tech/logo-ts.png" class="h-10" />     | [TypeScript](/docs/reference/pkg/nodejs/pulumi/pulumi/automation/) | Stable                                                            |
