@@ -1,5 +1,5 @@
 ---
-title: "Improve Image Build Efficiency with the Pulumi Docker Provider 4.0"
+title: "Pulumi Docker Provider 4.0: Build images up to 50x faster"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date this file was generated. Posts with future dates are visible in development,
@@ -11,7 +11,7 @@ date: 2023-02-28T09:00:00-05:00
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
 # Max length is 160 characters.
-meta_desc: Announcing the Pulumi Docker Provider 4.0, with significantly improved performance, Docker BuildKit support, and support for Pulumi Yaml and Pulumi Java programs.
+meta_desc: Create Docker images up to 50x faster with reduced need for rebuilds, Docker BuildKit, and caching improvements.
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
@@ -23,6 +23,7 @@ meta_image: meta.png
 # if you don't already have one.
 authors:
     - monica-rodriguez
+    - guinevere-saenger
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
@@ -45,9 +46,9 @@ One of the most heavily used features of this provider is the `docker.Image` res
 
 ### Significantly improved performance
 
-To improve the efficiency of the Docker Provider, we have changed the default behavior to rebuild only on context change. In addition, the `cacheFrom` option now offers the ability to use a registry as the image cache. These improvements reduce build time and overall runtime in your Pulumi program. This functionality and other improvements we are announcing today are a [Docker Provider highly requested feature](https://github.com/pulumi/pulumi-docker/issues/132) from our community.
+To improve the efficiency of the Docker Provider, we have changed the default behavior to rebuild only on context change. In addition, the `cacheFrom` option now offers the ability to use a registry as the image cache. By leveraging BuildKit and caching improvements, subsequent rebuilds may be up to 50x faster. This functionality and other improvements of the Docker Provider we are announcing today are [highly requested from our community](https://github.com/pulumi/pulumi-docker/issues/132).
 
-<!-- Add image/gif showing output during build, side by side comparison of old vs new?-->
+<!-- Add image/gif showing output during build, side by side comparison of old vs new?, or graph with speed comparison -->
 
 ### BuildKit support
 
@@ -57,7 +58,8 @@ The enhanced functionality and performance provided by the [Docker BuildKit](htt
 
 ## Rich Docker build logs inside Pulumi IaC
 
-<!-- Add para about docker build logs and a small gif of output -->
+Filtered docker logs during build and push will now be displayed in the Info box on pulumi up.
+<!-- Add more about docker build logs and a small gif of output -->
 
 ### Pulumi YAML and Pulumi Java support
 
