@@ -1,5 +1,5 @@
 ---
-title: "Pulumi Docker Provider 4.0: Build images up to 50x faster"
+title: "Pulumi Docker Provider 4.0: Build Images Up To 50x Faster"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date this file was generated. Posts with future dates are visible in development,
