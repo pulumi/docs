@@ -138,7 +138,7 @@ If there are members in a group that are not yet assigned to the Pulumi Service 
 
 ## Verifying Group Provisioning
 
-To confirm that the groups were provisioned correctly, sign in to the Pulumi Service and select the **Teams** tab where you should see the team listed.
+To confirm that the groups were provisioned correctly, sign in to the Pulumi Service and select **Settings** > **Teams** from the left navigation.
 
 ![SCIM teams.](/images/docs/guides/scim/console.png)
 
