@@ -66,8 +66,8 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Kat Cosgrove
-          role: Staff Developer Advocate, Pulumi
+        - name: Lee Briggs
+          role: Sr. Solutions Architect, Pulumi
 
 
     # A bullet point list containing what the user will learn during the webinar.
