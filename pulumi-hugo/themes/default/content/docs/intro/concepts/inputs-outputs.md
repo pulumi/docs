@@ -157,7 +157,7 @@ connectionString := pulumi.All(sqlServer.Name, database.Name).ApplyT(
     func (args []interface{}) (string, error) {
         server := args[0].(string)
         db := args[1].(string)
-        return fmt.Sprintf("Server=tcp:%s.database.windows.net;initial catalog=%s...", server, db)
+        return fmt.Sprintf("Server=tcp:%s.database.windows.net;initial catalog=%s...", server, db), nil
     },
 )
 ```
