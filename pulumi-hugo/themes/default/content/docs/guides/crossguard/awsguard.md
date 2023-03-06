@@ -113,6 +113,11 @@ Policy Packs can be tested on a user's local workstation to facilitate rapid dev
 
     If you don’t have a Pulumi program readily available, you can create a new project for testing by running `pulumi new aws-typescript` in an empty directory. This AWS example will create an S3 bucket, which is perfect for testing our Policy.
 
+    ```sh
+    $ mkdir test-program && cd test-program
+    $ pulumi new aws-typescript
+    ```
+
     In the Pulumi project's directory run:
 
     ```sh

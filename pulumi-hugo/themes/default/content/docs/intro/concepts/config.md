@@ -91,6 +91,8 @@ $ pulumi new aws-typescript --config="aws:region=us-west-2"
 
 Configuration values can be retrieved for a given stack using either {{< pulumi-config-get >}} or {{< pulumi-config-require >}}. Using {{< pulumi-config-get >}} will return {{< language-null >}} if the configuration value was not provided, and {{< pulumi-config-require >}} will raise an exception with a helpful error message to prevent the deployment from continuing until the variable has been set using the CLI.
 
+For potentially-secret config, use {{< pulumi-config-getsecret >}} or {{< pulumi-config-requiresecret >}}, which will return the config value as an `Output` which carries both the value and the secret-ness of the config value so that it will be encrypted whenver serialized (see [secrets](/docs/intro/concepts/secrets/) for more on managing secret values).
+
 Configuration methods operate on a particular namespace, which by default is the name of the current project. Passing an empty constructor to {{< pulumi-config >}}, as in the following example, sets it up to read values set without an explicit namespace (e.g., `pulumi config set name Joe`):
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
@@ -101,7 +103,7 @@ Configuration methods operate on a particular namespace, which by default is the
 let config = new pulumi.Config();
 let name = config.require("name");
 let lucky = config.getNumber("lucky") || 42;
-console.log(`Hello, ${name} -- I see your lucky number is ${lucky}!`);
+let secret = config.requireSecret("secret");
 ```
 
 {{% /choosable %}}
@@ -111,7 +113,7 @@ console.log(`Hello, ${name} -- I see your lucky number is ${lucky}!`);
 let config = new pulumi.Config();
 let name = config.require("name");
 let lucky = config.getNumber("lucky") || 42;
-console.log(`Hello, ${name} -- I see your lucky number is ${lucky}!`);
+let secret = config.requireSecret("secret");
 ```
 
 {{% /choosable %}}
@@ -121,7 +123,7 @@ console.log(`Hello, ${name} -- I see your lucky number is ${lucky}!`);
 config = pulumi.Config();
 name = config.require('name');
 lucky = config.get_int('lucky') or 42
-print(f'Hello, {name} -- I see your lucky number is {lucky}!')
+secret = config.require_secret('secret')
 ```
 
 {{% /choosable %}}
@@ -142,7 +144,7 @@ func main() {
         if err != nil {
             lucky = 42
         }
-        fmt.Printf("Hello, %v -- I see your lucky number is %v!\n", name, lucky)
+        secret := conf.RequireSecret("secret")
         return nil
     }
 }
@@ -155,7 +157,7 @@ func main() {
 var config = new Pulumi.Config();
 var name = config.Require("name");
 var lucky = config.GetInt32("lucky") ?? 42;
-Console.WriteLine($"Hello, {name} -- I see your lucky number is {lucky}!");
+var secret = config.RequireSecret("secret")
 ```
 
 {{% /choosable %}}
@@ -166,7 +168,7 @@ public static void stack(Context ctx) {
     var config = ctx.config();
     var name = config.require("name");
     var lucky = config.getInteger("lucky").orElse(42);
-    ctx.log().info(String.format("Hello, %s -- I see your lucky number is %s!", name, lucky));
+    var secret = config.requireSecret("secret");
 }
 ```
 
@@ -179,8 +181,9 @@ config:
     type: string
   lucky:
     default: 42
-outputs:
-  stdout: Hello, ${name} -- I see your lucky number is ${lucky}!
+  secret:
+    type: string
+    secret: true
 ```
 
 {{% /choosable %}}

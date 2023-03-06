@@ -158,7 +158,7 @@ class WebsiteStack : Stack
 {
     public WebsiteStack()
     {
-        var siteBucket = new Bucket("s3-website-bucket", new BucketArgs{});
+        var siteBucket = new BucketV2("s3-website-bucket", new BucketArgs{});
 
         var websiteConfig = new Aws.S3.BucketWebsiteConfigurationV2("website-config", new Aws.S3.BucketWebsiteConfigurationV2Args
         {
@@ -186,7 +186,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		siteBucket, err := s3.NewBucket(ctx, "s3-website-bucket", nil)
+		siteBucket, err := s3.NewBucketV2(ctx, "s3-website-bucket", nil)
 		if err != nil {
 			return err
 		}

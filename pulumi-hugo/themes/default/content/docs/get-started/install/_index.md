@@ -305,7 +305,7 @@ Subsequent updates can be installed in the usual way:
 <div class="accordion-item text-2xl py-3 border-t-2">
 <input type="checkbox" class="absolute hidden" id="windows-winget" />
 <label for="windows-winget" class="accordion-label">
-<h5 class="mt-2 w-2/3">Winget</h5>
+<h5 class="mt-2 w-2/3">Windows Package Manager (Winget)</h5>
 <div class="flex flex-grow justify-end items-center">
 <span class="closed-accordion">+</span>
 <span class="open-accordion hidden">-</span>
@@ -313,7 +313,7 @@ Subsequent updates can be installed in the usual way:
 </label>
 <div class="accordion-item-body-no-animation text-base">
 
-Install Pulumi using the [winget-cli](https://github.com/microsoft/winget-cli/) package manager. This is built-in on Windows 11 and later.
+Install Pulumi using the Windows Package Manager [`winget`](https://github.com/microsoft/winget-cli/) CLI. This is built-in on Windows 11 and later.
 
 ```powershell
 > winget install pulumi

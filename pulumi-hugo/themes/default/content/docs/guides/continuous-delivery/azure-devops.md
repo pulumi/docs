@@ -209,9 +209,12 @@ jobs:
       stack: 'acmeCorp/acmeProject/acme-ui'
       args: '--yes'
   - script: |
-      echo "##vso[task.setvariable variable=resourceGroupName;isOutput=true]$(pulumi stack output resourceGroupName)"
-      echo "##vso[task.setvariable variable=storageAccountName;isOutput=true]$(pulumi stack output storageAccountName)"
-      echo "##vso[task.setvariable variable=containerName;isOutput=true]$(pulumi stack output containerName)"
+      RESOURCE_GROUP_NAME=$(pulumi stack output resourceGroupName)
+      STORAGE_ACCOUNT_NAME=$(pulumi stack output storageAccountName)
+      CONTAINER_NAME=$(pulumi stack output containerName)
+      echo "##vso[task.setvariable variable=resourceGroupName;isOutput=true]$RESOURCE_GROUP_NAME"
+      echo "##vso[task.setvariable variable=storageAccountName;isOutput=true]$STORAGE_ACCOUNT_NAME"
+      echo "##vso[task.setvariable variable=containerName;isOutput=true]$CONTAINER_NAME"
     displayName: 'Set stack outputs as variables'
     name: 'pulumi'
 

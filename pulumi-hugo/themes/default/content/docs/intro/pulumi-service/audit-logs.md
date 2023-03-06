@@ -99,7 +99,7 @@ The JSON format is composed of the following fields:
 
 | Field | Description |
 |---------------------------|---------------------------|
-| timestamp | the RFC3339 timestamp of when the event was recorded |
+| timestamp | the Unix timestamp of when the event was recorded |
 | sourceIP | IP Address of the client originating the request to invoke this event |
 | event | the name of the event |
 | description | detailed description of the event that occurred |
@@ -115,7 +115,7 @@ Timestamp, Name, Login, Event, Description, SourceIP, RequireOrgAdmin, RequireSt
 
 | Field                     | Description                                                                                                             |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| Timestamp             | the RFC3339 timestamp of when the event was recorded                                                                   |
+| Timestamp             | the Unix timestamp of when the event was recorded                                                                   |
 | Name                  | name of the user invoking the event                                                                                     |
 | Login                 | username of the user invoking the event                                                                                 |
 | Event                 | the name of the event                                                                                                   |

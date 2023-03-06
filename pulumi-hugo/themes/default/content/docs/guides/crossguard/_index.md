@@ -25,8 +25,8 @@ Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be 
 | <img src="/logos/tech/logo-js.png" class="h-10" />     | [JavaScript](/docs/reference/pkg/nodejs/pulumi/policy/)      | Stable                                                                                                                                        |
 | <img src="/logos/tech/logo-python.png" class="h-10" /> | [Python](/docs/reference/pkg/python/pulumi_policy/)          | Stable                                                                                                                                        |
 | <img src="/logos/tech/logo-opa.png" class="h-10" />    | [Open Policy Agent (OPA)](/blog/opa-support-for-crossguard) | Preview                                                                                                                                       |
-| <img src="/logos/tech/dotnet.png" class="h-10" />      | .NET                                                                         | On the backlog; please add a 👍 reaction to this [GitHub issue](https://github.com/pulumi/pulumi-policy/issues/229) to register your interest |
-| <img src="/logos/tech/logo-golang.png" class="h-10" /> | Go                                                                           | On the backlog; please add a 👍 reaction to this [GitHub issue](https://github.com/pulumi/pulumi-policy/issues/230) to register your interest |
+| <img src="/logos/tech/dotnet.png" class="h-10" />      | .NET                                                                         | [Future](https://github.com/pulumi/pulumi-policy/issues/229) |
+| <img src="/logos/tech/logo-golang.png" class="h-10" /> | Go                                                                           | [Future](https://github.com/pulumi/pulumi-policy/issues/230) |
 
 ## Getting Started
 

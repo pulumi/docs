@@ -173,6 +173,11 @@ Now let's take a look at how to run the Policy Pack locally against a Pulumi pro
 
     If you don’t have a Pulumi program readily available, you can create a new program for testing by running `pulumi new aws-typescript` in an empty directory. This AWS example will create an S3 bucket, which is perfect for testing our Policy.
 
+    ```sh
+    $ mkdir test-program && cd test-program
+    $ pulumi new aws-typescript
+    ```
+
     In the Pulumi program's directory run:
 
     ```sh
@@ -223,6 +228,11 @@ Now let's take a look at how to run the Policy Pack locally against a Pulumi pro
 1. Use the `--policy-pack` flag with `pulumi preview` or `pulumi up` to specify the path to the directory containing your Policy Pack when previewing/updating a Pulumi program.
 
     If you don’t have a Pulumi program readily available, you can create a new program for testing by running `pulumi new aws-python` in an empty directory. This AWS example will create an S3 bucket, which is perfect for testing our Policy.
+
+    ```sh
+    $ mkdir test-program && cd test-program
+    $ pulumi new aws-python
+    ```
 
     In the Pulumi program's directory, run:
 
