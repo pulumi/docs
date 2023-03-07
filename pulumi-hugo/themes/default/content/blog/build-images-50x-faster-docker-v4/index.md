@@ -5,7 +5,7 @@ title: "Pulumi Docker Provider 4.0: Build Images Up To 50x Faster"
 # the date this file was generated. Posts with future dates are visible in development,
 # but excluded from production builds. Use the time and timezone-offset portions of
 # of this value to schedule posts for publishing later.
-date: 2023-02-28T09:00:00-05:00
+date: 2023-03-08T09
 
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
@@ -114,7 +114,7 @@ These are being implemented as top-level fields; currently available are:
 
 #### Language specific package type updates
 
-{{< chooser language "typescript,python,csharp,go" >}}
+{{< chooser language "python,csharp,go" >}}
 
 {{% choosable language csharp %}}
 
