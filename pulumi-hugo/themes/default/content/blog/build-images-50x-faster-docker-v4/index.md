@@ -5,7 +5,7 @@ title: "Pulumi Docker Provider 4.0: Build Images Up To 50x Faster"
 # the date this file was generated. Posts with future dates are visible in development,
 # but excluded from production builds. Use the time and timezone-offset portions of
 # of this value to schedule posts for publishing later.
-date: 2023-03-08T09
+date: 2023-03-08
 
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
@@ -30,16 +30,19 @@ tags:
     - containers
     - docker
     - providers
+    - pulumi-releases
+    - features
+    - pulumi-news
 
 ---
 
-The Pulumi Docker Provider has been a top Pulumi provider since it launched in 2018. It can be used to provision any of the resources available in Docker, including managing containers, images, networks, volumes and more.
+The [Pulumi Docker Provider](/registry/packages/docker) has been a top Pulumi provider since it launched in 2018. It can be used to provision any of the resources available in Docker, including containers, images, networks, volumes and more.
 
-One of the most heavily used features of this provider is the `docker.Image` resource, which enables Pulumi users to build and (optionally) push a local Docker context (like an application folder), to a registry as part of a Pulumi deployment. Today we are excited to announce a set of improvements to the Pulumi Docker Provider Image Resource driven by the feedback we have received from our community. This set of improvements includes:
+One of the most heavily used features of this provider is the `docker.Image` resource, which enables Pulumi users to build and (optionally) push a local Docker context (like an application folder) to a registry as part of a Pulumi deployment. Today we are excited to announce a set of improvements to the `docker.Image` Resource driven by the feedback we have received from our community. This set of improvements includes:
 
 * Significantly improved performance (including reduced need for rebuilds)
 * BuildKit support (including cross-platform builds)
-* Rich Docker build logs inside Pulumi IaC
+* Rich Docker build logs inside Pulumi IaC program output
 * Pulumi YAML and Pulumi Java support
 
 <!--more-->
@@ -52,7 +55,7 @@ To improve the efficiency of the Docker Provider, we have changed the default be
 
 ### BuildKit support
 
-The enhanced functionality and performance provided by the [Docker BuildKit](https://docs.docker.com/build/buildkit/) is now fully available to be leveraged in your Pulumi programs. BuildKit comes with functionality to improve your builds’ performance and the reusability of your Dockerfiles. Cross-platform builds are now supported, enabling image building for a target container runtime that is different from the build environment. BuildKit is now the default builder version mode. The V1 builder can still be accessed by specifying `Build.BuilderVersion=BuilderV1`.
+The enhanced functionality and performance provided by the [Docker BuildKit](https://docs.docker.com/build/buildkit/) can now be fully leveraged in your Pulumi programs. BuildKit is now the default builder version mode. The V1 builder can still be accessed by specifying `Build.BuilderVersion=BuilderV1`. BuildKit comes with functionality to improve your builds’ performance and the reusability of your Dockerfiles. Cross-platform builds are now supported, enabling image building for a target container runtime that is different from the build environment.
 
 ```typescript
 import * as docker from "@pulumi/docker";
@@ -73,7 +76,7 @@ const img = new docker.Image("my-image", {
 });
 ```
 
-## Rich Docker build logs inside Pulumi IaC
+## Rich Docker build logs inside Pulumi IaC program output
 
 Filtered docker logs during build and push will now be displayed in the Info box on pulumi up.
 [![asciicast](https://asciinema.org/a/I8Xzmfme56ZP4uD6uo2U4i2wr.svg)](https://asciinema.org/a/I8Xzmfme56ZP4uD6uo2U4i2wr)
@@ -82,11 +85,10 @@ Filtered docker logs during build and push will now be displayed in the Info box
 
 We announced [Pulumi YAML and Pulumi Java](https://www.pulumi.com/blog/pulumi-universal-iac/) last year and are excited to have extended support to the Pulumi Docker Provider. This release schematizes all Docker resources, which enables auto-support of all Pulumi languages. In addition, this means the Docker image resource can now participate in the CRUD (create, replace, update, delete) lifecycle.
 
-### Migrating to 4.0
+### Property changes in 4.0
 
 The 4.0 version of the Docker provider consists of a significant overhaul of the Image Resource.
-These changes are mainly a result of either the way Pulumi generates language SDKs from a schematized resource, or of migrating to using the docker-go client library instead of invoking the Docker CLI.
-A few additional changes are about streamlining the resource properties available.
+These changes are mainly a result of either the way Pulumi generates language SDKs from a schematized resource, or of using the docker-go client library instead of invoking the Docker CLI.
 
 #### Inputs
 
@@ -144,4 +146,6 @@ ImageRegistry → RegistryArgs
 
 {{< /chooser >}}
 
-The Docker Provider Image Resource has everything you need to build, run, and push Docker images for any container registry. Build your next image now!
+### Getting started
+
+The Docker Provider Image Resource has everything you need to build, run, and push Docker images for any container registry. Visit [Docker installation and configuration](https://www.pulumi.com/registry/packages/docker/installation-configuration/) page to start building your next image now!
