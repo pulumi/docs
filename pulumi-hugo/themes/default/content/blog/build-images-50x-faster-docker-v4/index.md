@@ -59,7 +59,7 @@ The enhanced functionality and performance provided by the [Docker BuildKit](htt
 ## Rich Docker build logs inside Pulumi IaC
 
 Filtered docker logs during build and push will now be displayed in the Info box on pulumi up.
-<!-- Add more about docker build logs and a small gif of output -->
+[![asciicast](https://asciinema.org/a/I8Xzmfme56ZP4uD6uo2U4i2wr.svg)](https://asciinema.org/a/I8Xzmfme56ZP4uD6uo2U4i2wr)
 
 ### Pulumi YAML and Pulumi Java support
 
@@ -97,24 +97,35 @@ These are being implemented as top-level fields; currently available are:
 
 #### Language specific package type updates
 
-**Dotnet:**
+{{< chooser language "typescript,python,csharp,go" >}}
+
+{{% choosable language csharp %}}
 
 ```csharp
 Docker.ImageRegistry → Docker.Inputs.RegistryArgs
 Docker.DockerBuild → Docker.Inputs.DockerBuildArgs
 ```
 
-**Go:**
+{{% /choosable %}}
+
+{{% choosable language go %}}
 
 ```go
 docker.ImageRegistry → docker.Registry
 ```
 
-**Python:**
+{{% /choosable %}}
+
+{{% choosable language python %}}
 
 ```python
 DockerBuild → DockerBuildArgs
 ImageRegistry → RegistryArgs
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+{{< /chooser >}}
 
 The Docker Provider Image Resource has everything you need to build, run, and push Docker images for any container registry. Build your next image now!
