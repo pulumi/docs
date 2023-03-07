@@ -126,6 +126,5 @@ ImageRegistry → RegistryArgs
 {{% /choosable %}}
 
 {{< /chooser >}}
-{{< /chooser >}}
 
 The Docker Provider Image Resource has everything you need to build, run, and push Docker images for any container registry. Build your next image now!
