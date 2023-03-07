@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pulumi Terraform &mdash; Pulumi  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <title>Pulumi Terraform &mdash; Pulumi  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -25,14 +27,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> Pulumi
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Pulumi
           </a>
               <div class="version">
                 0.16
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -60,7 +66,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Pulumi Terraform</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/providers/pulumi_terraform.rst.txt" rel="nofollow"> View page source</a>
@@ -72,7 +78,7 @@
            <div itemprop="articleBody">
              
   <section id="pulumi-terraform">
-<h1>Pulumi Terraform<a class="headerlink" href="#pulumi-terraform" title="Permalink to this headline">¶</a></h1>
+<h1>Pulumi Terraform</h1>
 <blockquote>
 <div><p>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-terraform">Terraform Provider</a> distributed under
 <a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
@@ -81,7 +87,31 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="pulumi_terraform/state.html">state</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pulumi_terraform/state.html">state</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_terraform/state.html#pulumi_terraform.state.Any"><code class="docutils literal notranslate"><span class="pre">Any</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_terraform/state.html#pulumi_terraform.state.ArtifactoryBackendArgs"><code class="docutils literal notranslate"><span class="pre">ArtifactoryBackendArgs</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_terraform/state.html#pulumi_terraform.state.AzureRMBackendArgs"><code class="docutils literal notranslate"><span class="pre">AzureRMBackendArgs</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_terraform/state.html#pulumi_terraform.state.ConsulBackendArgs"><code class="docutils literal notranslate"><span class="pre">ConsulBackendArgs</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_terraform/state.html#pulumi_terraform.state.EtcdV2BackendArgs"><code class="docutils literal notranslate"><span class="pre">EtcdV2BackendArgs</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_terraform/state.html#pulumi_terraform.state.EtcdV3BackendArgs"><code class="docutils literal notranslate"><span class="pre">EtcdV3BackendArgs</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_terraform/state.html#pulumi_terraform.state.GcsBackendArgs"><code class="docutils literal notranslate"><span class="pre">GcsBackendArgs</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_terraform/state.html#pulumi_terraform.state.HttpBackendArgs"><code class="docutils literal notranslate"><span class="pre">HttpBackendArgs</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_terraform/state.html#pulumi_terraform.state.LocalBackendArgs"><code class="docutils literal notranslate"><span class="pre">LocalBackendArgs</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_terraform/state.html#pulumi_terraform.state.MantaBackendArgs"><code class="docutils literal notranslate"><span class="pre">MantaBackendArgs</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_terraform/state.html#pulumi_terraform.state.OssBackendArgs"><code class="docutils literal notranslate"><span class="pre">OssBackendArgs</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_terraform/state.html#pulumi_terraform.state.PostgresBackendArgs"><code class="docutils literal notranslate"><span class="pre">PostgresBackendArgs</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_terraform/state.html#pulumi_terraform.state.RemoteBackendArgs"><code class="docutils literal notranslate"><span class="pre">RemoteBackendArgs</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_terraform/state.html#pulumi_terraform.state.RemoteStateReference"><code class="docutils literal notranslate"><span class="pre">RemoteStateReference</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_terraform/state.html#pulumi_terraform.state.RemoteStateReference.outputs"><code class="docutils literal notranslate"><span class="pre">RemoteStateReference.outputs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_terraform/state.html#pulumi_terraform.state.RemoteStateReference.get_output"><code class="docutils literal notranslate"><span class="pre">RemoteStateReference.get_output()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_terraform/state.html#pulumi_terraform.state.RemoteStateReference.translate_output_property"><code class="docutils literal notranslate"><span class="pre">RemoteStateReference.translate_output_property()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulumi_terraform/state.html#pulumi_terraform.state.RemoteStateReference.translate_input_property"><code class="docutils literal notranslate"><span class="pre">RemoteStateReference.translate_input_property()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_terraform/state.html#pulumi_terraform.state.S3BackendArgs"><code class="docutils literal notranslate"><span class="pre">S3BackendArgs</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulumi_terraform/state.html#pulumi_terraform.state.SwiftBackendArgs"><code class="docutils literal notranslate"><span class="pre">SwiftBackendArgs</span></code></a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
