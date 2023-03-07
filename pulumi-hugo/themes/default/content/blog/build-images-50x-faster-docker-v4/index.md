@@ -52,9 +52,26 @@ To improve the efficiency of the Docker Provider, we have changed the default be
 
 ### BuildKit support
 
-The enhanced functionality and performance provided by the [Docker BuildKit](https://docs.docker.com/build/buildkit/) is now fully available to be leveraged in your Pulumi programs. BuildKit comes with functionality to improve your builds’ performance and the reusability of your Dockerfiles. Cross-platform builds are now supported, enabling image building for a target container runtime that is different from the build environment. BuildKit is now the default builder version mode. The V1 builder can still be accessed by specifying `Build.BuilderVersion=V1`.
+The enhanced functionality and performance provided by the [Docker BuildKit](https://docs.docker.com/build/buildkit/) is now fully available to be leveraged in your Pulumi programs. BuildKit comes with functionality to improve your builds’ performance and the reusability of your Dockerfiles. Cross-platform builds are now supported, enabling image building for a target container runtime that is different from the build environment. BuildKit is now the default builder version mode. The V1 builder can still be accessed by specifying `Build.BuilderVersion=BuilderV1`.
 
-<!-- Add image or code snippet for buildkit options or cross platform builds-->
+```typescript
+import * as docker from "@pulumi/docker";
+const img = new docker.Image("my-image", {
+    imageName: "docker.io/pulumibot/demo-image:latest",
+    build: {
+        context: "app",
+        dockerfile: "Dockerfile",
+        args: {
+            "BUILDKIT_INLINE_CACHE": "1"
+        },
+        builderVersion: "BuilderBuildKit", // can also be set to `BuilderV1`
+        cacheFrom: {
+            images: ["docker.io/pulumibot/demo-image:cache-base"]
+        },
+        platform: "linux/amd64",
+    }
+});
+```
 
 ## Rich Docker build logs inside Pulumi IaC
 
