@@ -85,66 +85,15 @@ Filtered docker logs during build and push will now be displayed in the Info box
 
 We announced [Pulumi YAML and Pulumi Java](https://www.pulumi.com/blog/pulumi-universal-iac/) last year and are excited to have extended support to the Pulumi Docker Provider. This release schematizes all Docker resources, which enables auto-support of all Pulumi languages. In addition, this means the Docker image resource can now participate in the CRUD (create, replace, update, delete) lifecycle.
 
-### Property changes in 4.0
+### Migrating to 4.0
 
 The 4.0 version of the Docker provider consists of a significant overhaul of the Image Resource.
-These changes are mainly a result of either the way Pulumi generates language SDKs from a schematized resource, or of using the docker-go client library instead of invoking the Docker CLI.
+As a result there are some breaking changes to the behavior of the Image resource and supporting types, as well as some minor name changes.
 
-#### Inputs
+Happily, since the Image resource does not manage any backend state, migrating to this version does not need any resource imports or stack updates.
+For most use cases, migrating should be as straightforward as updating your `pulumi-docker` version to 4.0.0 and adjusting your code to reflect the updated types.
 
-`LocalImageName`: Deprecated. Use `ImageName` in conjunction with `SkipPush:true`.
-
-`Build`: No longer a required input. No longer accepts a string for a custom build context. Use `Build.Context` instead.
-
-`ExtraOptions`: Deprecated. This was a way to pass arbitrary CLI flags to the Docker CLI.
-These are being implemented as top-level fields; currently available are:
-
-* `Build.Platform` - note that this can only take a single value currently, not a list of target platforms.
-* `Build.Target`
-* `Build.CacheFrom` - no longer accepts a boolean. Specify explicitly in images list:
-  * `Build.CacheFrom.Images` - replaces `Build.CacheFrom.Stages`, with updated functionality (a list of images to use as build cache)
-
-`Env`: Deprecated. This field’s use case was mainly for passing `DOCKER_BUILDKIT=1` to the CLI invocation of docker build. Use `Build.BuilderVersion` instead. You do not need to specify `Build.BuilderVersion` if you are running in Buildkit mode, which is the default.
-
-`ImageName`: Must be of fully qualified repository format, i.e. `registry.domain.abc/repositoryname/image`. The tag will be inferred as `:latest` unless otherwise specified. `Docker.io` will no longer be automatically inferred.
-
-#### Outputs
-
-`Id`: Deprecated. Use `ImageName` for a unique identifier.
-
-`Digest`: Deprecated as of an older version of pulumi-docker 3.6; this removes it entirely.
-
-#### Language specific package type updates
-
-{{< chooser language "python,csharp,go" >}}
-
-{{% choosable language csharp %}}
-
-```csharp
-Docker.ImageRegistry → Docker.Inputs.RegistryArgs
-Docker.DockerBuild → Docker.Inputs.DockerBuildArgs
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```go
-docker.ImageRegistry → docker.Registry
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```python
-DockerBuild → DockerBuildArgs
-ImageRegistry → RegistryArgs
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
+Please find the detailed migration guide, in the [release notes for v4.0.0](https://github.com/pulumi/pulumi-docker/releases/tag/v4.0.0).
 
 ### Getting started
 
