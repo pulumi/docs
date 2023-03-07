@@ -244,9 +244,13 @@
             <ul class="list-none block p-0 inline-flex flex-wrap justify-center">
                 {{ range first 8 (where $.Site.Data.awards.awards "featured" true) }}
                     <li class="mx-4 bg-white">
-                        <a data-track="award-{{ .url | urlize }}" href="{{ .url }}">
+                        {{ if .url }}
+                            <a data-track="award-{{ .url | urlize }}" href="{{ .url }}">
+                                <img class="inline-block w-32 rounded p-2 border-2 border-gray-300" src="{{ .img }}" title="{{ .title }}" />
+                            </a>
+                        {{ else }}
                             <img class="inline-block w-32 rounded p-2 border-2 border-gray-300" src="{{ .img }}" title="{{ .title }}" />
-                        </a>
+                        {{ end }}
                     </li>
                 {{ end }}
             </ul>

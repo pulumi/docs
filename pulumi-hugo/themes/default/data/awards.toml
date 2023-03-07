@@ -2,7 +2,6 @@
 title = "Best Innovation in Coding Tools, 2022"
 featured = true
 img = "/logos/press/awards/devies-2022.png"
-url = "https://www.developerweek.com/awards/"
 
 [[awards]]
 title = "Top Open Source Tech Startups 2021"
@@ -50,7 +49,6 @@ url = "https://www.crn.com/slide-shows/cloud/the-10-hottest-kubernetes-startups-
 title = "Gartner Cool Vendor 2020"
 featured = true
 img = "/logos/press/awards/gartner-cool-vendor.png"
-url = "https://www.gartner.com/doc/reprints?id=1-1Z160QCQ&ct=200514&st=sb"
 
 [[awards]]
 title = "IDC Innovator 2020"
