@@ -131,6 +131,17 @@ github://${github api host}/{organization}[/{repository}]
 
 For example the [Pulumiverse Astra](https://github.com/pulumiverse/pulumi-astra) package would specify `github://api.github.com/pulumiverse`.
 
+### Support for Gitlab releases
+
+Since [release 3.56.0](https://github.com/pulumi/pulumi/releases/tag/v3.56.0), Pulumi understands a special form of `pluginDownloadURL` to download plugins via Gitlab releases
+
+```
+gitlab://${gitlab api host}/{<project_id>}
+```
+
+- `gitlab api host`: the address of a Gitlab API, for Gitlab SaaS this is `gitlab.com`
+- `project_id`: the Gitlab project ID to use. The project ID can be found right below the project name on the project page.
+
 ## Publish the documentation
 
 All package documentation on Pulumi Registry is published via the [`pulumi/registry` repository on GitHub](https://github.com/pulumi/registry). To publish your package on Pulumi Registry:
