@@ -97,4 +97,4 @@ Please find the detailed migration guide in the [release notes for v4.0.0](https
 
 ### Getting started
 
-The Pulumi Docker Provider has everything you need to build, run, and push Docker images for any container registry. Visit the [Docker installation and configuration](https://www.pulumi.com/registry/packages/docker/installation-configuration/) page to start building your next image now!
+The Pulumi Docker Provider has everything you need to build, run, and push Docker images for any container registry. Visit the [Pulumi Docker Provider installation and configuration](https://www.pulumi.com/registry/packages/docker/installation-configuration/) page to start building your next image now!
