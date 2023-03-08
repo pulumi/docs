@@ -42,7 +42,7 @@ Below, you can meet some of Pulumi's tech women - their experience, why they cho
 
 ### Kelsey Dirks, Customer Success Manager
 
-"When I entered university, I chose Electrical Engineering as my major. I soon learned coding was not my specialty, but I loved the people in the classes. It was clear both the professors and students were passionate about their craft. I knew that when I left university, I wanted to work with these types of people, but I had no idea in what capacity. Over the years, my experience led me to be a Customer Success Manager.
+"When I entered university I chose Electrical Engineering as my major. I soon learned coding was not my specialty and switched to Communications, but I loved the people in the classes. It was clear both the professors and students were passionate about their craft. I knew that when I left university, I wanted to work with these types of people, but I had no idea in what capacity. Over the years, my experience led me to be a Customer Success Manager.
 
 What I would tell my younger self is to not stress about trying to figure everything out right away. Every job will have its ups and downs, but when it comes to a career, trust that it will all work out. The biggest piece of advice I can give to women entering the tech field is don’t be afraid to lean on your female support system. If you aren’t able to advocate for yourself, your sisters in STEM will."
 
@@ -53,5 +53,9 @@ What I would tell my younger self is to not stress about trying to figure everyt
 ### Casey Huang, Software Engineer
 
 "To my younger self - At some point, you’ve heard people sell working in the tech industry by saying the hours are more flexible - you’re not chained to your desk 9 to 5, you can leave early as long as you get your work done. This is somewhat true, but you should know: there is always more work to do. Some of it is important enough to move the business needle. Some of it isn’t as important, but you just care a lot about it. It’ll be up to you to define your boundaries, and it will be up to you to defend them. But it’s okay; if your work environment is truly a good fit for you, they’ll follow your lead and support you. You can’t min/max life like you like to do in video games. What you’re doing is good enough. Don’t be so afraid of making mistakes. If anything, you’ll learn faster that way."
+
+### Guinevere Saenger, Software Engineer
+
+"Working in tech provides me with significant financial independence, professional respect, and a flexible work schedule. These are worthwhile for anyone to have, but especially so for women."
 
 We're always looking for more amazing talent to [join us in our community](/community) and as [part of the Pulumi team](/careers).
