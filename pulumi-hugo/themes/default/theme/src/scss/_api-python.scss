@@ -32,7 +32,9 @@ section[id="pulumi-python-sdk"] {
     // Don't show the header link - there's an anchorjs link on this header that does the
     // job just as well.
     h1[id$="\B6"],
-    h2[id$="\B6"] {
+    h2[id$="\B6"],
+    h1[id$="\F0C1"],
+    h2[id$="\F0C1"] {
         a.headerlink {
             @apply hidden;
         }
