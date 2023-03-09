@@ -296,7 +296,6 @@ bucketObject, err := storage.NewBucketObject(ctx, "index.html", &storage.BucketO
     ContentType: pulumi.String("text/html"),
     Source:      pulumi.NewFileAsset("index.html"),
 })
-bucketEndpoint := pulumi.Sprintf("http://storage.googleapis.com/%s/%s", bucket.Name, bucketObject.Name)
 if err != nil {
     return err
 }
@@ -305,6 +304,7 @@ if err != nil {
 Finally, at the end of the program file, export the resulting bucket’s endpoint URL so you can easily access it:
 
 ```go
+bucketEndpoint := pulumi.Sprintf("http://storage.googleapis.com/%s/%s", bucket.Name, bucketObject.Name)
 ctx.Export("bucketEndpoint", bucketEndpoint)
 ```
 
