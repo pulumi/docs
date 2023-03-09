@@ -45,6 +45,9 @@ export class EventSessionRegistrationModal {
     selectedSessions: string[] = [];
 
     @State()
+    skippedSessionSelection: boolean = false;
+
+    @State()
     processingFormSubmissions = false;
 
     @State()
@@ -61,8 +64,17 @@ export class EventSessionRegistrationModal {
         this.parsedEventSessions = JSON.parse(newEventSessions);
     }
 
+    private handleSkipSessionSelection(parsedEventSessions: EventSessionInfo[]) {
+        if (parsedEventSessions.length === 1) {
+            this.selectedSessions.push(parsedEventSessions[0].hubspot_form_id);
+            this.displayingContent = "form"
+            this.skippedSessionSelection = true;
+        }
+    }
+
     componentWillLoad() {
         this.handleEventSessionInfo(this.eventSessions);
+        this.handleSkipSessionSelection(this.parsedEventSessions);
     }
 
     componentDidLoad() {
@@ -114,8 +126,10 @@ export class EventSessionRegistrationModal {
     private handleCloseModal = (e: Event) => {
         e.preventDefault();
         this.isModalOpen = false;
-        this.displayingContent = "session-select";
-        this.selectedSessions = [];
+        if (!this.skippedSessionSelection) {
+            this.displayingContent = "session-select";
+            this.selectedSessions = [];
+        }
         document.querySelector("body").className = document.querySelector("body").className.replace("disable-scroll", "");
     }
 
@@ -222,7 +236,7 @@ export class EventSessionRegistrationModal {
         if (!this.processingFormSubmissions) {
             return(
                 <div class="registration-form-container">
-                    <a href="#" onClick={this.handleGotToSessionSelect}>&larr; Go back to select sessions.</a>
+                    { this.skippedSessionSelection ? null : <a href="#" onClick={this.handleGotToSessionSelect}>&larr; Go back to select sessions.</a>}
                     <div class="registration-form">
                         <pulumi-hubspot-form
                             formId={ this.selectedSessions[0] }

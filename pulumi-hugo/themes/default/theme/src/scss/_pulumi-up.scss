@@ -1,259 +1,70 @@
-// 2022 PulumiUP styles.
+// 2023 PulumiUP styles
 body.section-pulumi-up {
     &.disable-scroll {
         height: 100%;
         overflow: hidden;
     }
 
-    .pulumi-up-stars {
-        @apply absolute w-full h-full top-0 left-0;
-        z-index: -1;
-
-        background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 5px), radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px),
-            radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 5px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 5px);
-        background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-        background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    .banner-image {
+        background-image: url("/images/pulumiup-2023/banner-mid.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 740px;
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: white;
+    .banner-image-confirmation {
+        background-image: url("/images/pulumiup-2023/banner-thin.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 561px;
     }
 
-    .white-background {
-        @apply bg-white;
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p:not(.pulumiup-card-top-date),
-        a:not(.btn-primary) {
-            color: black;
-        }
+    .yellow-header-text {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 48px;
+        color: #F7BF2A;
+        text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
     }
 
-    .btn-pulumiup-card {
-        @apply px-3;
+    .banner-description p {
+        font-family: 'Inter';
+        font-size: 18px;
+        line-height: 27px;
 
-        background-color: #feda4a;
-        border-radius: 5px;
+        text-align: center;
+        color: #000000;
     }
 
-    .header-container .logo-container {
-        .normal-logo {
-            @apply hidden;
-        }
-
-        .dark-logo {
-            @apply block;
-        }
+    // handle mobile screen size banner
+    .below-banner-description {
+        display: none;
     }
 
-    background: radial-gradient(circle at left, #1f0b20 0, black 100%);
-
-    main,
-    .top-nav-bar,
-    .header-container,
-    .footer {
-        background-color: transparent;
-
-        a,
-        p,
-        .header-nav-item-drop-down {
-            color: white;
+    @media only screen and (max-width: 768px) {
+        // change the banner
+        .banner-image, .banner-image-confirmation {
+            background-image: none;
+            height: auto;
+            background-color: #7bdeff;
         }
 
-        .top-nav-banner-cta {
-            --tw-bg-opacity: 1;
-            background-color: rgb(47 48 50 / var(--tw-bg-opacity));
-
-            .top-nav-banner-cta-text {
-                color: white !important;
-            }
+        // move text off the banner
+        .banner-description {
+          display: none;
         }
 
-        .header-nav-drop-down-menu ul {
-            --tw-bg-opacity: 1;
-            background-color: rgb(47 48 50 / var(--tw-bg-opacity))  !important;
-        }
-
-        .header-nav-drop-down-menu a {
-            color: white !important;
-            i {
-                color: white !important;
-            }
-        }
-        .header-nav-drop-down-menu a:hover{
-            color: $brand-violet !important;
-        }
-
-        .list-sub-title {
-            color: white !important;
-        }
-
-        .mobile-menu-heading {
-            color: white !important;
-        }
-
-        [class*="mobile-menu-subitems-"] {
-            a {
-                color: white !important;
-                i {
-                    color: white !important;
-                }
-            }
+        .below-banner-description {
+            display: flex;
         }
     }
 
-    .top-nav-bar,
-    .header-container {
-        @apply bg-black;
-    }
-
-    .fade {
-        @apply absolute w-full top-0 left-0;
-
-        min-height: 10vh;
-        background-image: linear-gradient(0deg, transparent, black 75%);
-        z-index: 1;
-    }
-
-    .star-wars {
-        @apply relative text-justify container mx-auto;
-
-        justify-content: center;
-        height: 40vh;
-        font-family: "Pathway Gothic One", sans-serif;
-        font-size: 500%;
-        font-weight: 600;
-        line-height: 150%;
-        perspective: 400px;
-
-        h1,
-        p {
-            color: #feda4a;
-        }
-
-        .title-animation {
-            @apply text-center;
-
-            .title-part {
-                @apply my-0 leading-none;
-                font-family: "StarWars", "sans-serif";
-                letter-spacing: 6px;
-
-                @screen lg {
-                    animation: title-fade 46s ease-out;
-                }
-            }
-
-            .subtitle {
-                @apply mt-4 mb-0 text-xl;
-                color: white;
-                letter-spacing: 6px;
-
-                @screen lg {
-                    animation: move-byline 48s linear;
-                }
-            }
-        }
-
-        @keyframes title-fade {
-            0% {
-                opacity: 0;
-                transform: scale(1.5) translateY(-0.75em);
-            }
-            86% {
-                opacity: 0;
-                transform: scale(1.5) translateY(-0.75em);
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        @keyframes move-byline {
-            0% {
-                opacity: 0;
-            }
-            95% {
-                opacity: 0;
-            }
-            96% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-    }
-
-    .crawl {
-        @apply relative hidden;
-
-        top: 99999px;
-        transform-origin: 50% 100%;
-        animation: crawl 60s linear;
-
-        @screen lg {
-            @apply block;
-        }
-    }
-
-    .crawl > .title {
-        @apply text-center;
-
-        font-size: 90%;
-    }
-
-    .crawl > .title h1 {
-        margin: 0 0 100px;
-        text-transform: uppercase;
-    }
-
-    @keyframes crawl {
-        0% {
-            top: 200px;
-            transform: rotateX(20deg) translateZ(0);
-        }
-        100% {
-            top: -6000px;
-            transform: rotateX(25deg) translateZ(-2500px);
-        }
-    }
-
-    .pulumiup-overview-date-block {
-        @apply inline-block px-6;
-
-        background-color: #feda4a;
-        transform: skewX(-45deg);
-
-        p {
-            @apply text-lg font-bold py-2 px-8 m-0;
-
-            color: black;
-            transform: skewX(45deg);
-        }
-    }
-
-    .date-countdown-container {
-        margin-bottom: -4rem;
-    }
-
-    .date-countdown p {
-        color: black;
-        text-shadow: none;
+    .light-blue-background {
+        background-color: #7bdeff;
     }
 
     .why-attend {
@@ -269,6 +80,278 @@ body.section-pulumi-up {
         }
     }
 }
+
+// 2022 PulumiUP styles.
+// body.section-pulumi-up {
+//     &.disable-scroll {
+//         height: 100%;
+//         overflow: hidden;
+//     }
+
+//     .pulumi-up-stars {
+//         @apply absolute w-full h-full top-0 left-0;
+//         z-index: -1;
+
+//         background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 5px), radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px),
+//             radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 5px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 5px);
+//         background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+//         background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+//     }
+
+//     h1,
+//     h2,
+//     h3,
+//     h4,
+//     h5,
+//     h6 {
+//         color: white;
+//     }
+
+//     .white-background {
+//         @apply bg-white;
+
+//         h1,
+//         h2,
+//         h3,
+//         h4,
+//         h5,
+//         h6,
+//         p:not(.pulumiup-card-top-date),
+//         a:not(.btn-primary) {
+//             color: black;
+//         }
+//     }
+
+//     .btn-pulumiup-card {
+//         @apply px-3;
+
+//         background-color: #feda4a;
+//         border-radius: 5px;
+//     }
+
+//     .header-container .logo-container {
+//         .normal-logo {
+//             @apply hidden;
+//         }
+
+//         .dark-logo {
+//             @apply block;
+//         }
+//     }
+
+//     background: radial-gradient(circle at left, #1f0b20 0, black 100%);
+
+//     main,
+//     .top-nav-bar,
+//     .header-container,
+//     .footer {
+//         background-color: transparent;
+
+//         a,
+//         p,
+//         .header-nav-item-drop-down {
+//             color: white;
+//         }
+
+//         .top-nav-banner-cta {
+//             --tw-bg-opacity: 1;
+//             background-color: rgb(47 48 50 / var(--tw-bg-opacity));
+
+//             .top-nav-banner-cta-text {
+//                 color: white !important;
+//             }
+//         }
+
+//         .header-nav-drop-down-menu ul {
+//             --tw-bg-opacity: 1;
+//             background-color: rgb(47 48 50 / var(--tw-bg-opacity))  !important;
+//         }
+
+//         .header-nav-drop-down-menu a {
+//             color: white !important;
+//             i {
+//                 color: white !important;
+//             }
+//         }
+//         .header-nav-drop-down-menu a:hover{
+//             color: $brand-violet !important;
+//         }
+
+//         .list-sub-title {
+//             color: white !important;
+//         }
+
+//         .mobile-menu-heading {
+//             color: white !important;
+//         }
+
+//         [class*="mobile-menu-subitems-"] {
+//             a {
+//                 color: white !important;
+//                 i {
+//                     color: white !important;
+//                 }
+//             }
+//         }
+//     }
+
+//     .top-nav-bar,
+//     .header-container {
+//         @apply bg-black;
+//     }
+
+//     .fade {
+//         @apply absolute w-full top-0 left-0;
+
+//         min-height: 10vh;
+//         background-image: linear-gradient(0deg, transparent, black 75%);
+//         z-index: 1;
+//     }
+
+//     .star-wars {
+//         @apply relative text-justify container mx-auto;
+
+//         justify-content: center;
+//         height: 40vh;
+//         font-family: "Pathway Gothic One", sans-serif;
+//         font-size: 500%;
+//         font-weight: 600;
+//         line-height: 150%;
+//         perspective: 400px;
+
+//         h1,
+//         p {
+//             color: #feda4a;
+//         }
+
+//         .title-animation {
+//             @apply text-center;
+
+//             .title-part {
+//                 @apply my-0 leading-none;
+//                 font-family: "StarWars", "sans-serif";
+//                 letter-spacing: 6px;
+
+//                 @screen lg {
+//                     animation: title-fade 46s ease-out;
+//                 }
+//             }
+
+//             .subtitle {
+//                 @apply mt-4 mb-0 text-xl;
+//                 color: white;
+//                 letter-spacing: 6px;
+
+//                 @screen lg {
+//                     animation: move-byline 48s linear;
+//                 }
+//             }
+//         }
+
+//         @keyframes title-fade {
+//             0% {
+//                 opacity: 0;
+//                 transform: scale(1.5) translateY(-0.75em);
+//             }
+//             86% {
+//                 opacity: 0;
+//                 transform: scale(1.5) translateY(-0.75em);
+//             }
+//             90% {
+//                 opacity: 1;
+//             }
+//             100% {
+//                 opacity: 1;
+//                 transform: scale(1);
+//             }
+//         }
+
+//         @keyframes move-byline {
+//             0% {
+//                 opacity: 0;
+//             }
+//             95% {
+//                 opacity: 0;
+//             }
+//             96% {
+//                 opacity: 1;
+//             }
+//             100% {
+//                 opacity: 1;
+//             }
+//         }
+//     }
+
+//     .crawl {
+//         @apply relative hidden;
+
+//         top: 99999px;
+//         transform-origin: 50% 100%;
+//         animation: crawl 60s linear;
+
+//         @screen lg {
+//             @apply block;
+//         }
+//     }
+
+//     .crawl > .title {
+//         @apply text-center;
+
+//         font-size: 90%;
+//     }
+
+//     .crawl > .title h1 {
+//         margin: 0 0 100px;
+//         text-transform: uppercase;
+//     }
+
+//     @keyframes crawl {
+//         0% {
+//             top: 200px;
+//             transform: rotateX(20deg) translateZ(0);
+//         }
+//         100% {
+//             top: -6000px;
+//             transform: rotateX(25deg) translateZ(-2500px);
+//         }
+//     }
+
+//     .pulumiup-overview-date-block {
+//         @apply inline-block px-6;
+
+//         background-color: #fe4a53;
+//         transform: skewX(-45deg);
+
+//         p {
+//             @apply text-lg font-bold py-2 px-8 m-0;
+
+//             color: black;
+//             transform: skewX(45deg);
+//         }
+//     }
+
+//     .date-countdown-container {
+//         margin-bottom: -4rem;
+//     }
+
+//     .date-countdown p {
+//         color: black;
+//         text-shadow: none;
+//     }
+
+    // .why-attend {
+    //     div[class^="icon-"], div[class*=" icon-"] {
+    //         width: 3rem;
+    //         height: 3rem;
+    //         padding: 0.6rem;
+
+    //         svg {
+    //             width: 2rem;
+    //             height: 2rem;
+    //         }
+    //     }
+    // }
+// }
 
 // 2021 PulumiUP styles (can remove after page is updated).
 $blue400: theme("colors.blue.400");
