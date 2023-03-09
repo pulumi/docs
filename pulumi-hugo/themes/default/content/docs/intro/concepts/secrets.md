@@ -8,7 +8,7 @@ menu:
     weight: 7
 ---
 
-All resource input and output values are recorded as [`state`](/docs/intro/concepts/state), and are stored in the Pulumi Service, a file, or a pluggable provider that you choose. These raw values are usually just server names, configuration settings, and so on. In some cases, however, these values contain sensitive data, such as database passwords or service tokens.
+All resource input and output values are recorded as [`state`](/docs/intro/concepts/state), and are stored in the Pulumi Service, a file, or a pluggable provider that you choose. These raw values are usually just server names, configuration settings, etc. However, these values sometimes contain sensitive data, such as database passwords or service tokens. **Pulumi never sends authentication secrets or credentials to the Pulumi Service**.
 
 The Pulumi Service always transmits and stores entire state files securely; however, Pulumi also supports encrypting specific values as “secrets” for extra protection. Encryption ensures that these values never appear as plaintext in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by the Pulumi Service or you can use a [provider of your own choosing](#configuring-secrets-encryption) instead.
 
