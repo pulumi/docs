@@ -15,20 +15,14 @@ module:
       mounts:
         - source: content
           target: content
-        - source: static
-          target: static
-        - source: layouts
-          target: layouts
-        - source: data
-          target: data
-    - path: github.com/pulumi/theme
-      mounts:
         - source: assets
           target: assets
         - source: static
           target: static
         - source: layouts
           target: layouts
+        - source: data
+          target: data
 
 security:
   funcs:
