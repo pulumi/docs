@@ -412,7 +412,7 @@ s.SetConfig(ctx, "aws:region", auto.ConfigValue{Value: "us-west-2"})
 
 ```csharp
 await stack.Workspace.InstallPluginAsync("aws", "v4.0.0");
-await stack.SetConfigValueAsync("aws:region", new ConfigValue("us-west-2"));
+await stack.SetConfigAsync("aws:region", new ConfigValue("us-west-2"));
 ```
 
 {{% /choosable %}}
