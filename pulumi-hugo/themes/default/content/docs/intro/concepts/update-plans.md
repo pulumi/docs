@@ -1,5 +1,5 @@
 ---
-title: "Plans"
+title: "Update Plans"
 meta_desc: Learn about Pulumi update plans and how they can be used.
 menu:
   intro:
@@ -8,6 +8,7 @@ menu:
 
 aliases:
   - /updateplans/
+  - /docs/intro/concepts/plans/
 ---
 
 {{% notes type="warning" %}}
