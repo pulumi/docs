@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "PulumiUP: Infrastructure as Code Conference | June 15, 2023"
-meta_desc: "PulumiUP is a virtual conference with industry-recognized leaders, demos, and panel discussions about the future of IaC, Cloud Engineering & DevOps and Cloud."
+meta_desc: "PulumiUP is a virtual conference with industry-recognized leaders, demos, and panel discussions about the future of IaC, Platform Engineering & DevOps and Cloud"
 
 redirect_to: "/pulumi-up"
 
