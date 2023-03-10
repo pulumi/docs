@@ -11,6 +11,8 @@ tags:
     - best-practices
     - cloud-engineering
     - zephyr
+    - aws
+    - eks
 ---
 
 This is the first in a series of blog posts that explores how a fictional company---Zephyr Archaeotech Emporium---uses Pulumi to manage their online retail store. This post explores a couple common questions that users ask when working with Pulumi; specifically, where should I store my Pulumi code? And how do I support multiple environments with Pulumi? This post will provide some guidance and recommended practices around these topics, using Zephyr and their online store as the use case.<!--more-->
@@ -19,23 +21,15 @@ The ultimate goal of this series is to discuss recommended practices for using P
 
 Here are links to all the blog posts in the series (entries below that are not linked are planned but haven't yet been published---this will get updated as new posts are published):
 
-**IaC Recommended Practices: Code Organization and Stacks** (this post)
-
-IaC Recommended Practices: Developer Stacks and Git Branches
-
-IaC Recommended Practices: Local Testing with Pulumi
-
-IaC Recommended Practices: Structuring Pulumi Projects
-
-IaC Recommended Practices: Moving Infrastructure State Between Projects
-
-IaC Recommended Practices: Tying Stacks Together with Stack References
-
-IaC Recommended Practices: Evolving the Application
-
-IaC Recommended Practices: Adding Pulumi Deployments
-
-IaC Recommended Practices: Refactoring for Reuse
+* [**IaC Recommended Practices: Code Organization and Stacks**](/blog/iac-recommended-practices-code-organization-and-stacks/) (this post)
+* [IaC Recommended Practices: Developer Stacks and Git Branches](/blog/iac-recommended-practices-developer-stacks-git-branches/)
+* IaC Recommended Practices: Structuring Pulumi Projects
+* IaC Recommended Practices: Local Testing with Pulumi
+* IaC Recommended Practices: Moving Infrastructure State Between Projects
+* IaC Recommended Practices: Tying Stacks Together with Stack References
+* IaC Recommended Practices: Evolving the Application
+* IaC Recommended Practices: Adding Pulumi Deployments
+* IaC Recommended Practices: Refactoring for Reuse
 
 ## Setting up the scenario
 
