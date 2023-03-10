@@ -12,99 +12,203 @@ subheading: |
     and tame cloud complexity -- something we call Cloud Engineering.
 
 overview:
-    title: Unite developers, infrastructure teams, and security engineers
+    title: Infrastructure as Code for Engineers
     description: |
-        By using the industry's best languages, you can skip learning proprietary, limited domain-specific
-        languages, and enable your team to work more productively and better together.
+        Ship infrastructure faster with software engineering. Use Pulumi’s open source SDK in your favorite languages to provision infrastructure on any cloud, and securely increase infrastructure as code adoption across teams with Pulumi's enterprise-grade SaaS.
 
 key_features:
     title: Key features
     items:
-        - description: Build [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) in familiar languages
+        - title: "Author in any language, deploy to any cloud"
+          sub_title: "Pulumi Infrastructure as Code Engine"
+          description: 
+            Define infrastructure as code (IaC) in TypeScript/JavaScript, Python, Go, C#, Java, and YAML using your IDE and test frameworks for a fast inner dev loop. Deploy to [100+ providers](/registry/) like AWS, Azure, Google Cloud, and Kubernetes.
+          image: "/images/product/pulumi-iac-code.png"
+          button:
+            text: "Learn more about Pulumi SDK"
+            link: "/docs/reference/pulumi-sdk/"
           features:
-              - title: Languages you love
-                icon: code
-                icon_color: yellow
+              - title: IaC for every engineer
                 description: |
-                    Use TypeScript, JavaScript, Python, Go, .NET, Java, and YAML to model cloud infrastructure
-                    by leveraging the features of each language.
-
-              - title: Build on any cloud
-                icon: global
-                icon_color: yellow
+                   Author and share infrastructure code in standard languages that anyone can easily use.
+              - title: Author IaC faster
                 description: |
-                    Access the full breadth of services in AWS, Azure, GCP, and [60+ providers](/registry/) through
-                    a complete and consistent SDK interface.
+                    Use your IDE with interactive documentation, type checking, and statement completion.
+              - title: Write Policy as Code
+                description: |
+                    Write Policy as Code in programming languages to enforce best practices with [Crossguard](/crossguard/).
 
-              - title: Create reusable infrastructure
-                icon: puzzle
-                icon_color: yellow
-                description:
-                    Build and share cloud infrastructure with reusable [Pulumi Packages](/product/packages/), which
-                    encapsulate your cloud architectures and best practices.
-
-        - description: Deploy cloud infrastructure and applications together
+        - title: "Create infrastructure automation workflows"
+          sub_title: "Pulumi Automation API"
+          description: |
+            Create workflows that coordinate provisioning, previewing, refreshing, and destroying cloud resources by using the Pulumi engine as a library in your application code.
+          image: "/images/product/automation-api.png"
+          button:
+            text: "Learn more about Automation API"
+            link: "/automation/"
           features:
-              - title: Multiple deployment options
-                icon: rocketship
-                icon_color: salmon
+              - title: 10x productivity
                 description: |
-                    Deploy infrastructure interactively with a CLI, programmatically with Pulumi’s
-                    [Automation API](/automation/), or through your [CI/CD process](/docs/guides/continuous-delivery/).
-
-              - title: Deployments as Code
-                icon: gear
-                icon_color: salmon
+                   Engineers can manage 10x more cloud resources using Automation API compared to traditional CLI tools.
+              - title: Create custom CLIs
                 description: |
-                    Run deployments from your application code at runtime with [Automation API](/automation/). Create infrastructure APIs, custom platforms, and CLIs.
-
-              - title: Preview and test changes
-                icon: eye
-                icon_color: salmon
+                    Build atop Pulumi to create CLIs that make it easy for end-users to provision prebuilt cloud architectures.
+              - title: Power up your SaaS
                 description: |
-                    Test and validate infrastructure with standard [unit test frameworks](/docs/guides/testing/#unit-testing) and
-                    [integration tests](/docs/guides/testing/integration/). Preview changes before deploying.
+                    Enable your services and APIs to dynamically provision and manage cloud resources at scale.
 
-        - description: Manage cloud applications with visibility and controls
+        - title: "Build infrastructure faster with reusable components"
+          sub_title: "Pulumi Packages"
+          description: |
+            Build and reuse higher-level abstractions for cloud architectures with multi-language Pulumi Packages. Distribute the packages through repositories or package managers so your team members can reuse them.
+          ide:
+            - title: index.ts
+              language: typescript
+              code: |
+                import * as eks from "@pulumi/eks";
+
+                // Create an EKS cluster with the default configuration.
+                const cluster = new eks.Cluster("eks-cluster");
+
+                // Export the cluster's kubeconfig.
+                export const kubeconfig = cluster.kubeconfig;
+            - title: __main__.py
+              language: python
+              code: |
+                import pulumi
+                import pulumi_eks as eks
+
+                # Create an EKS cluster with the default configuration.
+                cluster = eks.Cluster("eks-cluster")
+
+                # Export the cluster's kubeconfig.
+                pulumi.export("kubeconfig", cluster.kubeconfig)
+            - title: main.go
+              language: go
+              code: |
+                    package main
+
+                    import (
+                      "github.com/pulumi/pulumi-eks/sdk/go/eks"
+                      "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+                    )
+
+                    func main() {
+                      pulumi.Run(func(ctx *pulumi.Context) error {
+                        // Create an EKS cluster with default settings.
+                        cluster, err := eks.NewCluster(ctx, "eks-cluster", nil)
+                        if err != nil {
+                          return err
+                        }
+
+                        // Export the cluster's kubeconfig.
+                        ctx.Export("kubeconfig", cluster.Kubeconfig)
+                        return nil
+                      })
+                    }
+            - title: MyStack.cs
+              language: csharp
+              code: |
+                using System.Collections.Generic;
+                using Pulumi;
+                using Pulumi.Eks;
+
+                await Deployment.RunAsync(() =>
+                {
+                  // Create an EKS cluster with default settings.
+                  var cluster = new Cluster("eks-cluster");
+
+                  // Export the cluster's kubeconfig.
+                  return new Dictionary<string, object?>
+                  {
+                    ["kubeconfig"] = cluster.Kubeconfig
+                  };
+                });
+            - title: Main.Java
+              language: java
+              code: |
+                import com.pulumi.Context;
+                import com.pulumi.Pulumi;
+                import com.pulumi.eks.Cluster;
+
+                public class App {
+                    public static void main(String[] args) {
+                        Pulumi.run(App::stack);
+                    }
+
+                    private static void stack(Context ctx) {
+                    final var cluster = new Cluster("eks-cluster");
+                    ctx.export("kubeconfig", cluster.kubeconfig());
+                  }
+                }
+            - title: Pulumi.yaml
+              language: yaml
+              code: |
+                resources:
+                  eks-cluster:
+                    type: eks:Cluster
+                outputs:
+                  kubeconfig: ${cluster.kubeconfig}
+          button:
+            text: "Learn more about Pulumi Packages"
+            link: "/product/packages/"
           features:
-              - title: Policy as Code
-                icon: shield
-                icon_color: purple
+              - title: Native cloud providers
                 description: |
-                    [Enforce compliance and detect drift](/crossguard/) by checking infrastructure against rules for
-                    security, cost, and best practices.
-
-              - title: State and secrets management
-                icon: security
-                icon_color: purple
+                    Full API coverage for AWS, Azure, Google Cloud, and Kubernetes with same-day updates.
+              - title: Crosswalk for AWS
                 description: |
-                    [Pulumi Service](/product/pulumi-service/) manages your infrastructure state and automatically
-                    encrypts sensitive values in transit and at rest.
-
-              - title: Administer teams and stacks
-                icon: monitor
-                icon_color: purple
+                    Adopt well-architected best practices for your infrastructure easily with the [Crosswalk library](/docs/guides/crosswalk/aws/).
+              - title: Cloud Native support
                 description: |
-                    Secure access to infrastructure with role-based permissions and [single sign-on](/docs/guides/saml/). View deployed resources, review audit logs, and set tags.
-
-stats:
-    title: Open source. Enterprise ready.
-    description: |
-        Pulumi’s Universal Infrastructure as Code CLI and SDK is an [open-source project](https://github.com/pulumi/) that’s supported
-        by an active community. We maintain a [public roadmap](/blog/relaunching-pulumis-public-roadmap/) and welcome feedback and contributions.
-    community:
-        number: "10,000s"
-        description: of community members
-    company:
-        number: "1,000s"
-        description: of companies
-    integration:
-        number: "70+"
-        description: Cloud and service integrations
-    cta:
-        title: The easiest way to use Pulumi open source at scale
-        description: |
-            The [Pulumi Service](/product/pulumi-service/) is a fully-managed service for the open-source CLI and SDK. It enables you and your team to focus on building, deploying, and managing cloud applications with your favorite languages and software engineering.
+                    Use a single workflow to manage both [Kubernetes](/kubernetes/) resources and infrastructure.
+        
+        - title: "Deliver infrastructure through software delivery pipelines"
+          sub_title: "CI/CD Integrations"
+          description: |
+            Version, review, test, and deploy infrastructure code through the same tools and processes used for your application code.
+          image: "/images/product/pulumi-cicd.png"
+          button:
+            text: "Learn more about CI/CD Integrations"
+            link: "/docs/guides/continuous-delivery/"
+          features:
+              - title: Version and review
+                description: |
+                    Manage infrastructure code in Git and approve changes through pull requests.
+              - title: Shift left
+                description: |
+                    Get rapid feedback on your code with fast [unit tests](/docs/guides/testing/), and run [integration tests](/docs/guides/testing/) against ephemeral infrastructure.
+              - title: Continuous delivery
+                description: |
+                    [Integrate your CI/CD provider](/docs/guides/continuous-delivery/) with Pulumi or use GitOps to [manage Kubernetes clusters](/docs/guides/continuous-delivery/pulumi-kubernetes-operator/).
+        
+        - title: "Scale and secure infrastructure as code for teams"
+          sub_title: "Pulumi Service"
+          description: |
+             Store infrastructure state & secrets, empower teams to ship infrastructure collaboratively, and manage security and governance using the Pulumi Service. The fastest and easiest way to use Pulumi at scale. 
+          image: "/images/product/pulumi-service.png"
+          button:
+            text: "Learn more about the Pulumi Service"
+            link: "/product/pulumi-service/"
+          features:
+              - title: State & secrets management
+                description: |
+                    Securely store state with built-in secrets manager, or bring your own KMS.
+              - title: Role-based access control
+                description: |
+                    Create teams (or use GitHub teams), set stack permissions, and manage access tokens.
+              - title: Federated identity
+                description: |
+                    Manage identities and access with SCIM, SAML SSO, GitHub, GitLab, or Atlassian.
+              - title: Policy enforcement
+                description: |
+                    Create policy packs and enforce them server-side across your team’s deployments.
+              - title: Remote deployments
+                description: |
+                    Automate execution of IaC programs in a secure, [hosted environment](/product/pulumi-deployments/) and from GitHub.
+              - title: Audit logs
+                description: |
+                    Track and store user actions and change history with option to export logs.
 
 get_started:
     title: Getting started
@@ -118,6 +222,6 @@ get_started:
     migrate:
         title: Migrating from other tools
         description: |
-            Transition to Pulumi with converter tools for Terraform, AWS CloudFormation, Azure Resource Manager, and Kubernetes.
-        cta_text: Explore Conversion Tools
+            Transition from existing infrastructure tools or continue using both. Pulumi has converter tools for Terraform, AWS CloudFormation, Azure Resource Manager, and Kubernetes. 
+        cta_text: Explore Converter Tools
 ---
