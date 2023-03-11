@@ -153,7 +153,7 @@
         {{ else if eq .Type "docs" }}
             <title>{{ $title }} | Pulumi Docs</title>
         {{ else if eq .Type "registry" }}
-            <title>{{ $title }} | Pulumi Registry</title>
+            <title>{{ replace $title "/" "." }} | Pulumi Registry</title>
         {{ else }}
             <title>{{ $title }} | Pulumi</title>
         {{ end }}
