@@ -73,7 +73,7 @@ PASS
 ok      ... 43.993s
 ```
 
-There are many options to control the behavior of these tests. For a full set of options, see [the `ProgramTestOptions` data
+There are many options to control the behavior of these tests. For a full set of options, see the [`ProgramTestOptions` data
 structure](https://godoc.org/github.com/pulumi/pulumi/pkg/testing/integration#ProgramTestOptions). For instance, you can configure a Jaeger endpoint for tracing (`Tracing`), tell the harness to expect failure for negative testing (`ExpectFailure`), apply a series of "edits" to the program for a sequence of update state transitions (`EditDirs`), and more.
 
 Let's see how to use the options to validate that the program deploys what we expect.
@@ -166,13 +166,13 @@ You can then iterate through the `Deployment` object to check that the expected 
 
 ## Full Examples
 
-A minimal example of using Pulumi's Go integration test framework is available in the examples repository: [Integration Testing in Go](https://github.com/pulumi/examples/tree/05ae8e1803d7f44cecac69589175e416e421cdfe/testing-integration).
+A minimal example of using Pulumi's Go integration test framework is available in the examples repository: [Integration Testing in Go](https://github.com/pulumi/examples/tree/master/testing-integration).
 
-Our own [integration test suite](https://github.com/pulumi/examples/blob/05ae8e1803d7f44cecac69589175e416e421cdfe/misc/test/examples_test.go) can be a source of further inspiration.
+Our own [integration test suite](https://github.com/pulumi/examples/blob/master/misc/test/examples_test.go) can be a source of further inspiration.
 
 We even write tests inside Pulumi using Automation API and language-specific test frameworks like `mocha`. Take a look at the source for yourself:
 
 - [NodeJS tests](https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/automation/localWorkspace.spec.ts)
 - [Go tests](https://github.com/pulumi/pulumi/blob/master/sdk/go/auto/local_workspace_test.go)
 - [Python tests](https://github.com/pulumi/pulumi/blob/master/sdk/python/lib/test/automation/test_local_workspace.py)
-- [C# tests](https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation.Tests/LocalWorkspaceTests.cs)
+- [C# tests](https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi.Automation.Tests/LocalWorkspaceTests.cs)
