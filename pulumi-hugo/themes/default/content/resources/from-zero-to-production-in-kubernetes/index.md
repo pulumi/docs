@@ -1,13 +1,13 @@
 ---
 # Name of the webinar.
 title: "From Zero to Production in Kubernetes"
-meta_desc: "Join Pulumi & NGINX and go from zero to production on Kubernetes by using Python to build abstractions that make getting to production easier."
+meta_desc: "Go from Zero to Production on Kubernetes using Python to build abstractions and MARA - Modern Application Reference Architecture."
 
 # A featured webinar will display first in the list.
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -48,7 +48,7 @@ main:
     # Webinar title.
     title: "From Zero to Production in Kubernetes"
     # URL for embedding a URL for ungated webinars.
-    #youtube_url: "https://www.youtube.com/embed/L-8uzn6AdHM"
+    youtube_url: "https://www.youtube.com/embed/DPp4veSBUr0?rel=0"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2023-01-18T09:00:00-08:00
     # Duration of the webinar.
@@ -66,8 +66,8 @@ main:
     presenters:
         - name: Josh Kodroff
           role: Senior Solutions Architect, Pulumi
-        - name: Damian Curry
-          role: Business Development Technical Director, F5/NGINX
+        - name: Javier Evans
+          role: Solutions Architect, F5/NGINX
         - name: Jason Schmidt
           role: Senior Solutions Architect, F5/NGINX
 
