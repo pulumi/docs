@@ -16,7 +16,7 @@ aliases:
 
 {{% notes type="info" %}}
 The content and examples in this guide refer to Pulumi's GitHub Action v3. Pulumi's GitHub Action v1 has been deprecated
-and will reach its End of Life (EOL) on August 31st, 2021.
+and has reached its End of Life (EOL) on August 31st, 2021.
 {{% /notes %}}
 
 Pulumi's [GitHub Actions](https://developer.github.com/actions) help you deploy apps and
