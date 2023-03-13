@@ -1909,7 +1909,7 @@ Outputs:
   ~ fullImageName: "...cloud-specific url.../my-repo-dc811b0:78d0fce7c2450c15a6153b6b11208fcb6b9edea7bb7ef3b7b6194f3fc101a170"
 ```
 
-The Pulumi Docker `Image` component supports a number of additional options to control its behavior, including passing build arguments, environment variables, extra options for the Docker build, as well as various controls for image caching. For full details on each of these, refer to [the API documentation](/registry/packages/docker/api-docs/image/).
+The Pulumi Docker `Image` component supports a number of additional options to control its behavior, including passing build arguments, environment variables, extra options for the Docker build, as well as various controls for image caching. For full details on each of these, refer to the [image API documentation](/registry/packages/docker/api-docs/image/).
 
 ## Consume the Container Image
 
@@ -2255,4 +2255,4 @@ All of these steps were manually run from a CLI; however, a natural next step is
 
 Although we've shown a very simple set of infrastructure resources, it would be natural to extend these examples by provisioning other ancillary services that your application needs, including databases, pub/sub topics, queues, metrics and dashboards, and more. Using an infrastructure as code approach to building, publishing, and consuming your container images means you can incrementally add on such infrastructure to the base code shown above and reference them from your containers easily with automatic dependency tracking.
 
-The complete examples in this article are [available on GitHub here](https://github.com/pulumi/pulumi-docker/tree/master/examples/container-registries). Pulumi is open source and free to get started with &mdash; [give it a try, and get up and running with infrastructure as code for your containers today](/docs/get-started/)!
+The [complete examples](https://github.com/pulumi/pulumi-docker/tree/master/examples/) in this article are available on GitHub. Pulumi is open source and free to get started with &mdash; [give it a try, and get up and running with infrastructure as code for your containers today](/docs/get-started/)!
