@@ -41,7 +41,7 @@ Here are the current system requirements to run EKS Anywhere Bare Metal:
 
 ## Setting up your bare metal servers
 
-As a "born in the cloud" company, Pulumi does not have a data center lying around for testing, so we’ll walk through the process of setting up EKS Anywhere Bare Metal using servers hosted by [Equinix Metal](https://www.equinix.com/metal). This really shows off the power of running EKS Anywhere and the great lengths the AWS team has gone to in enabling EKS Anywhere for a variety of scenarios.
+As a "born in the cloud" company, Pulumi does not have a data center lying around for testing, so we’ll walk through the process of setting up EKS Anywhere Bare Metal using servers hosted by [Equinix Metal](https://www.equinix.com/products/digital-infrastructure-services/equinix-metal). This really shows off the power of running EKS Anywhere and the great lengths the AWS team has gone to in enabling EKS Anywhere for a variety of scenarios.
 
 The process to setup bare metal clusters involves the following steps:
 
@@ -70,7 +70,7 @@ To use the component, take the following steps:
 
 1. Make sure you’ve followed the steps to [setup Pulumi and AWS](/docs/get-started/aws/begin/)
 
-1. Grab the EKS-A component and example code [on Pulumiverse](https://github.com/pulumiverse/pulumi-aws-eksa).
+1. Grab the EKS-A component and example code on [Pulumiverse](https://github.com/pulumiverse/pulumi-aws-eksa).
 
 1. Set your Equinix Metal Auth token as a Pulumi secret:
 
