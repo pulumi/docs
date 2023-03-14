@@ -1,6 +1,6 @@
 ---
 title_tag: Configuring SAML | SAML SSO
-title: Configuring SAML
+title: SAML
 meta_desc:
   This page provides a walkthrough important aspects of configuring any SAML
   (Security Assertion Markup Language) 2.0 identity provider.
@@ -21,6 +21,7 @@ with the [Pulumi Service](/docs/intro/pulumi-service/).
 > - [Azure Active Directory](/docs/guides/saml/aad/)
 > - [Google Workspace](/docs/guides/saml/gsuite/)
 > - [Okta](/docs/guides/saml/okta/)
+> - [Auth0](/docs/guides/saml/auth0/)
 > - [OneLogin](/docs/guides/saml/onelogin/)
 
 ## Terminology

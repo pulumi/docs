@@ -29,4 +29,5 @@ If you're looking to integrate Pulumi with your SAML 2.0 identity provider, refe
 - [Azure Active Directory](aad/)
 - [Google Workspace (formerly G Suite)](gsuite)
 - [Okta](okta/)
+- [Auth0](auth0/)
 - [OneLogin](onelogin/)

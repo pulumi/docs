@@ -1,5 +1,6 @@
 ---
-title: Configuring SCIM in OneLogin
+title_tag: Configuring OneLogin | SCIM
+title: OneLogin
 meta_desc: This page describes how to support SCIM 2.0 functionality between Pulumi and OneLogin.
 menu:
     userguides:
