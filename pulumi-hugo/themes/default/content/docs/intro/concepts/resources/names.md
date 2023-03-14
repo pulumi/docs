@@ -264,6 +264,37 @@ resources:
 
 {{< /chooser >}}
 
+## Resource Types {#types}
+
+Each resource is an instance of a specific Pulumi resource type.  This type is specified by a type token in the format `<package>:<module>:<typename>`.  Concrete examples of this format are:
+
+- `aws:s3/bucket:Bucket`
+- `azure-native:compute:VirtualMachine`
+- `kubernetes:apps/v1:Deployment`
+- `random:index:RandomPassword`
+
+The `<package>` component of the type (e.g. `aws`, `azure-native`, `kubernetes`, `random`) specifies which [Pulumi Package](/docs/guides/pulumi-packages/) defines the resource.  This is mapped to the package in the [Pulumi Registry](/registry/) and to the underlying [Resource Provider](/docs/intro/concepts/resources/providers/).
+
+The `<module>` component of the type (e.g. `s3/bucket`, `compute`, `apps/v1`, `index`) is the module path where the resource lives within the package.  It is `/` delimited by component of the path.  Per-language Pulumi SDKs use the module path to emit nested namespaces/modules in a language-specific way to organize all the types defined in a package.  For eaxmple, the `Deployment` resource above is available at `kubernetes.apps.v1.Deployment` in TypeScript and in the `github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/apps/v1` module in Go.  For historical reasons only, some packages include the type name itself as a final component of the module (e.g. `s3/bucket` for the type name `Bucket`) - in this case, this component is not included in the SDK namespace.  The name `index` indicates that the resource is not nested, and is instead available at the top level of the package.  For example, the `RandomPassword` resource above is available at `random.RandomPassword` in TypeScript.
+
+The `<typename>` component of the type (e.g. `Bucket`, `VirtualMachine`, `Deployment`, `RandomPassword`) is the identifier used to refer to the resource itself.  It is mapped to the class or constructor name in the per-language Pulumi SDK.
+
+Note that because of some of the historical details of how `<module>` is defined, a "simplified" resource type name is accepted or presented in certain places, and mapped into the "full" resource type name specified above.  The simplified resource type name applies the following rules:
+
+1. If the type token is two components instead of three, that is `<package>:<typename>`, it is interpreted as if it was `<package>:index:<typename>`.
+2. The repetition of the `<typename>` as part of the module definition is not required, and will be inferred if necessary - that is `aws:s3:Bucket` will be interpreted as referring to `aws:s3/bucket:Bucket`.
+
+This "simplified" type name format is currently used in the following places:
+
+- The [Pulumi YAML](/docs/intro/languages/yaml/) language allows simple type names to be used as the `type` of a resource.
+
+The examples above can be written in simplified form as:
+
+- `aws:s3:Bucket`
+- `azure-native:compute:VirtualMachine`
+- `kubernetes:apps/v1:Deployment`
+- `random:RandomPassword`
+
 ## Resource URNs {#urns}
 
 Each resource is assigned a [Uniform Resource Name (URN)](https://en.wikipedia.org/wiki/Uniform_Resource_Name) that uniquely identifies that resource globally. Unless you are writing a tool, you will seldom need to interact with an URN directly, but it is fundamental to how Pulumi works so it’s good to have a general understanding of it.
@@ -277,6 +308,8 @@ urn:pulumi:production::acmecorp-website::custom:resources:Resource$aws:s3/bucket
            ^^^^^^^^^^  ^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^^^^^ ^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^
            <stack-name> <project-name>   <parent-type>             <resource-type>       <resource-name>
 ```
+
+The type components of the URN are [resource types](#types) as defined above, and the full type in the URN is a `$` delimited path of the parent chain of resource types that the resource is nested within (up to and excluding the root Stack resource).
 
 The URN must be globally unique. This means all of the components that go into a URN must be unique within your program. If you create two resources with the same name, type, and parent path, for instance, you will see an error:
 
