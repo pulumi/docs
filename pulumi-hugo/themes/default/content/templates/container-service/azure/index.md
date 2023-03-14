@@ -1,8 +1,9 @@
 ---
+title_tag: Deploy a Container Service to Azure
 title: Container Service on Azure
 layout: template
 
-meta_desc: The Container Service template makes it easy to deploy a container service on Azure with Pulumi and Azure Container Instances (ACI).
+meta_desc: Easily deploy a container service on Azure with Pulumi and Azure Container Instances (ACI) using this template.
 meta_image: meta.png
 card_desc: Deploy a container service on Azure with Pulumi and Azure Container Instances.
 template:

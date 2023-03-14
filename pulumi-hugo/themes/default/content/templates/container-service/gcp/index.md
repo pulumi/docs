@@ -1,8 +1,9 @@
 ---
+title_tag: Deploy a Container Service to Google Cloud
 title: Container Service on Google Cloud
 layout: template
 
-meta_desc: The Container Service template makes it easy to deploy a container service on Google Cloud with Pulumi and Google Cloud Run.
+meta_desc: Easily deploy a container service on Google Cloud with Pulumi and Google Cloud Run using this template.
 
 meta_image: meta.png
 

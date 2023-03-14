@@ -1,11 +1,10 @@
 ---
-title: Learning Machine
+title_tag: Learning Machine | Case Studies
+title: "Learning Machine: Expediting Customer Deployments"
 description: |
     Learning Machine used Pulumi and TypeScript to streamline its DevOps processes
     and eliminate several hundred thousand lines of configuration code.
-meta_desc: |
-    Learning Machine used Pulumi and TypeScript to streamline its DevOps processes
-    and eliminate several hundred thousand lines of configuration code.
+meta_desc: See how Learning Machine worked with Pulumi to streamline its DevOps processes and eliminate several hundred thousand lines of configuration code.
 
 customer_name: Learning Machine
 customer_logo: /logos/customers/learning-machine_logo.svg

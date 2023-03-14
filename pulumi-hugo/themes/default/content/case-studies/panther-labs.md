@@ -1,9 +1,9 @@
 ---
-title: Increasing Velocity and Innovation at Panther Labs
+title_tag: Panther Labs | Case Studies
+title: "Panther Labs: Increasing Velocity & Innovation"
 description: |
     With Pulumi, Panther Labs was able to provide innovative solutions to their customers quickly, which is a clear advantage for a startup.
-meta_desc: |
-    With Pulumi, Panther Labs was able to provide innovative solutions to their customers quickly, which is a clear advantage for a startup.
+meta_desc: Learn how Panther Labs worked with Pulumi to increase deployment speeds by 10X and reduce the size of its infrastructure codebase by over 50%.
 
 customer_name: Panther Labs
 customer_logo: /logos/customers/panther-labs-wordmark.svg

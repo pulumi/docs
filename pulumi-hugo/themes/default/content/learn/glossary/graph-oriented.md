@@ -1,6 +1,7 @@
 ---
+title_tag: What is a Graph Oriented Database?
 title: Graph Oriented Database
-meta_desc: A type of NoSQL database that relies on the graph data structure to define and manage relationships between different entries.
+meta_desc: A graph-oriented database is a type of NoSQL database that relies on the graph data structure to define and manage relationships between different entries.
 layout: glossary/single
 ---
 

@@ -1,7 +1,8 @@
 ---
+title_tag: Deploy a Static Website to Azure
 title: Azure Static Website
 layout: template
-meta_desc: The Azure Static Website template makes it easy to deploy a static website on Azure with Pulumi, Azure Blob Storage, and Azure CDN.
+meta_desc: Easily deploy a static HTML website on Azure with Pulumi, Azure Blob Storage, and Azure CDN using this template.
 meta_image: meta.png
 card_desc: Deploy a static website on Azure with Pulumi, Azure Blob Storage, and Azure CDN.
 template:

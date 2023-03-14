@@ -1,7 +1,8 @@
 ---
+title_tag: Templates for Deploying Kubernetes Applications
 title: "Kubernetes Application Templates"
 layout: overview
-meta_desc: Pulumi program templates that make it easy to deploy Kubernetes applications on Kubernetes clusters.
+meta_desc: Instantly deploy Kubernetes web applications on AWS, Azure, or Google Cloud Platform with Pulumi Kubernetes Application templates.
 meta_image: meta.png
 weight: 99
 ---

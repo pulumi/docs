@@ -1,6 +1,7 @@
 ---
+title_tag: What is a Database Cache?
 title: Database Cache
-meta_desc: A database cache is supplementary to your primary database, either built into your database itself or as an additional layer.
+meta_desc: A database cache is supplementary to your primary database and exists to radically speed up read access to frequently-queried data.
 layout: glossary/single
 ---
 

@@ -1,11 +1,10 @@
 ---
-title: Atlassian
+title_tag: Atlassian Bitbucket Cloud | Case Studies
+title: "Atlassian: Increasing Developer Productivity"
 description: |
     Atlassian Bitbucket used Pulumi to make it easier and faster for its developers to use
     cloud infrastructure and reduced developers' time spent on maintenance by 50%.
-meta_desc: |
-    Atlassian Bitbucket used Pulumi to make it easier for its developers to use cloud infrastructure
-    and reduced developers' time spent on maintenance by 50%.
+meta_desc: Learn how Atlassian Bitbucket worked with Pulumi to improve developer productivity and reduce developers' time spent on maintenance by 50%.
 
 customer_name: Atlassian
 customer_logo: /logos/customers/atlassian-wordmark.svg

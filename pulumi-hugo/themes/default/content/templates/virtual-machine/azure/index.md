@@ -1,7 +1,8 @@
 ---
+title_tag: Deploy a Virtual Machine to Azure
 title: Virtual Machine on Azure
 layout: template
-meta_desc: The Virtual Machine template makes it easy to deploy a virtual machine on Azure with Pulumi and Azure Virtual Machines.
+meta_desc: Easily deploy a virtual machine on Azure with Pulumi and Azure Virtual Machines using this template.
 meta_image: meta.png
 card_desc: Deploy a virtual machine on Azure with Pulumi and Azure Virtual Machines.
 template:

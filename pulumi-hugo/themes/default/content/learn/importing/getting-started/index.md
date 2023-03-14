@@ -1,10 +1,11 @@
 ---
+title_tag: Getting Started with Migration & Imports | Learn Pulumi
 title: "Getting Started"
 layout: topic
 date: 2022-06-03T11:31:57-05:00
 draft: false
 description: Get set up to import resources and migrate to Pulumi in this pathway.
-meta_desc: Get set up to import resources and migrate to Pulumi in this pathway.
+meta_desc: Learn how to set up your local system to get started with bringing Pulumi into your existing ecosystem in this tutorial.
 index: 0
 estimated_time: 2
 meta_image: meta.png

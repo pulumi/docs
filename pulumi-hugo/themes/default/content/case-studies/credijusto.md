@@ -1,11 +1,10 @@
 ---
-title: Credijusto
+title_tag: Credijusto | Case Studies
+title: "Credijusto: Taming Network Configuration Complexity"
 description: |
     Credijusto used Pulumi to help its development team scale to support rapid growth
     while enforcing best practices for their infrastructure.
-meta_desc: |
-    Credijusto used Pulumi to help its development team scale to support rapid growth
-    while enforcing best practices for their infrastructure.
+meta_desc: Learn how Credijusto worked with Pulumi to help its development team scale to support rapid growth, while enforcing best practices for their infrastructure.
 
 customer_name: Credijusto
 customer_logo: /logos/customers/credijusto_logo.svg

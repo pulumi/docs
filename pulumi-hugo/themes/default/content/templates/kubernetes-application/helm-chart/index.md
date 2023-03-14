@@ -1,8 +1,9 @@
 ---
+title_tag: Deploy a Helm Chart to Kubernetes Cluster
 title: Helm Chart on Kubernetes
 layout: template
 
-meta_desc: The Helm Chart template makes it easy to deploy a web application to a Kubernetes cluster with Pulumi and Helm.
+meta_desc: Easily deploy a Helm chart to an existing Kubernetes cluster with Pulumi and Helm using this template.
 
 meta_image: meta.png
 

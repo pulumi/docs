@@ -1,7 +1,8 @@
 ---
+title_tag: Deploy a Managed Kubernetes Cluster to Azure
 title: Kubernetes Cluster on Azure
 layout: template
-meta_desc: The Kubernetes Cluster template makes it easy to deploy a Kubernetes cluster on Azure with Pulumi and Azure Kubernetes Service (AKS).
+meta_desc: Easily deploy a managed Kubernetes cluster on Azure with Pulumi and Azure Kubernetes Service (AKS) using this template.
 meta_image: meta.png
 card_desc: Deploy a Kubernetes cluster on Azure with Pulumi and Azure Kubernetes Service (AKS).
 template:

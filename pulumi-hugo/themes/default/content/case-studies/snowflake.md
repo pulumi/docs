@@ -1,9 +1,9 @@
 ---
-title: Snowflake
+title_tag: Snowflake | Case Studies
+title: "Snowflake: Testable, Repeatable Infrastructure"
 description: |
     Snowflake uses Pulumi to allow their application and infrastructure teams to truly treat their infrastructure as software.
-meta_desc: |
-    Snowflake uses Pulumi to allow their application and infrastructure teams to truly treat their infrastructure as software.
+meta_desc: Learn how Snowflake worked with Pulumi to easily develop infrastructure that is repeatable, testable and scalable.
 
 customer_name: Snowflake
 customer_logo: /logos/customers/snowflake-logo.svg

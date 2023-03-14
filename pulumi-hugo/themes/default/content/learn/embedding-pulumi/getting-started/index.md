@@ -1,4 +1,5 @@
 ---
+title_tag: Getting Started with Embedding Pulumi | Learn Pulumi
 title: "Getting Started"
 layout: topic
 date: 2021-12-15
@@ -6,9 +7,7 @@ draft: false
 description: |
     Set up your local system to start building a working example of the
     Automation API.
-meta_desc: |
-    Set up your local system to start building a working example of the
-    Automation API.
+meta_desc: Learn how to set up your local system to start building a working example of the Pulumi Automation API in this tutorial.
 index: 0
 estimated_time: 5
 meta_image: meta.png

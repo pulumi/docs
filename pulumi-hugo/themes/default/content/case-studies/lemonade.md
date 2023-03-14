@@ -1,11 +1,10 @@
 ---
-title: Lemonade
+title_tag: Lemonade | Case Studies
+title: "Lemonade: Accelerating Innovation with Pulumi"
 description: |
     Lemonade's Ops team supports a much larger group of developers by using Pulumi to
     standardize infrastructure components and enforce best practices.
-meta_desc: |
-    Lemonade's Ops team supports a much larger group of developers by using Pulumi to
-    standardize infrastructure components and enforce best practices.
+meta_desc: Learn how Lemonade worked with Pulumi to standardize infrastructure components and enforce best practices across its growing team of developers.
 
 customer_name: Lemonade
 customer_logo: /logos/customers/lemonade.svg

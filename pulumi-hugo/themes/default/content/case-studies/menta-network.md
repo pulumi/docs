@@ -1,12 +1,11 @@
 ---
-title: Menta Network
+title_tag: Menta Network | Case Studies
+title: "Menta Network: Reducing Operating Costs by 60%"
 layout: case-studies
 description: |
     Menta Network used Pulumi and GitLab to build ephemeral environments in Python and
     helped its customers to get ready for peak traffic.
-meta_desc: |
-    Menta Network used Pulumi and GitLab to build ephemeral environments in Python and
-    helped its customers to get ready for peak traffic.
+meta_desc: Learn how Menta Network worked with Pulumi and GitLab to build ephemeral environments in Python and help its customers to get ready for peak traffic.
 
 customer_name: Menta Network
 customer_logo: /logos/customers/menta_logo.svg

@@ -1,8 +1,9 @@
 ---
+title_tag: Templates for Deploying Static Websites
 title: Static Website Templates
 layout: overview
 description: Pulumi program templates are the fastest way to deploy static websites on AWS, Azure, or Google Cloud Platform. Templates come with predefined infrastructure as code so you can get started instantly.
-meta_desc: Pulumi program templates that make it easy to deploy static websites on AWS, Azure, or Google Cloud Platform.
+meta_desc: Easily deploy static HTML websites on AWS, Azure, or Google Cloud Platform with Pulumi Static Website templates.
 meta_image: meta.png
 weight: 1
 ---

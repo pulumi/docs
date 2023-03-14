@@ -1,6 +1,7 @@
 ---
+title_tag: What is Google Kubernetes Engine (GKE)?
 title: Google Kubernetes Engine
-meta_desc: A managed container orchestration tool on Google Cloud Platform (GCP), allowing for the deployment and automated management of containerized applications.
+meta_desc: GKE is a managed container orchestration tool on GCP that allows for the deployment and automated management of containerized applications.
 layout: glossary/single
 ---
 

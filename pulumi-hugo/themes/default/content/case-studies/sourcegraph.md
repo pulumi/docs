@@ -1,9 +1,9 @@
 ---
-title: Sourcegraph
+title_tag: Sourcegraph | Case Studies
+title: "Sourcegraph: Deploying GKEs in a Snap with Pulumi"
 description: |
     Pulumi helps to supercharge Kubernetes deployments at Sourcegraph, ensuring their team has continuous access to the latest builds.
-meta_desc: |
-    Pulumi helps to supercharge Kubernetes deployments at Sourcegraph, ensuring their team has continuous access to the latest builds.
+meta_desc: Learn how Pulumi helps Sourcegraph supercharge their Kubernetes deployments, ensuring their team has continuous access to the latest builds.
 
 customer_name: Sourcegraph
 customer_logo: /logos/customers/sourcegraph-logo.svg

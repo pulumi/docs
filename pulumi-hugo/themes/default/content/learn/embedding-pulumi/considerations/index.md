@@ -1,4 +1,5 @@
 ---
+title_tag: Logging & Error Handling | Learn Pulumi
 title: "Understanding Logging and Error Handling"
 layout: topic
 date: 2021-12-15
@@ -6,9 +7,7 @@ draft: false
 description: |
     Explore why it's important to consider logging and error handling when using
     the Automation API.
-meta_desc: |
-    Explore why it's important to consider logging and error handling when using
-    the Automation API.
+meta_desc: Learn why it is important to consider logging and error handling when using the Automation API in this tutorial.
 index: 2
 estimated_time: 10
 meta_image: meta.png

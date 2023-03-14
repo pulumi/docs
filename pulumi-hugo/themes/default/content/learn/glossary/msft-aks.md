@@ -1,6 +1,7 @@
 ---
+title_tag: What is Azure Kubernetes Service?
 title: Azure Kubernetes Service
-meta_desc: A managed container orchestration tool on Microsoft Azure, allowing for the deployment and automated management of containerized applications.
+meta_desc: AKS is a managed container orchestration tool on Microsoft Azure, allowing for the deployment and automated management of containerized applications.
 layout: glossary/single
 ---
 

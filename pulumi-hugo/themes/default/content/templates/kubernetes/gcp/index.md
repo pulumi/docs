@@ -1,8 +1,9 @@
 ---
+title_tag: Deploy a Managed Kubernetes Cluster to Google Cloud
 title: Kubernetes Cluster on Google Cloud
 layout: template
 
-meta_desc: The Kubernetes Cluster template makes it easy to deploy a Kubernetes cluster on Google Cloud with Pulumi and Google Kubernetes Engine (GKE).
+meta_desc: Easily deploy a managed Kubernetes cluster on Google Cloud with Pulumi and Google Kubernetes Engine (GKE) using this template.
 
 meta_image: meta.png
 

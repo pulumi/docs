@@ -1,7 +1,8 @@
 ---
+title_tag: Deploy a Static Website to AWS
 title: AWS Static Website
 layout: template
-meta_desc: The AWS Static Website template makes it easy to deploy a static website on AWS with Pulumi, Amazon S3, and Amazon CloudFront.
+meta_desc: Easily deploy a static HTML website on Amazon Web Services (AWS) with Pulumi, Amazon S3, and Amazon CloudFront using this template.
 meta_image: meta.png
 card_desc: Deploy a static website on AWS with Pulumi, Amazon S3, and Amazon CloudFront.
 template:

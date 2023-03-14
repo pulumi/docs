@@ -1,10 +1,11 @@
 ---
+title_tag: Importing Resources with Code | Pulumi
 title: "Importing via code"
 layout: topic
 date: 2022-06-03T11:33:05-05:00
 draft: false
 description: Try importing resources with code via Pulumi's ResourceOptions.
-meta_desc: Try importing resources with code via Pulumi's ResourceOptions.
+meta_desc: Learn how to import resources as part of migrating to Pulumi using code via Pulumi's ResourceOptions in this tutorial.
 index: 3
 estimated_time: 10
 meta_image: meta.png

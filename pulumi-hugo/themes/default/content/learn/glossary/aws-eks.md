@@ -1,6 +1,7 @@
 ---
+title_tag: What is AWS Elastic Kubernetes Service (EKS)?
 title: Elastic Kubernetes Service
-meta_desc: A managed Kubernetes service on AWS, allowing you to run your containerized workloads on Kubernetes without the overhead of managing it yourself.
+meta_desc: AWS EKS is a managed Kubernetes service that allows you to run your containerized workloads on Kubernetes without the overhead of managing it yourself.
 layout: glossary/single
 ---
 

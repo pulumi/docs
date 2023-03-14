@@ -1,10 +1,11 @@
 ---
+title_tag: Understanding Stack References | Learn Pulumi
 title: "Understanding Stack References"
 layout: topic
 date: 2021-09-20T08:33:49-05:00
 draft: false
 description: Learn how to share outputs across stacks with stack references.
-meta_desc: Learn how to share outputs across stacks with stack references.
+meta_desc: Learn what stack references are, how they differ from stack outputs, and how to share stack outputs from one Pulumi program to another in this tutorial.
 index: 3
 estimated_time: 10
 meta_image: meta.png

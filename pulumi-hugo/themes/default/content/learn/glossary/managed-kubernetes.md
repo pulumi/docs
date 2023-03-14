@@ -1,6 +1,7 @@
 ---
+title_tag: What is Managed Kubernetes Service?
 title: Managed Kubernetes Service
-meta_desc: A type of database that does not store its data in tables.
+meta_desc: A managed Kubernetes service is a Kubernetes platform where some or all of the responsibility for setup and maintenance lies with a third-party provider. 
 layout: glossary/single
 ---
 

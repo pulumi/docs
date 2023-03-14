@@ -1,6 +1,7 @@
 ---
+title_tag: What is AWS Elastic Container Service (ECS)?
 title: Elastic Container Service
-meta_desc: A managed container orchestration tool on AWS, allowing for the deployment and automated management of containerized applications.
+meta_desc: AWS ECS is a managed container orchestration tool that allows for the deployment and automated management of containerized applications.
 layout: glossary/single
 ---
 

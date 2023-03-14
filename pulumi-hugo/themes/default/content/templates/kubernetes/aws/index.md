@@ -1,7 +1,8 @@
 ---
+title_tag: Deploy a Managed Kubernetes Cluster to AWS
 title: Kubernetes Cluster on AWS
 layout: template
-meta_desc: The AWS Kubernetes template makes it easy to deploy a Kubernetes cluster on AWS with Pulumi and Amazon EKS.
+meta_desc: Easily deploy a managed Kubernetes cluster on AWS with Pulumi and Amazon EKS using this template.
 meta_image: meta.png
 card_desc: Deploy a Kubernetes cluster on AWS with Pulumi and Amazon EKS.
 template:

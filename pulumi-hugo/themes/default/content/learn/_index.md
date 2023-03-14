@@ -1,11 +1,10 @@
 ---
+title_tag: "Learn Pulumi: Key Concepts, Tutorials, Best Practices"
 title: Learn Pulumi
 description: |
     Courses, tutorials, examples, and more to help you get the most out of
     Pulumi.
-meta_desc: |
-    Courses, tutorials, examples, and more to help you get the most out of
-    Pulumi.
+meta_desc: Learn all the key concepts of Pulumi, along with best practices and architectural patterns with these curated tutorials.
 menu:
     header:
         weight: 0 # Change this to 4 to have LEARN appear in the header bar.

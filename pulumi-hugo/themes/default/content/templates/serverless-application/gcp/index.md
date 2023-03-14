@@ -1,7 +1,8 @@
 ---
+title_tag: Deploy a Serverless Application to Google Cloud
 title: Google Cloud Serverless Application
 layout: template
-meta_desc: The Google Cloud Serverless Template makes it easy to deploy a serverless application on GCP with Pulumi, Google Cloud Functions, and Google Cloud Storage.
+meta_desc: Easily deploy a serverless application on GCP with Pulumi, Google Cloud Functions, and Google Cloud Storage using this template.
 meta_image: meta.png
 card_desc: Deploy a serverless application on Google Cloud with Pulumi, Google Cloud Functions, and Google Cloud Storage.
 template:

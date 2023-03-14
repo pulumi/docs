@@ -1,7 +1,8 @@
 ---
+title_tag: Deploy a Serverless Application to Azure
 title: Azure Serverless Application
 layout: template
-meta_desc: The Azure Serverless Template makes it easy to deploy a serverless application on Azure with Pulumi, Azure Functions, and Azure Blob Storage.
+meta_desc: Easily deploy a serverless application on Azure with Pulumi, Azure Functions, and Azure Blob Storage using this template.
 meta_image: meta.png
 card_desc: Deploy a serverless application on Azure with Pulumi, Azure Functions, and Azure Blob Storage.
 template:

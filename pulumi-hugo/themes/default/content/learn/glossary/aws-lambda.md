@@ -1,6 +1,7 @@
 ---
+title_tag: What is AWS Lambda?
 title: AWS Lambda
-meta_desc: A serverless platform on AWS, allowing for the execution of code or containers without the need to provision infrastructure yourself.
+meta_desc: AWS Lambda is a serverless platform that allows for the execution of code or containers without the need to provision infrastructure yourself.
 layout: glossary/single
 ---
 

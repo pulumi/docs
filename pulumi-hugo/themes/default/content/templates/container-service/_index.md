@@ -1,8 +1,9 @@
 ---
+title_tag: Templates for Deploying Container Services
 title: Container Service Templates
 layout: overview
 description: Pulumi program templates are the fastest way to deploy container services on AWS, Azure, or Google Cloud Platform. Templates come with predefined infrastructure as code so you can get started instantly.
-meta_desc: Pulumi program templates that make it easy to deploy container services on AWS, Azure, or Google Cloud Platform.
+meta_desc: Easily deploy container services on AWS, Azure, or Google Cloud Platform with Pulumi Container Service templates. 
 meta_image: meta.png
 weight: 1
 ---

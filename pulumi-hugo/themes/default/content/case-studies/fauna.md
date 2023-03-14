@@ -1,9 +1,9 @@
 ---
-title: Fauna
+title_tag: Fauna | Case Studies
+title: "Fauna: Building Region Groups with Pulumi"
 description: |
     Pulumi enabled Fauna to develop a crucial new feature, Region Groups, by giving developers a way of building and deploying multi-cloud applications quickly and safely with software engineering.
-meta_desc: |
-    Pulumi enabled Fauna to develop a crucial new feature, Region Groups, by giving developers the capabilities they needed to build and deploy quickly and safely.
+meta_desc: Learn how Fauna worked with Pulumi to develop Region Groups by giving developers the capabilities they needed to build and deploy quickly and safely.
 
 customer_name: Fauna
 customer_logo: /logos/customers/fauna-wordmark.svg

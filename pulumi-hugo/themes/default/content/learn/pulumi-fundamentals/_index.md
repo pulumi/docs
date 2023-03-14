@@ -1,4 +1,5 @@
 ---
+title_tag: Pulumi Fundamentals | Learn Pulumi
 title: "Pulumi Fundamentals"
 layout: module
 date: 2021-09-10T12:00:00-05:00
@@ -6,9 +7,7 @@ draft: false
 description: |
     Learn how to use Pulumi to build, configure, and deploy a real-life, modern
     application.
-meta_desc: |
-    Learn how to use Pulumi to build, configure, and deploy a real-life, modern
-    application.
+meta_desc: Learn how to use Pulumi to build, configure, and deploy a real-life, modern application in this starter tutorial.
 index: 0
 meta_image: fundamentals.png
 youll_learn:

@@ -1,7 +1,8 @@
 ---
+title_tag: Deploy a Virtual Machine to AWS
 title: Virtual Machine on AWS
 layout: template
-meta_desc: The Virtual Machine template makes it easy to deploy a virtual machine on AWS with Pulumi and Amazon EC2.
+meta_desc: Easily deploy a virtual machine on Amazon Web Services (AWS) with Pulumi and Amazon EC2 using this template.
 meta_image: meta.png
 card_desc: Deploy a virtual machine on AWS with Pulumi and Amazon EC2.
 template:

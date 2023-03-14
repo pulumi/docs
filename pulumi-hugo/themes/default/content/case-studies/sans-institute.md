@@ -1,9 +1,9 @@
 ---
-title: SANS Institute
+title_tag: SANS Institute | Case Studies
+title: "SANS Institute: Reducing Deployment Times by 70%"
 description: |
     The DevOps team at SANS Institute, which provides cybersecurity training & certification, uses Pulumi to streamline delivering applications and infrastructure.
-meta_desc: |
-    The DevOps team at SANS Institute, which provides cybersecurity training & certification, uses Pulumi to streamline delivering applications and infrastructure.
+meta_desc: Learn how DevOps team at SANS Institute worked with Pulumi to streamline delivering applications and infrastructure and reduce deployment times by 70%.
 
 customer_name: SANS Institute
 customer_logo: /logos/customers/sans-wordmark.svg

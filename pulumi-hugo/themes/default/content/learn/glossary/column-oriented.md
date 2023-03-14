@@ -1,6 +1,7 @@
 ---
+title_tag: What is a Column Oriented Database?
 title: Column Oriented Database
-meta_desc: A type of NoSQL database that stores its data in columns, rather than the two-dimensional column and row organization of a traditional relational database.
+meta_desc: A column-oriented database is a type of NoSQL database that stores its data in columns, rather than by columns and rows in a traditional relational database.
 layout: glossary/single
 ---
 

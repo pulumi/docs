@@ -1,6 +1,7 @@
 ---
+title_tag: What is NoSQL?
 title: NoSQL
-meta_desc: A type of database that does not store its data in tables.
+meta_desc: NoSQL is a type of database that organizes data into some data structure other than the two-dimensional tables seen in relational databases.
 layout: glossary/single
 ---
 

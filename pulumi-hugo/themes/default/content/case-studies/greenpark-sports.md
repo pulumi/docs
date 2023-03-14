@@ -1,9 +1,9 @@
 ---
-title: GreenPark Sports
+title_tag: GreenPark Sports | Case Studies
+title: "GreenPark Sports: Increasing Cloud Deployments by 70%"
 description: |
     Pulumi enabled GreenPark Sports to empower its developers with self-service cloud infrastructure, allowing them to quickly and easily deploy Kubernetes clusters and contribute infrastructure code.
-meta_desc: |
-    Pulumi enabled GreenPark Sports to empower its developers with self-service cloud infrastructure through a “developer-first” approach.
+meta_desc: Learn how GreenPark Sports worked with Pulumi to empower its developers with self-service cloud infrastructure through a “developer-first” approach.
 
 customer_name: GreenPark Sports
 customer_logo: /logos/customers/greenpark-sports-wordmark.png

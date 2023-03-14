@@ -1,8 +1,9 @@
 ---
+title_tag: Deploy a Web Application to Kubernetes Cluster
 title: Web Application on Kubernetes
 layout: template
 
-meta_desc: The Kubernetes Application template makes it easy to deploy a web application to a Kubernetes cluster with Pulumi.
+meta_desc: Easily deploy a web application to an existing Kubernetes cluster with Pulumi using this template.
 
 meta_image: meta.png
 

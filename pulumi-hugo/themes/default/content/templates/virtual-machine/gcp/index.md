@@ -1,7 +1,8 @@
 ---
+title_tag: Deploy a Virtual Machine to Google Cloud
 title: Virtual Machine on Google Cloud
 layout: template
-meta_desc: The Virtual Machine template makes it easy to deploy a virtual machine on Google Cloud with Pulumi and Google Compute Engine.
+meta_desc: Easily deploy a virtual machine on Google Cloud with Pulumi and Google Compute Engine using this template.
 meta_image: meta.png
 card_desc: Deploy a virtual machine on Google Cloud with Pulumi and Google Compute Engine.
 template:

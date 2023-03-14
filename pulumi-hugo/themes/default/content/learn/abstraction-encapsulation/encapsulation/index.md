@@ -1,12 +1,12 @@
 ---
+title_tag: Getting Started with Encapsulation | Learn Pulumi
 title: "Understanding Encapsulation"
 layout: topic
 date: 2021-11-17
 draft: false
 description: |
     Explore encapsulation of cloud resources with Pulumi.
-meta_desc: |
-    Explore encapsulation of cloud resources with Pulumi.
+meta_desc: Learn what encapsulation is in the context of infrastructure as code, why it is crucial for maintaining good IaC, and what encapsulation looks like in practice.
 index: 0
 estimated_time: 10
 meta_image: meta.png

@@ -1,8 +1,9 @@
 ---
+title_tag: Templates for Deploying Virtual Machines
 title: Virtual Machine Templates
 layout: overview
 description: Pulumi program templates are the fastest way to deploy virtual machines on AWS, Azure, or Google Cloud Platform. Templates come with predefined infrastructure as code so you can get started instantly.
-meta_desc: Pulumi program templates that make it easy to deploy virtual machines on AWS, Azure, or Google Cloud Platform.
+meta_desc: Easily deploy virtual machines (VMs) on AWS, Azure, or Google Cloud Platform with Pulumi Virtual Machine templates.
 meta_image: meta.png
 weight: 1
 ---

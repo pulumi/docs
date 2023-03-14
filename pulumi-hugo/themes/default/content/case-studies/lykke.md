@@ -1,9 +1,9 @@
 ---
-title: Lykke
+title_tag: Lykke | Case Studies
+title: "Lykke: Scaling Services while Reducing Costs"
 description: |
     Lykke worked closely with Pulumi to bring new applications to market and deploy infrastructure capabilities that help their developer team be more productive.
-meta_desc: |
-    Lykke worked closely with Pulumi to bring new applications to market and deploy infrastructure capabilities that help their developer team be more productive.
+meta_desc: Learn how Lykke worked with Pulumi to bring new applications to market and deploy infrastructure capabilities that boosted developer productivity.
 
 customer_name: Lykke
 customer_logo: /logos/customers/lykke_logo.svg

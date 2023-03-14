@@ -1,11 +1,10 @@
 ---
-title: Mercedes-Benz Research and Development
+title_tag: Mercedes-Benz R&D | Case Studies
+title: "Mercedes-Benz: Programming the Cloud"
 description: |
     Mercedes-Benz Research and Development used Pulumi to bring their application and
     infrastructure teams closer together.
-meta_desc: |
-    Mercedes-Benz Research and Development used Pulumi to bring their application and
-    infrastructure teams closer together.
+meta_desc: Learn how Mercedes-Benz Research and Development worked with Pulumi to bring their application and infrastructure teams closer together.
 
 customer_name: Mercedes-Benz Research and Development
 customer_logo: /logos/customers/mercedes-benz-RDNA_logo.png

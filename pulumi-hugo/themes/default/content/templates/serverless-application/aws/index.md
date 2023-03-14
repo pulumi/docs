@@ -1,7 +1,8 @@
 ---
+title_tag: Deploy a Serverless Application to AWS
 title: AWS Serverless Application
 layout: template
-meta_desc: The AWS Serverless Application template makes it easy to deploy a serverless application on AWS with Pulumi, AWS Lambda, and Amazon API Gateway.
+meta_desc: Easily deploy a serverless application on AWS with Pulumi, AWS Lambda, and Amazon API Gateway using this template.
 meta_image: meta.png
 card_desc: Deploy a serverless application on AWS with Pulumi, AWS Lambda, and Amazon API Gateway.
 template:

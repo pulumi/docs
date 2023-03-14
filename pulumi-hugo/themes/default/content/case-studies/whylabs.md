@@ -1,9 +1,9 @@
 ---
-title: Shifting Infrastructure Left at WhyLabs
+title_tag: WhyLabs | Case Studies
+title: "WhyLabs: Shifting Infrastructure to the Left"
 description: |
     At WhyLabs, Pulumi has made a significant impact in how they build, deploy and manage their infrastructure.
-meta_desc: |
-    At WhyLabs, Pulumi has made a significant impact in how they build, deploy and manage their infrastructure.
+meta_desc: Learn how WhyLabs worked with Pulumi to enable engineers to continuously and reliably ship new features faster than before for improved time-to-market.
 
 customer_name: WhyLabs
 customer_logo: /logos/customers/whylabs-wordmark.svg
