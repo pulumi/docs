@@ -6,6 +6,8 @@ meta_image: /images/pulumiup-2023/meta.png
 meta_desc: |
     PulumiUP is a virtual conference with industry-recognized leaders, demos, and panel discussions about the future of IaC, Platform Engineering & DevOps and Cloud
 
+event_date: 2023-06-15T08:00:00-07:00
+
 templates:
     items:
         - heading: Serverless AWS, Azure and GCP Templates

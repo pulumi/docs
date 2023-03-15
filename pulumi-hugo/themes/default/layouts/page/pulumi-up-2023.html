@@ -26,6 +26,16 @@
         </div>
     </div>
 
+    <section id="countdown" class="pt-12">
+        <pulumi-date-countdown-circles
+            date-string="{{ .Params.event_date }}"
+            value-label-class="block font-normal"
+            container-class="flex flex-wrap justify-center items-center"
+            text-class="px-3 text-4xl m-0"
+        >
+        </pulumi-date-countdown-circles>
+    </section>
+
     <div class="below-banner-description mx-auto px-8 my-8 w-full flex-col">
         <p>PulumiUP is a free, virtual conference open to all interested in platform engineering, infrastructure as code, software development, modern applications, or Pulumi.</p>
         <p>

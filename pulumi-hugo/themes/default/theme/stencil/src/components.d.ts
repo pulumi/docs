@@ -81,6 +81,11 @@ export namespace Components {
         "textClass": string;
         "valueLabelClass": string;
     }
+    interface PulumiDateCountdownCircles {
+        "containerClass": string;
+        "dateString": string;
+        "valueLabelClass": string;
+    }
     interface PulumiDatetime {
         "class"?: string;
         "date": string;
@@ -255,6 +260,12 @@ declare global {
         prototype: HTMLPulumiDateCountdownElement;
         new (): HTMLPulumiDateCountdownElement;
     };
+    interface HTMLPulumiDateCountdownCirclesElement extends Components.PulumiDateCountdownCircles, HTMLStencilElement {
+    }
+    var HTMLPulumiDateCountdownCirclesElement: {
+        prototype: HTMLPulumiDateCountdownCirclesElement;
+        new (): HTMLPulumiDateCountdownCirclesElement;
+    };
     interface HTMLPulumiDatetimeElement extends Components.PulumiDatetime, HTMLStencilElement {
     }
     var HTMLPulumiDatetimeElement: {
@@ -406,6 +417,7 @@ declare global {
         "pulumi-contact-us-form": HTMLPulumiContactUsFormElement;
         "pulumi-convert": HTMLPulumiConvertElement;
         "pulumi-date-countdown": HTMLPulumiDateCountdownElement;
+        "pulumi-date-countdown-circles": HTMLPulumiDateCountdownCirclesElement;
         "pulumi-datetime": HTMLPulumiDatetimeElement;
         "pulumi-developer-quotes": HTMLPulumiDeveloperQuotesElement;
         "pulumi-example": HTMLPulumiExampleElement;
@@ -499,6 +511,11 @@ declare namespace LocalJSX {
         "countdownOverText"?: string;
         "dateString"?: string;
         "textClass"?: string;
+        "valueLabelClass"?: string;
+    }
+    interface PulumiDateCountdownCircles {
+        "containerClass"?: string;
+        "dateString"?: string;
         "valueLabelClass"?: string;
     }
     interface PulumiDatetime {
@@ -609,6 +626,7 @@ declare namespace LocalJSX {
         "pulumi-contact-us-form": PulumiContactUsForm;
         "pulumi-convert": PulumiConvert;
         "pulumi-date-countdown": PulumiDateCountdown;
+        "pulumi-date-countdown-circles": PulumiDateCountdownCircles;
         "pulumi-datetime": PulumiDatetime;
         "pulumi-developer-quotes": PulumiDeveloperQuotes;
         "pulumi-example": PulumiExample;
@@ -650,6 +668,7 @@ declare module "@stencil/core" {
             "pulumi-contact-us-form": LocalJSX.PulumiContactUsForm & JSXBase.HTMLAttributes<HTMLPulumiContactUsFormElement>;
             "pulumi-convert": LocalJSX.PulumiConvert & JSXBase.HTMLAttributes<HTMLPulumiConvertElement>;
             "pulumi-date-countdown": LocalJSX.PulumiDateCountdown & JSXBase.HTMLAttributes<HTMLPulumiDateCountdownElement>;
+            "pulumi-date-countdown-circles": LocalJSX.PulumiDateCountdownCircles & JSXBase.HTMLAttributes<HTMLPulumiDateCountdownCirclesElement>;
             "pulumi-datetime": LocalJSX.PulumiDatetime & JSXBase.HTMLAttributes<HTMLPulumiDatetimeElement>;
             "pulumi-developer-quotes": LocalJSX.PulumiDeveloperQuotes & JSXBase.HTMLAttributes<HTMLPulumiDeveloperQuotesElement>;
             "pulumi-example": LocalJSX.PulumiExample & JSXBase.HTMLAttributes<HTMLPulumiExampleElement>;
