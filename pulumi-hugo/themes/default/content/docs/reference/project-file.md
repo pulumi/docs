@@ -26,7 +26,7 @@ runtime: nodejs
 ```yaml
 name: Example Pulumi project file with all possible attributes
 runtime: yaml
-description: An example project
+description: An example project with all attributes
 main: example-project/
 stackConfigDir: config/
 backend:
@@ -58,7 +58,7 @@ plugins:
 | - | - | - | - |
 | `name` | required | Name of the project containing alphanumeric characters, hyphens, underscores, and periods. | None. |
 | `runtime` | required | Installed language runtime of the project: `nodejs`, `python`, `go`, `dotnet`, `java` or `yaml`. | [runtime options](#runtime-options)
-| `description` | optional | Description of the project. | None. |
+| `description` | optional | A brief description of the project. | None. |
 | `config` | optional | Project level config (Added in v3.44). | [config options](#config-options) |
 | `main` | optional | Path to the Pulumi program. The default is the working directory. | None. |
 | `stackConfigDir` | optional | Config directory location relative to the location of `Pulumi.yaml`. | None. |
@@ -73,12 +73,12 @@ The runtime attribute has an additional property called options where you can fu
 
 | Name | Use case | Description |
 | - | - | - |
-| `typescript` | Only applicable for the nodejs runtime | Boolean indicating whether to use `ts-node` or not. |
-| `nodeargs` | Only applicable for the nodejs runtime | Arguments to pass to `node`. |
-| `buildTarget` | Only applicable for the go runtime | Path to save the compiled go binary to. |
-| `binary` | Applicable for the go, .net, and java runtimes | Path to pre-built executable. |
-| `virtualenv` | Ony applicable for the python runtime | Virtual environment path. |
-| `compiler` | Only applicable for YAML projects | Executable and arguments that emit to standard out. |
+| `typescript` | Only applicable for the **nodejs** runtime | Boolean indicating whether to use `ts-node` or not. |
+| `nodeargs` | Only applicable for the **nodejs** runtime | Arguments to pass to `node`. |
+| `buildTarget` | Only applicable for the **go** runtime | Path to save the compiled go binary to. |
+| `binary` | Applicable for the **go**, **.net**, and **java** runtimes | Path to pre-built executable. |
+| `virtualenv` | Ony applicable for the **python** runtime | Virtual environment path. |
+| `compiler` | Only applicable for **YAML** projects | Executable and arguments issued to standard out. |
 
 #### About `nodeargs`
 
@@ -144,7 +144,7 @@ Schemas are only valid for project property keys. For setting the value of a pro
 | `description` | optional | Description of the template. |
 | `config` | required | Config to request when using this template with `pulumi new`. |
 
-#### `config`
+#### `config` 
 
 | Name | Required | Description |
 | - | - | - |
@@ -160,7 +160,7 @@ Use this option to link to local plugin binaries. This option is intended for us
 | - | - | - |
 | `providers` | optional | Plugin for the provider. |
 | `analyzers` | optional | Plugin for the policy. |
-| `languages` | optional | Plugin in for the language. |
+| `languages` | optional | Plugin for the language. |
 
 #### Options for `providers`, `analyzers`, and `languages`
 
