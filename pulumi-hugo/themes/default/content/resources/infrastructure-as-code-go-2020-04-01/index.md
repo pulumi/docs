@@ -46,7 +46,7 @@ main:
     # Webinar title.
     title: "Modern Cloud Infrastructure in Go"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-04-01T18:30:00.000 -04:00
+    sortable_date: 2020-04-01T18:30:00.000-04:00
     # Duration of the webinar.
     duration: "1.5 hours"
     # Datetime of the webinar.

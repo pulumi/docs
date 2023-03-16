@@ -97,6 +97,12 @@
                     {{ $filters := slice "all" }}
 
 
+                    <!-- create values to determine if date is upcoming -->
+                    {{ $nowUnix := now.UnixMilli }}
+                    <!-- add 24 hours to event date to list it for an extra day -->
+                    {{ $eventDateUnix := (add (.date | time.AsTime).UnixMilli (duration "hour" 24).Milliseconds) }}
+
+
                     <!-- Set the values based on the type of the page. -->
                     {{ if eq $data.Type "webinars" }}
                         {{ $description = $data.Params.meta_desc }}
@@ -132,7 +138,7 @@
                         {{ else if $data.Params.pre_recorded }}
                             {{ $icon = "video" }}
                             {{ $filters = $filters | append "videos" }}
-                        {{ else }}
+                        {{ else if lt $nowUnix $eventDateUnix }}
                             {{ $filters = $filters | append "upcoming" }}
                         {{ end }}
 

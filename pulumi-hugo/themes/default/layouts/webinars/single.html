@@ -12,6 +12,13 @@
 {{ end }}
 
 {{ define "main" }}
+    <!-- time variables to remove registration forms from past events -->
+    {{ $nowUnix := now.UnixMilli }}
+    <!-- add 24 hours to event date to list it for an extra day -->
+    {{ $eventDateUnix := (add (.Params.main.sortable_date | time.AsTime).UnixMilli (duration "hour" 24).Milliseconds) }}
+    {{ $timePassed := gt $nowUnix $eventDateUnix }}
+
+
     <section id="webinarLandingPage" class="px-4">
         <div class="container mx-auto max-w-6xl pt-16 pb-8 md:flex">
             {{ if .Params.gated }}
@@ -59,7 +66,7 @@
                     {{ end }}
                 </div>
                 <div id="webinarRegistrationForm" class="mt-10 md:mt-0 md:w-1/2 md:mx-8 bg-gray-200 rounded p-6">
-                    {{ if .Params.unlisted }}
+                    {{ if (or .Params.unlisted $timePassed) }}
                         <h4 class="text-orange">Recording Coming Soon!</h4>
                         <p>This live webinar is no longer available. The recording will be posted to this page when it is available.</p>
                     {{ else }}
