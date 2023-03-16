@@ -77,7 +77,7 @@ including all the required frontmatter parameters.
 
 1. If you don't already have a [TOML](https://github.com/toml-lang/toml) file [in the `team` directory](https://github.com/pulumi/pulumi-hugo/tree/master/themes/default/data/team/team) of the repo, create one now. For Pulumi employees, that file should look something like this (your `id` can be any string, but we recommend `firstname-lastname`):
 
-   ```
+   ```toml
    id = "christian-nunciato"
    name = "Christian Nunciato"
    title = "Software Engineer"
@@ -91,7 +91,7 @@ including all the required frontmatter parameters.
 
    For community contributors, it's mostly the same, but with a `status` of `guest`, and a more informative `title`:
 
-   ```
+   ```toml
    id = "mikhail-shilkov"
    name = "Mikhail Shilkov"
    title = "Microsoft Azure MVP and early Pulumi user"
