@@ -144,7 +144,7 @@ Schemas are only valid for project property keys. For setting the value of a pro
 | `description` | optional | Description of the template. |
 | `config` | required | Config to request when using this template with `pulumi new`. |
 
-#### `config` 
+#### `config`
 
 | Name | Required | Description |
 | - | - | - |
