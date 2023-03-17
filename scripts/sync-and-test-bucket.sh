@@ -32,6 +32,10 @@ fi
 # For previews, name the destination bucket with the PR number, to reduce the number of
 # buckets we create and to facilitate shorter sync times.
 destination_bucket="$(origin_bucket_prefix)-$(build_identifier)"
+if [[ "$GITHUB_WORKFLOW" == "Build and deploy new account" ]]; then
+    echo "setting bucket in new account"
+    destination_bucket="www-$(origin_bucket_prefix)-$(build_identifier)"
+fi
 destination_bucket_uri="s3://${destination_bucket}"
 
 # Translate Hugo redirects into a file we'll use for making 301 redirects later. Note that
