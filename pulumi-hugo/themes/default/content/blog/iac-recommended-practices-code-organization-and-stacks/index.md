@@ -21,12 +21,11 @@ The ultimate goal of this series is to discuss recommended practices for using P
 
 Here are links to all the blog posts in the series (entries below that are not linked are planned but haven't yet been published---this will get updated as new posts are published):
 
-* [**IaC Recommended Practices: Code Organization and Stacks**](/blog/iac-recommended-practices-code-organization-and-stacks/) (this post)
+* **IaC Recommended Practices: Code Organization and Stacks** (this post)
 * [IaC Recommended Practices: Developer Stacks and Git Branches](/blog/iac-recommended-practices-developer-stacks-git-branches/)
-* IaC Recommended Practices: Structuring Pulumi Projects
-* IaC Recommended Practices: Local Testing with Pulumi
-* IaC Recommended Practices: Moving Infrastructure State Between Projects
+* [IaC Recommended Practices: Structuring Pulumi Projects](/blog/iac-recommended-practices-structuring-pulumi-projects/)
 * IaC Recommended Practices: Tying Stacks Together with Stack References
+* IaC Recommended Practices: Local Testing with Pulumi
 * IaC Recommended Practices: Evolving the Application
 * IaC Recommended Practices: Adding Pulumi Deployments
 * IaC Recommended Practices: Refactoring for Reuse

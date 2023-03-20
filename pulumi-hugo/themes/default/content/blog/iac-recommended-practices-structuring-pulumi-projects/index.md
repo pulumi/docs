@@ -19,21 +19,14 @@ The [first blog post](/blog/iac-recommended-practices-code-organization-and-stac
 
 Here are links to all the blog posts in the series (entries below that are not linked are planned but haven't yet been published---this will get updated as new posts are published):
 
-[IaC Recommended Practices: Code Organization and Stacks](/blog/iac-recommended-practices-code-organization-and-stacks/)
-
-[IaC Recommended Practices: Developer Stacks and Git Branches](/blog/iac-recommended-practices-developer-stacks-git-branches/)
-
-**IaC Recommended Practices: Structuring Pulumi Projects** (this post)
-
-IaC Recommended Practices: Tying Stacks Together with Stack References
-
-IaC Recommended Practices: Local Testing with Pulumi
-
-IaC Recommended Practices: Evolving the Application
-
-IaC Recommended Practices: Adding Pulumi Deployments
-
-IaC Recommended Practices: Refactoring for Reuse
+* [IaC Recommended Practices: Code Organization and Stacks](/blog/iac-recommended-practices-code-organization-and-stacks/)
+* [IaC Recommended Practices: Developer Stacks and Git Branches](/blog/iac-recommended-practices-developer-stacks-git-branches/)
+* **IaC Recommended Practices: Structuring Pulumi Projects** (this post)
+* IaC Recommended Practices: Tying Stacks Together with Stack References
+* IaC Recommended Practices: Local Testing with Pulumi
+* IaC Recommended Practices: Evolving the Application
+* IaC Recommended Practices: Adding Pulumi Deployments
+* IaC Recommended Practices: Refactoring for Reuse
 
 ## Catching up with Zephyr
 
