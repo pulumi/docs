@@ -13,6 +13,8 @@ const config = {
     websiteDomain: stackConfig.require("websiteDomain"),
     // websiteLogsBucketName is the name of the S3 bucket used for storing access logs.
     websiteLogsBucketName: stackConfig.require("websiteLogsBucketName"),
+    // websiteFallbackBucketName is the name of the S3 fallback bucket.
+    websiteFallbackBucketName: stackConfig.get("websiteFallbackBucketName"),
     // ACM certificate for the target domain. Must be in the us-east-1 region.
     // certificateArn: stackConfig.require("certificateArn"),
     // redirectDomain is the domain to use for any redirects.
@@ -83,7 +85,7 @@ const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {
 if (config.makeFallbackBucket) {
     const fallbackBucket = new aws.s3.Bucket(
         "fallback-bucket", {
-            bucket: config.websiteDomain,
+            bucket: config.websiteFallbackBucketName,
             acl: aws.s3.PublicReadAcl,
             website: {
                 indexDocument: "index.html",
