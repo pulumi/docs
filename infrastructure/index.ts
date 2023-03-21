@@ -13,8 +13,6 @@ const config = {
     websiteDomain: stackConfig.require("websiteDomain"),
     // websiteLogsBucketName is the name of the S3 bucket used for storing access logs.
     websiteLogsBucketName: stackConfig.require("websiteLogsBucketName"),
-    // websiteFallbackBucketName is the name of the S3 fallback bucket.
-    websiteFallbackBucketName: stackConfig.get("websiteFallbackBucketName"),
     // ACM certificate for the target domain. Must be in the us-east-1 region.
     certificateArn: stackConfig.require("certificateArn"),
     // redirectDomain is the domain to use for any redirects.
@@ -85,15 +83,12 @@ const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {
 if (config.makeFallbackBucket) {
     const fallbackBucket = new aws.s3.Bucket(
         "fallback-bucket", {
-            bucket: config.websiteFallbackBucketName,
+            bucket: config.websiteDomain,
             acl: aws.s3.PublicReadAcl,
             website: {
                 indexDocument: "index.html",
                 errorDocument: "404.html",
             },
-        },
-        {
-            protect: true,
         },
     );
 }
@@ -176,7 +171,7 @@ const baseCacheBehavior = {
 const domainAliases = [];
 
 // websiteDomain is the A record for the website bucket associated with the website.
-domainAliases.push(`*.${getDomainAndSubdomain(config.websiteDomain).parentDomain.slice(0, -1)}`);
+domainAliases.push(config.websiteDomain);
 
 // redirectDomain is the domain to use for fully-qualified 301 redirects.
 if (config.redirectDomain) {
@@ -347,7 +342,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
 
     // CloudFront certs must be in us-east-1, just like API Gateway.
     viewerCertificate: {
-        // cloudfrontDefaultCertificate: true,
         acmCertificateArn: config.certificateArn,
         sslSupportMethod: "sni-only",
         minimumProtocolVersion: "TLSv1.2_2018",
@@ -393,7 +387,7 @@ function getDomainAndSubdomain(domain: string): { subdomain: string, parentDomai
     };
 }
 
-// // Creates a new Route53 DNS record pointing the domain to the CloudFront distribution.
+// Creates a new Route53 DNS record pointing the domain to the CloudFront distribution.
 async function createAliasRecord(
         targetDomain: string, distribution: aws.cloudfront.Distribution): Promise<aws.route53.Record> {
 
@@ -414,6 +408,7 @@ async function createAliasRecord(
             ],
         },
         {
+            aliases: [{name: "*.pulumi.com"}],
             protect: true,
         });
 }
