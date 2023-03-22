@@ -9,7 +9,7 @@ main:
     - name: Josh Kodroff
       role: Senior Solutions Architect, Pulumi
     - name: April Edwards
-      role: Senior Cloud Advocate, Microsoft
+      role: Senior Enterprise Advocate, GitHub
   title: Getting Started with Kubernetes on Azure
   description: In this workshop, you will learn how to deploy a Kubernetes cluster
     on Microsoft Azure and run containerized applications on the cluster. The
