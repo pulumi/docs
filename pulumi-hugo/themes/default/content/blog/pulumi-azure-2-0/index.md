@@ -178,6 +178,7 @@ pulumi-azure>=2.0.0
 ```
 
 {{% /choosable %}}
+{{% /chooser %}}
 
 There are quite a few breaking changes, so you may need to adjust your code before you can run the program successfully again.
 

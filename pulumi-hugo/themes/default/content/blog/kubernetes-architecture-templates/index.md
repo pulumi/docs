@@ -90,7 +90,7 @@ $ touch Pulumi.dev.yaml
 
 And do a quick cleanup of the `Pulumi.dev.yaml` file:
 
-{{< code-filename file="<root>/Pulumi.dev.yaml" >}}
+{{< code-filename file="<root>/Pulumi.dev.yaml" />}}
 
 ```yaml {.line-numbers}
 config:
@@ -106,7 +106,7 @@ Since we're running on GKE, we need to define a different namespace than `defaul
 
 We'll need to modify the `Pulumi.yaml` file to remove the virtual environment:
 
-{{< code-filename file="<root>/Pulumi.yaml" >}}
+{{< code-filename file="<root>/Pulumi.yaml" />}}
 
 ```yaml {.line-numbers}
 name: k8s-combo-infra
@@ -116,7 +116,7 @@ runtime: python
 
 And now we can set up our new `__main__.py` file! Create a new `__main__.py` file in the root of the repo, and add this code:
 
-{{< code-filename file="<root>/__main__.py" >}}
+{{< code-filename file="<root>/__main__.py" />}}
 
 ```python {.line-numbers}
 from pulumi import export as pulumi_export
@@ -141,7 +141,7 @@ We do need to make a couple small changes to the `app/__main__.py` file. We need
 1. pass that provider context to all of the resources, and
 1. get the endpoint from our app:
 
-{{< code-filename file="<root>/app/__main__.py" >}}
+{{< code-filename file="<root>/app/__main__.py" />}}
 
 ```python {.line-numbers hl_lines=[5,"14-19",27,51,93,109,111,117]}
 import pulumi
@@ -273,7 +273,7 @@ $ poetry run pulumi up
 
 And up they all go! Note that this takes a while, so don't panic!
 
-{{< code-filename file="output" >}}
+{{< code-filename file="output" />}}
 
 ```bash
 Previewing update (dev)
