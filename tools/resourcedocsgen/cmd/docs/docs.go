@@ -1,13 +1,10 @@
 package docs
 
 import (
-	"embed"
 	"encoding/json"
 	"fmt"
-	"io/fs"
 	"io/ioutil"
 	"os"
-	"path/filepath"
 	"strings"
 
 	"github.com/ghodss/yaml"
@@ -35,27 +32,9 @@ var (
 	// could have a hand-authored overlays schema spec in the overlays folder that could be
 	// merged into it.
 	mainSpec *pschema.PackageSpec
-	//go:embed overlays/**/*.json
-	overlays embed.FS
 )
 
 func getPulumiPackageFromSchema(docsOutDir string) (*pschema.Package, error) {
-	overlaysSchemaFile, err := getOverlaySchema()
-	if err != nil {
-		return nil, errors.Wrap(err, "getting overlays schema")
-	}
-
-	if overlaysSchemaFile != nil {
-		overlaySpec := &pschema.PackageSpec{}
-
-		if err := json.Unmarshal(overlaysSchemaFile, overlaySpec); err != nil {
-			return nil, errors.Wrap(err, "unmarshalling overlay schema into a PackageSpec")
-		}
-
-		if err := mergeOverlaySchemaSpec(mainSpec, overlaySpec); err != nil {
-			return nil, errors.Wrap(err, "merging the overlay schema spec with the main spec")
-		}
-	}
 
 	// Delete existing docs before generating new ones.
 	if err := os.RemoveAll(docsOutDir); err != nil {
@@ -77,38 +56,6 @@ func getPulumiPackageFromSchema(docsOutDir string) (*pschema.Package, error) {
 	docsgen.Initialize(tool, pulPkg)
 
 	return pulPkg, nil
-}
-
-// getOverlaySchema returns the overlay file contents for the package.
-// Returns nil if there is no overlay file for the package.
-func getOverlaySchema() ([]byte, error) {
-	glog.Infoln("Checking if the package has an overlays schema...")
-	// Test the expected path for an overlays file. If there is no such file, assume
-	// that the package has no overlays.
-	overlayFilePath := filepath.Join("overlays", mainSpec.Name, "overlays.json")
-	f, err := overlays.Open(overlayFilePath)
-	if err != nil {
-		pathErr := err.(*fs.PathError)
-		if pathErr.Err == fs.ErrNotExist {
-			glog.Infoln("Didn't find an overlays schema...")
-			overlayFilePath = ""
-		} else {
-			return nil, errors.Wrap(err, "checking embedded overlays fs for overlay file")
-		}
-	}
-
-	if overlayFilePath == "" {
-		return nil, nil
-	}
-
-	glog.Infoln("Using the overlays schema file from", overlayFilePath)
-
-	b, err := ioutil.ReadAll(f)
-	if err != nil {
-		return nil, errors.Wrap(err, "reading overlay file from embedded fs")
-	}
-
-	return b, nil
 }
 
 func ResourceDocsCmd() *cobra.Command {
