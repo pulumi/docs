@@ -49,6 +49,9 @@ One of the most heavily used features of this provider is the `docker.Image` res
 
 Our friends Nikhil Benesch and the Materialize team created a Docker image provider that demonstrated better workflows with Docker BuildKit and we’re excited to finally make these improvements part of our official Pulumi Docker Provider.
 
+Below is a video walkthrough of using the v4 Docker provider:
+{{< youtube "kr0RZzv-pUI?rel=0" >}}
+
 ### Significantly improved performance
 
 To improve the efficiency of the Pulumi Docker Provider, we have changed the default behavior to rebuild only on context change. In addition, the `cacheFrom` option now offers the ability to use a registry as the image cache. By leveraging BuildKit and caching improvements, subsequent rebuilds may be up to 50x faster. This functionality and other improvements of the Pulumi Docker Provider we are announcing today are [highly requested from our community](https://github.com/pulumi/pulumi-docker/issues/132).
