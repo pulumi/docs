@@ -15,6 +15,82 @@
         max-width: 1680px;
     }
 
+    &.about-awards-section {
+         .circle-top-left {
+            @apply rounded-full absolute bg-yellow-600;
+            width: 17rem;
+            height: 17rem;
+            left: -8.25rem;
+            top: -8.5rem;
+        }
+
+        .circle-top-right {
+            @apply rounded-full absolute bg-orange-500;
+            width: 12rem;
+            height: 12rem;
+            right: 4.5rem;
+            bottom: 14rem;
+        }
+
+         .circle-bottom-left {
+            @apply rounded-full absolute bg-purple-600;
+            width: 12rem;
+            height: 12rem;
+            left: 0rem;
+            top: 23rem;
+        }
+
+        .circle-bottom-right {
+            @apply rounded-full absolute bg-salmon-600;
+            width: 5.5rem;
+            height: 5.5rem;
+            right: -1.5rem;
+            bottom: -1rem;
+        }
+    }
+
+    &.about-what-we-believe {
+         .circle-top-left {
+            @apply rounded-full absolute bg-fuchsia-600;
+            width: 22rem;
+            height: 22rem;
+            left: .75rem;
+            top: -9.5rem;
+        }
+
+        .circle-top-right {
+            @apply rounded-full absolute bg-yellow-500;
+            width: 12rem;
+            height: 12rem;
+            right: -3.5rem;
+            top: -2rem;
+        }
+
+        .circle-middle-left {
+            @apply rounded-full absolute bg-salmon-500;
+            width: 7.5rem;
+            height: 7.5rem;
+            left: 27rem;
+            bottom: 16rem;
+        }
+
+         .circle-bottom-left {
+            @apply rounded-full absolute bg-purple-600;
+            width: 5.5rem;
+            height: 5.5rem;
+            left: 0rem;
+            bottom: 8rem;
+        }
+
+        .circle-bottom-right {
+            @apply rounded-full absolute bg-salmon-600;
+            width: 8.5rem;
+            height: 8.5rem;
+            right: -1.5rem;
+            bottom: 6rem;
+        }
+    }
+
     &.home-build-section {
         .circle-left,
         .circle-center,

@@ -145,6 +145,24 @@ function generateOnThisPage() {
         $(list).removeClass("invisible");
     });
 
+    $(`#about-nav li[data-filter-name="who-we-are"]`).addClass("active-about-nav-item");
+
+    $(function () {                       
+        $("#about-nav li").click(function () { 
+            const activeClassName = "active-about-nav-item";
+            $(this).addClass(activeClassName); 
+
+            const activeLink = $(this).data("filter-name");
+            const allLinks = ["who-we-are", "what-we-believe", "community", "history", "awards", "newsroom", "join-us"]
+            const inactiveLinks = allLinks.filter(link => link !== activeLink);
+
+            inactiveLinks.forEach(link => {
+                $(`#about-nav li[data-filter-name="${link}"]`).removeClass(activeClassName);
+            })
+
+        });
+    });
+
     // Wrap "required" asterisks in tooltips.
     $("dl.resources-properties dt.property-required.property-replacement")
         .removeAttr("title")
