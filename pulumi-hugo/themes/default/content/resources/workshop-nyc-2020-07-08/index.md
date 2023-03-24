@@ -11,6 +11,8 @@ aliases:
 type: events
 
 unlisted: true
+# don't index on unlisted resources
+block_external_search_index: true
 
 # The url slug for the even landing page.
 url_slug: "workshop-nyc-2020-07-08"

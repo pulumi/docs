@@ -30,7 +30,7 @@ type: webinars
 # set the 'block_external_search_index' flag to true so Google does not index
 # the webinar page created.
 external: false
-block_external_search_index: false
+block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.

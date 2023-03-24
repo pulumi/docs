@@ -9,6 +9,8 @@ aliases:
 
 # Events with unlisted as true will not be shown on the event list
 unlisted: true
+# don't index on unlisted resources
+block_external_search_index: true
 
 # The layout of the landing page.
 type: events

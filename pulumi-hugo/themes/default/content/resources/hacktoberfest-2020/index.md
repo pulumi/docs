@@ -24,7 +24,7 @@ event:
     integrations, automation, and infrastructure libraries!
 type: events
 url_slug: hacktoberfest-2020
-block_external_search_index: false
+block_external_search_index: true
 ---
 ## About Hacktoberfest
 
