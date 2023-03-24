@@ -1,0 +1,19 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
+<rss version="2.0">
+    <channel>
+        <title>Pulumi Events</title>
+        <link>{{ .Site.Params.canonicalURL }}{{ .RelPermalink }}</link>
+        <description>Feed containing upcoming Pulumi events.</description>
+        <language>{{ .Site.LanguageCode }}</language>
+        <pubDate>{{ now | time.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+        {{ range (sort .Data.Pages ".Params.main.sortable_date").Reverse }}
+            <item>
+                <guid>{{ .Site.Params.canonicalURL }}{{ .RelPermalink }}</guid>
+                <title>{{ .Params.title }}</title>
+                <description>{{ .Params.meta_desc }}</description>
+                <pubDate>{{ .Params.main.sortable_date }}</pubDate>
+                <link>{{ .Site.Params.canonicalURL }}{{ .RelPermalink }}</link>
+            </item>
+        {{ end }}
+    </channel>
+</rss>

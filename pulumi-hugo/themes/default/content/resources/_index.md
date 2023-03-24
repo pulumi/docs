@@ -27,4 +27,6 @@ sections:
     - label: Whitepapers
       anchor: whitepapers
       icon: book
+
+outputs: ["html", "rss"]
 ---
