@@ -17,7 +17,7 @@ The holidays are upon us and mere anarchy has been loosed upon our psyches. More
 
 ![An architecture diagram showing an AWS application load balancer, Fargate service, and MongoDB Atlas database](/images/challenge/architecture_mern.png)
 
-After completing this challenge and if you feel so inclined to thank The Pulumipus, please write a blog post or post a quick video about it. Tag us on social media or email us at [da@pulumi.com](mailto:da@pulumi.com), and we will send you some special swag.
+After completing this challenge and if you feel so inclined to thank The Pulumipus, please write a blog post or post a quick video about it. Tag us on social media or email us at [da@pulumi.com](mailto:da@pulumi.com), and we will help spread the word about your experience.
 
 ### Prerequisites
 
@@ -258,7 +258,7 @@ Run `pulumi up` and select yes to update the stack. Go to the `app_url` export t
 
 ### Congratulations
 
-Congratulations! You've completed this Pulumi Challenge. If you want to receive special swag for completing the challenge (and to thank The Pulumipus), write a blog or post a quick video about it, and then tag us on social media or email us at [da@pulumi.com](mailto:da@pulumi.com).
+Congratulations! You've completed this Pulumi Challenge. Tag us on social media or email us at [da@pulumi.com](mailto:da@pulumi.com) and tell us what you thought of this Pulumi Challenge!
 
 #### What you have learned
 
