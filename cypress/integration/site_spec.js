@@ -55,7 +55,7 @@ describe("www.pulumi.com", () => {
 
         // Regression test for https://github.com/pulumi/docs/issues/1396, which has happened multiple times.
         // The CSS is applied by targeting specific node structures due to the way our Python docs are generated.
-        describe("is styled correctly", () => {
+        it("is styled correctly", () => {
             cy.get("#pulumi-python-sdk")
                 .invoke("css", "--pulumi-python-sdk")
                 .should("equal", "true");
