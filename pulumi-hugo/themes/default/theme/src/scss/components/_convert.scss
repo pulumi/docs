@@ -13,7 +13,7 @@ pulumi-convert {
         }
 
         .btn-convert {
-            @apply hidden btn bg-blue-500 border-blue-500 flex items-center w-full text-sm justify-center mt-8 mb-4 py-3 text-white;
+            @apply btn bg-blue-500 border-blue-500 flex items-center w-full text-xs justify-center py-3 text-white;
 
             .icon {
                 @apply ml-2;
@@ -33,8 +33,8 @@ pulumi-convert {
                 @apply cursor-default bg-blue-800 border-blue-800 text-gray-400;
             }
 
-            @screen xl {
-                @apply hidden w-auto text-xs justify-start mt-0 mb-0 py-2;
+           @screen xl {
+                @apply w-auto justify-start;
             }
         }
 
@@ -96,18 +96,10 @@ pulumi-convert {
             }
 
             .tabs {
-                @apply bg-black shadow-md p-0 flex items-center overflow-x-scroll relative;
+                @apply bg-black shadow-md p-0 flex items-center relative overflow-visible;
 
                 pulumi-tooltip {
-                    display: none;
-                }
-
-                @screen xl {
-                    @apply overflow-visible;
-
-                    pulumi-tooltip {
-                        display: inherit;
-                    }
+                    display: inherit;
                 }
 
                 .tab {
@@ -139,11 +131,7 @@ pulumi-convert {
 
                     // Hide fourth (and greater) tabs until we have enough screen width to use them.
                     &:nth-of-type(n + 4) {
-                        @apply hidden;
-
-                        @screen xl {
-                            @apply flex;
-                        }
+                        @apply flex;
                     }
                 }
 
@@ -154,9 +142,7 @@ pulumi-convert {
                     transform: translateY(-50%);
 
                     .btn-convert {
-                        @screen xl {
-                            @apply block;
-                        }
+                        @apply block;
                     }
 
                     .btn-download,
@@ -289,6 +275,10 @@ pulumi-convert {
                     .CodeMirror-scroll {
                         @apply opacity-0;
                     }
+                }
+
+                .btn-convert {
+                    @apply hidden;
                 }
             }
 
