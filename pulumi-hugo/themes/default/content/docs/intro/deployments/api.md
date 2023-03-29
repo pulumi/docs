@@ -1,7 +1,7 @@
 ---
 title_tag: "REST API Documentation"
 title: "REST API Documentation"
-meta_desc: Documentation for the Pulumi Deployments REST API including configuring settings, and OIDC, 
+meta_desc: Documentation for the Pulumi Deployments REST API including configuring settings and OIDC
 menu:
   intro:
     identifier: deployments-api
@@ -280,10 +280,9 @@ The following environment variables are used internally by Pulumi Deployments, a
   "preRunCommands": [
     "node --version",
     "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash",
-    ". ~/.bashrc && nvm use 17 && yarn"
+    "nvm use 17 && yarn"
   ],
   "environmentVariables": {
-    "NVM_DIR": "/usr/local/bin",
     "NODE_VERSION": "17"
   },
   "options": {

@@ -180,3 +180,41 @@ Once the GitHub app has been installed, the deployment settings for a stack can 
 - Configuring deployment settings for a stack currently requires admin privileges in the Pulumi organization.
 - The GitHub app may only be installed by a GitHub *and* Pulumi admin.
 - Currently, there is a 1 to 1 mapping between GitHub organizations and Pulumi organizations.
+
+## Common Scenarios
+
+### Path Filtering
+
+When using the GitHub app and push-to-deploy, you may want to filter deployment events to only target file changes in specific directories. You can easily do this using path filtering, so a deployment is only triggered if there is a change in files that match the path filters. This is especially useful for monorepos where you may have multiple Pulumi programs within the same repository.
+
+![Pulumi UI - Path Filters](../ui-path-filters.png)
+
+As with any other deployment setting, the path filters may be set via the Pulumi Console, using the REST API or defined in code using the Service provider.
+
+### Customizing the Deployment Environment
+
+By default, the deployment is executed using the [pulumi/pulumi](https://hub.docker.com/r/pulumi/pulumi) image. However, there may be scenarios where you might want to customize the image used for the execution, e.g. if you want to use a different version of python or need to include additional dependencies.
+
+This is possible by specifying a custom executor image for your deployment.
+
+![Pulumi UI - Custom Executor](../ui-custom-executor.png)
+
+Image requirements:
+
+- It must be a unix-based image which includes `curl`.
+- It must include the `pulumi` CLI in its `$PATH`.
+- It must include the required SDK runtime(s) for your Pulumi program.
+
+{{% notes "info" %}}
+
+Using a custom image may result in slower execution due to time spent pulling the image.
+
+{{% /notes %}}
+
+### Customizing the dependency installation step
+
+By default, the deployment executor will attempt to install dependencies for your project by using the default dependency manager for the language (i.e. `npm` for nodejs or `virtualenv` for python). However, there may be scenarios where you may want to have more control over the dependency installation step (e.g. you are using `yarn` and/or a different version of `node` than the one that is installed by default).
+
+This is enabled by skipping the default dependency installation step (under Advanced Settings in the UI), and setting a few pre-run commands and environment variables.
+
+![Pulumi UI - Node Version](../ui-node-version.png)
