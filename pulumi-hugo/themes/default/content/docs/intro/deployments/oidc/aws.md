@@ -3,9 +3,11 @@ title_tag: Configuring OpenID Connect for AWS | OIDC
 title: Configuring OpenID Connect for AWS
 meta_desc: This page describes how to configure OIDC token exchange in AWS for use with Pulumi Deployments
 menu:
-    userguides:
-        parent: oidc
+    intro:
+        parent: deployments-oidc
         weight: 1
+
+aliases: ["/docs/guides/oidc/aws"]
 ---
 
 This document outlines the steps required to configure Pulumi Deployments to use OpenID Connect to authenticate with AWS. OIDC in AWS uses a web identity provider to assume an IAM role. Access to the IAM role is authorized using a trust policy that validates the contents of the OIDC token issued by the Pulumi Service.

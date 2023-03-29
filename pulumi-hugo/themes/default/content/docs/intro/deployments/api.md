@@ -1,10 +1,16 @@
 ---
-title: "Pulumi Deployments REST API"
-meta_desc: A fully managed REST API to run Pulumi programs executed by the Pulumi Service. This includes APIs to observe your deployment and all associated logs.
+title_tag: "REST API Documentation"
+title: "REST API Documentation"
+meta_desc: Documentation for the Pulumi Deployments REST API including configuring settings, and OIDC, 
 menu:
-  reference:
+  intro:
+    identifier: deployments-api
+    parent: deployments
     weight: 5
+
+aliases: ["/docs/reference/deployments-rest-api/"]
 ---
+
 
 The Pulumi Deployments REST API provides a fully-managed remote execution interface for your Pulumi programs.
 
@@ -28,62 +34,16 @@ To view your access tokens, or create a new one, view the <a href="https://app.p
 
 The Pulumi Deployments REST API will return a 401 status code if the token is missing or invalid.
 
-## Endpoints
+## Deployment Settings
 
-### Create Deployment
+Several endpoints accept or return deployment settings. Deployment settings are composed of several parts:
 
-Creates a new deployment to execute a Pulumi program via the Pulumi Service.
+* An [ExecutorContext](#executorcontext) that defines information about the executor where the Pulumi operation is executed.
+* A [SourceContext](#sourcecontext) that defines where the source code for your project is located. Currently, only git repos are supported.
+* An [OperationContext](#operationcontext) that defines how the Pulumi project is to be executed (i.e. the Pulumi operation to execute and any associated context it requires).
+* An optional [GitHub block](#github) that contains information for GitHub integration.
 
-```
-POST https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployments
-```
-
-{{% notes "info" %}}
-
-The stack **must** exist before a deployment can be created for it. If you attempt to create a deployment for a stack that does not exist, the request will return an error stating as such.
-
-{{% /notes %}}
-
-A deployment request consists of three main pieces, an [ExecutorContext](#ExecutorContext) a [SourceContext](#SourceContext) and an [OperationContext](#OperationContext).
-
-* The [ExecutorContext](#ExecutorContext) defines information about the executor where the Pulumi operation is executed.
-* The [SourceContext](#SourceContext) defines where the source code for your project is located. Currently, only git repos are supported.
-* The [OperationContext](#OperationContext) defines how the Pulumi project is to be executed (i.e. the Pulumi operation to execute and any associated context it requires).
-
-#### Example
-
-The following request will create a deployment in the "my-org" Pulumi organization for "aws-ts-s3" project and "dev" stack.
-The request uses the [Pulumi examples repo](https://github.com/pulumi/examples) as a source, specifically targeting [aws-ts-s3-folder](https://github.com/pulumi/examples/tree/master/aws-ts-s3-folder) program.
-First, any pre-run commands defined in the request are run, in this case printing the string "hello world".
-Finally, it will run a `pulumi update` against the stack, as specified in the "operation".
-
-```shell
-curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
---location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3/dev/deployments" \
--d '{
-    "sourceContext": {
-        "git": {
-            "repoURL": "https://github.com/pulumi/deploy-demos.git",
-            "branch": "refs/heads/demo",
-            "repoDir": "pulumi-programs/aws-ts-s3"
-        }
-    },
-    "operationContext": {
-        "operation": "update",
-        "preRunCommands": [
-            "echo \"hello world\"",
-        ],
-        "environmentVariables": {
-            "AWS_REGION": "us-west-2",
-            "AWS_ACCESS_KEY_ID": "$AWS_ACCESS_KEY_ID",
-            "AWS_SECRET_ACCESS_KEY": "$AWS_SECRET_ACCESS_KEY",
-            "AWS_SESSION_TOKEN": "$AWS_SESSION_TOKEN"
-        }
-    }
-}'
-```
-
-#### ExecutorContext
+### ExecutorContext
 
 The executor context defines information about the executor where the Pulumi operation is executed. If unspecified, the default [pulumi/pulumi](https://hub.docker.com/r/pulumi/pulumi) image is used.
 
@@ -101,7 +61,7 @@ Using a custom image may result in slower execution due to time spent pulling th
 
 {{% /notes %}}
 
-##### Example
+#### Example
 
 ```json
 {
@@ -109,16 +69,15 @@ Using a custom image may result in slower execution due to time spent pulling th
 }
 ```
 
-#### SourceContext
+### SourceContext
 
-The source for your deployment request contains information about where the source code for your project is located. Currently, only git repos are supported as a source.
+The source context contains information about where the source code for your project is located. Currently, only git repos are supported as a source.
 
-* **repoURL** (string): The URL of the git repository where the source code is located.
+* **repoURL** (Optional[string]): The URL of the git repository where the source code is located. Must not be specified if a [GitHub block](#github) is present.
 * **branch** (Optional[string]): The repository branch to use.
 * **repoDir** (Optional[string]): The directory where Pulumi.yaml is located, if not in the project source root.
 * **commit** (Optional[string]): The hash of the commit to deploy. If used, HEAD will be in detached mode. This is mutually exclusive with the branch setting. Either value must be specified.
 * **gitAuth** (Optional[object]): The authentication information for the git repo. If not specified, the repo is assumed to be public. Only one type is supported at a time.
-  * **accessToken** (Secret): The access token to use
     * **sshAuth** (Optional[object]): SSHAuth is the authentication information for the git repo
         * **sshPrivateKey** (Secret): The private key to use
         * **password** (Optional[Secret]): The password to use
@@ -132,9 +91,9 @@ Secret types should have the following structure:
   "key": { "secret": "value" }
 ```
 
-##### Examples
+#### Examples
 
-###### No authentication required (public repo)
+##### No authentication required (public repo)
 
 ```json
 {
@@ -146,24 +105,7 @@ Secret types should have the following structure:
 }
 ```
 
-###### Using an access token
-
-```json
-{
-  "git": {
-    "repoURL": "https://github.com/pulumi/examples.git",
-    "branch": "refs/heads/master",
-    "repoDir": "aws-ts-s3-folder",
-    "gitAuth": {
-      "accessToken": {
-        "secret": "myAccessToken"
-      }
-    }
-  }
-}
-```
-
-###### Using SSH authentication
+##### Using SSH authentication
 
 ```json
 {
@@ -185,7 +127,7 @@ Secret types should have the following structure:
 }
 ```
 
-###### Using basic authentication
+##### Using basic authentication
 
 ```json
 {
@@ -205,11 +147,30 @@ Secret types should have the following structure:
 }
 ```
 
-#### OperationContext
+##### Using an access token
 
-The operation context of your deployment request describes the Pulumi operation to execute and any associated context it requires such as pre-run commands and environment variables.
+```json
+{
+  "git": {
+    "repoURL": "https://github.com/pulumi/examples.git",
+    "branch": "refs/heads/master",
+    "repoDir": "aws-ts-s3-folder",
+    "gitAuth": {
+      "basicAuth": {
+        "userName": "git",
+        "password": {
+          "secret": "myAccessToken"
+        }
+      }
+    }
+  }
+}
+```
 
-* **operation** (string): The Pulumi command to execute (`update`, `preview`, `refresh`, `destroy`).
+### OperationContext
+
+The operation context describes any context required for Pulumi operations to execute such as pre-run commands and environment variables.
+
 * **preRunCommands** (Optional[list[string]]): A list of commands to run before the Pulumi command is executed. Each command is run in a separate subshell. A command may export environment variables by writing
   them as `NAME=value` pairs to a file named `PULUMI_ENV`. For example, a pre-run command could set the `HELLO` environment variable to `world` as follows:
 
@@ -276,14 +237,15 @@ The following environment variables are used internally by Pulumi Deployments, a
 * **serviceAccount** (string): The email address of the service account to use.
 * **tokenLifetime** (Optional[string]): The lifetime of the temporary credentials in "XhYmZs" format.
 
-##### Examples
+#### Examples
+
+##### Pre-run commands and environment variables
 
 ```json
 {
   "preRunCommands": [
     "go get sigs.k8s.io/kind@v0.16.0"
   ],
-  "operation": "update",
   "environmentVariables": {
     "AWS_REGION": "us-east-2",
     "CUSTOM_VARIABLE": "foo",
@@ -294,7 +256,7 @@ The following environment variables are used internally by Pulumi Deployments, a
 }
 ```
 
-Override default dependency installation step to use poetry:
+##### Override default dependency installation step to use poetry
 
 ```json
 {
@@ -302,7 +264,6 @@ Override default dependency installation step to use poetry:
       "curl -sSL https://install.python-poetry.org | python3",
       "poetry install"
   ],
-  "operation": "update",
   "environmentVariables": {
       "POETRY_HOME": "/usr/local"
   },
@@ -312,7 +273,7 @@ Override default dependency installation step to use poetry:
 }
 ```
 
-Override default dependency installation step to use a different version of node:
+##### Override default dependency installation step to use a different version of node
 
 ```json
 {
@@ -321,7 +282,6 @@ Override default dependency installation step to use a different version of node
     "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash",
     ". ~/.bashrc && nvm use 17 && yarn"
   ],
-  "operation": "update",
   "environmentVariables": {
     "NVM_DIR": "/usr/local/bin",
     "NODE_VERSION": "17"
@@ -332,11 +292,10 @@ Override default dependency installation step to use a different version of node
 }
 ```
 
-Use OIDC with AWS:
+##### Use OIDC with AWS
 
 ```json
 {
-  "operation": "refresh",
   "environmentVariables": {
     "AWS_REGION": "us-west-2"
   },
@@ -354,6 +313,297 @@ Use OIDC with AWS:
 Environment variables may be automatically marked `secret` by the API even if they are not explicitly marked as such in the request if they "look" like secrets. We evaluate "secretness" based on specific key terms and the entropy of the associated value.
 
 {{% /notes %}}
+
+### GitHub
+
+The GitHub block describes settings for Pulumi Deployments' GitHub integration.
+
+* **repository** (string): The GitHub repository that contains the Pulumi program to deploy.
+* **deployCommits** (boolean): True to run `update` deployments for each commit pushed to the configured branch.
+* **previewPullRequests** (boolean): True to run `preview` deployments for each pull request that targets the configured branch.
+* **paths** (Optional[list[string]]): A list of path filters that determine whether or not a commit or pull request should trigger a deployment based on the paths affected by the commit or pull request. Path
+  filters may use the `*` and `**` elements to match a single path component or any number of path components, respectively. If a path filter begins with a `!`, it excludes matching paths rather than including
+  matching paths. If all filters are excludes, there is an implicit `**` filter. A deployment will run if any non-excluded file is modified. Note that the list of changed paths returned by GitHub is limited to
+  300 files. If there are files changed that aren't matched in the first 300 files returned by the filter, a deployment will not run. You may need to create additional filters so that a deployment will run.
+
+#### Examples
+
+##### Use GitHub integration for push-to-deploy and PR previews with path filters
+
+```json
+{
+  "repository": "pulumi/deploy-demos",
+  "deployCommits": true,
+  "previewPullRequests": true,
+  "paths": [ "pulumi-programs/bucket-time/**", "!pulumi/programs/bucket-time/README.md" ]
+}
+```
+
+##### Use GitHub integration but disable push-to-deploy
+
+```json
+{
+  "repository": "pulumi/deploy-demos",
+  "deployCommits": false,
+  "previewPullRequests": true,
+  "paths": [ "pulumi-programs/bucket-time/**", "!pulumi/programs/bucket-time/README.md" ]
+}
+```
+
+##### Use GitHub integration for source control only
+
+```json
+{
+  "repository": "pulumi/deploy-demos",
+}
+```
+
+## Endpoints
+
+### Get Settings
+
+Gets the [deployment settings](#deploymentsettings) associated with a stack.
+
+```
+GET https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployment/settings
+```
+
+#### Example
+
+##### Request
+
+```shell
+curl -XGET -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3-folder/dev/deployment/settings"
+```
+
+##### Response
+
+```json
+{
+  "sourceContext": {
+    "git": {
+      "repoURL": "https://github.com/pulumi/deploy-demos.git",
+      "branch": "refs/heads/demo",
+      "repoDir": "pulumi-programs/aws-ts-s3"
+    }
+  },
+  "operationContext": {
+    "preRunCommands": [
+      "echo \"hello world\""
+    ],
+    "environmentVariables": {
+      "AWS_REGION": "us-west-2",
+      "AWS_ACCESS_KEY_ID": "$AWS_ACCESS_KEY_ID",
+      "AWS_SECRET_ACCESS_KEY": "$AWS_SECRET_ACCESS_KEY",
+      "AWS_SESSION_TOKEN": "$AWS_SESSION_TOKEN"
+    }
+  }
+}
+```
+
+### Patch Settings
+
+Patches the [deployment settings](#deploymentsettings) associated with a stack.
+
+```
+POST https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployment/settings
+```
+
+The final settings for the stack are calculated by merging the settings present in the request with the stack's current settings according to the following rules:
+
+* For object properties:
+    * Start with a copy of the current property value
+    * Remove all properties that are explicitly set to `null` in the patch value
+    * Merge all non-`null` properties from the patch value that exist in the current property value
+    * Add all non-`null` properties from the patch value that do not exist in the current property value
+* For other propertries, replace the current value with the the patch value
+
+For example, if the current settings for a stack are:
+
+```json
+{
+  "sourceContext": {
+    "git": {
+      "repoURL": "https://github.com/pulumi/deploy-demos.git",
+      "branch": "refs/heads/demo",
+      "repoDir": "pulumi-programs/aws-ts-s3"
+    }
+  },
+  "operationContext": {
+    "preRunCommands": [
+      "echo \"hello world\""
+    ],
+    "environmentVariables": {
+      "AWS_REGION": "us-west-2",
+      "AWS_ACCESS_KEY_ID": "$AWS_ACCESS_KEY_ID",
+      "AWS_SECRET_ACCESS_KEY": "$AWS_SECRET_ACCESS_KEY",
+      "AWS_SESSION_TOKEN": "$AWS_SESSION_TOKEN"
+    }
+  }
+}
+```
+
+And we apply this patch:
+
+```shell
+curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3/dev/deployment/settings" \
+-d '{
+  "sourceContext": {
+    "git": {
+      "repoURL": null,
+    }
+  },
+  "operationContext": {
+    "preRunCommands": [
+      "echo \"bonjour\""
+    ],
+    "environmentVariables": {
+      "AWS_ACCESS_KEY_ID": null,
+      "AWS_SECRET_ACCESS_KEY": null,
+      "AWS_SESSION_TOKEN": null
+    },
+    "oidc": {
+      "aws" {
+        "roleArn": "my-role-arn",
+        "sessionName": "pulumi-deploy"
+      }
+    }
+  },
+  "gitHub": {
+    "repository": "pulumi/deploy-demos"
+  }
+}'
+```
+
+Then the new settings for the stack are:
+
+```json
+{
+  "sourceContext": {
+    "git": {
+      "branch": "refs/heads/demo",
+      "repoDir": "pulumi-programs/aws-ts-s3"
+    }
+  },
+  "operationContext": {
+    "preRunCommands": [
+      "echo \"bonjour\""
+    ],
+    "environmentVariables": {
+      "AWS_REGION": "us-west-2"
+    }
+    "oidc": {
+      "aws" {
+        "roleArn": "my-role-arn",
+        "sessionName": "pulumi-deploy"
+      }
+    }
+  },
+  "gitHub": {
+    "repository": "pulumi/deploy-demos"
+  }
+}
+```
+
+### Clear Settings
+
+Clears the [deployment settings](#deploymentsettings) associated with a stack.
+
+```
+DELETE https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployment/settings
+```
+
+#### Example
+
+```shell
+curl -i -XDELETE -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3/dev/deployment/settings"
+```
+
+### Create Deployment
+
+Creates a new deployment to execute a Pulumi program via the Pulumi Service.
+
+```
+POST https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployments
+```
+
+{{% notes "info" %}}
+
+The stack **must** exist before a deployment can be created for it. If you attempt to create a deployment for a stack that does not exist, the request will return an error stating as such.
+
+{{% /notes %}}
+
+A deployment request consists of optional [deployment settings](#deploymentsettings) and the operation to perform.
+
+#### Examples
+
+##### Stack deployment settings
+
+The following request will create a deployment in the "my-org" Pulumi organization for "aws-ts-s3" project and "dev" stack. It will use only the settings associated with the stack.
+
+```shell
+curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3/dev/deployments" \
+-d '{
+	"operation": "update",
+	"inheritSettings": true
+}'
+```
+
+##### Merged stack and request deployment settings
+
+The following request will create a deployment in the "my-org" Pulumi organization for "aws-ts-s3" project and "dev" stack. It will use merge the settings associated with the stack with the settings present
+in the request according to the rules used by [the Patch Settings endpoint](#patchsettings).
+
+```shell
+curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3/dev/deployments" \
+-d '{
+	"operation": "update",
+	"inheritSettings": true,
+    "operationContext": {
+        "environmentVariables": {
+            "AWS_REGION": "us-east-1"
+        }
+    }
+}'
+```
+
+##### Request deployment settings only
+
+The following request will create a deployment in the "my-org" Pulumi organization for "aws-ts-s3" project and "dev" stack. Any deployment settings associated with the stack will be ignored; instead, the
+deployment will use only the deployment settings present in the request. The request uses the [Pulumi examples repo](https://github.com/pulumi/examples) as a source, specifically
+targeting [aws-ts-s3-folder](https://github.com/pulumi/examples/tree/master/aws-ts-s3-folder) program. First, any pre-run commands defined in the request are run, in this case printing the string
+"hello world". Finally, it will run a `pulumi update` against the stack, as specified in the "operation".
+
+```shell
+curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+--location "https://api.pulumi.com/api/preview/my-org/aws-ts-s3/dev/deployments" \
+-d '{
+	"operation": "update",
+    "sourceContext": {
+        "git": {
+            "repoURL": "https://github.com/pulumi/deploy-demos.git",
+            "branch": "refs/heads/demo",
+            "repoDir": "pulumi-programs/aws-ts-s3"
+        }
+    },
+    "operationContext": {
+        "preRunCommands": [
+            "echo \"hello world\""
+        ],
+        "environmentVariables": {
+            "AWS_REGION": "us-west-2",
+            "AWS_ACCESS_KEY_ID": "$AWS_ACCESS_KEY_ID",
+            "AWS_SECRET_ACCESS_KEY": "$AWS_SECRET_ACCESS_KEY",
+            "AWS_SESSION_TOKEN": "$AWS_SESSION_TOKEN"
+        }
+    }
+}'
+```
 
 ### Get Deployment
 

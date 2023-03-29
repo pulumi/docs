@@ -3,9 +3,11 @@ title_tag: Configuring OpenID Connect for GCP | OIDC
 title: Configuring OpenID Connect for GCP
 meta_desc: This page describes how to configure OIDC token exchange in GCP for use with Pulumi Deployments
 menu:
-    userguides:
-        parent: oidc
+    intro:
+        parent: deployments-oidc
         weight: 1
+
+aliases: ["/docs/guides/oidc/gcp"]
 ---
 
 This document outlines the steps required to configure Pulumi Deployments to use OpenID Connect to authenticate with GCP. OIDC in GCP uses [workload identity federation](https://cloud.google.com/iam/docs/workload-identity-federation) to allow access to resources. Access to the resources is authorized using attribute conditions that validate the contents of the OIDC token issued by the Pulumi Service.
