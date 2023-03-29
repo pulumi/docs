@@ -1,6 +1,6 @@
 ---
 title: Pricing
-meta_desc: Pulumi's open source infrastructure as code SDK and enterprise SaaS products together provide editions for teams of all sizes.
+meta_desc: Pulumi's open source infrastructure as code SDK and enterprise SaaS is available in various editions with a starting cost of free.
 type: page
 layout: pricing
 menu:
