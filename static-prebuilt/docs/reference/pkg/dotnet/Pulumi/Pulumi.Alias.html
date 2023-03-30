@@ -1,23 +1,22 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class Alias
-   </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class Alias
-   ">
-    <meta name="generator" content="docfx 2.59.4.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class Alias
+ </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class Alias
+ ">
     
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="">
-    <meta property="docfx:tocrel" content="toc.html">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="toc.html">
     
     
     
@@ -25,7 +24,7 @@
   <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -37,7 +36,7 @@
               </button>
               <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
                 <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
-              </a>    </div>
+              </a>            </div>
             <div class="collapse navbar-collapse" id="navbar">
               <form class="navbar-form navbar-right" role="search" id="search">
                 <div class="form-group">
@@ -47,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -57,7 +56,7 @@
         </div>
       </header>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -67,54 +66,52 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Pulumi.Alias">
-  
+
+
   <h1 id="Pulumi_Alias" data-uid="Pulumi.Alias" class="text-break">Class Alias
-  </h1>
+</h1>
   <div class="markdown level0 summary"><p>Alias is a description of prior named used for a resource. It can be processed in the
 context of a resource creation to determine what the full aliased URN would be.</p>
-<p>
+<p></p>
 Use <a class="xref" href="Pulumi.Alias.html#Pulumi_Alias_Urn">Urn</a> in the case where a prior URN is known and can just be specified in
 full.  Otherwise, provide some subset of the other properties in this type to generate an
 appropriate urn from the pre-existing values of the <a class="xref" href="Pulumi.Resource.html">Resource</a> with certain
 parts overridden.
-<p>
+<p></p>
 The presence of a property indicates if its value should be used. If absent (i.e.
-<span class="xref">null</span>), then the value is not used.
-<p>
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>), then the value is not used.
+<p></p>
 Note: because of the above, there needs to be special handling to indicate that the previous
-<a class="xref" href="Pulumi.Alias.html#Pulumi_Alias_Parent">Parent</a> of a <a class="xref" href="Pulumi.Resource.html">Resource</a> was <span class="xref">null</span>.  Specifically,
+<a class="xref" href="Pulumi.Alias.html#Pulumi_Alias_Parent">Parent</a> of a <a class="xref" href="Pulumi.Resource.html">Resource</a> was <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.  Specifically,
 pass in:
-<p>
+<p></p>
 <code>Aliases = { new Alias { NoParent = true } }</code>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><span class="xref">Alias</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.html">Pulumi</a></h6>
@@ -124,19 +121,19 @@ pass in:
     <pre><code class="lang-csharp hljs">public sealed class Alias</code></pre>
   </div>
   <h3 id="properties">Properties
-  </h3>
+</h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Alias.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/Alias.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_Alias_Name_" data-uid="Pulumi.Alias.Name*"></a>
   <h4 id="Pulumi_Alias_Name" data-uid="Pulumi.Alias.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The previous name of the resource.  If <span class="xref">null</span>, the current name of the
+  <div class="markdown level1 summary"><p>The previous name of the resource.  If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, the current name of the
 resource is used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,21 +145,21 @@ resource is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Alias.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/Alias.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Alias_NoParent_" data-uid="Pulumi.Alias.NoParent*"></a>
   <h4 id="Pulumi_Alias_NoParent" data-uid="Pulumi.Alias.NoParent">NoParent</h4>
-  <div class="markdown level1 summary"><p>Used to indicate the resource previously had no parent.  If <span class="xref">false</span> this
+  <div class="markdown level1 summary"><p>Used to indicate the resource previously had no parent.  If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> this
 property is ignored.</p>
-<p>
+<p></p>
 To specify no original parent, use <code>new Alias { NoParent = true }</code>.
-<p>
+<p></p>
 Only specify one of <a class="xref" href="Pulumi.Alias.html#Pulumi_Alias_Parent">Parent</a> or <a class="xref" href="Pulumi.Alias.html#Pulumi_Alias_ParentUrn">ParentUrn</a> or <a class="xref" href="Pulumi.Alias.html#Pulumi_Alias_NoParent">NoParent</a>.
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -180,27 +177,27 @@ Only specify one of <a class="xref" href="Pulumi.Alias.html#Pulumi_Alias_Parent"
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Alias.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/Alias.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Alias_Parent_" data-uid="Pulumi.Alias.Parent*"></a>
   <h4 id="Pulumi_Alias_Parent" data-uid="Pulumi.Alias.Parent">Parent</h4>
-  <div class="markdown level1 summary"><p>The previous parent of the resource. If <span class="xref">null</span>, the current parent of
+  <div class="markdown level1 summary"><p>The previous parent of the resource. If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, the current parent of
 the resource is used.</p>
-<p>
+<p></p>
 To specify no original parent, use <code>new Alias { NoParent = true }</code>.
-<p>
+<p></p>
 Only specify one of <a class="xref" href="Pulumi.Alias.html#Pulumi_Alias_Parent">Parent</a> or <a class="xref" href="Pulumi.Alias.html#Pulumi_Alias_ParentUrn">ParentUrn</a> or <a class="xref" href="Pulumi.Alias.html#Pulumi_Alias_NoParent">NoParent</a>.
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Resource Parent { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Resource? Parent { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -218,21 +215,21 @@ Only specify one of <a class="xref" href="Pulumi.Alias.html#Pulumi_Alias_Parent"
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Alias.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/Alias.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Alias_ParentUrn_" data-uid="Pulumi.Alias.ParentUrn*"></a>
   <h4 id="Pulumi_Alias_ParentUrn" data-uid="Pulumi.Alias.ParentUrn">ParentUrn</h4>
-  <div class="markdown level1 summary"><p>The previous parent of the resource. If <span class="xref">null</span>, the current parent of
+  <div class="markdown level1 summary"><p>The previous parent of the resource. If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, the current parent of
 the resource is used.</p>
-<p>
+<p></p>
 To specify no original parent, use <code>new Alias { NoParent = true }</code>.
-<p>
+<p></p>
 Only specify one of <a class="xref" href="Pulumi.Alias.html#Pulumi_Alias_Parent">Parent</a> or <a class="xref" href="Pulumi.Alias.html#Pulumi_Alias_ParentUrn">ParentUrn</a> or <a class="xref" href="Pulumi.Alias.html#Pulumi_Alias_NoParent">NoParent</a>.
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ParentUrn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ParentUrn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -244,23 +241,23 @@ Only specify one of <a class="xref" href="Pulumi.Alias.html#Pulumi_Alias_Parent"
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Alias.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/Alias.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Alias_Project_" data-uid="Pulumi.Alias.Project*"></a>
   <h4 id="Pulumi_Alias_Project" data-uid="Pulumi.Alias.Project">Project</h4>
-  <div class="markdown level1 summary"><p>The previous project of the resource. If <span class="xref">null</span>, defaults to the value
+  <div class="markdown level1 summary"><p>The previous project of the resource. If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, defaults to the value
 of <span class="xref">Pulumi.IDeployment.ProjectName</span>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -272,23 +269,23 @@ of <span class="xref">Pulumi.IDeployment.ProjectName</span>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Alias.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/Alias.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Alias_Stack_" data-uid="Pulumi.Alias.Stack*"></a>
   <h4 id="Pulumi_Alias_Stack" data-uid="Pulumi.Alias.Stack">Stack</h4>
-  <div class="markdown level1 summary"><p>The previous stack of the resource.  If <span class="xref">null</span>, defaults to the value of
+  <div class="markdown level1 summary"><p>The previous stack of the resource.  If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, defaults to the value of
 <span class="xref">Pulumi.IDeployment.StackName</span>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Stack { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Stack { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -300,23 +297,23 @@ of <span class="xref">Pulumi.IDeployment.ProjectName</span>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Alias.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/Alias.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Alias_Type_" data-uid="Pulumi.Alias.Type*"></a>
   <h4 id="Pulumi_Alias_Type" data-uid="Pulumi.Alias.Type">Type</h4>
-  <div class="markdown level1 summary"><p>The previous type of the resource.  If <span class="xref">null</span>, the current type of the
+  <div class="markdown level1 summary"><p>The previous type of the resource.  If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, the current type of the
 resource is used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Type { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Type { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -328,13 +325,13 @@ resource is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Alias.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/Alias.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_Alias_Urn_" data-uid="Pulumi.Alias.Urn*"></a>
   <h4 id="Pulumi_Alias_Urn" data-uid="Pulumi.Alias.Urn">Urn</h4>
@@ -344,7 +341,7 @@ should be provided.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Urn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Urn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -356,11 +353,12 @@ should be provided.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+
 </article>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
@@ -368,7 +366,7 @@ should be provided.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Alias.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi/Core/Alias.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
@@ -378,7 +376,7 @@ should be provided.</p>
             </div>
           </div>        </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -386,14 +384,14 @@ should be provided.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright 2016-2022, Pulumi Corporation.
-            
+      Copyright 2016-2023, Pulumi Corporation.
+      
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

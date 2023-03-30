@@ -3,7 +3,7 @@
     {
       "src": [
         {
-          "src": "../../pulumi/sdk/dotnet",
+          "src": "../../pulumi-dotnet/sdk",
           "files": ["Pulumi/Pulumi.csproj"]
         }
       ],
@@ -13,7 +13,7 @@
     {
       "src": [
         {
-          "src": "../../pulumi/sdk/dotnet",
+          "src": "../../pulumi-dotnet/sdk",
           "files": ["Pulumi.FSharp/Pulumi.FSharp.fsproj"]
         }
       ],
@@ -22,7 +22,7 @@
     {
       "src": [
         {
-          "src": "../../pulumi/sdk/dotnet",
+          "src": "../../pulumi-dotnet/sdk",
           "files": ["Pulumi.Automation/Pulumi.Automation.csproj"]
         }
       ],
@@ -40,7 +40,7 @@
     "overwrite": [],
     "dest": "../static-prebuilt/docs/reference/pkg/dotnet",
     "globalMetadata": {
-      "_appFooter": "Copyright 2016-2022, Pulumi Corporation."
+      "_appFooter": "Copyright 2016-2023, Pulumi Corporation."
     },
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],

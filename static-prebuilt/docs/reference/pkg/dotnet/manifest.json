@@ -9,10 +9,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.CommandException.html",
-          "hash": "81Z+hUoj9LdMxzTrWYbrF3V/De6z2kQ/YiqiS7d/EpI="
+          "hash": "2fQmApkzXtaJBCBPahRe/czbAru+XnRp1f/WW9+y8kE="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -21,10 +20,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.ConcurrentUpdateException.html",
-          "hash": "2ZzN+sj5Kpusaa2CQ8iSKeSWHmzJPAPWFUaEHSPQUoY="
+          "hash": "2DjNhlSs4VMIEI9oK2y54/nKEALQGrq71LPewPq08EM="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -33,10 +31,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.StackAlreadyExistsException.html",
-          "hash": "o6QxkCHaFUHgsaa4iLbqxvQq0T0+MTN1YIQvrutW+t8="
+          "hash": "/9cqPsa4ln3UU/xl8+G3JjFB5/GZIiYzZ4Y2ZUrcCpg="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -45,10 +42,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.StackNotFoundException.html",
-          "hash": "GLPFDW7WkCNGQYL1Off7/TovgQgHby3AIkxJKKIJUPQ="
+          "hash": "0PaYqHDM48vRiRIp0UO5zT/+JZG9gi7DZISISBBb8Rs="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -57,10 +53,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Commands.Exceptions.html",
-          "hash": "de5Etx8hEfT8RjKRdR+vpMJY6HahKc+peHLlxv+GrnE="
+          "hash": "UfZ8JwwFROVizRNV3a6caqFyY05R8Lem/maCyoTPjgA="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,10 +64,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.ConfigValue.html",
-          "hash": "7iFJs6jILQelZ4nr2lQK1/kTuckN+x8AeDfO3Gh6Pjk="
+          "hash": "G1QMmQG1C6FFYx5f/wIwH8NHk731aV2HSTFyKTwyw0E="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -81,10 +75,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.DestroyOptions.html",
-          "hash": "YfDOs22QUcI+3/BPfOsAmZh8vL7dWOz/z7P8CUoHwpg="
+          "hash": "9gd8vZnk1OXod6wi3MT252s79yUQiIjodH05rZIHRyA="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -93,10 +86,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.EnvironmentVariableValue.html",
-          "hash": "kzNXdA7sHi7FzPPqEO/v2Ux7st2ckbgBIVOJe+eqwtI="
+          "hash": "W3OIHe+UBdSJk8fMYk+i6ESQrVNVy7bdqNwoWVEfn0A="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -105,10 +97,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.CancelEvent.html",
-          "hash": "to4y5QGWqhA9dt2aCkMDgb9MRJLLzz3O9a9svj/tMwY="
+          "hash": "pnLQIFL/21usgt6cK810d9zUzsUzxdVMPmp/2Lwd5vQ="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -117,10 +108,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.DiagnosticEvent.html",
-          "hash": "WNoaiY8Kkg66WOrnM+vBKqWEVeFiMhsHOgY1Er7uXFo="
+          "hash": "QBYkGXgU3MnWOhY0Gco6mc2FKGv90aKju6fiVem1huo="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -129,10 +119,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.DiffKind.html",
-          "hash": "etuxz+A0COiQhNK8mGMXrJboVGlWVrwpOF9y0p6W5zM="
+          "hash": "MtGf4EAbMf+llE7nO1AfFgLZ4lPm3FzoN9eDfLovQy4="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -141,10 +130,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.EngineEvent.html",
-          "hash": "Nb62H645a4FB5j/aNNZx0bOXs8Cdz39QMCoye7py+r0="
+          "hash": "4inzoCTJt9IFS1uwTh8lXzwd65YnCCuMG1Z0Af1C14Y="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -153,10 +141,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.PolicyEvent.html",
-          "hash": "hQjcQATOiYuKoKbWaSsrbUrTC4V8wxr0SgmyHv/QTUc="
+          "hash": "Uj4x2s5EzT8EaF+XZyClinmguQpcE2AvPqj9Q65NLHk="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -165,10 +152,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.PreludeEvent.html",
-          "hash": "5bHAvedWYRMQ8Jbo8Cv1yXungEhl2Yadc9PjyiTwq30="
+          "hash": "YFKC8y1NYpBSq3cp7Aoo4Qcaj5G7xyh+NNWda/oo1pU="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -177,10 +163,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.PropertyDiff.html",
-          "hash": "T5PpJ/mc17LEzxQVUsGSPTxBSCvw/Wgiz0SeljSX118="
+          "hash": "dNzqyBM7T1n0Jkr3H6lPpXLv9p0eixD5aQejqtoakFM="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -189,10 +174,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.ResourceOperationFailedEvent.html",
-          "hash": "zzMRi8adj+PACRf2qnfa0zNcQ9+tOx8cmnnlOBPLZgY="
+          "hash": "36Mu6z6Gj8JGgNDMAPhs0LIMt2Ro6JamxIZ+ZA/rSek="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -201,10 +185,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.ResourceOutputsEvent.html",
-          "hash": "lZ/y0Iboui4pXPLJ3FexnG7q8Zgpq0tmTMb4XC6AKDI="
+          "hash": "CejxKsKpX8+t6E7d3WliGx5ofgRszoo4J+1KHOGgMLQ="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -213,10 +196,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.ResourcePreEvent.html",
-          "hash": "k0bur19AngxyfRmfr7dk9VwlBUYdKZjvBS6LqLzpU24="
+          "hash": "HPa10lipD3H2PFU1WjSBfjytEMpvZje0uP3vb2Aqc9c="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -225,10 +207,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.StandardOutputEngineEvent.html",
-          "hash": "qtvwNWFCzQDGZXP8Ws9O+PLzxy6ULuCWuPbWW/nbnEc="
+          "hash": "zKTK7FVQw+Ugflsi/K0NZqvQ1EPR2CDU1J7oiPLm+uM="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -237,10 +218,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.StepEventMetadata.html",
-          "hash": "/B1A+HSDWZle1LO2uTJS4VcImlwmTUTprx9+TT0P8ZM="
+          "hash": "8+00JLJCXEAREbiiUxsmzQNNOW+X+9lugRYYW1ZdfZc="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -249,10 +229,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.StepEventStateMetadata.html",
-          "hash": "V5HU7lpeRrHpGWwoPumD7fzkJ1uMfxD92slBA9Podd0="
+          "hash": "HLrlHIqPLntXOFey0x9/arDjMVh8Ng0W8xLcX9KQMfA="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -261,10 +240,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.SummaryEvent.html",
-          "hash": "Rpsx8rr7hWBkG8/LcxeCHiXXxFDOQAxp86GZezRi944="
+          "hash": "4uFupVO2lCOucyTdP3w+JBxThsy2RrlrmVSOq+ELvMo="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -273,10 +251,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Events.html",
-          "hash": "FQG7dAqMoqqIzvwL8nr12LhkJFqG17GXJ+cT0FkIwXQ="
+          "hash": "1qNuT5PRLu2n7WzzXRrZJ3cHHx8Lh+rS27qTSvOoYpI="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -285,10 +262,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Exceptions.MissingExpectedEventException.html",
-          "hash": "AzLsZk9fwKQ1fyTuzNpQ/SoQ8bqx4Ulx0xPmv13YPtc="
+          "hash": "5bg9dCWKyhyd+VDdtZ5yvzBLAP5r9PRF5WqB/DzSgKU="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -297,10 +273,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Exceptions.NoSummaryEventException.html",
-          "hash": "vYzXjRTEm4nCDSs9HXUe9LTySfbK1rnCeNe9pUw/rpU="
+          "hash": "SGZqy5X7v+DZmGQREsU9Dh3s0HA5mIR1eGUm0+oASRo="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -309,10 +284,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Exceptions.ProjectSettingsConflictException.html",
-          "hash": "PSeCmODx2fjdw0uNGyCzeqlxojxQoYwx8JemRMFBG58="
+          "hash": "dTMFrlCPlEWmMi1A4um55mQfmjFLMDXp0paRUaukJjk="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -321,10 +295,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Exceptions.html",
-          "hash": "1UOJJD75RwLMUtfjrhW0B4/3V98YxaoMVRdId0108qw="
+          "hash": "aeXHK5IEzTFPdkcEvbhL9Jqe3zGIi1KlgIa5Rjsr2Rw="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -333,10 +306,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.HistoryOptions.html",
-          "hash": "ExshxYC/GR5xO6fQOBBbXHGRjg9aazmK7qTng+nbnZE="
+          "hash": "rKH6NRI75sSSOGLi9K0+yJ9Wi/6OsqVFPL+k6hKNxWA="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -345,10 +317,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.InlineProgramArgs.html",
-          "hash": "oc7vyiVSZNFyqLjycJmLWK9W/KRDO2Oi30NLiQRsgog="
+          "hash": "5mhJglkCnC7WyHu7e+nm1k3AkvjYkbGazpQslX1g4UU="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -357,10 +328,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.LocalProgramArgs.html",
-          "hash": "l4U3A4M1FSvYVybqnS2c8YXoTB7YxI3/dX5TtXM2pvU="
+          "hash": "NYknDmflIaZHi4HOiNY5GLO40ZF+bo5Tw7eJZ5sgTEg="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -369,10 +339,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.LocalWorkspace.html",
-          "hash": "QXRGkI+ORG8vmB3piz6pml7ECFPOnZeJkscsNf5EXRg="
+          "hash": "H7l+Uy++JlJYrC+wOHd+TdSCglTtjujfnjBhOSMpdzI="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -381,10 +350,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.LocalWorkspaceOptions.html",
-          "hash": "nyMdIPq4+zJnMbWkpxc/AtWkSIoz5EOV/Qhx3JjtLxE="
+          "hash": "P73X6wpIM/+zTeW2pxrwnMn8rDzrr75lsEGiXlm9rAI="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -393,10 +361,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.OperationType.html",
-          "hash": "WoGnG+Koey93G9y632XmJK9a2eGrZK/TWZ+YgI1lwDY="
+          "hash": "NSaRx/+Tvbe/KMWW4mRp4z6X8JPFiuUsdzGzFPuiQNg="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -405,10 +372,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.OutputValue.html",
-          "hash": "TVZmwfg2zqr5vyZef0FMjNcoy6AWDDqq8nNyJHEmMD4="
+          "hash": "hYPDyRYlVD8oUlOboC/xXoS5q5e0ntCj7uyNTRKmftA="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -417,10 +383,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.PluginInfo.html",
-          "hash": "TM/Y3USx1QYzYPevxwFZI6nJGMBjZ+HmcxG7fqIu2q8="
+          "hash": "ZtzxzCuT1KjmwG5nShanEIT4ziuir/JNvldR26EzKxU="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -429,10 +394,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.PluginInstallOptions.html",
-          "hash": "yZ4OxqOWDk1PWXpn5rIAJ2R0PUryghPx5wEhQFMrPlk="
+          "hash": "zyXo+XVHPPh25Db4D5n5BRlaCZRWj8wK5wv0H4Y08qQ="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -441,10 +405,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.PluginKind.html",
-          "hash": "k9Dd89yjEKoYnPxZ+SU6lT9hRCrw58YQwKdLTSkkTDU="
+          "hash": "i7wyUXGB6qqkbpePvT7IzVJgBIzNQ85iEjs8r3K/rs8="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -453,10 +416,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.PreviewOptions.html",
-          "hash": "U/hPuS4CqlC8eaa7IraeL+/EkOYDIQi134gsWlOlgoc="
+          "hash": "lDpRxri50395ycvGFDqSSRl2U982p8a+Ojdl+PkPONw="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -465,10 +427,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.PreviewResult.html",
-          "hash": "hWXst4K7EPFFsmhAXwLg2E1Hv4Te6tj4Y2zS6Q2koJw="
+          "hash": "PLP8kM23w8jO5X8wdczJmgAohPz0IN2zMsJ6/MdFylc="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -477,10 +438,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectBackend.html",
-          "hash": "rDknAlsL53PoLOF/o1EAgDjsuDktfQyjL2igpW6NwX4="
+          "hash": "07/PwIgxOSnPbSmRYsvRltd7yMRV2+FnJJikL5gvNIM="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -489,10 +449,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectRuntime.html",
-          "hash": "Ovsdcl6FgPmeqmG2Wd2hGPhy+MY5wEqgUa5Bkv3czMc="
+          "hash": "oU1Ql/CmEJzOiF/gAFIimbBgot4jHimlJEXGzn142W4="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -501,10 +460,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectRuntimeName.html",
-          "hash": "wzrjjXMwB0Yl8Vp6c4rNUOHPAPZx62Tjj6AF37y4KFk="
+          "hash": "wRxcy4BfaA3m/x3DgvBg5jkTYDYPeR/eFrEoyu2EzNE="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -513,10 +471,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectRuntimeOptions.html",
-          "hash": "UKBSk/KP4NMIZ/eBGNmaMoPwq6LKazDwuhal/VjYKrs="
+          "hash": "1tE6ZAePkNFxvMTF6Lgjr2Rp25ux0JyAU0a3+h3sfjk="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -525,10 +482,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectSettings.html",
-          "hash": "2NFcLcfaHxtdEfgxGIs8P2IcKWZcqD0G1Ab+lU6Q1dY="
+          "hash": "WWLnh5qajGmEf3IyA3Q3Tt0ngUISN/WV47zOCMVUykQ="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -537,10 +493,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectTemplate.html",
-          "hash": "8r6CFoNM28RRLK2xMEfBKuTGdnjlNKIhiOM4Luhgy4w="
+          "hash": "4YnXYqDrS2lUnVsi2ZlaZzaxMLNw1tsk2mxfOnqtlo4="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -549,10 +504,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.ProjectTemplateConfigValue.html",
-          "hash": "PXpQ5ryUf75AaM//M7hsA2czvYIRcBaOFOY1LHr38AY="
+          "hash": "hH0/P6t4qa4QGsNLIeeZIugS8Ko/yiE+igFbL1oH7O4="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -561,10 +515,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.PulumiFn.html",
-          "hash": "yr0lGRvpcqECI3x7x3Otr0upBbG/pm4QaLUB4d1/3xQ="
+          "hash": "wyGFRzjI9VT3BXtbbxJb7yMf7gy6UQzOXUmlP+6nPog="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -573,10 +526,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.RefreshOptions.html",
-          "hash": "EHfUYm+WWPRFdRwMxjVI/93Ox47nE/i/3Fmgzs1WWKA="
+          "hash": "Aix7HxGYz+D3ECQvndOt+ps7Xqb4ITigaqDsEj4riEM="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -585,10 +537,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.RemoteDestroyOptions.html",
-          "hash": "NcewL/tR5MPa3/ktLBKgrI9Ciy1Jj0fP2swyxn4RbR0="
+          "hash": "4RVj2Z457vGtRYYmXksXvm+N7NoDem3v+kYDoYSAObc="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -597,10 +548,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.RemoteGitAuthArgs.html",
-          "hash": "aHEtEEzReJxtX/hUqE/JqP4QORfJVEzDmEOuysHWVvw="
+          "hash": "jpNnSjcpT/ro8rfyw7vaAnS3WPh+Hopu4a3r4VgpPKI="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -609,10 +559,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.RemoteGitProgramArgs.html",
-          "hash": "S6byQN/beRylYpMlpsTdLnzTJiEmLlE3qpblG8W5mLc="
+          "hash": "RZs0PrUUjo/krIVFO6VIwhwUQmd6GGIh5eboc1ocEVw="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -621,10 +570,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.RemotePreviewOptions.html",
-          "hash": "poek/Q5sShFh2cE573gYk8MEIeQvtOg99UUnrg5YNB8="
+          "hash": "jNcH85BY31DjC1i6haNxFLxKMWUwakUOQ32QgapyO7g="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -633,10 +581,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.RemoteRefreshOptions.html",
-          "hash": "js3Egw26LLFE3UC3nB2RSGAUtMT+sqHxeRXfbvQwelA="
+          "hash": "bIvuorvLXAjWJUitEaKSQTT2mvBOuslffwiPL0b0aOQ="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -645,10 +592,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.RemoteUpOptions.html",
-          "hash": "yaqi9a+OKO7GjAGAw/dzZ5K2I8CCIMa5ZXu6VlgJ2jM="
+          "hash": "/tYDa8qmR+9taPEgQY+MWHIc0yvn7LH28nfBpOKN9eQ="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -657,10 +603,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.RemoteUpdateOptions.html",
-          "hash": "Xwh8ea2D9nzIE3QJXsKm4J7Z0AXt04IQzLytozZYS9M="
+          "hash": "ke7GI8IRA0jlRGZiMW89x5p+ZkMrZyXOYiZihnty9SQ="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -669,10 +614,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.RemoteWorkspace.html",
-          "hash": "FrZKvRnnZD308fWMZMoeSTaZq6xYONYH0wHskQzymJs="
+          "hash": "K1DUZ/OWpv2XrsjahojKQ/CSl3/m+uEqPWRbLnTHb7w="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -681,10 +625,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.RemoteWorkspaceOptions.html",
-          "hash": "yCV/Q+MoAJyzXk7F8uTyg560X2PnSNpojSY5qN3/I74="
+          "hash": "we50MBc48qteiHJAdyCRUifbIfssFx/EAgoeQs5VR9Y="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -693,10 +636,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.RemoteWorkspaceStack.html",
-          "hash": "hfM6bwH8/gz9zdUaetsg0uJ/kVRltGOlH12jwgX3Pl4="
+          "hash": "8NmNhu0SicQ0WoeIryZimPks4poTxEQLqlfQR7FYs0s="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -705,10 +647,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Serialization.LocalSerializer.html",
-          "hash": "bmwIwfXt6W574qGhXf8+4eqNvJcxPxBfvX2A7B193PE="
+          "hash": "KMQeBh2LpA2xmBI/BLHsZ3MdP5q4Ulvu4fquUUWVxOs="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -717,10 +658,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Serialization.html",
-          "hash": "1uF6Q3EcSawbwt8CF/yfu6yhCfWuoL9qe17r59bnPq4="
+          "hash": "LDCI/OJxVE8nE9PG9DzSzfTdGev2N9IrRHDHgCo1kzQ="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -729,10 +669,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.StackDeployment.html",
-          "hash": "zE0gsiKT+z0GLoRyvLS8MDxQnvXVVr1VeOfiJ6sfijA="
+          "hash": "GBGW/aMqiOyOrADN25Awqf/lbtCDByodusssPowzASg="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -741,10 +680,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.StackSettings.html",
-          "hash": "DIFbkBaqBswPkI5dI+adVgWKxwGNBn2dS8djY2zCBWs="
+          "hash": "6YH93l++jOurJmeGdmoNQ0D9tjvoxPTn0hCKgohxuSE="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -753,10 +691,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.StackSettingsConfigValue.html",
-          "hash": "y7Bijc8G56naOoKyDWZPfeBw0jay0JY3UX7U0tuN0yo="
+          "hash": "u/VYcjo7b//Yvlhuv+2yQVTEUiMnyN5p127tDyScniM="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -765,10 +702,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.StackSummary.html",
-          "hash": "GeTLuxTcA92TGzYUzxtDMxG6LPct5t3whmsHBgA6ka8="
+          "hash": "byVof/czMRu4VaMozoMNYq+s5KmcgYDoQQPPBU9oVCc="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -777,10 +713,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.UpOptions.html",
-          "hash": "Q++fhpvAcREyhH36CAgT3TTgDn38jM3TXy8nA+62XsE="
+          "hash": "zx1VDV1H1P8H12zz9WGxUW73PBN6LzfAmJYa2ZVat1Q="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -789,10 +724,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.UpResult.html",
-          "hash": "3PpJSPObUQAk9tB27kBET56EfjBukxsyxj29o2cLg4M="
+          "hash": "UWG/y/V27x4e1PLklEoCGe2sf/IlddrErH85bjLd5o4="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -801,10 +735,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.UpdateKind.html",
-          "hash": "Fm9swkFHsYQAaYO6QuohUqaHbNo79zONJLw6M0BwBtY="
+          "hash": "9qzdGFwO8enqGbEi1nxiagDWdNJMZFIzFZcdg1A3vQo="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -813,10 +746,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.UpdateOptions.html",
-          "hash": "OPl32R9vDEVeBMXlawq30zNl95tMnHqR6hcmaqzO+y0="
+          "hash": "Qg4Ny3DzalDkhvOm31aM98GqA0bDvyACplehwdJZm8A="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -825,10 +757,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.UpdateResult.html",
-          "hash": "5GP9St+jwNkZ3U6cvnD0KywV9CVJ6Tbyw53SW0QAtM0="
+          "hash": "xxGtdj9GbNTa4UIuapTrgPxsc/QBgvFZTG0WF4WGJdk="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -837,10 +768,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.UpdateState.html",
-          "hash": "9yrj7BPyK2rkVSkHyEX2AUHvGr9sZ3OLHODpRk/CY54="
+          "hash": "CMX/bsFzb4k8JiFj6ma45gRU2QTK67Uko5XYpRRecaY="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -849,10 +779,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.UpdateSummary.html",
-          "hash": "+KwMuI2fHNoQGyKzshc1f/qtd+NSNFx1H/5jQIkiCbc="
+          "hash": "dVyVDwvXsbWoeTgIWCJ/kDMT5VO6sMiSox7eXG87TGk="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -861,10 +790,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.WhoAmIResult.html",
-          "hash": "k/2XCTq+urMSU7EggH4jPvk2wAjxSitDknUERHvEgFc="
+          "hash": "pIGe/ppsh3O9zWx+7G0/7qZb7pm0Rbjo8xKaXd7yoHg="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -873,10 +801,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Workspace.html",
-          "hash": "ESfZt3v4hokhcLvdhuBN/B395zb8kBoqQY8X6iFaG7k="
+          "hash": "MSZ+T1Wnesc1EgAxhalejScIGT1AESeFQ5ekAMKf3OM="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -885,10 +812,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.WorkspaceStack.html",
-          "hash": "Hq8uJv1NOewahl6g3j9TrPClAjKBbfDIxCF1yd+I5po="
+          "hash": "qsLFQd5tkXfRgir0+Kd6hw2TMktyY2lSBhpfIaLrzZw="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -897,10 +823,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.WorkspaceStackState.html",
-          "hash": "5ODVcJ81K1f60ZvOFWIZuAk6ELqDgL9PpiMZI0YW71Q="
+          "hash": "ODYy53nJerAd6qdf1bypECFpPmEcvgtceuGvkjcwxdw="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -909,10 +834,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.html",
-          "hash": "lNkJj3DiYCwPZeladn3RkoMktZCA7o8IFA3Uf8Li3pk="
+          "hash": "IFfaGNphBKJencsSo3XgCtko0MZv7fg60cZUO0S7A4w="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -921,70 +845,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/toc.html",
-          "hash": "R1kSzuqReSTKV7FQNXWgy62bFawj51yxBi+bK0/15Yk="
+          "hash": "rJPrnzSns47f9HCTyFK/hD5cXZYdD38VPm+0NZAnMtU="
         }
       },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "metadata/Pulumi.FSharp/Pulumi.FSharp.Deployment.yml",
-      "output": {
-        ".html": {
-          "relative_path": "Pulumi.FSharp/Pulumi.FSharp.Deployment.html",
-          "hash": "ceaEfEy+SusEgtBRA+mOAlrXN2lmImRghVhYCKkM0U0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "metadata/Pulumi.FSharp/Pulumi.FSharp.Ops.yml",
-      "output": {
-        ".html": {
-          "relative_path": "Pulumi.FSharp/Pulumi.FSharp.Ops.html",
-          "hash": "2etG4e2WmofAKg6zU92NXW1RSBZAuLtmDyB1uOOIb10="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "metadata/Pulumi.FSharp/Pulumi.FSharp.Outputs.yml",
-      "output": {
-        ".html": {
-          "relative_path": "Pulumi.FSharp/Pulumi.FSharp.Outputs.html",
-          "hash": "J+g/E1G/7Ip8x/RT69atMYt1ppgztpCwntUPRyEOukk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "metadata/Pulumi.FSharp/Pulumi.FSharp.yml",
-      "output": {
-        ".html": {
-          "relative_path": "Pulumi.FSharp/Pulumi.FSharp.html",
-          "hash": "e1Z0qhQORNzxo7snUo7FaLg6o1tF29hxp0MDwtMpVhg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "metadata/Pulumi.FSharp/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "Pulumi.FSharp/toc.html",
-          "hash": "dlG3Y4mmMGRPhO96C5mUPktQh7l0KLEz+UZ/l3DAGds="
-        }
-      },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -993,10 +856,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.Alias.html",
-          "hash": "sZAxH2/8bYbIidqeLBKLDsuiWGuaRjC2PwdG2y9HJRo="
+          "hash": "ScU/Z+tpzGrzg2hWAFvnitRqiAA9xCJvBUYhc48nzyo="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1005,10 +867,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.Archive.html",
-          "hash": "doHo1kx977PS3GaPv9Bzn/pIPDQdr4hZnkppcSe7MDY="
+          "hash": "3tX6XmmBxFkC8Leybc8yzcdaqw+12UCnMLGvFwEZbSs="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1017,10 +878,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.Asset.html",
-          "hash": "nz13OtVCEM+sfVMCQoPiGRnS07fT4+kAj8+3BQJM7XM="
+          "hash": "JqnppqkBKRqZ/xRWSBqb5urhwvasegQfrV4hThs6OUo="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1029,10 +889,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.AssetArchive.html",
-          "hash": "t/T+8oruowyF/Z+1juTSChhUQjajAMQx0za4/WcrsvU="
+          "hash": "lERIiii6bgkFtDgx7LREO2SGVZ8LVmo4gSeQocFwWHc="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1041,10 +900,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.AssetOrArchive.html",
-          "hash": "8rJZm3lkMe1oG6mdv0fDZDKlk14ajupjeB98NZ+jJc8="
+          "hash": "yGNiyp4lvLIFH0i60xRTB7U0glS59rmc0SUnDq+lHqE="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1053,10 +911,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.CallArgs.html",
-          "hash": "h/OgDXObqyG/td9aeDQITdrEscGNal6Mq3wxjglsg2Q="
+          "hash": "SvT1kYF6PnD9x27x6bAVAgLqpxo+zujbJuRz6oR0W1s="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1065,10 +922,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.CallOptions.html",
-          "hash": "HdNJ2ojSZOnovcysU5+kDzl3oJP7sibm+RM5r5L2wGA="
+          "hash": "teIlWlQUegzzacJQNgqYts5rIEtoTVBXQWxMkUi9LAo="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1077,10 +933,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.ComponentResource.html",
-          "hash": "B0pXIOVICu2Tpa6EAs5ky+ZxEyPMqa/lhZbt+tZTKmA="
+          "hash": "DX0PeDgS8Fb6PCCMXKlNo3lm0dNzTJZRxp4wbduVsp4="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1089,10 +944,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.ComponentResourceOptions.html",
-          "hash": "dE/UKH1YqjSRyKiH40MmqSDYAuFGBcsuOi6iDFr9z6c="
+          "hash": "qREB7YvvOj/GBw0fh1F5TsF31zfiD75rxud/a256ZrE="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1101,10 +955,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.Config.html",
-          "hash": "RKg8BNcaOrzEejWg8aLp+eYh2A9Sj1f10a8JWAJzCM4="
+          "hash": "z/reHdYQerZk3zmDXsCjBihwYak5tIYHLw1qYKweXFw="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1113,10 +966,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.CustomResource.html",
-          "hash": "YTzPp+9ipTzFqYkedXrRTsYKoy1AxNnoOw1Zj+kOYQ4="
+          "hash": "zfKJQ9BuF51YCtBv6dIDt/TlbBKQVzcZ2yVPJDgKUdo="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1125,10 +977,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.CustomResourceOptions.html",
-          "hash": "/WvkGX/+MbIPZD1ncnRClEJjVO1VRjZAgxEOPwuKa5Q="
+          "hash": "10gdcwjhmEHgnn9uperm6COc3NKHgO70txmvXuIdimM="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1137,10 +988,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.CustomTimeouts.html",
-          "hash": "sJtNGDsg/+BOrs6mDceYJYQY0o7W6/2D8QUPDrD4TXs="
+          "hash": "chPShoJRTpAWnaIlTWoqxQI4/Lk8RKdwZvwIXuwCKQs="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1149,10 +999,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.Deployment.html",
-          "hash": "I9HH12hGPpZpG8WKk4Eo7FdJ0rUrowouX9HPZZape70="
+          "hash": "ZdYzWU2OrMI+zGG8BrSFnBXnBnNxUADKgiuyqf4Es/s="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1161,10 +1010,20 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.DeploymentInstance.html",
-          "hash": "3AfV+Lkg8dEBwDKMV69onBnYNFros37NoMuqbW1CMV0="
+          "hash": "k8RTPXKaD+vH9+kbNMxmpgeGqom5atshnA84kvsU5E4="
         }
       },
-      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.DictionaryInvokeArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.DictionaryInvokeArgs.html",
+          "hash": "YnAfqXLL2zUulEAC0WIZBgQ0LH0uZVETW/VtDhw6ebo="
+        }
+      },
       "version": ""
     },
     {
@@ -1173,10 +1032,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.DictionaryResourceArgs.html",
-          "hash": "x2zKcIx4XcbfDC2fc3mLDl78jHjjoBrf7HfXhPsGey0="
+          "hash": "aJwfAJUBcm7nyOcTg2ynaM8FeTu+wBOEsSOX2zVpMmA="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1185,10 +1043,328 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.EnumTypeAttribute.html",
-          "hash": "H6c4RDrnNxYpukLT7vEHRsXAKkbDFrEKHQGsK+nQAAo="
+          "hash": "7sQ4wlfrsVtcmMa2nmtcdnNEQzHY/arIA8agLcIb/64="
         }
       },
-      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.CheckFailure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.CheckFailure.html",
+          "hash": "fW1IqZxVaa1tT5d8eyRyf5D4qY4oXVNk7Z60djW8Vi4="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.CheckRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.CheckRequest.html",
+          "hash": "FPTLdxCYwm9EaNjqFVie1uLvC+nZagJZHSyJZlaecUU="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.CheckResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.CheckResponse.html",
+          "hash": "zlRfFteFpkP6teZq95Ow3KBuRJd0uxyI6+6Y8plgy+s="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ConfigureRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.ConfigureRequest.html",
+          "hash": "nkzfSlJ/dqyJBkJxOGTR3ynCA9JKycccEdVD/YqaaH8="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ConfigureResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.ConfigureResponse.html",
+          "hash": "GWoG1O29DirZ76LVeFCT2Q5FToYlgpl12QdUJrp9wVM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.CreateRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.CreateRequest.html",
+          "hash": "/NK2O/XY5KBtJQF2JfSj5Nj5aspXTkCfRfnkDija87A="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.CreateResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.CreateResponse.html",
+          "hash": "qg9NC0onyJcbXSUg/dFBHUnlTLLlsMZXhhID9wnNMtA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.DeleteRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.DeleteRequest.html",
+          "hash": "URb1JUUAs8LUwyh6e21Aw3FxTCEaNt/M0BsNYzK3rzk="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.DiffRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.DiffRequest.html",
+          "hash": "kFAyIkM1cAHKapHtGB3hRnr/Np0mJCg3HdnKAU77v64="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.DiffResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.DiffResponse.html",
+          "hash": "UjcOH/C5XMTarbmOl2jkiu1OoRnkpOsLKEGNqmaBPEo="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.GetSchemaRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.GetSchemaRequest.html",
+          "hash": "pR/5Qtc8wyYMfvcP00b5JyWqsuuPzuDEpEHaD57HEFc="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.GetSchemaResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.GetSchemaResponse.html",
+          "hash": "Hm6IJZrD/vWeGxpdcKvQiD0+f1mplBWU/8820lSrRKQ="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.IHost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.IHost.html",
+          "hash": "uCY7Dlwa8FGzfd4C5Z1StnBOZEcdJEtiW3JIhOShqj0="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.InvokeRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.InvokeRequest.html",
+          "hash": "zXuwjeZmWEPzc11W8pVVCHcCdv82erTrRE88nQyRBsA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.InvokeResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.InvokeResponse.html",
+          "hash": "7YaEL7O8pH8Wv4128ZOVB/5o4eS3QgH1SvttY63wC+g="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.LogMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.LogMessage.html",
+          "hash": "rzq4X+gK20cuvmF1DGTdBDoeJNoHZmQN+OQiLev+f6k="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.LogSeverity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.LogSeverity.html",
+          "hash": "jSN/zms7ycjD7z+xWc0aUoPSCUf0F3ihy+Pqt0xZThQ="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.OutputReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.OutputReference.html",
+          "hash": "nDvIZQFjQoUQLY4Xl4D5mUr1aniYfiaiEgGxcb3cNNM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.PropertyDiff.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.PropertyDiff.html",
+          "hash": "XRBvqda9RiNhdz+ziu1TfuqU1w/5vrRWhOYI0w+HYRU="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.PropertyDiffKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.PropertyDiffKind.html",
+          "hash": "izTkuZXcZtMlgZYX9dQhWoCtfRODaDGJvKq8cNzxulc="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.PropertyValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.PropertyValue.html",
+          "hash": "qZ3ehB+nuWRNpN7mHjbDSqrOxwXwf+efJzZKkRjQ1Po="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.PropertyValueType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.PropertyValueType.html",
+          "hash": "+LDYBUFJLCp2qLCiihvSbHGEnqJwX4kTfRtcdxWMleA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.Provider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.Provider.html",
+          "hash": "eapBxm13/f7M5tHTs79VMspVr8FZKQVG86hvGe6sIfA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ReadRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.ReadRequest.html",
+          "hash": "sGUUsGx9KUtJNTOcQO+M2+qgezCkiNB52tt7S1K72mU="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ReadResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.ReadResponse.html",
+          "hash": "YBpp5xsC82YOT73tBywCd5fPrUSMJ7+Z+3g0r9P8+E4="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.ResourceReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.ResourceReference.html",
+          "hash": "y5XwKQGBupfTm/dNefDkahpnyIBOEZTIutUcXN4Kdc8="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.UpdateRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.UpdateRequest.html",
+          "hash": "bnuA1MLMKSYZKskZFatAqPZgZKSDWA/parsfmvj5ILA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.UpdateResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.UpdateResponse.html",
+          "hash": "N4zUtIIv7fTn2+PWnvsK0lej+fjJWjaTKjdVJ+NPRXM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Experimental.Provider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Experimental.Provider.html",
+          "hash": "UKfGzfn0ATxixjdMJKjZLqP5QAhBBIttj2AOW+C52mI="
+        }
+      },
       "version": ""
     },
     {
@@ -1197,10 +1373,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.FileArchive.html",
-          "hash": "+ckB+f4bCrk4ttFoI0edhUddDYwqmK7BpPP2numw0sg="
+          "hash": "NqzcdnBJdNgqpLiM3oX4NgyAMSQWPb9SazfSOWtCNjw="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1209,10 +1384,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.FileAsset.html",
-          "hash": "xqu4w22SaGqLuDiGL1Gwc+FxUvlu0rVOcsew3c8eVwA="
+          "hash": "/6hL7lZHlAKgfzBmyCf51bbUY1qsSJidVZwFNz1CPps="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1221,10 +1395,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.Input-1.html",
-          "hash": "lwKa5aibsoBxv7V6v1OwjTjzFAyX+62KRITbG38UsnA="
+          "hash": "lTU4ThS/98fbhLu0RG4MhOUU3k1T92+mnjJI/YfQ+6E="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1233,10 +1406,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.InputArgs.html",
-          "hash": "bqEAr1oeHITPO2uVyl39cBetWkdDk0C2533Xoj5WjOg="
+          "hash": "vAA3TM2ho3fm+/cYVImHTlwJoz5AqG/YWcJthQV3Mls="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1245,10 +1417,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.InputAttribute.html",
-          "hash": "P/FYYrd6hnzOqSLCNs0kUQqHNF5/09QpwmamaU4v48A="
+          "hash": "ZrXd2pMI0eNj3+eMP+0FLBdIMIhBO4EtbRhCantPFrI="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1257,10 +1428,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.InputExtensions.html",
-          "hash": "uvePQeSaSi500EOgWN38eR50FIawCPGeqth1Q1xt33k="
+          "hash": "8p1A+UXloEjB8HQRFkJzPzaUDtT2hz+Rni+x2phKwyc="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1269,10 +1439,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.InputJson.html",
-          "hash": "kNrvH19JodqeTvoBlwSH+g4TXXHMIepbbgHlnKYJuCY="
+          "hash": "Nl2fYmcDvQ6O9lBQTFQ6sJ0KrxZhajmza/FAiuwj3dg="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1281,10 +1450,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.InputList-1.html",
-          "hash": "iIrgqubIz8Y4WkX4v60BgvpJ4MM2vHNZdaA7PY47sTU="
+          "hash": "QejJR1rRHaFMH1yLVP7w9rv1/aPu8/YTRRebgTFKAeY="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1293,10 +1461,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.InputListExtensions.html",
-          "hash": "LOBBUxzFxtTqq06DRlu2IMUKcWlQamiGaTqNAAc6YU0="
+          "hash": "vZgaj2nu/HJTuoO3DuO5/mcLsKjo20wkoIg5UcIn938="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1305,10 +1472,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.InputMap-1.html",
-          "hash": "8RNJzhUBJeNe/Zzh99Q867LFc7kY02ChGP16bVvpPXs="
+          "hash": "yu5KkD5fVWeoR2xrJuzRwuk+P0z6Im+gRce6rQa5pYI="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1317,10 +1483,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.InputMapExtensions.html",
-          "hash": "Zu1A3HkJxAw6SB7kX7rAodplJObY6BENcR9be1Yb2SE="
+          "hash": "T5dpCrynRZEgWw11P7oIR67zDnJZ439/cWX+pnz9Y4o="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1329,10 +1494,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.InputUnion-2.html",
-          "hash": "X/Qe7FUBuKj6leiEqmeTs8pFyQyqWAtiZtGwcearDdA="
+          "hash": "OGl8itoYGvtQSMp5WweDNn20RCPQ9eE0Et0ZgtvWxho="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1341,10 +1505,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.InvokeArgs.html",
-          "hash": "0HFpr9O7VtNOv1zoYzUzK4RSqoutipNsBlZvME26qEA="
+          "hash": "eZgr24PPcOxBSYzTcZHJD12dSqg5EvJTG7mEqBmsopk="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1353,10 +1516,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.InvokeOptions.html",
-          "hash": "8188AtehkPhMZtm7B0mhrUUdzC9A5IWgoTk1g6Va2oQ="
+          "hash": "TW6xXFdVdW4CNaZAE2mq1MI5QdwHVMiru9CfNJRnMKk="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1365,10 +1527,20 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.Log.html",
-          "hash": "HiP3hdLd/dG5XoHpOCeAktFZbRF8X8VUtM7JkCv0O8E="
+          "hash": "RmFcgwV4LaU4TrxRdi7E0RaLgsDKOiZuh6El/2qAXlM="
         }
       },
-      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.LogException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.LogException.html",
+          "hash": "Dlxx2dNtESbatafjCOlxUngOHnWGz/mZb6B9tx+5yd8="
+        }
+      },
       "version": ""
     },
     {
@@ -1377,10 +1549,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.Output-1.html",
-          "hash": "ek38j5qA/SRewICMW4DZ3IhMQRTNu0hLADpr0uK24Vw="
+          "hash": "zWgKjmxrizlLwKvAWa9/8YSs3u66+3+dUVeQ5uf5umA="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1389,10 +1560,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.Output.html",
-          "hash": "7FM905ZTLHvbblVHEwoZ1pciUFNGqEhPb+Z2aqStz0o="
+          "hash": "MdlC2MRJlXwuGqGiM1+h7zvI7e2Ayxt6iGxi+0DqQxc="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1401,10 +1571,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.OutputAttribute.html",
-          "hash": "y/93KVem+qUshh3beG303ccZW9G0yJinAiKKKhApUG8="
+          "hash": "PMBjmdXLE0RdwC2JSEWno0uBpjcQUqsqmsJYsP6xjfU="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1413,10 +1582,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.OutputConstructorAttribute.html",
-          "hash": "Qr/caTr3crArVEvWihFLh2l8ntZTSQVMwfQ34siHjww="
+          "hash": "oXsGoGCkkFAkqVKA91avZGDWB2l8eHsh1hGtaasc0Ys="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1425,10 +1593,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.OutputExtensions.html",
-          "hash": "0Yw/aBdJbQLKKrRhBdLQU3Sxa/TBfa4BwCwZaHtCo7s="
+          "hash": "tKeofm4CypaIoOaGB6SJgk5jAETv8m8M6f2DMzoUJ9w="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1437,10 +1604,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.OutputTypeAttribute.html",
-          "hash": "d8BEcwaZVV7h6o2Ph5iUv/5K7KZtgk7+N9I7OaETyH4="
+          "hash": "enEsL/YoskLJvb8UVsnEEiIJZ2DLNNxZiQuWoyatORs="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1449,10 +1615,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.ProviderResource.html",
-          "hash": "sV89YknOowNhWYUb37zk0TmTMiqILiIUVbr8gqMFkM8="
+          "hash": "GYjcKdURL+KtsgQVbbaxPbmCB/TN7Ks/k6VReAkLjLs="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1461,10 +1626,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.RemoteArchive.html",
-          "hash": "zsPLvmGPZZxMwNnUxGE4rSxIVOFEw4QQnPtEYvM8A5U="
+          "hash": "UzTj+xg9PcZfBQyQZqBEuicamDNZJgRLLjQWA1mgF/E="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1473,10 +1637,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.RemoteAsset.html",
-          "hash": "MlsNToVjqLASCkuAISPoT3zv6flBz45j7t88kmjH/Ys="
+          "hash": "0VETyFk9nKty+uQNP+uqEyVjrwPUC90dm6TP3n8Vjoc="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1485,10 +1648,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.Resource.html",
-          "hash": "7Iy4e3rFAgvwl10oQLYsMSIFTtAU9cLCZltiAV3B41s="
+          "hash": "7Y1gbTrThXMWx/Q2FtRbvaR0TXhG/CnfbGrjtKRq6gA="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1497,10 +1659,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.ResourceArgs.html",
-          "hash": "i1sQ9RtcSFt03EJ86gMFwEKkTwaLDkUWsE0C46UHLkE="
+          "hash": "3rw9ahht0GE+bCRMlVFgP0q9FtlB0+8VVGRs1bkxtHQ="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1509,10 +1670,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.ResourceException.html",
-          "hash": "AhUpOAZ+hCXUqKFFuI4CX9w6hRzqU1KZC7npvMmXdpI="
+          "hash": "ZVVVBx8DTsyrBs/pQmNxu+7G2LAVbvMdoBIHLKcZHgc="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1521,10 +1681,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.ResourceOptions.html",
-          "hash": "AsfFcKDNuMloMYrRpRfyTCU0kbVPsAhWwJ9E1lpREdk="
+          "hash": "wfB13yrHRIOuPYJb43St5GAdgzIlLbgljm8RYiftLVY="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1533,10 +1692,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.ResourceTransformation.html",
-          "hash": "vMLkuPGDtgkmRWCtWkEysc07TUJBbM1sKKSqSEQOx9Q="
+          "hash": "xOdPy/Kj8ia4iqjQHq553F8/x+Ld9cntERXZ+LNLJzk="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1545,10 +1703,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.ResourceTransformationArgs.html",
-          "hash": "CNK+Tq/0HrslD3B3xVvTt8q9XAucljBtA3pSgsVyM3Y="
+          "hash": "cSu9bOeDEE9jSbjq5XeoRbfzADrF9BentXog0fe+Yss="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1557,10 +1714,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.ResourceTransformationResult.html",
-          "hash": "X4iYOodJBoqQnADeMAVJsPYorFTXKSq4iEyup0ZcZo8="
+          "hash": "t1Fj2Mw7HwN1MGJYvrv/aLS0z4DUmbeUrAVh1TGmP3M="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1569,10 +1725,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.ResourceTypeAttribute.html",
-          "hash": "WnWNdzKuLk8aeicECnTL+SrGnIgVqxiSHYzgbDLeGbg="
+          "hash": "Aq+faQXeNRG5sblFp5KzevYwwltBFiG+1jCew8lSghk="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1581,10 +1736,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.Stack.html",
-          "hash": "pjbGLkVLt1dLCS78xpsIymeBqLiLPrtkl/nObq7RJNQ="
+          "hash": "uahag4FC34kpAiWrHGbM+0xLPw/WQSZ4vz3oTx2677k="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1593,10 +1747,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.StackOptions.html",
-          "hash": "L4cgixuidPxb5GmpA0cFInNQ9xDJUzjzgPjANIRpeQA="
+          "hash": "XoTBOBN87jUXmncm8ri6fc5i44m3ugW7Aoq4TcAccjI="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1605,10 +1758,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.StackReference.html",
-          "hash": "wj4i2+0OhbMhZmdQX15okgCV/nu7/cDebbAIdijidak="
+          "hash": "R8zW5syYGHJ9rff+zQH815+1K5+MvKC1xeapG7b59NM="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1617,10 +1769,20 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.StackReferenceArgs.html",
-          "hash": "YJ6EjQw42pAegymjPy3sUYeZfPVY+aT+7Exge8D5mBw="
+          "hash": "Cnkigp7P4h8k0q3OwMfQpacTjDeX29CVr7Z+QabXp5E="
         }
       },
-      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.StackReferenceOutputDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.StackReferenceOutputDetails.html",
+          "hash": "Y9C9E/4oSKdWEt6lC9ykgoaqqhLbap8kR+FJ5hiVImk="
+        }
+      },
       "version": ""
     },
     {
@@ -1629,10 +1791,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.StringAsset.html",
-          "hash": "bwxNX52Xc5IuE/YuAepJu9X2hvfC0ErJsj7t8vCQMus="
+          "hash": "Kxv9uH1pXgtAOL/u5xYZagENHcTzGRy5Lqa3ihHxavk="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1641,10 +1802,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.Testing.IMocks.html",
-          "hash": "R+0cQiY3483vNTpeVwt5L6wTp/v4ZxxBoff7RO6rjpk="
+          "hash": "e2pc/c+xEdxZG8rhJTB1mwAZcthVJxXsbNenlXdNpp8="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1653,10 +1813,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.Testing.MockCallArgs.html",
-          "hash": "+L1N9q02EDIneu15mYPn2h8RuUEZNoCzcETkggc2X5Y="
+          "hash": "zBzgorMJFbINP8SajAQx3xWDNDsM+1EnX7xtl3eDFdY="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1665,10 +1824,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.Testing.MockResourceArgs.html",
-          "hash": "bHf0mkRoqY6jdJieqZ1GbXkn1NomxrGFD+XIod03xQg="
+          "hash": "WGIFdh4hGC+xhoi7YQ+pXjCAU3VMD80zC6LPXUA8CSw="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1677,10 +1835,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.Testing.TestOptions.html",
-          "hash": "TyhdkBFYnHe+masJjYLyHtzpwwzG/V6jbhY/hBW1z7A="
+          "hash": "WRMQ4qtBECvhOyXNTyucZVLHTpOSzybXZKz8kQ74NiE="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1689,10 +1846,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.Testing.html",
-          "hash": "ZPeYsEmqKbt3DQpCMd4ln8JfSbKE7fmifksvv1W7EPU="
+          "hash": "hpoUOumJupsKGTIRZ2qyMm9znHNR3KMWNwudHWGmC2U="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1701,10 +1857,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.Union-2.html",
-          "hash": "9h9mUxKadwQQQoKUVqpS3At6BdOjm3W8CyAk2dPpULw="
+          "hash": "ZQANang4iSBE4TxO/Xkgp/fr1R+bD+hGoDFnSsdz7WI="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1713,10 +1868,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.Urn.html",
-          "hash": "7vcq1UKz/kOLs1UKvoQ44zoWdf5+Q80qCKDtdUfZsvk="
+          "hash": "ox3M5UeQ5cUsB8R646Jk75W2st7FaQJ1hL+tPV2pWxQ="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1725,10 +1879,9 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.html",
-          "hash": "SGOTmxZZXVOkyGl51Ndidhml92nu8nS42qXlNk0V7qk="
+          "hash": "y6cp89I1WcTYOvi8qzHnGsOYj5Ro4GkPaoINnZEvZtE="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1737,48 +1890,10 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/toc.html",
-          "hash": "SBJp1UOYZNJs+pZVCR1s9fG679Crm5HZBK1Fo98H/cc="
+          "hash": "E+9VxSAx+naFcJY29mGd0VcB9itSl6/9Xvkj5iQsNYA="
         }
       },
-      "is_incremental": false,
       "version": ""
-    }
-  ],
-  "incremental_info": [
-    {
-      "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
-        "incrementalPhase": "build",
-        "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
-      },
-      "processors": {
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 142,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        }
-      }
-    },
-    {
-      "status": {
-        "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
-        "incrementalPhase": "postProcessing",
-        "total_file_count": 0,
-        "skipped_file_count": 0
-      },
-      "processors": {}
     }
   ],
   "version_info": {},

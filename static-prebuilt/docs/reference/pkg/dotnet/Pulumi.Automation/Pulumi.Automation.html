@@ -1,23 +1,22 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace Pulumi.Automation
-   </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace Pulumi.Automation
-   ">
-    <meta name="generator" content="docfx 2.59.4.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Namespace Pulumi.Automation
+ </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Namespace Pulumi.Automation
+ ">
     
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="">
-    <meta property="docfx:tocrel" content="toc.html">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="toc.html">
     
     
     
@@ -25,7 +24,7 @@
   <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -37,7 +36,7 @@
               </button>
               <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
                 <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
-              </a>    </div>
+              </a>            </div>
             <div class="collapse navbar-collapse" id="navbar">
               <form class="navbar-form navbar-right" role="search" id="search">
                 <div class="form-group">
@@ -47,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -57,7 +56,7 @@
         </div>
       </header>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -67,23 +66,23 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Pulumi.Automation">
-  
+
   <h1 id="Pulumi_Automation" data-uid="Pulumi.Automation" class="text-break">Namespace Pulumi.Automation
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
-  </h3>
+</h3>
       <h4><a class="xref" href="Pulumi.Automation.ConfigValue.html">ConfigValue</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Automation.DestroyOptions.html">DestroyOptions</a></h4>
-      <section><p>Options controlling the behavior of an <see cref="!:WorkspaceStack.DestroyAsync(DestroyOptions, System.Threading.CancellationToken)"></see> operation.</p>
+      <section><p>Options controlling the behavior of an <a class="xref" href="Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_DestroyAsync_Pulumi_Automation_DestroyOptions_System_Threading_CancellationToken_">DestroyAsync(DestroyOptions?, CancellationToken)</a> operation.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Automation.EnvironmentVariableValue.html">EnvironmentVariableValue</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Automation.HistoryOptions.html">HistoryOptions</a></h4>
-      <section><p>Options controlling the behavior of a <see cref="!:WorkspaceStack.GetHistoryAsync(HistoryOptions, System.Threading.CancellationToken)"></see> operation.</p>
+      <section><p>Options controlling the behavior of a <a class="xref" href="Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_GetHistoryAsync_Pulumi_Automation_HistoryOptions_System_Threading_CancellationToken_">GetHistoryAsync(HistoryOptions?, CancellationToken)</a> operation.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Automation.InlineProgramArgs.html">InlineProgramArgs</a></h4>
       <section></section>
@@ -92,17 +91,17 @@
 </section>
       <h4><a class="xref" href="Pulumi.Automation.LocalWorkspace.html">LocalWorkspace</a></h4>
       <section><p>LocalWorkspace is a default implementation of the Workspace interface.</p>
-<p>
+<p></p>
 A Workspace is the execution context containing a single Pulumi project, a program,
 and multiple stacks.Workspaces are used to manage the execution environment,
 providing various utilities such as plugin installation, environment configuration
 ($PULUMI_HOME), and creation, deletion, and listing of Stacks.
-<p>
+<p></p>
 LocalWorkspace relies on Pulumi.yaml and Pulumi.{stack}.yaml as the intermediate format
 for Project and Stack settings.Modifying ProjectSettings will
 alter the Workspace Pulumi.yaml file, and setting config on a Stack will modify the Pulumi.{stack}.yaml file.
 This is identical to the behavior of Pulumi CLI driven workspaces.
-<p>
+<p></p>
 If not provided a working directory - causing LocalWorkspace to create a temp directory,
 than the temp directory will be cleaned up on <a class="xref" href="Pulumi.Automation.LocalWorkspace.html#Pulumi_Automation_LocalWorkspace_Dispose">Dispose()</a>.
 </section>
@@ -117,7 +116,7 @@ and environment variables to pass through to every command.</p>
       <h4><a class="xref" href="Pulumi.Automation.PluginInstallOptions.html">PluginInstallOptions</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Automation.PreviewOptions.html">PreviewOptions</a></h4>
-      <section><p>Options controlling the behavior of an <see cref="!:WorkspaceStack.PreviewAsync(PreviewOptions, System.Threading.CancellationToken)"></see> operation.</p>
+      <section><p>Options controlling the behavior of an <a class="xref" href="Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_PreviewAsync_Pulumi_Automation_PreviewOptions_System_Threading_CancellationToken_">PreviewAsync(PreviewOptions?, CancellationToken)</a> operation.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Automation.PreviewResult.html">PreviewResult</a></h4>
       <section></section>
@@ -143,10 +142,10 @@ and environment variables to pass through to every command.</p>
       <section><p>A Pulumi program as an inline function (in process).</p>
 </section>
       <h4><a class="xref" href="Pulumi.Automation.RefreshOptions.html">RefreshOptions</a></h4>
-      <section><p>Options controlling the behavior of an <see cref="!:WorkspaceStack.RefreshAsync(RefreshOptions, System.Threading.CancellationToken)"></see> operation.</p>
+      <section><p>Options controlling the behavior of an <a class="xref" href="Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_RefreshAsync_Pulumi_Automation_RefreshOptions_System_Threading_CancellationToken_">RefreshAsync(RefreshOptions?, CancellationToken)</a> operation.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Automation.RemoteDestroyOptions.html">RemoteDestroyOptions</a></h4>
-      <section><p>Options controlling the behavior of an <see cref="!:RemoteWorkspaceStack.DestroyAsync(RemoteDestroyOptions, System.Threading.CancellationToken)"></see> operation.</p>
+      <section><p>Options controlling the behavior of an <a class="xref" href="Pulumi.Automation.RemoteWorkspaceStack.html#Pulumi_Automation_RemoteWorkspaceStack_DestroyAsync_Pulumi_Automation_RemoteDestroyOptions_System_Threading_CancellationToken_">DestroyAsync(RemoteDestroyOptions?, CancellationToken)</a> operation.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Automation.RemoteGitAuthArgs.html">RemoteGitAuthArgs</a></h4>
       <section><p>Authentication options for the repository that can be specified for a private Git repo.
@@ -158,17 +157,17 @@ There are three different authentication paths:</p>
       <section><p>Description of a stack backed by a remote Pulumi program in a Git repository.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Automation.RemotePreviewOptions.html">RemotePreviewOptions</a></h4>
-      <section><p>Options controlling the behavior of an <see cref="!:RemoteWorkspaceStack.PreviewAsync(RemotePreviewOptions, System.Threading.CancellationToken)"></see> operation.</p>
+      <section><p>Options controlling the behavior of an <a class="xref" href="Pulumi.Automation.RemoteWorkspaceStack.html#Pulumi_Automation_RemoteWorkspaceStack_PreviewAsync_Pulumi_Automation_RemotePreviewOptions_System_Threading_CancellationToken_">PreviewAsync(RemotePreviewOptions?, CancellationToken)</a> operation.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Automation.RemoteRefreshOptions.html">RemoteRefreshOptions</a></h4>
-      <section><p>Options controlling the behavior of an <see cref="!:RemoteWorkspaceStack.RefreshAsync(RemoteRefreshOptions, System.Threading.CancellationToken)"></see> operation.</p>
+      <section><p>Options controlling the behavior of an <a class="xref" href="Pulumi.Automation.RemoteWorkspaceStack.html#Pulumi_Automation_RemoteWorkspaceStack_RefreshAsync_Pulumi_Automation_RemoteRefreshOptions_System_Threading_CancellationToken_">RefreshAsync(RemoteRefreshOptions?, CancellationToken)</a> operation.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Automation.RemoteUpdateOptions.html">RemoteUpdateOptions</a></h4>
       <section><p>Common options controlling the behavior of update actions taken
 against an instance of <a class="xref" href="Pulumi.Automation.RemoteWorkspaceStack.html">RemoteWorkspaceStack</a>.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Automation.RemoteUpOptions.html">RemoteUpOptions</a></h4>
-      <section><p>Options controlling the behavior of an <see cref="!:RemoteWorkspaceStack.UpAsync(RemoteUpOptions, System.Threading.CancellationToken)"></see> operation.</p>
+      <section><p>Options controlling the behavior of an <a class="xref" href="Pulumi.Automation.RemoteWorkspaceStack.html#Pulumi_Automation_RemoteWorkspaceStack_UpAsync_Pulumi_Automation_RemoteUpOptions_System_Threading_CancellationToken_">UpAsync(RemoteUpOptions?, CancellationToken)</a> operation.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Automation.RemoteWorkspace.html">RemoteWorkspace</a></h4>
       <section></section>
@@ -180,10 +179,10 @@ against an instance of <a class="xref" href="Pulumi.Automation.RemoteWorkspaceSt
       <h4><a class="xref" href="Pulumi.Automation.StackDeployment.html">StackDeployment</a></h4>
       <section><p>Represents the state of a stack deployment as used by
 ExportStackAsync and ImportStackAsync.</p>
-<p>
+<p></p>
 There is no strongly typed model for the contents yet, but you
 can access the raw representation via the Json property.
-<p>
+<p></p>
 NOTE: instances may contain sensitive data (secrets).
 </section>
       <h4><a class="xref" href="Pulumi.Automation.StackSettings.html">StackSettings</a></h4>
@@ -201,7 +200,7 @@ against an instance of <a class="xref" href="Pulumi.Automation.WorkspaceStack.ht
       <h4><a class="xref" href="Pulumi.Automation.UpdateSummary.html">UpdateSummary</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Automation.UpOptions.html">UpOptions</a></h4>
-      <section><p>Options controlling the behavior of an <see cref="!:WorkspaceStack.UpAsync(UpOptions, System.Threading.CancellationToken)"></see> operation.</p>
+      <section><p>Options controlling the behavior of an <a class="xref" href="Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_UpAsync_Pulumi_Automation_UpOptions_System_Threading_CancellationToken_">UpAsync(UpOptions?, CancellationToken)</a> operation.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Automation.UpResult.html">UpResult</a></h4>
       <section></section>
@@ -209,7 +208,7 @@ against an instance of <a class="xref" href="Pulumi.Automation.WorkspaceStack.ht
       <section></section>
       <h4><a class="xref" href="Pulumi.Automation.Workspace.html">Workspace</a></h4>
       <section><p>Workspace is the execution context containing a single Pulumi project, a program, and multiple stacks.</p>
-<p>
+<p></p>
 Workspaces are used to manage the execution environment, providing various utilities such as plugin
 installation, environment configuration ($PULUMI_HOME), and creation, deletion, and listing of Stacks.
 </section>
@@ -217,18 +216,18 @@ installation, environment configuration ($PULUMI_HOME), and creation, deletion, 
       <section><p><a class="xref" href="Pulumi.Automation.WorkspaceStack.html">WorkspaceStack</a> is an isolated, independently configurable instance of a
 Pulumi program. <a class="xref" href="Pulumi.Automation.WorkspaceStack.html">WorkspaceStack</a> exposes methods for the full pulumi lifecycle
 (up/preview/refresh/destroy), as well as managing configuration.</p>
-<p>
+<p></p>
 Multiple stacks are commonly used to denote different phases of development
 (such as development, staging, and production) or feature branches (such as
 feature-x-dev, jane-feature-x-dev).
-<p>
+<p></p>
 Will dispose the <a class="xref" href="Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_Workspace">Workspace</a> on <a class="xref" href="Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_Dispose">Dispose()</a>.
 </section>
       <h4><a class="xref" href="Pulumi.Automation.WorkspaceStackState.html">WorkspaceStackState</a></h4>
       <section><p>Module class for manipulating stack state for a given <a class="xref" href="Pulumi.Automation.WorkspaceStack.html">WorkspaceStack</a>.</p>
 </section>
     <h3 id="enums">Enums
-  </h3>
+</h3>
       <h4><a class="xref" href="Pulumi.Automation.OperationType.html">OperationType</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Automation.PluginKind.html">PluginKind</a></h4>
@@ -240,6 +239,8 @@ Will dispose the <a class="xref" href="Pulumi.Automation.WorkspaceStack.html#Pul
       <section></section>
       <h4><a class="xref" href="Pulumi.Automation.UpdateState.html">UpdateState</a></h4>
       <section></section>
+
+
 </article>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
@@ -254,7 +255,7 @@ Will dispose the <a class="xref" href="Pulumi.Automation.WorkspaceStack.html#Pul
             </div>
           </div>        </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -262,14 +263,14 @@ Will dispose the <a class="xref" href="Pulumi.Automation.WorkspaceStack.html#Pul
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright 2016-2022, Pulumi Corporation.
-            
+      Copyright 2016-2023, Pulumi Corporation.
+      
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>
