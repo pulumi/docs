@@ -260,9 +260,18 @@ function excludeAcceptable(links) {
 
         // Ignore remote disconnects.
         .filter(b => b.reason !== "ERRNO_ECONNRESET")
+        
+        // Ignore BLC_UNKNOWN's
+        .filter(b => b.reason !== "BLC_UNKNOWN")
+            
+        // Ignore BLC_INVALID's
+        .filter(b => b.reason !== "BLC_INVALID")
 
         // Ignore HTTP 308s.
         .filter(b => b.reason !== "HTTP_308")
+            
+        // Ignore HTTP 503s.
+        .filter(b => b.reason !== "HTTP_503")
 
         // Ignore complaints about MIME types. BLC currently hard-codes an expectation of
         // type text/html, which causes it to fail on direct links to images, PDFs, and
