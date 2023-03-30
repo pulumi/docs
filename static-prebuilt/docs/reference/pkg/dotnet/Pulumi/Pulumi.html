@@ -1,23 +1,22 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace Pulumi
-   </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace Pulumi
-   ">
-    <meta name="generator" content="docfx 2.59.4.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Namespace Pulumi
+ </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Namespace Pulumi
+ ">
     
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="">
-    <meta property="docfx:tocrel" content="toc.html">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="toc.html">
     
     
     
@@ -25,7 +24,7 @@
   <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -37,7 +36,7 @@
               </button>
               <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
                 <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
-              </a>    </div>
+              </a>            </div>
             <div class="collapse navbar-collapse" id="navbar">
               <form class="navbar-form navbar-right" role="search" id="search">
                 <div class="form-group">
@@ -47,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -57,7 +56,7 @@
         </div>
       </header>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -67,30 +66,30 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Pulumi">
-  
+
   <h1 id="Pulumi" data-uid="Pulumi" class="text-break">Namespace Pulumi
-  </h1>
+</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
-  </h3>
+</h3>
       <h4><a class="xref" href="Pulumi.Alias.html">Alias</a></h4>
       <section><p>Alias is a description of prior named used for a resource. It can be processed in the
 context of a resource creation to determine what the full aliased URN would be.</p>
-<p>
+<p></p>
 Use <a class="xref" href="Pulumi.Alias.html#Pulumi_Alias_Urn">Urn</a> in the case where a prior URN is known and can just be specified in
 full.  Otherwise, provide some subset of the other properties in this type to generate an
 appropriate urn from the pre-existing values of the <a class="xref" href="Pulumi.Resource.html">Resource</a> with certain
 parts overridden.
-<p>
+<p></p>
 The presence of a property indicates if its value should be used. If absent (i.e.
-<span class="xref">null</span>), then the value is not used.
-<p>
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>), then the value is not used.
+<p></p>
 Note: because of the above, there needs to be special handling to indicate that the previous
-<a class="xref" href="Pulumi.Alias.html#Pulumi_Alias_Parent">Parent</a> of a <a class="xref" href="Pulumi.Resource.html">Resource</a> was <span class="xref">null</span>.  Specifically,
+<a class="xref" href="Pulumi.Alias.html#Pulumi_Alias_Parent">Parent</a> of a <a class="xref" href="Pulumi.Resource.html">Resource</a> was <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.  Specifically,
 pass in:
-<p>
+<p></p>
 <code>Aliases = { new Alias { NoParent = true } }</code>
 </section>
       <h4><a class="xref" href="Pulumi.Archive.html">Archive</a></h4>
@@ -110,7 +109,7 @@ archives.</p>
       <section><p>Base type for all call argument classes.</p>
 </section>
       <h4><a class="xref" href="Pulumi.CallOptions.html">CallOptions</a></h4>
-      <section><p>Options to help control the behavior of <span class="xref">Pulumi.Deployment.Call``1(System.String,Pulumi.CallArgs,Pulumi.Resource,Pulumi.CallOptions,System.Boolean)</span>.</p>
+      <section><p>Options to help control the behavior of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Call&lt;T&gt;(string, CallArgs, Resource, CallOptions, bool)</a>.</p>
 </section>
       <h4><a class="xref" href="Pulumi.ComponentResource.html">ComponentResource</a></h4>
       <section><p>A <a class="xref" href="Pulumi.Resource.html">Resource</a> that aggregates one or more other child resources into a higher
@@ -153,17 +152,32 @@ should perform all startup logic they need in their <code>Main</code> method and
     // Code that creates resources.
 });
 </code></pre>
-<p>}</code></p>
-<p>
+<p>}</p></code></p>
+
 Importantly: Cloud resources cannot be created outside of the lambda passed to any of the
 <a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_RunAsync_System_Action_">RunAsync(Action)</a> overloads.  Because cloud Resource construction is
-inherently asynchronous, the result of this function is a <span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span> which should
+inherently asynchronous, the result of this function is a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> which should
 then be returned or awaited.  This will ensure that any problems that are encountered during
 the running of the program are properly reported.  Failure to do this may lead to the
 program ending early before all resources are properly registered.
 </section>
       <h4><a class="xref" href="Pulumi.DeploymentInstance.html">DeploymentInstance</a></h4>
       <section><p>Metadata of the deployment that is currently running. Accessible via <a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_Instance">Instance</a>.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.DictionaryInvokeArgs.html">DictionaryInvokeArgs</a></h4>
+      <section><p>A special type of <a class="xref" href="Pulumi.InvokeArgs.html">InvokeArgs</a> with resource inputs represented
+as a loosely-typed dictionary of objects. Normally,
+<a class="xref" href="Pulumi.DictionaryInvokeArgs.html">DictionaryInvokeArgs</a> should not be used by resource providers
+since it's too low-level and provides low safety. Its target scenario are
+resources with a very dynamic shape of inputs.
+The input dictionary may only contain objects that are serializable by
+Pulumi, i.e only the following types (or pulumi.Output of those types) are allowed:</p>
+<ul><li>Primitive types: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>,
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></li><li><a class="xref" href="Pulumi.Asset.html">Asset</a>, <a class="xref" href="Pulumi.Archive.html">Archive</a>, or
+<a class="xref" href="Pulumi.AssetArchive.html">AssetArchive</a></li><li><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement">JsonElement</a>
+</li><li>Generic collections of the above:
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1">ImmutableArray&lt;T&gt;</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary&lt;TKey, TValue&gt;</a>
+with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> keys, <a class="xref" href="Pulumi.Union-2.html">Union&lt;T0, T1&gt;</a></li></ul>
 </section>
       <h4><a class="xref" href="Pulumi.DictionaryResourceArgs.html">DictionaryResourceArgs</a></h4>
       <section><p>A special type of <a class="xref" href="Pulumi.ResourceArgs.html">ResourceArgs</a> with resource inputs represented
@@ -173,12 +187,12 @@ since it's too low-level and provides low safety. Its target scenario are
 resources with a very dynamic shape of inputs.
 The input dictionary may only contain objects that are serializable by
 Pulumi, i.e only the following types (or pulumi.Output of those types) are allowed:</p>
-<ul><li>Primitive types: <span class="xref">System.String</span>, <span class="xref">System.Double</span>,
-<span class="xref">System.Int32</span>, <span class="xref">System.Boolean</span></li><li><a class="xref" href="Pulumi.Asset.html">Asset</a>, <a class="xref" href="Pulumi.Archive.html">Archive</a>, or
-<a class="xref" href="Pulumi.AssetArchive.html">AssetArchive</a></li><li><span class="xref">System.Text.Json.JsonElement</span>
+<ul><li>Primitive types: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>,
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></li><li><a class="xref" href="Pulumi.Asset.html">Asset</a>, <a class="xref" href="Pulumi.Archive.html">Archive</a>, or
+<a class="xref" href="Pulumi.AssetArchive.html">AssetArchive</a></li><li><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement">JsonElement</a>
 </li><li>Generic collections of the above:
-<span class="xref">System.Collections.Immutable.ImmutableArray&lt;T&gt;</span>, <span class="xref">System.Collections.Immutable.ImmutableDictionary&lt;TKey, TValue&gt;</span>
-with <span class="xref">System.String</span> keys, <a class="xref" href="Pulumi.Union-2.html">Union&lt;T0, T1&gt;</a></li></ul>
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1">ImmutableArray&lt;T&gt;</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary&lt;TKey, TValue&gt;</a>
+with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> keys, <a class="xref" href="Pulumi.Union-2.html">Union&lt;T0, T1&gt;</a></li></ul>
 </section>
       <h4><a class="xref" href="Pulumi.EnumTypeAttribute.html">EnumTypeAttribute</a></h4>
       <section><p>Attribute used by a Pulumi Cloud Provider Package to mark enum types.</p>
@@ -212,7 +226,7 @@ available T, or the output from a existing <a class="xref" href="Pulumi.Resource
       <h4><a class="xref" href="Pulumi.InputAttribute.html">InputAttribute</a></h4>
       <section><p>Attribute used by a Pulumi Cloud Provider Package to mark <a class="xref" href="Pulumi.Resource.html">Resource</a> input
 fields and properties.</p>
-<p>
+<p></p>
 Note: for simple inputs (i.e. <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> this should just be placed on the
 property itself.  i.e. <code>[Input] Input&lt;string> Acl</code>.
 <p>For collection inputs (i.e. <a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a> this should be placed on the
@@ -227,30 +241,30 @@ backing field for the property.  i.e.</p>
       <h4><a class="xref" href="Pulumi.InputExtensions.html">InputExtensions</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.InputJson.html">InputJson</a></h4>
-      <section><p>Represents an <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> value that wraps a <span class="xref">System.Text.Json.JsonElement</span>.</p>
+      <section><p>Represents an <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> value that wraps a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement">JsonElement</a>.</p>
 </section>
       <h4><a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a></h4>
       <section><p>A list of values that can be passed in as the arguments to a <a class="xref" href="Pulumi.Resource.html">Resource</a>.
 The individual values are themselves <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>s.  i.e. the individual values
 can be concrete values or <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s.</p>
-<p>
-<a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a> differs from a normal <span class="xref">System.Collections.Generic.IList`1</span> in that it is itself
+<p></p>
+<a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a> differs from a normal <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList&lt;T&gt;</a> in that it is itself
 an <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>.  For example, a <a class="xref" href="Pulumi.Resource.html">Resource</a> that accepts an <a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a> will accept not just a list but an <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>
 of a list.  This is important for cases where the <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>
 list from some <a class="xref" href="Pulumi.Resource.html">Resource</a> needs to be passed into another <a class="xref" href="Pulumi.Resource.html">Resource</a>.  Or for cases where creating the list invariably produces an <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a> because its resultant value is dependent on other <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s.
-<p>
+<p></p>
 This benefit of <a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a> is also a limitation.  Because it represents a
 list of values that may eventually be created, there is no way to simply iterate over, or
 access the elements of the list synchronously.
-<p>
+<p></p>
 <a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a> is designed to be easily used in object and collection
 initializers.  For example, a resource that accepts a list of inputs can be written in
 either of these forms:
-<p>
+<p></p>
 <pre><code>    new SomeResource(&quot;name&quot;, new SomeResourceArgs {
         ListProperty = { Value1, Value2, Value3 },
     });</code></pre>
-<p>
+<p></p>
 or
 <pre><code>    new SomeResource(&quot;name&quot;, new SomeResourceArgs {
         ListProperty = new [] { Value1, Value2, Value3 },
@@ -259,26 +273,26 @@ or
       <h4><a class="xref" href="Pulumi.InputListExtensions.html">InputListExtensions</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a></h4>
-      <section><p>A mapping of <span class="xref">System.String</span>s to values that can be passed in as the arguments to a
+      <section><p>A mapping of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>s to values that can be passed in as the arguments to a
 <a class="xref" href="Pulumi.Resource.html">Resource</a>. The individual values are themselves <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>s.  i.e.
 the individual values can be concrete values or <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s.</p>
-<p>
-<a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a> differs from a normal <span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;</span> in that it is
+<p></p>
+<a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a> differs from a normal <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> in that it is
 itself an <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>.  For example, a <a class="xref" href="Pulumi.Resource.html">Resource</a> that accepts an
 <a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a> will accept not just a dictionary but an <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>
 of a dictionary as well.  This is important for cases where the <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>
 map from some <a class="xref" href="Pulumi.Resource.html">Resource</a> needs to be passed into another <a class="xref" href="Pulumi.Resource.html">Resource</a>.
 Or for cases where creating the map invariably produces an <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a> because
 its resultant value is dependent on other <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s.
-<p>
+<p></p>
 This benefit of <a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a> is also a limitation.  Because it represents a
 list of values that may eventually be created, there is no way to simply iterate over, or
 access the elements of the map synchronously.
-<p>
+<p></p>
 <a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a> is designed to be easily used in object and collection
 initializers.  For example, a resource that accepts a map of values can be written easily in
 this form:
-<p>
+<p></p>
 <pre><code>    new SomeResource(&quot;name&quot;, new SomeResourceArgs {
         MapProperty = {
             { Key1, Value1 },
@@ -291,18 +305,23 @@ this form:
       <section></section>
       <h4><a class="xref" href="Pulumi.InputUnion-2.html">InputUnion&lt;T0, T1&gt;</a></h4>
       <section><p>Represents an <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> value that can be one of two different types. For
-example, it might potentially be an <span class="xref">System.Int32</span> some of the time or a <span class="xref">System.String</span> in other cases.</p>
+example, it might potentially be an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> some of the time or a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> in other cases.</p>
 </section>
       <h4><a class="xref" href="Pulumi.InvokeArgs.html">InvokeArgs</a></h4>
       <section><p>Base type for all invoke argument classes.</p>
 </section>
       <h4><a class="xref" href="Pulumi.InvokeOptions.html">InvokeOptions</a></h4>
-      <section><p>Options to help control the behavior of <span class="xref">Pulumi.IDeployment.InvokeAsync``1(System.String,Pulumi.InvokeArgs,Pulumi.InvokeOptions)</span>.</p>
+      <section><p>Options to help control the behavior of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">InvokeAsync&lt;T&gt;(string, InvokeArgs, InvokeOptions)</a>.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Log.html">Log</a></h4>
       <section><p>Logging functions that can be called from a .NET application that will be logged to the
 <code>Pulumi</code> log stream.  These events will be printed in the terminal while the Pulumi app
 runs, and will be available from the Web console afterwards.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.LogException.html">LogException</a></h4>
+      <section><p>Special exception we throw if we had a problem actually logging a message to the engine
+error rpc endpoint. In this case, we have no choice but to tear ourselves down reporting
+whatever we can to the console instead.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Output.html">Output</a></h4>
       <section><p>Useful static utility methods for both creating and working with <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s.</p>
@@ -312,9 +331,9 @@ runs, and will be available from the Web console afterwards.</p>
 created, these are represented using the special <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s type, which
 internally represents two things: an eventually available value of the output and
 the dependency on the source(s) of the output value.
-In fact, <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s is quite similar to <span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>.
+In fact, <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s is quite similar to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a>.
 Additionally, they carry along dependency information.</p>
-<p>
+<p></p>
 The output properties of all resource objects in Pulumi have type <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>.
 </section>
       <h4><a class="xref" href="Pulumi.OutputAttribute.html">OutputAttribute</a></h4>
@@ -325,7 +344,7 @@ in your Pulumi programs to mark outputs of <a class="xref" href="Pulumi.Componen
       <h4><a class="xref" href="Pulumi.OutputConstructorAttribute.html">OutputConstructorAttribute</a></h4>
       <section><p>Attribute used by a Pulumi Cloud Provider Package to marks the constructor for a complex
 property type so that it can be instantiated by the Pulumi runtime.</p>
-<p>The constructor should contain parameters that map to the resultant <span class="xref">Google.Protobuf.WellKnownTypes.Struct.Fields</span> returned by the engine.</p>
+<p>The constructor should contain parameters that map to the resultant <a class="xref" href="https://github.com/pulumi/protobuf/blob/cc766328dae753b0eae31a8fad158afb8226b9ad/csharp/src/Google.Protobuf/WellKnownTypes/Struct.cs">Fields</a> returned by the engine.</p>
 </section>
       <h4><a class="xref" href="Pulumi.OutputExtensions.html">OutputExtensions</a></h4>
       <section><p>Extension methods for <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>.</p>
@@ -382,6 +401,10 @@ stack definitions.</p>
       <h4><a class="xref" href="Pulumi.StackReferenceArgs.html">StackReferenceArgs</a></h4>
       <section><p>The set of arguments for constructing a StackReference resource.</p>
 </section>
+      <h4><a class="xref" href="Pulumi.StackReferenceOutputDetails.html">StackReferenceOutputDetails</a></h4>
+      <section><p>Holds a StackReference's output value.
+At most one of Value and SecretValue will be set.</p>
+</section>
       <h4><a class="xref" href="Pulumi.StringAsset.html">StringAsset</a></h4>
       <section><p>StringAsset is a kind of asset produced from an in-memory UTF8-encoded string.</p>
 </section>
@@ -390,32 +413,34 @@ stack definitions.</p>
 automatically by Pulumi to identify resources.  They cannot be manually constructed.</p>
 </section>
     <h3 id="structs">Structs
-  </h3>
+</h3>
       <h4><a class="xref" href="Pulumi.ResourceTransformationArgs.html">ResourceTransformationArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.ResourceTransformationResult.html">ResourceTransformationResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Union-2.html">Union&lt;T0, T1&gt;</a></h4>
       <section><p>Represents a <a href="https://en.wikipedia.org/wiki/Tagged_union">Tagged Union</a>.</p>
-<p>
+<p></p>
 This is used to hold a value that could take on several different, but fixed, types. Only
 one of the types can be in use at any one time. It can be thought of as a type that has
 several &quot;cases,&quot; each of which should be handled correctly when that type is manipulated.
-<p>
-For example, a <a class="xref" href="Pulumi.Resource.html">Resource</a> property that could either store a <span class="xref">System.Int32</span>
-or a <span class="xref">System.String</span> can be represented as <code>Output&lt;int, string></code>.  The <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> version of this is <a class="xref" href="Pulumi.InputUnion-2.html">InputUnion&lt;T0, T1&gt;</a>.
+<p></p>
+For example, a <a class="xref" href="Pulumi.Resource.html">Resource</a> property that could either store a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>
+or a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> can be represented as <code>Output&lt;int, string></code>.  The <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> version of this is <a class="xref" href="Pulumi.InputUnion-2.html">InputUnion&lt;T0, T1&gt;</a>.
 </section>
     <h3 id="delegates">Delegates
-  </h3>
+</h3>
       <h4><a class="xref" href="Pulumi.ResourceTransformation.html">ResourceTransformation</a></h4>
       <section><p>ResourceTransformation is the callback signature for <a class="xref" href="Pulumi.ResourceOptions.html#Pulumi_ResourceOptions_ResourceTransformations">ResourceTransformations</a>. A transformation is passed the same set of
 inputs provided to the <a class="xref" href="Pulumi.Resource.html">Resource</a> constructor, and can optionally return back
 alternate values for the <code>properties</code> and/or <code>options</code> prior to the resource
 actually being created. The effect will be as though those <code>properties</code> and/or
 <code>options</code> were passed in place of the original call to the <a class="xref" href="Pulumi.Resource.html">Resource</a>
-constructor.  If the transformation returns <span class="xref">null</span>, this indicates that the
+constructor.  If the transformation returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, this indicates that the
 resource will not be transformed.</p>
 </section>
+
+
 </article>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
@@ -430,7 +455,7 @@ resource will not be transformed.</p>
             </div>
           </div>        </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -438,14 +463,14 @@ resource will not be transformed.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright 2016-2022, Pulumi Corporation.
-            
+      Copyright 2016-2023, Pulumi Corporation.
+      
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>
