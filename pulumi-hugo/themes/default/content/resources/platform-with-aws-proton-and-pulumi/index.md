@@ -27,6 +27,7 @@ main:
     Proton and Pulumi with diagrams and a series of labs to help accelerate your
     organization's platform engineering efforts.
   sortable_date: 2023-03-16T16:00:00.000Z
+  youtube_url: https://www.youtube.com/embed/4cHN4wIrN7Y
 event_data:
   name: Platform Engineering with AWS Proton and Pulumi
   start_date: 2023-03-16T16:00:00.000Z
@@ -47,10 +48,10 @@ form:
   salesforce_campaign_id: 701Du0000009vYaIAI
   gotowebinar_key: ""
 featured: false
-pre_recorded: false
+pre_recorded: true
 pulumi_tv: false
 unlisted: false
-gated: true
+gated: false
 type: webinars
 external: false
 block_external_search_index: false

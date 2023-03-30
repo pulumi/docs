@@ -8,22 +8,37 @@ layout: kubecon
 
 links:
     items:
-        - heading: Let's Talk Business
-          description: Are you interested in learning more about Pulumi for your team and organization? Schedule an one-on-one meeting at KubeCon.
-          action: Schedule 1:1 Meeting
-          link: /contact/?form=sales
-        - heading: Kubernetes on Google Cloud with Pulumi
-          description: Learn how to deploy a Kubernetes cluster on Google Cloud and run containerized applications on the cluster. 200-level workshop, code will be provided
-          action: Register
-          link: /resources/kubernetes-on-google-cloud/
+        - heading: RSVP to KubeCon Happy Hour
+          description: Join Kong, LaunchDarkly, Pulumi, and Honeycomb for an evening of light fare, libations, and conversations.<br/><b>Limited Spots Remaining</b><br/>April 7, 10pm CEST at De Kroon Restaurant & Club.
+          action: Reserve your spot
+          link: https://kubeconemeahappyhour.eventbrite.com/?aff=pulumi
         - heading: Join a Workshop
           description: Our workshops are live, and 100% open source. Choose from fundamental to advanced topics. They are hands-on and code source is provided.
-          action: Check Upcoming Workshops
-          link: /resources/#upcoming
-        - heading: Observability as Code
-          description: Getting your infrastructure and application deployed is essential, but how do you ensure your new capabilities are running reliably in production? Observability is a crucial component of any site reliability strategy, and New Relic and Pulumi make it easier.
-          action: Watch the Webinar
-          link: /resources/observability-as-code-with-new-relic
+          action: Check upcoming workshops
+          link: /resources#upcoming
+
+workshops:
+    items:
+      - title: Platform Engineering with AWS Proton and Pulumi
+        date: March 16, 2023
+        description: In this workshop, you will learn how to enable self-service infrastructure for your infrastructure using AWS Proton and Pulumi.
+        link: /resources/platform-with-aws-proton-and-pulumi/
+        action: Watch
+      - title: Getting Started with Kubernetes on Azure
+        date: April 25, 2023
+        description: In this workshop, you will learn how to deploy a Kubernetes cluster on Microsoft Azure and run containerized applications on the cluster.
+        link: /resources/getting-started-with-kubernetes-azure
+        action: Register
+      - title: Getting Started with Kubernetes on AWS
+        date: April 26, 2023
+        description: In this workshop, you will learn the fundamentals of setting up EKS clusters on AWS through guided exercises using Pulumi.
+        link: /resources/getting-started-with-kubernetes-aws
+        action: Register
+      - title: Getting Started with Kubernetes on Google Cloud
+        date: April 27, 2023
+        description: In this workshop, you will learn how to deploy a Kubernetes cluster on Google Cloud and run containerized applications on the cluster.
+        link: /resources/getting-started-with-kubernetes-google-cloud
+        action: Register
 
 templates:
     items:
