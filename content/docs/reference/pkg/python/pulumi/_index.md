@@ -14,7 +14,7 @@ that you’ll need in order to interact with Pulumi resource providers and expre
 Pulumi resource providers all depend on this library and express their resources in terms of the types defined in this
 module.</p>
 <blockquote class="epigraph">
-<div><p><strong>Note</strong>: The Pulumi Python SDK requires Python version 3.7 or greater. Please see the
+<div><p><strong>Note</strong>: The Pulumi Python SDK requires Python version 3.6 or greater. Please see the
 <a class="reference external" href="/docs/reference/python/#getting-started">Python getting started</a> documentation for details on how to get started with
 Python.</p>
 </div></blockquote>
