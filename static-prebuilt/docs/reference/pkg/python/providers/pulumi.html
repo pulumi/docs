@@ -11,13 +11,13 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pulumi Policy" href="pulumi_policy.html" />
     <link rel="prev" title="&lt;no title&gt;" href="../index.html" /> 
 </head>
 
@@ -187,6 +187,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#pulumi.automation.LocalWorkspace.remove_config"><code class="docutils literal notranslate"><span class="pre">LocalWorkspace.remove_config()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pulumi.automation.LocalWorkspace.remove_all_config"><code class="docutils literal notranslate"><span class="pre">LocalWorkspace.remove_all_config()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pulumi.automation.LocalWorkspace.refresh_config"><code class="docutils literal notranslate"><span class="pre">LocalWorkspace.refresh_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pulumi.automation.LocalWorkspace.get_tag"><code class="docutils literal notranslate"><span class="pre">LocalWorkspace.get_tag()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pulumi.automation.LocalWorkspace.set_tag"><code class="docutils literal notranslate"><span class="pre">LocalWorkspace.set_tag()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pulumi.automation.LocalWorkspace.remove_tag"><code class="docutils literal notranslate"><span class="pre">LocalWorkspace.remove_tag()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pulumi.automation.LocalWorkspace.list_tags"><code class="docutils literal notranslate"><span class="pre">LocalWorkspace.list_tags()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pulumi.automation.LocalWorkspace.who_am_i"><code class="docutils literal notranslate"><span class="pre">LocalWorkspace.who_am_i()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pulumi.automation.LocalWorkspace.stack"><code class="docutils literal notranslate"><span class="pre">LocalWorkspace.stack()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pulumi.automation.LocalWorkspace.create_stack"><code class="docutils literal notranslate"><span class="pre">LocalWorkspace.create_stack()</span></code></a></li>
@@ -217,6 +221,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#pulumi.automation.Stack.remove_config"><code class="docutils literal notranslate"><span class="pre">Stack.remove_config()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pulumi.automation.Stack.remove_all_config"><code class="docutils literal notranslate"><span class="pre">Stack.remove_all_config()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pulumi.automation.Stack.refresh_config"><code class="docutils literal notranslate"><span class="pre">Stack.refresh_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pulumi.automation.Stack.get_tag"><code class="docutils literal notranslate"><span class="pre">Stack.get_tag()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pulumi.automation.Stack.set_tag"><code class="docutils literal notranslate"><span class="pre">Stack.set_tag()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pulumi.automation.Stack.remove_tag"><code class="docutils literal notranslate"><span class="pre">Stack.remove_tag()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pulumi.automation.Stack.list_tags"><code class="docutils literal notranslate"><span class="pre">Stack.list_tags()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pulumi.automation.Stack.outputs"><code class="docutils literal notranslate"><span class="pre">Stack.outputs()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pulumi.automation.Stack.history"><code class="docutils literal notranslate"><span class="pre">Stack.history()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pulumi.automation.Stack.info"><code class="docutils literal notranslate"><span class="pre">Stack.info()</span></code></a></li>
@@ -233,6 +241,8 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="pulumi_policy.html">Pulumi Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pulumi_terraform.html">Pulumi Terraform</a></li>
 </ul>
 
         </div>
@@ -2029,6 +2039,67 @@ scoped to the Workspace.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pulumi.automation.LocalWorkspace.get_tag">
+<span class="sig-name descname"><span class="pre">get_tag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stack_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pulumi.automation.LocalWorkspace.get_tag" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the value associated with the specified stack name and key,
+scoped to the Workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stack_name</strong> – The name of the stack.</p></li>
+<li><p><strong>key</strong> – The key to use for the tag lookup.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi.automation.LocalWorkspace.set_tag">
+<span class="sig-name descname"><span class="pre">set_tag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stack_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pulumi.automation.LocalWorkspace.set_tag" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the specified key-value pair on the provided stack name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stack_name</strong> – The name of the stack.</p></li>
+<li><p><strong>key</strong> – The tag key to set.</p></li>
+<li><p><strong>value</strong> – The tag value to set.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi.automation.LocalWorkspace.remove_tag">
+<span class="sig-name descname"><span class="pre">remove_tag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stack_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pulumi.automation.LocalWorkspace.remove_tag" title="Permalink to this definition"></a></dt>
+<dd><p>Removes the specified key-value pair on the provided stack name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stack_name</strong> – The name of the stack.</p></li>
+<li><p><strong>key</strong> – The tag key to remove.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi.automation.LocalWorkspace.list_tags">
+<span class="sig-name descname"><span class="pre">list_tags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stack_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">MutableMapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pulumi.automation.LocalWorkspace.list_tags" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the tag map for the specified tag name, scoped to the Workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>stack_name</strong> – The name of the stack.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>TagMap</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pulumi.automation.LocalWorkspace.who_am_i">
 <span class="sig-name descname"><span class="pre">who_am_i</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">WhoAmIResult</span></span></span><a class="headerlink" href="#pulumi.automation.LocalWorkspace.who_am_i" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the currently authenticated user.</p>
@@ -2479,6 +2550,62 @@ cloud provider. Any such changes are adopted into the current stack.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pulumi.automation.Stack.get_tag">
+<span class="sig-name descname"><span class="pre">get_tag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pulumi.automation.Stack.get_tag" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the tag value associated with specified key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>key</strong> – The key to use for the tag lookup.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi.automation.Stack.set_tag">
+<span class="sig-name descname"><span class="pre">set_tag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pulumi.automation.Stack.set_tag" title="Permalink to this definition"></a></dt>
+<dd><p>Sets a tag key-value pair on the Stack in the associated Workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> – The tag key to set.</p></li>
+<li><p><strong>value</strong> – The tag value to set.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi.automation.Stack.remove_tag">
+<span class="sig-name descname"><span class="pre">remove_tag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pulumi.automation.Stack.remove_tag" title="Permalink to this definition"></a></dt>
+<dd><p>Removes the specified key-value pair on the provided stack name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stack_name</strong> – The name of the stack.</p></li>
+<li><p><strong>key</strong> – The tag key to remove.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pulumi.automation.Stack.list_tags">
+<span class="sig-name descname"><span class="pre">list_tags</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">MutableMapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pulumi.automation.Stack.list_tags" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the tag map for the specified tag name, scoped to the Workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>stack_name</strong> – The name of the stack.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>TagMap</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pulumi.automation.Stack.outputs">
 <span class="sig-name descname"><span class="pre">outputs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">MutableMapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">OutputValue</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pulumi.automation.Stack.outputs" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the current set of Stack outputs from the last Stack.up().</p>
@@ -2586,6 +2713,7 @@ It has a plaintext value, and an option boolean indicating secretness.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../index.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pulumi_policy.html" class="btn btn-neutral float-right" title="Pulumi Policy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
