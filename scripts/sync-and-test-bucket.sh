@@ -31,17 +31,7 @@ fi
 
 # For previews, name the destination bucket with the PR number, to reduce the number of
 # buckets we create and to facilitate shorter sync times.
-destination_bucket=""
-if [[ "$GITHUB_WORKFLOW" == "Build and deploy" ]]; then
-    echo "configuring bucket in production account"
-    destination_bucket="$(origin_bucket_prefix)-$(build_identifier)"
-elif [[ "$GITHUB_WORKFLOW" == "Build and deploy new account" ]]; then
-    echo "configuring bucket in new production account"
-    destination_bucket="www-$(origin_bucket_prefix)-$(build_identifier)"
-else
-    echo "the workflow, ${GITHUB_WORKFLOW}, is not recognized"
-    exit 1
-fi
+destination_bucket="$(origin_bucket_prefix)-$(build_identifier)"
 destination_bucket_uri="s3://${destination_bucket}"
 
 # Translate Hugo redirects into a file we'll use for making 301 redirects later. Note that
