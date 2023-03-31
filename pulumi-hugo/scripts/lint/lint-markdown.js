@@ -68,46 +68,45 @@ function checkPageMetaDescription(meta) {
  * @param {Object} [result] The result object returned after finishing searching.
  * @returns {Object} The markdown file paths to search and an error object for the files front matter.
  */
-function searchForMarkdown(paths, result) {
-    // If the result arg does not exist we should create it.
-    if (!result) {
-        result = {
-            files: [],
-            frontMatter: {},
-        };
-    }
-    // Grab the first file in the list and generate
-    // its full path.
-    const file = paths[0];
-    const fullPath = path.resolve(__dirname, file);
+function searchForMarkdown(paths) {
+    var result = {
+        files: [], // list of file paths
+        frontMatter: {}, // file path => { error: string } | { title: string, metaDescription: string }
+    };
 
-    // Check if the path is a directory
-    const isDirectory = fs.statSync(fullPath).isDirectory();
+    while (paths.length > 0) {
+        // Grab the first file in the list and generate
+        // its full path.
+        const file = paths.shift();
+        const fullPath = path.resolve(__dirname, file);
 
-    // Get the file suffix so we can grab the markdown files.
-    const fileParts = file.split(".");
-    const fileSuffix = fileParts[fileParts.length - 1];
+        // Check if the path is a directory
+        const isDirectory = fs.statSync(fullPath).isDirectory();
 
-    // Ignore auto generated docs.
-    if (file.indexOf("/content/docs/reference/pkg") > -1) {
-        const remaining = paths.slice(1, paths.length);
-        return searchForMarkdown(remaining, result);
-    }
-    // If the path is a directory we want to add the contents of the directory
-    // to the list.
-    if (isDirectory) {
-        const contents = fs.readdirSync(fullPath).map(function (file) {
-            return fullPath + "/" + file;
-        });
-        paths[0] = contents;
+        // Get the file suffix so we can grab the markdown files.
+        const fileParts = file.split(".");
+        const fileSuffix = fileParts[fileParts.length - 1];
 
-        // Flatten the array.
-        const newPaths = [].concat.apply([], paths);
-        return searchForMarkdown(newPaths, result);
+        // Ignore auto generated docs.
+        if (file.indexOf("/content/docs/reference/pkg") > -1) {
+            continue;
+        }
+
+        // If the path is a directory we want to add the contents of the directory
+        // to the list.
+        if (isDirectory) {
+            fs.readdirSync(fullPath).forEach(function (file) {
+                paths.push(fullPath + "/" + file);
+            });
+            continue;
+        }
+
         // Else check if the file suffix is a markdown
         // and add it the resulting file list.
-    }
-    if (fileSuffix === "md") {
+        if (fileSuffix !== "md") {
+            continue;
+        }
+
         try {
             // Read the file contents so we can grab the file header.
             const content = fs.readFileSync(fullPath, "utf8");
@@ -145,12 +144,6 @@ function searchForMarkdown(paths, result) {
             };
             result.files.push(fullPath);
         }
-    }
-
-    // If there are remaining paths in the list, keep going.
-    const remaining = paths.slice(1, paths.length);
-    if (remaining.length > 0) {
-        return searchForMarkdown(remaining, result);
     }
     return result;
 }
