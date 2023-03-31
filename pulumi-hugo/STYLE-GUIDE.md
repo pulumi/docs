@@ -54,37 +54,57 @@ This bit of info is serious. If you missed it, bad things could happen.
 
 * Keep paragraphs short, rarely use 4 or more sentences in a single paragraph.
 
-* When writing paragraphs and long sentences,
-  use [semantic line breaks](https://sembr.org/) judiciously
-  to aid your peers in reviewing and editing the text.
-  Avoid writing really long lines,
-  and don't "reflow" paragraphs in your editor.
+* When writing paragraphs and long sentences, use one of the following:
 
-    As a demonstration, consider the following three samples.
+    * Keep the entire paragraph on a single line
+      and use "soft wrapping" in your IDE/editor.
+    * Use [semantic line breaks](https://sembr.org/)
+      to break the paragraph across multiple lines.
 
-    ```plain
-    This is a pargraph all on one line. This paragraph is easy to edit because you can suggest changes to the whole paragraph in one go. However, it's difficult to review because if any line or word in this sentence changes, the entire line is considered changed.
+    **Do not** "reflow" paragraphs. This causes too much diff noise.
 
-    This pargraph is split across multiple lines, but it has been run through
-    the editor's reflow function. This makes it especially difficult to review
-    and edit because a change to any line can require the following lines to be
-    reflown. That's hard to suggest changes for during a code review.
+    <details>
+    <summary>Rationale</summary>
 
-    This pargraph uses semantic line breaks.
-    Line breaks are introduced between sentences,
-    and where appropriate, even within sentences.
-    This makes it easy to review and edit individual sentences or clauses.
-    When something in a sentence changes,
-    the lines that follow it don't get touched.
-    ```
+    There are two aspects to think about with this choice:
 
-    Historical note:
-    A large amount of our existing documentation puts paragraphs on one line
-    (the format used by the first of the samples above).
-    Don't rewrite entire files to follow this recommendation.
-    That's a lot of effort in editing and reviewing with questionable benefit.
-    Instead, fix paragraphs as you change them,
-    and over time our documentation will evolve to conform.
+    - editable: how easy is it to suggest changes to the text
+    - reviewable: how easy is it to tell what changed
+
+    And we have three high-level options:
+
+    - all on one line
+
+        ```plain
+        This is a pargraph all on one line. This paragraph is easy to edit because you can suggest changes to the whole paragraph in one go. When anything in this paragraph changes, GitHub will highlight which words changed.
+        ```
+
+    - semantic line breaks
+
+        ```plain
+        This pargraph uses semantic line breaks.
+        Line breaks are introduced between sentences,
+        and where appropriate, even within sentences.
+        This makes it easy to review and edit individual sentences or clauses.
+        When something in a sentence changes,
+        the lines that follow it don't get touched.
+        ```
+
+    - reflowed to a fixed maximum line length
+
+        ```plain
+        This pargraph is split across multiple lines, but it has been run
+        through the editor's reflow function to a maximum line length. This
+        makes it difficult to review because most changes to any sentence will
+        also show the following sentences as changed, and GitHub's word-diff
+        will be less useful there. This is also difficult to edit because
+        suggested changes won't be able to account for reflowing: GitHub's
+        comment box doesn't have reflow support.
+        ```
+
+    In short, only *all on one line* and *semantic line breaks* leave the text
+    adequately editable and reviewable.
+    </details>
 
 ## Blockquotes
 
