@@ -22,9 +22,8 @@ Here are links to all the blog posts in the series (entries below that are not l
 * [IaC Recommended Practices: Code Organization and Stacks](/blog/iac-recommended-practices-code-organization-and-stacks/)
 * [IaC Recommended Practices: Developer Stacks and Git Branches](/blog/iac-recommended-practices-developer-stacks-git-branches/)
 * **IaC Recommended Practices: Structuring Pulumi Projects** (this post)
-* IaC Recommended Practices: Tying Stacks Together with Stack References
-* IaC Recommended Practices: Local Testing with Pulumi
-* IaC Recommended Practices: Evolving the Application
+* [IaC Recommended Practices: Using Stack References](/blog/iac-recommended-practices-using-stack-references/)
+* IaC Recommended Practices: RBAC and Security
 * IaC Recommended Practices: Adding Pulumi Deployments
 * IaC Recommended Practices: Refactoring for Reuse
 
