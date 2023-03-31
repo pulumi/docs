@@ -165,6 +165,8 @@ The benefits of a workflow like this one are many:
 * No more deployment conflicts. When every developer has a stack of their own, they can deploy to the sandboxed environment as often as necessary, without having to wait for another deployment to finish first.
 * Everyone on the team has their own production-like environment to use for end-to-end testing.
 
+![An image showing the main branch deploying with test and prod stacks and feature branches deploying with developer stacks](./dev-stacks-git-branches.png)
+
 For Zephyr, the quickest path to adopting this workflow was to use the `dev` stack as a foundation for new developer stacks. To do that, team members simply ran the following Pulumi commands:
 
 ```bash
