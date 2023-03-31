@@ -52,15 +52,13 @@ schedule_overview:
     description: |
       A lot of fun and cool stuff will be discussed and announced as part of PulumiUP! Staff Developer Advocate Matty Stratton will be joined by Luke Hoban and Joe Duffy (and others!) to talk about all the cool stuff. Join in the fun on Twitter!
 
-      <a href="https://pulumip.us/PulumiUPRecap" class="underline" target="_blank" rel="noopener noreferrer">Join the conversation</a>
-
   - title: Community Summit
     day: Thursday, May 5th
     time: 8:00AM - 12:00PM PDT
     description: |
       Join your friends in the Pulumi community for the first ever Pulumi Community Summit.
       This virtual event will include an "Open Spaces" concept where you can
-      <a href="https://pulumip.us/SuggestTopic" class="underline" target="_blank" rel="noopener noreferrer">propose topics ahead of time</a>.
+      propose topics ahead of time.
       Those topics with the most interest will form the agenda for the day, with virtual breakout rooms centered around those themes.
 
   - title: PulumiVision
@@ -74,8 +72,6 @@ schedule_overview:
     time: 2:30PM - 3:30PM PDT
     description: |
       In this workshop, we’re going to learn more about cloud computing and Infrastructure as Code by exploring how to use Pulumi to build, configure, and deploy a real-life, modern application using Docker. We will create a frontend, a backend, and a database to deploy the Pulumipus Boba Tea Shop, and along the way, learn more about how Pulumi works to make managing all of these different moving pieces a little bit less painful!
-
-      <a href="/resources/introduction-to-infrastructure-as-code/" class="underline">Save your spot</a> &#8594;
 
 registration:
     items:
