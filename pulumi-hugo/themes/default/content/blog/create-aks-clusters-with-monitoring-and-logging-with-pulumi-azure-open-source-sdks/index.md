@@ -124,8 +124,7 @@ Log queries are used to retrieve any log data from Azure Monitor.
 Whether you're
 [analyzing data in the portal](https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/portals),
 [configuring an alert rule](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-metric)
-to be notified of a particular condition, or retrieving data using the
-[Azure Monitor Logs API](https://dev.loganalytics.io/), you will use a
+to be notified of a particular condition you will use a
 query to specify the data you want.
 
 We will now enable monitoring and logging by default for the cluster and

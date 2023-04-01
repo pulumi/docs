@@ -61,7 +61,7 @@ To modify an environment variable in the deployment settings, you only need to s
 }
 ```
 
-The [REST API documentation](api.md) contains much more thorough information about individual API properties.
+The [REST API documentation](../api) contains much more thorough information about individual API properties.
 
 ### Defined as Code with the Pulumi Service Provider
 
@@ -128,7 +128,7 @@ The `inheritSettings` property allows you to make use of the predefined deployme
 }
 ```
 
-The merge behavior of deployment settings are further explained in the [REST API documentation](api.md).
+The merge behavior of deployment settings are further explained in the [REST API documentation](../api).
 
 ### Click to Deploy
 

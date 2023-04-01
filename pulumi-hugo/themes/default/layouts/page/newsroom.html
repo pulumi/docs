@@ -25,7 +25,9 @@
                             <div class="text-sm text-gray-700">{{ .date }}</div>
                             <img class="mt-4 h-5" src="{{ .img }}" />
                             <h5 class="mt-2 mb-0">{{ .title }}</h5>
-                            <a data-track="news-{{ .url | urlize }}" class="block my-4" href="{{ .url }}" target="_blank" rel="noopener noreferrer"> Read more &rarr; </a>
+                            {{ if .url }}
+                                <a data-track="news-{{ .url | urlize }}" class="block my-4" href="{{ .url }}" target="_blank" rel="noopener noreferrer"> Read more &rarr; </a>
+                            {{ end }}
                         </li>
                     {{ end }}
                 </ul>

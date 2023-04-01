@@ -411,7 +411,6 @@ url = "http://vmblog.com/archive/2019/02/04/kubecon-2018-video-prediction-series
 date = "31st January 2019"
 title = "Filling in the Dev and Ops Gap in Cloud Native Deployments"
 img = "/logos/press/newstack.png"
-url = "https://thenewstack.io/filling-in-the-dev-and-ops-gap-in-cloud-native-deployments/"
 
 [[coverage]]
 date = "11th December 2018"
@@ -543,13 +542,11 @@ url = "https://techcrunch.com/2018/10/22/pulumi-raises-15m-for-its-infrastructur
 date = "22nd October 2018"
 title = "Pulumi Raises $15M For Its Infrastructure As Code Platform"
 img = "/logos/press/geekwire.png"
-url = "https://www.startupworld.com/news/pulumi-raises-15m-for-its-infrastructure-as-code-platform/"
 
 [[coverage]]
 date = "22nd October 2018"
 title = "Pulumi snags $15 mln Series A"
 img = "/logos/press/geekwire.png"
-url = "https://www.pehub.com/2018/10/pulumi-snags-15-mln-series-a/"
 
 [[coverage]]
 date = "18th October 2018"

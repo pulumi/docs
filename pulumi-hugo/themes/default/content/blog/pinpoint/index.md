@@ -11,9 +11,9 @@ tags:
     - Kubernetes
 ---
 
-*This guest blog was contributed by Andrew Kunzel and Michael Goode of [Pinpoint](https://pinpoint.com/). Andrew is the Director of Backend Engineering, and Michael is a Platform Operations Engineer.*
+*This guest blog was contributed by Andrew Kunzel and Michael Goode of [Pinpoint](https://www.pinpointhq.com/). Andrew is the Director of Backend Engineering, and Michael is a Platform Operations Engineer.*
 
-At [Pinpoint](https://pinpoint.com/), Kubernetes is the most powerful tool in our arsenal. It allows us to deploy and rapidly scale our applications with speed and efficiency that continues to delight our customers. In recent years, managed services like AWS EKS have made it easier than ever to leverage the power of Kubernetes in even the smallest of organizations. Yet even with these new conveniences, managing all of this infrastructure can be a daunting task. Right out of the gate, we knew that we wanted to avoid the burden of maintaining repositories full of home-brewed deployment scripts and domain-specific languages like YAML.
+At [Pinpoint](https://www.pinpointhq.com/), Kubernetes is the most powerful tool in our arsenal. It allows us to deploy and rapidly scale our applications with speed and efficiency that continues to delight our customers. In recent years, managed services like AWS EKS have made it easier than ever to leverage the power of Kubernetes in even the smallest of organizations. Yet even with these new conveniences, managing all of this infrastructure can be a daunting task. Right out of the gate, we knew that we wanted to avoid the burden of maintaining repositories full of home-brewed deployment scripts and domain-specific languages like YAML.
 
 <!--more-->
 

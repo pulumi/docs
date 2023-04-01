@@ -12,7 +12,7 @@ developers search for the right tools, approaches, and abstractions to
 help them manage Cloud Native infrastructure in production.
 
 On Feb 5, Heptio (now part of VMWare)
-[announced](https://blogs.vmware.com/cloudnative/2019/02/05/welcoming-heptio-open-source-projects-to-vmware/)
+[announced](https://news.vmware.com/releases/vmware-to-acquire-heptio-to-accelerate-enterprise-adoption-of-kubernetes-on-premises-and-across-multi-cloud-environments)
 that work on [ksonnet](https://github.com/ksonnet), a project launched
 by Heptio, Box, Microsoft, and Bitnami, will stop. We're sad to see
 ksonnet winding down, but are thankful for the collaborative exchange of

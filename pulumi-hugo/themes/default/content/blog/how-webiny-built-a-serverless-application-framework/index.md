@@ -27,7 +27,7 @@ In other words, it is a framework that enables developers to architect, build, a
 - REST and GraphQL APIs
 - microservices
 
-With the framework, Webiny also built a content management system called the [Webiny Serverless CMS](https://www.webiny.com/serverless-cms?utm_source=Pulumi&utm_medium=blog-post&utm_campaign=webiny-blog-promotion&utm_content=how-webiny-built-framework-with-pulumi&utm_term=W00647). It is free, open-source, and by default, included with every new Webiny project.
+With the framework, Webiny also built a content management system called the [Webiny Serverless CMS](https://www.webiny.com/docs/infrastructure/pulumi-iac/iac-with-pulumi). It is free, open-source, and by default, included with every new Webiny project.
 
 Finally, it’s worth mentioning that, at the moment, Webiny exclusively works with [AWS](https://aws.amazon.com/). But, bringing Webiny to other cloud providers like [Microsoft Azure](https://azure.microsoft.com/en-us/) and [Google Cloud Platform (GCP)](https://cloud.google.com/) is definitely something we’ll be looking at in the future.
 
