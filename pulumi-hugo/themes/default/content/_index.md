@@ -580,13 +580,13 @@ get_started:
       source: twitter
       text: "@PulumiCorp is pretty awesome. Just nuked a couple of load balancers and recreated them, no big deal."
       username: "@joepferguson@phpc.social"
-      avatar: https://pbs.twimg.com/profile_images/1593803782034423809/j53OblCR_400x400.jpg
+      avatar: https://pbs.twimg.com/profile_images/1627752241158361141/OprWSkfm_400x400.jpg
       link: https://twitter.com/JoePFerguson/status/1593289950597976066
 
     -
       text: "All in all, I''m very happy with making the transition to Pulumi! I became way more productive managing my infrastructure. At the same time I ended up enjoying the work of doing so a lot more - which is really important too. (click to read blog post)"
       username: Erik Näslund
-      avatar: https://hashnode.com/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1616450184066%2F-uXss6aRN.jpeg%3Fw%3D500%26h%3D500%26fit%3Dcrop%26crop%3Dfaces%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=3840&q=75
+      avatar: https://cdn.hashnode.com/res/hashnode/image/upload/v1616450184066/-uXss6aRN.jpeg?w=500&h=500&fit=crop&crop=faces&auto=compress,format&format=webp
       link: https://blog.ekik.org/my-experience-migrating-my-infrastructure-from-terraform-to-pulumi
       source: blog
 
@@ -652,7 +652,7 @@ get_started:
     -
       text: "Ok, Pulumi just got even more real. With “pulumi convert” and CrossCode support in YAML, it just overtook HCL and Terraform in position #1 for me. Sorry HashiCorp Pulumi is now in the lead."
       username: Eric Hendrickson, CTO Provisions Group
-      avatar: https://media.licdn.com/dms/image/C5603AQHI5n0U3nsqXA/profile-displayphoto-shrink_800_800/0/1653244735916?e=1678924800&v=beta&t=p50cz6bH97VFWDf6MGzKFuNTp9-5dUGqjieUNi0AzfA
+      avatar: https://media.licdn.com/dms/image/C5603AQHI5n0U3nsqXA/profile-displayphoto-shrink_800_800/0/1653244735916?e=2147483647&v=beta&t=bpKK4xk5sz2FggWpBItAccRz15m8HseqIQJAujV9A-E
       link: https://www.linkedin.com/feed/update/urn:li:activity:6993614249331765250?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A6993614249331765250%2C6993718113632411648%29
       source: linkedin
 
