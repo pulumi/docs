@@ -66,9 +66,9 @@ jobs:
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:
-          SLACK_CHANNEL: sean-ops-test
+          SLACK_CHANNEL: docs-ops-test
           SLACK_COLOR: "#F54242"
-          SLACK_MESSAGE: "[new account] build and deploy failure in pulumi/docs repo :meow_sad:"
+          SLACK_MESSAGE: "[NEW ACCOUNT] build and deploy failure in pulumi/docs repo :meow_sad:"
           SLACK_USERNAME: docsbot
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png
