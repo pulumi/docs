@@ -152,19 +152,26 @@ The filesystem and cloud storage backends allow you to store state locally on yo
 
 To use a self-managed backend, specify a storage endpoint URL as `pulumi login`'s `<backend-url>` argument: `s3://<bucket-path>`, `azblob://<container-path>`, `gs://<bucket-path>`, or `file://<fs-path>`. This will tell Pulumi to store state in AWS S3, Azure Blob Storage, Google Cloud Storage, or the local filesystem, respectively. Checkpoint files are stored in a relative`.pulumi` directory. For example, if you were using the Amazon S3 self-managed backend, your checkpoint files would be stored at `s3://my-pulumi-state-bucket/.pulumi` where `my-pulumi-state-bucket` represents the name of your S3 bucket.
 
+Inside the `.pulumi` folder, we access the following subdirectories:
+
+1. `meta.yaml`: This is the metadata file. It does not hold information about the stacks but rather information about the backend itself.
+1. `stacks/`: Active state files for each stack (e.g. `dev.json` or `proj/dev.json` if the stack is scoped to a project).
+1. `locks/`: Optional lock files for each stack if the stack is currently being operated on by a Pulumi operation (e.g. `dev/$lock.json` or `proj/dev/$lock.json` where `$lock` is a unique identifier for the lock).
+1. `history/`: History for each stack (e.g. `dev/dev-$timestamp.history.json` or `proj/dev/dev-$timestamp.history.json` where `$timestamp` records the time the history file was created).
+
 The detailed format of the `<backend-url>` differs by backend and each has different options such as how to authenticate, as described below.
 
 ### Local Filesystem
 
-To use the filesystem backend to store your checkpoint files locally on your machine, pass the `--local` flag when logging in:
+To use the filesystem backend to store your state files locally on your machine, pass the `--local` flag when logging in:
 
 ```sh
 $ pulumi login --local
 ```
 
-You will see `Logged into <my-machine> as <my-user> (file://~)` as a result where `<my-machine>` and `<my-user>` are your configured machine and user names, respectively. All subsequent stack state and checkpoints will be store as JSON files locally on your machine.
+You will see `Logged into <my-machine> as <my-user> (file://~)` as a result where `<my-machine>` and `<my-user>` are your configured machine and user names, respectively. All subsequent stack state will be stored as JSON files locally on your machine.
 
-The default directory for these JSON files is `~/.pulumi`. To store checkpoint files in an alternative location, specify a `file://<path>` URL instead, where `<path>` is the full path to the target directory where state files will be stored. For instance, to store state underneath `/app/data/.pulumi/` instead, run:
+The default directory for these JSON files is `~/.pulumi`. To store state files in an alternative location, specify a `file://<path>` URL instead, where `<path>` is the full path to the target directory where state files will be stored. For instance, to store state underneath `/app/data/.pulumi/` instead, run:
 
 ```sh
 $ pulumi login file:///app/data
@@ -236,6 +243,16 @@ $ pulumi login gs://<my-pulumi-state-bucket>
 
 To configure credentials for this backend, see [Application Default Credentials](https://cloud.google.com/docs/authentication/production). For additional configuration options, see [GCP Setup](/registry/packages/gcp/installation-configuration/). If you're new to Google Cloud Storage, see [the Google Cloud documentation](https://cloud.google.com/storage/docs/quickstarts).
 
+### Scoping
+
+Versions of Pulumi prior to v3.61.0 placed stacks in a global namespace in self-managed backends. This meant that you couldn't share stack names (e.g. `dev`, `prod`, `staging`) across multiple projects in the same self-managed backend. With Pulumi v3.61.0 and later, stacks created in new or empty self-managed backends are scoped by project by default&mdash;same as the Pulumi Service backend.
+
+Existing self-managed backends will continue to use the global namespace for stacks. You can upgrade an existing self-managed backend to use project-scoped stacks using the `pulumi state upgrade` command. This command will upgrade all stacks in the backend to be scoped by project.
+
+{{% notes type="info"%}}
+`pulumi state upgrade` will make upgraded stacks inaccesible to older versions of Pulumi. This is a one-way operation. Once you have upgraded your backend, you cannot downgrade to the previous version.
+{{% /notes %}}
+
 ## Migrating Between State Backends
 
 It is possible to start with one backend and then later migrate to another. This is common if you have began your project with Pulumi using a self-managed backend but later decided to adopt the Pulumi Service for easier use within your team. This section describes how to perform this operation, however, if you would like our assistance with a migration, [please get in touch](/contact/).
@@ -249,8 +266,8 @@ As an example, imagine you'd like to migrate a stack named `my-app-production` f
 $ pulumi login --local
 $ pulumi stack select my-app-production
 
-# export the stack's checkpoint to a local file
-$ pulumi stack export --show-secrets --file my-app-production.checkpoint.json
+# export the stack's state to a local file
+$ pulumi stack export --show-secrets --file my-app-production.stack.json
 
 # logout and login to the desired new backend
 $ pulumi logout
@@ -259,8 +276,8 @@ $ pulumi login # default to Pulumi Service
 # create a new stack with the same name on pulumi.com
 $ pulumi stack init my-app-production
 
-# import the new existing checkpoint into pulumi.com
-$ pulumi stack import --file my-app-production.checkpoint.json
+# import the new existing state into pulumi.com
+$ pulumi stack import --file my-app-production.stack.json
 ```
 
 After performing these steps, your stack will now be under the management of the Pulumi Service. All subsequent operations should be performed using this new backend.
