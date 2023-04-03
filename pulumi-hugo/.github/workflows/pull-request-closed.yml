@@ -8,7 +8,7 @@ jobs:
     # Only run this job for events that originate on this repository.
     if: github.event.pull_request.head.repo.full_name == github.repository
     name: Find and remove buckets
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: Check out branch
         uses: actions/checkout@v2
