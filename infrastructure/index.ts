@@ -247,6 +247,24 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         },
         {
             ...baseCacheBehavior,
+            targetOriginId: originBucket.arn,
+            pathPattern: "/*/rss.xml",
+            defaultTtl: oneHour,
+            maxTtl: oneHour,
+            forwardedValues: {
+                cookies: {
+                    forward: "none",
+                },
+                queryString: false,
+                headers: [
+                    "Origin",
+                    "Access-Control-Request-Headers",
+                    "Access-Control-Request-Method",
+                ],
+            },
+        },
+        {
+            ...baseCacheBehavior,
             pathPattern: "/css/styles.*.css",
             defaultTtl: oneYear,
             maxTtl: oneYear,
