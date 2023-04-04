@@ -247,6 +247,9 @@ function getDefaultExcludedKeywords() {
         "https://data-flair.training",
         "https://opensource.org/licenses",
         "https://console.eventstore.cloud/authentication-tokens",
+        "https://telecomreseller.com/2019/03/20/crossing-cloud-chasms-avoiding-catastrophic-cloud-calamities",
+        "https://www.enterprisetech.com/2018/10/23/startup-pulumi-rolls-cloud-native-tools",
+        "http://optout.networkadvertising.org/?c=1",
     ];
 }
 
