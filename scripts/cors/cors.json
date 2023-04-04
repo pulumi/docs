@@ -1,7 +1,10 @@
 {
   "CORSRules": [
     {
-      "AllowedOrigins": ["https://*.pulumi.com"],
+      "AllowedOrigins": [
+        "https://*.pulumi.com",
+        "https://*.pulumi-dev.io"
+      ],
       "AllowedHeaders": ["Authorization"],
       "AllowedMethods": ["GET"],
       "MaxAgeSeconds": 300

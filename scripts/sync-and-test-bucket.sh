@@ -102,7 +102,7 @@ set_bucket_for_commit "$(git_sha)" "$destination_bucket" "$(aws_region)"
 pwd
 
 # Set cors configuration on bucket.
-aws s3api put-bucket-cors --bucket "$destination_bucket" --cors-configuration file://scripts/cors.json
+aws s3api put-bucket-cors --bucket "$destination_bucket" --cors-configuration file://scripts/cors/cors.json
 
 # Finally, if it's a preview, post a comment to the PR that directs the user to the resulting bucket URL.
 if [ "$1" == "preview" ]; then
