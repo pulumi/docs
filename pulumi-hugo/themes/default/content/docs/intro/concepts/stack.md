@@ -714,6 +714,275 @@ as your current stack (i.e. when deploying the "staging" stack of the above prog
 from the infra project. Once you have that resource, you can fetch the `kubeConfig` output variable with the `getOutput`
 function. From that point onwards, Pulumi understands the inter-stack dependency for scenarios like cascading updates.
 
+### Reading outputs from stack references
+
+Stack references support two ways of reading outputs from the referenced stack:
+
+* `getOutput` returns an `Output` that provides gated access to the output value.
+  The output value can be accessed and transformed with methods like `Output.apply`.
+  This is useful when the output is used as an input to another resource.
+* `getOutputDetails` returns an `OutputDetails` object that provides direct access to the output value.
+  This is useful when you want to process the output directly in your code.
+
+As demonstration of **`getOutput`**,
+suppose that your referenced stack exports a `privateIp` output.
+You want to incorporate the IP address into the name of an S3 bucket object
+containing logs from that machine.
+
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+const infra = new pulumi.StackReference(...);
+const ip = infra.getOutput("privateIp");
+const logKey = ip.apply(ip => `logs/${ip}.log`);
+const logFile = new aws.s3.BucketObject("log", {
+    // ...
+    key: logKey
+});
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+const infra: StackReference = new pulumi.StackReference(...);
+const ip: Output<string> = infra.getOutput("privateIp");
+const logKey: Output<string> = ip.apply(ip => `logs/${ip}.log`);
+const logFile: aws.s3.BucketObject = new aws.s3.BucketObject("log", {
+    // ...
+    key: logKey
+});
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+infra = StackReference(...)
+ip = infra.get_output("privateIp")
+log_key = ip.apply(lambda ip: f"logs/{ip}.log")
+log_file = aws.s3.BucketObject("log", {
+    # ...
+    key: log_key
+})
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+infra, err := pulumi.NewStackReference(ctx, ...)
+if err != nil {
+    return err
+}
+ip := infra.GetOutput("privateIp")
+logKey := ip.ApplyT(func(ip string) string {
+    return fmt.Sprintf("logs/%s.log", ip)
+}).(StringOutput)
+logFile := s3.NewBucketObject(ctx, "log", &s3.BucketObjectArgs{
+    // ...
+    Key: logKey,
+})
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var infra = new StackReference(...);
+var ip = infra.GetOutput("privateIp");
+var logKey = ip.Apply(ip => $"logs/{ip}.log");
+var logFile = new Aws.S3.BucketObject("log", new Aws.S3.BucketObjectArgs
+{
+    // ...
+    Key = logKey,
+});
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+StackReference infra = new StackReference(...);
+Output<String> ip = infra.getOutput("privateIp");
+Output<String> logKey = ip.apply(ip -> String.format("logs/%s.log", ip));
+BucketObject logFile = new BucketObject("log", new BucketObjectArgs.Builder()
+    .key(logKey)
+    .build());
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+On the other hand, as an example of using **`getOutputDetails`**,
+suppose that your referenced stack creates a VPC
+and exports a list of public subnets as a JSON-serialized string,
+and you want to add a bastion host to each subnet.
+With `getOutputDetails`, this would look something like this:
+
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+const infra = new pulumi.StackReference(...);
+const subnetsJSON = await infra.getOutputDetails("subnets");
+const subnets = JSON.parse(subnetsJSON.value);
+for (let i = 0; i < subnets.length; i++) {
+    const subnet = subnets[i];
+    const host = new aws.ec2.Instance(`bastion-${i}`, {
+        // ...
+        subnetId: subnet.id,
+    });
+    // ...
+}
+```
+
+Note that your Pulumi program must export a top-level `async` function
+to be able to use the `await` operator.
+
+```javascript
+export = async () => {
+    // ...
+}
+```
+
+See [Javascript Entrypoint](https://www.pulumi.com/docs/intro/languages/javascript/#entrypoint)
+for more information.
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+const infra: StackReference = new pulumi.StackReference(...);
+const subnetsJSON: StackReferenceOutputDetails = await infra.getOutputDetails("subnets");
+const subnets = JSON.parse(subnetsJSON.value);
+for (let i = 0; i < subnets.length; i++) {
+    const subnet = subnets[i];
+    const host = new aws.ec2.Instance(`bastion-${i}`, {
+        // ...
+        subnetId: subnet.id,
+    });
+    // ...
+}
+```
+
+Note that your Pulumi program must export a top-level `async` function
+to be able to use the `await` operator.
+
+```javascript
+export = async () => {
+    // ...
+}
+```
+
+See [Javascript Entrypoint](https://www.pulumi.com/docs/intro/languages/javascript/#entrypoint)
+for more information.
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+{{% notes "info" %}}
+This functionality is not currently supported in Python.
+Progress is tracked on [pulumi/pulumi#12172](https://github.com/pulumi/pulumi/issues/12172)
+if you need this functionality.
+{{% /notes %}}
+
+<!-- ```python -->
+<!-- infra = StackReference(...) -->
+<!-- subnets_json = await infra.get_output_details("subnets") -->
+<!-- subnets = json.loads(subnets_json.value) -->
+<!-- for i, subnet in enumerate(subnets): -->
+<!--     host = aws.ec2.Instance(f"bastion-{i}", { -->
+<!--         # ... -->
+<!--         subnet_id: subnet["id"], -->
+<!--     }) -->
+<!--     # ... -->
+<!-- ``` -->
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+infra, err := pulumi.NewStackReference(ctx, ...)
+if err != nil {
+    return err
+}
+subnetsJSON, err := infra.GetOutputDetails("subnets")
+if err != nil {
+    return err
+}
+var subnets []struct{ ID string `json:"id"` }
+if err := json.Unmarshal([]byte(subnetsJSON.Value.(string)), &subnets); err != nil {
+    return err
+}
+
+for i, subnet := range subnets {
+    host, err := ec2.NewInstance(ctx, fmt.Sprintf("bastion-%d", i), &ec2.InstanceArgs{
+        // ...
+        SubnetId: pulumi.String(subnet.ID),
+    })
+    if err != nil {
+        return err
+    }
+    // ...
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var infra = new StackReference(...);
+var subnetsJSON = await infra.GetOutputDetailsAsync("subnets");
+var subnets = JsonConvert.DeserializeObject<Subnet[]>((string)subnetsJSON.Value);
+for (int i = 0; i < subnets.Length; i++) {
+    var subnet = subnets[i];
+    var host = new Aws.Ec2.Instance($"bastion-{i}", new Aws.Ec2.InstanceArgs
+    {
+        // ...
+        SubnetId = subnet.Id,
+    });
+    // ...
+}
+```
+
+Note that your Pulumi program must be inside an `async` function
+to be able to use the `await` operator.
+
+```csharp
+return await Deployment.RunAsync(async () =>
+{
+    // ...
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+StackReferenceOutputDetails subnetsJSON = infra.outputDetails("subnets");
+infra.outputDetailsAsync("subnets").thenAccept(subnetsJSON -> {
+    Subnet[] subnets = new Gson().fromJson((String)subnetsJSON.getValue().get(), Subnet[].class);
+    for (int i = 0; i < subnets.length; i++) {
+        Subnet subnet = subnets[i];
+        Instance host = new Instance(String.format("bastion-%d", i), new InstanceArgs.Builder()
+            // ...
+            .subnetId(subnet.getId())
+            .build());
+        // ...
+    }
+})
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ## Import and export a stack deployment
 
 A stack can be exported to see the raw data associated with the stack. This is useful when manual changes need to be applied to the stack due to changes made in the target cloud platform that Pulumi is not aware of. The modified stack can then be imported to set the current state of the stack to the new values.
