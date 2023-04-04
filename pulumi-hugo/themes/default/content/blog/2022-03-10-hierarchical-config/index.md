@@ -19,7 +19,7 @@ This [issue](https://github.com/pulumi/pulumi/issues/2307) was first open in 201
 - [How to share a config between projects](https://github.com/pulumi/pulumi/issues/5473)
 - [Project-wide variables (not stack specific) #6719](https://github.com/pulumi/pulumi/issues/6719)
 
-This is clearly a feature that our community has asked for and we're currently working on delivering it as soon as we can. However, in the interim, I'm going to show you a few ways that you can get around this now.
+This is clearly a feature that our community has asked for! We're happy to say that we delivered the first part of our plans to support [hierarchical config](/blog/project-config-mvp/) in early November 2022. While we believe this new functionality satisfies most customer requests, below are some other approaches you can also use.
 
 ## Project Level Config
 
@@ -188,7 +188,7 @@ So we've worked out that project level configuration is a data structure within 
 
 However, the organization level config is prone and rife with pain, confusion, and delusion. It requires non-trivial tooling and process to ensure that a global document is valid and consistent with downstream consumers. What I've shown you is a "if you must" approach that I would use myself. We've also not even handled the "merge" of organization level with project level overrides, and then stack level overrides. Of course, with code it's all possible, but it's more and more code that you need to write that we don't want you to need to write, right? Right!
 
-Pulumi wants to make this better for you. While this feature doesn't exist yet, we are actively working on it. If you want to follow along with the progress, I suggest you watch/subscribe to [this issue](https://github.com/pulumi/pulumi/issues/2307).
+Pulumi wants to make this better for you, which is why we [added project-level config support](/blog/project-config-mvp/) and why we are actively exploring additional enhancements. If you want to follow along with our progress on improving the configuration experience, I suggest you watch/subscribe to [this issue](https://github.com/pulumi/pulumi/issues/4604).
 
 If you want to share your opinions on how **YOU** would like this feature to be implemented, jump into the comments. We'd love to hear from you!
 
