@@ -56,7 +56,15 @@ current_time_in_ms() {
 }
 
 origin_bucket_prefix() {
-    echo "pulumi-docs-origin"
+    # This function returns the bucket name prefix to be used when naming the
+    # S3 buckets. We are adding a `www` prefix to the buckets being deployed
+    # to the new account, in order to account for collisions in the global
+    # bucket namespace.
+    if [[ "$GITHUB_WORKFLOW" == "Build and deploy new account" ]]; then
+        echo "www-pulumi-docs-origin"
+    else
+        echo "pulumi-docs-origin"
+    fi
 }
 
 # Returns the name of the metadata file we expect to exist locally before running Pulumi.
