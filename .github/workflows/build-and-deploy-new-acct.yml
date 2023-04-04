@@ -46,17 +46,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_OPTIONS: "--max_old_space_size=4096"
 
-      - name: Archive test results
-        uses: actions/upload-artifact@v2
-        with:
-          name: browser-test-results
-          path: cypress/videos
-
-      - name: Archive bucket metadata
-        uses: actions/upload-artifact@v2
-        with:
-          name: origin-bucket-metadata
-          path: origin-bucket-metadata.json
   notify:
     if: (github.ref == 'refs/heads/master' || (github.event_name == 'pull_request' && github.event.pull_request.user.login == 'pulumi-bot')) && failure()
     name: Send slack notification
