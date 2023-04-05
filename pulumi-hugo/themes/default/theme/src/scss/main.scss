@@ -334,4 +334,8 @@ $sitenav-offset: calc($sitenav-height + 16px);
     min-height: 178px;
 }
 
+svg.expand-collapse-glyph {
+    width: 16px;
+    height: 16px;
+}
 @tailwind utilities;
