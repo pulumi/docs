@@ -334,8 +334,15 @@ $sitenav-offset: calc($sitenav-height + 16px);
     min-height: 178px;
 }
 
-svg.expand-collapse-glyph {
-    width: 16px;
-    height: 16px;
+pulumi-tree-item {
+    &::part(expand-collapse-button) {
+        @apply text-xs;
+    }
+    &.expanded {
+        .glyph {
+            transform: rotateZ(90deg);
+        }
+    }
 }
+
 @tailwind utilities;

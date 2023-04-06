@@ -95,6 +95,7 @@ export class PulumiApiDocNavNode {
 
             return (
                 <pulumi-tree-item slot="item" selected={!!this.shouldNodeBeSelected(nodeHref)} expanded={this.isExpanded} class="nav-tree-item nested" title={node.name}>
+                    <span class="glyph" slot="expand-collapse-glyph">►</span>
                     <div class="content-container">
                         <a class={`depth-${depth}`} href={nodeHref}>
                             {this.getIcon(node.type)}
@@ -117,6 +118,7 @@ export class PulumiApiDocNavNode {
                 id={this.node.name}
                 title={this.node.name}
             >
+                <span class="glyph" slot="expand-collapse-glyph">►</span>
                 <div class="content-container">
                     <a class={`depth-${this.depth}`} href={this.href}>
                         {this.getIcon(this.node.type)}
