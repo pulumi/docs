@@ -99,6 +99,9 @@ aws s3 cp "$metadata_file" "${destination_bucket_uri}/metadata.json" --region "$
 # Persist an association between the current commit and the bucket we just deployed to.
 set_bucket_for_commit "$(git_sha)" "$destination_bucket" "$(aws_region)"
 
+# Set cors configuration on bucket.
+aws s3api put-bucket-cors --bucket "$destination_bucket" --cors-configuration "file://scripts/cors/cors.json" --region "$(aws_region)"
+
 # Finally, if it's a preview, post a comment to the PR that directs the user to the resulting bucket URL.
 if [ "$1" == "preview" ]; then
     pr_comment_api_url="$(cat "$GITHUB_EVENT_PATH" | jq -r ".pull_request._links.comments.href")"
