@@ -38,5 +38,5 @@ url_slug: "/pulumi-up"
 # Content for the left hand side section of the page.
 main:
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-06-15T08:00:00+02:00
+    sortable_date: 2023-06-15T08:00:00-07:00
 ---
