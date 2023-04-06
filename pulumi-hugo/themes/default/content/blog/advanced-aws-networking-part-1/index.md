@@ -38,7 +38,7 @@ In this blog series you will learn how to create a hub-and-spoke network archite
 <!--more-->
 
 {{% notes type="info" %}}
-The complete code for this project is available on [GitHub](https://github.com/pulumi/examples/tree/master/aws-py-hub-and-spoke), which is a great place to go for full context.
+The complete code for this project is available on [GitHub](https://github.com/pulumi/examples/tree/master/aws-py-hub-and-spoke-network), which is a great place to go for full context.
 {{% /notes %}}
 
 ## What is a hub-and-spoke network?
@@ -130,7 +130,7 @@ spoke_tgw_route_table = aws.ec2transitgateway.RouteTable(
 ## Creating the inspection VPC
 
 {{% notes type="info" %}}
-The code samples in this section are not exhaustive. That is, they do not contain every line of code required so that we can focus on the most illustrative portions. See the [GitHub repo](https://github.com/pulumi/examples/tree/master/aws-py-hub-and-spoke) for full context.
+The code samples in this section are not exhaustive. That is, they do not contain every line of code required so that we can focus on the most illustrative portions. See the [GitHub repo](https://github.com/pulumi/examples/tree/master/aws-py-hub-and-spoke-network) for full context.
 {{% /notes %}}
 
 Now that you've added some foundational Transit Gateway resources, you can create your inspection VPC.
