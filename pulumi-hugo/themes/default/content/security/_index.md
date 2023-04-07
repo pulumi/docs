@@ -16,7 +16,7 @@ For more details on Pulumi’s product architecture and security practices, plea
 
 ## Vulnerability Reporting
 
-If you believe you’ve discovered a potential vulnerability in Pulumi’s security, please contact us at [security@pulumi.com](mailto:security@pulumi.com). For non-critical matters please file an issue at [https://support.pulumi.com](https://support.pulumi.com/).
+If you believe you’ve discovered a potential vulnerability in Pulumi’s security, please contact us at [security@pulumi.com](mailto:security@pulumi.com). For non-critical matters please file an issue with [Pulumi support](https://support.pulumi.com/).
 
 When reporting a potential vulnerability, please include as much of the following information as possible.
 
