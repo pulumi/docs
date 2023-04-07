@@ -34,11 +34,11 @@ languages, or through YAML manifests and `kubectl`.
 You can also [get started][get-started] with Pulumi and create a new [managed Kubernetes cluster](https://www.pulumi.com/docs/tutorials/kubernetes/#clusters) on [Amazon EKS][aws-eks], [Google GKE][gcp-gke], or [Azure AKS][azure-aks] if you don't have an existing cluster.
 
 [aws-eks]: https://aws.amazon.com/eks/
-[gcp-gke]: https://cloud.google.com/kubernetes-engine
+[gcp-gke]: https://cloud.google.com/kubernetes-engine/
 [azure-aks]: https://azure.microsoft.com/en-us/services/kubernetes-service/
-[get-started]: https://www.pulumi.com/docs/get-started/kubernetes
+[get-started]: https://www.pulumi.com/docs/get-started/kubernetes/
 [k8s-ext-pattern]: https://kubernetes.io/docs/concepts/extend-kubernetes/operator/
-[deploy-op]: https://git.io/JJX6a
+[deploy-op]: https://github.com/pulumi/pulumi-kubernetes-operator#deploy-the-operator/
 
 ## How it Works
 
@@ -632,10 +632,10 @@ the video clip below for a demo.
 {{< youtube "nQZr3uquc-c" >}}
 
 [blue-green-example]: https://github.com/metral/pulumi-blue-green/blob/master/index.ts
-[k8s-deployment]: https://kubernetes.io/docs/concepts/workloads/controllers/deployment
-[blue-green]: https://en.wikipedia.org/wiki/Blue-green_deployment
-[k8s-service]: https://kubernetes.io/docs/concepts/services-networking/service
-[blue-green-walkthrough]: https://github.com/pulumi/pulumi-kubernetes-operator/tree/master/examples/blue-green
+[k8s-deployment]: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+[blue-green]: https://en.wikipedia.org/wiki/Blue-green_deployment/
+[k8s-service]: https://kubernetes.io/docs/concepts/services-networking/service/
+[blue-green-walkthrough]: https://github.com/pulumi/pulumi-kubernetes-operator/tree/master/examples/blue-green/
 
 ## Wrap-Up
 
@@ -659,14 +659,14 @@ Learn more about how [Pulumi works with Kubernetes](https://www.pulumi.com/regis
 You can help to shape this experience directly by
 providing feedback on [GitHub](https://github.com/pulumi/pulumi-kubernetes-operator/). We love to hear from our users!
 
-You can explore more content by checking out [PulumiTV on YouTube](https://www.youtube.com/pulumitv), work through
+You can explore more content by checking out [PulumiTV on YouTube](https://www.youtube.com/pulumitv/), work through
 Kubernetes [tutorials](https://www.pulumi.com/docs/tutorials/kubernetes/) to dive deeper, and join the [Community Slack](https://slack.pulumi.com/) to engage
 with users and the Pulumi team.
 
-[pulumi-k8s-op]: https://github.com/pulumi/pulumi-kubernetes-operator
-[pulumi-k8s-nginx]: https://github.com/pulumi/examples/tree/master/kubernetes-ts-nginx
-[pulumi-aws-eks]: https://github.com/metral/pulumi-aws-eks
-[p-examples]: https://github.com/pulumi/examples
+[pulumi-k8s-op]: https://github.com/pulumi/pulumi-kubernetes-operator/
+[pulumi-k8s-nginx]: https://github.com/pulumi/examples/tree/master/kubernetes-ts-nginx/
+[pulumi-aws-eks]: https://github.com/metral/pulumi-aws-eks/
+[p-examples]: https://github.com/pulumi/examples/
 [stack]: /docs/intro/concepts/stack/
 [pulumi-config]: /docs/intro/concepts/config/
 [pulumi-providers]: /registry/
