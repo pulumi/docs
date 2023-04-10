@@ -52,9 +52,9 @@ capabilities:
 deployment:
     title: Hosting Options
     descriptionTop: |
-        Install Self-Hosted Pulumi Service](/docs/guides/self-hosted) in any on-premises or cloud provider environment or run in air-gapped environments, including those requiring FedRAMP.
+        [Install Self-Hosted Pulumi Service](/docs/guides/self-hosted) in any on-premises or cloud provider environment or run in air-gapped environments, including those requiring FedRAMP.
     descriptionBottom: |
-        [Contact us](/contact/) if you don't see your desired [deployment option](/docs/guides/self-hosted).
+        [Contact us](/contact/) if you don't see your desired deployment option.
 pricing:
     title: Pricing
     description: |
