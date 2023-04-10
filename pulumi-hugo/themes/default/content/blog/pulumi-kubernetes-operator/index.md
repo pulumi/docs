@@ -563,7 +563,7 @@ to ship new software easily and reliably. Kubernetes API resources like
 [Deployments][k8s-deployment] are used to model stateless apps and operate their lifecycles
 e.g. recreate app replicas, or perform a rolling update.
 
-A common approach that most teams rely on is the [Blue / Green][blue-green] deployment.
+A common approach that most teams rely on is the Blue / Green deployment.
 This starts with an initial version of the app, and then deploys an updated version
 alongside the initial version. Once ready, traffic is switched over from the
 initial version to the new version with no downtime.
@@ -633,7 +633,6 @@ the video clip below for a demo.
 
 [blue-green-example]: https://github.com/metral/pulumi-blue-green/blob/master/index.ts
 [k8s-deployment]: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
-[blue-green]: https://en.wikipedia.org/wiki/Blue-green_deployment/
 [k8s-service]: https://kubernetes.io/docs/concepts/services-networking/service/
 [blue-green-walkthrough]: https://github.com/pulumi/pulumi-kubernetes-operator/tree/master/examples/blue-green/
 
