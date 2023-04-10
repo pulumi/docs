@@ -26,7 +26,7 @@ Words are important. Pulumi strives to use language that is clear, harmonious, a
 
 ## Links
 
-* Link text should be descriptive and have meaning outside of the surrounding context: Avoid link text like _here_, _click here_, _see here_ and instead link to the title of the linked page, e.g. "see [Pulumi Pricing](https://www.pulumi.com/pricing/)".  (While this practice beneftis all readers, it is of particular important for visually impared users who use screen readers and often jump through the links of a document.)
+* Link text should be descriptive and have meaning outside of the surrounding context: Avoid link text like _here_, _click here_, _see here_ and instead link to the title of the linked page, e.g. "see [Pulumi Pricing](https://www.pulumi.com/pricing/)".  (While this practice benefits all readers, it is of particular important for visually impared users who use screen readers and often jump through the links of a document.)
 * When changing the URL for an already existing page, add a redirect by using a [Hugo alias](https://gohugo.io/content-management/urls/#yaml-front-matter).
 
 ## Notes and Warnings
@@ -123,7 +123,7 @@ This bit of info is serious. If you missed it, bad things could happen.
 * Lead with content that excites and engages, end with exactly one call-to-action.
 * Try and save links for the last 75% of the content.
 * Use headings and lists to make content scannable and consumable.
-* Use visauls: code, graphs, videos, architecture diagrams, etc.
+* Use visuals: code, graphs, videos, architecture diagrams, etc.
 * Highlight important points.
 
 ## Additional Resources
