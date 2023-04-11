@@ -1,2 +1,11 @@
 config:
   aws:region: us-west-2
+  www.pulumi.com:addSecurityHeaders: "true"
+  www.pulumi.com:certificateArn: "arn:aws:acm:us-east-1:388588623842:certificate/9db6a76b-f7ba-465b-ab96-ce1d3b8ae02c"
+  www.pulumi.com:doEdgeRedirects: "true"
+  www.pulumi.com:makeFallbackBucket: "false"
+  www.pulumi.com:originBucketNameOverride: ""
+  www.pulumi.com:pathToOriginBucketMetadata: ../origin-bucket-metadata.json
+  www.pulumi.com:websiteDomain: www.pulumi.com
+  www.pulumi.com:websiteLogsBucketName: www-prod.pulumi.com-website-logs
+  www.pulumi.com:newAccountRollout: true

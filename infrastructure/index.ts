@@ -35,6 +35,9 @@ const config = {
     // comply with AWS configuration rules, the bucket will be named to match the
     // configured `websiteDomain`.
     makeFallbackBucket: stackConfig.getBoolean("makeFallbackBucket") || false,
+
+    // newAccountRollout is a temporary config value for new account rollout.
+    newAccountRollout: stackConfig.get("newAccountRollout") || undefined,
 };
 
 // originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
@@ -169,16 +172,21 @@ const baseCacheBehavior = {
     responseHeadersPolicyId: "67f7725c-6f97-4210-82d7-5512b31e9d03", // SecurityHeadersPolicy
 };
 
-// domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
-// domain name to be used to access the website must be listed here.
 const domainAliases = [];
 
-// websiteDomain is the A record for the website bucket associated with the website.
-domainAliases.push(config.websiteDomain);
+// As the first part of the new account rollout, do not set the domain aliases.
+if (!config.newAccountRollout) {
 
-// redirectDomain is the domain to use for fully-qualified 301 redirects.
-if (config.redirectDomain) {
-     domainAliases.push(config.redirectDomain);
+    // domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
+    // domain name to be used to access the website must be listed here.
+
+    // websiteDomain is the A record for the website bucket associated with the website.
+    domainAliases.push(config.websiteDomain);
+
+    // redirectDomain is the domain to use for fully-qualified 301 redirects.
+    if (config.redirectDomain) {
+        domainAliases.push(config.redirectDomain);
+    }
 }
 
 // distributionArgs configures the CloudFront distribution. Relevant documentation:
@@ -408,32 +416,35 @@ function getDomainAndSubdomain(domain: string): { subdomain: string, parentDomai
     };
 }
 
-// Creates a new Route53 DNS record pointing the domain to the CloudFront distribution.
-async function createAliasRecord(
-        targetDomain: string, distribution: aws.cloudfront.Distribution): Promise<aws.route53.Record> {
+// As the first part of the new account rollout do not add any DNS records.
+if (!config.newAccountRollout) {
+    // Creates a new Route53 DNS record pointing the domain to the CloudFront distribution.
+    async function createAliasRecord(
+            targetDomain: string, distribution: aws.cloudfront.Distribution): Promise<aws.route53.Record> {
 
-    const domainParts = getDomainAndSubdomain(targetDomain);
-    const hostedZone = await aws.route53.getZone({ name: domainParts.parentDomain });
-    return new aws.route53.Record(
-        targetDomain,
-        {
-            name: domainParts.subdomain,
-            zoneId: hostedZone.zoneId,
-            type: "A",
-            aliases: [
-                {
-                    name: distribution.domainName,
-                    zoneId: distribution.hostedZoneId,
-                    evaluateTargetHealth: true,
-                },
-            ],
-        },
-        {
-            protect: true,
-        });
+        const domainParts = getDomainAndSubdomain(targetDomain);
+        const hostedZone = await aws.route53.getZone({ name: domainParts.parentDomain });
+        return new aws.route53.Record(
+            targetDomain,
+            {
+                name: domainParts.subdomain,
+                zoneId: hostedZone.zoneId,
+                type: "A",
+                aliases: [
+                    {
+                        name: distribution.domainName,
+                        zoneId: distribution.hostedZoneId,
+                        evaluateTargetHealth: true,
+                    },
+                ],
+            },
+            {
+                protect: true,
+            });
+    }
+
+    [...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
 }
-
-[...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
 
 export const uploadsBucketName = uploadsBucket.bucket;
 export const originBucketWebsiteDomain = originBucket.websiteDomain;
