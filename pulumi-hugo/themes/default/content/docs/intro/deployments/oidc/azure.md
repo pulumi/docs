@@ -12,10 +12,6 @@ aliases: ["/docs/guides/oidc/azure"]
 
 This document outlines the steps required to configure Pulumi Deployments to use OpenID Connect to authenticate with Azure. OIDC in Azure uses [workload identity federation](https://learn.microsoft.com/en-us/azure/active-directory/develop/workload-identity-federation) to access Azure resources via an Azure Active Directory App. Access to the temporary credentials is authorized using federated credentials that validate the contents of the OIDC token issued by the Pulumi Service.
 
-{{% notes type="warning" %}}
-Although Pulumi Deployments can exchange an OIDC token for temporary Azure credentials, these credentials cannot be used with the Azure Classic or Azure Native packages. Enabling OIDC in these providers is tracked by [GitHub Issue #1324 in the Azure Native repository](https://github.com/pulumi/pulumi-azure-native/issues/1324).
-{{% /notes %}}
-
 ## Prerequisites
 
 * You must be an admin of your Pulumi organization.
