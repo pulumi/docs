@@ -14,6 +14,7 @@ aliases:
 - /docs/intro/console/organization-roles/
 - /docs/console/organization-roles/
 - /docs/intro/console/organizations/
+- /docs/intro/pulumi-service/organizations/
 ---
 
 Organizations are a space for you to collaborate on shared projects and stacks.

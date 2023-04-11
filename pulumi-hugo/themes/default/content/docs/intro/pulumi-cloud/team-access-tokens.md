@@ -6,6 +6,8 @@ menu:
   intro:
     parent: pulumi-cloud
     weight: 6
+aliases:
+  - /docs/intro/pulumi-service/team-access-tokens/
 ---
 {{% notes "info" %}}
 Team Access Tokens are only available to organizations using Pulumi Enterprise or Pulumi Business Critical.

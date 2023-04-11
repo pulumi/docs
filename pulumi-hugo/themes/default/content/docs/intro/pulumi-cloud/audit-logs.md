@@ -9,6 +9,7 @@ menu:
 aliases:
 - /docs/intro/console/collaboration/auditing/
 - /docs/intro/console/auditing/
+- /docs/intro/pulumi-service/audit-logs/
 ---
 {{% notes "info" %}}
 Audit Logs are available to organizations using the Enterprise and Business Critical editions.

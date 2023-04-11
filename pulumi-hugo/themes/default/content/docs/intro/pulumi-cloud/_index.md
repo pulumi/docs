@@ -11,7 +11,7 @@ aliases:
 - /docs/reference/service/
 - /docs/intro/console/accounts-and-organizations/editions/
 - /docs/intro/console/
-- /docs/intro/pulumi-cloud/
+- /docs/intro/pulumi-service/
 ---
 
 The [Pulumi Cloud](https://app.pulumi.com) web application automatically manages deployment state and enables collaboration between developers and operators. The Pulumi CLI automatically uses the Pulumi Cloud unless you use a [self-managed backend](/docs/intro/concepts/state/).

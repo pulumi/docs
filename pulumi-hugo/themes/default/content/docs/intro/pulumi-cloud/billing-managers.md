@@ -6,6 +6,8 @@ menu:
   intro:
     parent: pulumi-cloud
     weight: 4
+aliases:
+- /docs/intro/pulumi-service/billing-managers/
 ---
 
 The Billing Manager role gives customers the ability to have someone in their Pulumi Organization manage billing operations without granting them any additional permissions to view or modify your stacks, policies, or other organizational settings.

@@ -12,6 +12,7 @@ aliases:
 - /docs/intro/console/collaboration/
 - /docs/intro/console/collaboration/teams/
 - /docs/intro/console/teams/
+- /docs/intro/pulumi-service/teams/
 ---
 
 {{% notes "info" %}}

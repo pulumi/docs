@@ -6,6 +6,8 @@ menu:
   intro:
     parent: pulumi-cloud
     weight: 3
+aliases:
+- /docs/intro/pulumi-service/organization-access-tokens/
 ---
 
 Organization Access Tokens provide Enterprise and Business Critical customers the opportunity to manage resources and stack operations for their organization independent of a single-user account.
