@@ -149,7 +149,7 @@ You can now use `pulumi convert --language java` to generate programs for Java f
 
 ### Stack READMEs
 
-Users can create [Stack READMEs](/docs/intro/pulumi-service/projects-and-stacks#stack-readme) in the [Pulumi Service](https://app.pulumi.com) that dynamically update based on [Stack Outputs](/learn/building-with-pulumi/stack-outputs/).
+Users can create [Stack READMEs](/docs/intro/pulumi-cloud/projects-and-stacks#stack-readme) in the [Pulumi Service](https://app.pulumi.com) that dynamically update based on [Stack Outputs](/learn/building-with-pulumi/stack-outputs/).
 
 A Pulumi Service Stack README is dynamically populated with details from your stack outputs. It does this by interpolating output variables on the stack, such as `${outputs.instances[0].ARN}` so that each stack can construct links to dashboards, shell commands, and other pieces of documentation.
 

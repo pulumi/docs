@@ -45,16 +45,16 @@ The rest of the community agreed too, as this is one of our top customer product
 
 The Pulumi Service Provider builds on top of the [Pulumi Service REST API](/docs/reference/service-rest-api/) which is another feature available to our customers to programmatically configuring the Pulumi Service. The Pulumi Service REST API is includes functionality to interact with and manipulate any kind of metadata managed by Pulumi. That includes Projects and Stacks, Previews and Updates, Organizations and Audit Logs. We have already seen Cloud Engineering teams using the Pulumi REST API to build all sorts of custom functionality. These new capabilities are especially powerful when used in combination with the [Automation API](/automation/).
 
-The [Pulumi Service Provider](/registry/packages/pulumiservice/) can be used in any Pulumi language, TypeScript, Python, Go, .NET, Java and YAML. It supports configuration of [Teams](/docs/intro/pulumi-service/teams/), [Access Tokens](/docs/intro/pulumi-service/accounts/), [Stack Tags](/docs/reference/cli/pulumi_stack_tag/) and [Webhooks](/docs/intro/pulumi-service/webhooks/) using infrastructure as code.
+The [Pulumi Service Provider](/registry/packages/pulumiservice/) can be used in any Pulumi language, TypeScript, Python, Go, .NET, Java and YAML. It supports configuration of [Teams](/docs/intro/pulumi-cloud/teams/), [Access Tokens](/docs/intro/pulumi-cloud/accounts/), [Stack Tags](/docs/reference/cli/pulumi_stack_tag/) and [Webhooks](/docs/intro/pulumi-cloud/webhooks/) using infrastructure as code.
 
 ## What resources are available?
 
 Based on feedback from customers, we've picked the following resources to support at launch:
 
-* [Webhooks](/docs/intro/pulumi-service/webhooks/)
-* [Teams](/docs/intro/pulumi-service/teams/)
+* [Webhooks](/docs/intro/pulumi-cloud/webhooks/)
+* [Teams](/docs/intro/pulumi-cloud/teams/)
 * [StackTags](/docs/reference/cli/pulumi_stack_tag/)
-* [AccessTokens](/docs/intro/pulumi-service/accounts/)
+* [AccessTokens](/docs/intro/pulumi-cloud/accounts/)
 
 ## How do I get started?
 

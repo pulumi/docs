@@ -32,7 +32,7 @@ You should have completed the [Pulumi Fundamentals pathway](/learn/pulumi-fundam
 
 You will need the following tools to complete this module:
 
-* A [Pulumi account and token](/docs/intro/pulumi-service/accounts#access-tokens)
+* A [Pulumi account and token](/docs/intro/pulumi-cloud/accounts#access-tokens)
     * If you don't have an account, go to the [signup page](https://app.pulumi.com/signup).
 * [Pulumi CLI](/docs/reference/cli/)
     * If you don't have the CLI, go to the [installation page](/docs/get-started/install/).

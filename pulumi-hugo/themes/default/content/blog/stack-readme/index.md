@@ -38,7 +38,7 @@ draft: false
 # for additional details, and please remove these comments before submitting for review.
 ---
 
-Starting today, users can create [Stack READMEs](https://www.pulumi.com/docs/intro/pulumi-service/projects-and-stacks/#stack-readme) in the [Pulumi Service](https://app.pulumi.com) that dynamically update based on [Stack Outputs](https://www.pulumi.com/learn/building-with-pulumi/stack-outputs).
+Starting today, users can create [Stack READMEs](https://www.pulumi.com/docs/intro/pulumi-cloud/projects-and-stacks/#stack-readme) in the [Pulumi Service](https://app.pulumi.com) that dynamically update based on [Stack Outputs](https://www.pulumi.com/learn/building-with-pulumi/stack-outputs).
 
 Each Pulumi Stack you deploy manages a key set of cloud infrastructure for your organization. The Pulumi Console includes a variety of features for exposing key information about your stack for other users within your organization - configuration, outputs, resources under management, links to cloud providers, and a graph of all resources. However, it's often useful to allow the author of a Pulumi Stack to describe in their own words the key elements of a stack, so future viewers can quickly understand the components and cloud resources that are managed.
 
@@ -48,7 +48,7 @@ A README is a text file that introduces and explains a project. A Pulumi Service
 
 There are a lot of operational activities that happen around [Pulumi Stacks](https://www.pulumi.com/docs/intro/concepts/stack), but critical information is spread across many tools. We have heard from our users that it can be time consuming switching from different tools and web apps to manage their deployments- from their cloud Console, to the Pulumi Service User Interface (UI), to the CLI, and so on. By collecting resource outputs in the Pulumi Service UI, we are reducing this friction and keeping relevant Stack information in one place so that is kept up to date automatically.
 
-README templates can reference Stack outputs and resource properties, for example `${outputs.vpc.ARN}`. To walk you through a tangible example, a user can deploy an RDS instance and then use a variable in their README template to link to their CloudWatch dashboard to keep an eye on operational metrics. This CloudWatch dashboard link will dynamically update when deployments happen. You can use the same README template across dev, testing and production and have the correct dashboard links for each Stack. Learn more in the [Stack READMEs documentation page](https://www.pulumi.com/docs/intro/pulumi-service/projects-and-stacks/#stack-readme).
+README templates can reference Stack outputs and resource properties, for example `${outputs.vpc.ARN}`. To walk you through a tangible example, a user can deploy an RDS instance and then use a variable in their README template to link to their CloudWatch dashboard to keep an eye on operational metrics. This CloudWatch dashboard link will dynamically update when deployments happen. You can use the same README template across dev, testing and production and have the correct dashboard links for each Stack. Learn more in the [Stack READMEs documentation page](https://www.pulumi.com/docs/intro/pulumi-cloud/projects-and-stacks/#stack-readme).
 
 The new experience lives in the Stack page, which can be navigated to through Projects and clicking on the specific Stack you want to view the README for. Let's take a look at this new feature!
 
@@ -230,4 +230,4 @@ Ta da! 🎉
 
 We now have a README on the Stack.
 
-Refer to the [Stack README documentation page](https://www.pulumi.com/docs/intro/pulumi-service/projects-and-stacks/#stack-readme) for more details on how to use this feature. As always, please feel free to submit feature requests and bug reports to the [Pulumi Service GitHub Repo](https://github.com/pulumi/service-requests). We love hearing feedback from users about ways we can improve your productivity when using Pulumi. We look forward to seeing how you make Stack READMEs fit your needs!
+Refer to the [Stack README documentation page](https://www.pulumi.com/docs/intro/pulumi-cloud/projects-and-stacks/#stack-readme) for more details on how to use this feature. As always, please feel free to submit feature requests and bug reports to the [Pulumi Service GitHub Repo](https://github.com/pulumi/service-requests). We love hearing feedback from users about ways we can improve your productivity when using Pulumi. We look forward to seeing how you make Stack READMEs fit your needs!

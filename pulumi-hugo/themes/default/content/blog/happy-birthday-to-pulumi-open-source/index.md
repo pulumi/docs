@@ -33,7 +33,7 @@ since launching:
     to parity with our
     [Node.js-based JavaScript and TypeScript SDKs](/docs/reference/pkg/nodejs/).
 - [Team and Enterprise SaaS editions for teams managing infrastructure in production.](/pricing/)
-- [GitHub, GitLab, Atlassian, and SAML/SSO identity providers.](/docs/intro/pulumi-service/organizations)
+- [GitHub, GitLab, Atlassian, and SAML/SSO identity providers.](/docs/intro/pulumi-cloud/organizations)
 - [CI/CD integrations with GitHub, GitLab, Codefresh, CircleCI, major clouds, and more.](/docs/guides/continuous-delivery)
 - [Pluggable secrets management and transitive state encryption.](/blog/managing-secrets-with-pulumi/)
 - [Pluggable state backends for AWS S3, Azure Blob Store, and Google Cloud Store.](/docs/intro/concepts/state/)

@@ -283,7 +283,7 @@ Be sure to tidy up as before with `pulumi destroy` when you're done.
 
 ## Bonus step: Add a Deploy with Pulumi button
 
-In addition to the CLI, your users can also create new projects in the Pulumi Service with the [Deploy with Pulumi button](/docs/intro/pulumi-service/pulumi-button/). This is a great option for making your project installable from GitHub READMEs and other team docs. Here, for example, is a Deploy button that creates a new project using my version of the gist we created above:
+In addition to the CLI, your users can also create new projects in the Pulumi Service with the [Deploy with Pulumi button](/docs/intro/pulumi-cloud/pulumi-button/). This is a great option for making your project installable from GitHub READMEs and other team docs. Here, for example, is a Deploy button that creates a new project using my version of the gist we created above:
 
 [![Deploy with Pulumi](https://get.pulumi.com/new/button.svg)](https://app.pulumi.com/new?template=https://gist.github.com/cnunciato/b331efae6a4740c237a0364d17fe220f)
 
@@ -299,7 +299,7 @@ Embedding these buttons yourself is easy --- just use one of the snippets below,
 [![Deploy with Pulumi](https://get.pulumi.com/new/button.svg)](https://app.pulumi.com/new?template={template-url})
 ```
 
-Project creators who go down this path will be prompted in the browser for the same configuration values as they would with the CLI, and afterward, they'll be able to deploy the project either with the Pulumi CLI or with [Pulumi Deployments](https://www.pulumi.com/docs/intro/pulumi-service/deployments/).
+Project creators who go down this path will be prompted in the browser for the same configuration values as they would with the CLI, and afterward, they'll be able to deploy the project either with the Pulumi CLI or with [Pulumi Deployments](https://www.pulumi.com/docs/intro/pulumi-cloud/deployments/).
 
 ## Wrapping up
 
@@ -309,7 +309,7 @@ As you can see, creating a template is both simple and powerful, and I hope this
 * The [pulumi/templates repository](https://github.com/pulumi/templates) on GitHub
 * [Pulumi project file reference](/docs/reference/pulumi-yaml)
 * [`pulumi new` reference](/docs/reference/cli/pulumi_new/)
-* [Deploy with Pulumi button reference](/docs/intro/pulumi-service/pulumi-button/)
+* [Deploy with Pulumi button reference](/docs/intro/pulumi-cloud/pulumi-button/)
 
 And as always, be sure to stop by [Pulumi Community Slack](https://slack.pulumi.com/) to let us know know how it goes.
 

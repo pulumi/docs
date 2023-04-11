@@ -254,4 +254,4 @@ The main benefits of using the OIDC integration for Pulumi Deployments are as fo
 
 ### If you haven’t yet tried out Pulumi Deployments
 
-You should now see a “Deploy” tab under Stack Settings in the [Pulumi Service console](https://app.pulumi.com/) and have access to the [Deployments REST API](https://www.pulumi.com/docs/reference/deployments-rest-api/). View [the documentation](https://www.pulumi.com/docs/intro/pulumi-service/deployments/) for help getting started and join our [Slack](https://pulumi-community.slack.com/archives/C048NVDH6DV) (#pulumi-deployments channel) for questions and feedback.
+You should now see a “Deploy” tab under Stack Settings in the [Pulumi Service console](https://app.pulumi.com/) and have access to the [Deployments REST API](https://www.pulumi.com/docs/reference/deployments-rest-api/). View [the documentation](https://www.pulumi.com/docs/intro/pulumi-cloud/deployments/) for help getting started and join our [Slack](https://pulumi-community.slack.com/archives/C048NVDH6DV) (#pulumi-deployments channel) for questions and feedback.

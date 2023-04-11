@@ -452,7 +452,7 @@ And if we select it, we'll see the complete Mocha test output:
 
 ![Failed Deployment Details](./failed-deployment-details.png)
 
-We could even [use webhooks](/docs/intro/pulumi-service/webhooks/) to
+We could even [use webhooks](/docs/intro/pulumi-cloud/webhooks/) to
 fire off a Slack alarm so that nobody misses the issue. This is often very helpful in
 unattended scenarios, like [continuous deployment](/docs/guides/continuous-delivery/).
 

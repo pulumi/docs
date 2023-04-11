@@ -53,7 +53,7 @@ The Pulumi Business Critical edition includes everything in the Pulumi Enterpris
 - [Organization policies and enforcement](/docs/guides/crossguard/)
 - [Self-hosting available](/docs/guides/self-hosted/)
 - [Cross-domain identity (SCIM)](/docs/guides/scim)
-- [Automatic export of audit logs](/docs/intro/pulumi-service/audit-logs#automated-export)
+- [Automatic export of audit logs](/docs/intro/pulumi-cloud/audit-logs#automated-export)
 - 24 x 7 support included
 - Premium training, onboarding and certain professional services
 

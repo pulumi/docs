@@ -116,6 +116,6 @@ We [previously added](https://github.com/pulumi/pulumi/pull/2697) support for se
 
 ### Audit logging for third-party secrets managers
 
-Previously secret decryption [Audit Log](/docs/intro/pulumi-service/audit-logs/) events were only logged for users using the Pulumi Service secrets provider. Now users who use the Pulumi Service for their state but a third-party secrets provider (AWS KMS, Azure KeyVault, HashiCorp Vault, etc.) will have a log of these events.
+Previously secret decryption [Audit Log](/docs/intro/pulumi-cloud/audit-logs/) events were only logged for users using the Pulumi Service secrets provider. Now users who use the Pulumi Service for their state but a third-party secrets provider (AWS KMS, Azure KeyVault, HashiCorp Vault, etc.) will have a log of these events.
 
 [Learn more in this GitHub issue](https://github.com/pulumi/pulumi/issues/8563).

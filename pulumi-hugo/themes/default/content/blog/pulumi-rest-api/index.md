@@ -46,7 +46,7 @@ Authentication and authorization is governed by the Pulumi identity and RBAC sys
 
 ## The REST API for Cloud Engineering
 
-We have already seen Cloud Engineering teams using the Pulumi REST API to build all sorts of custom functionality. These new capabilities are especially powerful when used in combination with the [Automation API](/automation/), which lets you use infrastructure as code as a library embedded into a larger system, and [Webhooks](/docs/intro/pulumi-service/webhooks/), which lets you invoke your own REST API in response to a Pulumi event such as a stack update.
+We have already seen Cloud Engineering teams using the Pulumi REST API to build all sorts of custom functionality. These new capabilities are especially powerful when used in combination with the [Automation API](/automation/), which lets you use infrastructure as code as a library embedded into a larger system, and [Webhooks](/docs/intro/pulumi-cloud/webhooks/), which lets you invoke your own REST API in response to a Pulumi event such as a stack update.
 
 Examples of scenarios we've seen include:
 
@@ -68,7 +68,7 @@ Let's take a look at the Pulumi REST API in action. This example will demonstrat
 
 Imagine that there is suddenly a MySQL vulnerability or EOL notice that we need to respond to. We use Amazon RDS and would like to query our entire organization to find projects and stacks that currently have RDS databases deployed using version 5.6 of MySQL. Thankfully the Pulumi REST API makes all metadata about all of my cloud projects and stacks &mdash; across all clouds &mdash; available for easy querying and inspection. So a dozen lines of bash will do the trick!
 
-The first step is to [generate an API access token](/docs/intro/pulumi-service/accounts#access-tokens). The Pulumi Service lets you manage many access tokens (the same as what's used for `pulumi login`) and it's easiest to just create one specific to this project's purpose. This will let us revoke that token after we're done and know that there is no lingering access.
+The first step is to [generate an API access token](/docs/intro/pulumi-cloud/accounts#access-tokens). The Pulumi Service lets you manage many access tokens (the same as what's used for `pulumi login`) and it's easiest to just create one specific to this project's purpose. This will let us revoke that token after we're done and know that there is no lingering access.
 
 To do that, go to <https://app.pulumi.com/account/tokens> (or click your avatar in the upper right and go to Settings, where you'll see Access Tokens on the left-hand nav):
 
