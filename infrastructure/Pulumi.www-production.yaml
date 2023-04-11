@@ -1,2 +1,12 @@
 config:
   aws:region: us-west-2
+  www.pulumi.com:addSecurityHeaders: "true"
+  www.pulumi.com:certificateArn: "new cert arn here" # update with new cert arn
+  www.pulumi.com:doEdgeRedirects: "true"
+  www.pulumi.com:makeFallbackBucket: "false" # are we good to set this as false now??
+  www.pulumi.com:originBucketNameOverride: ""
+  www.pulumi.com:pathToOriginBucketMetadata: ../origin-bucket-metadata.json
+  www.pulumi.com:websiteDomain: www.pulumi.com
+  www.pulumi.com:websiteLogsBucketName: www-prod.pulumi.com-logs # will need to update name to avoid collisions
+  www.pulumi.com:newAccountRollout: true
+  
