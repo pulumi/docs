@@ -23,7 +23,7 @@ meta_desc: A list of different environment variables the Pulumi CLI supports.
     </dt>
     <dd>
         <p>
-            Set this environment variable to authenticate into the Pulumi Service backend and bypass the access
+            Set this environment variable to authenticate into the Pulumi Cloud backend and bypass the access
             token prompt when running {{% md %}}`pulumi login`{{% /md %}}.
         </p>
         <pre><code class="text-xs">PULUMI_ACCESS_TOKEN="your-access-token"</code></pre>
@@ -87,7 +87,7 @@ meta_desc: A list of different environment variables the Pulumi CLI supports.
     </dt>
     <dd>
         <p>
-            Overrides the domain used when generating links to the Pulumi Service.
+            Overrides the domain used when generating links to the Pulumi Cloud.
         </p>
         <pre><code class="text-xs">PULUMI_CONSOLE_DOMAIN="yourhost.domain.com"</code></pre>
     </dd>

@@ -28,7 +28,7 @@ between different environments by merging or directly committing changes.
 Let's see how to get started -- it's easy!
 
 {{% notes type="info" %}}
-Users in organizations can use the [CI/CD Integration Assistant](/docs/intro/pulumi-service/ci-cd-integration-assistant) with GitHub Actions.
+Users in organizations can use the [CI/CD Integration Assistant](/docs/intro/pulumi-cloud/ci-cd-integration-assistant) with GitHub Actions.
 {{% /notes %}}
 
 ## Pre-Requisites
@@ -340,8 +340,8 @@ jobs:
 
 Now that you've got these two common workflows defined, you'll need to configure your
 secrets. Secrets are exposed as environment variables to the GitHub Actions runtime
-environment. Minimally, you'll need to supply a [Pulumi access token](/docs/intro/pulumi-service/accounts#access-tokens)
-to allow the Pulumi CLI to communicate with the Pulumi Service on your behalf, and
+environment. Minimally, you'll need to supply a [Pulumi access token](/docs/intro/pulumi-cloud/accounts#access-tokens)
+to allow the Pulumi CLI to communicate with the Pulumi Cloud on your behalf, and
 you'll probably want to provide credentials for communicating with your cloud
 provider as well.
 
@@ -354,7 +354,7 @@ to your repo's **Settings** tab, where you'll find the new **Secrets** area:
 
 First, [create a new Pulumi Access Token](https://app.pulumi.com/account/tokens), then
 submit that token as a new secret named named `PULUMI_ACCESS_TOKEN`. This enables your
-GitHub Action to communicate with the Pulumi service on your behalf.
+GitHub Action to communicate with the Pulumi Cloud on your behalf.
 
 Next, add secrets for your cloud credentials, just as you did `PULUMI_ACCESS_TOKEN` above,
 based on your provider of choice. For example:
@@ -373,7 +373,7 @@ went as planned:
 ![Action Checks](/images/docs/reference/gh-actions-checks.png)
 
 Select the Logs pane to see the full output of the Pulumi CLI, along with the URL of your
-deployment on the Pulumi Service with more details:
+deployment on the Pulumi Cloud with more details:
 
 ![Action Logs](/images/docs/reference/gh-actions-logs.png)
 
@@ -393,7 +393,7 @@ the GitHub Actions container directly.
 ### Pulumi GitHub App
 
 The [Pulumi GitHub App](/docs/guides/continuous-delivery/github-app/) is something you install on your
-GitHub organization. It allows the Pulumi service to leave comments on Pull Requests.
+GitHub organization. It allows the Pulumi Cloud to leave comments on Pull Requests.
 
 Once the Pulumi GitHub App is installed, when your GitHub Actions run Pulumi, a summary of
 any resource changes will be left on the Pull Request, as well as links to the Pulumi

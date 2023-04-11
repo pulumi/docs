@@ -54,13 +54,13 @@ If you also want to support pushing existing Okta groups, the steps in [Setting 
 
 * Unique identifier field for users: Set to `userName`.
 * Authentication Mode: HTTP Header
-* For **HTTP HEADER**, you will use a token from the [Pulumi Service](https://app.pulumi.com) as the authorization bearer token. To generate a token, navigate to your org in the Pulumi Service, click on the **Settings** tab, and then click **SAML SSO**. Scroll down to the **SCIM** section and generate a new token if you have never generated one for your org, or regenerate it if you have already done so in the past.
+* For **HTTP HEADER**, you will use a token from the [Pulumi Cloud](https://app.pulumi.com) as the authorization bearer token. To generate a token, navigate to your org in the Pulumi Cloud, click on the **Settings** tab, and then click **SAML SSO**. Scroll down to the **SCIM** section and generate a new token if you have never generated one for your org, or regenerate it if you have already done so in the past.
 
     {{% notes "info" %}}
-Once you generate the token, please save it securely. Neither the Pulumi Service nor Pulumi support can retrieve a token once it's been initially generated. If you lose the SCIM token and need it again, you'll have to generate a new token, which invalidates any previous tokens for your Pulumi organization.
+Once you generate the token, save it securely. Neither the Pulumi Cloud nor Pulumi support can retrieve a token once it's been initially generated. If you lose and need the SCIM token again, you'll have to generate a new token, invalidating any previous tokens for your Pulumi organization.
     {{% /notes %}}
 
-* Paste the token from the Pulumi Service into the Okta SCIM configuration for **HTTP HEADER**.
+* Paste the token from the Pulumi Cloud into the Okta SCIM configuration for **HTTP HEADER**.
 
 The following shows how your SCIM connection info should be filled in.
 
@@ -68,7 +68,7 @@ The following shows how your SCIM connection info should be filled in.
 
 ## Enabling SCIM Provisioning Actions
 
-To configure the actions that Okta will send to the Pulumi Service, you need to enable them.
+To configure the actions that Okta will send to the Pulumi Cloud, you need to enable them.
 
 1. Under the **Provisioning** tab, click **Edit**.
 2. While you are in the **To App** section, check **Enable** on the following:
@@ -111,7 +111,7 @@ Pulumi usernames are immutable and should not be changed after a user is associa
 
 ## Setting up Group Provisioning {#groupprovisioning}
 
-The Pulumi Service supports the provisioning of teams within your organization using SCIM. This is done by mapping the groups you have created using SCIM to create teams within your organization in the Pulumi Service. Setting this up allows you to manage your teams' memberships solely in Okta.
+The Pulumi Cloud supports the provisioning of teams within your organization using SCIM. This is done by mapping the groups you have created using SCIM to create teams within your organization in the Pulumi Cloud. Setting this up allows you to manage your teams' memberships solely in Okta.
 
 To set this up, you need to enable Push Groups as a supported provisioning action under the **Provisioning** settings and then specify which groups you would like to push. To do that, perform the following steps:
 
@@ -133,16 +133,16 @@ To set this up, you need to enable Push Groups as a supported provisioning actio
 7. After clicking **Save**, you should see that your group was pushed and it should say **Active**.
 
     {{% notes "info" %}}
-If there are members in a group that are not yet assigned to the Pulumi Service application in Okta, they will not be added to the team in the Pulumi Service. Ensure that all members in the group have been assigned to the application before pushing the group.
+If there are members in a group that are not yet assigned to the Pulumi Cloud application in Okta, they will not be added to the team in the Pulumi Cloud. Ensure that all members in the group have been assigned to the application before pushing the group.
     {{% /notes %}}
 
 ## Verifying Group Provisioning
 
-To confirm that the groups were provisioned correctly, sign in to the Pulumi Service and select **Settings** > **Teams** from the left navigation.
+To confirm that the groups were provisioned correctly, sign in to the Pulumi Cloud and select **Settings** > **Teams** from the left navigation.
 
 ![SCIM teams.](/images/docs/guides/scim/console.png)
 
-Click on that group and verify its membership. Note that the team’s membership cannot be altered within the Pulumi Service. If any membership changes are needed, they must be done within Okta. This allows the membership to be managed using Okta so your teams on the Pulumi side will always mirror the groups you have configured there.
+Select that group and verify its membership. Note that the team’s membership cannot be altered within the Pulumi Cloud. If any membership changes are needed, they must be done within Okta. This allows the membership to be managed using Okta, so your teams on the Pulumi side will always mirror the groups you have configured.
 
 ## Known Limitations
 

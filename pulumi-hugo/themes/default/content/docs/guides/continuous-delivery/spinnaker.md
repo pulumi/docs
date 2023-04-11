@@ -33,8 +33,8 @@ method (i.e. Kubernetes).
 
 ### Pulumi
 
-This guide assumes you are using the default Pulumi Service [managed backend](https://www.pulumi.com/docs/intro/concepts/state/#backends).
-To sign-up for a new Pulumi account, head over to the [Pulumi Service](https://app.pulumi.com/signup).
+This guide assumes you are using the default Pulumi Cloud [managed backend](https://www.pulumi.com/docs/intro/concepts/state/#backends).
+To sign-up for a new Pulumi account, head over to the [Pulumi Cloud](https://app.pulumi.com/signup).
 The Pulumi Plugin for Spinnaker referenced in this guide supports specifying alternate backend URLs.
 
 ## Pulumi Stack And Branch Mappings
@@ -45,7 +45,7 @@ The sample pipeline (shown later) below acts on a hypothetical stack: `dev`. The
 purposes only. You may choose a different name that best suits your use case.
 
 * Depending on your use-case, you may want to create the Pulumi Stack ahead of time.
-* You can create a new stack in the [Pulumi Service](https://app.pulumi.com/site/new-project).
+* You can create a new stack in the [Pulumi Cloud](https://app.pulumi.com/site/new-project).
 * Alternatively, you can also run `pulumi new [template]` to create a [template project](/docs/reference/cli/pulumi_new/)
 on your machine and push it to your Version Control System (VCS) repository.
 
@@ -82,14 +82,14 @@ To pass sensitive secrets to the Kubernetes batch job run by the plugin, define 
 The `Secret` resource must be in the same namespace as the Pulumi stage input when you configure the pipeline.
 {{% /notes %}}
 
-Sensitive secrets such as the [Pulumi Access Token](/docs/intro/pulumi-service/accounts#access-tokens), the cloud provider credentials, or even your VCS credentials
+Sensitive secrets such as the [Pulumi Access Token](/docs/intro/pulumi-cloud/accounts#access-tokens), the cloud provider credentials, or even your VCS credentials
 (eg. GitHub, Bitbucket, GitLab), should be defined as key/value pairs in the `Secret` resource.
 
 If you are using either the Pulumi-managed or the self-hosted [service backend](/docs/intro/concepts/state/), get a
 [Pulumi Access Token](https://app.pulumi.com/account/tokens) for the Pulumi account that you will use in your pipeline.
 Save the value of the token with the key `PULUMI_ACCESS_TOKEN` in your Kubernetes `Secret` resource.
 
-If you do not use the Pulumi Service backend, the `PULUMI_ACCESS_TOKEN` is optional. Instead, you should make sure that Pulumi has the credentials to access whichever backend URL you do choose to use.
+If you do not use the Pulumi Cloud backend, the `PULUMI_ACCESS_TOKEN` is optional. Instead, you should make sure that Pulumi has the credentials to access whichever backend URL you do choose to use.
 
 Here's an **example** `Secret` resource applied in a Spinnaker installation.
 

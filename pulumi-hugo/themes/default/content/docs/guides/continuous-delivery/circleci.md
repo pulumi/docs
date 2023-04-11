@@ -60,7 +60,7 @@ Integrating Pulumi into CircleCI starts with the `pulumi/login` orb, which will 
 downloading the Pulumi command-line tool if it is not on the current `$PATH`. It will then run
 `pulumi login` using available credentials.
 
-You can either specify the [Pulumi access token](/docs/intro/pulumi-service/accounts#access-tokens)
+You can either specify the [Pulumi access token](/docs/intro/pulumi-cloud/accounts#access-tokens)
 with the `access-token` parameter, or default to using the `$PULUMI_ACCESS_TOKEN` environment variable.
 Using the environment variable is preferred, as you can secure store that using secure
 [project-level configuration](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project)

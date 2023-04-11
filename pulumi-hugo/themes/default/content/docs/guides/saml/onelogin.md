@@ -13,7 +13,7 @@ aliases:
   - /docs/console/accounts/saml/onelogin/
 ---
 
-This guide walks you through configuring OneLogin as a SAML SSO identity provider (IdP) for the Pulumi Service.
+This guide walks you through configuring OneLogin as a SAML SSO identity provider (IdP) for the Pulumi Cloud.
 
 ## Prerequisites
 
@@ -84,7 +84,7 @@ To assign users or groups to the application, navigate to the **Users** tab in t
 
 ## Configuring Your Pulumi Organization
 
-The final step is to configure the Pulumi Service with details on your new OneLogin-based
+The final step is to configure the Pulumi Cloud with details on your new OneLogin-based
 SAML application. To do this, you need to obtain the IDP metadata document from OneLogin and then provide
 it to Pulumi.
 
@@ -93,7 +93,7 @@ First, navigate to the OneLogin Application you created above and select the **M
 ![Get Metadata](/images/docs/reference/service/saml-onelogin/onelogin-get-metadata.png)
 
 1. Open the file and copy the entire block of XML text in your clipboard
-1. Open the Pulumi Service and navigate to your SAML organization.
+1. Open the Pulumi Cloud and navigate to your SAML organization.
 1. Select the **Settings** tab, and then select **Access Management**.
 1. In the **Membership Requirements** section, select the **Change requirements** button.
 1. Select **SAML SSO** and then select **Next**.
@@ -111,7 +111,7 @@ Members of your OneLogin application can now sign into Pulumi. Navigate to
 [https://app.pulumi.com/signin/sso/](https://app.pulumi.com/signin/sso/) and enter the
 name of your Pulumi organization.
 
-![Pulumi Service](/images/docs/reference/service/saml-okta/pulumi-console-signin.png)
+![Pulumi Cloud](/images/docs/reference/service/saml-okta/pulumi-console-signin.png)
 
 ## Troubleshooting
 

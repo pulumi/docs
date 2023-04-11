@@ -88,7 +88,7 @@ Here is a summary of the key differences between Pulumi and Terraform:
 | ------- | ------ | --------- |
 | [Language Support](#language) | Python, TypeScript, JavaScript, Go, C#, F#, Java, YAML | HashiCorp Configuration Language (HCL) |
 | [IDE Support](#ide) | Code completion, strong typing, error squiggles, rich resource documentation, etc. | Limited |
-| [State Management](#state) | Managed through Pulumi Service by default, self-managed options available. | Self-managed by default, managed SaaS offering available. |
+| [State Management](#state) | Managed through Pulumi Cloud by default, self-managed options available. | Self-managed by default, managed SaaS offering available. |
 | [Provider Support](#providers) | Native cloud providers with 100% same-day resource coverage plus Terraform-based providers for additional coverage. | Support across multiple IaaS, SaaS, and PaaS providers. |
 | [Cloud Native Support](#cloud-native) | Richly typed. Includes CRDs & in-cluster operator support for GitOps delivery. | Core API typed. Generic support for CRD. |
 | [Dynamic Provider Support](#dynamic-providers) | Yes | No |
@@ -124,7 +124,7 @@ Terraform has plugins for some IDEs. However, the features are varied and limite
 
 The Terraform engine takes care of provisioning and updating resources. With Pulumi, you use general purpose languages to express desired state, and Pulumi’s engine similarly gives you diffs and a way to robustly update your infrastructure.
 
-By default, Terraform requires that you manage concurrency and state manually, by way of its “state files.” Pulumi, in contrast, uses the free [Pulumi Service](https://app.pulumi.com/) to eliminate these concerns. This makes getting started with Pulumi, and operationalizing it in a team setting, much easier. For advanced use cases, it is possible to [use Pulumi without the Service](/docs/support/faq#can-i-use-pulumi-without-depending-on-the-pulumi-service), which works a lot more like Terraform, but requires you to manage state and concurrency issues. Pulumi errs on the side of ease-of-use.
+By default, Terraform requires that you manage concurrency and state manually, by way of its “state files.” Pulumi, in contrast, uses the free [Pulumi Cloud](https://app.pulumi.com/) to eliminate these concerns. This makes getting started with Pulumi, and operationalizing it in a team setting, much easier. For advanced use cases, it is possible to [use Pulumi without the Pulumi Cloud](/docs/support/faq#can-i-use-pulumi-without-depending-on-the-/pulumi-cloud/), which works a lot more like Terraform, but requires you to manage state and concurrency issues. Pulumi errs on the side of ease-of-use.
 
 For more information on how Pulumi manages state or how to use different backends, see [State and Backends](/docs/intro/concepts/state/).
 
@@ -182,7 +182,7 @@ Terraform supports integration testing. With Pulumi, you can take advantage of n
 
 ### Modes of Execution {#modes}
 
-Both Pulumi and Terraform can execute commands through their CLI. Terraform can also do remote operations through Terraform Cloud. Pulumi also provides two APIs by which you can execute Pulumi commands. First, the Automation API allows you to provision, update, and destroy infrastructure through Pulumi directly in your application code. This enables higher order orchestration workflows and dynamically managed infrastructure. Second, the REST API allows you to query and interact with state information, history, stack tags when using the Managed Pulumi Service. To learn more, see [Automation API](/docs/guides/automation-api/) and [REST API](/docs/reference/service-rest-api/).
+Both Pulumi and Terraform can execute commands through their CLI. Terraform can also do remote operations through Terraform Cloud. Pulumi also provides two APIs by which you can execute Pulumi commands. First, the Automation API allows you to provision, update, and destroy infrastructure through Pulumi directly in your application code. This enables higher order orchestration workflows and dynamically managed infrastructure. Second, the REST API allows you to query and interact with state information, history, stack tags when using the Managed Pulumi Cloud. To learn more, see [Automation API](/docs/guides/automation-api/) and [REST API](/docs/reference/service-rest-api/).
 
 ### Embed within Application Code {#embedding}
 
@@ -204,7 +204,7 @@ Pulumi always transmits and stores entire state files securely. However, Pulumi 
 
 ### Audit Capabilities {#auditing}
 
-Pulumi provides audit logs that enable you to track the activity of users within an organization. Audit logs capture the UNIX timestamp of the event, the user who invoked the action, the event that took place, and the source IP of the call the user made. These logs are available to organizations with an Enterprise level subscription. The logs are immutable and record all user actions. Terraform Cloud only provides a stream of audit events that describe changes throughout an organization with 14 days of retention. To learn more, see [Audit Logs](/docs/intro/pulumi-service/audit-logs/).
+Pulumi provides audit logs that enable you to track the activity of users within an organization. Audit logs capture the UNIX timestamp of the event, the user who invoked the action, the event that took place, and the source IP of the call the user made. These logs are available to organizations with an Enterprise level subscription. The logs are immutable and record all user actions. Terraform Cloud only provides a stream of audit events that describe changes throughout an organization with 14 days of retention. To learn more, see [Audit Logs](/docs/intro/pulumi-cloud/audit-logs/).
 
 ### Adopt Existing Resources {#adopting}
 

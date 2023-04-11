@@ -13,9 +13,9 @@ menu:
 
 Without a well-defined path to deliver infrastructure in production, it is too easy for your team to end up with systems that are deployed manually, lack security best practices, or rely on workflows that are poorly documented and unmaintained. Pulumi Deployments offers a secure, and easy-to-configure CI/CD pipeline that can be consistently replicated across every environment in your organization without piles of GitHub Actions YAML.
 
-Git Push to Deploy, with security best practices like temporary credentials via OIDC, can be configured in minutes via the Pulumi Service UI. You can also write a Pulumi Program to centrally manage Deployment Settings with the Pulumi Service Provider and define all of your deployment configurations as code.
+Git Push to Deploy, with security best practices like temporary credentials via OIDC, can be configured in minutes via the Pulumi Cloud UI. You can also write a Pulumi Program to centrally manage Deployment Settings with the Pulumi Service Provider and define all your deployment configurations as code.
 
-When you choose Pulumi Deployments for your golden path, you get productivity features like Click to Deploy, which normally requires separate “workflow_dispatch” YAML configuration in tools like GitHub Actions. Having the flexibility to refresh, or update a stack from the Pulumi Service console saves your team time when performing day-to-day operational tasks. You also get access to the Deployments REST API which enables the higher-level platform automation required to manage infrastructure at scale.
+When you choose Pulumi Deployments for your golden path, you get productivity features like Click to Deploy, which normally requires separate “workflow_dispatch” YAML configuration in tools like GitHub Actions. Having the flexibility to refresh, or update a stack from the Pulumi Cloud console saves your team time when performing day-to-day operational tasks. You also get access to the Deployments REST API which enables the higher-level platform automation required to manage infrastructure at scale.
 
 ## Service Catalogs
 
@@ -28,7 +28,7 @@ Platform teams face ever-increasing pressure to enable self-service infrastructu
 Pulumi provides several useful building blocks that help you get the job done:
 
 1. **[Component Resources](https://www.pulumi.com/docs/intro/concepts/resources/components/)** are logical infrastructure groupings. Similar to Terraform modules but much more flexible as they can take advantage of classes, interfaces, control flow, and package managers from your language of choice. Defining Component Resources for VPCs, Databases, and Kubernetes Clusters that automatically enforce security, compliance, and reliability best practices is a platform engineering best practice.
-2. **OIDC Integration** enables your deployments to exchange a signed, short-lived token issued by the Pulumi Service for short-term credentials from your cloud provider. This can improve the security of your deployments by eliminating the need for hardcoded cloud provider credentials. Many organizations drive all development through OIDC-enabled Pulumi Deployments workflows so that developers never need cloud credentials on their local machines. OIDC can be configured across multiple clouds and cloud accounts in just a few minutes.
+2. **OIDC Integration** enables your deployments to exchange a signed, short-lived token issued by the Pulumi Cloud for short-term credentials from your cloud provider. This can improve the security of your deployments by eliminating the need for hardcoded cloud provider credentials. Many organizations drive all development through OIDC-enabled Pulumi Deployments workflows so that developers never need cloud credentials on their local machines. OIDC can be configured across multiple clouds and cloud accounts in just a few minutes.
 3. **Deployment Settings REST APIs** enable configuring everything necessary for CI/CD on the fly. Normally what would require templating, generating, and checking in GitHub Actions YAML can be done through a REST API call. Everything including environment variables, OIDC and auth configuration, source control settings, and build steps can be configured through the REST API.
 4. **Deployment Triggers** give you and your developer customers multiple ways to keep your infrastructure up to date. You can enable or disable `git push` to deploy, Click to Deploy, and Deploy via REST API. Not only can your users rely on deployment triggers to update their own infrastructure, but you can use those same triggers to apply patches and enforce compliance.
 
@@ -104,9 +104,9 @@ err = s.client.createDeployment(ctx, s.org, s.project, stack, createDeploymentRe
 
 ```
 
-Notice how this REST API call specifies `InheritSettings: true` so that Deployment Settings are read from the Pulumi Service and merged with the incoming request payload to create deployment configuration for this run. This stack also has to Click to Deploy via the Pulumi Service UI, so operational tasks like refreshing the stack can be done on demand without pulling down source code onto your local machine.
+Notice how this REST API call specifies `InheritSettings: true` so that Deployment Settings are read from the Pulumi Cloud and merged with the incoming request payload to create deployment configuration for this run. This stack also has to Click to Deploy via the Pulumi Cloud UI, so operational tasks like refreshing the stack can be done on demand without pulling down source code onto your local machine.
 
-The Deployments Platform does all of the heavy lifting of managing deployment compute, providing asynchronous workflow orchestration,  queueing, status and logging API access, and more. At the end, you get a Pulumi Stack and state file containing a manifest of all cloud resources and their properties managed by the Pulumi Service.
+The Deployments Platform does the heavy lifting of managing deployment compute, providing asynchronous workflow orchestration, queueing, status and logging API access, and more. In the end, you get a Pulumi Stack and state file containing a manifest of all cloud resources and their properties managed by the Pulumi Cloud.
 
 Deployment Settings and Triggers can be combined to ship infrastructure in novel ways with just a few lines of code. See the full [RESTful infrastructure API example](https://github.com/pulumi/deploy-demos/tree/main/deployment-drivers/go/http) to try it out yourself.
 

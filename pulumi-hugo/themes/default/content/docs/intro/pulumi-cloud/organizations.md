@@ -1,18 +1,18 @@
 ---
-title_tag: "Pulumi Service: Organizations"
+title_tag: "Pulumi Cloud: Organizations"
 title: "Organizations"
-meta_desc: Organizations are a space for you to collaborate on shared projects and stacks. Learn more about how Organizations work in the Pulumi Cloud Service.
+meta_desc: Organizations are a space for you to collaborate on shared projects and stacks. Learn more about how Organizations work in the Pulumi Cloud.
 menu:
   intro:
-    parent: pulumi-service
+    parent: pulumi-cloud
     weight: 2
 aliases:
 - /docs/reference/service/orgs/
 - /docs/console/accounts/organizations/
 - /docs/intro/console/accounts/organizations/
-- /docs/console/collaboration/organization-roles
-- /docs/intro/console/organization-roles
-- /docs/console/organization-roles
+- /docs/console/collaboration/organization-roles/
+- /docs/intro/console/organization-roles/
+- /docs/console/organization-roles/
 - /docs/intro/console/organizations/
 ---
 
@@ -23,7 +23,7 @@ Organizations are a space for you to collaborate on shared projects and stacks.
 | Page | Description |
 |--------|--------|
 | Dashboard | An overview of the organization including recently updated stacks, recent activity, and a resource count graph. |
-| All stacks | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management](/docs/intro/pulumi-service/projects-and-stacks/). |
+| All stacks | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management](/docs/intro/pulumi-cloud/projects-and-stacks/). |
 | Policies | Lists of organization policies and policy groups. Policies allow you to set guardrails to enforce best practices and compliance. |
 | Settings | Organization settings including subscription and payment information and history, Billing Managers, stack permissions, and links to Pulumi's [continuous delivery guides](/docs/guides/continuous-delivery/). |
 

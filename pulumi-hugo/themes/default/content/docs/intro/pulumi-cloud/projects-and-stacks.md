@@ -1,10 +1,10 @@
 ---
-title_tag: "Pulumi Service: Project and Stack Management"
+title_tag: "Pulumi Cloud: Project and Stack Management"
 title: "Project and Stack Management"
-meta_desc: Learn how to manage projects and stacks in the Pulumi Service, including creating a project and managing stack permissions.
+meta_desc: Learn how to manage projects and stacks in the Pulumi Cloud, including creating a project and managing stack permissions.
 menu:
   intro:
-    parent: pulumi-service
+    parent: pulumi-cloud
     weight: 7
 aliases:
 - /docs/intro/console/project-and-stack-management/
@@ -31,13 +31,13 @@ To create a project:
 
 ## Stack Permissions
 
-The Pulumi Service provides fine-grained access controls for stacks. Stack permissions are
+The Pulumi Cloud provides fine-grained access controls for stacks. Stack permissions are
 based on the member's role within the organization and their team membership.
 Additionally, any member who creates a stack is granted admin permissions on that stack.
 
 Organization admins can control the stack default permissions at the organization level from **Settings** > **General**.
 There are four types of stack permissions: `None`, `Read`, `Write`, and `Admin`.
-[Team permissions](/docs/intro/pulumi-service/teams#team-permissions) will expand these default permissions.
+[Team permissions](/docs/intro/pulumi-cloud/teams#team-permissions) will expand these default permissions.
 
 Stack permissions allow users to perform the following actions:
 
@@ -188,10 +188,10 @@ public class App {
 
 {{% /choosable %}}
 
-An example of a README file, `Pulumi.README.md`, the template Stack README file for the Pulumi Service.
+An example of a README file, `Pulumi.README.md`, the template Stack README file for the Pulumi Cloud.
 
 ```markdown
-# Pulumi Service README
+# Pulumi Cloud README
 ​
 [Sign in to AWS to view stack resources!](https://top-secret-url.com)
 ​
@@ -204,7 +204,7 @@ An example of a README file, `Pulumi.README.md`, the template Stack README file 
 3. [Cloudwatch Logs](https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#logStream:group=${outputs.cloudwatchLogGroup}): Search across service logs
 ```
 
-Here is how it looks rendered in the [Pulumi Service UI](https://app.pulumi.com):
+Here is how it looks rendered in the [Pulumi Cloud UI](https://app.pulumi.com):
 
 ![Stack READMEs](/images/docs/reference/service/stack-readme.png)
 
@@ -299,7 +299,7 @@ To transfer stacks in bulk:
 
 ## Deleting a Stack
 
-Deleting a stack removes the stack entirely from the Pulumi Service, along with all of its update history.
+Deleting a stack removes the stack entirely from the Pulumi Cloud, along with all of its update history.
 
 To delete a stack:
 

@@ -13,9 +13,9 @@ This page highlights some common patterns and workflows using Pulumi Deployments
 
 ## Deployment Settings
 
-Deployment settings refers to the full set of configuration required to run a Pulumi Deployment, defined on a per-stack basis. These settings may be defined once for the stack, via the UI, Pulumi Service provider, or the REST API and can be consumed using any of the triggers, i.e. push-to-deploy, click-to-deploy or via the REST API.
+Deployment settings refer to the full set of configuration required to run a Pulumi Deployment, defined on a per-stack basis. These settings may be defined once for the stack, via the UI, Pulumi Service provider, or the REST API and can be consumed using any of the triggers, i.e., push-to-deploy, click-to-deploy, or via the REST API.
 
-### From the Pulumi Service UI
+### From the Pulumi Cloud UI
 
 From the Pulumi Console, a stack's deployment settings can be accessed via the `Settings > Deploy` tab. Once the settings are defined via the UI, they apply to all Deployment triggers, including push-to-deploy (if you have the GitHub app installed), click-to-deploy and the REST API.
 
@@ -65,7 +65,7 @@ The [REST API documentation](../api) contains much more thorough information abo
 
 ### Defined as Code with the Pulumi Service Provider
 
-Finally, a stack's deployment settings may be defined as a resource within the stack itself using the Pulumi Service provider. This allows you to securely store your settings in source control alongside your code.
+Finally, a stack's deployment settings may be defined as a resource within the stack itself using the Pulumi Service provider. This lets you securely store your settings in source control alongside your code.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -150,7 +150,7 @@ You'll need to install and configure the [Pulumi GitHub App](/docs/guides/contin
 
 {{% notes type="warning" %}}
 
-While the app can be installed via GitHub, it **must be installed through the Pulumi Service** using the steps below to ensure correct setup. Installing through the Pulumi Service ensures we have a connection from Pulumi to your GitHub user or organization.
+While the app can be installed via GitHub, it **must be installed through the Pulumi Cloud** using the steps below to ensure correct setup. Installing through the Pulumi Cloud ensures we have a connection from Pulumi to your GitHub user or organization.
 
 {{% /notes %}}
 
@@ -164,7 +164,7 @@ Follow these steps:
 
 4. After clicking "Install" you will be directed to GitHub. Select the GitHub organization you wish to use with Pulumi Deployments.
 5. Select which repos (or all repos) Pulumi Deployments can have access to, and then Install.
-6. You will be redirected to the Pulumi Service (app.pulumi.com). Return to the Settings > Integrations tab and confirm the GitHub App is installed on your desired organization.
+6. You will be redirected to the Pulumi Cloud (app.pulumi.com). Return to **Settings** > **Integrations** to confirm the GitHub App is installed.
 
 If you installed the GitHub app in the past and the steps above aren't showing it as installed for your desired organization, please try the following:
 

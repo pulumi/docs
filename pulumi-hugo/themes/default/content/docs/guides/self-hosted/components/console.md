@@ -1,21 +1,21 @@
 ---
-title_tag: Pulumi Service | Self-Hosting Pulumi
-title: Pulumi Service
+title_tag: Pulumi Cloud | Self-Hosting Pulumi
+title: Pulumi Cloud
 menu:
     userguides:
         parent: self_hosted_components
         identifier: self_hosted_console_service
         weight: 2
-meta_desc: Pulumi Service is one of the components required for self-hosting Pulumi. Self-hosting is available as part of the Pulumi Business Critical Edition.
+meta_desc: Pulumi Cloud is one of the components required for self-hosting Pulumi. Self-hosting is available as part of the Pulumi Business Critical Edition.
 ---
 
 {{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the Self-Hosted Pulumi Service, sign up for the [30 day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
+Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the Self-Hosted Pulumi Cloud, sign up for the [30 day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
 
 To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/intro/concepts/state/).
 {{% /notes %}}
 
-The Pulumi Service allows users to view the stacks they have created and see any past activities recorded for those stacks. It also allows you to manage RBAC for your users.
+The Pulumi Cloud allows users to view the stacks they have created and see any past activities recorded for those stacks. It also allows you to manage RBAC for your users.
 
 In order for the CLI to persist the state of a particular stack, a user must login to the CLI. In order to login to the CLI, you should have created an account using the Console first.
 
@@ -38,7 +38,7 @@ You can run this container on the same host that your API container is running o
 ## What's In The Container?
 
 {{% notes type="info" %}}
-The container image repository is private. [Contact us](/contact/) if you would like to evaluate the Self-Hosted Pulumi Service.
+The container image repository is private. [Contact us](/contact/) if you would like to evaluate the Self-Hosted Pulumi Cloud.
 {{% /notes %}}
 
 The Console container runs a web server using a Node 18-based image.
@@ -55,7 +55,7 @@ The following are the core environment variables that are required at a minimum.
 
 | Variable Name | Description |
 | ------------- | ----------- |
-| PULUMI_API | The endpoint URL where the service APIs can be reached. This should match the value of PULUMI_API_DOMAIN. Default is `http://localhost:8080`. |
+| PULUMI_API | The endpoint URL where the cloud APIs can be reached. This should match the value of PULUMI_API_DOMAIN. Default is `http://localhost:8080`. |
 | PULUMI_API_INTERNAL_ENDPOINT | The endpoint URL local to the container using which the Console app can reach the API container using a container-to-container network. |
 | PULUMI_CONSOLE_DOMAIN | `PULUMI_CONSOLE_DOMAIN` is used to redirect the user after they have **signed-in** using a social identity or SAML SSO e.g., "pulumi.example.com"  |
 | PULUMI_HOMEPAGE_DOMAIN | `PULUMI_HOMEPAGE_DOMAIN` is used to redirect the user after they have **signed-out** e.g., "pulumi.example.com" |
@@ -106,7 +106,7 @@ The following environment variables must be configured to enable TLS. The values
 | CONSOLE_TLS_CERTIFICATE | The TLS certificate. The certificate must be supplied in X.509 format and must be PEM encoded.                |
 | CONSOLE_TLS_PRIVATE_KEY | The private key associated with the TLS certificate. The private key must be PEM encoded.                     |
 | CONSOLE_MIN_TLS_VERSION | The minimum version of TLS to allow (must be in \<major>.\<minor> format, e.g. `1.2`). This variable is optional, if not set a minimum version will not be enforced.|
-| ALLOW_INVALID_CERTS | This optional value can be set to allow connections originating from the Console container to the Service container to connect without TLS verification. This can be helpful in scenarios like testing or when using self-signed certs for internal traffic. |
+| ALLOW_INVALID_CERTS | This optional value can be set to allow connections originating from the Console container to the Cloud container to connect without TLS verification. This can be helpful in scenarios like testing or when using self-signed certs for internal traffic. |
 
 > Note: Self-signed certificates may be used to configure TLS in the event the need for a trusted entity is not necessary. A self-signed cert and private key may be generated using OpenSSL. The following command uses OpenSSL to generate a self-signed certificate. This example will output two files, the certificate (cert.pem) and the private key (key.pem) used to sign it.
 

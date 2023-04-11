@@ -6,16 +6,16 @@ menu:
         parent: self_hosted_components
         identifier: self_hosted_api_service
         weight: 1
-meta_desc: Pulumi API is one of the components required for self-hosting the Pulumi Service. Self-hosting is available as part of the Pulumi Business Critical Edition.
+meta_desc: Pulumi API is one of the components required for self-hosting the Pulumi Cloud. Self-hosting is available as part of the Pulumi Business Critical Edition.
 ---
 
 {{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the Self-Hosted Pulumi Service, sign up for the [30 day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
+Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the Self-Hosted Pulumi Cloud, sign up for the [30 day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
 
 To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/intro/concepts/state/).
 {{% /notes %}}
 
-The Pulumi API is one of the components required for self-hosting the Pulumi Service in your organization's environment. It provides the necessary APIs for both the CLI and the [Console](/docs/guides/self-hosted/console/).
+The Pulumi API is one of the components required for self-hosting the Pulumi Cloud in your organization's environment. It provides the necessary APIs for both the CLI and the [Console](/docs/guides/self-hosted/console/).
 
 ## Prerequisites
 
@@ -142,7 +142,7 @@ uses the public key for encryption. The API will request KeyVault to decrypt a c
 
 ## Cloud Provider Authentication
 
-These settings are required if you are running the Pulumi Service on one of these clouds or using one of their services.
+These settings are required if you are running the Pulumi Cloud on one of these clouds or using one of their services.
 
 ### AWS
 
@@ -150,7 +150,7 @@ For more information about authenticating with AWS services, see the AWS SDK [do
 
 | Variable Name         | Description                                                                                                                                                                                                                      |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AWS_REGION            | The region where the dependent AWS services used by Pulumi Service have been created. For example, the KMS key must exist in this region. Similarly, if you are using RDS, then there must be a writable cluster in this region. |
+| AWS_REGION            | The region where the dependent AWS services used by Pulumi Cloud have been created. For example, the KMS key must exist in this region. Similarly, if you are using RDS, then there must be a writable cluster in this region. |
 | AWS_ACCESS_KEY_ID     | The AWS access key ID.                                                                                                                                                                                                           |
 | AWS_SECRET_ACCESS_KEY | The AWS secret key.                                                                                                                                                                                                              |
 | AWS_PROFILE           | The AWS profile.                                                                                                                                                                                                                 |
@@ -159,7 +159,7 @@ For more information about authenticating with AWS services, see the AWS SDK [do
 ### Azure
 
 {{% notes type="info" %}}
-Many of Azure's services support using Managed System Identity (MSI). As such, the Pulumi Service can also be configured
+Many of Azure's services support using Managed System Identity (MSI). As such, the Pulumi Cloud can also be configured
 to use MSI to connect to all dependent Azure services (such as Azure KeyVault and Azure Storage). However,
 if you would like to use a self-managed Service Principal (aka AAD client credentials) instead, you must specify the
 Azure Storage account key using the `AZURE_STORAGE_KEY` env var.
@@ -188,8 +188,8 @@ Only required if using GitLab as the backing identity provider for your organiza
 | Variable Name | Description |
 | ------------- | ----------- |
 | SMTP_SERVER | Location of the SMTP server to use for sending notification emails. (must be in \<host>:\<port> format, e.g. `smtp.domain.com:465`) |
-| SMTP_USERNAME | Name of the SMTP user the Pulumi Service connects as. |
-| SMTP_PASSWORD | Password of the SMTP user the Pulumi Service connects as. |
+| SMTP_USERNAME | Name of the SMTP user the Pulumi Cloud connects as. |
+| SMTP_PASSWORD | Password of the SMTP user the Pulumi Cloud connects as. |
 | SMTP_GENERIC_SENDER | Sender information used as `FROM:` for outgoing emails. |
 
 ## Other Environment Variables {#other-env-vars}
@@ -197,8 +197,8 @@ Only required if using GitLab as the backing identity provider for your organiza
 | Variable Name                 | Description                                                                                                                                                                                                                                            |
 |-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | GITHUB_OAUTH_ENDPOINT         | Used for GitHub API calls.                                                                                                                                                                                                                             |
-| PULUMI_DATABASE_USER_NAME     | Name of the database user the Pulumi Service connects as. Leave default unless you are having trouble connecting to your database.                                                                                                                     |
-| PULUMI_DATABASE_USER_PASSWORD | Password of the database user the Pulumi Service connects as. Leave default unless you are having trouble connecting to your database.                                                                                                                 |
+| PULUMI_DATABASE_USER_NAME     | Name of the database user the Pulumi Cloud connects as. Leave default unless you are having trouble connecting to your database.                                                                                                                     |
+| PULUMI_DATABASE_USER_PASSWORD | Password of the database user the Pulumi Cloud connects as. Leave default unless you are having trouble connecting to your database.                                                                                                                 |
 | PULUMI_DISABLE_EMAIL_LOGIN    | When `true` the API will disallow logins using the email/password identity. To hide the email login option from the Console refer to the [email identity configuration](/docs/guides/self-hosted/components/console#email-identity) for the Console.   |
 | PULUMI_DISABLE_EMAIL_SIGNUP   | When `true` the API will disallow signups using the email/password identity. To hide the email signup option from the Console refer to the [email identity configuration](/docs/guides/self-hosted/components/console#email-identity) for the Console. |
 | RECAPTCHA_SECRET_KEY          | reCAPTCHA secret key for self-service password reset. Create a [site key and a secret key from Google](https://www.google.com/recaptcha/admin).                                                                                                        |

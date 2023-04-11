@@ -13,7 +13,7 @@ aliases:
 ---
 
 This guide walks you through configuring your Auth0 Authentication Platform as a SAML SSO identity provider
-(IDP) for the Pulumi Service.
+(IDP) for the Pulumi Cloud.
 
 ## Prerequisites
 

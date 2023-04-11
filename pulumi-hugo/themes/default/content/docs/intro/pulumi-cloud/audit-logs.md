@@ -1,10 +1,10 @@
 ---
-title_tag: "Pulumi Service: Audit Logs"
+title_tag: "Pulumi Cloud: Audit Logs"
 title: "Audit Logs"
 meta_desc: Pulumi’s audit logs allow you to account for user activity within your organization. Learn how to view, interpret, and export audit logs here.
 menu:
   intro:
-    parent: pulumi-service
+    parent: pulumi-cloud
     weight: 10
 aliases:
 - /docs/intro/console/collaboration/auditing/
@@ -86,12 +86,12 @@ To export audit logs using the console:
 ### Exporting Audit Logs Using the API
 
 {{% notes "info" %}}
-See [Pulumi Service REST API](/docs/reference/service-rest-api#audit-logs) for full details of the API endpoint to export audit log events. This API is rate-limited and only intended for occasional use, see automated export section above if you need frequent export.
+See [Pulumi Cloud REST API](/docs/reference/service-rest-api#audit-logs) for full details of the API endpoint to export audit log events. This API is rate-limited and only intended for occasional use, see automated export section above if you need frequent export.
 {{% /notes %}}
 
 ### Supported Audit Log Formats
 
-The Pulumi Service REST API supports multiple formats for exporting audit log events.
+The Pulumi Cloud REST API supports multiple formats for exporting audit log events.
 
 #### JSON Format
 
@@ -203,6 +203,6 @@ Custom defined keys:
 | Team Deleted                             | indicates the deletion of a team from organization                                                                         |
 | Team Updated                             | indicates the updating of a team in an organization                                                                        |
 | User Added New Identity to Their Account | indicates a user has associated a new identity with their Pulumi account                                            |
-| User Login                        | indicates a user has successfully logged into the Pulumi Service                                                             |
-| User Login Failed                               | indicates a user tried and failed to log into the Pulumi Service        |
+| User Login                        | indicates a user has successfully logged into the Pulumi Cloud                                                             |
+| User Login Failed                               | indicates a user tried and failed to log into the Pulumi Cloud        |
 | SAML Configuration Updated                      | indicates the organization's SAML configuration has been updated  |

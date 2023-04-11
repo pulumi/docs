@@ -29,10 +29,10 @@ Please note that some advanced SCIM features aren't supported yet. For more info
 Under the **Admin Credentials** section of the **Provisioning** feature, fill out the form as follows:
 
 * **Tenant URL**: `https://api.pulumi.com/scim/v2/{orgName}`, where `{orgName}` must be replaced with your organization’s login name (not display name). If you do not know this, navigate to your SAML settings and look at the SSO URL. It will have your organization’s login name in the URL.
-* **Secret Token**: You will use a token from the [Pulumi Service](https://app.pulumi.com) as the authorization bearer token. To generate a token, navigate to your org in the Pulumi Service, select the **Settings** tab, and then select **SAML SSO**. Scroll down to the **SCIM** section and generate a new token if you have never generated one for your org, or regenerate it if you have already done so in the past.
+* **Secret Token**: You will use a token from the [Pulumi Cloud](https://app.pulumi.com) as the authorization bearer token. To generate a token, navigate to your org in the Pulumi Cloud, select **Settings**, then **Access Management**, and then in the **SCIM** section, generate a new token if you have never generated one for your org or regenerate it if you have already done so in the past.
 
     {{% notes "info" %}}
-Once you generate the token, please save it securely. Neither the Pulumi Service nor Pulumi support can retrieve a token once it's been initially generated. If you lose the SCIM token and need it again, you'll have to generate a new token, which invalidates any previous tokens for your Pulumi organization.
+Once you generate the token, save it securely. Neither the Pulumi Cloud nor Pulumi support can retrieve a token once it's been initially generated. If you lose and need the SCIM token again, you'll have to generate a new token, invalidating any previous tokens for your Pulumi organization.
     {{% /notes %}}
 
 Select **Test Connection**. You should get a success notification once the connection is successful.
@@ -82,7 +82,7 @@ You are now done with the Mappings configuration. Click **Save** and close the c
 
 ## Enable Group Provisioning
 
-To enable provisioning of Azure AD groups to Pulumi Service, click **Edit Provisioning** and then click the **Provision Azure Active Directory Groups** setting under the **Mappings**
+To enable the provisioning of Azure AD groups to Pulumi Cloud, select **Edit Provisioning** and then select the **Provision Azure Active Directory Groups** setting under the **Mappings**
 expansion panel and switch the **Enabled** setting to **Yes**.
 
 ### Update Group Attribute Mappings

@@ -398,7 +398,7 @@ https://github.com/pulumi/pulumi-aws), [`pulumi/pulumi-awsx`](https://github.com
 ### If I'm an Existing User, What Has Changed?
 
 The primary change is new functionality added to the above packages, and the availability of these User Guides.
-Pulumi Crosswalk for AWS continues to work with the standard Pulumi CLI and Pulumi Service. If you already use the free Individual
+Pulumi Crosswalk for AWS continues to work with the standard Pulumi CLI and Pulumi Cloud. If you already use the free Individual
 Edition, or paid Team or Enterprise Edition, you can continue to do so now with Pulumi Crosswalk for AWS functionality.
 
 ### Upgrading from an old version of Pulumi Crosswalk for AWS?

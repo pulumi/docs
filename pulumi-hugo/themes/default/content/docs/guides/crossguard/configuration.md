@@ -16,7 +16,7 @@ menu:
 
 Configuration allows you to author flexible Policy Packs that can be reused across your entire organization. As an organization administrator, you can use a single Policy Pack yet vary configuration (e.g. enforcement level, the allowed instance types, cost allowances, etc.) from one Policy Group to the next. For example, you may have a Policy Group for your non-production stacks that allow smaller instance types, while your Production Policy Group allows for use of large instance types.
 
-Configuration schema is defined per policy, and then the actual configuration can be set via a form in the Pulumi Service or using a JSON file.
+Configuration schema is defined per policy, and then the actual configuration can be set via a form in the Pulumi Cloud or using a JSON file.
 
 ## Writing Configurable Policy Packs
 
@@ -194,9 +194,9 @@ To run this Policy Pack locally with the configuration, you can run:
 $ pulumi preview --policy-pack <path-to-policy-pack-directory> --policy-pack-config <path-to-policy-pack-config-file>
 ```
 
-## Using the Pulumi Service
+## Using the Pulumi Cloud
 
-Configuration can also be added, edited and enabled via the Pulumi Service. Once a Policy Pack has been published to the Pulumi Service, organization administrators can enable the pack with configuration on a Policy Group using the console. Learn more in the [Enforcing a policy pack guide](/docs/guides/crossguard/get-started#enforcing-a-policy-pack).
+Configuration can also be added, edited and enabled via the Pulumi Cloud. Once a Policy Pack has been published to the Pulumi Cloud, organization administrators can enable the pack with configuration on a Policy Group using the console. Learn more in the [Enforcing a policy pack guide](/docs/guides/crossguard/get-started#enforcing-a-policy-pack).
 
 On a Policy Group page, you can click the ADD button to enable a new Policy Pack.
 
@@ -208,11 +208,11 @@ If the selected Policy Pack has configuration, a form will appear for you to ent
 
 ### Using the CLI with the Console
 
-The `pulumi` CLI can also be used to interact with Policy Packs enforced by the Pulumi Service. The CLI allows you to both validate configuration and enable Policy Packs with configuration files.
+The `pulumi` CLI can also be used to interact with Policy Packs enforced by the Pulumi Cloud. The CLI allows you to both validate configuration and enable Policy Packs with configuration files.
 
 #### Validating Configuration
 
-If the Policy Pack has already been published to the Pulumi Service, you can validate the configuration using the `pulumi policy validate-config` command.
+If the Policy Pack has already been published to the Pulumi Cloud, you can validate the configuration using the `pulumi policy validate-config` command.
 
 ```bash
 $ pulumi policy validate-config <org-name>/<policy-pack-name> <version> --config <path-to-policy-pack-config-file>

@@ -53,7 +53,7 @@ build.
 
 The first is `PULUMI_ACCESS_TOKEN`, which is required to authenticate with pulumi.com in order to
 perform the preview or update. You can create a new
-[Pulumi access token](/docs/intro/pulumi-service/accounts#access-tokens) specifically for your
+[Pulumi access token](/docs/intro/pulumi-cloud/accounts#access-tokens) specifically for your
 CI/CD job on your [Pulumi Account page](https://app.pulumi.com/account/tokens).
 
 Next, you will also need to set environment variables specific to your cloud resource provider.

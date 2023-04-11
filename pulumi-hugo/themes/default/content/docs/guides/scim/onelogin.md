@@ -77,13 +77,13 @@ Select **Save** to save the application settings.
 
 ## Configuring Communications Between Pulumi and OneLogin
 
-These next steps configure the Pulumi Service with details on your new OneLogin-based application  and configure OneLogin to be able to authenticate to the Pulumi Service.
+These next steps configure the Pulumi Cloud with details on your new OneLogin-based application  and configure OneLogin to be able to authenticate to the Pulumi Cloud.
 
 For the first step, you need to obtain the IDP metadata document from OneLogin and then provide it to Pulumi.
 
 1. Navigate to the OneLogin Application you created above and select the **More Actions** drop down menu button and select _SAML Metadata_ to download the metadata XML file.
 1. Open the file and copy the entire block of XML text in your clipboard.
-1. Open the Pulumi Service and navigate to organization for which you are enabling SAML/SCIM.
+1. Open the Pulumi Cloud and navigate to the organization for which you are enabling SAML/SCIM.
 1. Select the **Settings** tab, and then select **Access Management**.
 1. In the **Membership Requirements** section, select the **Change requirements** button.
 1. Select **SAML SSO** and then select **Next**.
@@ -93,7 +93,7 @@ For the first step, you need to obtain the IDP metadata document from OneLogin a
 
 At this point Pulumi is able to accept communications from OneLogin. The next step is to provide OneLogin a token to allow Pulumi to authenticaticate the communications from OneLogin.
 
-1. Navigate to the Pulumi Service *Access management* view.
+1. Navigate to the Pulumi Cloud, then **Settings**, then **Access management**.
 1. Scroll to the *SCIM* block at the bottom of the page.
 1. Select **Generate new token**
 1. Copy the token

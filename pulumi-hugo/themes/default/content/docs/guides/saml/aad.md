@@ -14,7 +14,7 @@ aliases:
 ---
 
 This guide walks you through configuring your Azure Active Directory (Azure AD) as a SAML SSO identity provider
-(IDP) for the Pulumi Service.
+(IDP) for the Pulumi Cloud.
 
 ## Prerequisites
 
@@ -36,11 +36,11 @@ This guide walks you through configuring your Azure Active Directory (Azure AD) 
     ![New application](/images/docs/reference/service/saml-aad/new-application.png)
 
 1. Select **Non-gallery application** tile and in the **Add your own application** panel, enter
-   _Pulumi Service_ as the application name then select **Add**.
+   _Pulumi Cloud_ as the application name then select **Add**.
 
     ![Non-gallery application](/images/docs/reference/service/saml-aad/non-gallery-application.png)
 
-1. In the new _Pulumi Service_ application, navigate to the **Single sign-on** section, and
+1. In the new _Pulumi Cloud_ application, navigate to the **Single sign-on** section, and
   select **SAML**.
 
     ![Single sign-on settings](/images/docs/reference/service/saml-aad/single-sign-on.png)
@@ -79,13 +79,13 @@ This guide walks you through configuring your Azure Active Directory (Azure AD) 
 
 > **Important:** Do not change the value of Name ID Format value once your users have started using Pulumi---not even switching its value between Email or Persistent.
 <br />
-> **Note:** Be sure to assign users and groups to use your new _Pulumi Service_ SAML application.
+> **Note:** Be sure to assign users and groups to use your new _Pulumi Cloud_ SAML application.
 > That is how you can control membership access to your Pulumi organization. See the
 > [Azure AD documentation](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-single-sign-on-non-gallery-applications#assign-users-and-groups-to-your-saml-application)
 > for more information.
 
 Now that the Azure AD-side of the SAML SSO configuration is complete, you will need
-to configure the Pulumi Service to receive SAML SSO requests from your
+to configure the Pulumi Cloud to receive SAML SSO requests from your
 Azure AD.
 
 ## Configuring Your Pulumi Organization
@@ -98,7 +98,7 @@ download the SAML application's configuration data and then pass that to Pulumi.
 
     ![Download XML](/images/docs/reference/service/saml-aad/download-xml.png)
 
-1. Sign into the Pulumi Service and navigate to your SAML organization. Navigate to the
+1. Sign into the Pulumi Cloud and navigate to your SAML organization. Navigate to the
   **Settings** tab and then select **Access Management**.
 
 1. Select the **Change Requirements** button and then **SAML SSO**.
@@ -113,13 +113,13 @@ download the SAML application's configuration data and then pass that to Pulumi.
 ## Signing into Pulumi using Azure AD
 
 Once your Azure AD application is created, and its configuration data passed to Pulumi, you can now
-sign in to the Pulumi Service using your SAML SSO credentials.
+sign in to the Pulumi Cloud using your SAML SSO credentials.
 
 Navigate to [https://app.pulumi.com/signin/sso/](https://app.pulumi.com/signin/sso/) and enter the
 name of your Pulumi organization. If everything is configured correctly, you should be prompted to
-sign in to your Azure AD instance, and then immediately be redirected back to the Pulumi Service.
+sign in to your Azure AD instance, and then immediately be redirected back to the Pulumi Cloud.
 
-![Pulumi Service](/images/docs/reference/service/saml-aad/pulumi-console-signin.png)
+![Pulumi Cloud](/images/docs/reference/service/saml-aad/pulumi-console-signin.png)
 
 ## Troubleshooting
 

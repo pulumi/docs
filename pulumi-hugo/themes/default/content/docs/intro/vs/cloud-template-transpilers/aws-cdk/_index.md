@@ -44,7 +44,7 @@ The following table summarizes some additional similarities and differences betw
 | Feature | Pulumi | AWS CDK |
 | ------- | ------ | -------------- |
 | [Language Support](#language) | TypeScript, JavaScript, Python, Go, C#, F#, VB.NET, Java, YAML | Python, TypeScript, JavaScript, Go (developer preview), C#, Java |
-| [State Management](#state) | Managed by Pulumi Service or with self-managed options | Managed by the AWS CloudFormation service |
+| [State Management](#state) | Managed by Pulumi Cloud or with self-managed options | Managed by the AWS CloudFormation service |
 | [Provider Support](#providers) | Supports all major cloud providers, including 100% same-day coverage of new resources with AWS Native | AWS only |
 | [Cloud Native Support](#cloud-native) | Richly typed support for the full cloud-native ecosystem and Kubernetes | AWS only |
 | [Dynamic Provider Support](#dynamic-providers) | Yes | Limited |

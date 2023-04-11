@@ -126,7 +126,7 @@ Run `pulumi cancel` to cancel the update.
 Warning! If you cancel another person's update, their update will fail immediately.
 {{% /notes %}}
 
-One of the services that the [Pulumi Service](/docs/intro/pulumi-service/) provides is *concurrency control*.
+One of the services that the [Pulumi Cloud](/docs/intro/pulumi-cloud/) provides is *concurrency control*.
 The service will allow at most one user to update a particular stack at a time. This is accomplished by using "leases"; whenever a user
 requests an update, they request a "lease" on the stack that gives them the right to update the requested stack.
 The service makes sure that only one person has a lease active at a time.
@@ -200,11 +200,11 @@ Full error example:
 error: could not load plugin for aws provider 'urn:pulumi:<stack_name>::pulumi-service::pulumi:providers:aws::default': no resource plugin 'aws-v0.16.2' found in the workspace or on your $PATH, install the plugin using \`pulumi plugin install resource aws v0.16.2\`
 ```
 
-### Cannot connect to the Pulumi Service
+### Cannot connect to the Pulumi Cloud
 
-If your network blocks external traffic and you're using the Pulumi Service to manage your state, your security team may need the following details to allow the Pulumi CLI to connect to the Service:
+If your network blocks external traffic and you're using the Pulumi Cloud to manage your state, your security team may need the following details to allow the Pulumi CLI to connect to the Pulumi Cloud:
 
-- The URL that the Pulumi CLI uses to connect to the Service is `https://api.pulumi.com`. (It does not use `https://app.pulumi.com`, so if you want to view the console from a web browser, you'll need enable that as well.)
+- The URL that the Pulumi CLI uses to connect to the Pulumi Cloud is `https://api.pulumi.com`. (It does not use `https://app.pulumi.com`, so if you want to view the console from a web browser, you'll need enable that as well.)
 - All access goes over HTTPS via port 443.
 
 ### Nothing happens due to network proxy

@@ -9,7 +9,7 @@ menu:
 meta_desc: Learn how to make the self-hosted Pulumi ready for SAML SSO with any IdP. Self-hosting is available as part of the Enterprise Edition.
 ---
 
-The self-hosted option allows you to control various aspects of the Pulumi Service including how users will sign in to the [Pulumi Service](/docs/guides/self-hosted/components/console/).
+The self-hosted option allows you to control various aspects of the Pulumi Cloud including how users will sign in to the [Pulumi Cloud](/docs/guides/self-hosted/components/console/).
 
 ## Creating The Keys
 

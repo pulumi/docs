@@ -1,10 +1,10 @@
 ---
-title_tag: "Pulumi Service: Webhooks"
+title_tag: "Pulumi Cloud: Webhooks"
 title: "Webhooks"
 meta_desc: Pulumi Webhooks allow you to notify external services of events happening within your Pulumi organization. Learn how to create and manage webhooks here.
 menu:
   intro:
-    parent: pulumi-service
+    parent: pulumi-cloud
     weight: 11
 aliases:
 - /docs/reference/service/webhooks/
@@ -62,7 +62,7 @@ To create a stack webhook:
 
 If a secret is provided, webhook deliveries will contain a signature
 in the HTTP request header that can be used to authenticate messages as coming from
-the Pulumi Service.
+the Pulumi Cloud.
 
 ## Event Notifications
 
@@ -95,7 +95,7 @@ Payloads contain several headers.
 
 | Header | Description |
 |--------|-------------|
-| `Pulumi-Webhook-ID` | Unique ID for each webhook sent which you can reference when looking at delivery logs in the Pulumi Service. |
+| `Pulumi-Webhook-ID` | Unique ID for each webhook sent which you can reference when looking at delivery logs in the Pulumi Cloud. |
 | `Pulumi-Webhook-Kind` | The kind of webhook event, e.g. `stack_update`. |
 | `Pulumi-Webhook-Signature` | Only set if the webhook has a shared secret. HMAC hex digest of the request payload, using the `sha256` hash function and the webhook secret as the HMAC key. |
 
@@ -283,4 +283,4 @@ the stack update or performed the action.
 ## Additional Resources
 
 * [Managing Github Webhooks with Pulumi](/blog/managing-github-webhooks-with-pulumi/)
-* [Pulumi Service REST API](/docs/reference/service-rest-api/)
+* [Pulumi Cloud REST API](/docs/reference/service-rest-api/)

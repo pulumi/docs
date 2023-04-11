@@ -6,10 +6,10 @@ menu:
         parent: self_hosted
         identifier: self_hosted_quickstart_docker_compose_install
         weight: 10
-meta_desc: Quickstart Docker compose installer for testing of the self-hosted Pulumi service.
+meta_desc: Quickstart Docker compose installer for testing of the self-hosted Pulumi Cloud.
 ---
 
-The Pulumi Service Docker container images can be run using any OCI-compatible container orchestrator. We provide sample docker-compose files that can help you get started with your self-evaluation quickly.
+The Pulumi Cloud Docker container images can be run using any OCI-compatible container orchestrator. We provide sample docker-compose files that can help you get started with your self-evaluation quickly.
 
 > **Note**: docker-compose is not required to run these containers. We recommend that you choose a container orchestrator with which your IT team has experience.
 
@@ -50,7 +50,7 @@ Your Pulumi sales contact should be able to provide you with this.
 
 Since the quickstart option is meant to be used for testing purposes, there is no real maintenance or management needed other than perhaps updating the service containers with the latest versions.
 
-### Updating the Pulumi Service Containers
+### Updating the Pulumi Cloud Containers
 
 For testing purposes, it is recommended to use the `latest` image tag in the docker compose file and re-run the `run-ee.sh` script when there are newer versions of the service image pushed to docker hub.
 

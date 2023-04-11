@@ -15,7 +15,7 @@ Pulumi is a modern infrastructure as code platform. Learn more about its most im
         <p>Learn about how Pulumi works, its core concepts and its programming model.</p>
     </div>
     <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/intro/pulumi-service"><i class="far fa-window-maximize pr-2"></i>Pulumi Service</a></h3>
+        <h3 class="no-anchor pt-4"><a href="/docs/intro/pulumi-cloud/"><i class="far fa-window-maximize pr-2"></i>Pulumi Cloud</a></h3>
         <p>Learn how to manage deployments, enable collaboration within your team, and enforce security policies.</p>
     </div>
 </div>

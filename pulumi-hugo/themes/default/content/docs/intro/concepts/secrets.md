@@ -8,9 +8,9 @@ menu:
     weight: 7
 ---
 
-All resource input and output values are recorded as [`state`](/docs/intro/concepts/state), and are stored in the Pulumi Service, a file, or a pluggable provider that you choose. These raw values are usually just server names, configuration settings, etc. However, these values sometimes contain sensitive data, such as database passwords or service tokens. **Pulumi never sends authentication secrets or credentials to the Pulumi Service**.
+All resource input and output values are recorded as [`state`](/docs/intro/concepts/state), and are stored in the Pulumi Cloud, a file, or a pluggable provider that you choose. These raw values are usually just server names, configuration settings, etc. However, these values sometimes contain sensitive data, such as database passwords or service tokens. **Pulumi never sends authentication secrets or credentials to the Pulumi Cloud**.
 
-The Pulumi Service always transmits and stores entire state files securely; however, Pulumi also supports encrypting specific values as “secrets” for extra protection. Encryption ensures that these values never appear as plaintext in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by the Pulumi Service or you can use a [provider of your own choosing](#configuring-secrets-encryption) instead.
+The Pulumi Cloud always transmits and stores entire state files securely; however, Pulumi also supports encrypting specific values as “secrets” for extra protection. Encryption ensures that these values never appear as plaintext in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by the Pulumi Cloud or you can use a [provider of your own choosing](#configuring-secrets-encryption) instead.
 
 To encrypt a configuration setting before runtime, you can use the CLI command [`config set`](/docs/intro/concepts/config#configuration) command with a [`--secret`](#secrets) flag. You can also set a secret during runtime. Any [`Output<T>`](/docs/reference/pkg/python/pulumi#outputs-and-inputs) value can be marked secret. If an output is a secret, any computed values derived from it—such as those derived through an [`apply`](/docs/reference/pkg/python/pulumi#outputs-and-inputs) call —will also be marked secret. All these encrypted values are stored in your state file.
 
@@ -207,7 +207,7 @@ It is possible to mark resource outputs as containing secrets. In this case, Pul
 Some configuration data is sensitive, such as database passwords or service tokens. For such cases, passing the `--secret` flag to the `config set` command encrypts the data and stores the resulting ciphertext instead of plaintext.
 
 {{% notes "info" %}}
-By default, the Pulumi CLI uses a per-stack encryption key managed by the Pulumi Service, and a per-value salt, to encrypt values. To use an alternative encryption provider, refer to [Configuring Secrets Encryption](#configuring-secrets-encryption).
+By default, the Pulumi CLI uses a per-stack encryption key managed by the Pulumi Cloud, and a per-value salt, to encrypt values. To use an alternative encryption provider, refer to [Configuring Secrets Encryption](#configuring-secrets-encryption).
 {{% /notes %}}
 
 For example, this command sets a configuration variable named `dbPassword` to the plaintext value `S3cr37`:
@@ -456,11 +456,11 @@ On `pulumi up`, secret values are decrypted and made available in plaintext at r
 
 ## Configuring Secrets Encryption
 
-The Pulumi Service automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using `--secret` or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Service that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored. For more details about the concept of state files and backends, refer to [State and Backends](/docs/intro/concepts/state/).
+The Pulumi Cloud automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using `--secret` or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Cloud that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored. For more details about the concept of state files and backends, refer to [State and Backends](/docs/intro/concepts/state/).
 
 The default encryption mechanism may be insufficient in the following scenarios:
 
-1. If you are using the Pulumi CLI independent of the Pulumi Service-either in local mode, or by using one of the
+1. If you are using the Pulumi CLI independent of the Pulumi Cloud-either in local mode, or by using one of the
    available backend plugins (such as those that store state in AWS S3, Azure Blob Store, or Google Object Storage).
 
 2. If your team already has a preferred cloud encryption provider that you would like to use.

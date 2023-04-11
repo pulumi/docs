@@ -1,10 +1,10 @@
 ---
-title_tag: "Pulumi Service: Teams and RBAC"
+title_tag: "Pulumi Cloud: Teams and RBAC"
 title: "Teams and RBAC"
-meta_desc: The Pulumi Service offers role-based access control (RBAC) using teams. Learn how how to create and manage teams in this guide.
+meta_desc: The Pulumi Cloud offers role-based access control (RBAC) using teams. Learn how how to create and manage teams in this guide.
 menu:
   intro:
-    parent: pulumi-service
+    parent: pulumi-cloud
     weight: 5
 aliases:
 - /docs/reference/service/teams/
@@ -19,7 +19,7 @@ Teams are only available to organizations using Pulumi Enterprise Edition and Pu
 To learn more about editions visit the [pricing page](/pricing/).
 {{% /notes %}}
 
-The Pulumi Service offers role-based access control (RBAC) using teams. Teams allow organization admins to assign a set of stack permissions to a group of users.
+The Pulumi Cloud offers role-based access control (RBAC) using teams. Teams allow organization admins to assign a set of stack permissions to a group of users.
 
 ## Creating a Team{#creating-a-team}
 
@@ -41,7 +41,7 @@ If your Pulumi organization is backed by GitHub, you can import your existing
 GitHub teams into Pulumi.
 
 For these teams, membership is managed on GitHub, while the set of stack
-permissions granted to team members is managed in the Pulumi Service.
+permissions granted to team members is managed in the Pulumi Cloud.
 
 ## Team Permissions
 

@@ -17,7 +17,7 @@ aliases:
 
 Pulumi is a [universal infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform that allows you to use familiar programming languages and tools to build, deploy, and manage cloud infrastructure.
 
-Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with the [Pulumi Service](/docs/intro/pulumi-service/) to make managing infrastructure secure, reliable, and hassle-free.
+Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with the [Pulumi Cloud](/docs/intro/pulumi-cloud/) to make managing infrastructure secure, reliable, and hassle-free.
 
 Select one of the following options to get started:
 
@@ -345,9 +345,9 @@ Or, watch how to do it in this video walkthrough:
 
 See [Registry](/registry/) on how to use other supported clouds.
 
-## Pulumi Service
+## Pulumi Cloud
 
-The Pulumi Service is a fully managed service that helps you adopt Pulumi’s open source SDK with ease. It provides built-in state and secrets management, integrates with source control and CI/CD, and offers a web console and API that make it easier to visualize and manage infrastructure. It is free for individual use, with features available for teams.
+The Pulumi Cloud is a fully managed service that helps you adopt Pulumi’s open source SDK with ease. It provides built-in state and secrets management, integrates with source control and CI/CD, and offers a web console and API that make it easier to visualize and manage infrastructure. It is free for individual use, with features available for teams.
 
 <a class="btn btn-secondary" href="https://app.pulumi.com/signup" target="_blank">Create an Account</a>
 

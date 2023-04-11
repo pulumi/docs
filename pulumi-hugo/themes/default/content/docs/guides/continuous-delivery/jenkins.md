@@ -21,7 +21,7 @@ altered to fit into any existing type of deployment setup.
 ## Prerequisites
 
 - A working installation of a recent version of Jenkins.
-- An account in the [Pulumi Service](https://app.pulumi.com).
+- An account in the [Pulumi Cloud](https://app.pulumi.com).
 - The [latest version of Pulumi](/docs/get-started/install/).
 - Setup a new project and [stack](/docs/intro/concepts/stack/) using one of our [Get Started](/docs/get-started/) guides or by running [`pulumi new`](/docs/reference/cli/pulumi_new)
 and choosing one of the many templates that are available.
@@ -44,7 +44,7 @@ Alternatively, you can also run `pulumi new [template]` to create a [template pr
 
 ## PULUMI_ACCESS_TOKEN
 
-To login non-interactively in to the CLI, you will need to set the env var `PULUMI_ACCESS_TOKEN` as a build parameter when setting up the Jenkins build. To [create a new access token](/docs/intro/pulumi-service/accounts#access-tokens), go the [Access Tokens](https://app.pulumi.com/account/tokens) page in the Pulumi Service.
+To login non-interactively in to the CLI, you will need to set the env var `PULUMI_ACCESS_TOKEN` as a build parameter when setting up the Jenkins build. To [create a new access token](/docs/intro/pulumi-cloud/accounts#access-tokens), go the [Access Tokens](https://app.pulumi.com/account/tokens) page in the Pulumi Cloud.
 
 ## Creating a New Jenkins Build
 

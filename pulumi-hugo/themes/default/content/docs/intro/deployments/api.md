@@ -523,7 +523,7 @@ curl -i -XDELETE -H "Content-Type: application/json" -H "Authorization: token $P
 
 ### Create Deployment
 
-Creates a new deployment to execute a Pulumi program via the Pulumi Service.
+Creates a new deployment to execute a Pulumi program via the Pulumi Cloud.
 
 ```
 POST https://api.pulumi.com/api/preview/{organization}/{project}/{stack}/deployments

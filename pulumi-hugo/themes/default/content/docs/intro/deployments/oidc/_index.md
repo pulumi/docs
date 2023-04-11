@@ -12,11 +12,11 @@ menu:
 aliases: ["/docs/guides/oidc/"]
 ---
 
-[Pulumi Deployments](https://www.pulumi.com/docs/reference/deployments-rest-api/) supports OpenID Connect (OIDC) integration with cloud providers. OIDC enables your deployments to exchange a signed, short-lived token issued by the Pulumi Service for short-term credentials from your cloud provider. This can improve the security of your deployments by eliminating the need for hardcoded cloud provider credentials. If you are unfamiliar with OIDC, GitHub provides a [fine introduction to the topic](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect).
+[Pulumi Deployments](https://www.pulumi.com/docs/reference/deployments-rest-api/) supports OpenID Connect (OIDC) integration with cloud providers. OIDC enables your deployments to exchange a signed, short-lived token issued by the Pulumi Cloud for short-term credentials from your cloud provider. This can improve the security of your deployments by eliminating the need for hardcoded cloud provider credentials. If you are unfamiliar with OIDC, GitHub provides a [fine introduction to the topic](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect).
 
 ## Overview
 
-Every time a deployment runs, the Pulumi Service issues a new OIDC token specific to that deployment. The OIDC token is a short-lived, signed [JSON Web Token](https://jwt.io) that contains information about the deployment and that can be exchanged for credentials from a cloud provider. For AWS, Azure, and GCP, this credential exchange can be done automatically as part of deployment setup. For advanced scenarios or other cloud providers, the token is available in the `PULUMI_OIDC_TOKEN` environment variable as well as in the `/mnt/pulumi/pulumi.oidc` file.
+Every time a deployment runs, the Pulumi Cloud issues a new OIDC token specific to that deployment. The OIDC token is a short-lived, signed [JSON Web Token](https://jwt.io) that contains information about the deployment and that can be exchanged for credentials from a cloud provider. For AWS, Azure, and GCP, this credential exchange can be done automatically as part of deployment setup. For advanced scenarios or other cloud providers, the token is available in the `PULUMI_OIDC_TOKEN` environment variable as well as in the `/mnt/pulumi/pulumi.oidc` file.
 
 The token contains the standard audience, issuer, and subject claims:
 

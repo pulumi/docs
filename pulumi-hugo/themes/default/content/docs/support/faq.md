@@ -1,6 +1,6 @@
 ---
 title: Frequently Asked Questions (FAQ)
-meta_desc: A collection of Frequently Asked Questions (FAQ) about Pulumi, including topics like secrets management, Pulumi Service, and more.
+meta_desc: A collection of Frequently Asked Questions (FAQ) about Pulumi, including topics like secrets management, Pulumi Cloud, and more.
 menu:
   support:
     weight: 2
@@ -32,23 +32,23 @@ $ pulumi stack init acme-corp/widget-server
 
 ### How do I migrate stacks from an individual account to an organization account?
 
-The [Pulumi Service](https://app.pulumi.com/) allows you to transfer stacks from your individual account to any organization account you belong to as an administrator.
+The [Pulumi Cloud](https://app.pulumi.com/) allows you to transfer stacks from your individual account to any organization account you belong to as an administrator.
 
 To transfer a stack from your individual account to an organization, navigate to the Stacks page and select **Transfer stacks**.
 
 From there, select the transfer destination and tick any stacks you'd like to transfer.
 
-To learn more about this process, see [Transferring Stacks](/docs/intro/pulumi-service/projects-and-stacks#transferring-stacks).
+To learn more about this process, see [Transferring Stacks](/docs/intro/pulumi-cloud/projects-and-stacks#transferring-stacks).
 
-## Pulumi Service
+## Pulumi Cloud
 
 ### How does Pulumi store state?
 
-Pulumi needs to store the result of operations. On creation of a Pulumi resource, Pulumi makes a call to the cloud provider's API and then it stores the result of that API call. The place where Pulumi stores that result is called the "state" or "checkpoint". The state can be stored using the Pulumi Service or in files on Amazon S3, Azure Blob Storage, Google Cloud Storage Buckets, or as a file on your local machine that you manage yourself.
+Pulumi needs to store the result of operations. On creation of a Pulumi resource, Pulumi makes a call to the cloud provider's API and then it stores the result of that API call. The place where Pulumi stores that result is called the "state" or "checkpoint". The state can be stored using the Pulumi Cloud or in files on Amazon S3, Azure Blob Storage, Google Cloud Storage Buckets, or as a file on your local machine that you manage yourself.
 
-### How does Pulumi depend on the Pulumi Service?
+### How does Pulumi depend on the Pulumi Cloud?
 
-Pulumi uses the Pulumi Service to store information about the current state of your application, which is used during updates, previews, and destroys as the source of truth for the current state of your cloud resources. We refer to this state as the "checkpoint" for your application. In addition, the Pulumi Service ensures that for a given stack, only a single update is running at once (so, if you and someone else are collaborating on a stack together, it ensures that you both don't update the same stack at the same time.) Once your stack has been deployed, it has no dependency on the Pulumi Service. To learn more about how the Pulumi engine uses pulumi.com, see [How Pulumi Works](/docs/intro/concepts/how-pulumi-works/).
+Pulumi uses the Pulumi Cloud to store information about the current state of your application, which is used during updates, previews, and destroys as the source of truth for the current state of your cloud resources. We refer to this state as the "checkpoint" for your application. In addition, the Pulumi Cloud ensures that for a given stack, only a single update is running at once (so, if you and someone else are collaborating on a stack together, it ensures that you both don't update the same stack at the same time.) Once your stack has been deployed, it has no dependency on the Pulumi Cloud. To learn more about how the Pulumi engine uses pulumi.com, see [How Pulumi Works](/docs/intro/concepts/how-pulumi-works/).
 
 ### What happens if app.pulumi.com is down?
 
@@ -56,19 +56,19 @@ Any infrastructure that you’ve deployed using Pulumi will continue working and
 
 If app.pulumi.com is down, you'll be unable to preview, update, or destroy a stack using Pulumi. Some commands, like `pulumi logs`, use app.pulumi.com to find the correct log stream so will not function until pulumi.com recovers; however, your cloud provider will still produce logs that you can use for diagnostics, which you can view via your cloud console or CLI.
 
-### Can I use Pulumi without depending on the Pulumi Service?
+### Can I use Pulumi without depending on the Pulumi Cloud?
 
-Using the Pulumi service with Pulumi provide a good combination of usability, safety, and security. However, for users with especially unique requirements, it is possible to use Pulumi apart from the Pulumi Service.
+Using the Pulumi Cloud with Pulumi provide a good combination of usability, safety, and security. However, for users with especially unique requirements, it is possible to use Pulumi apart from the Pulumi Cloud.
 
-When you use Pulumi without the Pulumi Service, the checkpoint for your stack is stored locally or in your own external self-managed state storage. If that file is lost or outdated, Pulumi can no longer operate on your stack. To collaborate with others on your stack, you must host this file yourself and protect against conflicting updates to it. If you use your own checkpoint file, the Pulumi Service features, such as the deployment history and resource view, will not be available.
+When you use Pulumi without the Pulumi Cloud, the checkpoint for your stack is stored locally or in your own external self-managed state storage. If that file is lost or outdated, Pulumi can no longer operate on your stack. To collaborate with others on your stack, you must host this file yourself and protect against conflicting updates to it. If you use your own checkpoint file, the Pulumi Cloud features, such as the deployment history and resource view, will not be available.
 
-To use Pulumi without the Pulumi Service, log in using `pulumi login --local` or by logging in to an alternative backend. For more information, read more at [State and Backends](/docs/intro/concepts/state/).
+To use Pulumi without the Pulumi Cloud, log in using `pulumi login --local` or by logging in to an alternative backend. For more information, read more at [State and Backends](/docs/intro/concepts/state/).
 
-### How can I go back to using the Pulumi Service?
+### How can I go back to using the Pulumi Cloud?
 
-Run `pulumi login`, and you’ll be back to using the Pulumi Service. You will need to migrate any existing stacks to the Service.
+Run `pulumi login`, and you’ll be back to using the Pulumi Cloud. You will need to migrate any existing stacks to the Pulumi Cloud.
 
-### How to migrate from a self-managed backend to the Pulumi Service?
+### How to migrate from a self-managed backend to the Pulumi Cloud?
 
 The Pulumi CLI allows you to export and import checkpoints so you can do the following. Suppose the stack “my-app-production” has been managed with a local checkpoint file, and you want to migrate it to pulumi.com. If you are currently logged in to the local endpoint, run the following commands:
 
@@ -97,11 +97,11 @@ You can disable this [auto-naming](/docs/intro/concepts/resources#autonaming) on
 
 ### Are my secrets ever visible?
 
-Pulumi provides primitives so you can enforce your [secrets](/docs/intro/concepts/secrets#secrets) are stored in a secure manner in the CLI, state file and Pulumi Service. During an update, your secrets will be decrypted in memory and visible to your Pulumi program. It is your responsibility to ensure that you do not persist them outside of Pulumi without securing them.
+Pulumi provides primitives so you can enforce your [secrets](/docs/intro/concepts/secrets#secrets) are stored in a secure manner in the CLI, state file and Pulumi Cloud. During an update, your secrets will be decrypted in memory and visible to your Pulumi program. It is your responsibility to ensure that you do not persist them outside of Pulumi without securing them.
 
 ### How does Pulumi manage secrets?
 
-When you set a [configuration](/docs/intro/concepts/config/) value, you may pass `--secret` to `pulumi config set` which causes the value to be encrypted so it can be safely persisted in `Pulumi.<stack-name>.yaml`. For every stack the Pulumi service manages a unique encryption key, which it uses to encrypt secrets for that stack (and this is configurable to use your own custom secrets provider). Because a different key is used for each stack, encrypting the same value across two different stacks will lead to different encrypted strings being stored in the `Pulumi.<stack-name>.yaml` files. This also means that you cannot copy an encrypted value from one file to another using a text editor. Instead, you must use `pulumi config set`.
+When you set a [configuration](/docs/intro/concepts/config/) value, you may pass `--secret` to `pulumi config set` which causes the value to be encrypted so it can be safely persisted in `Pulumi.<stack-name>.yaml`. For every stack the Pulumi Cloud manages a unique encryption key, which it uses to encrypt secrets for that stack (and this is configurable to use your own custom secrets provider). Because a different key is used for each stack, encrypting the same value across two different stacks will lead to different encrypted strings being stored in the `Pulumi.<stack-name>.yaml` files. This also means that you cannot copy an encrypted value from one file to another using a text editor. Instead, you must use `pulumi config set`.
 
 When you run a preview, update or destroy, pulumi decrypts this data. It is plain text during the execution of your deployment, and any part of your Pulumi program may access it using the Pulumi config object.
 

@@ -1,7 +1,7 @@
 ---
 title_tag: Components | Self-Hosting Pulumi
 title: Components
-meta_desc: The Pulumi service container images page links and docker hub links.
+meta_desc: The Pulumi Cloud container images page links and docker hub links.
 menu:
     userguides:
         parent: self_hosted
@@ -12,7 +12,7 @@ aliases:
 ---
 
 {{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the Self-Hosted Pulumi Service, sign up for the [30 day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
+Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud, sign up for the [30-day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
 {{% /notes %}}
 
 | Component | Repository |

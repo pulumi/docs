@@ -14,7 +14,7 @@ aliases:
 ---
 
 This guide walks you through configuring your Google Workspace (formerly known as G Suite) service as a SAML SSO identity provider
-(IDP) for the Pulumi Service.
+(IDP) for the Pulumi Cloud.
 
 ## Prerequisites
 
@@ -59,7 +59,7 @@ URLs of the `acs` and `metadata` and `sso` endpoints of the Pulumi API, adjusted
     > **Important:** Do not change the value of Name ID Format value once your users have started using Pulumi---not even switching its value between `EMAIL` or `PERSISTENT`.
 
 1. The final step---attribute mapping---is optional, but you may wish to specify proper
-first and last names for your Pulumi users, based on their Google account profiles. The Pulumi service
+first and last names for your Pulumi users, based on their Google account profiles. The Pulumi Cloud
 expects to receive these fields as `firstName` and `lastName`, respectively.
 
     Once you add them, select **Finish**.
@@ -76,14 +76,14 @@ domain users by selecting the down arrow in the **User access** panel:
     ![Enable the SAML application part 2](/images/docs/reference/service/saml-gsuite/gsuite-app-enable-2.png)
 
    At this point, you're done configuring Google Workspace, and can move on to completing SAML SSO setup in
-   the Pulumi Service.
+   the Pulumi Cloud.
 
 ## Configuring Your Pulumi Organization
 
 The final step in the process consists of associating your Pulumi organization with your SSO identity
 provider.
 
-1. Sign in to the Pulumi Service where your SAML organization resides, then navigate to the **Settings** tab for that
+1. Sign in to the Pulumi Cloud where your SAML organization resides, then navigate to the **Settings** tab for that
 organization.
 
 1. Select **Access Management** and then **Change requirements**.
@@ -106,7 +106,7 @@ Members of your Google Workspace can now sign into Pulumi. Navigate to
 [https://app.pulumi.com/signin/sso/](https://app.pulumi.com/signin/sso/) and enter the
 name of your Pulumi organization.
 
-![Pulumi Service](/images/docs/reference/service/saml-gsuite/pulumi-console-signin.png)
+![Pulumi Cloud](/images/docs/reference/service/saml-gsuite/pulumi-console-signin.png)
 
 ## Troubleshooting
 

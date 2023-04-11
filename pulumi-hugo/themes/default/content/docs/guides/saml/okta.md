@@ -13,7 +13,7 @@ aliases:
 - /docs/console/accounts/saml/okta/
 ---
 
-This guide walks you through configuring Okta as a SAML SSO identity provider (IdP) for the Pulumi Service.
+This guide walks you through configuring Okta as a SAML SSO identity provider (IdP) for the Pulumi Cloud.
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ available, choose **SAML 2.0**.
 ### Configuring the Application
 
 Next you will be guided through a wizard to configure the Okta application. The first step is to
-give it a name---Pulumi Service for example---and an icon.
+give it a name---Pulumi Cloud for example---and an icon.
 
 ![Configuring a SAML Integration](/images/docs/reference/service/saml-okta/create-saml-integration.png)
 
@@ -73,7 +73,7 @@ page.
 
 ## Configuring Your Pulumi Organization
 
-The final step is to configure the Pulumi Service with details on your new Okta-based
+The final step is to configure the Pulumi Cloud with details on your new Okta-based
 SAML application. To do this, you need to obtain the IDP metadata document from Okta and then provide
 it to Pulumi.
 
@@ -89,7 +89,7 @@ a user's identity.
 
 ![SAML Application Metadata](/images/docs/reference/service/saml-okta/okta-xml-descriptor.png)
 
-With the block of XML text in your clipboard, open the Pulumi Service and navigate to your SAML
+With the block of XML text in your clipboard, open the Pulumi Cloud and navigate to your SAML
 organization. Select the **Settings** tab, and then select **Access Management**.
 
 In the **Membership Requirements** section, select the **Change requirements** button.
@@ -109,7 +109,7 @@ Members of your Okta application can now sign into Pulumi. Navigate to
 [https://app.pulumi.com/signin/sso/](https://app.pulumi.com/signin/sso/) and enter the
 name of your Pulumi organization.
 
-![Pulumi Service](/images/docs/reference/service/saml-okta/pulumi-console-signin.png)
+![Pulumi Cloud](/images/docs/reference/service/saml-okta/pulumi-console-signin.png)
 
 ## Troubleshooting
 

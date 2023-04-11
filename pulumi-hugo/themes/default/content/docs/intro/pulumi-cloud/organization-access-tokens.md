@@ -1,10 +1,10 @@
 ---
-title_tag: "Pulumi Service: Organization Access Tokens"
+title_tag: "Pulumi Cloud: Organization Access Tokens"
 title: "Organization Access Tokens"
 meta_desc: Learn how Enterprise and Business Critical customers can manage resources and stack operations for their organization with Organization Access Tokens.
 menu:
   intro:
-    parent: pulumi-service
+    parent: pulumi-cloud
     weight: 3
 ---
 
@@ -50,11 +50,11 @@ Since an organization can have multiple Organization Access Tokens, it’s neces
 
 ## Permissions/Authorization
 
-Organization Access Tokens behave like an organization member with [stack write permissions](https://www.pulumi.com/docs/intro/pulumi-service/projects-and-stacks/#stack-permissions) to all of the organization’s stacks. They do not grant any privileges to view the Pulumi Service ui, or to create additional Organization or Personal Access Tokens. See below for a full list of accessible APIs:
+Organization Access Tokens behave like an organization member with [stack write permissions](https://www.pulumi.com/docs/intro/pulumi-cloud/projects-and-stacks/#stack-permissions) to all of the organization’s stacks. They do not grant any privileges to view the Pulumi Cloud ui, or to create additional Organization or Personal Access Tokens. See below for a full list of accessible APIs:
 
 ### API Access
 
-See the Pulumi [Service REST API docs](https://www.pulumi.com/docs/reference/service-rest-api/) for more information about each API endpoint.
+See the Pulumi [Cloud REST API docs](https://www.pulumi.com/docs/reference/cloud-rest-api/) for more information about each API endpoint.
 
 #### Stacks
 

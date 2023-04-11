@@ -14,7 +14,7 @@ menu:
 ## Prerequisites
 
 - A working installation of Octopus or a hosted instance from [https://octopus.com](https://octopus.com).
-- An account in the [Pulumi Service](https://app.pulumi.com).
+- An account in the [Pulumi Cloud](https://app.pulumi.com).
 - The [latest version of Pulumi](/docs/get-started/install/).
 - Setup a new project and [stack](/docs/intro/concepts/stack/) using one of our [Get Started](/docs/get-started/) guides or by running [`pulumi new`](/docs/reference/cli/pulumi_new)
 and choosing one of the many templates that are available.
@@ -66,7 +66,7 @@ Variables can be scoped right down to the environment that can access them. For 
 
 #### PULUMI_ACCESS_TOKEN
 
-To run Pulumi commands non-interactively, you will need to set the env var `PULUMI_ACCESS_TOKEN` as a [project variable](https://octopus.com/docs/deployment-process/variables). To [create a new access token](/docs/intro/pulumi-service/accounts#access-tokens), go the [Access Tokens](https://app.pulumi.com/account/tokens) page in the Pulumi Service.
+To run Pulumi commands non-interactively, you will need to set the env var `PULUMI_ACCESS_TOKEN` as a [project variable](https://octopus.com/docs/deployment-process/variables). To [create a new access token](/docs/intro/pulumi-cloud/accounts#access-tokens), go the [Access Tokens](https://app.pulumi.com/account/tokens) page in the Pulumi Cloud.
 
 ### Create the Process
 

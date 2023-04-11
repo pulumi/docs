@@ -14,7 +14,7 @@ aliases:
 - /docs/console/continuous-delivery/github-app/
 ---
 
-Pulumi's GitHub app displays the results of Pulumi stack update previews in pull requests and enables automatic stack deployments via [Pulumi Deployments](/docs/intro/pulumi-service/deployments/). Once installed and
+Pulumi's GitHub app displays the results of Pulumi stack update previews in pull requests and enables automatic stack deployments via [Pulumi Deployments](/docs/intro/pulumi-cloud/deployments/). Once installed and
 configured, it will show you any potential infrastructure changes on Pull Requests and commit checks. You can also configure `git push` to deploy workflows that update your stacks whenever a pull request is merged.
 
 ## Features
@@ -23,7 +23,7 @@ The Pulumi GitHub app will automatically add comments to Pull Requests with the 
 stack changes. This includes a summary of how many resources were created, updated, and/or deleted.
 This allows you to quickly see the changes caused by your Pulumi program without needing to leave
 GitHub's Pull Request view, with a link to the richer details available on the
-[Pulumi Service](https://app.pulumi.com).
+[Pulumi Cloud](https://app.pulumi.com).
 
 ![Comment on Pull Request](/images/docs/github-app/pr-comment.png)
 
@@ -56,7 +56,7 @@ If you installed the GitHub app in the past and the steps above aren't showing i
 
 ### Configure Git Push-to-Deploy with Pulumi Deployments
 
-If you would like to set up a `git push`-to-deploy workflow using the newly released Pulumi Deployments feature, consult the [Pulumi Deployments documentation](/docs/intro/pulumi-service/deployments) after installing the Pulumi GitHub App. During the preview period, you must [request access](/product/pulumi-deployments) in order to use this feature.
+To set up a `git push`-to-deploy workflow using Pulumi Deployments, consult the [Pulumi Deployments documentation](/docs/intro/pulumi-cloud/deployments) after installing the Pulumi GitHub App.
 
 ## CI Integration
 
