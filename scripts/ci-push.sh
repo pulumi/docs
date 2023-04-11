@@ -16,6 +16,8 @@ elif [[ "$GITHUB_WORKFLOW" == "Build and deploy new account" ]]; then
     # until we cut over DNS to start routing to the new account.
     ./scripts/build-site.sh preview
     ./scripts/sync-and-test-bucket.sh
+    node ./scripts/await-in-progress.js
+    ./scripts/run-pulumi.sh update
 else
     echo "the workflow, ${GITHUB_WORKFLOW}, is not recognized"
     exit 1
