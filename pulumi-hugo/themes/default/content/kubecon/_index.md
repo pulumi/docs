@@ -9,7 +9,7 @@ layout: kubecon
 links:
     items:
         - heading: RSVP to Happy Hour
-          description: Join Kong, LaunchDarkly, Pulumi, and Honeycomb for an evening of light fare, libations, and conversations.<br/><b>Limited Spots Remaining</b><br/>April 7, 10pm CEST at De Kroon Restaurant & Club.
+          description: Join Kong, LaunchDarkly, Pulumi, and Honeycomb for an evening of light fare, libations, and conversations.<br/><b>Limited Spots Remaining</b><br/>April 20, 6:30pm CEST at De Kroon Restaurant & Club.
           action: Reserve your spot
           link: https://kubeconemeahappyhour.eventbrite.com/?aff=pulumi
         - heading: Join a Workshop
