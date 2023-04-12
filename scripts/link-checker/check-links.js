@@ -256,6 +256,8 @@ function getDefaultExcludedKeywords() {
 // Filters out transient errors that needn't fail a link-check run.
 function excludeAcceptable(links) {
     return (links
+        // Ignore 403's
+        .filter(b => b.reason !== "HTTP_403")
 
         // Ignore GitHub and npm 429s (rate-limited). We should really be handling these more
         // intelligently, but we can come back to that in a follow up.
