@@ -42,7 +42,7 @@ The Pulumi REST API is available at https<nolink>://api.pulumi.com and includes 
 
 Authentication and authorization is governed by the Pulumi identity and RBAC systems. As we add functionality to the Pulumi SDK and Service, we are committed to shipping and supporting the underlying REST APIs. If it's used in our web console or CLI, we want it to be available to so you can add custom features and functionality.
 
-[Read complete details about the REST API here](/docs/reference/service-rest-api/) or keep reading for examples and scenarios.
+[Read complete details about the REST API](/docs/reference/cloud-rest-api/) or keep reading for examples and scenarios.
 
 ## The REST API for Cloud Engineering
 
@@ -82,7 +82,7 @@ This then gives us the access token text. We need to copy it and put it somewher
 
 ![Access Token Created](access-tokens-3.png)
 
-We will use this token for all API calls and the token dictates what authorization we will have to perform actions within a given user or organization account. As we will see, all APIs pertain to given permission scopes, much like GitHub, which will determine the permissions granted. If we're using `curl`, for example, we will pass the `"Authorization: token XYZ"` header, with `-H`, as [described in the Authorization section of the REST API documentation](/docs/reference/service-rest-api/#authentication).
+We will use this token for all API calls and the token dictates what authorization we will have to perform actions within a given user or organization account. As we will see, all APIs pertain to given permission scopes, much like GitHub, which will determine the permissions granted. If we're using `curl`, for example, we will pass the `"Authorization: token XYZ"` header, with `-H`, as [described in the Authorization section of the REST API documentation](/docs/reference/cloud-rest-api/#authentication).
 
 If we forget to do that, we'll receive a 4xx error. For instance, 401:
 
@@ -143,6 +143,6 @@ Now all we need to do is generate a token, set our `PAPI_TOKEN` environment vari
 
 ## Give It a Try Today
 
-As we have seen, the Pulumi REST API gives us easy access to projects, stacks, cloud resources, teams, and more. It is now generally available to all users of the Pulumi Service, both free and paying customers. To give it a try today, [sign up for your free account now](https://app.pulumi.com/signup), give our [Getting Started guide](/docs/get-started/) a try, and then check out the [Pulumi REST API documentation](/docs/reference/service-rest-api/).
+As we have seen, the Pulumi REST API gives us easy access to projects, stacks, cloud resources, teams, and more. It is now generally available to all users of the Pulumi Service, both free and paying customers. To give it a try today, [sign up for your free account now](https://app.pulumi.com/signup), give our [Getting Started guide](/docs/get-started/) a try, and then check out the [Pulumi REST API documentation](/docs/reference/cloud-rest-api/).
 
 We can't wait to see the powerful automation you build for your team using the Pulumi REST API! Have fun spelunking in the cloud.

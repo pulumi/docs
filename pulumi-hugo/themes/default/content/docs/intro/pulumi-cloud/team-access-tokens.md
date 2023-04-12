@@ -66,7 +66,7 @@ Team Access Tokens behave like a team member with the [stack permissions](https:
 
 ### API Access
 
-See the Pulumi [Service REST API docs](https://www.pulumi.com/docs/reference/service-rest-api/) for more information about each API endpoint.
+See the [Pulumi Cloud REST API docs](https://www.pulumi.com/docs/reference/cloud-rest-api/) for more information about each API endpoint.
 
 #### Stacks
 

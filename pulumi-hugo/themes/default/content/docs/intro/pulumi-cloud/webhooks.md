@@ -284,4 +284,4 @@ the stack update or performed the action.
 ## Additional Resources
 
 * [Managing Github Webhooks with Pulumi](/blog/managing-github-webhooks-with-pulumi/)
-* [Pulumi Cloud REST API](/docs/reference/service-rest-api/)
+* [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/)

@@ -182,7 +182,7 @@ Terraform supports integration testing. With Pulumi, you can take advantage of n
 
 ### Modes of Execution {#modes}
 
-Both Pulumi and Terraform can execute commands through their CLI. Terraform can also do remote operations through Terraform Cloud. Pulumi also provides two APIs by which you can execute Pulumi commands. First, the Automation API allows you to provision, update, and destroy infrastructure through Pulumi directly in your application code. This enables higher order orchestration workflows and dynamically managed infrastructure. Second, the REST API allows you to query and interact with state information, history, stack tags when using the Managed Pulumi Cloud. To learn more, see [Automation API](/docs/guides/automation-api/) and [REST API](/docs/reference/service-rest-api/).
+Both Pulumi and Terraform can execute commands through their CLI. Terraform can also do remote operations through Terraform Cloud. Pulumi also provides two APIs by which you can execute Pulumi commands. First, the Automation API allows you to provision, update, and destroy infrastructure through Pulumi directly in your application code. This enables higher order orchestration workflows and dynamically managed infrastructure. Second, the REST API allows you to query and interact with state information, history, stack tags when using the Managed Pulumi Cloud. To learn more, see [Automation API](/docs/guides/automation-api/) and [REST API](/docs/reference/cloud-rest-api/).
 
 ### Embed within Application Code {#embedding}
 

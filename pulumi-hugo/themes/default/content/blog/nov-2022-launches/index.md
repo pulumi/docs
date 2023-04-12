@@ -34,7 +34,7 @@ We launched the Pulumi Automation API [two years ago](https://www.pulumi.com/blo
 
 Today, we are taking the next step in this journey with the introduction of Pulumi Deployments to the Pulumi Service.  With Pulumi Deployments, you can run a Pulumi infrastructure as code action (a preview, update, destroy or refresh) inside Pulumi’s managed service.  Pulumi provides scalability, observability and security for deployments.
 
-Pulumi Deployments are exposed as a new fundamental capability of the service via the [Pulumi Service REST API](https://www.pulumi.com/docs/reference/service-rest-api/).  They are also now supported in Automation API as a new kind of `Remote` workspace that can be used in building your own custom infrastructure automation software.
+Pulumi Deployments are exposed as a new fundamental capability of the service via the [Pulumi Service REST API](https://www.pulumi.com/docs/reference/cloud-rest-api/).  They are also now supported in Automation API as a new kind of `Remote` workspace that can be used in building your own custom infrastructure automation software.
 
 ![Pulumi Deployments REST API and Automation API](deployment-api.png)
 
