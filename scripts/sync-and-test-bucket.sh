@@ -103,7 +103,7 @@ set_bucket_for_commit "$(git_sha)" "$destination_bucket" "$(aws_region)"
 aws s3api put-bucket-cors --bucket "$destination_bucket" --cors-configuration "file://scripts/cors/cors.json" --region "$(aws_region)"
 
 # Finally, if it's a preview, post a comment to the PR that directs the user to the resulting bucket URL.
-if [ "$1" == "preview" && "$GITHUB_WORKFLOW" == "Build and deploy" ]; then
+if [[ "$1" == "preview" && "$GITHUB_WORKFLOW" == "Build and deploy" ]]; then
     pr_comment_api_url="$(cat "$GITHUB_EVENT_PATH" | jq -r ".pull_request._links.comments.href")"
     post_github_pr_comment \
         "Your site preview for commit $(git_sha_short) is ready! :tada:\n\n${s3_website_url}." \
