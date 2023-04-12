@@ -22,7 +22,15 @@ case ${PULUMI_ACTION} in
         # Given how frequently we update the CloudFront distribution, and how easy it can
         # be for our checkpointed CloudFront Etag to fall out of sync with what's current,
         # we refresh the distribution on every update.
-        pulumi -C infrastructure refresh -t "urn:pulumi:production::www.pulumi.com::aws:cloudfront/distribution:Distribution::cdn" --yes
+        if [[ "$GITHUB_WORKFLOW" == "Build and deploy" ]]; then
+            pulumi -C infrastructure refresh -t "urn:pulumi:production::www.pulumi.com::aws:cloudfront/distribution:Distribution::cdn" --yes
+        elif [[ "$GITHUB_WORKFLOW" == "Build and deploy new account" ]]; then
+            # The urn of the CloudFront distribution for the new account.
+            pulumi -C infrastructure refresh -t "urn:pulumi:www-production::www.pulumi.com::aws:cloudfront/distribution:Distribution::cdn" --yes
+        else
+            echo "the workflow, ${GITHUB_WORKFLOW}, is not recognized"
+            exit 1
+        fi
 
         pulumi -C infrastructure up --yes
         ;;
