@@ -61,7 +61,7 @@ Pulumi can easily integrate into any continuous integration/continuous delivery 
         <img src="/logos/tech/ci-cd/octopus-deploy.svg" alt="Octopus Deploy">
         <h4 class="no-anchor">Octopus Deploy</h4>
     </a>
-    <a href="/docs/intro/pulumi-cloud/deployments">
+    <a href="/docs/intro/deployments">
         <img src="/logos/brand/avatar-on-white.png" alt="Pulumi Deployments">
         <h4 class="no-anchor">Pulumi Deployments</h4>
     </a>
