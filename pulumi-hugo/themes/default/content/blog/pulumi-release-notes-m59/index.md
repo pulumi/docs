@@ -50,7 +50,7 @@ spec:
 
 We shipped 4 new versions of the Azure Native provider (1.16.0 through 1.19.0) that collectively added 12 new resources that you can manage with the Azure Native provider, including Fast Healthcare Interoperability Resources (FHIR) and Azure Relay resources.
 
-[See the full list](https://github.com/pulumi/pulumi-azure-native/blob/master/CHANGELOG.md#1190-2021-07-22)
+[See the full list](https://github.com/pulumi/pulumi-azure-native/blob/master/CHANGELOG_OLD.md#1190-2021-07-22)
 
 ### Google Native: autonaming; easier management of project and region settings
 

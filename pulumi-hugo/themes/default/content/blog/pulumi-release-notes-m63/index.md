@@ -79,7 +79,7 @@ We shipped a new version of the AWS Native provider (0.2.0) that added [19 new r
 
 ### New resources in the Azure Native provider
 
-We shipped new versions of the Azure Native provider (1.35.0 through 1.42.0) that collectively added [31 new resources](https://github.com/pulumi/pulumi-azure-native/blob/master/CHANGELOG.md#1420-2021-10-25) giving you access to new Azure offerings like vSphere integration, Chaos engineering, and more.
+We shipped new versions of the Azure Native provider (1.35.0 through 1.42.0) that collectively added [31 new resources](https://github.com/pulumi/pulumi-azure-native/blob/master/CHANGELOG_OLD.md#1420-2021-10-25) giving you access to new Azure offerings like vSphere integration, Chaos engineering, and more.
 
 ## Pulumi CLI and core technologies
 

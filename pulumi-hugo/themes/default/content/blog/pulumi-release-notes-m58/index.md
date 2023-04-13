@@ -255,7 +255,7 @@ Learn more at [pulumi/pulumi-kubernetes#1421](https://github.com/pulumi/pulumi-k
 
 We shipped 5 new versions of the Azure Native provider (1.11.0 through 1.15.0) that collectively added 10 new resources that you can manage with the Azure Native provider, including Azure Arc data services and Azure Event Grid resources.
 
-[See the full list](https://github.com/pulumi/pulumi-azure-native/blob/master/CHANGELOG.md#1150-2020-07-01)
+[See the full list](https://github.com/pulumi/pulumi-azure-native/blob/master/CHANGELOG_OLD.md#1150-2020-07-01)
 
 ### Google Native provider adds support for enums and more
 

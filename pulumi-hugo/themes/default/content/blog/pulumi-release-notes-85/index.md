@@ -231,7 +231,7 @@ We implemented a workaround to support Azure DevOps repositories when driving Pu
 
 Every week we keep shipping provider updates. Two highlights on our native providers:
 
-- Azure Native shipped 20 new resources, including support for `networkcloud` and `voiceservices` ([changelog](https://github.com/pulumi/pulumi-azure-native/blob/master/CHANGELOG.md))
+- Azure Native shipped 20 new resources, including support for `networkcloud` and `voiceservices` ([changelog](https://github.com/pulumi/pulumi-azure-native/blob/master/CHANGELOG_OLD.md))
 - AWS Native shipped 30 new resources in `apigatewayv2`, `appflow`, `applicationautoscaling`, `cloudtrail`, `connect`, `directoryservice`, `ec2`, `fms`, `gamecast`, `gamelift`, `kendraranking`, `networkmanager`, `omics`, `organizations`, `sagemaker`, `secretsmanager`, `simspaceweaver`, and `systemsmanagersap` modules ([changelog](https://github.com/pulumi/pulumi-aws-native/blob/master/CHANGELOG.md))
 
 Five new community packages were added to the Registry: [Vultr](https://www.pulumi.com/registry/packages/vultr/), [Zscaler Private Access (ZPA)](https://www.pulumi.com/registry/packages/zpa/), [Zscaler Internet Access (ZIA)](https://www.pulumi.com/registry/packages/zia/), [Statuscake](https://www.pulumi.com/registry/packages/statuscake/), and [Nuage](https://www.pulumi.com/registry/packages/nuage/).

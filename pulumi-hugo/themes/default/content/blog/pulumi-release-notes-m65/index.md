@@ -173,10 +173,10 @@ We shipped new versions of the AWS Native provider (0.5.0 through 0.8.0) that ad
 
 ### New resources in the Azure Native provider
 
-We shipped new versions of the Azure Native provider (1.46.0 through 1.49.0) that collectively added [8 new resources](https://github.com/pulumi/pulumi-azure-native/blob/master/CHANGELOG.md#1450-2021-11-05).
+We shipped new versions of the Azure Native provider (1.46.0 through 1.49.0) that collectively added [8 new resources](https://github.com/pulumi/pulumi-azure-native/blob/master/CHANGELOG_OLD.md#1450-2021-11-05).
 
 {{% notes type="warning" %}}
-Azure Native version 1.47.0 fixes a security issue that could result in your Azure credentials being stored in your state in cleartext. Read the [description of the issue](https://github.com/pulumi/pulumi-azure-native/blob/master/CHANGELOG.md#1470-2021-11-19) to see if you're affected and how to remediate any cleartext secrets.
+Azure Native version 1.47.0 fixes a security issue that could result in your Azure credentials being stored in your state in cleartext. Read the [description of the issue](https://github.com/pulumi/pulumi-azure-native/blob/master/CHANGELOG_OLD.md#1470-2021-11-19) to see if you're affected and how to remediate any cleartext secrets.
 
 As a precaution, we recommend updating to the latest version of the Azure Native provider.
 {{% /notes %}}

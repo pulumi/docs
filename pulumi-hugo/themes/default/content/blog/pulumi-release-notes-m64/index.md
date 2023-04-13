@@ -204,7 +204,7 @@ We shipped new versions of the AWS Native provider (0.3.0 through 0.4.0) that ad
 
 ### New resources in the Azure Native provider
 
-We shipped new versions of the Azure Native provider (1.43.0 through 1.45.0) that collectively added [4 new resources](https://github.com/pulumi/pulumi-azure-native/blob/master/CHANGELOG.md#1450-2021-11-05) giving you access to resources like Cognitive Services.
+We shipped new versions of the Azure Native provider (1.43.0 through 1.45.0) that collectively added [4 new resources](https://github.com/pulumi/pulumi-azure-native/blob/master/CHANGELOG_OLD.md#1450-2021-11-05) giving you access to resources like Cognitive Services.
 
 ## Pulumi CLI and core technologies
 

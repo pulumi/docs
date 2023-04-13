@@ -37,7 +37,7 @@ Learn more in these GitHub issues [1](https://github.com/pulumi/pulumi-eks/issue
 
 We shipped 2 new versions of the Azure Native provider (1.20.0 through 1.21.0) that collectively added 8 new resources that you can manage with the Azure Native provider, including core networking and IoT security resources.
 
-[See the full list](https://github.com/pulumi/pulumi-azure-native/blob/master/CHANGELOG.md#1210-2021-08-12)
+[See the full list](https://github.com/pulumi/pulumi-azure-native/blob/master/CHANGELOG_OLD.md#1210-2021-08-12)
 
 ## Pulumi CLI and core technologies
 

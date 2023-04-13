@@ -369,7 +369,7 @@ Learn more in the [MinIO](/registry/packages/minio/) and [Snowflake](/registry/p
 
 We shipped new versions of the Azure Native provider (1.22.0 through 1.28.0) that collectively added 15 new resources across services like SQL Server, Kusto, DocumentDB, and Power BI that you can now manage with the Azure Native provider.
 
-[See the full list](https://github.com/pulumi/pulumi-azure-native/blob/master/CHANGELOG.md#1280-2021-09-13)
+[See the full list](https://github.com/pulumi/pulumi-azure-native/blob/master/CHANGELOG_OLD.md#1280-2021-09-13)
 
 ## Pulumi CLI and core technologies
 
