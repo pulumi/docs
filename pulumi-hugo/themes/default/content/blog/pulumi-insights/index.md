@@ -22,7 +22,7 @@ Pulumi Insights was born from partnering with our community and observing their 
 * __🔎 Search__: Multi-cloud resource search, powered by the Pulumi resource supergraph, which surfaces rich metadata and relationships between cloud infrastructure.
 * __📊 Analytics__: Visualize Pulumi resource data with your favorite BI tools, including Excel, Tableau and others, using your own data warehouse for reporting on cost, compliance, and other operational use cases.
 
-All of these features work across Pulumi’s 130+ supported cloud providers, including AWS, Azure, Google Cloud, and Kubernetes, and can be defined in any programming language, including TypeScript, Python, .NET, Go, Java and YAML.
+All of these features work across Pulumi’s 130+ supported cloud providers, including AWS, Azure, Google Cloud, Cloudflare, and Kubernetes, and can be defined in any programming language, including TypeScript, Python, .NET, Go, Java and YAML.
 
 Pulumi Insights is available for all Pulumi Cloud users today.
 
