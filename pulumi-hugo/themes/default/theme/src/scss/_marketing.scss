@@ -105,6 +105,24 @@ body {
         @apply border-transparent;
     }
 
+    // white secondary button for violet-600 background
+    .btn-secondary-home-action {
+        @apply bg-violet-600 text-white border-2 border-white whitespace-normal;
+        @include transition;
+
+        &.disabled {
+            opacity: 0.3rem;
+        }
+
+        &:hover {
+            @apply bg-violet-500;
+        }
+
+        &:focus {
+            @apply bg-violet-400;
+        }
+    }
+
     @screen md {
         h1 {
             @apply text-7xl;

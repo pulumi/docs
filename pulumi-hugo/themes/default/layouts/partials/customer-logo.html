@@ -6,7 +6,7 @@
 {{ end }}
 
 {{ if eq .logo "ro" }}
-    <span class="w-full h-full">
+    <span class="w-full h-full flex">
         {{ if eq .hoverable true }}
             <span class="ro-hoverable">
                 <span class="ro-gray">{{ partial "customer-logos/ro-gray" }}</span>
@@ -17,7 +17,7 @@
         {{ end }}
     </span>
 {{ else if eq .logo "panther-labs" }}
-    <span class="w-full h-full">
+    <span class="w-full h-full flex">
         {{ if eq .hoverable true }}
             <span class="ro-hoverable">
                 <span class="ro-gray">{{ partial "customer-logos/panther-labs-gray" }}</span>
@@ -28,7 +28,7 @@
         {{ end }}
     </span>
 {{ else if eq .logo "mercedes-benz" }}
-    <span class="w-full h-full">
+    <span class="w-full h-full flex">
         {{ if eq .hoverable true }}
             <span class="ro-hoverable">
                 <span class="ro-gray">{{ partial "customer-logos/mercedes-benz-gray" }}</span>
@@ -39,7 +39,7 @@
         {{ end }}
     </span>
 {{ else if eq .logo "bio-fire" }}
-    <span class="w-full h-full">
+    <span class="w-full h-full flex">
         {{ if eq .hoverable true }}
             <span class="ro-hoverable">
                 <span class="ro-gray">{{ partial "customer-logos/bio-fire-gray" }}</span>
@@ -50,7 +50,7 @@
         {{ end }}
     </span>
 {{ else if eq .logo "singtel" }}
-    <span class="w-full h-full">
+    <span class="w-full h-full flex">
         {{ if eq .hoverable true }}
             <span class="ro-hoverable">
                 <span class="ro-gray">{{ partial "customer-logos/singtel-gray" }}</span>
@@ -61,7 +61,7 @@
         {{ end }}
     </span>
 {{ else if eq .logo "cboe" }}
-    <span class="w-full h-full">
+    <span class="w-full h-full flex">
         {{ if eq .hoverable true }}
             <span class="ro-hoverable">
                 <span class="ro-gray">{{ partial "customer-logos/cboe-gray" }}</span>
@@ -72,7 +72,7 @@
         {{ end }}
     </span>
 {{ else if eq .logo "greenpark-sports" }}
-    <span class="w-full h-full">
+    <span class="w-full h-full flex">
         {{ if eq .hoverable true }}
             <span class="ro-hoverable">
                 <span class="ro-gray">{{ partial "customer-logos/greenpark-sports" }}</span>
@@ -83,7 +83,7 @@
         {{ end }}
     </span>
 {{ else }}
-    <span class="{{ $logoClass }} w-full h-full m-auto">
+    <span class="{{ $logoClass }} w-full h-full flex m-auto">
         {{ $path := .logo | printf "%s/%s" "customer-logos" | printf "%s" }}
         {{ partial $path }}
     </span>

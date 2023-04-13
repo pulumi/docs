@@ -28,7 +28,7 @@
 
                         <div>
                             {{ if .Params.tags }}
-                                <ul class="m-0 mt-8 p-0">
+                                <ul class="tags m-0 mt-8 p-0 text-sm">
                                     {{ range $tag := .Params.tags }}
                                         <li class="mt-0 inline-flex">
                                             <a class="tag tag-blog" href="/blog/tag/{{ $tag | urlize }}/">

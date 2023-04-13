@@ -217,6 +217,202 @@
         }
     }
 
+    &.home-background-yellow-left {
+        .dot-background-container {
+            @apply w-1/3 h-full relative float-right;
+            height: 60%;
+
+            .dot-background-overlay {
+                @apply w-full h-full absolute top-0 left-0;
+                background-color: rgba(255, 255, 255, 0.5);
+                z-index: 0;
+            }
+
+            .dot-background {
+                @apply absolute top-0 right-0;
+            }
+        }
+
+        .circle-left,
+        .circle-right {
+            @apply rounded-full absolute bg-yellow-600;
+        }
+
+        .circle-left {
+            @apply w-32 h-32 top-0;
+            left: -4rem;
+        }
+
+        .circle-right {
+            width: 20.25rem;
+            height: 20.25rem;
+            right: -1.5rem;
+            top: 6.125rem;
+        }
+    }
+
+    &.home-background-yellow-right {
+        .dot-background-container {
+            @apply w-1/3 relative;
+            height: 60%;
+
+            .dot-background-overlay {
+                @apply w-full h-full absolute top-0 left-0;
+                background-color: rgba(255, 255, 255, 0.5);
+                z-index: 0;
+            }
+
+            .dot-background {
+                @apply absolute top-0 left-0;
+            }
+        }
+
+        .circle-left {
+            @apply rounded-full absolute bg-yellow-600;
+            width: 20.25rem;
+            height: 20.25rem;
+            left: -1.5rem;
+            bottom: 4rem;
+        }
+
+        .circle-right {
+            @apply rounded-full absolute bg-yellow-600 top-0;
+            width: 10.5rem;
+            height: 10.5rem;
+            right: -5.25rem;
+        }
+    }
+
+    &.home-background-purple-left {
+        .dot-background-container {
+            @apply w-1/3 h-full relative float-right;
+
+            .dot-background-overlay {
+                @apply w-full h-full absolute top-0 left-0;
+                background-color: rgba(255, 255, 255, 0.5);
+                z-index: 0;
+            }
+
+            .dot-background {
+                @apply absolute top-0 right-0;
+            }
+        }
+
+        .circle-left,
+        .circle-right {
+            @apply rounded-full absolute bg-purple-600;
+        }
+
+        .circle-left {
+            @apply w-32 h-32 top-0;
+            left: -4rem;
+        }
+
+        .circle-right {
+            width: 20.25rem;
+            height: 20.25rem;
+            right: -1.5rem;
+            top: 6.125rem;
+        }
+    }
+
+    &.home-background-purple-right {
+        .dot-background-container {
+            @apply w-1/3 relative;
+            height: 60%;
+
+            .dot-background-overlay {
+                @apply w-full h-full absolute top-0 left-0;
+                background-color: rgba(255, 255, 255, 0.5);
+                z-index: 0;
+            }
+
+            .dot-background {
+                @apply absolute top-0 left-0;
+            }
+        }
+
+        .circle-left {
+            @apply rounded-full absolute bg-purple-600;
+            width: 20.25rem;
+            height: 20.25rem;
+            left: -1.5rem;
+            bottom: 4rem;
+        }
+
+        .circle-right {
+            @apply rounded-full absolute bg-purple-600 top-0;
+            width: 10.5rem;
+            height: 10.5rem;
+            right: -5.25rem;
+        }
+    }
+
+    &.home-background-salmon-left {
+        .dot-background-container {
+            @apply w-1/3 h-full relative float-right;
+
+            .dot-background-overlay {
+                @apply w-full h-full absolute top-0 left-0;
+                background-color: rgba(255, 255, 255, 0.5);
+                z-index: 0;
+            }
+
+            .dot-background {
+                @apply absolute top-0 right-0;
+            }
+        }
+
+        .circle-left,
+        .circle-right {
+            @apply rounded-full absolute bg-salmon-600;
+        }
+
+        .circle-left {
+            @apply w-32 h-32 top-0;
+            left: -4rem;
+        }
+
+        .circle-right {
+            width: 20.25rem;
+            height: 20.25rem;
+            right: -1.5rem;
+            top: 6.125rem;
+        }
+    }
+
+    &.home-background-salmon-right {
+        .dot-background-container {
+            @apply w-1/3 relative;
+            height: 60%;
+
+            .dot-background-overlay {
+                @apply w-full h-full absolute top-0 left-0;
+                background-color: rgba(255, 255, 255, 0.5);
+                z-index: 0;
+            }
+
+            .dot-background {
+                @apply absolute top-0 left-0;
+            }
+        }
+        
+        .circle-left {
+            @apply rounded-full absolute bg-salmon-600;
+            width: 20.25rem;
+            height: 20.25rem;
+            left: -1.5rem;
+            bottom: 4rem;
+        }
+
+        .circle-right {
+            @apply rounded-full absolute bg-salmon-600 top-0;
+            width: 10.5rem;
+            height: 10.5rem;
+            right: -5.25rem;
+        }
+    }
+
     &.cloud-engineering-small-dots {
         .dot-background-container {
             @apply w-1/4 h-full relative;

@@ -782,6 +782,39 @@ body .bg-violet-600 .btn-secondary{
   border-color: transparent
 }
 
+body .btn-secondary-home-action{
+  white-space: normal;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgba(255, 255, 255, var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgba(128, 90, 195, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
+}
+
+body body .btn-secondary-home-action .btn-secondary{
+  border-color: transparent
+}
+
+body .btn-secondary-home-action {
+  transition:all 120ms linear;
+}
+
+body .btn-secondary-home-action.disabled{
+  opacity:.3rem
+}
+
+body .btn-secondary-home-action:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgba(153, 123, 207, var(--tw-bg-opacity))
+}
+
+body .btn-secondary-home-action:focus{
+  --tw-bg-opacity: 1;
+  background-color: rgba(179, 156, 219, var(--tw-bg-opacity))
+}
+
 @media (min-width: 768px){
   body h1{
     font-size: 4.5rem;

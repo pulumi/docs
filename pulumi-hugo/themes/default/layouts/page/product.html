@@ -24,7 +24,7 @@
 
         <div class="container mx-auto text-center">
             <div class="w-full p-4">
-                <h2>{{ .Params.overview.title }}</h2>
+                <h2>{{ .Params.overview.title | markdownify }}</h2>
             </div>
         </div>
         <div class="container mx-auto">
@@ -45,7 +45,7 @@
         </div>
 
         <div class="container mx-auto rounded-xl bg-white">
-            <img class="block z-10" src="/images/product/pulumi-marketecture.png" alt="Pulumi Cloud Engineering Platform" />
+            <img class="block z-10" src="/images/product/pulumi_marketecture.png" alt="Pulumi Cloud Engineering Platform" />
         </div>
     </section>
 

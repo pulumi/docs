@@ -12,7 +12,7 @@
                     {{ .Content }}
 
 
-                    <ul class="list-none p-0 my-8 inline-flex flex-wrap text-xs">
+                    <ul class="tags list-none p-0 my-8 inline-flex flex-wrap text-xs">
                         {{ range $tag, $content := .Site.Taxonomies.tags }}
                             <li>
                                 <a class="tag tag-blog text-xs m-1" href="{{ .Page.RelPermalink }}">{{ $tag }}</a>

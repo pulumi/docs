@@ -56,6 +56,7 @@ Collaborate with other developers and coordinate on updates. Provide fine-graine
 * [Stack Permissions](/docs/intro/pulumi-cloud/projects-and-stacks#stack-permissions)
 * [Project and Stack Management](/docs/intro/pulumi-cloud/projects-and-stacks/)
 * [Audit Logs](/docs/intro/pulumi-cloud/audit-logs/)
+* [Pulumi Insights](insights)
 
 ## Integrations and Extensions
 

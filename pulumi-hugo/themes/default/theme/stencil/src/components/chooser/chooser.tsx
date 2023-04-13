@@ -15,7 +15,7 @@ export type ChooserType = "language" | "k8s-language" | "os" | "cloud" | "person
 export type ChooserKey = LanguageKey | K8sLanguageKey | OSKey | CloudKey | PersonaKey;
 export type ChooserOption = SupportedLanguage | SupportedK8sLanguage | SupportedOS | SupportedCloud | SupportedPersona;
 
-interface SupportedLanguage {
+export interface SupportedLanguage {
     key: LanguageKey;
     name: string;
     extension: string;

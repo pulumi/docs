@@ -5,7 +5,7 @@ menu:
   reference:
     weight: 4
 aliases:
-- /docs/reference/service-rest-api/
+  - /docs/reference/service-rest-api/
 ---
 
 The Pulumi Cloud REST API is used by the Pulumi CLI to query and interact with state information, history, stack tags, etc. This API is available for end users to integrate into their own automation use cases.
@@ -61,12 +61,12 @@ GET /api/user/stacks
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
-| `organization` | string | query | **Optional.** organization name to filter stacks by |
-| `project` | string | query | **Optional.** organization name to filter stacks by |
-| `tagName` | string | query | **Optional.** tag name to filter stacks by |
-| `tagValue` | string | query | **Optional.** tag value to filter stacks by |
+| Parameter           | Type   | In    | Description                                                                                                  |
+| ------------------- | ------ | ----- | ------------------------------------------------------------------------------------------------------------ |
+| `organization`      | string | query | **Optional.** organization name to filter stacks by                                                          |
+| `project`           | string | query | **Optional.** organization name to filter stacks by                                                          |
+| `tagName`           | string | query | **Optional.** tag name to filter stacks by                                                                   |
+| `tagValue`          | string | query | **Optional.** tag value to filter stacks by                                                                  |
 | `continuationToken` | string | query | **Optional.** the continuation token to use for retrieving the next set of results if results were truncated |
 
 #### Example
@@ -117,11 +117,11 @@ GET /api/stacks/{organization}/{project}/{stack}
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
+| Parameter      | Type   | In   | Description       |
+| -------------- | ------ | ---- | ----------------- |
 | `organization` | string | path | organization name |
-| `project` | string | path | project name |
-| `stack` | string | path | stack name |
+| `project`      | string | path | project name      |
+| `stack`        | string | path | stack name        |
 
 #### Example
 
@@ -177,11 +177,11 @@ GET /api/stacks/{organization}/{project}/{stack}/export
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
+| Parameter      | Type   | In   | Description       |
+| -------------- | ------ | ---- | ----------------- |
 | `organization` | string | path | organization name |
-| `project` | string | path | project name |
-| `stack` | string | path | stack name |
+| `project`      | string | path | project name      |
+| `stack`        | string | path | stack name        |
 
 #### Example
 
@@ -302,12 +302,12 @@ POST /api/stacks/{organization}/{project}/{stack}/transfer
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
-| `organization` | string | path | organization name |
-| `project` | string | path | project name |
-| `stack` | string | path | stack name |
-| `toOrg` | string | body | the organization to transfer the stack _to_ |
+| Parameter      | Type   | In   | Description                                 |
+| -------------- | ------ | ---- | ------------------------------------------- |
+| `organization` | string | path | organization name                           |
+| `project`      | string | path | project name                                |
+| `stack`        | string | path | stack name                                  |
+| `toOrg`        | string | body | the organization to transfer the stack _to_ |
 
 #### Example
 
@@ -341,12 +341,12 @@ DELETE /api/stacks/{organization}/{project}/{stack}
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
-| `organization` | string | path | organization name |
-| `project` | string | path | project name |
-| `stack` | string | path | stack name |
-| `force` | boolean | query | flag indicating to delete the stack even if it still contains resources |
+| Parameter      | Type    | In    | Description                                                             |
+| -------------- | ------- | ----- | ----------------------------------------------------------------------- |
+| `organization` | string  | path  | organization name                                                       |
+| `project`      | string  | path  | project name                                                            |
+| `stack`        | string  | path  | stack name                                                              |
+| `force`        | boolean | query | flag indicating to delete the stack even if it still contains resources |
 
 #### Example
 
@@ -389,13 +389,13 @@ POST /api/stacks/{organization}/{project}/{stack}/tags
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
+| Parameter      | Type   | In   | Description       |
+| -------------- | ------ | ---- | ----------------- |
 | `organization` | string | path | organization name |
-| `project` | string | path | project name |
-| `stack` | string | path | stack name |
-| `name` | string | body | tag name |
-| `value` | string | body | tag value |
+| `project`      | string | path | project name      |
+| `stack`        | string | path | stack name        |
+| `name`         | string | body | tag name          |
+| `value`        | string | body | tag value         |
 
 #### Example
 
@@ -429,12 +429,12 @@ DELETE /api/stacks/{organization}/{project}/{stack}/tags/{tagName}
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
+| Parameter      | Type   | In   | Description       |
+| -------------- | ------ | ---- | ----------------- |
 | `organization` | string | path | organization name |
-| `project` | string | path | project name |
-| `stack` | string | path | stack name |
-| `tagName` | string | path | tag name |
+| `project`      | string | path | project name      |
+| `stack`        | string | path | stack name        |
+| `tagName`      | string | path | tag name          |
 
 #### Example
 
@@ -470,18 +470,19 @@ GET /api/stacks/{organization}/{project}/{stack}/updates
 ```
 
 By default the results are not paginated. You can specify `page` and `pageSize` query parameters to paginate the results.
+
 > `?pageSize=1&page=1` can be used to return only the most recent update.
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
-| `organization` | string | path | organization name |
-| `project` | string | path | project name |
-| `stack` | string | path | stack name |
-| `page` | number | query | **Optional.** page of the results to return |
-| `pageSize` | number | query | **Optional.** number of results per page |
-| `output-type` | number | query | **Optional.** the response format to return - possible values are `service` or `cli` (default) |
+| Parameter      | Type   | In    | Description                                                                                    |
+| -------------- | ------ | ----- | ---------------------------------------------------------------------------------------------- |
+| `organization` | string | path  | organization name                                                                              |
+| `project`      | string | path  | project name                                                                                   |
+| `stack`        | string | path  | stack name                                                                                     |
+| `page`         | number | query | **Optional.** page of the results to return                                                    |
+| `pageSize`     | number | query | **Optional.** number of results per page                                                       |
+| `output-type`  | number | query | **Optional.** the response format to return - possible values are `service` or `cli` (default) |
 
 #### Example
 
@@ -740,12 +741,12 @@ GET /api/stacks/{organization}/{project}/{stack}/update/{updateID}
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
-| `organization` | string | path | organization name |
-| `project` | string | path | project name |
-| `stack` | string | path | stack name |
-| `updateID` | uuid | path | update id - UUID as retrieved from [List Stack Updates](#list-stack-updates) using `?output-type=service` |
+| Parameter      | Type   | In   | Description                                                                                               |
+| -------------- | ------ | ---- | --------------------------------------------------------------------------------------------------------- |
+| `organization` | string | path | organization name                                                                                         |
+| `project`      | string | path | project name                                                                                              |
+| `stack`        | string | path | stack name                                                                                                |
+| `updateID`     | uuid   | path | update id - UUID as retrieved from [List Stack Updates](#list-stack-updates) using `?output-type=service` |
 
 #### Example
 
@@ -780,12 +781,12 @@ GET /api/stacks/{organization}/{project}/{stack}/update/{updateID}/events
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
-| `organization` | string | path | organization name |
-| `project` | string | path | project name |
-| `stack` | string | path | stack name |
-| `updateID` | uuid | path | update id - UUID as retrieved from [List Stack Updates](#list-stack-updates) using `?output-type=service` |
+| Parameter      | Type   | In   | Description                                                                                               |
+| -------------- | ------ | ---- | --------------------------------------------------------------------------------------------------------- |
+| `organization` | string | path | organization name                                                                                         |
+| `project`      | string | path | project name                                                                                              |
+| `stack`        | string | path | stack name                                                                                                |
+| `updateID`     | uuid   | path | update id - UUID as retrieved from [List Stack Updates](#list-stack-updates) using `?output-type=service` |
 
 #### Example
 
@@ -1001,11 +1002,11 @@ GET /api/stacks/{organization}/{project}/{stack}/updates/latest/previews
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
+| Parameter      | Type   | In   | Description       |
+| -------------- | ------ | ---- | ----------------- |
 | `organization` | string | path | organization name |
-| `project` | string | path | project name |
-| `stack` | string | path | stack name |
+| `project`      | string | path | project name      |
+| `stack`        | string | path | stack name        |
 
 #### Example
 
@@ -1259,10 +1260,10 @@ GET /api/orgs/{organization}/members?type=backend
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
-| `organization` | string | path | organization name |
-| `type` | string | query | must be set to `backend` |
+| Parameter           | Type   | In    | Description                                                                                                  |
+| ------------------- | ------ | ----- | ------------------------------------------------------------------------------------------------------------ |
+| `organization`      | string | path  | organization name                                                                                            |
+| `type`              | string | query | must be set to `backend`                                                                                     |
 | `continuationToken` | string | query | **Optional.** the continuation token to use for retrieving the next set of results if results were truncated |
 
 #### Example
@@ -1324,11 +1325,11 @@ POST /api/orgs/{organization}/members/{username}
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
-| `organization` | string | path | organization name |
-| `username` | string | path | user name |
-| `role` | string | body | The role to assign - possible values are `admin` or `member` |
+| Parameter      | Type   | In   | Description                                                  |
+| -------------- | ------ | ---- | ------------------------------------------------------------ |
+| `organization` | string | path | organization name                                            |
+| `username`     | string | path | user name                                                    |
+| `role`         | string | body | The role to assign - possible values are `admin` or `member` |
 
 #### Example
 
@@ -1362,10 +1363,10 @@ DELETE /api/orgs/{organization}/members/{username}
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
+| Parameter      | Type   | In   | Description       |
+| -------------- | ------ | ---- | ----------------- |
 | `organization` | string | path | organization name |
-| `username` | string | path | user name |
+| `username`     | string | path | user name         |
 
 #### Example
 
@@ -1398,9 +1399,9 @@ GET /api/orgs/{organization}/teams
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
-| `organization` | string | path | organization name |
+| Parameter           | Type   | In    | Description                                                                                                  |
+| ------------------- | ------ | ----- | ------------------------------------------------------------------------------------------------------------ |
+| `organization`      | string | path  | organization name                                                                                            |
 | `continuationToken` | string | query | **Optional.** the continuation token to use for retrieving the next set of results if results were truncated |
 
 #### Example
@@ -1454,13 +1455,13 @@ POST /api/orgs/{org}/teams/{teamType}
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
-| `organization` | string | path | organization name |
-| `teamType` | string | path | the type of team to create - valid options are `pulumi` or `github` |
-| `name` | string | body | team name |
-| `displayName` | string | body | **Optional.** team display name |
-| `description` | string | body | **Optional.** team description |
+| Parameter      | Type   | In   | Description                                                         |
+| -------------- | ------ | ---- | ------------------------------------------------------------------- |
+| `organization` | string | path | organization name                                                   |
+| `teamType`     | string | path | the type of team to create - valid options are `pulumi` or `github` |
+| `name`         | string | body | team name                                                           |
+| `displayName`  | string | body | **Optional.** team display name                                     |
+| `description`  | string | body | **Optional.** team description                                      |
 
 #### Example
 
@@ -1506,10 +1507,10 @@ DELETE /api/orgs/{org}/teams/{teamName}
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
+| Parameter      | Type   | In   | Description       |
+| -------------- | ------ | ---- | ----------------- |
 | `organization` | string | path | organization name |
-| `teamName` | string | path | team name |
+| `teamName`     | string | path | team name         |
 
 #### Example
 
@@ -1549,12 +1550,12 @@ PATCH /api/orgs/{organization}/teams/{team}
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
-| `organization` | string | path | organization name |
-| `team` | string | path | team name |
+| Parameter      | Type   | In   | Description                                                              |
+| -------------- | ------ | ---- | ------------------------------------------------------------------------ |
+| `organization` | string | path | organization name                                                        |
+| `team`         | string | path | team name                                                                |
 | `memberAction` | string | body | The action for the user and team - possible values are `add` or `remove` |
-| `member` | string | body | user name |
+| `member`       | string | body | user name                                                                |
 
 #### Example
 
@@ -1588,14 +1589,14 @@ PATCH /api/orgs/{organization}/teams/{team}
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
-| `organization` | string | path | organization name |
-| `team` | string | path | team name |
-| `addStackPermission` | object | body | object specifying stack and permissions - see following parameters |
-| `addStackPermission .projectName` | string | object | project name |
-| `addStackPermission .stackName` | string | object | stack name |
-| `addStackPermission .permission` | integer | object | number representing stack permissions: 101 (read), 102 (edit), 103 (admin) |
+| Parameter                         | Type    | In     | Description                                                                |
+| --------------------------------- | ------- | ------ | -------------------------------------------------------------------------- |
+| `organization`                    | string  | path   | organization name                                                          |
+| `team`                            | string  | path   | team name                                                                  |
+| `addStackPermission`              | object  | body   | object specifying stack and permissions - see following parameters         |
+| `addStackPermission .projectName` | string  | object | project name                                                               |
+| `addStackPermission .stackName`   | string  | object | stack name                                                                 |
+| `addStackPermission .permission`  | integer | object | number representing stack permissions: 101 (read), 102 (edit), 103 (admin) |
 
 #### Example
 
@@ -1629,13 +1630,13 @@ PATCH /api/orgs/{organization}/teams/{team}
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
-| `organization` | string | path | organization name |
-| `team` | string | path | team name |
-| `removeStack` | object | body | object specifying stack and permissions - see following parameters |
-| `removeStack .projectName` | string | object | project name |
-| `removeStack .stackName` | string | object | stack name |
+| Parameter                  | Type   | In     | Description                                                        |
+| -------------------------- | ------ | ------ | ------------------------------------------------------------------ |
+| `organization`             | string | path   | organization name                                                  |
+| `team`                     | string | path   | team name                                                          |
+| `removeStack`              | object | body   | object specifying stack and permissions - see following parameters |
+| `removeStack .projectName` | string | object | project name                                                       |
+| `removeStack .stackName`   | string | object | stack name                                                         |
 
 #### Example
 
@@ -1669,11 +1670,11 @@ PATCH /api/orgs/{organization}/members/{username}
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
-| `organization` | string | query | organization name to filter stacks by |
-| `username` | string | path | user name |
-| `role` | string | body | The role to assign - possible values are `admin` or `member` |
+| Parameter      | Type   | In    | Description                                                  |
+| -------------- | ------ | ----- | ------------------------------------------------------------ |
+| `organization` | string | query | organization name to filter stacks by                        |
+| `username`     | string | path  | user name                                                    |
+| `role`         | string | body  | The role to assign - possible values are `admin` or `member` |
 
 #### Example
 
@@ -1752,8 +1753,8 @@ POST /api/user/tokens
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
+| Parameter     | Type   | In   | Description                    |
+| ------------- | ------ | ---- | ------------------------------ |
 | `description` | string | body | Descripton of the access token |
 
 #### Example
@@ -1791,8 +1792,8 @@ DELETE /api/user/tokens/{tokenId}
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
+| Parameter | Type   | In   | Description          |
+| --------- | ------ | ---- | -------------------- |
 | `tokenId` | string | path | the token identifier |
 
 #### Example
@@ -1824,13 +1825,13 @@ POST /api/orgs/{organization}/hooks
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
-| `active` | boolean | body | enable webhook |
-| `displayName` | string | body | name of webhook |
-| `organizationName` | string | body | organization name |
-| `payloadUrl` | string | body | URL to send request to |
-| `secret` | string | body | **Optional.** secret used as the HMAC key. See [webhook docs](/docs/intro/pulumi-cloud/webhooks#headers) for more information  |
+| Parameter          | Type    | In   | Description                                                                                                                   |
+| ------------------ | ------- | ---- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `active`           | boolean | body | enable webhook                                                                                                                |
+| `displayName`      | string  | body | name of webhook                                                                                                               |
+| `organizationName` | string  | body | organization name                                                                                                             |
+| `payloadUrl`       | string  | body | URL to send request to                                                                                                        |
+| `secret`           | string  | body | **Optional.** secret used as the HMAC key. See [webhook docs](/docs/intro/pulumi-cloud/webhooks#headers) for more information |
 
 #### Example
 
@@ -1868,9 +1869,9 @@ GET /api/orgs/{organization}/hooks
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
-| `organization` | string | path | organization name|
+| Parameter      | Type   | In   | Description       |
+| -------------- | ------ | ---- | ----------------- |
+| `organization` | string | path | organization name |
 
 #### Example
 
@@ -1911,10 +1912,10 @@ GET /api/orgs/{organization}/hooks/{webhookname}
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
+| Parameter      | Type   | In   | Description       |
+| -------------- | ------ | ---- | ----------------- |
 | `organization` | string | path | organization name |
-| `webhookname` | string | path | webhook name |
+| `webhookname`  | string | path | webhook name      |
 
 #### Example
 
@@ -1950,10 +1951,10 @@ POST /api/orgs/{organization}/hooks/{webhookname}/ping
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
+| Parameter      | Type   | In   | Description       |
+| -------------- | ------ | ---- | ----------------- |
 | `organization` | string | path | organization name |
-| `webhookname` | string | path | webhook name |
+| `webhookname`  | string | path | webhook name      |
 
 #### Example
 
@@ -1992,10 +1993,10 @@ GET /api/orgs/{organization}/hooks/{webhookname}/deliveries
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
-| `organization` | string | path | organization name|
-| `webhookname` | string | path | webhook name |
+| Parameter      | Type   | In   | Description       |
+| -------------- | ------ | ---- | ----------------- |
+| `organization` | string | path | organization name |
+| `webhookname`  | string | path | webhook name      |
 
 #### Example
 
@@ -2035,12 +2036,12 @@ GET /api/orgs/{organization}/auditlogs
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
-| `organization` | string | path | organization name |
-| `startTime` | unix timestamp | query | return audit log entries that occurred before (i.e., are older) than this timestamp |
-| `userFilter` | string | query | **Optional.** username (e.g. `user1`) to filter results by |
-| `continuationToken` | string | query | **Optional.** the continuation token to use for retrieving the next set of results if results were truncated |
+| Parameter           | Type           | In    | Description                                                                                                  |
+| ------------------- | -------------- | ----- | ------------------------------------------------------------------------------------------------------------ |
+| `organization`      | string         | path  | organization name                                                                                            |
+| `startTime`         | unix timestamp | query | return audit log entries that occurred before (i.e., are older) than this timestamp                          |
+| `userFilter`        | string         | query | **Optional.** username (e.g. `user1`) to filter results by                                                   |
+| `continuationToken` | string         | query | **Optional.** the continuation token to use for retrieving the next set of results if results were truncated |
 
 #### Example
 
@@ -2118,12 +2119,12 @@ GET /api/orgs/{organization}/auditlogs/export
 
 #### Parameters
 
-| Parameter | Type | In | Description |
-| --------- | ---------- | ---------- | ---------- |
-| `organization` | string | path | organization name |
-| `startTime` | unix timestamp | query | return audit log entries that occurred before (i.e., are older) than this timestamp |
-| `userFilter` | string | query | **Optional.** username (e.g. `user1`) to filter results by |
-| `format` | string | query | **Optional.** the response format to return - possible values are `cef` or `csv` (default) |
+| Parameter      | Type           | In    | Description                                                                                |
+| -------------- | -------------- | ----- | ------------------------------------------------------------------------------------------ |
+| `organization` | string         | path  | organization name                                                                          |
+| `startTime`    | unix timestamp | query | return audit log entries that occurred before (i.e., are older) than this timestamp        |
+| `userFilter`   | string         | query | **Optional.** username (e.g. `user1`) to filter results by                                 |
+| `format`       | string         | query | **Optional.** the response format to return - possible values are `cef` or `csv` (default) |
 
 #### Example
 
@@ -2309,3 +2310,658 @@ Status: 200 OK
   ]
 }
 ```
+
+## Resource Search
+
+{{% notes "info" %}}
+The Resource Search API is currently is preview and subject to change.
+
+Please post any bug reports or feature requests in the [Pulumi Cloud Requests repo](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose).
+{{% /notes %}}
+
+{{< chooser language "javascript,typescript,python,go" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+const headers = {
+  Accept: "application/json",
+  Authorization: "token pul-abc123",
+};
+
+const body = await (
+  await fetch("https://api.pulumi.com/api/orgs/{org}/search/resources", {
+    method: "GET",
+    headers: headers,
+  })
+).json();
+
+console.log(body);
+```
+
+{{< /choosable >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+const headers = {
+  Accept: "application/json",
+  Authorization: "token pul-abc123",
+};
+
+const body = await(
+  await fetch("https://api.pulumi.com/api/orgs/{org}/search/resources", {
+    method: "GET",
+    headers: headers,
+  }),
+).json();
+
+console.log(body);
+```
+
+{{< /choosable >}}
+
+{{% choosable language python %}}
+
+```python
+import requests
+headers = {
+  'Accept': 'application/json',
+  'Authorization': 'token pul-abc123'
+}
+
+r = requests.get('https://api.pulumi.com/api/orgs/{org}/search/resources', headers = headers)
+
+print(r.json())
+
+```
+
+{{< /choosable >}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+       "bytes"
+       "net/http"
+)
+
+func main() {
+    headers := map[string][]string{
+        "Accept": []string{"application/json"},
+        "Authorization": []string{"token pul-abc123"},
+    }
+
+    data := bytes.NewBuffer([]byte{jsonReq})
+    req, err := http.NewRequest("GET", "https://api.pulumi.com/api/orgs/{org}/search/resources", data)
+    req.Header = headers
+
+    client := &http.Client{}
+    resp, err := client.Do(req)
+    // ...
+}
+
+```
+
+{{< /choosable >}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+
+public class HttpExample
+{
+    private HttpClient Client { get; set; }
+
+    public HttpExample()
+    {
+      Client = new HttpClient();
+    }
+
+    public async Task MakeGetRequest()
+    {
+      string url = "https://api.pulumi.com/api/orgs/{org}/search/resources";
+      var result = await GetAsync(url);
+    }
+
+    /// Performs a GET Request
+    public async Task GetAsync(string url)
+    {
+        //Start the request
+        HttpResponseMessage response = await Client.GetAsync(url);
+
+        //Validate result
+        response.EnsureSuccessStatusCode();
+
+    }
+
+    /// Deserialize object from request response
+    private async Task DeserializeObject(HttpResponseMessage response)
+    {
+        //Read body
+        string responseBody = await response.Content.ReadAsStringAsync();
+
+        //Deserialize Body to object
+        var result = JsonConvert.DeserializeObject(responseBody);
+    }
+}
+
+```
+
+{{< /choosable >}}
+
+{{% choosable language java %}}
+
+```java
+URL obj = new URL("https://api.pulumi.com/api/orgs/{org}/search/resources");
+HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+con.setRequestMethod("GET");
+int responseCode = con.getResponseCode();
+BufferedReader in = new BufferedReader(
+    new InputStreamReader(con.getInputStream()));
+String inputLine;
+StringBuffer response = new StringBuffer();
+while ((inputLine = in.readLine()) != null) {
+    response.append(inputLine);
+}
+in.close();
+System.out.println(response.toString());
+
+```
+
+{{< /choosable >}}
+
+{{< /chooser >}}
+
+`GET /api/orgs/{org}/search/resources`
+
+Search for resources belonging to the given organization.
+
+### Parameters
+
+| Name     | In    | Type          | Required | Description                                                                                                                              |
+| -------- | ----- | ------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| org      | path  | string        | true     | Name of the organization to search.                                                                                                      |
+| query    | query | string        | false    | The search query to execute. If omitted all resources are returned (subject to any pagination limits).                                   |
+| sort     | query | array[string] | false    | Results are returned sorted by this field value.                                                                                         |
+| asc      | query | boolean       | false    | Whether to return results in ascending or descending sort order.                                                                         |
+| size     | query | integer       | false    | How many results to return at a time.                                                                                                    |
+| page     | query | number        | false    | The page of results to return.                                                                                                           |
+| continue | query | string        | false    | A continuation token for pagination.                                                                                                     |
+| facet    | query | array[string] | false    | If provided, an aggregation will be returned with the top-5 values for the given facet, along with how many resources have those values. |
+
+#### Detailed descriptions
+
+**org**: Name of the organization to search.
+The organization can belong to a team, enterprise, or an individual user.
+
+The provided authorization token must have access to this organization.
+
+**query**: The search query to execute. If omitted all resources are returned (subject to any pagination limits).
+
+**sort**: Results are returned sorted by this field value.
+If omitted, results are sorted according to their search relevance. If there is no query, results are sorted by their last modified time.
+
+If specified more than once, the first parameter is the primary sort order and subsequent parameters control additional sorting criteria.
+
+Allowed values: created, custom, delete, id, modified, module, name, package, parent.urn, pending, project, protected, provider.urn, stack, type, urn.
+
+**asc**: Whether to return results in ascending or descending sort order.
+
+**size**: How many results to return at a time.
+
+**page**: The page of results to return.
+The page parameter can only be used to fetch up 10,000 resources. If a query matches more than 10,000 resources, the "continue" parameter should be used instead.
+
+**continue**: A continuation token for pagination.
+Only available on Enterprise plans.
+
+**facet**: If provided, an aggregation will be returned with the top-5 values for the given facet, along with how many resources have those values.
+
+This parameter can be provided multiple times to return aggregations for up to 5 dimensions.
+
+Allowed values: created, custom, delete, id, modified, module, name, package, parent.urn, pending, project, protected, provider.urn, stack, type, urn.
+
+#### Example responses
+
+> 200 Response
+
+```json
+{
+  "total": 10000,
+  "resources": [
+    {
+      "created": "string",
+      "custom": true,
+      "delete": true,
+      "dependencies": ["string"],
+      "id": "string",
+      "modified": "string",
+      "module": "string",
+      "name": "string",
+      "package": "string",
+      "parent.urn": "string",
+      "pending": "creating",
+      "project": "string",
+      "protected": true,
+      "provider.urn": "string",
+      "stack": "string",
+      "type": "string",
+      "urn": "string"
+    }
+  ],
+  "aggregations": {
+    "others": 0,
+    "results": [
+      {
+        "name": "string",
+        "count": 0
+      }
+    ]
+  },
+  "pagination": {
+    "previous": "string",
+    "next": "string",
+    "continue": "string"
+  }
+}
+```
+
+### Responses
+
+| Status | Meaning                                                                    | Description                             | Schema                                        |
+| ------ | -------------------------------------------------------------------------- | --------------------------------------- | --------------------------------------------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Successful search.                      | [ResourceSearchResult](#resourcesearchresult) |
+| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request. Not safe to retry.         | None                                          |
+| 422    | [Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)   | Unprocessable query. Not safe to retry. | None                                          |
+| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error. Safe to retry.            | None                                          |
+
+## Data Export
+
+{{% notes "info" %}}
+The Data Export API is only available to organizations using the Enterprise and Business Critical editions.
+
+If you don't see it in your organization, [contact sales](/contact?form=sales).
+{{% /notes %}}
+
+{{% notes "info" %}}
+The Data Export API is currently is preview and subject to change.
+
+Please post any bug reports or feature requests in the [Pulumi Cloud Requests repo](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose).
+{{% /notes %}}
+
+{{< chooser language "javascript,typescript,python,go" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+const headers = {
+  Accept: "application/json",
+  Authorization: "token pul-abc123",
+};
+
+const body = await (
+  await fetch("https://api.pulumi.com/api/orgs/{org}/search/resources/export", {
+    method: "GET",
+    headers: headers,
+  })
+).json();
+
+console.log(body);
+```
+
+{{< /choosable >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+const headers = {
+  Accept: "application/json",
+  Authorization: "token pul-abc123",
+};
+
+const body = await(
+  await fetch("https://api.pulumi.com/api/orgs/{org}/search/resources/export", {
+    method: "GET",
+    headers: headers,
+  }),
+).json();
+
+console.log(body);
+```
+
+{{< /choosable >}}
+
+{{% choosable language python %}}
+
+```python
+import requests
+headers = {
+  'Accept': 'application/json',
+  'Authorization': 'token pul-abc123'
+}
+
+r = requests.get('https://api.pulumi.com/api/orgs/{org}/search/resources/export', headers = headers)
+
+print(r.json())
+
+```
+
+{{< /choosable >}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+       "bytes"
+       "net/http"
+)
+
+func main() {
+    headers := map[string][]string{
+        "Accept": []string{"application/json"},
+        "Authorization": []string{"token pul-abc123"},
+    }
+
+    data := bytes.NewBuffer([]byte{jsonReq})
+    req, err := http.NewRequest("GET", "https://api.pulumi.com/api/orgs/{org}/search/resources/export", data)
+    req.Header = headers
+
+    client := &http.Client{}
+    resp, err := client.Do(req)
+    // ...
+}
+
+```
+
+{{< /choosable >}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+
+public class HttpExample
+{
+    private HttpClient Client { get; set; }
+
+    public HttpExample()
+    {
+      Client = new HttpClient();
+    }
+
+    public async Task MakeGetRequest()
+    {
+      string url = "https://api.pulumi.com/api/orgs/{org}/search/resources/export";
+      var result = await GetAsync(url);
+    }
+
+    /// Performs a GET Request
+    public async Task GetAsync(string url)
+    {
+        //Start the request
+        HttpResponseMessage response = await Client.GetAsync(url);
+
+        //Validate result
+        response.EnsureSuccessStatusCode();
+
+    }
+
+    /// Deserialize object from request response
+    private async Task DeserializeObject(HttpResponseMessage response)
+    {
+        //Read body
+        string responseBody = await response.Content.ReadAsStringAsync();
+
+        //Deserialize Body to object
+        var result = JsonConvert.DeserializeObject(responseBody);
+    }
+}
+
+```
+
+{{< /choosable >}}
+
+{{% choosable language java %}}
+
+```java
+URL obj = new URL("https://api.pulumi.com/api/orgs/{org}/search/resources/export");
+HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+con.setRequestMethod("GET");
+int responseCode = con.getResponseCode();
+BufferedReader in = new BufferedReader(
+    new InputStreamReader(con.getInputStream()));
+String inputLine;
+StringBuffer response = new StringBuffer();
+while ((inputLine = in.readLine()) != null) {
+    response.append(inputLine);
+}
+in.close();
+System.out.println(response.toString());
+
+```
+
+{{< /choosable >}}
+
+{{< /chooser >}}
+
+`GET /api/orgs/{org}/search/resources/export`
+
+Export resources matching a given query in CSV format.
+
+### Parameters
+
+| Name  | In    | Type          | Required | Description                                                         |
+| ----- | ----- | ------------- | -------- | ------------------------------------------------------------------- |
+| org   | path  | string        | true     | Name of the organization to search.                                 |
+| query | query | string        | false    | The search query to execute. If omitted all resources are returned. |
+| sort  | query | array[string] | false    | Results are returned sorted by this field value.                    |
+| asc   | query | boolean       | false    | Whether to return results in ascending or descending sort order.    |
+
+#### Example responses
+
+> 200 Response
+
+```curl
+< HTTP/1.1 200 OK
+< Content-Type: application/octet-stream
+< X-Pulumi-Request-Id: 5d286ad6-0aa6-424e-bc9f-945e1cb90952
+< Date: Tue, 1 Apr 2023 00:00:00 GMT
+< Transfer-Encoding: chunked
+
+created,custom,delete,id,modified,module,name,package,parent_urn,pending,project,protected,provider_urn,stack,type,urn
+```
+
+### Responses
+
+| Status | Meaning                                                                    | Description                     | Schema                              |
+| ------ | -------------------------------------------------------------------------- | ------------------------------- | ----------------------------------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Successful export.              | [CSV](/docs/intro/insights/export/) |
+| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request. Not safe to retry. | None                                |
+| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error. Safe to retry.    | None                                |
+
+## Schemas
+
+### ResourceSearchResult
+
+The result of a Resource Search query.
+
+```json
+{
+  "total": 10000,
+  "resources": [
+    {
+      "created": "string",
+      "custom": true,
+      "delete": true,
+      "dependencies": ["string"],
+      "id": "string",
+      "modified": "string",
+      "module": "string",
+      "name": "string",
+      "package": "string",
+      "parent.urn": "string",
+      "pending": "creating",
+      "project": "string",
+      "protected": true,
+      "provider.urn": "string",
+      "stack": "string",
+      "type": "string",
+      "urn": "string"
+    }
+  ],
+  "aggregations": {
+    "others": 0,
+    "results": [
+      {
+        "name": "string",
+        "count": 0
+      }
+    ]
+  },
+  "pagination": {
+    "previous": "string",
+    "next": "string",
+    "continue": "string"
+  }
+}
+```
+
+#### Properties
+
+| Name         | Type                                | Description                                       |
+| ------------ | ----------------------------------- | ------------------------------------------------- |
+| total        | integer(int64)\|null                | The total number of results matched by the query. |
+| resources    | [[ResourceResult](#resourceresult)] | Resources matching the query.                     |
+| aggregations | [Aggregations](#aggregations)       | The result of any aggregations requested.         |
+| pagination   | [Pagination](#pagination)           | URIs for pagination, if appropriate.              |
+
+### ResourceResult
+
+An individual resource.
+
+```json
+{
+  "created": "string",
+  "custom": true,
+  "delete": true,
+  "dependencies": ["string"],
+  "id": "string",
+  "modified": "string",
+  "module": "string",
+  "name": "string",
+  "package": "string",
+  "parent.urn": "string",
+  "pending": "creating",
+  "project": "string",
+  "protected": true,
+  "provider.urn": "string",
+  "stack": "string",
+  "type": "string",
+  "urn": "string"
+}
+```
+
+#### Properties
+
+| Name         | Type          | Description                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------ | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| created      | string\|null  | The UTC time when the resource was created.<br><br>Resources created _or modified_ with CLI versions below 3.60 _do not_ have created set.                                                                                                                                                                                                                                       |
+| custom       | boolean\|null | Whether the resource is a CustomResource.                                                                                                                                                                                                                                                                                                                                        |
+| delete       | boolean\|null | Whether the resource is marked for deletion in the next update.<br><br> Typically indicates a resource that was not cleaned up due to an error.                                                                                                                                                                                                                                  |
+| dependencies | [string]      | The URN of other resources this resource explicitly or implicitly [depends on](/docs/intro/concepts/resources#dependson).                                                                                                                                                                                                                                                        |
+| id           | string\|null  | The [physical name](/docs/intro/concepts/resources/names/#physicalname) of the resource, as assigned by the resource's provider. May not be set if the resource is pending creation.                                                                                                                                                                                             |
+| modified     | string\|null  | The UTC time when the resource's state was last modified during an update, refresh or import. <br><br>Stacks modified with CLI versions below 3.60 record this for all resources as the time of the stack operation, regardless of whether the resource was modified. After CLI version 3.60 the resource's modified time is only updated when the resource's state is modified. |
+| module       | string\|null  | The module component of the resource's type.<br><br>This is `s3` for a resource of type `aws:s3/bucket:Bucket`.                                                                                                                                                                                                                                                                  |
+| name         | string\|null  | The logical name of the resource. <br><br>Typically the first parameter provided to the resource when it was instantiated.                                                                                                                                                                                                                                                       |
+| package      | string\|null  | The package component of the resource's [type][types].<br><br>This is `aws` for a resource of type `aws:s3/bucket:Bucket`.                                                                                                                                                                                                                                                       |
+| parent.urn   | string\|null  | The URN of the resource's parent, if it has one.                                                                                                                                                                                                                                                                                                                                 |
+| pending      | string\|null  | The state of the resource if it is pending. <br><br>Typically indicates an operation that was interrupted due to an error, possibly needing manual intervention to resolve.<br><br>Allowed values: `creating`, `deleting`, `updating`, `reading`, `importing`.                                                                                                                   |
+| project      | string\|null  | The project the resource belongs to.                                                                                                                                                                                                                                                                                                                                             |
+| protected    | boolean\|null | Whether the resource is [protected](/docs/intro/concepts/resources/options/protect] from deletion.                                                                                                                                                                                                                                                                               |
+| provider.urn | string\|null  | The URN of the resource's provider.                                                                                                                                                                                                                                                                                                                                              |
+| stack        | string\|null  | The Stack the resource belongs to.                                                                                                                                                                                                                                                                                                                                               |
+| type         | string\|null  | The type of the resource.                                                                                                                                                                                                                                                                                                                                                        |
+| urn          | string\|null  | The URN of the resource.                                                                                                                                                                                                                                                                                                                                                         |
+
+### Aggregations
+
+A collection of aggregated values.
+
+```json
+{
+  "others": 0,
+  "results": [
+    {
+      "name": "string",
+      "count": 0
+    }
+  ]
+}
+```
+
+#### Properties
+
+| Name    | Type                                      | Description                                                                                        |
+| ------- | ----------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| others  | integer(int64)\|null                      | The number of resources not counted in the top 5 results.                                          |
+| results | [[AggregationResult](#aggregationresult)] | The top 5 values for the given aggregation, and the number of resources with each of those values. |
+
+### AggregationResult
+
+An aggregated value.
+
+```json
+{
+  "name": "string",
+  "count": 0
+}
+```
+
+#### Properties
+
+| Name  | Type                 | Description                          |
+| ----- | -------------------- | ------------------------------------ |
+| name  | string\|null         | A value from the faceted dimension.  |
+| count | integer(int64)\|null | How many resources share that value. |
+
+### Pagination
+
+URLs for fetching additional results.
+
+If null, the request is invalid or does not permit pagination.
+
+```json
+{
+  "previous": "string",
+  "next": "string",
+  "continue": "string"
+}
+```
+
+#### Properties
+
+| Name     | Type         | Description                                                                                                                                                                                                                                                                                                                                            |
+| -------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| previous | string\|null | When non-null, this is a URI to fetch the previous page of results.                                                                                                                                                                                                                                                                                    |
+| next     | string\|null | When non-null, this is a URI to fetch the next page of results.<br><br>This only allows paginating through the first 10,000 results of a query. <br><br>The `continue` parameter should be used to fetch more than 10,000 results.                                                                                                                     |
+| continue | string\|null | When non-null, this is a URI to fetch the next page of results. <br><br>Unlike the `next` property, repeatedly following `continue` allows paginating through an unbounded number of results.<br><br>When paginating with `continue`, `next` and `previous` will always be `null`.<br><br>`continue` is only available to Pulumi Enterprise customers. |
+
+[types]: /docs/intro/concepts/resources/names/#types

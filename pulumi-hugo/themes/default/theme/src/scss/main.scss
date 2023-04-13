@@ -67,6 +67,7 @@
 @import "components/swiper";
 @import "components/slot-machine";
 @import "components/pulumi-tertiary-nav";
+@import "components/pulumi-ai";
 @import "components/tabs";
 
 h1,
@@ -196,21 +197,25 @@ main {
     @apply text-blue-700;
 }
 
-.tag {
-    @apply text-sm lowercase border border-blue-200 rounded py-1 px-2 mr-1;
+.section-blog {
+    .tags {
+        .tag {
+            @apply lowercase border border-blue-200 rounded py-1 px-2 mr-1;
 
-    &.tag-blog {
-        @apply bg-gray-100 text-blue-600;
+            &.tag-blog {
+                @apply bg-gray-100 text-blue-600;
 
-        &:hover {
-            @apply border-blue-300 text-blue-700 no-underline;
-        }
+                &:hover {
+                    @apply border-blue-300 text-blue-700 no-underline;
+                }
 
-        &.active {
-            @apply border-blue-600 bg-blue-600 text-white;
+                &.active {
+                    @apply border-blue-600 bg-blue-600 text-white;
 
-            &:hover {
-                @apply text-white;
+                    &:hover {
+                        @apply text-white;
+                    }
+                }
             }
         }
     }

@@ -59,10 +59,10 @@
         }
 
         &-item {
-            @apply w-1/4 text-center py-2;
+            @apply flex justify-center items-center w-1/4 text-center py-2;
 
             &:first-child {
-                @apply text-left;
+                @apply justify-start text-left;
             }
 
             span {

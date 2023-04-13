@@ -52,8 +52,9 @@ Stack permissions allow users to perform the following actions:
 | Destroy stack (`pulumi destroy`) | |   | ✅ | ✅ |
 | Export stack checkpoint | | ✅ | ✅ | ✅ |
 | Import stack checkpoint |  | | ✅ | ✅ |
-| Delete stack (`pulumi stack rm`) | | | | ✅ |
-| Transfer to another organization | | | | ✅ |
+| Delete stack (`pulumi stack rm`) |   |   |   | ✅ |
+| Transfer to another organization |   |   |   | ✅ |
+| Search stack resources           |   |  ✅ |  ✅ | ✅ |
 
 ## Viewing Stacks
 

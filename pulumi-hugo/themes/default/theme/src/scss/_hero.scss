@@ -60,7 +60,7 @@
     }
 
     .home-page-hero-content {
-        @apply flex flex-col items-start justify-center pt-12;
+        @apply flex flex-col justify-center pt-12;
         z-index: 100;
 
         @screen lg {

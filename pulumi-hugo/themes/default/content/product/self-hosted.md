@@ -1,15 +1,15 @@
 ---
-title: Self-Hosted Pulumi Service
+title: Self-Hosted Pulumi Cloud
 layout: self-hosted
 
-meta_desc: Download, install, and manage a self-hosted version of the Pulumi Service.
+meta_desc: Download, install, and manage a self-hosted version of Pulumi Cloud.
 
 overview:
     title: Install self-hosted Pulumi
     descriptionTop: |
         Maintain complete control over your hosting, network isolation, identity, and data ownership to satisfy compliance requirements.  [Request a license key](#self-hosted-trial) to start a free trial today.
     descriptionBottom: |
-        Want the Pulumi Service delivered as SaaS?  [Start Using the Pulumi Service for free](https://app.pulumi.com/signin).
+        Want Pulumi Cloud delivered as SaaS?  [Start Using Pulumi Cloud for free](https://app.pulumi.com/signin).
 trial:
     title: Request trial license key
     description: |
@@ -22,7 +22,7 @@ capabilities:
           icon: rocketship
           icon_color: salmon
           description: |
-            All the capabilities of the Pulumi Service: state management, role-based access controls, policy and compliance guardrails.
+            All the capabilities of Pulumi Cloud: state management, role-based access controls, policy and compliance guardrails.
         - title: Full control of data
           icon: gear
           icon_color: violet
@@ -52,7 +52,7 @@ capabilities:
 deployment:
     title: Hosting Options
     descriptionTop: |
-        [Install Self-Hosted Pulumi Service](/docs/guides/self-hosted) in any on-premises or cloud provider environment or run in air-gapped environments, including those requiring FedRAMP.
+        [Install Self-Hosted Pulumi Cloud](/docs/guides/self-hosted) in any on-premises or cloud provider environment or run in air-gapped environments, including those requiring FedRAMP.
     descriptionBottom: |
         [Contact us](/contact/) if you don't see your desired deployment option.
 pricing:

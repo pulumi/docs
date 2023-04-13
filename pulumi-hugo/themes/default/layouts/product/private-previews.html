@@ -1,0 +1,63 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" .Params.title) }}
+{{ end }}
+
+{{ define "main" }}
+    {{ $pageContext := . }}
+
+
+    <section id="overview" class="max-w-5xl mx-auto text-center my-16 px-6">
+        {{ with .Params.overview }}
+            <h2>{{ .title }}</h2>
+            <p class="text-left">{{ .description | markdownify }}</p>
+        {{ end }}
+    </section>
+
+    <section id="insights-graphic" class="max-w-4xl mx-auto text-center relative mb-16 px-6 lg:px-0">
+        <div class="shape-background pulumi-service-screenshot"></div>
+        <img class="card mx-auto bg-white" src="/images/product/pulumi-insights-overview.gif" alt="Pulumi Insights Overview GIF" />
+    </section>
+
+    <section id="preview-assist" class="max-w-5xl mx-auto text-center my-16 px-6">
+        {{ with .Params.preview1 }}
+            <h2>{{ .title }}</h2>
+            <p class="text-left">{{ .description | markdownify }}</p>
+        {{ end }}
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+            hbspt.forms.create({
+                region: "na1",
+                portalId: "4429525",
+                formId: "523720d6-1dd0-410e-86ee-92b62ab3bb81",
+            });
+        </script>
+    </section>
+
+    <section id="preview-import" class="max-w-5xl mx-auto text-center my-16 px-6 bg-gray-100">
+        {{ with .Params.preview2 }}
+            <h2>{{ .title }}</h2>
+            <p class="text-left">{{ .description | markdownify }}</p>
+        {{ end }}
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+            hbspt.forms.create({
+                region: "na1",
+                portalId: "4429525",
+                formId: "0de6a53c-7156-429f-99f2-a3a738a48439",
+            });
+        </script>
+    </section>
+
+    <section id="learn" class="container mx-auto text-center mt-16 px-6">
+        <div class="w-full bg-violet-600 card p-6 lg:p-16 lg:pt-24 text-center">
+            <div class="max-w-xl mx-auto">
+                <h2 class="text-white hidden lg:block px-0 lg:px-16">{{ .Params.learn.title }}</h2>
+                <h4 class="text-white mt-0 lg:hidden">{{ .Params.learn.title }}</h4>
+                <p class="text-white">{{ .Params.learn.description }}</p>
+                <div class="mt-12">
+                    <a class="btn-secondary" href="https://www.pulumi.com/blog/pulumi-insights/">Read the blog</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ end }}

@@ -16,7 +16,7 @@
   Our marketing styles diverge a bit from the other parts of the website so we load
   in a different bundle on our marketing pages.
 -->
-{{ $nonMarketingSections := slice "docs" "registry" "blog" "learn" "templates" "authors" "tags" "legal" }}
+{{ $nonMarketingSections := slice "docs" "registry" "blog" "learn" "templates" "ai" "authors" "tags" "legal" }}
 {{ if in $nonMarketingSections .Section }}
 {{ else }}
     {{ $marketingCss := resources.Get "css/marketing.css" | fingerprint }}

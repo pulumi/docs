@@ -109,7 +109,7 @@
 
 .developer-advocates-giveaway {
     .submitted-message {
-        @apply font-display font-bold text-lg text-center;
+        @apply font-display font-bold text-lg text-center overflow-auto;
     }
 
     img {

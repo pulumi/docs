@@ -54,7 +54,7 @@
         {{ $others := where $allTags "Name" "not in" "pulumi-releases features" }}
 
 
-        <ul class="list-none p-0 mb-2 inline-flex flex-wrap text-xs">
+        <ul class="tags list-none p-0 mb-2 inline-flex flex-wrap text-xs">
             {{ range $i, $tagInfo := (slice $releases $features (first 40 $others)) }}
                 {{ range $tagInfo }}
                     {{ $tag := .Name }}
