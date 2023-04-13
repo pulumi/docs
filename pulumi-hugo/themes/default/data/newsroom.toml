@@ -1,4 +1,10 @@
 [[releases]]
+date = "13th April 2023"
+title = "Pulumi Launches Pulumi Insights - Intelligence for Infrastructure as Code"
+summary = "Advanced search, analytics, and AI delivers the world's smartest infrastructure platform."
+url = "https://info.pulumi.com/press-release/pulumi-insights"
+
+[[releases]]
 date = "2nd November 2022"
 title = "Pulumi Launches Deployments: The Fastest Way to Go from Code to Cloud"
 summary = "New Deployments-as-a-Service technology lets engineers manage ten times more infrastructure, unlocking innovation and scaling in the cloud"
