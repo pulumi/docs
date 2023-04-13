@@ -34,15 +34,25 @@ Cloud Import programs are written in Go and require and Go 1.19+ to be installed
 
 If you've never used Pulumi with AWS before we recommend you start first with the [Get Started with AWS](https://www.pulumi.com/docs/get-started/aws/) guide that helps you configure credentials and install dependencies.
 
+The AWS Cloud Import program requires the Pulumi `aws-native` plugin with version >= `v0.57.0`. We recommend reinstalling aws-native plugins to be sure you pick up the latest version:
+
+```console
+$ pulumi plugin rm resource aws-native # delete older version of the plugin
+$ pulumi plugin install resource aws-native # install the latest version
+```
+
 Once you have your environemnt configured with AWS credentials, run the following to get started:
 
 ```console
 $ git clone https://github.com/pulumi/pulumi-cloud-import.git # cd into the cloned repo
 $ cd pulumi-cloud-import-aws
 $ pulumi stack init <org/stackname> # we recommend naming stacks accountName-regionName i.e. testing-us-west-2
+$ pulumi config set aws-native:maxRetries 25 # cloud control API has aggressive rate limiting, so we need to retry with exponential backoff
 $ export AWS_REGION=us-west-2 # the region of your AWS account
 $ pulumi up --skip-preview --show-reads # run the aws cloud import program
 ```
+
+The program uses 3 concurrent workers by default due to rate limits on the AWS cloud control API. You can control the concurrency through an environment variable: `PULUMI_CLOUD_IMPORT_WORKERS=10`.
 
 ### Azure
 
