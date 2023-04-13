@@ -16,7 +16,7 @@ case_studies:
     title: Customers innovating with Pulumi Cloud
     items:
         - name: Atlassian
-          link: /case-studies/atlassian
+          link: /case-studies/atlassian/
           logo: atlassian
           description: |
             Developers reduced their time spent on maintenance by 50%.
@@ -28,25 +28,25 @@ case_studies:
             Increased developers' agility and speed through platform engineering.
 
         - name: Panther Labs
-          link: /case-studies/panther-labs
+          link: /case-studies/panther-labs/
           logo: panther-labs
           description: |
             Increased velocity and speed, with deployments that are up to 10x faster.
 
         - name: Mercedes-Benz
-          link: /case-studies/mercedes-benz
+          link: /case-studies/mercedes-benz/
           logo: mercedes-benz
           description: |
             Enabled developers to deploy Kubernetes clusters quickly and easily.
 
         - name: Lemonade
-          link: /case-studies/lemonade
+          link: /case-studies/lemonade/
           logo: lemonade
           description: |
             Standardized infrastructure architectures with reusable components.
 
         - name: Snowflake
-          link: /case-studies/snowflake
+          link: /case-studies/snowflake/
           logo: snowflake
           description: |
             Built a multi-cloud, Kubernetes-based platform to standardize all deployments

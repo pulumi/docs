@@ -113,7 +113,7 @@
                             <h5>{{ .name }}</h5>
                             <p class="pb-8">{{ .description | markdownify }}</p>
                             <div class="absolute bottom-0 left-0 w-full">
-                                <a href="{{ relref $pageContext .link }}" class="btn-secondary whitespace-nowrap"
+                                <a href="{{ .link }}" class="btn-secondary whitespace-nowrap"
                                     >{{ .name }}
                                     Case Study</a
                                 >
