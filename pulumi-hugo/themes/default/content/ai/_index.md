@@ -1,6 +1,7 @@
 ---
 title: Pulumi AI
 meta_desc: Pulumi AI is an experimental feature that lets you use natural-language prompts to generate Pulumi infrastructure-as-code programs in your favorite language.
+meta_image: /ai/meta.png
 layout: ai
 aliases:
     - pulumi-ai
