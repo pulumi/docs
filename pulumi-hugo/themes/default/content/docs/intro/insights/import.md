@@ -11,11 +11,11 @@ menu:
 
 Cloud Import lets you bring resources managed outside of Pulumi into the resource graph to make them available for everything Insights has to offer including search and analytics. Cloud Import also has a workflow for taking these resources and generating infrastructure as code. Whether your resources were created with ClickOps, Terraform, Clourformation, or any other tool, you can bring them into Pulumi with Cloud Import.
 
-Cloud Import is available both as an [open source project](https://github.com/pulumi/pulumi-cloud-import), and as a fully managed experience you can configure through the [Pulumi Cloud](app.pulumi.com/signup).
+Cloud Import is available both as an [open source project](https://github.com/pulumi/pulumi-cloud-import), and as a fully managed experience you can configure through the [Pulumi Cloud](https://app.pulumi.com/signup).
 
 ## Open Source
 
-[pulumi/pulumi-cloud-import](https://github.com/pulumi/pulumi-cloud-import) is an open source project that uses [Pulumi](github.com/pulumi/pulumi) to read all of the resources within your cloud account. There is a dedicated Pulumi program for each supported cloud provider. If you'd like to see more clouds supported please [open an issue on GitHub](https://github.com/pulumi/pulumi-cloud-import/issues/new).
+[pulumi/pulumi-cloud-import](https://github.com/pulumi/pulumi-cloud-import) is an open source project that uses [Pulumi](https://github.com/pulumi/pulumi-cloud-import) to read all of the resources within your cloud account. There is a dedicated Pulumi program for each supported cloud provider. If you'd like to see more clouds supported please [open an issue on GitHub](https://github.com/pulumi/pulumi-cloud-import/issues/new).
 
 Each import program for a given cloud provider follows the same general structure:
 
@@ -71,9 +71,9 @@ $ pulumi up --skip-preview --show-reads # run the azure cloud import program
 
 ## Pulumi Cloud
 
-Cloud Import is available as a fully managed experience within the Pulumi Cloud. The feature is currently in private preview and you can request access via [the waitlist](pulumi.com/product/private-previews). Once you have access, you can click on the `Cloud Import` tab to get started.
+Cloud Import is available as a fully managed experience within the Pulumi Cloud. The feature is currently in private preview and you can request access via [the waitlist](/product/private-previews/). Once you have access, you can click on the `Cloud Import` tab to get started.
 
-This managed experience uses [Pulumi Deployments](https://www.pulumi.com/docs/intro/deployments/) to run the Cloud Import program on your behalf. Within the Pulumi Cloud you can fill out a simple form that takes in your [OIDC configuration](https://www.pulumi.com/docs/intro/deployments/oidc/) to use a secure temporary credential workflow to connect to your cloud account. This will create the following:
+This managed experience uses [Pulumi Deployments](/docs/intro/deployments/) to run the Cloud Import program on your behalf. Within the Pulumi Cloud you can fill out a simple form that takes in your [OIDC configuration](/docs/intro/deployments/oidc/) to use a secure temporary credential workflow to connect to your cloud account. This will create the following:
 
 1. A Pulumi stack to store the `external` resources from your cloud account.
 2. Deployment Settings for that stack that contain all configuration necessary to run the import program against your cloud account.
@@ -83,13 +83,13 @@ This managed experience uses [Pulumi Deployments](https://www.pulumi.com/docs/in
 
 ### AWS
 
-Cloud Import for AWS within the Pulumi Cloud requires that you configure OIDC to enable a secure, temporary credential exchange workflow. See [the guide on configuring OIDC for AWS with Pulumi Deployments](https://www.pulumi.com/docs/intro/deployments/oidc/aws/) for more details.
+Cloud Import for AWS within the Pulumi Cloud requires that you configure OIDC to enable a secure, temporary credential exchange workflow. See [the guide on configuring OIDC for AWS with Pulumi Deployments](/docs/intro/deployments/oidc/aws/) for more details.
 
 !["The Cloud Import for AWS configuration form within the Pulumi Cloud"](../cloud-import-aws.png)
 
 ### Azure
 
-Cloud Import for Azure within the Pulumi Cloud requires that you configure OIDC to enable a secure, temporary credential exchange workflow. See [the guide on configuring OIDC for Azure with Pulumi Deployments](https://www.pulumi.com/docs/intro/deployments/oidc/Azure/) for more details.
+Cloud Import for Azure within the Pulumi Cloud requires that you configure OIDC to enable a secure, temporary credential exchange workflow. See [the guide on configuring OIDC for Azure with Pulumi Deployments](/docs/intro/deployments/oidc/azure/) for more details.
 
 !["The Cloud Import for Azure configuration form within the Pulumi Cloud."](../cloud-import-azure.png)
 
@@ -105,7 +105,7 @@ Azure resources are parented by Resource Group, so you can issue parent queries 
 
 ## Generating Pulumi Code
 
-Cloud Import can also generate Pulumi IaC code for you if you would like to manage the lifecycle of these resources with Pulumi IaC. This can be useful if you are looking for a way to clean up and delete a bunch of resources in bulk, or are looking to migrate a project off of ClickOps (or another tool) and onto IaC. Generating code uses the [`pulumi import`](https://www.pulumi.com/docs/reference/cli/pulumi_import/) CLI command. Running import will bring the lifecycle of your resources under the management of Pulumi. After running `pulumi import` running `pulumi up` may make changes to your resources in the backing cloud provider, and running `pulumi destroy` will delete them permantently. We will need to do a few things:
+Cloud Import can also generate Pulumi IaC code for you if you would like to manage the lifecycle of these resources with Pulumi IaC. This can be useful if you are looking for a way to clean up and delete a bunch of resources in bulk, or are looking to migrate a project off of ClickOps (or another tool) and onto IaC. Generating code uses the [`pulumi import`](/docs/reference/cli/pulumi_import/) CLI command. Running import will bring the lifecycle of your resources under the management of Pulumi. After running `pulumi import` running `pulumi up` may make changes to your resources in the backing cloud provider, and running `pulumi destroy` will delete them permantently. We will need to do a few things:
 
 1. Generate an import file, which is a description of all resources, their types, and their identifiers.
 2. Create a new Pulumi project and stack to house our resources and the code we're going to generate
@@ -136,7 +136,7 @@ In an empty directory create a new Pulumi program in your language of choice. Yo
 - `pulumi new go`
 - `pulumi new yaml`
 
-At this point, you will need to authenticate with your cloud provider of choice. See guides on cloud authentication in [AWS](https://www.pulumi.com/docs/get-started/aws/) and [Azure](https://www.pulumi.com/docs/get-started/azure/) for more details.
+At this point, you will need to authenticate with your cloud provider of choice. See guides on cloud authentication in [AWS](/docs/get-started/aws/) and [Azure](/docs/get-started/azure/) for more details.
 
 ### Running `pulumi import`
 
