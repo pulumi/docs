@@ -101,6 +101,6 @@ To get started with Pulumi Insights today:
 
 * Sign up or log in to [Pulumi Cloud](https://app.pulumi.com)
 * Try out [Pulumi AI](/ai)
-* Watch the videos for [Pulumi Insights](https://www.youtube.com/watch?v=MTHGyed3Ef8), [Pulumi AI](https://youtu.be/FT_nDCDNkpk) and [Pulumi Search](https://youtu.be/e1u-P9bnEA4)
+* Watch the videos for [Pulumi Insights](https://www.youtube.com/watch?v=MTHGyed3Ef8), [Pulumi AI](https://youtu.be/xdTUEStC8I0) and [Pulumi Search](https://youtu.be/e1u-P9bnEA4)
 * Check out the [Pulumi Insights Documentation](/docs/intro/insights/)
 * Join the [Pulumi Community Slack](https://slack.pulumi.com/)
