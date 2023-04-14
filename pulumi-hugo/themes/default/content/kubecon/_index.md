@@ -19,11 +19,6 @@ links:
 
 workshops:
     items:
-      - title: Platform Engineering with AWS Proton and Pulumi
-        date: March 16, 2023
-        description: In this workshop, you will learn how to enable self-service infrastructure for your infrastructure using AWS Proton and Pulumi.
-        link: /resources/platform-with-aws-proton-and-pulumi/
-        action: Watch
       - title: Getting Started with Kubernetes on Azure
         date: April 25, 2023
         description: In this workshop, you will learn how to deploy a Kubernetes cluster on Microsoft Azure and run containerized applications on the cluster.
@@ -38,6 +33,11 @@ workshops:
         date: April 27, 2023
         description: In this workshop, you will learn how to deploy a Kubernetes cluster on Google Cloud and run containerized applications on the cluster.
         link: /resources/getting-started-with-kubernetes-google-cloud
+        action: Register
+      - title: Production-ready Kubernetes for Python Developers
+        date: May 18, 2023
+        description: In this workshop, you will learn how to deploy a Kubernetes cluster using the Python language. (External webinar)
+        link: https://community.cncf.io/events/details/cncf-cncf-online-programs-presents-cncf-on-demand-webinar-production-ready-kubernetes-for-python-developers/
         action: Register
 
 templates:
