@@ -3,7 +3,7 @@
     {{ partial "head.html" . }}
     <body class="section-{{ .Section }} bg-gray-900">
         <pulumi-root></pulumi-root>
-        {{ partial "tertiary-nav" . }}
+        {{ partial "top-nav" . }}
         <main>
             {{ block "main" . }}
             {{ end }}

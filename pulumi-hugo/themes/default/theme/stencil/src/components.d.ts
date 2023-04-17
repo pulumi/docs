@@ -33,6 +33,7 @@ export namespace Components {
         "prompt": string;
         "repoUrl": string;
         "signupUrl": string;
+        "userID": string;
         "welcomeContent": string;
         "welcomeSelector": string;
         "wsEndpoint": string;
@@ -192,6 +193,9 @@ export namespace Components {
         "show": () => Promise<void>;
     }
     interface PulumiTopButton {
+    }
+    interface PulumiUserToggle {
+        "userId": string;
     }
     interface PulumiWebinarFormSelect {
         "labelClass"?: string;
@@ -416,6 +420,12 @@ declare global {
         prototype: HTMLPulumiTopButtonElement;
         new (): HTMLPulumiTopButtonElement;
     };
+    interface HTMLPulumiUserToggleElement extends Components.PulumiUserToggle, HTMLStencilElement {
+    }
+    var HTMLPulumiUserToggleElement: {
+        prototype: HTMLPulumiUserToggleElement;
+        new (): HTMLPulumiUserToggleElement;
+    };
     interface HTMLPulumiWebinarFormSelectElement extends Components.PulumiWebinarFormSelect, HTMLStencilElement {
     }
     var HTMLPulumiWebinarFormSelectElement: {
@@ -459,6 +469,7 @@ declare global {
         "pulumi-tertiary-nav": HTMLPulumiTertiaryNavElement;
         "pulumi-tooltip": HTMLPulumiTooltipElement;
         "pulumi-top-button": HTMLPulumiTopButtonElement;
+        "pulumi-user-toggle": HTMLPulumiUserToggleElement;
         "pulumi-webinar-form-select": HTMLPulumiWebinarFormSelectElement;
     }
 }
@@ -483,6 +494,7 @@ declare namespace LocalJSX {
         "prompt"?: string;
         "repoUrl"?: string;
         "signupUrl"?: string;
+        "userID"?: string;
         "welcomeContent"?: string;
         "welcomeSelector"?: string;
         "wsEndpoint"?: string;
@@ -638,6 +650,9 @@ declare namespace LocalJSX {
     }
     interface PulumiTopButton {
     }
+    interface PulumiUserToggle {
+        "userId"?: string;
+    }
     interface PulumiWebinarFormSelect {
         "labelClass"?: string;
         "selectClass"?: string;
@@ -680,6 +695,7 @@ declare namespace LocalJSX {
         "pulumi-tertiary-nav": PulumiTertiaryNav;
         "pulumi-tooltip": PulumiTooltip;
         "pulumi-top-button": PulumiTopButton;
+        "pulumi-user-toggle": PulumiUserToggle;
         "pulumi-webinar-form-select": PulumiWebinarFormSelect;
     }
 }
@@ -723,6 +739,7 @@ declare module "@stencil/core" {
             "pulumi-tertiary-nav": LocalJSX.PulumiTertiaryNav & JSXBase.HTMLAttributes<HTMLPulumiTertiaryNavElement>;
             "pulumi-tooltip": LocalJSX.PulumiTooltip & JSXBase.HTMLAttributes<HTMLPulumiTooltipElement>;
             "pulumi-top-button": LocalJSX.PulumiTopButton & JSXBase.HTMLAttributes<HTMLPulumiTopButtonElement>;
+            "pulumi-user-toggle": LocalJSX.PulumiUserToggle & JSXBase.HTMLAttributes<HTMLPulumiUserToggleElement>;
             "pulumi-webinar-form-select": LocalJSX.PulumiWebinarFormSelect & JSXBase.HTMLAttributes<HTMLPulumiWebinarFormSelectElement>;
         }
     }

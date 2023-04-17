@@ -1,5 +1,5 @@
 {{ if hasPrefix .RelPermalink "/docs/" }}
-    {{ partial "tertiary-nav" . }}
+    {{ partial "top-nav" . }}
     <div class="header-container docs-hero">
         <span class="hide-on-pinned">
             <div class="dot-background-container">
@@ -48,7 +48,7 @@
                 <li>
                     <a data-track="header-console" href="https://app.pulumi.com/" target="_blank">
                         <i class="fas fa-user-circle"></i>
-                        Sign In
+                        {{ partial "top-nav-user-toggle" }}
                     </a>
                 </li>
             </ul>
@@ -459,7 +459,9 @@
                                 <a href="https://slack.pulumi.com/">Slack</a>
                                 <a href="{{ relref . "/docs" }}">Docs</a>
                                 <a href="{{ relref . "/registry" }}">Registry</a>
-                                <a href="https://app.pulumi.com/">Sign In</a>
+                                <a href="https://app.pulumi.com/">
+                                    {{ partial "top-nav-user-toggle" }}
+                                </a>
                             </div>
                             <div class="text-center bg-violet-600 text-white get-started">
                                 <a class="block" data-track="header-get-started-mobile" href="https://app.pulumi.com/signup" title="Sign up for Pulumi Cloud"> Try Pulumi Cloud </a>

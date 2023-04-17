@@ -6,10 +6,14 @@ import thunk from "redux-thunk";
 import { AppState } from "./state";
 import { preferences } from "./reducers/preferences";
 import { banners } from "./reducers/banners";
+import { user } from "./reducers/user";
+
+import { TypeKeys } from "./actions";
 
 export const rootReducer = combineReducers({
     preferences,
     banners,
+    user,
 });
 
 // The Redux store. See https://redux.js.org/ for general information about Redux and
@@ -41,6 +45,15 @@ export const configureStore = () => {
             console.error("Failed to save pulumi_state:", e);
         }
     });
+
+    // While we await broader support for the CookieStore API, we poll every
+    // few seconds for any changes to user-info cookies.
+    // https://developer.mozilla.org/en-US/docs/Web/API/Cookie_Store_API
+    setInterval(() => {
+        store.dispatch({
+            type: TypeKeys.GET_USER_INFO,
+        });
+    }, 3000);
 
     return store;
 };

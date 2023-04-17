@@ -1,0 +1,5 @@
+pulumi-user-toggle {
+    > span[slot] {
+        @apply invisible;
+    }
+}

@@ -1,5 +1,6 @@
 import { SetLanguage, SetK8sLanguage, SetOS, SetCloud, SetPersona } from "./preferences";
 import { DismissBanner } from "./banners";
+import { GetUser } from "./user";
 
 export enum TypeKeys {
     // Chooser-related action types.
@@ -12,7 +13,11 @@ export enum TypeKeys {
 
     // Banner-related action types.
     DISMISS_BANNER = "DISMISS_BANNER",
+
+    // User-related action types.
+    GET_USER_INFO = "GET_USER_INFO",
 }
 
 export type PreferencesAction = SetLanguage | SetK8sLanguage | SetOS | SetCloud | SetPersona;
 export type BannersAction = DismissBanner;
+export type UserAction = GetUser;

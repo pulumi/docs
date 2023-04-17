@@ -11,8 +11,13 @@ import { parseCookie } from "../../util/util";
 
 export class PulumiAIClient {
     private socket: WebSocket;
+
     public MAX_PROMPT_LENGTH = 1024;
     public MAX_PROGRAM_LENGTH = 204800;
+
+    private ajsAnonymousID: string;
+    private ajsUserID: string;
+    private pulumiUserID: string;
 
     constructor(
         private url: string,
@@ -26,29 +31,7 @@ export class PulumiAIClient {
     ) {}
 
     private onOpen() {
-        const cookie = parseCookie();
-        const ajsAnonymousID = cookie["ajs_anonymous_id"];
-        const ajsUserID = cookie["ajs_user_id"];
-        const pulumiWebUserInfo = cookie["pulumi_web_user_info"];
-
-        let pulumiUserID;
-        if (pulumiWebUserInfo) {
-            try {
-                pulumiUserID = JSON.parse(decodeURIComponent(pulumiWebUserInfo).replace("j:", "")).userId;
-            } catch (error) {
-                console.log(`Failed to parse pulumi_web_user_info cookie '${pulumiWebUserInfo}'.`);
-            }
-        }
-
-        const message: CreateConnectionAction = {
-            type: MessageType.CREATE_CONNECTION,
-            data: {
-                segmentAnonymousId: ajsAnonymousID,
-                pulumiUserId: pulumiUserID || ajsUserID,
-            },
-        };
-
-        this.send(message);
+        this.sendCreateConnection();
     }
 
     private onMessage(event: MessageEvent) {
@@ -85,7 +68,9 @@ export class PulumiAIClient {
     }
 
     private send(data: any) {
-        this.socket.send(JSON.stringify(data));
+        if (this.socket) {
+            this.socket.send(JSON.stringify(data));
+        }
     }
 
     public connect() {
@@ -94,6 +79,34 @@ export class PulumiAIClient {
         this.socket.addEventListener("message", this.onMessage.bind(this));
         this.socket.addEventListener("error", this.onError.bind(this));
         this.socket.addEventListener("close", this.onClose.bind(this));
+    }
+
+    private sendCreateConnection() {
+        const cookie = parseCookie();
+        this.ajsAnonymousID = cookie["ajs_anonymous_id"];
+        this.ajsUserID = cookie["ajs_user_id"];
+
+        const message: CreateConnectionAction = {
+            type: MessageType.CREATE_CONNECTION,
+            data: {
+                segmentAnonymousId: this.ajsAnonymousID,
+                pulumiUserId: this.pulumiUserID || this.ajsUserID,
+            },
+        };
+
+        this.send(message);
+    }
+
+    public set userID(id: string) {
+        this.pulumiUserID = id;
+
+        // If the socket we have isn't ready yet, wait a bit and try again.
+        if (this.socket && this.socket.readyState !== this.socket.OPEN) {
+            setTimeout(() => { this.userID = id; }, 100);
+            return;
+        }
+
+        this.sendCreateConnection();
     }
 
     public disconnect() {

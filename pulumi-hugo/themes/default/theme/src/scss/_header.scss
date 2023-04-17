@@ -192,7 +192,7 @@
                         ul {
                             @apply bg-white text-left rounded shadow-3xl p-5 whitespace-nowrap;
                             min-width: fit-content;
-                            div { 
+                            div {
                                 .header-nav-drop-down-heading {
                                     @apply font-medium;
                                 }
@@ -200,7 +200,7 @@
                                     @include gradient-border;
                                     @apply pt-1 pb-4 pr-5 text-xs;
                                 }
-                                
+
                             }
 
                             .header-nav-one-col-drop-down {
@@ -213,7 +213,7 @@
                                     @apply pl-1 pr-2 py-2 flex-col w-1/2;
                                 }
                             }
-                            
+
                             li {
                                 @apply px-1 py-2 flex-col;
                                 flex: 50%;
@@ -304,11 +304,11 @@
         // The 'pb-16' is used to pad the bottom of the container so
         // the CTA button does not get cut off.
         @apply hidden w-full h-screen pb-16;
-        
+
         @screen lg {
             @apply hidden;
         }
-        
+
         ul {
             @apply m-4 overflow-y-auto;
             height: calc(100vh - 305px);
@@ -331,7 +331,7 @@
                     margin-left: 1.1rem;
                 }
             }
-            
+
             .mobile-menu-item {
                 @apply text-2xl font-display text-gray-800 mt-4;
                 a {
@@ -346,7 +346,7 @@
                     @apply mt-6;
                 }
             }
-            
+
             [class*="mobile-menu-subitems-"] {
                 @apply mt-2 text-base hidden;
                 flex-basis: 100%;
@@ -402,7 +402,7 @@
                 .mobile-menu-subitems-learn {
                     @apply block;
                 }
-    
+
                 .mobile-menu-heading {
                     color: $brand-violet;
                 }
@@ -422,7 +422,7 @@
             @apply hidden;
         }
     }
-    
+
     .mobile-menu-footer {
         @apply block w-full h-screen overflow-y-auto;
         .get-started {

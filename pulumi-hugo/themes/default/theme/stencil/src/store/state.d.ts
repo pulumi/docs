@@ -19,7 +19,12 @@ export interface BannersState {
     dismissed: Banner[];
 }
 
+export interface UserState {
+    id: string;
+}
+
 export interface AppState {
     preferences: PreferencesState;
     banners: BannersState;
+    user: UserState;
 }
