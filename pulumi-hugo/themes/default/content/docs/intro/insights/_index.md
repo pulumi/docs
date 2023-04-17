@@ -28,7 +28,7 @@ It provides:
 
 ## Resource Search
 
-Resource Search can be accessed directly from the Pulumi Cloud dashboard or from the side navigation by navigating to the 'Resources' tab.
+Resource Search can be accessed directly from the Pulumi Cloud dashboard or from the side navigation by navigating to **Resources**.
 
 By default, you will see a table with the resources you have access to, ordered by most recently updated.
 
@@ -41,36 +41,34 @@ You can control how many resources are displayed per page and paginate through y
 ![Resource Search Pagination](search-pagination.png)
 
 {{% notes "info" %}}
-The web UI does not allow paginating through more than several thousand resources at a time.
-
-If you need access to more resources, you can use the [Data Export](export) feature or access them programmatically via the [API](/docs/reference/cloud-rest-api#resource-search).
+If you need access to more resources, you can use the [Data Export](export) feature or access them programmatically via the [Pulumi Cloud Rest API](/docs/reference/cloud-rest-api#resource-search).
 {{% /notes %}}
 
-You can use the search bar to refine the resources displayed on the page.
+Use the search bar to refine the resources displayed on the page.
 
-Clicking "project" will pre-populate a query with `project:` which we can then extend to `project:production` to return resources with "production" in their project name.
+Selecting **project** will pre-populate a query with `project:` which we can then extend to `project:production` to return resources with "production" in their project name.
 
-Clicking on the "Filter" menu to the left of the search bar can augment or pre-populate queries with helpful date ranges.
+Selecting the **Filters** menu to augments or pre-populate queries with helpful date ranges.
 
 ![Resource Search Filters](search-filters.png)
 
-The columns displayed on results can be modified to show or hide information by clicking on the gear icon in the upper left corder.
+The columns displayed on results can be modified to show or hide information by selecting the gear icon.
 
 ![Resource Search Columns](search-columns.png)
 
-Clicking on a column header will modify the query to sort by that column.
+Selecting a column header will modify the query to sort by that column.
 
 ### Resource Search Aggregates
 
-The "Advanced filtering" menu can be expanded to apply additional filters to your query and to see finer-grained resource counts.
+The **Advanced filtering** menu can be expanded to apply additional filters to your query and to view finer-grained resource counts.
 
 ![Resource Search Advanced Filters](search-advanced.png)
 
-In the example above, the query has been restricted to the "my-stack" stack.
+In this example, the query has been restricted to the "my-stack" stack.
 
 The counts next to each value show that this stack has 18 subnets, and 366 AWS resources in total.
 
-Clicking "Clear filters" will remove all previously selected filters.
+Selecting **Clear filters** will remove all previously selected filters.
 
 ## Data Export
 
@@ -81,7 +79,7 @@ If you don't see it in your organization, [contact sales](/contact?form=sales).
 
 Organizations with Data Export enabled are able to export all resources matching a particular query in CSV format.
 
-For a more detailed description of CSV schema, see the [documentation](export).
+For a more detailed description of CSV schema, see the [export documentation](export).
 
 ## APIs
 

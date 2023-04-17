@@ -6,6 +6,7 @@ menu:
     weight: 4
 aliases:
   - /docs/reference/service-rest-api/
+  - /docs/intro/insights/api/
 ---
 
 The Pulumi Cloud REST API is used by the Pulumi CLI to query and interact with state information, history, stack tags, etc. This API is available for end users to integrate into their own automation use cases.
