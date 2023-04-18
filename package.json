@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "lint-markdown": "node ./scripts/markdown_seo_lint.js",
     "minify-css": "node scripts/minify-css.js"
   },
   "dependencies": {

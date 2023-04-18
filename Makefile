@@ -83,3 +83,7 @@ ci_pull_request_closed:
 ci_bucket_cleanup:
 	$(MAKE) banner
 	./scripts/ci-bucket-cleanup.sh
+
+.PHONY: lint
+lint:
+	yarn run lint-markdown
