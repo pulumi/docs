@@ -40,6 +40,12 @@ destination_bucket_uri="s3://${destination_bucket}"
 # created in another account, in which case subsequent operations on the bucket will also
 # fail, causing this script to exit nonzero. In either case, it's okay to continue.
 aws s3 mb $destination_bucket_uri --region "$(aws_region)" || true
+# set `BlockPublicAcls` to false to enable setting the public-read ACL below.
+aws s3api put-public-access-block --bucket $destination_bucket --public-access-block-configuration BlockPublicAcls=false
+# set `ObjectOwnership=ObjectWriter`, since as of April 2023 the default has changed to `BucketOwnerEnforced` which 
+# disables bucket ACLs.
+aws s3api put-bucket-ownership-controls --bucket $destination_bucket --ownership-controls="Rules=[{ObjectOwnership=ObjectWriter}]"
+aws s3api put-bucket-acl --bucket $destination_bucket --acl bucket-owner-full-control --acl public-read
 aws s3api put-bucket-tagging --bucket $destination_bucket --tagging "TagSet=[{$(aws_owner_tag)}]" --region "$(aws_region)"
 
 # Make the bucket an S3 website.
