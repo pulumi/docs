@@ -25,14 +25,14 @@ You'll be prompted to make sure you really want to delete these resources. This 
 ```
 Previewing destroy (dev):
 
-     Type                 Name            Plan
- -   pulumi:pulumi:Stack  quickstart-dev  delete
- -   ├─ aws:s3:BucketObject  index.html          delete
- -   └─ aws:s3:Bucket        my-bucket           delete
+     Type                    Name            Plan
+ -   pulumi:pulumi:Stack     quickstart-dev  delete
+ -   ├─ aws:s3:BucketObject  hello.txt       delete
+ -   └─ aws:s3:Bucket        my-bucket       delete
+
 
 Outputs:
-  - bucketEndpoint: "http://my-bucket-b9c2eaa.s3-website-us-east-1.amazonaws.com"
-  - bucketName    : "my-bucket-b9c2eaa"
+  - bucketName: "my-bucket-b9c2eaa"
 
 Resources:
     - 3 to delete
@@ -40,19 +40,18 @@ Resources:
 Do you want to perform this destroy? yes
 Destroying (dev):
 
-     Type                 Name            Status
- -   pulumi:pulumi:Stack  quickstart-dev  deleted
- -   ├─ aws:s3:BucketObject  index.html          deleted
- -   └─ aws:s3:Bucket        my-bucket           deleted
+     Type                    Name            Status
+ -   pulumi:pulumi:Stack     quickstart-dev  deleted
+ -   ├─ aws:s3:BucketObject  hello.txt       deleted
+ -   └─ aws:s3:Bucket        my-bucket       deleted
 
 Outputs:
-  - bucketEndpoint: "http://my-bucket-b9c2eaa.s3-website-us-east-1.amazonaws.com"
-  - bucketName    : "my-bucket-b9c2eaa"
+  - bucketName: "my-bucket-b9c2eaa"
 
 Resources:
     - 3 deleted
 
-Duration: 7s
+Duration: 3s
 ```
 
 > To delete the stack itself, run [`pulumi stack rm`](/docs/reference/cli/pulumi_stack_rm). Note that this removes the stack entirely from the Pulumi Cloud, along with all of its update history.
@@ -61,8 +60,8 @@ Congratulations! You've successfully provisioned some cloud resources using Pulu
 
 - Created a Pulumi new project.
 - Provisioned a new S3 bucket.
-- Added an `index.html` file to your bucket.
-- Served the `index.html` as a static website.
+- Added a `hello.txt` file to your bucket.
+- Verified the deployment with AWS CLI.
 - Destroyed the resources you've provisioned.
 
 On the next page, we have a collection of examples and tutorials that you can deploy as they are or use them as a foundation for your own applications and infrastructure projects.

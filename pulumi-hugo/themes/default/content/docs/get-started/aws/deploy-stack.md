@@ -47,7 +47,7 @@ Updating (dev):
  +   └─ aws:s3:Bucket     my-bucket       created
 
 Outputs:
-    bucketName: "my-bucket-68e33ec"
+    bucketName: "my-bucket-b9c2eaa"
 
 Resources:
     + 2 created
@@ -119,6 +119,6 @@ Running that command will print out the name of your bucket.
 
 {{< console-note >}}
 
-Now that your bucket has been provisioned, let's modify the bucket to host a static website.
+Now that your bucket has been provisioned, let's make a few modifications to the program.
 
 {{< get-started-stepper >}}
