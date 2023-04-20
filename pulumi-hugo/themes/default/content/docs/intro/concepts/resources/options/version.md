@@ -9,7 +9,7 @@ menu:
     weight: 15
 ---
 
-The `version` resource option specifies a provider version to use when operating on a resource. This version overrides the version information inferred from the current package. This option should be used rarely.
+The `version` resource option specifies a provider version to use when operating on a resource. This version overrides the version information inferred from the current package. This option was built to be used directly by the Pulumi SDK. `version` should not be used directly during normal operations.
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
