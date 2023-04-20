@@ -50,7 +50,7 @@ aws s3api put-public-access-block --bucket $destination_bucket --public-access-b
 # set `ObjectOwnership=ObjectWriter`, since as of April 2023 the default has changed to `BucketOwnerEnforced` which 
 # disables bucket ACLs.
 aws s3api put-bucket-ownership-controls --bucket $destination_bucket --ownership-controls="Rules=[{ObjectOwnership=ObjectWriter}]"
-aws s3api put-bucket-acl --bucket $destination_bucket --acl bucket-owner-full-control --acl public-read
+aws s3api put-bucket-acl --bucket $destination_bucket --acl bucket-owner-full-control
 
 # Tag the bucket with ownership information for production buckets.
 if [ "$(pulumi -C infrastructure stack --show-name)" == "production" ]; then
