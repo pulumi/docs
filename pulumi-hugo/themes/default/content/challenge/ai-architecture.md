@@ -5,7 +5,7 @@ description: |
     Use Pulumi AI to generate the most interesting or sophisticated architecture possible
 meta_desc: |
     Use Pulumi AI to generate the most interesting or sophisticated architecture possible
-meta_image: /images/challenge/challenge-dec-meta.png
+meta_image: /images/challenge/challenge-ai-meta.png
 banner_image: /images/challenge/challenge-ai-banner.png
 ---
 
@@ -15,7 +15,7 @@ banner_image: /images/challenge/challenge-ai-banner.png
 
 Why write your Pulumi programs yourself when you can have AI do it for you? Pulumi AI leverages large language models (LLMs) to author infrastructure as code for any architecture for any cloud in any language.
 
-For the **GPT your IaC Challenge**, your goal is to have Pulumi AI create the most complex and sophisticated piece of architecture where you can run a successful `pulumi up` with the program created by Pulumi AI. To participate in the challenge, you'll need to either visit [pulumi.com/ai](https://pulumi.com/ai) or download the [CLI](https://github.com/pulumi/pulumi-ai) so you can use Pulumi AI.
+For the **GPT Your IaC challenge**, your goal is to have Pulumi AI create the most complex and sophisticated piece of architecture where you can run a successful `pulumi up` with the program created by Pulumi AI. To participate in the challenge, you'll need to either visit [pulumi.com/ai](https://pulumi.com/ai) or download the [CLI](https://github.com/pulumi/pulumi-ai) so you can use Pulumi AI.
 
 We will send you a piece of swag if you document this via a blog post, social media, or video. Tag us on social media or email us at [da@pulumi.com](mailto:da@pulumi.com), and we will help spread the word about your experience. All submissions will be judged at the end of the challenge, and the best submissions (there will be a few categories) will receive a special prize.
 
@@ -134,7 +134,7 @@ Diagnostics:
 
 #### Step 4. Fix Program
 
-Your Pulumi AI-generated program may not work when you run `pulumi up` the first time (like ours), but you can ask it to fix the error. It's OK to have Pulumi AI fix an error as part of the **GPT your IaC Challenge**. Go back to [pulumi.com/ai](https://pulumi.com/ai) and enter in the chat widget `Fix this error <error output from pulumi up>`
+Your Pulumi AI-generated program may not work when you run `pulumi up` the first time (like ours), but you can ask it to fix the error. It's OK to have Pulumi AI fix an error as part of the **GPT Your IaC Challenge**. Go back to [pulumi.com/ai](https://pulumi.com/ai) and enter in the chat widget `Fix this error <error output from pulumi up>`
 
 ![alt_text](/images/challenge/AIStep4.png "navigate to Pulumi AI website")
 
@@ -178,7 +178,7 @@ There you go! Pulumi AI has helped us generate a program to provision important 
 
 ### Congratulations
 
-Congratulations! You've completed this Pulumi Challenge. If you want, please create a blog post, social media, or video documenting your work on this challenge. Tag us on social media or email us at [da@pulumi.com](mailto:da@pulumi.com) to claim your swag. Winners will be chosen in a few months and receive a special prize.
+Congratulations! You've completed this **Pulumi Challenge**. If you want, please create a blog post, social media, or video documenting your work on this challenge. Tag us on social media or email us at [da@pulumi.com](mailto:da@pulumi.com) to claim your swag. Winners will be chosen in a few months and receive a special prize.
 
 #### What you have learned
 
