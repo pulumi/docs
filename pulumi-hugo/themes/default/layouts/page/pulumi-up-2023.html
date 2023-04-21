@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <section id="countdown" class="pt-12">
+    <section id="countdown" class="pt-12 mb-16">
         <pulumi-date-countdown-circles
             date-string="{{ .Params.event_date }}"
             value-label-class="block font-normal"
@@ -44,151 +44,191 @@
         </p>
     </div>
 
-    <section id="sessions" class="py-0">
-        <div class="container mx-auto py-12">
-            <h2 class="text-black px-6">Highlights from PulumiUP 2022</h2>
-            <h4 class="px-6">Innovation & Future-Forward Thoughts on Cloud</h4>
-            <div class="flex flex-wrap justify-center items-stretch">
-                {{ $people := .Site.Data.team.team }}
-                {{ range .Params.sessions }}
-                    <div class="w-full lg:w-1/2 p-3">
-                        <div class="card h-full bg-white overflow-hidden">
-                            <div class="flex flex-col h-full pb-3">
-                                <div class="bg-black w-full p-6 pb-3">
-                                    <div class="w-full lg:h-full">
-                                        <div class="flex justify-center items-start">
-                                            {{ range $presenter := .presenters }}
-                                                {{ $presenterData := index $people $presenter }}
-                                                <div class="w-1/4 pr-2">
-                                                    <img
-                                                        class="rounded-md"
-                                                        src="/images/team/{{ $presenter }}.jpg"
-                                                        alt="{{ $presenterData.name }}"
-                                                        title="{{ $presenterData.name }}"
-                                                    />
-                                                    <div class="text-white text-sm text-center mt-2">
-                                                        {{ $presenterData.name }}
-                                                    </div>
-                                                </div>
-                                            {{ end }}
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-col h-full p-6">
-                                    <h5 class="mt-0 mt-4">
-                                        {{ .title }}
-                                    </h5>
-                                    <p>
-                                        {{ .description }}
-                                    </p>
-                                    <div class="flex-grow text-center mt-8 flex justify-center items-end">
-                                        <a class="btn-secondary" href="{{ .link }}" target="_blank" rel="noopener noreferrer">Watch now</a>
-                                    </div>
-                                </div>
-                            </div>
+    <section id="dev-stories" class="yellow-blue-gradient mt-2">
+        <div class="container mx-auto px-4 py-8 text-center">
+            <h2>DevStories</h2>
+            <p class="text-lg">
+                PulumiUP isn't just another developer conference. Our brilliant speakers are engineers like you, who tackled challenges, successfully implemented solutions, and
+                some even founded their own companies. Listen to their stories, their ideas, be inspired and learn from the best.
+            </p>
+            <div class="container">
+                {{ range .Params.stories }}
+                    <div class="card mx-auto bg-white w-full m-4 p-4 flex flex-col lg:flex-row">
+                        <div class="w-full lg:w-1/5 flex-col">
+                            <img class="mx-auto pt-2" src="{{ .photo }}" alt="{{ .name }}" />
+                            <div class="text-xl my-2">{{ .name }}</div>
+                            <div class="text-sm text-gray-700 my-2">{{ .position }}</div>
+                        </div>
+                        <div class="w-full lg:w-4/5 text-left">
+                            <h5>{{ .title }}</h5>
+                            {{ .description | markdownify }}
                         </div>
                     </div>
                 {{ end }}
+            </div>
+            <h5 class="py-4">Stay tuned... More to come!</h5>
+            <event-session-registration-modal
+                modal-title="Register for PulumiUP"
+                button-text="Register Now"
+                button-class="btn-primary"
+                event-sessions="{{ .Params.registration.items | jsonify }}"
+            >
+            </event-session-registration-modal>
+        </div>
+    </section>
 
+    <section id="personas" class="light-blue-background">
+        <div class="container mx-auto px-4 py-8 lg:pt-24 text-center">
+            <h2>A MUST attend for...</h2>
+            <div class="mx-auto py-8 flex flex-col lg:flex-row">
+                {{ range .Params.personas.groups }}
+                    <div class="w-full lg:w-1/4 flex flex-row lg:flex-col">
+                        {{ range .items }}
+                            <div class="flex flex-col lg:flex-row px-12 my-4">
+                                <div class="w-14 flex justify-center"><img src="{{ .image }}" /></div>
+                                <div class="flex-col lg:px-8 text-left">
+                                    <p class="text-sm text-black text-left">{{ .name }}</p>
+                                </div>
+                            </div>
+                        {{ end }}
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
 
-                <div class="mt-16 mb-8 text-center">
-                    <a class="btn-primary" href="https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlpcvhSsUXdT5CXjRwAaM_My" target="_blank" rel="noopener noreferrer"
-                        >Watch all now</a
-                    >
+    <section id="topic-tags" class="relative mt-16">
+        <div class="dot-background-container">
+            <div class="dot-background"></div>
+        </div>
+        <div class="dot-overlay"></div>
+
+        <div class="w-full py-8" style="background-color:rgba(255,255,255,.8)">
+            <div class="text-center relative mx-auto w-full lg:w-2/3">
+                <h2 class="text-black mb-8">At A Glance Topics</h2>
+                <p>
+                    Learn how industry leaders leverage infrastructure as code to innovate, accelerate software development, enable their developer teams, and cut costs. Grow your
+                    knowledge about cloud and trending topics, and build more efficiently.
+                </p>
+                <div class="flex flex-row flex-wrap justify-center">
+                    {{ range .Params.topics }}
+                        <div class="rounded-md px-2 py-2 m-2 text-white {{ .color }}">{{ .name }}</div>
+                    {{ end }}
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="why" class="light-blue-background">
-        <div class="why-attend text-center container mx-auto py-24 px-6 lg:px-0">
-            <h2>Why Attend PulumiUP 2023</h2>
-            <p>Get ready to be inspired, challenged, and transformed. Learn from experts and success stories about early adopters.</p>
-
-            <div class="flex flex-col lg:flex-row">
-                <div class="w-full lg:w-1/3 px-8 mt-8 lg:mb-0">
-                    {{ partial "color-icon.html" (dict "icon" "lightning" "icon_color" "yellow") }}
-                    <p class="key-feature-description">
-                        Learn from cloud engineering experts about how they manage and solve frustrations with handling cloud complexity all the way from cloud native applications
-                        to structuring engineering orgs to be productive with the cloud.
-                    </p>
+    <section id="why-attend" class="my-8 lg:my-20">
+        <div class="container mx-auto">
+            <h2 class="pl-8">Why Attend</h2>
+            <div class="px-4 py-8 text-center flex flex-col lg:flex-row">
+                <div class="w-full lg:w-1/2 p-4 text-left">
+                    {{ .Params.why_attend.description | markdownify }}
+                    <div class="my-12 flex justify-center lg:justify-start">
+                        <event-session-registration-modal
+                            modal-title="Register for PulumiUP"
+                            button-text="Register Now"
+                            button-class="btn-primary"
+                            event-sessions="{{ .Params.registration.items | jsonify }}"
+                        >
+                        </event-session-registration-modal>
+                    </div>
                 </div>
-
-                <div class="w-full lg:w-1/3 px-8 mt-8 lg:mb-0">
-                    {{ partial "color-icon.html" (dict "icon" "lock" "icon_color" "purple") }}
-                    <p class="key-feature-description">
-                        Unlock the power of the cloud with thought-provoking presentations that are designed to help you transform your organization, your business, and yourself.
-                        Access open source code on Github and get involved with the community.
-                    </p>
-                </div>
-
-                <div class="w-full lg:w-1/3 px-8 mt-8 lg:mb-0">
-                    {{ partial "color-icon.html" (dict "icon" "rocketship" "icon_color" "salmon") }}
-                    <p class="key-feature-description">
-                        You will learn how top-performing cloud engineering teams and organizations are leveraging the cloud to drive remarkable success and how to implement their
-                        techniques within your own organization or team.
-                    </p>
-                </div>
-            </div>
-
-            <div class="py-16">
-                <div class="max-w-3xl card bg-white mx-auto p-6 text-left">
-                    <h3>Who Should Attend</h3>
-                    <p>Business leaders, engineering managers, developers, and anyone who is interested in learning more about the cloud and cloud engineering.</p>
-
-                    <ul>
-                        <li>Infrastructure and platform engineers</li>
-                        <li>Software engineers and developers</li>
-                        <li>Solutions architects</li>
-                        <li>Technical leaders (CIOs, CTOs, VPs, Directors)</li>
-                        <li>Everyone else interested in cloud engineering</li>
-                    </ul>
+                <div class="w-full lg:w-1/2 px-8">
+                    {{ range .Params.why_attend.items }}
+                        <div class="flex flex-col lg:flex-row px-4">
+                            <img src="{{ .icon }}" class="hidden lg:block" />
+                            <img src="{{ .icon }}" class="block lg:hidden w-14" />
+                            <div class="flex-col lg:px-8 text-left">
+                                <p class="text-xl font-bold text-left">{{ .title }}</p>
+                                <p>{{ .description }}</p>
+                            </div>
+                        </div>
+                    {{ end }}
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="my-0 mb-16 py-12 overflow-hidden px-3 white-background">
+    <section id="speakers" class="relative my-8 lg:my-24">
+        <div class="dot-background-container">
+            <div class="dot-background"></div>
+        </div>
+        <div class="dot-overlay"></div>
+
+        <div class="w-full py-8" style="background-color:rgba(255,255,255,.8)">
+            <div class="container mx-auto text-center">
+                <h2 class="mb-8 text-center">Speakers</h2>
+                <ul class="inline-flex flex-wrap list-none justify-center p-0 gap-x-8 gap-y-6">
+                    {{ range .Params.speakers }}
+                        <li class="about-card border-2 border-gray-300 bg-white rounded-md flex overflow-hidden relative">
+                            <div class="flex">
+                                <img class="" src="{{ .image }}" alt="{{ .name }}" />
+                                <div class="flex flex-col justify-center text-left mx-4">
+                                    <div class="font-display font-medium text-gray-900 text-2xl mb-3">{{ .name }}</div>
+                                    <div class="text-sm text-gray-700">{{ .title }}</div>
+                                </div>
+                            </div>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+            <div class="my-16 flex justify-center">
+                <event-session-registration-modal
+                    modal-title="Register for PulumiUP"
+                    button-text="Register Now"
+                    button-class="btn-primary btn-primary-blue-bg"
+                    event-sessions="{{ .Params.registration.items | jsonify }}"
+                >
+                </event-session-registration-modal>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="light-blue-background mb-8 lg:mb-16">
+        <div class="container mx-auto py-16 px-6 lg:px-0">
+            <h2 class="text-center">Schedule At A Glance</h2>
+            <p class="text-center mb-8">
+                2022 was amazing, but 2023 will be even better! Be inspired! Learn from experts and success Dev stories about early adopters from startups to large companies.
+            </p>
+            <div class="mx-auto w-full lg:w-1/2 grid gap-2 lg:gap-4 grid-cols-3 lg:grid-cols-6">
+                {{ range .Params.schedule }}
+                    <div class="bg-white rounded-md col-span-1 px-2 flex items-center justify-center">
+                        <p class="text-xs">{{ .time }}</p>
+                    </div>
+                    <div class="bg-white rounded-md col-span-2 lg:col-span-5 px-2 flex items-center">
+                        <p class="text-xs">{{ .title }}</p>
+                    </div>
+                {{ end }}
+            </div>
+            <div class="mt-12 flex justify-center">
+                <event-session-registration-modal
+                    modal-title="Register for PulumiUP"
+                    button-text="Register Now"
+                    button-class="btn-primary btn-primary-blue-bg"
+                    event-sessions="{{ .Params.registration.items | jsonify }}"
+                >
+                </event-session-registration-modal>
+            </div>
+        </div>
+    </section>
+
+    <section id="sponsors" class="my-0 mb-16 py-4 lg:py-12 overflow-hidden px-3 white-background">
         <div class="container mx-auto text-center">
-            <h3 class="text-center mb-10 hidden lg:block">{{ .Params.customer_logos.title }}</h3>
-            <h6 class="text-center mb-10 lg:hidden">{{ .Params.customer_logos.title }}</h6>
+            <h2 class="text-center mb-10 hidden lg:block">{{ .Params.customer_logos.title }}</h2>
+            <h6 class="text-center lg:hidden">{{ .Params.customer_logos.title }}</h6>
             <div class="flex flex-wrap items-center justify-center">
                 {{ range $logo := .Params.customer_logos.logos }}
-                    <div class="w-3/4 lg:w-1/6 p-10">
+                    <div class="w-3/4 lg:w-1/6 p-4 lg:p-10">
                         {{ $imgClass := "w-full" }}
                         {{ if eq $logo "aws-logo.svg" }}
                             {{ $imgClass = "w-2/3 mx-auto" }}
                         {{ end }}
-
-
-                        <img class="{{ $imgClass }}" src="/images/pulumiup/sponsors/{{ $logo }}" />
+                        <img class="{{ $imgClass }}" src="/images/pulumiup-2023/sponsors/{{ $logo }}" />
                     </div>
                 {{ end }}
             </div>
-        </div>
-    </section>
-
-    <section id="schedule" class="light-blue-background mb-32">
-        <div class="container mx-auto py-16 px-6 lg:px-0">
-            <h2>2022 Schedule</h2>
-
-            {{ range .Params.schedule_overview }}
-                <div class="flex flex-wrap my-8">
-                    <div class="w-full lg:w-1/4 border-b lg:border-b-0 lg:border-r-2 border-gray-700">
-                        <p class="text-3xl">{{ .day }}</p>
-                        <p>{{ .time }}</p>
-                        <p></p>
-                    </div>
-
-                    <div class="w-full lg:w-3/4 lg:pl-6">
-                        <p class="text-3xl">{{ .title }}</p>
-                        <p>
-                            {{ .description | markdownify }}
-                        </p>
-                    </div>
-                </div>
-            {{ end }}
         </div>
     </section>
 
