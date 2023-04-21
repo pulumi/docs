@@ -778,7 +778,7 @@ allow_tls = aws.ec2.SecurityGroup("allowTls",
                                     from_port=443,
                                     to_port=443,
                                     protocol="tcp",
-                                    cidr_blocks=["0.0.0.0"],
+                                    cidr_blocks=["0.0.0.0/0"],
                                   )],
                                   egress=[aws.ec2.SecurityGroupEgressArgs(
                                     from_port=0,
