@@ -31,7 +31,7 @@ Specifically, you will learn:
   cloud-native infrastructure with containerization
 
 Joining us is Pulumi customer [Learning
-Machine](https://www.learningmachine.com/). Adopting Pulumi helped
+Machine](https://www.hyland.com/). Adopting Pulumi helped
 Learning Machine reduce 25,000 LoC of ad-hoc DevOps scripts to 500 LoC
 of JavaScript, improving time to ship code, time to provision and
 onboard new customers, and unify their Development and DevOps teams and
