@@ -25,43 +25,48 @@ You'll be prompted to make sure you really want to delete these resources. This 
 ```
 Previewing destroy (dev):
 
-     Type                    Name            Plan
- -   pulumi:pulumi:Stack     quickstart-dev  delete
- -   ├─ aws:s3:BucketObject  hello.txt       delete
- -   └─ aws:s3:Bucket        my-bucket       delete
-
+     Type                               Name                 Plan
+ -   pulumi:pulumi:Stack                quickstart-dev       delete
+ -   ├─ aws:s3:BucketObject             index.html           delete
+ -   ├─ aws:s3:BucketOwnershipControls  ownership-controls   delete
+ -   ├─ aws:s3:BucketPublicAccessBlock  public-access-block  delete
+ -   └─ aws:s3:Bucket                   my-bucket            delete
 
 Outputs:
-  - bucketName: "my-bucket-b9c2eaa"
+  - bucketEndpoint: "http://my-bucket-dfd6bd0.s3-website-us-east-1.amazonaws.com"
+  - bucketName    : "my-bucket-dfd6bd0"
 
 Resources:
-    - 3 to delete
+    - 5 to delete
 
 Do you want to perform this destroy? yes
 Destroying (dev):
 
-     Type                    Name            Status
- -   pulumi:pulumi:Stack     quickstart-dev  deleted
- -   ├─ aws:s3:BucketObject  hello.txt       deleted
- -   └─ aws:s3:Bucket        my-bucket       deleted
+     Type                               Name                 Status
+ -   pulumi:pulumi:Stack                quickstart-dev       deleted
+ -   ├─ aws:s3:BucketObject             index.html           deleted (1s)
+ -   ├─ aws:s3:BucketPublicAccessBlock  public-access-block  deleted (0.28s)
+ -   ├─ aws:s3:BucketOwnershipControls  ownership-controls   deleted (0.47s)
+ -   └─ aws:s3:Bucket                   my-bucket            deleted (0.39s)
 
 Outputs:
-  - bucketName: "my-bucket-b9c2eaa"
+  - bucketEndpoint: "http://my-bucket-dfd6bd0.s3-website-us-east-1.amazonaws.com"
+  - bucketName    : "my-bucket-dfd6bd0"
 
 Resources:
-    - 3 deleted
+    - 5 deleted
 
-Duration: 3s
+Duration: 4s
 ```
 
-> To delete the stack itself, run [`pulumi stack rm`](/docs/reference/cli/pulumi_stack_rm). Note that this removes the stack entirely from the Pulumi Cloud, along with all of its update history.
+> To delete the stack itself, run [`pulumi stack rm`](/docs/reference/cli/pulumi_stack_rm). Note that this removes the stack entirely from Pulumi Cloud, along with all of its update history.
 
 Congratulations! You've successfully provisioned some cloud resources using Pulumi. By completing this guide you have successfully:
 
 - Created a Pulumi new project.
 - Provisioned a new S3 bucket.
-- Added a `hello.txt` file to your bucket.
-- Verified the deployment with AWS CLI.
+- Added an `index.html` file to your bucket.
+- Served the `index.html` as a static website.
 - Destroyed the resources you've provisioned.
 
 On the next page, we have a collection of examples and tutorials that you can deploy as they are or use them as a foundation for your own applications and infrastructure projects.

@@ -12,7 +12,7 @@
         <li>Creating a new Pulumi project.</li>
         {{ if eq $cloud "AWS" }}
             <li>Provisioning a new AWS S3 bucket.</li>
-            <li>Adding a file to the bucket.</li>
+            <li>Adding an <code>index.html</code> file to the bucket and serving it as a static website.</li>
         {{ else if eq $cloud "Microsoft Azure" }}
             <li>Provisioning a new Blob storage container.</li>
             <li>Adding an <code>index.html</code> file to your container and serving it as a static website.</li>

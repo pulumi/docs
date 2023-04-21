@@ -12,14 +12,18 @@ menu:
 aliases: ["/docs/quickstart/aws/modify-program/"]
 ---
 
-Now that your S3 bucket is provisioned, let's add a file to it. First, from within your project directory, create a new file called `hello.txt` file with some content in it:
+Now that your S3 bucket is provisioned, let's add a file to it. First, from within your project directory, create a new file called `index.html` file along with some content:
 
 {{< chooser os "macos,linux,windows" / >}}
 
 {{% choosable os macos %}}
 
 ```bash
-echo 'Hello, Pulumi!' > hello.txt
+echo '<html>
+    <body>
+        <h1>Hello, Pulumi!</h1>
+    </body>
+</html>' > index.html
 ```
 
 {{% /choosable %}}
@@ -27,7 +31,11 @@ echo 'Hello, Pulumi!' > hello.txt
 {{% choosable os linux %}}
 
 ```bash
-echo 'Hello, Pulumi!' > hello.txt
+echo '<html>
+    <body>
+        <h1>Hello, Pulumi!</h1>
+    </body>
+</html>' > index.html
 ```
 
 {{% /choosable %}}
@@ -35,15 +43,18 @@ echo 'Hello, Pulumi!' > hello.txt
 {{% choosable os windows %}}
 
 ```powershell
-$hello = "Hello, Pulumi!"
-$hello | Out-File -FilePath hello.txt
+@"
+<html>
+  <body>
+    <h1>Hello, Pulumi!</h1>
+  </body>
+</html>
+"@ | Out-File -FilePath index.html
 ```
 
 {{% /choosable %}}
 
-Now that you have your new `hello.txt` with some content, open your program file and modify it to add the file to your S3 bucket.
-
-To accomplish this, you will use Pulumi's `FileAsset` class to assign the content of the file to a new  `BucketObject`:
+Now, open the program and add this file to the S3 bucket. To do this, you'll use Pulumi's `FileAsset` resource to assign the content of the file to a new  `BucketObject`:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
@@ -52,9 +63,10 @@ To accomplish this, you will use Pulumi's `FileAsset` class to assign the conten
 In `index.js`, create the `BucketObject` right after creating the bucket itself:
 
 ```javascript
-const bucketObject = new aws.s3.BucketObject("hello.txt", {
+// Create an S3 Bucket object
+const bucketObject = new aws.s3.BucketObject("index.html", {
     bucket: bucket.id,
-    source: new pulumi.asset.FileAsset("hello.txt")
+    source: new pulumi.asset.FileAsset("./index.html")
 });
 ```
 
@@ -65,9 +77,10 @@ const bucketObject = new aws.s3.BucketObject("hello.txt", {
 In `index.ts`, create the `BucketObject` right after creating the bucket itself:
 
 ```typescript
-const bucketObject = new aws.s3.BucketObject("hello.txt", {
+// Create an S3 Bucket object
+const bucketObject = new aws.s3.BucketObject("index.html", {
     bucket: bucket.id,
-    source: new pulumi.asset.FileAsset("hello.txt")
+    source: new pulumi.asset.FileAsset("./index.html")
 });
 ```
 
@@ -78,10 +91,11 @@ const bucketObject = new aws.s3.BucketObject("hello.txt", {
 In `__main__.py`, create a new bucket object by adding the following right after creating the bucket itself:
 
 ```python
+# Create an S3 Bucket object
 bucketObject = s3.BucketObject(
-    'hello.txt',
+    'index.html',
     bucket=bucket.id,
-    source=pulumi.FileAsset('hello.txt')
+    source=pulumi.FileAsset('./index.html')
 )
 ```
 
@@ -92,9 +106,10 @@ bucketObject = s3.BucketObject(
 In `main.go`, create the `BucketObject` right after creating the bucket itself:
 
 ```go
-_, err = s3.NewBucketObject(ctx, "hello.txt", &s3.BucketObjectArgs{
+// Create an S3 Bucket object
+_, err = s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
     Bucket:  bucket.ID(),
-    Source: pulumi.NewFileAsset("hello.txt"),
+    Source: pulumi.NewFileAsset("./index.html"),
 })
 if err != nil {
     return err
@@ -108,10 +123,11 @@ if err != nil {
 In `Program.cs`, create a new `BucketObject` right after creating the bucket itself.
 
 ```csharp
-var bucketObject = new BucketObject("hello.txt", new BucketObjectArgs
+// Create an S3 Bucket object
+var bucketObject = new BucketObject("index.html", new BucketObjectArgs
 {
     Bucket = bucket.BucketName,
-    Source = new FileAsset("./hello.txt")
+    Source = new FileAsset("./index.html")
 });
 ```
 
@@ -122,22 +138,34 @@ var bucketObject = new BucketObject("hello.txt", new BucketObjectArgs
 In {{< langfile >}}, import the `FileAsset`, `BucketObject`, and `BucketObjectArgs` classes, then create the `BucketObject` right after creating the bucket itself.
 
 ```java
-// ...
-import com.pulumi.asset.FileAsset;
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.aws.s3.Bucket;
 import com.pulumi.aws.s3.BucketObject;
 import com.pulumi.aws.s3.BucketObjectArgs;
+import com.pulumi.asset.FileAsset;
 
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
-            // var bucket = ...
+
+            // Create an AWS resource (S3 Bucket)
+            var bucket = new Bucket("my-bucket");
 
             // Create an S3 Bucket object
-            new BucketObject("hello.txt", BucketObjectArgs.builder()
+            new BucketObject("index.html", BucketObjectArgs.builder()
                 .bucket(bucket.id())
-                .source(new FileAsset("hello.txt"))
+                .source(new FileAsset("./index.html"))
                 .build()
             );
+
+            // Export the name of the bucket
+            ctx.export("bucketName", bucket.bucket());
+        });
+    }
+}
 ```
 
 {{% /choosable %}}
@@ -147,14 +175,26 @@ public class App {
 In {{< langfile >}}, create the `BucketObject` right below the bucket itself.
 
 ```yaml
+name: quickstart
+runtime: yaml
+description: A minimal AWS Pulumi YAML program
+
 resources:
-  # ...
-  hello.txt:
+  # Create an AWS resource (S3 Bucket)
+  my-bucket:
+    type: aws:s3:Bucket
+
+  # Create an S3 Bucket object
+  index.html:
     type: aws:s3:BucketObject
     properties:
       bucket: ${my-bucket}
       source:
-        Fn::FileAsset: ./hello.txt
+        fn::fileAsset: ./index.html
+
+outputs:
+  # Export the name of the bucket
+  bucketName: ${my-bucket.id}
 ```
 
 {{% /choosable %}}

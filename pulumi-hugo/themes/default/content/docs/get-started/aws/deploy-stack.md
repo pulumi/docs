@@ -43,16 +43,16 @@ Do you want to perform this update? yes
 Updating (dev):
 
      Type                 Name            Status
- +   pulumi:pulumi:Stack  quickstart-dev  created
- +   └─ aws:s3:Bucket     my-bucket       created
+ +   pulumi:pulumi:Stack  quickstart-dev  created (4s)
+ +   └─ aws:s3:Bucket     my-bucket       created (2s)
 
 Outputs:
-    bucketName: "my-bucket-b9c2eaa"
+    bucketName: "my-bucket-58ce361"
 
 Resources:
     + 2 created
 
-Duration: 14s
+Duration: 5s
 ```
 
 Remember the output you defined in the previous step? That [stack output](/docs/intro/concepts/stack#outputs) can be seen in the `Outputs:` section of your update. You can access your outputs from the CLI by running the `pulumi stack output [property-name]` command. For example you can print the name of your bucket with the following command:
@@ -119,6 +119,6 @@ Running that command will print out the name of your bucket.
 
 {{< console-note >}}
 
-Now that your bucket has been provisioned, let's make a few modifications to the program.
+Now that the bucket has been provisioned, let's modify the program to host a static website.
 
 {{< get-started-stepper >}}

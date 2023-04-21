@@ -94,7 +94,7 @@ from pulumi_aws import s3
 bucket = s3.Bucket('my-bucket')
 
 # Export the name of the bucket
-pulumi.export('bucket_name',  bucket.id)
+pulumi.export('bucket_name', bucket.id)
 ```
 
 {{% /choosable %}}
@@ -105,8 +105,8 @@ pulumi.export('bucket_name',  bucket.id)
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
-    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -120,7 +120,7 @@ func main() {
         // Export the name of the bucket
         ctx.Export("bucketName", bucket.ID())
         return nil
-    })
+	  })
 }
 ```
 
@@ -164,7 +164,7 @@ public class App {
             var bucket = new Bucket("my-bucket");
 
             // Export the name of the bucket
-            ctx.export("bucketName", bucket.getId());
+            ctx.export("bucketName", bucket.bucket());
         });
     }
 }
@@ -212,7 +212,7 @@ export const bucketName = bucket.id;
 {{% choosable language python %}}
 
 ```python
-pulumi.export('bucket_name',  bucket.id)
+pulumi.export('bucket_name', bucket.id)
 ```
 
 {{% /choosable %}}
@@ -239,7 +239,7 @@ return new Dictionary<string, object?>
 {{% choosable language java %}}
 
 ```java
-ctx.export("bucketName", bucket.getId());
+ctx.export("bucketName", bucket.bucket());
 ```
 
 {{% /choosable %}}
