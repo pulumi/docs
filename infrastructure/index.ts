@@ -80,6 +80,10 @@ const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {
     }],
 });
 
+// This needs to be set in order to allow the use of ACLs. This was added to update our infrastructure to be
+// compatible with the default S3 settings from AWS' April update. `ObjectWriter` was the prior default, so
+// changing it to that here to match the configuration prior to the update.
+// https://aws.amazon.com/blogs/aws/heads-up-amazon-s3-security-changes-are-coming-in-april-of-2023/
 const uploadsBucketOwnershipControls = new aws.s3.BucketOwnershipControls("uploads-bucket-ownership-controls", {
     bucket: uploadsBucket.id,
     rule: {
@@ -151,6 +155,10 @@ const websiteLogsBucket = new aws.s3.Bucket(
     },
 );
 
+// This needs to be set in order to allow the use of ACLs. This was added to update our infrastructure to be
+// compatible with the default S3 settings from AWS' April update. `ObjectWriter` was the prior default, so
+// changing it to that here to match the configuration prior to the update.
+// https://aws.amazon.com/blogs/aws/heads-up-amazon-s3-security-changes-are-coming-in-april-of-2023/
 const logsBucketOwnershipControls = new aws.s3.BucketOwnershipControls("logs-bucket-ownership-controls", {
     bucket: websiteLogsBucket.id,
     rule: {
