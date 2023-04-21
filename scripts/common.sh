@@ -126,6 +126,13 @@ set_bucket_for_commit() {
         --overwrite
 }
 
+# Remove the parameter key associated with a specific commit.
+remove_param_for_commit() {
+    aws ssm delete-parameter \
+        --name "$(ssm_parameter_key_for_commit $1)" \
+        --region $2
+}
+
 # List the 100 most recent bucket in the current account, sorted descendingly by
 # CreationDate, matching the prefix we use to name website buckets. Supports an optional
 # suffix to filter by (e.g., "pr" or "push").
