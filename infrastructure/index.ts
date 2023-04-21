@@ -99,9 +99,8 @@ if (config.makeFallbackBucket) {
     );
 }
 
-// The origin bucket needs to have the "public-read" ACL so its contents can be read by
-// CloudFront and served. But we deny the s3:ListBucket permission to anyone but account
-// users to prevent unintended disclosure of the bucket's contents.
+// We deny the s3:ListBucket permission to anyone but account users to prevent unintended 
+// disclosure of the bucket's contents.
 const originBucketPolicy = new aws.s3.BucketPolicy("origin-bucket-policy", {
     bucket: originBucket.bucket,
     policy: pulumi.all([originBucket.arn, aws.getCallerIdentity()])
