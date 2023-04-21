@@ -41,6 +41,7 @@ if [[ "$GITHUB_EVENT_NAME" == "pull_request" && ! -z "$GITHUB_EVENT_PATH" ]]; th
                 # and we have access to it.
                 if aws s3api head-bucket --bucket "$pr_bucket_name" --region "$(aws_region)" 2>/dev/null; then
                     aws s3 rb "s3://${pr_bucket_name}" --force --region "$(aws_region)"
+                    remove_param_for_commit "$(git_sha)" "$(aws_region)"
                 else
                     echo "Unable to delete ${pr_bucket_name}. Skipping."
                 fi
