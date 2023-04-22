@@ -31,7 +31,7 @@ In the wizard, select "Other Issuer" as the "Federated credential scenario".
 Finally, fill in the "Issuer", "Subject Identifier", "Name", and "Audience" fields in the form.
 
 * "Issuer" must be `https://api.pulumi.com/oidc`
-* "Subject Identifier" must be a valid [subject claim](/docs/guides/oidc/#overview)
+* "Subject Identifier" must be a valid [subject claim](/docs/guides/oidc/#overview) (see examples at the end of this section).
 * "Name" is an arbitrary name for the credential
 * "Audience" must be the name of your Pulumi organization
 
@@ -52,4 +52,4 @@ Because Azure's federated credentials require that the subject identifier exactl
 6. Enter the ID of the subscription you want to use in the "Subscription ID" field.
 7. Click the "Save deployment configuration" button.
 
-With this configuration, each deployment of this stack will attempt to exchange the deployment's OIDC token for Azure credentials using the specified AAD App prior to running any pre-commands or Pulumi operations. The fetched credentials are published in the `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`,  and `AZURE_SUBSCRIPTION_ID` environment variables. The raw OIDC token is also available for advanced scenarios in the `PULUMI_OIDC_TOKEN` environment variable and the `/mnt/pulumi/pulumi.oidc` file.
+With this configuration, each deployment of this stack will attempt to exchange the deployment's OIDC token for Azure credentials using the specified AAD App prior to running any pre-commands or Pulumi operations. The fetched credentials are published in the `ARM_CLIENT_ID`, `ARM_TENANT_ID`,  and `ARM_SUBSCRIPTION_ID` environment variables. The raw OIDC token is also available for advanced scenarios in the `PULUMI_OIDC_TOKEN` environment variable and the `/mnt/pulumi/pulumi.oidc` file.
