@@ -81,7 +81,7 @@ jobs:
         run: PKGS=pulumi NOBUILD=true ./scripts/run_typedoc.sh
         working-directory: docs
       - name: generate python docs
-        run: ./scripts/generate_python_docs.sh "pulumi"
+        run: ./scripts/generate_python_docs.sh
         working-directory: docs
       - name: generate markdown
         run: |
