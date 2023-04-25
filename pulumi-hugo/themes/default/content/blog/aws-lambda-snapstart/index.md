@@ -70,7 +70,7 @@ Lambda functions that need to persist network connections, rely on ephemeral dat
 
 To take advantage of faster cold starts, you must create your function resource with the option to use SnapStart. Note that beyond the previously described requirements to make your function code SnapSafe, no changes need to be made to the function code itself to use SnapStart. In the following example, we use the [AWS Native](https://www.pulumi.com/registry/packages/aws-native/) provider to provision our function with SnapStart. The AWS Native provider uses the new [Cloud Control API](https://aws.amazon.com/cloudcontrolapi/) behind the scenes and has same-day support for new resources included in Cloud Control API - like SnapStart. This example also uses the [AWS Classic provider](https://www.pulumi.com/registry/packages/aws/) and the [Pulumi Command Provider](https://www.pulumi.com/registry/packages/command).
 
-First, we add the necessary imports, create a role for our function to assume, and an S3 bucket to hold our Lambda code. Then we add our function’s zipped code as an object in the bucket. For this example, the Lambda function code is the [AWS pet store example](https://github.com/awslabs/aws-serverless-java-container/tree/main/samples/springboot2/pet-store) in Spring Boot:
+First, we add the necessary imports, create a role for our function to assume, and an S3 bucket to hold our Lambda code. Then we add our function’s zipped code as an object in the bucket. For this example, the Lambda function code is the [AWS pet store example](https://github.com/awslabs/aws-serverless-java-container/tree/main/samples/springboot3/pet-store) in Spring Boot:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
