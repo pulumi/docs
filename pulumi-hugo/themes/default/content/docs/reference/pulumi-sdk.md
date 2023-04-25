@@ -1,7 +1,7 @@
 ---
 title: Pulumi SDK Reference
 linktitle: SDK Reference
-meta_desc: Documentation and examples for working with cloud providers and other services.
+meta_desc: The Pulumi SDK defines the core types and functions you will use in your programs. View API documentation based on your language runtime here.
 menu:
   reference:
     name: Pulumi SDK

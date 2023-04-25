@@ -50,6 +50,7 @@ external: false
 block_external_search_index: false
 aws_only: true
 title: Getting Started with Infrastructure as Code on AWS
+title_tag: "Getting Started with IaC on AWS (Apr 2023 Workshop)"
 meta_desc: This workshop is designed to help new users become familiar with the
   core concepts needed to effectively deploy resources on AWS using Pulumi.
 url_slug: getting-started-with-iac-pulumi-aws

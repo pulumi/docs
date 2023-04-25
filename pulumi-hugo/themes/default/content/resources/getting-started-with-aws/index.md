@@ -1,6 +1,7 @@
 ---
 # Name of the webinar.
 title: "Getting Started with Infrastructure as Code on AWS"
+title_tag: "Getting Started with IaC on AWS (Oct 2020 Workshop)"
 meta_desc: "In this workshop, you will learn the fundamentals of Infrastructure as Code on AWS through a series of exercises using Pulumi’s Cloud Engineering platform."
 
 aliases:

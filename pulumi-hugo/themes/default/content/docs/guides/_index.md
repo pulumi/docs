@@ -1,7 +1,6 @@
 ---
 title: User Guides
-meta_desc: Pulumi’s approach to infrastructure as code is great for continuous delivery,
-           secure collaboration, and easy management of common cloud services and operations.
+meta_desc: Pulumi’s approach to IaC is great for continuous delivery, secure collaboration, and more. Start with one of our user guides here and start using Pulumi.
 menu:
   userguides:
     name: Overview

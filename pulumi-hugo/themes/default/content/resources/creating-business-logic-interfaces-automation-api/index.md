@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "Altana AI - Business Logic Interfaces with Automation API"
-meta_desc: In this talk you will learn how to migrate a large monolith codebase to Cloud-Native and learn a few gotchas along the way.
+meta_desc: Learn how Pulumi’s Automation API can be integrated into a self-service application to codify your business logic and provide a richer operational experience.
 
 cloud_engineering_days:
     track: customer_stories

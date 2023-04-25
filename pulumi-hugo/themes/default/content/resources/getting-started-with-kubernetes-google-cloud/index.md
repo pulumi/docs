@@ -47,7 +47,6 @@ external: false
 block_external_search_index: false
 aws_only: false
 title: Getting Started with Kubernetes on Google Cloud
-meta_desc: In this workshop, you will learn how to deploy a Kubernetes cluster
-  on Google Cloud and run containerized applications on the cluster.
+meta_desc: In this April 2023 workshop, you will learn how to deploy a Kubernetes cluster on Google Cloud and run containerized applications on the cluster.
 url_slug: getting-started-with-kubernetes-google-cloud
 ---

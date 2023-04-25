@@ -47,7 +47,6 @@ external: false
 block_external_search_index: false
 aws_only: false
 title: Kubernetes on Google Cloud with Pulumi
-meta_desc: In this workshop, you will learn how to deploy a Kubernetes cluster
-  on Google Cloud and run containerized applications on the cluster.
+meta_desc: In this March 2023 workshop, you will learn how to deploy a Kubernetes cluster on Google Cloud and run containerized applications on the cluster.
 url_slug: kubernetes-on-google-cloud
 ---

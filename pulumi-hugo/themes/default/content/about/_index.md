@@ -1,6 +1,6 @@
 ---
 title: About
-meta_desc: Pulumi's open source infrastructure as code SDK enables you to create, deploy, and manage infrastructure on any cloud, using your favorite languages.
+meta_desc: At Pulumi, we help engineers ship infrastructure faster with Infrastructure as Code in general-purpose languages.
 type: page
 layout: about
 menu:

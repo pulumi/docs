@@ -1,8 +1,7 @@
 ---
 title: Automation API Guides
 linktitle: Automation API
-meta_desc: Pulumi’s approach to infrastructure as code is great for continuous delivery,
-           secure collaboration, and easy management of common cloud services and operations.
+meta_desc: The Pulumi Automation API is a programmatic interface for running Pulumi programs without the Pulumi CLI. View our Automation API guides here.
 menu:
     userguides:
         identifier: automation-api

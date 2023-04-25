@@ -1,7 +1,7 @@
 ---
 title: "Getting Started With Kubernetes: Advanced Deployment"
 date: 2020-07-09
-meta_desc: "A tutorial for getting started with Kubernetes using Infrastructure as Code."
+meta_desc: "Part 3 of a 3-part tutorial for getting started with Kubernetes using Infrastructure as Code."
 meta_image: getting-started.png
 authors:
     - sophia-parafina

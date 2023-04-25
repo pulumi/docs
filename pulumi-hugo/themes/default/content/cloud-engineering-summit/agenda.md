@@ -1,6 +1,6 @@
 ---
 title: Cloud Engineering Summit Agenda
-meta_desc: The Cloud Engineering Summit is a day of learning for cloud practitioners about cloud infrastructure, modern applications, and everything in between. Oct 20-21.
+meta_desc: View the agenda for The Cloud Engineering Summit here.
 
 type: page
 layout: cloud-engineering-summit-agenda

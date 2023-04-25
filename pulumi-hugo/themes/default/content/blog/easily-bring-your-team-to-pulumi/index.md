@@ -8,6 +8,7 @@ authors:
 tags:
     - pulumi-enterprise
     - security
+aliases: [/blog/pulumiup-bring-your-whole-team-to-pulumi/]
 ---
 
 The Pulumi Service helps teams of all sizes deliver and manage cloud apps and infrastructure. In the console, everyone on the team can see the infrastructure the team is responsible for, when it was last deployed, how it’s configured, and more. They can see a full breakdown of the infrastructure as well, so they can understand how the team brings together individual cloud services to create their applications. When you bring your teams together on the Pulumi Service, you can provide a “single pane of glass” over all the infrastructure that you manage with Pulumi.

@@ -1,6 +1,6 @@
 ---
 title: Leadership
-meta_desc: Pulumi's open source infrastructure as code SDK enables you to create, deploy, and manage infrastructure on any cloud, using your favorite languages.
+meta_desc: At Pulumi, our purpose is to democratize the cloud for every engineer. Meet our leaders.
 type: page
 layout: leadership
 ---

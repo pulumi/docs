@@ -1,7 +1,7 @@
 ---
 title: API Reference
 linktitle: API
-meta_desc: Documentation and examples for working with cloud providers and other services.
+meta_desc: Pulumi offers APIs for working with a wide variety of cloud platforms. Browse resource-level documentation and examples here.
 menu:
   reference:
     name: API Reference

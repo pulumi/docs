@@ -2,7 +2,7 @@
 title: Deploy the Changes | Azure
 h1: Deploy the Changes
 linktitle: Deploy the Changes
-meta_desc: This page provides an overview of how deploy changes to an Azure project.
+meta_desc: Learn how to deploy changes to an Azure project in this guide.
 weight: 7
 menu:
   getstarted:

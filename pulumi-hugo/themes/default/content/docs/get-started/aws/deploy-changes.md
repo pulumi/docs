@@ -2,7 +2,7 @@
 title: Deploy the Changes | AWS
 h1: Deploy the Changes
 linktitle: Deploy the Changes
-meta_desc: This page provides an overview of how deploy changes to an AWS project.
+meta_desc: Learn how to deploy changes to an AWS project in this guide.
 weight: 7
 menu:
   getstarted:

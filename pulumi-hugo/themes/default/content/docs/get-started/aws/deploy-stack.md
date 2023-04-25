@@ -2,7 +2,7 @@
 title: Deploy the Stack | AWS
 h1: Deploy the Stack
 linktitle: Deploy the Stack
-meta_desc: This page provides an overview of how deploy changes to an AWS project.
+meta_desc: Learn how to deploy your stack to an AWS project in this guide.
 weight: 5
 menu:
   getstarted:
