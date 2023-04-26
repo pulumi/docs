@@ -47,6 +47,10 @@ const config = {
     // cloudfrontDomainAlias is the domain alias to add to the CloudFront distribution.
     // If not set, will default the alias to the `websiteDomain` config value.
     cloudfrontDomainAlias: stackConfig.get("cloudfrontDomainAlias") || undefined,
+
+    // setRootRecord assumes the name of the hosted zone specified for the A record.
+    setRootRecord: stackConfig.get("setRootRecord") || undefined,
+
 };
 
 // originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
@@ -435,9 +439,9 @@ if (!config.newAccountRollout) {
         const domainParts = getDomainAndSubdomain(targetDomain);
         const hostedZone = await aws.route53.getZone({ name: config.hostedZone || domainParts.parentDomain });
         return new aws.route53.Record(
-            targetDomain,
+            config.websiteDomain,
             {
-                name: domainParts.subdomain,
+                name: config.setRootRecord ? "" : domainParts.subdomain,
                 zoneId: hostedZone.zoneId,
                 type: "A",
                 aliases: [
