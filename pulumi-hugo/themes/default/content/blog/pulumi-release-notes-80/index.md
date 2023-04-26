@@ -133,7 +133,7 @@ We added Output.format to the Python SDK to match helper methods in our other SD
 
 ### Cloning Pulumi templates from Azure DevOps
 
-We now support cloning Pulumi templates (`pulumi new`) from Azure DevOps repositories. When given a URL with a hostname of `dev.azure.com`, it will use system-installed git and will clone the master/main branch.
+We now support cloning Pulumi templates (`pulumi new`) from Azure DevOps repositories. When given a URL with a hostname of `dev.azure.com`, it will use system-installed Git and will clone the master/main branch.
 
 ### Skip Checkpoints Experimental Flag
 
@@ -143,9 +143,9 @@ We have added a new experimental flag to improve performance for certain use cas
 
 ### Token Authentication in Go Providers
 
-Thank you to community member [@aohoy](https://github.com/aohoy) for adding support for token authentication in the Go providers that use git. You can now authenticated requests by tokens such as `https://auth:token@gitlab.example.com/group/proj.git/tree/v0.0.0/path`.
+Thank you to community member [@aohoy](https://github.com/aohoy) for adding support for token authentication in the Go providers that use Git. You can now authenticated requests by tokens such as `https://auth:token@gitlab.example.com/group/proj.git/tree/v0.0.0/path`.
 
-👉 Learn more by reviewing the [Add token to git Go module pull request](https://github.com/pulumi/pulumi/pull/10628).
+👉 Learn more by reviewing the [Add token to Git Go module pull request](https://github.com/pulumi/pulumi/pull/10628).
 
 ### Bump TypeScript version from v3.7.3 to v3.8.3
 
@@ -168,7 +168,7 @@ With Pulumi Deployments, you can run a Pulumi infrastructure as code action (a p
 1. **The Deployments REST API** - A fully managed REST API to execute Pulumi programs with the Pulumi Service. This includes APIs to observe your deployment and all associated logs.
 2. **Deployment Visualization** - A dashboard for deployment observability including deployment status, logs, and queueing via the Pulumi Service console.
 3. **Click to Deploy** - Deploy infrastructure with the click of a button from the Pulumi Service console.
-4. **git push to Deploy** - Configure automatic infrastructure deployments in response to git push events by installing and configuring the Pulumi GitHub App.
+4. **Git push to Deploy** - Configure automatic infrastructure deployments in response to `git push` events by installing and configuring the Pulumi GitHub App.
 5. **Remote Automation API** - Our strongly typed infrastructure orchestration technology can now run deployments remotely in the cloud.
 
 Click to Deploy
