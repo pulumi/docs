@@ -457,6 +457,12 @@ SELECT *
 
 Huzzah! You've now got yourself a working data warehouse.
 
+## See it in action
+
+To demonstrate the entire process of building a data warehouse with Redshift and Pulumi, we created this [Modern Infrastructure video](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWloyj3V5gXzPraiKStO2GGZw) that shows all of this in action:
+
+{{< youtube "2v_53eWGrqE?rel=0" >}}
+
 ## Taking stock, and looking ahead
 
 If you're like me, you're probably happy to be up and running --- but you've also got a few questions:

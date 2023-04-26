@@ -301,6 +301,12 @@ Embedding these buttons yourself is easy --- just use one of the snippets below,
 
 Project creators who go down this path will be prompted in the browser for the same configuration values as they would with the CLI, and afterward, they'll be able to deploy the project either with the Pulumi CLI or with [Pulumi Deployments](https://www.pulumi.com/docs/intro/deployments/).
 
+## See it in action
+
+You can watch this [Modern Infrastructure video](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWloyj3V5gXzPraiKStO2GGZw) to see another example of creating and sharing a Pulumi template:
+
+{{< youtube "-jbZ_LZz31M?rel=0" >}}
+
 ## Wrapping up
 
 As you can see, creating a template is both simple and powerful, and I hope this post encourages you to experiment with a few of your own. Feel free to peruse the following links for inspiration:

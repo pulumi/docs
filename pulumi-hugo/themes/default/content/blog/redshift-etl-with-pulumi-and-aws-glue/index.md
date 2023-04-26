@@ -785,6 +785,12 @@ Resources:
     - 16 deleted
 ```
 
+## See it in action
+
+If you'd like to see a demonstration of what you've read in this blog post, then this [Modern Infrastructure video](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWloyj3V5gXzPraiKStO2GGZw) covers the whole process:
+
+{{< youtube "cbAzk9ovR9s?rel=0" >}}
+
 ## What's next?
 
 I hope you learned as much as I did with this post --- we covered a lot, and we've only scratched the surface of what's possible with these tools. Once again, I'd encourage you to spend some time digging into the [Redshift](https://docs.aws.amazon.com/redshift/index.html) and [Glue](https://docs.aws.amazon.com/glue/index.html) documentation to explore both in more depth, as there's lots more to learn than what we've covered so far.
