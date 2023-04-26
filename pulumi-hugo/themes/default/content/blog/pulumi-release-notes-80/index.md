@@ -168,7 +168,7 @@ With Pulumi Deployments, you can run a Pulumi infrastructure as code action (a p
 1. **The Deployments REST API** - A fully managed REST API to execute Pulumi programs with the Pulumi Service. This includes APIs to observe your deployment and all associated logs.
 2. **Deployment Visualization** - A dashboard for deployment observability including deployment status, logs, and queueing via the Pulumi Service console.
 3. **Click to Deploy** - Deploy infrastructure with the click of a button from the Pulumi Service console.
-4. **git push to Deploy** - Configure automatic infrastructure deployments in response to `git push` events by installing and configuring the Pulumi GitHub App.
+4. **Git push to Deploy** - Configure automatic infrastructure deployments in response to `git push` events by installing and configuring the Pulumi GitHub App.
 5. **Remote Automation API** - Our strongly typed infrastructure orchestration technology can now run deployments remotely in the cloud.
 
 Click to Deploy
