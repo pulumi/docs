@@ -439,10 +439,9 @@ if (!config.newAccountRollout) {
         const domainParts = getDomainAndSubdomain(targetDomain);
         const hostedZone = await aws.route53.getZone({ name: config.hostedZone || domainParts.parentDomain });
         return new aws.route53.Record(
-            "my-a-record.pulumi.com",
+            config.websiteDomain,
             {
-                // name: config.setRootRecord ? "" : domainParts.subdomain,
-                name: "",
+                name: config.setRootRecord ? "" : domainParts.subdomain,
                 zoneId: hostedZone.zoneId,
                 type: "A",
                 aliases: [
