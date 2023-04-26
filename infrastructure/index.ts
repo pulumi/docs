@@ -38,6 +38,15 @@ const config = {
 
     // newAccountRollout is a temporary config value for new account rollout.
     newAccountRollout: stackConfig.get("newAccountRollout") || undefined,
+
+    // hostedZone is a config value that represents the hosted zone the A record
+    // will be added to. If not set, it will be set to the parent domain of the
+    // `websiteDomain` config value.
+    hostedZone: stackConfig.get("hostedZone") || undefined,
+
+    // cloudfrontDomainAlias is the domain alias to add to the CloudFront distribution.
+    // If not set, will default the alias to the `websiteDomain` config value.
+    cloudfrontDomainAlias: stackConfig.get("cloudfrontDomainAlias") || undefined,
 };
 
 // originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
@@ -179,8 +188,10 @@ if (!config.newAccountRollout) {
     // domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
     // domain name to be used to access the website must be listed here.
 
+    const domainAlias = config.cloudfrontDomainAlias || config.websiteDomain;
+
     // websiteDomain is the A record for the website bucket associated with the website.
-    domainAliases.push(config.websiteDomain);
+    domainAliases.push(domainAlias);
 
     // redirectDomain is the domain to use for fully-qualified 301 redirects.
     if (config.redirectDomain) {
@@ -422,7 +433,7 @@ if (!config.newAccountRollout) {
             targetDomain: string, distribution: aws.cloudfront.Distribution): Promise<aws.route53.Record> {
 
         const domainParts = getDomainAndSubdomain(targetDomain);
-        const hostedZone = await aws.route53.getZone({ name: domainParts.parentDomain });
+        const hostedZone = await aws.route53.getZone({ name: config.hostedZone || domainParts.parentDomain });
         return new aws.route53.Record(
             targetDomain,
             {

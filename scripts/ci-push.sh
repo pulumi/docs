@@ -14,7 +14,7 @@ if [[ "$GITHUB_WORKFLOW" == "Build and deploy" ]]; then
 elif [[ "$GITHUB_WORKFLOW" == "Build and deploy new account" ]]; then
     # temporarily setting site to build in preview mode, to prevent search bots from indexing
     # until we cut over DNS to start routing to the new account.
-    ./scripts/build-site.sh preview
+    ./scripts/build-site.sh
     ./scripts/sync-and-test-bucket.sh
     node ./scripts/await-in-progress.js
     ./scripts/run-pulumi.sh update
