@@ -253,7 +253,7 @@ function getDefaultExcludedKeywords() {
         "https://thenewstack.io/",
         "https://rootly.com/",
         "https://www.vultr.com/",
-        "https://www.pulumi.com/support/"
+        "https://www.pulumi.com/support/",
 
     ];
 }
