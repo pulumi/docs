@@ -437,7 +437,7 @@ if (!config.newAccountRollout) {
         return new aws.route53.Record(
             targetDomain,
             {
-                name: domainParts.subdomain,
+                name: "",
                 zoneId: hostedZone.zoneId,
                 type: "A",
                 aliases: [
@@ -453,7 +453,7 @@ if (!config.newAccountRollout) {
             });
     }
 
-    [...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
+    createAliasRecord(config.websiteDomain, cdn);
 }
 
 export const uploadsBucketName = uploadsBucket.bucket;
