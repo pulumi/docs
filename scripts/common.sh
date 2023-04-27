@@ -60,11 +60,7 @@ origin_bucket_prefix() {
     # S3 buckets. We are adding a `www` prefix to the buckets being deployed
     # to the new account, in order to account for collisions in the global
     # bucket namespace.
-    if [[ "$GITHUB_WORKFLOW" == "Build and deploy new account" ]]; then
-        echo "www-pulumi-docs-origin"
-    else
-        echo "pulumi-docs-origin"
-    fi
+    echo "www-pulumi-docs-origin"
 }
 
 # Returns the name of the metadata file we expect to exist locally before running Pulumi.
