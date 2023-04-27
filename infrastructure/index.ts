@@ -41,13 +41,11 @@ const config = {
     // `websiteDomain` config value.
     hostedZone: stackConfig.get("hostedZone") || undefined,
 
-    // cloudfrontDomainAlias is the domain alias to add to the CloudFront distribution.
-    // If not set, will default the alias to the `websiteDomain` config value.
-    cloudfrontDomainAlias: stackConfig.get("cloudfrontDomainAlias") || undefined,
-
-    // setRootRecord assumes the name of the hosted zone specified for the A record.
+    // setRootRecord assumes the name of the hosted zone specified for the A record. In production
+    // we run a dedicated hosted zone wired up via an NS record. If you wish to share a hosted zone
+    // (e.g. in dev environment) you may want to set this to false. This will then take the subdomain
+    // of the `websiteDomain` rather than use the root of that zone.
     setRootRecord: stackConfig.get("setRootRecord") || undefined,
-
 };
 
 // originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
@@ -181,15 +179,11 @@ const baseCacheBehavior = {
     responseHeadersPolicyId: "67f7725c-6f97-4210-82d7-5512b31e9d03", // SecurityHeadersPolicy
 };
 
+// domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
 const domainAliases = [];
 
-// domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
-// domain name to be used to access the website must be listed here.
-
-const domainAlias = config.cloudfrontDomainAlias || config.websiteDomain;
-
 // websiteDomain is the A record for the website bucket associated with the website.
-domainAliases.push(domainAlias);
+domainAliases.push(config.websiteDomain);
 
 // redirectDomain is the domain to use for fully-qualified 301 redirects.
 if (config.redirectDomain) {
