@@ -252,6 +252,9 @@ function getDefaultExcludedKeywords() {
         "http://optout.networkadvertising.org/?c=1",
         "https://thenewstack.io/",
         "https://rootly.com/",
+        "https://www.vultr.com/",
+        "https://www.pulumi.com/support/",
+
     ];
 }
 
