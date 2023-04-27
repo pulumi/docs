@@ -7,7 +7,7 @@
             <div class="lg:w-8/12">
                 <div class="app">
                     <pulumi-ai
-                        ws-endpoint="wss://89fsnviadl.execute-api.us-west-2.amazonaws.com/wsMessengerApiStage-abef943"
+                        ws-endpoint="{{ getenv "PULUMI_AI_WS_URL" }}"
                         repo-url="https://github.com/pulumi/pulumiai"
                         signup-url="https://app.pulumi.com/signup?pulumiai=1"
                         welcome-content="{{ htmlUnescape (htmlEscape (.Params.welcome | markdownify)) }}"
