@@ -36,9 +36,6 @@ const config = {
     // configured `websiteDomain`.
     makeFallbackBucket: stackConfig.getBoolean("makeFallbackBucket") || false,
 
-    // newAccountRollout is a temporary config value for new account rollout.
-    newAccountRollout: stackConfig.get("newAccountRollout") || undefined,
-
     // hostedZone is a config value that represents the hosted zone the A record
     // will be added to. If not set, it will be set to the parent domain of the
     // `websiteDomain` config value.
@@ -186,21 +183,17 @@ const baseCacheBehavior = {
 
 const domainAliases = [];
 
-// As the first part of the new account rollout, do not set the domain aliases.
-if (!config.newAccountRollout) {
+// domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
+// domain name to be used to access the website must be listed here.
 
-    // domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
-    // domain name to be used to access the website must be listed here.
+const domainAlias = config.cloudfrontDomainAlias || config.websiteDomain;
 
-    const domainAlias = config.cloudfrontDomainAlias || config.websiteDomain;
+// websiteDomain is the A record for the website bucket associated with the website.
+domainAliases.push(domainAlias);
 
-    // websiteDomain is the A record for the website bucket associated with the website.
-    domainAliases.push(domainAlias);
-
-    // redirectDomain is the domain to use for fully-qualified 301 redirects.
-    if (config.redirectDomain) {
-        domainAliases.push(config.redirectDomain);
-    }
+// redirectDomain is the domain to use for fully-qualified 301 redirects.
+if (config.redirectDomain) {
+    domainAliases.push(config.redirectDomain);
 }
 
 // distributionArgs configures the CloudFront distribution. Relevant documentation:
@@ -430,35 +423,32 @@ function getDomainAndSubdomain(domain: string): { subdomain: string, parentDomai
     };
 }
 
-// As the first part of the new account rollout do not add any DNS records.
-if (!config.newAccountRollout) {
-    // Creates a new Route53 DNS record pointing the domain to the CloudFront distribution.
-    async function createAliasRecord(
-            targetDomain: string, distribution: aws.cloudfront.Distribution): Promise<aws.route53.Record> {
+// Creates a new Route53 DNS record pointing the domain to the CloudFront distribution.
+async function createAliasRecord(
+        targetDomain: string, distribution: aws.cloudfront.Distribution): Promise<aws.route53.Record> {
 
-        const domainParts = getDomainAndSubdomain(targetDomain);
-        const hostedZone = await aws.route53.getZone({ name: config.hostedZone || domainParts.parentDomain });
-        return new aws.route53.Record(
-            config.websiteDomain,
-            {
-                name: config.setRootRecord ? "" : domainParts.subdomain,
-                zoneId: hostedZone.zoneId,
-                type: "A",
-                aliases: [
-                    {
-                        name: distribution.domainName,
-                        zoneId: distribution.hostedZoneId,
-                        evaluateTargetHealth: true,
-                    },
-                ],
-            },
-            {
-                protect: true,
-            });
-    }
-
-    [...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
+    const domainParts = getDomainAndSubdomain(targetDomain);
+    const hostedZone = await aws.route53.getZone({ name: config.hostedZone || domainParts.parentDomain });
+    return new aws.route53.Record(
+        config.websiteDomain,
+        {
+            name: config.setRootRecord ? "" : domainParts.subdomain,
+            zoneId: hostedZone.zoneId,
+            type: "A",
+            aliases: [
+                {
+                    name: distribution.domainName,
+                    zoneId: distribution.hostedZoneId,
+                    evaluateTargetHealth: true,
+                },
+            ],
+        },
+        {
+            protect: true,
+        });
 }
+
+[...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
 
 export const uploadsBucketName = uploadsBucket.bucket;
 export const originBucketWebsiteDomain = originBucket.websiteDomain;
