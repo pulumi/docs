@@ -109,6 +109,7 @@ stories:
     - name: Tim Holm
       position: Co-Founder and CTO
       company: Nitric
+      logo: /images/pulumiup-2023/speaker-logos/nitric.svg
       photo: /images/pulumiup-2023/speakers/tim-holm.png
       title: Engineering a Multi-cloud Platform
       description: |
@@ -122,6 +123,7 @@ stories:
     - name: Ala Shiban
       position: Co-Founder and CEO
       company: Klotho
+      logo: /images/pulumiup-2023/speaker-logos/klotho.svg
       photo: /images/pulumiup-2023/speakers/ala-shiban.png
       title: Creating a ‘Cloud-Aware’ Code Solution
       description: |
@@ -131,6 +133,7 @@ stories:
     - name: Sefi Genis
       position: Co-Founder and CTO
       company: Firefly
+      logo: /images/pulumiup-2023/speaker-logos/firefly.svg
       photo: /images/pulumiup-2023/speakers/sefi-genis.png
       title: Lessons Learned from Writing Thousands of Lines of IaC
       description: |
@@ -140,6 +143,7 @@ stories:
     - name: Matt Stephenson
       position: Sr Principal Software Engineer
       company: Starburst
+      logo: /images/pulumiup-2023/speaker-logos/starburst.svg
       photo: /images/pulumiup-2023/speakers/matt-stephenson.png
       title: Creating Infrastructure Automation Magic with Code
       description: |
@@ -149,6 +153,7 @@ stories:
     - name: Dennis Sauvé
       position: DevOps Engineer
       company: Washington Trust Bank
+      logo: /images/pulumiup-2023/speaker-logos/washington-trust-bank.svg
       photo: /images/pulumiup-2023/speakers/dennis-sauve.png
       title: How a bank modernized its software engineering with infrastructure as code automation
       description: |
@@ -158,6 +163,7 @@ stories:
     - name: Tyler Scheuble
       position: Head of Platform
       company: People Data Labs
+      logo: /images/pulumiup-2023/speaker-logos/people-data-labs.svg
       photo: /images/pulumiup-2023/speakers/tyler-scheuble.png
       title: Using Monorepos to Level-up your Infrastructure as Code and Software Delivery
       description: |
@@ -209,39 +215,48 @@ speakers:
   - name: Tim Holm
     image: /images/pulumiup-2023/speakers/tim-holm.png
     title: Co-Founder and CTO
-    logo: nitric
+    logo: /images/pulumiup-2023/speaker-logos/nitric.svg
+    company: Nitric
   - name: Ala Shiban
     image: /images/pulumiup-2023/speakers/ala-shiban.png
     title: Co-Founder and CEO
-    logo: klotho
-  - name: Eran Bibi
-    image: /images/pulumiup-2023/speakers/eran-bibi.png
-    title: Co-Founder and CPO
-    logo: Firefly
+    logo: /images/pulumiup-2023/speaker-logos/klotho.svg
+    company: Klotho
+  - name: Sefi Genis
+    image: /images/pulumiup-2023/speakers/sefi-genis.png
+    title: Co-Founder and CTO
+    logo: /images/pulumiup-2023/speaker-logos/firefly.svg
+    company: Firefly
   - name: Matt Stephenson
     image: /images/pulumiup-2023/speakers/matt-stephenson.png
     title: Sr. Principal Software Engineer
-    logo: Starburst
+    logo: /images/pulumiup-2023/speaker-logos/starburst.svg
+    company: Starburst
   - name: Dennis Sauvé
     image: /images/pulumiup-2023/speakers/dennis-sauve.png
     title: DevOps Engineer
-    logo: Washignton Trust Bank
+    logo: /images/pulumiup-2023/speaker-logos/washington-trust-bank.svg
+    company: Washington Trust Bank
   - name: Tyler Scheuble
     image: /images/pulumiup-2023/speakers/tyler-scheuble.png
     title: Head of Platform
-    logo: People Data Labs
+    logo: /images/pulumiup-2023/speaker-logos/people-data-labs.svg
+    company: People Data Labs
   - name: Joe Duffy
     image: /images/team/joe-duffy.jpg
     title: Co-Founder and CEO
-    logo: Pulumi
+    logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
+    company: Pulumi
   - name: Luke Hoban
     image: /images/team/luke-hoban.jpg
     title: CTO
-    logo: Pulumi
+    logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
+    company: Pulumi
   - name: Eric Rudder
     image: /images/team/eric-rudder.jpg
     title: Co-Founder and Executive Chairman
-    logo: Pulumi
+    logo: /images/pulumiup-2023/speaker-logos/pulumi.svg
+    company: Pulumi
 
 schedule:
   - title: Opening Keynote and Welcome with Co-Founder/CEO Joe Duffy
@@ -266,10 +281,12 @@ registration:
 
 customer_logos:
   title: Featured Partners
-  logos:
-    - aws.png
-    - google-cloud.svg
-    - firefly.svg
-    - klotho.svg
-    - nitric.png
+  rows:
+    - logos:
+      - aws.png
+      - google-cloud.svg
+    - logos:
+      - firefly.svg
+      - klotho.svg
+      - nitric.png
 ---

@@ -16,7 +16,7 @@
                     {{ range (sort $.Site.Data.team.leadership "weight") }}
                         <li class="about-card border-2 border-gray-300 rounded-md flex overflow-hidden relative">
                             <div class="flex">
-                                <img class="" src="/images/team/{{ .id }}.jpg" alt="{{ .name }}" />
+                                <img class="about-card-photo" src="/images/team/{{ .id }}.jpg" alt="{{ .name }}" />
                                 <div class="flex flex-col justify-center text-left mx-4">
                                     <div class="font-display font-medium text-gray-900 text-3xl mb-3">{{ .name }}</div>
                                     <div class="text-sm text-gray-700">{{ .title }}</div>
@@ -38,7 +38,7 @@
                     {{ range (sort $.Site.Data.team.board "weight") }}
                         <li class="about-card border-2 border-gray-300 rounded-md flex overflow-hidden relative">
                             <div class="flex">
-                                <img class="" src="/images/team/{{ .id }}.jpg" alt="{{ .name }}" />
+                                <img class="about-card-photo" src="/images/team/{{ .id }}.jpg" alt="{{ .name }}" />
                                 <div class="flex flex-col justify-center text-left mx-4">
                                     <div class="font-display font-medium text-gray-900 text-3xl mb-3">{{ .name }}</div>
                                     <div class="text-sm text-gray-700">{{ .title }}</div>
