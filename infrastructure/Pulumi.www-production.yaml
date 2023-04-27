@@ -9,5 +9,4 @@ config:
   www.pulumi.com:websiteDomain: www.pulumi.com
   www.pulumi.com:websiteLogsBucketName: www-prod.pulumi.com-website-logs
   www.pulumi.com:hostedZone: www.pulumi.com
-  www.pulumi.com:cloudfrontDomainAlias: "*.pulumi.com"
   www.pulumi.com:setRootRecord: true
