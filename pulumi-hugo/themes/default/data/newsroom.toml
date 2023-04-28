@@ -375,7 +375,6 @@ url = "https://blog.scottlowe.org/2019/05/05/a-sandbox-for-learning-pulumi/"
 date = "2nd May 2019"
 title = "ICYMI: 6 tips to master Kubernetes performance and management"
 img = "/logos/press/techtarget.png"
-url = "https://searchmicroservices.techtarget.com/tip/ICYMI-6-tips-to-master-Kubernetes-performance-and-management"
 
 [[coverage]]
 date = "1st May 2019"
@@ -488,7 +487,6 @@ url = "https://betakit.com/sw-the-saas-weekly-wasted-cloud-spend/"
 date = "24th October 2018"
 title = "In Kubernetes management, infrastructure work is tricky"
 img = "/logos/press/techtarget.png"
-url = "https://searchmicroservices.techtarget.com/feature/In-Kubernetes-management-infrastructure-work-is-tricky"
 
 [[coverage]]
 date = "22nd October 2018"
