@@ -46,9 +46,13 @@ The result from my prompt is a very good, short Pulumi program that defines all 
 
 But it’s not perfect!  There may be a few errors when I copy this code into a Pulumi program.  This is where Pulumi AI’s interactive mode with memory becomes invaluable.  I can just let Pulumi AI know about the error and ask it to fix the problem.
 
-![](that-gave-an-error.png)
+![That gave me an error](that-gave-an-error.png)
 
-Pulumi AI doesn’t just rename the property -- it actually recognizes that the property expects an array, and adjusts to match this requirement.  Pulumi AI can update the code for each of the three errors, iterate on the program, and ultimately complete a fully working solution in less than five minutes.  (Pulumi AI has literally saved me hours on completing this and other tasks just like it!)
+Pulumi AI doesn’t just rename the property -- it actually recognizes that the property expects an array, and adjusts to match this requirement.  
+
+![addressPrefixes diff](diff.png)
+
+Pulumi AI can update the code for each of the three errors, iterate on the program, and ultimately complete a fully working solution in less than five minutes.  (Pulumi AI has literally saved me hours on completing this and other tasks just like it!)
 
 The ability to interactively fine tune results to your specific needs is one of the most amazing benefits of Pulumi AI with static code examples.  If Pulumi AI does something slightly different than you want, you can ask it to change it -- and it’s still not quite right, you can change it again.  Compare this approach to finding an article on  Medium that is almost, but not quite what you want.  The difference in productivity is magical.
 
@@ -74,11 +78,11 @@ We believe that fundamentally, both code and templates, while having different u
 
 This inspires two objectives we have in developing Pulumi AI.  
 
-The first goal is to avoid the need to even think about "the details of" IaC during the discovery and phase of development.  With the `pulumi-ai` CLI, you can iterate using only natural language, keeping your mental abstraction separate from implementation details, and focus only on the key results - did I get the externally visible outputs I requested?   
+The first is to enable Pulumi AI to use higher-level components when available, so that it is working at the right level of abstraction for the problem at hand. Pulumi AI does this today, for example, by favoring use of the higher level `awsx` and `eks` packages over the raw primitives from the `aws` package in its output.  This ensures that Pulumi AI solves complex problems in simple and composable ways when possible, but falls down into lower level building blocks when it must.  Just like an expert (human!) Pulumi developer would do when given the same set of tasks.
 
-Our second aim is enabling the use of higher-level components whenever they are available. Pulumi AI does this today, for example, by favoring use of the higher level `awsx` and `eks` packages over the raw primitives in its output.  This ensures that Pulumi solves complex problems in simple and composable ways when possible, and writes  lower level code when it must, just like an expert (human!) Pulumi developer would do when given the same set of tasks.
+The second is to avoid the need to even think about IaC during the discovery and development phase.  With the `pulumi-ai` CLI, you can iterate using only natural language, keeping your mental model abstraction out of the details, and focused only on the results - did I get the externally visible outputs I requested?
 
-Both of these goals are important, and each of them inspires our roadmap for Pulumi AI.
+All of these are important, and each of them represents a direction of our investment in Pulumi AI.
 
 ## The Future
 
