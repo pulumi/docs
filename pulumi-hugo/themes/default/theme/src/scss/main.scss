@@ -351,4 +351,8 @@ pulumi-tree-item {
     }
 }
 
+section.newsletter-input pulumi-hubspot-form input.hs-input {
+    @apply rounded;
+}
+
 @tailwind utilities;
