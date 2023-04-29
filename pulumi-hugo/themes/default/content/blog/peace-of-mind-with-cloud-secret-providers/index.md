@@ -671,7 +671,7 @@ class AnotherStack : Stack
 
 {{< /chooser >}}
 
-Now we need to verify if the value is _actually_ encrypted. An easy way to do that is to try and export the secret value without access to the key. How this is done depends on your AWS configuration, however in my setup, I use the `AWS_PROFILE` environment variable which refers to a [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) to configure access to AWS. If I unset this environment variable, I will no longer be using the AWS credentials that have access to this KMS key. Let's unset the AWS_PROFILE environment variable and then rerun `pulumi up`:
+Now we need to verify if the value is _actually_ encrypted. An easy way to do that is to try and export the secret value without access to the key. How this is done depends on your AWS configuration, however in my setup, I use the `AWS_PROFILE` environment variable which refers to a [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) to configure access to AWS. If I unset this environment variable, I will no longer be using the AWS credentials that have access to this KMS key. Let's unset the AWS_PROFILE environment variable and then rerun `pulumi up`:
 
 ```bash
 unset AWS_PROFILE
