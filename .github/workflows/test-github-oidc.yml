@@ -16,3 +16,6 @@ jobs:
           role-to-assume: arn:aws:iam::388588623842:role/ContinuousIntegrationRole
           role-session-name: github-test
           aws-region: us-west-2
+      - name: test
+        run: |
+          aws sts get-caller-identity
