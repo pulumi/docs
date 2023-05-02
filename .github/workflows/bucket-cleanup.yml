@@ -4,6 +4,9 @@ on:
     # * is a special character in YAML so you have to quote this string.
     # Run every day at 3:00PM UTC.
     - cron:  '0 15 * * *'
+permissions:
+      id-token: write   # This is required for requesting the JWT
+      contents: read    # This is required for actions/checkout
 jobs:
   all:
     env:
@@ -25,14 +28,17 @@ jobs:
         run: |
           git config --global url."https://${{ secrets.PULUMI_BOT_TOKEN }}:x-oauth-basic@github.com/pulumi/pulumi-hugo-internal".insteadOf "https://github.com/pulumi/pulumi-hugo-internal"
 
-      - name: Install assume-role
-        run: go install github.com/remind101/assume-role@latest
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousIntegrationRole
+          role-session-name: docs-cleanup
+          role-duration-seconds: 7200
+          aws-region: us-west-2
 
       - name: Run make ci_bucket_cleanup
         run: make ci_bucket_cleanup
         env:
-            AWS_ACCESS_KEY_ID: ${{ secrets.CI_AWS_ACCESS_KEY_ID_NEW }}
-            AWS_SECRET_ACCESS_KEY: ${{ secrets.CI_AWS_SECRET_ACCESS_KEY_NEW }}
             PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
             SLACK_ACCESS_TOKEN: ${{ secrets.SLACK_ACCESS_TOKEN }}
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
