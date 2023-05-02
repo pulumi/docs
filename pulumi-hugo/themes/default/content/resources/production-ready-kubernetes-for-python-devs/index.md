@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "Production-ready Kubernetes for Python Developers"
-meta_desc: "In this workshop, you will learn how to deploy a Kubernetes cluster using the Python language. (External webinar)"
+meta_desc: "In this workshop, you will learn how to deploy a Kubernetes cluster using the Python language. Hosted by Cloud Native Computing Foundation."
 
 # A featured webinar will display first in the list.
 featured: false
