@@ -1,17 +1,11 @@
 ---
 title: "Kubecon NA 2021 Roundup"
-
 date: 2021-11-08T22:50:38Z
-
 draft: false
-
 meta_desc: Kat Cosgrove's recording roundup of the trends, updates, and gems from Kubecon NA 2021!
-
-meta_image: meta.jpg
-
+meta_image: meta.png
 authors:
     - kat-cosgrove
-
 tags:
     - kubecon
     - kubernetes

@@ -4,7 +4,7 @@ authors: ["mikhail-shilkov"]
 tags: ["Azure", "Security"]
 date: "2019-07-26"
 meta_desc: In this post, we will look at 7 ways to deal with application secrects in Azure.
-meta_image: "feature.jpg"
+meta_image: feature.png
 ---
 
 Every non-trivial application relies on configuration values that may depend on the current execution environment. Some of these values contain sensitive information that shouldn't be shared publicly. In general, the fewer parties that have access to those secret values, the safer the application will be&mdash;in fact, in an ideal world, no one would be granted direct access to those secrets.

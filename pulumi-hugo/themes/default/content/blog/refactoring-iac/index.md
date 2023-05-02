@@ -2,7 +2,7 @@
 title: "Refactoring Infrastructure as Code"
 date: 2021-06-01
 meta_desc: "Cloud engineering applies software engineering principles such as refactoring to improve and maintain infrastructure."
-meta_image: refactoring_iac.gif
+meta_image: refactoring-iac.png
 authors:
     - sophia-parafina
 tags:

@@ -61,6 +61,26 @@ function checkPageMetaDescription(meta) {
 }
 
 /**
+ * checkMetaImage validates that all meta images are png files in order ensure
+ * compatibility when shared on social media platforms.
+ *
+ * @param {string} image The meta image file for a given page
+ */
+function checkMetaImage(image) {
+    if (!image) {
+        return null;
+    }
+
+    const regex = /\.([0-9a-z]+)(?:[\?#]|$)/i;
+    const extension = regex.exec(image)[1];
+    if (extension !== "png") {
+        return `Meta image, '${image}', must be a png file.`;
+    }
+
+    return null;
+}
+
+/**
  * Builds an array of markdown files to lint and checks each file's front matter
  * for formatting errors.
  *
@@ -133,6 +153,7 @@ function searchForMarkdown(paths) {
                     error: null,
                     title: checkPageTitle(obj.title),
                     metaDescription: checkPageMetaDescription(obj.meta_desc),
+                    metaImage: checkMetaImage(obj.meta_image),
                 };
                 result.files.push(fullPath);
             }
@@ -200,6 +221,12 @@ function groupLintErrorOutput(result) {
                 lintErrors.push({
                     lineNumber: "File Header",
                     ruleDescription: frontMatterErrors.metaDescription,
+                });
+            }
+            if (frontMatterErrors.metaImage) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.metaImage,
                 });
             }
         }

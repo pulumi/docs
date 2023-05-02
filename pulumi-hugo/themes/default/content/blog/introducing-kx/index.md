@@ -4,8 +4,7 @@ authors: ["levi-blackstone"]
 tags: ["Kubernetes"]
 meta_desc: "The Kubernetes Extensions (kx) library for Pulumi is designed to simplify the declaration of Kubernetes resources, and make the API easier to use."
 date: "2019-11-14"
-
-meta_image: "feature.png"
+meta_image: feature.png
 ---
 
 Kubernetes provides a rich, standards-based API that works across cloud and on-premise

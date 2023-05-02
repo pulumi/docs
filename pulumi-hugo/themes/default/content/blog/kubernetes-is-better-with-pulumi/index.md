@@ -2,7 +2,7 @@
 title: "Winning with Pulumi Superpowers and Kubernetes"
 date: 2020-06-03
 meta_desc: "Ten reasons why you should deploy modern apps and Kubernetes with Pulumi"
-meta_image: dangerous_pulumi.gif
+meta_image: dangerous-pulumi.png
 authors:
    - levi-blackstone
    - sophia-parafina
@@ -18,7 +18,7 @@ You’ve containerized your application, and it’s running great on your deskto
 
 Recently, Pulumi engineer [Levi Blackstone](https://twitter.com/levi_blackstone) posted a [Twitter thread](https://twitter.com/levi_blackstone/status/1265798769242550272) on why he thinks Pulumi is the best way to build and deploy modern applications on Kubernetes. Levi might be a bit biased, but he makes solid points for using Pulumi with Kubernetes, whether you’re a developer or operator.
 
-![Legend of Pulumipus](dangerous_pulumi.gif)
+![Legend of Pulumipus](dangerous-pulumi.gif)
 
 ## For Devs
 
@@ -26,7 +26,7 @@ First, let’s take a look at Kubernetes from a dev’s point of view.
 
 - **Use the full Kubernetes API surface** – Each of Pulumi’s Kubernetes SDKs (TypeScript, Python, .NET and Go) are generated from the OpenAPI spec. This is critical because it means that resource definitions in any language are a 1:1 match with the upstream API. In the example below, the deployment manifest on the left corresponds to the TypeScript on the right.
 
-![Kubernetes API](kubernetes_api.jpg)
+![Kubernetes API](kubernetes-api.jpg)
 
 - **Conditional logic** – Another significant drawback of YAML is the lack of conditional logic. It’s common to change parameters depending on the environment, but this usually calls for separate tools to template your YAML. With Pulumi, this logic can go right into your resource definitions. It’s common to develop your application locally using minikube, which doesn't natively support LoadBalancer Services. On the other hand, many cloud deployments do use a LoadBalancer Service to route traffic. The example below shows how you can deploy to either environment without having to rewrite the manifest by using a configuration value.
 
@@ -57,15 +57,15 @@ frontendService, err := corev1.NewService(ctx, “frontent”, &corev1.ServiceAr
 
 - **Strongly typed resources** – A tricky part about defining Kubernetes resources in YAML/JSON is the lack of typing. It's hard to track typos, and you have to apply the resource to a cluster to get any feedback. Pulumi helps here by showing type information right in the SDK.
 
-![Typed resources](typed_resources.jpg)
+![Typed resources](typed-resources.jpg)
 
 - **Readiness logic** – Pulumi includes readiness logic to help you understand when your Kubernetes resources are ready. This makes it easy to integrate Kubernetes workflows into CI systems! Unlike `kubectl apply`, Pulumi doesn’t indicate success until all of the resources are ready to go. Let Pulumi worry about the bookkeeping so you can focus on more interesting matters.
 
-![Readiness logic](readiness_logic.gif)
+![Readiness logic](readiness-logic.gif)
 
 - **Deprecation warnings** – Pulumi warns you if you’re using Kubernetes resources with deprecated apiVersions, and gives you info about which versions remove them entirely. Don’t be caught by surprise when you upgrade your clusters!
 
-![Deprecation warnings](deprecation_warnings.jpg)
+![Deprecation warnings](deprecation-warnings.jpg)
 
 ## For  Operators
 
@@ -93,7 +93,7 @@ deployment = ConfigFile(
 
 - **Helm support** – Pulumi lets you manage Helm charts similarly to our YAML support. It’s common for organizations to fork upstream charts to customize a few values, but this can often be avoided with the use of transformations in Pulumi.
 
-![Helm support](helm_manifest.gif)
+![Helm support](helm-manifest.gif)
 
 - **Extension libraries** – Our kubernetesx library makes it easier to manage Kubernetes resources by abstracting away a lot of the boilerplate. This dramatically cuts the amount of code you need to write, while still giving you access to the full API surface if you need it. Read about kubernetesx on our [blog] (/blog/introducing-kx).
 

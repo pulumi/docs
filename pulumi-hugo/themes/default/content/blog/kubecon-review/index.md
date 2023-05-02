@@ -2,7 +2,7 @@
 title: "Pulumi Sweeps into KubeCon"
 date: 2019-11-25T14:03:19-06:00
 meta_desc: "Pulumi at KubeCon 2019 releases previews of Crosswalk for Kubernetes and Query for Kubernetes "
-meta_image: meta.jpg
+meta_image: meta.png
 authors:
     - sophia-parafina
 tags:

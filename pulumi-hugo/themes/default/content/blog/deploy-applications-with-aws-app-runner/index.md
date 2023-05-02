@@ -2,7 +2,7 @@
 title: "Easily Deploy Applications With AWS App Runner"
 date: 2021-05-18
 meta_desc: "AWS App Runner configures networking, scaling, and security, letting deploy applications via source code or container."
-meta_image: aws_app_runner.jpg
+meta_image: aws-app-runner.png
 authors:
     - lee-zen
 tags:

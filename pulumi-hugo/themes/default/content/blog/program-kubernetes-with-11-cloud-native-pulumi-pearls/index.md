@@ -2,7 +2,7 @@
 title: "Program Kubernetes with 11 Pulumi Pearls"
 date: "2018-09-12"
 meta_desc: "How to build & deploy Kubernetes applications using infrastructure as code, in three categories: config as code, multi-cloud, & software delivery as code."
-meta_image: "health-checks.gif"
+meta_image: "health-checks.png"
 authors: ["joe-duffy"]
 tags: ["Kubernetes"]
 ---
