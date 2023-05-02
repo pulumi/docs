@@ -8,7 +8,7 @@ permissions:
       contents: read    # This is required for actions/checkout
 jobs:
   test-github:
-    runs-on: ubuntu-20.04
+    runs-on: buildjet-4vcpu-ubuntu-2004
     steps:
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v2
