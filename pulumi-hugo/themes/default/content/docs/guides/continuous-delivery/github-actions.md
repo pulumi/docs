@@ -82,7 +82,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3.5
+      - uses: actions/setup-node@v3.5.0
         with:
           node-version-file: package.json
       - name: Configure AWS Credentials
@@ -218,7 +218,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3.5
+      - uses: actions/setup-node@v3.5.0
         with:
           node-version-file: package.json
       - name: Configure AWS Credentials
@@ -432,7 +432,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3.5
+      - uses: actions/setup-node@v3.5.0
         with:
           node-version-file: package.json
       - name: Configure AWS Credentials
@@ -583,7 +583,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3.5
+      - uses: actions/setup-node@v3.5.0
         with:
           node-version-file: package.json
       - name: Configure AWS Credentials
@@ -745,7 +745,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
-      - uses: actions/setup-node@v3.5
+      - uses: actions/setup-node@v3.5.0
         with:
           node-version-file: package.json
       - name: Configure AWS Credentials
@@ -900,7 +900,7 @@ If you previously used GitHub Action v1, the following are changes you should kn
   example, if you are running a NodeJS (for example) app then you need to ensure that your action has NodeJS available to it. Specify the [`engines`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#engines) in your `package.json` and configure the workflow using:
 
 ```yaml
-- uses: actions/setup-node@v3.5
+- uses: actions/setup-node@v3.5.0
   with:
     node-version-file: package.json
 ```
