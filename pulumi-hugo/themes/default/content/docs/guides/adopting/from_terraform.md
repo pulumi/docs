@@ -49,7 +49,7 @@ $ pip3 install pulumi_terraform
 {{% choosable language go %}}
 
 ```bash
-$ go get github.com/pulumi/pulumi-terraform/sdk/v4
+$ go get github.com/pulumi/pulumi-terraform/sdk/v5
 ```
 
 {{% /choosable %}}
