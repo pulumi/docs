@@ -71,7 +71,7 @@ Monitor holistic metrics tracking overall service health
 
 **RDS Performance Metrics**
 Monitor RDS performance (wait times, top queries)
-[Link](https://us-west-2.console.aws.amazon.com/rds/home?region=us-west-2#performance-insights-v20206:/resourceId/${database.databaseCluster.id}/resourceName/${outputs.rdsClusterWriterInstance})
+[Link](https://us-west-2.console.aws.amazon.com/rds/home?region=us-west-2#performance-insights-v20206:/resourceId/${outputs.databaseClusterId}/resourceName/${outputs.rdsClusterWriterInstance})
 
 **Cloudwatch Logs**
 Search across service logs
