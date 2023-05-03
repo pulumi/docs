@@ -21,6 +21,7 @@
                 <li role="none"><a role="menuitem" href="https://github.com/pulumi/pulumi">GitHub</a></li>
                 <li role="none"><a role="menuitem" href="https://slack.pulumi.com">Slack</a></li>
                 <li role="none"><a role="menuitem" href="{{ relref . " /registry" }}">Registry</a></li>
+                <li role="none"><a role="menuitem" href="{{ relref . " /ai" }}">Pulumi AI</a></li>
                 <li role="none">
                     <a role="menuitem" href="https://app.pulumi.com">
                         {{ partial "top-nav-user-toggle" }}
@@ -59,6 +60,12 @@
                 <a data-track="header-github" href="{{ relref . " /registry" }}">
                     <i class="fas fa-archive mr-0.5"></i>
                     Registry
+                </a>
+            </li>
+            <li class="mr-8">
+                <a data-track="header-ai" href="{{ relref . " /ai" }}">
+                    <i class="fas fa-robot mr-0.5"></i>
+                    Pulumi AI
                 </a>
             </li>
             <li>
