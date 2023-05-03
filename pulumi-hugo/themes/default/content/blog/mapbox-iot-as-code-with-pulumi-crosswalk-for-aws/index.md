@@ -47,7 +47,7 @@ traffic-aware ETA calculations, and high-prevision elevation. This data,
 exposed by the API is backed by a high performance database (DynamoDB)
 to enable visualization in realtime on the map client.
 
-![AWS-architecture-iot](./aws-architecture-iot.jpg)
+![AWS-architecture-iot](./aws-architecture-iot.png)
 
 The fun part -- Pulumi Service console helps you map your cloud
 architecture shown above as a connected set of DAG resources so you need

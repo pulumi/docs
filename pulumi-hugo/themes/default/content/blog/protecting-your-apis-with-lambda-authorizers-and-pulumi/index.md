@@ -80,7 +80,7 @@ will create our API Gateway and Hello World Lambda. In Step 2, we will
 set up the logic for our Lambda authorizer. And finally in Step 3, we
 will bring it all together by telling API Gateway to use our authorizer.
 
-![lambda_authorizer](./lambda-authorizer.jpg)
+![lambda_authorizer](./lambda-authorizer.png)
 
 ### 1 - Define Your Routes
 
