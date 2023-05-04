@@ -1,0 +1,35 @@
+a.pulumi-ai-badge {
+    display: inline-block;
+    
+    div {
+        width: fit-content;
+        margin-top: 4px;
+        margin-bottom: 24px;
+        border-color: #a6adec;
+        border-width: 2px;
+        border-left-width: 12px;
+        border-radius: 6px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+
+        :hover {
+            border-color: #828ce4;
+            cursor: pointer;
+        }
+
+        p {
+            margin: 4px 14px 4px 16px;
+            font-size: 14px;
+
+            i {
+                margin-left: 12px;
+                font-size: 14px;
+                position:relative;
+                top:-1px;
+                color: transparent;
+                -webkit-text-stroke-width: 1.5px;
+                -webkit-text-stroke-color: #2f3032;
+            }
+        }
+    }
+}
