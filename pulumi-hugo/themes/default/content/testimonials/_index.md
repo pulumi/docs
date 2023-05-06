@@ -159,4 +159,10 @@ messages:
       author: "@joepferguson@phpc.social"
       link: https://twitter.com/JoePFerguson/status/1593289950597976066
       source: twitter
+    -
+      message: "Just wanted to send a quick message and let you know I've been playing around a bit with the pulumi AI tool. So far, its been fantastic. There are many pieces of configuration that I know need to be done but I sometimes can't remember the syntax or perhaps the methods to use to accomplish what I know that I need. Using the AI tool for basic/simple questions sped up my development process. One example I can provide is setting up my new EKS cluster. Going through this process I know that I will need to modify the aws-auth configmap to provide various levels of access to users mapped to AWS roles. However, I didn't remember how to accomplish this using Pulumi. Simple question to the AI and it was able to provide me with the base framework that I can then build off of to suit my use case."
+      author: Kacee
+      link: https://pulumi.slack.com/archives/C4PCU9XKN/p1683131107652869
+      source: email
+      featured: true
 ---
