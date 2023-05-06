@@ -30,7 +30,7 @@ values:
       icon: user
       color: yellow
     - title: Dream Big
-      content: When the customer is successful, we are successful, and we always treat our customers’ success as our highest priority. We wear our customers’ shoes to understand the world from their perspective and build experiences to delight them.
+      content: We can’t possibly succeed at our audacious mission by taking small, conservative steps. Instead, we are lifelong learners who are intellectually curious, creative, rebellious, and like to dream big. We hire the best and the brightest, imagine a better future together, and empower our employees to invent the future.
       icon: leaf
       color: blue
     - title: Play to Win, as a Team
