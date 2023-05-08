@@ -56,7 +56,7 @@ security:
 pricing:
     title: Pricing
     description: |
-         Pulumi Insights is included for all resource managed by Pulumi Cloud. 
+         Pulumi Insights is included for all resources managed by Pulumi Cloud. 
 
 get_started:
     title: Get started today
