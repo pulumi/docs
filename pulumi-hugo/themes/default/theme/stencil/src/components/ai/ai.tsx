@@ -26,6 +26,8 @@ interface SupportedGPTModel {
 
 type SelectableLanguage = SupportedLanguage & { abbrev: string };
 
+const MAX_INPUT_ROWS = 6;
+
 @Component({
     tag: "pulumi-ai",
     styleUrl: "ai.scss",
@@ -397,6 +399,11 @@ export class PulumiAI {
 
     private onInput() {
         this.prompt = (this.input.value || "").trim();
+        
+        const rows = this.input.value.split("\n").length;
+        if (rows <= MAX_INPUT_ROWS) {
+            this.input.rows = rows;
+        }
     }
 
     private validateProps() {
@@ -445,7 +452,13 @@ export class PulumiAI {
 
     private prepareInput() {
         this.input.addEventListener("keydown", (event: KeyboardEvent) => {
-            if (event.metaKey && (event.key === "Enter")) {
+            if (event.key === "Enter") {
+                if (event.metaKey) {
+                    this.input.value += "\n";
+                    this.input.rows++;
+                    return;
+                }
+
                 event.preventDefault();
                 this.submit();
             }
@@ -525,7 +538,7 @@ export class PulumiAI {
     }
 
     private get input() {
-        return this.el.querySelector("form input") as HTMLInputElement;
+        return this.el.querySelector("form textarea") as HTMLTextAreaElement;
     }
 
     private get output() {
@@ -657,7 +670,7 @@ export class PulumiAI {
                             <div class="chat-widget-form">
                                 { this.renderLanguageSelector() }
                                 <form onSubmit={ this.onSubmit.bind(this) }>
-                                    <input type="text" placeholder={ this.placeholder } disabled={ this.running } onInput={ this.onInput.bind(this) } maxLength={ this.client?.MAX_PROMPT_LENGTH } value={ this.prompt }></input>
+                                    <textarea rows={1} placeholder={ this.placeholder } disabled={ this.running } onInput={ this.onInput.bind(this) } maxLength={ this.client?.MAX_PROMPT_LENGTH } value={ this.prompt }></textarea>
                                     { this.renderSubmitButton(true) }
                                 </form>
                             </div>

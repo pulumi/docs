@@ -186,8 +186,8 @@
             form {
                 @apply flex flex-col lg:flex-row items-center;
 
-                input {
-                    @apply outline-none border-none w-full leading-relaxed rounded text-sm bg-gray-800 p-3 text-white lg:mr-2 mb-2 lg:mb-0;
+                textarea {
+                    @apply resize-none outline-none border-none w-full leading-relaxed rounded text-sm bg-gray-800 p-3 text-white lg:mr-2 mb-2 lg:mb-0;
 
                     &::placeholder {
                         @apply text-gray-600;
