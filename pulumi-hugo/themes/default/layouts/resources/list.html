@@ -108,6 +108,10 @@
                         {{ $description = $data.Params.meta_desc }}
                         {{ $displayDate = dateFormat "January 2, 2006" .date }}
 
+                        {{ if $data.Params.main.hide_date }}
+                            {{ $displayDate = "To be announced" }}
+                        {{ end }}
+
 
                         <!-- Set the url to link to. -->
                         {{ if $data.Params.external }}
@@ -147,6 +151,10 @@
                         {{ $description = $data.Params.event.description }}
                         {{ $displayDate = dateFormat "January 2, 2006" $data.Params.event.start_date }}
                         {{ $filters = $filters | append "upcoming" }}
+
+                        {{ if $data.Params.main.hide_date }}
+                            {{ $displayDate = "Date to be announced" }}
+                        {{ end }}
 
 
                         <!-- If the event has a redirect attribute it is external so set the link correctly. -->
