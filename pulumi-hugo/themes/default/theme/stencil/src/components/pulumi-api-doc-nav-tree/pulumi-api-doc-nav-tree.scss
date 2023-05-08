@@ -61,43 +61,49 @@
 $base-ch-width-xl: 24ch;
 $base-ch-width-l: 12ch;
 
-.nav-tree-item a {
-    width: 100%;
-    // Because of many CSS subtleties with the base Microsoft FAST component used
-    // for the nav tree, using percentage or inherited width does not work accurately
-    // here.  Instead, we need to set the width specifically to the number of characters
-    // that can be shown.  This number is based on the depth of the tree item (since deeper items
-    // are indented more), and the screen size (which changes the overall space available to the nav).
-    @media (max-width: 1279px) {
-        &.depth-0 {
-            max-width: $base-ch-width-l;
-        }
-        &.depth-1 {
-            max-width: $base-ch-width-l - 2;
-        }
+.nav-tree-item {
+    
+    a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: map-get($gray, 900);
+        max-width: 24ch;
 
-        &.depth-2 {
-            max-width: $base-ch-width-l - 4;
-        }
-    }
-    @media (min-width: 1280px) {
-        &.depth-0 {
-            max-width: $base-ch-width-xl;
-        }
-        &.depth-1 {
-            max-width: $base-ch-width-xl - 2;
-        }
-
-        &.depth-2 {
-            max-width: $base-ch-width-xl - 4;
+        &:hover {
+            text-decoration: underline;
         }
     }
 
-    height: 100%;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: black;
+    summary {
+        width: 100%;
+        padding-left: 8px;
+        @media (max-width: 1279px) {
+            &.depth-0 {
+                max-width: $base-ch-width-l;
+            }
+            &.depth-1 {
+                max-width: $base-ch-width-l - 2;
+            }
+
+            &.depth-2 {
+                max-width: $base-ch-width-l - 4;
+            }
+        }
+        @media (min-width: 1280px) {
+            &.depth-0 {
+                max-width: $base-ch-width-xl;
+            }
+            &.depth-1 {
+                max-width: $base-ch-width-xl - 2;
+            }
+
+            &.depth-2 {
+                max-width: $base-ch-width-xl - 4;
+            }
+        }
+    }
 }
 
 .content-container {
@@ -111,4 +117,65 @@ $base-ch-width-l: 12ch;
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+details {
+    padding: 0.25rem 0.5rem;
+
+    // Hide the open/close markers by default.
+    summary {
+        list-style: none;
+        padding: 0.25rem 0rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #f9f9f9;
+        }
+
+        &.is-link:hover {
+            text-decoration: underline;
+        }
+
+         &[data-selected="true"] {
+            background-color: #e0e0e0;
+            font-weight: bold;
+
+            a:hover {
+                text-decoration: none;
+            }
+        }
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        a {
+            padding: 0.25rem;
+        }
+    }
+
+    &[data-expandable] {
+        > summary::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f0da";
+            display: inline-block;
+            cursor: none;
+            visibility: hidden;
+        }
+    }
+
+    &[data-expandable="true"] {
+        > summary::before {
+            margin-right: 0.5rem;
+            cursor: pointer;
+            visibility: visible;
+        }
+
+        &[open] {
+            > summary::before {
+                transform: rotate(90deg);
+            }
+        }
+    }
 }

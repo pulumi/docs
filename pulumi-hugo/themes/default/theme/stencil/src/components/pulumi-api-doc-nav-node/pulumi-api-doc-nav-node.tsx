@@ -1,4 +1,4 @@
-import { Component, h, Listen, Prop } from "@stencil/core";
+import { Component, h, Prop } from "@stencil/core";
 import { APINavNode, APINavNodeType } from "../pulumi-api-doc-filterable-nav/pulumi-api-doc-filterable-nav";
 
 @Component({
@@ -18,15 +18,23 @@ export class PulumiApiDocNavNode {
     @Prop({ mutable: true })
     isExpanded: boolean;
 
-    @Listen("expanded-change", { target: "document" })
-    onExpansionChange(event: CustomEvent) {
-        if (this.node.name === event.detail.id) {
-            this.isExpanded = event.detail.expanded;
-        }
-    }
-
     componentWillLoad() {
         this.isExpanded = !!this.node.isExpanded || this.isNodeInPathForCurrentlyVisiblePage(this.node.name);
+    }
+
+    onExpansionChange(href: string, isLink = false) {
+        if (isLink) {
+            window.location.href = href;
+        }
+
+        this.isExpanded = !this.isExpanded;
+    }
+
+    // For whatever reason, the <a> href doesn't work
+    // in Safari, so we handle the routing explicitly.
+    handleLinkClick(e: MouseEvent, href: string) {
+        e.stopPropagation();
+        window.location.href = href;
     }
 
     componentShouldUpdate(newVal, oldVal, propName) {
@@ -92,41 +100,57 @@ export class PulumiApiDocNavNode {
             const nodeLinkLastChar = node.link.charAt(node.link.length - 1);
             const nodeLink = nodeLinkLastChar === "/" ? node.link : `${node.link}/`;
             const nodeHref = `${linkBase}${nodeLink}`;
+            const hasChildren = node.children ? node.children.length === 0 : false;
 
             return (
-                <pulumi-tree-item slot="item" selected={!!this.shouldNodeBeSelected(nodeHref)} expanded={this.isExpanded} class="nav-tree-item nested" title={node.name}>
-                    <span class="glyph" slot="expand-collapse-glyph">►</span>
-                    <div class="content-container">
-                        <a class={`depth-${depth}`} href={nodeHref}>
-                            {this.getIcon(node.type)}
-                            <span class="link-container">{node.name}</span>
-                        </a>
-                    </div>
+                            <details
+                    open={this.isExpanded}
+                    data-expandable={
+                        node.children && node.children.length > 0
+                            ? "true"
+                            : "false"
+                    }
+                    
+                    class="nav-tree-item nested"
+                                    id={node.name}
+                title={node.name}
+                onClick={() => this.onExpansionChange(nodeHref, !hasChildren)}
+                >
+                    <summary class={`content-container ${hasChildren ? "" : "is-link"}`} data-selected={this.shouldNodeBeSelected(nodeHref) ? "true" : "false"}>
+                     <a class={`depth-${depth}`} href={nodeHref} onClick={(e) => this.handleLinkClick(e, nodeHref)}>
+                         {this.getIcon(node.type)}
+                         <span class="link-container">{node.name}</span>
+                     </a>
+                    </summary>
                     {this.getChildNodes(node.children, this.isExpanded, depth + 1, nodeHref)}
-                </pulumi-tree-item>
+                </details>
             );
         });
     }
 
     render() {
         return (
-            <pulumi-tree-item
-                slot="item"
-                selected={!!this.shouldNodeBeSelected(this.href)}
-                expanded={this.isExpanded}
-                class="nav-tree-item nested"
-                id={this.node.name}
+            <details
+                    open={this.isExpanded}
+                    data-expandable={
+                        this.node.children && this.node.children.length > 0
+                            ? "true"
+                            : "false"
+                    }
+                    class="nav-tree-item nested"
+                                    id={this.node.name}
+                                    
                 title={this.node.name}
-            >
-                <span class="glyph" slot="expand-collapse-glyph">►</span>
-                <div class="content-container">
-                    <a class={`depth-${this.depth}`} href={this.href}>
-                        {this.getIcon(this.node.type)}
-                        <span class="link-container">{this.node.name}</span>
-                    </a>
-                </div>
-                {this.getChildNodes(this.node.children, this.isExpanded)}
-            </pulumi-tree-item>
+                onClick={() => this.onExpansionChange(this.href, this.node.children.length === 0)}
+                >
+                    <summary class="content-container" data-selected={this.shouldNodeBeSelected(this.href) ? "true" : "false"}>
+                     <a class={`depth-${this.depth}`} href={this.href} onClick={(e) => this.handleLinkClick(e, this.href)}>
+                         {this.getIcon(this.node.type)}
+                         <span class="link-container">{this.node.name}</span>
+                     </a>
+                    </summary>
+                    {this.getChildNodes(this.node.children, this.isExpanded)}
+                </details>
         );
     }
 }

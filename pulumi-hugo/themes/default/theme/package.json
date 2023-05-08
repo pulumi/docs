@@ -5,7 +5,6 @@
     "private": true,
     "license": "Apache-2.0",
     "dependencies": {
-        "@pulumi/facet": "^0.1.1",
         "@types/marked": "^4.0.8",
         "clipboard-polyfill": "^3.0.3",
         "marked": "^4.3.0",
