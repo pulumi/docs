@@ -19,7 +19,7 @@
     @include transition;
 
     &.docs, &.registry {
-        border-color: map-get($blue, 300) !important;
+        border-color: map-get($brand, "blue") !important;
         &:focus {
             border-color: map-get($blue, 600) !important;
         }
@@ -51,6 +51,12 @@
     top: auto !important;
     left: auto !important;
 
+    @screen md {
+        top: 16px !important;
+        left: -650px !important;
+        width: 650px !important;
+    }
+
     .st-query-present {
         .st-ui-result {
             .st-ui-type-heading {
@@ -78,6 +84,61 @@
     }
 }
 
+.search-header-container {
+    background-color: map-get($gray, 100);
+    border-bottom: 0px;
+    height: 50px;
+    
+    @screen md {
+        height: 51px;
+        border-bottom: 1px solid #e5e5e9;
+    }
+
+    .tabs {
+        .tab {
+            align-items: center;
+            background-color: map-get($gray, 100);
+            color: map-get($gray, 500);
+            cursor: pointer;
+            display: flex;
+            font-family: "Gilroy";
+            font-size: 16px;
+            font-weight: 500;
+            height: 50px;
+            justify-content: center;
+            line-height: 26px;
+            padding-bottom: 3px;
+            padding-left: 24px;
+            padding-right: 24px;
+            .tab-icon {
+                background-color: map-get($gray, 100);
+                padding-right: 10px;
+            }
+        }
+
+        .tab-selected {
+            align-items: center;
+            background-color: #F2F2F4;
+            border-bottom: 3px solid map-get($brand, "violet");
+            color: map-get($gray, 900);
+            cursor: pointer;
+            display: flex;
+            font-family: "Gilroy";
+            font-size: 16px;
+            font-weight: 700;
+            height: 50px;
+            justify-content: center;
+            line-height: 26px;
+            padding-left: 18px;
+            padding-right: 18px;
+            .tab-icon {
+                background-color: #F2F2F4;
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
 .search-header {
     @apply justify-center;
 
@@ -89,15 +150,24 @@
         @apply mx-auto justify-start;
     }
 
+    background-color: map-get($gray, 100);
+    
     .search-container {
         @apply flex-grow;
-
+        border-bottom: 1px solid map-get($gray, 300);
         @screen md {
             @apply flex-grow-0 justify-start;
+            border-bottom: none;
         }
+        
 
+        background-color: map-get($gray, 100);
+        height: 50px;
+        padding-left: 16px;
+        padding-right: 16px;
+        
         .search-widget {
-            @apply w-full px-4;
+            @apply w-full h-full p-0;
 
             @screen md {
                 width: 450px;
@@ -110,6 +180,29 @@
             @screen xl {
                 @apply px-0;
                 width: 800px;
+            }
+
+            #search-query {
+                font-family: "Gilroy" !important;
+                font-size: 16px;
+                font-weight: 500;
+                height: 7px;
+                line-height: 26px;
+            }
+
+            form {
+                width: 100%;
+                @screen md {
+                    width: 346px;
+                }
+            }
+
+            form > i {
+                font-size: 14px;
+            }
+
+            form > button {
+                font-family: "Gilroy";
             }
         }
     }

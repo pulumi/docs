@@ -51,8 +51,8 @@
         }
 
         &.is-pinned {
-            @apply shadow;
-
+            box-shadow: 0 1px 12px 0 rgba(0,0,0,.06),0 1px 4px 0 rgba(0,0,0,.04);
+            
             @screen md {
                 @apply shadow-none;
             }
@@ -117,15 +117,16 @@
 }
 
 .header-container {
-    @apply z-40 bg-white py-6;
+    @apply z-40 bg-white py-0;
     top: -1px;
 
     @screen lg {
-        @apply py-3 mt-0;
+        @apply py-0 mt-0;
     }
 
     &.is-pinned {
-        @apply sticky shadow;
+        @apply sticky;
+        box-shadow: 0 1px 12px 0 rgba(0,0,0,.06),0 1px 4px 0 rgba(0,0,0,.04);
     }
 
     .logo-container {
