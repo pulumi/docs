@@ -46,17 +46,27 @@ const config = {
     // (e.g. in dev environment) you may want to set this to false. This will then take the subdomain
     // of the `websiteDomain` rather than use the root of that zone.
     setRootRecord: stackConfig.get("setRootRecord") || undefined,
+
+    // registryBucketNameOverride is an optional value that can be used to set the specific registry bucket
+    // used.
+    registryBucketNameOverride: stackConfig.get("registryBucketName"),
+
+    // testingFlow is a flag set in the stack config and used to indicate which pieces of infrastructure
+    // should be created when run against the test environment.
+    testingFlow: stackConfig.getBoolean("testingFlow") || undefined,
 };
 
 // originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
 // website. This bucket is presumed to exist prior to the Pulumi run; if it doesn't, this
 // program will fail.
 export let originBucketName: string | undefined;
+export let registryBucketName: string | undefined;
 
 // If a build metadata file is present and contains valid content, use that for the bucket
 // name by default. Will fail if there's a file present that isn't parsable as expected.
 if (fs.existsSync(config.pathToOriginBucketMetadata)) {
     originBucketName = JSON.parse(fs.readFileSync(config.pathToOriginBucketMetadata).toString()).bucket;
+    registryBucketName = JSON.parse(fs.readFileSync(config.pathToOriginBucketMetadata).toString()).registryBucket;
 }
 
 // However, if the bucket's been configured manually, use that instead. A manually
@@ -65,14 +75,31 @@ if (config.originBucketNameOverride) {
     originBucketName = config.originBucketNameOverride;
 }
 
+if (config.registryBucketNameOverride) {
+    registryBucketName = config.registryBucketNameOverride;
+}
+
 // If there's still no bucket selected, it's an error.
 if (!originBucketName) {
     throw new Error("An origin bucket was not specified.");
 }
 
-// Fetch the bucket we'll use for the preview or update.
+// If there's still no bucket selected, it's an error.
+if (!registryBucketName) {
+        throw new Error("A registry bucket was not specified.");
+}
+
+// Fetch the bucket we'll use for the preview or update. This bucket will be used to serve at the root of the site.
+// This is the bucket that will be used to serve the content under the / route. The /docs and /registry routes will
+// be served by the `registryBucket`.
 const originBucket = pulumi.output(aws.s3.getBucket({
     bucket: originBucketName,
+}));
+
+// Fetch the bucket that houses registry content. This is the bucket that will be used to serve the content
+// under the /registry and /docs route.
+const registryBucket = pulumi.output(aws.s3.getBucket({
+    bucket: registryBucketName,
 }));
 
 // Create a bucket to store files we do not keep in source control.
@@ -86,6 +113,33 @@ const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {
         ],
         allowedOrigins: ["*"],
     }],
+});
+
+// Create a bucket to store css bundle files. These will be served under the /css route using a custom cloudfront behavior
+// which will only be configured in the testing flow.
+const cssBucket = new aws.s3.Bucket("css-bucket", {
+    website: {
+        indexDocument: "index.html",
+    },
+});
+
+const cssBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("css-public-access-block", {
+    bucket: cssBucket.id,
+    blockPublicAcls: false,
+});
+
+const cssBucketOwnershipControls = new aws.s3.BucketOwnershipControls("css-bucket-ownership-controls", {
+    bucket: cssBucket.id,
+    rule: {
+        objectOwnership: "ObjectWriter"
+    }
+});
+
+const cssBucketAcl = new aws.s3.BucketAclV2("css-bucket-acl", {
+    bucket: cssBucket.id,
+    acl: aws.s3.PublicReadAcl,
+}, {
+    dependsOn: [cssBucketPublicAccessBlock, cssBucketOwnershipControls],
 });
 
 // This needs to be set in order to allow the use of ACLs. This was added to update our infrastructure to be
@@ -134,6 +188,27 @@ if (config.makeFallbackBucket) {
 const originBucketPolicy = new aws.s3.BucketPolicy("origin-bucket-policy", {
     bucket: originBucket.bucket,
     policy: pulumi.all([originBucket.arn, aws.getCallerIdentity()])
+        .apply(([arn, awsCallerIdentityResult]) => JSON.stringify({
+            Version: "2008-10-17",
+            Statement: [
+                {
+                    Effect: "Deny",
+                    Principal: "*",
+                    Action: "s3:ListBucket",
+                    Resource: arn,
+                    Condition: {
+                        StringNotEquals: {
+                            "aws:PrincipalAccount": awsCallerIdentityResult.accountId,
+                        },
+                    },
+                },
+            ],
+    })),
+});
+
+const registryBucketPolicy = new aws.s3.BucketPolicy("registry-bucket-policy", {
+    bucket: registryBucket.bucket,
+    policy: pulumi.all([registryBucket.arn, aws.getCallerIdentity()])
         .apply(([arn, awsCallerIdentityResult]) => JSON.stringify({
             Version: "2008-10-17",
             Statement: [
@@ -220,15 +295,148 @@ const baseCacheBehavior = {
     responseHeadersPolicyId: "67f7725c-6f97-4210-82d7-5512b31e9d03", // SecurityHeadersPolicy
 };
 
+const registryOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
+const cssOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
+const registryBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
+const cssBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
+
+// Only provision additional cloudfront behavors and origins if we're in the testing flow as to not make
+// any changes to the production infrastructure at this point.
+if (config.testingFlow && registryBucketName) {
+    registryOrigins.push(
+        {
+            originId: registryBucket.arn,
+            domainName: registryBucket.websiteEndpoint,
+            customOriginConfig: {
+                originProtocolPolicy: "http-only",
+                httpPort: 80,
+                httpsPort: 443,
+                originSslProtocols: ["TLSv1.2"],
+            }
+        }
+    );
+    cssOrigins.push(
+        {
+            originId: cssBucket.arn,
+            domainName: cssBucket.websiteEndpoint,
+            customOriginConfig: {
+                originProtocolPolicy: "http-only",
+                httpPort: 80,
+                httpsPort: 443,
+                originSslProtocols: ["TLSv1.2"],
+            }
+        }
+    );
+    registryBehaviors.push(
+        {
+            ...baseCacheBehavior,
+            targetOriginId: registryBucket.arn,
+            pathPattern: "/registry/*",
+            defaultTtl: oneHour,
+            maxTtl: oneHour,
+            forwardedValues: {
+                cookies: {
+                    forward: "none",
+                },
+                queryString: false,
+                headers: [
+                    "Origin",
+                    "Access-Control-Request-Headers",
+                    "Access-Control-Request-Method",
+                ],
+            },
+        },
+        {
+            ...baseCacheBehavior,
+            targetOriginId: registryBucket.arn,
+            pathPattern: "/docs/cli/commands/*",
+            defaultTtl: oneHour,
+            maxTtl: oneHour,
+            forwardedValues: {
+                cookies: {
+                    forward: "none",
+                },
+                queryString: false,
+                headers: [
+                    "Origin",
+                    "Access-Control-Request-Headers",
+                    "Access-Control-Request-Method",
+                ],
+            },
+        },
+        {
+            ...baseCacheBehavior,
+            targetOriginId: registryBucket.arn,
+            pathPattern: "/docs/install/*",
+            defaultTtl: oneHour,
+            maxTtl: oneHour,
+            forwardedValues: {
+                cookies: {
+                    forward: "none",
+                },
+                queryString: false,
+                headers: [
+                    "Origin",
+                    "Access-Control-Request-Headers",
+                    "Access-Control-Request-Method",
+                ],
+            },
+        },
+        {
+            ...baseCacheBehavior,
+            targetOriginId: registryBucket.arn,
+            pathPattern: "/docs/reference/pkg/*",
+            defaultTtl: oneHour,
+            maxTtl: oneHour,
+            forwardedValues: {
+                cookies: {
+                    forward: "none",
+                },
+                queryString: false,
+                headers: [
+                    "Origin",
+                    "Access-Control-Request-Headers",
+                    "Access-Control-Request-Method",
+                ],
+            },
+        },
+    )
+    cssBehaviors.push(
+        {
+            ...baseCacheBehavior,
+            targetOriginId: cssBucket.arn,
+            pathPattern: "/css/*",
+            defaultTtl: oneHour,
+            maxTtl: oneHour,
+            forwardedValues: {
+                cookies: {
+                    forward: "none",
+                },
+                queryString: false,
+                headers: [
+                    "Origin",
+                    "Access-Control-Request-Headers",
+                    "Access-Control-Request-Method",
+                ],
+            },
+        }
+    )
+}
+
+
 // domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
 const domainAliases = [];
 
-// websiteDomain is the A record for the website bucket associated with the website.
-domainAliases.push(config.websiteDomain);
-
-// redirectDomain is the domain to use for fully-qualified 301 redirects.
-if (config.redirectDomain) {
-    domainAliases.push(config.redirectDomain);
+// The testing flow does not have a configured domain, so we don't need to add any aliases
+// for the time being.
+if (!config.testingFlow) {
+    // websiteDomain is the A record for the website bucket associated with the website.
+    domainAliases.push(config.websiteDomain);
+    
+    // redirectDomain is the domain to use for fully-qualified 301 redirects.
+    if (config.redirectDomain) {
+        domainAliases.push(config.redirectDomain);
+    }
 }
 
 // distributionArgs configures the CloudFront distribution. Relevant documentation:
@@ -265,7 +473,10 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
                 httpsPort: 443,
                 originSslProtocols: ["TLSv1.2"],
             },
-        }
+        },
+        // Add registry and css bucket origins. These will be empty in the current production flow.
+        ...registryOrigins,
+        ...cssOrigins
     ],
 
     // Default object to serve when no path is given.
@@ -277,6 +488,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     },
 
     orderedCacheBehaviors: [
+        ...registryBehaviors,
+        ...cssBehaviors,
         {
             ...baseCacheBehavior,
             targetOriginId: uploadsBucket.arn,
@@ -419,7 +632,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
 
     // CloudFront certs must be in us-east-1, just like API Gateway.
     viewerCertificate: {
-        acmCertificateArn: config.certificateArn,
+        acmCertificateArn: config.testingFlow ? undefined : config.certificateArn,
+        cloudfrontDefaultCertificate: config.testingFlow,
         sslSupportMethod: "sni-only",
         minimumProtocolVersion: "TLSv1.2_2018",
     },
@@ -464,35 +678,41 @@ function getDomainAndSubdomain(domain: string): { subdomain: string, parentDomai
     };
 }
 
-// Creates a new Route53 DNS record pointing the domain to the CloudFront distribution.
-async function createAliasRecord(
-        targetDomain: string, distribution: aws.cloudfront.Distribution): Promise<aws.route53.Record> {
+if (!config.testingFlow) {
+    // Creates a new Route53 DNS record pointing the domain to the CloudFront distribution.
+    async function createAliasRecord(
+            targetDomain: string, distribution: aws.cloudfront.Distribution): Promise<aws.route53.Record> {
 
-    const domainParts = getDomainAndSubdomain(targetDomain);
-    const hostedZone = await aws.route53.getZone({ name: config.hostedZone || domainParts.parentDomain });
-    return new aws.route53.Record(
-        config.websiteDomain,
-        {
-            name: config.setRootRecord ? "" : domainParts.subdomain,
-            zoneId: hostedZone.zoneId,
-            type: "A",
-            aliases: [
-                {
-                    name: distribution.domainName,
-                    zoneId: distribution.hostedZoneId,
-                    evaluateTargetHealth: true,
-                },
-            ],
-        },
-        {
-            protect: true,
-        });
+        const domainParts = getDomainAndSubdomain(targetDomain);
+        const hostedZone = await aws.route53.getZone({ name: config.hostedZone || domainParts.parentDomain });
+        return new aws.route53.Record(
+            config.websiteDomain,
+            {
+                name: config.setRootRecord ? "" : domainParts.subdomain,
+                zoneId: hostedZone.zoneId,
+                type: "A",
+                aliases: [
+                    {
+                        name: distribution.domainName,
+                        zoneId: distribution.hostedZoneId,
+                        evaluateTargetHealth: true,
+                    },
+                ],
+            },
+            {
+                protect: true,
+            });
+    }
+
+    [...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
 }
-
-[...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
 
 export const uploadsBucketName = uploadsBucket.bucket;
 export const originBucketWebsiteDomain = originBucket.websiteDomain;
 export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
 export const websiteDomain = config.websiteDomain;
+export const registryBucketWebsiteDomain = registryBucket.websiteEndpoint;
+export const registryS3BucketName = registryBucket.bucket;
+export const originS3BucketName = originBucket.bucket;
+export const cssS3BucketName = cssBucket.bucket;
