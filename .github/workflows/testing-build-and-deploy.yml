@@ -1,21 +1,18 @@
-name: Build and deploy
-on:
+name: Build and deploy testing
+on: 
   push:
     branches:
       - master
-  # pull_request:
-  #   branches:
-  #     - master
-permissions:
-      id-token: write   # This is required for requesting the JWT
-      contents: read    # This is required for actions/checkout
+  pull_request:
+      branches:
+        - master
 jobs:
   buildSite:
     env:
       GOPATH: ${{ github.workspace }}/go
     name: Install deps and build site
     runs-on: buildjet-8vcpu-ubuntu-2204
-    environment: production
+    environment: testing
     steps:
 
       - uses: actions/checkout@v2
@@ -30,37 +27,28 @@ jobs:
 
       - uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.111.0'
+          hugo-version: '0.96.0'
           extended: true
 
       - name: Configure Git
         run: |
           git config --global url."https://${{ secrets.PULUMI_BOT_TOKEN }}:x-oauth-basic@github.com/pulumi/pulumi-hugo-internal".insteadOf "https://github.com/pulumi/pulumi-hugo-internal"
 
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
-        with:
-          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
-          role-session-name: docs-deploy
-          role-duration-seconds: 7200
-          aws-region: us-west-2
-
       - name: Install Pulumi CLI
         uses: pulumi/actions@v4
 
       - name: Build and deploy
-        run: make ci_${GITHUB_EVENT_NAME}
+        run: make ci_push
         env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.CI_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.CI_AWS_SECRET_ACCESS_KEY }}
           CDN_PULUMI_URN: ${{ vars.CDN_PULUMI_URN }}
+          DEPLOYMENT_ENVIRONMENT: ${{ vars.DEPLOYMENT_ENVIRONMENT }}
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           PULUMI_STACK_NAME: ${{ vars.PULUMI_STACK_NAME }}
-          DEPLOYMENT_ENVIRONMENT: ${{ vars.DEPLOYMENT_ENVIRONMENT }}
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ALGOLIA_APP_ID: ${{ vars.ALGOLIA_APP_ID }}
-          ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}
-          ALGOLIA_APP_ADMIN_KEY: ${{  secrets.ALGOLIA_APP_ADMIN_KEY }}
-          NODE_OPTIONS: "--max_old_space_size=8192"
+          NODE_OPTIONS: "--max_old_space_size=4096"
 
       - name: Archive test results
         uses: actions/upload-artifact@v2
@@ -82,7 +70,7 @@ jobs:
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:
-          SLACK_CHANNEL: docs-ops
+          SLACK_CHANNEL: docs-ops-test
           SLACK_COLOR: "#F54242"
           SLACK_MESSAGE: "build and deploy failure in pulumi/docs repo :meow_sad:"
           SLACK_USERNAME: docsbot
