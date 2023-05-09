@@ -240,6 +240,7 @@ function getDefaultExcludedKeywords() {
         "https://ceph.io",
         "https://www.pagerduty.com",
         "https://support.pulumi.com",
+        "https://www.pulumi.com/support/",
         "https://pbs.twimg.com/profile_images/",
         "https://linen.dev/",
         "https://cloud.yandex.com/",
@@ -254,7 +255,6 @@ function getDefaultExcludedKeywords() {
         "https://rootly.com/",
         "https://www.vultr.com/",
         "https://www.pulumi.com/support/",
-
     ];
 }
 
