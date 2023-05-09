@@ -41,7 +41,7 @@ $ pulumi plugin rm resource aws-native # delete older version of the plugin
 $ pulumi plugin install resource aws-native # install the latest version
 ```
 
-Once you have your environemnt configured with AWS credentials, run the following to get started:
+Once you have your environment configured with AWS credentials, run the following to get started:
 
 ```console
 $ git clone https://github.com/pulumi/pulumi-cloud-import.git # cd into the cloned repo
@@ -58,7 +58,7 @@ The program uses 3 concurrent workers by default due to rate limits on the AWS c
 
 If you've never used Pulumi with Azure before we recommend you start first with the [Get Started with Azure](https://www.pulumi.com/docs/get-started/azure/) guide that helps you configure credentials and install dependencies.
 
-Once you have your environemnt configured with Azure credentials, run the following to get started:
+Once you have your environment configured with Azure credentials, run the following to get started:
 
 ```console
 $ git clone https://github.com/pulumi/pulumi-cloud-import.git # cd into the cloned repo
@@ -67,6 +67,19 @@ $ pulumi stack init <org/stackname> # we recommend naming stacks subscriptionNam
 $ export ARM_LOCATION=westus2 # the region of your Azure Subscription that you'd like to read from
 $ export ARM_SUBSCRIPTION_ID=xxxxxxxxxxxxxxxxxxxxxxxxxx # ID of the Subscription that you'd like to read from
 $ pulumi up --skip-preview --show-reads # run the azure cloud import program
+```
+
+### Kubernetes
+
+If you've never used Pulumi with Kubernetes before we recommend you start first with the [Get Started with Kubernetes](https://www.pulumi.com/docs/get-started/kubernetes/) guide that helps you configure credentials and install dependencies.
+
+Once you have your environment configured with Kubernetes credentials, run the following to get started:
+
+```console
+$ git clone https://github.com/pulumi/pulumi-cloud-import.git # cd into the cloned repo
+$ cd pulumi-cloud-import-kubernetes
+$ pulumi stack init <org/stackname>
+$ pulumi up --skip-preview --show-reads # run the Kubernetes cloud import program
 ```
 
 ## Pulumi Cloud
