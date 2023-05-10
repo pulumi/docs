@@ -77,7 +77,6 @@ const originBucket = pulumi.output(aws.s3.getBucket({
 
 // Create a bucket to store files we do not keep in source control.
 const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {
-    acl: aws.s3.PublicReadAcl,
     website: {
         indexDocument: "index.html",
     },
@@ -87,6 +86,29 @@ const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {
         ],
         allowedOrigins: ["*"],
     }],
+});
+
+// This needs to be set in order to allow the use of ACLs. This was added to update our infrastructure to be
+// compatible with the default S3 settings from AWS' April update. `ObjectWriter` was the prior default, so
+// changing it to that here to match the configuration prior to the update.
+// https://aws.amazon.com/blogs/aws/heads-up-amazon-s3-security-changes-are-coming-in-april-of-2023/
+const uploadsBucketOwnershipControls = new aws.s3.BucketOwnershipControls("uploads-bucket-ownership-controls", {
+    bucket: uploadsBucket.id,
+    rule: {
+        objectOwnership: "ObjectWriter"
+    }
+});
+
+const uploadsBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("uploads-public-access-block", {
+    bucket: uploadsBucket.id,
+    blockPublicAcls: false,
+});
+
+const uploadsBucketAcl = new aws.s3.BucketAclV2("uploads-bucket-acl", {
+    bucket: uploadsBucket.id,
+    acl: aws.s3.PublicReadAcl,
+}, {
+    dependsOn: [uploadsBucketPublicAccessBlock, uploadsBucketOwnershipControls],
 });
 
 // Optionally create a fallback bucket for serving the website directly out of S3 when necessary.
@@ -135,12 +157,31 @@ const websiteLogsBucket = new aws.s3.Bucket(
     "website-logs-bucket",
     {
         bucket: config.websiteLogsBucketName,
-        acl: aws.s3.PrivateAcl,
     },
     {
         protect: true,
     },
 );
+
+// This needs to be set in order to allow the use of ACLs. This was added to update our infrastructure to be
+// compatible with the default S3 settings from AWS' April update. `ObjectWriter` was the prior default, so
+// changing it to that here to match the configuration prior to the update.
+// https://aws.amazon.com/blogs/aws/heads-up-amazon-s3-security-changes-are-coming-in-april-of-2023/
+const logsBucketOwnershipControls = new aws.s3.BucketOwnershipControls("logs-bucket-ownership-controls", {
+    bucket: websiteLogsBucket.id,
+    rule: {
+        objectOwnership: "ObjectWriter"
+    }
+});
+
+const logsBucketACL = new aws.s3.BucketAclV2("logs-bucket-acl", {
+    bucket: websiteLogsBucket.id,
+    acl: aws.s3.PrivateAcl,
+}, {
+    dependsOn: [logsBucketOwnershipControls],
+});
+
+
 
 const fiveMinutes = 60 * 5;
 const oneHour = fiveMinutes * 12;
