@@ -38,7 +38,7 @@ This post continues the previous post in the series. Zephyr's infrastructure foo
 The reasons for this structure are explained in [the third Zephyr blog post](/blog/iac-recommended-practices-structuring-pulumi-projects/). For Zephyr, it came down to supporting multiple teams and allowing the application to evolve independently of the infrastructure that supports it.
 
 {{% notes %}}
-You can continue to use the `multi-project` tag in the GitHub repositories to see the state of Zephyr's code and projects for this blog post.
+You can continue to use the `blog/multi-project` branch in the GitHub repositories to see the state of Zephyr's code and projects for this blog post.
 {{% /notes %}}
 
 It's clear that there are dependencies across projects: The `zephyr-k8s` project needs to know the VPC ID and the subnet IDs from the `zephyr-infra` project. Similarly, the `zephyr-app` project needs to have access to the Kubernetes cluster details from the `zephyr-k8s` project. As the Zephyr team went about building the code that's now in use in their multi-project architecture, they needed to decide how best to handle these cross-project dependencies. The Zephyr team knew that hard-coding output values from one project as configuration values in another stack wasn't the ideal way (and in fact Pulumi **strongly** recommends against hard-coding output values), but what was the best solution to use? The answer to that question is _stack references_.
@@ -58,7 +58,7 @@ You can see how the Zephyr team did this for their projects, including code samp
 
 It's worthwhile to note that any information that needs to be accessible from another stack via a stack reference must be exported as a stack output in the source stack. If you don't mark it as a stack output, then it can't be used in a stack reference. Adding stack outputs after the fact requires little effort and has no impact on existing infrastructure.
 
-Also, any value retrieved via a stack reference is treated as [a Pulumi Output](/docs/intro/concepts/inputs-outputs/), and therefore may require some extra work to transform values (such as the use of `Output.apply`). The recent addition of `OutputDetails` support in Pulumi---you can read more about `OutputDetails` [in this blog post announcing the functionality](/blog/stack-reference-output-details/)---helps considerably in this situation. Some SDKs also have language-specific mechanisms that can help; for example, using Go's `.AsStringArrayOutput()` method on a `StackReference.GetOutput` statement makes referencing subnet IDs from other project much easier.
+Also, any value retrieved via a stack reference is treated as [a Pulumi Output](/docs/intro/concepts/inputs-outputs/), and therefore may require some extra work to transform values (such as the use of `Output.apply`). The recent addition of `OutputDetails` support in Pulumi---you can read more about `OutputDetails` [in this blog post announcing the functionality](/blog/stack-reference-output-details/)---helps considerably in this situation. Some SDKs also have language-specific mechanisms that can help; for example, using Go's `.AsStringArrayOutput()` method on a `StackReference.GetOutput` statement makes referencing subnet IDs from another project much easier.
 
 While stack references are conceptually straightforward and not difficult to implement, there are some recommended practices to be mindful of regarding the use of stack outputs and stack references:
 
@@ -74,7 +74,7 @@ One thing not listed above is security---and that's because a later post in the 
 
 With these recommended practices in mind, you can examine the Zephyr team's implementation to see how they put these recommendations into action.
 
-* In the code for the base infrastructure stack, you can see that Zephyr [exported the essential values](https://github.com/pulumi/zephyr-infra/blob/multi-project/index.ts#L14-L17) needed by the Kubernetes platform stack:
+* In the code for the base infrastructure stack, you can see that Zephyr [exported the essential values](https://github.com/pulumi/zephyr-infra/blob/blog/multi-project/index.ts#L14-L17) needed by the Kubernetes platform stack:
 
     ```typescript
     // Export some values for use elsewhere
@@ -83,7 +83,7 @@ With these recommended practices in mind, you can examine the Zephyr team's impl
     export const pubSubnetIds = eksVpc.publicSubnetIds;
     ```
 
-* In the Kubernetes platform stack, the Zephyr team [parameterized the values](https://github.com/pulumi/zephyr-k8s/blob/multi-project/index.ts#L10-L12) needed for the stack reference. This particular approach, by the way, is key to preserving [the per-developer stacks](/blog/iac-recommended-practices-developer-stacks-git-branches/) to which the Zephyr team has grown accustomed (each developer needs to specify the correct organization, project, and stack name):
+* In the Kubernetes platform stack, the Zephyr team [parameterized the values](https://github.com/pulumi/zephyr-k8s/blob/blog/multi-project/index.ts#L10-L12) needed for the stack reference. This particular approach, by the way, is key to preserving [the per-developer stacks](/blog/iac-recommended-practices-developer-stacks-git-branches/) to which the Zephyr team has grown accustomed (each developer needs to specify the correct organization, project, and stack name):
 
     ```typescript
     // Grab some configuration values
@@ -96,14 +96,14 @@ With these recommended practices in mind, you can examine the Zephyr team's impl
     const infraSr = new pulumi.StackReference(`${infraOrgName}/${infraProjName}/${infraStackName}`);
     ```
 
-* As with the base infrastructure stack, [only the key value needed by other stacks](https://github.com/pulumi/zephyr-k8s/blob/multi-project/index.ts#L36-L37) is exported (in this case, the Kubeconfig required to access this cluster):
+* As with the base infrastructure stack, [only the key value needed by other stacks](https://github.com/pulumi/zephyr-k8s/blob/blog/multi-project/index.ts#L36-L37) is exported (in this case, the Kubeconfig required to access this cluster):
 
     ```typescript
     // Export some values for use elsewhere
     export const kubeconfig = eksCluster.kubeconfig;
     ```
 
-* Finally, in the application stack, the [stack reference values are again parameterized](https://github.com/pulumi/zephyr-app/blob/multi-project/infra/index.ts#L7-L9), and the Kubeconfig---necessary for the application stack to deploy onto the provisioned Kubernetes cluster---is [referenced via a stack reference](https://github.com/pulumi/zephyr-app/blob/multi-project/infra/index.ts#L11-L13):
+* Finally, in the application stack, the [stack reference values are again parameterized](https://github.com/pulumi/zephyr-app/blob/blog/multi-project/infra/index.ts#L7-L9), and the Kubeconfig---necessary for the application stack to deploy onto the provisioned Kubernetes cluster---is [referenced via a stack reference](https://github.com/pulumi/zephyr-app/blob/blog/multi-project/infra/index.ts#L11-L13):
 
     ```typescript
     // Grab some configuration values
@@ -117,7 +117,7 @@ With these recommended practices in mind, you can examine the Zephyr team's impl
     ```
 
 {{% notes %}}
-All of the GitHub links in the paragraphs above reference the `multi-project` tag in each repository, which has the code as of this blog post (and the earlier blog post).
+All of the GitHub links in the paragraphs above reference the `blog/multi-project` branch in each repository, which has the code as of this blog post (and the earlier blog posts).
 {{% /notes %}}
 
 ## Summarizing recommended practices

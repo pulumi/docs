@@ -47,7 +47,7 @@ Alice smiled. "I have an idea."
 A couple days later, Alice contacted Bob and said, "I want to show you what I've come up with."
 
 {{% notes %}}
-To see the code that Alice created for local testing of the Zephyr online store with Pulumi, visit [the zephyr-app repository](https://github.com/pulumi/zephyr-app/) and look at the `inner-dev-loop` tag.
+To see the code that Alice created for local testing of the Zephyr online store with Pulumi, visit [the zephyr-app repository](https://github.com/pulumi/zephyr-app/) and look at the [`blog/inner-dev-loop`](https://github.com/pulumi/zephyr-app/tree/blog/inner-dev-loop/) branch.
 {{% /notes %}}
 
 When Bob met up with Alice, Alice showed him a TypeScript program she'd written with Pulumi's Docker provider that automates building and deploying the Zephyr online store to a local Docker daemon.
@@ -170,4 +170,4 @@ Bob watches as the operation completes in about 17 seconds.
 
 ## Try this out yourself
 
-Now that you've seen how Alice uses Pulumi to streamline testing the Zephyr online store's application code locally, feel free to try this out yourself! The code that you saw in this blog post is available [in the `zephyr-app` repository on GitHub](https://github.com/pulumi/zephyr-app/). Just select the `inner-dev-loop` branch and go to the `develop/pulumi` folder.
+Now that you've seen how Alice uses Pulumi to streamline testing the Zephyr online store's application code locally, feel free to try this out yourself! The code that you saw in this blog post is available [in the `zephyr-app` repository on GitHub](https://github.com/pulumi/zephyr-app/). Just select the [`blog/inner-dev-loop`](https://github.com/pulumi/zephyr-app/tree/blog/inner-dev-loop/) branch and go to the `develop/pulumi` folder.

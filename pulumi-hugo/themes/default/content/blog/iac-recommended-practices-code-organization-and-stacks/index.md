@@ -90,7 +90,7 @@ Zephyr decided to initially start with two stacks: a production stack (named "pr
 
 ## Viewing the first iteration of Zephyr's code
 
-You can view the first iteration of Zephyr's Pulumi and application code---the iteration that corresponds to the decisions described in this blog post---by navigating to [this GitHub repository](https://github.com/pulumi/zephyr-app/). From the branch/tag dropdown, switch from the "main" branch to viewing the "original" tag.
+You can view the first iteration of Zephyr's Pulumi and application code---the iteration that corresponds to the decisions described in this blog post---by navigating to [this GitHub repository](https://github.com/pulumi/zephyr-app/). From the branch/tag dropdown, switch from the `main` branch to viewing the [`blog/original`](https://github.com/pulumi/zephyr-app/tree/blog/original/) branch.
 
 From that GitHub repository, you can also choose to deploy the Pulumi code yourself. Full instructions for deploying the code are found in the repository.
 

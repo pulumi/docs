@@ -34,7 +34,7 @@ Here are links to all of the posts in the series. Entries below that are not yet
 When we [last met up](/blog/iac-recommended-practices-code-organization-and-stacks/) with the Zephyr team, they were off and running, managing their newly refactored online store, Zephyr Archaeotech Emporium, with a single Pulumi [project](/docs/intro/concepts/project/) and two Pulumi [stacks](/docs/intro/concepts/stack/) --- one for development (`dev`) and another for production (`prod`). The team had chosen to use one Git repository (a monorepo) to manage the code for the online store and its infrastructure after refactoring the store into a set of containerized microservices deployed with Kubernetes on [Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html).
 
 {{% notes %}}
-For a snapshot of the code as it was at the end of the first post in the series, see the [`original`](https://github.com/pulumi/zephyr-app/tree/original) tag of the [`pulumi/zepyhr-app`](https://github.com/pulumi/zephyr-app) repository on GitHub.
+For a snapshot of the code as it was at the end of the first post in the series, see the [`blog/original`](https://github.com/pulumi/zephyr-app/tree/blog/original) branch of the [`pulumi/zepyhr-app`](https://github.com/pulumi/zephyr-app) repository on GitHub.
 {{% /notes %}}
 
 Up to now, the two-stack approach has worked well for the team. It's allowed them to focus on building new features, integrating those features into the shared `dev` environment by developing and testing locally (which we'll cover in a future post) and merging their [feature branches](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) regularly into the base branch, `main`, using standard GitHub pull-request workflows. Around once a day, as the team's changes are merged into `main`, the team lead (and original author of the Pulumi program) deploys them into the `dev` environment with Pulumi with the following commands:
@@ -193,7 +193,7 @@ pulumi stack rename zephyr/test
 
 ## Viewing the second iteration of Zephyr's code
 
-You can view the second iteration of Zephyr's Pulumi and application code --- the iteration that corresponds to the decisions described in this blog post --- by navigating to [this GitHub repository](https://github.com/pulumi/zephyr-app/). From the branch/tag dropdown, switch from the `main` branch to the [`dev-stacks`](https://github.com/pulumi/zephyr-app/tree/dev-stacks) tag
+You can view the second iteration of Zephyr's Pulumi and application code --- the iteration that corresponds to the decisions described in this blog post --- by navigating to [this GitHub repository](https://github.com/pulumi/zephyr-app/). From the branch/tag dropdown, switch from the `main` branch to the [`blog/dev-stacks`](https://github.com/pulumi/zephyr-app/tree/blog/dev-stacks) branch.
 
 From that GitHub repository, you can also choose to deploy the Pulumi code yourself. Full instructions for deploying the code are found in the repository.
 

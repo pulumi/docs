@@ -32,7 +32,7 @@ Here are links to all the blog posts in the series (entries below that are not l
 As a result of launching its online presence, Zephyr saw amazing success. The market for arcane artifacts and novel curiosities is booming, and Zephyr is becoming a leader in this market. Funded by this success, Zephyr has grown rapidly. Along with this growth, Zephyr's software engineering and IT teams also grew and expanded. Fortunately, Zephyr's [use of per-developer stacks with short-lived ephemeral Git branches](/blog/iac-recommended-practices-developer-stacks-git-branches/) positioned the development teams well for this growth.
 
 {{% notes %}}
-For a look at the state of Zephyr's Pulumi code as it stood as of the end of the second post in the series, see the [`dev-stacks`](https://github.com/pulumi/zephyr-app/tree/dev-stacks) tag of the [`pulumi/zephyr-app`](https://github.com/pulumi/zephyr-app) repository on GitHub.
+For a look at the state of Zephyr's Pulumi code as it stood as of the end of the second post in the series, see the [`blog/dev-stacks`](https://github.com/pulumi/zephyr-app/tree/blog/dev-stacks) branch of the [`pulumi/zephyr-app`](https://github.com/pulumi/zephyr-app) repository on GitHub.
 {{% /notes %}}
 
 Naturally this growth has resulted in some separation of duties. The IT team now has responsibility for the infrastructure that supports the online retail store. Within that team, some team members are focused on "core" infrastructure, while other team members are focused only on Kubernetes (a natural decision given Zephyr's use of Kubernetes in their architecture). The application team continues to remain responsible for the online store application itself.
@@ -84,7 +84,7 @@ In [the first Zephyr post](/blog/iac-recommended-practices-code-organization-and
 
 Note that relocating code (to a different GitHub repository or different filesystem location within a repository) generally has no impact on Pulumi. As long as the project name and stack name do not change, then changing the filesystem location won't affect anything---keeping in mind, of course, that filesystem paths and such may need to be adjusted in code to account for any such changes.
 
-These repositories are available for you to review on GitHub ([zephyr-infra](https://github.com/pulumi/zephyr-infra), [zephyr-k8s](https://github.com/pulumi/zephyr-k8s), and [zephyr-app](https://github.com/pulumi/zephyr-app)); use the branch/tag selector to find the `multi-project` tab in each repository to see the state of the code as of this blog post. Be aware that the process for standing up the Zephyr online store is now a bit more complex; check the instructions in each repository for more details if you'd like to give these projects a spin.
+These repositories are available for you to review on GitHub ([zephyr-infra](https://github.com/pulumi/zephyr-infra), [zephyr-k8s](https://github.com/pulumi/zephyr-k8s), and [zephyr-app](https://github.com/pulumi/zephyr-app)); use the branch/tag selector to find the `blog/multi-project` branch in each repository to see the state of the code as of this blog post. Be aware that the process for standing up the Zephyr online store is now a bit more complex; check the instructions in each repository for more details if you'd like to give these projects a spin.
 
 ## Summarizing recommended practices
 
