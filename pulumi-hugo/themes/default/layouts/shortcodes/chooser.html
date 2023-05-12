@@ -4,6 +4,16 @@
 {{ if eq $options "nodejs" }}
     {{ $options = "javascript,typescript" }}
 {{ end }}
+
+{{ if not $type }}
+    {{ errorf "%s Missing required parameter 'type'." .Path }}
+{{ end }}
+
+{{ if not $options }}
+    {{ errorf "%s Missing required parameter 'options'." .Path }}
+{{ end }}
+
+
 <div>
     <pulumi-chooser type="{{ $type }}" options="{{ $options }}" mode="{{ $mode }}">{{ .Inner }}</pulumi-chooser>
 </div>

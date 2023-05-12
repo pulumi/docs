@@ -122,7 +122,7 @@ You can adjust these settings by changing the code in {{< langfile >}}:
 
 {{% chooser language "typescript,python,go,csharp,yaml" / %}}
 
-{{% choosable language typescript %}}
+{{% choosable %}}
 
 ```diff
 const cdn = new aws.cloudfront.Distribution("cdn", {
