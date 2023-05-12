@@ -39,7 +39,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          role-to-assume: arn:aws:iam::388588623842:role/ContinuousIntegrationRole
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
           role-session-name: docs-deploy
           role-duration-seconds: 7200
           aws-region: us-west-2
