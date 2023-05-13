@@ -1,9 +1,12 @@
 ---
-title: Available Versions
+title: Pulumi CLI versions
 meta_desc: This page provides an list of available versions of the Pulumi CLI.
-no_on_this_page: true
-
-aliases: ["/docs/reference/changelog/"]
+menu:
+  install:
+    weight: 1
+aliases:
+- "/docs/reference/changelog/"
+- "docs/get-started/install/versions/"
 ---
 
 The current stable version of Pulumi is **{{< latest-version >}}**.
