@@ -340,8 +340,8 @@ async function getURLsToCheck(base) {
 
                 // Exclude resource docs, SDK docs, and CLI download pages.
                 .filter(page => !page.match(/\/registry\/packages\/.+\/api-docs\//))
-                .filter(page => !page.match(/\/docs\/reference\/pkg\/nodejs|python\//))
-                .filter(page => !page.match(/\/docs\/get-started\/install\/versions\//))
+                .filter(page => !page.match(/\/docs\/languages-sdks\/nodejs|python\//))
+                .filter(page => !page.match(/\/docs\/install\/versions\//))
 
                 // Always check using the supplied baseURL.
                 .map(url => {
