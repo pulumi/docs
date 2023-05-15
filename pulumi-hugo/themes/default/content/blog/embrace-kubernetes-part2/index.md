@@ -66,4 +66,4 @@ Implementing a Kubernetes solution is not an overnight change. It's common to ru
 
 ## Learn More
 
-If you’ve looked at [Get Started with Kubernetes](/docs/get-started/kubernetes/) and want to learn more about how Pulumi can help you with your implementation, take a look at [Kubernetes Overview](/registry/packages/kubernetes/) and [Getting Started with Kubernetes: Application Basics](/blog/getting-started-with-k8s-part2).
+If you’ve looked at [Get Started with Kubernetes](/docs/clouds/kubernetes/get-started/) and want to learn more about how Pulumi can help you with your implementation, take a look at [Kubernetes Overview](/registry/packages/kubernetes/) and [Getting Started with Kubernetes: Application Basics](/blog/getting-started-with-k8s-part2).

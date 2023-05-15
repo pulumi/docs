@@ -65,7 +65,7 @@ When it comes to answering the question of where to store Pulumi code relative t
 1. **In the same repository as your application code:** This approach has the advantage of being simpler, but may not offer the necessary flexibility when dealing with multiple teams or varying levels of access control.
 2. **In a separate repository from your application code:** Using a separate repository adds some complexity, but does provide greater flexibility to more easily address a variety of organizational requirements and varying levels of access control.
 
-So which approach is best? That will depend on a number of different factors, many of which are outlined [here](/docs/guides/organizing-projects-stacks/). Some other factors that users need to take into consideration include:
+So which approach is best? That will depend on a number of different factors, many of which are outlined in the [organizing projects & stacks documentation](/docs/using-pulumi/organizing-projects-stacks/). Some other factors that users need to take into consideration include:
 
 * Who is responsible for maintaining the code? If the application code and the Pulumi code are managed by different teams, then using separate repositories may be the best approach.
 * What sort of access controls are needed? If the organization needs different access controls for the application code and the Pulumi code, then separate repositories are generally needed.
@@ -75,7 +75,7 @@ So which approach is best? That will depend on a number of different factors, ma
 It's worth stressing that the answers to these questions may change over time as organizations grow and their applications evolve. Addressing that change and its effects on an organization's Pulumi projects and stacks is something we'll be discussing later in this series.
 
 {{% notes type="info" %}}
-The discussion above is working from the assumption that Pulumi users will store their Pulumi code in a version control system, like Git. Strictly speaking, using a version control system isn't required for Pulumi to function (there is one exception we'll touch on later in this series when we discuss [Pulumi Deployments](https://www.pulumi.com/docs/intro/deployments/)), but we **very strongly** recommend that all users use Pulumi in conjunction with version control.
+The discussion above is working from the assumption that Pulumi users will store their Pulumi code in a version control system, like Git. Strictly speaking, using a version control system isn't required for Pulumi to function (there is one exception we'll touch on later in this series when we discuss [Pulumi Deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/)), but we **very strongly** recommend that all users use Pulumi in conjunction with version control.
 {{% /notes %}}
 
 In the case of Zephyr, their team felt like a monorepo approach (storing Pulumi code and application code together) was most appropriate for their specific requirements. Zephyr is a relatively small organization with a single team of developers that are responsible for managing both the cloud infrastructure as well as the development and deployment of the online store application. Zephyr's team also decicded to use a single Pulumi project---for now. (Be sure to follow this blog series to see how that evolves, and why!)
@@ -84,7 +84,7 @@ In the case of Zephyr, their team felt like a monorepo approach (storing Pulumi 
 
 The second question Zephyr encountered is how to handle the need for multiple instances of their application. In addition to a production instance---which is the instance behind Zephyr's public-facing online store---Zephyr also felt they needed an environment for the developers to use in testing changes to the online store.
 
-This use case---needing to have multiple, separate instances of the infrastructure and applications created by a single Pulumi program---is exactly what [Pulumi stacks](https://www.pulumi.com/docs/intro/concepts/stack/) were designed to address. Each stack is a separate instance of the resources created by a Pulumi program within a project. Further, each stack has its own independent state, and each stack has its own configuration values. Stacks can be short-lived (meaning the associated resources are also short-lived), or stacks can be long-lived. Aside from the cloud resources created by the Pulumi program, stacks are lightweight and simple to create or delete.
+This use case---needing to have multiple, separate instances of the infrastructure and applications created by a single Pulumi program---is exactly what [Pulumi stacks](https://www.pulumi.com/docs/concepts/stack/) were designed to address. Each stack is a separate instance of the resources created by a Pulumi program within a project. Further, each stack has its own independent state, and each stack has its own configuration values. Stacks can be short-lived (meaning the associated resources are also short-lived), or stacks can be long-lived. Aside from the cloud resources created by the Pulumi program, stacks are lightweight and simple to create or delete.
 
 Zephyr decided to initially start with two stacks: a production stack (named "prod") and a development stack (named "dev"). As you'll observe throughout this series, this is a decision that is easily adjusted over time as your organization's requirements change.
 

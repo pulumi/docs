@@ -228,4 +228,4 @@ or join our [Community Slack](https://slack.pulumi.com/) channel if you have any
 [eks-webhook]: https://github.com/aws/amazon-eks-pod-identity-webhook/
 [k8s-sa]: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
 [pulumi-k8s]: /registry/packages/kubernetes/
-[p-get-started]: /docs/get-started/kubernetes/
+[p-get-started]: /docs/clouds/kubernetes/get-started/

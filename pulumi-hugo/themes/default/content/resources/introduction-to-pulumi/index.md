@@ -68,7 +68,7 @@ main:
 
         **Prerequisites**
 
-        To successfully complete all the exercises you will need to have [Docker](https://docs.docker.com/get-docker/) installed on your machine. You can also install the [Pulumi CLI](/docs/get-started/install/) ahead of time, but we will walk you through the install process during the session.
+        To successfully complete all the exercises you will need to have [Docker](https://docs.docker.com/get-docker/) installed on your machine. You can also install the [Pulumi CLI](/docs/install/) ahead of time, but we will walk you through the install process during the session.
 
 
     # The webinar presenters

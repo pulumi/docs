@@ -31,7 +31,7 @@ Here are some examples of how to simplify Kubernetes deployments using EKS Bluep
 
 ## Setting up and managing multiple environments
 
-Pulumi has a concept called [Stacks](/docs/intro/concepts/stack/) that allows you to deploy the same Pulumi program multiple times, with minor variations to account for environmental differences. Leveraging this with our new Pulumi SSP SDK, you can deploy a cluster to multiple environments with very little code.
+Pulumi has a concept called [Stacks](/docs/concepts/stack/) that allows you to deploy the same Pulumi program multiple times, with minor variations to account for environmental differences. Leveraging this with our new Pulumi SSP SDK, you can deploy a cluster to multiple environments with very little code.
 Here’s an example with one of Pulumi’s supported languages, Python.
 
 ```python

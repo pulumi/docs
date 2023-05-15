@@ -21,7 +21,7 @@ tags:
     - serverless
 ---
 
-If you're familiar with [Amazon API Gateway](https://aws.amazon.com/api-gateway/), you know it's all about making it easier to provision and manage a web API. Maybe you've used it, as I have, with [Crosswalk](/docs/guides/crosswalk/aws/), our AWS extension library, to stand up a REST API and handle requests with AWS Lambda functions:
+If you're familiar with [Amazon API Gateway](https://aws.amazon.com/api-gateway/), you know it's all about making it easier to provision and manage a web API. Maybe you've used it, as I have, with [Crosswalk](/docs/clouds/aws/guides/), our AWS extension library, to stand up a REST API and handle requests with AWS Lambda functions:
 
 ```typescript
 import * as awsx from "@pulumi/awsx";

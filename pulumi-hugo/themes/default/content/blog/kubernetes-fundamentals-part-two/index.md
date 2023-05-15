@@ -23,7 +23,7 @@ Kubernetes is very powerful, but also very complicated. The flexibility of the p
 
 ## Okay, I want to try it for myself.
 
-First things first, we need [Pulumi](https://www.pulumi.com/docs/get-started/install/), [Node.js](https://nodejs.org/en/download/), and [npm](https://www.npmjs.com/get-npm) installed.
+First things first, we need [Pulumi](https://www.pulumi.com/docs/install/), [Node.js](https://nodejs.org/en/download/), and [npm](https://www.npmjs.com/get-npm) installed.
 
 We're going to do this on Google Cloud Product (GCP), so you'll also need the [Google Cloud SDK](https://cloud.google.com/sdk/docs/downloads-interactive) set up. From there, log in with `gcloud`:
 

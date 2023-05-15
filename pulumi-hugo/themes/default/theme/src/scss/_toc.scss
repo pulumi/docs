@@ -1,87 +1,157 @@
-$toc-header-spacing: 5px;
-
 #left-nav {
     scroll-behavior: smooth;
 }
 
-.toc {
+nav.toc {
     @apply text-sm pb-8;
-
-    a {
-        @apply text-blue-800;
-
-        &:hover {
-            @apply text-blue-700;
-        }
-    }
-
-    .active {
-        @apply font-semibold;
-    }
-
-    h5 {
-        @apply font-body font-semibold text-base text-blue-800;
-
-        a {
-            &:hover {
-                @apply text-blue-700;
-            }
-        }
-    }
 
     ul {
         @apply list-none p-0;
     }
 
-    .toc-header {
-        width: fit-content;
-        padding-right: $toc-header-spacing;
-        margin-left: -$toc-header-spacing;
-
-        a {
-            margin-left: $toc-header-spacing;
-        }
+    li {
+        border-radius: 0 2px 2px 0;
+        border-left: transparent 3px solid;
 
         &.active {
-            background-color: #dbdef7;
-            transition: background-color 2.5s;
-
-            a {
-                &::before {
-                    @apply bg-blue-800;
-                    content: "";
-                    position: absolute;
-                    width: 3px;
-                    height: 24px;
-                    left: 9px;
-                }
+            background-color: #edeffb;
+            border-left: #364098 3px solid;
+            width: fit-content;
+    
+            &:hover {
+                text-decoration: none;
+                background-color: #cacef4;
+                color: #272e6d;
+                border-left: #272e6d 3px solid;
             }
         }
     }
-}
 
-.sidenav-topic {
-    @apply mb-2;
-}
+    a {
+        @apply py-0.5 px-1.5 rounded-sm;
+        color: #364098;
 
-.sidenav-subsection {
-    @apply mb-2 ml-4 text-sm;
-}
+        &:hover {
+            text-decoration: #8e8f97 solid underline;
+            text-underline-offset: 6px;
+            color: #364098;
+        }
+    }
 
-.sidenav-parent {
-    @apply mb-2;
-}
+    div.active a:hover,
+    li.active a:hover {
+        text-decoration: none;
+    }
 
-.toggleButton {
-    @apply text-gray-500 ml-1 cursor-pointer;
-}
+    div.toc-header {
+        font-size: 16px;
+        width: fit-content;
+        padding-right: 5px;
 
-.toggle > .collapsed,
-.toggleVisible > .expanded {
-    @apply visible;
-}
+        margin-top: 16px;
+        margin-bottom: 0;
+        border-left: transparent 3px solid;
+        border-radius: 0 2px 2px 0;
 
-.toggle > .expanded,
-.toggleVisible > .collapsed {
-    @apply hidden;
+        &.active {
+            background-color: #edeffb;
+            border-left: #364098 3px solid;
+            width: fit-content;
+            text-decoration: none;
+
+            &:hover {
+                background-color: #cacef4;
+                color: #272e6d;
+                border-left: #272e6d 3px solid;
+            }
+        }
+    }
+
+    div.toc-header,
+    li.sidenav-topic {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        margin-left: 8px;
+        margin-bottom: 16px;
+        margin-top: 16px;
+    }
+
+    .sidenav-subsection {
+        @apply mb-2 text-sm;
+        margin-left: 16px;
+    }
+
+    .top-level-container,
+    div.sidenav-subsection {
+        border-left: #e5e5e9 1px solid;
+        margin-left: 8px;
+    }
+
+    .toggleButton, .toggleButton-topLevel {
+        @apply cursor-pointer;
+        color: #131314;
+        font-size: 11px;
+        position: relative;
+        top: -1px;
+        padding-right: 6px;
+    }
+
+    .toggle > .collapsed,
+    .toggleVisible > .expanded {
+        @apply visible;
+    }
+
+    .toggle > .expanded,
+    .toggleVisible > .collapsed {
+        @apply hidden;
+    }
+
+    .toggle-topLevel.toggle + .top-level-container {
+        display: none;
+    }
+
+    .toggle-topLevel.toggleVisible + .top-level-container {
+        display: block;
+    }
+
+    .toggle-topLevel.toggle {
+        .toggleButton-topLevel.down {
+            display: none;
+        }
+
+        .toggleButton-topLevel.right {
+            display: inline;
+        }
+    }
+
+    .toggle-topLevel.toggleVisible {
+        .toggleButton-topLevel.down {
+            display: inline;
+        }
+
+        .toggleButton-topLevel.right {
+            display: none;
+        }
+    }
+
+    div.icon {
+        display: block;
+        text-indent: -9999px;
+    }
+
+    div.icon-14-14 {
+        width: 14px;
+        height: 14px;
+        background-size: 14px 14px;   
+        position: relative;
+    }
+
+    div.keyboard-arrow-right-gray {
+        background: url(/images/docs/icons/keyboard-arrow-right-gray.svg);
+    }
+
+    div.keyboard-arrow-down-gray-14-14 {
+        background: url(/images/docs/icons/keyboard-arrow-down-gray-14-14.svg);
+    }
 }

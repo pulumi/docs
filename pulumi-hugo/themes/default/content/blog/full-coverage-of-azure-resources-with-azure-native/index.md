@@ -11,7 +11,7 @@ tags:
 
 Last September, we [announced the beta release of Pulumi Azure NextGen](/blog/announcing-nextgen-azure-provider/): a new Microsoft Azure provider for Pulumi that combines same-day access to the entire [Azure API surface](https://docs.microsoft.com/en-us/rest/api/azure/) with the excellent Pulumi experience you know and love, including version-less resources, auto-naming, and auto-location.
 
-Today, we’re excited to announce that this new provider is now the default way to manage Azure resources with Pulumi. We’re also excited to announce its final name: the native Azure provider for Pulumi, or “Azure-Native” for short. You can get started with the new provider using our newly-updated [getting started guide](/docs/get-started/azure/).
+Today, we’re excited to announce that this new provider is now the default way to manage Azure resources with Pulumi. We’re also excited to announce its final name: the native Azure provider for Pulumi, or “Azure-Native” for short. You can get started with the new provider using our newly-updated [getting started guide](/docs/clouds/azure/get-started/).
 
 <!--more-->
 
@@ -196,7 +196,7 @@ Pass an explicit value to the `resourceGroupName` property if you want to contro
 
 However, suppose you create a sub-resource, e.g., a container under a storage account, a database under a database account, or a slot under a web app. In that case, Pulumi will not append a random suffix because those resources names don’t have to be globally unique.
 
-You can also apply [transformations](https://www.pulumi.com/docs/intro/concepts/resources/#transformations) to define your own naming schemas: see [this example](https://github.com/matwilko/Pulumi.AzureNextGen.Ambient/blob/434c4beccffdd8d1180e385ff5fe298867a285af/AutoNaming.cs) from our community.
+You can also apply [transformations](https://www.pulumi.com/docs/concepts/resources/#transformations) to define your own naming schemas: see [this example](https://github.com/matwilko/Pulumi.AzureNextGen.Ambient/blob/434c4beccffdd8d1180e385ff5fe298867a285af/AutoNaming.cs) from our community.
 
 ### Auto-Location
 
@@ -235,7 +235,7 @@ Note that the Azure resources are not affected by this migration.
 
 ## Getting Started
 
-If you are new to Pulumi, follow our [Get Started](/docs/get-started/azure/) guide.
+If you are new to Pulumi, follow our [Get Started](/docs/clouds/azure/get-started/) guide.
 
 From now on, the `azure-*` templates will reference the native Azure provider. It's easier to get started than ever:
 

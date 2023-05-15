@@ -30,7 +30,7 @@ This is normally very convenient and aligns with how we want to configure our pr
 * Situations where we want to provision resources in many places for performance, scalability, or resilience purposes.
 * Highly programmatic scenarios where some configuration might be fetched dynamically from an external resource.
 
-In all of these cases, thankfully Pulumi has an answer: [explicit provider configuration](/docs/intro/concepts/resources/providers#explicit-provider-configuration).
+In all of these cases, thankfully Pulumi has an answer: [explicit provider configuration](/docs/concepts/resources/providers#explicit-provider-configuration).
 
 ## How Explicit Provider Configuration Works
 

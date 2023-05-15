@@ -64,7 +64,7 @@ This tutorial is about as cheap as they come; all you need is some time to perfo
 
 ## Set up the environment
 
-Your first step is to install Python. Follow the [directions on this page](/docs/get-started/aws/begin/) to install Python on your local system.
+Your first step is to install Python. Follow the [directions on this page](/docs/clouds/aws/get-started/begin/) to install Python on your local system.
 
 Next, get the Aiven examples by cloning this [repo](https://github.com/aiven/aiven-examples) to your local machine.
 

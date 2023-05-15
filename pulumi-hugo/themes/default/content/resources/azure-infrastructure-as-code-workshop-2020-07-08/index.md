@@ -27,7 +27,7 @@ main:
     monitoring, often spanning private, public, and hybrid cloud architectures.
 
 
-    In this workshop, Luke Hoban and the Pulumi team show you how to tackle these challenges using Infrastructure as Code (IaC) through a series of hands-on labs. The techniques work for any cloud --- Azure, AWS, and GCP. You'll be able to leverage your favorite languages including Python, Go, JavaScript, TypeScript, and C# instead of YAML or domain-specific languages.
+    In this workshop, Luke Hoban and the Pulumi team show you how to tackle these challenges using Infrastructure as Code (IaC) through a series of hands-on labs. The techniques work for any cloud --- Azure, AWS, and Google Cloud. You'll be able to leverage your favorite languages including Python, Go, JavaScript, TypeScript, and C# instead of YAML or domain-specific languages.
 
 
     After completing this workshop, you'll be up and running with IaC fundamentals, modern application architectures across many clouds, and Kubernetes best-practices that are ready for production environments. You'll also be ready to empower your development teams to be more productive --- continuously deploying both their applications and infrastructure.

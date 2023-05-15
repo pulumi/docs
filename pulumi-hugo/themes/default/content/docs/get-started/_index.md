@@ -1,23 +1,26 @@
 ---
-title: Get Started with Pulumi
+title_tag: Get Started with Pulumi
 meta_desc: Step-by-step guides for creating, deploying, and managing infrastructure with
            Pulumi on the cloud using your favorite language.
+title: Get started
+h1: Get started with Pulumi
 no_on_this_page: true
 menu:
   getstarted:
-      name: Overview
-      weight: 1
+    name: Overview
+    weight: 2
 
 aliases:
-  - /docs/quickstart/
-  - /start/
-  - /getting-started/
-  - /get-started/
+- /docs/quickstart/
+- /start/
+- /getting-started/
+- /get-started/
+- /docs/tour/
 ---
 
 Pulumi is an [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform that allows you to use familiar programming languages and tools to build, deploy, and manage cloud infrastructure.
 
-Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with the [Pulumi Cloud](/docs/intro/pulumi-cloud/) to make managing infrastructure secure, reliable, and hassle-free.
+Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with the [Pulumi Cloud](/docs/pulumi-cloud/) to make managing infrastructure secure, reliable, and hassle-free.
 
 Select one of the following options to get started:
 
@@ -27,7 +30,7 @@ Select one of the following options to get started:
 
 <div class="tiles flex-wrap justify-center items-stretch mt-4">
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <a data-track="aws-get-started" href="/docs/get-started/aws/" class="tile h-full">
+        <a data-track="aws-get-started" href="/docs/clouds/aws/get-started/" class="tile h-full">
             <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
                 <h4 class="no-anchor"><i class="fas fa-folder text-blue-400 pr-2"></i>Starter</h4>
                 <p>If you are new to Pulumi, this guide helps you install Pulumi, configure AWS, and run your first update.</p>
@@ -100,7 +103,7 @@ Select one of the following options to get started:
 
 <div class="tiles flex-wrap justify-center items-stretch mt-4">
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <a data-track="azure-get-started" href="/docs/get-started/azure/" class="tile h-full">
+        <a data-track="azure-get-started" href="/docs/clouds/azure/get-started/" class="tile h-full">
             <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
                 <h4 class="no-anchor"><i class="fas fa-folder text-blue-400 pr-2"></i>Starter</h4>
                 <p>If you are new to Pulumi, this guide helps you install Pulumi, configure Azure, and run your first update.</p>
@@ -179,7 +182,7 @@ Select one of the following options to get started:
 
 <div class="tiles flex-wrap justify-center items-stretch mt-4">
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <a data-track="google-get-started" href="/docs/get-started/gcp/" class="tile h-full">
+        <a data-track="google-get-started" href="/docs/clouds/gcp/get-started/" class="tile h-full">
             <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
                 <h4 class="no-anchor"><i class="fas fa-folder text-blue-400 pr-2"></i>Starter</h4>
                 <p>If you are new to Pulumi, this guide helps you install Pulumi, configure Google Cloud, and run your first update.</p>
@@ -258,7 +261,7 @@ Select one of the following options to get started:
 
 <div class="tiles flex-wrap justify-center items-stretch mt-4">
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <a data-track="kubernetes-get-started" href="/docs/get-started/kubernetes/" class="tile h-full">
+        <a data-track="kubernetes-get-started" href="/docs/clouds/kubernetes/get-started/" class="tile h-full">
             <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
                 <h4 class="no-anchor"><i class="fas fa-folder text-blue-400 pr-2"></i>Starter</h4>
                 <p>If you are new to Pulumi, this guide helps you install Pulumi, configure the Kubernetes Provider, and run your first update.</p>
@@ -357,7 +360,7 @@ The following sections are also useful when first learning how to use Pulumi:
 
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/intro/concepts"><i class="fas fa-file-alt pr-2"></i>Architecture & Concepts</a></h3>
+        <h3 class="no-anchor pt-4"><a href="/docs/intro/concepts"><i class="fas fa-file-alt pr-2"></i>Concepts</a></h3>
         <p>Get details on the Pulumi programming model and core concepts.</p>
     </div>
     <div class="md:w-1/2 md:ml-4 border-solid border-t-2 border-gray-200">

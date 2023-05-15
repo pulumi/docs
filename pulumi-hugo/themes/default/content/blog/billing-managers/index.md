@@ -23,7 +23,7 @@ We are excited to announce that starting today Pulumi customers can create a Bil
 
 ## Feature overview
 
-The Billing Manager role gives the user permissions to access and edit only billing information, with no read or write permissions for stacks. This role is for when you need  someone in your Organization to manage billing operations but you do not want them to have any permissions beyond that. Billing Managers can only be invited or added to the Organization by Organization Admins. Once added, the only information a Billing Manager will see is metrics about the Organization and the Billing and Usage page. Learn more about the permissions in the [Billing Manager documentation](/docs/intro/pulumi-cloud/billing-managers/).
+The Billing Manager role gives the user permissions to access and edit only billing information, with no read or write permissions for stacks. This role is for when you need  someone in your Organization to manage billing operations but you do not want them to have any permissions beyond that. Billing Managers can only be invited or added to the Organization by Organization Admins. Once added, the only information a Billing Manager will see is metrics about the Organization and the Billing and Usage page. Learn more about the permissions in the [Billing Manager documentation](/docs/pulumi-cloud/access-management/billing-managers/).
 
 Billing Managers can be used for different purposes depending on the [Pulumi Service Edition](/pricing/) you are on, let's walk through them.
 

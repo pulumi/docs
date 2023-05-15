@@ -22,13 +22,13 @@ jump out that may resonate with you as well:
 
 ## Prerequisites
 
-- [Install Pulumi](/docs/get-started/install/)
+- [Install Pulumi](/docs/install/)
 - [Install Node.js version 6 or later](https://nodejs.org/en/download/)
 - Install a package manager for Node.js, such as [npm](https://www.npmjs.com/get-npm) or [Yarn](https://yarnpkg.com/en/docs/install)
 - [Install Google Cloud SDK](https://cloud.google.com/sdk/docs/downloads-interactive)
 - [Install Helm](https://helm.sh/docs/using_helm/#installing-helm) and only initialize with `helm init —client-only`
 
-We will work this example on a GKE cluster so lets first configure GCP Auth:
+We will work this example on a GKE cluster so lets first configure Google Cloud Auth:
 
 ```bash
 $ gcloud auth login
@@ -116,7 +116,7 @@ const clusterProvider = new k8s.Provider(name, { kubeconfig: kubeconfig });
 
 ## Step 3: Create a NGINX-Ingress-Controller to Generate Ingresses
 
-You can use the default L7 load balancer in GCP but here we add an NGINX-Ingress-Controller to
+You can use the default L7 load balancer in Google Cloud but here we add an NGINX-Ingress-Controller to
 the cluster. With Pulumi, you write four lines of typescript to reuse the stable NGINX ingress
 controller helm chart and have the controller, default backends, RBAC, Service account, Config
 map all running within seconds.

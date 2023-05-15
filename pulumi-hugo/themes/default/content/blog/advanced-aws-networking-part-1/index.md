@@ -135,7 +135,7 @@ The code samples in this section are not exhaustive. That is, they do not contai
 
 Now that you've added some foundational Transit Gateway resources, you can create your inspection VPC.
 
-The inspection VPC is implemented as a [Pulumi component resource](https://www.pulumi.com/docs/intro/concepts/resources/components/). While we do not need to create multiple inspection VPCs in this codebase, implementing the inspection VPC as a component resource enhances the readability of both the code and the output by grouping all resources that belong to the inspection VPC in the output of `pulumi up`. You can also improve the component's readability by placing its code in a separate file (in this case, `inspection.py`).
+The inspection VPC is implemented as a [Pulumi component resource](https://www.pulumi.com/docs/concepts/resources/components/). While we do not need to create multiple inspection VPCs in this codebase, implementing the inspection VPC as a component resource enhances the readability of both the code and the output by grouping all resources that belong to the inspection VPC in the output of `pulumi up`. You can also improve the component's readability by placing its code in a separate file (in this case, `inspection.py`).
 
 When you create a component resource in Python, it's helpful to create a class that contains the arguments to the component resource. This allows you to pass the arguments to the component resource as a single object, which makes the code easier to read and understand. You can create a terse and easily readable arguments class in Python with the [`@dataclass` decorator](https://docs.python.org/3/library/dataclasses.html):
 
@@ -245,7 +245,7 @@ for subnet_id in public_subnet_ids:
     )
 ```
 
-You need to create both sets of these routes within an [apply](https://www.pulumi.com/docs/intro/concepts/inputs-outputs/#apply) because of the need to access the raw values of each of the subnet ids. Apply can be conceptually difficult for beginners in Pulumi to grasp, but it essentially means "once you know all of the values that needed, pass them on to this function".
+You need to create both sets of these routes within an [apply](https://www.pulumi.com/docs/concepts/inputs-outputs/#apply) because of the need to access the raw values of each of the subnet ids. Apply can be conceptually difficult for beginners in Pulumi to grasp, but it essentially means "once you know all of the values that needed, pass them on to this function".
 
 ## Final steps
 

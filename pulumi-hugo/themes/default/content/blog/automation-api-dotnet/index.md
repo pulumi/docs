@@ -20,7 +20,7 @@ Currently available in public preview, Pulumi's Automation API enables you to pr
 
 ## Using Automation API in .NET
 
-The `Pulumi.Automation` [NuGet package](https://www.nuget.org/packages/Pulumi.Automation) exposes a `LocalWorkspace` for  creating and managing Pulumi [Stacks](/docs/intro/concepts/stack/), and a `WorkspaceStack` that is a programmatic representation of a Stack for updating, refreshing, previewing, and destroying cloud resources. The Automation API makes it trivial to run Pulumi programs inline:
+The `Pulumi.Automation` [NuGet package](https://www.nuget.org/packages/Pulumi.Automation) exposes a `LocalWorkspace` for  creating and managing Pulumi [Stacks](/docs/concepts/stack/), and a `WorkspaceStack` that is a programmatic representation of a Stack for updating, refreshing, previewing, and destroying cloud resources. The Automation API makes it trivial to run Pulumi programs inline:
 
 ```csharp
 var program = PulumiFn.Create(() =>

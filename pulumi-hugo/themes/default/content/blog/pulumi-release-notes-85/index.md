@@ -117,7 +117,7 @@ We shipped an improvement where Pulumi CLI will ignore .git, .hg, and .bzr files
 
 Pulumi comes with a wealth of packages but users can also create and use custom providers and components. By default, Pulumi expects the binaries to be hosted on GitHub. On top of that, the CLI now supports GitLab as a first-class source of package downloads.
 
-If your package binary is hosted on GitLab, you can now set its `pluginDownloadURL` property (see [Publish your package](https://www.pulumi.com/docs/guides/pulumi-packages/how-to-author/#publish-your-package)) to point to your GitLab project, e.g. to `gitlab://gitlab.com/43429536`. 
+If your package binary is hosted on GitLab, you can now set its `pluginDownloadURL` property (see [Publish your package](https://www.pulumi.com/docs/using-pulumi/pulumi-packages/how-to-author/#publish-your-package)) to point to your GitLab project, e.g. to `gitlab://gitlab.com/43429536`. 
 
 👉  Learn more in the [Support custom plugins from other sources issue](https://github.com/pulumi/pulumi/issues/9007).
 
@@ -135,7 +135,7 @@ While a plugin is being installed, the CLI downloads the necessary archive and s
 
 ### "Yes, using Update Plans" prompt removed
 
-[Update Plans](https://www.pulumi.com/docs/intro/concepts/plans/) is a preview feature to constrain the update only to the operations that were planned during preview. To get extra feedback from our users, we experimented with showing an extra option "yes, using Update Plans" at the update prompt. The experiment is now complete, so we removed the option.
+[Update Plans](https://www.pulumi.com/docs/concepts/plans/) is a preview feature to constrain the update only to the operations that were planned during preview. To get extra feedback from our users, we experimented with showing an extra option "yes, using Update Plans" at the update prompt. The experiment is now complete, so we removed the option.
 
 Lean more in the [Remove the "yes, using Update Plans" prompt issue](https://github.com/pulumi/pulumi/issues/11894).
 
@@ -143,7 +143,7 @@ Lean more in the [Remove the "yes, using Update Plans" prompt issue](https://git
 
 ### Output methods to serialize and deserialize JSON
 
-Building JSON from values and parsing strings into JSON are two of the most common operations in Pulumi programs. All programming languages have built-in libraries to do so. However, quite often JSON operations need to be combined with Pulumi [Inputs and Outputs](https://www.pulumi.com/docs/intro/concepts/inputs-outputs/), which required writing a cumbersome combination of `Apply` and serialization method calls.
+Building JSON from values and parsing strings into JSON are two of the most common operations in Pulumi programs. All programming languages have built-in libraries to do so. However, quite often JSON operations need to be combined with Pulumi [Inputs and Outputs](https://www.pulumi.com/docs/concepts/inputs-outputs/), which required writing a cumbersome combination of `Apply` and serialization method calls.
 
 To streamline this experience, Pulumi SDKs shipped helper serialization and deserialization functions that undertand the type `Output<T>` natively. Here is a simple usage example in Python, where `table.arn` is an output coming from another resource:
 
@@ -167,7 +167,7 @@ policy = iam.Policy(
 
 ### Retrieve stack reference outputs as plain values
 
-You can read outputs from one stack in another stack's program using [Stack References](https://www.pulumi.com/docs/intro/concepts/stack/#stackreferences). In the past, the resulting values were always wrapped inside an `Output<T>` container in order to preserve secret values (when needed).
+You can read outputs from one stack in another stack's program using [Stack References](https://www.pulumi.com/docs/concepts/stack/#stackreferences). In the past, the resulting values were always wrapped inside an `Output<T>` container in order to preserve secret values (when needed).
 
 With recent SDKs, we shipped an alternative method `StackReference.getOutputDetails`. This method returns a plain object with two fields: `value` and `secretValue`. At most one of these fields is set, depending on whether the stack reference output is a secret or not.
 
@@ -254,4 +254,4 @@ The main benefits of using the OIDC integration for Pulumi Deployments are as fo
 
 ### If you haven’t yet tried out Pulumi Deployments
 
-You should now see a “Deploy” tab under Stack Settings in the [Pulumi Service console](https://app.pulumi.com/) and have access to the [Deployments REST API](https://www.pulumi.com/docs/reference/deployments-rest-api/). View [the documentation](https://www.pulumi.com/docs/intro/deployments/) for help getting started and join our [Slack](https://pulumi-community.slack.com/archives/C048NVDH6DV) (#pulumi-deployments channel) for questions and feedback.
+You should now see a “Deploy” tab under Stack Settings in the [Pulumi Service console](https://app.pulumi.com/) and have access to the [Deployments REST API](https://www.pulumi.com/docs/reference/deployments-rest-api/). View [the documentation](https://www.pulumi.com/docs/pulumi-cloud/deployments/) for help getting started and join our [Slack](https://pulumi-community.slack.com/archives/C048NVDH6DV) (#pulumi-deployments channel) for questions and feedback.

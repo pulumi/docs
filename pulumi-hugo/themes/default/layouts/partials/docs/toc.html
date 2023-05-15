@@ -1,14 +1,9 @@
-<aside class="toc pl-4">
-    {{ if hasPrefix .RelPermalink "/docs/aws/" }}
-        <h4 class="no-anchor">
-            <a data-track="toc-aws" href="{{ relref . "/docs/aws" }}">AWS</a>
-        </h4>
-        {{ template "toc" (dict "page" . "menu" .Site.Menus.aws) }}
-    {{ else if hasPrefix .RelPermalink "/docs/" }}
+<nav class="toc">
+    {{ if hasPrefix .RelPermalink "/docs/" }}
         {{/* Render a top-level menu for our major docs sections */}}
         {{ $toc_page := . }}
-        {{ $toc_sections := slice "Get Started with Pulumi" "Intro" "User Guides" "Converters" "Reference" "Support" }}
-        {{ $toc_menus := dict "Get Started with Pulumi" .Site.Menus.getstarted "Intro" .Site.Menus.intro "User Guides" .Site.Menus.userguides "Converters" .Site.Menus.converters "Reference" .Site.Menus.reference "Support" .Site.Menus.support }}
+        {{ $toc_sections := slice "Download & install" "Get started" "Clouds" "Concepts" "Pulumi Cloud" "Using Pulumi" "Languages & SDKs" "Pulumi CLI" "Support" }}
+        {{ $toc_menus := dict "Download & install" .Site.Menus.install "Get started" .Site.Menus.getstarted "Clouds" .Site.Menus.clouds "Concepts" .Site.Menus.concepts "Pulumi Cloud" .Site.Menus.pulumicloud "Using Pulumi" .Site.Menus.usingpulumi "Languages & SDKs" .Site.Menus.languages "Pulumi CLI" .Site.Menus.cli "Support" .Site.Menus.support }}
 
         {{ range $index, $element := $toc_sections }}
             {{ $sidenav_selected := "" }}
@@ -26,89 +21,76 @@
                 {{ $sidenav_selected = "active" }}
             {{ end }}
 
-
-            <span>
-                {{ if $toc_section_link }}
-                    <a href="{{ $toc_section_link }}" class="{{ $sidenav_selected }}">{{ $toc_name }}</a>
-                {{ else }}
-                    {{ $toc_name }}
-                {{ end }}
-                {{ if ne (add $index 1) (len $toc_sections) }}
-                    <span class="text-gray-500">/</span>
-                {{ end }}
-            </span>
-        {{ end }}
-
-        {{ range $toc_sections }}
-            {{ $toc_name := . }}
-            {{ $toc_menu := (index $toc_menus $toc_name) }}
-
-            {{/* If this section has an "Overview" page, link to it from the header */}}
-            {{ $toc_section_link := "" }}
-            {{ range $toc_menu }}
-                {{ if (eq .Name "Overview") }}
-                    {{ $toc_section_link = .URL }}
-                {{ end }}
+            {{ $toggle_class := "toggle" }}
+            {{ if or (hasPrefix $.Page.RelPermalink $toc_section_link) (eq $toc_name "Clouds") }}
+                {{ $toggle_class = "toggleVisible " }}
             {{ end }}
-
-
-            <h5 class="no-anchor toc-header" id="{{ $toc_name | urlize }}-toc-header">
-                {{ if $toc_section_link }}
-                    <a href="{{ $toc_section_link }}">{{ $toc_name }}</a>
-                {{ else }}
-                    {{ $toc_name }}
-                {{ end }}
-            </h5>
-
-            {{ template "toc" (dict "page" $toc_page "menu" $toc_menu) }}
-        {{ end }}
-    {{ end }}
-</aside>
-
-{{ define "toc" }}
-    {{ $page := .page }}
-
-    {{ range .menu }}
-        {{/* Note that we skip "Overview" pages, since they are linked to from above */}}
-        {{ if ne .Name "Overview" }}
-            {{ $toggle_state := "toggle" }}
-            {{ $sidenav_selected := "" }}
-
-            {{ if or (eq $page.RelPermalink .URL) (and (not .HasChildren) (hasPrefix $page.RelPermalink .URL) (ne .Name "Troubleshooting")) }}
-                {{ $toggle_state = "toggleVisible" }}
+            {{ if eq $.Page.RelPermalink $toc_section_link }}
                 {{ $sidenav_selected = "active" }}
-            {{ else if hasPrefix $page.RelPermalink .URL }}
-                {{ $toggle_state = "toggleVisible" }}
             {{ end }}
+            <div class="{{ $sidenav_selected }} no-anchor toc-header toggle-topLevel {{ $toggle_class }}" id="{{ $toc_name | urlize }}-toc-header">
+                <a href="{{ $toc_section_link }}">{{ $toc_name }}</a>
+                {{ if and ($toc_section_link) (ne $toc_name "Download & install") (ne $toc_name "Get started") (ne $toc_name "Clouds") }}
+                    <span class="toggleButton-topLevel down">
+                        <div class="icon icon-14-14 keyboard-arrow-down-gray-14-14"></div>
+                    </span>
+                    <span class="toggleButton-topLevel right">
+                        <div class="icon icon-14-14 keyboard-arrow-right-gray"></div>
+                    </span>
+                {{ end }}
+            </div>
 
-
-            <ul class="{{ $toggle_state }}">
-                <ul class="collapsed">
-                    <li class="sidenav-topic {{ $sidenav_selected }}">
-                        <a href="{{ .URL }}" data-track="toc-{{ .Name | urlize }}">{{ .Name }}</a>
-                        {{- if .HasChildren -}}
-                            <span class="toggleButton">
-                                <i class="fas fa-caret-right"></i>
-                            </span>
-                        {{- end -}}
-                    </li>
-                </ul>
-                <ul class="expanded">
-                    <li class="sidenav-topic {{ if .HasChildren }}sidenav-parent{{ end }} {{ $sidenav_selected }}">
-                        <a href="{{ .URL }}" data-track="toc-{{ .Name | urlize }}">{{ .Name }}</a>
-                        {{- if .HasChildren -}}
-                            <span class="toggleButton">
-                                <i class="fas fa-caret-down"></i>
-                            </span>
-                        {{- end -}}
-                    </li>
-                    {{ if .HasChildren }}
-                        <div class="sidenav-subsection">
-                            {{ template "toc" (dict "page" $page "menu" .Children) }}
-                        </div>
-                    {{ end }}
-                </ul>
-            </ul>
+            <div class="top-level-container">
+                {{ template "toc" (dict "page" $toc_page "menu" $toc_menu) }}
+            </div>
         {{ end }}
     {{ end }}
-{{ end }}
+
+    {{ define "toc" }}
+        {{ $page := .page }}
+
+        {{ range .menu }}
+            {{/* Note that we skip "Overview" pages, since they are linked to from above */}}
+            {{ if or (ne .Name "Overview") }}
+                {{ $toggle_state := "toggle" }}
+                {{ $sidenav_selected := "" }}
+
+                {{ if or (eq $page.RelPermalink .URL) (and (not .HasChildren) (hasPrefix $page.RelPermalink .URL) (ne .Name "Troubleshooting")) }}
+                    {{ $toggle_state = "toggleVisible" }}
+                    {{ $sidenav_selected = "active" }}
+                {{ else if hasPrefix $page.RelPermalink .URL }}
+                    {{ $toggle_state = "toggleVisible" }}
+                {{ end }}
+
+
+                <ul class="{{ $toggle_state }}">
+                    <ul class="collapsed">
+                        <li class="sidenav-topic {{ $sidenav_selected }}">
+                            <a href="{{ .URL }}" data-track="toc-{{ .Name | urlize }}">{{ .Name }}</a>
+                            {{ if .HasChildren }}
+                                <span class="toggleButton">
+                                    <div class="icon icon-14-14 keyboard-arrow-right-gray"></div>
+                                </span>
+                            {{ end }}
+                        </li>
+                    </ul>
+                    <ul class="expanded">
+                        <li class="sidenav-topic {{ if .HasChildren }}sidenav-parent{{ end }} {{ $sidenav_selected }}">
+                            <a href="{{ .URL }}" data-track="toc-{{ .Name | urlize }}">{{ .Name }}</a>
+                            {{ if .HasChildren }}
+                                <span class="toggleButton">
+                                    <div class="icon icon-14-14 keyboard-arrow-down-gray-14-14"></div>
+                                </span>
+                            {{ end }}
+                        </li>
+                        {{ if .HasChildren }}
+                            <div class="sidenav-subsection">
+                                {{ template "toc" (dict "page" $page "menu" .Children) }}
+                            </div>
+                        {{ end }}
+                    </ul>
+                </ul>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+</nav>

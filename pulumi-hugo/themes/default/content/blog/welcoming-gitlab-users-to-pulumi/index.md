@@ -57,7 +57,7 @@ would collaborate on a project on GitLab.
 ## Running Pulumi on GitLab
 
 Pulumi can be run in [many CI/CD environments](/docs/guides/continuous-delivery). Pulumi can be easily
-integrated in your [CI pipeline on GitLab](/docs/guides/continuous-delivery/gitlab-ci/), too.
+integrated in your [CI pipeline on GitLab](/docs/using-pulumi/continuous-delivery/gitlab-ci/), too.
 
 ## Deep-linking to your GitLab projects, branches and commits
 
@@ -76,7 +76,7 @@ commit-hash, and the branch in which this stack was updated.
 
 ![gl-4](./gl-4.png)
 
-## FAQs
+## FAQ
 
 ### I use my GitHub identity to login into GitLab. How do I do that with Pulumi?
 
@@ -91,9 +91,9 @@ to sign-in.
 Yes. Signing-in with a GitLab account will create a new account. That
 means, your stacks and activity will stay with the other account. You
 can migrate them by performing a
-[`pulumi stack export`](/docs/reference/cli/pulumi_stack_export)
+[`pulumi stack export`](/docs/cli/commands/pulumi_stack_export)
 from your source stack and then importing it using
-[`pulumi stack import`](/docs/reference/cli/pulumi_stack_import)
+[`pulumi stack import`](/docs/cli/commands/pulumi_stack_import)
 in a new stack in your GitLab-based account.
 
 If you would like to add your GitLab identity to your _existing_ Pulumi account, you can

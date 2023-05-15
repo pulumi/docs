@@ -42,11 +42,11 @@ The Pulumi REST API is available at https<nolink>://api.pulumi.com and includes 
 
 Authentication and authorization is governed by the Pulumi identity and RBAC systems. As we add functionality to the Pulumi SDK and Service, we are committed to shipping and supporting the underlying REST APIs. If it's used in our web console or CLI, we want it to be available to so you can add custom features and functionality.
 
-[Read complete details about the REST API](/docs/reference/cloud-rest-api/) or keep reading for examples and scenarios.
+[Read complete details about the REST API](/docs/pulumi-cloud/cloud-rest-api/) or keep reading for examples and scenarios.
 
 ## The REST API for Cloud Engineering
 
-We have already seen Cloud Engineering teams using the Pulumi REST API to build all sorts of custom functionality. These new capabilities are especially powerful when used in combination with the [Automation API](/automation/), which lets you use infrastructure as code as a library embedded into a larger system, and [Webhooks](/docs/intro/pulumi-cloud/webhooks/), which lets you invoke your own REST API in response to a Pulumi event such as a stack update.
+We have already seen Cloud Engineering teams using the Pulumi REST API to build all sorts of custom functionality. These new capabilities are especially powerful when used in combination with the [Automation API](/automation/), which lets you use infrastructure as code as a library embedded into a larger system, and [Webhooks](/docs/pulumi-cloud/webhooks/), which lets you invoke your own REST API in response to a Pulumi event such as a stack update.
 
 Examples of scenarios we've seen include:
 
@@ -68,7 +68,7 @@ Let's take a look at the Pulumi REST API in action. This example will demonstrat
 
 Imagine that there is suddenly a MySQL vulnerability or EOL notice that we need to respond to. We use Amazon RDS and would like to query our entire organization to find projects and stacks that currently have RDS databases deployed using version 5.6 of MySQL. Thankfully the Pulumi REST API makes all metadata about all of my cloud projects and stacks &mdash; across all clouds &mdash; available for easy querying and inspection. So a dozen lines of bash will do the trick!
 
-The first step is to [generate an API access token](/docs/intro/pulumi-cloud/accounts#access-tokens). The Pulumi Service lets you manage many access tokens (the same as what's used for `pulumi login`) and it's easiest to just create one specific to this project's purpose. This will let us revoke that token after we're done and know that there is no lingering access.
+The first step is to [generate an API access token](/docs/pulumi-cloud/accounts#access-tokens). The Pulumi Service lets you manage many access tokens (the same as what's used for `pulumi login`) and it's easiest to just create one specific to this project's purpose. This will let us revoke that token after we're done and know that there is no lingering access.
 
 To do that, go to <https://app.pulumi.com/account/tokens> (or click your avatar in the upper right and go to Settings, where you'll see Access Tokens on the left-hand nav):
 
@@ -82,7 +82,7 @@ This then gives us the access token text. We need to copy it and put it somewher
 
 ![Access Token Created](access-tokens-3.png)
 
-We will use this token for all API calls and the token dictates what authorization we will have to perform actions within a given user or organization account. As we will see, all APIs pertain to given permission scopes, much like GitHub, which will determine the permissions granted. If we're using `curl`, for example, we will pass the `"Authorization: token XYZ"` header, with `-H`, as [described in the Authorization section of the REST API documentation](/docs/reference/cloud-rest-api/#authentication).
+We will use this token for all API calls and the token dictates what authorization we will have to perform actions within a given user or organization account. As we will see, all APIs pertain to given permission scopes, much like GitHub, which will determine the permissions granted. If we're using `curl`, for example, we will pass the `"Authorization: token XYZ"` header, with `-H`, as [described in the Authorization section of the REST API documentation](/docs/pulumi-cloud/cloud-rest-api/#authentication).
 
 If we forget to do that, we'll receive a 4xx error. For instance, 401:
 
@@ -143,6 +143,6 @@ Now all we need to do is generate a token, set our `PAPI_TOKEN` environment vari
 
 ## Give It a Try Today
 
-As we have seen, the Pulumi REST API gives us easy access to projects, stacks, cloud resources, teams, and more. It is now generally available to all users of the Pulumi Service, both free and paying customers. To give it a try today, [sign up for your free account now](https://app.pulumi.com/signup), give our [Getting Started guide](/docs/get-started/) a try, and then check out the [Pulumi REST API documentation](/docs/reference/cloud-rest-api/).
+As we have seen, the Pulumi REST API gives us easy access to projects, stacks, cloud resources, teams, and more. It is now generally available to all users of the Pulumi Service, both free and paying customers. To give it a try today, [sign up for your free account now](https://app.pulumi.com/signup), give our [Getting Started guide](/docs/get-started/) a try, and then check out the [Pulumi REST API documentation](/docs/pulumi-cloud/cloud-rest-api/).
 
 We can't wait to see the powerful automation you build for your team using the Pulumi REST API! Have fun spelunking in the cloud.

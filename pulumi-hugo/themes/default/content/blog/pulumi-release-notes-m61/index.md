@@ -408,7 +408,7 @@ Thanks [@jancespivo](https://github.com/jancespivo) for contributing this change
 
 ### Automation API in .NET can use plugin installation options `exact` and `server`
 
-When running Pulumi interactively, you can use the [`pulumi plugin install` command](/docs/reference/cli/pulumi_plugin_install) to manually install plugins required by your program, possibly from a server where you host your own plugins. You can now do the same task in the .NET Automation API:
+When running Pulumi interactively, you can use the [`pulumi plugin install` command](/docs/cli/commands/pulumi_plugin_install) to manually install plugins required by your program, possibly from a server where you host your own plugins. You can now do the same task in the .NET Automation API:
 
 ```csharp
 await workspace.InstallPluginAsync("myplugin", "v0.0.1", options: new PluginInstallOptions
@@ -423,7 +423,7 @@ Thanks [@orionstudt](https://github.com/orionstudt) for contributing this change
 
 ### Schema checker for Pulumi Packages
 
-When authoring a Pulumi Package, it can be helpful to validate that your [schema](/docs/guides/pulumi-packages/schema/) is correct. Now, you can validate your schema by running the [`pulumi schema check` command](/docs/reference/cli/pulumi_schema_check).
+When authoring a Pulumi Package, it can be helpful to validate that your [schema](/docs/using-pulumi/pulumi-packages/schema/) is correct. Now, you can validate your schema by running the [`pulumi schema check` command](/docs/cli/commands/pulumi_schema_check).
 
 [Learn more in this GitHub PR](https://github.com/pulumi/pulumi/pull/7865)
 

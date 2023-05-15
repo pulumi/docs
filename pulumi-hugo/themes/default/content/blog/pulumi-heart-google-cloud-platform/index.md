@@ -222,7 +222,7 @@ lines to your CI/CD system.
 
 For teams working with Google Cloud Build, Pulumi deployments can be
 integrated into your continuous delivery with just
-[a few steps](/docs/guides/continuous-delivery/google-cloud-build/). And
+[a few steps](/docs/using-pulumi/continuous-delivery/google-cloud-build/). And
 for teams working with GitHub, Pulumi's GitHub App gives you rich
 feedback on what changes will be deployed as part of a Pull Request, so
 you can see and approve infrastructure changes before they happen:
@@ -230,7 +230,7 @@ you can see and approve infrastructure changes before they happen:
 ![Pulumi in a Pull Request](./pulumi_pr.png)
 
 Learn more about integrating Pulumi with CI/CD in our
-[continuous delivery](/docs/guides/continuous-delivery/) documentation.
+[continuous delivery](/docs/using-pulumi/continuous-delivery/) documentation.
 
 ## Managing Deployment with the Pulumi Service
 
@@ -263,7 +263,7 @@ Pulumi is free and open source. You can get started with Pulumi today.
 Here are a few resources to learn more about working with Pulumi and
 GCP:
 
-- [Google Cloud Platform Getting Started Guide](/docs/get-started/gcp/)
+- [Google Cloud Platform Getting Started Guide](/docs/clouds/gcp/get-started/)
 - [GKE Tutorial](/registry/packages/kubernetes/how-to-guides/gke/)
 - [GCE Tutorial](/registry/packages/gcp/how-to-guides/gce-webserver/)
 - Example: [Serverless Slackbot with Cloud Functions in JavaScript](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot)

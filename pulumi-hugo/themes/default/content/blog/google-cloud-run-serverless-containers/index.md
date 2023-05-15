@@ -25,7 +25,7 @@ Today, we will deploy our first Cloud Run services with Pulumi. Then, we'll disc
 
 We'll start by deploying a pre-built container image provided by Google to a Cloud Run service.
 
-To follow along, create a new Pulumi project with the [Get Started with Google Cloud](https://www.pulumi.com/docs/get-started/gcp/) guide.
+To follow along, create a new Pulumi project with the [Get Started with Google Cloud](https://www.pulumi.com/docs/clouds/gcp/get-started/) guide.
 
 ### Enable Cloud Run for the project
 
@@ -255,7 +255,7 @@ GCF has a notion of events and triggers: it can natively integrate with Pub/Sub,
 
 ### AWS Fargate
 
-[AWS Fargate](https://aws.amazon.com/fargate/) deploys container images. It requires an ECS cluster to run on and imposes more configuration burden on the user, including networking, load balancing, auto-scaling, and service discovery. Pulumi Crosswalk for AWS [can help](https://www.pulumi.com/docs/guides/crosswalk/aws/ecs/) with these tasks.
+[AWS Fargate](https://aws.amazon.com/fargate/) deploys container images. It requires an ECS cluster to run on and imposes more configuration burden on the user, including networking, load balancing, auto-scaling, and service discovery. Pulumi Crosswalk for AWS [can help](https://www.pulumi.com/docs/clouds/aws/guides/ecs/) with these tasks.
 
 Fargate is capable of hosting long-running workloads. Therefore, Fargate's scaling model is not tied to individual requests, and there is no scale-to-zero out of the box.
 

@@ -53,7 +53,7 @@ In [AWS Advanced Networking Part 1](https://pulumi.com/blog/advanced-aws-network
 
 1. Learned about the benefits of a hub-and-spoke network architecture with centralized egress.
 1. Created the shared [AWS Transit Gateway](https://aws.amazon.com/transit-gateway/) resources to be shared among our spoke VPCs and inspection VPC.
-1. Defined your inspection VPC as a Pulumi [component resource](https://www.pulumi.com/docs/intro/concepts/resources/components/).
+1. Defined your inspection VPC as a Pulumi [component resource](https://www.pulumi.com/docs/concepts/resources/components/).
 
 Now, to finish the architecture, you will need to:
 

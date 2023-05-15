@@ -75,7 +75,7 @@ that happened during a CircleCI workflow.
 
 Also, if you are using CircleCI with GitHub, you can consider installing
 the
-[Pulumi GitHub application](/docs/guides/continuous-delivery/github-app/). The Pulumi
+[Pulumi GitHub application](/docs/using-pulumi/continuous-delivery/github-app/). The Pulumi
 GitHub app will surface the results of any previews or updates from your
 CI/CD on the source GitHub pull request. It's always good to know if a
 pull request is going to lead to changes to your cloud infrastructure!

@@ -143,7 +143,7 @@ storage_profile=compute.StorageProfileArgs(
 
 ### Provisioning the server
 
-Once the virtual machine has been created, we need to provision it with the Minecraft server. The `install.sh` script installs the prerequisite software, the Minecraft server, and creates the service for starting and stopping the server. We could use [scp](https://man7.org/linux/man-pages/man1/scp.1.html) to copy the install script to the virtual machine from our local machine and then [ssh](https://man7.org/linux/man-pages/man1/ssh.1.html) into a terminal to run the script. The alternative is to use a Pulumi [dynamic resource provider](/blog/dynamic-providers#dynamic-resource-provider) to provision the virtual machine.  The `provisioners.py` script creates a dynamic provider that enable using scp to transfer files and send commands via ssh. Creating dynamic providers are beyond the scope of this article, but more information is [available](/docs/intro/concepts/resources#dynamicproviders) on the Pulumi docs.
+Once the virtual machine has been created, we need to provision it with the Minecraft server. The `install.sh` script installs the prerequisite software, the Minecraft server, and creates the service for starting and stopping the server. We could use [scp](https://man7.org/linux/man-pages/man1/scp.1.html) to copy the install script to the virtual machine from our local machine and then [ssh](https://man7.org/linux/man-pages/man1/ssh.1.html) into a terminal to run the script. The alternative is to use a Pulumi [dynamic resource provider](/blog/dynamic-providers#dynamic-resource-provider) to provision the virtual machine.  The `provisioners.py` script creates a dynamic provider that enable using scp to transfer files and send commands via ssh. Creating dynamic providers are beyond the scope of this article, but more information is [available](/docs/concepts/resources#dynamicproviders) on the Pulumi docs.
 
 We provision our Minecraft server by creating the `conn` connection object defined in `provisioners.py`.
 
@@ -193,6 +193,6 @@ You can download the [code](https://github.com/pulumi/examples/tree/master/azure
 
 See these resources to learn more about deploying infrastructure on Azure.
 
-- [Get Started with Azure](/docs/get-started/azure/)
+- [Get Started with Azure](/docs/clouds/azure/get-started/)
 - [Azure-Native Provider](/registry/packages/azure-native/api-docs/)
 - [Dynamic Providers](/blog/dynamic-providers/)

@@ -13,6 +13,30 @@ function bindToggle(el) {
     });
 }
 
+
+
+function bindTopLevelToggle(el) {
+    $(".toggleButton-topLevel", el).click(function () {
+        if ($(this).closest(".toggle-topLevel, .toggleVisible-topLevel")[0] != el) {
+            // Only trigger the closest toggle header.
+            return;
+        }
+
+        if ($(el).is(".toggle")) {
+            $(el).addClass("toggleVisible").removeClass("toggle");
+        } else {
+            $(el).addClass("toggle").removeClass("toggleVisible");
+        }
+    });
+}
+
+function bindTopLevelToggles(selector) {
+    $(selector).each(function (i, el) {
+        console.log("its actually here")
+        bindTopLevelToggle(el);
+    });
+}
+
 function bindToggles(selector) {
     $(selector).each(function (i, el) {
         bindToggle(el);
@@ -119,6 +143,9 @@ function generateOnThisPage() {
     // Set up toggle functionality.
     bindToggles(".toggle");
     bindToggles(".toggleVisible");
+
+    bindTopLevelToggles(".toggle-topLevel");
+    bindTopLevelToggles(".toggleVisible-topLevel");
 
     // Create "On This Page" in the right nav.
     generateOnThisPage();

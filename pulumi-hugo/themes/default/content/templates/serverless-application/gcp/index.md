@@ -2,7 +2,7 @@
 title_tag: Deploy a Serverless Application to Google Cloud
 title: Google Cloud Serverless Application
 layout: template
-meta_desc: Easily deploy a serverless application on GCP with Pulumi, Google Cloud Functions, and Google Cloud Storage using this template.
+meta_desc: Easily deploy a serverless application on Google Cloud with Pulumi, Google Cloud Functions, and Google Cloud Storage using this template.
 meta_image: meta.png
 card_desc: Deploy a serverless application on Google Cloud with Pulumi, Google Cloud Functions, and Google Cloud Storage.
 template:
@@ -25,7 +25,7 @@ The Serverless Application template creates an infrastructure as code project in
 
 ## Using this template
 
-To use this template to deploy your own serverless application, make sure you've [installed Pulumi](/docs/get-started/install/) and [configured your Google Cloud credentials](/registry/packages/gcp/installation-configuration#credentials), then create a new [project](/docs/intro/concepts/project/) using the template in your language of choice:
+To use this template to deploy your own serverless application, make sure you've [installed Pulumi](/docs/install/) and [configured your Google Cloud credentials](/registry/packages/gcp/installation-configuration#credentials), then create a new [project](/docs/concepts/projects/) using the template in your language of choice:
 
 {{< templates/pulumi-new >}}
 
@@ -33,13 +33,13 @@ Follow the prompts to complete the new-project wizard. When it's done, you'll ha
 
 ## Deploying the project
 
-The template requires no additional configuration. Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/reference/cli/pulumi_up):
+The template requires no additional configuration. Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/cli/commands/pulumi_up):
 
 ```bash
 $ pulumi up
 ```
 
-When the deployment completes, Pulumi exports the following [stack output](/docs/intro/concepts/stack#outputs) values:
+When the deployment completes, Pulumi exports the following [stack output](/docs/concepts/stack#outputs) values:
 
 siteURL
 : The HTTP URL of the static website.
@@ -55,7 +55,7 @@ $ open $(pulumi stack output siteURL)
 
 ## Customizing the project
 
-Projects created with the serverless template expose the following [configuration](/docs/intro/concepts/config/) settings:
+Projects created with the serverless template expose the following [configuration](/docs/concepts/config/) settings:
 
 sitePath
 : The path to the folder containing the files of the website. Defaults to `www`, which is the name (and relative path) of the folder included with the template.
@@ -69,7 +69,7 @@ indexDocument
 errorDocument
 : The file to use for error pages. Defaults to `error.html`.
 
-All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/reference/cli/pulumi_config_set) as shown below.
+All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/cli/commands/pulumi_config_set) as shown below.
 
 ```bash
 $ pulumi config set www_path ../my-existing-website/build
@@ -78,7 +78,7 @@ $ pulumi up
 
 ## Tidying up
 
-You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/reference/cli/pulumi_destroy):
+You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/cli/commands/pulumi_destroy):
 
 ```bash
 $ pulumi destroy

@@ -30,7 +30,7 @@ The Container Service template creates an infrastructure as code project in your
 
 ## Using this template
 
-To use this template to deploy your own container service, make sure you've [installed Pulumi](/docs/get-started/install) and [configured your Google Cloud credentials](/registry/packages/gcp/installation-configuration#credentials), then create a new [project](/docs/intro/concepts/project) using the template in your language of choice:
+To use this template to deploy your own container service, make sure you've [installed Pulumi](/docs/install/) and [configured your Google Cloud credentials](/registry/packages/gcp/installation-configuration#credentials), then create a new [project](/docs/concepts/projects/) using the template in your language of choice:
 
 {{< templates/pulumi-new >}}
 
@@ -38,13 +38,13 @@ Follow the prompts to complete the new-project wizard. When it's done, you'll ha
 
 ## Deploying the project
 
-You must supply an existing project ID and choose a region before deploying the container service. You can input both through the new-project wizard. The template requires no additional configuration. Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/reference/cli/pulumi_up):
+You must supply an existing project ID and choose a region before deploying the container service. You can input both through the new-project wizard. The template requires no additional configuration. Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/cli/commands/pulumi_up):
 
 ```bash
 $ pulumi up
 ```
 
-When the deployment completes, Pulumi exports the following [stack output](/docs/intro/concepts/stack#outputs) values:
+When the deployment completes, Pulumi exports the following [stack output](/docs/concepts/stack#outputs) values:
 
 url
 : The HTTP URL of your Cloud Run service.
@@ -57,7 +57,7 @@ $ open $(pulumi stack output url)
 
 ## Customizing the project
 
-Projects created with the Container Service template expose the following [configuration](/docs/intro/concepts/config) settings:
+Projects created with the Container Service template expose the following [configuration](/docs/concepts/config) settings:
 
 containerPort
 : Specifies the port mapping for the container service. Defaults to port `8080`.
@@ -77,7 +77,7 @@ imageName
 appPath
 : Specifies the location of the Dockerfile used to build the container image that is run. Defaults to the `./app` folder, which contains a "Hello World" example app.
 
-All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/reference/cli/pulumi_config_set) as shown below:
+All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/cli/commands/pulumi_config_set) as shown below:
 
 ```bash
 $ pulumi config set someProp ../some/value
@@ -86,7 +86,7 @@ $ pulumi up
 
 ## Tidying up
 
-You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/reference/cli/pulumi_destroy):
+You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/cli/commands/pulumi_destroy):
 
 ```bash
 $ pulumi destroy

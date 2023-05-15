@@ -26,7 +26,7 @@ links:
 Now that we've created our images, we can provision our application with a
 network and containers. First, we're going to add configuration to our Pulumi
 program. Pulumi is a tool to
-[configure](/docs/intro/concepts/config/) your infrastructure,
+[configure](/docs/concepts/config/) your infrastructure,
 and that includes being able to configure the different stacks with different
 values. As a result, it makes sense to include the basic configurations as
 variables at the top of your program.

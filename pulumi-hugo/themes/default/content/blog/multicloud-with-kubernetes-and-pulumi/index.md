@@ -31,7 +31,7 @@ Please find the [repository with the full version of the code here.](https://git
 
 ## Part One: Create a component
 
-A [Component Resource](https://www.pulumi.com/docs/intro/concepts/resources/components/) is an abstraction on top of
+A [Component Resource](https://www.pulumi.com/docs/concepts/resources/components/) is an abstraction on top of
 other Pulumi packages, often combining a few different providers into something that fits your infrastructure needs
 precisely.
 
@@ -40,7 +40,7 @@ precisely.
 In our example, we are using three separate clouds, one of these being a local KinD cluster.
 
 - [Nodejs](https://nodejs.org/en/download/)
-- [Pulumi CLI](https://www.pulumi.com/docs/get-started/install/)
+- [Pulumi CLI](https://www.pulumi.com/docs/install/)
 - Have the Pulumi Registry documentation handy for some Pulumi providers:
     - [Pulumi Civo Provider](https://www.pulumi.com/registry/packages/civo/)
     - [Pulumi Linode Provider](https://www.pulumi.com/registry/packages/linode/)
@@ -50,7 +50,7 @@ In our example, we are using three separate clouds, one of these being a local K
       Go and Nodejs._
 
 Gather access tokens for Linode and Civo, if using, and set them in the environment or as
-[secrets](https://www.pulumi.com/docs/intro/concepts/secrets/#using-configuration-and-secrets-in-code).
+[secrets](https://www.pulumi.com/docs/concepts/secrets/#using-configuration-and-secrets-in-code).
 
 ### Start by writing the code for each cloud
 
@@ -325,7 +325,7 @@ tedious soon. Here is where we automate deploying our frontend as well.
 
 ## Part 2: Leverage the Automation API
 
-The [Pulumi Automation API](https://www.pulumi.com/docs/guides/automation-api/) allows us to run Pulumi commands
+The [Pulumi Automation API](https://www.pulumi.com/docs/using-pulumi/automation-api/) allows us to run Pulumi commands
 without using the CLI manually.
 
 Let's review our basic project file structure first, for context.

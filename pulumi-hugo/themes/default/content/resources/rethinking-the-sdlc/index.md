@@ -69,7 +69,7 @@ transcript: |
 
     I came up with this wild idea, but I want to make sure that it works for you and your specific situations and I want to hear how you think it could be improved. You can always find me on Twitter, @editingemily. Most of my work centers around DevOps and I really can't overstate the sheer impact the concept of DevOps has had on the tech industry. In many ways it built on the foundation of Agile to become a default, a standard we all reach for in our everyday work. When DevOps surfaced as an idea in 2008, the tech industry was in a vastly different space.
 
-    AWS was in infancy, offering only a handful of services. Azure and GCP didn't exist yet. The majority of companies maintained their own infrastructure. Developers wrote code and relied on sysadmins to deploy new code at scheduled intervals. Container technology hadn't been invented.
+    AWS was in infancy, offering only a handful of services. Azure and Google Cloud didn't exist yet. The majority of companies maintained their own infrastructure. Developers wrote code and relied on sysadmins to deploy new code at scheduled intervals. Container technology hadn't been invented.
 
     Applications adhered to a monolithic architecture. Databases were relational, and server-less wasn't even a concept. Everything from the application to the engineers was centralized. Our current ecosystem couldn't be more different. Now, software is still hard, don't get me wrong.
 

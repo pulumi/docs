@@ -29,7 +29,7 @@ We've
 how Pulumi [**tracks the status**](/blog/kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service)
 of Kubernetes resources to provide fine-grained status messages for both
 your [**infrastructure and applications**](/blog/how-do-kubernetes-deployments-work-an-adversarial-perspective).
-Pulumi [**uses a resource graph**](/docs/intro/concepts/how-pulumi-works)
+Pulumi [**uses a resource graph**](/docs/concepts/how-pulumi-works)
 for orchestration, dependency management, differential updates, and
 cascading rollouts.
 
@@ -48,7 +48,7 @@ Pulumi's sophisticated await logic helps customers with a couple use
 cases:
 
 1) Visualize fine-grained, live, single-view status updates for all of
-the Kubernetes cluster resources belonging to a [**Pulumi stack**](/docs/intro/concepts/stack). Most applications
+the Kubernetes cluster resources belonging to a [**Pulumi stack**](/docs/concepts/stack). Most applications
 deployed to Kubernetes have a variety of interacting components,
 including Pods, Deployments, Secrets, Persistent Volumes, Config Maps,
 Ingress and more. Rather than requiring multiple commands like
@@ -122,7 +122,7 @@ resources to check out:
   [Azure AKS](https://github.com/pulumi/examples/tree/master/classic-azure-ts-aks-mean)
 - Tutorial: [Operate and deploy to a Kubernetes cluster](/registry/packages/kubernetes/how-to-guides/exposed-deployment/)
 - Docs: [Pulumi docs](/docs/reference/), including an
-  [overview of the programming model](/docs/intro/concepts/)
+  [overview of the programming model](/docs/concepts/)
 - Video: [Watch Joe Beda take Pulumi for a spin in last week's TGIK](https://www.youtube.com/watch?v=ILMK65YVSKw)
 
 As always, you can check out our code

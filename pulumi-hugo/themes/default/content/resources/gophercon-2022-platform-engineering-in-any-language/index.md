@@ -62,7 +62,7 @@ main:
     description: |
         The days of bash being the language of the Ops professional are long gone. Today, we have the privilege to operate bare metal, provision the cloud, and sprinkle annotations on our Kubernetes manifests with a plethora of programming languages.
 
-        In this session, I will guide you through building a self-service platform in 4 different programming languages, using Pulumi with AWS, Azure, and GCP.
+        In this session, I will guide you through building a self-service platform in 4 different programming languages, using Pulumi with AWS, Azure, and Google Cloud.
 
         Would you do this in production? Maybe not. Will it be fun? You're damn right.
 

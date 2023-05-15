@@ -16,16 +16,16 @@ In this post, we showcase what's new!
 
 ## First-class Support for Tags
 
-Pulumi has had support for [stack tags](/docs/intro/concepts/stack#stack-tags) for a while, enabling
+Pulumi has had support for [stack tags](/docs/concepts/stack#stack-tags) for a while, enabling
 you to add attributes to your stacks with custom data such as the `account-id` or `environment`. But previously the data was
-only available on the command-line, via the `pulumi stack tag` command ([documentation](/docs/reference/cli/pulumi_stack_tag/).
+only available on the command-line, via the `pulumi stack tag` command ([documentation](/docs/cli/commands/pulumi_stack_tag/).
 
 We've added first-class support for stack tags in the Pulumi Service as well. You can create, update, and delete tags from within the console.
 
 {{< figure alt="Updating stack tags within the Pulumi Service" src="./update-tags-in-console.png" class="md:max-w-lg" >}}
 
 Making it easier to create and edit tag data is just the beginning. We've started to add new search/filtering capabilities
-based on stack tags. For example, you can now use filters to rapidly add stacks to [Pulumi teams](/docs/intro/pulumi-cloud/teams/).
+based on stack tags. For example, you can now use filters to rapidly add stacks to [Pulumi teams](/docs/pulumi-cloud/access-management/teams/).
 
 {{< figure alt="Filtering stacks by their tags" src="./filter-stacks-by-tag.png" class="md:max-w-lg" >}}
 
@@ -34,7 +34,7 @@ added by Pulumi's first (and extremely awesome) intern, Tasia (👋)!
 
 ## Deep Linking into CI/CD Systems
 
-Many people practice [continuous delivery using Pulumi](/docs/guides/continuous-delivery/), automatically
+Many people practice [continuous delivery using Pulumi](/docs/using-pulumi/continuous-delivery/), automatically
 updating stacks in response to code check-ins or merges. We've now added support for deep links from the Pulumi Service back
 into your CI/CD tool of choice. So, for example, you'll now see links to the [Circle CI job](https://circleci.com) or
 [Travis CI build](https://travis-ci.com) from the Pulumi Service.
@@ -54,19 +54,19 @@ We now pretty print JSON configuration values and have much better support for v
 ## Download Earlier Checkpoints
 
 The most important job of the Pulumi Service is to maintain a durable, accurate snapshot of your cloud resource data.
-While in most cases your [stack's checkpoint data](/docs/intro/concepts/state) is a low-level detail
+While in most cases your [stack's checkpoint data](/docs/concepts/state) is a low-level detail
 you don't need to worry about; in some advanced scenarios, you may need to inspect or edit it manually.
 
 You can now download a stack’s checkpoint file directly from the Pulumi Service. You can get the
-same data from the command-line, using `pulumi stack export` ([documentation](/docs/reference/cli/pulumi_stack_export/),
+same data from the command-line, using `pulumi stack export` ([documentation](/docs/cli/commands/pulumi_stack_export/),
 which now supports a `--version` flag to export older checkpoint files too.
 
 {{< figure alt="Download stack checkpoints from the Pulumi Service" src="./download-checkpoint-file.png" class="md:max-w-lg" >}}
 
 ## Reverse Stack Permissions View
 
-The Enterprise Edition supports [role-based access control](/docs/intro/pulumi-cloud/projects-and-stacks#stack-permissions)
-using [teams](/docs/intro/pulumi-cloud/teams/). But a common problem we've heard from people in large organizations
+The Enterprise Edition supports [role-based access control](/docs/pulumi-cloud/projects-and-stacks#stack-permissions)
+using [teams](/docs/pulumi-cloud/access-management/teams/). But a common problem we've heard from people in large organizations
 is that it can be difficult to review exactly *_what_* access someone has to a stack and *_why_*.
 
 Fortunately, the Pulumi Service now has the ability for organization administrators to see all stacks a particular member has access to.

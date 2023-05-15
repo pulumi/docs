@@ -29,7 +29,7 @@ A Pulumi project uses a .NET Core console application to build infrastructure. T
 
 ### Prerequisites
 
-1. [Install Pulumi](/docs/get-started/install/)
+1. [Install Pulumi](/docs/install/)
 
 1. [Install .NET Core SDK 3.1+](https://dotnet.microsoft.com/download)
 
@@ -228,4 +228,4 @@ var app = new AppService("app", new AppServiceArgs
 
 ## Summary
 
-In this example, we declared resources for a website and a database using C# and the Pulumi engine deployed them to Azure. To get started with infrastructure as code, download [Pulumi](/docs/get-started/install/) to build and deploy modern applications using .NET Core.
+In this example, we declared resources for a website and a database using C# and the Pulumi engine deployed them to Azure. To get started with infrastructure as code, download [Pulumi](/docs/install/) to build and deploy modern applications using .NET Core.

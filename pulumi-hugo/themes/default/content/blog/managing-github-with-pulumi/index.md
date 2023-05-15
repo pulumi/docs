@@ -82,7 +82,7 @@ $ export GITHUB_OWNER=pulumi
 
 Now, Pulumi is _great_ at creating new infrastructure from scratch via code. But this wasn’t a from-scratch situation. We had to migrate existing resources---GitHub teams---to Pulumi, without disrupting anyone’s access.
 
-Enter [Pulumi Import](/docs/reference/cli/pulumi_import/).
+Enter [Pulumi Import](/docs/cli/commands/pulumi_import/).
 
 What Pulumi Import does, in a nutshell, is find existing infrastructure by unique ID (in the GitHub provider’s case, the team ID), and add them to a Pulumi Stack. You can find the specific import instructions on the registry documentation for each resource. In this case we want the [GitHub import instructions](/registry/packages/github/api-docs/team#import).
 
@@ -155,7 +155,7 @@ Resources:
 
 Since `pulumi preview` shows no changes, we now know that our code reflects the existing infrastructure. It’s a bit funny to think about your program working well when it does nothing, but this was a huge first step in preserving existing infrastructure and ensuring all of our coworkers could continue their daily work uninterrupted!
 
-To finish up, we [unprotect the resource](/docs/reference/cli/pulumi_state_unprotect/):
+To finish up, we [unprotect the resource](/docs/cli/commands/pulumi_state_unprotect/):
 
 ```bash
 $ pulumi state unprotect 'urn:pulumi:prod::team-mgmt::github:index/team:Team::animals'
@@ -258,7 +258,7 @@ Here is where things get a little tricky. Any GitHub Team can have subteams, but
 4. Write the parent team’s ID into the `ParentTeamId field` of each child team.
 5. Do all of the above in a single `pulumi up`.
 
-This is where maintaining infrastructure with Pulumi truly shines. In our code, we can use [Pulumi Apply](/docs/intro/concepts/inputs-outputs#apply) to hold on to the promise of a parent team ID, and pass this promise into the appropriate field:
+This is where maintaining infrastructure with Pulumi truly shines. In our code, we can use [Pulumi Apply](/docs/concepts/inputs-outputs#apply) to hold on to the promise of a parent team ID, and pass this promise into the appropriate field:
 
 ```go
 func setupTeams(ctx *pulumi.Context, parentTeam *Team) error {
@@ -297,7 +297,7 @@ func setupTeams(ctx *pulumi.Context, parentTeam *Team) error {
 }
 ```
 
-Running this as part of `main.go` will result in beautifully nested teams on the GitHub UI. But with Pulumi, we can do even better. We can set [`pulumi.Parent()`](/docs/intro/concepts/resources/options/parent) on the child teams:
+Running this as part of `main.go` will result in beautifully nested teams on the GitHub UI. But with Pulumi, we can do even better. We can set [`pulumi.Parent()`](/docs/concepts/options/parent) on the child teams:
 
 ```go
 for _, childTeam := range parentTeam.Teams {
@@ -402,7 +402,7 @@ That’s pretty great so far! While there are many org chart tools, what makes t
 
 ## Add CI
 
-In order for this tool to be used by everyone, we keep code and configuration in a GitHub repository. We can use [Pulumi’s GitHub Action](/docs/guides/continuous-delivery/github-actions) to run a `pulumi preview` on a pull request, and a `pulumi up` on merge to main.
+In order for this tool to be used by everyone, we keep code and configuration in a GitHub repository. We can use [Pulumi’s GitHub Action](/docs/using-pulumi/continuous-delivery/github-actions) to run a `pulumi preview` on a pull request, and a `pulumi up` on merge to main.
 
 Here’s what that looks like on the pull request:
 
@@ -479,7 +479,7 @@ jobs:
          stack-name: pulumi/prod
 ```
 
-Note that we are calling `refresh: true` in both Workflows, which uses [Pulumi Refresh](/docs/reference/cli/pulumi_refresh/) to make sure that the existing GitHub resources are aligned with the resource state in our Stack.
+Note that we are calling `refresh: true` in both Workflows, which uses [Pulumi Refresh](/docs/cli/commands/pulumi_refresh/) to make sure that the existing GitHub resources are aligned with the resource state in our Stack.
 
 Now, anyone with access to the GitHub management repo can:
 

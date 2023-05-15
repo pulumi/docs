@@ -31,7 +31,7 @@ Here are links to all of the posts in the series. Entries below that are not yet
 
 ## Catching up with Team Zephyr
 
-When we [last met up](/blog/iac-recommended-practices-code-organization-and-stacks/) with the Zephyr team, they were off and running, managing their newly refactored online store, Zephyr Archaeotech Emporium, with a single Pulumi [project](/docs/intro/concepts/project/) and two Pulumi [stacks](/docs/intro/concepts/stack/) --- one for development (`dev`) and another for production (`prod`). The team had chosen to use one Git repository (a monorepo) to manage the code for the online store and its infrastructure after refactoring the store into a set of containerized microservices deployed with Kubernetes on [Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html).
+When we [last met up](/blog/iac-recommended-practices-code-organization-and-stacks/) with the Zephyr team, they were off and running, managing their newly refactored online store, Zephyr Archaeotech Emporium, with a single Pulumi [project](/docs/concepts/projects/) and two Pulumi [stacks](/docs/concepts/stack/) --- one for development (`dev`) and another for production (`prod`). The team had chosen to use one Git repository (a monorepo) to manage the code for the online store and its infrastructure after refactoring the store into a set of containerized microservices deployed with Kubernetes on [Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html).
 
 {{% notes %}}
 For a snapshot of the code as it was at the end of the first post in the series, see the [`blog/original`](https://github.com/pulumi/zephyr-app/tree/blog/original) branch of the [`pulumi/zepyhr-app`](https://github.com/pulumi/zephyr-app) repository on GitHub.
@@ -61,7 +61,7 @@ The deployment process is still a bit more manual than the team would like --- b
 
 A few more details worth noting out about Team Zephyr's current setup:
 
-* Both of the project's stack-configuration files, `Pulumi.dev.yaml` and `Pulumi.prod.yaml`, are checked into version control. This is safe and considered good practice (even with [secrets](https://www.pulumi.com/docs/intro/concepts/secrets/)) because it allows the team to review or change the configuration of a given stack easily by viewing or editing the code in each file.
+* Both of the project's stack-configuration files, `Pulumi.dev.yaml` and `Pulumi.prod.yaml`, are checked into version control. This is safe and considered good practice (even with [secrets](https://www.pulumi.com/docs/concepts/secrets/)) because it allows the team to review or change the configuration of a given stack easily by viewing or editing the code in each file.
 
 * The `main` branch is the only long-lived branch in the repository; all others (e.g., developers' feature branches) are deleted once they're merged into `main`.
 
@@ -161,7 +161,7 @@ For the developer, the typical workflow looks something like this:
 
 The benefits of a workflow like this one are many:
 
-* No more resource-naming collisions. Because Pulumi names cloud resources [uniquely by default](/docs/intro/concepts/resources/names/#autonaming), no two stacks will ever produce cloud resources with the same names.
+* No more resource-naming collisions. Because Pulumi names cloud resources [uniquely by default](/docs/concepts/resources/names/#autonaming), no two stacks will ever produce cloud resources with the same names.
 * No more deployment conflicts. When every developer has a stack of their own, they can deploy to the sandboxed environment as often as necessary, without having to wait for another deployment to finish first.
 * Everyone on the team has their own production-like environment to use for end-to-end testing.
 

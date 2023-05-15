@@ -58,5 +58,5 @@ If you haven't yet, try out the new pulumi-eks package with [this walkthrough].
 [manage EKS clusters]: /blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi/
 [multi-language components]: https://github.com/pulumi/pulumi/issues/2430
 [this walkthrough]:  https://www.pulumi.com/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi/
-[resources]: https://www.pulumi.com/docs/intro/concepts/resources/
+[resources]: https://www.pulumi.com/docs/concepts/resources/
 <!-- markdownlint-enable url -->

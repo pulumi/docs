@@ -24,7 +24,7 @@ After completing this challenge and if you feel so inclined to thank The Pulumip
 In order to complete this challenge, you'll need a couple things set up in advance. The challenge utilizes the MongoDB Cloud free tier and incurs a small charge for using AWS Fargate.
 
 - A [Pulumi account](https://app.pulumi.com/signup)
-- The [Pulumi CLI](/docs/get-started/install/)
+- The [Pulumi CLI](/docs/install/)
 - [Python 3.9 or higher](https://www.python.org/downloads/)
 - [Docker](https://docs.docker.com/get-docker/)
 - An [AWS account](https://portal.aws.amazon.com/)

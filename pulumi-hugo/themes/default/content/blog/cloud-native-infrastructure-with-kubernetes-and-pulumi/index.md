@@ -1,7 +1,7 @@
 ---
 title: "Cloud Native Infrastructure with Kubernetes and Pulumi"
 date: "2018-09-12"
-meta_desc: "Pulumi for Kubernetes lets you create, deploy, and manage Kubernetes apps using a familiar programming language across AWS, Azure, GCP, and native environments."
+meta_desc: "Pulumi for Kubernetes lets you create, deploy, & manage Kubernetes apps using programming language across AWS, Azure, Google Cloud, and native environments."
 meta_image: "meta.png"
 authors: ["joe-duffy"]
 tags: ["Kubernetes"]
@@ -20,7 +20,7 @@ a way to create, deploy, and manage Kubernetes applications using your
 favorite programming languages.
 that works across AWS, Azure, Google Cloud, OpenStack, and other clouds,
 now to Kubernetes and cloud native architectures. You can
-[dive right in here](/docs/get-started/kubernetes/) and
+[dive right in here](/docs/clouds/kubernetes/get-started/) and
 look at some
 [powerful things Pulumi enables here](/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/).
 <!--more-->

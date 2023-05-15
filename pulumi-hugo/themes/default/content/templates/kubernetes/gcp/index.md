@@ -31,7 +31,7 @@ The Kubernetes Cluster template creates an infrastructure as code project in you
 
 ## Using this template
 
-To use this template to deploy your own Kubernetes cluster, make sure you've [installed Pulumi](/docs/get-started/install) and [configured your Google Cloud credentials](/registry/packages/gcp/installation-configuration#credentials), then create a new [project](/docs/intro/concepts/project) using the template in your language of choice:
+To use this template to deploy your own Kubernetes cluster, make sure you've [installed Pulumi](/docs/install/) and [configured your Google Cloud credentials](/registry/packages/gcp/installation-configuration#credentials), then create a new [project](/docs/concepts/projects/) using the template in your language of choice:
 
 {{< templates/pulumi-new >}}
 
@@ -41,13 +41,13 @@ Follow the prompts to complete the new-project wizard. When it's done, you'll ha
 
 You must supply an existing project ID to deploy the cluster. You can input the project ID through the new-project wizard. No additional configuration is required.
 
-Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/reference/cli/pulumi_up):
+Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/cli/commands/pulumi_up):
 
 ```bash
 $ pulumi up
 ```
 
-When the deployment completes, Pulumi exports the following [stack output](/docs/intro/concepts/stack#outputs) values:
+When the deployment completes, Pulumi exports the following [stack output](/docs/concepts/stack#outputs) values:
 
 networkName
 : The name of the virtual network containing the Kubernetes cluster resources.
@@ -68,7 +68,7 @@ Output values like these are useful in many ways, most commonly as inputs for ot
 
 ## Customizing the project
 
-Projects created with the Kubernetes Cluster template expose the following [configuration](/docs/intro/concepts/config) settings:
+Projects created with the Kubernetes Cluster template expose the following [configuration](/docs/concepts/config) settings:
 
 gcp:project
 : The Google Cloud project ID to deploy into.
@@ -79,7 +79,7 @@ gcp:region
 nodesPerZone
 : The desired number of nodes per zone in the nodepool. Defaults to `1`.
 
-All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/reference/cli/pulumi_config_set) as shown below:
+All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/cli/commands/pulumi_config_set) as shown below:
 
 ```bash
 $ pulumi config set someProp ../some/value
@@ -88,7 +88,7 @@ $ pulumi up
 
 ## Tidying up
 
-You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/reference/cli/pulumi_destroy):
+You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/cli/commands/pulumi_destroy):
 
 ```bash
 $ pulumi destroy

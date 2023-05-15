@@ -27,7 +27,7 @@ Let's get to it.
 
 ## Step 1: Create a new project {#create}
 
-If you haven't already, make sure you've [installed Pulumi](/docs/get-started/install/) and [configured your AWS credentials](/registry/packages/aws/installation-configuration/). For this example, we'll be using [AWS](/registry/packages/aws/installation-configuration/), but the process is the same for any cloud provider, so if you aren't set up on AWS, you should still be able to follow along anyway.
+If you haven't already, make sure you've [installed Pulumi](/docs/install/) and [configured your AWS credentials](/registry/packages/aws/installation-configuration/). For this example, we'll be using [AWS](/registry/packages/aws/installation-configuration/), but the process is the same for any cloud provider, so if you aren't set up on AWS, you should still be able to follow along anyway.
 
 Create a new project in the usual way using one of our starter templates. The YAML template is a good choice for this walkthrough, as YAML projects are simple and lightweight (no runtime dependencies!), and because they combine both project and program into one file, they're especially conducive to sharing:
 
@@ -49,7 +49,7 @@ As Pulumi template authors, our general goal is twofold:
 
 A good template, in other words, is one that not only takes you from `pulumi new` to `pulumi up` in as few steps as possible, but that also leaves you with an open, extensible program you can use as a foundation to build upon. For us, the goal is to create a template that can be used to provision the minimal set of cloud resources one needs to run a static website on AWS. And done well, our template will also lend itself easily to further development --- custom domains, serverless functions, edge caching, and so on.
 
-To that end, let's start by replacing the contents of `Pulumi.yaml` with the following program, which defines the core resources we need: an [S3 bucket](/registry/packages/aws/api-docs/s3/bucket/) to hold the files of the website and an [S3 bucket object](/registry/packages/aws/api-docs/s3/bucketobject/) (`index.html`) to serve as its home page. We'll also export the computed URL of the website as a Pulumi [stack output](/docs/intro/concepts/stack/#outputs) to give us something to navigate to after deployment:
+To that end, let's start by replacing the contents of `Pulumi.yaml` with the following program, which defines the core resources we need: an [S3 bucket](/registry/packages/aws/api-docs/s3/bucket/) to hold the files of the website and an [S3 bucket object](/registry/packages/aws/api-docs/s3/bucketobject/) (`index.html`) to serve as its home page. We'll also export the computed URL of the website as a Pulumi [stack output](/docs/concepts/stack/#outputs) to give us something to navigate to after deployment:
 
 ```yaml
 name: my-template-project
@@ -283,7 +283,7 @@ Be sure to tidy up as before with `pulumi destroy` when you're done.
 
 ## Bonus step: Add a Deploy with Pulumi button
 
-In addition to the CLI, your users can also create new projects in the Pulumi Service with the [Deploy with Pulumi button](/docs/intro/pulumi-cloud/pulumi-button/). This is a great option for making your project installable from GitHub READMEs and other team docs. Here, for example, is a Deploy button that creates a new project using my version of the gist we created above:
+In addition to the CLI, your users can also create new projects in the Pulumi Service with the [Deploy with Pulumi button](/docs/pulumi-cloud/pulumi-button/). This is a great option for making your project installable from GitHub READMEs and other team docs. Here, for example, is a Deploy button that creates a new project using my version of the gist we created above:
 
 [![Deploy with Pulumi](https://get.pulumi.com/new/button.svg)](https://app.pulumi.com/new?template=https://gist.github.com/cnunciato/b331efae6a4740c237a0364d17fe220f)
 
@@ -299,7 +299,7 @@ Embedding these buttons yourself is easy --- just use one of the snippets below,
 [![Deploy with Pulumi](https://get.pulumi.com/new/button.svg)](https://app.pulumi.com/new?template={template-url})
 ```
 
-Project creators who go down this path will be prompted in the browser for the same configuration values as they would with the CLI, and afterward, they'll be able to deploy the project either with the Pulumi CLI or with [Pulumi Deployments](https://www.pulumi.com/docs/intro/deployments/).
+Project creators who go down this path will be prompted in the browser for the same configuration values as they would with the CLI, and afterward, they'll be able to deploy the project either with the Pulumi CLI or with [Pulumi Deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/).
 
 ## See it in action
 
@@ -314,8 +314,8 @@ As you can see, creating a template is both simple and powerful, and I hope this
 * [Pulumi Templates](/templates/)
 * The [pulumi/templates repository](https://github.com/pulumi/templates) on GitHub
 * [Pulumi project file reference](/docs/reference/pulumi-yaml)
-* [`pulumi new` reference](/docs/reference/cli/pulumi_new/)
-* [Deploy with Pulumi button reference](/docs/intro/pulumi-cloud/pulumi-button/)
+* [`pulumi new` reference](/docs/cli/commands/pulumi_new/)
+* [Deploy with Pulumi button reference](/docs/pulumi-cloud/pulumi-button/)
 
 And as always, be sure to stop by [Pulumi Community Slack](https://slack.pulumi.com/) to let us know know how it goes.
 

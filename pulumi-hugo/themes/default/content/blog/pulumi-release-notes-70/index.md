@@ -110,7 +110,7 @@ Learn more in the [list current orgs GitHub issue](https://github.com/pulumi/pul
 
 You can now install Pulumi using the [Winget](https://github.com/microsoft/winget-cli/) package manager. Windows users on Windows 11 and later can now use `winget install pulumi` to install Pulumi and `winget upgrade pulumi` to get the latest version.
 
-Learn more in the [install Winget GitHub issue](https://github.com/pulumi/pulumi/issues/4676) and in the [Pulumi installation instructions](https://www.pulumi.com/docs/get-started/install/).
+Learn more in the [install Winget GitHub issue](https://github.com/pulumi/pulumi/issues/4676) and in the [Pulumi installation instructions](https://www.pulumi.com/docs/install/).
 
 ### Pulumi stack unselect
 

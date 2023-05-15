@@ -53,11 +53,11 @@ Metabase provides you with two options to run <a href="https://www.metabase.com/
 
 Once we settled on our business intelligence tool it was time to wire it up and start living that sweet data-driven lifestyle. To run the service yourself, Metabase provides you with two options: a Docker Image or a .JAR. We were already running our SaaS service on ECS, so naturally, we opted to go with the Docker approach. In addition to running the Docker Image, we also needed to provision a database so that Metabase could store the relevant data it needs to run the service.
 
-To accomplish the task of provisioning all the required resources, the team wrote a [Pulumi Component](/docs/intro/concepts/resources/components/) to encapsulate all the complexity and provide a simple interface for provisioning and updating the service. Unfortunately, this was before we had developed [Pulumi Packages](/docs/guides/pulumi-packages/) and the Component was only available within the program itself.
+To accomplish the task of provisioning all the required resources, the team wrote a [Pulumi Component](/docs/concepts/resources/components/) to encapsulate all the complexity and provide a simple interface for provisioning and updating the service. Unfortunately, this was before we had developed [Pulumi Packages](/docs/using-pulumi/pulumi-packages/) and the Component was only available within the program itself.
 
 ## The Metabase Package
 
-That brings us to today, and we are happy to deliver an open source Pulumi Package for running Metabase on [AWS ECS](/docs/guides/crosswalk/aws/ecs/). With Pulumi’s Metabase Package, you can quickly get started with Metabase without having to worry about the underlying infrastructure.
+That brings us to today, and we are happy to deliver an open source Pulumi Package for running Metabase on [AWS ECS](/docs/clouds/aws/guides/ecs/). With Pulumi’s Metabase Package, you can quickly get started with Metabase without having to worry about the underlying infrastructure.
 
 In the below sections we will look at example configurations of the Metabase resource, all the way from a bare bones configuration to a more complex configuration with a custom VPC, subnets, and domain.
 

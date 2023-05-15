@@ -13,7 +13,7 @@ tags:
     - "cli-flags"
 ---
 
-We've been hearing feedback from our customers that they need ways to manage permissions for their stacks at scale. Today we are announcing a `--teams` flag for [`pulumi stack init`](/docs/reference/cli/pulumi_stack_init), which allows customers to assign Teams to stacks from the CLI. This flag offers a third programmatic method for assigning permissions, supplementing [Pulumi Service REST API](/docs/reference/service-rest-api) or the [Pulumi Service Provider](/registry/packages/pulumiservice). Developers can now initialize their stacks with the right permissions directly from the CLI.
+We've been hearing feedback from our customers that they need ways to manage permissions for their stacks at scale. Today we are announcing a `--teams` flag for [`pulumi stack init`](/docs/cli/commands/pulumi_stack_init), which allows customers to assign Teams to stacks from the CLI. This flag offers a third programmatic method for assigning permissions, supplementing [Pulumi Service REST API](/docs/reference/service-rest-api) or the [Pulumi Service Provider](/registry/packages/pulumiservice). Developers can now initialize their stacks with the right permissions directly from the CLI.
 
 <!--more-->
 
@@ -22,9 +22,9 @@ consist of stacks, which are separate deployments of the same infrastructure. St
 also be configured with separate inputs. Organization admins can leverage RBAC
 to grant access permissions at the organization or Pulumi Teams levels. Pulumi Teams and RBAC are available for Enterprise and Business Critical customers.
 
-Stacks are often created via the CLI with the [`pulumi stack init` command](https://www.pulumi.com/docs/reference/cli/pulumi_stack_init/#options).
+Stacks are often created via the CLI with the [`pulumi stack init` command](https://www.pulumi.com/docs/cli/commands/pulumi_stack_init/#options).
 This command initializes a new stack. If you're using the
-[Pulumi Service](https://www.pulumi.com/docs/intro/concepts/state/#pulumi-service-backend) as your backend, you can view your newly created stack in the Pulumi Service console. If your organization uses teams, you will want to give your teammates access to the stack.
+[Pulumi Service](https://www.pulumi.com/docs/concepts/state/#pulumi-service-backend) as your backend, you can view your newly created stack in the Pulumi Service console. If your organization uses teams, you will want to give your teammates access to the stack.
 
 With the release of Pulumi v3.59.0, developers can assign Pulumi Team access during stack creation. To do this, pass in the `--teams` flag followed by the team's name. For instance:
 

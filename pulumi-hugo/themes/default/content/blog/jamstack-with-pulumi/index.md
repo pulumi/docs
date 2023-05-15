@@ -86,7 +86,7 @@ Configuring a static website can be complicated when using either the AWS web in
 - [Amazon Route53](https://aws.amazon.com/route53/) to set up the DNS for the website
 - [Amazon Certificate Manager](https://aws.amazon.com/certificate-manager/) for securing the site via HTTPS
 
-Using Pulumi to deploy Infrastructure as Code, we can create and build our infrastructure using either TypeScript or Python. If you haven't installed Pulumi and configured it to work with your AWS credentials, follow the [Getting Started with AWS guide](/docs/get-started/aws/).
+Using Pulumi to deploy Infrastructure as Code, we can create and build our infrastructure using either TypeScript or Python. If you haven't installed Pulumi and configured it to work with your AWS credentials, follow the [Getting Started with AWS guide](/docs/clouds/aws/get-started/).
 
 To get started building our infrastructure, we’ll download the Python example for setting up a static website with AWS. There are many [examples on our GitHub repository](https://github.com/pulumi/), but we can clone just the AWS Static Website example using a [sparse checkout](https://git-scm.com/docs/git-sparse-checkout) which clones only the directory we specify,
 
@@ -162,7 +162,7 @@ $ pulumi stack init website-testing
     $ pulumi config set aws:region us-east-1
     ```
 
-1. Install [dependencies](https://www.pulumi.com/docs/intro/concepts/how-pulumi-works/) for our Pulumi program.
+1. Install [dependencies](https://www.pulumi.com/docs/concepts/how-pulumi-works/) for our Pulumi program.
 
     {{< chooser language "typescript,python" >}}
     {{% choosable language typescript %}}

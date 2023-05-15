@@ -23,7 +23,7 @@ In order to complete this challenge, you'll need a couple things set up in advan
 {{% choosable cloud aws %}}
 
 * A [Pulumi account](https://app.pulumi.com/signup)
-* The [Pulumi CLI](/docs/get-started/install/)
+* The [Pulumi CLI](/docs/install/)
 * An AWS account
 * A [Checkly account](https://www.checklyhq.com/)
 
@@ -32,12 +32,12 @@ In order to complete this challenge, you'll need a couple things set up in advan
 {{% choosable cloud gcp %}}
 
 * A [Pulumi account](https://app.pulumi.com/signup)
-* The [Pulumi CLI](/docs/get-started/install/)
+* The [Pulumi CLI](/docs/install/)
 * A Google Cloud [account](https://cloud.google.com/gcp) and [project](https://cloud.google.com/resource-manager/docs/creating-managing-projects/)
 * A [Checkly account](https://www.checklyhq.com/)
 
 {{< notes >}}
-If you're new to Google Cloud, you can get $300 in free credits to run, test, and deploy workloads. <a href="https://cloud.google.com/gcp" target="_blank" rel="noopener noreferrer">Open a free GCP account</a> and use it for this Pulumi Challenge!
+If you're new to Google Cloud, you can get $300 in free credits to run, test, and deploy workloads. <a href="https://cloud.google.com/gcp" target="_blank" rel="noopener noreferrer">Open a free Google Cloud account</a> and use it for this Pulumi Challenge!
 {{< /notes >}}
 
 {{% /choosable %}}
@@ -69,11 +69,11 @@ pulumi new aws-typescript
 pulumi new gcp-typescript
 ```
 
-The `pulumi new gcp-typescript` command will prompt for the name of the GCP project to use, but if you didn't enter one or need to change it, you can do so with the `pulumi config set` command. Setting the GCP region is handled in the same way.
+The `pulumi new gcp-typescript` command will prompt for the name of the Google Cloud project to use, but if you didn't enter one or need to change it, you can do so with the `pulumi config set` command. Setting the Google Cloud region is handled in the same way.
 
 ```shell
 # set the project ID
-pulumi config set gcp:project <GCP_PROJECT_ID>
+pulumi config set gcp:project <Google Cloud_PROJECT_ID>
 
 # optionally set the region as appropriate for your location
 pulumi config set gcp:region europe-west1
@@ -107,13 +107,13 @@ const bucketAcl = new aws.s3.BucketAclV2("bAcl", {
 
 {{% choosable cloud gcp %}}
 
-Now that you have a base GCP project configured, you need to create your first resource. In this instance, you'll create a new [GCS bucket](https://cloud.google.com/storage/docs/buckets) which will allow you to store your static website. The command `pulumi new gcp-typescript` produced a file `pulumi-challenge/index.ts`. Clear the contents of the `index.ts` file and add the following code to create your first resources.
+Now that you have a base Google Cloud project configured, you need to create your first resource. In this instance, you'll create a new [GCS bucket](https://cloud.google.com/storage/docs/buckets) which will allow you to store your static website. The command `pulumi new gcp-typescript` produced a file `pulumi-challenge/index.ts`. Clear the contents of the `index.ts` file and add the following code to create your first resources.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-// Create a GCP resource (Storage Bucket)
+// Create a Google Cloud resource (Storage Bucket)
 const bucket = new gcp.storage.Bucket("mybucket", {
     // Set location as appropriate for wherever you are located
     location: "EU",
@@ -391,7 +391,7 @@ const cloudfrontDistribution = new aws.cloudfront.Distribution(
 
 {{% choosable cloud gcp %}}
 
-On Google Cloud, that means you want to front your Cloud Storage Bucket with a [Load Balancer](https://cloud.google.com/load-balancing/docs/https) and enable its [CDN capabilities](https://cloud.google.com/cdn/docs/overview). Add the following additional code to your `index.ts` file in order to create a GCP Load Balancer, Public IP address and URL Map to your GCP storage bucket.
+On Google Cloud, that means you want to front your Cloud Storage Bucket with a [Load Balancer](https://cloud.google.com/load-balancing/docs/https) and enable its [CDN capabilities](https://cloud.google.com/cdn/docs/overview). Add the following additional code to your `index.ts` file in order to create a Google Cloud Load Balancer, Public IP address and URL Map to your Google Cloud storage bucket.
 
 ```typescript
 // Google Cloud Load Balancer Backend
@@ -667,7 +667,7 @@ import * as gcp from "@pulumi/gcp";
 // Also shows the challenger how to build a ComponentResource
 import { CdnWebsite } from "./cdn-website";
 
-// List of GCP API's That Need to be enabled on the GCP Project
+// List of Google Cloud API's That Need to be enabled on the Google Cloud Project
 var apiDependencies: Array<pulumi.Resource> = []
 var gcpServiceAPIs: Array<string> = [
     "compute.googleapis.com",
@@ -676,7 +676,7 @@ var gcpServiceAPIs: Array<string> = [
 // Enable required API services for a Google Cloud Platform project
 for (var idx in gcpServiceAPIs) {
     apiDependencies.push(
-        // Enable GCP Service API
+        // Enable Google Cloud Service API
         new gcp.projects.Service("".concat("gcp-api-", gcpServiceAPIs[idx]), {
             disableDependentServices: true,
             service: gcpServiceAPIs[idx],
@@ -689,7 +689,7 @@ const website = new CdnWebsite("your-startup", {}, {dependsOn: apiDependencies})
 export const websiteUrl = website.url;
 ```
 
-You'll also note the presence of some code to enable the GCP service APIs that are required to run certain GCP services.
+You'll also note the presence of some code to enable the Google Cloud service APIs that are required to run certain Google Cloud services.
 
 {{% /choosable %}}
 
@@ -787,7 +787,7 @@ import * as gcp from "@pulumi/gcp";
 // Also shows the challenger how to build a ComponentResource
 import { CdnWebsite } from "./cdn-website";
 
-// List of GCP API's That Need to be enabled on the GCP Project
+// List of Google Cloud API's That Need to be enabled on the Google Cloud Project
 var apiDependencies: Array<pulumi.Resource> = []
 var gcpServiceAPIs: Array<string> = [
     "compute.googleapis.com",
@@ -796,7 +796,7 @@ var gcpServiceAPIs: Array<string> = [
 // Enable required API services for a Google Cloud Platform project
 for (var idx in gcpServiceAPIs) {
     apiDependencies.push(
-        // Enable GCP Service API
+        // Enable Google Cloud Service API
         new gcp.projects.Service("".concat("gcp-api-", gcpServiceAPIs[idx]), {
             disableDependentServices: true,
             service: gcpServiceAPIs[idx],

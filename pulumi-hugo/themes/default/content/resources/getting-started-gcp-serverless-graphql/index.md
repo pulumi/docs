@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "Getting Started with Serverless GraphQL on GCP"
-meta_desc: "In this episode, Lee Zen walks you through building a serverless GraphQL API using Apollo GraphQL and GCP Functions with the help of Pulumi."
+title: "Getting Started with Serverless GraphQL on Google Cloud"
+meta_desc: "In this episode, Lee Zen walks you through building a serverless GraphQL API using Apollo GraphQL and Google Cloud Functions with the help of Pulumi."
 
 aliases:
   - /webinars/getting-started-gcp-serverless-graphql
@@ -42,14 +42,14 @@ url_slug: "getting-started-gcp-serverless-graphql"
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Getting Started with Serverless GraphQL on GCP"
+    title: "Getting Started with Serverless GraphQL on Google Cloud"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Getting Started with Serverless GraphQL on GCP"
+    title: "Getting Started with Serverless GraphQL on Google Cloud"
     # URL for embedding a URL for ungated webinars.
     youtube_url: "https://www.youtube.com/embed/mU5_aclyQR8"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
@@ -60,7 +60,7 @@ main:
     datetime: "MAY 19, 2020"
     # Description of the webinar.
     description: |
-        In this episode, Lee Zen walks you through building a serverless GraphQL API using Apollo GraphQL and GCP Functions with the help of Pulumi. The code for this episode is [available on GitHub](https://github.com/pulumi/pulumitv/tree/master/modern-infrastructure-wednesday/2020-05-20).
+        In this episode, Lee Zen walks you through building a serverless GraphQL API using Apollo GraphQL and Google Cloud Functions with the help of Pulumi. The code for this episode is [available on GitHub](https://github.com/pulumi/pulumitv/tree/master/modern-infrastructure-wednesday/2020-05-20).
 
     # The webinar presenters
     presenters:
@@ -69,13 +69,13 @@ main:
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - Deploy an Apollo Server to GCP
+        - Deploy an Apollo Server to Google Cloud
         - Learn about callbacks and callback factories
 
 transcript: |
-    Hello, and welcome to another episode of Modern Infrastructure Wednesday. I'm your host Lee Zen. And today, we're going to be talking about serverless GraphQL API. It's kind of a lot to unpack. What we're talking about is really how to build a GraphQL API using the function in GCP. And you can see, I'm wearing my new super Pulumipus t-shirt, so let's get started. In this episode we'll be covering a way to modify an existing example. It's an Apollo Server example. Apollo is one of the GraphQL API implementations and then we'll learn about callbacks and callback factories, and seeing how we can actually modify the example to work with callbacks in Pulumi. You can follow along on [github.com/pulumi/pulumitv](https://github.com/pulumi/pulumitv). All the example code will be there, as well as all the previous episodes example code. And of course, if you enjoy this episode, please like and [subscribe](https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw?sub_confirmation=1) to the channel for future videos. We're publishing one every week, please comment if you have any feedback.
+    Hello, and welcome to another episode of Modern Infrastructure Wednesday. I'm your host Lee Zen. And today, we're going to be talking about serverless GraphQL API. It's kind of a lot to unpack. What we're talking about is really how to build a GraphQL API using the function in Google Cloud. And you can see, I'm wearing my new super Pulumipus t-shirt, so let's get started. In this episode we'll be covering a way to modify an existing example. It's an Apollo Server example. Apollo is one of the GraphQL API implementations and then we'll learn about callbacks and callback factories, and seeing how we can actually modify the example to work with callbacks in Pulumi. You can follow along on [github.com/pulumi/pulumitv](https://github.com/pulumi/pulumitv). All the example code will be there, as well as all the previous episodes example code. And of course, if you enjoy this episode, please like and [subscribe](https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw?sub_confirmation=1) to the channel for future videos. We're publishing one every week, please comment if you have any feedback.
 
-    Let's take a look at what this looks like. I already have a skeleton project set up for GCP and Pulumi on TypeScript and if I go look at the example I was talking about, this is in the Apollo GraphQL repo. I've already installed the two dependencies they talk about. So now we're just going to copy and paste the code they have around implementing the API handler as a Google function. This is really what the function should be in the Google function itself, but for now, we're just going to drop it into our Pulumi program and then add some things here to get this to deploy. This handler is really what we want to deploy, so we can make an API. Well actually, we'll call it a function. We'll call this API function and this is a GCP cloud functions callback function. We'll call this API function and this could really just be the `server.createHandler` here. The reason, as you can see, it takes a callback, which is exactly what this creates. That's pretty much all we would technically need.
+    Let's take a look at what this looks like. I already have a skeleton project set up for Google Cloud and Pulumi on TypeScript and if I go look at the example I was talking about, this is in the Apollo GraphQL repo. I've already installed the two dependencies they talk about. So now we're just going to copy and paste the code they have around implementing the API handler as a Google function. This is really what the function should be in the Google function itself, but for now, we're just going to drop it into our Pulumi program and then add some things here to get this to deploy. This handler is really what we want to deploy, so we can make an API. Well actually, we'll call it a function. We'll call this API function and this is a Google Cloud cloud functions callback function. We'll call this API function and this could really just be the `server.createHandler` here. The reason, as you can see, it takes a callback, which is exactly what this creates. That's pretty much all we would technically need.
 
     In addition to that, we will want to actually create a invoker so that we can actually invoke a role, rather, a member, so that we can actually invoke this from anywhere. So let's go ahead and do that. We'll call this the API invoker, and this is a cloud functions member. We'll call this API invoker. We can see here, this takes a function, so this will be the function above, there's an underlying function, and there's the ID. Then it also requires a member, and this will be all users. So we'll let anyone invoke this, even just random internet users. We'll give it a role, which is the cloud functions invoker role and then finally, we'll export the URL of the function that we're creating.
 

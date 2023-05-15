@@ -474,7 +474,7 @@ export class Chooser {
         },
         {
             key: "gcp",
-            name: "GCP",
+            name: "Google Cloud",
             preview: false,
         },
         {

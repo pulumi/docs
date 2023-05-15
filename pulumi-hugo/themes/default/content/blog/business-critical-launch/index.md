@@ -50,10 +50,10 @@ Full details of our Pulumi Service editions can be found on [our pricing page](/
 
 The Pulumi Business Critical edition includes everything in the Pulumi Enterprise Edition, plus:
 
-- [Organization policies and enforcement](/docs/guides/crossguard/)
-- [Self-hosting available](/docs/guides/self-hosted/)
-- [Cross-domain identity (SCIM)](/docs/guides/scim)
-- [Automatic export of audit logs](/docs/intro/pulumi-cloud/audit-logs#automated-export)
+- [Organization policies and enforcement](/docs/using-pulumi/crossguard/)
+- [Self-hosting available](/docs/pulumi-cloud/self-hosted/)
+- [Cross-domain identity (SCIM)](/docs/pulumi-cloud/access-management/scim/)
+- [Automatic export of audit logs](/docs/pulumi-cloud/audit-logs#automated-export)
 - 24 x 7 support included
 - Premium training, onboarding and certain professional services
 
@@ -66,7 +66,7 @@ We are also announcing today a 30 day trial for self-hosting the [Pulumi Service
 
 ![Self-Hosted Screenshot](self-hosted.png)
 
-The Self-Hosted Pulumi Service can be installed in any on-premises or cloud provider environment. It can also run in air-gapped environments without access to the Internet, including those with the most demanding compliance needs such as FedRAMP. In concert with the launch of the 30 day trial, we have made the [deployment reference architectures](https://github.com/pulumi/pulumi-self-hosted-installers) public. For assistance setting up your environment or if you don’t see your desired deployment option, [contact us](/contact/).  Full details on self-hosting the Pulumi Service can be found in our [Self-Hosted Pulumi Service documentation](/docs/guides/self-hosted/).
+The Self-Hosted Pulumi Service can be installed in any on-premises or cloud provider environment. It can also run in air-gapped environments without access to the Internet, including those with the most demanding compliance needs such as FedRAMP. In concert with the launch of the 30 day trial, we have made the [deployment reference architectures](https://github.com/pulumi/pulumi-self-hosted-installers) public. For assistance setting up your environment or if you don’t see your desired deployment option, [contact us](/contact/).  Full details on self-hosting the Pulumi Service can be found in our [Self-Hosted Pulumi Service documentation](/docs/pulumi-cloud/self-hosted/).
 
 ## Pulumi in the Amazon Web Services (AWS) Marketplace
 

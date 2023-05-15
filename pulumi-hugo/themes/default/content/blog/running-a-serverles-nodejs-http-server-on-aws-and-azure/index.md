@@ -127,7 +127,7 @@ with a simpler approach for these cloud ecosystems. To further this
 goal, we've created a new API called
 [cloud.HttpServer](https://github.com/pulumi/pulumi-cloud/blob/master/api/httpServer.ts).
 `HttpServer` is a Pulumi
-[Resource](/docs/intro/concepts/resources/),
+[Resource](/docs/concepts/resources/),
 but is designed to work well with the existing large middleware
 ecosystem out there. And critically, the same HttpServer API can be
 implemented consistently on AWS, Azure and GCP - so you can write once

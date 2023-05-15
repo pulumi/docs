@@ -243,7 +243,7 @@ jobs:
 
 {{< /chooser >}}
 
-Learn more in the [GitHub Actions User Guide](/docs/guides/continuous-delivery/github-actions/)
+Learn more in the [GitHub Actions User Guide](/docs/using-pulumi/continuous-delivery/github-actions/)
 
 ### Kubernetes: new `skipAwait` option
 

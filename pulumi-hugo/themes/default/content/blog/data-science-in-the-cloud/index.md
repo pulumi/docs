@@ -37,7 +37,7 @@ Pulumi reduces the burden of creating and maintaining repeatable and robust depl
 
 As a data scientist, you might want to share data, charts, or graphs with remote team members and make them available through a shared website. You want to keep iterating on your model but don't want to update the site manually, or worse, let it get out of date.
 
-This [example](https://github.com/pulumi/automation-api-examples/blob/main/python/pulumi_via_jupyter/automation_api.ipynb) is a simple overview of Automation API that demonstrates a basic deployment of a static website from within a Jupyter notebook. This example uses an inline program to define infrastructure within a function alongside your other code. The function called `s3_static_site` creates an s3 bucket, sets it up as a basic static website, and exports the URL. This is the equivalent of creating a Pulumi [stack](/docs/intro/concepts/stack/) using the CLI.
+This [example](https://github.com/pulumi/automation-api-examples/blob/main/python/pulumi_via_jupyter/automation_api.ipynb) is a simple overview of Automation API that demonstrates a basic deployment of a static website from within a Jupyter notebook. This example uses an inline program to define infrastructure within a function alongside your other code. The function called `s3_static_site` creates an s3 bucket, sets it up as a basic static website, and exports the URL. This is the equivalent of creating a Pulumi [stack](/docs/concepts/stack/) using the CLI.
 
 We've added code to the example to upload files written to the `www` directory. Every time you want to update the website, you can write a file to the directory and call the function to upload it to the s3 bucket. Pulumi maintains state, so it will only upload new files when the function is called.
 
@@ -101,7 +101,7 @@ The Pulumi Service also displays updates to the static site and the changes made
 
 ![Pulumi updates](pulumi_updates.png)
 
-Now that the static site has been deployed, we want to get the site URL. The `s3_static_site` function exports the website url. Pulumi returns the s3_site as an object with [outputs](/docs/intro/concepts/inputs-outputs/) that we use to retrieve the URL. There are several ways to check if the site is working, but a simple way is to open the URL in a web browser.
+Now that the static site has been deployed, we want to get the site URL. The `s3_static_site` function exports the website url. Pulumi returns the s3_site as an object with [outputs](/docs/concepts/inputs-outputs/) that we use to retrieve the URL. There are several ways to check if the site is working, but a simple way is to open the URL in a web browser.
 
 ```python
 import webbrowser

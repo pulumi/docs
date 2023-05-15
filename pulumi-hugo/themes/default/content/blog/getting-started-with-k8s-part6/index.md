@@ -35,7 +35,7 @@ Pulumi also lets you keep an eye on your Kubernetes resources in real-time with 
 
 There are many [logging and monitoring](https://kubernetes.io/docs/tasks/debug-application-cluster/) solutions available for Kubernetes. In the previous section, we used Prometheus for generating metrics. Pulumi supports logging and monitoring tools to assist with cluster and application management.
 
-Kubernetes Cluster Services provide logging and monitoring at the cluster level or a subset of apps and workloads. Check out our tutorials for setting up logging and monitoring for Kubernetes on [AWS, Azure, and GCP](/docs/guides/crosswalk/kubernetes/cluster-services/). The tutorial also shows how to configure [DataDog](https://www.datadoghq.com/) to log and monitor applications. The [example code](https://github.com/pulumi/kubernetes-guides/tree/master/general-cluster-services/datadog-daemonset) is on Github.
+Kubernetes Cluster Services provide logging and monitoring at the cluster level or a subset of apps and workloads. Check out our tutorials for setting up logging and monitoring for Kubernetes on [AWS, Azure, and GCP](/docs/clouds/kubernetes/guides/cluster-services/). The tutorial also shows how to configure [DataDog](https://www.datadoghq.com/) to log and monitor applications. The [example code](https://github.com/pulumi/kubernetes-guides/tree/master/general-cluster-services/datadog-daemonset) is on Github.
 
 ## Summary
 

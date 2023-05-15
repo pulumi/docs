@@ -17,7 +17,7 @@ So a while back, after far too much time spent wandering the blogsphere manually
 
 <!--more-->
 
-If you're already comfortable with Pulumi, and you just want to get up and running, [I've set up a GitHub repo](https://github.com/pulumi/examples/tree/master/aws-ts-pulumi-miniflux) (complete with a [Deploy with Pulumi button](/docs/intro/pulumi-cloud/pulumi-button/)!) that should have all you need to get going. Just click the button, set a few configs (like your RSS server's administrative password, which will be stored as an [encrypted Pulumi secret](/docs/intro/concepts/config/), and follow the prompts. Your shiny new server should be up and running within minutes.
+If you're already comfortable with Pulumi, and you just want to get up and running, [I've set up a GitHub repo](https://github.com/pulumi/examples/tree/master/aws-ts-pulumi-miniflux) (complete with a [Deploy with Pulumi button](/docs/pulumi-cloud/pulumi-button/)!) that should have all you need to get going. Just click the button, set a few configs (like your RSS server's administrative password, which will be stored as an [encrypted Pulumi secret](/docs/concepts/config/), and follow the prompts. Your shiny new server should be up and running within minutes.
 
 ## Sketching it Out
 
@@ -63,7 +63,7 @@ Now let's define a few configuration values for the project.
 
 ## Configuring the Stack
 
-While we could certainly hard-code all of these values into our program, it'd be better to use Pulumi to set them, since doing so give us the option to vary them by [stack](/docs/intro/concepts/stack/) (say, if we wanted to run this particular app in multiple environments), but more importantly, to set some passwords for the database user and service administrator. So let's do that first, so we'll have them all ready as we develop our program:
+While we could certainly hard-code all of these values into our program, it'd be better to use Pulumi to set them, since doing so give us the option to vary them by [stack](/docs/concepts/stack/) (say, if we wanted to run this particular app in multiple environments), but more importantly, to set some passwords for the database user and service administrator. So let's do that first, so we'll have them all ready as we develop our program:
 
 ```shell
 $ pulumi config set db_name miniflux
@@ -73,7 +73,7 @@ $ pulumi config set admin_username admin
 $ pulumi config set admin_password anothersupersecretpassword --secret
 ```
 
-You can change any of these values if you like (and you should definitely change the two passwords, of course), but note that the passwords are set with the `--secret` flag, which encrypts their values using Pulumi's [built-in support for secrets](/docs/intro/concepts/config/).
+You can change any of these values if you like (and you should definitely change the two passwords, of course), but note that the passwords are set with the `--secret` flag, which encrypts their values using Pulumi's [built-in support for secrets](/docs/concepts/config/).
 
 Okay. With our configuration set, we're ready to start building.
 
@@ -86,7 +86,7 @@ The Pulumi program we're writing will:
 * create a new instance of PostgreSQL, with minimal settings, placing it into the subnet group and giving it access to your default [ECS Cluster](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_clusters.html);
 * create a new [Network Listener](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-listeners.html) to define a publicly accessible URL for the Miniflux service;
 * create a new Fargate service for the Miniflux app, in your default ECS Cluster, passing it the newly created DB connection and Pulumi config settings; and finally,
-* export the URL as a Pulumi stack [Output](/docs/intro/concepts/inputs-outputs/) so we can navigate to the service.
+* export the URL as a Pulumi stack [Output](/docs/concepts/inputs-outputs/) so we can navigate to the service.
 
 Let's get coding!
 
@@ -223,6 +223,6 @@ And with that, you should now be able to browse your RSS server securely:
 
 ## Finishing Up
 
-In this post, we've seen how easy it is to run a container as a service connected to an RDS database with Pulumi, and to expose that container securely on the web. If we wanted, we could go even farther --- we could refactor the program into Pulumi [Components](/docs/intro/concepts/resources#components), perhaps (one for the service, one for the database), package it up for sharing on npm, and so on.
+In this post, we've seen how easy it is to run a container as a service connected to an RDS database with Pulumi, and to expose that container securely on the web. If we wanted, we could go even farther --- we could refactor the program into Pulumi [Components](/docs/concepts/resources#components), perhaps (one for the service, one for the database), package it up for sharing on npm, and so on.
 
 But we'll leave those improvements for another day. For now, let's enjoy what we've created! And start catching up on all that reading we've missed.

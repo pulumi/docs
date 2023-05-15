@@ -32,7 +32,7 @@ shiny new 'Add New Project' button. Here's how that works:
 
 - Clicking the 'Add New Project' button takes you to a series of
   available templates - essentially a matrix of cloud provider and
-  language: from Go on GCP, through TypeScript on AWS, to Python on
+  language: from Go on Google Cloud, through TypeScript on AWS, to Python on
   OpenStack, and everything in-between.
 - Choosing an option will present a screen with some standard
   configuration options that you can change or leave defaulted.

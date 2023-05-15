@@ -17,9 +17,9 @@ write this as a simple example using Pulumi SDKs.
 
 ## Prerequisites
 
-1. [Install `pulumi` CLI](/docs/get-started/install)
-    and set up your [*Azure credentials*](/docs/get-started/azure)
-2. Initialize a new [Pulumi project](/docs/intro/concepts/project/) from available
+1. [Install `pulumi` CLI](/docs/install/)
+    and set up your [*Azure credentials*](/docs/clouds/azure/get-started/)
+2. Initialize a new [Pulumi project](/docs/concepts/projects/) from available
     templates. We use **`****`azure-typescript`****`** template here to
     install all dependencies and save the configuration.
 

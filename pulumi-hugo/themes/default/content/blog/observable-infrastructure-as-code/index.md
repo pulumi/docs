@@ -14,7 +14,7 @@ tags:
     - automation-api
 ---
 
-Pulumi community member [Kay Plößer](https://kay.is/) spent some time digging into setting up observability of a Pulumi deployment using [Honeycomb](https://www.honeycomb.io/). Read more to find out all the details on configuring Honeycomb and Pulumi together, with a side dish of [Automation API](/docs/guides/automation-api/)!
+Pulumi community member [Kay Plößer](https://kay.is/) spent some time digging into setting up observability of a Pulumi deployment using [Honeycomb](https://www.honeycomb.io/). Read more to find out all the details on configuring Honeycomb and Pulumi together, with a side dish of [Automation API](/docs/using-pulumi/automation-api/)!
 
 <!--more-->
 ***
@@ -36,7 +36,7 @@ This article will show you how to make your Pulumi deployment observable with [@
 
 - [Node.js](https://nodejs.org/en/)
 - [A Pulumi account](https://www.pulumi.com/)
-- [The Pulumi CLI](https://www.pulumi.com/docs/get-started/install/)
+- [The Pulumi CLI](https://www.pulumi.com/docs/install/)
 - A Pulumi stack
 - [A Honeycomb account](https://www.honeycomb.io/)
 

@@ -25,7 +25,7 @@ The Kubernetes Cluster template creates an infrastructure as code project in you
 
 ## Using this template
 
-To use this template to deploy your own Kubernetes cluster, make sure you've [installed Pulumi](/docs/get-started/install/) and [configured your Azure credentials](/registry/packages/azure/installation-configuration#credentials), then create a new [project](/docs/intro/concepts/project/) using the template in your language of choice:
+To use this template to deploy your own Kubernetes cluster, make sure you've [installed Pulumi](/docs/install/) and [configured your Azure credentials](/registry/packages/azure/installation-configuration#credentials), then create a new [project](/docs/concepts/projects/) using the template in your language of choice:
 
 {{< templates/pulumi-new >}}
 
@@ -41,13 +41,13 @@ mgmtGroupId
 sshPubKey
 : Contents of your public key which will be used for SSH access to the cluster nodes you will deploy.
 
-Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/reference/cli/pulumi_up):
+Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/cli/commands/pulumi_up):
 
 ```bash
 $ pulumi up
 ```
 
-When the deployment completes, Pulumi exports the following [stack output](/docs/intro/concepts/stack#outputs) values:
+When the deployment completes, Pulumi exports the following [stack output](/docs/concepts/stack#outputs) values:
 
 rgname
 : The name of the Azure Resource Group containing the Kubernetes cluster resources.
@@ -65,7 +65,7 @@ Output values like these are useful in many ways, most commonly as inputs for ot
 
 ## Customizing the project
 
-Projects created with the Kubernetes Cluster template expose the following [configuration](/docs/intro/concepts/config/) settings:
+Projects created with the Kubernetes Cluster template expose the following [configuration](/docs/concepts/config/) settings:
 
 numWorkerNodes
 : The number of nodes in your cluster. Defaults to `3`.
@@ -79,7 +79,7 @@ prefixForDns
 nodeVmSize
 : The VM instance type used to run your nodes. Defaults to `Standard_DS2_v2`.
 
-All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/reference/cli/pulumi_config_set) as shown below:
+All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/cli/commands/pulumi_config_set) as shown below:
 
 ```bash
 $ pulumi config set someProp ../some/value
@@ -88,7 +88,7 @@ $ pulumi up
 
 ## Tidying up
 
-You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/reference/cli/pulumi_destroy):
+You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/cli/commands/pulumi_destroy):
 
 ```bash
 $ pulumi destroy

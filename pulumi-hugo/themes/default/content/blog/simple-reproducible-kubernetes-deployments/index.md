@@ -288,7 +288,7 @@ actually making any changes. And because Pulumi is always tracking old
 states, rollback afterwards is easy also.
 
 This CLI workflow is great for the dev inner loop, however
-[the Pulumi GitHub App](/docs/guides/continuous-delivery/github-app/) also integrates
+[the Pulumi GitHub App](/docs/using-pulumi/continuous-delivery/github-app/) also integrates
 these previews and diffs with your CI/CD system, by enlightening your
 GitHub Pull Requests with potential update impacts, while your team
 still has a chance to discuss changes inside the usual PR workflow,

@@ -49,9 +49,9 @@ and extend to suit your needs.
 ## Using this template
 
 To use this template to deploy your own $THING,
-make sure you've [installed Pulumi](/docs/get-started/install/)
+make sure you've [installed Pulumi](/docs/install/)
 and [configured your $CLOUD credentials](/registry/packages/$CLOUD/installation-configuration/#credentials),
-then create a new [project](/docs/intro/concepts/project/) using the template in your language of choice:
+then create a new [project](/docs/concepts/projects/) using the template in your language of choice:
 
 {{< templates/pulumi-new >}}
 
@@ -64,14 +64,14 @@ Feel free to inspect the code in {{< langfile >}} for a closer look.
 
 The template requires no additional configuration.
 Once the new project is created,
-you can deploy it immediately with [`pulumi up`](/docs/reference/cli/pulumi_up/):
+you can deploy it immediately with [`pulumi up`](/docs/cli/commands/pulumi_up/):
 
 ```bash
 $ pulumi up
 ```
 
 When the deployment completes,
-Pulumi exports the following [stack output](/docs/intro/concepts/stack/#outputs) values:
+Pulumi exports the following [stack output](/docs/concepts/stack/#outputs) values:
 
 someOutput
 : The provider-assigned property of the widget resource.
@@ -91,7 +91,7 @@ $ open $(pulumi stack output cdnURL)
 ## Customizing the project
 
 Projects created with the $ARCHITECTURE template expose
-the following [configuration](/docs/intro/concepts/config/) settings:
+the following [configuration](/docs/concepts/config/) settings:
 
 someProp
 : The description of the property. Defaults to `someValue`.
@@ -101,7 +101,7 @@ otherProp
 
 All of these settings are optional and may be adjusted
 either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`)
-or by changing their values with [`pulumi config set`](/docs/reference/cli/pulumi_config_set/) as shown below.
+or by changing their values with [`pulumi config set`](/docs/cli/commands/pulumi_config_set/) as shown below.
 
 ### Changing a config value
 
@@ -198,7 +198,7 @@ A description of the other next step.
 
 ## Tidying up
 
-You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/reference/cli/pulumi_destroy/):
+You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](docs/cli/commands/pulumi_destroy/):
 
 ```bash
 $ pulumi destroy

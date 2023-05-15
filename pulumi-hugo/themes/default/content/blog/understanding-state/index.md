@@ -56,8 +56,8 @@ changed. That's important for having multiple programs trying to execute at
 once, debugging system changes, and other important considerations for working
 in teams across a remote, cloud-based environment. In short, it's good to know
 what changed! When you use Pulumi, you have access to that change information
-through [audit logging](https://www.pulumi.com/docs/intro/pulumi-cloud/audit-logs/)
-and can use [webhooks](https://www.pulumi.com/docs/intro/pulumi-cloud/webhooks/) to
+through [audit logging](https://www.pulumi.com/docs/pulumi-cloud/audit-logs/)
+and can use [webhooks](https://www.pulumi.com/docs/pulumi-cloud/webhooks/) to
 feed those changes into other systems for observation, like a shared monitoring
 system with your security team or a distributed team that can't look over your
 shoulder as something deploys.
@@ -93,7 +93,7 @@ of the system.
 I hope this short introduction to how state works, especially with
 infrastructure-as-code platforms, helps get you on your way! If you want to read
 more about state with Pulumi (and get some nifty diagrams), head to
-[State and Backends](/docs/intro/concepts/state/). Until
+[State and Backends](/docs/concepts/state/). Until
 next time!
 
 ---

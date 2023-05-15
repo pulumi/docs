@@ -13,7 +13,7 @@ platform.  The response has been overwhelming and we've been hard at
 work responding to your feedback ever since.
 
 Today, we are excited to release [Pulumi 0.15](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0150-2018-08-13) and make
-it [available to download](/docs/get-started/install/).  This release
+it [available to download](/docs/install/).  This release
 includes improvements across the entire Pulumi development experience.
 Pulumi supports more platforms
 ([Kubernetes](/registry/packages/kubernetes/api-docs/) and
@@ -21,9 +21,9 @@ Pulumi supports more platforms
 (Parallelism, simpler (native
 TypeScript support), richer
 (serverless frameworks for Azure and
-GCP),  and is more deeply
+Google Cloud),  and is more deeply
 integrated into the application lifecycle
-([GitHub App for CI/CD integration](/docs/guides/continuous-delivery/github-app)).
+([GitHub App for CI/CD integration](/docs/using-pulumi/continuous-delivery/github-app)).
 
 In this post, we'll take a quick tour of these new features. Stay tuned
 for follow up blog posts to dive deeper into individual topics.
@@ -86,7 +86,7 @@ const kibana = new helm.v2.Chart("kibana", {
 ```
 
 Check out the [Kubernetes
-overview](/docs/get-started/kubernetes) docs, the [API
+overview](/docs/clouds/kubernetes/get-started/) docs, the [API
 documentation](/registry/packages/kubernetes/api-docs)
 and the [pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes)
 GitHub project for additional details.
@@ -199,12 +199,12 @@ and the [pulumi-openstack](https://github.com/pulumi/pulumi-openstack)
 GitHub project for additional details. Huge thanks to Fraser for his
 work on this!
 
-## Serverless Functions in GCP and Azure
+## Serverless Functions in Google Cloud and Azure
 
 Particularly with serverless functions being real functions, we had a
 lot of interest in broadening our existing support beyond [just AWS
 serverless](https://github.com/pulumi/pulumi-aws-serverless).  We are
-happy to announce better serverless functionality for GCP and Azure.
+happy to announce better serverless functionality for Google Cloud and Azure.
 
 On Azure, the new `@pulumi/azure-serverless` package makes it easy to
 work with serverless functions, and has initial support for hooking up
@@ -262,7 +262,7 @@ infrastructure changes.
 
 The Pulumi GitHub App is still in preview as we work to support more CI
 systems and extend its capabilities. For information on how to install
-it and configure it with your CI system, please [read the documentation](/docs/guides/continuous-delivery/github-app/).
+it and configure it with your CI system, please [read the documentation](/docs/using-pulumi/continuous-delivery/github-app/).
 
 ## Summary
 

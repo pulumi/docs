@@ -149,8 +149,8 @@
                 <ul class="text-gray-600">
                     {{ if .Params.aws_only }}
                         <li>
-                            <strong><a class="link" href="{{ relref . "/docs/get-started/aws" }}">Create an AWS S3 Bucket</a></strong> then modify the bucket to host a static
-                            website.
+                            <strong><a class="link" href="{{ relref . "/docs/clouds/aws/get-started" }}">Create an AWS S3 Bucket</a></strong> then modify the bucket to host a
+                            static website.
                         </li>
                         <li>
                             <strong><a class="link" href="{{ relref . "/registry/packages/aws" }}">Learn how to use Pulumi's AWS Classic Provider</a></strong
@@ -161,7 +161,7 @@
                             Marketplace.
                         </li>
                         <li>
-                            <strong><a class="link" href="{{ relref . "/docs/get-started/install" }}">Download Pulumi</a></strong
+                            <strong><a class="link" href="{{ relref . "/docs/install" }}">Download Pulumi</a></strong
                             >, a free open source infrastructure as code tool.
                         </li>
                         <li>
@@ -169,19 +169,20 @@
                         </li>
                     {{ else }}
                         <li>
-                            <strong><a class="link" href="{{ relref . "/docs/get-started/aws" }}">Create an AWS S3 Bucket</a></strong> then modify the bucket to host a static
-                            website.
+                            <strong><a class="link" href="{{ relref . "/docs/clouds/aws/get-started" }}">Create an AWS S3 Bucket</a></strong> then modify the bucket to host a
+                            static website.
                         </li>
                         <li>
-                            <strong><a class="link" href="{{ relref . "/docs/get-started/azure" }}">Create an Azure Resource Group and Storage Account</a></strong
+                            <strong><a class="link" href="{{ relref . "/docs/clouds/azure/get-started" }}">Create an Azure Resource Group and Storage Account</a></strong
                             >, then export the storage account’s connection string.
                         </li>
                         <li>
-                            <strong><a class="link" href="{{ relref . "/docs/get-started/gcp" }}">Create a Google Cloud Storage Bucket</a></strong> and apply labels to that bucket.
+                            <strong><a class="link" href="{{ relref . "/docs/clouds/gcp/get-started" }}">Create a Google Cloud Storage Bucket</a></strong> and apply labels to that
+                            bucket.
                         </li>
                         <li>
-                            <strong><a class="link" href="{{ relref . "/docs/get-started/kubernetes" }}">Create a Kubernetes NGINX deployment</a></strong> and add a config value
-                            for MiniKube deployments.
+                            <strong><a class="link" href="{{ relref . "/docs/clouds/kubernetes/get-started" }}">Create a Kubernetes NGINX deployment</a></strong> and add a config
+                            value for MiniKube deployments.
                         </li>
                     {{ end }}
                 </ul>

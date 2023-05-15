@@ -91,7 +91,7 @@ For example, here is a dashboard in Metabase, created by combining Pulumi resour
 
 ![Analytics with Pulumi, Snowflake and Metabase](analytics-dashboard.png)
 
-Pulumi resource Data Export is available today both interactively in the console and via REST API . Learn more about these features in the [Pulumi Data Export](/docs/intro/insights/export/) documentation.
+Pulumi resource Data Export is available today both interactively in the console and via REST API . Learn more about these features in the [Pulumi Data Export](/docs/pulumi-cloud/insights/export/) documentation.
 
 ## Conclusion
 
@@ -102,5 +102,5 @@ To get started with Pulumi Insights today:
 * Sign up or log in to [Pulumi Cloud](https://app.pulumi.com)
 * Try out [Pulumi AI](/ai)
 * Watch the videos for [Pulumi Insights](https://www.youtube.com/watch?v=MTHGyed3Ef8), [Pulumi AI](https://youtu.be/xdTUEStC8I0) and [Pulumi Search](https://youtu.be/e1u-P9bnEA4)
-* Check out the [Pulumi Insights Documentation](/docs/intro/insights/)
+* Check out the [Pulumi Insights Documentation](/docs/pulumi-cloud/insights/)
 * Join the [Pulumi Community Slack](https://slack.pulumi.com/)

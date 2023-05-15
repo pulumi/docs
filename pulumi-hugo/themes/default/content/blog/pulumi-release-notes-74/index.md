@@ -86,7 +86,7 @@ As always, please feel free to submit feature requests and bug reports to the [P
 
 ### Add local Policy Packs to Automation API
 
-The Pulumi [Automation API](/docs/guides/automation-api/) is a programmatic interface for running Pulumi programs without the Pulumi CLI. Conceptually, this can be thought of as encapsulating the functionality of the CLI (`pulumi up`, `pulumi preview`, `pulumi destroy`, `pulumi stack init`, and so on.) but with more flexibility. We have now added support for Pulumi [Policy Packs](/docs/guides/crossguard/get-started#creating-a-policy-pack) can now be run with Automation API by specifying `--policy-pack`.
+The Pulumi [Automation API](/docs/using-pulumi/automation-api/) is a programmatic interface for running Pulumi programs without the Pulumi CLI. Conceptually, this can be thought of as encapsulating the functionality of the CLI (`pulumi up`, `pulumi preview`, `pulumi destroy`, `pulumi stack init`, and so on.) but with more flexibility. We have now added support for Pulumi [Policy Packs](/docs/using-pulumi/crossguard/get-started#creating-a-policy-pack) can now be run with Automation API by specifying `--policy-pack`.
 
 ### Add --stack to `pulumi about`
 
@@ -149,7 +149,7 @@ You can now use `pulumi convert --language java` to generate programs for Java f
 
 ### Stack READMEs
 
-Users can create [Stack READMEs](/docs/intro/pulumi-cloud/projects-and-stacks#stack-readme) in the [Pulumi Service](https://app.pulumi.com) that dynamically update based on [Stack Outputs](/learn/building-with-pulumi/stack-outputs/).
+Users can create [Stack READMEs](/docs/pulumi-cloud/projects-and-stacks#stack-readme) in the [Pulumi Service](https://app.pulumi.com) that dynamically update based on [Stack Outputs](/learn/building-with-pulumi/stack-outputs/).
 
 A Pulumi Service Stack README is dynamically populated with details from your stack outputs. It does this by interpolating output variables on the stack, such as `${outputs.instances[0].ARN}` so that each stack can construct links to dashboards, shell commands, and other pieces of documentation.
 

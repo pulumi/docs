@@ -5,7 +5,11 @@
         </div>
 
         <div class="md:w-6/12">
-            <h1>{{ .Title }}</h1>
+            {{ $h1 := .Title }}
+            {{ if .Params.h1 }}
+                {{ $h1 = .Params.h1 }}
+            {{ end }}
+            <h1>{{ $h1 }}</h1>
             {{ .Content }}
         </div>
 

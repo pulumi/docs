@@ -1,113 +1,129 @@
 # -------------------------------------
 # Command Line Menu
 # -------------------------------------
-reference:
+cli:
   - name: cancel
-    parent: cli
-    url: /docs/reference/cli/pulumi_cancel/
+    url: /docs/cli/commands/pulumi_cancel/
     weight: 1
+    parent: commands
+    aliases:
+      - /docs/cli/pulumi_cancel/
 
   - name: config
-    parent: cli
-    url: /docs/reference/cli/pulumi_config/
+    url: /docs/cli/commands/pulumi_config/
     weight: 2
+    parent: commands
+    aliases:
+      - /docs/cli/pulumi_config/
 
   - name: console
-    parent: cli
-    url: /docs/reference/cli/pulumi_console/
+    url: /docs/cli/commands/pulumi_console/
     weight: 3
+    parent: commands
+    aliases:
+      - /docs/cli/pulumi_console/
 
   - name: destroy
-    parent: cli
-    url: /docs/reference/cli/pulumi_destroy/
+    url: /docs/cli/commands/pulumi_destroy/
     weight: 4
+    parent: commands
+    aliases:
+      - /docs/cli/pulumi_destroy/
 
   - name: import
-    parent: cli
-    url: /docs/reference/cli/pulumi_import/
+    url: /docs/cli/commands/pulumi_import/
     weight: 5
+    parent: commands
+    aliases:
+      - /docs/cli/pulumi_import/
 
   - name: login
-    parent: cli
-    url: /docs/reference/cli/pulumi_login/
+    url: /docs/cli/commands/pulumi_login/
     weight: 6
+    parent: commands
+    aliases:
+      - /docs/cli/pulumi_login/
 
   - name: logout
-    parent: cli
-    url: /docs/reference/cli/pulumi_logout/
+    url: /docs/cli/commands/pulumi_logout/
     weight: 7
+    parent: commands
+    aliases:
+      - /docs/cli/pulumi_logout/
 
   - name: logs
-    parent: cli
-    url: /docs/reference/cli/pulumi_logs/
+    url: /docs/cli/commands/pulumi_logs/
     weight: 8
+    parent: commands
+    aliases:
+      - /docs/cli/pulumi_logs/
 
   - name: new
-    parent: cli
-    url: /docs/reference/cli/pulumi_new/
+    url: /docs/cli/commands/pulumi_new/
     weight: 9
+    parent: commands
+    aliases:
+      - /docs/cli/pulumi_new/
 
   - name: plugin
-    parent: cli
-    url: /docs/reference/cli/pulumi_plugin/
+    url: /docs/cli/commands/pulumi_plugin/
     weight: 10
+    parent: commands
+    aliases:
+      - /docs/cli/pulumi_plugin/
 
   - name: policy
-    parent: cli
-    url: /docs/reference/cli/pulumi_policy/
+    url: /docs/cli/commands/pulumi_policy/
     weight: 11
+    parent: commands
+    aliases:
+      - /docs/cli/pulumi_policy/
 
   - name: preview
-    parent: cli
-    url: /docs/reference/cli/pulumi_preview/
+    url: /docs/cli/commands/pulumi_preview/
     weight: 12
+    parent: commands
+    aliases:
+      - /docs/cli/pulumi_preview/
 
   - name: refresh
-    parent: cli
-    url: /docs/reference/cli/pulumi_refresh/
+    url: /docs/cli/commands/pulumi_refresh/
     weight: 13
+    parent: commands
+    aliases:
+      - /docs/cli/pulumi_refresh/
 
   - name: stack
-    parent: cli
-    url: /docs/reference/cli/pulumi_stack/
+    url: /docs/cli/commands/pulumi_stack/
     weight: 14
+    parent: commands
+    aliases:
+      - /docs/cli/pulumi_stack/
 
   - name: state
-    parent: cli
-    url: /docs/reference/cli/pulumi_state/
+    url: /docs/cli/commands/pulumi_state/
     weight: 15
+    parent: commands
+    aliases:
+      - /docs/cli/pulumi_state/
 
   - name: up
-    parent: cli
-    url: /docs/reference/cli/pulumi_up/
+    url: /docs/cli/commands/pulumi_up/
     weight: 16
+    parent: commands
+    aliases:
+      - /docs/cli/pulumi_up/
 
   - name: version
-    parent: cli
-    url: /docs/reference/cli/pulumi_version/
+    url: /docs/cli/commands/pulumi_version/
     weight: 17
+    parent: commands
+    aliases:
+      - /docs/cli/pulumi_version/
 
   - name: whoami
-    parent: cli
-    url: /docs/reference/cli/pulumi_whoami/
+    url: /docs/cli/commands/pulumi_whoami/
     weight: 18
-
-  - name: Node.js
-    parent: Pulumi SDK
-    url: /docs/reference/pkg/nodejs/pulumi/pulumi
-    weight: 1
-
-  - name: Python
-    parent: Pulumi SDK
-    url: /docs/reference/pkg/python/pulumi
-    weight: 2
-
-  - name: Go
-    parent: Pulumi SDK
-    url: https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi
-    weight: 3
-
-  - name: .NET
-    parent: Pulumi SDK
-    url: /docs/reference/pkg/dotnet/Pulumi/Pulumi.html
-    weight: 4
+    parent: commands
+    aliases:
+      - /docs/cli/pulumi_whoami/

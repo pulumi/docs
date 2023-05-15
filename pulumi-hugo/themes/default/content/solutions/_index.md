@@ -142,7 +142,7 @@ personas:
               icon_color: yellow
               description: |
                 Use a programming model designed to make you maximally productive across any cloud,
-                AWS, Azure, GCP, or Kubernetes.
+                AWS, Azure, Google Cloud, or Kubernetes.
             - title: Real abstractions for the cloud
               icon: abstract-shapes
               icon_color: salmon
@@ -202,7 +202,7 @@ personas:
               icon: clouds
               icon_color: yellow
               description: |
-                Build multi-cloud applications with a single workflow across all clouds &mdash; AWS, Azure, GCP, Kubernetes, hybrid or on-premises.
+                Build multi-cloud applications with a single workflow across all clouds &mdash; AWS, Azure, Google Cloud, Kubernetes, hybrid or on-premises.
             - title: Enterprise-Grade
               icon: buildings
               icon_color: salmon

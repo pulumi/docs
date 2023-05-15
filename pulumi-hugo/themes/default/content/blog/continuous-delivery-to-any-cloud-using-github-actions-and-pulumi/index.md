@@ -78,7 +78,7 @@ in addition to our favorite IDEs and tools.
 After committing our changes, Pulumi takes it from there. Deployments
 can be previewed, diffed, and are recorded so that you'll always know
 who changed what, when, and why -- all very "Git-like." Pulumi's
-[GitHub App](/docs/guides/continuous-delivery/github-app/)
+[GitHub App](/docs/using-pulumi/continuous-delivery/github-app/)
 adds to this and enables "GitOps" so that teams can propose, approve,
 and promote code from "staging" to "production" using pull requests
 (more on that below).
@@ -95,7 +95,7 @@ all of this up and running. Let's see how!
 ## Getting Up and Running
 
 The full sequence of steps is available in our [GitHub Actions Getting
-Started Guide](/docs/guides/continuous-delivery/github-actions).
+Started Guide](/docs/using-pulumi/continuous-delivery/github-actions).
 
 In summary, using GitHub Actions with Pulumi is as easy as [signing up
 for Pulumi](https://app.pulumi.com/) (if you haven't already), creating
@@ -134,7 +134,7 @@ it's so easy!
 
 If you are going to use this setup in a real team setting, you'll
 probably also want to use Pulumi's GitHub App. Simply by
-[installing it into your repo](/docs/guides/continuous-delivery/github-app/),
+[installing it into your repo](/docs/using-pulumi/continuous-delivery/github-app/),
 and combined with the above, you'll instantly get improved GitHub Checks API
 integration and, more importantly, context added by the Pulumi bot to
 your Pull Requests about what a deployment will do before it's even
@@ -151,7 +151,7 @@ There is so much more fun to have, and we're just getting started. Look
 for more in the weeks to come. In the meantime, here are some follow up
 links in case you want to learn more about GitHub Actions and Pulumi:
 
-- To learn more, [install Pulumi](/docs/get-started/install/) and then
+- To learn more, [install Pulumi](/docs/install/) and then
   check out our [Getting Started guide](/docs/get-started/).
 - In addition to [the keynote video](https://www.youtube.com/watch?v=59SxB2uY9E0), we have two
   other videos that you might enjoy watching to learn more:

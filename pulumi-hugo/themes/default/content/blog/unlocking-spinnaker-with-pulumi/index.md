@@ -11,7 +11,7 @@ Spinnaker is an open source, multi-cloud continuous delivery platform for releas
 This makes it a perfect fit for Pulumi to unleash the power of Spinnaker and its continuous delivery capabilities to all of the providers
 that Pulumi supports today and in the future.
 
-We have written a developer [guide](/docs/guides/continuous-delivery/spinnaker/) showing you how to install the [plugin](https://github.com/pulumi/spinnaker-preconfigured-job-plugin) in your Spinnaker instance and start using it right away.
+We have written a developer [guide](/docs/using-pulumi/continuous-delivery/spinnaker/) showing you how to install the [plugin](https://github.com/pulumi/spinnaker-preconfigured-job-plugin) in your Spinnaker instance and start using it right away.
 
 Here's a brief overview of the plugin.
 

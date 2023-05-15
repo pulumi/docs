@@ -12,7 +12,7 @@ Migrate from Terraform to modern languages with tf2pulumi.  Supports Terraform 0
 {{% /notes %}}
 
 <div class="header-hero-actions mt-8 mb-4 text-center">
-    <a class="btn btn-lg mr-2" href="/docs/guides/adopting/from_terraform">
+    <a class="btn btn-lg mr-2" href="/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/">
         Learn More
     </a>
 </div>
@@ -36,7 +36,7 @@ We'll review referencing existing resources, and then dive deeper into how you c
 For referencing existing resources, Pulumi offers several tools.
 
 * The `.get` methods available on every resource let you [get all the details for a resource](/registry/packages/aws/api-docs/ec2/vpc#look-up) from the cloud provider based just on its `id`.
-* The `StackReference` resource lets you reference outputs of another stack for use as inputs to a stack, which is very useful for [organizing projects and stacks](/docs/guides/organizing-projects-stacks/).
+* The `StackReference` resource lets you reference outputs of another stack for use as inputs to a stack, which is very useful for [organizing projects and stacks](/docs/using-pulumi/organizing-projects-stacks/).
 * [`terraform.state.RemoteStateReference()`](/blog/using-terraform-remote-state-with-pulumi), [`aws.cloudformation.getStack()`](/registry/packages/aws/api-docs/cloudformation/getstack) and [`azure.core.TemplateDeployment.get()`](/registry/packages/azure/api-docs/core/templatedeployment#look-up) let you reference outputs from existing Terraform, CloudFormation and ARM deployments respectively.
 
 Together, these make it easy to reference existing infrastructure regardless of how it was provisioned.

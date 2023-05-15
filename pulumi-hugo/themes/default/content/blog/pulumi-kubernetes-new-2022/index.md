@@ -19,7 +19,7 @@ Today we are announcing a set of major updates which deepen and extend Pulumi’
 * [New Pulumi Provider for Flux](https://www.pulumi.com/registry/packages/flux/): Manage Flux with Infrastructure as Code
 * [Pulumi Kubernetes Provider v3.22](https://www.pulumi.com/registry/packages/kubernetes/): Server Side Apply and Resource Patch
 
-You can [learn more about Pulumi and Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/) or jump in and [get started](https://www.pulumi.com/docs/get-started/kubernetes/) right away, or read on to learn more about what’s new for Pulumi and Kubernetes!
+You can [learn more about Pulumi and Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/) or jump in and [get started](https://www.pulumi.com/docs/clouds/kubernetes/get-started/) right away, or read on to learn more about what’s new for Pulumi and Kubernetes!
 
 ## Pulumi Kubernetes Operator v1.10: Flux Integration and Inline Infrastructure support
 
@@ -278,4 +278,4 @@ At Pulumi, we are passionate about pushing the state of the art of Infrastructur
 
 We’re so happy to be able to work with the Flux project to bring all of the benefits of its composable GitOps toolkit to Pulumi users. We’re excited about the new use cases that Inline Infrastructure support in the Pulumi Kubernetes Operator enables. And we’re thrilled to bring Server Side Apply and Patch support to the Pulumi Kubernetes Provider.
 
-You can [learn more about Pulumi and Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/) or jump in right away by following the [getting started guide](https://www.pulumi.com/docs/get-started/kubernetes/).
+You can [learn more about Pulumi and Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/) or jump in right away by following the [getting started guide](https://www.pulumi.com/docs/clouds/kubernetes/get-started/).

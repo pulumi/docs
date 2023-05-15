@@ -19,7 +19,7 @@ Today, we’re excited to launch [Pulumi Registry](/registry/), the one place to
 
 Pulumi Registry is launching with support for 64 of the leading cloud providers and modern cloud SaaS offerings, including Amazon Web Services, Microsoft Azure, Google Cloud, Kubernetes, Auth0, CloudFlare, Confluent Cloud, Datadog, DigitalOcean, Docker, GitHub, Kong, MinIO, MongoDB Atlas, PagerDuty, Snowflake, Spot by NetApp, and SumoLogic. Pulumi Registry also features some of the most popular Helm charts wrapped as Pulumi Components so you can take advantage of the most popular cloud native technologies.
 
-We’re excited to enable any developer to take advantage of the power of these offerings, and we can’t wait to see what you achieve with them and Pulumi. If you’d like to enable your customers with the power of the Pulumi cloud engineering platform, [get in touch](/docs/guides/pulumi-packages/contribute-to-pulumi-registry/). We’re eager to work with you!
+We’re excited to enable any developer to take advantage of the power of these offerings, and we can’t wait to see what you achieve with them and Pulumi. If you’d like to enable your customers with the power of the Pulumi cloud engineering platform, [get in touch](/docs/using-pulumi/pulumi-packages/contribute-to-pulumi-registry/). We’re eager to work with you!
 
 ## Everything you need to build for the modern cloud
 
@@ -51,7 +51,7 @@ If Pulumi Registry doesn’t yet have a native provider for your preferred cloud
 
 We also invite the entire Pulumi community to contribute new Providers to Pulumi Registry. You can enable your customers to manage your cloud service or cloud resources using Pulumi’s modern infrastructure-as-code by authoring a Native Provider, or by bridging an existing Terraform provider into the Pulumi ecosystem, and publishing it to the Pulumi Registry. We’ve also seen passionate customers and community members author Native Providers for cloud services with public, well-known APIs! Pulumi Registry will enable fully self-service publishing in 2022, but until then, we’re happy to work with you to publish your Provider.
 
-👉 [Build and publish a Pulumi Provider](/docs/guides/pulumi-packages/contribute-to-pulumi-registry/)
+👉 [Build and publish a Pulumi Provider](/docs/using-pulumi/pulumi-packages/contribute-to-pulumi-registry/)
 
 ## Components: from new to production, faster than ever
 
@@ -322,7 +322,7 @@ class MyStack : Stack
 
 Want to share your own best practices and cloud configurations with the Pulumi community? You can author a Pulumi Component and publish it to Pulumi Registry. We’ll have fully self-service publishing in 2022, but until then, we’re happy to work with you to publish your Component. You can get started using the link below.
 
-👉 [Build and publish a Pulumi Component](/docs/guides/pulumi-packages/contribute-to-pulumi-registry/)
+👉 [Build and publish a Pulumi Component](/docs/using-pulumi/pulumi-packages/contribute-to-pulumi-registry/)
 
 ## What’s next
 

@@ -27,7 +27,7 @@ Let's get going!
 
 ## Create a new project
 
-We'll begin, as always, by creating a new Pulumi project. (And if you haven't already, make sure you've [installed Pulumi](https://www.pulumi.com/docs/get-started/install/) and [configured your AWS credentials](https://www.pulumi.com/registry/packages/aws/installation-configuration/) in the usual way.)
+We'll begin, as always, by creating a new Pulumi project. (And if you haven't already, make sure you've [installed Pulumi](https://www.pulumi.com/docs/install/) and [configured your AWS credentials](https://www.pulumi.com/registry/packages/aws/installation-configuration/) in the usual way.)
 
 {{< chooser language "typescript,python" />}}
 
@@ -283,7 +283,7 @@ vpc_endpoint = ec2.VpcEndpoint("s3-vpc-endpoint", ec2.VpcEndpointArgs(
 
 {{% /choosable %}}
 
-Finally, add the cluster itself, using everything you've defined up to now --- config settings, network settings, IAM role, and the VPC's default security group, which enables traffic to and from the cluster on all ports and subnet IPs. Finish things off by exporting the name of the S3 bucket and Redshift ARN, as you'll need both in order to post and then import the S3 data (both will be [auto-named](/docs/intro/concepts/resources/names/#autonaming)):
+Finally, add the cluster itself, using everything you've defined up to now --- config settings, network settings, IAM role, and the VPC's default security group, which enables traffic to and from the cluster on all ports and subnet IPs. Finish things off by exporting the name of the S3 bucket and Redshift ARN, as you'll need both in order to post and then import the S3 data (both will be [auto-named](/docs/concepts/resources/names/#autonaming)):
 
 {{< chooser language "typescript,python" />}}
 

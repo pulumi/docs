@@ -34,7 +34,7 @@ Pulumi tries to offer a solution where our customers are only limited by their i
 
 ## Pulumi Architecture
 
-Here is the diagram from our [How Pulumi Works](/docs/intro/concepts/how-pulumi-works/) page:
+Here is the diagram from our [How Pulumi Works](/docs/concepts/how-pulumi-works/) page:
 
 ![Pulumi Architecture](/images/docs/reference/engine-block-diagram.png)
 
@@ -108,7 +108,7 @@ While this is definitely an imperative program, there is one important thing to 
 
 Running your program always sends the full resource model to the Pulumi deployment engine regardless of what state your current infrastructure is in.
 
-Our previous example was shown in Python, but recently we also delivered [support for YAML](/docs/intro/languages/yaml/).
+Our previous example was shown in Python, but recently we also delivered [support for YAML](/docs/languages-sdks/yaml/).
 The creation of our S3 bucket could be converted to this snippet:
 
 ```yaml

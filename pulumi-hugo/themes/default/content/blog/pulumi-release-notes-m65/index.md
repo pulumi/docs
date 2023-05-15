@@ -197,7 +197,7 @@ In some scenarios, you may want to retain certain resources even while destroyin
 
 ### Pulumi Package plugins can now be hosted on GitHub Releases
 
-To [publish a Pulumi Package](/docs/guides/pulumi-packages/how-to-author/), you need to publish the resource provided plugin that contains the implementation of your package. Previously, you couldn't use popular release services like GitHub Releases because the `pluginDownloadUrl` format in the Pulumi Packages [schema](/docs/guides/pulumi-packages/schema/) was too strict.
+To [publish a Pulumi Package](/docs/using-pulumi/pulumi-packages/how-to-author/), you need to publish the resource provided plugin that contains the implementation of your package. Previously, you couldn't use popular release services like GitHub Releases because the `pluginDownloadUrl` format in the Pulumi Packages [schema](/docs/using-pulumi/pulumi-packages/schema/) was too strict.
 
 Now, you can construct a `pluginDownloadUrl` with placeholders for `${VERSION}`, `${OS}`, and/or `${ARCH}` (case-sensitive) and these values will be interpolated whenever the Pulumi CLI attempts to download a Pulumi Package's plugin.
 
@@ -215,4 +215,4 @@ Previously, inviting new members to your Pulumi Service organization meant enter
 
 Once you've connected your Self-Hosted Pulumi Service instance with a directory–a SAML directory like Azure Active Directory or a source control directory like GitHub, GitLab, or Bitbucket–you may want to remove the ability for your users to sign in without using that directory. Now, you can by setting the `PULUMI_DISABLE_EMAIL_LOGIN` and `PULUMI_DISABLE_EMAIL_SIGNUP` environment variables to true.
 
-See the [self-hosted setup guide](/docs/guides/self-hosted/components/console#email-identity) for more information.
+See the [self-hosted setup guide](/docs/pulumi-cloud/self-hosted/components/console#email-identity) for more information.

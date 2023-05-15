@@ -19,7 +19,7 @@ A provider manages the CRUD (Create, Read, Update, Delete) life-cycle of a resou
 
 A resource provider is made up of two different pieces:
 
-1. A resource plugin, which is the binary used by the deployment engine to manage a resource. These plugins are stored in the plugin cache (located in `~/.pulumi/plugins`) and can be managed using the [`pulumi plugin`](https://www.pulumi.com/docs/reference/cli/pulumi_plugin/) set of commands.
+1. A resource plugin, which is the binary used by the deployment engine to manage a resource. These plugins are stored in the plugin cache (located in `~/.pulumi/plugins`) and can be managed using the [`pulumi plugin`](https://www.pulumi.com/docs/cli/commands/pulumi_plugin/) set of commands.
 
 1. An SDK which provides bindings for each type of resource the provider can manage.
 
@@ -27,7 +27,7 @@ A resource provider is made up of two different pieces:
 
 A resource provider is an extension of the API exposed by the respective cloud providers. As such, it can be the limiting factor. Thankfully, there is a solution to this. Since the Pulumi engine works with life-cycle callbacks handing control to the provider at appropriate times, it is easy to write a provider that implements custom logic in those callbacks.
 
-Learn more about how Pulumi works [here](https://www.pulumi.com/docs/intro/concepts/how-pulumi-works/).
+Learn more about how Pulumi works [here](https://www.pulumi.com/docs/concepts/how-pulumi-works/).
 
 ## Dynamic Resource Provider
 
@@ -179,4 +179,4 @@ const catConfig = new provisioners.RemoteExec("cat-config", {
 ...
 ```
 
-Read more about dynamic providers in our [docs](/docs/intro/concepts/resources/dynamic-providers/). Let us know what cool dynamic providers you create by dropping us a note on our community [Slack](https://slack.pulumi.com/)!
+Read more about dynamic providers in our [docs](/docs/concepts/resources/dynamic-providers/). Let us know what cool dynamic providers you create by dropping us a note on our community [Slack](https://slack.pulumi.com/)!

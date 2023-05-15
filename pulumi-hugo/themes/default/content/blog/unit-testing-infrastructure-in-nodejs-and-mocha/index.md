@@ -8,7 +8,7 @@ meta_image: "meta.png"
 ---
 
 {{% notes type="warning" %}}
-Some parts of this blog post are out-of-date. Please refer to our [Testing Guide](/docs/guides/testing/) for the updated overview and tutorials.
+Some parts of this blog post are out-of-date. Please refer to our [Testing Guide](/docs/using-pulumi/testing/) for the updated overview and tutorials.
 {{% /notes %}}
 
 Testing your infrastructure using familiar tools like Node.js's Mocha
@@ -81,7 +81,7 @@ The VPC test is slightly more complex. For the most part, it is simply checking 
 `cluster.core.vpcId` property and ensuring it doesn't equal the default VPC ID, which
 we fetch with `aws.ec2.getVpc`. However, because we might be creating the custom VPC in the
 program itself, it's possible we won't know the ID during previews. (A [preview](
-/docs/reference/cli/pulumi_preview) is when
+/docs/cli/commands/pulumi_preview) is when
 Pulumi shows you a dry-run of your deployment without actually doing it yet.) That's why
 we check `pulumi.runtime.isDryRun` and let things slide, with a little warning message.
 We could always be conservative and fail the test, but in this case, we'll actually permit the
@@ -107,7 +107,7 @@ export const cluster = new eks.Cluster("my-cluster", {
 ```
 
 > If you want to create a fresh Pulumi project and follow along, simply
-> [install the CLI](/docs/get-started/install/), ensure it is
+> [install the CLI](/docs/install/), ensure it is
 > [configured for your AWS account](/registry/packages/aws/installation-configuration/),
 > and run `pulumi new aws-typescript` to create an empty project. Swap out the contents
 > of `index.ts` with the above.
@@ -452,9 +452,9 @@ And if we select it, we'll see the complete Mocha test output:
 
 ![Failed Deployment Details](./failed-deployment-details.png)
 
-We could even [use webhooks](/docs/intro/pulumi-cloud/webhooks/) to
+We could even [use webhooks](/docs/pulumi-cloud/webhooks/) to
 fire off a Slack alarm so that nobody misses the issue. This is often very helpful in
-unattended scenarios, like [continuous deployment](/docs/guides/continuous-delivery/).
+unattended scenarios, like [continuous deployment](/docs/using-pulumi/continuous-delivery/).
 
 Better to catch these things late than never!
 
@@ -507,7 +507,7 @@ a preview, when all of these different states are possible. That has the downsid
 catching problems before they get deployed, however. As with many things, this is a tradeoff.
 
 For a more complete overview of `Output<T>`, please see the
-[Pulumi Programming Model documentation](/docs/intro/concepts/inputs-outputs/).
+[Pulumi Programming Model documentation](/docs/concepts/inputs-outputs/).
 
 ## Next Steps
 

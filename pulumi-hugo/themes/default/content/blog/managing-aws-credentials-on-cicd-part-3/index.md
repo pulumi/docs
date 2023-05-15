@@ -274,7 +274,7 @@ along with the source code for a stack, so that builds and stack updates are rep
 However, what if those configuration settings contain secrets? Like you need to store an API key
 to use a 3rd party API.
 
-Pulumi supports [encrypting sensitive configuration data](https://www.pulumi.com/docs/intro/concepts/config/#secrets).
+Pulumi supports [encrypting sensitive configuration data](https://www.pulumi.com/docs/concepts/config/#secrets).
 You just need to add the `--secret` flag.
 
 ```bash
@@ -288,12 +288,12 @@ is safe to check into your source tree, since it cannot be copied/decrypted for 
 
 ### Secrets in Checkpoint Files
 
-Pulumi keeps track of your cloud resources in a something called a [checkpoint file](/docs/intro/concepts/state/),
+Pulumi keeps track of your cloud resources in a something called a [checkpoint file](/docs/concepts/state/),
 and that too might contain sensitive information. For example, a Pulumi resource might have a `"password"` output property.
 
-Pulumi [has support](/docs/intro/concepts/resources#additionalsecretoutputs) to mark that resource
+Pulumi [has support](/docs/concepts/resources#additionalsecretoutputs) to mark that resource
 output as "secret" and make sure that it is encrypted within the checkpoint file. (So if you were to look at the checkpoint file
-contents via [`pulumi stack export`](/docs/reference/cli/pulumi_stack_export), you would not be able to recover
+contents via [`pulumi stack export`](/docs/cli/commands/pulumi_stack_export), you would not be able to recover
 the data.
 
 Just like for secret configuration values, the default for stacks hosted on the Pulumi Service is to encrypt
@@ -308,7 +308,7 @@ data stored in the Pulumi Service were available, it would be useless without yo
 If that's the case, then you can use a configurable secrets provider, and swap out the default "Pulumi Service managed" encryption
 scheme for your own. (And we won't take it personally, promise.)
 
-When you create a new stack using [pulumi stack init](/docs/reference/cli/pulumi_stack_init/), you can optionally
+When you create a new stack using [pulumi stack init](/docs/cli/commands/pulumi_stack_init/), you can optionally
 specify a `--secrets-provider` flag. That will determine where and how secrets get managed on your stack.
 
 For example, to use your own KMS key for encrypting data, you can pass the secrets provider

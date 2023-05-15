@@ -12,7 +12,7 @@ overview:
 benefits:
     title: How will Pulumi Deployments benefit me?
     description: |
-        Pulumi Deployments accelerates your rate of infrastructure deployments by executing `pulumi up` commands remotely whenever you click a button, push to a GitHub branch, or call the Deployments REST API. Instead of using the CLI, you can use a managed service to run your Pulumi programs which enables you to automate cloud deployments at scale. Pulumi Deployments is based on the same technology as [Pulumi Automation API](/docs/guides/automation-api/), which lets organizations manage more than ten times the cloud infrastructure resources per engineer when compared to other infrastructure as code tools.
+        Pulumi Deployments accelerates your rate of infrastructure deployments by executing `pulumi up` commands remotely whenever you click a button, push to a GitHub branch, or call the Deployments REST API. Instead of using the CLI, you can use a managed service to run your Pulumi programs which enables you to automate cloud deployments at scale. Pulumi Deployments is based on the same technology as [Pulumi Automation API](/docs/using-pulumi/automation-api/), which lets organizations manage more than ten times the cloud infrastructure resources per engineer when compared to other infrastructure as code tools.
 
 preview:
   youtube_url: https://www.youtube.com/embed/v48U7CNWutc

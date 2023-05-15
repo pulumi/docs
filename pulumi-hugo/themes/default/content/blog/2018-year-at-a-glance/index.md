@@ -27,15 +27,15 @@ open source contributions and passionate community leaders emerging who are help
 helping us to make Pulumi even better.
 
 **Support for major public, private, and hybrid clouds.** We launched with support for the three major public
-clouds, [AWS](/docs/get-started/aws/), [Azure](/docs/get-started/azure/), and
-[Google Cloud](/docs/get-started/gcp/), and have since added capabilities across all
+clouds, [AWS](/docs/clouds/aws/), [Azure](/docs/clouds/azure/), and
+[Google Cloud](/docs/clouds/gcp/), and have since added capabilities across all
 of them, including adding [serverless](/registry/packages/aws/how-to-guides/rest-api/),
 [containers](https://github.com/pulumi/examples/blob/master/aws-ts-containers/index.ts), and
 [infrastructure](https://github.com/pulumi/examples/blob/master/aws-js-webserver/index.js)
 productivity libraries -- it is here where we believe Pulumi’s unique approach of using general purpose languages truly
 shines. We immediately had a wave of inbound interest in applying the Pulumi approach to infrastructure as code in other
 areas, and quickly added other providers including OpenStack, VMWare vSphere, Alibaba Cloud, F5 BigIP, and more. In
-September, we unveiled [a native Kubernetes provider](/docs/get-started/kubernetes/) with support for the
+September, we unveiled [a native Kubernetes provider](/registry/packages/kubernetes/) with support for the
 entire API surface area across all versions, plus an operations tool, [KubeSpy](https://github.com/pulumi/kubespy) --
 both of which continue to lead to significant community growth. Many customers are loving that they can achieve a
 consistent engineering workflow across multi-cloud environments -- often spanning public, private, and/or hybrid clouds.

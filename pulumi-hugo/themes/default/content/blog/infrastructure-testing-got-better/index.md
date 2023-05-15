@@ -198,4 +198,4 @@ After working with Pulumi to build-out our data lake and implementing robust, en
 
 ## Conclusion
 
-Testing is just one of the superpowers that Pulumi 2.0 delivers. For more information, see our [Testing User Guide](/docs/guides/testing/) and [worked examples](https://github.com/pulumi/examples#testing) on GitHub in the language of your choice.
+Testing is just one of the superpowers that Pulumi 2.0 delivers. For more information, see our [Testing User Guide](/docs/using-pulumi/testing/) and [worked examples](https://github.com/pulumi/examples#testing) on GitHub in the language of your choice.

@@ -43,7 +43,7 @@ $ mkdir app
 $ mkdir infra
 ```
 
-In the `infra` directory, we'll add [the GKE template](/templates/kubernetes/gcp) first. We're [using the `--generate-only` flag](/docs/reference/cli/pulumi_new#options) to avoid creating the default virtual environment and the various extra stack information since we're using Poetry and will be running everything from the root directory later:
+In the `infra` directory, we'll add [the GKE template](/templates/kubernetes/gcp) first. We're [using the `--generate-only` flag](/docs/cli/commands/pulumi_new#options) to avoid creating the default virtual environment and the various extra stack information since we're using Poetry and will be running everything from the root directory later:
 
 ```bash
 $ cd infra

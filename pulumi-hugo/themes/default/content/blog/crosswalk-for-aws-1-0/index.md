@@ -33,7 +33,7 @@ tags:
 # for additional details, and please remove these comments before submitting for review.
 ---
 
-We introduced [Crosswalk for AWS](https://www.pulumi.com/docs/guides/crosswalk/aws/) three years ago as a library of components on top of the core AWS platform to make it easier to get from zero to production on AWS, easier to adopt AWS best practices by default, and easier to evolve your AWS infrastructure as your application needs mature.  Since then, we’ve added many new capabilities, expanded the portfolio of libraries, and made these libraries [available to all Pulumi languages](https://www.pulumi.com/blog/crosswalk-for-aws-all-languages/).  We’ve also seen thousands of Pulumi customers, including more than 25% of all Pulumi AWS users, adopting one or more of the Crosswalk for AWS components to aid in delivering their AWS-based applications and services.
+We introduced [Crosswalk for AWS](https://www.pulumi.com/docs/clouds/aws/guides/) three years ago as a library of components on top of the core AWS platform to make it easier to get from zero to production on AWS, easier to adopt AWS best practices by default, and easier to evolve your AWS infrastructure as your application needs mature.  Since then, we’ve added many new capabilities, expanded the portfolio of libraries, and made these libraries [available to all Pulumi languages](https://www.pulumi.com/blog/crosswalk-for-aws-all-languages/).  We’ve also seen thousands of Pulumi customers, including more than 25% of all Pulumi AWS users, adopting one or more of the Crosswalk for AWS components to aid in delivering their AWS-based applications and services.
 
 Today, we’re excited to deliver the 1.0 releases of the three core libraries that make up Crosswalk for AWS: [AWSX 1.0](https://www.pulumi.com/registry/packages/awsx/), [EKS 1.0](https://www.pulumi.com/registry/packages/eks/) and [AWS API Gateway 1.0](https://www.pulumi.com/registry/packages/aws-apigateway/).  These 1.0 releases offer a stable supported foundation, available in all Pulumi languages, for these rich infrastructure components.
 
@@ -43,7 +43,7 @@ Today, we’re excited to deliver the 1.0 releases of the three core libraries t
 
 Pulumi provides access to 100 providers (and counting!) for working with a wide variety of cloud and SaaS platforms.  But since the very beginning of our work on Pulumi, [AWS](https://www.pulumi.com/registry/packages/aws/) has been the most used platform, both by the number of organizations using the provider, and by the average number of cloud resources managed per organization.
 
-One of our guiding lights for Pulumi has always been to help organizations to scale up the complexity, capability, and richness of what they can build in the cloud, and in specific on the AWS platform.  AWS offers an enormous number of powerful building block services, and organizations can stitch those building blocks together in countless ways to accomplish their needs.  Pulumi brings a variety of software engineering tools to bear to help with this - rich programming languages, IDE productivity, testing, policy, and fast iteration.  But none is more important than Pulumi’s focus on enabling the creation of [reusable infrastructure components](https://www.pulumi.com/docs/intro/concepts/resources/components/) - higher level components that provide their own API interface built from the powerful building blocks of the underlying cloud resources.
+One of our guiding lights for Pulumi has always been to help organizations to scale up the complexity, capability, and richness of what they can build in the cloud, and in specific on the AWS platform.  AWS offers an enormous number of powerful building block services, and organizations can stitch those building blocks together in countless ways to accomplish their needs.  Pulumi brings a variety of software engineering tools to bear to help with this - rich programming languages, IDE productivity, testing, policy, and fast iteration.  But none is more important than Pulumi’s focus on enabling the creation of [reusable infrastructure components](https://www.pulumi.com/docs/concepts/resources/components/) - higher level components that provide their own API interface built from the powerful building blocks of the underlying cloud resources.
 
 The Crosswalk for AWS libraries offer components that help address many of the most common use cases we’ve seen AWS users need to tackle - configuring the many components of their VPC network setup, running containers on Amazon ECS and Fargate, configuring a fully featured and production ready Amazon EKS Cluster, and setting up the infrastructure and functions needed as part of a serverless architecture.  All with just a few lines of code that offers AWS best practices out of the box, while offering the ability to scale up into the full features of the AWS platform.
 
@@ -974,8 +974,8 @@ Crosswalk for AWS is free and open source, and you can [get started](https://www
 
 For more on Crosswalk for AWS see:
 
-- [Pulumi Crosswalk for AWS API Gateway documentation](/docs/guides/crosswalk/aws/api-gateway/)
-- [Pulumi Crosswalk for AWS Elastic Container Registry (ECR) documentation](/docs/guides/crosswalk/aws/ecr)
-- [Pulumi Crosswalk for AWS Elastic Kubernetes Service (EKS)](/docs/guides/crosswalk/aws/eks)
-- [Pulumi Crosswalk for AWS Elastic Load Balancing (ELB)](/docs/guides/crosswalk/aws/elb)
-- [Pulumi Crosswalk for AWS Virtual Private Cloud (VPC)](/docs/guides/crosswalk/aws/vpc)
+- [Pulumi Crosswalk for AWS API Gateway documentation](/docs/clouds/aws/guides/api-gateway/)
+- [Pulumi Crosswalk for AWS Elastic Container Registry (ECR) documentation](/docs/clouds/aws/guides/ecr)
+- [Pulumi Crosswalk for AWS Elastic Kubernetes Service (EKS)](/docs/clouds/aws/guides/eks)
+- [Pulumi Crosswalk for AWS Elastic Load Balancing (ELB)](/docs/clouds/aws/guides/elb)
+- [Pulumi Crosswalk for AWS Virtual Private Cloud (VPC)](/docs/clouds/aws/guides/vpc)

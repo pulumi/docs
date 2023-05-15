@@ -19,7 +19,7 @@ by different teams. For example, it's common to see an application team
 deploying into a VPC owned and managed by a network operations team.
 
 Pulumi supports
-[this kind of workflow](/docs/intro/concepts/stack#stackreferences)
+[this kind of workflow](/docs/concepts/stack#stackreferences)
 natively using the [`StackReference`](/docs/reference/pkg/nodejs/pulumi/pulumi#StackReference)
 type from the Pulumi SDK. Integration with the most popular
 cloud-specific tools have been supported by Pulumi since the earliest
@@ -178,6 +178,6 @@ Pulumi is free and open-source, and you can [get started today](/docs/get-starte
 To learn more about migrating
 from Terraform to Pulumi, check out
 [From Terraform to Infrastructure as Software](/blog/from-terraform-to-infrastructure-as-software/)
-and the [Terraform comparison documentation](/docs/intro/vs/terraform/), or join us in
+and the [Terraform comparison documentation](/docs/concepts/vs/terraform/), or join us in
 the [Pulumi Community Slack](https://slack.pulumi.com/) to discuss with
 the Pulumi community.

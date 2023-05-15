@@ -21,7 +21,7 @@ capabilities:
             CrossCode enables a polyglot world where one team can write infrastructure as code components in one language and another team can consume them from another language. CrossCode supports any JVM language (Java, Scala, Kotlin, Clojure), .NET (C#, F#, PowerShell), Node.js (JavaScript, TypeScript), Go, Python, and markup languages (YAML, JSON, CUE). CrossCode components enable the sharing and reuse of well-architected building blocks that can be consumed across the organization.
           more:
             label: Read more
-            href: "/docs/intro/languages"
+            href: "/docs/languages-sdks/"
 
         - title: Convert from any infrastructure as code format
           icon: gear
@@ -39,7 +39,7 @@ capabilities:
             CrossCode can import existing infrastructure and generate the infrastructure as code in any supported Pulumi language. This works for any infrastructure no matter if it was provisioned manually or by another infrastructure as code system.
           more:
             label: Read more
-            href: "/docs/guides/adopting/import"
+            href: "/docs/using-pulumi/adopting-pulumi/import/"
 
         - title: Enforce policy in all popular programming languages
           icon: shield

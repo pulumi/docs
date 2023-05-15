@@ -12,14 +12,14 @@ In this blog, we will work through an example that shows how to use Pulumi to en
 continuous delivery with your Kubernetes workloads on Amazon EKS. This integration will work just
 as seamlessly for any Kubernetes cluster, including Azure AKS or Google GKE, using the relevant
 Pulumi libraries for [Azure](https://github.com/pulumi/pulumi-azure) and
-[GCP](https://github.com/pulumi/pulumi-gcp).
+[Google Cloud](https://github.com/pulumi/pulumi-gcp).
 <!--more-->
 
 ## Prerequisites
 
 - An account on [https://app.pulumi.com](https://app.pulumi.com/) with
   an organization.
-- The latest `pulumi` CLI. Installation instructions are [here](/docs/get-started/install/).
+- The latest `pulumi` CLI. Installation instructions are [here](/docs/install/).
 - A bare repository. Set the remote URL to be your GitLab project.
 
 ## Concepts in Pulumi
@@ -31,8 +31,8 @@ organization. This can be a specific GitHub, GitLab or Atlassian
 organization or your solo organization. Inside each organization, users
 create Pulumi projects and stacks.
 
-Pulumi [projects](/docs/intro/concepts/project/)
-and [stacks](/docs/intro/concepts/stack/)
+Pulumi [projects](/docs/concepts/projects/)
+and [stacks](/docs/concepts/stack/)
 are flexible to accommodate the diverse needs across teams, applications,
 and infrastructure scenarios. Just like Git repos that work with varying
 approaches Pulumi projects and stacks allow you to organize your code
@@ -54,15 +54,14 @@ Working with Inter-Stack Dependencies with the latter option is more
 suited in a production setup giving users more flexibility and
 boundaries between their teams. We will use this structure in our
 example below. For more information on Pulumi projects and stacks,
-please refer to our documentation
-[here](/docs/guides/organizing-projects-stacks/).
+please refer to our [organizaing documentation](/docs/using-pulumi/organizing-projects-stacks/).
 
 ### Use Tags to group Pulumi Stacks as Environments:
 
 - Pulumi Stacks have associated metadata in the form of key/value
     tags.
 - You can assign custom tags to stacks (when logged into the
-  [Pulumi Service backend](/docs/intro/concepts/state/) to customize how
+  [Pulumi Service backend](/docs/concepts/state/) to customize how
   stacks are listed in the [Pulumi Service](https://app.pulumi.com/).
     - In our example below we have two environments _prod_ and _dev_.
     - To group stacks by environment we assign custom tags
@@ -71,7 +70,7 @@ please refer to our documentation
     - In the Pulumi Service, you'll be able to group stacks by
         tag: `environment:dev` and tag: `environment:prod`.
 
-Please read more about managing [stack tags in Pulumi](/docs/intro/concepts/stack#stack-tags).
+Please read more about managing [stack tags in Pulumi](/docs/concepts/stack#stack-tags).
 
 ![Stack tags](./image-4.png)
 

@@ -192,7 +192,7 @@ PolicyPack(
 
 Policy as Code is an important tool for building a secure and efficient cloud infrastructure. Pulumi lets you efficiently test resources before deployment and entire stacks when deployed. Learn more about what you can do with Policy as Code:
 
-- [Get Started with Policy as Code](/docs/guides/crossguard/get-started/)
+- [Get Started with Policy as Code](/docs/using-pulumi/crossguard/get-started/)
 - [New Policy as Code Capabilities with CrossGuard](/blog/crossguard-2-0/)
 - [Automatically Enforcing AWS Resource Tagging Policies](/blog/automatically-enforcing-aws-resource-tagging-policies/)
 - [Manage Any Infrastructure with Policy as Code](/blog/manage-infrastructure-with-pac/)

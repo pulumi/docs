@@ -9,7 +9,7 @@ meta_image: "featured-img-efs-csi-driver.png"
 ---
 
 {{% notes type="warning" %}}
-Some parts of this blog post are out-of-date. As an alternative, please refer to the [EFS CSI Helm Chart](https://github.com/kubernetes-sigs/aws-efs-csi-driver/tree/master/charts/aws-efs-csi-driver) and Pulumi's support for [deploying helm charts](/docs/guides/adopting/from_kubernetes#provisioning-a-helm-chart)
+Some parts of this blog post are out-of-date. As an alternative, please refer to the [EFS CSI Helm Chart](https://github.com/kubernetes-sigs/aws-efs-csi-driver/tree/master/charts/aws-efs-csi-driver) and Pulumi's support for [deploying helm charts](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes#provisioning-a-helm-chart)
 {{% /notes %}}
 
 The Amazon Elastic File System Container Storage Interface (CSI) Driver implements the [CSI specification](https://github.com/container-storage-interface/spec/blob/master/spec.md) for container orchestrators to manage the lifecycle of Amazon EFS filesystems. The CSI specification defines an interface along with the minimum operational and packaging recommendations for a storage provider to implement a CSI compatible plugin. The interface declares the RPCs that a plugin must expose. The CSI drivers are the right mechanism to work with, when using a cloud storage component with Kubernetes workloads. Amazon Elastic File System (Amazon EFS) provides parallel shared access through a standard file system interface to Amazon EC2 instances and Linux-based workloads without disrupting your applications. EFS is a regional service storing data across multiple Availability Zones (AZs) for high availability and durability.
@@ -20,7 +20,7 @@ In this blog, we will work through an example that shows how to use AWS EFS CSI 
 
 ## Step 1: Initialize Pulumi Project and Stack for your organization:
 
-[Install Pulumi CLI](/docs/get-started/) and set up your [AWS credentials](/docs/get-started/aws/). Initialize a new [Pulumi project](/docs/intro/concepts/project/) from available templates. We use `aws-typescript` template here to install all library dependencies.
+[Install Pulumi CLI](/docs/get-started/) and set up your [AWS credentials](/docs/clouds/aws/get-started/). Initialize a new [Pulumi project](/docs/concepts/projects/) from available templates. We use `aws-typescript` template here to install all library dependencies.
 
 We will work with two Pulumi stacks in this example, one for the Amazon EKS cluster and AWS EFS CSI components caled k8sinfra. The other for the application and its storage class, persistent volume and persistent volume claim called app. The AWS EFS CSI (Container Storage Interface) is based on the initial [AWS EFS CSI Driver](https://github.com/kubernetes-sigs/aws-efs-csi-driver/) work done by Kubernetes SIG-AWS.
 

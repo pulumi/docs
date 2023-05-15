@@ -17,12 +17,12 @@ tags:
     - learn
 links:
     - text: Component Resources
-      url: https://www.pulumi.com/docs/intro/concepts/resources/#components
+      url: https://www.pulumi.com/docs/concepts/resources/#components
 ---
 
 Now that we have a better understanding of why abstraction and encapsulation are valuable concepts for Pulumi programs, let's explore what happens when we start working in larger teams at scale.
 
-A resource in Pulumi terms is basically a building block. That building block could be a base component like an `s3.Bucket` object that's managed by external providers like your favorite cloud provider. Alternatively, a resource could be a group of other resources that implements abstraction and encapsulation for reasons like defining a common pattern. This latter type of resource is called a [_Component Resource_](/docs/intro/concepts/resources#components) in Pulumi's terminology.
+A resource in Pulumi terms is basically a building block. That building block could be a base component like an `s3.Bucket` object that's managed by external providers like your favorite cloud provider. Alternatively, a resource could be a group of other resources that implements abstraction and encapsulation for reasons like defining a common pattern. This latter type of resource is called a [_Component Resource_](/docs/concepts/resources#components) in Pulumi's terminology.
 
 ## Deciding to create a component resource
 
@@ -161,17 +161,17 @@ pulumi.export("bucket_name", bucket1.bucket.id)
 
 {{% /choosable %}}
 
-With the call to `super()`, we pass in a name for the resource, which [we recommend](/docs/intro/concepts/resources/components#authoring-a-new-component-resource) being of the form `<package>:<module>:<type>` to avoid type conflicts since it's being registered alongside other resources like the Bucket resource we're calling (`aws:s3:Bucket`).
+With the call to `super()`, we pass in a name for the resource, which [we recommend](/docs/concepts/resources/components#authoring-a-new-component-resource) being of the form `<package>:<module>:<type>` to avoid type conflicts since it's being registered alongside other resources like the Bucket resource we're calling (`aws:s3:Bucket`).
 
 {{% choosable language python %}}
 
-That last call in the init, `self.register_outputs({})`, passes Pulumi the expected outputs so Pulumi can read the results of the creation or update of a component resource just like any other resource, so don't forget that call! You can [register default outputs using this call](/docs/intro/concepts/resources/components#registering-component-outputs), as well. It's not hard to imagine we will always want the bucket name for our use case, so we pass that in as an always-given output for our component resource.
+That last call in the init, `self.register_outputs({})`, passes Pulumi the expected outputs so Pulumi can read the results of the creation or update of a component resource just like any other resource, so don't forget that call! You can [register default outputs using this call](/docs/concepts/resources/components#registering-component-outputs), as well. It's not hard to imagine we will always want the bucket name for our use case, so we pass that in as an always-given output for our component resource.
 
 {{% /choosable %}}
 
 {{% choosable language typescript %}}
 
-That last call in the init, `this.registerOutputs({})`, passes Pulumi the expected outputs so Pulumi can read the results of the creation or update of a component resource just like any other resource, so don't forget that call! You can [register default outputs using this call](/docs/intro/concepts/resources/components#registering-component-outputs), as well. It's not hard to imagine we will always want the bucket name for our use case, so we pass that in as an always-given output for our component resource.
+That last call in the init, `this.registerOutputs({})`, passes Pulumi the expected outputs so Pulumi can read the results of the creation or update of a component resource just like any other resource, so don't forget that call! You can [register default outputs using this call](/docs/concepts/resources/components#registering-component-outputs), as well. It's not hard to imagine we will always want the bucket name for our use case, so we pass that in as an always-given output for our component resource.
 
 {{% /choosable %}}
 
@@ -185,6 +185,6 @@ There's a lot more to explore regarding this topic in Pulumi. We're working on m
 
 * [An AWS/Python example](https://github.com/pulumi/examples/tree/master/aws-py-wordpress-fargate-rds)
 * [An Azure/Python example](https://github.com/pulumi/examples/tree/master/classic-azure-py-webserver-component)
-* [A GCP/Python example](https://github.com/pulumi/examples/tree/master/gcp-py-network-component)
+* [A Google Cloud/Python example](https://github.com/pulumi/examples/tree/master/gcp-py-network-component)
 
 Go build new things, and watch this space for more learning experiences with Pulumi!

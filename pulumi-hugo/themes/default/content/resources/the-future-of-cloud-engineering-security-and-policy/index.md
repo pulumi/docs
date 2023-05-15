@@ -396,7 +396,7 @@ transcript: |
 
     **Johnathan Hunt**
 
-    Yeah. Two words, world domination. No, but for real though, honestly, the trend we're seeing all across the world, regardless of industry, regardless of professional personal space, is an aggregate like a complete solution and aggregated services. What do I see? I see AWS. I see GCP. I see Microsoft Azure. I see these companies adding more and more solutions to their platform. That's going to be a one-stop shop. Isn't that what we're trying to do? Many of us are trying to do with the product and services that we offer. Amazon started off as a bookstore and look where it's at today. That's what I see happening in the next 10 to 20 years, is just an increase in an already expansive set of service solutions and embed it into the hosting platform.
+    Yeah. Two words, world domination. No, but for real though, honestly, the trend we're seeing all across the world, regardless of industry, regardless of professional personal space, is an aggregate like a complete solution and aggregated services. What do I see? I see AWS. I see Google Cloud. I see Microsoft Azure. I see these companies adding more and more solutions to their platform. That's going to be a one-stop shop. Isn't that what we're trying to do? Many of us are trying to do with the product and services that we offer. Amazon started off as a bookstore and look where it's at today. That's what I see happening in the next 10 to 20 years, is just an increase in an already expansive set of service solutions and embed it into the hosting platform.
 
     **Eric Rudder**
 

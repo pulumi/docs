@@ -147,7 +147,7 @@ Learn more at [pulumi/pulumi#7062](https://github.com/pulumi/pulumi/issues/7062)
 
 ### Pulumi Packages: schema documentation and enhancements
 
-[Pulumi Packages](/docs/guides/pulumi-packages/), released at [PulumiUP earlier this year](/blog/pulumiup-pulumi-packages-multi-language-components/) enable cloud infrastructure resource provisioning to be defined once, in your language of choice, and made available to users in all Pulumi languages. A key part of Pulumi Packages is the Pulumi schema that defines each resource in a package.  We have now introduced new [documentation for Pulumi Package Schema](/docs/guides/pulumi-packages/).
+[Pulumi Packages](/docs/using-pulumi/pulumi-packages/), released at [PulumiUP earlier this year](/blog/pulumiup-pulumi-packages-multi-language-components/) enable cloud infrastructure resource provisioning to be defined once, in your language of choice, and made available to users in all Pulumi languages. A key part of Pulumi Packages is the Pulumi schema that defines each resource in a package.  We have now introduced new [documentation for Pulumi Package Schema](/docs/using-pulumi/pulumi-packages/).
 
 We've also updated the Pulumi Package schema to make it more powerful. For more complex Pulumi Package scenarios, you may want to be able to reference the types in one Pulumi Package from another Pulumi Package. Previously, this was only possible if you authored your Pulumi Package in Go; now, it's possible in all Pulumi Languages.
 
@@ -163,9 +163,9 @@ Previously, you could accept an invitation to join an organization even if you d
 
 ### Self-Hosted Pulumi Service now supports Azure services and Minio storage
 
-The [Self-Hosted Pulumi Service](/docs/guides/self-hosted/), which brings the full power of the Pulumi Service into your own environment, can now be deployed in a few new ways:
+The [Self-Hosted Pulumi Service](/docs/pulumi-cloud/self-hosted/), which brings the full power of the Pulumi Service into your own environment, can now be deployed in a few new ways:
 
 - In Microsoft Azure, using [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) for state storage and [Azure Key Vault](https://azure.microsoft.com/en-us/services/key-vault/) for secret storage
 - Using [Minio](https://min.io/) for state storage
 
-Learn more about how to configure these options in the [Pulumi API setup guide](/docs/guides/self-hosted/components/api/).
+Learn more about how to configure these options in the [Pulumi API setup guide](/docs/pulumi-cloud/self-hosted/components/api/).

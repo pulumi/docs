@@ -7,7 +7,7 @@ authors: ["vova-ivanov"]
 tags: ["aws", "typescript", "containers", "docker"]
 ---
 
-In this blog post, we will explore PERN stack applications and deploy one to AWS. *PERN* is an acronym for PostgreSQL, Express, React, and Node. A PERN stack application is a project that uses PostgreSQL, Express as an application framework, React as a user interface framework, and runs on Node. We will also use [Pulumi Crosswalk](/docs/guides/crosswalk/aws/) to reduce the amount of code and provide a quick and straightforward path for deploying the application.
+In this blog post, we will explore PERN stack applications and deploy one to AWS. *PERN* is an acronym for PostgreSQL, Express, React, and Node. A PERN stack application is a project that uses PostgreSQL, Express as an application framework, React as a user interface framework, and runs on Node. We will also use [Pulumi Crosswalk](/docs/clouds/aws/guides/) to reduce the amount of code and provide a quick and straightforward path for deploying the application.
 
 <!--more-->
 

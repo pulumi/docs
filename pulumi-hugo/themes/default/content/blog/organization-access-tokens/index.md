@@ -44,7 +44,7 @@ See below what the experience looks like in the Pulumi Service:
 
 ![Gif of tokens navigation](nav-org-tokens.gif)
 
-Users can now create an Organization Access Token in the Pulumi Service, give it a unique human-readable name (i.e. jenkins-ci-dev) and then use it to gain access to their Pulumi Service Organization. Only Organization Admins can create and manage Organization Access Tokens. As a security consideration for our customers, Organization Access Tokens cannot create other Organization Access Tokens. When a token is created they are provided a one-time token value. These tokens can only be deleted as an explicit action, either by clicking a button in the console or calling an API to delete the token. Creating or deleting an Organization Access Token will be logged as an event in the [Audit Logs](/docs/intro/pulumi-cloud/audit-logs/).
+Users can now create an Organization Access Token in the Pulumi Service, give it a unique human-readable name (i.e. jenkins-ci-dev) and then use it to gain access to their Pulumi Service Organization. Only Organization Admins can create and manage Organization Access Tokens. As a security consideration for our customers, Organization Access Tokens cannot create other Organization Access Tokens. When a token is created they are provided a one-time token value. These tokens can only be deleted as an explicit action, either by clicking a button in the console or calling an API to delete the token. Creating or deleting an Organization Access Token will be logged as an event in the [Audit Logs](/docs/pulumi-cloud/audit-logs/).
 
 To determine which actions have been taken by which Organization Access Tokens, and to give greater clarity into specifically which tokens are conducting what operations, we have expanded Audit Log events to include information about the Organization Access Token that took the action. As an organization can have multiple Organization Access Tokens, this is a necessary step to ensure that accurate auditing can be done in the event that a token is compromised or is being used maliciously.
 
@@ -52,7 +52,7 @@ See below how Organization Access Tokens appears in Audit Logs:
 
 ![Gif of tokens in Audit Logs](audit-logs-org-tokens.gif)
 
-Learn more about using this feature in our [Access Token documentation](/docs/intro/pulumi-cloud/organization-access-tokens/).
+Learn more about using this feature in our [Access Token documentation](/docs/pulumi-cloud/access-management/organization-access-tokens/).
 
 Let's explore how one of our customers is adopting Organization Access Tokens in the Pulumi Service. [Fauna](https://fauna.com/), a Pulumi customer, is a distributed document relational database, delivered as a Cloud API. A native serverless architecture means no operations are required. Developers choose Fauna to build new applications faster and confidently scale existing ones across regions and the globe.
 

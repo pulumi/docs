@@ -18,7 +18,7 @@ That's why we also added support for "Cloud Secret Providers," giving users full
 
 <!--more-->
 
-Pulumi supports encryption via the [Pulumi service](/docs/intro/concepts/secrets#configuring-secrets-encryption), [AWS KMS](https://aws.amazon.com/kms/), [Azure KeyVault](https://azure.microsoft.com/en-us/services/key-vault/), [Google Cloud KMS](https://cloud.google.com/kms) and [HashiCorp Vault](https://www.vaultproject.io/). This post shows you _one_ example of using a cloud secret provider in a Pulumi stack using AWS KMS.
+Pulumi supports encryption via the [Pulumi service](/docs/concepts/secrets#configuring-secrets-encryption), [AWS KMS](https://aws.amazon.com/kms/), [Azure KeyVault](https://azure.microsoft.com/en-us/services/key-vault/), [Google Cloud KMS](https://cloud.google.com/kms) and [HashiCorp Vault](https://www.vaultproject.io/). This post shows you _one_ example of using a cloud secret provider in a Pulumi stack using AWS KMS.
 
 ## Create a KMS Key
 
@@ -846,6 +846,6 @@ The result should look like this:
 
 ## Wrap up
 
-This example showed how to use client-side encryption with AWS KMS. Pulumi, as mentioned before, has support for Azure KeyVault, Google Cloud KMS, and HashiCorp Vault for storing your keys. You can find examples of how to use these encryption methods in our [examples repo](https://github.com/pulumi/examples/tree/master/secrets-provider) and take a look at our [secrets provider documentation](/docs/intro/concepts/config#available-encryption-providers).
+This example showed how to use client-side encryption with AWS KMS. Pulumi, as mentioned before, has support for Azure KeyVault, Google Cloud KMS, and HashiCorp Vault for storing your keys. You can find examples of how to use these encryption methods in our [examples repo](https://github.com/pulumi/examples/tree/master/secrets-provider) and take a look at our [secrets provider documentation](/docs/concepts/config#available-encryption-providers).
 
 We hope your next compliance audit is more relaxed with this feature available!

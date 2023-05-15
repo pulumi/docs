@@ -43,8 +43,8 @@ code as an included class.
 ## Running the App
 
 Follow the steps in
-[Pulumi Installation and Setup](/docs/get-started/install/) and
-[Configuring Pulumi Kubernetes](/docs/get-started/kubernetes/)
+[Pulumi Installation and Setup](/docs/install/) and
+[Configuring Pulumi Kubernetes](/docs/clouds/kubernetes/get-started/)
 to get setup with Pulumi and Kubernetes.
 
 > *Note*: The code in this repo assumes you are deploying to a cluster

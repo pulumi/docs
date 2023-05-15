@@ -10,7 +10,7 @@ event_date: 2023-06-15T08:00:00-07:00
 
 templates:
     items:
-        - heading: Serverless AWS, Azure and GCP Templates
+        - heading: Serverless AWS, Azure and Google Cloud Templates
           description: Deploy serverless applications on AWS, Azure, or Google Cloud Platform.
           image: /images/kubecon/templates-serverless-application.png
           action: Try it

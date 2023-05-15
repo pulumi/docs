@@ -71,7 +71,7 @@ Pulumi also simplified how they manage Kubernetes deployments. It gave them a st
 
 #### Building Reusable Cloud Infrastructure
 
-Next, Jacob’s team built a set of [reusable Pulumi components](/docs/intro/concepts/resources/#components) in Go which developers could use to build and deploy new services without having to think about infrastructure configurations. Components abstract away infrastructure complexity, making them easy to consume. For example, Jacob’s team built a component in 8 lines of code representing a service with around 100 resources configured with best practices. When using the component, developers only needed to input a name for the service, the environment they’re running in, and a few other settings.
+Next, Jacob’s team built a set of [reusable Pulumi components](/docs/concepts/resources/#components) in Go which developers could use to build and deploy new services without having to think about infrastructure configurations. Components abstract away infrastructure complexity, making them easy to consume. For example, Jacob’s team built a component in 8 lines of code representing a service with around 100 resources configured with best practices. When using the component, developers only needed to input a name for the service, the environment they’re running in, and a few other settings.
 
 #### Empowering Developers to Self-Service with Infrastructure
 

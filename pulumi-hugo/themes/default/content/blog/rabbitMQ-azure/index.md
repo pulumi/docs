@@ -42,7 +42,7 @@ As we will be using Pulumi for .NET to deploy to Azure, we will need the followi
 
 - Azure CLI: installation guide is available [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest).
 - .N ET Core SDK: download is available [here](https://dotnet.microsoft.com/download).
-- Pulumi: installation guide is available [here](https://www.pulumi.com/docs/get-started/install/).
+- Pulumi: installation guide is available [here](https://www.pulumi.com/docs/install/).
 
 ## Example Repository
 

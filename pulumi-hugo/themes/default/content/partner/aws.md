@@ -11,9 +11,9 @@ hero:
         Pulumi’s [infrastructure as code](/what-is/what-is-infrastructure-as-code/)
         SDK enables you to build, deploy, and manage your AWS infrastructure faster
         and with more confidence, using modern programming languages and software engineering
-        practices. Leverage the full expressivity of general-purpose languages ([TypeScript/JavaScript](/docs/intro/languages/javascript/),
-        [Python](/docs/intro/languages/python/), [Go](/docs/intro/languages/go/), [C#](/docs/intro/languages/dotnet/), [Java](/docs/intro/languages/java/)
-        or use markup languages (e.g., [YAML](/docs/intro/languages/yaml/), CUE) to build any cloud architecture including containers, serverless, and server-based.
+        practices. Leverage the full expressivity of general-purpose languages ([TypeScript/JavaScript](/docs/languages-sdks/javascript/),
+        [Python](/docs/languages-sdks/python/), [Go](/docs/languages-sdks/go/), [C#](/docs/languages-sdks/dotnet/), [Java](/docs/languages-sdks/java/)
+        or use markup languages (e.g., [YAML](/docs/languages-sdks/yaml/), CUE) to build any cloud architecture including containers, serverless, and server-based.
 
 awsx:
     yaml: |
@@ -158,6 +158,6 @@ contact_us_form:
         name_title: Site Reliability Engineer, Cockroach Labs
         content: |
             We are building a distributed-database-as-a-service product that runs on Kubernetes clusters across
-            multiple public clouds including GCP, AWS and others. Pulumi's declarative model, the support for real
+            multiple public clouds including Google Cloud, AWS and others. Pulumi's declarative model, the support for real
             programming languages, and the uniform workflow on any cloud make our SRE team much more efficient.
 ---

@@ -55,7 +55,7 @@ enterprise application to cloud-native infrastructure, or delivering a
 new service as part of an established cloud application, Crosswalk for
 AWS provides the easiest way to get from zero to production, and to then
 evolve with your projects' needs. You can
-[get started with Crosswalk for AWS](/docs/guides/crosswalk/aws/) today!
+[get started with Crosswalk for AWS](/docs/clouds/aws/guides/) today!
 
 > *Note:* Crosswalk for AWS projects are authored using the Pulumi
 > infrastructure-as-code tools. Pulumi allows you to define your
@@ -95,10 +95,10 @@ By building on top of great AWS building blocks like Lambda, API
 Gateway, IAM and more, we avoid needing to worry about infrastructure,
 pay nearly zero fixed costs, and gain the ability to iterate quickly.
 With just a few more lines of code, we can
-[wire up to our own domain](/docs/guides/crosswalk/aws/api-gateway#configuring-api-gateway-custom-domains-and-ssl-using-route53-and-acm),
-[add authorization](/docs/guides/crosswalk/aws/api-gateway#controlling-and-managing-access-to-apis),
+[wire up to our own domain](/docs/clouds/aws/guides/api-gateway#configuring-api-gateway-custom-domains-and-ssl-using-route53-and-acm),
+[add authorization](/docs/clouds/aws/guides/api-gateway#controlling-and-managing-access-to-apis),
 [provision a database](/registry/packages/aws/api-docs/dynamodb/table/),
-or [chain together a more complex event-driven application](/docs/guides/crosswalk/aws/lambda#available-aws-services-with-event-sources).
+or [chain together a more complex event-driven application](/docs/clouds/aws/guides/lambda#available-aws-services-with-event-sources).
 
 ### Containers (ECS, Fargate)
 
@@ -136,9 +136,9 @@ export const url = web.endpoint.hostname;
 Using ECS, Fargate, ECR and ELB, we get a robust production-ready
 container deployment - horizontally scaled out, load-balanced, and
 integrated with a private image repository. With just a few more lines
-of code, we can [add autoscaling](/docs/guides/crosswalk/aws/ecs#creating-an-auto-scaling-group-for-ecs-cluster-instances),
-[customize our ECS cluster](/docs/guides/crosswalk/aws/ecs#explicitly-creating-ecs-clusters-for-ec2-or-fargate),
-or [wire through advanced container configuration](/docs/guides/crosswalk/aws/ecs#ecs-tasks-containers-and-services)
+of code, we can [add autoscaling](/docs/clouds/aws/guides/ecs#creating-an-auto-scaling-group-for-ecs-cluster-instances),
+[customize our ECS cluster](/docs/clouds/aws/guides/ecs#explicitly-creating-ecs-clusters-for-ec2-or-fargate),
+or [wire through advanced container configuration](/docs/clouds/aws/guides/ecs#ecs-tasks-containers-and-services)
 (volumes, environment variables, and more).
 
 ### Networking (VPC)
@@ -167,9 +167,9 @@ design patterns based on [AWS guidance and documentation](https://docs.aws.amazo
 By building in simple defaults for routing, subnet structure, NATs and
 multi-AZ you can get started quickly without having to re-discover these
 best practices. And as your needs grow, you can deeply customize and
-evolve your VPC structure - [defining custom CIDR blocks](/docs/guides/crosswalk/aws/vpc#configuring-cidr-blocks-for-a-vpc),
-[customizing Internet and NAT Gateways](/docs/guides/crosswalk/aws/vpc#configuring-internet-and-nat-gateways-for-subnets-in-a-vpc)
-or [additional additional private subnets](/docs/guides/crosswalk/aws/vpc#configuring-subnets-for-a-vpc).
+evolve your VPC structure - [defining custom CIDR blocks](/docs/clouds/aws/guides/vpc#configuring-cidr-blocks-for-a-vpc),
+[customizing Internet and NAT Gateways](/docs/clouds/aws/guides/vpc#configuring-internet-and-nat-gateways-for-subnets-in-a-vpc)
+or [additional additional private subnets](/docs/clouds/aws/guides/vpc#configuring-subnets-for-a-vpc).
 
 ### Kubernetes (EKS)
 
@@ -203,9 +203,9 @@ export const kubeconfig = cluster.kubeconfig;
 Building on EKS we get all the benefits of managed Kubernetes paired
 with the platform capabilities of AWS. With Crosswalk for AWS, we can
 get started quickly, and then evolve to take advantage of all of these
-platform features, like [customized node groups](/docs/guides/crosswalk/aws/eks#configuring-your-eks-cluster-s-worker-nodes-and-node-groups),
-[private networking](/docs/guides/crosswalk/aws/eks#configuring-your-eks-cluster-s-networking),
-and even [deploying Kubernetes YAML and Helm charts](/docs/guides/crosswalk/aws/eks#deploying-existing-kubernetes-yaml-config-to-your-eks-cluster)
+platform features, like [customized node groups](/docs/clouds/aws/guides/eks#configuring-your-eks-cluster-s-worker-nodes-and-node-groups),
+[private networking](/docs/clouds/aws/guides/eks#configuring-your-eks-cluster-s-networking),
+and even [deploying Kubernetes YAML and Helm charts](/docs/clouds/aws/guides/eks#deploying-existing-kubernetes-yaml-config-to-your-eks-cluster)
 to our cluster.
 
 ### Monitoring (CloudWatch)
@@ -244,9 +244,9 @@ export const dashboardUrl =
 With CloudWatch being deeply integrated into all AWS services, we can
 easily build up robust logging, alerting and dashboarding solutions
 across our AWS infrastructure. With just a few more lines of code we can
-[get logs for our functions and containers](/docs/guides/crosswalk/aws/cloudwatch#configuring-cloudwatch-logging),
-[create alarms when we cross critical thresholds](/docs/guides/crosswalk/aws/cloudwatch#creating-cloudwatch-alarms),
-and [create rich dashboard layouts](/docs/guides/crosswalk/aws/cloudwatch#defining-cloudwatch-dashboards-in-code)
+[get logs for our functions and containers](/docs/clouds/aws/guides/cloudwatch#configuring-cloudwatch-logging),
+[create alarms when we cross critical thresholds](/docs/clouds/aws/guides/cloudwatch#creating-cloudwatch-alarms),
+and [create rich dashboard layouts](/docs/clouds/aws/guides/cloudwatch#defining-cloudwatch-dashboards-in-code)
 all of which will version along with our infrastructure!
 
 ## Early Feedback

@@ -95,7 +95,7 @@ src="/images/case-studies/bitbucket-cloud-diagram.png" alt="Bitbucket Cloud and 
 
 ### Using the Automation API
 
-The [Pulumi Automation API](/docs/guides/automation-api/) exposes the full power of infrastructure as code through a programmatic interface instead of CLI commands. It exposes Pulumi programs and stacks as strongly-typed and composable building blocks, enabling developers to automate deployments directly from their code at run-time. (A Pulumi program, which is written in your chosen programming language, describes how your cloud infrastructure should be composed.)
+The [Pulumi Automation API](/docs/using-pulumi/automation-api/) exposes the full power of infrastructure as code through a programmatic interface instead of CLI commands. It exposes Pulumi programs and stacks as strongly-typed and composable building blocks, enabling developers to automate deployments directly from their code at run-time. (A Pulumi program, which is written in your chosen programming language, describes how your cloud infrastructure should be composed.)
 
 Mike and the rest of the DevSpeed team have found many creative ways to use the Automation API to make changes to their infrastructure easily. One example is that they wanted to update the address of their primary database across all developer environments, which were using a raw address from AWS. Instead, they wanted to update the addresses with something more readable. They used the Automation API to write Python code that would automatically select every running instance and make the change. Next, Mike’s team is looking to use Automation API to automatically deploy and run Bitbucket developer environments as a full integration test.
 

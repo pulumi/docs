@@ -36,7 +36,7 @@ You can also [get started][get-started] with Pulumi and create a new [managed Ku
 [aws-eks]: https://aws.amazon.com/eks/
 [gcp-gke]: https://cloud.google.com/kubernetes-engine/
 [azure-aks]: https://azure.microsoft.com/en-us/services/kubernetes-service/
-[get-started]: https://www.pulumi.com/docs/get-started/kubernetes/
+[get-started]: https://www.pulumi.com/docs/clouds/kubernetes/get-started/
 [k8s-ext-pattern]: https://kubernetes.io/docs/concepts/extend-kubernetes/operator/
 [deploy-op]: https://github.com/pulumi/pulumi-kubernetes-operator#deploy-the-operator/
 
@@ -89,7 +89,7 @@ The `Stack` [CustomResourceDefinition (CRD)][k8s-crd] encapsulates an existing P
 infrastructure project in a Git repo, a specific commit SHA to deploy, and any
 additional settings to control the Pulumi update run.
 
-These settings include your [Pulumi API access token](/docs/intro/pulumi-cloud/accounts#access-tokens), environment variables,
+These settings include your [Pulumi API access token](/docs/pulumi-cloud/accounts#access-tokens), environment variables,
 config and secrets, and lifecycle controls for the update.
 
 ### Deploying an NGINX Stack on Kubernetes
@@ -653,7 +653,7 @@ containers, serverless, and Kubernetes across cloud providers and cloud native s
 Check out the [GitHub repo][pulumi-k8s-op] to experiment deploying the operator
 and some test Stacks.
 
-Learn more about how [Pulumi works with Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/), and [Get Started](https://www.pulumi.com/docs/get-started/kubernetes/) if you're new.
+Learn more about how [Pulumi works with Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/), and [Get Started](https://www.pulumi.com/docs/clouds/kubernetes/get-started/) if you're new.
 
 You can help to shape this experience directly by
 providing feedback on [GitHub](https://github.com/pulumi/pulumi-kubernetes-operator/). We love to hear from our users!
@@ -666,6 +666,6 @@ with users and the Pulumi team.
 [pulumi-k8s-nginx]: https://github.com/pulumi/examples/tree/master/kubernetes-ts-nginx/
 [pulumi-aws-eks]: https://github.com/metral/pulumi-aws-eks/
 [p-examples]: https://github.com/pulumi/examples/
-[stack]: /docs/intro/concepts/stack/
-[pulumi-config]: /docs/intro/concepts/config/
+[stack]: /docs/concepts/stack/
+[pulumi-config]: /docs/concepts/config/
 [pulumi-providers]: /registry/

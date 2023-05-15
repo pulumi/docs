@@ -88,7 +88,7 @@ registry.
 - Because the ECR registry ID is only known once the actual repository
   is provisioned in the cloud, the registryId property of the
   ecr.Repository resource has the type `Output<string>` rather than
-  string (see [Inputs and Outputs](https://www.pulumi.com/docs/intro/concepts/inputs-outputs/)).
+  string (see [Inputs and Outputs](https://www.pulumi.com/docs/concepts/inputs-outputs/)).
 
 In the code below, note how `getCredentialsOutput` now accepts
 `appRepo.registryId` directly:

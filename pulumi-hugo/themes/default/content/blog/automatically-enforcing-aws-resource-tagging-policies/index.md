@@ -739,8 +739,8 @@ In this post, we've seen some ways to enforce AWS tagging best practices. This i
 
 Check out these resources to get started with Pulumi's open source platform:
 
-* [AWS getting started guide](/docs/get-started/aws/)
-* [Policy as Code getting started guide](/docs/guides/crossguard/get-started/)
+* [AWS getting started guide](/docs/clouds/aws/get-started/)
+* [Policy as Code getting started guide](/docs/using-pulumi/crossguard/get-started/)
 * [Full example code used in this post](https://github.com/joeduffy/aws-tags-example)
 
 Good luck making sure your team's resources are tagged early and often with less manual effort!

@@ -17,7 +17,7 @@ tags:
 
 ---
 
-Using Pulumi is more than just writing code and components. In addition to common software development practices, there are also a number of success patterns related to how your company or team builds and deploys Pulumi programs to successfully build, deploy, and manage your infrastructure and applications. In this continuation of a series, I will explore one of these patterns - using the Pulumi [Automation API](https://www.pulumi.com/docs/guides/automation-api/) to create a developer portal.
+Using Pulumi is more than just writing code and components. In addition to common software development practices, there are also a number of success patterns related to how your company or team builds and deploys Pulumi programs to successfully build, deploy, and manage your infrastructure and applications. In this continuation of a series, I will explore one of these patterns - using the Pulumi [Automation API](https://www.pulumi.com/docs/using-pulumi/automation-api/) to create a developer portal.
 
 <!--more-->
 

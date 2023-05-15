@@ -31,7 +31,7 @@ The Kubernetes Application template creates an infrastructure as code project in
 
 ## Using this template
 
-To use this template to deploy a web application to a Kubernetes cluster, make sure you've already provisioned a [Kubernetes cluster](/templates/kubernetes), [installed Pulumi](/docs/get-started/install) and [`kubectl`](https://kubernetes.io/docs/tasks/tools/install-kubectl/), and [configured your kubeconfig file](/registry/packages/kubernetes/installation-configuration#setup). Then create a new [project](/docs/intro/concepts/project) using the template in your language of choice:
+To use this template to deploy a web application to a Kubernetes cluster, make sure you've already provisioned a [Kubernetes cluster](/templates/kubernetes), [installed Pulumi](/docs/install/) and [`kubectl`](https://kubernetes.io/docs/tasks/tools/install-kubectl/), and [configured your kubeconfig file](/registry/packages/kubernetes/installation-configuration#setup). Then create a new [project](/docs/concepts/projects/) using the template in your language of choice:
 
 {{< templates/pulumi-new >}}
 
@@ -39,13 +39,13 @@ Follow the prompts to complete the new-project wizard. When it's done, you'll ha
 
 ## Deploying the project
 
-The template requires no additional configuration. By default, it will install Nginx. Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/reference/cli/pulumi_up):
+The template requires no additional configuration. By default, it will install Nginx. Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/cli/commands/pulumi_up):
 
 ```bash
 $ pulumi up
 ```
 
-When the deployment completes, Pulumi exports the following [stack output](/docs/intro/concepts/stack#outputs) values:
+When the deployment completes, Pulumi exports the following [stack output](/docs/concepts/stack#outputs) values:
 
 deploymentName
 : The name of your new Kubernetes Deployment.
@@ -57,7 +57,7 @@ Output values like these are useful in many ways, most commonly as inputs for ot
 
 ## Customizing the project
 
-Projects created with the Kubernetes Application template expose the following [configuration](/docs/intro/concepts/config) settings:
+Projects created with the Kubernetes Application template expose the following [configuration](/docs/concepts/config) settings:
 
 namespace
 : The name of the namespace to be created in your existing cluster. Defaults to `default`.
@@ -65,7 +65,7 @@ namespace
 replicas
 : The number of replicated Pods to be created in your new Deployment. Defaults to `1`.
 
-All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/reference/cli/pulumi_config_set) as shown below.
+All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/cli/commands/pulumi_config_set) as shown below.
 
 ```bash
 $ pulumi config set someProp ../some/value
@@ -74,7 +74,7 @@ $ pulumi up
 
 ## Tidying up
 
-You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/reference/cli/pulumi_destroy):
+You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/cli/commands/pulumi_destroy):
 
 ```bash
 $ pulumi destroy

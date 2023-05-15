@@ -185,7 +185,7 @@ workshops:
       link: /resources/simpler-pulumi-package-authoring
       link_text: View Recording
       description: |
-        Explore how to start sharing Pulumi code with others. Use Go to build a custom architecture for GCP that we’ll compile down into a shareable library.
+        Explore how to start sharing Pulumi code with others. Use Go to build a custom architecture for Google Cloud that we’ll compile down into a shareable library.
 
     - title: "Securing Deployments with Policy as Code"
       link: /resources/securing-deployments-policy-as-code

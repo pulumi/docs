@@ -49,7 +49,7 @@ While the idea around components for different use-cases certainly sounded inter
 
 ### 2. Using YAML Instead of Code
 
-At Webiny, we believe [cloud engineering](https://www.pulumi.com/cloud-engineering/) and infrastructure-as-code is the future, so, naturally, we wanted our users to use familiar code (ideally TypeScript) and development tools to define their cloud infrastructure. Within Serverless Components, the components are configured via YAML files, of which we were never really big fans, simply because of the fact that writing code instead of configurations gives more flexibility to developers.
+At Webiny, we believe [cloud engineering](/cloud-engineering/) and infrastructure-as-code is the future, so, naturally, we wanted our users to use familiar code (ideally TypeScript) and development tools to define their cloud infrastructure. Within Serverless Components, the components are configured via YAML files, of which we were never really big fans, simply because of the fact that writing code instead of configurations gives more flexibility to developers.
 
 ### 3. Vendor Lock-In
 
@@ -74,8 +74,8 @@ The key features that we were looking for were the following:
 So, the search began, and soon enough, we discovered Pulumi. And as it turned out, it not only checked all the boxes we had initially listed but much more:
 
 - different options when it comes to storing cloud infrastructure state files: a managed SaaS ([pulumi.com](https://app.pulumi.com/signin)) with a console and self-hosted, (for example [Amazon S3](https://aws.amazon.com/s3/))
-- ability to deploy cloud infrastructure into multiple environments using its concept of [stacks](https://www.pulumi.com/docs/intro/concepts/stack/)
-- advanced features like [Policy as Code](https://www.pulumi.com/docs/guides/crossguard/get-started/) and [watch mode](https://www.pulumi.com/docs/reference/cli/pulumi_watch/)
+- ability to deploy cloud infrastructure into multiple environments using its concept of [stacks](/docs/concepts/stack/)
+- advanced features like [Policy as Code](/docs/using-pulumi/crossguard/get-started/) and [watch mode](/docs/cli/commands/pulumi_watch/)
 - great documentation
 - a vibrant community of developers and a responsive team behind the product
 
@@ -109,17 +109,17 @@ As an example, a default Webiny project includes three project applications:
 
 If we were to compare these by the complexity of the necessary cloud infrastructure to deploy, the Admin Area is the simplest. It only relies on a single [Amazon S3](https://aws.amazon.com/s3/) bucket and an [Amazon Cloudfront](https://aws.amazon.com/cloudfront/) distribution. On the other hand, the API project application is the most complex one as it needs to deploy multiple [AWS Lambda](https://aws.amazon.com/lambda/) functions, [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) tables, Amazon S3 buckets, and more.
 
-Ultimately, we decided that each project application should be a [Pulumi project](https://www.pulumi.com/docs/intro/concepts/project/#projects). With this approach, we gave developers the ability to both define and deploy respective cloud infrastructures independently. And, with the concept of [stacks](https://www.pulumi.com/docs/intro/concepts/stack/), they are also able to deploy them into multiple environments, which we’ll show in a moment.
+Ultimately, we decided that each project application should be a [Pulumi project](/docs/concepts/projects/#projects). With this approach, we gave developers the ability to both define and deploy respective cloud infrastructures independently. And, with the concept of [stacks](/docs/concepts/stack/), they are also able to deploy them into multiple environments, which we’ll show in a moment.
 
 ### Pulumi CLI and Webiny CLI
 
-Once we understood how to use Pulumi concepts with Webiny's project organization, the next step was integrating the [Pulumi CLI](https://www.pulumi.com/docs/reference/cli/) with the [Webiny CLI](https://www.webiny.com/docs/key-topics/webiny-cli?utm_source=Pulumi&utm_medium=blog-post&utm_campaign=webiny-blog-promotion&utm_content=how-webiny-built-framework-with-pulumi&utm_term=W00650).
+Once we understood how to use Pulumi concepts with Webiny's project organization, the next step was integrating the [Pulumi CLI](/docs/cli/) with the [Webiny CLI](https://www.webiny.com/docs/key-topics/webiny-cli?utm_source=Pulumi&utm_medium=blog-post&utm_campaign=webiny-blog-promotion&utm_content=how-webiny-built-framework-with-pulumi&utm_term=W00650).
 
 And although the Pulumi CLI is great, we still wanted to keep it super simple for the user and make the overall developer experience as straightforward and unified as possible. For starters, we didn’t want our users to install the Pulumi CLI manually. We wanted it to happen automatically.
 
 We’ve created our version of the [Pulumi SDK](https://github.com/webiny/webiny-js/tree/v5.28.0/packages/pulumi-sdk), which lets us use the Pulumi CLI more programmatically. It also enables us to make the Pulumi CLI download experience as smooth as possible. Essentially, whenever a user runs a deployment-related command, all of the necessary Pulumi CLI binaries and plugins are downloaded and stored inside the project’s node_modules folder.
 
-> Although we could’ve saved us some time by using Pulumi’s [Automation API](https://www.pulumi.com/docs/guides/automation-api/) (instead of creating the mentioned Pulumi SDK), at the time, the Automation API was still in preview and not generally available. And since the setup we already had was working well, we decided to keep it and hopefully revisit the Automation API integration in the future.
+> Although we could’ve saved us some time by using Pulumi’s [Automation API](/docs/using-pulumi/automation-api/) (instead of creating the mentioned Pulumi SDK), at the time, the Automation API was still in preview and not generally available. And since the setup we already had was working well, we decided to keep it and hopefully revisit the Automation API integration in the future.
 
 Once we had that in place, we were ready for the next step, exposing a couple of fundamental deployment-related commands via the Webiny CLI. The following examples show us some of the commands users can use:
 
@@ -145,9 +145,9 @@ Note the `--env` argument appended to each command. With it and Pulumi’s conce
 
 The last piece of the puzzle was storing cloud infrastructure state files. Here we went with the following approach.
 
-For local development, users’ cloud infrastructure state files are stored locally within their Webiny project using the [Local Filesystem Backend](https://www.pulumi.com/docs/intro/concepts/state/#logging-into-the-local-filesystem-backend), which we’ve seen worked great for developers.
+For local development, users’ cloud infrastructure state files are stored locally within their Webiny project using the [Local Filesystem Backend](/docs/concepts/state/#logging-into-the-local-filesystem-backend), which we’ve seen worked great for developers.
 
-On the other hand, for ephemeral environments spawned in CI/CD or long-lived environments like staging or production, through our [documentation](https://www.webiny.com/docs/key-topics/ci-cd/cloud-infrastructure-state-files#using-different-backends), we advise our users to use centralized and remote storage by using backends like [Amazon S3](https://www.pulumi.com/docs/intro/concepts/state/#aws-s3) and even [Pulumi Service (pulumi.com)](https://www.pulumi.com/docs/intro/concepts/state/#logging-into-the-pulumi-service-backend). Both backends have their pros and cons, and we let the users choose the one they want to use.
+On the other hand, for ephemeral environments spawned in CI/CD or long-lived environments like staging or production, through our [documentation](https://www.webiny.com/docs/key-topics/ci-cd/cloud-infrastructure-state-files#using-different-backends), we advise our users to use centralized and remote storage by using backends like [Amazon S3](/docs/concepts/state/#aws-s3) and even [Pulumi Cloud (pulumi.com)](/docs/concepts/state/#logging-into-the-pulumi-service-backend). Both backends have their pros and cons, and we let the users choose the one they want to use.
 
 ## Show Me the Code
 
@@ -192,7 +192,7 @@ Furthermore, if we opened each of these `pulumi` folders, we’d see different c
 
 This code organization makes it much easier for developers to grasp the overall cloud infrastructure. It also makes it easier for them to adjust the code to their needs eventually.
 
-A more complex example is the cloud infrastructure code in the API project application ([`api/pulumi`](https://github.com/webiny/webiny-js/tree/v5.28.0/packages/cwp-template-aws/template/common/api)), which deploys many different cloud infrastructure resources, like [AWS Lambda functions](https://www.pulumi.com/docs/reference/pkg/aws/lambda/), [DynamoDB tables](https://www.pulumi.com/docs/reference/pkg/aws/dynamodb/), [ElasticSearch clusters](https://www.pulumi.com/docs/reference/pkg/aws/elasticsearch/), [VPCs](https://www.pulumi.com/docs/reference/pkg/aws/ec2/), and more.
+A more complex example is the cloud infrastructure code in the API project application ([`api/pulumi`](https://github.com/webiny/webiny-js/tree/v5.28.0/packages/cwp-template-aws/template/common/api)), which deploys many different cloud infrastructure resources, like [AWS Lambda functions](/docs/reference/pkg/aws/lambda/), [DynamoDB tables](/docs/reference/pkg/aws/dynamodb/), [ElasticSearch clusters](/docs/reference/pkg/aws/elasticsearch/), [VPCs](/docs/reference/pkg/aws/ec2/), and more.
 
 But I will leave this up to you to check out, as pasting multiple chunks of code here might not be that productive.
 
@@ -235,7 +235,7 @@ export = async () => {
 
 Another useful feature is the automatic tagging of the deployed cloud infrastructure resources. In other words, every *taggable* cloud infrastructure resource will be tagged with `WbyProjectName` and `WbyEnvironment` tags. For developers, this makes it much easier to see all of the deployed resources within their Webiny project.
 
-We created a `tagResources` function, which essentially registers a global stack transformation via [`pulumi.runtime.registerStackTransformation`](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#registerStackTransformation) function to achieve this.
+We created a `tagResources` function, which essentially registers a global stack transformation via [`pulumi.runtime.registerStackTransformation`](/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#registerStackTransformation) function to achieve this.
 
 It is also applied in the same [`index.ts`](https://github.com/webiny/webiny-js/blob/v5.28.0/packages/cwp-template-aws/template/common/apps/admin/pulumi/index.ts#L6-L11) entrypoint file we saw in the previous section:
 
@@ -255,7 +255,7 @@ export = async () => {
 
 #### Protect Feature
 
-Finally, to protect our users from accidental deletions of mission-critical cloud infrastructure resources, we’ve used Pulumi’s [protect](https://www.pulumi.com/docs/intro/concepts/resources/#protect) feature:
+Finally, to protect our users from accidental deletions of mission-critical cloud infrastructure resources, we’ve used Pulumi’s [protect](/docs/concepts/resources/#protect) feature:
 
 > The protect option marks a resource as protected. A protected resource cannot be deleted directly. Instead, you must first set `protect: false` and run `pulumi up`. Then you can delete the resource by removing the line of code or by running `pulumi destroy`. The default is to inherit this value from the parent resource and `false` for resources without a parent.
 
@@ -269,7 +269,7 @@ Webiny aims to be a multi-cloud compatible solution, and this is something Pulum
 
 With that, we would also like to create various project templates, which would, for example, enable users to quickly start working on a new GraphQL or REST HTTP API, a simple React application, a microservice, and more. All of these require specific cloud infrastructure resources to be deployed, and again, this is where Pulumi will make our users' lives much easier.
 
-Finally, I already mentioned the [Automation API](https://www.pulumi.com/automation/) as something that we might look into in the future, as it seems it’s something that can be seamlessly integrated with Webiny.
+Finally, I already mentioned the [Automation API](/automation/) as something that we might look into in the future, as it seems it’s something that can be seamlessly integrated with Webiny.
 
 ## Conclusion
 

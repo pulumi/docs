@@ -29,7 +29,7 @@ main:
     supports 100% of Azure capabilities?
 
 
-    In this workshop, the Pulumi team will show you how to define, deploy and manage Azure resources using Infrastructure as Code through a series of hands-on labs. The techniques work for any cloud -- Azure, AWS, and GCP. You'll be able to leverage your favorite languages including Python, Go, JavaScript, TypeScript, and C# instead of YAML or domain-specific languages.
+    In this workshop, the Pulumi team will show you how to define, deploy and manage Azure resources using Infrastructure as Code through a series of hands-on labs. The techniques work for any cloud -- Azure, AWS, and Google Cloud. You'll be able to leverage your favorite languages including Python, Go, JavaScript, TypeScript, and C# instead of YAML or domain-specific languages.
 
 
     After completing this workshop, you'll be up and running with IaC fundamentals, modern application architectures across many clouds, and best-practices that are ready for production environments. You'll also be ready to empower your development teams to be more productive -- continuously deploying both their applications and infrastructure.

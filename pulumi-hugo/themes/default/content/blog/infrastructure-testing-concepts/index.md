@@ -58,7 +58,7 @@ Cloud engineering applies software testing principles to infrastructure where we
 
 ### Static tests
 
-Infrastructure templating languages such as YAML or JSON have limited static validation capabilities; primarily, they are limited to linting: validating and formatting the code. Pulumi's approach of deploying infrastructure with programming languages lets you use built-in tools in IDEs that perform static tests, highlight errors in your code, and offer other features such as code completion, enumerations, and syntax checking. [Pulumi's preview](/docs/reference/cli/pulumi_preview) also performs static checking before deploying a resource.
+Infrastructure templating languages such as YAML or JSON have limited static validation capabilities; primarily, they are limited to linting: validating and formatting the code. Pulumi's approach of deploying infrastructure with programming languages lets you use built-in tools in IDEs that perform static tests, highlight errors in your code, and offer other features such as code completion, enumerations, and syntax checking. [Pulumi's preview](/docs/cli/commands/pulumi_preview) also performs static checking before deploying a resource.
 
 ### Unit tests
 
@@ -82,7 +82,7 @@ Finally, there are several ways to run property tests against any cloud environm
 
 Integration tests validate whether services or modules in an application work as specified. Unlike unit tests, they use actual dependencies instead of mock objects, and they provide less precise feedback than unit or property tests. Because integration uses actual dependencies, they require that services be complete and functioning. Tests are run in a strict order to ensure that modules or services are instantiated before the test. Developers are less likely to write and run integration tests, leaving it to SRE experts in specialties such as chaos engineering and pipeline automation to write tests run in a CI/CD system.
 
-In cloud engineering, an infrastructure integration test uses infrastructure deployed in an [ephemeral environment](https://about.gitlab.com/blog/2020/01/27/kubecon-na-2019-are-you-about-to-break-prod/). As an example, we can use the Pulumi CLI to deploy the ephemeral environment as a [stack](/docs/intro/concepts/stack/) that builds a dependency graph based on [inputs and outputs](/docs/intro/concepts/inputs-outputs#inputs-and-outputs) that ensures the required resources are instantiated and available before the integration test.
+In cloud engineering, an infrastructure integration test uses infrastructure deployed in an [ephemeral environment](https://about.gitlab.com/blog/2020/01/27/kubecon-na-2019-are-you-about-to-break-prod/). As an example, we can use the Pulumi CLI to deploy the ephemeral environment as a [stack](/docs/concepts/stack/) that builds a dependency graph based on [inputs and outputs](/docs/concepts/inputs-outputs#inputs-and-outputs) that ensures the required resources are instantiated and available before the integration test.
 
 Once the resources are deployed, the integration test retrieves the stack outputs, which is often a public IP address or resource name. The test can be as complex as a suite of application-level tests between the various services or components or as simple as a health check that expects an HTTP 200 status return from an endpoint. The primary advantage of integration tests is that they use the same cloud infrastructure used in production to return actual values.
 

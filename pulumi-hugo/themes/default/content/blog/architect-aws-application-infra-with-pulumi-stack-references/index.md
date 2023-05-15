@@ -37,7 +37,7 @@ $ tree -d -L 1
 ```
 
 This means all of the work required for the networking components can be in the network project. We can use
-[Stack References](/docs/intro/concepts/stack#stackreferences) in Pulumi
+[Stack References](/docs/concepts/stack#stackreferences) in Pulumi
 to expose any required information from the networking layer, to the database and application layers.
 
 Let's create the networking project.
@@ -453,4 +453,4 @@ information between these projects. You can find a runable version of this infra
 This demonstrates the suggested way of architecting Pulumi applications both for operability and collaboration.
 
 You can try this code today get started with Pulumi today at [https://www.pulumi.com](/) and
-following the [Getting Started](/docs/get-started/aws/) for managing AWS resources with Pulumi.
+following the [Getting Started](/docs/clouds/aws/get-started/) for managing AWS resources with Pulumi.

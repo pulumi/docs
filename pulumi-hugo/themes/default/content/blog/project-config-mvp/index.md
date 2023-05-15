@@ -17,7 +17,7 @@ Pulumi will now allow you to set configuration values in your `Pulumi.yaml` file
 
 ### Project level configuration values
 
-Pulumi has always had the concept of [configuration per stack](/docs/intro/concepts/config/), and the changes for project level configuration haven't fundamentally changed that. You can still set config for stacks via the `pulumi config` CLI command, or by editing the `Pulumi.<stack>.yaml` file. Project level config just gives you the ability to set default values for all stacks in your `Pulumi.yaml`.
+Pulumi has always had the concept of [configuration per stack](/docs/concepts/config/), and the changes for project level configuration haven't fundamentally changed that. You can still set config for stacks via the `pulumi config` CLI command, or by editing the `Pulumi.<stack>.yaml` file. Project level config just gives you the ability to set default values for all stacks in your `Pulumi.yaml`.
 
 A common request we get for this is making sure that all stacks use the same AWS region, or don't have default providers enabled. You can now do this by setting these in your `Pulumi.yaml`.
 
@@ -86,7 +86,7 @@ config:
 
 ### Deprecation of 'configuration' in YAML
 
-When we released our support for simple Pulumi programs in YAML we added some support for configuration with it. This was done via the [`configuration` key](https://www.pulumi.com/docs/reference/yaml/#configuration) in the `Pulumi.yaml` file. We'll be deprecating support for that key now, as YAML will instead use the new standard project configuration.
+When we released our support for simple Pulumi programs in YAML we added some support for configuration with it. This was done via the [`configuration` key](https://www.pulumi.com/docs/languages-sdks/yaml/yaml-language-reference/#configuration) in the `Pulumi.yaml` file. We'll be deprecating support for that key now, as YAML will instead use the new standard project configuration.
 
 ### Future plans
 

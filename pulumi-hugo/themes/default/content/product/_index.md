@@ -26,7 +26,7 @@ key_features:
           image: "/images/product/pulumi-iac-code.png"
           button:
             text: "Learn more about Pulumi SDK"
-            link: "/docs/reference/pulumi-sdk/"
+            link: "/docs/languages-sdks/"
           features:
               - title: Code faster
                 description: |
@@ -158,7 +158,7 @@ key_features:
                     Full API coverage for AWS, Azure, Google Cloud, and Kubernetes with same-day updates.
               - title: Crosswalk for AWS
                 description: |
-                    Adopt well-architected best practices for your infrastructure easily with the [Crosswalk library](/docs/guides/crosswalk/aws/).
+                    Adopt well-architected best practices for your infrastructure easily with the [Crosswalk library](/docs/clouds/aws/guides/).
               - title: Cloud Native support
                 description: |
                     Use a single workflow to manage both [Kubernetes](/kubernetes/) resources and infrastructure.
@@ -170,17 +170,17 @@ key_features:
           image: "/images/product/pulumi-cicd.png"
           button:
             text: "Learn more about CI/CD Integrations"
-            link: "/docs/guides/continuous-delivery/"
+            link: "/docs/using-pulumi/continuous-delivery/"
           features:
               - title: Version and review
                 description: |
                     Manage infrastructure code in Git and approve changes through pull requests.
               - title: Shift left
                 description: |
-                    Get rapid feedback on your code with fast [unit tests](/docs/guides/testing/), and run [integration tests](/docs/guides/testing/) against ephemeral infrastructure.
+                    Get rapid feedback on your code with fast [unit tests](/docs/using-pulumi/testing/unit/), and run [integration tests](/docs/using-pulumi/testing/integration/) against ephemeral infrastructure.
               - title: Continuous delivery
                 description: |
-                    [Integrate your CI/CD provider](/docs/guides/continuous-delivery/) with Pulumi or use GitOps to [manage Kubernetes clusters](/docs/guides/continuous-delivery/pulumi-kubernetes-operator/).
+                    [Integrate your CI/CD provider](/docs/using-pulumi/continuous-delivery/) with Pulumi or use GitOps to [manage Kubernetes clusters](/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/).
 
         - title: "Scale and secure infrastructure as code for teams"
           sub_title: "Pulumi Cloud"
@@ -216,7 +216,7 @@ get_started:
     get_started:
         title: Get started now
         description: |
-            Deploy your first app in just five minutes. Follow our tutorials for AWS, Azure, GCP, Kubernetes, and more.
+            Deploy your first app in just five minutes. Follow our tutorials for AWS, Azure, Google Cloud, Kubernetes, and more.
         cta_text: Get Started
 
     migrate:

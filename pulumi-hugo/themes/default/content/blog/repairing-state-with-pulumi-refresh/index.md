@@ -64,7 +64,7 @@ If the Pulumi CLI process is terminated between steps 2 and 3, then Pulumi does 
 
 ## The Solution
 
-As of [#10394](https://github.com/pulumi/pulumi/pull/10394), the solution to both problems is [pulumi refresh](https://www.pulumi.com/docs/reference/cli/pulumi_refresh/). The `pulumi refresh` command modifies Pulumi's state so it matches the state of the underlying providers. Most discrepancies can be resolved automatically by checking Pulumi's state against the underlying resource provider. For our AWS bucket example, Pulumi would ask the aws-native provider if bucket `my-bucket-6e3d099` exists and what tags it has.
+As of [#10394](https://github.com/pulumi/pulumi/pull/10394), the solution to both problems is [pulumi refresh](https://www.pulumi.com/docs/cli/commands/pulumi_refresh/). The `pulumi refresh` command modifies Pulumi's state so it matches the state of the underlying providers. Most discrepancies can be resolved automatically by checking Pulumi's state against the underlying resource provider. For our AWS bucket example, Pulumi would ask the aws-native provider if bucket `my-bucket-6e3d099` exists and what tags it has.
 
 This works for all resources that Pulumi knows about. This set includes Pulumi managed resources that were changed manually, or for pending UPDATE, DELETE, READ and IMPORT operations. Pulumi does not know the resource ID for pending CREATE operations (it might not exist), so it can not resolve everything for you. It needs a little bit of help. For each pending CREATE, Pulumi will ask you what to do:
 
@@ -75,7 +75,7 @@ created resource, and Pulumi will bring that resource under management.
 
 If no resource was created, you can select `clear` to tell Pulumi to clear the pending CREATE. It will recreate the resource for you the next time you run `pulumi up`.
 
-You can learn more by going to the [`pulumi refresh` documentation](https://www.pulumi.com/docs/reference/cli/pulumi_refresh/) or by running `pulumi refresh --help`.
+You can learn more by going to the [`pulumi refresh` documentation](https://www.pulumi.com/docs/cli/commands/pulumi_refresh/) or by running `pulumi refresh --help`.
 
 ### Command Details
 

@@ -685,7 +685,7 @@ resource graph. In this example, we've changed our container image from
 The ability to look at previews before making an update ensures mistakes
 don't get made and that deployments don't have unanticipated impacts.
 There is even a
-[Pulumi GitHub App](/docs/guides/continuous-delivery/github-app/)
+[Pulumi GitHub App](/docs/using-pulumi/continuous-delivery/github-app/)
 that will show such diffs inside of pull requests before they've been
 deployed, so you know the impact of configuration changes before code
 even makes its way to master.

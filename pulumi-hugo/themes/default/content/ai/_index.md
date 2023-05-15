@@ -17,7 +17,7 @@ Pulumi AI is an experimental feature that lets you use natural-language prompts 
 
 Use the chat widget below to describe the infrastructure you'd like to build, making adjustments conversationally as you go. When you're done, create a new Pulumi project and deploy:
 
-1. [Install Pulumi](/docs/get-started/install)
+1. [Install Pulumi](/docs/install/)
 
 1. Create a new {{< pulumi-language >}} project:
 

@@ -26,7 +26,7 @@ Updated January 2021 to include Python, .NET, and Go support.
 {{% /notes %}}
 
 To get started, download the free and open source
-[Pulumi SDK](/docs/get-started/install/), which includes
+[Pulumi SDK](/docs/install/), which includes
 the `pulumi` CLI we'll use below. If you don't
 have the AWS CLI installed and configured, [set that up too](/registry/packages/aws/installation-configuration/).
 You'll need AWS credentials to access your AWS account and
@@ -380,5 +380,5 @@ DigitalOcean's Managed Kubernetes, and custom clusters (including Minikube).
 
 For more information:
 
-- [Get started with Pulumi and Kubernetes](/docs/get-started/kubernetes/)
-- [Get started with Pulumi and AWS](/docs/get-started/aws/)
+- [Get started with Pulumi and Kubernetes](/docs/clouds/kubernetes/get-started/)
+- [Get started with Pulumi and AWS](/docs/clouds/aws/get-started/)

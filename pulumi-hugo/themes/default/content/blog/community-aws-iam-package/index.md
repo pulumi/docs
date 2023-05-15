@@ -421,4 +421,4 @@ A few of the other use cases support by the Community AWS IAM package are:
 If you want to learn more about Pulumi and the Community AWS IAM package, here are a few links you might find interesting:
 
 - Read the [AWS IAM documentation](/registry/packages/aws-iam/) to learn more about the package, how to [install and configure](/registry/packages/aws-iam/installation-configuration/) it and use its APIs.
-- If you’re interested in learning more about Pulumi concepts, try the [Architecture & Concepts](/docs/intro/concepts) page.
+- If you’re interested in learning more about Pulumi concepts, try the [Concepts](/docs/concepts/) page.

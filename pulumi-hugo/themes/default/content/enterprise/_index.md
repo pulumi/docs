@@ -111,7 +111,7 @@ get_started:
           link_text: Request Free Trial
 
         - title: Migration Tools
-          link: /docs/guides/adopting/
+          link: /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/
           link_text: View Docs
 
         - title: Enterprise Whitepaper

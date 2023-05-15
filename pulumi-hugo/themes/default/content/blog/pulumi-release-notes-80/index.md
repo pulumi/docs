@@ -99,7 +99,7 @@ Automation API now supports parallel execution of NodeJS inline programs in addi
 
 ### New --remove flag for `pulumi destroy`
 
-A [`pulumi destroy`](/docs/reference/cli/pulumi_destroy) operation destroys all existing resources in the stack, but not the stack itself. If you then wanted to delete the stack itself, once all the resources were destroyed, you would run a [`pulumi stack rm`]. A community member, [mrod-io](https://github.com/mrod-io) added a flag for `pulumi destroy` for when you want to remove the stack after its resources are destroyed: `pulumi destroy --remove`.
+A [`pulumi destroy`](/docs/cli/commands/pulumi_destroy) operation destroys all existing resources in the stack, but not the stack itself. If you then wanted to delete the stack itself, once all the resources were destroyed, you would run a [`pulumi stack rm`]. A community member, [mrod-io](https://github.com/mrod-io) added a flag for `pulumi destroy` for when you want to remove the stack after its resources are destroyed: `pulumi destroy --remove`.
 
 **See it in action below:**
 
@@ -137,7 +137,7 @@ We now support cloning Pulumi templates (`pulumi new`) from Azure DevOps reposit
 
 ### Skip Checkpoints Experimental Flag
 
-We have added a new experimental flag to improve performance for certain use cases. This flag makes Pulumi skip saving [state checkpoints](/docs/intro/concepts/state/#checkpoints) as it modifies resources and instead only save the final state of a deployment. This is an experimental feature that also requires an PULUMI_EXPERIMENTAL=true environment variable to be set. Using the feature introduces risk that in the case of network disconnect or crash state edits will be lost and may require manual recovery. When this risk is acceptable, using the feature can speed up Pulumi deployment times. As it is in experimental we may make changes to how it has been implemented down the track.
+We have added a new experimental flag to improve performance for certain use cases. This flag makes Pulumi skip saving [state checkpoints](/docs/concepts/state/#checkpoints) as it modifies resources and instead only save the final state of a deployment. This is an experimental feature that also requires an PULUMI_EXPERIMENTAL=true environment variable to be set. Using the feature introduces risk that in the case of network disconnect or crash state edits will be lost and may require manual recovery. When this risk is acceptable, using the feature can speed up Pulumi deployment times. As it is in experimental we may make changes to how it has been implemented down the track.
 
 👉 Learn more by reviewing the [Skip checkpoints pull request](https://github.com/pulumi/pulumi/pull/10750).
 

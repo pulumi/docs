@@ -10,7 +10,7 @@ tags:
     - features
 ---
 
-Today we are announcing a minor but significant improvement to the Pulumi [preview](/docs/reference/cli/pulumi_preview/)
+Today we are announcing a minor but significant improvement to the Pulumi [preview](/docs/cli/commands/pulumi_preview/)
 experience.
 
 <!--more-->

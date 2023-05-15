@@ -11,13 +11,13 @@ tags:
 
 Pulumi's CI/CD Assistant helps you bring your infrastructure under version control and create a continuous integration and delivery pipeline that deploys changes to your cloud applications and infrastructure whenever you make a change in source control. Using CI/CD secures your production delivery while ensuring that every deployment is expressed in a committed Pulumi program and quickly reflected in your deployed infrastructure.  With the CI/CD Assistant, it's easier than ever before to set up version control and a CI/CD pipeline for your favorite CI/CD system, even if you're new to CI/CD workflows.
 
-Since its launch late last year, the CI/CD Assistant has been available to organizations using the Team and Enterprise offerings; today at PulumiUP, we announced that it's now also available to all teams, including Team organizations. Get started with the CI/CD Assistant on any stack's settings page, or [learn more in the docs](/docs/intro/pulumi-cloud/ci-cd-integration-assistant/).
+Since its launch late last year, the CI/CD Assistant has been available to organizations using the Team and Enterprise offerings; today at PulumiUP, we announced that it's now also available to all teams, including Team organizations. Get started with the CI/CD Assistant on any stack's settings page, or [learn more in the docs](/docs/pulumi-cloud/deployments/ci-cd-integration-assistant/).
 
 <!-- more -->
 
 ## Get your cloud applications and infrastructure to production faster and safer
 
-Building source code safely in version control and deploying using continuous integration and delivery (CI/CD) pipelines are best practices of cloud engineering. Using version control creates a full history of changes to Pulumi infrastructure as code programs you write: when the change was made, who made it, and what was changed. Version control systems also provide an easy mechanism to revert to an old infrastructure configuration: you can restore a past version of your infrastructure as code and redeploy it, effectively rolling back by rolling forward. Adding a CI/CD pipeline adds even more benefit by accelerating the deployment of changes. The CI/CD pipeline for your cloud code can deploy updates on every change, on a schedule, or in many CI/CD systems by an external event or workflow you've configured. A well-configured CI/CD pipeline is also much more secure: you can focus on restricting access to production deployments, generating temporary access keys for the CI/CD environment, and also also use the Pulumi [Secrets](/docs/intro/concepts/secrets/) feature to safeguard and minimize access to any and all secrets you use to deploy.
+Building source code safely in version control and deploying using continuous integration and delivery (CI/CD) pipelines are best practices of cloud engineering. Using version control creates a full history of changes to Pulumi infrastructure as code programs you write: when the change was made, who made it, and what was changed. Version control systems also provide an easy mechanism to revert to an old infrastructure configuration: you can restore a past version of your infrastructure as code and redeploy it, effectively rolling back by rolling forward. Adding a CI/CD pipeline adds even more benefit by accelerating the deployment of changes. The CI/CD pipeline for your cloud code can deploy updates on every change, on a schedule, or in many CI/CD systems by an external event or workflow you've configured. A well-configured CI/CD pipeline is also much more secure: you can focus on restricting access to production deployments, generating temporary access keys for the CI/CD environment, and also also use the Pulumi [Secrets](/docs/concepts/secrets/) feature to safeguard and minimize access to any and all secrets you use to deploy.
 
 The CI/CD Assistant helps you realize all these benefits by getting version control and CI/CD configured for your infrastructure stacks. The Assistant walks you through a 4-step guided procedure:
 
@@ -30,7 +30,7 @@ When you've configured version control and CI/CD on a Pulumi stack, you get addi
 
 ![stack update with version control and CI/CD metadata](ci-cd-console.png)
 
-👉 [Learn more](/docs/intro/pulumi-cloud/ci-cd-integration-assistant/)
+👉 [Learn more](/docs/pulumi-cloud/deployments/ci-cd-integration-assistant/)
 
 ## Support for many CI/CD providers
 

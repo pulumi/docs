@@ -64,16 +64,16 @@ capabilities:
               more_info: |
                 Allow developers to safely deploy in parallel with concurrent state-locking.
 
-                Audit changes or rollback to previous versions with a [complete history](/docs/intro/concepts/state/#checkpoints) of your state.
+                Audit changes or rollback to previous versions with a [complete history](/docs/concepts/state/#checkpoints) of your state.
 
             - title: Automatic secrets management
               description: |
                 Use built-in secrets management for encrypted data such as credentials or tokens. You can also bring your own secrets manager.
 
               more_info: |
-                Your infrastructure [state is encrypted](/docs/intro/concepts/state/#state-encryption) in transit and at rest.
+                Your infrastructure [state is encrypted](/docs/concepts/state/#state-encryption) in transit and at rest.
 
-                Sensitive configurations (e.g. database passwords, cloud tokens) are [stored as secrets](/docs/intro/concepts/secrets/).
+                Sensitive configurations (e.g. database passwords, cloud tokens) are [stored as secrets](/docs/concepts/secrets/).
 
                 Use Pulumi's secrets manager or integrate with AWS KMS, Azure Key Vault, Google KMS, and HashiCorp Vault.
 
@@ -87,9 +87,9 @@ capabilities:
               more_info: |
                 Invite new team members and share projects to collaborate on infrastructure.
 
-                View [timelines](/docs/intro/pulumi-cloud/projects-and-stacks/#stack-activity) that show diffs of changed resources and who made the changes.
+                View [timelines](/docs/pulumi-cloud/projects-and-stacks/#stack-activity) that show diffs of changed resources and who made the changes.
 
-                [Tag stacks](/docs/intro/concepts/stack/#stack-tags) for easier filtering and searching.
+                [Tag stacks](/docs/concepts/stack/#stack-tags) for easier filtering and searching.
 
             - title: Software delivery integrations
               description: |
@@ -98,11 +98,11 @@ capabilities:
               more_info: |
                 Work with existing tools like IDEs, test frameworks, and package managers.
 
-                Integrate your [source control system](/docs/intro/pulumi-cloud/ci-cd-integration-assistant/) so teams can trace changes back to commits and pull requests.
+                Integrate your [source control system](/docs/pulumi-cloud/deployments/ci-cd-integration-assistant/) so teams can trace changes back to commits and pull requests.
 
-                Continuously deliver infrastructure through existing pipelines with [CI/CD integrations](/docs/guides/continuous-delivery/).
+                Continuously deliver infrastructure through existing pipelines with [CI/CD integrations](/docs/using-pulumi/continuous-delivery/).
 
-                Use event-based [webhooks](/docs/intro/pulumi-cloud/webhooks/) to notify external services like Slack or continuous integration tools.
+                Use event-based [webhooks](/docs/pulumi-cloud/webhooks/) to notify external services like Slack or continuous integration tools.
 
                 Use [the Service API](/blog/pulumi-rest-api/) to manage stacks, updates, teams, and more.
 
@@ -111,7 +111,7 @@ capabilities:
           details:
             - title: Run cloud infrastructure operations remotely
               description: |
-                [Run remote infrastructure commands](/docs/intro/deployments/) to provision, configure, and destroy cloud resources, all executed in a secure cloud environment.
+                [Run remote infrastructure commands](/docs/pulumi-cloud/deployments/) to provision, configure, and destroy cloud resources, all executed in a secure cloud environment.
 
               more_info: |
                 Trigger deployments via REST API, click to deploy from Pulumi Cloud's console, Git Push to Deploy, Remote Automation API, and other programmatic building blocks.
@@ -120,12 +120,12 @@ capabilities:
 
             - title: Manage infrastructure operations at high scale with Deployments-as-a-Service
               description: |
-                Use the [Pulumi Deployments REST API](/docs/intro/deployments/api/) to programmatically trigger deployments for high volume infrastructure automation use cases.
+                Use the [Pulumi Deployments REST API](/docs/pulumi-cloud/deployments/api/) to programmatically trigger deployments for high volume infrastructure automation use cases.
 
               more_info: |
-                Call Pulumi's [REST API endpoint](/docs/intro/deployments/api/) to trigger Pulumi commands that run in Pulumi Cloud (e.g., update, destroy, refresh, preview).
+                Call Pulumi's [REST API endpoint](/docs/pulumi-cloud/deployments/api/) to trigger Pulumi commands that run in Pulumi Cloud (e.g., update, destroy, refresh, preview).
 
-                Offload your local Automation API deployment workloads to Pulumi Cloud via the [Remote Automation API feature](/docs/intro/deployments/#deployment-triggers).
+                Offload your local Automation API deployment workloads to Pulumi Cloud via the [Remote Automation API feature](/docs/pulumi-cloud/deployments/#deployment-triggers).
 
         - title: View and search all infrastructure from one place
           image: /images/product/resource-search-diagram.svg
@@ -137,7 +137,7 @@ capabilities:
               more_info: |
                 View dashboards for quick insights into your infrastructure, such as how many resources are running and who has made changes.
 
-                [Tag stacks](/docs/intro/concepts/stack/#stack-tags) for easier filtering and searching.
+                [Tag stacks](/docs/concepts/stack/#stack-tags) for easier filtering and searching.
 
                 Jump directly to the cloud console for each resource you've deployed with Pulumi.
 
@@ -157,26 +157,26 @@ capabilities:
           details:
             - title: Set up identity and access controls
               description: |
-                Integrate SSO and your [identity provider](/docs/guides/scim/) with Pulumi, set [user permissions](/docs/intro/pulumi-service/teams/) for each stack, and track user activity with [audit logs](/docs/intro/pulumi-service/audit-logs/).
+                Integrate SSO and your [identity provider](/docs/pulumi-cloud/access-management/scim/) with Pulumi, set [user permissions](/docs/intro/pulumi-service/teams/) for each stack, and track user activity with [audit logs](/docs/intro/pulumi-service/audit-logs/).
 
               more_info: |
-                Single sign-on with any [SAML 2.0](/docs/guides/saml/) identity provider like Azure Active Directory, Google Workspace , Okta, and OneLogin.
+                Single sign-on with any [SAML 2.0](/docs/pulumi-cloud/access-management/saml/) identity provider like Azure Active Directory, Google Workspace , Okta, and OneLogin.
 
-                Manage Pulumi access from your central identity provider via [SCIM 2.0 integration](/docs/guides/scim/).
+                Manage Pulumi access from your central identity provider via [SCIM 2.0 integration](/docs/pulumi-cloud/access-management/scim/).
 
-                Set [role-based access controls](/docs/intro/pulumi-cloud/teams/) that limit who can access infrastructure.
+                Set [role-based access controls](/docs/pulumi-cloud/access-management/teams/) that limit who can access infrastructure.
 
                 Track the activity of users within your organization with [audit logs](/docs/intro/pulumi-service/audit-logs/).
 
 
             - title: Proactive compliance enforcement
               description: |
-                Set guardrails for developers deploying with Pulumi by creating [policy packs](/docs/guides/crossguard/configuration/) that enforce your [deployment rules](/docs/guides/crossguard/).
+                Set guardrails for developers deploying with Pulumi by creating [policy packs](/docs/using-pulumi/crossguard/configuration/) that enforce your [deployment rules](/docs/using-pulumi/crossguard/).
 
               more_info: |
-                Define [Policy as Code](/docs/guides/crossguard/) rules for security, best practices, and more.
+                Define [Policy as Code](/docs/using-pulumi/crossguard/) rules for security, best practices, and more.
 
-                Assign [policy packs](/docs/guides/crossguard/configuration/) that run on specific stacks (e.g., dev/test/staging rules).
+                Assign [policy packs](/docs/using-pulumi/crossguard/configuration/) that run on specific stacks (e.g., dev/test/staging rules).
 
                 Automatically block deployments that violate your organization's policies.
 
@@ -184,9 +184,9 @@ open_source:
     title: The easiest way to use Pulumi open source
     image: /images/product/service-open-source-diagram.svg
     description: |
-        Pulumi Cloud is a managed service for Pulumi's open source CLI and SDK. It tracks your [infrastructure’s state](/docs/intro/concepts/state/) and coordinates updates with the CLI, which creates or updates resources to reach your infrastructure’s [desired state](/docs/intro/concepts/how-pulumi-works/).
+        Pulumi Cloud is a managed service for Pulumi's open source CLI and SDK. It tracks your [infrastructure’s state](/docs/concepts/state/) and coordinates updates with the CLI, which creates or updates resources to reach your infrastructure’s [desired state](/docs/concepts/how-pulumi-works/).
 
-        You can also use any cloud or on-premises storage to build and [run your own backend](/docs/intro/concepts/state/#logging-into-a-self-managed-backend).
+        You can also use any cloud or on-premises storage to build and [run your own backend](/docs/concepts/state/#logging-into-a-self-managed-backend).
 
 security:
     title: Pulumi takes security seriously

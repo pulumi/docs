@@ -119,17 +119,17 @@ In summary, site reliability engineering and platform engineering are related in
 
 Platform engineering roles typically require a combination of technical and soft skills. Here are some of the skills that are commonly required to be a platform engineer:
 
-* Strong programming skills: Platform engineers should have a solid foundation in at least [one programming language](/docs/intro/languages/) and experience with software design patterns.
+* Strong programming skills: Platform engineers should have a solid foundation in at least [one programming language](/docs/languages-sdks/) and experience with software design patterns.
 
-* [Cloud engineering](/cloud-engineering/): Experience with cloud computing platforms such as Amazon Web Services (AWS), Google Cloud Platform (GCP), or Microsoft Azure is often required, as well as familiarity with Infrastructure As Code.
+* [Cloud engineering](/cloud-engineering/): Experience with cloud computing platforms such as Amazon Web Services (AWS), Google Cloud Platform (Google Cloud), or Microsoft Azure is often required, as well as familiarity with Infrastructure As Code.
 
-* DevOps and automation: Familiarity with DevOps practices and tools for automation, such as containerization, [continuous integration/delivery pipelines](/docs/guides/continuous-delivery/), and configuration management.
+* DevOps and automation: Familiarity with DevOps practices and tools for automation, such as containerization, [continuous integration/delivery pipelines](/docs/using-pulumi/continuous-delivery/), and configuration management.
 
 * System administration: Knowledge of Linux/Unix administration and networking concepts and experience with virtualization technologies such as VMware or KVM.
 
 * Databases: Understanding of database systems and experience with SQL and NoSQL databases.
 
-* Security: Knowledge of [security best practices](/docs/guides/crossguard/), [policy as code](/docs/guides/crossguard/), and experience with security tools and technologies.
+* Security: Knowledge of [security best practices](/docs/using-pulumi/crossguard/), [policy as code](/docs/using-pulumi/crossguard/), and experience with security tools and technologies.
 
 * Collaboration and communication: The ability to work effectively with development teams, stakeholders, and other technical teams, as well as the ability to communicate technical concepts to non-technical stakeholders.
 

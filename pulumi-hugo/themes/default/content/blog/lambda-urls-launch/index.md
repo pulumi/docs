@@ -341,7 +341,7 @@ Outputs:
 
 {{% choosable language go %}}
 
-You'll also need to run the following command to add the required permission to allow the Lambda function to be run. If you don't have the AWS CLI installed, there are instructions on our [getting started docs](/docs/get-started/aws/):
+You'll also need to run the following command to add the required permission to allow the Lambda function to be run. If you don't have the AWS CLI installed, there are instructions on our [getting started docs](/docs/clouds/aws/get-started/):
 
 ```bash
 aws lambda add-permission --function-name $(pulumi stack output functionName) --action lambda:InvokeFunctionUrl --principal '*' --function-url-auth-type NONE --statement-id FunctionURLAllowPublicAccess

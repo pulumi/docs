@@ -35,9 +35,9 @@ Also refer to this blog of the [Race across America](https://blog.mapbox.com/tea
 showcased live during the webinar tomorrow.
 <!--more-->
 
-**Prerequisites:** [Install Pulumi](/docs/get-started/install/);
+**Prerequisites:** [Install Pulumi](/docs/install/);
 [Install Node.js](https://nodejs.org/en/download/) and
-[Setup AWS](/docs/get-started/aws/)
+[Setup AWS](/docs/clouds/aws/get-started/)
 
 The diagram represents how Mapbox's solution design on AWS services is
 built with Pulumi AWS and AWSX libraries in Javascript. Data is ingested

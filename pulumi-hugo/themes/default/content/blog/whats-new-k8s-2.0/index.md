@@ -8,7 +8,7 @@ meta_image: pulumi_k8s.png
 ---
 
 We recently announced the 2.0 release of Pulumi which includes parity for
-[Node.js (JavaScript, TypeScript)](/docs/intro/languages/javascript), [Python](/docs/intro/languages/python/), [.NET (C#, F#, etc)](/docs/intro/languages/dotnet) and [Go](/docs/intro/languages/go/),
+[Node.js (JavaScript, TypeScript)](/docs/languages-sdks/javascript), [Python](/docs/languages-sdks/python/), [.NET (C#, F#, etc)](/docs/languages-sdks/dotnet) and [Go](/docs/languages-sdks/go/),
 and improvements to Kubernetes and dozens of other [supported cloud resource providers](/registry/) and [packages](/docs/reference/pkg#package-documentation).
 
 [Kubernetes support](/registry/packages/kubernetes/) in Pulumi spans orchestration of clusters and application
@@ -133,7 +133,7 @@ As our community continues to grow, we’re committed to improving our Kubernete
 experience even further. You can help to shape this experience directly by
 providing feedback on [GitHub](https://github.com/pulumi/pulumi-kubernetes/). We love to hear from our users!
 
-Learn more about how [Pulumi works with Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/), and [Get Started](https://www.pulumi.com/docs/get-started/kubernetes/) if you're
+Learn more about how [Pulumi works with Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/), and [Get Started](https://www.pulumi.com/docs/clouds/kubernetes/get-started/) if you're
 new.
 
 You can explore more content by checking out [PulumiTV on YouTube](https://www.youtube.com/pulumitv), work through

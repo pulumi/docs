@@ -51,20 +51,20 @@ Many developers now use JavaScript to create IaC, often in [serverless applicati
 - Node.js doesn’t need to be compiled.
 - There is a vast ecosystem of reusable modules that developers can leverage to create microservices.
 - The npm package manager makes it easy to make JavaScript modules easy to discover and it manages dependency conflicts.
-- JavaScript is the best language for processing the JSON format. A common serverless function (called Lambdas on AWS, Azure Functions on Azure and Google Cloud Functions on GCP) is to perform some sort of translation on a JSON object.
+- JavaScript is the best language for processing the JSON format. A common serverless function (called Lambdas on AWS, Azure Functions on Azure and Google Cloud Functions on Google Cloud) is to perform some sort of translation on a JSON object.
 
 ## The Serverless Framework
 
-The Serverless Framework is another reason for JavaScript’s popularity for serverless architectures. It is written in Node.js and it lets you develop and deploy serverless applications to AWS, Azure, GCP and other cloud providers. A Serverless app can be as simple as a couple of lambda functions or an entire back-end composed of hundreds of lambda functions.
+The Serverless Framework is another reason for JavaScript’s popularity for serverless architectures. It is written in Node.js and it lets you develop and deploy serverless applications to AWS, Azure, Google Cloud and other cloud providers. A Serverless app can be as simple as a couple of lambda functions or an entire back-end composed of hundreds of lambda functions.
 
 ## Find the Right Platform: JavaScript and Infrastructure as Code
 
 There are platforms available that can really boost your productivity when it comes to JavaScript and Infrastructure as Code. Here are a few qualities to look for:
 
-- **Support for Standard Languages.** Of course, you need a platform that [fully supports JavaScript and Node.js](/docs/intro/languages/javascript/).
+- **Support for Standard Languages.** Of course, you need a platform that [fully supports JavaScript and Node.js](/docs/languages-sdks/javascript/).
 - **Multi-cloud support.** Make sure the platform allows you to build, manage and deploy your infrastructure to [any cloud provider](/registry/).
 - **Improves on the Serverless Framework.** While the Serverless Framework definitely helps with serverless computing, it only helps with that part of your application. Find a platform that lets you adopt a more holistic approach and treats the entire program as cloud-native. You should be able to write entire applications within that platform. Some parts of that application may be serverless functions, but you should also be able to include resources such as containers, databases, and cloud services.
 
 ## Pulumi Corporation
 
-Pulumi's Cloud Engineering Platform unites infrastructure teams, application developers, and compliance teams around a unified software engineering process for delivering modern cloud applications faster and speeding innovation. Pulumi’s open-source tools help infrastructure teams tame the cloud’s complexity with Universal Infrastructure-as-Code using the world’s most popular programming languages and communities, including [Python](/docs/intro/languages/python/), [Node.js (JavaScript, TypeScript)](/docs/intro/languages/javascript), [Go](/docs/intro/languages/go/), and [].NET (C#, F#, VB)](/docs/intro/languages/dotnet). [Get started for free today](/docs/get-started/), or check out one of our on-demand workshops on getting started with [Infrastructure as Code and JavaScript](/resources/getting-from-code-to-cloud-with-vscode-and-pulumi/).
+Pulumi's Cloud Engineering Platform unites infrastructure teams, application developers, and compliance teams around a unified software engineering process for delivering modern cloud applications faster and speeding innovation. Pulumi’s open-source tools help infrastructure teams tame the cloud’s complexity with Universal Infrastructure-as-Code using the world’s most popular programming languages and communities, including [Python](/docs/languages-sdks/python/), [Node.js (JavaScript, TypeScript)](/docs/languages-sdks/javascript), [Go](/docs/languages-sdks/go/), and [].NET (C#, F#, VB)](/docs/languages-sdks/dotnet). [Get started for free today](/docs/get-started/), or check out one of our on-demand workshops on getting started with [Infrastructure as Code and JavaScript](/resources/getting-from-code-to-cloud-with-vscode-and-pulumi/).

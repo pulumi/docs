@@ -11,7 +11,7 @@ tags:
 ---
 
 When deploying infrastructure, we want to ensure that what we're deploying matches our expectations.
-One way to do so is via [unit testing](/docs/guides/testing/unit/).
+One way to do so is via [unit testing](/docs/using-pulumi/testing/unit/).
 We've talked about this concept in previous posts, such as [in this overview](/blog/unit-test-infrastructure/)
 and [this post on deployments with .NET](/blog/unit-testing-cloud-deployments-with-dotnet/).
 
@@ -192,4 +192,4 @@ There are many other examples of resources where it's useful to check the underl
 For example, checking the validity of certificates, keys, files, and container images are all assets
 that benefit from making sure we're wiring in resources correctly to our cloud infrastructure.
 We hope you take this opportunity to use Pulumi's unit testing framework to check your infrastructure's underlying assets for correctness.
-Please visit the [unit testing guide](/docs/guides/testing/unit/) to learn more.
+Please visit the [unit testing guide](/docs/using-pulumi/testing/unit/) to learn more.

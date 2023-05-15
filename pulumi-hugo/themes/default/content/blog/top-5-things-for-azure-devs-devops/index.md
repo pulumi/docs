@@ -142,8 +142,8 @@ jobs:
           cwd: "./"
 ```
 
-You can chain tasks to run the build process, including building and deploying applications in the same pipeline. The Pulumi [Continuous Delivery User Guide](/docs/guides/continuous-delivery/azure-devops/) provides an in-depth walkthrough for configuring an Azure pipeline.
+You can chain tasks to run the build process, including building and deploying applications in the same pipeline. The Pulumi [Continuous Delivery User Guide](/docs/using-pulumi/continuous-delivery/azure-devops/) provides an in-depth walkthrough for configuring an Azure pipeline.
 
 ## Summary
 
-As a developer on a DevOps team, you may not be the person to configure a pipeline. However, it's a good cloud engineering practice to understand how your application is built and deployed. Although we focus on Azure, the Pulumi task extension works with many other CI/CD systems. Check out our [User Guides](/docs/guides/continuous-delivery/) for all the CI/CD systems Pulumi supports.
+As a developer on a DevOps team, you may not be the person to configure a pipeline. However, it's a good cloud engineering practice to understand how your application is built and deployed. Although we focus on Azure, the Pulumi task extension works with many other CI/CD systems. Check out our [User Guides](/docs/using-pulumi/continuous-delivery/) for all the CI/CD systems Pulumi supports.

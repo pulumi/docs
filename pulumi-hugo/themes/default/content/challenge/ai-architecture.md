@@ -15,7 +15,7 @@ banner_image: /images/challenge/challenge-ai-banner.png
 
 Why write your Pulumi programs yourself when you can have AI do it for you? Pulumi AI leverages large language models (LLMs) to author infrastructure as code for any architecture for any cloud in any language.
 
-For the **GPT Your IaC challenge**, your goal is to have Pulumi AI create the most complex and sophisticated piece of architecture where you can run a successful `pulumi up` with the program created by Pulumi AI. To participate in the challenge, you'll need to either visit [pulumi.com/ai](https://pulumi.com/ai) or download the [CLI](https://github.com/pulumi/pulumi-ai) so you can use Pulumi AI.
+For the **GPT Your IaC challenge**, your goal is to have Pulumi AI create the most complex and sophisticated piece of architecture where you can run a successful `pulumi up` with the program created by Pulumi AI. To participate in the challenge, you'll need to either visit [pulumi.com/ai](/ai) or download the [CLI](https://github.com/pulumi/pulumi-ai) so you can use Pulumi AI.
 
 We will send you a piece of swag if you document this via a blog post, social media, or video. Tag us on social media or email us at [da@pulumi.com](mailto:da@pulumi.com), and we will help spread the word about your experience. All submissions will be judged at the end of the challenge, and the best submissions (there will be a few categories) will receive a special prize.
 
@@ -24,7 +24,7 @@ We will send you a piece of swag if you document this via a blog post, social me
 The challenge utilizes whatever cloud and whatever language you choose to ask Pulumi AI to write for you. Pulumi AI will do all the heavy lifting! However, in order to complete this challenge, you will need a couple things set up in advance.
 
 - A [Pulumi account](https://app.pulumi.com/signup)
-- The [Pulumi CLI](/docs/get-started/install/)
+- The [Pulumi CLI](/docs/install/)
 - Pulumi AI
 - Cloud accounts
 - OpenAI API Key
@@ -41,7 +41,7 @@ export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
 export OPENAI_API_KEY=<YOUR_API_KEY>
 ```
 
-To begin the challenge, first navigate to [pulumi.com/ai](https://pulumi.com/ai).
+To begin the challenge, first navigate to [pulumi.com/ai](/ai).
 
 ![alt_text](/images/challenge/AIStep1.png "navigate to Pulumi AI website")
 
@@ -134,7 +134,7 @@ Diagnostics:
 
 #### Step 4. Fix Program
 
-Your Pulumi AI-generated program may not work when you run `pulumi up` the first time (like ours), but you can ask it to fix the error. It's OK to have Pulumi AI fix an error as part of the **GPT Your IaC Challenge**. Go back to [pulumi.com/ai](https://pulumi.com/ai) and enter in the chat widget `Fix this error <error output from pulumi up>`
+Your Pulumi AI-generated program may not work when you run `pulumi up` the first time (like ours), but you can ask it to fix the error. It's OK to have Pulumi AI fix an error as part of the **GPT Your IaC Challenge**. Go back to [pulumi.com/ai](/ai) and enter in the chat widget `Fix this error <error output from pulumi up>`
 
 ![alt_text](/images/challenge/AIStep4.png "navigate to Pulumi AI website")
 

@@ -186,7 +186,7 @@ arm2pulumi:
     If you can deploy a resource with ARM templates, you can deploy it with the Pulumi Azure provider!
 
   cta: Learn More
-  cta_url: "/docs/guides/adopting/from_azure"
+  cta_url: "/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure/"
 
 detail_sections:
   - title: 100% API Coverage
@@ -249,7 +249,7 @@ detail_sections:
 superpowers:
   - title: Multi Cloud
     cta: Learn more
-    cta_url: "/docs/get-started/azure"
+    cta_url: "/docs/clouds/azure/get-started/"
     icon_type: cloud
     description: |
         Pulumi allows you to use top programming languages across all public clouds with support
@@ -258,7 +258,7 @@ superpowers:
 
   - title: Reduce Provisioning Time
     cta: Learn more
-    cta_url: "/docs/get-started/azure"
+    cta_url: "/docs/clouds/azure/get-started/"
     icon_type: provisioning
     description: |
         With Pulumi you are able to take advantage of the features of programming languages,
@@ -311,6 +311,6 @@ contact_us_form:
         name_title: Site Reliability Engineer, Cockroach Labs
         content: |
             We are building a distributed-database-as-a-service product that runs on Kubernetes clusters across
-            multiple public clouds including GCP, AWS and others. Pulumi's declarative model, the support for real
+            multiple public clouds including Google Cloud, AWS and others. Pulumi's declarative model, the support for real
             programming languages, and the uniform workflow on any cloud make our SRE team much more efficient.
 ---

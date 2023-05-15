@@ -33,7 +33,7 @@ A great example of the unique value you get from the Pulumi native provider appr
 
 With the Azure platform evolving as rapidly as it does, you might worry that it’ll be hard to manage API versions or know which APIs are stable and ready to use. But fear not! Each major version of the Azure Native provider exposes a top-level namespace with a consistent set of stable APIs. Any breaking changes made in the Azure APIs will be released in a new major version of the Azure Native provider. If you need a different version of an API, you have access to that as well: every API version is exposed as a separate namespace in the provider.
 
-👉 Get started with [Azure Native](/docs/get-started/azure/)
+👉 Get started with [Azure Native](/registry/packages/azure-native/)
 
 ## Public preview: a native provider for Google Cloud Platform
 

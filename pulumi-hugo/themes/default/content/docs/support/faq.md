@@ -1,9 +1,12 @@
 ---
-title: Frequently Asked Questions (FAQ)
+title_tag: Pulumi CLI & Pulumi Cloud FAQ
 meta_desc: A collection of Frequently Asked Questions (FAQ) about Pulumi, including topics like secrets management, Pulumi Cloud, and more.
+title: FAQ
+h1: Pulumi CLI & Pulumi Cloud FAQ
 menu:
   support:
     weight: 2
+    identifier: all-faqs
 
 aliases:
   - /docs/reference/faq/
@@ -38,7 +41,7 @@ To transfer a stack from your individual account to an organization, navigate to
 
 From there, select the transfer destination and tick any stacks you'd like to transfer.
 
-To learn more about this process, see [Transferring Stacks](/docs/intro/pulumi-cloud/projects-and-stacks#transferring-stacks).
+To learn more about this process, see [Transferring Stacks](/docs/pulumi-cloud/projects-and-stacks#transferring-stacks).
 
 ## Pulumi Cloud
 
@@ -48,7 +51,7 @@ Pulumi needs to store the result of operations. On creation of a Pulumi resource
 
 ### How does Pulumi depend on the Pulumi Cloud?
 
-Pulumi uses the Pulumi Cloud to store information about the current state of your application, which is used during updates, previews, and destroys as the source of truth for the current state of your cloud resources. We refer to this state as the "checkpoint" for your application. In addition, the Pulumi Cloud ensures that for a given stack, only a single update is running at once (so, if you and someone else are collaborating on a stack together, it ensures that you both don't update the same stack at the same time.) Once your stack has been deployed, it has no dependency on the Pulumi Cloud. To learn more about how the Pulumi engine uses pulumi.com, see [How Pulumi Works](/docs/intro/concepts/how-pulumi-works/).
+Pulumi uses the Pulumi Cloud to store information about the current state of your application, which is used during updates, previews, and destroys as the source of truth for the current state of your cloud resources. We refer to this state as the "checkpoint" for your application. In addition, the Pulumi Cloud ensures that for a given stack, only a single update is running at once (so, if you and someone else are collaborating on a stack together, it ensures that you both don't update the same stack at the same time.) Once your stack has been deployed, it has no dependency on the Pulumi Cloud. To learn more about how the Pulumi engine uses pulumi.com, see [How Pulumi Works](/docs/concepts/how-pulumi-works/).
 
 ### What happens if app.pulumi.com is down?
 
@@ -62,7 +65,7 @@ Using the Pulumi Cloud with Pulumi provide a good combination of usability, safe
 
 When you use Pulumi without the Pulumi Cloud, the checkpoint for your stack is stored locally or in your own external self-managed state storage. If that file is lost or outdated, Pulumi can no longer operate on your stack. To collaborate with others on your stack, you must host this file yourself and protect against conflicting updates to it. If you use your own checkpoint file, the Pulumi Cloud features, such as the deployment history and resource view, will not be available.
 
-To use Pulumi without the Pulumi Cloud, log in using `pulumi login --local` or by logging in to an alternative backend. For more information, read more at [State and Backends](/docs/intro/concepts/state/).
+To use Pulumi without the Pulumi Cloud, log in using `pulumi login --local` or by logging in to an alternative backend. For more information, read more at [State and Backends](/docs/concepts/state/).
 
 ### How can I go back to using the Pulumi Cloud?
 
@@ -91,17 +94,17 @@ Pulumi resources have different logical names and physical names. The logical na
 
 To ensure that as many logical Pulumi resources and stacks can be stood up side-by-side without them conflicting, Pulumi automatically creates each resource's name by combining the logical name with a random suffix appended afterwards. This approach to auto-naming also ensures Pulumi can replace resources with less downtime, by creating the replacement before needing to delete the old resource. In practice, both of these provide significant benefits. This means, however, that your resource's physical name will typically look like `my-bucket-d7c2fa0` instead of `my-bucket`.
 
-You can disable this [auto-naming](/docs/intro/concepts/resources#autonaming) on a per-resource basis if this isn't right for you. Doing so lets you have precise physical names without random suffixes, but also means you lose the two benefits named above.
+You can disable this [auto-naming](/docs/concepts/resources#autonaming) on a per-resource basis if this isn't right for you. Doing so lets you have precise physical names without random suffixes, but also means you lose the two benefits named above.
 
 ## Secrets
 
 ### Are my secrets ever visible?
 
-Pulumi provides primitives so you can enforce your [secrets](/docs/intro/concepts/secrets#secrets) are stored in a secure manner in the CLI, state file and Pulumi Cloud. During an update, your secrets will be decrypted in memory and visible to your Pulumi program. It is your responsibility to ensure that you do not persist them outside of Pulumi without securing them.
+Pulumi provides primitives so you can enforce your [secrets](/docs/concepts/secrets#secrets) are stored in a secure manner in the CLI, state file and Pulumi Cloud. During an update, your secrets will be decrypted in memory and visible to your Pulumi program. It is your responsibility to ensure that you do not persist them outside of Pulumi without securing them.
 
 ### How does Pulumi manage secrets?
 
-When you set a [configuration](/docs/intro/concepts/config/) value, you may pass `--secret` to `pulumi config set` which causes the value to be encrypted so it can be safely persisted in `Pulumi.<stack-name>.yaml`. For every stack the Pulumi Cloud manages a unique encryption key, which it uses to encrypt secrets for that stack (and this is configurable to use your own custom secrets provider). Because a different key is used for each stack, encrypting the same value across two different stacks will lead to different encrypted strings being stored in the `Pulumi.<stack-name>.yaml` files. This also means that you cannot copy an encrypted value from one file to another using a text editor. Instead, you must use `pulumi config set`.
+When you set a [configuration](/docs/concepts/config/) value, you may pass `--secret` to `pulumi config set` which causes the value to be encrypted so it can be safely persisted in `Pulumi.<stack-name>.yaml`. For every stack the Pulumi Cloud manages a unique encryption key, which it uses to encrypt secrets for that stack (and this is configurable to use your own custom secrets provider). Because a different key is used for each stack, encrypting the same value across two different stacks will lead to different encrypted strings being stored in the `Pulumi.<stack-name>.yaml` files. This also means that you cannot copy an encrypted value from one file to another using a text editor. Instead, you must use `pulumi config set`.
 
 When you run a preview, update or destroy, pulumi decrypts this data. It is plain text during the execution of your deployment, and any part of your Pulumi program may access it using the Pulumi config object.
 
@@ -121,7 +124,7 @@ Supported languages run out of process and communicate over gRPC with the Pulumi
 
 ### Does Pulumi use Terraform?
 
-Pulumi does not use the Terraform engine in any way. However, some Pulumi providers use the open-source [Terraform schemas](https://www.terraform.io/docs/extend/schemas/index.html) in order to know what resources and parameters are available, and to determine the return and response attributes. On the other hand, [Pulumi native providers](https://www.pulumi.com/blog/pulumiup-native-providers/) are mapped directly to the cloud provider APIs and do not use Terraform schemas.
+Pulumi does not use the Terraform engine in any way. However, some Pulumi providers use the open-source [Terraform schemas](https://www.terraform.io/docs/extend/schemas/index.html) in order to know what resources and parameters are available, and to determine the return and response attributes. On the other hand, [Pulumi native providers](/blog/pulumiup-native-providers/) are mapped directly to the cloud provider APIs and do not use Terraform schemas.
 
 ### Is Pulumi imperative or declarative?
 
@@ -130,3 +133,10 @@ Pulumi is a declarative tool that uses imperative languages to define your end s
 ### How will Pulumi make me more productive?
 
 Pulumi uses strongly typed languages with programming languages that support [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense) and the [Language Server Protocol](https://en.wikipedia.org/wiki/Language_Server_Protocol) which means when you are defining Pulumi programs, you rarely need to leave your IDE.
+
+## More FAQ
+
+* [Kubernetes guides FAQ](/docs/clouds/kubernetes/guides/faq/)
+* [Policy as code FAQ](/docs/using-pulumi/crossguard/faq/)
+* [Pulumi Deployments FAQ](/docs/pulumi-cloud/deployments/faq/)
+* [Pulumi Cloud SCIM FAQ](/docs/pulumi-cloud/access-management/scim/faq/)

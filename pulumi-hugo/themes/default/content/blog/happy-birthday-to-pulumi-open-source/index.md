@@ -21,9 +21,9 @@ since launching:
     [Getting Started guide](/docs/get-started/).
 - [A native Kubernetes provider with 100% Kubernetes API/version coverage.](/blog/pulumi-a-better-way-to-kubernetes)
 - A steady stream of improvements across
-    [AWS](/docs/get-started/aws/),
-    [Azure](/docs/get-started/azure/), and
-    [Google Cloud](/docs/get-started/gcp/) providers.
+    [AWS](/docs/clouds/aws/get-started/),
+    [Azure](/docs/clouds/azure/get-started/), and
+    [Google Cloud](/docs/clouds/gcp/get-started/) providers.
 - [Pulumi Crosswalk for AWS, a framework with built-in AWS infrastructure best practices.](/crosswalk/aws/)
 - Over 20 additional providers, including
     [CloudFlare](https://github.com/pulumi/pulumi-cloudflare),
@@ -32,14 +32,14 @@ since launching:
 - Brought our [Python 3 SDK](/docs/reference/pkg/python/)
     to parity with our
     [Node.js-based JavaScript and TypeScript SDKs](/docs/reference/pkg/nodejs/).
-- [Team and Enterprise SaaS editions for teams managing infrastructure in production.](/pricing/)
-- [GitHub, GitLab, Atlassian, and SAML/SSO identity providers.](/docs/intro/pulumi-cloud/organizations)
-- [CI/CD integrations with GitHub, GitLab, Codefresh, CircleCI, major clouds, and more.](/docs/guides/continuous-delivery)
-- [Pluggable secrets management and transitive state encryption.](/blog/managing-secrets-with-pulumi/)
-- [Pluggable state backends for AWS S3, Azure Blob Store, and Google Cloud Store.](/docs/intro/concepts/state/)
-- [Tools for managing complex, multi-stack environments, including Terraform integration.](/blog/using-terraform-remote-state-with-pulumi/)
+- [Team and Enterprise SaaS editions for teams managing infrastructure in production](/pricing/).
+- [GitHub, GitLab, Atlassian, and SAML/SSO identity providers](/docs/pulumi-cloud/organizations/).
+- [CI/CD integrations with GitHub, GitLab, Codefresh, CircleCI, major clouds, and more](/docs/guides/continuous-delivery).
+- [Pluggable secrets management and transitive state encryption](/blog/managing-secrets-with-pulumi/).
+- [Pluggable state backends for AWS S3, Azure Blob Store, and Google Cloud Store](/docs/concepts/state/).
+- [Tools for managing complex, multi-stack environments, including Terraform integration](/blog/using-terraform-remote-state-with-pulumi/).
 - Numerous engine reliability and performance improvements, including parallelism.
-- [75 blogs, increasingly focused on end to end solutions we see working with customers.](/blog/)
+- [75 blogs, increasingly focused on end to end solutions we see working with customers](/blog/).
 
 In addition to the steady stream of product improvements, the community
 has grown fast:

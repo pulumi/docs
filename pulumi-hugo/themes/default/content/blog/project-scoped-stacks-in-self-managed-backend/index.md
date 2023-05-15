@@ -15,9 +15,9 @@ At Pulumi, our goal is to offer the best Infrastructure as Code experience for a
 From the very beginning, we've believed that the best IaC experience is made possible by combining a great open source SDK and CLI with a great backend management service.
 This is why we built and run the [Pulumi Service](/product/pulumi-service/), a rich management platform for your Infrastructure as Code, which includes a forever free option for individuals, a generous free tier for teams, and critical tools for enterprises to manage IaC at scale.
 
-Over the last few years, we've continued to expand the features of the Pulumi Service - with [Deployments](/blog/pulumi-deployments/),  [Audit Logs](/docs/intro/pulumi-cloud/audit-logs/), [SAML SSO](/docs/guides/saml/) and [SCIM](/docs/guides/scim/), [Teams](/docs/intro/pulumi-cloud/teams/), [Stack Transfers](/blog/stack-transfers/), [Favorites](/blog/new-improved-pulumi-service-console/), [Organization](/docs/intro/pulumi-cloud/organization-access-tokens/) and [Team Access Tokens](/docs/intro/pulumi-cloud/team-access-tokens/) and much more.
+Over the last few years, we've continued to expand the features of the Pulumi Service - with [Deployments](/blog/pulumi-deployments/),  [Audit Logs](/docs/pulumi-cloud/audit-logs/), [SAML SSO](/docs/pulumi-cloud/access-management/saml/) and [SCIM](/docs/pulumi-cloud/access-management/scim/), [Teams](/docs/pulumi-cloud/access-management/teams/), [Stack Transfers](/blog/stack-transfers/), [Favorites](/blog/new-improved-pulumi-service-console/), [Organization](/docs/pulumi-cloud/access-management/organization-access-tokens/) and [Team Access Tokens](/docs/pulumi-cloud/access-management/team-access-tokens/) and much more.
 
-While the majority of Pulumi users do choose to use the Pulumi Service, we also know that there are good reasons why some organizations would prefer to use Pulumi IaC alone without the Pulumi Service.  And so we support and continue to invest in enabling a variety of additional [backends](/docs/intro/concepts/state/) that allow the Pulumi CLI to be used with state stored in the local filesystem or in cloud storage like S3, Azure Blob Storage, or Google Cloud Storage.
+While the majority of Pulumi users do choose to use the Pulumi Service, we also know that there are good reasons why some organizations would prefer to use Pulumi IaC alone without the Pulumi Service.  And so we support and continue to invest in enabling a variety of additional [backends](/docs/concepts/state/) that allow the Pulumi CLI to be used with state stored in the local filesystem or in cloud storage like S3, Azure Blob Storage, or Google Cloud Storage.
 
 Historically the Pulumi Service backend and the self-managed file storage backends have differed in their handling of "projects". The Pulumi Service stores state for a Pulumi stack in a seperate namespace per project. The self-managed backends have historically stored all stacks in a single namespace across all projects.  This inconsistency has been a common source of confusion for users getting started with Pulumi when using the file storage backends.
 
@@ -33,10 +33,10 @@ Feel free to skip ahead to the next section if you're already familiar with this
 
 ### Projects and stacks
 
-Pulumi [*projects*](/docs/intro/concepts/project/) are a unit of organization.
+Pulumi [*projects*](/docs/concepts/projects/) are a unit of organization.
 A project holds the code and configuration for your infrastructure,
 and can be used to deploy multiple stacks.
-A [*stack*](/docs/intro/concepts/stack/) is a single,
+A [*stack*](/docs/concepts/stack/) is a single,
 isolated instance of your infrastructure.
 
 For example, you might have an "app" project for your application,
@@ -48,7 +48,7 @@ deploying to the "test" and "prod" stacks.
 
 Each stack tracks metadata about your infrastructure
 so it can manage your cloud resources.
-This metadata is called [*state*](/docs/intro/concepts/state/)
+This metadata is called [*state*](/docs/concepts/state/)
 and it is stored in a *backend* of your choosing:
 **Service** or **Self-Managed**.
 
@@ -67,7 +67,7 @@ for additional control over where the information is stored.
 ![What's a state backend](whats-a-backend.png)
 
 If you're unsure of which backend to use,
-see [Deciding On a State Backend](/docs/intro/concepts/state/#deciding-on-a-state-backend).
+see [Deciding On a State Backend](/docs/concepts/state/#deciding-on-a-state-backend).
 
 ### Project-scoped stacks
 

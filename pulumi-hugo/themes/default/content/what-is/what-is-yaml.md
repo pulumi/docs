@@ -161,8 +161,8 @@ outputs:
 
 Finally, we have an output. This is a value handed to you by Pulumi, after the completion of any work required on behalf of relevant resources. If you're familiar with Javascript, you can think of it sort of like a promise. In this case, we're asking for the URL our document will be visible at.
 
-Defining infrastructure doesn't get much simpler than that! [Try it yourself](/docs/intro/languages/yaml/) and get started with any major cloud provider in a snap.
+Defining infrastructure doesn't get much simpler than that! [Try it yourself](/docs/languages-sdks/yaml/) and get started with any major cloud provider in a snap.
 
 ## Pulumi Corporation
 
-Pulumi lets infrastructure, developer, and security teams deliver infrastructure as code faster, using programming ([Python](/docs/intro/languages/python/), [Node.js (JavaScript, TypeScript)](/docs/intro/languages/javascript/), [Go](/docs/intro/languages/go/), [.NET (C#, F#, VB)](/docs/intro/languages/dotnet/), and [Java](/docs/intro/languages/java/) and markup ([YAML, JSON, and CUE](/docs/intro/languages/yaml/) languages they already know. It provides a single pipeline for delivering and securing infrastructure and applications on any cloud. [Get started for free today!](/docs/get-started/)
+Pulumi lets infrastructure, developer, and security teams deliver infrastructure as code faster, using programming ([Python](/docs/languages-sdks/python/), [Node.js (JavaScript, TypeScript)](/docs/languages-sdks/javascript/), [Go](/docs/languages-sdks/go/), [.NET (C#, F#, VB)](/docs/languages-sdks/dotnet/), and [Java](/docs/languages-sdks/java/) and markup ([YAML, JSON, and CUE](/docs/languages-sdks/yaml/) languages they already know. It provides a single pipeline for delivering and securing infrastructure and applications on any cloud. [Get started for free today!](/docs/get-started/)

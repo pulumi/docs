@@ -116,5 +116,5 @@ demo this post in an episode of the [Kubernetes Community Meeting](https://kuber
 [levi-blackstone]: /blog/author/levi-blackstone/
 [pulumi-kubernetes]: https://github.com/pulumi/pulumi-kubernetes
 [client-go]: https://github.com/kubernetes/client-go
-[crosswalk-aws]: /docs/guides/crosswalk/aws/
+[crosswalk-aws]: /docs/clouds/aws/guides/
 <!-- markdownlint-enable url -->

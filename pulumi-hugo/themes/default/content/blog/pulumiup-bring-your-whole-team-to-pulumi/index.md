@@ -15,7 +15,7 @@ Pulumi's Cloud Engineering Platform helps teams of all sizes deliver and manage 
 
 <!--more-->
 
-Most teams larger than a few people define their team members, and the groups they’re a part of, using an Identity Provider (IdP) like [Okta](https://www.okta.com/products/single-sign-on/), Microsoft’s [Azure Active Directory](https://azure.microsoft.com/en-us/services/active-directory/), or [Google Cloud Identity & Access Management](https://cloud.google.com/iam/). Defining groups allows you to set policies based on logical groupings of teammates, such as giving different capabilities to individual developers versus infrastructure administrators. Pulumi works seamlessly with these IdPs (and many more) by providing [Single Sign-On with SAML](/docs/guides/saml/) and [user and group synchronization via SCIM 2.0](/docs/guides/scim/). When you use both SAML SSO and SCIM, you can manage the users who should have access to Pulumi and the [Pulumi teams](/docs/intro/pulumi-cloud/teams/) they belong to entirely from your IdP. Managing users and teams this way helps keep your organization more secure by ensuring a single point of control over the users who have access to manage and update your infrastructure. It also saves you time by centralizing all of your identity and access management workflows in your identity provider.
+Most teams larger than a few people define their team members, and the groups they’re a part of, using an Identity Provider (IdP) like [Okta](https://www.okta.com/products/single-sign-on/), Microsoft’s [Azure Active Directory](https://azure.microsoft.com/en-us/services/active-directory/), or [Google Cloud Identity & Access Management](https://cloud.google.com/iam/). Defining groups allows you to set policies based on logical groupings of teammates, such as giving different capabilities to individual developers versus infrastructure administrators. Pulumi works seamlessly with these IdPs (and many more) by providing [Single Sign-On with SAML](/docs/pulumi-cloud/access-management/saml/) and [user and group synchronization via SCIM 2.0](/docs/pulumi-cloud/access-management/scim/). When you use both SAML SSO and SCIM, you can manage the users who should have access to Pulumi and the [Pulumi teams](/docs/pulumi-cloud/access-management/teams/) they belong to entirely from your IdP. Managing users and teams this way helps keep your organization more secure by ensuring a single point of control over the users who have access to manage and update your infrastructure. It also saves you time by centralizing all of your identity and access management workflows in your identity provider.
 
 {{% notes type="info" %}}
 SAML SSO and SCIM support are only available in **Pulumi Enterprise**. See [pricing](/pricing/) for more details.
@@ -27,10 +27,10 @@ In a world of many cloud applications and service providers, IT departments can 
 
 To configure single sign-on with SAML for your Pulumi organization, use the guide that matches your IdP:
 
-- [Okta](/docs/guides/saml/okta/)
-- [Azure Active Directory](/docs/guides/saml/aad/)
-- [Google Cloud Identity & Access Management](/docs/guides/saml/gsuite)
-- [Generic guide (for all other IdPs)](/docs/guides/saml/sso)
+- [Okta](/docs/pulumi-cloud/access-management/saml/okta/)
+- [Azure Active Directory](/docs/pulumi-cloud/access-management/saml/aad/)
+- [Google Cloud Identity & Access Management](/docs/pulumi-cloud/access-management/saml/gsuite)
+- [Generic guide (for all other IdPs)](/docs/pulumi-cloud/access-management/saml/sso)
 
 ![SAML configuration](saml-in-console.png)
 After configuring your IdP, any and all changes, either to your cloud applications and infrastructure, or your account's settings, will be tracked and associated with the user who performed that activity. The end result is full end-to-end visibility and attestation for important changes to your Pulumi organization.
@@ -41,14 +41,14 @@ After you’ve configured single sign-on with SAML, you can take it one step fur
 
 To configure user and group synchronization via SCIM, use the guide that matches your IdP:
 
-- [Okta](/docs/guides/scim/okta/)
-- [Azure Active Directory](/docs/guides/scim/azuread/)
+- [Okta](/docs/pulumi-cloud/access-management/scim/okta/)
+- [Azure Active Directory](/docs/pulumi-cloud/access-management/scim/azuread/)
 
 ## Distributed, least privilege access permissions model
 
-In addition to support for standards like SAML and SCIM, the Role-Based Access Control (RBAC) permissions model enables you to set up a least privilege access model for your infrastructure resources. In such a model, all access to infrastructure is specifically granted to individual users by creating [Teams](/docs/intro/pulumi-cloud/teams/) that have the appropriate level of access (Read, Write, or Admin) to a set of [Stacks](/docs/intro/pulumi-cloud/projects-and-stacks/), then adding users to those teams. Team membership can be managed manually by Team Admins or automatically using SCIM group synchronization.
+In addition to support for standards like SAML and SCIM, the Role-Based Access Control (RBAC) permissions model enables you to set up a least privilege access model for your infrastructure resources. In such a model, all access to infrastructure is specifically granted to individual users by creating [Teams](/docs/pulumi-cloud/access-management/teams/) that have the appropriate level of access (Read, Write, or Admin) to a set of [Stacks](/docs/pulumi-cloud/projects-and-stacks/), then adding users to those teams. Team membership can be managed manually by Team Admins or automatically using SCIM group synchronization.
 
-Learn how to create Teams in the [Teams docs](/docs/intro/pulumi-cloud/teams/).
+Learn how to create Teams in the [Teams docs](/docs/pulumi-cloud/access-management/teams/).
 
 ## Next steps
 

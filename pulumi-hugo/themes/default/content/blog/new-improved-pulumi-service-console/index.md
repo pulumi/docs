@@ -39,7 +39,7 @@ It’s been nearly four years since the Pulumi Service launched back in 2018. In
 
 <!--more-->
 
-We’ve added features like [audit logs](/docs/intro/pulumi-cloud/audit-logs/), [SAML SSO](/docs/guides/saml/) and [SCIM](/docs/guides/scim/), [Teams](/docs/intro/pulumi-cloud/teams/), [Organization](/docs/intro/pulumi-cloud/organization-access-tokens/) and [Team Access Tokens](/docs/intro/pulumi-cloud/team-access-tokens/), and much more! But throughout all these changes, the look and feel of the Service has largely stayed the same—until now! Today we’re excited to launch a set of improvements to the overall user experience of the Pulumi Service. These updates include:
+We’ve added features like [audit logs](/docs/pulumi-cloud/audit-logs/), [SAML SSO](/docs/pulumi-cloud/access-management/saml/) and [SCIM](/docs/pulumi-cloud/access-management/scim/), [Teams](/docs/pulumi-cloud/access-management/teams/), [Organization](/docs/pulumi-cloud/access-management/organization-access-tokens/) and [Team Access Tokens](/docs/pulumi-cloud/access-management/team-access-tokens/), and much more! But throughout all these changes, the look and feel of the Service has largely stayed the same—until now! Today we’re excited to launch a set of improvements to the overall user experience of the Pulumi Service. These updates include:
 
 - Increased organizational insights on the Service Dashboard
 - Quick access to stacks with a new Stack Favorites feature

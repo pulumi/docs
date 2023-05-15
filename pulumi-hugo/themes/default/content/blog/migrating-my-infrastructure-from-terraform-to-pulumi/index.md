@@ -47,8 +47,8 @@ You might already know a bit of Pulumi, but here's a very quick overview plus so
 - Pulumi allows you to write your IaC using TypeScript, Javascript, Python, Go or C#.
 - You define *resources* which have *inputs* and *outputs*. As an example, a resource could be an RDS database Instance. One of it's inputs would be the database version to use. One of the outputs would be the hostname / address of the server.
 - The outputs are lazily evaluated, and their exact value is often not known until after you've executed your code. I.e. you wouldn't have the `db_instance.address` until the instance had been created. Think of outputs as promises / futures.
-- You can use [component resources](https://www.pulumi.com/docs/intro/concepts/resources/#components) to group your resources into logical groups - similar to how Terraform modules work. If you don't do this there's a high risk you'll end up with a very messy setup further down the line.
-- Read Pulumi's own [overview](https://www.pulumi.com/docs/intro/concepts/) and [naming](https://www.pulumi.com/docs/intro/concepts/resources/#autonaming) docs before attempting to use Pulumi yourself. I'd say that's the most important bit to know about.
+- You can use [component resources](https://www.pulumi.com/docs/concepts/resources/#components) to group your resources into logical groups - similar to how Terraform modules work. If you don't do this there's a high risk you'll end up with a very messy setup further down the line.
+- Read Pulumi's own [overview](https://www.pulumi.com/docs/concepts/) and [naming](https://www.pulumi.com/docs/concepts/resources/#autonaming) docs before attempting to use Pulumi yourself. I'd say that's the most important bit to know about.
 - Pulumi are using the [open core](https://en.wikipedia.org/wiki/Open-core_model) model where most features are free, but some extra goodies are on a paid tier. You can use the open source version and do state management yourself, but you miss out on certain features.
 
 So what does Pulumi code look like? Below is a minimal extract of some of the Python code I've written (slightly altered).
@@ -105,11 +105,11 @@ There's also the fact that I can use the Pulumi Console (web interface) to check
 
 ### How I went about the migration
 
-After reading the [migration guide](https://www.pulumi.com/docs/guides/adopting/from_terraform/) I immediately tried out what seemed to be the obvious option - [tf2pulumi](https://www.pulumi.com/tf2pulumi/). This is supposed to be able to convert Terraform code directly to Pulumi. In my case it simply errored out and was not able to convert my Terraform code. To be fair my TF code was using slightly more "advanced" features like custom written modules, so it wasn't the easiest thing to handle for tf2pulumi. I recommend you try it out, because it sounds great in theory. However it wasn't an option for me, so I had to go for a more manual approach. In retrospect I'm actually quite happy I did, because it gave me the opportunity to organise my code in a way that I preferred.
+After reading the [migration guide](https://www.pulumi.com/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform//) I immediately tried out what seemed to be the obvious option - [tf2pulumi](https://www.pulumi.com/tf2pulumi/). This is supposed to be able to convert Terraform code directly to Pulumi. In my case it simply errored out and was not able to convert my Terraform code. To be fair my TF code was using slightly more "advanced" features like custom written modules, so it wasn't the easiest thing to handle for tf2pulumi. I recommend you try it out, because it sounds great in theory. However it wasn't an option for me, so I had to go for a more manual approach. In retrospect I'm actually quite happy I did, because it gave me the opportunity to organise my code in a way that I preferred.
 
 Don't worry though - "manual" imports using Pulumi is still rather easy to perform, albeit a bit time consuming. Here's how I did it.
 
-I started by testing out the [AWS getting started guide](https://www.pulumi.com/docs/get-started/aws/) to get a feel for how Pulumi worked. This was a great move and I recommend everyone else to do the same.
+I started by testing out the [AWS getting started guide](https://www.pulumi.com/docs/clouds/aws/get-started/) to get a feel for how Pulumi worked. This was a great move and I recommend everyone else to do the same.
 
 I was then ready to start importing my existing resources. The general workflow was to look at my existing Terraform code, rewrite it using Pulumi, and then import the existing resources. It was a bit time consuming in the beginning, but I got a lot faster at it after a few hours.
 
@@ -123,7 +123,7 @@ Once I had everything migrated to Pulumi I set up a Gitlab CI/CD flow which allo
 
 #### Use component resources to group resources
 
-When your infrastructure starts growing it becomes hard to manage unless you group your resources. Pulumi's solution to this are the so called [component resources](https://www.pulumi.com/docs/intro/concepts/resources/#components). They are "logical components" which you define yourself.
+When your infrastructure starts growing it becomes hard to manage unless you group your resources. Pulumi's solution to this are the so called [component resources](https://www.pulumi.com/docs/concepts/resources/#components). They are "logical components" which you define yourself.
 
 ```shell
 $ pulumi stack
@@ -144,7 +144,7 @@ It might seem like a small thing, but it *really* helps to have a logical grou
 
 #### Importing a resource that has a parent was a bit confusing at first
 
-Each resource in pulumi has a globally unique [URN](https://www.pulumi.com/docs/intro/concepts/resources/#urns). You can show the URNs for the infrastructure you've codeified in pulumi by issuing `pulumi stack --show-urns`
+Each resource in pulumi has a globally unique [URN](https://www.pulumi.com/docs/concepts/resources/#urns). You can show the URNs for the infrastructure you've codeified in pulumi by issuing `pulumi stack --show-urns`
 
 ```shell
 $ pulumi stack --show-urns
@@ -325,7 +325,7 @@ policy=(
 
 The `.apply` method can also be useful for troubleshooting when you need to access the particular value of an output.
 
-This might seem tricky at first, but digest this for a bit, then have a look at the docs for [Inputs and Outputs](https://www.pulumi.com/docs/intro/concepts/inputs-outputs/) and I'm sure it'll all make sense.
+This might seem tricky at first, but digest this for a bit, then have a look at the docs for [Inputs and Outputs](https://www.pulumi.com/docs/concepts/inputs-outputs/) and I'm sure it'll all make sense.
 
 ### Don't name resources unless you really have to
 
@@ -371,13 +371,13 @@ update:
 
 As you can see my pipeline is very simple for this little project which is still in an Alpha phase. There's just the "production" environment, and changes are automatically applied once the MR is merged.
 
-You'll have to make use of your gitlab-fu (or other-ci-cd-fu) to adapt this to your own needs. Read the [docs from Pulumi](https://www.pulumi.com/docs/guides/continuous-delivery/) to get started. It's usually very simple and straight forward!
+You'll have to make use of your gitlab-fu (or other-ci-cd-fu) to adapt this to your own needs. Read the [docs from Pulumi](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/) to get started. It's usually very simple and straight forward!
 
 I did things quite differently from what's described in the Pulumi docs. I used the ready made image from Docker Hub, while they build their own. I did this to make the whole pipeline quicker. It seems to work really well so far, and I haven't found any downsides to my approach (yet).
 
 ### I couldn't get the Gitlab integration webhooks to work
 
-You are normally able to have Pulumi post a report of the planned changes [attached to your merge request](https://www.pulumi.com/docs/guides/continuous-delivery/gitlab-app/) .
+You are normally able to have Pulumi post a report of the planned changes [attached to your merge request](https://www.pulumi.com/docs/using-pulumi/continuous-delivery/gitlab-app/) .
 
 ![image.png](./preview.jpeg)
 

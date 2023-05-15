@@ -23,7 +23,7 @@ main:
     This workshop is designed to help users completely new to Pulumi to become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and a series of hands on exercises to help you understand the building blocks available in Pulumi.
 
 
-    If you want to code along, you’ll need a [free Pulumi SaaS account](https://app.pulumi.com/signup/) and [the Pulumi CLI](https://www.pulumi.com/docs/get-started/install/)
+    If you want to code along, you’ll need a [free Pulumi SaaS account](https://app.pulumi.com/signup/) and [the Pulumi CLI](https://www.pulumi.com/docs/install/)
   sortable_date: 2022-12-08T18:00:00.000Z
 event_data:
   name: Intro to Infrastructure as Code with TypeScript

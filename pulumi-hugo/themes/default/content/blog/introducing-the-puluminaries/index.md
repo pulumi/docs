@@ -68,7 +68,7 @@ Kat has been a helpful member of the Pulumi community - not only providing feedb
 <img src="komal-ali.png" width="200" height="200" alt="Komal Ali"/>
 <a data-track="twitter" href="https://twitter.com/zwitkali"><i class="fab fa-twitter"></i></a>&nbsp;<a data-track="github" href="https://github.com/komalali"><i class="fab fa-github"></i></a>&nbsp;<a data-track="linkedin" href="https://linkedin.com/in/komal-ali"><i class="fab fa-linkedin"></i></a>
 
-In addition to being a Puluminary, Komal is also a Pulumni, having spent time working to make Pulumi a better tool for developers -  they were ever-present in making our Python SDK better and creating the [Automation API](https://www.pulumi.com/docs/guides/automation-api/)!
+In addition to being a Puluminary, Komal is also a Pulumni, having spent time working to make Pulumi a better tool for developers -  they were ever-present in making our Python SDK better and creating the [Automation API](https://www.pulumi.com/docs/using-pulumi/automation-api/)!
 
 ### Paul Hicks
 

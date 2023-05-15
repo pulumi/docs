@@ -25,7 +25,7 @@ The existing [Helm Chart](/registry/packages/kubernetes/api-docs/helm/v3/chart/)
 
 ## How is Helm Release resource different?
 
-Pulumi's Helm Chart integration was implemented as a [Component Resource](/docs/intro/concepts/resources#components) which effectively extracts the corresponding Kubernetes resources' manifests from the chart and installs them as if they were individually specified in the Pulumi user program. This allowed users to install community developed Helm charts, while providing fine-grained control over the respective Kubernetes resources installed in the process. For instance, the installed resources are subject to all policies specified through Policy-as-Code policy packs registered with Pulumi. Other users have used Pulumi's powerful transformation support to manipulate Helm charts to fit their desired needs before installing them in their environment.
+Pulumi's Helm Chart integration was implemented as a [Component Resource](/docs/concepts/resources#components) which effectively extracts the corresponding Kubernetes resources' manifests from the chart and installs them as if they were individually specified in the Pulumi user program. This allowed users to install community developed Helm charts, while providing fine-grained control over the respective Kubernetes resources installed in the process. For instance, the installed resources are subject to all policies specified through Policy-as-Code policy packs registered with Pulumi. Other users have used Pulumi's powerful transformation support to manipulate Helm charts to fit their desired needs before installing them in their environment.
 
 In contrast, the new Helm Release resource uses the Helm SDK, bringing the full feature set of Helm directly to Pulumi users. This provides the following advantages:
 
@@ -54,7 +54,7 @@ Secondly, only the Release resource and the relevant Kubernetes resources read b
 
 ## How do I use it?
 
-If you aren't already familiar with using Pulumi with Kubernetes, head on over to [Pulumi's getting started guide for Kubernetes](/docs/get-started/kubernetes/) first.
+If you aren't already familiar with using Pulumi with Kubernetes, head on over to [Pulumi's getting started guide for Kubernetes](/docs/clouds/kubernetes/get-started/) first.
 
 1. In your chosen Kubernetes Pulumi project, make sure the referenced version of the Pulumi-Kubernetes SDK is at least `v3.7.0`.
 2. Helm Release support is configured to target the relevant cluster pointed to by the Kubernetes provider associated with it and no additional configuration is required by default. However, more advanced configuration options are supported, see the provider configuration [documentation](/registry/packages/kubernetes/api-docs/provider/#helmdriver_nodejs) for more details.

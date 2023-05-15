@@ -145,7 +145,7 @@ cloud engineering within their teams. We are [hiring in all areas of the
 company](/careers) as we enter this next exciting
 chapter of the company.
 
-[Download Pulumi](/docs/get-started/install/) -- we
+[Download Pulumi](/docs/install/) -- we
 can't wait to see all the great things you build next with Pulumi!
 
 Joe & Eric

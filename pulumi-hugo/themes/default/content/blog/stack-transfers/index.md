@@ -63,6 +63,6 @@ See it in action!
 
 ![New org flow](new-org-flow.png)
 
-Learn more in the [Stack Transfer documentation](/docs/intro/pulumi-cloud/projects-and-stacks/#transferring-stacks). Please submit an issue in the [Pulumi Service Requests repo](https://github.com/pulumi/service-requests/issues/new?assignees=&labels=kind%2Fenhancement&template=feature-request.md) if you have feature requests for the Pulumi Service or [join our Slack channel](https://slack.pulumi.com) if you have questions.
+Learn more in the [Stack Transfer documentation](/docs/pulumi-cloud/projects-and-stacks/#transferring-stacks). Please submit an issue in the [Pulumi Service Requests repo](https://github.com/pulumi/service-requests/issues/new?assignees=&labels=kind%2Fenhancement&template=feature-request.md) if you have feature requests for the Pulumi Service or [join our Slack channel](https://slack.pulumi.com) if you have questions.
 
 Until next time!

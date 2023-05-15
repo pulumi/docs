@@ -208,8 +208,8 @@ kubernetes_overview:
     list:
         - Manage Kubernetes clusters on all major cloud providers.
         - Increase productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate Kubernetes clusters, app workloads, or both.
-        - Automate Kubernetes deployments with CI/CD integrations for [Flux](/blog/pulumi-kubernetes-new-2022/#integration-with-flux-sources), [Spinnaker](/blog/unlocking-spinnaker-with-pulumi/), [Octopus](/blog/deploying-with-octopus-and-pulumi/), [GitHub Actions](/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/), [GitLab](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/), [Azure DevOps](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/) and [more](/docs/guides/continuous-delivery/).
-        - Seamlessly manage both Kubernetes and cloud resources using GitOps with the [Pulumi Kubernetes Operator](/docs/guides/continuous-delivery/pulumi-kubernetes-operator/).
+        - Automate Kubernetes deployments with CI/CD integrations for [Flux](/blog/pulumi-kubernetes-new-2022/#integration-with-flux-sources), [Spinnaker](/blog/unlocking-spinnaker-with-pulumi/), [Octopus](/blog/deploying-with-octopus-and-pulumi/), [GitHub Actions](/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/), [GitLab](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/), [Azure DevOps](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/) and [more](/docs/using-pulumi/continuous-delivery/).
+        - Seamlessly manage both Kubernetes and cloud resources using GitOps with the [Pulumi Kubernetes Operator](/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/).
         - Use Kubernetes [Server-Side Apply](/registry/packages/kubernetes/how-to-guides/managing-resources-with-server-side-apply/) to safely manage shared Kubernetes resources with Pulumi and your existing controllers.
     cta: Learn More
     cta_url: "/blog/new-kubernetes-superpowers"
@@ -217,7 +217,7 @@ kubernetes_overview:
 superpowers:
     - title: Run On Any Cloud
       cta: Learn more
-      cta_url: "/docs/get-started/kubernetes"
+      cta_url: "/docs/clouds/kubernetes/get-started/"
       icon_type: cloud
       description: |
         Support for all clouds including Amazon Elastic Kubernetes Service (EKS), Azure
@@ -227,7 +227,7 @@ superpowers:
 
     - title: Reduce Provisioning Time
       cta: Learn more
-      cta_url: "/docs/get-started/kubernetes"
+      cta_url: "/docs/clouds/kubernetes/get-started/"
       icon_type: provisioning
       description: |
         With Pulumi you are able to take advantage of the features of programming languages,
@@ -245,7 +245,7 @@ superpowers:
 
     - title: Smart Architecture
       cta: Learn more
-      cta_url: "/docs/intro/concepts"
+      cta_url: "/docs/concepts/"
       icon_type: architecture
       description: |
         YAML and templated DSLs force you to write the same boilerplate code over and over.

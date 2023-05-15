@@ -16,7 +16,7 @@ main:
     Pulumi's Automation API to work with Pulumi in a programmatic manner.
 
 
-    If you want to code along, you’ll need a [free Pulumi SaaS account](https://app.pulumi.com/signup/), [the Pulumi CLI](/docs/get-started/install), and an AWS account (free tier).
+    If you want to code along, you’ll need a [free Pulumi SaaS account](https://app.pulumi.com/signup/), [the Pulumi CLI](/docs/install/), and an AWS account (free tier).
   title: Automating Infrastructure as Code Workflows
   youtube_url: "https://www.youtube.com/embed/Df_UQ1CD06A?rel=0"
   sortable_date: 2022-11-17T18:00:00.000Z

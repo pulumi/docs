@@ -54,16 +54,16 @@ Although this code looks remarkably similar to using your cloud's Go SDK to impe
 
 Making Go a first-class citizen is a goal for the Pulumi 2.0 release. We especially wanted Go to have more idiomatic and stronger typing than `interface{}`.
 
-Pulumi’s [programming model](/docs/intro/concepts/) is inherently asynchronous. Consider creating a new AWS SecurityGroup, and using it to provision an EC2 instance. The EC2 instance must wait for the Group to finish provisioning, and the Pulumi engine must track this dependency. While two resources, modern cloud deployments commonly manage hundreds of resources. Pulumi models these resources using promise-like wrappers referred to as Inputs and Outputs allowing us to build a dependency graph, and parallelize cloud resource provisioning where possible.
+Pulumi’s [programming model](/docs/concepts/) is inherently asynchronous. Consider creating a new AWS SecurityGroup, and using it to provision an EC2 instance. The EC2 instance must wait for the Group to finish provisioning, and the Pulumi engine must track this dependency. While two resources, modern cloud deployments commonly manage hundreds of resources. Pulumi models these resources using promise-like wrappers referred to as Inputs and Outputs allowing us to build a dependency graph, and parallelize cloud resource provisioning where possible.
 
-Inputs, Outputs, and functions that operate over them ([All](/docs/intro/concepts/inputs-outputs#all), [Apply](/docs/intro/concepts/inputs-outputs#apply), [Sprintf](/docs/intro/concepts/inputs-outputs#outputs-and-strings)) must be compatible with raw type primitives (string, integer, list, map, boolean), and user-defined structs. In other words, we must support polymorphism in a language that doesn’t have generics. We hide the gritty details behind a rich, strongly-typed API that we were able to iterate on easily thanks to the utilization of [code generation](https://github.com/pulumi/pulumi/blob/master/sdk/go/pulumi/types_builtins.go).
+Inputs, Outputs, and functions that operate over them ([All](/docs/concepts/inputs-outputs#all), [Apply](/docs/concepts/inputs-outputs#apply), [Sprintf](/docs/concepts/inputs-outputs#outputs-and-strings)) must be compatible with raw type primitives (string, integer, list, map, boolean), and user-defined structs. In other words, we must support polymorphism in a language that doesn’t have generics. We hide the gritty details behind a rich, strongly-typed API that we were able to iterate on easily thanks to the utilization of [code generation](https://github.com/pulumi/pulumi/blob/master/sdk/go/pulumi/types_builtins.go).
 
 ## Try Pulumi + Go Today
 
 Although Pulumi for Go is in “preview” status until 2.0 is released, it supports all of the essential Pulumi programming model features (and the rest is on its way). Our goal is to gather feedback and over the next few weeks, and work hard to improve the Go experience across the board, including more examples and better documentation. To get started check out:
 
 - [GoDoc](https://godoc.org/github.com/pulumi/pulumi)
-- Getting started with Go and [AWS](/docs/get-started/aws/), [Azure](/docs/get-started/azure/), or [Google Cloud](/docs/get-started/gcp/).
+- Getting started with Go and [AWS](/docs/clouds/aws/get-started/), [Azure](/docs/clouds/azure/get-started/), or [Google Cloud](/docs/clouds/gcp/get-started/).
 - Author and deploy serverless functions in Go on [AWS Lambda](https://github.com/pulumi/examples/tree/master/aws-go-lambda) and [GCP Cloud Functions](https://github.com/pulumi/examples/tree/master/gcp-go-functions).
 - Build a serverless container-based application on [AWS ECS Fargate](https://github.com/pulumi/examples/tree/master/aws-go-fargate).
 - Deploy a web server on a virtual machine with [AWS](https://github.com/pulumi/examples/tree/master/aws-go-webserver) or [Azure](https://github.com/pulumi/examples/tree/master/classic-azure-go-webserver-component).

@@ -33,7 +33,7 @@ Controlling access to resources is basic infrastructure security. Leaving servic
 
 Controlling ingress and egress to and from resources and not exposing them on the Internet is a best practice. Policies that run at the level of the organization can mitigate the likelihood of unauthorized access to resources or even data breaches. Regardless of the type of environment, whether its dev, test, production, Policy as Code can enforce best practice across the organization.
 
-Another area of concern is securing your software supply chain. Although your infrastructure runs on a cloud provider, it is not exempt form vulnerabilities as shown by [CVE-2020-8835](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8835) which allows container escape to get root privileges on the host node. On GCP, nodes running on Ubuntu running Kubernetes 1.16 and 1.17 were affected. You can write a policy that checks the version of GKE and prevents those version from being deployed.
+Another area of concern is securing your software supply chain. Although your infrastructure runs on a cloud provider, it is not exempt form vulnerabilities as shown by [CVE-2020-8835](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8835) which allows container escape to get root privileges on the host node. On Google Cloud, nodes running on Ubuntu running Kubernetes 1.16 and 1.17 were affected. You can write a policy that checks the version of GKE and prevents those version from being deployed.
 
 ## Validate Before or During Deployment
 
@@ -45,9 +45,9 @@ In either case, your infrastructure is validated before it’s deployed, saving 
 
 ## Best Practices as Policies
 
-All cloud providers offer a set of best practices for deploying resources. Best practices can be implemented as policies, but instead of managing them as individual policies, wouldn’t it be more efficient to organized similar policies as a bundle? This is the idea behind [Policy Packs](/docs/guides/crossguard/core-concepts#policy-pack). They provide a way to group similar policies based on how you manage your infrastructure. For example, you may have several policies for storage based on how they are tagged. Policy packs don’t restrict which policies you combine; you can have Kubernetes policies bundled with container registry policies. You create Policy Packs according to the requirements and needs of your organization.
+All cloud providers offer a set of best practices for deploying resources. Best practices can be implemented as policies, but instead of managing them as individual policies, wouldn’t it be more efficient to organized similar policies as a bundle? This is the idea behind [Policy Packs](/docs/using-pulumi/crossguard/core-concepts#policy-pack). They provide a way to group similar policies based on how you manage your infrastructure. For example, you may have several policies for storage based on how they are tagged. Policy packs don’t restrict which policies you combine; you can have Kubernetes policies bundled with container registry policies. You create Policy Packs according to the requirements and needs of your organization.
 
-You can apply a Policy Pack to a single stack of resources or across multiple stacks. A group of stacks that use the same Policy Pack is a [Policy Group](/docs/guides/crossguard/core-concepts#policy-group). Note that a stack can belong to multiple Policy Groups. A typical application of Policy Groups is to set policies for environments; for example, you might have a more permissive Policy Group for your development and staging environments and more restrictive one for production.
+You can apply a Policy Pack to a single stack of resources or across multiple stacks. A group of stacks that use the same Policy Pack is a [Policy Group](/docs/using-pulumi/crossguard/core-concepts#policy-group). Note that a stack can belong to multiple Policy Groups. A typical application of Policy Groups is to set policies for environments; for example, you might have a more permissive Policy Group for your development and staging environments and more restrictive one for production.
 
 Policy as code enables you to deploy best practices as policies. Moreover, you can organize policies in bundles or Policy Packs based on your organizational requirements. This provides repeatable and fine-grained control over the resources you deploy. You can apply Policy Packs on individual resource stacks or across multiple stacks as Policy Groups, giving you granular control over how and which resources are deployed.
 
@@ -69,4 +69,4 @@ We often talk about Policy as Code in terms of repeatability, versioning, and te
 - encoding best practices for resource stacks,
 - and working with cloud provider native resources to provide best of breed security and granular control.
 
-Learn more about using programming languages for [Policy as Code with our docs](/docs/guides/crossguard/).
+Learn more about using programming languages for [Policy as Code with our docs](/docs/using-pulumi/crossguard/).

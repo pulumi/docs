@@ -21,7 +21,7 @@ main:
     managing all of these different moving pieces a little bit less painful!
 
 
-    If you want to code along, you’ll need a [free Pulumi SaaS account](https://app.pulumi.com/signup/) and [the Pulumi CLI](https://www.pulumi.com/docs/get-started/install/).
+    If you want to code along, you’ll need a [free Pulumi SaaS account](https://app.pulumi.com/signup/) and [the Pulumi CLI](https://www.pulumi.com/docs/install/).
   sortable_date: 2022-12-15T18:00:00.000Z
 event_data:
   name: Intro to Infrastructure as Code with YAML

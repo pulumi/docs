@@ -33,7 +33,7 @@ If you haven't already, I'd encourage you to [read through the previous post](/b
 
 When we left off, we'd gotten Redshift up and running, and we were able to pull the data from S3 into Redshift directly (by running a manual query in the Redshift console), but that's as far as we got --- no automation, no protection from duplicate records, just the absolute basics.
 
-So to pick up from there, let's start by bootstrapping a new project with the code from the previous post. As always, make sure you've [installed Pulumi](/docs/get-started/install/) and [configured your AWS credentials](/registry/packages/aws/installation-configuration/) in the usual way first, then run the following commands to get going:
+So to pick up from there, let's start by bootstrapping a new project with the code from the previous post. As always, make sure you've [installed Pulumi](/docs/install/) and [configured your AWS credentials](/registry/packages/aws/installation-configuration/) in the usual way first, then run the following commands to get going:
 
 {{< chooser language "typescript,python" />}}
 
@@ -244,7 +244,7 @@ cluster = redshift.Cluster("cluster", redshift.ClusterArgs(
 
 {{% /choosable %}}
 
-At the top of the program, you'll see that the code assumes you've set several [Pulumi configuration](/docs/intro/concepts/config/) values --- `clusterIdentifier`, `clusterNodeType`, and others --- so take a moment to do that now with the Pulumi CLI as well:
+At the top of the program, you'll see that the code assumes you've set several [Pulumi configuration](/docs/concepts/config/) values --- `clusterIdentifier`, `clusterNodeType`, and others --- so take a moment to do that now with the Pulumi CLI as well:
 
 ```bash
 $ pulumi config set clusterIdentifier my-redshift-cluster

@@ -68,7 +68,7 @@ Financial optimization can also come in the form of strategic sourcing; most clo
 
 Using cloud engineering practices with Pulumi, you have the opportunity to implement both proactive and reactive models to control your cloud spend.
 
-As an [infrastructure as code platform](https://www.pulumi.com/product/), **Pulumi is in the unique position to be proactive about managing your costs**.  
+As an [infrastructure as code platform](/product/), **Pulumi is in the unique position to be proactive about managing your costs**.  
 
 - You can design guardrails on your provisioning to limit expensive resource types or quantities,
 - Direct resources to reserved allocations,
@@ -102,34 +102,34 @@ Implementing Tag Policy is the best first action to take. Tags are the set of re
 
 You will now be able to report on and manage resources in those tag groups.  It’s advisable that you do not create too many required tags, or it will quickly get difficult to manage and it increases the likelihood of multiple tags applying, which reduces the insightfulness of the data.
 
-Read more about Tag Policy implementation with Pulumi below, and for extended reading, refer to this post, [Automatically Enforcing AWS Resource Tagging Policies](https://www.pulumi.com/blog/automatically-enforcing-aws-resource-tagging-policies/) from CEO, Joe Duffy.
+Read more about Tag Policy implementation with Pulumi below, and for extended reading, refer to this post, [Automatically Enforcing AWS Resource Tagging Policies](/blog/automatically-enforcing-aws-resource-tagging-policies/) from CEO, Joe Duffy.
 
 ## Pulumi Features in Context
 
 ### Multi-Language Components
 
-[Multi-language components](https://www.pulumi.com/blog/pulumiup-pulumi-packages-multi-language-components/) allow you to create repeatable infrastructure patterns, modular abstractions of resources and/or groups of resources that meet your desired configuration standards.  Packaging up resources within and across clouds, implementing standard deployment best practices, and making those components available to developers reduces the cognitive load that they have when building new applications from those pre-assembled, ready-to-run components.
+[Multi-language components](/blog/pulumiup-pulumi-packages-multi-language-components/) allow you to create repeatable infrastructure patterns, modular abstractions of resources and/or groups of resources that meet your desired configuration standards.  Packaging up resources within and across clouds, implementing standard deployment best practices, and making those components available to developers reduces the cognitive load that they have when building new applications from those pre-assembled, ready-to-run components.
 
 Use these guardrails to enforce Tag Policies, for example that every tag for “Production” is actually “Production” and not “Prod” or “production” (yes, case sensitivity matters).  Or you may ensure teams only deploy resources such as VMs to regions where you have allocated Reserved Instances or other financial benefits in your application architecture. With MLCs end users have access to your component and not to the underlying infrastructure resources, guaranteeing repeatabality, however, in order to realize the benefits of MLCs, your developers must be empowered to leverage them, but limited from using other methods.
 
 ## CrossGuard
 
-[CrossGuard Policy as Code](https://www.pulumi.com/docs/guides/crossguard/) allows an Organization to define global rules for how resources may be provisioned and prevent resources from being provisioned by Pulumi in any other configuration.  Pulumi Stacks that do not meet the Organization’s financial, security, data protection, or other pre-defined standards are prevented from provisioning any resources, and the developer is instructed to correct their desired configuration or program in accordance with the Organization-wide policies.
+[CrossGuard Policy as Code](/docs/using-pulumi/crossguard/) allows an Organization to define global rules for how resources may be provisioned and prevent resources from being provisioned by Pulumi in any other configuration.  Pulumi Stacks that do not meet the Organization’s financial, security, data protection, or other pre-defined standards are prevented from provisioning any resources, and the developer is instructed to correct their desired configuration or program in accordance with the Organization-wide policies.
 
-[Policy as code](https://www.pulumi.com/docs/guides/crossguard/) ensures that any Pulumi code written and run meets an organization’s stated policies. It is the ultimate preventative weapon to prevent financial, security, or other placement and provisioning decisions that may lead to exposure or overrun.
+[Policy as code](/docs/using-pulumi/crossguard/) ensures that any Pulumi code written and run meets an organization’s stated policies. It is the ultimate preventative weapon to prevent financial, security, or other placement and provisioning decisions that may lead to exposure or overrun.
 
 Go here for [examples of FinOps policies](https://github.com/pulumi/examples/tree/master/policy-packs/aws-ts-finops) to get you started!
 
 ## Automation API
 
-Of the many things [Automation API](https://www.pulumi.com/docs/guides/automation-api/) allows you to do, one is you can create an HTTP endpoint for a Pulumi program.  Organizations have used this to control easy on/off switches for applications such as provisioning/deprovisioning single tenant SaaS architectures, short lived environments, and complex testing and blue/green deployments.  Because of the encapsulation of a Pulumi program and the simplification this provides, this endpoint may be directly exposed to those responsible for making the financial decisions in the moment, such as a Sales Engineer who must turn on a new POC environment for testing who then must be sure to shut that off when completed.  Oftentimes, these decisions are automated in processes and pipelines.
+Of the many things [Automation API](/docs/using-pulumi/automation-api/) allows you to do, one is you can create an HTTP endpoint for a Pulumi program.  Organizations have used this to control easy on/off switches for applications such as provisioning/deprovisioning single tenant SaaS architectures, short lived environments, and complex testing and blue/green deployments.  Because of the encapsulation of a Pulumi program and the simplification this provides, this endpoint may be directly exposed to those responsible for making the financial decisions in the moment, such as a Sales Engineer who must turn on a new POC environment for testing who then must be sure to shut that off when completed.  Oftentimes, these decisions are automated in processes and pipelines.
 
 ## Pulumi FinOps in Practice: Sweeping up Dev and QA
 
-A common automation in FinOps is to destroy things that don’t meet your Tag Policy.  These “Sweeper Bots” will continuously query AWS for resources with specific tags and delete them.  Read more about how Pulumi has implemented this using Pulumi to set tags and Lambda to sweep through and remove resources that meet certain specifications in this post, [Controlling AWS Costs with Lambda and Pulumi](https://www.pulumi.com/blog/controlling-aws-costs-with-lambda-and-pulumi/).
+A common automation in FinOps is to destroy things that don’t meet your Tag Policy.  These “Sweeper Bots” will continuously query AWS for resources with specific tags and delete them.  Read more about how Pulumi has implemented this using Pulumi to set tags and Lambda to sweep through and remove resources that meet certain specifications in this post, [Controlling AWS Costs with Lambda and Pulumi](/blog/controlling-aws-costs-with-lambda-and-pulumi/).
 
 ## Conclusion
 
 In the manner of ["Crawl, Walk, Run"](https://www.finops.org/framework/maturity-model/), it’s best to **start by implementing policies as code in a manner that will cause the most benefit while causing the least amount of change and/or downtime**.  Make sure you have the appropriate billing tags applied to all supported resources, ensuring you are able to allocate costs to the appropriate business units in your company. Then add in additional policies to make sure you are using instances covered by any reserved instance or similar savings plans.  Continue evolving your infrastructure and policy as code strategy to incorporate both preventative and reactive checks and balances.
 
-Have questions about using Pulumi when implementing FinOps in your IaC pipelines? [Contact us](https://www.pulumi.com/contact/?form=sales) and let us know your questions or [request a demo](https://www.pulumi.com/request-a-demo/).
+Have questions about using Pulumi when implementing FinOps in your IaC pipelines? [Contact us](/contact/?form=sales) and let us know your questions or [request a demo](/request-a-demo/).

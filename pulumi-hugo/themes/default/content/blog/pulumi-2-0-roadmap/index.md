@@ -44,7 +44,7 @@ Expect to see a steady stream of improvements between now and 2.0 being finished
 
 You can write custom policies, or use off-the-shelf policies authored by the community, including our preview [AWS pack](https://github.com/pulumi/pulumi-policy-aws) and [Open Policy Agent (OPA) integration](https://github.com/pulumi/pulumi-policy-opa). Just as you can share your own infrastructure creations using your language's package manager, you can share your policies too.
 
-CrossGuard is 100% open source, enabled by `pulumi up`'s new `--policy-pack` flag, and advanced organization-wide controls are available in the Team and Enterprise Editions. To learn more, [read the CrossGuard user guide](/docs/guides/crossguard/); or, to dive straight in, try out [the getting started tutorial](/docs/guides/crossguard/get-started/).
+CrossGuard is 100% open source, enabled by `pulumi up`'s new `--policy-pack` flag, and advanced organization-wide controls are available in the Team and Enterprise Editions. To learn more, [read the CrossGuard user guide](/docs/using-pulumi/crossguard/); or, to dive straight in, try out [the getting started tutorial](/docs/using-pulumi/crossguard/get-started/).
 
 ### Testing
 
@@ -62,9 +62,9 @@ To give watch mode a try, simply run `pulumi watch`. Or, to see a demo of watch 
 
 ### Self-Host and On-Premises
 
-Although we've worked hard to make the Pulumi service easy and affordable to use by default, we understand that some customers can't depend on a multi-tenanted SaaS website for their infrastructure deployments. For these customers, Pulumi already offers [custom state hosting](/docs/intro/concepts/state/) in AWS S3, Azure Blob Storage, GCP Cloud Storage, or even as a manually managed JSON file. However, by hosting the state this way, you lose out on what makes the Pulumi service so great: identity, teams, RBAC, policies, webhooks, and more.
+Although we've worked hard to make the Pulumi service easy and affordable to use by default, we understand that some customers can't depend on a multi-tenanted SaaS website for their infrastructure deployments. For these customers, Pulumi already offers [custom state hosting](/docs/concepts/state/) in AWS S3, Azure Blob Storage, GCP Cloud Storage, or even as a manually managed JSON file. However, by hosting the state this way, you lose out on what makes the Pulumi service so great: identity, teams, RBAC, policies, webhooks, and more.
 
-Today we are releasing preview support for the self-hosted Pulumi service. This gives you the full capabilities of the Pulumi Enterprise SaaS, while also giving you the flexibility to run it anywhere. Self-hosted Pulumi Enterprise can run on-premises behind your firewall on a VM or in Kubernetes, in your AWS, Azure, or GCP account &mdash; virtually anywhere that can run VMs or containers. For more information, see the [tutorial about how to configure self-hosted Pulumi Enterprise](/docs/guides/self-hosted/), or [contact us for pricing information and a demo](/contact/).
+Today we are releasing preview support for the self-hosted Pulumi service. This gives you the full capabilities of the Pulumi Enterprise SaaS, while also giving you the flexibility to run it anywhere. Self-hosted Pulumi Enterprise can run on-premises behind your firewall on a VM or in Kubernetes, in your AWS, Azure, or GCP account &mdash; virtually anywhere that can run VMs or containers. For more information, see the [tutorial about how to configure self-hosted Pulumi Enterprise](/docs/pulumi-cloud/self-hosted/), or [contact us for pricing information and a demo](/contact/).
 
 ### A Lot More ...
 

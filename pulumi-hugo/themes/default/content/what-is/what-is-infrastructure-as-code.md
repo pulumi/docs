@@ -96,7 +96,7 @@ When infrastructure is described as code, it can be checked into source control,
 
 ### Testing
 
-As any critical system grows in complexity, people can start to feel nervous about making changes. With infrastructure as code, teams can write tests for their infrastructure to ensure its correctness.  They can encode policies so that all provisioned infrastructure and its configurations [are compliant](/docs/guides/testing/property-testing/). Once they’re tested, infrastructure components can be reusable pieces of code that capture best practices and that can be shared across teams. No more reinventing the wheel.
+As any critical system grows in complexity, people can start to feel nervous about making changes. With infrastructure as code, teams can write tests for their infrastructure to ensure its correctness.  They can encode policies so that all provisioned infrastructure and its configurations [are compliant](/docs/using-pulumi/testing/property-testing/). Once they’re tested, infrastructure components can be reusable pieces of code that capture best practices and that can be shared across teams. No more reinventing the wheel.
 
 ### Use of IDEs
 

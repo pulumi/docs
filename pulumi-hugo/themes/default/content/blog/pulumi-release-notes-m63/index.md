@@ -56,7 +56,7 @@ Visit [Visit Pulumi Registry](/registry/) and filter to Components to get starte
 
 ### Pulumi Kubernetes Operator 1.0
 
-The Pulumi Kubernetes Operator defines a Kubernetes Custom Resource called `pulumi.com/v1/Stack`, which represents a Pulumi [stack](/docs/intro/concepts/stack/). Using the Operator, you can specify the desired state of your cloud infrastructure using resources managed directly in your Kubernetes cluster, which trigger creation, update and deletion of the detailed cloud infrastructure you need. Get started with the [1.0 release](https://github.com/pulumi/pulumi-kubernetes-operator/releases/tag/v1.0.0) of the Pulumi Kubernetes Operator today!
+The Pulumi Kubernetes Operator defines a Kubernetes Custom Resource called `pulumi.com/v1/Stack`, which represents a Pulumi [stack](/docs/concepts/stack/). Using the Operator, you can specify the desired state of your cloud infrastructure using resources managed directly in your Kubernetes cluster, which trigger creation, update and deletion of the detailed cloud infrastructure you need. Get started with the [1.0 release](https://github.com/pulumi/pulumi-kubernetes-operator/releases/tag/v1.0.0) of the Pulumi Kubernetes Operator today!
 
 This example Kubernetes resource uses the Pulumi Kubernetes Operator to deploy a Pulumi program which provisions cloud infrastructure to manage NGINX provided in the target Git repo and commit, and future updates to the commit or config settings will deploy updates to the infrastructure:
 
@@ -87,7 +87,7 @@ In this milestone, we shipped Pulumi versions [3.14.0](https://github.com/pulumi
 
 ### Resource methods for Pulumi Packages
 
-When authoring component resources you want to publish in a [Pulumi Package](/docs/guides/pulumi-packages/), it’s often useful to provide additional functionality through methods on the component. Resource methods are similar to functions, but instead of being exposed as top-level functions in a module, methods are exposed as methods on a resource class. This allows for a more object-oriented approach to exposing functionality: operations performed by a resource (that potentially use the resource’s state) can now be exposed as methods on the resource. Resource methods can be implemented once, in your language of choice, and made available to users in all Pulumi languages.
+When authoring component resources you want to publish in a [Pulumi Package](/docs/using-pulumi/pulumi-packages/), it’s often useful to provide additional functionality through methods on the component. Resource methods are similar to functions, but instead of being exposed as top-level functions in a module, methods are exposed as methods on a resource class. This allows for a more object-oriented approach to exposing functionality: operations performed by a resource (that potentially use the resource’s state) can now be exposed as methods on the resource. Resource methods can be implemented once, in your language of choice, and made available to users in all Pulumi languages.
 
 For example, the `Cluster` component in the [`eks`](/registry/packages/eks) package has a [`getKubeconfig`](https://github.com/pulumi/pulumi-eks/blob/700d73e961976e58762cb9c723ad2fa838052f46/nodejs/eks/cluster.ts#L1482) method that can be used to generate a kubeconfig for authentication with the cluster that does not use the default AWS credential provider chain, but is instead scoped based on the passed-in arguments. With the new support for resource methods for Pulumi Packages, we can make this method available to all the Pulumi languages, which is exactly what we've done in pulumi-eks [v0.34.0](https://github.com/pulumi/pulumi-eks/releases/tag/v0.34.0).
 
@@ -109,6 +109,6 @@ await stack.State.UnprotectAsync(resource.Urn);
 
 ### Automated audit log export
 
-Some larger companies manage their security risk using a Security Information and Event Management (SIEM) system to collect security information from all of the systems and SaaS products they use. To make it easier for you to bring Pulumi audit log events into such systems, you can now enable [automated export](/docs/intro/pulumi-cloud/audit-logs#automated-export) of your audit logs to an Amazon S3 bucket, which many SIEMs can read from automatically.
+Some larger companies manage their security risk using a Security Information and Event Management (SIEM) system to collect security information from all of the systems and SaaS products they use. To make it easier for you to bring Pulumi audit log events into such systems, you can now enable [automated export](/docs/pulumi-cloud/audit-logs#automated-export) of your audit logs to an Amazon S3 bucket, which many SIEMs can read from automatically.
 
-[Learn more in the docs](/docs/intro/pulumi-cloud/audit-logs#automated-export).
+[Learn more in the docs](/docs/pulumi-cloud/audit-logs#automated-export).

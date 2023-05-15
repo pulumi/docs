@@ -212,7 +212,7 @@ func main() {
 
 ## Can I migrate from `aws.s3.Bucket` to `aws.s3.BucketV2`?
 
-Yes! As part of this major version, we have taken advantage of using [aliases](/docs/intro/concepts/resources/options/aliases/) in Pulumi to be able to allow users to
+Yes! As part of this major version, we have taken advantage of using [aliases](/docs/concepts/options/aliases/) in Pulumi to be able to allow users to
 change to `aws.s3.BucketV2` easily. An alias was added to the new `aws.s3.BucketV2` resource as follows:
 
 ```go

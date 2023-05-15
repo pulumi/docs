@@ -12,7 +12,7 @@ tags:
 
 ![Pulumi Booth KubeCon2019](booth.jpg)
 
-We had a fantastic time at KubeCon in San Diego. At the event, the Pulumi team released two technology previews: [Pulumi Crosswalk for Kubernetes](/docs/guides/crosswalk/kubernetes/) and [Pulumi Query for Kubernetes](https://github.com/pulumi/pulumi-query-kubernetes).
+We had a fantastic time at KubeCon in San Diego. At the event, the Pulumi team released two technology previews: [Pulumi Crosswalk for Kubernetes](/docs/clouds/kubernetes/guides/) and [Pulumi Query for Kubernetes](https://github.com/pulumi/pulumi-query-kubernetes).
 
 Crosswalk for Kubernetes is a set of common patterns compiled in playbooks. These patterns reduce the complex Kubernetes API syntax by providing trusted defaults with idiomatic Kubernetes. Checkout a quick introduction to Crosswalk for Kubernetes in this [blog post](/blog/inside-crosswalk-for-kubernetes/).
 

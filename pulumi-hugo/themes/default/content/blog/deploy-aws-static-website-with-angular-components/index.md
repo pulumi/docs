@@ -16,7 +16,7 @@ tags:
 
 In this blog post, we’re going to use some Angular framework components to assemble a static website and then use Pulumi and its AWS Static Website component to deploy it to AWS. The website is for a café called the Pulumi Café. It will contain two pages, one an About page and the other a Menu page, as well as some navigational pieces.
 
-To follow this example, you need to have both Angular and Pulumi installed. (Here’s a link to the [Pulumi installation instructions](/docs/get-started/aws/begin/).) You’ll also need an AWS account.
+To follow this example, you need to have both Angular and Pulumi installed. (Here’s a link to the [Pulumi installation instructions](/docs/clouds/aws/get-started/begin/).) You’ll also need an AWS account.
 
 ## What is Angular?
 
@@ -114,5 +114,5 @@ If you want to learn more about Pulumi and the AWS Static Website component, her
 * If you want to learn about other Pulumi components, the [registry](/registry/) page catalogs them all.
 * If you want to view more examples of how to use Pulumi, go to the Pulumi [examples](https://github.com/pulumi/examples) repo.
 * If you want to delve deeper into Pulumi, the [Getting Started](/docs/get-started/) guide is a good first step.
-* If you’re interested in learning more about Pulumi concepts, try the [Architecture & Concepts](/docs/intro/concepts) page.
+* If you’re interested in learning more about Pulumi concepts, try the [Concepts](/docs/concepts/) page.
 * If you want to learn more about Angular, see their [Getting Started](https://angular.io/start) docs.

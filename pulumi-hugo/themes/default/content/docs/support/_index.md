@@ -1,14 +1,14 @@
 ---
-title_tag: Documentation Support
-title: Support
+title_tag: Pulumi support overview
 meta_desc: Pulumi is here to help! Try reviewing our troubleshooting or FAQ docs, or reach out to support.
+title: Support
+h1: Pulumi support overview
 menu:
   support:
     name: Overview
-    weight: 1
-
+    weight: 9
 aliases:
-  - /docs/troubleshooting/overview/
+- /docs/troubleshooting/overview/
 ---
 
 Pulumi is here to help! Try reviewing our troubleshooting or FAQ docs, or reach out to support.

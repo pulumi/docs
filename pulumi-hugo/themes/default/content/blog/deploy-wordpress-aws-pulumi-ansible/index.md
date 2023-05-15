@@ -59,7 +59,7 @@ To start, you'll create a Pulumi IaC project, which will declare all of the supp
 
 > Note: If you're following along, be sure to install the prerequisites:
 >
-> * [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
+> * [Install Pulumi](https://www.pulumi.com/docs/install/)
 > * [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 > * [Configure AWS Credentials](https://www.pulumi.com/docs/intro/cloud-providers/aws/setup/)
 
@@ -107,7 +107,7 @@ $ pulumi new aws-yaml
 
 {{% /choosable %}}
 
-Next, to make our infrastructure setup easy to vary between environments, the code leverages [Pulumi's "configuration" system](/docs/intro/concepts/config) --- not to be confused with configuration management tools --- which just allows you to vary provisioning settings for each stack in case your environments have different needs. For instance, perhaps you have different SSH keys, or want larger instance sizes, in development versus production:
+Next, to make our infrastructure setup easy to vary between environments, the code leverages [Pulumi's "configuration" system](/docs/concepts/config) --- not to be confused with configuration management tools --- which just allows you to vary provisioning settings for each stack in case your environments have different needs. For instance, perhaps you have different SSH keys, or want larger instance sizes, in development versus production:
 
 {{% chooser language "typescript,python,go,csharp,yaml" / %}}
 
@@ -361,7 +361,7 @@ variables:
 
 {{% /choosable %}}
 
-Finally, you'll read in the contents of the public and private key files so they're ready to use in the infrastructure declarations that are coming soon. Notice that this code uses [Pulumi's built-in secrets feature](/docs/intro/concepts/secrets) to ensure the private key remains encrypted at all times:
+Finally, you'll read in the contents of the public and private key files so they're ready to use in the infrastructure declarations that are coming soon. Notice that this code uses [Pulumi's built-in secrets feature](/docs/concepts/secrets) to ensure the private key remains encrypted at all times:
 
 {{% chooser language "typescript,python,go,csharp,yaml" / %}}
 
@@ -750,7 +750,7 @@ resources:
 
 {{% /choosable %}}
 
-> Note: All of the AWS building blocks are declared one at a time here to make it entirely transparent what's going on. Once you've set up a VPC a handful of times, however, this can get tedious. The [Pulumi Crosswalk for AWS package](/docs/guides/crosswalk/aws/) offers standard VPC configurations out-of-the-box with fewer lines of code, and built-in best practices. Check it out!
+> Note: All of the AWS building blocks are declared one at a time here to make it entirely transparent what's going on. Once you've set up a VPC a handful of times, however, this can get tedious. The [Pulumi Crosswalk for AWS package](/docs/clouds/aws/guides/) offers standard VPC configurations out-of-the-box with fewer lines of code, and built-in best practices. Check it out!
 
 Next, to accomplish the stated connectivity goals --- EC2 instance available over HTTP(S) and SSH on the Internet, and the RDS database available only to MySQL traffic originating from the EC2 instance itself -- you'll now create two security groups, one each for the public and private subnets respectively:
 

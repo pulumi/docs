@@ -23,13 +23,13 @@ Services like these were called [speaking clocks](https://en.wikipedia.org/wiki/
 
 By the mid-2000s, though, most of these locally run services had been shut down --- by then, we had clocks baked into our phones --- and today, only a handful of Audichrons survive. Thanks to the National Institute of Standards and Technology, however, [you can still call a phone number to get the time](https://www.theatlantic.com/technology/archive/2016/06/remember-when-you-could-call-the-time/488273/), and while the voice might not be the same, and long distance rates will apply, it's definitely there, and you can use it. So on the off chance you happen to find yourself with no idea what time it is and only an analog phone line in reach, fear not --- old-school telephone tech has your back. For now. Assuming you remember the number.
 
-Recalling all this stuff did make me wonder, though, what a more modern version of a speaking clock might look like. So in this post, we're going to build one ourselves. We won't use an actual phone number, but we will use Pulumi and AWS --- and because we want to do it _right_, we'll take a test-driven approach to developing the infrastructure with [Jest, the JavaScript testing framework](https://jestjs.io). We'll use TypeScript and Node.js for everything, focus on [unit tests](/docs/guides/testing/unit/), and when we're done, we'll have a single, serverless, browser-friendly HTTPS endpoint that returns an MP3 audio stream that speaks the current time.
+Recalling all this stuff did make me wonder, though, what a more modern version of a speaking clock might look like. So in this post, we're going to build one ourselves. We won't use an actual phone number, but we will use Pulumi and AWS --- and because we want to do it _right_, we'll take a test-driven approach to developing the infrastructure with [Jest, the JavaScript testing framework](https://jestjs.io). We'll use TypeScript and Node.js for everything, focus on [unit tests](/docs/using-pulumi/testing/unit/), and when we're done, we'll have a single, serverless, browser-friendly HTTPS endpoint that returns an MP3 audio stream that speaks the current time.
 
 Let's get started.
 
 ## Sketching it out
 
-The first thing we'll need is a runtime environment --- someplace to run some server-side JavaScript that can render and deliver an audio file. Until recently, the easiest way to get an HTTP endpoint up and running on AWS has generally been with [AWS Lambda](https://aws.amazon.com/lambda/) and [API Gateway](https://aws.amazon.com/api-gateway/), using Lambda to run the requisite code and API Gateway to expose the Lambda to the internet. Pulumi Crosswalk actually makes this [really easy](/docs/guides/crosswalk/aws/api-gateway/), too --- but with the [release of AWS Lambda Function URLs](/blog/lambda-urls-launch/) this April, we now have another option, one that doesn't need API Gateway at all.
+The first thing we'll need is a runtime environment --- someplace to run some server-side JavaScript that can render and deliver an audio file. Until recently, the easiest way to get an HTTP endpoint up and running on AWS has generally been with [AWS Lambda](https://aws.amazon.com/lambda/) and [API Gateway](https://aws.amazon.com/api-gateway/), using Lambda to run the requisite code and API Gateway to expose the Lambda to the internet. Pulumi Crosswalk actually makes this [really easy](/docs/clouds/aws/guides/api-gateway/), too --- but with the [release of AWS Lambda Function URLs](/blog/lambda-urls-launch/) this April, we now have another option, one that doesn't need API Gateway at all.
 
 A [Lambda Function URL](https://docs.aws.amazon.com/lambda/latest/dg/lambda-urls.html) is just what it sounds like: a URL that exposes a Lambda function. Specifically, it's an AWS cloud resource that consists of a few properties that tell AWS whether to allow anonymous access to the function or to [protect it with AWS IAM](https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html#urls-auth-iam), and optionally, you can also provide a few [cross-origin resource-sharing (CORS) rules](https://docs.aws.amazon.com/lambda/latest/dg/urls-configuration.html#urls-cors) to provide (or restrict) access by websites running on other domains.
 
@@ -45,14 +45,14 @@ Plan in place, we can kick things off by creating a new Pulumi project.
 
 ## Create a new TypeScript project
 
-Start by creating a new AWS TypeScript project [in the usual way](/docs/get-started/aws/create-project?language=nodejs):
+Start by creating a new AWS TypeScript project [in the usual way](/docs/clouds/aws/get-started/create-project?language=nodejs):
 
 ```bash
 $ mkdir audichron-2022 && cd audichron-2022
 $ pulumi new aws-typescript
 ```
 
-Step through the prompts to create a new [stack](/docs/intro/concepts/stack/) (you'll only need one stack for this project), and when the new-project wizard completes, clear out the contents of `index.ts` entirely, as we'll be building this program entirely from the ground up.
+Step through the prompts to create a new [stack](/docs/concepts/stack/) (you'll only need one stack for this project), and when the new-project wizard completes, clear out the contents of `index.ts` entirely, as we'll be building this program entirely from the ground up.
 
 ## Install and configure Jest
 
@@ -118,13 +118,13 @@ With that, it's time to get to start writing some real tests.
 
 As devoted practitioners of [test-driven development](https://en.wikipedia.org/wiki/Test-driven_development), we're going to start by writing some unit tests --- specifically, some _failing_ unit tests that we can fix by writing the Pulumi code to make them pass.
 
-Recall that our design requires just two cloud resources: a Lambda function and a Lambda function URL. For the function itself, we'll use the high-level [`aws.lambda.CallbackFunction`](/docs/intro/concepts/function-serialization) resource, one of my favorites for managing for Lambdas because it requires only one property: an inline JavaScript function to handle the event that triggers the Lambda.
+Recall that our design requires just two cloud resources: a Lambda function and a Lambda function URL. For the function itself, we'll use the high-level [`aws.lambda.CallbackFunction`](/docs/concepts/inputs-outputs/function-serialization/) resource, one of my favorites for managing for Lambdas because it requires only one property: an inline JavaScript function to handle the event that triggers the Lambda.
 
 For the URL resource --- the eventual triggerer of that event ---  you'll use an [`aws.lambda.FunctionURL`](/registry/packages/aws/api-docs/lambda/functionurl) configured to make the Lambda publicly accessible (i.e., available to anyone on the internet) and embeddable on any domain, making it easy, for example, to embed the URL as the `src` attribute of an [HTML5 `audio` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio).
 
 So to get things going, we'll need to:
 
-* Configure Pulumi to [mock AWS resources](/docs/guides/testing/unit#add-mocks). We're writing unit tests, after all, and we want them to be fast, so we'll need to prevent those tests from provisioning any real cloud infrastructure.
+* Configure Pulumi to [mock AWS resources](/docs/using-pulumi/testing/unit#add-mocks). We're writing unit tests, after all, and we want them to be fast, so we'll need to prevent those tests from provisioning any real cloud infrastructure.
 
 * Import your Pulumi resource declarations --- the function and the function URL --- into `index.spec.ts` so you can reference them in tests.
 
@@ -153,7 +153,7 @@ describe("My speaking clock", () => {
                 // We could, however, use the arguments passed into this function to
                 // customize the mocked-out properties of a particular resource based
                 // on its type. See the unit-testing docs for details:
-                // https://www.pulumi.com/docs/guides/testing/unit
+                // https://www.pulumi.com/docs/using-pulumi/testing/unit
                 return {
                     id: `${args.name}-id`,
                     state: args.inputs,
@@ -278,7 +278,7 @@ it("is publicly accessible", () => {
 });
 ```
 
-The main reason is the asynchronous nature of the objects we're testing. An `aws.lambda.FunctionUrl`, after all, isn't just a plain ol' JavaScript object --- it's a [Pulumi `CustomResource`](/docs/intro/concepts/resources), a representation of an eventual resource running in the cloud, with properties that may not be known until sometime after the resource has been deployed. While it's true we provided `authorizationType` as a regular JavaScript `string`, by the time we attempt to read it in the test, it's been transformed into a [`pulumi.Output<string>`](/docs/intro/concepts/inputs-outputs#apply) --- an asynchronous value, like a [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), that has to be unwrapped with a call to `apply()` before it can be read.
+The main reason is the asynchronous nature of the objects we're testing. An `aws.lambda.FunctionUrl`, after all, isn't just a plain ol' JavaScript object --- it's a [Pulumi `CustomResource`](/docs/concepts/resources), a representation of an eventual resource running in the cloud, with properties that may not be known until sometime after the resource has been deployed. While it's true we provided `authorizationType` as a regular JavaScript `string`, by the time we attempt to read it in the test, it's been transformed into a [`pulumi.Output<string>`](/docs/concepts/inputs-outputs#apply) --- an asynchronous value, like a [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), that has to be unwrapped with a call to `apply()` before it can be read.
 
 However, just adding `apply` and calling `expect` from within its callback doesn't quite work, either:
 
@@ -540,7 +540,7 @@ export const timeURL = new aws.lambda.FunctionUrl("time-url", {
 export const audioURL = timeURL.functionUrl;
 ```
 
-Finally, open `index.ts` (which should still be empty) and add a couple of lines to import the `resources` module and export the function URL as a Pulumi [stack output](/docs/intro/concepts/stack#outputs):
+Finally, open `index.ts` (which should still be empty) and add a couple of lines to import the `resources` module and export the function URL as a Pulumi [stack output](/docs/concepts/stack#outputs):
 
 ```typescript
 import "./resources";
@@ -600,6 +600,6 @@ When you're ready, you can tear everything down with a `pulumi destroy`.
 
 Beyond just having a nifty (and admittedly rather silly) new way to tell time, you should have a much better sense at this point of how you can use Pulumi with Jest to write better, safer infrastructure code.
 
-From here, there's a bunch more you might think about next: writing more tests to cover the code we just added, [exploring some additional flavors of testing](/docs/guides/testing/) in the docs, or [having a look at a few examples](https://github.com/pulumi/examples). You'll find the [full source for this walkthrough up on GitHub](https://github.com/cnunciato/pulumi-jest-unit-testing-example) as well.
+From here, there's a bunch more you might think about next: writing more tests to cover the code we just added, [exploring some additional flavors of testing](/docs/using-pulumi/testing/) in the docs, or [having a look at a few examples](https://github.com/pulumi/examples). You'll find the [full source for this walkthrough up on GitHub](https://github.com/cnunciato/pulumi-jest-unit-testing-example) as well.
 
 Happy testing!

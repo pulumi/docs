@@ -48,9 +48,9 @@ packages.
 ## Step 1: Initialize Pulumi project and stack
 
 [Install pulumi CLI](/docs/get-started/)
-and set up your [AWS credentials](/docs/get-started/aws/).
-Initialize a new [Pulumi project](/docs/intro/concepts/project/)
-and [Pulumi stack](/docs/reference/cli/pulumi_stack/) from
+and set up your [AWS credentials](/docs/clouds/aws/get-started/).
+Initialize a new [Pulumi project](/docs/concepts/projects/)
+and [Pulumi stack](/docs/cli/commands/pulumi_stack/) from
 available programming [language
 templates](https://github.com/pulumi/templates). We will use the
 `aws-typescript` template here and install all library
@@ -397,4 +397,4 @@ product platform, check out the following resources:
 
 - [Pulumi Crosswalk for AWS Announcement](/blog/introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws/)
 - [Mapbox IOT-as-Code with Pulumi Crosswalk for AWS](/blog/mapbox-iot-as-code-with-pulumi-crosswalk-for-aws/)
-- [Pulumi Crosswalk for AWS Documentation for ECS, EKS, ELB, and more](/docs/guides/crosswalk/aws/)
+- [Pulumi Crosswalk for AWS Documentation for ECS, EKS, ELB, and more](/docs/clouds/aws/guides/)
