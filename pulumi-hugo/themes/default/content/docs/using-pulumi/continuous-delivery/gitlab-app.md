@@ -43,18 +43,18 @@ If you only want to configure a webhook for a certain project, then you may do t
   * Secret Token: `<The Pulumi access token from above.>`
   * Uncheck all boxes and check just the **Merge request events** checkbox
 
-![Group Hook Setup 1](/images/docs/guides/continuous-delivery/gitlab-app/group_hook_1.png)
+![Group Hook Setup 1](/images/docs/using-pulumi/continuous-delivery/gitlab-app/group_hook_1.png)
 
 * Ensure the checkbox under **SSL verification** is checked as shown below
 * Click the **Add webhook** button.
 
-![Group Hook Setup 2](/images/docs/guides/continuous-delivery/gitlab-app/group_hook_2.png)
+![Group Hook Setup 2](/images/docs/using-pulumi/continuous-delivery/gitlab-app/group_hook_2.png)
 
 That's it! Now when you create a merge request and run Pulumi in a merge request pipeline, you should see notes in the MR that show a summary of the Pulumi preview. Learn how to run [Pulumi in GitLab CI/CD](/docs/using-pulumi/continuous-delivery/gitlab-ci/).
 
 Here's a preview of what it looks like.
 
-![Merge Request Note](/images/docs/guides/continuous-delivery/gitlab-app/merge_request_note.png)
+![Merge Request Note](/images/docs/using-pulumi/continuous-delivery/gitlab-app/merge_request_note.png)
 
 ## Disabling the Integration
 

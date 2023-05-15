@@ -116,6 +116,6 @@ kubernetes_operator:
     url: https://github.com/pulumi/pulumi-kubernetes-operator
     icon: github-small
   - display_name: Get started with Pulumi Kubernetes Operator
-    url: /docs/guides/continuous-delivery/pulumi-kubernetes-operator/
+    url: /docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/
     icon: light-bulb-small-gray
 ---

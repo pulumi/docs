@@ -273,7 +273,7 @@ There is also a [Pulumi GitHub App](/docs/using-pulumi/continuous-delivery/githu
 
 ### Other CI/CD Integrations
 
-If you don't use Azure DevOps or GitHub Actions, Pulumi also supports a number of other [CI/CD integrations](/docs/guides/continuous-delivery).
+If you don't use Azure DevOps or GitHub Actions, Pulumi also supports a number of other [CI/CD integrations](/docs/using-pulumi/continuous-delivery/).
 
 ## Package Documentation
 

@@ -103,7 +103,7 @@ defined -- or even use functions that already exist, and glue them together with
 Because Pulumi provisions and manages resources, updating your functions after creating them is easy. Just edit your
 code, run `pulumi up`, and Pulumi will diff and compute the minimal set of changes it can make to upgrade your code,
 without any downtime required. This is as easy to do by hand as it is in
-[CI/CD](/docs/guides/continuous-delivery).
+[CI/CD](/docs/using-pulumi/continuous-delivery/).
 
 ### Register an Event Handler Using a Magic Lambda Function
 

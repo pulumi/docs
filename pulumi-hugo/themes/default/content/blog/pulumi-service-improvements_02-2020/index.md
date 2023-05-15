@@ -41,7 +41,7 @@ into your CI/CD tool of choice. So, for example, you'll now see links to the [Ci
 
 {{< figure alt="Link to the Travis CI Build from the Pulumi Service" src="./deep-linking-cicd-providers.png" class="md:max-w-lg" >}}
 
-> Pulumi supports a variety of CI/CD providers, but if yours isn't listed in [our CI/CD guide](/docs/guides/continuous-delivery)
+> Pulumi supports a variety of CI/CD providers, but if yours isn't listed in [our CI/CD guide](/docs/using-pulumi/continuous-delivery/)
 > [let us know](https://slack.pulumi.com) or [contribute it](https://github.com/pulumi/pulumi/blob/master/sdk/go/common/util/ciutil)
 > on your own.
 

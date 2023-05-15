@@ -267,7 +267,7 @@ superpowers:
 
   - title: Automate Delivery
     cta: Learn more
-    cta_url: "/docs/guides/continuous-delivery"
+    cta_url: "/docs/using-pulumi/continuous-delivery/"
     icon_type: delivery
     description: |
         You can integrate Pulumi directly with your favorite CI/CD and SCM systems to

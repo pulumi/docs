@@ -241,7 +241,7 @@ export let url = f.function.httpsTriggerUrl;
 
 ## GitHub App for CI/CD Integration
 
-Pulumi already works with [your favorite CI/CD systems](/docs/guides/continuous-delivery)
+Pulumi already works with [your favorite CI/CD systems](/docs/using-pulumi/continuous-delivery/)
 to accomplish automated
 and continuous deployments of cloud infrastructure and applications.
 This is how Pulumi deploys and manages our own infrastructure that runs

@@ -60,7 +60,7 @@ stacks of cloud resources, simplifying the process of adding new
 applications, or sharing responsibilities between teams.
 
 2) Reliably integrate with
-[**CI/CD systems**](/docs/guides/continuous-delivery) for infrastructure and
+[**CI/CD systems**](/docs/using-pulumi/continuous-delivery/) for infrastructure and
 application deployments without requiring hardcoded timeouts, or
 scripting kubectl and parsing the resulting JSON/YAML to detect errors.
 If errors are encountered, Pulumi automatically surfaces the relevant
