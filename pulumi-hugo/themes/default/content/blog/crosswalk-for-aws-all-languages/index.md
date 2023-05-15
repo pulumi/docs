@@ -847,7 +847,7 @@ export const vpcId = vpc.Id;
 
 ## What’s Next?
 
-Crosswalk for AWS is free and open source, and you can [get started](https://www.pulumi.com/docs/guides/crosswalk/aws) today.
+Crosswalk for AWS is free and open source, and you can [get started](https://www.pulumi.com/docs/clouds/aws/guides/) today.
 
 For more on Crosswalk for AWS see:
 

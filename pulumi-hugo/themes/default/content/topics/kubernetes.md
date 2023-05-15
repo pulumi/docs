@@ -302,7 +302,7 @@ detail_sections:
       description: |
         Create, deploy, and manage production-ready infrastructure leveraging hosted Kubernetes offerings such as Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), or Google Kubernetes Engine (GKE).
       cta: Learn More
-      cta_url: "/docs/guides/crosswalk/kubernetes"
+      cta_url: "/docs/clouds/kubernetes/guides/"
       items:
           - title: Day 2 and Beyond
             icon: cycle

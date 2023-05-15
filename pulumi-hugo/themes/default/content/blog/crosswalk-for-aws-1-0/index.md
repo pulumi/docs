@@ -970,7 +970,7 @@ If you're currently using v0.x and want to upgrade to v1.x you can:
 
 ## What’s Next?
 
-Crosswalk for AWS is free and open source, and you can [get started](https://www.pulumi.com/docs/guides/crosswalk/aws) today.
+Crosswalk for AWS is free and open source, and you can [get started](https://www.pulumi.com/docs/clouds/aws/guides/) today.
 
 For more on Crosswalk for AWS see:
 

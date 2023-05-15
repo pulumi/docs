@@ -38,7 +38,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [groups]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html
 [roles]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html
 [policies]: https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html
-[crosswalk-aws]: /docs/guides/crosswalk/aws
+[crosswalk-aws]: /docs/clouds/aws/guides/
 [iam-users]: /docs/clouds/aws/guides/iam/#iam-users
 [iam-groups]: /docs/clouds/aws/guides/iam/#iam-groups
 [iam-roles]: /docs/clouds/aws/guides/iam/#iam-roles
