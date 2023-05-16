@@ -61,7 +61,7 @@ To start, you'll create a Pulumi IaC project, which will declare all of the supp
 >
 > * [Install Pulumi](https://www.pulumi.com/docs/install/)
 > * [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
-> * [Configure AWS Credentials](https://www.pulumi.com/docs/intro/cloud-providers/aws/setup/)
+> * [Configure AWS Credentials](/registry/packages/aws/installation-configuration/)
 
 First, create a new Pulumi project in your language of choice:
 

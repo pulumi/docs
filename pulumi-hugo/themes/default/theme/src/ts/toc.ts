@@ -1,11 +1,11 @@
 $(function () {
     const pathTocHeaderMap = {
         "/docs/get-started/": "get-started-with-pulumi-toc-header",
-        "/docs/intro/": "intro-toc-header",
-        "/docs/guides/": "user-guides-toc-header",
+        "/docs/": "intro-toc-header",
+        "/docs/using-pulumi/": "user-guides-toc-header",
         "/docs/reference/": "reference-toc-header",
         "/docs/support/": "support-toc-header",
-        "/docs/converters/": "converters-toc-header",
+        "/docs/using-pulumi/adopting-pulumi/converters/": "converters-toc-header",
     };
 
     Object.keys(pathTocHeaderMap).map(key => {

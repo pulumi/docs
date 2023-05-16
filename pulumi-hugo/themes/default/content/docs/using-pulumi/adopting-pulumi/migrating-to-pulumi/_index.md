@@ -16,5 +16,5 @@ Learn how Pulumi compares to other solutions, how to migrate to Pulumi, use the 
 
 - [Migrating from Terraform to Pulumi](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/)
 - [Migrating from AWS to Pulumi](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/)
-- [Migrating from Azure to Pulumi](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure/)
+- [Migrating from Azure to Pulumi](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure)
 - [Migrating from Kubernetes to Pulumi](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes/)

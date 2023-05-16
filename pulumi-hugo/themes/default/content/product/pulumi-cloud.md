@@ -157,7 +157,7 @@ capabilities:
           details:
             - title: Set up identity and access controls
               description: |
-                Integrate SSO and your [identity provider](/docs/pulumi-cloud/access-management/scim/) with Pulumi, set [user permissions](/docs/intro/pulumi-service/teams/) for each stack, and track user activity with [audit logs](/docs/intro/pulumi-service/audit-logs/).
+                Integrate SSO and your [identity provider](/docs/pulumi-cloud/access-management/scim/) with Pulumi, set [user permissions](/docs/pulumi-cloud/access-management/teams/) for each stack, and track user activity with [audit logs](/docs/pulumi-cloud/audit-logs/).
 
               more_info: |
                 Single sign-on with any [SAML 2.0](/docs/pulumi-cloud/access-management/saml/) identity provider like Azure Active Directory, Google Workspace , Okta, and OneLogin.
@@ -166,7 +166,7 @@ capabilities:
 
                 Set [role-based access controls](/docs/pulumi-cloud/access-management/teams/) that limit who can access infrastructure.
 
-                Track the activity of users within your organization with [audit logs](/docs/intro/pulumi-service/audit-logs/).
+                Track the activity of users within your organization with [audit logs](/docs/pulumi-cloud/audit-logs/).
 
 
             - title: Proactive compliance enforcement

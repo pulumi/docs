@@ -364,7 +364,7 @@ The following sections are also useful when first learning how to use Pulumi:
         <p>Get details on the Pulumi programming model and core concepts.</p>
     </div>
     <div class="md:w-1/2 md:ml-4 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/guides/adopting"><i class="fas fa-cloud pr-2"></i>Adopting Pulumi</a></h3>
+        <h3 class="no-anchor pt-4"><a href="/docs/using-pulumi/adopting-pulumi/"><i class="fas fa-cloud pr-2"></i>Adopting Pulumi</a></h3>
         <p>Learn how to support, migrate, or convert existing cloud infrastructure with Pulumi.</p>
     </div>
 </div>

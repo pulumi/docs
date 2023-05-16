@@ -37,7 +37,7 @@ Learn more about [Policy as Code core concepts](/docs/using-pulumi/crossguard/co
 
 Let's start with authoring your first Policy Pack.
 
-Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. [More information on language support for policies](/docs/guides/crossguard#languages).
+Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. [More information on language support for policies](/docs/using-pulumi/crossguard#languages).
 
 {{< chooser language "typescript,python" >}}
 

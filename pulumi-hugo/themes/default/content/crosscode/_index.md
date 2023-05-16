@@ -48,7 +48,7 @@ capabilities:
             CrossCode enables Pulumi CrossGuard policy as code to be written in all popular programming languages (Java, .NET, TypeScript, Go, Python) and markup languages (YAML, JSON, CUE). Policy as code empowers organizations to enforce resource compliance through programmable guardrails.
           more:
             label: Read more
-            href: "/docs/guides/crossguard"
+            href: "/docs/using-pulumi/crossguard/"
 
 questions:
     title: Questions?

@@ -186,7 +186,7 @@ arm2pulumi:
     If you can deploy a resource with ARM templates, you can deploy it with the Pulumi Azure provider!
 
   cta: Learn More
-  cta_url: "/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure/"
+  cta_url: "/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure"
 
 detail_sections:
   - title: 100% API Coverage
@@ -285,7 +285,7 @@ superpowers:
 
   - title: Be Proactive, Not Reactive
     cta: Learn more
-    cta_url: "/docs/guides/crossguard"
+    cta_url: "/docs/using-pulumi/crossguard"
     icon_type: policy
     description: |
         When you enable Pulumi's Policy as Code feature, you instantly gain the power to
@@ -294,7 +294,7 @@ superpowers:
 
   - title: Reduce Deployment Complexity
     cta: Learn more
-    cta_url: "/docs/guides/testing"
+    cta_url: "/docs/using-pulumi/testing"
     icon_type: testing
     description: |
         Deploying untested code can lead to some unexpected results. Pulumi lets you take advantage

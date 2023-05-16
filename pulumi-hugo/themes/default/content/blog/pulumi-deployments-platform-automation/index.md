@@ -157,5 +157,5 @@ Deployment Settings and Triggers can be combined to ship infrastructure in novel
 
 Pulumi Deployments is the platform for shipping infrastructure at scale. It gives you the programmatic building blocks you need to deliver infrastructure on demand in a large organization. Get started with Deployments today. Happy automating!
 
-- [Deployments Documentation](https://pulumi.com/docs/intro/deployments)
+- [Deployments Documentation](https://pulumi.com/docs/pulumi-cloud/deployments/)
 - [Deployment Demo Repo](https://github.com/pulumi/deploy-demos)

@@ -13,7 +13,7 @@ aliases:
 - /docs/guides/crossguard/core-concepts/
 ---
 
-Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. More information on [language support for policies](/docs/guides/crossguard#languages).
+Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language. More information on [language support for policies](/docs/using-pulumi/crossguard#languages).
 
 {{< chooser language "typescript,python" />}}
 

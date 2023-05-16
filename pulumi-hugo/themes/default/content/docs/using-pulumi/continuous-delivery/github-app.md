@@ -57,7 +57,7 @@ If you installed the GitHub app in the past and the steps above aren't showing i
 
 ### Configure Git Push-to-Deploy with Pulumi Deployments
 
-To set up a `git push`-to-deploy workflow using Pulumi Deployments, consult the [Pulumi Deployments documentation](/docs/intro/deployments) after installing the Pulumi GitHub App.
+To set up a `git push`-to-deploy workflow using Pulumi Deployments, consult the [Pulumi Deployments documentation](/docs/pulumi-cloud/deployments/) after installing the Pulumi GitHub App.
 
 ## CI Integration
 

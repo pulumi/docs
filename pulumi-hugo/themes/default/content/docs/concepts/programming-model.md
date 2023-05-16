@@ -55,6 +55,6 @@ block_external_search_index: true
     waiting a few seconds before redirecting gives the script a chance to locate
     a matching anchor.
 -->
-<meta http-equiv="refresh" content="4; url=/docs/intro/concepts">
+<meta http-equiv="refresh" content="4; url=/docs/concepts">
 
-This content has moved. Redirecting to [Architecture &amp; Concepts](/docs/intro/concepts)...
+This content has moved. Redirecting to [Architecture &amp; Concepts](/docs/concepts)...

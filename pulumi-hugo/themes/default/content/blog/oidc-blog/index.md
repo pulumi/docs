@@ -81,8 +81,8 @@ Pulumi Deployments is available in preview today. Deployments are free during th
 
 - [Request access](/product/pulumi-deployments) to the Pulumi Deployments preview
 - [Pulumi Deployments examples repo](https://github.com/pulumi/deploy-demos)
-- [Pulumi Deployments documentation](/docs/intro/deployments)
-- [Pulumi Deployments REST API documentation](/docs/reference/deployments-rest-api)
+- [Pulumi Deployments documentation](/docs/pulumi-cloud/deployments/)
+- [Pulumi Deployments REST API documentation](/docs/pulumi-cloud/deployments/api/)
 - [Automation API examples](https://github.com/pulumi/automation-api-examples)
 
 Please submit an issue in the [Pulumi Service Requests repo](https://github.com/pulumi/service-requests) if you have feature requests for the Pulumi Service or join our [Slack channel](https://pulumi-community.slack.com)(#pulumi-deployments) if you have questions.

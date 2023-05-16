@@ -7,7 +7,7 @@ meta_desc: Pulumi Deployments is a new feature that automates the execution of P
 overview:
     title: The fastest way to go from code to cloud
     description: |
-        [Pulumi Deployments](/docs/intro/deployments) is a new feature that automates the execution of your Pulumi programs in a secure, hosted environment. Deploy any stack with a click of a button, `git push`, or API call. Available in preview today.
+        [Pulumi Deployments](/docs/pulumi-cloud/deployments/) is a new feature that automates the execution of your Pulumi programs in a secure, hosted environment. Deploy any stack with a click of a button, `git push`, or API call. Available in preview today.
 
 benefits:
     title: How will Pulumi Deployments benefit me?
@@ -48,7 +48,7 @@ learn:
         - title: Documentation
           description: Refer to our documentation to get Pulumi Deployments set up once you have been accepted into the Preview.
           buttons:
-            - link: /docs/intro/deployments
+            - link: /docs/pulumi-cloud/deployments
               action: Pulumi Deployments Docs
             - link: /docs/reference/deployments-rest-api
               action: Pulumi Deployments REST API Docs

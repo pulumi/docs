@@ -24,7 +24,7 @@ When working with existing resources, there are two primary scenarios:
 * You need to reference existing resources to use as inputs to new resources in Pulumi
 * You need to adopt existing resources under management so they can be managed by Pulumi
 
-For the first situation, consult [the user guide index](/docs/guides/adopting#coexistence). For the
+For the first situation, consult [the user guide index](/docs/using-pulumi/adopting-pulumi#coexistence). For the
 second, let's now see how to adopt existing resources.
 
 ## Adopting Existing Resources
