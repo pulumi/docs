@@ -30,7 +30,7 @@ describe("www.pulumi.com", () => {
     describe("getting started", () => {
 
         beforeEach(() => {
-            cy.visit("/docs/get-started/aws/begin");
+            cy.visit("/docs/clouds/aws/get-started/begin");
         });
 
         describe("when an OS is selected", () => {
