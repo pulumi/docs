@@ -1,5 +1,7 @@
 ---
 title: "pulumi state upgrade"
+aliases:
+  - /docs/reference/cli/pulumi_state_upgrade/
 ---
 
 

@@ -1,5 +1,7 @@
 ---
 title: "pulumi logout"
+aliases:
+  - /docs/reference/cli/pulumi_logout/
 ---
 
 

@@ -1,5 +1,7 @@
 ---
 title: "pulumi state"
+aliases:
+  - /docs/reference/cli/pulumi_state/
 ---
 
 

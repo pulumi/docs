@@ -1,5 +1,7 @@
 ---
 title: "pulumi policy enable"
+aliases:
+  - /docs/reference/cli/pulumi_policy_enable/
 ---
 
 

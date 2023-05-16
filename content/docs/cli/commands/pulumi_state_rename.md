@@ -1,5 +1,7 @@
 ---
 title: "pulumi state rename"
+aliases:
+  - /docs/reference/cli/pulumi_state_rename/
 ---
 
 

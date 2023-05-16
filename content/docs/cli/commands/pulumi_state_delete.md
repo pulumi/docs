@@ -1,5 +1,7 @@
 ---
 title: "pulumi state delete"
+aliases:
+  - /docs/reference/cli/pulumi_state_delete/
 ---
 
 

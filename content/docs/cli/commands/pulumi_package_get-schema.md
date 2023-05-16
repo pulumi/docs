@@ -1,5 +1,7 @@
 ---
 title: "pulumi package get-schema"
+aliases:
+  - /docs/reference/cli/pulumi_package_get-schema/
 ---
 
 

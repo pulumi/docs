@@ -1,5 +1,7 @@
 ---
 title: "pulumi stack output"
+aliases:
+  - /docs/reference/cli/pulumi_stack_output/
 ---
 
 

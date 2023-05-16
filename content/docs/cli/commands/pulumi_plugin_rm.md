@@ -1,5 +1,7 @@
 ---
 title: "pulumi plugin rm"
+aliases:
+  - /docs/reference/cli/pulumi_plugin_rm/
 ---
 
 

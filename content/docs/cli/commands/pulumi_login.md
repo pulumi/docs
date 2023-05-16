@@ -1,5 +1,7 @@
 ---
 title: "pulumi login"
+aliases:
+  - /docs/reference/cli/pulumi_login/
 ---
 
 

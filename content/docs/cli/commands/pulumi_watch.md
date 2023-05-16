@@ -1,5 +1,7 @@
 ---
 title: "pulumi watch"
+aliases:
+  - /docs/reference/cli/pulumi_watch/
 ---
 
 

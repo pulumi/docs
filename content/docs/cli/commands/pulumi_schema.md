@@ -1,5 +1,7 @@
 ---
 title: "pulumi schema"
+aliases:
+  - /docs/reference/cli/pulumi_schema/
 ---
 
 

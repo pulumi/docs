@@ -1,5 +1,7 @@
 ---
 title: "pulumi schema check"
+aliases:
+  - /docs/reference/cli/pulumi_schema_check/
 ---
 
 

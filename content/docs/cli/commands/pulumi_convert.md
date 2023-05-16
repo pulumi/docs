@@ -1,5 +1,7 @@
 ---
 title: "pulumi convert"
+aliases:
+  - /docs/reference/cli/pulumi_convert/
 ---
 
 

@@ -1,5 +1,7 @@
 ---
 title: "pulumi policy validate-config"
+aliases:
+  - /docs/reference/cli/pulumi_policy_validate-config/
 ---
 
 

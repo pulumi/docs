@@ -1,5 +1,7 @@
 ---
 title: "pulumi policy publish"
+aliases:
+  - /docs/reference/cli/pulumi_policy_publish/
 ---
 
 

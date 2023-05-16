@@ -1,5 +1,7 @@
 ---
 title: "pulumi stack graph"
+aliases:
+  - /docs/reference/cli/pulumi_stack_graph/
 ---
 
 

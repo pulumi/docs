@@ -1,5 +1,7 @@
 ---
 title: "pulumi console"
+aliases:
+  - /docs/reference/cli/pulumi_console/
 ---
 
 

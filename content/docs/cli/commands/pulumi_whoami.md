@@ -1,5 +1,7 @@
 ---
 title: "pulumi whoami"
+aliases:
+  - /docs/reference/cli/pulumi_whoami/
 ---
 
 

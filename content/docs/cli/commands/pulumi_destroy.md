@@ -1,5 +1,7 @@
 ---
 title: "pulumi destroy"
+aliases:
+  - /docs/reference/cli/pulumi_destroy/
 ---
 
 

@@ -1,5 +1,7 @@
 ---
 title: "pulumi version"
+aliases:
+  - /docs/reference/cli/pulumi_version/
 ---
 
 
