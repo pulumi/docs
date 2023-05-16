@@ -31,7 +31,9 @@ In this example, we use Pulumi’s [Crosswalk for AWS](/docs/clouds/aws/guides/)
 import * as awsx from "@pulumi/awsx";
 
 // Create a repository, as before.
-const repo = new awsx.ecr.Repository("my-repo");
+const repo = new awsx.ecr.Repository("my-repo", {
+    forceDelete: true,
+});
 
 // And publish its URL, so we can push to it if we'd like.
 export const url = repo.repository.repositoryUrl;
@@ -45,13 +47,13 @@ There are two services for running containers in the AWS Cloud: Elastic Cloud Se
 
 ECS is designed to work with other AWS services and provides more straightforward configuration and integration with them while providing high availability. In contrast, EKS is a managed Kubernetes service, and because Kubernetes is open-source, your infrastructure is portable to other cloud providers. Also, Kubernetes can provide fine-grain control over deployed services. The choice of which scheduler to use depends on your requirements.
 
-You can create either an ECS or EKS cluster using Pulumi. If you wish to use ECS, Crosswalk for AWS (@pulumi/awsx) provides all the primitives needed to build infrastructure on AWS.
+You can create either an ECS or EKS cluster using Pulumi. If you wish to use ECS, @pulumi/aws provides all the primitives needed to build infrastructure on AWS.
 
 ```ts
-import * as awsx from "@pulumi/awsx";
+import * as awsx from "@pulumi/aws";
 
 // Create an ECS cluster explicitly, and give it a name tag.
-const cluster = new awsx.ecs.Cluster("custom", {
+const cluster = new aws.ecs.Cluster("custom", {
     tags: {
         "Name": "my-custom-ecs-cluster",
     },
@@ -77,24 +79,30 @@ Fargate is an AWS service that runs containers. It is suited to running small wo
 In this example, we create a load balancer open on port 80, spin up two instances of our container, and publish the endpoint URL.
 
 ```ts
-// load balancer on port 80
-const lb = new awsx.lb.ApplicationListener("nginx", { port: 80 });
-const nginx = new awsx.ecs.FargateService("nginx", {
-    cluster,
+import * as pulumi from "@pulumi/pulumi";
+
+const lb = new awsx.lb.ApplicationLoadBalancer("nginx");
+
+const service = new awsx.ecs.FargateService("service", {
+    cluster: cluster.arn,
+    assignPublicIp: true,
     taskDefinitionArgs: {
         containers: {
             nginx: {
-                image: image,
-                memory: 512,
-                portMappings: [ lb ],
-            },
-        },
+                image: image.imageUri,
+                essential: true,
+                portMappings: [{
+                    containerPort: 80,
+                    targetGroup: lb.defaultTargetGroup,
+                }],
+            }
+        }
     },
     desiredCount: 2,
 });
 
 // Export the load balancer's address so that it's easy to access.
-export const appURL = lb.endpoint.hostname;
+export const appURL = pulumi.interpolate`http://${loadbalancer.loadBalancer.dnsName}`;
 ```
 
 ### EC2 with Kubernetes
@@ -147,7 +155,7 @@ $ mkdir quickstart && cd quickstart
 $ pulumi new aws-typescript
 ```
 
-In this example, we build the application in code using the ECR repository class `buildAndPushImage`. This class uses Docker to build the image locally and push it to our repository. Make sure that you have [Docker installed and running](https://docs.docker.com/install/#supported-platforms).
+In this example, we build the application in code using the `awsx.ecr.Image` resource. This resource uses Docker to build the image locally and push it to our repository. Make sure that you have [Docker installed and running](https://docs.docker.com/install/#supported-platforms).
 
 The container application for this example is an HTML page in NGINX. Make a `./app` directory in your Pulumi project and add the Dockerfile below.
 
@@ -198,14 +206,19 @@ Now we're ready to start building our infrastructure. Replace the generated `ind
 import * as awsx from "@pulumi/awsx";
 
 // Create a repository
-const repo = new awsx.ecr.Repository("my-repo");
+const repo = new awsx.ecr.Repository("my-repo", {
+    forceDelete: true,
+});
 
 // Build an image from the "./app" directory
 // and publish it to our ECR repository.
-export const image = repo.buildAndPushImage("./app");
+export const image = new awsx.ecr.Image("image", {
+    repositoryUrl: repo.url,
+    path: "./app",
+});
 
 // Create an ECS cluster explicitly, and give it a name tag.
-const cluster = new awsx.ecs.Cluster("custom", {
+const cluster = new aws.ecs.Cluster("custom", {
     tags: {
         "Name": "my-custom-ecs-cluster",
     },
@@ -218,7 +231,7 @@ const service = new awsx.ecs.FargateService("nginx", {
     taskDefinitionArgs: {
         containers: {
             nginx: {
-                image: image,
+                image: image.imageUri,
                 memory: 512,
                 portMappings: [ lb ],
             },
@@ -276,10 +289,15 @@ import * as eks from "@pulumi/eks";
 import * as k8s from "@pulumi/kubernetes";
 
 // Create a repository, as before.
-const repo = new awsx.ecr.Repository("my-repo");
+const repo = new awsx.ecr.Repository("my-repo", {
+    forceDelete: true,
+});
 
 // Build an image from the "./app" directory. and publish it to our ECR repository.
-export const image = repo.buildAndPushImage("./app");
+export const image = new awsx.ecr.Image("image", {
+    repositoryUrl: repo.url,
+    path: "./app",
+});
 
 // Create an EKS cluster with the default configuration.
 const cluster = new eks.Cluster("my-cluster")
@@ -297,7 +315,7 @@ const deployment = new k8s.apps.v1.Deployment(`${appName}-dep`, {
             spec: {
                 containers: [{
                     name: appName,
-                    image: image,
+                    image: image.imageUri,
                     ports: [{ name: "http", containerPort: 80 }]
                 }],
             }
