@@ -85,7 +85,7 @@ jobs:
         working-directory: docs
       - name: generate markdown
         run: |
-          pulumi gen-markdown ./content/docs/reference/cli
+          pulumi gen-markdown ./content/docs/cli/commands
         working-directory: docs
       - name: Update latest version
         run: |
