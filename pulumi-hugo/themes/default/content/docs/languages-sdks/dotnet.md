@@ -285,15 +285,6 @@ In addition to the standard packages the [Pulumi Registry](/registry/) houses 10
 
 <dl class="tabular">
     <dt>Pulumi SDK</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/pulumi">@pulumi/pulumi</a></dd>
-    <dt>Pulumi Policy</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/policy">@pulumi/policy</a></dd>
-    <dt>Pulumi Terraform</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/terraform">@pulumi/terraform</a></dd>
-</dl>
-
-<dl class="tabular">
-    <dt>Pulumi SDK</dt>
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.html">Pulumi</a></dd>
     <dt>Pulumi FSharp SDK</dt>
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.FSharp/Pulumi.FSharp.html">Pulumi.FSharp</a></dd>
