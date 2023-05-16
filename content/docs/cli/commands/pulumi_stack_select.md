@@ -1,5 +1,7 @@
 ---
 title: "pulumi stack select"
+aliases:
+  - /docs/reference/cli/pulumi_stack_select/
 ---
 
 

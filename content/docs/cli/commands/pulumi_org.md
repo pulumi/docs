@@ -1,5 +1,7 @@
 ---
 title: "pulumi org"
+aliases:
+  - /docs/reference/cli/pulumi_org/
 ---
 
 

@@ -1,5 +1,7 @@
 ---
 title: "pulumi org get-default"
+aliases:
+  - /docs/reference/cli/pulumi_org_get-default/
 ---
 
 

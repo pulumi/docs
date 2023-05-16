@@ -1,5 +1,7 @@
 ---
 title: "pulumi package gen-sdk"
+aliases:
+  - /docs/reference/cli/pulumi_package_gen-sdk/
 ---
 
 

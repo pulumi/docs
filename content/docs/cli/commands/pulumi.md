@@ -1,5 +1,7 @@
 ---
 title: "pulumi"
+aliases:
+  - /docs/reference/cli/pulumi/
 ---
 
 

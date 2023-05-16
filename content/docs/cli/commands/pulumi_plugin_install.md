@@ -1,5 +1,7 @@
 ---
 title: "pulumi plugin install"
+aliases:
+  - /docs/reference/cli/pulumi_plugin_install/
 ---
 
 

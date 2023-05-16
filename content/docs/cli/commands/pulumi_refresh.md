@@ -1,5 +1,7 @@
 ---
 title: "pulumi refresh"
+aliases:
+  - /docs/reference/cli/pulumi_refresh/
 ---
 
 

@@ -1,5 +1,7 @@
 ---
 title: "pulumi gen-completion"
+aliases:
+  - /docs/reference/cli/pulumi_gen-completion/
 ---
 
 

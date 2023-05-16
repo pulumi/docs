@@ -1,5 +1,7 @@
 ---
 title: "pulumi policy rm"
+aliases:
+  - /docs/reference/cli/pulumi_policy_rm/
 ---
 
 

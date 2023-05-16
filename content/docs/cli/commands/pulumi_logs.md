@@ -1,5 +1,7 @@
 ---
 title: "pulumi logs"
+aliases:
+  - /docs/reference/cli/pulumi_logs/
 ---
 
 

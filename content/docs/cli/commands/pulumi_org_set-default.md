@@ -1,5 +1,7 @@
 ---
 title: "pulumi org set-default"
+aliases:
+  - /docs/reference/cli/pulumi_org_set-default/
 ---
 
 

@@ -1,5 +1,7 @@
 ---
 title: "pulumi stack import"
+aliases:
+  - /docs/reference/cli/pulumi_stack_import/
 ---
 
 

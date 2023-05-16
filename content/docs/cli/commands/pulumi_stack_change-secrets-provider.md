@@ -1,5 +1,7 @@
 ---
 title: "pulumi stack change-secrets-provider"
+aliases:
+  - /docs/reference/cli/pulumi_stack_change-secrets-provider/
 ---
 
 

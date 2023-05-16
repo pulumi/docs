@@ -1,5 +1,7 @@
 ---
 title: "pulumi cancel"
+aliases:
+  - /docs/reference/cli/pulumi_cancel/
 ---
 
 

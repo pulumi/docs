@@ -1,5 +1,7 @@
 ---
 title: "pulumi config set-all"
+aliases:
+  - /docs/reference/cli/pulumi_config_set-all/
 ---
 
 

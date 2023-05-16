@@ -1,5 +1,7 @@
 ---
 title: "pulumi stack unselect"
+aliases:
+  - /docs/reference/cli/pulumi_stack_unselect/
 ---
 
 

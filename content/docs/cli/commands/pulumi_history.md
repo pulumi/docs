@@ -1,5 +1,7 @@
 ---
 title: "pulumi history"
+aliases:
+  - /docs/reference/cli/pulumi_history/
 ---
 
 

@@ -1,5 +1,7 @@
 ---
 title: "pulumi package"
+aliases:
+  - /docs/reference/cli/pulumi_package/
 ---
 
 

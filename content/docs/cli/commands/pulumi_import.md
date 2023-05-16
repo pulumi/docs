@@ -1,5 +1,7 @@
 ---
 title: "pulumi import"
+aliases:
+  - /docs/reference/cli/pulumi_import/
 ---
 
 

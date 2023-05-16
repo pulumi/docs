@@ -1,5 +1,7 @@
 ---
 title: "pulumi preview"
+aliases:
+  - /docs/reference/cli/pulumi_preview/
 ---
 
 

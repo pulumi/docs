@@ -1,5 +1,7 @@
 ---
 title: "pulumi stack"
+aliases:
+  - /docs/reference/cli/pulumi_stack/
 ---
 
 

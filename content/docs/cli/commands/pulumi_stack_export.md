@@ -1,5 +1,7 @@
 ---
 title: "pulumi stack export"
+aliases:
+  - /docs/reference/cli/pulumi_stack_export/
 ---
 
 

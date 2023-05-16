@@ -1,5 +1,7 @@
 ---
 title: "pulumi config set"
+aliases:
+  - /docs/reference/cli/pulumi_config_set/
 ---
 
 

@@ -1,5 +1,7 @@
 ---
 title: "pulumi stack rename"
+aliases:
+  - /docs/reference/cli/pulumi_stack_rename/
 ---
 
 
