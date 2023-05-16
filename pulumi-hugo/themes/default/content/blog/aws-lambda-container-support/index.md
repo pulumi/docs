@@ -1,5 +1,5 @@
 ---
-title: "Running Container Images in AWS Lambda"
+title: Running Container Images in AWS Lambda
 date: 2020-12-01
 draft: false
 meta_desc: AWS Lambda launches support for packaging and deploying functions as container images
@@ -10,7 +10,6 @@ tags:
     - aws
     - containers
     - serverless
-
 ---
 
 When AWS Lambda launched in 2014, it pioneered the concept of Function-as-a-Service. Developers could write a function in one of the supported programming languages, upload it to AWS, and Lambda executes the function on every invocation.
@@ -27,10 +26,9 @@ Today, AWS announced that AWS Lambda now supports packaging serverless functions
 
 Ready to get up and running quickly right away?
 
-1. Bootstrap a project `$ pulumi new https://github.com/pulumi/apps/lambda-containers`.
+1. Bootstrap a project `pulumi new https://github.com/pulumi/examples/tree/master/aws-ts-lambda-thumbnailer`.
 2. Add your Lambda's logic to `./app/Dockerfile` and `./app/index.js`.
 3. Deploy with `$ pulumi up`.
-4. Test with `$ curl $(pulumi stack output invokeUrl)`.
 
 For additional information on how Lambda Containers work, and more advanced options, please read on.
 
@@ -119,12 +117,17 @@ We can use [Pulumi Crosswalk for AWS](https://www.pulumi.com/docs/clouds/aws/gui
 ```ts
 import * as awsx from "@pulumi/awsx";
 
-const image = awsx.ecr.buildAndPushImage("image", {
-   context: "./docker-ffmpeg-thumb",
+const repo = new awsx.ecr.Repository("repo", {
+    forceDelete: true,
+});
+
+const image = new awsx.ecr.Image("image", {
+    repositoryUrl: repo.url,
+    path: "./app",
 });
 ```
 
-The local `docker-ffmpeg-thumb` folder contains the application files (`Dockerfile` and `index.js`).
+The local `app` folder contains the application files (`Dockerfile` and `index.js`).
 
 ### Setup a role
 
@@ -132,11 +135,12 @@ Next, we define an IAM role and a policy attachment to grant AWS Lambda access t
 
 ```ts
 const role = new aws.iam.Role("thumbnailerRole", {
-   assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({ Service: "lambda.amazonaws.com" }),
+    assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({ Service: "lambda.amazonaws.com" }),
 });
+
 new aws.iam.RolePolicyAttachment("lambdaFullAccess", {
-   role: role.name,
-   policyArn: aws.iam.ManagedPolicy.AWSLambdaExecute,
+    role: role.name,
+    policyArn: aws.iam.ManagedPolicy.AWSLambdaExecute,
 });
 ```
 
@@ -146,10 +150,10 @@ It's time to define the AWS Lambda function itself! It's as simple as giving it 
 
 ```ts
 const thumbnailer = new aws.lambda.Function("thumbnailer", {
-   packageType: "Image",
-   imageUri: image.imageValue,
-   role: role.arn,
-   timeout: 900,
+    packageType: "Image",
+    imageUri: image.imageUri,
+    role: role.arn,
+    timeout: 900,
 });
 ```
 
