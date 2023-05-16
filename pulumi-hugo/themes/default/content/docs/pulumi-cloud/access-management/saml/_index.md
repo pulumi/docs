@@ -14,7 +14,7 @@ menu:
 aliases:
 - /docs/reference/service/saml-overview/
 - /docs/console/accounts/saml/
-- docs/guides/saml/
+- /docs/guides/saml/
 ---
 
 The [Pulumi Cloud](https://app.pulumi.com) can be configured to work with any SAML 2.0 identity provider. SAML support requires Pulumi Enterprise or Pulumi Business Critical. To learn more about the capabilities of Pulumi Enterprise or Pulumi Business Critical, refer to the [pricing page](/pricing/).
