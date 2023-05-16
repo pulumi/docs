@@ -12,7 +12,15 @@
                 <title>{{ .Params.title }}</title>
                 <description>{{ .Params.meta_desc }}</description>
                 <pubDate>{{ .Params.main.sortable_date }}</pubDate>
+                {{ if .Params.external }}
+                <!--
+                    When the workshop is external, the `url_slug` property is set to the external link
+                    in the workshop template.
+                -->
+                <link>{{ .Params.url_slug }}</link>
+                {{ else }}
                 <link>{{ .Site.Params.canonicalURL }}{{ .RelPermalink }}</link>
+                {{ end }}
             </item>
         {{ end }}
     </channel>

@@ -33,7 +33,7 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "/pulumi-up"
+url_slug: "https://www.pulumi.com/resources/pulumi-up-2023/"
 
 # Content for the left hand side section of the page.
 main:
