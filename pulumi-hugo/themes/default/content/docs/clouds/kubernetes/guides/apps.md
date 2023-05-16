@@ -92,12 +92,17 @@ import * as awsx from "@pulumi/awsx";
 import * as k8s from "@pulumi/kubernetes";
 
 // Create a repository.
-const repo = new awsx.ecr.Repository("my-repo");
+const repo = new awsx.ecr.Repository("my-repo", {
+    forceDelete: true,
+});
 
 // Build a Docker image from a local Dockerfile context in the
 // './node-app' directory, and push it to the registry.
 const customImage = "node-app";
-const appImage = repo.buildAndPushImage(`./${customImage}`);
+const appImage = new awsx.ecr.Image("image", {
+    repositoryUrl: repo.url,
+    path: `./${customImage}`,
+});
 
 // Create a k8s provider.
 const provider = new k8s.Provider("provider", {
@@ -116,7 +121,7 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
             spec: {
                 containers: [{
                     name: customImage,
-                    image: appImage,
+                    image: appImage.imageUri,
                     ports: [{name: "http", containerPort: 80}],
                 }],
             }
@@ -135,7 +140,9 @@ import * as k8s from "@pulumi/kubernetes";
 import * as kx from "@pulumi/kubernetesx";
 
 // Create a repository.
-const repo = new awsx.ecr.Repository("my-repo");
+const repo = new awsx.ecr.Repository("my-repo", {
+    forceDelete: true,
+});
 
 // Build a Docker image from a local Dockerfile context in the
 // './node-app' directory, and push it to the registry.
@@ -151,7 +158,7 @@ const provider = new k8s.Provider("provider", {
 // Define the Pod for the Deployment.
 const pb = new kx.PodBuilder({
     containers: [{
-        image: appImage,
+        image: appImage.imageUri,
         ports: { "http": 80 },
     }],
 });
@@ -228,7 +235,7 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
             spec: {
                 containers: [{
                     name: customImage,
-                    image: appImage.imageName,
+                    image: appImage.imageUri,
                     ports: [{name: "http", containerPort: 80}],
                 }],
             }
@@ -282,7 +289,7 @@ const provider = new k8s.Provider("provider", {
 // Define the Pod for the Deployment.
 const pb = new kx.PodBuilder({
     containers: [{
-        image: appImage.imageName,
+        image: appImage.imageUri,
         ports: { "http": 80 },
     }],
 });
@@ -350,7 +357,7 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
             spec: {
                 containers: [{
                     name: customImage,
-                    image: appImage.imageName,
+                    image: appImage.imageUri,
                     ports: [{name: "http", containerPort: 80}],
                 }],
             }
@@ -395,7 +402,7 @@ const provider = new k8s.Provider("provider", {
 // Define the Pod for the Deployment.
 const pb = new kx.PodBuilder({
     containers: [{
-        image: appImage.imageName,
+        image: appImage.imageUri,
         ports: { "http": 80 },
     }],
 });
