@@ -45,9 +45,6 @@ providers:
     - display_name: API docs
       icon: book-small-black
       url: aws-native/api-docs/
-    - display_name: How-to guides
-      icon: question-small-black
-      url: aws-native/how-to-guides/
 components:
 - display_name: AWSx
   url: awsx/

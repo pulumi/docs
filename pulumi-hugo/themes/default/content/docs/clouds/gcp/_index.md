@@ -46,9 +46,6 @@ providers:
     - display_name: API docs
       icon: book-small-black
       url: google-native/api-docs/
-    - display_name: How-to guides
-      icon: question-small-black
-      url: google-native/how-to-guides/
 components:
 - display_name: Google Cloud Global CloudRun
   url: gcp-global-cloudrun/
