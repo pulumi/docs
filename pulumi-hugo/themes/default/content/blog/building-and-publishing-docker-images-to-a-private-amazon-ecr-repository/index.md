@@ -122,11 +122,16 @@ EKS):
 
 ```typescript
 // common code from before trimmed out
-const repository = new awsx.ecr.Repository("repo");
+const repository = new awsx.ecr.Repository("repo", {
+    forceDelete: true,
+});
 
 // Invoke 'docker' to actually build the DockerFile that is in the 'app' folder relative to
 // this program. Once built, push that image up to our personal ECR repo.
-const image = repository.buildAndPushImage("./app")
+const image = new awsx.ecr.Image("image", {
+    repositoryUrl: repository.url,
+    path: `./app`,
+});
 
 const service = new awsx.ecs.FargateService("service", {
     // ... common code from before trimmed out
@@ -164,7 +169,7 @@ out at the end of the day exactly what changes needed to be made. From
 the above we can see just the creation of the Repository components, and
 the updates of the Service to now use it. A nice minimal change that
 exactly matches our intuition around what would happen. If necessary,
-the `.buildAndPushImage` operation can also take many more options to
+the `awsx.ecr.Image` resource can also take many more options to
 control what's happening with `docker`. Options around tagging and
 caching can be configured, and the `docker` command line can also just
 be augmented if necessary to handle advanced scenarios.
