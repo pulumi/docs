@@ -33,6 +33,7 @@ export namespace Components {
         "prompt": string;
         "repoUrl": string;
         "signupUrl": string;
+        "siteUrl": string;
         "userID": string;
         "welcomeContent": string;
         "welcomeSelector": string;
@@ -494,6 +495,7 @@ declare namespace LocalJSX {
         "prompt"?: string;
         "repoUrl"?: string;
         "signupUrl"?: string;
+        "siteUrl"?: string;
         "userID"?: string;
         "welcomeContent"?: string;
         "welcomeSelector"?: string;

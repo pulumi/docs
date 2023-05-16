@@ -11,6 +11,7 @@
                         repo-url="https://github.com/pulumi/pulumiai"
                         signup-url="https://app.pulumi.com/signup?pulumiai=1"
                         welcome-content="{{ htmlUnescape (htmlEscape (.Params.welcome | markdownify)) }}"
+                        site-url="{{ .Site.BaseURL }}"
                     >
                     </pulumi-ai>
                 </div>

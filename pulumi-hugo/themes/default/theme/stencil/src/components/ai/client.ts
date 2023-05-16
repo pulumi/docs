@@ -5,7 +5,12 @@ import {
     Language,
     OutputChunkResponse,
     CreateConnectionAction,
+    CreateConnectionResponse,
     ChatGptModel,
+    PingArgs,
+    SetConnectionUserIdsAction,
+    GetConversationAction,
+    GetConversationResponse,
 } from "./types";
 import { parseCookie } from "../../util/util";
 
@@ -21,13 +26,14 @@ export class PulumiAIClient {
 
     constructor(
         private url: string,
-        private connectionOpenCallback: (event: Event) => void,
+        private connectionOpenCallback: (event: CreateConnectionResponse) => void,
         private outputChunkCallback: (content: OutputChunkResponse) => void,
         private outputCompleteCallback: () => void,
         private overMessageLimitCallback: () => void,
         private overCapacityCallback: () => void,
         private errorCallback: (error: string) => void,
         private connectionClosedCallback: (msg: string) => void,
+        private getConversationCallback: (msg: GetConversationResponse) => void,
     ) {}
 
     private onOpen() {
@@ -39,8 +45,11 @@ export class PulumiAIClient {
 
         switch (eventData.type) {
             case MessageType.CREATE_CONNECTION:
-                this.connectionOpenCallback(event);
-                break
+                this.connectionOpenCallback(eventData.data);
+                break;
+            case MessageType.GET_CONVERSATION:
+                this.getConversationCallback(eventData.data);
+                break;
             case MessageType.OUTPUT_CHUNK:
                 this.outputChunkCallback(eventData.data);
                 break;
@@ -97,6 +106,22 @@ export class PulumiAIClient {
         this.send(message);
     }
 
+    private updateUserIDs() {
+        const cookie = parseCookie();
+        this.ajsAnonymousID = cookie["ajs_anonymous_id"];
+        this.ajsUserID = cookie["ajs_user_id"];
+
+        const message: SetConnectionUserIdsAction = {
+            type: MessageType.SET_CONNECTION_USER_IDS,
+            data: {
+                segmentAnonymousId: this.ajsAnonymousID,
+                pulumiUserId: this.pulumiUserID || this.ajsUserID,
+            },
+        };
+
+        this.send(message);
+    }
+
     public set userID(id: string) {
         this.pulumiUserID = id;
 
@@ -106,23 +131,43 @@ export class PulumiAIClient {
             return;
         }
 
-        this.sendCreateConnection();
+        this.updateUserIDs();
     }
 
     public disconnect() {
         this.socket.close();
     }
 
-    public submit(language: Language, program: string, instructions: string, version: number, model: ChatGptModel) {
+    public ping() {
+        const args: PingArgs = {
+            type: MessageType.PING,
+            data: {},
+        };
+
+        this.send(args);
+    }
+
+    public submit(conversationId: string, language: Language, program: string, instructions: string, version: number, model: ChatGptModel, originalConversationId?: string) {
         const args: GenerateNewOutputAction = {
             type: MessageType.GENERATE_NEW_OUTPUT,
             data: {
+                conversationId,
                 language,
                 program: program.substring(0, this.MAX_PROGRAM_LENGTH),
                 instructions: instructions.substring(0, this.MAX_PROMPT_LENGTH),
                 version,
                 model,
+                originalConversationId,
             },
+        };
+
+        this.send(args);
+    }
+
+    public getConversation(conversationId: string) {
+        const args: GetConversationAction = {
+            type: MessageType.GET_CONVERSATION,
+            data: { conversationId },
         };
 
         this.send(args);

@@ -3,8 +3,9 @@ import { store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
 import { setLanguage } from "../../store/actions/preferences";
 import { PulumiAIClient } from "./client";
-import { ChatGptModel, Language, OutputChunkResponse } from "./types";
+import { ChatGptModel, Language, OutputChunkResponse, CreateConnectionResponse, GetConversationResponse } from "./types";
 import { SupportedLanguage, LanguageKey } from "../chooser/chooser";
+import { getQueryVariable } from "../../util/util";
 
 import * as clipboard from "clipboard-polyfill";
 import * as marked from "marked";
@@ -55,8 +56,14 @@ export class PulumiAI {
     @Prop()
     signupUrl: string;
 
+    @Prop()
+    siteUrl: string;
+
     @Element()
     private el: HTMLElement;
+
+    @State()
+    private conversationId: string;
 
     @State()
     private running: boolean = false;
@@ -69,6 +76,9 @@ export class PulumiAI {
 
     @State()
     private versions: Version[] = [];
+
+    @State()
+    private submissionCount = 0;
 
     @State()
     private currentVersion: Version;
@@ -85,6 +95,18 @@ export class PulumiAI {
 
     @State()
     private overMessageLimit: boolean = false;
+
+    @State()
+    private pingListener: NodeJS.Timeout;
+
+    @State()
+    private existingConversationId: string;
+
+    @State()
+    private showShareMenu = false;
+
+    @State()
+    private shareMenuElement: HTMLElement;
 
     @Prop({ mutable: true })
     model: ChatGptModel;
@@ -190,6 +212,10 @@ export class PulumiAI {
                 setTimeout(() => tipContentEl.textContent = this.copyButtonTooltip, 1000);
             }
         }
+
+        if (this.shareMenuElement && !this.shareMenuElement.contains(el)) {
+            this.showShareMenu = false;
+        }
     }
 
     @Listen("wheel", {
@@ -228,10 +254,37 @@ export class PulumiAI {
         return "";
     }
 
+    private get shareableLink() {
+        if (this.versions.length === 0) {
+            return `${this.siteUrl}/ai/`;
+        }
+
+        if (this.submissionCount === 0) {
+            return `${this.siteUrl}/ai/?convid=${this.existingConversationId}`;
+        }
+
+        return `${this.siteUrl}/ai/?convid=${this.conversationId}`;
+    }
+
+    private get twitterLink() {
+        let postText = "Check out what I generated with Pulumi AI!";
+        if (this.versions.length === 0) {
+            postText = "Pulumi AI can help you generate infrastructure as code specific to your use case. Give it a try!"
+        }
+
+        const tweet = `${postText} ${this.shareableLink}`;
+        return `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet)}`;
+    }
+
     componentWillLoad() {
         this.selectedModel = this.supportedModels.find(m => m.key === this.model) || this.supportedModels.reverse()[0];
         this.selectedLanguage = this.supportedLanguages[0];
         this.connectionStatus = "Not connected";
+
+        this.existingConversationId = getQueryVariable("convid");
+        if (this.existingConversationId) {
+            this.staticWelcomeMessage = this.welcomeContent;
+        }
 
         this.validateProps();
         this.validateGlobals();
@@ -252,6 +305,7 @@ export class PulumiAI {
                 () => this.onOverCapacity(),
                 (error) => this.onError(error),
                 (message) => this.onClose(message),
+                (data) => this.onGetConverstation(data),
             );
             this.client.connect();
 
@@ -264,10 +318,47 @@ export class PulumiAI {
         if (this.storeUnsubscribe) {
             this.storeUnsubscribe();
         }
+
+        if (this.pingListener) {
+            clearInterval(this.pingListener);
+        }
     }
 
-    private onConnected(_event: Event) {
+    private onConnected(data: CreateConnectionResponse) {
         this.connectionStatus = "Connected";
+        this.conversationId = data.conversationId;
+        
+        if (this.existingConversationId) {
+            console.log("exisiting conversation", this.existingConversationId);
+            this.client.getConversation(this.existingConversationId);
+        }
+
+        // We ping the backend every 30 seconds to ensure
+        // we are keeping connections alive.
+        this.pingListener = setInterval(() => this.client.ping(), 30000);
+    }
+
+    private onGetConverstation(data: GetConversationResponse) {
+        const versions: Version[] = data.conversation.map(c => {
+            return {
+                prompt: c.prompt,
+                source: c.response,
+                language: c.language,
+                markup: this.addButtons(marked.marked.parse(c.response)),
+            };
+        });
+
+        this.currentVersion = versions[versions.length - 1];
+        this.versions = Array.from(versions);
+        this.currentVersion = null;
+
+        this.running = false;
+        this.scroll();
+        this.clear();
+        this.focus();
+
+        // Wait a bit for the versions to render, then colorize them.
+        setTimeout(() => this.highlight(this.outputVersions), 250);
     }
 
     private onSubmit(event: Event) {
@@ -275,8 +366,12 @@ export class PulumiAI {
         this.submit();
     }
 
+    private copyShareableLink() {
+        clipboard.writeText(this.shareableLink);
+    }
+
     private get runnable() {
-        return this.connectionStatus === "Connected" && !this.running && this.input.value != "";
+        return this.connectionStatus === "Connected" && !this.running && this.input.value.trim() != "";
     }
 
     private highlight(parentNode: HTMLElement): void {
@@ -453,14 +548,15 @@ export class PulumiAI {
     private prepareInput() {
         this.input.addEventListener("keydown", (event: KeyboardEvent) => {
             if (event.key === "Enter") {
-                if (event.metaKey) {
-                    this.input.value += "\n";
+                if (event.shiftKey) {
                     this.input.rows++;
                     return;
                 }
-
+                
                 event.preventDefault();
-                this.submit();
+                if (this.runnable) {
+                    this.submit();
+                }
             }
         });
         this.focus();
@@ -524,6 +620,10 @@ export class PulumiAI {
         </ul>
     }
 
+    private toggleShareMenu() {
+        this.showShareMenu = !this.showShareMenu;
+    }
+
     private selectLanguage(language: SelectableLanguage) {
         this.selectedLanguage = language;
         this.focus();
@@ -559,15 +659,16 @@ export class PulumiAI {
         this.errorMessage = null;
         this.staticWelcomeMessage = this.welcomeContent;
         this.overMessageLimit = false;
+        this.submissionCount++;
 
-        const query = this.input.value?.trim()
+        const query = this.input.value?.trim();
 
         if (!query) {
             return;
         }
 
         this.currentVersion = {
-            prompt: this.input.value,
+            prompt: query,
             language: this.selectedLanguage.name,
             source: "",
             markup: "",
@@ -576,11 +677,13 @@ export class PulumiAI {
         this.versions = Array.from(this.versions);
 
         this.client.submit(
+            this.conversationId,
             this.selectedLanguage.name as Language,
             this.versions && this.versions.length > 0 ? this.versions[this.versions.length - 1].source : "",
-            this.input.value,
+            query,
             this.versions.length,
             this.selectedModel.key,
+            this.existingConversationId,
         );
     }
 
@@ -593,6 +696,10 @@ export class PulumiAI {
     }
 
     private renderWelcomeMessage() {
+        if (this.staticWelcomeMessage) {
+            return;
+        }
+
         const message = this.welcomeContent.split("");
         message.map((char, i) => setTimeout(() => {
             this.animatingWelcomeMessage += char;
@@ -675,38 +782,60 @@ export class PulumiAI {
                                 </form>
                             </div>
                         </div>
-                        <div class="chat-status">
-                            <div>
-                                <span>{ this.connectionStatus }</span>
-                                {
-                                    this.connectionStatus === "Connected" && this.selectedModel && <span>
-                                        <span> &bull; </span>
-                                        <span class="models">
-                                            <span class="label">GPT</span>
-                                            {
-                                                this.supportedModels.map(model => <span>
-                                                    <a
-                                                        class={ model.key === this.selectedModel.key ? "active" : "" }
-                                                        onClick={ this.selectGPTModel.bind(this, model) }>
-                                                            <span>{ model.version }</span>
-                                                    </a>
-                                                </span>)
-                                            }
+                        <div class="chat-details">
+                            <div class="chat-status">
+                                <div>
+                                    <span>{ this.connectionStatus }</span>
+                                    {
+                                        this.connectionStatus === "Connected" && this.selectedModel && <span>
+                                            <span> &bull; </span>
+                                            <span class="models">
+                                                <span class="label">GPT</span>
+                                                {
+                                                    this.supportedModels.map(model => <span>
+                                                        <a
+                                                            class={ model.key === this.selectedModel.key ? "active" : "" }
+                                                            onClick={ this.selectGPTModel.bind(this, model) }>
+                                                                <span>{ model.version }</span>
+                                                        </a>
+                                                    </span>)
+                                                }
+                                            </span>
                                         </span>
-                                    </span>
-                                }
-                                {
-                                    this.connectionStatus === "Disconnected" && <span>
-                                        <span> &bull; </span>
-                                        <a class="alert" onClick={ () => location.reload() }>Reload</a>
-                                    </span>
-                                }
-                                {
-                                    this.errorMessage && <span>
-                                        <span> &bull; </span>
-                                        <span class="alert">Error: { this.errorMessage }</span>
-                                    </span>
-                                }
+                                    }
+                                    {
+                                        this.connectionStatus === "Disconnected" && <span>
+                                            <span> &bull; </span>
+                                            <a class="alert" onClick={ () => location.reload() }>Reload</a>
+                                        </span>
+                                    }
+                                    {
+                                        this.errorMessage && <span>
+                                            <span> &bull; </span>
+                                            <span class="alert">Error: { this.errorMessage }</span>
+                                        </span>
+                                    }
+                                </div>
+                            </div>
+
+                            <div class="chat-share">
+                                <div class="share-button">
+                                    { this.showShareMenu ? <ul class="share-button-options" ref={(el) => this.shareMenuElement = el}>
+                                        <div class="caret"></div>
+
+                                        <li onClick={() => this.copyShareableLink()}>
+                                            <span><i class="fas fa-link"></i>Copy Link</span>
+                                        </li>
+
+                                        <li>
+                                            <a href={this.twitterLink} target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i>Share on Twitter</a>
+                                        </li>
+                                    </ul> : undefined}
+
+                                    { this.versions.length ? <div class="share-link" onClick={() => this.toggleShareMenu()}>
+                                        <span><i class="fas fa-share-square"></i> Share conversation</span>
+                                    </div> : undefined }
+                                </div>
                             </div>
                         </div>
                     </div>

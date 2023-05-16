@@ -95,6 +95,11 @@
                                         @extend .fa;
                                         @extend .fa-copy;
                                     }
+
+                                    &.share {
+                                        @extend .fa;
+                                        @extend .fa-share-alt;
+                                    }
                                 }
                             }
                         }
@@ -230,6 +235,58 @@
 
                 @screen lg {
 
+                }
+            }
+        }
+
+        .chat-details {
+            @apply relative;
+        }
+
+        .chat-share {
+            @apply absolute bottom-0 right-0 text-white;
+
+            .share-button-options {
+                @apply list-none p-0 px-4 py-1 mb-2 bg-gray-400 text-black relative;
+
+                li {
+                    @apply m-0 my-2 text-gray-700 cursor-pointer;
+
+                    i {
+                        @apply mr-2
+                    }
+
+                    a {
+                        @apply text-gray-700 no-underline;
+
+                        &:hover {
+                            @apply text-black;
+                        }
+                    }
+
+                    &:hover {
+                        @apply text-black;
+                    }
+                }
+
+                .caret {
+                    border-left: solid 8px transparent;
+                    border-right: solid 8px transparent;
+                    border-top: solid 8px map-get($gray, 300);;
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    bottom: -7px;
+                    left: 50%;
+                    right: 50%;
+                }
+            }
+
+            .share-link {
+                @apply text-right cursor-pointer text-gray-400 text-xs;
+
+                &:hover {
+                    @apply text-white;
                 }
             }
         }
