@@ -62,7 +62,7 @@ The preview will take a few minutes, as it builds a Docker container. A total of
 
 ### Step 5:  View the endpoint URL
 
-Run [`pulumi stack output`](https://www.pulumi.com/docs/cli/commands/pulumi_stack_output/) to view your stack's output properties, and then `curl` the command to view the resulting page. `$(pulumi stack output url)` evaluates to the load balancer’s URL.
+Run [`pulumi stack output`](https://www.pulumi.com/docs/reference/cli/pulumi_stack_output/) to view your stack's output properties, and then `curl` the command to view the resulting page. `$(pulumi stack output url)` evaluates to the load balancer’s URL.
 
     ```bash
     $ pulumi stack output
@@ -82,7 +82,7 @@ Run [`pulumi stack output`](https://www.pulumi.com/docs/cli/commands/pulumi_stac
 
 ### Step 6: View runtime logs from the container
 
-Use the [`pulumi logs`](https://www.pulumi.com/docs/cli/commands/pulumi_logs/) command. To get a log stream, use `pulumi logs --follow`.
+Use the [`pulumi logs`](https://www.pulumi.com/docs/reference/cli/pulumi_logs/) command. To get a log stream, use `pulumi logs --follow`.
 
     ```
     $ pulumi logs --follow
@@ -92,5 +92,5 @@ Use the [`pulumi logs`](https://www.pulumi.com/docs/cli/commands/pulumi_logs/) c
 
 ## Clean Up
 
-To clean up resources, run [`pulumi destroy`](https://www.pulumi.com/docs/cli/commands/pulumi_destroy/) to avoid incurring any costs. Select `yes` on the confirmation prompt so Pulumi will remove all of the resources that you've created. To delete the stack itself, run [`pulumi stack rm`](https://www.pulumi.com/docs/cli/commands/pulumi_stack_rm/). Note that this command deletes all deployment history from the Pulumi console, unless you've explicitly [chosen a different backend](https://www.pulumi.com/docs/intro/concepts/state/) for storing your infrastructure state.
+To clean up resources, run [`pulumi destroy`](https://www.pulumi.com/docs/reference/cli/pulumi_destroy/) to avoid incurring any costs. Select `yes` on the confirmation prompt so Pulumi will remove all of the resources that you've created. To delete the stack itself, run [`pulumi stack rm`](https://www.pulumi.com/docs/reference/cli/pulumi_stack_rm/). Note that this command deletes all deployment history from the Pulumi console, unless you've explicitly [chosen a different backend](https://www.pulumi.com/docs/intro/concepts/state/) for storing your infrastructure state.
 
