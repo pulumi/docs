@@ -55,11 +55,11 @@ templates:
 - display_name: Kubernetes cluster on AWS
   url: kubernetes/aws/
 - display_name: Kubernetes cluster on Azure
-  url: templates/kubernetes/azure/
+  url: kubernetes/azure/
 - display_name: Kubernetes cluster on Google Cloud
-  url: templates/kubernetes/gcp/
+  url: kubernetes/gcp/
 - display_name: Helm Chart on Kubernetes
-  url: templates/kubernetes-application/helm-chart/
+  url: kubernetes-application/helm-chart/
 guides-description: Learn how to use Pulumi & Kubernetes together.
 guides:
   description: Learn how to use Kubernetes & Pulumi together.

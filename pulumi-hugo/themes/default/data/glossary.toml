@@ -1,7 +1,7 @@
 [[entries]]
 term = "Component"
 description = "A Pulumi component is a logical group of resources that contains other components and physical cloud resources."
-link = "docs/concepts/resources/components"
+link = "/docs/concepts/resources/components"
 
 [[entries]]
 term = "Stack"
@@ -121,7 +121,7 @@ link = "/registry"
 [[entries]]
 term = "Runtime Code"
 description = "You can create libraries and components that allow the caller to pass in JavaScript callbacks to invoke at runtime."
-link = "docs/concepts/inputs-outputs/function-serialization"
+link = "/docs/concepts/inputs-outputs/function-serialization"
 
 [[entries]]
 term = "SAML"

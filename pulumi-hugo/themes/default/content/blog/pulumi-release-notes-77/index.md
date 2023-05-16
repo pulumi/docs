@@ -205,7 +205,7 @@ Look for the star icon next to any stack name and select it to start building yo
 
 ### Pulumi Service Provider improvements
 
-The Pulumi Service Provider builds on top of the Pulumi Service REST API which is another feature available to our customers to programmatically configuring the Pulumi Service. At launch, the Pulumi Service Provider had resource support for Teams, Webhooks, StackTags and AccessTokens. We have recently also added support for [TeamStackPermissions](docs/cli/commands/pulumi_destroy/), enabling users to add stacks to Teams and [Provider](docs/cli/commands/pulumi_destroy/) to control Provider resources.
+The Pulumi Service Provider builds on top of the Pulumi Service REST API which is another feature available to our customers to programmatically configuring the Pulumi Service. At launch, the Pulumi Service Provider had resource support for Teams, Webhooks, StackTags and AccessTokens. We have recently also added support for [TeamStackPermissions](/docs/cli/commands/pulumi_destroy/), enabling users to add stacks to Teams and [Provider](/docs/cli/commands/pulumi_destroy/) to control Provider resources.
 
 As always, please feel free to submit feature requests and bug reports to [Pulumi Service Provider GitHub Repo](https://github.com/pulumi/pulumi-pulumiservice/issues). We look forward to seeing what you build with the Pulumi Service Provider!
 

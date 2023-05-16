@@ -150,7 +150,7 @@ service = awsx.ecs.FargateService(
 export("url", Output.concat("http://", loadbalancer.load_balancer.dns_name))
 ```
 
-Pulumi Architecture Templates build on Pulumi’s support for creating your own templates. Pulumi programs can be templated by users to create their own starting points for cloud infrastructure projects using `pulumi new`.  You can [build your own templates and Deploy with Pulumi buttons](https://www.pulumi.com/docs/pulumi-cloud/-button/) to create similar architecture templates within your own team and organization.
+Pulumi Architecture Templates build on Pulumi’s support for creating your own templates. Pulumi programs can be templated by users to create their own starting points for cloud infrastructure projects using `pulumi new`.  You can [build your own templates and Deploy with Pulumi buttons](https://www.pulumi.com/docs/pulumi-cloud/pulumi-button/) to create similar architecture templates within your own team and organization.
 
 👉 Read more in the [Pulumi Architecture Templates blog post](https://www.pulumi.com/blog/intro-architecture-templates/).
 

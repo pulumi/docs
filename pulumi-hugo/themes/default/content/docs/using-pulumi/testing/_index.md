@@ -23,7 +23,7 @@ Similarly, Pulumi provides multiple testing styles for cloud programs:
 
 The following table summarizes the differences between the three approaches:
 
-|                                | [**Unit Tests**](/docs/using-pulumi/testing/sting/unit)    | [**Property Tests**](/docs/using-pulumi/testing/property-testing)  | [**Integration Tests**](/docs/using-pulumi/testing/integration)  |
+|                                | [**Unit Tests**](/docs/using-pulumi/testing/unit)    | [**Property Tests**](/docs/using-pulumi/testing/property-testing)  | [**Integration Tests**](/docs/using-pulumi/testing/integration)  |
 |--------------------------------|---------------|---------|----------|
 | Provision real infrastructure  | No            | Yes     | Yes      |
 | Require the Pulumi CLI         | No            | Yes     | Yes      |

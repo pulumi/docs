@@ -135,7 +135,7 @@ While a plugin is being installed, the CLI downloads the necessary archive and s
 
 ### "Yes, using Update Plans" prompt removed
 
-[Update Plans](https://www.pulumi.com/docs/concepts/plans/) is a preview feature to constrain the update only to the operations that were planned during preview. To get extra feedback from our users, we experimented with showing an extra option "yes, using Update Plans" at the update prompt. The experiment is now complete, so we removed the option.
+[Update Plans](https://www.pulumi.com/docs/concepts/update-plans/) is a preview feature to constrain the update only to the operations that were planned during preview. To get extra feedback from our users, we experimented with showing an extra option "yes, using Update Plans" at the update prompt. The experiment is now complete, so we removed the option.
 
 Lean more in the [Remove the "yes, using Update Plans" prompt issue](https://github.com/pulumi/pulumi/issues/11894).
 

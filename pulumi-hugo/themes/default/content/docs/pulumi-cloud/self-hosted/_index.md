@@ -48,13 +48,13 @@ The Pulumi Cloud [Docker container images](/docs/pulumi-cloud/self-hosted/compon
 
 However, Pulumi provides [installers](https://github.com/pulumi/pulumi-self-hosted-installers) to support common deployment environments:
 
-* [Quickstart Docker Compose](docs/pulumi-cloud/self-hosted/deployment-options/quickstart-docker-compose/): Using a Pulumi-provided set of docker-compose files and bash scripts, one can deploy a small system for **testing** in a local Docker environment.
-* [ECS-Hosted](ecs-hosted/): Using a Pulumi-provided set of Pulumi programs written in TypeScript or Go, one can automate the deployment and maintenance of a production-grade self-hosted solution.
-* [EKS-Hosted](eks-hosted/): Using a Pulumi-provided set of Pulumi programs written in TypeScript, one can automate the deployment and maintenance of a production-grade self-hosted solution running on Amazon Elastic Kubernetes Sevice (EKS). This solution most closely matches the managed service deployment model.
-* [AKS-Hosted](aks-hosted/): Using a Pulumi-provided set of Pulumi programs written in TypeScript, one can automate the deployment and maintenance of a production-grade self-hosted solution on Azure Kubernetes Service (AKS).
-* [GKE-Hosted](gke-hosted/): Using a Pulumi-provided set of Pulumi programs written in TypeScript, one can automate the deployment and maintenance of a production-grade self-hosted solution on Google Kubernetes Engine (GKE).
-* [Bring Your Own Infrastructure](byo-infra-hosted/): Using a Pulumi-provided set of Pulumi programs written in TypeScript, one can automate the deployment and maintenance of a production-grade self-hosted solution on your own K8s, MySQL and S3-compatible storage,.
-* [Local-Docker](local-docker/): Using a Pulumi-provided Pulumi program written in TypeScript, one can automate the deployment and maintenance of a production-grade self-hosted solution using a customer-provided docker environment,  a customer-provided MySQL database and a customer-provided object store (e.g. Minio).
+* [Quickstart Docker Compose](/docs/pulumi-cloud/self-hosted/deployment-options/quickstart-docker-compose/): Using a Pulumi-provided set of docker-compose files and bash scripts, one can deploy a small system for **testing** in a local Docker environment.
+* [ECS-Hosted](/docs/pulumi-cloud/self-hosted/deployment-options/ecs-hosted/): Using a Pulumi-provided set of Pulumi programs written in TypeScript or Go, one can automate the deployment and maintenance of a production-grade self-hosted solution.
+* [EKS-Hosted](/docs/pulumi-cloud/self-hosted/deployment-options/eks-hosted/): Using a Pulumi-provided set of Pulumi programs written in TypeScript, one can automate the deployment and maintenance of a production-grade self-hosted solution running on Amazon Elastic Kubernetes Sevice (EKS). This solution most closely matches the managed service deployment model.
+* [AKS-Hosted](/docs/pulumi-cloud/self-hosted/deployment-options/aks-hosted/): Using a Pulumi-provided set of Pulumi programs written in TypeScript, one can automate the deployment and maintenance of a production-grade self-hosted solution on Azure Kubernetes Service (AKS).
+* [GKE-Hosted](/docs/pulumi-cloud/self-hosted/deployment-options/gke-hosted/): Using a Pulumi-provided set of Pulumi programs written in TypeScript, one can automate the deployment and maintenance of a production-grade self-hosted solution on Google Kubernetes Engine (GKE).
+* [Bring Your Own Infrastructure](/docs/pulumi-cloud/self-hosted/deployment-options/byo-infra-hosted/): Using a Pulumi-provided set of Pulumi programs written in TypeScript, one can automate the deployment and maintenance of a production-grade self-hosted solution on your own K8s, MySQL and S3-compatible storage,.
+* [Local-Docker](/docs/pulumi-cloud/self-hosted/deployment-options/local-docker/): Using a Pulumi-provided Pulumi program written in TypeScript, one can automate the deployment and maintenance of a production-grade self-hosted solution using a customer-provided docker environment,  a customer-provided MySQL database and a customer-provided object store (e.g. Minio).
 
 ## Components
 

@@ -20,7 +20,7 @@ OPA-based rules for CrossGuard get all the core benefits of Pulumi's policy-as-c
 
 ## What is Pulumi CrossGuard?
 
-Pulumi [CrossGuard](https://www.pulumi.com/docs/using-pulumi/crossguard/guard/) is a policy-as-code framework for enforcing policy across Pulumi infrastructure deployments on any cloud or in Kubernetes. CrossGuard can be used to enforce policy for compliance, security, best practices or cost control.
+Pulumi [CrossGuard](https://www.pulumi.com/docs/using-pulumi/crossguard/) is a policy-as-code framework for enforcing policy across Pulumi infrastructure deployments on any cloud or in Kubernetes. CrossGuard can be used to enforce policy for compliance, security, best practices or cost control.
 
 Pulumi's web console offers tools to manage and enforce CrossGuard policy across your organization, ensuring that every infrastructure project is held to a high bar on policy compliance.
 
