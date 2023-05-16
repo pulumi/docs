@@ -11,7 +11,7 @@ link = "/docs/concepts/stack"
 [[entries]]
 term = "Program"
 description = "Pulumi programs are authored in general-purpose programming languages such as JavaScript or Python. You can use any packages supported by the language’s package manager, as well as Pulumi packages."
-link = "/docs/concepts/how-pulumi-work"
+link = "/docs/concepts/how-pulumi-works"
 
 [[entries]]
 term = "Deployment Engine"
