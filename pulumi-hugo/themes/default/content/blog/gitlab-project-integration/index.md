@@ -40,7 +40,7 @@ request front and center, so you don't miss any of those changes.
 
 Here's a _preview_ of what that looks like 😉
 
-![Merge Request Note](/images/docs/using-pulumi/continuous-delivery/gitlab-app/merge_request_note.png)
+![Merge Request Note](/blog/gitlab-project-integration/pulumi_gitlab.png)
 
 Head over to our docs to learn how to [configure the GitLab integration](/docs/using-pulumi/continuous-delivery/gitlab-app/), whether for
 a single project or all of the projects under a GitLab Group.

@@ -11,6 +11,7 @@ aliases:
 - /docs/intro/concepts/plans/
 - /docs/intro/concepts/update-plans/
 - /docs/intro/vs/
+- /docs/concepts/plans/ 
 ---
 
 {{% notes type="warning" %}}

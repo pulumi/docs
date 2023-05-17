@@ -31,7 +31,7 @@ This means that if a stack belongs to multiple Policy Groups that specify differ
 
 Under a stack's "Settings" tab you can take a look at the Policy Packs that would be enforced on a `preview` or `update` as well as the Policy Groups that the stack belongs to.
 
-![Stack Policy Settings](/images/docs/using-pulumi/crossguard/stack-policies.jpg)
+![Stack Policy Settings](/images/docs/guides/crossguard/stack-policies.jpg)
 
 ## How does Policy as Code work during a stack import or refresh?
 

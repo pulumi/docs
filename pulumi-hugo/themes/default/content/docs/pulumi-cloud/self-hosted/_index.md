@@ -36,9 +36,9 @@ Pulumi can be installed in almost any on-premise or cloud provider environment. 
 
 Here are some examples of deployment topologies:
 
-{{< figure src="/images/docs/pulumi-cloud/self-hosted/on-prem-internet-config.png" caption="Internet-Accessible Deployment" >}}
+{{< figure src="/images/docs/guides/self-hosted/on-prem-internet-config.png" caption="Internet-Accessible Deployment" >}}
 
-{{< figure src="/images/docs/pulumi-cloud/self-hosted/on-prem-intranet-config.png" caption="Intranet-Only Deployment" >}}
+{{< figure src="/images/docs/guides/self-hosted/on-prem-intranet-config.png" caption="Intranet-Only Deployment" >}}
 
 For information on ingress and egress from the self-hosted Pulumi Cloud, please see the [network requirements](/docs/pulumi-cloud/self-hosted/network/) information.
 

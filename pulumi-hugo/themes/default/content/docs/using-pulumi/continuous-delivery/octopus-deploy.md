@@ -82,7 +82,7 @@ A process consists of the steps to execute in a project. The following sections 
     - **Package ID**: This is usually derived from your package, but enter a name of your choice. This ID will be used later.
     - **Package Name**: Enter any name.
 
-  ![Add Package Reference](/images/docs/using-pulumi/continuous-delivery/octopus-deploy/package-reference.png)
+  ![Add Package Reference](/images/docs/guides/continuous-delivery/octopus-deploy/package-reference.png)
 
 - Select the **Run a Script**, fill out the following fields as follows:
     - **Script Source**: Inline source code
@@ -105,7 +105,7 @@ A process consists of the steps to execute in a project. The following sections 
     - In the following screenshot the stack configuration is overridden using a file that is created in a separate **Run a script** step.
     - Overriding the stack configuration is not required. It was done here for demonstrating the use of the `--config-file` flag.
 
-![Add Package Reference](/images/docs/using-pulumi/continuous-delivery/octopus-deploy/run-pulumi.png)
+![Add Package Reference](/images/docs/guides/continuous-delivery/octopus-deploy/run-pulumi.png)
 
 To deploy a package, create a release from the latest package using the appropriate package feed and deploy it to an environment.
 To do that, click on **Releases** under the **Projects** tab and click on **Create Release**, and follow the on-screen instructions.

@@ -194,7 +194,7 @@ would be running `pulumi up` non-interactively.
 
 1. In the end, your pipeline should look like this:
 
-    ![Full Pipeline](/images/docs/using-pulumi/continuous-delivery/spinnaker/full-pipeline.png)
+    ![Full Pipeline](/images/docs/guides/continuous-delivery/spinnaker/full-pipeline.png)
 
 1. Go back to the main Pipelines view and click on the **Start Manual Execution** link next to your pipeline.
 Once the job starts execution, you should see a **Console Output** link. Clicking it will open a modal that will show

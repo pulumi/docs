@@ -125,7 +125,7 @@ Navigate to the SCIM application in OneLogin.
    * *Conditions*: leave blank so that the rule applies to all users.
    * *Actions*: Set Groups ... Map from OneLogin ... For each role ... with value that matches your team name (e.g. `AlphaTeam`)
    * Save the rule.
-    ![Application Rule](/images/docs/pulumi-cloud/access-management/scim/onelogin-application-rule.png)
+    ![Application Rule](/images/docs/guides/scim/onelogin-application-rule.png)
 
 1. Save the Application updates.
 

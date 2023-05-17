@@ -68,7 +68,7 @@ Once you generate the token, save it securely. Neither the Pulumi Cloud nor Pulu
 
 The following shows how your SCIM connection info should be filled in.
 
-![Okta SCIM provisioning](/images/docs/pulumi-cloud/access-management/scim/okta-scim-provisioning.png)
+![Okta SCIM provisioning](/images/docs/guides/scim/okta-scim-provisioning.png)
 
 ## Enabling SCIM Provisioning Actions
 
@@ -121,14 +121,14 @@ To set this up, you need to enable Push Groups as a supported provisioning actio
 
 1. Navigate to the application that you created above by clicking the on the **Applications** tab and then selecting the application.
 
-    ![Okta application selection.](/images/docs/pulumi-cloud/access-management/scim/okta-application-selection-scim.png)
+    ![Okta application selection.](/images/docs/guides/scim/okta-application-selection-scim.png)
 
 2. Click on **Provisioning** tab, then click on the integrations menu option located on the side navigation.
 3. Check the **Push Groups** box under **Supported provisioning actions**.
 4. Select the **Push Groups** tab.
 5. Select the **Push Groups** drop down menu. Here you will have the option to find groups either by name or rule.
 
-    ![Push Groups drop down menu in Okta](/images/docs/pulumi-cloud/access-management/scim/okta-pushgroups-menu-scim.png)
+    ![Push Groups drop down menu in Okta](/images/docs/guides/scim/okta-pushgroups-menu-scim.png)
 
 6. Select **Find groups by name**. This will take you to a screen where you can search groups by the group name. Once you find the group(s) that you are looking for, click **Save**.
 
@@ -144,7 +144,7 @@ If there are members in a group that are not yet assigned to the Pulumi Cloud ap
 
 To confirm that the groups were provisioned correctly, sign in to the Pulumi Cloud and select **Settings** > **Teams** from the left navigation.
 
-![SCIM teams.](/images/docs/pulumi-cloud/access-management/scim/console.png)
+![SCIM teams](/images/docs/guides/scim/console.png)
 
 Select that group and verify its membership. Note that the team’s membership cannot be altered within the Pulumi Cloud. If any membership changes are needed, they must be done within Okta. This allows the membership to be managed using Okta, so your teams on the Pulumi side will always mirror the groups you have configured.
 
