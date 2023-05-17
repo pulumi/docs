@@ -28,9 +28,9 @@
             {{ if eq $.Page.RelPermalink $toc_section_link }}
                 {{ $sidenav_selected = "active" }}
             {{ end }}
-            <div class="{{ $sidenav_selected }} no-anchor toc-header toggle-topLevel {{ $toggle_class }}" id="{{ $toc_name | urlize }}-toc-header">
+            <div id="toc-menu-{{ $toc_name }}" class="{{ $sidenav_selected }} no-anchor toc-header toggle-topLevel {{ $toggle_class }}" id="{{ $toc_name | urlize }}-toc-header">
                 <a href="{{ $toc_section_link }}">{{ $toc_name }}</a>
-                {{ if and ($toc_section_link) (ne $toc_name "Download & install") (ne $toc_name "Get started") (ne $toc_name "Clouds") }}
+                {{ if and ($toc_section_link) (ne $toc_name "Download & install") (ne $toc_name "Get started") }}
                     <span class="toggleButton-topLevel down">
                         <div class="icon icon-14-14 keyboard-arrow-down-gray-14-14"></div>
                     </span>
@@ -62,8 +62,8 @@
                     {{ $toggle_state = "toggleVisible" }}
                 {{ end }}
 
-
-                <ul class="{{ $toggle_state }}">
+                {{ $filepath := .URL }}
+                <ul id="toc-expandable-menu{{ replace $filepath "/" "-" }}" class="{{ $toggle_state }}">
                     <ul class="collapsed">
                         <li class="sidenav-topic {{ $sidenav_selected }}">
                             <a href="{{ .URL }}" data-track="toc-{{ .Name | urlize }}">{{ .Name }}</a>
