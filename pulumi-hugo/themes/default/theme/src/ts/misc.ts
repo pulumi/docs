@@ -32,7 +32,6 @@ function bindTopLevelToggle(el) {
 
 function bindTopLevelToggles(selector) {
     $(selector).each(function (i, el) {
-        console.log("its actually here")
         bindTopLevelToggle(el);
     });
 }
