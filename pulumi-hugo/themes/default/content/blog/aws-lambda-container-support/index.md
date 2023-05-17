@@ -97,7 +97,7 @@ Here are the key features of the container image for our Thumbnailer:
 - Copies the `index.js` with function implementation
 - Points the `index.handler` command
 
-You can find the full Dockerfile [here](https://github.com/pulumi/examples/blob/master/aws-ts-lambda-thumbnailer/docker-ffmpeg-thumb/Dockerfile).
+You can find the full Dockerfile [here](https://github.com/pulumi/examples/blob/master/aws-ts-lambda-thumbnailer/app/Dockerfile).
 
 ### Create an S3 Bucket
 
