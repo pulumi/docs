@@ -254,16 +254,21 @@ export class PulumiAI {
         return "";
     }
 
-    private get shareableLink() {
+    private get shareableLink(): string {
+        let baseUrl = this.siteUrl;
+        if (baseUrl.slice(-1) === "/") {
+            baseUrl = baseUrl.substring(0, baseUrl.length - 1);
+        }
+
         if (this.versions.length === 0) {
-            return `${this.siteUrl}/ai/`;
+            return `${baseUrl}/ai/`;
         }
 
         if (this.submissionCount === 0) {
-            return `${this.siteUrl}/ai/?convid=${this.existingConversationId}`;
+            return `${baseUrl}/ai/?convid=${this.existingConversationId}`;
         }
 
-        return `${this.siteUrl}/ai/?convid=${this.conversationId}`;
+        return `${baseUrl}/ai/?convid=${this.conversationId}`;
     }
 
     private get twitterLink() {
