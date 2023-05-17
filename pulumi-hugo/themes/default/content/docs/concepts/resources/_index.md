@@ -15,20 +15,20 @@ aliases:
     // The following list maps the headings that previously appeared on this page to their new locations.
     // We use this list to determine whether we can redirect visitors from the old content to the new.
     var redirects = {
-        "#options": "/docs/concepts/resources/options",
-        "#additionalsecretoutputs": "/docs/concepts/resources/options/additionalsecretoutputs",
-        "#aliases": "/docs/concepts/resources/options/aliases",
-        "#customtimeouts": "/docs/concepts/resources/options/customtimeouts",
-        "#deletebeforereplace": "/docs/concepts/resources/options/deletebeforereplace",
-        "#dependson": "/docs/concepts/resources/options/dependson",
-        "#ignorechanges": "/docs/concepts/resources/options/ignorechanges",
-        "#import": "/docs/concepts/resources/options/import",
-        "#parent": "/docs/concepts/resources/options/parent",
-        "#protect": "/docs/concepts/resources/options/protect",
-        "#provider": "/docs/concepts/resources/options/provider",
-        "#replaceonchanges": "/docs/concepts/resources/options/replaceonchanges",
-        "#transformations": "/docs/concepts/resources/options/transformations",
-        "#version": "/docs/concepts/resources/options/version",
+        "#options": "/docs/concepts/options/",
+        "#additionalsecretoutputs": "/docs/concepts/options/additionalsecretoutputs",
+        "#aliases": "/docs/concepts/options/aliases",
+        "#customtimeouts": "/docs/concepts/options/customtimeouts",
+        "#deletebeforereplace": "/docs/concepts/options/deletebeforereplace",
+        "#dependson": "/docs/concepts/options/dependson",
+        "#ignorechanges": "/docs/concepts/options/ignorechanges",
+        "#import": "/docs/concepts/options/import",
+        "#parent": "/docs/concepts/options/parent",
+        "#protect": "/docs/concepts/options/protect",
+        "#provider": "/docs/concepts/options/provider",
+        "#replaceonchanges": "/docs/concepts/options/replaceonchanges",
+        "#transformations": "/docs/concepts/options/transformations",
+        "#version": "/docs/concepts/options/version",
         "#components": "/docs/concepts/resources/components",
         "#authoring-a-new-component-resource": "/docs/concepts/resources/components/#authoring-a-new-component-resource",
         "#creating-child-resources": "/docs/concepts/resources/components/#creating-child-resources",
@@ -121,7 +121,7 @@ All resources have a required [`name`](/docs/concepts/resources/names) argument,
 
 The `args` argument is an object with a set of named property input values that are used to initialize the resource. These can be normal raw values—such as strings, integers, lists, and maps—or [outputs](/docs/concepts/inputs-outputs/) from other resources. Each resource has a number of named input properties that control the behavior of the resulting infrastructure. To determine what arguments a resource supports, refer to that resource’s API documentation in the [Registry](/registry/).
 
-The [`options`](/docs/concepts/resources/options) argument is optional, but lets you control certain aspects of the resource. For example, you can show explicit dependencies, use a custom provider configuration, or import an existing infrastructure.
+The [`options`](/docs/concepts/options) argument is optional, but lets you control certain aspects of the resource. For example, you can show explicit dependencies, use a custom provider configuration, or import an existing infrastructure.
 
 ## Resource Details
 

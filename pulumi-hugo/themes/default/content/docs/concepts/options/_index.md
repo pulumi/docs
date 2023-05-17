@@ -22,8 +22,8 @@ All resource constructors accept an options argument that provide the following 
 - [import](/docs/concepts/options/import/): bring an existing cloud resource into Pulumi.
 - [parent](/docs/concepts/options/parent/): establish a parent/child relationship between resources.
 - [protect](/docs/concepts/options/protect/): prevent accidental deletion of a resource by marking it as protected.
-- [provider](/docs/concepts/options/provider/): pass an [explicitly configured provider](../providers/#explicit-provider-configuration), instead of using the default global provider.
-- [providers](/docs/concepts/options/providers/): pass a set of [explicitly configured providers](../providers/#explicit-provider-configuration). These are used if provider is not given, and are passed to child resources.
+- [provider](/docs/concepts/options/provider/): pass an [explicitly configured provider](/docs/concepts/resources/providers/#explicit-provider-configuration), instead of using the default global provider.
+- [providers](/docs/concepts/options/providers/): pass a set of [explicitly configured providers](/docs/concepts/resources/providers/#explicit-provider-configuration). These are used if provider is not given, and are passed to child resources.
 - [replaceOnChanges](/docs/concepts/options/replaceonchanges/): declare that changes to certain properties should be treated as forcing a replacement.
 - [retainOnDelete](/docs/concepts/options/retainondelete/): if true the resource will be retained in the backing cloud provider during a Pulumi delete operation.
 - [transformations](/docs/concepts/options/transformations/): dynamically transform a resource’s properties on the fly.

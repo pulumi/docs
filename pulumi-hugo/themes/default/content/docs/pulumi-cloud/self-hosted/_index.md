@@ -40,7 +40,7 @@ Here are some examples of deployment topologies:
 
 {{< figure src="/images/docs/pulumi-cloud/self-hosted/on-prem-intranet-config.png" caption="Intranet-Only Deployment" >}}
 
-For information on ingress and egress from the self-hosted Pulumi Cloud, please see the [network requirements](/docs/pulumi-cloud/self-hosted/network/network/) information.
+For information on ingress and egress from the self-hosted Pulumi Cloud, please see the [network requirements](/docs/pulumi-cloud/self-hosted/network/) information.
 
 ## Deployment Options
 
@@ -58,8 +58,8 @@ However, Pulumi provides [installers](https://github.com/pulumi/pulumi-self-host
 
 ## Components
 
-The Pulumi self-hosted [Components](components/) consist of Docker images for the Pulumi Cloud's frontend UI and backend API.
+The Pulumi self-hosted [Components](/docs/pulumi-cloud/self-hosted/components/) consist of Docker images for the Pulumi Cloud's frontend UI and backend API.
 
 ## Requirements
 
-The self-hosted Pulumi Cloud has several [requirements](requirements/) to enable it to be installed and run on your infrastructure.
+The self-hosted Pulumi Cloud has several [requirements](/docs/pulumi-cloud/self-hosted/network/) to enable it to be installed and run on your infrastructure.

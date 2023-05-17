@@ -17,7 +17,7 @@ Self-hosting is only available with **Pulumi Business Critical**. If you would l
 To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/concepts/state/).
 {{% /notes %}}
 
-The Pulumi API is one of the components required for self-hosting the Pulumi Cloud in your organization's environment. It provides the necessary APIs for both the CLI and the [Console](//docs/pulumi-cloud/self-hosted/components/console/).
+The Pulumi API is one of the components required for self-hosting the Pulumi Cloud in your organization's environment. It provides the necessary APIs for both the CLI and the [Console](/docs/pulumi-cloud/self-hosted/components/console/).
 
 ## Prerequisites
 
@@ -204,7 +204,7 @@ Only required if using GitLab as the backing identity provider for your organiza
 | PULUMI_DISABLE_EMAIL_LOGIN    | When `true` the API will disallow logins using the email/password identity. To hide the email login option from the Console refer to the [email identity configuration](/docs/pulumi-cloud/self-hosted/components/console#email-identity) for the Console.   |
 | PULUMI_DISABLE_EMAIL_SIGNUP   | When `true` the API will disallow signups using the email/password identity. To hide the email signup option from the Console refer to the [email identity configuration](/docs/pulumi-cloud/self-hosted/components/console#email-identity) for the Console. |
 | RECAPTCHA_SECRET_KEY          | reCAPTCHA secret key for self-service password reset. Create a [site key and a secret key from Google](https://www.google.com/recaptcha/admin).                                                                                                        |
-| SAML_CERTIFICATE_PUBLIC_KEY   | Public key used by the [IdP](/docs/reference/glossary#idp) to sign SAML assertions. Learn how to [set SAML_CERTIFICATE_PUBLIC_KEY](/docs/pulumi-cloud/self-hosted/saml-sso/).                                                                                |
+| SAML_CERTIFICATE_PUBLIC_KEY   | Public key used by the [IdP](/docs/concepts/glossary/#idp) to sign SAML assertions. Learn how to [set SAML_CERTIFICATE_PUBLIC_KEY](/docs/pulumi-cloud/self-hosted/saml-sso/).                                                                                |
 | SAML_CERTIFICATE_PRIVATE_KEY  | Private key used by Pulumi to validate the SAML assertions sent by the IdP. Learn how to [set SAML_CERTIFICATE_PRIVATE_KEY](/docs/pulumi-cloud/self-hosted/saml-sso/).                                                                                       |
 
 ## TLS Environment Variables

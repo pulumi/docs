@@ -1,6 +1,7 @@
 ---
 title: "Programming Model"
-aliases: ["/docs/reference/programming-model/"]
+aliases:
+- /docs/reference/programming-model/
 block_external_search_index: true
 ---
 

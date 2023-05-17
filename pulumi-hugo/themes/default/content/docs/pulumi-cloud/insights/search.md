@@ -46,7 +46,7 @@ a resource named "foo" in the "bar" stack will be returned, but a resource only 
 The default search behavior is helpful for preliminary exploration but is often too broad for finer analysis.
 To more precicesly control _how_ your queries match resources, you can explicitly limit part or all of your query to match specific fields.
 
-For example, searching `name:production` will only return resources that include "production" in their [logical name](../../concepts/resources/names/#logicalname).
+For example, searching `name:production` will only return resources that include "production" in their [logical name](/docs/concepts/resources/names/#logicalname).
 
 In general, any column visible in the UI can be queried as a field by taking the lowercase column name and adding a `:` followed by a query term.
 The colon cannot be followed by whitespace.
@@ -270,7 +270,7 @@ If you don't see it in your organization, [contact sales](/contact?form=sales).
 
 You can download a CSV with all resources matching your query by clicking the "Download CSV" buttong.
 
-For a complete description of the CSV format returned, see the [Data Export](../export) documentation.
+For a complete description of the CSV format returned, see the [Data Export](/docs/pulumi-cloud/insights/export/) documentation.
 
 ## API Access
 
@@ -319,7 +319,7 @@ More specifically:
 
 - Organization admins have access to all resources.
 - If an organization has a default permission of read or write, then all users can query all resources.
-- If an organization has no default permission, then users can only query resources they have access to via [Stack](../../pulumi-cloud/projects-and-stacks/#stack-permissions) or [Team](/docs/pulumi-cloud/access-management/teams/#team-permissions) permissions.
+- If an organization has no default permission, then users can only query resources they have access to via [Stack](/docs/pulumi-cloud/projects-and-stacks/#stack-permissions) or [Team](/docs/pulumi-cloud/access-management/teams/#team-permissions) permissions.
 
 [types]: /docs/concepts/resources/names/#types
 [urn]: /docs/concepts/resources/names/#urns
