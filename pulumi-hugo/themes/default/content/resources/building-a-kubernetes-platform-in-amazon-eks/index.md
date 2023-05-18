@@ -4,7 +4,7 @@ title: "Building a Kubernetes Platform in Amazon EKS with Pulumi"
 meta_desc: "In this workshop, you will examine how Pulumi interacts with Kubernetes, and build real-world examples of managing Amazon EKS clusters."
 
 # A featured webinar will display first in the list.
-featured: true
+featured: false
 
 # If the video is pre-recorded or live.
 pre_recorded: true

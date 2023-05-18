@@ -1,12 +1,10 @@
 ---
 # Name of the webinar.
-title: "KubeCon EU 2023"
-meta_desc: "The Cloud Native Computing Foundation’s flagship conference gathers adopters and technologists from leading open source and cloud native communities."
-
-redirect_to: "/kubecon"
+title: "Pulumi Insights for Multi-cloud Deployments"
+meta_desc: "Accelerate your cloud infrastructure projects in our Pulumi Insights for Multi-cloud Deployments workshop."
 
 # A featured webinar will display first in the list.
-featured: false
+featured: true
 
 # If the video is pre-recorded or live.
 pre_recorded: false
@@ -33,10 +31,10 @@ block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "/kubecon"
+url_slug: "https://go.oracle.com/LP=136167?elqCampaignId=417399"
 
 # Content for the left hand side section of the page.
 main:
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-04-18T08:00:00+02:00
+    sortable_date: 2023-06-01T09:00:00+07:00
 ---
