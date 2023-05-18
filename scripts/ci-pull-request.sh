@@ -15,4 +15,5 @@ source ./scripts/ci-login.sh
 
 ./scripts/build-site.sh preview
 ./scripts/sync-and-test-bucket.sh preview
+./scripts/update-search-index.sh preview
 ./scripts/run-pulumi.sh preview
