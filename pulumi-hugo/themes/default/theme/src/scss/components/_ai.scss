@@ -244,10 +244,11 @@
         }
 
         .chat-share {
-            @apply absolute bottom-0 right-0 text-white;
+            @apply absolute right-0 text-white;
+            bottom: 1px;
 
             .share-button-options {
-                @apply list-none p-0 px-4 py-1 mb-2 bg-gray-400 text-black relative;
+                @apply list-none p-0 px-4 py-1 mb-2 bg-gray-400 text-black relative rounded;
 
                 li {
                     @apply m-0 my-2 text-gray-700 cursor-pointer;
@@ -266,6 +267,10 @@
 
                     &:hover {
                         @apply text-black;
+                    }
+
+                    &.disabled {
+                        @apply pointer-events-none;
                     }
                 }
 

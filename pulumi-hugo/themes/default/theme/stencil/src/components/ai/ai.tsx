@@ -108,6 +108,12 @@ export class PulumiAI {
     @State()
     private shareMenuElement: HTMLElement;
 
+    @State()
+    private disableShareButtons = false;
+
+    @State()
+    private copyLinkText = "Copy Link";
+
     @Prop({ mutable: true })
     model: ChatGptModel;
 
@@ -373,6 +379,14 @@ export class PulumiAI {
 
     private copyShareableLink() {
         clipboard.writeText(this.shareableLink);
+        this.disableShareButtons = true;
+        this.copyLinkText = "Link Copied!";
+
+        setTimeout(() => {
+            this.copyLinkText = "Copy Link";
+            this.showShareMenu = false;
+            this.disableShareButtons = false;
+        }, 2000);
     }
 
     private get runnable() {
@@ -828,11 +842,11 @@ export class PulumiAI {
                                     { this.showShareMenu ? <ul class="share-button-options" ref={(el) => this.shareMenuElement = el}>
                                         <div class="caret"></div>
 
-                                        <li onClick={() => this.copyShareableLink()}>
-                                            <span><i class="fas fa-link"></i>Copy Link</span>
+                                        <li class={this.disableShareButtons ? "disabled" : ""} onClick={() => this.copyShareableLink()}>
+                                            <span><i class="fas fa-link"></i>{this.copyLinkText}</span>
                                         </li>
 
-                                        <li>
+                                        <li class={this.disableShareButtons ? "disabled" : ""}>
                                             <a href={this.twitterLink} target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i>Share on Twitter</a>
                                         </li>
                                     </ul> : undefined}
