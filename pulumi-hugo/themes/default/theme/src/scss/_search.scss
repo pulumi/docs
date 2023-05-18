@@ -51,12 +51,6 @@
     top: auto !important;
     left: auto !important;
 
-    @screen md {
-        top: 16px !important;
-        left: -650px !important;
-        width: 650px !important;
-    }
-
     .st-query-present {
         .st-ui-result {
             .st-ui-type-heading {
@@ -68,6 +62,14 @@
                 color: #4a5568 !important; /* text-gray-600 */
             }
         }
+    }
+}
+
+div.search-header-container div.st-default-autocomplete {
+    @screen md {
+        top: 16px !important;
+        left: -650px !important;
+        width: 650px !important;
     }
 }
 
