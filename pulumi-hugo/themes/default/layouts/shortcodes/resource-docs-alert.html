@@ -3,12 +3,12 @@
 
 {{- /* Not all providers have resource docs, so we check to make sure they do before trying to link to them. */ -}}
 {{ if fileExists (printf "%s/_index.md" $packagePath) }}
-    <div class="note note-info" role="alert">
-        <div class="note-heading">
-            <i class="fas fa-info-circle mr-1"></i>
-            <span>Note</span>
+    <div class="note note-info">
+        <div class="icon-and-line">
+            <i class="fas fa-info-circle"></i>
+            <div class="line"></div>
         </div>
-        <div class="note-body">
+        <div class="content">
             <p>
                 This page documents the language specification for the
                 {{ $providerName }}

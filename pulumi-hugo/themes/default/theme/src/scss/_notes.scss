@@ -1,54 +1,100 @@
 .note {
-    @apply my-4 rounded border-2 text-sm;
-
-    .note-heading {
-        @apply mb-2 font-semibold text-xs;
-    }
-
-    .note-heading,
-    .note-body {
-        @apply px-3 py-2;
-    }
-
-    .note-body {
-        a {
-            @apply underline;
-        }
-    }
+    display: flex;
+    flex-direction: row;
+    border-radius: 4px;
+    padding: 10px 12px 12px 12px;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 12px 0;
+    position: relative;
 
     p {
-        @apply leading-relaxed;
+        margin-bottom: 16px;
+        line-height: 1.6;
 
-        &:first-child {
-            @apply mt-0;
+        &:first-of-type {
+            margin-top: 0;
         }
+    }
 
-        &:last-child {
-            @apply mb-0;
+    :last-child {
+        margin-bottom: 0;
+    }
+
+    a {
+        &:hover {
+            text-decoration: underline;
         }
+    }
+
+    i {
+        font-size: 15px;
+        margin-top: 2px;
+    }
+
+    div.icon-and-line {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.line {
+        display: flex;
+        width: 2px;
+        border-radius: 100px;
+        margin-top: 4px;
+        position: absolute;
+        top: 28px;
+        height: calc(100% - 46px);
+    }
+
+    div.content {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 14px;
+        color: #131314;
+        flex-direction: row;
+    }
+
+    code {
+        border-radius: 4px;
+        padding: 1px 6px 3px 6px;
     }
 
     &.note-info {
-        @apply border-blue-600;
+        background: #f6f7fd;
 
-        .note-heading {
-            @apply bg-blue-600 text-white;
+        a, 
+        i {
+            color: #4d5bd9;
+        }
+
+        div.line {
+            background-color: #a6adec;
+        }
+
+        code {
+            background-color: #ebedfb;
         }
     }
 
     &.note-warning {
-        @apply border-fuchsia-600;
+        background: #fcf2e9;
 
-        .note-heading {
-            @apply bg-fuchsia-600 text-white;
+        a {
+            color: #9D5314;
         }
-    }
 
-    &.note-deprecated {
-        @apply border-fuchsia-600;
+        i {
+            color: #e0771c;
+        }
 
-        .note-heading {
-            @apply bg-fuchsia-600 text-white;
+        div.line {
+            background-color: #ecad77;
+        }
+
+        code {
+            background: #f9e6d4;
         }
     }
 }
