@@ -315,7 +315,13 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         },
         {
             ...baseCacheBehavior,
-            pathPattern: "/css/styles.*.css",
+            pathPattern: "/css/bundle.*.css",
+            defaultTtl: oneYear,
+            maxTtl: oneYear,
+        },
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/css/marketing.*.css",
             defaultTtl: oneYear,
             maxTtl: oneYear,
         },
