@@ -2,128 +2,132 @@
 # Command Line Menu
 # -------------------------------------
 cli:
-  - name: cancel
-    url: /docs/cli/commands/pulumi_cancel/
+  - name: pulumi
+    url: /docs/cli/commands/pulumi/
     weight: 1
     parent: commands
-    aliases:
-      - /docs/reference/cli/pulumi_cancel/
+
+  - name: about
+    url: /docs/cli/commands/pulumi_about/
+    weight: 2
+    parent: commands
+
+  - name: cancel
+    url: /docs/cli/commands/pulumi_cancel/
+    weight: 2
+    parent: commands
 
   - name: config
     url: /docs/cli/commands/pulumi_config/
     weight: 2
     parent: commands
-    aliases:
-      - /docs/reference/cli/pulumi_config/
 
   - name: console
     url: /docs/cli/commands/pulumi_console/
-    weight: 3
+    weight: 2
     parent: commands
-    aliases:
-      - /docs/reference/cli/pulumi_console/
+
+  - name: convert
+    url: /docs/cli/commands/pulumi_convert/
+    weight: 2
+    parent: commands
 
   - name: destroy
     url: /docs/cli/commands/pulumi_destroy/
-    weight: 4
+    weight: 2
     parent: commands
-    aliases:
-      - /docs/reference/cli/pulumi_destroy/
+
+  - name: gen-completion
+    url: /docs/cli/commands/pulumi_gen-completion/
+    weight: 2
+    parent: commands
 
   - name: import
     url: /docs/cli/commands/pulumi_import/
-    weight: 5
+    weight: 2
     parent: commands
-    aliases:
-      - /docs/reference/cli/pulumi_import/
 
   - name: login
     url: /docs/cli/commands/pulumi_login/
-    weight: 6
+    weight: 2
     parent: commands
-    aliases:
-      - /docs/reference/cli/pulumi_login/
 
   - name: logout
     url: /docs/cli/commands/pulumi_logout/
-    weight: 7
+    weight: 2
     parent: commands
-    aliases:
-      - /docs/reference/cli/pulumi_logout/
 
   - name: logs
     url: /docs/cli/commands/pulumi_logs/
-    weight: 8
+    weight: 2
     parent: commands
-    aliases:
-      - /docs/reference/cli/pulumi_logs/
 
   - name: new
     url: /docs/cli/commands/pulumi_new/
-    weight: 9
+    weight: 2
     parent: commands
-    aliases:
-      - /docs/reference/cli/pulumi_new/
+
+  - name: org
+    url: /docs/cli/commands/pulumi_org/
+    weight: 2
+    parent: commands
+
+  - name: package
+    url: /docs/cli/commands/pulumi_package/
+    weight: 2
+    parent: commands
 
   - name: plugin
     url: /docs/cli/commands/pulumi_plugin/
-    weight: 10
+    weight: 2
     parent: commands
-    aliases:
-      - /docs/reference/cli/pulumi_plugin/
 
   - name: policy
     url: /docs/cli/commands/pulumi_policy/
-    weight: 11
+    weight: 2
     parent: commands
-    aliases:
-      - /docs/reference/cli/pulumi_policy/
 
   - name: preview
     url: /docs/cli/commands/pulumi_preview/
-    weight: 12
+    weight: 2
     parent: commands
-    aliases:
-      - /docs/reference/cli/pulumi_preview/
 
   - name: refresh
     url: /docs/cli/commands/pulumi_refresh/
-    weight: 13
+    weight: 2
     parent: commands
-    aliases:
-      - /docs/reference/cli/pulumi_refresh/
+
+  - name: schema
+    url: /docs/cli/commands/pulumi_schema/
+    weight: 2
+    parent: commands
 
   - name: stack
     url: /docs/cli/commands/pulumi_stack/
-    weight: 14
+    weight: 2
     parent: commands
-    aliases:
-      - /docs/reference/cli/pulumi_stack/
 
   - name: state
     url: /docs/cli/commands/pulumi_state/
-    weight: 15
+    weight: 2
     parent: commands
-    aliases:
-      - /docs/reference/cli/pulumi_state/
 
   - name: up
     url: /docs/cli/commands/pulumi_up/
-    weight: 16
+    weight: 2
     parent: commands
-    aliases:
-      - /docs/reference/cli/pulumi_up/
 
   - name: version
     url: /docs/cli/commands/pulumi_version/
-    weight: 17
+    weight: 2
     parent: commands
-    aliases:
-      - /docs/reference/cli/pulumi_version/
+
+  - name: watch
+    url: /docs/cli/commands/pulumi_watch/
+    weight: 2
+    parent: commands
 
   - name: whoami
     url: /docs/cli/commands/pulumi_whoami/
-    weight: 18
+    weight: 2
     parent: commands
-    aliases:
-      - /docs/reference/cli/pulumi_whoami/
