@@ -163,6 +163,10 @@ section.cloud-overview {
             display: flex;
             flex-direction: row;
             align-items: center;
+
+            div.icon {
+                min-width: 18px;
+            }
         }
 
         p.inner-card-description {
@@ -452,6 +456,18 @@ section.cloud-overview {
         background-size: 35px 35px;
     }
 
+    div.icon-52-16 {
+        width: 52px;
+        height: 16px;
+        background-size: 52px 16px;
+    }
+
+    div.icon-78-24 {
+        width: 78px;
+        height: 24px;
+        background-size: 78px 24px;
+    }
+
     div.badge-gray {
         background: url(/images/docs/icons/badge-gray.svg);
     }
@@ -513,10 +529,6 @@ section.cloud-overview {
         background: url(/images/docs/icons/clouds/aws-18-18.svg);
     }
 
-    div.azure-18-18 {
-        background: url(/images/docs/icons/clouds/azure-18-18.svg);
-    }
-
     div.google-cloud-18-18 {
         background: url(/images/docs/icons/clouds/google-cloud-18-18.svg);
     }
@@ -529,8 +541,12 @@ section.cloud-overview {
         background: url(/images/docs/icons/clouds/aws-35-35.svg);
     }
 
-    div.azure-35-35 {
-        background: url(/images/docs/icons/clouds/azure-35-35.svg);
+    div.azure-52-16 {
+        background: url(/images/docs/icons/clouds/azure-52-16.svg);
+    }
+
+    div.azure-78-24 {
+        background: url(/images/docs/icons/clouds/azure-78-24.svg);
     }
 
     div.google-cloud-35-35 {

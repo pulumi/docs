@@ -8,7 +8,11 @@
             <a href="{{ $get_started_guide.link }}">
                 <div class="card get-started-card">
                     <div class="heading">
-                        <div class="icon icon-35-35 icon-get-started {{ $get_started_guide.icon }}-35-35"></div>
+                        {{ if eq $get_started_guide.icon "azure" }}
+                            <div class="icon icon-78-24 icon-get-started {{ $get_started_guide.icon }}-78-24"></div>
+                        {{ else }}
+                            <div class="icon icon-35-35 icon-get-started {{ $get_started_guide.icon }}-35-35"></div>
+                        {{ end }}
                         <p>Get started</p>
                     </div>
                     <div class="icon icon-24-24 icon-get-started-arrow right-arrow-gray"></div>
@@ -298,7 +302,11 @@
                         <a href="{{ $link.url }}">
                             <div class="card-inner">
                                 <div class="card-inner-content-1">
-                                    <div class="icon icon-18-18 icon-left-of-card-label {{ $link.icon }}-18-18"></div>
+                                    {{ if eq $link.icon "azure" }}
+                                        <div class="icon icon-52-16 icon-left-of-card-label {{ $link.icon }}-52-16"></div>
+                                    {{ else }}
+                                        <div class="icon icon-18-18 icon-left-of-card-label {{ $link.icon }}-18-18"></div>
+                                    {{ end }}
                                     <p>{{ $link.display_name }}</p>
                                 </div>
                             </div>
