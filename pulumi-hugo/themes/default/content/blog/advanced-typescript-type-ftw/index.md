@@ -12,7 +12,7 @@ typechecking – making for a more productive inner loop and helping to find err
 how this works for infrastructure as code can be fascinating!
 <!--more-->
 
-A core part of the Pulumi [programming model](/docs/reference/) is that we allow people to express complex
+A core part of the Pulumi [programming model](/docs/concepts/) is that we allow people to express complex
 [dependency data](/docs/concepts/inputs-outputs/) that may _eventually_ be available.
 Traditional JavaScript programming might expose that as a Promise<T>, but we’ve taken that one step further by introducing
     a type we call:

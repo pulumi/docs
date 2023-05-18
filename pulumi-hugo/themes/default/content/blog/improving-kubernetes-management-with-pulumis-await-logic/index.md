@@ -121,7 +121,7 @@ resources to check out:
   [Google GKE](/registry/packages/kubernetes/how-to-guides/gke/), or
   [Azure AKS](https://github.com/pulumi/examples/tree/master/classic-azure-ts-aks-mean)
 - Tutorial: [Operate and deploy to a Kubernetes cluster](/registry/packages/kubernetes/how-to-guides/exposed-deployment/)
-- Docs: [Pulumi docs](/docs/reference/), including an
+- Docs: [Pulumi docs](/docs/), including an
   [overview of the programming model](/docs/concepts/)
 - Video: [Watch Joe Beda take Pulumi for a spin in last week's TGIK](https://www.youtube.com/watch?v=ILMK65YVSKw)
 

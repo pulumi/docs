@@ -205,4 +205,4 @@ Container registries are just one of the many resources used for deploying moder
 
 - [Tutorials](/registry/)
 - [Examples](https://github.com/pulumi/examples)
-- [API Reference](/docs/reference/pkg/)
+- [API Reference](/registry/)
