@@ -10,7 +10,7 @@ aliases:
 - /docs/reference/cli/environment-variables/
 ---
 
-<dl class="tabular tabular-5-col">
+<dl class="tabular tabular-5-col break-words">
     <dt>
         <span class="font-mono">
             PULUMI_AUTOMATION_API_SKIP_VERSION_CHECK
