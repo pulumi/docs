@@ -8,8 +8,8 @@ menu:
         identifier: faq-scim
         parent: scim
         weight: 4
-alias:
-- /docs/guides/scim/faq/
+aliases:
+  - /docs/guides/scim/faq/
 ---
 
 ## FAQ

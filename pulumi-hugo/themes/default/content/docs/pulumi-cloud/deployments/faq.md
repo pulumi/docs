@@ -7,8 +7,8 @@ menu:
   pulumicloud:
     parent: deployments
     weight: 6
-alias:
-- /docs/intro/deployments/faq/
+aliases:
+  - /docs/intro/deployments/faq/
 ---
 
 ## General Availability

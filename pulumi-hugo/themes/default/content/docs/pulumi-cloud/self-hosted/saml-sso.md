@@ -7,8 +7,8 @@ menu:
     pulumicloud:
         parent: self-hosted
         weight: 2
-alias:
-- /docs/guides/self-hosted/saml-sso/
+aliases:
+  - /docs/guides/self-hosted/saml-sso/
 ---
 
 The self-hosted option allows you to control various aspects of the Pulumi Cloud including how users will sign in to the [Pulumi Cloud](/docs/pulumi-cloud/self-hosted/components/console/).

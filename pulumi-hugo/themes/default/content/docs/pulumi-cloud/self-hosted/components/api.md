@@ -7,8 +7,8 @@ menu:
     pulumicloud:
         parent: self-hosted-components
         weight: 1
-alias:
-- /docs/guides/self-hosted/components/api/
+aliases:
+  - /docs/guides/self-hosted/components/api/
 ---
 
 {{% notes type="info" %}}

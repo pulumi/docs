@@ -7,8 +7,8 @@ menu:
     pulumicloud:
         identifier: self-hosted
         weight: 10
-alias:
-- /docs/guides/self-hosted/
+aliases:
+  - /docs/guides/self-hosted/
 ---
 
 {{% notes type="info" %}}

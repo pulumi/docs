@@ -7,8 +7,8 @@ menu:
   pulumicloud:
     parent: deployments
     weight: 2
-alias:
-- /docs/intro/deployments/reference/
+aliases:
+  - /docs/intro/deployments/reference/
 ---
 
 This page highlights some common patterns and workflows using Pulumi Deployments.

@@ -7,8 +7,8 @@ menu:
   pulumicloud:
     parent: insights
     weight: 3
-alias:
-- /docs/intro/insights/import/
+aliases:
+  - /docs/intro/insights/import/
 ---
 
 Cloud Import lets you bring resources managed outside of Pulumi into the resource graph to make them available for everything Insights has to offer including search and analytics. Cloud Import also has a workflow for taking these resources and generating infrastructure as code. Whether your resources were created with ClickOps, Terraform, Clourformation, or any other tool, you can bring them into Pulumi with Cloud Import.

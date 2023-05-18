@@ -7,8 +7,8 @@ menu:
     pulumicloud:
         parent: deployment-options
         weight: 2
-alias:
-- /docs/guides/self-hosted/ecs-hosted/
+aliases:
+  - /docs/guides/self-hosted/ecs-hosted/
 ---
 
 The [ECS-Hosted Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/ecs-hosted) is used to deploy the self-hosted Pulumi Cloud in Amazon Elastic Container Service. You can choose between using a TypeScript or Golang installer.

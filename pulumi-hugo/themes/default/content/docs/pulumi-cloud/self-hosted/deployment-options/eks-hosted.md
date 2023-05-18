@@ -7,8 +7,8 @@ menu:
     pulumicloud:
         parent: deployment-options
         weight: 3
-alias:
-- /docs/guides/self-hosted/eks-hosted/
+aliases:
+  - /docs/guides/self-hosted/eks-hosted/
 ---
 
 The [EKS-Hosted Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/eks-hosted) installer is used to deploy the self-hosted Pulumi Cloud in Amazon Elastic Kuberenetes Service (EKS).

@@ -7,8 +7,8 @@ menu:
     pulumicloud:
         parent: deployment-options
         weight: 6
-alias:
-- /docs/guides/self-hosted/local-docker/
+aliases:
+  - /docs/guides/self-hosted/local-docker/
 ---
 
 The [Local-Docker Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/local-docker) is generally meant to be used where an on-premise solution is needed or where the cloud-based installation solutions (i.e. EKS, ECS, AKS) are not possible.

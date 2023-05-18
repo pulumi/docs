@@ -7,9 +7,9 @@ menu:
     pulumicloud:
         parent: self-hosted
         weight: 4
-alias:
-- /docs/guides/self-hosted/requirements/
-- /docs/guides/self-hosted/requirements/network/
+aliases:
+  - /docs/guides/self-hosted/requirements/
+  - /docs/guides/self-hosted/requirements/network/
 ---
 
 {{% notes type="info" %}}
