@@ -1,32 +1,53 @@
 {{ define "hero" }}
-    <header class="header-hero-home mb-8 relative px-4 pb-56 lg:pb-40">
+    <header class="header-hero-home mb-8 relative px-4 pb-56 lg:pb-10">
         <div class="container mx-auto px-4">
             <h1>{{ .Params.hero.title }}</h1>
-            <div class="my-4 mb-8 text-2xl">
+            <div class="my-4 mb-16 text-2xl">
                 {{ .Params.hero.description }}
             </div>
             <div class="flex flex-col lg:flex-row mt-4">
-                <a class="btn btn-lg text-center mb-4 lg:mb-0 lg:mr-4" href="#contact">{{ .Params.hero.cta_text }}</a>
+                <a
+                    class="btn btn-lg text-center mb-4 lg:mb-0 lg:mr-4"
+                    href="https://github.com/pulumi/team-edition-for-open-source/issues/new?assignees=developer-advocates&labels=new-request&projects=&template=SUBMIT-PROJECT.yml&title=%5BNEW+OSS+PROJECT%5D%3A+"
+                    >{{ .Params.hero.cta_text }}</a
+                >
             </div>
         </div>
     </header>
 {{ end }}
 
 {{ define "main" }}
-    <section id="contact" class="mb-16 pt-8">
+    <section id="feature" class="mb-4 pt-8">
         <div class="container mx-auto flex flex-col lg:flex-row">
-            <div class="w-full lg:w-1/2 px-8">
+            <div class="w-full lg:w-3/4 px-8">
                 <h2>{{ .Params.features.title }}</h2>
                 <p>{{ .Params.features.description | markdownify }}</p>
 
                 <h2>{{ .Params.requirements.title }}</h2>
                 <p>{{ .Params.requirements.description | markdownify }}</p>
-
-                <h2>{{ .Params.contact.title }}</h2>
-                <p>{{ .Params.contact.description | markdownify }}</p>
             </div>
-            <div class="w-full lg:w-1/2 px-8 mt-4">
-                {{ partial "form-section" (dict "form" .Params.contact.form) }}
+        </div>
+    </section>
+    <section id="contact" class="container mx-auto w-full relative overflow-visible py-10 px-4">
+        <div class="flex justify-center mt-8">
+            <div class="card ready-cta w-full rounded-xl p-1 gradient">
+                <div class="flex justify-center rounded-xl bg-violet-100">
+                    <div class="p-8 md:p-16 lg:pt-8 lg:pb-8 inline-flex flex-col items-center">
+                        <h2 class="mb-4 text-center">How to Apply</h2>
+                        <p class="container mx-auto max-w-3xl text-lg text-center my-4">
+                            {{ .Params.contact.description | markdownify }}
+                        </p>
+                        <div class="flex flex-col self-stretch items-center lg:justify-between">
+                            <div class="flex flex-col justify-center align-center text-center w-full md:w-2/4 lg:ml-14 lg:mr-14 mb-4 lg:mb-0 z-0">
+                                <a
+                                    href="https://github.com/pulumi/team-edition-for-open-source/issues/new?assignees=developer-advocates&labels=new-request&projects=&template=SUBMIT-PROJECT.yml&title=%5BNEW+OSS+PROJECT%5D%3A+"
+                                    class="btn-primary py-3"
+                                    >Apply</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
