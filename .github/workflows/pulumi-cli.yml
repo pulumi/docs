@@ -99,7 +99,7 @@ jobs:
       - name: Update version lists
         run: |
           NL=$'\n'
-          sed -e "s/<tbody>/<tbody>\\${NL}        {{< changelog-table-row version=\"${{ env.PULUMI_VERSION}}\" date=\"$(date +%Y-%m-%d)\" showChecksum=\"true\" >}}/" -i ./content/docs/get-started/install/versions.md
+          sed -e "s/<tbody>/<tbody>\\${NL}        {{< changelog-table-row version=\"${{ env.PULUMI_VERSION}}\" date=\"$(date +%Y-%m-%d)\" showChecksum=\"true\" >}}/" -i ./content/docs/install/versions.md
         working-directory: docs
       - name: git status
         run: git status && git diff
