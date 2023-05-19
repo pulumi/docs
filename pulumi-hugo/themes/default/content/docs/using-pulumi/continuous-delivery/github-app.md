@@ -12,7 +12,7 @@ menu:
 aliases:
 - /docs/reference/cd-github/
 - /docs/console/continuous-delivery/github-app/
-- /guides/continuous-delivery/github-app/
+- /docs/guides/continuous-delivery/github-app/
 ---
 
 Pulumi's GitHub app displays the results of Pulumi stack update previews in pull requests and enables automatic stack deployments via [Pulumi Deployments](/docs/pulumi-cloud/deployments/). Once installed and
