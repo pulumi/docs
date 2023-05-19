@@ -5,6 +5,7 @@ title: C#, VB, F# (.NET)
 h1: Pulumi & C#, VB, F# (.NET)
 menu:
   languages:
+    identifier: dotnet
     weight: 3
 aliases:
 - /dotnet/

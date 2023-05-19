@@ -5,6 +5,7 @@ title: TypeScript (Node.js)
 h1: Pulumi & TypeScript & JavaScript (Node.js)
 menu:
   languages:
+    identifier: javascript
     weight: 1
 aliases:
 - /docs/reference/javascript/

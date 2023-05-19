@@ -5,6 +5,7 @@ title: Python
 h1: Pulumi & Python
 menu:
   languages:
+    identifier: python
     weight: 2
 aliases:
 - /docs/reference/python/

@@ -5,6 +5,7 @@ title: Go
 h1: Pulumi & Go
 menu:
     languages:
+        identifier: go
         weight: 4
 aliases:
 - /docs/intro/languages/go/
