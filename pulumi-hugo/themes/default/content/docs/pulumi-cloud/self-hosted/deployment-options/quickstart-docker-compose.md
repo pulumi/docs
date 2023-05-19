@@ -8,7 +8,7 @@ menu:
         parent: deployment-options
         weight: 1
 aliases:
-  - docs/guides/self-hosted/quickstart-docker-compose/
+  - /docs/guides/self-hosted/quickstart-docker-compose/
 ---
 
 The Pulumi Cloud Docker container images can be run using any OCI-compatible container orchestrator. We provide sample docker-compose files that can help you get started with your self-evaluation quickly.
