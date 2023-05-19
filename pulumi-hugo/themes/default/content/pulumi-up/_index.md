@@ -11,99 +11,33 @@ event_date: 2023-06-15T08:00:00-07:00
 aliases:
     - /pulumiup
 
-topics:
-    - name: Programming Languages
-      color: bg-purple-600
-    - name: TypeScript
-      color: bg-purple-600
-    - name: Java
-      color: bg-purple-600
-    - name: JavaScript
-      color: bg-purple-600
-    - name: .NET
-      color: bg-purple-600
-    - name: Python
-      color: bg-purple-600
-    - name: C#
-      color: bg-purple-600
-    - name: GO
-      color: bg-purple-600
-    - name: Infrastructure as Code
-      color: bg-blue-500
-    - name: Cloud
-      color: bg-blue-500
-    - name: DevOps
-      color: bg-blue-500
-    - name: Multi-cloud
-      color: bg-blue-500
-    - name: Security
-      color: bg-blue-500
-    - name: Self-service Infrastructure
-      color: bg-blue-500
-    - name: Kubernetes
-      color: bg-blue-500
-    - name: Immutable Architecture
-      color: bg-blue-500
-    - name: Pulumi Deployments
-      color: bg-blue-500
-    - name: Git
-      color: bg-blue-500
-    - name: Pipeline Automation
-      color: bg-blue-500
-    - name: Cloud Applications
-      color: bg-blue-500
-    - name: CI/CD
-      color: bg-blue-500
-    - name: Container
-      color: bg-blue-500
-    - name: Platform Engineering
-      color: bg-blue-500
-    - name: Platform Abstraction
-      color: bg-blue-500
-    - name: AWS
-      color: bg-blue-500
-    - name: Google Cloud
-      color: bg-blue-500
-    - name: Azure
-      color: bg-blue-500
-    - name: Terraform
-      color: bg-blue-500
-    - name: Cloud Migration
-      color: bg-blue-500
-    - name: IaC Adoption
-      color: bg-blue-500
-    - name: Monorepo
-      color: bg-blue-500
-    - name: Automation API
-      color: bg-blue-500
-    - name: Sharing & Reusability
-      color: bg-blue-500
-    - name: Serverless
-      color: bg-blue-500
-    - name: Best Practices
-      color: pulumiup-bg-yellow
-    - name: Software Development
-      color: pulumiup-bg-yellow
-    - name: Sustainability
-      color: pulumiup-bg-yellow
-    - name: SaaS
-      color: pulumiup-bg-yellow
-    - name: Developer Productivity
-      color: pulumiup-bg-yellow
-    - name: AI
-      color: pulumiup-bg-yellow
-    - name: Quality
-      color: pulumiup-bg-yellow
-    - name: Innovation
-      color: pulumiup-bg-green
-    - name: Enterprise
-      color: pulumiup-bg-green
-    - name: Future of Cloud
-      color: pulumiup-bg-green
-    - name: Teams
-      color: pulumiup-bg-green
-    - name: "..."
-      color: pulumiup-bg-green
+panelists:
+    - name: Luke Hoban
+      image: /images/team/luke-hoban.jpg
+      position: CTO / TypeScript Co-creator
+      company: Pulumi
+      socials:
+        - site: twitter
+          link: https://twitter.com/lukehoban
+    - name: Amanda Silver
+      image: /images/pulumiup-2023/speakers/amanda-silver.png
+      position: CVP Developer Tools
+      company: Microsoft
+      socials:
+        - site: linkedin
+          link: https://www.linkedin.com/in/amandaksilver/
+        - site: twitter
+          link: https://twitter.com/amandaksilver
+    - name: Beyang Liu
+      image: /images/pulumiup-2023/speakers/beyang-liu.png
+      position: Co-Founder / CTO
+      company: Sourcegraph
+      socials:
+        - site: linkedin
+          link: https://www.linkedin.com/in/beyang-liu
+        - site: twitter
+          link: https://twitter.com/beyang
+      
 
 stories:
     - name: Tim Holm

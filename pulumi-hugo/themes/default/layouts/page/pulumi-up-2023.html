@@ -44,8 +44,65 @@
         </p>
     </div>
 
-    <section id="dev-stories" class="yellow-blue-gradient mt-2">
+    <section id="ai-panel" class="mb-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-center">AI and the Future of Cloud Development</h2>
+            <p class="text-center mb-8">
+                Get ready for the future of cloud development! Listen to industry experts in our unfiltered panel discussion on how AI is transforming the cloud native landscape.
+                Stay ahead of the curve by hearing and learning from the best in the industry.
+            </p>
+            <div class="container justify-center flex flex-col lg:flex-row">
+                {{ range .Params.panelists }}
+                    <div class="mx-2 flex flex-row lg:flex-col my-2">
+                        <img src="{{ .image }}" class="rounded-l-md lg:rounded-b-none lg:rounded-t-md" style="height: 220px; width: 220px;" />
+                        <div class="light-blue-background w-full px-4 py-2 rounded-r-md lg:rounded-t-none lg:rounded-b-md text-left">
+                            <h6>{{ .name }}</h6>
+                            <p class="text-sm text-black my-2 flex-wrap">{{ .position }}</p>
+                            <p class="text-sm text-black my-2">{{ .company }}</p>
+                            <div class="flex flex-row my-4">
+                                {{ range .socials }}
+                                    <a href="{{ .link }}" target="_blank">
+                                        <img src="/logos/tech/{{ .site }}.svg" alt="{{ .site }}" class="mr-2" href="{{ .link }}" />
+                                    </a>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+            <h6 class="py-4">Be a part of shaping the future of cloud infrastructure!</h6>
+            <event-session-registration-modal
+                modal-title="Register for PulumiUP"
+                button-text="Register Now"
+                button-class="btn-primary"
+                event-sessions="{{ .Params.registration.items | jsonify }}"
+            >
+            </event-session-registration-modal>
+        </div>
+    </section>
+
+    <section id="personas" class="light-blue-background">
         <div class="container mx-auto px-4 py-8 text-center">
+            <h2>A MUST attend for...</h2>
+            <div class="mx-auto py-4 flex flex-col lg:flex-row">
+                {{ range .Params.personas.groups }}
+                    <div class="w-full lg:w-1/4 flex flex-row lg:flex-col">
+                        {{ range .items }}
+                            <div class="flex flex-col lg:flex-row px-12 my-4">
+                                <div class="w-14 flex justify-center"><img src="{{ .image }}" /></div>
+                                <div class="flex-col lg:px-8 text-left">
+                                    <p class="text-sm text-black text-left">{{ .name }}</p>
+                                </div>
+                            </div>
+                        {{ end }}
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <section id="dev-stories" class="yellow-blue-gradient">
+        <div class="container mx-auto px-4 pb-16 text-center">
             <h2>DevStories</h2>
             <p class="text-lg">
                 PulumiUP isn't just another developer conference. Our brilliant speakers are engineers like you, who tackled challenges, successfully implemented solutions, and
@@ -67,7 +124,7 @@
                     </div>
                 {{ end }}
             </div>
-            <h5 class="py-4">Stay tuned... More to come!</h5>
+            <h6 class="py-4">Don't miss out on this opportunity to improve your knowledge and skills in cloud infrastructure.</h6>
             <event-session-registration-modal
                 modal-title="Register for PulumiUP"
                 button-text="Register Now"
@@ -78,49 +135,7 @@
         </div>
     </section>
 
-    <section id="personas" class="light-blue-background">
-        <div class="container mx-auto px-4 py-8 lg:pt-24 text-center">
-            <h2>A MUST attend for...</h2>
-            <div class="mx-auto py-8 flex flex-col lg:flex-row">
-                {{ range .Params.personas.groups }}
-                    <div class="w-full lg:w-1/4 flex flex-row lg:flex-col">
-                        {{ range .items }}
-                            <div class="flex flex-col lg:flex-row px-12 my-4">
-                                <div class="w-14 flex justify-center"><img src="{{ .image }}" /></div>
-                                <div class="flex-col lg:px-8 text-left">
-                                    <p class="text-sm text-black text-left">{{ .name }}</p>
-                                </div>
-                            </div>
-                        {{ end }}
-                    </div>
-                {{ end }}
-            </div>
-        </div>
-    </section>
-
-    <section id="topic-tags" class="relative mt-16">
-        <div class="dot-background-container">
-            <div class="dot-background"></div>
-        </div>
-        <div class="dot-overlay"></div>
-
-        <div class="w-full py-8" style="background-color:rgba(255,255,255,.8)">
-            <div class="text-center relative mx-auto w-full lg:w-2/3">
-                <h2 class="text-black mb-8">At A Glance Topics</h2>
-                <p>
-                    Learn how industry leaders leverage infrastructure as code to innovate, accelerate software development, enable their developer teams, and cut costs. Grow your
-                    knowledge about cloud and trending topics, and build more efficiently.
-                </p>
-                <div class="flex flex-row flex-wrap justify-center">
-                    {{ range .Params.topics }}
-                        <div class="rounded-md px-2 py-2 m-2 text-white {{ .color }}">{{ .name }}</div>
-                    {{ end }}
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="why-attend" class="my-8 lg:my-20">
+    <section id="why-attend" class="my-8 lg:my-16">
         <div class="container mx-auto">
             <h2 class="pl-8">Why Attend</h2>
             <div class="px-4 py-8 text-center flex flex-col lg:flex-row">
@@ -152,7 +167,35 @@
         </div>
     </section>
 
-    <section id="speakers" class="relative my-8 lg:my-24">
+    <section id="schedule" class="light-blue-background">
+        <div class="container mx-auto py-16 px-6 lg:px-0">
+            <h2 class="text-center">Schedule At A Glance</h2>
+            <p class="text-center mb-8">
+                2022 was amazing, but 2023 will be even better! Be inspired! Learn from experts and success Dev stories about early adopters from startups to large companies.
+            </p>
+            <div class="mx-auto w-full lg:w-1/2 grid gap-2 lg:gap-4 grid-cols-3 lg:grid-cols-6">
+                {{ range .Params.schedule }}
+                    <div class="bg-white rounded-md col-span-1 px-2 flex items-center justify-center">
+                        <p class="text-xs">{{ .time }}</p>
+                    </div>
+                    <div class="bg-white rounded-md col-span-2 lg:col-span-5 px-2 flex items-center">
+                        <p class="text-xs">{{ .title }}</p>
+                    </div>
+                {{ end }}
+            </div>
+            <div class="mt-12 flex justify-center">
+                <event-session-registration-modal
+                    modal-title="Register for PulumiUP"
+                    button-text="Register Now"
+                    button-class="btn-primary btn-primary-blue-bg"
+                    event-sessions="{{ .Params.registration.items | jsonify }}"
+                >
+                </event-session-registration-modal>
+            </div>
+        </div>
+    </section>
+
+    <section id="speakers" class="relative mb-8">
         <div class="dot-background-container">
             <div class="dot-background"></div>
         </div>
@@ -177,34 +220,6 @@
                 </ul>
             </div>
             <div class="my-16 flex justify-center">
-                <event-session-registration-modal
-                    modal-title="Register for PulumiUP"
-                    button-text="Register Now"
-                    button-class="btn-primary btn-primary-blue-bg"
-                    event-sessions="{{ .Params.registration.items | jsonify }}"
-                >
-                </event-session-registration-modal>
-            </div>
-        </div>
-    </section>
-
-    <section id="schedule" class="light-blue-background mb-8 lg:mb-16">
-        <div class="container mx-auto py-16 px-6 lg:px-0">
-            <h2 class="text-center">Schedule At A Glance</h2>
-            <p class="text-center mb-8">
-                2022 was amazing, but 2023 will be even better! Be inspired! Learn from experts and success Dev stories about early adopters from startups to large companies.
-            </p>
-            <div class="mx-auto w-full lg:w-1/2 grid gap-2 lg:gap-4 grid-cols-3 lg:grid-cols-6">
-                {{ range .Params.schedule }}
-                    <div class="bg-white rounded-md col-span-1 px-2 flex items-center justify-center">
-                        <p class="text-xs">{{ .time }}</p>
-                    </div>
-                    <div class="bg-white rounded-md col-span-2 lg:col-span-5 px-2 flex items-center">
-                        <p class="text-xs">{{ .title }}</p>
-                    </div>
-                {{ end }}
-            </div>
-            <div class="mt-12 flex justify-center">
                 <event-session-registration-modal
                     modal-title="Register for PulumiUP"
                     button-text="Register Now"
