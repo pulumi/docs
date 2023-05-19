@@ -20,8 +20,16 @@ function bindToggle(el) {
 }
 
 function loadToggleStates() {
+    // checks whether the menu item refers to the current page the
+    // user is on.
+    const isCurrentPage = (el) => {
+        const browserUrl = window.location.href;
+        const anchorRef = $(el).find('a').attr('href');
+        return browserUrl.includes(anchorRef);
+    };
+
     $(".toggle-topLevel, .toggleVisible-topLevel").each(function (i, el) {
-        if (navigationState.getKey(el.id) == "expanded") {
+        if (navigationState.getKey(el.id) == "expanded" || isCurrentPage(el)) {
             $(el).addClass("toggleVisible").removeClass("toggle");
         } else if (navigationState.getKey(el.id) == "collapsed") {
             $(el).addClass("toggle").removeClass("toggleVisible");
