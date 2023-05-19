@@ -23,7 +23,7 @@
 
     <section class="providers">
         <div class="col">
-            <h2>Providers</h2>
+            <h2 id="providers">Providers</h2>
             <p>{{ .Params.providers.description }}</p>
             <div class="row cols-2">
                 {{ $num_of_providers := .Params.providers.provider_list }}
@@ -87,7 +87,7 @@
     </section>
     <section class="templates card-outer card-gradient">
         <div class="card-heading card-heading-1">
-            <h2>Templates</h2>
+            <h2 id="templates">Templates</h2>
             <div class="icon icon-24-24 icon-right-of-heading ruler-triangle-gray"></div>
         </div>
         <p>
@@ -110,7 +110,7 @@
     </section>
     <section class="components card-outer card-gradient">
         <div class="card-heading card-heading-1">
-            <h2>Components</h2>
+            <h2 id="components">Components</h2>
             <div class="icon icon-24-24 icon-right-of-heading puzzle-piece-gray"></div>
         </div>
         <p>Components support all languages and group a set of resources together.</p>
@@ -179,7 +179,7 @@
                         <div class="card-heading card-heading-2">
                             <div class="heading">
                                 <div class="icon icon-21-21 icon-left-of-heading recycle-gray-21-21"></div>
-                                <h2>{{ $convert.heading }}</h2>
+                                <h2 id="{{ urlize $convert.heading }}">{{ $convert.heading }}</h2>
                             </div>
                             <div class="icon icon-24-24 icon-right-of-heading right-arrow-gray"></div>
                         </div>
@@ -191,7 +191,7 @@
             {{ else }}
                 <section class="converters card-outer">
                     <div class="card-heading card-heading-1">
-                        <h2>{{ $convert.heading }}</h2>
+                        <h2 id="{{ urlize $convert.heading }}">{{ $convert.heading }}</h2>
                         <div class="icon icon-24-24 icon-right-of-heading recycle-gray-24-24"></div>
                     </div>
                     <p>{{ $convert.description }}</p>
@@ -217,7 +217,7 @@
     {{ if $guides }}
         <section class="guides card-outer card-gradient">
             <div class="card-heading card-heading-1">
-                <h2>Guides</h2>
+                <h2 id="guides">Guides</h2>
                 <div class="icon icon-24-24 icon-right-of-heading question-medium-gray"></div>
             </div>
             <p>
@@ -278,7 +278,7 @@
                 <div class="card-heading card-heading-2">
                     <div class="heading">
                         <div class="icon icon-21-21 icon-left-of-heading badge-gray"></div>
-                        <h2>Policies</h2>
+                        <h2 id="policies">Policies</h2>
                     </div>
                     <div class="icon icon-24-24 icon-right-of-heading right-arrow-gray"></div>
                 </div>
@@ -293,7 +293,7 @@
     {{ if $cluster_management }}
         <section class="card-outer">
             <div class="card-heading card-heading-1">
-                <h2>{{ $cluster_management.heading }}</h2>
+                <h2 id="{{ urlize $cluster_management.heading }}">{{ $cluster_management.heading }}</h2>
             </div>
             <p>{{ $cluster_management.description }}</p>
             <div class="flex">
@@ -321,7 +321,7 @@
     {{ if $operator }}
         <section class="card-outer">
             <div class="card-heading card-heading-1">
-                <h2>{{ $operator.heading }}</h2>
+                <h2 id="{{ urlize $operator.heading }}">{{ $operator.heading }}</h2>
             </div>
             <p>{{ $operator.description_1 }}</p>
             <p>{{ $operator.description_2 }}</p>
