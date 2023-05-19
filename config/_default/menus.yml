@@ -1,155 +1,154 @@
 # -------------------------------------
 # Command Line Menu
 # -------------------------------------
-menu:
-  cli:
-    - name: pulumi
-      url: /docs/cli/commands/pulumi/
-      weight: 1
-      parent: commands
+cli:
+  - name: pulumi
+    url: /docs/cli/commands/pulumi/
+    weight: 1
+    parent: commands
 
-    - name: about
-      url: /docs/cli/commands/pulumi_about/
-      weight: 2
-      parent: commands
+  - name: about
+    url: /docs/cli/commands/pulumi_about/
+    weight: 2
+    parent: commands
 
-    - name: cancel
-      url: /docs/cli/commands/pulumi_cancel/
-      weight: 2
-      parent: commands
+  - name: cancel
+    url: /docs/cli/commands/pulumi_cancel/
+    weight: 2
+    parent: commands
 
-    - name: config
-      url: /docs/cli/commands/pulumi_config/
-      weight: 2
-      parent: commands
+  - name: config
+    url: /docs/cli/commands/pulumi_config/
+    weight: 2
+    parent: commands
 
-    - name: console
-      url: /docs/cli/commands/pulumi_console/
-      weight: 2
-      parent: commands
+  - name: console
+    url: /docs/cli/commands/pulumi_console/
+    weight: 2
+    parent: commands
 
-    - name: convert
-      url: /docs/cli/commands/pulumi_convert/
-      weight: 2
-      parent: commands
+  - name: convert
+    url: /docs/cli/commands/pulumi_convert/
+    weight: 2
+    parent: commands
 
-    - name: destroy
-      url: /docs/cli/commands/pulumi_destroy/
-      weight: 2
-      parent: commands
+  - name: destroy
+    url: /docs/cli/commands/pulumi_destroy/
+    weight: 2
+    parent: commands
 
-    - name: gen-completion
-      url: /docs/cli/commands/pulumi_gen-completion/
-      weight: 2
-      parent: commands
+  - name: gen-completion
+    url: /docs/cli/commands/pulumi_gen-completion/
+    weight: 2
+    parent: commands
 
-    - name: import
-      url: /docs/cli/commands/pulumi_import/
-      weight: 2
-      parent: commands
+  - name: import
+    url: /docs/cli/commands/pulumi_import/
+    weight: 2
+    parent: commands
 
-    - name: login
-      url: /docs/cli/commands/pulumi_login/
-      weight: 2
-      parent: commands
+  - name: login
+    url: /docs/cli/commands/pulumi_login/
+    weight: 2
+    parent: commands
 
-    - name: logout
-      url: /docs/cli/commands/pulumi_logout/
-      weight: 2
-      parent: commands
+  - name: logout
+    url: /docs/cli/commands/pulumi_logout/
+    weight: 2
+    parent: commands
 
-    - name: logs
-      url: /docs/cli/commands/pulumi_logs/
-      weight: 2
-      parent: commands
+  - name: logs
+    url: /docs/cli/commands/pulumi_logs/
+    weight: 2
+    parent: commands
 
-    - name: new
-      url: /docs/cli/commands/pulumi_new/
-      weight: 2
-      parent: commands
+  - name: new
+    url: /docs/cli/commands/pulumi_new/
+    weight: 2
+    parent: commands
 
-    - name: org
-      url: /docs/cli/commands/pulumi_org/
-      weight: 2
-      parent: commands
+  - name: org
+    url: /docs/cli/commands/pulumi_org/
+    weight: 2
+    parent: commands
 
-    - name: package
-      url: /docs/cli/commands/pulumi_package/
-      weight: 2
-      parent: commands
+  - name: package
+    url: /docs/cli/commands/pulumi_package/
+    weight: 2
+    parent: commands
 
-    - name: plugin
-      url: /docs/cli/commands/pulumi_plugin/
-      weight: 2
-      parent: commands
+  - name: plugin
+    url: /docs/cli/commands/pulumi_plugin/
+    weight: 2
+    parent: commands
 
-    - name: policy
-      url: /docs/cli/commands/pulumi_policy/
-      weight: 2
-      parent: commands
+  - name: policy
+    url: /docs/cli/commands/pulumi_policy/
+    weight: 2
+    parent: commands
 
-    - name: preview
-      url: /docs/cli/commands/pulumi_preview/
-      weight: 2
-      parent: commands
+  - name: preview
+    url: /docs/cli/commands/pulumi_preview/
+    weight: 2
+    parent: commands
 
-    - name: refresh
-      url: /docs/cli/commands/pulumi_refresh/
-      weight: 2
-      parent: commands
+  - name: refresh
+    url: /docs/cli/commands/pulumi_refresh/
+    weight: 2
+    parent: commands
 
-    - name: schema
-      url: /docs/cli/commands/pulumi_schema/
-      weight: 2
-      parent: commands
+  - name: schema
+    url: /docs/cli/commands/pulumi_schema/
+    weight: 2
+    parent: commands
 
-    - name: stack
-      url: /docs/cli/commands/pulumi_stack/
-      weight: 2
-      parent: commands
+  - name: stack
+    url: /docs/cli/commands/pulumi_stack/
+    weight: 2
+    parent: commands
 
-    - name: state
-      url: /docs/cli/commands/pulumi_state/
-      weight: 2
-      parent: commands
+  - name: state
+    url: /docs/cli/commands/pulumi_state/
+    weight: 2
+    parent: commands
 
-    - name: up
-      url: /docs/cli/commands/pulumi_up/
-      weight: 2
-      parent: commands
+  - name: up
+    url: /docs/cli/commands/pulumi_up/
+    weight: 2
+    parent: commands
 
-    - name: version
-      url: /docs/cli/commands/pulumi_version/
-      weight: 2
-      parent: commands
+  - name: version
+    url: /docs/cli/commands/pulumi_version/
+    weight: 2
+    parent: commands
 
-    - name: watch
-      url: /docs/cli/commands/pulumi_watch/
-      weight: 2
-      parent: commands
+  - name: watch
+    url: /docs/cli/commands/pulumi_watch/
+    weight: 2
+    parent: commands
 
-    - name: whoami
-      url: /docs/cli/commands/pulumi_whoami/
-      weight: 2
-      parent: commands
-      
-  languages:
-    - name: SDK
-      parent: javascript
-      url: /docs/reference/pkg/nodejs/pulumi/pulumi
-      weight: 1
+  - name: whoami
+    url: /docs/cli/commands/pulumi_whoami/
+    weight: 2
+    parent: commands
 
-    - name: SDK
-      parent: python
-      url: /docs/reference/pkg/python/pulumi
-      weight: 1
+languages:
+  - name: SDK
+    parent: javascript
+    url: /docs/reference/pkg/nodejs/pulumi/pulumi
+    weight: 1
 
-    - name: SDK
-      parent: go
-      url: https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi
-      weight: 1
+  - name: SDK
+    parent: python
+    url: /docs/reference/pkg/python/pulumi
+    weight: 1
 
-    - name: SDK
-      parent: dotnet
-      url: /docs/reference/pkg/dotnet
-      weight: 1
+  - name: SDK
+    parent: go
+    url: https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi
+    weight: 1
+
+  - name: SDK
+    parent: dotnet
+    url: /docs/reference/pkg/dotnet
+    weight: 1
