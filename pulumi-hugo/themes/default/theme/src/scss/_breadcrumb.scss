@@ -1,18 +1,37 @@
-ol.breadcrumb {
-    @apply flex flex-wrap py-0 px-0 mt-2 mb-4 list-none;
+ol.docs-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+    gap: 6px;
 
     li {
-        @apply my-0;
+        margin: 0;
 
-        &.active a {
-            color: inherit;
+        a {
+            font-family: 'Inter';
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #5f6065;
+
+            &:hover {
+                color: #5f6065;
+                text-decoration: underline;
+                text-underline-offset: 4px;
+                text-decoration-color: #8e8f97;
+            }
         }
 
-        & + li {
-            @apply pl-2;
-
-            &::before {
-                @apply inline-block pr-2;
+        &.active a {
+            font-weight: 700;
+        }
+        
+        &:has(+ li) {
+            &::after {
+                display: inline-block;
+                padding-left: 6px;
+                color: #bebfc9;
                 content: "/";
             }
         }
