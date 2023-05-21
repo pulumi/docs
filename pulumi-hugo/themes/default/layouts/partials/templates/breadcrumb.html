@@ -2,7 +2,7 @@
 
 <!-- Don't show the breadcrumb on the main docs landing page. -->
 {{ if ne .RelPermalink "/docs/" }}
-    <ol class="breadcrumb">
+    <ol class="docs-breadcrumb">
         {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
     </ol>
 {{ end }}
