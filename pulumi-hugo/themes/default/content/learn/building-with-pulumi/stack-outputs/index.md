@@ -42,7 +42,7 @@ export const url = pulumi.interpolate`http://localhost:${frontendPort}`;
 {{% choosable language python %}}
 
 ```python
-pulumi.export("url", pulumi.format("http://localhost:{0}", frontend_port))
+pulumi.export("url", pulumi.Output.format("http://localhost:{0}", frontend_port))
 ```
 
 {{% /choosable %}}
