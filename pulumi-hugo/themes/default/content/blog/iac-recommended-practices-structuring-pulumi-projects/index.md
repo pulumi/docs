@@ -84,6 +84,10 @@ In [the first Zephyr post](/blog/iac-recommended-practices-code-organization-and
 
 Note that relocating code (to a different GitHub repository or different filesystem location within a repository) generally has no impact on Pulumi. As long as the project name and stack name do not change, then changing the filesystem location won't affect anything---keeping in mind, of course, that filesystem paths and such may need to be adjusted in code to account for any such changes.
 
+After restructuring their projects, Zephyr's arrangement of Pulumi projects and stacks, along with their associated GitHub repositories, looks something like this:
+
+![A diagram showing three Pulumi projects and stacks along with associated GitHub repositories](structuring-projects-diagram.png)
+
 These repositories are available for you to review on GitHub ([zephyr-infra](https://github.com/pulumi/zephyr-infra), [zephyr-k8s](https://github.com/pulumi/zephyr-k8s), and [zephyr-app](https://github.com/pulumi/zephyr-app)); use the branch/tag selector to find the `blog/multi-project` branch in each repository to see the state of the code as of this blog post. Be aware that the process for standing up the Zephyr online store is now a bit more complex; check the instructions in each repository for more details if you'd like to give these projects a spin.
 
 ## Summarizing recommended practices
