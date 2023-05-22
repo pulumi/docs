@@ -13,6 +13,8 @@ aliases:
 - /docs/reference/cd-aws-code-services/
 - /docs/console/continuous-delivery/aws-code-services/
 - /docs/guides/continuous-delivery/aws-code-services/
+- /docs/guides/continuous-delivery/cd-aws-code-services/
+- /docs/using-pulumi/continuous-delivery/cd-aws-code-services/
 ---
 
 [Amazon Code Services](https://aws.amazon.com/products/developer-tools/) encompases a variety

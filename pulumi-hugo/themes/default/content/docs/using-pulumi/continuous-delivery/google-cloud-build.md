@@ -11,6 +11,8 @@ aliases:
 - /docs/reference/cd-google-cloud-build/
 - /docs/console/continuous-delivery/google-cloud-build/
 - /docs/guides/continuous-delivery/google-cloud-build/
+- /docs/using-pulumi/continuous-delivery/cd-google-cloud-build/
+- /docs/guides/continuous-delivery/cd-google-cloud-build/
 ---
 
 ## Prerequisites

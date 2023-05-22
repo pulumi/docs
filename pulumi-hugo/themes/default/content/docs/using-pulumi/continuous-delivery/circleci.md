@@ -12,6 +12,8 @@ aliases:
 - /docs/reference/cd-circleci/
 - /docs/console/continuous-delivery/circleci/
 - /docs/guides/continuous-delivery/circleci/
+- /docs/using-pulumi/continuous-delivery/cd-circleci/
+- /docs/guides/continuous-delivery/cd-circleci/
 ---
 
 This page details how to use [CircleCI](https://circleci.com/) to deploy Pulumi stacks.

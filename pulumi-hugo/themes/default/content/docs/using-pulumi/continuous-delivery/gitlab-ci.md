@@ -13,6 +13,8 @@ aliases:
 - /docs/reference/cd-gitlab-ci/
 - /docs/console/continuous-delivery/gitlab-ci/
 - /docs/guides/continuous-delivery/gitlab-ci/
+- /docs/using-pulumi/continuous-delivery/cd-gitlab-ci/
+- /docs/guides/continuous-delivery/cd-gitlab-ci/
 ---
 
 [GitLab CI/CD](https://about.gitlab.com/features/gitlab-ci-cd/) enables the management of deploying

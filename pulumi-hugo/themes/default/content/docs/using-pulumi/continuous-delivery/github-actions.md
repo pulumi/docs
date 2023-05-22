@@ -12,6 +12,8 @@ aliases:
 - /docs/reference/cd-github-actions/
 - /docs/console/continuous-delivery/github-actions/
 - /docs/guides/continuous-delivery/github-actions/
+- /docs/using-pulumi/continuous-delivery/cd-github-actions/
+- /docs/guides/continuous-delivery/cd-github-actions/
 ---
 
 {{% notes type="info" %}}
