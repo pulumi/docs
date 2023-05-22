@@ -5,6 +5,10 @@
         @apply pt-6 pb-3 px-4;
     }
 
+    .top-nav-container &:not(.docs) &:not(.registry) {
+        @apply lg:container lg:px-4;
+    }
+
     .top-nav-container {
         @apply flex flex-col mx-auto;
 
@@ -44,12 +48,11 @@
     // The nav bar will be pinned on mobile but not on desktop.
     &.registry,
     &.docs {
-        @apply sticky z-auto bg-gray-850 -top-px;
-
-        @screen md {
-            @apply relative;
-        }
-
+        background-color: #fff;
+        color: #131314;
+        width: 100%;
+        position: relative;
+        
         &.is-pinned {
             box-shadow: 0 1px 12px 0 rgba(0,0,0,.06),0 1px 4px 0 rgba(0,0,0,.04);
             
@@ -63,6 +66,7 @@
         }
 
         .logo-nav-menu {
+            
             @apply w-full bg-gray-850 pt-2 -ml-2 text-white font-display z-50;
             top: 44px; // Height of the nav bar at screens below large.
 
@@ -185,7 +189,8 @@
                 }
 
                 &.header-nav-item-drop-down {
-                    @apply relative cursor-pointer;
+                    @apply cursor-pointer;
+                    @apply relative;
 
                     .header-nav-drop-down-menu {
                         @apply w-full absolute hidden pt-6 mt-2 top-0 z-20;

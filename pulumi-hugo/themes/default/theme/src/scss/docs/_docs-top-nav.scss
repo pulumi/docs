@@ -1,0 +1,173 @@
+nav.actually-docs {
+    padding: 0;
+
+    div.top-nav-container {
+        margin: 8px 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+
+        div.logo {
+            display: flex;
+            align-items: center;
+            min-height: 38px;
+
+            i.fa-chevron-down {
+                margin-left: 8px;
+                font-size: 11px;
+            }
+        }
+
+        div.logo-hamburger {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        div.logo-parent img {
+            height: 24px;
+        }
+
+        div.logo-get-started {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+
+            div.get-started a.get-started-header-button {
+                margin-left: 0;
+            }
+
+            @media (min-width: 640px){
+                gap: 36px;
+            }
+        }
+
+        div.logo-get-started,
+        div.logo-parent {
+            @media (min-width: 640px){
+                width: auto;
+            }
+        }
+
+        div.get-started {
+            a.get-started-header-button {
+                width: auto;
+                height: auto;
+                display: flex;
+                box-shadow: none;
+                color: #131314;
+                padding: 8px 16px;
+                border: 1px solid #805ac3;
+                border-radius: 20px;
+
+                &:hover {
+                    color: #fff;
+                    background: linear-gradient(90deg,#be5188,#805ac3) border-box;
+                }
+            }
+        }
+
+        ul.logo-nav-menu {
+            position: absolute;
+            top: 46px;
+            width: auto;
+            margin-left: 0;
+            padding: 0;
+            font-family: Inter;
+            z-index: 100;
+
+            li {
+                font-family: Inter;
+                font-size: 16px;
+            }
+        }
+
+        div.nav-items ul li:not(:last-child) {
+            margin-right: 24px;
+        }
+
+        div.nav-items ul {
+            display: flex;
+
+            li i
+            li div.icon {
+                margin-right: 4px;
+            }
+
+            li a {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+            }
+
+            li.github-widget,
+            li.slack,
+            li.docs,
+            li.registry,
+            li.ai,
+            div.get-started   {
+                display: none;
+            }
+    
+            li.github-widget,
+            li.slack {
+                @media (min-width: 900px){
+                    display: flex;
+                }
+            }
+    
+            li.docs,
+            li.registry {
+                @media (min-width: 768px) {
+                    display: flex
+                }
+            }
+    
+            li.ai {
+                @media (min-width: 475px) {
+                    display: flex
+                }
+            }
+    
+            div.get-started {
+                @media (min-width: 450px) {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    div.icon {
+        display: block;
+        text-indent: -9999px;
+    }
+
+    div.icon-14-14 {
+        width: 14px;
+        height: 14px;
+        background-size: 14px 14px;   
+        position: relative;
+    }
+
+    div.icon-16-16 {
+        width: 16px;
+        height: 16px;
+        background-size: 16px 16px;   
+        position: relative;
+    }
+
+    div.robot-outline {
+        background: url(/images/docs/icons/robot-outline.svg);
+        top: -1px;
+    }
+
+    div.book-outline {
+        background: url(/images/docs/icons/book-outline.svg);
+        top: -1px;
+    }
+
+    div.packages-outline {
+        background: url(/images/docs/icons/packages-outline.svg);
+        top: -1px;
+    }
+}

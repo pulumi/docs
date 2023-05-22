@@ -88,13 +88,8 @@ div.search-header-container div.st-default-autocomplete {
 
 .search-header-container {
     background-color: map-get($gray, 100);
-    border-bottom: 0px;
-    height: 50px;
-    
-    @screen md {
-        height: 51px;
-        border-bottom: 1px solid #e5e5e9;
-    }
+    border-bottom: 1px solid #e5e5e9;
+    border-top: 1px solid #e5e5e9;
 
     .tabs {
         .tab {
@@ -106,7 +101,6 @@ div.search-header-container div.st-default-autocomplete {
             font-family: "Gilroy";
             font-size: 16px;
             font-weight: 500;
-            height: 50px;
             justify-content: center;
             line-height: 26px;
             padding-bottom: 3px;
@@ -157,6 +151,7 @@ div.search-header-container div.st-default-autocomplete {
     .search-container {
         @apply flex-grow;
         border-bottom: 1px solid map-get($gray, 300);
+
         @screen md {
             @apply flex-grow-0 justify-start;
             border-bottom: none;
