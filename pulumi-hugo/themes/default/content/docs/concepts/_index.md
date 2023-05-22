@@ -18,7 +18,7 @@ Pulumi is a modern [infrastructure as code](/what-is/what-is-infrastructure-as-c
 
 > If this is your first time using Pulumi, you likely want to begin with [the Getting Started guide](/docs/get-started/) for your cloud of choice. It will walk you through an [AWS](/docs/clouds/aws/get-started/), [Azure](/docs/clouds/azure/get-started/), [Google Cloud](/docs/clouds/gcp/get-started/), or [Kubernetes](/docs/clouds/kubernetes/get-started/) deployment from start to finish.
 
-## Pulumi Overview {#overview}
+## Pulumi overview {#overview}
 
 This diagram illustrates the structure and major components of Pulumi.
 
@@ -269,7 +269,7 @@ outputs:
 
 {{< /chooser >}}
 
-## Concept Details
+## Concept details
 
 The following topics provide more details on the core concepts of Pulumi and how to use it:
 

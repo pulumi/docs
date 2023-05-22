@@ -21,7 +21,7 @@ aliases:
 
 The Pulumi CLI automatically uses Pulumi Cloud unless you set up a [self-managed backend](/docs/concepts/state/#using-a-self-managed-backend).
 
-## Getting Started
+## Getting started
 
 In your browser, navigate to <a href="https://app.pulumi.com" target="_blank">app.pulumi.com</a> and create an account.
 
@@ -36,7 +36,7 @@ You can create an unlimited number of stacks, encrypt configuration and resource
 
 Explore the following sections to learn more about the features and benefits of using Pulumi Cloud.
 
-### Identity and Organizations
+### Identity and organizations
 
 * [Accounts](/docs/pulumi-cloud/accounts/)
 * [Organizations](/docs/pulumi-cloud/organizations/)
@@ -44,7 +44,7 @@ Explore the following sections to learn more about the features and benefits of 
 * [Organization and Team Access Tokens](/docs/pulumi-cloud/access-management/organization-access-tokens/)
 * [SAML Integrations](/docs/pulumi-cloud/access-management/saml/)
 
-### Teams and Collaboration
+### Teams and collaboration
 
 Collaborate with other developers and coordinate on updates. Provide fine-grained access to stacks and use RBAC (Role-based Access Control) for your organization.
 
@@ -53,7 +53,7 @@ Collaborate with other developers and coordinate on updates. Provide fine-graine
 * [Stack Permissions](/docs/pulumi-cloud/projects-and-stacks#stack-permissions)
 * [Project and Stack Management](/docs/pulumi-cloud/projects-and-stacks/)
 
-### CI/CD Integrations and Extensions
+### CI/CD integrations and extensions
 
 Integrate Pulumi with your current continuous delivery pipeline. Build your own extensions, and create reusable templates.
 
@@ -63,7 +63,7 @@ Integrate Pulumi with your current continuous delivery pipeline. Build your own 
 * [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api/)
 * [Webhooks](/docs/pulumi-cloud/webhooks/)
 
-### Hosted Deployments Service
+### Hosted Deployments service
 
 * [Pulumi Deployments](/docs/pulumi-cloud/deployments/)
 * [Deploy with Pulumi Button](/docs/pulumi-cloud/pulumi-button)
@@ -72,13 +72,13 @@ Integrate Pulumi with your current continuous delivery pipeline. Build your own 
 
 * [Pulumi Insights: Resource Search, Data Export](/docs/intro/insights)
 
-### Security and Compliance
+### Security and compliance
 
 * [Audit Logs](/docs/pulumi-cloud/audit-logs/)
 * [Policy Packs](/docs/using-pulumi/crossguard/configuration/)
 * [Pulumi Cloud security whitepaper](/security/pulumi-cloud-security-whitepaper.pdf): Pulumi Cloud is multi-tenanted and runs within an AWS Virtual Private Cloud (VPC). All communications between Pulumi clients and the server are encrypted using TLS. Pulumi is SOC 2 Type II certified.
 
-## Upgrade Editions
+## Upgrade editions
 
 The following editions are also available as upgrade options:
 

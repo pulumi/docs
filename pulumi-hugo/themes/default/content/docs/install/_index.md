@@ -23,22 +23,16 @@ NOTE: To update this page with a new binary release, do the following:
 
 {{% choosable os macos %}}
 
-<div class="mb-6 border-solid border-b-2 border-gray-200">
-<div class="w-full md:w-3/4">
-<h3 class="no-anchor pt-4"><i class="fas fa-box pr-2"></i>Package Manager</h3>
+## Package manager
 
 ```bash
 $ brew install pulumi/tap/pulumi
 ```
 
-</div>
-<div class="w-full">
-<h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>macOS Binary Download</h3>
-<p>
+### MacOS binary download
+
 <a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-x64.tar.gz">amd64</a>
 <a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-arm64.tar.gz">arm64</a></p>
-</div>
-</div>
 
 macOS Sierra (10.12) or later is required.
 
@@ -46,7 +40,7 @@ The latest version of Pulumi is {{< latest-version >}}. For older versions, see 
 
 {{< get-started-note >}}
 
-## Other Installation Methods
+## Other installation methods
 
 In addition, there are many ways to install Pulumi:
 
@@ -199,7 +193,7 @@ The latest version of Pulumi is {{< latest-version >}}. For older versions, see 
 
 {{< get-started-note >}}
 
-## Other Installation Methods
+## Other installation methods
 
 In addition, there are many ways to install Pulumi:
 
@@ -274,7 +268,7 @@ The latest version of Pulumi is {{< latest-version >}}. For older versions, see 
 
 {{< get-started-note >}}
 
-## Other Installation Methods
+## Other installation methods
 
 In addition, there are many ways to install Pulumi:
 
@@ -402,7 +396,7 @@ Alternatively, you can install Pulumi manually using binaries built for Windows 
 
 {{% /chooser %}}
 
-## Verifying your Installation
+## Verify installation
 
 After installing Pulumi, verify everything is in working order by running the `pulumi` CLI:
 
@@ -437,15 +431,15 @@ v{{< latest-version >}}
 
 {{% /chooser %}}
 
-### Common Errors or Warnings
+### Common errors and warnings
 
 These are common installation-related errors or warnings you may encounter.
 
-#### Pulumi Not Found Error
+#### Pulumi not found error
 
 If you get an error that `pulumi` could not be found, it means your path has not been configured correctly. Verify that your system's `$PATH` contains the directory containing the `pulumi` CLI installed earlier.
 
-#### New Version Warning
+#### New version warning
 
 If a new version of Pulumi is available, the CLI produces the following example warning when running any of the available commands:
 
@@ -492,7 +486,7 @@ or visit https://pulumi.com/docs/reference/install/ for manual instructions and 
 
 If you are upgrading from Pulumi 2.0 to 3.0, please see our [migration guide](/docs/install/migrating-3.0).
 
-## Installing Betas and Previous Versions
+## Installing betas and previous versions
 
 Most installation methods choose the latest version by default. To install a specific version, use the following commands. You can find the list of versions on the [Available Versions](/docs/install/versions/) page.
 
@@ -500,7 +494,7 @@ Most installation methods choose the latest version by default. To install a spe
 
 {{% choosable os macos %}}
 
-### Installation Script
+### Installation script
 
 ```bash
 $ curl -fsSL https://get.pulumi.com | sh -s -- --version <version>
@@ -510,7 +504,7 @@ $ curl -fsSL https://get.pulumi.com | sh -s -- --version <version>
 
 {{% choosable os linux %}}
 
-### Installation Script
+### Installation script
 
 To install, run our installation script:
 
@@ -530,7 +524,7 @@ You can specify a specific version with [Chocolatey package manager](https://cho
 > choco install pulumi --version <version>
 ```
 
-### Installation Script
+### Installation script
 
 1. Open a new command prompt window (**WIN+R**: `cmd.exe`):
 
