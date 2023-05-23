@@ -155,5 +155,5 @@ languages:
   - name: SDK docs
     identifier: sdk-docs-dotnet
     parent: dotnet
-    url: /docs/reference/pkg/dotnet/Pulumi/Pulumi.html
+    url: "/docs/reference/pkg/dotnet/Pulumi/Pulumi.html"
     weight: 1
