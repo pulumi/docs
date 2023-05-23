@@ -6,7 +6,7 @@ h1: Pulumi & YAML
 menu:
   languages:
     identifier: yaml-language
-    weight: 5
+    weight: 6
 
 aliases:
 - /yaml/

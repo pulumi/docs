@@ -4,8 +4,9 @@ meta_desc: An overview of how to use the Java language with Pulumi for infrastru
 title: Java
 h1: Pulumi & Java
 menu:
-  languages:
-    weight: 4
+    languages:
+        identifier: java
+        weight: 5
 aliases:
 - /docs/intro/languages/java/
 ---
