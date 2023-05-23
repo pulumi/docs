@@ -105,6 +105,30 @@ titled **SAML SSO Settings**. Then select **Save** at the bottom of the card.
 
 Once the IDP metadata descriptor has been saved, you are all set to log into Pulumi.
 
+## Configuring Session Lifetime
+
+The Pulumi Cloud uses the `SessionNotOnOrAfter` attribute in the `AuthnStatement` element to configure the session lifetime. To configure this in Okta, you must use a [SAML assertion inline hook](https://developer.okta.com/docs/guides/saml-inline-hook/main/).
+
+The JSON payload the inline hook sends to Okta should contain the following:
+
+```json
+{
+  "commands": [
+    {
+      "type": "com.okta.assertion.patch",
+      "value": [
+        {
+          "op": "add",
+          "path": "/authentication/sessionLifetime",
+          "value": 21600 // lifetime in seconds
+        }
+      ]
+    }
+  ]
+}
+
+```
+
 ### Signing into Pulumi using Okta
 
 Members of your Okta application can now sign into Pulumi. Navigate to

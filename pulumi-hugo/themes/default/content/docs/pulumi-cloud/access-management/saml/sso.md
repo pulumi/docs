@@ -75,6 +75,18 @@ The name ID format is one of the most important aspects of your SAML SSO configu
 > **Note:** Pulumi only accepts stable and persistent identifiers for users. Identity providers must be able to set either a persistent randomly unique identifier (`urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`) or the user's email address (`urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress`) as the user's `Subject` value.
 > <br /> > **Important:** Once your name ID format is configured and your users have started to use SSO, **DO NOT** change the name identifier. That will prevent your users from being able to sign in.
 
+## Session Lifetime
+
+Most identity providers support configuring the lifetime of the SAML session by passing the optional `SessionNotOnAfter` attribute in the `AuthnStatement` element in the SAML assertion. Refer to your identity provider for guidance on how to set this attribute.
+
+Example of the `AuthnStatement` element with session lifetime configured:
+
+```xml
+<saml:AuthnStatement AuthnInstant="2023-05-23T00:49:39Z" SessionNotOnOrAfter="2023-05-23T10:49:39Z" SessionIndex="...">
+```
+
+If `SessionNotOnAfter` isn't specified, then the Pulumi Cloud will use the default session lifetime of 12 hours.
+
 ## Troubleshooting
 
 ### Validation error while trying to save an IdP-provided metadata XML in the Pulumi Cloud
