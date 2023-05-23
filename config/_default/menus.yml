@@ -131,3 +131,29 @@ cli:
     url: /docs/cli/commands/pulumi_whoami/
     weight: 2
     parent: commands
+
+# -------------------------------------
+# Languages & SDKs Menus
+# -------------------------------------
+
+languages:
+  - name: SDK docs
+    identifier: sdk-docs-javascript
+    parent: javascript
+    pageRef: /docs/reference/pkg/nodejs/pulumi/pulumi
+    weight: 1
+  - name: SDK docs
+    identifier: sdk-docs-python
+    parent: python
+    pageRef: /docs/reference/pkg/python/pulumi
+    weight: 1
+  - name: SDK docs
+    identifier: sdk-docs-go
+    parent: go
+    url: https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi
+    weight: 1
+  - name: SDK docs
+    identifier: sdk-docs-java
+    parent: java
+    url: https://github.com/pulumi/pulumi-java/tree/main/sdk/java
+    weight: 1
