@@ -33,15 +33,9 @@ of most _ChatOps_ workflows.
 ## Management
 
 Webhooks can be attached to either a stack or an organization. Stack webhooks
-will be notified whenever a stack is updated or changed. Organization
+will be notified of events specific to the stack. Organization
 webhooks will be notified for events happening within each of the organization's
 stacks.
-
-{{% notes "info" %}}
-There are some restrictions on the number of webhooks that can be registered
-when using the Pulumi Team editions. [Contact us](/contact/)
-if you need the limit increased.
-{{% /notes %}}
 
 The Webhooks management page is on the Stack or Organization Settings tab.
 
@@ -49,41 +43,80 @@ The Webhooks management page is on the Stack or Organization Settings tab.
 
 ### Create a Webhook
 
-To create an organization webhook:
+Pulumi Webhooks may be created through the UI using the steps outlined below, or by using the
+[Webhook resource](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/webhook/) from the Pulumi provider,
+or by [using the API](/docs/pulumi-cloud/cloud-rest-api/#create-webhook) directly.
 
-1. Navigate to **Settings** > **Integrations**.
-1. Select **Create webhook**.
-1. Provide a _Display Name_, _Payload URL_, and optionally a _Secret_.
+#### Create an Organization Webhook
 
-To create a stack webhook:
+1. Navigate to **Settings** > **Webhooks**.
+2. Select **Create webhook**.
+3. Select between a slack-formatted or generic JSON webhooks.
+4. If you selected `Slack`, you will be prompted to provide a Slack webhook URL and a display name.
+5. If you selected `Webhook`, provide a display name, payload URL, and optionally a secret.
+6. Choose between receiving all events or only receiving specific events using the filters menu.
+
+#### Create a Stack Webhook
 
 1. Navigate to the stack.
-1. Then navigate to **Settings** > **Integrations**
-1. Select **Create webhook**.
-1. Provide a _Display Name_, _Payload URL_, and optionally a _Secret_.
+2. Then navigate to **Settings** > **Webhooks**
+3. Select **Create webhook**.
+4. Select between a slack-formatted webhook or generic JSON webhooks.
+5. If you selected `Slack`, you will be prompted to provide a Slack webhook URL and a display name.
+6. If you selected `Webhook`, provide a display name, payload URL, and optionally a secret.
+7. Choose between receiving all events or only receiving specific events using the filters menu.
 
-If a secret is provided, webhook deliveries will contain a signature
-in the HTTP request header that can be used to authenticate messages as coming from
-the Pulumi Cloud.
+## Event Filtering
 
-## Event Notifications
+Event filtering allows you to choose which events should be delivered to each webhook. You may choose to receive
+all events, or filter to specific events (only failures, only deployment events, etc.).
+The following table describes the various event filters available and the context in which they are relevant.
 
-The following events will be emitted to webhooks registered to a stack or an organization.
-Organization-level webhooks will be sent webhook events from all of the stacks within
-that organization.
+| Filter                 | Event Kind      | Webhook Type               | Triggered                         |
+|------------------------|-----------------|----------------------------|-----------------------------------|
+| `stack_created`        | `stack`         | Organization webhooks only | When a stack is created.          |
+| `stack_deleted`        | `stack`         | Organization webhooks only | When a stack is deleted.          |
+| `preview_succeeded`    | `stack_preview` | Both                       | When a stack `preview` succeeds.  |
+| `preview_failed`       | `stack_preview` | Both                       | When a stack `preview` fails.     |
+| `update_succeeded`     | `stack_update`  | Both                       | When a stack `update` succeeds.   |
+| `update_failed`        | `stack_update`  | Both                       | When a stack `update` fails.      |
+| `destroy_succeeded`    | `stack_update`  | Both                       | When a stack `destroy` succeeds.  |
+| `destroy_failed`       | `stack_update`  | Both                       | When a stack `destroy` fails.     |
+| `refresh_succeeded`    | `stack_update`  | Both                       | When a stack `refresh` succeeds.  |
+| `refresh failed`       | `stack_update`  | Both                       | When a stack `refresh` fails.     |
+| `deployment_queued`    | `deployment`    | Both                       | When a deployment is queued.      |
+| `deployment_started`   | `deployment`    | Both                       | When a deployment starts running. |
+| `deployment_succeeded` | `deployment`    | Both                       | When a deployment succeeds.       |
+| `deployment_failed`    | `deployment`    | Both                       | When a deployment fails.          |
 
-| Event Kind | Triggered |
-| --- | --- |
-| `stack_update` | Whenever a stack is updated. |
-| `stack_preview` | Whenever a stack update is previewed. |
+## Webhook Formats
 
-The following events are only delivered to organization-based webhooks.
+When creating a webhook, you can choose between the generic JSON webhook payload or `slack`
+formatted events.
 
-| Event Kind | Triggered |
-| --- | --- |
-| `stack` | Whenever a stack is created or deleted within an organization. |
+### Slack-formatted Webhooks
 
-## Payloads
+Slack-formatted webhooks allow you to seamlessly integrate notifications about your Pulumi stacks and organizations
+into your Slack workspace by simply providing a [Slack incoming webhook URL](https://api.slack.com/messaging/webhooks)
+and optionally choosing which events you want delivered using [event filters](#event-filtering).
+
+You can either create your own Slack app (or use an existing one you may already have installed in your workspace), or
+follow the link below to quickly get started with a pre-defined Slack app manifest.
+
+<div class="btn btn-secondary"><a target="_blank" href="https://api.slack.com/apps?new_app=1&manifest_yaml=display_information%3A%0A%20%20name%3A%20pulumi-slack-notifications%0A%20%20description%3A%20Funnel%20Pulumi%20webhooks%20to%20Slack%0A%20%20background_color%3A%20%22%238a3391%22%0Afeatures%3A%0A%20%20bot_user%3A%0A%20%20%20%20display_name%3A%20pulumi-slack-notifications%0A%20%20%20%20always_online%3A%20false%0Aoauth_config%3A%0A%20%20scopes%3A%0A%20%20%20%20bot%3A%0A%20%20%20%20%20%20-%20incoming-webhook%0Asettings%3A%0A%20%20org_deploy_enabled%3A%20false%0A%20%20socket_mode_enabled%3A%20false%0A%20%20token_rotation_enabled%3A%20false" class="tile h-full">Create a Slack app from manifest</a></div>
+
+### Generic JSON Webhooks
+
+When using generic JSON webhooks, Pulumi will send an HTTP `POST` request to
+all registered webhooks. The webhook can then be used to emit a
+notification, start running integration tests, or even update additional stacks.
+
+{{% notes "info" %}}
+If a secret is provided, webhook deliveries will contain a signature in the HTTP request header that can be used
+to authenticate messages as coming from the Pulumi Cloud.
+{{% /notes %}}
+
+#### Payload Examples
 
 Each webhook payload has a format specific to the payload being emitted. Every payload will contain a sender, organization,
 and stack reference as appropriate. For examples of specific payloads, see _Payload Reference_ below.
@@ -91,14 +124,113 @@ and stack reference as appropriate. For examples of specific payloads, see _Payl
 Each webhook will contain a `user` field, which is the user who requested the action, an `organization` which is
 the organization name, and a URL for the event. It will also contain the `stackName` for the stack which was modified when applicable.
 
-### Headers
+##### Stack Creation
+
+```json
+{
+	"user": {
+		"name": "Morty Smith",
+		"githubLogin": "morty",
+		"avatarUrl": "https://crazy-adventures.net/morty.png"
+	},
+	"organization": {
+		"name": "Crazy Adventures",
+		"githubLogin": "crazy-adventures",
+		"avatarUrl": "https://crazy-adventures.net/logo.png"
+	},
+	"action": "created",
+	"projectName": "website",
+	"stackName": "website-prod"
+}
+```
+
+##### Stack Update
+
+```json
+{
+	"user": {
+		"name": "Morty Smith",
+		"githubLogin": "morty",
+		"avatarUrl": "https://crazy-adventures.net/morty.png"
+	},
+	"organization": {
+		"name": "Crazy Adventures",
+		"githubLogin": "crazy-adventures",
+		"avatarUrl": "https://crazy-adventures.net/logo.png"
+	},
+	"projectName": "website",
+	"stackName": "website-prod",
+	"updateUrl": "https://app.pulumi.com/crazy-adventures/website/website-prod/updates/42",
+	"kind": "refresh",
+	"result": "succeeded",
+	"resourceChanges": {
+		"update": 3,
+		"delete": 1,
+		"update-replace": 2
+	},
+    "isPreview": false
+}
+```
+
+##### Stack Preview
+
+```json
+{
+	"user": {
+		"name": "Morty Smith",
+		"githubLogin": "morty",
+		"avatarUrl": "https://crazy-adventures.net/morty.png"
+	},
+	"organization": {
+		"name": "Crazy Adventures",
+		"githubLogin": "crazy-adventures",
+		"avatarUrl": "https://crazy-adventures.net/logo.png"
+	},
+	"projectName": "website",
+	"stackName": "website-prod",
+	"updateUrl": "https://app.pulumi.com/crazy-adventures/website/website-prod/previews/11bf162b-d9d5-4715-8f88-20dcd0e0b167",
+	"kind": "update",
+	"result": "failed",
+	"resourceChanges": {
+		"update": 3,
+		"delete": 1,
+		"update-replace": 2
+	},
+    "isPreview": true
+}
+```
+
+##### Deployment
+
+```json
+{
+	"user": {
+		"name": "Morty Smith",
+		"githubLogin": "morty",
+		"avatarUrl": "https://crazy-adventures.net/morty.png"
+	},
+	"organization": {
+		"name": "Crazy Adventures",
+		"githubLogin": "crazy-adventures",
+		"avatarUrl": "https://crazy-adventures.net/logo.png"
+	},
+	"projectName": "website",
+	"stackName": "website-prod",
+	"deploymentUrl": "https://app.pulumi.com/crazy-adventures/website/website-prod/deployments/127",
+    "version": 127,
+	"operation": "update",
+	"status": "running"
+}
+```
+
+#### Headers
 
 Payloads contain several headers.
 
-| Header | Description |
-|--------|-------------|
-| `Pulumi-Webhook-ID` | Unique ID for each webhook sent which you can reference when looking at delivery logs in the Pulumi Cloud. |
-| `Pulumi-Webhook-Kind` | The kind of webhook event, e.g. `stack_update`. |
+| Header                     | Description                                                                                                                                                   |
+|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `Pulumi-Webhook-ID`        | Unique ID for each webhook sent which you can reference when looking at delivery logs in the Pulumi Cloud.                                                    |
+| `Pulumi-Webhook-Kind`      | The kind of webhook event, e.g. `stack_update`.                                                                                                               |
 | `Pulumi-Webhook-Signature` | Only set if the webhook has a shared secret. HMAC hex digest of the request payload, using the `sha256` hash function and the webhook secret as the HMAC key. |
 
 The following snippets show how to compute and verify the webhook signature.
@@ -165,122 +297,6 @@ func computeSignature(payload []byte, secret string) string {
 {{% /choosable %}}
 
 {{< /chooser >}}
-
-## Payload Examples
-
-Most payloads contain `user` and `organization` fields. `user` contains the
-identity of the user who triggered the webhook. For example, the person who initiated
-the stack update or performed the action.
-
-### Stack Creation
-
-```
-{
-	"user": {
-		"name": "Morty Smith",
-		"githubLogin": "morty",
-		"avatarUrl": "https://crazy-adventures.net/morty.png"
-	},
-	"organization": {
-		"name": "Crazy Adventures",
-		"githubLogin": "crazy-adventures",
-		"avatarUrl": "https://crazy-adventures.net/logo.png"
-	},
-	"action": "created",
-	"projectName": "website",
-	"stackName": "website-prod"
-}
-```
-
-### Team Stack Update
-
-```
-{
-	"user": {
-		"name": "Morty Smith",
-		"githubLogin": "morty",
-		"avatarUrl": "https://crazy-adventures.net/morty.png"
-	},
-	"organization": {
-		"name": "Crazy Adventures",
-		"githubLogin": "crazy-adventures",
-		"avatarUrl": "https://crazy-adventures.net/logo.png"
-	},
-	"action": "updated",
-	"stackName": "website-prod",
-	"team": {
-		"kind": "github",
-		"name": "Adventurers",
-		"members": [
-			{
-				"name": "Morty Smith",
-				"githubLogin": "morty",
-				"avatarUrl": "https://crazy-adventures.net/morty.png"
-			}
-		],
-		"stacks": [
-			{
-				"stackName": "website-prod",
-				"permission": 3
-			}
-		]
-	}
-}
-```
-
-### Stack Update
-
-```
-{
-	"user": {
-		"name": "Morty Smith",
-		"githubLogin": "morty",
-		"avatarUrl": "https://crazy-adventures.net/morty.png",
-	},
-	"organization": {
-		"name": "Crazy Adventures",
-		"githubLogin": "crazy-adventures",
-		"avatarUrl": "https://crazy-adventures.net/logo.png"
-	},
-	"projectName": "website",
-	"stackName": "website-prod",
-	"updateUrl": "https://app.pulumi.com/crazy-adventures/website-prod/42",
-	"kind": "refresh",
-	"result": "succeeded",
-	"resourceChanges": {
-		"update": 3,
-		"delete": 1,
-		"update-replace": 2
-	}
-}
-```
-
-### `stack_preview` event
-
-```
-{
-	"user": {
-		"name": "Morty Smith",
-		"githubLogin": "morty",
-		"avatarUrl": "https://crazy-adventures.net/morty.png",
-	},
-	"organization": {
-		"name": "Crazy Adventures",
-		"githubLogin": "crazy-adventures",
-		"avatarUrl": "https://crazy-adventures.net/logo.png"
-	},
-	"projectName": "website",
-	"stackName": "website-prod",
-	"updateUrl": "https://app.pulumi.com/crazy-adventures/website-prod/11bf162b-d9d5-4715-8f88-20dcd0e0b167",
-	"kind": "update",
-	"result": "failed",
-	"resourceChanges": {
-		"update": 3,
-		"delete": 1,
-		"update-replace": 2
-	}
-}
-```
 
 ## Additional Resources
 
