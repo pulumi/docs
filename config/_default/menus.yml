@@ -153,11 +153,6 @@ languages:
     url: https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi
     weight: 1
   - name: SDK docs
-    identifier: sdk-docs-dotnet
-    parent: dotnet
-    pageRef: /docs/reference/pkg/dotnet/Pulumi/Pulumi.html
-    weight: 1
-  - name: SDK docs
     identifier: sdk-docs-java
     parent: java
     url: https://github.com/pulumi/pulumi-java/tree/main/sdk/java
