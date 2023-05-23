@@ -138,18 +138,22 @@ cli:
 
 languages:
   - name: SDK docs
+    identifier: sdk-docs-javascript
     parent: javascript
     url: /docs/reference/pkg/nodejs/pulumi/pulumi
     weight: 1
   - name: SDK docs
+    identifier: sdk-docs-python
     parent: python
     url: /docs/reference/pkg/python/pulumi
     weight: 1
   - name: SDK docs
+    identifier: sdk-docs-go
     parent: go
     url: https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi
     weight: 1
   - name: SDK docs
+    identifier: sdk-docs-dotnet
     parent: dotnet
-    url: /docs/reference/pkg/dotnet
+    url: /docs/reference/pkg/dotnet/Pulumi/Pulumi.html
     weight: 1
