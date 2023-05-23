@@ -66,7 +66,11 @@
                 <ul id="toc-expandable-menu{{ replace $filepath "/" "-" }}" class="{{ $toggle_state }}">
                     <ul class="collapsed">
                         <li class="sidenav-topic {{ $sidenav_selected }}">
-                            <a href="{{ .URL }}" data-track="toc-{{ .Name | urlize }}">{{ .Name }}</a>
+                            {{ if eq .URL "https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi" }}
+                                <a href="{{ .URL }}" target="_blank" data-track="toc-{{ .Name | urlize }}">{{ .Name }}</a>
+                            {{ else }}
+                                <a href="{{ .URL }}" data-track="toc-{{ .Name | urlize }}">{{ .Name }}</a>
+                            {{ end }}
                             {{ if .HasChildren }}
                                 <span class="toggleButton">
                                     <div class="icon icon-14-14 keyboard-arrow-right-gray"></div>
