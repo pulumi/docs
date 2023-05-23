@@ -25,7 +25,8 @@ Here are links to all the blog posts in the series (entries below that are not l
 * [IaC Recommended Practices: Developer Stacks and Git Branches](/blog/iac-recommended-practices-developer-stacks-git-branches/)
 * [IaC Recommended Practices: Structuring Pulumi Projects](/blog/iac-recommended-practices-structuring-pulumi-projects/)
 * [IaC Recommended Practices: Using Stack References](/blog/iac-recommended-practices-using-stack-references/)
-* IaC Recommended Practices: RBAC and Security
+* [IaC Recommended Practices: RBAC and Security](/blog/iac-recommended-practices-rbac-and-security/)
+* IaC Recommended Practices: Using Automation API
 * IaC Recommended Practices: Adding Pulumi Deployments
 * IaC Recommended Practices: Refactoring for Reuse
 

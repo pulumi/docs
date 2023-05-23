@@ -23,7 +23,8 @@ Here are links to all the blog posts in the series (entries not linked below are
 * [IaC Recommended Practices: Developer Stacks and Git Branches](/blog/iac-recommended-practices-developer-stacks-git-branches/)
 * [IaC Recommended Practices: Structuring Pulumi Projects](/blog/iac-recommended-practices-structuring-pulumi-projects/)
 * **IaC Recommended Practices: Using Stack References** (you are here)
-* IaC Recommended Practices: RBAC and Security
+* [IaC Recommended Practices: RBAC and Security](/blog/iac-recommended-practices-rbac-and-security/)
+* IaC Recommended Practices: Using Automation API
 * IaC Recommended Practices: Adding Pulumi Deployments
 * IaC Recommended Practices: Refactoring for Reuse
 
@@ -68,7 +69,7 @@ While stack references are conceptually straightforward and not difficult to imp
 4. In line with parameterizing as much of your code as possible, **also be sure to parameterize your stack references.** A stack reference is built using an organization name, a project name, and a stack name. Don't hardcode these values; instead, use configuration values to allow the users to specify from which source stack(s) the values will be referenced. You'll see an example of that in the next section.
 5. **Plan for handling cascading stack updates.** If a stack has outputs being consumed via stack references, what happens when those stack outputs change? The Pulumi Service [supports webhooks](/docs/pulumi-cloud/webhooks/) that can help, and Pulumi is currently exploring options for having Pulumi Deployments help with this (see [this GitHub issue](https://github.com/pulumi/service-requests/issues/181)). In practice this should be uncommon, and frequent occurrences may be a good indicator that your resource partitioning (how resources are split among multiple projects) needs to be adjusted.
 
-One thing not listed above is security---and that's because a later post in the series focuses on this topic. You'll want to keep the security of your stacks in mind when planning for the use of stack references. The teams managing the stacks where the stack references exist will need at least read-only access to the stacks where the outputs exist. More on that in a later post!
+One thing not listed above is security---and that's because a later post in the series focuses on this topic. You'll want to keep the security of your stacks in mind when planning for the use of stack references. The teams managing the stacks where the stack references exist will need at least read-only access to the stacks where the outputs exist. (For more on this front, refer to [the IaC Recommended Practices post on RBAC and security](/blog/iac-recommended-practices-rbac-and-security/).)
 
 ## Examining Zephyr's use of stack references
 
