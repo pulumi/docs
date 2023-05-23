@@ -208,6 +208,16 @@ runtime:
     typescript: false
 ```
 
+## Package Management
+
+Pulumi has official support for NPM and Yarn Classic. Pulumi does
+not support Yarn Plug'n'Play.
+
+Pulumi defaults to using NPM. However, if Pulumi detects a `yarn.lock` file
+in the project root, or the environment variable `PULUMI_PREFER_YARN=true`,
+then Pulumi will use Yarn instead of NPM if the executable is available in the
+path.
+
 ## Package Documentation
 
 In addition to the standard and cloud-agnostic packages the [Pulumi Registry](/registry/) houses 100+ Node.js packages.
