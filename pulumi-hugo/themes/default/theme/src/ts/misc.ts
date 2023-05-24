@@ -35,6 +35,15 @@ function loadToggleStates() {
             $(el).addClass("toggle").removeClass("toggleVisible");
         }
     });
+
+    $(".toggleVisible, .toggleVisible-topLevel").each(function (i, el) {
+        // Scroll to active item in list.
+        if (isCurrentPage(el)) {
+            $("#left-nav").animate({
+                scrollTop: $(el).offset().top - 145
+            }, 0);
+        }
+    });
 }
 
 function updateToggleState(el, toggleState) {
