@@ -38,7 +38,7 @@ tags:
 # and please remove these comments before submitting for review.
 ---
 
-Last month we announced a new [Pulumi Cloud](/product/pulumi-cloud/) feature available for everyone: Resource Search. In the past month, Resource Search has been the fasted adopted feature since launching Pulumi Cloud, with thousands of users leveraging the feature to find resources across cloud environments, projects, stacks, teams, and users. Today we are announcing two new improvements to Resource Search: advanced filtering and Pulumi Teams support.
+Last month we announced a new [Pulumi Cloud](/product/pulumi-cloud/) feature available for everyone: Resource Search. In the past month, Resource Search has been the fastest adopted feature since launching Pulumi Cloud, with thousands of users leveraging the feature to find resources across cloud environments, projects, stacks, teams, and users. Today we are announcing two new improvements to Resource Search: advanced filtering and Pulumi Teams support.
 
 <!--more-->
 ## Introduction to Resource Search
