@@ -6,562 +6,570 @@ $border-hover: #bebfc9;
 $card-background: #f9f9f9;
 $box-shadow: #5f606524;
 
-section.cloud-overview {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin-top: 14px;
-
-    h1, h2, p {
-        color: $text-color
-    }
-
-    h1, h2 {
-        font-family: 'Gilroy';
-    }
-
-    h1 {
-        font-weight: 500;
-        font-size: 30px;
-        background-position: 0 24px;
-        background-repeat: no-repeat;
-        margin-bottom: 0;
-    }
-
-    h2 {
-        font-size: 21px;
-        font-weight: 400;
-        padding-bottom: 8px;
-    }
-
-    p {
-        font-family: Inter;
-        font-size: 16px;
-    }
-
-    .flex {
+.docs-list-main .docs-list-main-content,
+.docs-single-main .docs-single-main-content {
+    section.cloud-overview {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 12px;
-
-    }
-
-    .flex-2-col {
-        flex-basis: calc(50% - 6px);
-        display: flex;
-
-        a {
-            display: flex;
-            flex-grow: 1;
-        }
-    }
-
-    .flex-1-col {
-        flex-basis: 100%;
-    }
-
-    div.col,
-    div.row {
-        display: flex;
-        gap: 12px;
-    }
-
-    div.col {
         flex-direction: column;
-    }
+        gap: 24px;
 
-    div.cols-2 {
-        flex-direction: row;
-    }
-
-    .flex,
-    div.cols-2 {
-        @media (max-width: 768px) {
-            flex-direction: column;
-        }
-    }
-
-    div.row {
-        flex-direction: row;
-
-        a {
-            flex: 1;
-        }
-    }
-
-    div.card-heading {
-        display: flex;
-
-        h2 {
-            margin-top: 0;
-            border-bottom: 0;
-        }
-    }
-
-    div.card-heading-1 {
-        justify-content: space-between;
-        border-bottom: 1px solid $border-color-outer-card;
-        color: $text-color;
-        flex: 1;
-
-        h2 {
-            margin-bottom: 12px;
-            padding-bottom: 0;
-        }
-    }
-
-    div.card-heading-2 {
-        flex-direction: row;
-        align-items: center;
-
-        div.heading {
-            display: flex;
-            flex: 1;
-            align-items: center;
-
-            h2 {
-                margin-top: 0;
-                margin-bottom: 0;
-                padding-bottom: 0;
-            }
-        }
-    }
-
-    div.heading {
-        display:flex;
-        align-items: center;
-    }
-
-    div.card-inner {
-        box-shadow: 0px 0px 12px rgba(95,96,101,.08);
-        border: 1px solid $border-color-inner-card;
-        padding: 16px 24px;
-        display: flex;
-        justify-content: space-between;
-        background: #fff;
-        border-radius: 4px;
-        flex-basis: 100%;
-
-        p {
-            color: $text-color-inner-card;
-            font-family: Gilroy;
-            font-size: 18px;
+        h1, h2, p {
+            color: $text-color;
             margin: 0;
         }
 
-        &:hover {
-            background: $card-background;
-            border: 1px solid $border-hover;
+        h1, h2 {
+            font-family: 'Gilroy';
+        }
+
+        h1 {
+            font-weight: 500;
+            font-size: 30px;
+            background-position: 0 24px;
+            background-repeat: no-repeat;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 21px;
+            font-weight: 400;
+            padding-bottom: 8px;
+        }
+
+        p {
+            font-family: Inter;
+            font-size: 16px;
+            padding: 0;
+            margin: 16px 0;
+        }
+
+        > p {
+            margin-top: 0;
+        }
+
+        .flex {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 12px;
+
+        }
+
+        .flex-2-col {
+            flex-basis: calc(50% - 6px);
+            display: flex;
+
+            a {
+                display: flex;
+                flex-grow: 1;
+            }
+        }
+
+        .flex-1-col {
+            flex-basis: 100%;
+        }
+
+        div.col,
+        div.row {
+            display: flex;
+            gap: 12px;
+        }
+
+        div.col {
+            flex-direction: column;
+        }
+
+        div.cols-2 {
+            flex-direction: row;
+        }
+
+        .flex,
+        div.cols-2 {
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
+        }
+
+        div.row {
+            flex-direction: row;
+
+            a {
+                flex: 1;
+            }
+        }
+
+        div.card-heading {
+            display: flex;
+
+            h2 {
+                margin-top: 0;
+                border-bottom: 0;
+            }
+        }
+
+        div.card-heading-1 {
+            justify-content: space-between;
+            border-bottom: 1px solid $border-color-outer-card;
+            color: $text-color;
+            flex: 1;
+
+            h2 {
+                margin-bottom: 12px;
+                padding-bottom: 0;
+            }
+        }
+
+        div.card-heading-2 {
+            flex-direction: row;
+            align-items: center;
+
+            div.heading {
+                display: flex;
+                flex: 1;
+                align-items: center;
+
+                h2 {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        div.heading {
+            display:flex;
+            align-items: center;
+        }
+
+        div.card-inner {
+            box-shadow: 0px 0px 12px rgba(95,96,101,.08);
+            border: 1px solid $border-color-inner-card;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            background: #fff;
+            border-radius: 4px;
+            flex-basis: 100%;
 
             p {
+                color: $text-color-inner-card;
+                font-family: Gilroy;
+                font-size: 18px;
+                margin: 0;
+            }
+
+            &:hover {
+                background: $card-background;
+                border: 1px solid $border-hover;
+
+                p {
+                    color: $text-color;
+                }
+            }
+
+            div.card-inner-content-1 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                div.icon {
+                    min-width: 18px;
+                }
+            }
+
+            p.inner-card-description {
+                font-family: 'Inter';
+                font-weight: 400;
+                font-size: 14px;
                 color: $text-color;
             }
         }
 
-        div.card-inner-content-1 {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-
-            div.icon {
-                min-width: 18px;
-            }
-        }
-
-        p.inner-card-description {
-            font-family: 'Inter';
-            font-weight: 400;
-            font-size: 14px;
-            color: $text-color;
-        }
-    }
-
-    section.card-outer {
-        box-shadow: 0px 2px 24px 0px $box-shadow;
-        border: 1px solid $border-color-outer-card;
-        border-radius: 4px;
-        padding: 24px;
-    }
-
-    section.card-outer-hover {
-        &:hover {
-            background: $card-background;
-            border: 1px solid $border-hover;
-        }
-    }
-
-   .card-gradient {
-        background: rgb(246, 247, 253);
-        background: linear-gradient(
-            135deg,
-            rgba(246, 247, 253, 1) 0%,
-            rgba(249, 247, 252, 1) 5%,
-            rgba(249, 245, 250, 1) 10%,
-            rgba(254, 248, 249, 1) 15%,
-            rgba(255, 253, 247, 1) 20%,
-            rgba(255, 255, 255, 1) 25%,
-            rgba(255, 255, 255, 1) 75%,
-            rgba(254, 248, 249, 1) 80%,
-            rgba(254, 248, 249, 1) 85%,
-            rgba(249, 245, 250, 1) 90%,
-            rgba(249, 247, 252, 1) 95%,
-            rgba(246, 247, 253, 1) 100%
-        );
-    }
-
-    section.get-started {
-        display: flex;
-        justify-content: center;
-
-        div.card {
-            padding: 16px 24px;
-            box-shadow: 0px 2px 24px rgba(77, 91, 217, 0.14);
-            border-radius: 4px;
-            background: rgba(237, 239, 251, 0.5);
-            border: 1px solid #a6adec;
-            flex-direction: row;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            &:hover {
-                background: #edeffb;
-                border: 1px solid #828CE4;
-            }
-
-            p {
-                font-family: 'Gilroy';
-                font-weight: 500;
-                font-size: 21px;
-                margin: 0;
-            }
-
-            div.icon-get-started-arrow {
-                margin-left: 16px;
-            }
-
-            div.heading div.icon {
-                margin-right: 16px;
-            }
-
-            @media (min-width: 400px) {
-                min-width: 400px;
-            }
-        }
-    }
-
-    section.providers {
-        h2 {
-            font-size: 24px;
-            padding-bottom: 0;
-            margin-bottom: 0;
-        }
-        p {
-            margin-top: 0;
-            margin-bottom: 8px;
-        }
-
-        div.provider-card {
-            flex-grow: 1;
+        section.card-outer {
             box-shadow: 0px 2px 24px 0px $box-shadow;
             border: 1px solid $border-color-outer-card;
             border-radius: 4px;
             padding: 24px;
-            flex-basis: 50%;
-        
-            div.heading p {
-                font-family: 'Gilroy';
-                font-weight: 500;
-                font-size: 21px;
+        }
+
+        section.card-outer-hover {
+            &:hover {
+                background: $card-background;
+                border: 1px solid $border-hover;
             }
-    
-            div.content-link {
-                background: #fff;
-                border: 1px solid $border-color-inner-card;
-                box-shadow: 0px 0px 12px rgba(95, 96, 101, 0.08);
+        }
+
+    .card-gradient {
+            background: rgb(246, 247, 253);
+            background: linear-gradient(
+                135deg,
+                rgba(246, 247, 253, 1) 0%,
+                rgba(249, 247, 252, 1) 5%,
+                rgba(249, 245, 250, 1) 10%,
+                rgba(254, 248, 249, 1) 15%,
+                rgba(255, 253, 247, 1) 20%,
+                rgba(255, 255, 255, 1) 25%,
+                rgba(255, 255, 255, 1) 75%,
+                rgba(254, 248, 249, 1) 80%,
+                rgba(254, 248, 249, 1) 85%,
+                rgba(249, 245, 250, 1) 90%,
+                rgba(249, 247, 252, 1) 95%,
+                rgba(246, 247, 253, 1) 100%
+            );
+        }
+
+        section.get-started {
+            display: flex;
+            justify-content: center;
+
+            div.card {
+                padding: 16px 24px;
+                box-shadow: 0px 2px 24px rgba(77, 91, 217, 0.14);
                 border-radius: 4px;
-                padding: 8px 24px;
-                flex-basis: 100%;
-    
+                background: rgba(237, 239, 251, 0.5);
+                border: 1px solid #a6adec;
+                flex-direction: row;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
                 &:hover {
-                    background: $card-background;
-                    border: 1px solid $border-hover;
+                    background: #edeffb;
+                    border: 1px solid #828CE4;
+                }
+
+                p {
+                    font-family: 'Gilroy';
+                    font-weight: 500;
+                    font-size: 21px;
+                    margin: 0;
+                }
+
+                div.icon-get-started-arrow {
+                    margin-left: 16px;
                 }
 
                 div.heading div.icon {
-                    top: -1px;
-                    color: $text-color-inner-card
+                    margin-right: 16px;
                 }
 
-                div.heading p.content-name {
+                @media (min-width: 400px) {
+                    min-width: 400px;
+                }
+            }
+        }
+
+        section.providers {
+            h2 {
+                font-size: 24px;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+            p {
+                margin-top: 0;
+                margin-bottom: 8px;
+            }
+
+            div.provider-card {
+                flex-grow: 1;
+                box-shadow: 0px 2px 24px 0px $box-shadow;
+                border: 1px solid $border-color-outer-card;
+                border-radius: 4px;
+                padding: 24px;
+                flex-basis: 50%;
+            
+                div.heading p {
                     font-family: 'Gilroy';
                     font-weight: 500;
-                    font-size: 18px;
-                    color: $text-color-inner-card;
-                    margin: 0;
+                    font-size: 21px;
                 }
-            }
-
-            a:hover {
-                p,
-                div.icon {
-                    color: $text-color !important;
-                }
-            }
-
-            div.provider-heading {
-                justify-content: space-between;
-                align-items: flex-start;
-
-                p.provider-label {
-                    font-family: 'Inter';
-                    font-size: 14px;
-                    text-align: right;
-                    margin-top: 4px;
-
-                    &.preview {
-                        font-weight: 400;
-                        color: $text-color-inner-card;
+        
+                div.content-link {
+                    background: #fff;
+                    border: 1px solid $border-color-inner-card;
+                    box-shadow: 0px 0px 12px rgba(95, 96, 101, 0.08);
+                    border-radius: 4px;
+                    padding: 8px 24px;
+                    flex-basis: 100%;
+        
+                    &:hover {
+                        background: $card-background;
+                        border: 1px solid $border-hover;
                     }
 
-                    &.recommended {
+                    div.heading div.icon {
+                        top: -1px;
+                        color: $text-color-inner-card
+                    }
+
+                    div.heading p.content-name {
+                        font-family: 'Gilroy';
                         font-weight: 500;
-                        color: #2f3032;
-                        padding: 2px 6px;
-                        border: 1px solid #cacef4;
-                        border-radius: 3px;
+                        font-size: 18px;
+                        color: $text-color-inner-card;
+                        margin: 0;
+                    }
+                }
+
+                a:hover {
+                    p,
+                    div.icon {
+                        color: $text-color !important;
+                    }
+                }
+
+                div.provider-heading {
+                    justify-content: space-between;
+                    align-items: flex-start;
+
+                    p.provider-label {
+                        font-family: 'Inter';
+                        font-size: 14px;
+                        text-align: right;
+                        margin-top: 4px;
+
+                        &.preview {
+                            font-weight: 400;
+                            color: $text-color-inner-card;
+                        }
+
+                        &.recommended {
+                            font-weight: 500;
+                            color: #2f3032;
+                            padding: 2px 6px;
+                            border: 1px solid #cacef4;
+                            border-radius: 3px;
+                        }
                     }
                 }
             }
         }
-    }
 
-    section.convert {
-        div.recycle-gray-21-21 {
-            display: none;
+        section.convert {
+            div.recycle-gray-21-21 {
+                display: none;
 
-            @media (min-width: 450px) {
-                display: block;
+                @media (min-width: 450px) {
+                    display: block;
+                }
             }
         }
-    }
 
-    div.accordion {
-        overflow: hidden;
+        div.accordion {
+            overflow: hidden;
 
-        label {
-            padding-top: 12px;
-            border-radius: 4px;
-            display: flex;
-            font-family: 'Inter';
-            font-weight: 500;
-            font-size: 16px;
-            color: $text-color-inner-card;
-            cursor: pointer;
-            position: relative;
-            justify-content: center;
-            align-items: center;
+            label {
+                padding-top: 12px;
+                border-radius: 4px;
+                display: flex;
+                font-family: 'Inter';
+                font-weight: 500;
+                font-size: 16px;
+                color: $text-color-inner-card;
+                cursor: pointer;
+                position: relative;
+                justify-content: center;
+                align-items: center;
+            }
+
+            div.icon {
+                margin-left: 8px;
+            }
+        
+            label:hover {
+                text-decoration: underline;
+            }
+        }
+
+        div#accordion-components {
+            div.accordion-content,
+            input,
+            label.hide,
+            input:checked ~ label.show  {
+                display: none;
+            }
+        
+            input:checked ~ div.accordion-content,
+            input:checked ~ label.hide {
+                display: flex;
+            }
+        }
+
+        div#accordion-guides {
+            div.accordion-content,
+            input,
+            label.hide,
+            input:checked ~ label.show  {
+                display: none;
+            }
+        
+            input:checked ~ div.accordion-content,
+            input:checked ~ label.hide {
+                display: flex;
+            }
         }
 
         div.icon {
-            margin-left: 8px;
+            display: block;
+            text-indent: -9999px;
         }
-    
-        label:hover {
-            text-decoration: underline;
+
+        div.icon-left-of-heading {
+            position: relative;
+            top: -1px;
+            margin-right: 12px;
         }
-    }
 
-    div#accordion-components {
-        div.accordion-content,
-        input,
-        label.hide,
-        input:checked ~ label.show  {
-            display: none;
+        div.icon-left-of-card-label {
+            position: relative;
+            top: -1px;
+            margin-right: 8px;
         }
-    
-        input:checked ~ div.accordion-content,
-        input:checked ~ label.hide {
-            display: flex;
+
+        div.icon-right-of-heading {
+            top: 3px;
+            position: relative;
+            margin-right: 2px;
         }
-    }
 
-    div#accordion-guides {
-        div.accordion-content,
-        input,
-        label.hide,
-        input:checked ~ label.show  {
-            display: none;
+        div.icon-16-16 {
+            width: 16px;
+            height: 16px;
+            background-size: 16px 16px;   
+            position: relative;
         }
-    
-        input:checked ~ div.accordion-content,
-        input:checked ~ label.hide {
-            display: flex;
+
+        div.icon-18-18 {
+            width: 18px;
+            height: 18px;
+            background-size: 18px 18px;   
+            position: relative;
         }
-    }
 
-    div.icon {
-        display: block;
-        text-indent: -9999px;
-    }
+        div.icon-21-21 {
+            width: 21px;
+            height: 21px;
+            background-size: 21px 21px;
+        }
 
-    div.icon-left-of-heading {
-        position: relative;
-        top: -1px;
-        margin-right: 12px;
-    }
+        div.icon-24-24 {
+            width: 24px;
+            height: 24px;
+            background-size: 24px 24px;
+        }
 
-    div.icon-left-of-card-label {
-        position: relative;
-        top: -1px;
-        margin-right: 8px;
-    }
+        div.icon-35-35 {
+            width: 35px;
+            height: 35px;
+            background-size: 35px 35px;
+        }
 
-    div.icon-right-of-heading {
-        top: 3px;
-        position: relative;
-        margin-right: 2px;
-    }
+        div.icon-52-16 {
+            width: 52px;
+            height: 16px;
+            background-size: 52px 16px;
+        }
 
-    div.icon-16-16 {
-        width: 16px;
-        height: 16px;
-        background-size: 16px 16px;   
-        position: relative;
-    }
+        div.icon-78-24 {
+            width: 78px;
+            height: 24px;
+            background-size: 78px 24px;
+        }
 
-    div.icon-18-18 {
-        width: 18px;
-        height: 18px;
-        background-size: 18px 18px;   
-        position: relative;
-    }
+        div.badge-gray {
+            background: url(/images/docs/icons/badge-gray.svg);
+        }
 
-    div.icon-21-21 {
-        width: 21px;
-        height: 21px;
-        background-size: 21px 21px;
-    }
+        div.recycle-gray-21-21 {
+            background: url(/images/docs/icons/recycle-gray-21-21.svg);
+        }
 
-    div.icon-24-24 {
-        width: 24px;
-        height: 24px;
-        background-size: 24px 24px;
-    }
+        div.recycle-gray-24-24 {
+            background: url(/images/docs/icons/recycle-gray-24-24.svg);
+        }
 
-    div.icon-35-35 {
-        width: 35px;
-        height: 35px;
-        background-size: 35px 35px;
-    }
+        div.question-medium-gray {
+            background: url(/images/docs/icons/question-medium-gray.svg);
+        }
 
-    div.icon-52-16 {
-        width: 52px;
-        height: 16px;
-        background-size: 52px 16px;
-    }
+        div.ruler-triangle-gray {
+            background: url(/images/docs/icons/ruler-triangle-gray.svg);
+        }
 
-    div.icon-78-24 {
-        width: 78px;
-        height: 24px;
-        background-size: 78px 24px;
-    }
+        div.puzzle-piece-gray {
+            background: url(/images/docs/icons/puzzle-piece-gray.svg);
+        }
 
-    div.badge-gray {
-        background: url(/images/docs/icons/badge-gray.svg);
-    }
+        div.right-arrow-gray {
+            background: url(/images/docs/icons/right-arrow-gray.svg);
+        }
 
-    div.recycle-gray-21-21 {
-        background: url(/images/docs/icons/recycle-gray-21-21.svg);
-    }
+        div.play-blue {
+            background: url(/images/docs/icons/play-blue.svg);
+        }
 
-    div.recycle-gray-24-24 {
-        background: url(/images/docs/icons/recycle-gray-24-24.svg);
-    }
+        div.question-small-black {
+            background: url(/images/docs/icons/question-small-black.svg);
+        }
 
-    div.question-medium-gray {
-        background: url(/images/docs/icons/question-medium-gray.svg);
+        div.book-small-black {
+            background: url(/images/docs/icons/book-small-black.svg);
+        }
 
-    }
+        div.gear-small-black {
+            background: url(/images/docs/icons/gear-small-black.svg);
+        }
 
-    div.ruler-triangle-gray {
-        background: url(/images/docs/icons/ruler-triangle-gray.svg);
-    }
+        div.page-small-black {
+            background: url(/images/docs/icons/page-small-black.svg);
+        }
 
-    div.puzzle-piece-gray {
-        background: url(/images/docs/icons/puzzle-piece-gray.svg);
-    }
+        div.github-small {
+            background: url(/images/docs/icons/github-small.svg);
+        }
 
-    div.right-arrow-gray {
-        background: url(/images/docs/icons/right-arrow-gray.svg);
-    }
+        div.light-bulb-small-gray {
+            background: url(/images/docs/icons/light-bulb-small-gray.svg);
+        }
 
-    div.play-blue {
-        background: url(/images/docs/icons/play-blue.svg);
-    }
+        div.aws-18-18 {
+            background: url(/images/docs/icons/clouds/aws-18-18.svg);
+        }
 
-    div.question-small-black {
-        background: url(/images/docs/icons/question-small-black.svg);
-    }
+        div.google-cloud-18-18 {
+            background: url(/images/docs/icons/clouds/google-cloud-18-18.svg);
+        }
 
-    div.book-small-black {
-        background: url(/images/docs/icons/book-small-black.svg);
-    }
+        div.digitalocean-18-18 {
+            background: url(/images/docs/icons/clouds/digitalocean-18-18.svg);
+        }
 
-    div.gear-small-black {
-        background: url(/images/docs/icons/gear-small-black.svg);
-    }
+        div.aws-35-35 {
+            background: url(/images/docs/icons/clouds/aws-35-35.svg);
+        }
 
-    div.page-small-black {
-        background: url(/images/docs/icons/page-small-black.svg);
-    }
+        div.azure-52-16 {
+            background: url(/images/docs/icons/clouds/azure-52-16.svg);
+        }
 
-    div.github-small {
-        background: url(/images/docs/icons/github-small.svg);
-    }
+        div.azure-78-24 {
+            background: url(/images/docs/icons/clouds/azure-78-24.svg);
+        }
 
-    div.light-bulb-small-gray {
-        background: url(/images/docs/icons/light-bulb-small-gray.svg);
-    }
+        div.google-cloud-35-35 {
+            background: url(/images/docs/icons/clouds/google-cloud-35-35.svg);
+        }
 
-    div.aws-18-18 {
-        background: url(/images/docs/icons/clouds/aws-18-18.svg);
-    }
+        div.kubernetes-35-35 {
+            background: url(/images/docs/icons/clouds/kubernetes-35-35.svg);
+        }
 
-    div.google-cloud-18-18 {
-        background: url(/images/docs/icons/clouds/google-cloud-18-18.svg);
-    }
+        div.keyboard-arrow-down-gray {
+            background: url(/images/docs/icons/keyboard-arrow-down-gray.svg);
+        }
 
-    div.digitalocean-18-18 {
-        background: url(/images/docs/icons/clouds/digitalocean-18-18.svg);
-    }
-
-    div.aws-35-35 {
-        background: url(/images/docs/icons/clouds/aws-35-35.svg);
-    }
-
-    div.azure-52-16 {
-        background: url(/images/docs/icons/clouds/azure-52-16.svg);
-    }
-
-    div.azure-78-24 {
-        background: url(/images/docs/icons/clouds/azure-78-24.svg);
-    }
-
-    div.google-cloud-35-35 {
-        background: url(/images/docs/icons/clouds/google-cloud-35-35.svg);
-    }
-
-    div.kubernetes-35-35 {
-        background: url(/images/docs/icons/clouds/kubernetes-35-35.svg);
-    }
-
-    div.keyboard-arrow-down-gray {
-        background: url(/images/docs/icons/keyboard-arrow-down-gray.svg);
-    }
-
-    div.keyboard-arrow-up-gray {
-        background: url(/images/docs/icons/keyboard-arrow-up-gray.svg);
+        div.keyboard-arrow-up-gray {
+            background: url(/images/docs/icons/keyboard-arrow-up-gray.svg);
+        }
     }
 }

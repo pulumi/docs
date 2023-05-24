@@ -1,4 +1,119 @@
 .docs-list-main .docs-list-main-content,
 .docs-single-main .docs-single-main-content {
-    margin-bottom: 450px;
+    div.special-h1 {
+        display: inline-block;
+
+        h1 {
+            font-family: Gilroy;
+            line-height: 1.5;
+            font-weight: 400;
+            font-size: 30px;
+            color: #131314;
+            margin: 16px 0;
+        }
+    }
+
+    div.h1-gradient {
+        width: calc(100% - 32px);
+        height: 12px;
+        background: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%);
+        opacity: 0.1;
+        position: relative;
+        top: -34px;
+    }
+
+    section.docs-content {
+        margin-bottom: 450px;
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Gilroy;
+            line-height: 1.5;
+        }
+
+        h2, h3, h4, h5, h6 {
+            margin: 18px 0 !important;
+        }
+
+        h1 + h2,
+        h2 + h2,
+        h2 + h3,
+        h3 + h3,
+        h3 + h4,
+        h4 + h4,
+        h5 + h6,
+        h5 + h5,
+        h6 + h6 {
+            margin-top: 0 !important;
+        }
+
+        h1 {
+            font-weight: 400;
+            font-size: 30px;
+            color: #131314;
+            margin: 16px 0;
+        }
+
+        h2 {
+            font-weight: 400;
+            font-size: 24px;
+            color: #131314;
+        }
+
+        h3 {
+            font-weight: 600;
+            font-size: 21px;
+            color: #131314;
+        }
+
+        h4 {
+            font-weight: 600;
+            font-size: 18px;
+            color: #5f6065;
+        }
+
+        h5 {
+            font-weight: 400;
+            font-size: 18px;
+            color: #131314;
+        }
+
+        h6 {
+            font-weight: 600;
+            font-size: 16px;
+            color: #5a5a5a;
+            
+        }
+
+        p {
+            font-family: 'Inter';
+            font-weight: 400;
+            font-size: 16px;
+            color: #131314;
+            padding: 0 0 12px 0;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        table {
+            margin-bottom: 16px;
+        }
+
+        p a:not(.btn-secondary),
+        ul li a[href]  {
+            color: #4d5bd9;
+            background: linear-gradient(90deg,rgba(142, 143, 151, 0),rgba(142, 143, 151, 0)),linear-gradient(90deg,#8e8f97,#8e8f97);
+            background-position: 100% 100%,0 100%;
+            background-repeat: no-repeat;
+            background-size: 100% 0.1em,0 0.1em;
+            padding-bottom: 0.2rem;
+            transition: background-size .3s;
+            transition-timing-function: ease-in;
+
+            &:hover {
+                color: #4552c3;
+                text-decoration: none;
+                background-size: 0 0.1em,100% 0.1em;
+            }
+        }
+    }
 }

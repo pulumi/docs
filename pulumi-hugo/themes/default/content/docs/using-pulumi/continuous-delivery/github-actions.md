@@ -401,7 +401,7 @@ Once the Pulumi GitHub App is installed, when your GitHub Actions run Pulumi, a 
 any resource changes will be left on the Pull Request, as well as links to the Pulumi
 Console for more detailed information.
 
-<a class="btn" href="https://github.com/apps/pulumi" target="_blank">
+<a class="btn btn-secondary" href="https://github.com/apps/pulumi" target="_blank">
     Install Pulumi GitHub App
 </a>
 

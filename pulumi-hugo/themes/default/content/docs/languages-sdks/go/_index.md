@@ -15,7 +15,7 @@ aliases:
 
 Pulumi supports writing your infrastructure as code in the Go language built for any [supported version](https://go.dev/doc/devel/release#policy).
 
-<a class="btn" href="https://golang.org/doc/install" target="_blank" title="Install Go">Install Go</a>
+<a class="btn btn-secondary" href="https://golang.org/doc/install" target="_blank" title="Install Go">Install Go</a>
 
 ## Getting Started
 

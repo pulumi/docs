@@ -16,6 +16,13 @@
 
 @font-face {
     font-family: "Gilroy";
+    font-weight: 600;
+    font-style: normal;
+    src: url("/fonts/gilroy-semibold.woff2") format("woff2"), url("/fonts/gilroy-semibold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Gilroy";
     font-weight: 700;
     font-style: normal;
     src: url("/fonts/gilroy-bold.woff2") format("woff2"), url("/fonts/gilroy-bold.woff") format("woff");

@@ -18,7 +18,7 @@ Pulumi supports writing your infrastructure as code in any .NET language program
 
 You can use your favorite .NET tools &mdash; such as editors, package managers, build systems, and test frameworks &mdash; to create, deploy, and manage infrastructure on any cloud, including Azure, AWS, and Google Cloud.
 
-<a class="btn" href="https://dotnet.microsoft.com/download" target="_blank" title="Install .NET">Install .NET</a>
+<a class="btn btn-secondary" href="https://dotnet.microsoft.com/download" target="_blank" title="Install .NET">Install .NET</a>
 
 ## Getting Started
 

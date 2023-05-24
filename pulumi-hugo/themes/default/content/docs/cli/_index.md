@@ -27,7 +27,7 @@ This CLI has been designed for great inner loop productivity, in addition to
 
 The Pulumi CLI is open source and free to use:
 
-<a class="btn" href="/docs/get-started/install">Install Pulumi</a>
+<a class="btn btn-secondary" href="/docs/get-started/install">Install Pulumi</a>
 
 ## Environment Variables
 

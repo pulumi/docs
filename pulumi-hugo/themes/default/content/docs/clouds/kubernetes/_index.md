@@ -3,9 +3,6 @@ title_tag: "Kubernetes & Pulumi"
 meta_desc: Pulumi offers full support for Kubernetes, with a provider, an operator, 3+ components, multiple templates, and several guides.
 title: "Kubernetes"
 h1: Kubernetes & Pulumi
-notitle: true
-h1_gradient_width: 281
-h1_gradient_name: kubernetes
 menu:
   clouds:
     identifier: kube

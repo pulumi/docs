@@ -17,17 +17,22 @@
                 <div class="lg:w-3/4 lg:px-4 xxl:w-8/12">
                     {{ partial "docs/breadcrumb.html" . }}
 
-                    {{ if and (.Params.h1) (not .Params.notitle) }}
-                        <h1>{{ .Params.h1 }}</h1>
-                    {{ else if and (ne .Title "") (not .Params.notitle) }}
-                        <h1>{{ .Title }}</h1>
+
+                    <div class="special-h1">
+                        {{ if and (.Params.h1) (not .Params.notitle) }}
+                            <h1>{{ .Params.h1 }}</h1>
+                        {{ else if and (ne .Title "") (not .Params.notitle) }}
+                            <h1>{{ .Title }}</h1>
+                        {{ end }}
+                        <div class="h1-gradient"></div>
+                    </div>
+
+                    {{ if .Params.cloud_overview }}
+                        {{ partial "docs/cloud-overview.html" . }}
                     {{ end }}
 
 
-                    <section data-swiftype-index="true">
-                        {{ if .Params.cloud_overview }}
-                            {{ partial "docs/cloud-overview.html" . }}
-                        {{ end }}
+                    <section class="docs-content" data-swiftype-index="true">
                         {{ .Content }}
                     </section>
                 </div>
