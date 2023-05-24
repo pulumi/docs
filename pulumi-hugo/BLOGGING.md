@@ -193,16 +193,6 @@ GIFs are welcome, but should be optimized. In general, animated GIFs should be n
 gifsicle ./my-animation.gif --resize-width=1200 --optimize=3 --batch
 ```
 
-#### Tweets
-
-There's a Hugo [shortcode for Tweets](https://gohugo.io/content-management/shortcodes/#tweet), too, which accepts a Tweet ID, accessible [from its permalink](https://twitter.com/jcreed/status/1147203941609984002):
-
-```
-{{< tweet id="1202020186234048512" user="abbyfuller" >}}
-```
-
-For more Hugo shortcode fun, [go here](https://gohugo.io/content-management/shortcodes).
-
 ## Done? Submit!
 
 When you're ready to submit your post for review, issue a Pull Request against the `master` branch of the repo, and the team will have a look. Once merged &mdash; provided its `date` has passed the post will be deployed to https://www.pulumi.com/.

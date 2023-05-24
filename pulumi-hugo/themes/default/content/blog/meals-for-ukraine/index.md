@@ -19,8 +19,6 @@ Why not do good while learning about cloud native tech? [Buoyant](https://buoyan
 <!--more-->
 Working with restaurants across Ukraine and in six countries welcoming refugees, WCK is providing hundreds of thousands of daily meals for people in need. WCK serves meals at shelters, hospitals, transit hubs, and more. It's a wonderful mission and, if you agree, we encourage you to [donate to WCK directly](https://donate.wck.org/give/398293#!/donation/checkout) 💙 🇺🇦 💛
 
-{{< tweet id="1510622155775619078" user="WCKitchen" >}}
-
 ## How it works
 
 Participating is easy. If you registered for KubeCon, just click on the booth links below to visit our virtual booths. Each visit will count as a $2 donation, so if you visit us all, that's $12 for the cause right there!

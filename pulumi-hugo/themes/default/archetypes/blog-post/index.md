@@ -74,7 +74,3 @@ let bucket = new aws.s3.Bucket("stuff");
 {{< youtube "kDB-YRKFfYE?rel=0" >}}
 
 Note the `?rel=0` param, which tells YouTube to suggest only videos from same channel.
-
-## Tweets
-
-{{< tweet id="1202020186234048512" user="pulumipus" >}}

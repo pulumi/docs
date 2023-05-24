@@ -28,8 +28,6 @@ It is good to know to refresh what `declarative` and `imperative` mean:
 
 The title of the article mentions `imperative` and `declarative` both. Pulumi leverages the best of both worlds into our product.
 
-{{< tweet id="1553431913691430912" user="adamhjk" >}}
-
 Pulumi tries to offer a solution where our customers are only limited by their imagination rather than the tool at hand. Let me use the Pulumi architecture to highlight why I mention *imperative* twice.
 
 ## Pulumi Architecture

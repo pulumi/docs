@@ -31,9 +31,7 @@ You now have three primary options for powering your EKS clusters:
 
 Each option controls how your cluster's worker nodes are provisioned, managed, and scaled. Worker nodes are what physically run the compute and host the storage used by your Kubernetes pods, and impact the cost and your cluster's ability to meet workload demands. The spectrum of options available provides a range of flexibility, from least control to most control, respectively, over the configuration and provisioning of these worker nodes.
 
-[Abby Fuller](https://twitter.com/abbyfuller) from AWS explained these options visually and succinctly on Twitter:
-
-{{< tweet id="1202020186234048512" user="abbyfuller" >}}
+[Abby Fuller](https://twitter.com/abbyfuller) from AWS explained these options visually and succinctly on Twitter.
 
 Let's now see how each of these work. To fully appreciate the new features, we will go in the reverse order &mdash; from most control and most difficult, to the least control and easiest, option.
 
