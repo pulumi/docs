@@ -16,6 +16,7 @@ interface Version {
     id: string;
     prompt: string;
     language: string;
+    sourceChunks: string[];
     source: string;
     markup: string;
 
@@ -367,6 +368,7 @@ export class PulumiAI {
             return {
                 id: "",
                 prompt: c.prompt,
+                sourceChunks: [],
                 source: c.response,
                 language: c.language,
                 markup: this.addButtons(marked.marked.parse(c.response)),
@@ -456,8 +458,16 @@ export class PulumiAI {
     }
 
     private onContent(content: OutputChunkResponse) {
-        this.currentVersion.source = this.currentVersion.source.replace(" ⎸", "");
-        this.currentVersion.source += content.content + " ⎸";
+        const orderDiff = content.order - this.currentVersion.sourceChunks.length;
+        if (orderDiff > 1) {
+            for (let i = 0; i < (orderDiff + 1); i++) {
+                this.currentVersion.sourceChunks.push("");
+            }
+        }
+
+        const shouldDelete = orderDiff === 0 ? 0 : 1;
+        this.currentVersion.sourceChunks.splice(content.order, shouldDelete, content.content);
+        this.currentVersion.source = [ ...this.currentVersion.sourceChunks, " ⎸"].join("");
         this.currentVersion = Object.assign({}, this.currentVersion);
 
         this.scroll();
@@ -707,6 +717,7 @@ export class PulumiAI {
             prompt: query,
             id: "",
             language: this.selectedLanguage.name,
+            sourceChunks: [],
             source: "",
             markup: "",
             feedbackSubmitted: false,
