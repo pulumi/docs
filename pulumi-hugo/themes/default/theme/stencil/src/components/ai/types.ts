@@ -42,6 +42,7 @@ export enum MessageType {
     VERSION_FRIENDLY_TITLE = "VERSION_FRIENDLY_TITLE",
     SET_CONNECTION_USER_IDS = "SET_CONNECTION_USER_IDS",
     GET_CONVERSATION = "GET_CONVERSATION",
+    SEND_FEEDBACK = "SEND_FEEDBACK",
 
     // Errors
     SERVER_ERROR = "SERVER_ERROR",
@@ -64,6 +65,18 @@ export interface PingResponse {
 }
 
 export interface PingArgs {}
+// Feedback
+export interface FeedbackResponse {
+    ok: boolean;
+}
+
+export interface FeedbackArgs {
+    resultId: string;
+    anonymousId: string;
+    helpful: boolean;
+    userId: string;
+    comments?: string;
+}
 
 // Version Friendly Title
 export interface VersionFriendlyTitleResponse {
@@ -113,6 +126,7 @@ export interface GenerateNewOutputArgs {
 }
 
 export interface GenerateNewOutputResponse {
+    resultId: string;
     code: string;
     text: string;
 }
@@ -143,11 +157,12 @@ export type GenerateNewOutputAction = PulumiGPTApiMessage<MessageType.GENERATE_N
 export type CreateConnectionAction = PulumiGPTApiMessage<MessageType.CREATE_CONNECTION, CreateConnectionArgs>;
 export type SetConnectionUserIdsAction = PulumiGPTApiMessage<MessageType.SET_CONNECTION_USER_IDS, SetConnectionUserIdsArgs>;
 export type GetConversationAction = PulumiGPTApiMessage<MessageType.GET_CONVERSATION, GetConversationArgs>;
+export type SendFeedbackAction = PulumiGPTApiMessage<MessageType.SEND_FEEDBACK, FeedbackArgs>;
 
 export type Action =
     GenerateNewOutputAction |
-    SetConnectionUserIdsAction |
     CreateConnectionAction |
+    SendFeedbackAction |
     GetConversationAction;
 
 // Responses
@@ -161,6 +176,7 @@ export type OpenAIRateLimit = PulumiGPTApiMessage<MessageType.OPENAI_RATE_LIMIT_
 export type OverMessageLimit = PulumiGPTApiMessage<MessageType.OVER_MESSAGE_LIMIT_ERROR, OverMessageLimitErrorResponse>;
 export type Ping = PulumiGPTApiMessage<MessageType.PING, PingResponse>;
 export type GetConversation = PulumiGPTApiMessage<MessageType.GET_CONVERSATION, GetConversationResponse>;
+export type SendFeedback = PulumiGPTApiMessage<MessageType.SEND_FEEDBACK, FeedbackResponse>;
 
 export type Response =
     GenerateNewOutput |
@@ -172,4 +188,5 @@ export type Response =
     OpenAIRateLimit |
     OverMessageLimit | 
     Ping |
-    GetConversation;
+    GetConversation |
+    SendFeedback;

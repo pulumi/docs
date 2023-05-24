@@ -11,6 +11,8 @@ import {
     SetConnectionUserIdsAction,
     GetConversationAction,
     GetConversationResponse,
+    SendFeedbackAction,
+    GenerateNewOutputResponse,
 } from "./types";
 import { parseCookie } from "../../util/util";
 
@@ -28,7 +30,7 @@ export class PulumiAIClient {
         private url: string,
         private connectionOpenCallback: (event: CreateConnectionResponse) => void,
         private outputChunkCallback: (content: OutputChunkResponse) => void,
-        private outputCompleteCallback: () => void,
+        private outputCompleteCallback: (response: GenerateNewOutputResponse) => void,
         private overMessageLimitCallback: () => void,
         private overCapacityCallback: () => void,
         private errorCallback: (error: string) => void,
@@ -53,8 +55,8 @@ export class PulumiAIClient {
             case MessageType.OUTPUT_CHUNK:
                 this.outputChunkCallback(eventData.data);
                 break;
-            case MessageType.OUTPUT_COMPLETE:
-                this.outputCompleteCallback();
+            case MessageType.GENERATE_NEW_OUTPUT:
+                this.outputCompleteCallback(eventData.data);
                 break;
             case MessageType.OVER_MESSAGE_LIMIT_ERROR:
                 this.overMessageLimitCallback();
@@ -142,6 +144,21 @@ export class PulumiAIClient {
         const args: PingArgs = {
             type: MessageType.PING,
             data: {},
+        };
+
+        this.send(args);
+    }
+
+    public sendFeedback(resultId: string, helpful: boolean, comments = "") {
+        const args: SendFeedbackAction = {
+            type: MessageType.SEND_FEEDBACK,
+            data: {
+                resultId,
+                comments,
+                helpful,
+                anonymousId: this.ajsAnonymousID,
+                userId: this.pulumiUserID || this.ajsUserID,
+            },
         };
 
         this.send(args);

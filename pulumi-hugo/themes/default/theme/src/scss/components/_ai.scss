@@ -392,4 +392,38 @@
             @apply mt-8 text-xl;
         }
     }
+
+    .feedback {
+        &-descriptions {
+            @apply my-2 text-gray-300 text-xs;
+        }
+
+        &-actions {
+            @apply flex justify-start items-center;
+
+            .feedback-button {
+                @apply mx-3 text-gray-500 cursor-pointer text-xs;
+
+                &:hover {
+                    @apply text-white;
+                }
+
+                i {
+                    @apply mr-2;
+                }
+            }
+        }
+
+        textarea {
+            @apply resize-none outline-none border-none w-1/2 leading-relaxed rounded text-sm bg-gray-800 p-3 text-white lg:mr-2 mb-2 lg:mb-0;
+        }
+
+        .feedback-submit-button {
+            @apply p-3 text-white bg-blue-600 rounded h-full text-xs;
+        }
+
+        .feedback-submit-button-container {
+            @apply w-1/2 text-right;
+        }
+    }
 }
