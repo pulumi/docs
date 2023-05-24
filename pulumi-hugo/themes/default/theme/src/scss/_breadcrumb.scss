@@ -27,7 +27,7 @@ ol.docs-breadcrumb {
             font-weight: 700;
         }
         
-        &:has(+ li) {
+        &:not(:last-child) {
             &::after {
                 display: inline-block;
                 padding-left: 6px;
