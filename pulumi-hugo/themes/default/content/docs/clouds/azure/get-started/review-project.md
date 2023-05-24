@@ -71,6 +71,8 @@ const storageAccountKeys = storage.listStorageAccountKeysOutput({
     resourceGroupName: resourceGroup.name,
     accountName: storageAccount.name
 });
+
+export const primaryStorageKey = storageAccountKeys.keys[0].value;
 ```
 
 {{% /choosable %}}
