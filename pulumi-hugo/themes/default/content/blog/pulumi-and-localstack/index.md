@@ -114,7 +114,7 @@ The docker-compose file also mentions what to change if you're going to be doing
 
 This test set up might not look like many JavaScript projects you've encountered. We have "unit" tests segregated from "functional" tests. If we had more things to test, I might have "integration" tests, too.
 
-If you're curious about the different approaches to unit testing I've employed here, please read the excellent (now almost two decades old!) ["Mocks aren't Stubs" article](https://martinfowler.com/articles/mocksArentStubs.html) by my friend and [Thoughtworks](https://medium.com/u/8075bdd73dd9?source=post_page-----d993f3b94d17-----------------------------------) Chief Scientist, [Martin Fowler](https://twitter.com/martinfowler).
+If you're curious about the different approaches to unit testing I've employed here, please read the excellent (now almost two decades old!) ["Mocks aren't Stubs" article](https://martinfowler.com/articles/mocksArentStubs.html) by my friend and [Thoughtworks](https://thoughtworks.medium.com/) Chief Scientist, [Martin Fowler](https://twitter.com/martinfowler).
 
 ### Unit tests
 
