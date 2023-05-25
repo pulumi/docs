@@ -7,6 +7,7 @@ meta_desc: |
     Use Pulumi AI to generate the most interesting or sophisticated architecture possible
 meta_image: /images/challenge/challenge-ai-meta.png
 banner_image: /images/challenge/challenge-ai-banner.png
+hubspot_form_id: 1pC3zwQ3ET8ijTyGxv0W2Zg2mxud
 ---
 
 ## Welcome to the GPT Your IaC Challenge!
@@ -15,9 +16,9 @@ banner_image: /images/challenge/challenge-ai-banner.png
 
 Why write your Pulumi programs yourself when you can have AI do it for you? Pulumi AI leverages large language models (LLMs) to author infrastructure as code for any architecture for any cloud in any language.
 
-For the **GPT Your IaC challenge**, your goal is to have Pulumi AI create the most complex and sophisticated piece of architecture where you can run a successful `pulumi up` with the program created by Pulumi AI. To participate in the challenge, you'll need to either visit [pulumi.com/ai](/ai) or download the [CLI](https://github.com/pulumi/pulumi-ai) so you can use Pulumi AI.
+For the **GPT Your IaC Challenge**, your goal is to have Pulumi AI write a Pulumi program for any architecture you want and run a successful `pulumi up` with the program created. To participate in the challenge, you'll need to either visit [pulumi.com/ai](/ai) or download the [CLI](https://github.com/pulumi/pulumi-ai) so you can use Pulumi AI.
 
-We will send you a piece of swag if you document this via a blog post, social media, or video. Tag us on social media or email us at [da@pulumi.com](mailto:da@pulumi.com), and we will help spread the word about your experience. All submissions will be judged at the end of the challenge, and the best submissions (there will be a few categories) will receive a special prize.
+We will send you limited edition swag for completion of the challenge. We will also send you an even better piece of swag if you document this via a blog post, social media, or video. Tag us on social media or email us at [da@pulumi.com](mailto:da@pulumi.com), and we will help spread the word about your experience. All submissions will be judged at the end of the challenge, and the best submissions (there will be a few categories) will receive a special prize.
 
 ### Prerequisites
 
@@ -49,7 +50,7 @@ To begin the challenge, first navigate to [pulumi.com/ai](/ai).
 
 Next, you will use Pulumi AI to generate a program that will provision cloud infrastructure. In this example, we asked Pulumi AI to create some database infrastructure that will be used for a real-time application that generates lots of data. Using the chat widget on the Pulumi AI page, describe the infrastructure you would like to build. In our case, we supplied: `Deploy a Kinesis Data Stream, RDS database, DynamoDB database, and Timestream database.`
 
-Pulumi AI returned to us the code below:  
+Pulumi AI returned to us the code below:
 
 ```python
 import pulumi
@@ -178,7 +179,11 @@ There you go! Pulumi AI has helped us generate a program to provision important 
 
 ### Congratulations
 
-Congratulations! You've completed this **Pulumi Challenge**. If you want, please create a blog post, social media, or video documenting your work on this challenge. Tag us on social media or email us at [da@pulumi.com](mailto:da@pulumi.com) to claim your swag. Winners will be chosen in a few months and receive a special prize.
+Congratulations! You've completed this **Pulumi Challenge**. Follow the link below and complete your submission to receive limited edition swag for this challenge. You will need to upload a screenshot of the `pulumi up` output for us to verify completion.
+
+{{< challenge/open-form-button >}}
+
+If you want, please create a blog post, social media, or video documenting your work on this challenge. Tag us on social media or email us at [da@pulumi.com](mailto:da@pulumi.com) to claim another piece of even more special swag. Winners will be chosen in a few months and receive a special prize.
 
 #### What you have learned
 
