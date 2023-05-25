@@ -341,7 +341,7 @@ export class PulumiAI {
         if (this.pingListener) {
             clearInterval(this.pingListener);
         }
-        
+
         this.versions.forEach(v => {
             if (!v.feedbackSubmitted && v.helpful !== undefined) {
                 this.sendFeedback(v.id);
@@ -352,7 +352,7 @@ export class PulumiAI {
     private onConnected(data: CreateConnectionResponse) {
         this.connectionStatus = "Connected";
         this.conversationId = data.conversationId;
-        
+
         if (this.existingConversationId) {
             console.log("exisiting conversation", this.existingConversationId);
             this.client.getConversation(this.existingConversationId);
@@ -540,7 +540,7 @@ export class PulumiAI {
 
     private onInput() {
         this.prompt = (this.input.value || "").trim();
-        
+
         const rows = this.input.value.split("\n").length;
         if (rows <= MAX_INPUT_ROWS) {
             this.input.rows = rows;
@@ -598,7 +598,7 @@ export class PulumiAI {
                     this.input.rows++;
                     return;
                 }
-                
+
                 event.preventDefault();
                 if (this.runnable) {
                     this.submit();
@@ -806,6 +806,16 @@ export class PulumiAI {
         </div>;
     }
 
+    private renderSpinner() {
+        if (this.currentVersion && !this.currentVersion.source && this.running) {
+            return <div class="loading-spinner">
+                <div class="b1"></div>
+                <div class="b2"></div>
+                <div class="b3"></div>
+            </div>;
+        }
+    }
+
     private renderFeedback(version: Version) {
         if (version.helpful !== undefined && !version.feedbackSubmitted) {
             return(
@@ -876,6 +886,9 @@ export class PulumiAI {
                             </div>
                         }
                     </div>
+
+                    {/* Loading spinner. */}
+                    { this.renderSpinner() }
 
                     {/* Currently running request. */}
                     {
