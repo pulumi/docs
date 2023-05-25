@@ -20,37 +20,6 @@ You can use your favorite .NET tools &mdash; such as editors, package managers, 
 
 <a class="btn btn-secondary" href="https://dotnet.microsoft.com/download" target="_blank" title="Install .NET">Install .NET</a>
 
-## Getting Started
-
-The fastest way to get up and running is to choose from one of the following Getting Started guides:
-
-<div class="tiles mt-4">
-    <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="/docs/clouds/aws/get-started/?language=csharp">
-            <img class="h-8 mx-auto" src="/logos/tech/aws.svg" alt="AWS">
-        </a>
-    </div>
-    <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="/docs/clouds/azure/get-started/?language=csharp">
-            <img class="h-8 mx-auto" src="/logos/tech/azure.svg" alt="Azure">
-        </a>
-    </div>
-    <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="/docs/clouds/gcp/get-started/?language=csharp">
-            <img class="h-8 mx-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
-        </a>
-    </div>
-    <div class="flex-1 pb-4">
-        <a class="tile p-4" href="/docs/clouds/kubernetes/get-started/?language=csharp">
-            <img class="h-8 mx-auto" src="/logos/tech/k8s.svg" alt="Kubernetes">
-        </a>
-    </div>
-</div>
-
-{{% notes "info" %}}
-The Getting Started guides only demonstrate C#, but will also work for F# and Visual Basic.
-{{% /notes %}}
-
 ## Prerequisites
 
 Before using Pulumi for .NET, you will need to install both Pulumi and .NET Core SDK 3.1, .NET 5, or .NET 6 (recommended). If you follow the Getting Started guides above, they will walk you through doing this.
@@ -59,6 +28,8 @@ Before using Pulumi for .NET, you will need to install both Pulumi and .NET Core
 1. [Install .NET SDK](https://dotnet.microsoft.com/download)
 
 ## Example
+
+{{% chooser language "csharp,fsharp,visualbasic" %}}
 
 {{% choosable language csharp %}}
 For example, this C# program provisions an Azure resource group and storage account:
@@ -168,9 +139,11 @@ End Module
 
 {{% /choosable %}}
 
+{{% /chooser %}}
+
 ## C\#, F\#, and VB Templates
 
-You can write Pulumi programs in your favorite .NET language to get additional verification and tooling benefits. The fastest way to get started is to use a template. The template will autogenerate a set of files and initialize a Pulumi project. The getting started guides shown above will help do this on your cloud of choice, but this section describes doing so independently.
+You can write Pulumi programs in your favorite .NET language to get additional verification and tooling benefits. The fastest way to get started is to use a template. The template will autogenerate a set of files and initialize a Pulumi project.
 
 {{< chooser language "csharp,fsharp,visualbasic" >}}
 

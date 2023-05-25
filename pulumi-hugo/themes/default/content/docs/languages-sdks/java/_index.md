@@ -27,36 +27,9 @@ Please post any Bug Reports or Feature Requests in [GitHub Issues](https://githu
 
 {{< install-java >}}
 
-## Getting Started
-
-The fastest way to get up and running is to choose from one of the following Getting Started guides:
-
-<div class="tiles mt-4">
-    <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="/docs/clouds/aws/get-started/?language=java">
-            <img class="h-8 mx-auto" src="/logos/tech/aws.svg" alt="AWS">
-        </a>
-    </div>
-    <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="/docs/clouds/azure/get-started/?language=java">
-            <img class="h-8 mx-auto" src="/logos/tech/azure.svg" alt="Azure">
-        </a>
-    </div>
-    <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="/docs/clouds/gcp/get-started/?language=java">
-            <img class="h-8 mx-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
-        </a>
-    </div>
-    <div class="flex-1 pb-4">
-        <a class="tile p-4" href="/docs/clouds/kubernetes/get-started/?language=java">
-            <img class="h-8 mx-auto" src="/logos/tech/k8s.svg" alt="Kubernetes">
-        </a>
-    </div>
-</div>
-
 ## Templates
 
-The getting started guides shown above will help you write a Pulumi Java program via tutorial, but this section describes starting a basic project that you can start to explore with.
+This section describes starting a basic project that you can start to explore with.
 
 From an empty directory, create a new project:
 

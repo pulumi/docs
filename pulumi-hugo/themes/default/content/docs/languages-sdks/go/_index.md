@@ -17,36 +17,9 @@ Pulumi supports writing your infrastructure as code in the Go language built for
 
 <a class="btn btn-secondary" href="https://golang.org/doc/install" target="_blank" title="Install Go">Install Go</a>
 
-## Getting Started
-
-The fastest way to get up and running is to choose from one of the following Getting Started guides:
-
-<div class="tiles mt-4">
-    <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="/docs/clouds/aws/get-started/?language=go">
-            <img class="h-8 mx-auto" src="/logos/tech/aws.svg" alt="AWS">
-        </a>
-    </div>
-    <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="/docs/clouds/azure/get-started/?language=go">
-            <img class="h-8 mx-auto" src="/logos/tech/azure.svg" alt="Azure">
-        </a>
-    </div>
-    <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="/docs/clouds/gcp/get-started/?language=go">
-            <img class="h-8 mx-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
-        </a>
-    </div>
-    <div class="flex-1 pb-4">
-        <a class="tile p-4" href="/docs/clouds/kubernetes/get-started/?language=go">
-            <img class="h-8 mx-auto" src="/logos/tech/k8s.svg" alt="Kubernetes">
-        </a>
-    </div>
-</div>
-
 ## Templates
 
-The fastest way to get started is to use a template. The template will initialize a Pulumi project. The getting started guides shown above will help do this on your cloud of choice, but this section describes doing so independently.
+The fastest way to get started is to use a template. The template will initialize a Pulumi project.
 
 From an empty directory, create a new project:
 

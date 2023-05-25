@@ -14,8 +14,6 @@ aliases:
 - /docs/reference/pulumi-sdk/
 ---
 
-{{< get-started-note >}}
-
 Pulumi is a multi-language infrastructure as code tool. Each language is as capable as the
 other and supports the entire surface area of all of the clouds available in [Pulumi Registry](
 /registry).

@@ -22,33 +22,6 @@ test frameworks.
 
 <a class="btn btn-secondary" href="https://nodejs.org/en/download/" target="_blank" title="Install Node.js">Install Node.js</a>
 
-## Getting Started
-
-The fastest way to get up and running is to choose from one of the following Getting Started guides:
-
-<div class="tiles mt-4">
-    <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="/docs/clouds/aws/get-started/?language=nodejs">
-            <img class="h-8 mx-auto" src="/logos/tech/aws.svg" alt="AWS">
-        </a>
-    </div>
-    <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="/docs/clouds/azure/get-started/?language=nodejs">
-            <img class="h-8 mx-auto" src="/logos/tech/azure.svg" alt="Azure">
-        </a>
-    </div>
-    <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="/docs/clouds/gcp/get-started/?language=nodejs">
-            <img class="h-8 mx-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
-        </a>
-    </div>
-    <div class="flex-1 pb-4">
-        <a class="tile p-4" href="/docs/clouds/kubernetes/get-started/?language=nodejs">
-            <img class="h-8 mx-auto" src="/logos/tech/k8s.svg" alt="Kubernetes">
-        </a>
-    </div>
-</div>
-
 ## Pulumi Programming Model
 
 The Pulumi programming model defines the core concepts you will use when creating infrastructure as code programs using
