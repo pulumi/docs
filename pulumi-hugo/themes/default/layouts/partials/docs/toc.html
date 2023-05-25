@@ -68,7 +68,7 @@
                         <li class="sidenav-topic {{ $sidenav_selected }}">
                             {{ if or (eq .URL "https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi")
                                 (eq .URL "https://github.com/pulumi/pulumi-java/tree/main/sdk/java")
-                                (eq .URL "/docs/reference/pkg/dotnet/pulumi/pulumi.html")
+                                (eq .URL "https://www.pulumi.com/docs/reference/pkg/dotnet/Pulumi/Pulumi.html")
                             }}
                                 <a href="{{ .URL }}" target="_blank" data-track="toc-{{ .Name | urlize }}">{{ .Name }}</a>
                             {{ else }}
