@@ -1,3 +1,5 @@
+import {LocalStorageService} from "./state";
+
 (function (document, $) {
     // The main navigation bar. Binds handlers for showing and hiding
     // the big purple submenu on non-touch devices.
@@ -53,5 +55,28 @@
             learnOpened = !learnOpened;
         });
     })();
+
+    // track banner state in local storage.
+    const bannerState = new LocalStorageService("banner-state");
+    const banner = $("#dismissable-banner");
+    loadBannerState();
+
+    // load saved state of the banner from local storage.
+    function loadBannerState() {
+        if (bannerState.getKey("dismissed") !== "true") {
+            $(banner).css({"display": "block"});
+        } else {
+            $(banner).css({"display": "none"});
+        }
+    }
+
+    // click handler for banner dismiss button.
+    $("#dismiss-banner").on("click", function (e) {
+        // intercept href event, so we don't navigate to the link.
+        e.preventDefault();
+        
+        $(banner).css({"display": "none"});
+        bannerState.updateKey("dismissed", "true");
+    })
 
 })(document, jQuery);

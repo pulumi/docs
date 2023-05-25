@@ -88,4 +88,7 @@
             {{ end }}
         </ul>
     </div>
+    {{ if eq .Page.RelPermalink "/" }}
+        {{ partial "home/dismissible-banner.html" . }}
+    {{ end }}
 </nav>

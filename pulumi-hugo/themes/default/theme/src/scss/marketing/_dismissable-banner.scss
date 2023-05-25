@@ -1,0 +1,61 @@
+a.dismissable-banner {
+    // Hide by defualt, since there is a slight delay loading the state from local storage,
+    // which ends up resulting in an awkward flicker when the user has this dismissed.
+    // JS will show this based on state.
+    display: none;
+
+    > div.banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 8px 12px 16px;
+        position: fixed;
+        background: linear-gradient(90deg, #F6E8C4 0%, #F5D6D7 18.23%, #EFD1D9 38.02%, #DFC8DC 53.65%, #DACBE4 74.48%, #D6D8F5 100%);
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 1000;
+
+        div.banner-content-wrapper {
+            display: flex;
+            justify-content: space-around;
+            flex: 1;
+        }
+    
+        div.banner-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+
+            span.fake-link {
+                text-decoration: underline;
+            }
+    
+            p {
+                font-family: Gilroy;
+                font-size: 18px;
+                font-weight: 600;
+                color: #131314;
+                margin: 0;
+            }
+    
+            div.icon {
+                display: block;
+                text-indent: -9999px;
+            }
+            div.icon-20-17 {
+                width: 20px;
+                height: 17px;
+                background-size: 20px 17px;   
+                position: relative;
+            }
+            div.zelda-heart {
+                background: url(/icons/zelda-heart.svg);
+            }
+        }
+    }
+    i#dismiss-banner {
+        padding: 12px;
+    }
+}
