@@ -22,7 +22,7 @@ You can use your favorite .NET tools &mdash; such as editors, package managers, 
 
 ## Prerequisites
 
-Before using Pulumi for .NET, you will need to install both Pulumi and .NET Core SDK 3.1, .NET 5, or .NET 6 (recommended). If you follow the Getting Started guides above, they will walk you through doing this.
+Before using Pulumi for .NET, you will need to install both Pulumi and .NET Core SDK 3.1, .NET 5, or .NET 6 (recommended).
 
 1. [Install Pulumi](/docs/install/)
 1. [Install .NET SDK](https://dotnet.microsoft.com/download)
