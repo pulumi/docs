@@ -95,12 +95,11 @@ You can also create how-to guides for your packages by contributing them to the 
 
 Once you've authored and tested your package locally, you can publish it to make it available to the Pulumi community. You must publish several artifacts:
 
-- The npm, NuGet, and Python SDK packages to the [npm Registry](https://npmjs.com), the [NuGet Gallery](https://nuget.org), and the [Python Package Index](https://pypi.org)
+- The npm, NuGet, Java, and Python SDK packages to the [npm Registry](https://npmjs.com), the [NuGet Gallery](https://nuget.org), [Maven Central](https://central.sonatype.com) and the [Python Package Index](https://pypi.org)
+  - If your package is hosted on GitHub, you may choose to use our [custom Action for publishing Pulumi packages](https://github.com/pulumi/pulumi-package-publisher)
 - The Go module to your Git repository, by adding a tag, which we'll explain in the sections below
 - The binary Pulumi resource provider plugin to a binary hosting provider of your choice
-- The package documentation - overview, installation & configuration, API docs, and how-to guides - to [Pulumi Registry](/registry/)
-
-Future iterations of this guide will cover how to publish the first three items; for now, these are left as an exercise for the package author.
+- The [package documentation](#publish-the-documentation) - overview, installation & configuration, API docs, and how-to guides to [Pulumi Registry](/registry/)
 
 The URL used to download a plugin is derived from `pluginDownloadURL`, as specified in the schema. Pulumi expects to find a plugin at
 
