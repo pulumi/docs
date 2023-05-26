@@ -131,7 +131,7 @@ spotlight:
       left: 1135
       opacity: 100
     - id: christian-nunciato
-      name: Christian Nunciatio
+      name: Christian Nunciato
       size: 150
       top: 235
       left: 1190
