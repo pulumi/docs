@@ -62,7 +62,7 @@ Specifically, you should author a few pages:
 1. `installation-configuration.md`, which will be shown on your package's Installation & Configuration tab. Use this page to describe how to set up your package, including authenticating to a cloud provider, and to list the configuration options that can be used with your package. The title of this page should be in the form `<Package display name> Installation & Configuration`.
 
 {{% notes type="info" %}}
-A future improvement to Pulumi Packages will enable Pulumi Registry to create the contents for the Overview tab of your package directly from a `README.md` in the root of your package's repository. Until then, we recommend keeping the contents of `README.md` and `_index.md` similar or the same, save for the YAML metadata/front-matter that's in `_index.md`.
+We recommend keeping the contents of `README.md` and `_index.md` similar or the same, save for the YAML metadata/front-matter that's in `_index.md`.
 {{% /notes %}}
 
 ### Package metadata
