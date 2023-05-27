@@ -64,6 +64,9 @@ body.section-pulumi-up {
     }
 
     .light-blue-background {
+        &::before {
+            height: 0px;
+        }
         background-color: #7bdeff;
     }
 
