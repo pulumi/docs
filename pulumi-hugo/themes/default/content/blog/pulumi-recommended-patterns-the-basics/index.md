@@ -2,8 +2,7 @@
 title: "Pulumi Recommended Patterns: The basics"
 date: 2021-11-04T23:20:26Z
 draft: false
-meta_desc: |
-    "Learn and apply Pulumi recommended patterns to improve your infrastructure and easily scale your deployments using modern infrastructure as code"
+meta_desc: Learn and apply Pulumi recommended patterns to improve your infrastructure and easily scale your deployments using modern infrastructure as code.
 meta_image: article-1-meta.png
 authors:
     - aurelien-requiem
