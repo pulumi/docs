@@ -2,6 +2,7 @@
 title_tag: "Google Cloud & Pulumi"
 meta_desc: Pulumi offers full support for Google Cloud, with two providers, 2 components, and multiple templates.
 title: "Google Cloud"
+meta_image: /images/docs/meta-images/docs-clouds-google-cloud-meta-image.png
 h1: Google Cloud & Pulumi
 menu:
   clouds:

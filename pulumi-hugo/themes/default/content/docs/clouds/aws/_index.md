@@ -2,6 +2,7 @@
 title_tag: "AWS & Pulumi"
 meta_desc: Pulumi offers full support for AWS, with two providers, 10+ components, multiple templates, and numerous guides.
 title: "AWS"
+meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 h1: AWS & Pulumi
 menu:
   clouds:

@@ -2,6 +2,7 @@
 title_tag: "Azure & Pulumi"
 meta_desc: Pulumi offers full support for Azure, with two providers, 4+ components, and several templates.
 title: "Azure"
+meta_image: /images/docs/meta-images/docs-clouds-azure-meta-image.png
 h1: Azure & Pulumi
 menu:
   clouds:
