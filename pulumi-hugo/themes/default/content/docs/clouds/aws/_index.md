@@ -13,7 +13,7 @@ get_started_guide:
   link: get-started/
   icon: aws
 providers:
-  description: The AWS Classic provider can provision many AWS resources available in AWS CloudFormation. The AWS Native provider is in preview status, with same-day access to AWS resources available in the AWS Cloud Control API.  While AWS Classic remains fully supported, try AWS Native if you need AWS resources not available in the classic version.
+  description: Provision hundreds of AWS cloud resources with either the AWS Classic or AWS Native provider. The AWS Native provider is in preview status, with same-day access to AWS resources available in the AWS Cloud Control API.  While AWS Classic remains fully supported, try AWS Native if you need AWS resources not available in the classic version.
   provider_list:
   - display_name: AWS Classic
     recommended: true
