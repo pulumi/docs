@@ -45,12 +45,12 @@ template:
       secret: true
 plugins:
   providers:
-    name: aws
-    path: ../../bin
+    - name: aws
+      path: ../../bin
   languages:
-    name: yaml
-    path: ../../../pulumi-yaml/bin
-    version: 1.2.3
+    - name: yaml
+      path: ../../../pulumi-yaml/bin
+      version: 1.2.3
 ```
 
 ## Attributes
@@ -161,9 +161,9 @@ Use this option to link to local plugin binaries. This option is intended for us
 
 | Name | Required | Description |
 | - | - | - |
-| `providers` | optional | Plugin for the provider. |
-| `analyzers` | optional | Plugin for the policy. |
-| `languages` | optional | Plugin for the language. |
+| `providers` | optional | List of provider plugins. |
+| `analyzers` | optional | List of policy plugins. |
+| `languages` | optional | List of language plugins. |
 
 #### Options for `providers`, `analyzers`, and `languages`
 
