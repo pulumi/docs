@@ -20,6 +20,7 @@ function minifyCSS(filePath) {
         // https://purgecss.com/
         purgecss({
             content: [ "public/**/*.html", "public/js/bundle.*.js" ],
+            skippedContentGlobs: ["public/registry/packages/azure-native-v2/**/*"],
             css: [
                 bundlePath,
             ],
