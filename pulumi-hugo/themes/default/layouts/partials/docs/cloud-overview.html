@@ -94,15 +94,48 @@
             choice.
         </p>
         <div class="flex">
-            {{ range $template := .Params.templates }}
-                <div class="flex-2-col">
-                    <a href="/templates/{{ $template.url }}">
-                        <div class="card-inner">
-                            <div>
-                                <p>{{ $template.display_name }}</p>
+            {{ range $index, $template := .Params.templates }}
+                {{ if le $index 3 }}
+                    <div class="flex-2-col">
+                        <a href="/templates/{{ $template.url }}">
+                            <div class="card-inner">
+                                <div>
+                                    <p>{{ $template.display_name }}</p>
+                                </div>
                             </div>
+                        </a>
+                    </div>
+                {{ end }}
+            {{ end }}
+            {{ if ge (len .Params.templates) 5 }}
+                <div id="accordion-templates" class="accordion flex-1-col">
+                    <div>
+                        <input type="checkbox" id="accordion-checkbox-templates" />
+                        <div class="accordion-content flex">
+                            {{ range $index, $template := .Params.templates }}
+                                {{ if ge $index 4 }}
+                                    <div class="flex-2-col">
+                                        {{ $url := print "/templates/" $template.url }}
+                                        <a href="{{ $url }}">
+                                            <div class="card-inner">
+                                                <div>
+                                                    <p>{{ $template.display_name }}</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                {{ end }}
+                            {{ end }}
                         </div>
-                    </a>
+                        <label for="accordion-checkbox-templates" class="show">
+                            Show {{ sub (len .Params.templates) 4 }} more
+                            <div class="icon icon-16-16 keyboard-arrow-down-gray"></div>
+                        </label>
+                        <label for="accordion-checkbox-templates" class="hide">
+                            Show {{ sub (len .Params.templates) 4 }} less
+                            <div class="icon icon-16-16 keyboard-arrow-up-gray"></div>
+                        </label>
+                    </div>
                 </div>
             {{ end }}
         </div>

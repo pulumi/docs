@@ -58,6 +58,8 @@ templates:
   url: kubernetes/gcp/
 - display_name: Helm Chart on Kubernetes
   url: kubernetes-application/helm-chart/
+- display_name: Web application on Kubernetes
+  url: kubernetes-application/web-application/
 guides-description: Learn how to use Pulumi & Kubernetes together.
 guides:
   description: Learn how to use Kubernetes & Pulumi together.

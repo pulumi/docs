@@ -60,4 +60,6 @@ templates:
   url: static-website/gcp/
 - display_name: Virtual machine on Google Cloud
   url: virtual-machine/gcp/
+- display_name: Kubernetes cluster on Google Cloud
+  url: kubernetes/gcp/
 ---

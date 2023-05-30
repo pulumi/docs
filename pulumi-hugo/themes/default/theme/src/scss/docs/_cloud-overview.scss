@@ -409,6 +409,20 @@ $box-shadow: #5f606524;
             }
         }
 
+        div#accordion-templates {
+            div.accordion-content,
+            input,
+            label.hide,
+            input:checked ~ label.show  {
+                display: none;
+            }
+        
+            input:checked ~ div.accordion-content,
+            input:checked ~ label.hide {
+                display: flex;
+            }
+        }
+
         div.icon {
             display: block;
             text-indent: -9999px;

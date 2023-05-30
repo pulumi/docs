@@ -71,4 +71,6 @@ templates:
   url: static-website/azure/
 - display_name: Virtual machine on Azure
   url: virtual-machine/azure/
+- display_name: Kubernetes cluster on Azure
+  url: kubernetes/azure/
 ---

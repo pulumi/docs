@@ -84,6 +84,8 @@ templates:
   url: static-website/aws/
 - display_name: Virtual machine on AWS
   url: virtual-machine/aws/
+- display_name: Kubernetes cluster on AWS
+  url: kubernetes/aws/
 guides:
   description: Learn how to use AWS & Pulumi together.
   guides_list:
