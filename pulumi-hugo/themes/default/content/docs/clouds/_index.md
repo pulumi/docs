@@ -15,4 +15,4 @@ Pulumi supports AWS, Azure, Google Cloud, Kubernetes, and over 100 other package
 - [Azure](azure/)
 - [Google Cloud](gcp/)
 - [Kubernetes](kubernetes/)
-- [All clouds](pkg/)
+- [All clouds](/registry/)
