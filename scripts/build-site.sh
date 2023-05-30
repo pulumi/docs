@@ -25,7 +25,7 @@ printf "Copying prebuilt docs...\n\n"
 make copy_static_prebuilt
 
 # REGISTRY_COMMIT="$(go mod graph | grep pulumi/registry/themes/default | sed 's/.*-//')"
-REGISTRY_COMMIT="a58c0236af5a4e49b4bf7c3a5af242ea4792b9d5"
+REGISTRY_COMMIT="7f5472f4fa8882f0a4f0cbeb9901040b18eee8d7"
 
 printf "Generating API docs from registry commit %s...\n\n" "${REGISTRY_COMMIT}"
 pushd tools/resourcedocsgen
