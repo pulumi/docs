@@ -233,18 +233,11 @@
         <div class="container mx-auto text-center">
             <h2 class="text-center mb-10 hidden lg:block">{{ .Params.customer_logos.title }}</h2>
             <h6 class="text-center lg:hidden">{{ .Params.customer_logos.title }}</h6>
-            <div class="flex flex-wrap items-center justify-center">
-                {{ range $logo := .Params.customer_logos.row1.logos }}
-                    <div class="w-3/4 lg:w-1/6 p-4 lg:p-10">
-                        <img class="w-full" src="/images/pulumiup-2023/sponsors/{{ $logo }}" />
-                    </div>
-                {{ end }}
-            </div>
             {{ range $row := .Params.customer_logos.rows }}
                 <div class="flex flex-wrap items-center justify-center">
                     {{ range $logo := $row.logos }}
                         <div class="w-3/4 lg:w-1/6 p-4 lg:p-10">
-                            <img class="w-full" src="/images/pulumiup-2023/sponsors/{{ $logo }}" />
+                            <a href="{{ $logo.link }}"><img class="w-full" src="/images/pulumiup-2023/sponsors/{{ $logo.logo }}" /></a>
                         </div>
                     {{ end }}
                 </div>

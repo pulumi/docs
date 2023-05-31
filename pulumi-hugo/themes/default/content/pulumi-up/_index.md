@@ -268,10 +268,26 @@ customer_logos:
   title: Featured Partners
   rows:
     - logos:
-      - aws.png
-      - google-cloud.svg
+      - logo: aws.png
+        link: https://aws.amazon.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: google-cloud.svg
+        link: https://cloud.google.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: microsoft.png
+        link: http://azure.microsoft.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
     - logos:
-      - firefly.svg
-      - klotho.svg
-      - nitric.png
+      - logo: firefly.svg
+        link: https://www.gofirefly.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: klotho.svg
+        link: https://klo.dev/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: nitric.png
+        link: https://nitric.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: new-relic.png
+        link: https://developer.newrelic.com/pulumi/get-started-pulumi/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+    - logos:
+      - logo: equinix.png
+        link: https://www.equinix.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: port.png
+        link: https://www.getport.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: circleci.png
+        link: https://circleci.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
 ---
