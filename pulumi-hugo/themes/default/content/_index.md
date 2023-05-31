@@ -6,7 +6,10 @@ hero:
   title: [ "Infrastructure as code", "in any programming language" ]
   description: |
     Build infrastructure intuitively on any cloud using familiar languages.
-  cta_text: Try Pulumi Cloud
+  cta_text: Get Started
+  cta_link: /docs/get-started
+  secondary_cta_text: Contact Sales
+  secondary_cta_link: /contact/?form=sales
 
 code_faster:
   title: Code and ship faster
