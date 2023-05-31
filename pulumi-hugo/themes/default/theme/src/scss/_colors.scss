@@ -5,9 +5,12 @@ $brand: (
     "yellow": #f7bf2a,
     "salmon": #f26e7e,
     "fuchsia": #bd4c85,
+    "fuchsia-darker": #be5188,
     "purple": #8a3391,
     "violet": #805ac3,
+    "blue-lighter": #7682f4,
     "blue": #4d5bd9,
+    "blue-darker": #4552c3,
 );
 
 $brand-yellow: map-get($brand, "yellow");
@@ -19,14 +22,23 @@ $brand-blue: map-get($brand, "blue");
 
 $gray: (
     100: #f9f9f9,
+    112: #f9f9fa,
+    125: #f2f2f4,
+    150: #e5e5e9,
     200: #e0e0e0,
     300: #dcdcdc,
+    350: #bebfc9,
     400: #b0b0b0,
+    450: #8e8f97,
     500: #808080,
     600: #5a5a5a,
+    650: #5f6065,
+    675: #4a5568,
     700: #484848,
     800: #404041,
     900: #2b2b2c,
+    925: #2f3032,
+    950: #131314,
 );
 
 $yellow: (
@@ -92,12 +104,17 @@ $violet: (
 $blue: (
     100: #edeffb,
     200: #dbdef7,
+    250: #cacef4,
     300: #b8bdf0,
+    350: #a6adec,
     400: #949de8,
+    450: #828ce4,
     500: #717ce1,
     600: $brand-blue,
     700: #3e49ae,
+    750: #364098,
     800: #2e3782,
+    850: #272e6d,
     900: #1f2457,
 );
 

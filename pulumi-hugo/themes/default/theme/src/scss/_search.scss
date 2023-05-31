@@ -1,4 +1,100 @@
-@import "colors";
+.docs-type-nav-search {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    background-color: $white;
+    border-bottom: map-get($gray, 150) 1px solid;
+    border-top: none;
+    border-width: 1px 0px;
+
+    .docs-type-nav {
+        display: flex;
+        flex-direction: row;
+
+        a {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            padding: 11px 24px 12px 24px;
+            font-family: Gilroy;
+            font-weight: 500;
+            font-size: 16px;
+            border-bottom: 5px solid transparent;
+            color: map-get($gray, 650);
+
+            &.tab-selected {
+                border-bottom: 5px solid map-get($brand, "violet");
+                font-weight: 700;
+                color: map-get($gray, 950);
+                background-color: map-get($gray, 125);
+            }
+        }
+    }
+
+    .docs-search {
+        margin: 6px 24px 16px 24px;
+
+        @apply flex-grow;
+        border-bottom: 1px solid map-get($gray, 300);
+    
+        @screen md {
+            @apply flex-grow-0 justify-start;
+            border-bottom: none;
+        }
+        
+        .search-widget {
+            @apply w-full h-full p-0;
+    
+            @screen md {
+                width: 450px;
+            }
+    
+            @screen lg {
+                width: 600px;
+            }
+    
+            @screen xl {
+                @apply px-0;
+                width: 800px;
+            }
+    
+            #search-query {
+                font-family: "Gilroy" !important;
+                font-size: 16px;
+                font-weight: 500;
+                height: 7px;
+                line-height: 26px;
+            }
+    
+            form {
+                width: 100%;
+                @screen md {
+                    width: 346px;
+                }
+            }
+    
+            form > i {
+                font-size: 14px;
+            }
+    
+            form > button {
+                font-family: "Gilroy";
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+        padding: 0 16px;
+        border-top: 1px solid map-get($gray, 150);
+        background: map-get($gray, 112);
+
+        .docs-search {
+            margin: 0;
+        }
+    }
+}
 
 // Override the default styles of the Swiftype input field.
 .st-default-search-input {
@@ -41,7 +137,8 @@
 }
 
 // Override the default styles of the Swiftype autocomplete results container.
-.st-default-autocomplete {
+div.docs-type-nav-search .st-default-autocomplete,
+.section-blog .st-default-autocomplete {
     z-index: 40 !important; /* z-40 */
 
     // Swiftype's JS imperatively positions the autocomplete container in relation to the top-left
@@ -59,13 +156,13 @@
                 margin-bottom: 4px !important;
             }
             .st-ui-type-detail {
-                color: #4a5568 !important; /* text-gray-600 */
+                color: map-get($gray, 675) !important; /* text-gray-600 */
             }
         }
     }
 }
 
-div.search-header-container div.st-default-autocomplete {
+div.docs-type-nav-search .st-default-autocomplete {
     @screen md {
         top: 16px !important;
         left: -650px !important;
@@ -82,125 +179,6 @@ div.search-header-container div.st-default-autocomplete {
     .st-query-present, .st-query-not-present {
         span.st-ui-type-heading, .st-ui-pagination-link {
             color: $brand-blue !important;
-        }
-    }
-}
-
-.search-header-container {
-    background-color: map-get($gray, 100);
-    border-bottom: 1px solid #e5e5e9;
-    border-top: 1px solid #e5e5e9;
-
-    .tabs {
-        .tab {
-            align-items: center;
-            background-color: map-get($gray, 100);
-            color: map-get($gray, 500);
-            cursor: pointer;
-            display: flex;
-            font-family: "Gilroy";
-            font-size: 16px;
-            font-weight: 500;
-            justify-content: center;
-            line-height: 26px;
-            padding-bottom: 3px;
-            padding-left: 24px;
-            padding-right: 24px;
-            .tab-icon {
-                background-color: map-get($gray, 100);
-                padding-right: 10px;
-            }
-        }
-
-        .tab-selected {
-            align-items: center;
-            background-color: #F2F2F4;
-            border-bottom: 3px solid map-get($brand, "violet");
-            color: map-get($gray, 900);
-            cursor: pointer;
-            display: flex;
-            font-family: "Gilroy";
-            font-size: 16px;
-            font-weight: 700;
-            height: 50px;
-            justify-content: center;
-            line-height: 26px;
-            padding-left: 24px;
-            padding-right: 24px;
-            .tab-icon {
-                background-color: #F2F2F4;
-                padding-right: 10px;
-            }
-        }
-    }
-}
-
-.search-header {
-    @apply justify-center;
-
-    @screen md {
-        @apply justify-between;
-    }
-
-    @screen lg {
-        @apply mx-auto justify-start;
-    }
-
-    background-color: map-get($gray, 100);
-    
-    .search-container {
-        @apply flex-grow;
-        border-bottom: 1px solid map-get($gray, 300);
-
-        @screen md {
-            @apply flex-grow-0 justify-start;
-            border-bottom: none;
-        }
-        
-
-        background-color: map-get($gray, 100);
-        height: 50px;
-        padding-left: 16px;
-        padding-right: 16px;
-        
-        .search-widget {
-            @apply w-full h-full p-0;
-
-            @screen md {
-                width: 450px;
-            }
-
-            @screen lg {
-                width: 600px;
-            }
-
-            @screen xl {
-                @apply px-0;
-                width: 800px;
-            }
-
-            #search-query {
-                font-family: "Gilroy" !important;
-                font-size: 16px;
-                font-weight: 500;
-                height: 7px;
-                line-height: 26px;
-            }
-
-            form {
-                width: 100%;
-                @screen md {
-                    width: 346px;
-                }
-            }
-
-            form > i {
-                font-size: 14px;
-            }
-
-            form > button {
-                font-family: "Gilroy";
-            }
         }
     }
 }

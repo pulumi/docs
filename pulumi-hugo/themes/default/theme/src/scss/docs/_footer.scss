@@ -1,24 +1,11 @@
 footer.docs-footer {
-    margin-top: 48px;
     padding: 24px;
     border-top: 2px solid;
     border-image: linear-gradient(90deg, rgba(247, 191, 42, 0.3) 0%, rgba(242, 110, 126, 0.3) 18.23%, rgba(190, 81, 136, 0.3) 38.02%, rgba(138, 51, 145, 0.3) 53.65%, rgba(128, 90, 195, 0.3) 74.48%, rgba(118, 130, 244, 0.3)) 1;
     justify-content: space-between;
     gap: 40px;
-    
-    div.icon {
-        display: block;
-        text-indent: -9999px;
-    }
-
-    div.icon-24-24 {
-        width: 24px;
-        height: 24px;
-        background-size: 24px 24px;
-    }
 
     div.icon-pulumi-logo {
-        background: url(/images/docs/footer/pulumi-dark-logo.svg);
         margin-right: 12px;
     }
 

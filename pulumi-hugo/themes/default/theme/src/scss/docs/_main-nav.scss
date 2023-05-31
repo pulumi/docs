@@ -1,0 +1,137 @@
+#docs-main-nav {
+    scroll-behavior: smooth;
+}
+
+nav.main-nav {
+    @apply text-sm pb-8;
+
+    ul {
+        @apply list-none p-0;
+    }
+
+    li {
+        border-radius: 0 2px 2px 0;
+        border-left: transparent 3px solid;
+
+        &.active {
+            background-color: map-get($blue, 100);
+            border-left: map-get($blue, 750) 3px solid;
+            width: fit-content;
+    
+            &:hover {
+                text-decoration: none;
+                background-color: map-get($blue, 250);
+                color: map-get($blue, 850);
+                border-left: map-get($blue, 850) 3px solid;
+            }
+        }
+    }
+
+    a {
+        @apply py-0.5 px-1.5 rounded-sm;
+        color: map-get($blue, 750);
+
+        &:hover {
+            text-decoration: map-get($gray, 450) solid underline;
+            text-underline-offset: 6px;
+            color: map-get($blue, 750);
+        }
+    }
+
+    div.active a:hover,
+    li.active a:hover {
+        text-decoration: none;
+    }
+
+    div.toc-header {
+        font-size: 16px;
+        width: fit-content;
+        padding-right: 5px;
+
+        margin-top: 16px;
+        margin-bottom: 0;
+        border-left: transparent 3px solid;
+        border-radius: 0 2px 2px 0;
+
+        &.active {
+            background-color: map-get($blue, 100);
+            border-left: map-get($blue, 750) 3px solid;
+            width: fit-content;
+            text-decoration: none;
+
+            &:hover {
+                background-color: map-get($blue, 250);
+                color: map-get($blue, 850);
+                border-left: map-get($blue, 850) 3px solid;
+            }
+        }
+    }
+
+    div.toc-header,
+    li.sidenav-topic {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        margin-left: 8px;
+        margin-bottom: 16px;
+        margin-top: 16px;
+    }
+
+    .sidenav-subsection {
+        @apply mb-2 text-sm;
+        margin-left: 16px;
+    }
+
+    .top-level-container,
+    div.sidenav-subsection {
+        border-left: map-get($gray, 150) 1px solid;
+        margin-left: 8px;
+    }
+
+    .toggleButton, .toggleButton-topLevel {
+        @apply cursor-pointer;
+        color: map-get($gray, 950);
+        font-size: 11px;
+        position: relative;
+        top: -1px;
+        padding-right: 6px;
+    }
+
+    .toggle > .collapsed,
+    .toggleVisible > .expanded {
+        @apply visible;
+    }
+
+    .toggle > .expanded,
+    .toggleVisible > .collapsed {
+        @apply hidden;
+    }
+
+    .toggle-topLevel.toggle + .top-level-container {
+        display: none;
+    }
+
+    .toggle-topLevel.toggleVisible + .top-level-container {
+        display: block;
+    }
+
+    .toggle-topLevel.toggle {
+        .toggleButton-topLevel.down {
+            display: none;
+        }
+
+        .toggleButton-topLevel.right {
+            display: inline;
+        }
+    }
+
+    .toggle-topLevel.toggleVisible {
+        .toggleButton-topLevel.down {
+            display: inline;
+        }
+
+        .toggleButton-topLevel.right {
+            display: none;
+        }
+    }
+}

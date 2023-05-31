@@ -1,0 +1,103 @@
+<nav class="main-nav">
+    {{ if hasPrefix .RelPermalink "/docs/" }}
+        {{/* Render a top-level menu for our major docs sections */}}
+        {{ $toc_page := . }}
+        {{ $toc_sections := slice "Download & install" "Get started" "Clouds" "Concepts" "Pulumi Cloud" "Using Pulumi" "Languages & SDKs" "Pulumi CLI" "Support" }}
+        {{ $toc_menus := dict "Download & install" .Site.Menus.install "Get started" .Site.Menus.getstarted "Clouds" .Site.Menus.clouds "Concepts" .Site.Menus.concepts "Pulumi Cloud" .Site.Menus.pulumicloud "Using Pulumi" .Site.Menus.usingpulumi "Languages & SDKs" .Site.Menus.languages "Pulumi CLI" .Site.Menus.cli "Support" .Site.Menus.support }}
+
+        {{ range $index, $element := $toc_sections }}
+            {{ $sidenav_selected := "" }}
+            {{ $toc_name := . }}
+            {{ $toc_menu := (index $toc_menus $toc_name) }}
+
+            {{ $toc_section_link := "" }}
+            {{ range $toc_menu }}
+                {{ if (eq .Name "Overview") }}
+                    {{ $toc_section_link = .URL }}
+                {{ end }}
+            {{ end }}
+
+            {{ if (eq $.Page.RelPermalink $toc_section_link) }}
+                {{ $sidenav_selected = "active" }}
+            {{ end }}
+
+            {{ $toggle_class := "toggle" }}
+            {{ if or (hasPrefix $.Page.RelPermalink $toc_section_link) (eq $toc_name "Clouds") }}
+                {{ $toggle_class = "toggleVisible " }}
+            {{ end }}
+            {{ if eq $.Page.RelPermalink $toc_section_link }}
+                {{ $sidenav_selected = "active" }}
+            {{ end }}
+            <div id="toc-menu-{{ $toc_name }}" class="{{ $sidenav_selected }} no-anchor toc-header toggle-topLevel {{ $toggle_class }}" id="{{ $toc_name | urlize }}-toc-header">
+                <a href="{{ $toc_section_link }}">{{ $toc_name }}</a>
+                {{ if and ($toc_section_link) (ne $toc_name "Get started") }}
+                    <span class="toggleButton-topLevel down">
+                        <div class="icon icon-14-14 keyboard-arrow-down-gray-14-14"></div>
+                    </span>
+                    <span class="toggleButton-topLevel right">
+                        <div class="icon icon-14-14 keyboard-arrow-right-gray"></div>
+                    </span>
+                {{ end }}
+            </div>
+
+            <div class="top-level-container">
+                {{ template "toc" (dict "page" $toc_page "menu" $toc_menu) }}
+            </div>
+        {{ end }}
+    {{ end }}
+
+    {{ define "toc" }}
+        {{ $page := .page }}
+
+        {{ range .menu }}
+            {{/* Note that we skip "Overview" pages, since they are linked to from above */}}
+            {{ if or (ne .Name "Overview") }}
+                {{ $toggle_state := "toggle" }}
+                {{ $sidenav_selected := "" }}
+
+                {{ if or (eq $page.RelPermalink .URL) (and (not .HasChildren) (hasPrefix $page.RelPermalink .URL) (ne .Name "Troubleshooting")) }}
+                    {{ $toggle_state = "toggleVisible" }}
+                    {{ $sidenav_selected = "active" }}
+                {{ else if hasPrefix $page.RelPermalink .URL }}
+                    {{ $toggle_state = "toggleVisible" }}
+                {{ end }}
+
+                {{ $filepath := .URL }}
+                <ul id="toc-expandable-menu{{ replace $filepath "/" "-" }}" class="{{ $toggle_state }}">
+                    <ul class="collapsed">
+                        <li class="sidenav-topic {{ $sidenav_selected }}">
+                            {{ if or (eq .URL "https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi")
+                                (eq .URL "https://github.com/pulumi/pulumi-java/tree/main/sdk/java")
+                                (eq .URL "https://www.pulumi.com/docs/reference/pkg/dotnet/Pulumi/Pulumi.html")
+                            }}
+                                <a href="{{ .URL }}" target="_blank" data-track="toc-{{ .Name | urlize }}">{{ .Name }}</a>
+                            {{ else }}
+                                <a href="{{ .URL }}" data-track="toc-{{ .Name | urlize }}">{{ .Name }}</a>
+                            {{ end }}
+                            {{ if .HasChildren }}
+                                <span class="toggleButton">
+                                    <div class="icon icon-14-14 keyboard-arrow-right-gray"></div>
+                                </span>
+                            {{ end }}
+                        </li>
+                    </ul>
+                    <ul class="expanded">
+                        <li class="sidenav-topic {{ if .HasChildren }}sidenav-parent{{ end }} {{ $sidenav_selected }}">
+                            <a href="{{ .URL }}" data-track="toc-{{ .Name | urlize }}">{{ .Name }}</a>
+                            {{ if .HasChildren }}
+                                <span class="toggleButton">
+                                    <div class="icon icon-14-14 keyboard-arrow-down-gray-14-14"></div>
+                                </span>
+                            {{ end }}
+                        </li>
+                        {{ if .HasChildren }}
+                            <div class="sidenav-subsection">
+                                {{ template "toc" (dict "page" $page "menu" .Children) }}
+                            </div>
+                        {{ end }}
+                    </ul>
+                </ul>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+</nav>

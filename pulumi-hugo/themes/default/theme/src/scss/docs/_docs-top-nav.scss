@@ -136,38 +136,4 @@ nav.actually-docs {
             }
         }
     }
-
-    div.icon {
-        display: block;
-        text-indent: -9999px;
-    }
-
-    div.icon-14-14 {
-        width: 14px;
-        height: 14px;
-        background-size: 14px 14px;   
-        position: relative;
-    }
-
-    div.icon-16-16 {
-        width: 16px;
-        height: 16px;
-        background-size: 16px 16px;   
-        position: relative;
-    }
-
-    div.robot-outline {
-        background: url(/images/docs/icons/robot-outline.svg);
-        top: -1px;
-    }
-
-    div.book-outline {
-        background: url(/images/docs/icons/book-outline.svg);
-        top: -1px;
-    }
-
-    div.packages-outline {
-        background: url(/images/docs/icons/packages-outline.svg);
-        top: -1px;
-    }
 }

@@ -80,7 +80,7 @@ function bindToggles(selector) {
 }
 
 function generateOnThisPage() {
-    var $ul = $(".table-of-contents > .content > ul");
+    var $ul = $(".table-of-contents .content ul.table-of-contents-list");
     if ($ul) {
         var found = false;
         var headings = [];

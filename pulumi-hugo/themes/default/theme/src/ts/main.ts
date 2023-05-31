@@ -20,6 +20,7 @@ import "./pricing-trial";
 import "./developer-advocates";
 import "./toc";
 import "./ai";
+import "./docs-main";
 
 // Register all Stencil components.
 defineCustomElements();

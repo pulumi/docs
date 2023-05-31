@@ -1,44 +1,34 @@
-<div class="search-header-container">
-    <div class="search-header flex-col-reverse md:flex-row lg:container flex flex-1 justify-between">
-        <div class="flex xl:w-3/12 px-4 lg:px-8 xl:px-5">
-            <div class="flex tabs">
-                {{ $mode := .Scratch.Get "mode" }}
-                {{ if eq "docs" $mode }}
-                    <a class="tab-selected" href="/docs">
-                        <img class="tab-icon" src="/icons/docs.svg" />
-                        Docs
-                    </a>
-                    <a class="tab" href="/registry">
-                        <img class="tab-icon" src="/icons/registry-light.svg" />
-                        Packages
-                    </a>
-                {{ else }}
-                    <a class="tab" href="/docs">
-                        <img class="tab-icon" src="/icons/docs-light.svg" />
-                        Docs
-                    </a>
-                    <a class="tab-selected" href="/registry">
-                        <img class="tab-icon" src="/icons/registry.svg" />
-                        Packages
-                    </a>
-                {{ end }}
-            </div>
-            <div class=" items-center transition-all hidden">
-                <img class="h-6 mr-12" src="/images/logo/logo-on-white.svg" alt="Pulumi logo" />
-                <div class="get-started-pinned-search-container">
-                    <a class="get-started-pinned-search-button" data-track="get-started-pinned-search" href="">Get Started</a>
-                </div>
-            </div>
-        </div>
-        <div id="search-container" class="search-container bg-white mt-2 md:mt-0 md:flex md:justify-center lg:ml-6 py-0">
-            <div id="search-form" class="search-widget text-gray-600 focus-within:text-gray-700 py-0 md:flex justify-center md:justify-end items-center">
-                <form class="relative flex">
-                    <i class="fas fa-search absolute inset-y-0 flex items-center pl-3"></i>
-                    <input id="search-query" type="text" class="st-default-search-input docs text-sm transition" placeholder="Search..." />
-                    <button type="submit" class="hidden md:block bg-blue-600 font-display font-normal text-lg text-white p-1.5 px-4 rounded-r">Search</button>
-                </form>
-                <div id="search-results" class="relative"></div>
-            </div>
+<div class="docs-type-nav-search">
+    <div class="docs-type-nav">
+        {{ $mode := .Scratch.Get "mode" }}
+        {{ if eq "docs" $mode }}
+            <a class="tab-selected" href="/docs">
+                <img class="tab-icon" src="/icons/docs.svg" />
+                Docs
+            </a>
+            <a class="tab" href="/registry">
+                <img class="tab-icon" src="/icons/registry-light.svg" />
+                Packages
+            </a>
+        {{ else }}
+            <a class="tab" href="/docs">
+                <img class="tab-icon" src="/icons/docs-light.svg" />
+                Docs
+            </a>
+            <a class="tab-selected" href="/registry">
+                <img class="tab-icon" src="/icons/registry.svg" />
+                Packages
+            </a>
+        {{ end }}
+    </div>
+    <div id="search-container" class="docs-search">
+        <div id="search-form" class="search-widget text-gray-600 focus-within:text-gray-700 py-0 md:flex justify-center md:justify-end items-center">
+            <form class="relative flex">
+                <i class="fas fa-search absolute inset-y-0 flex items-center pl-3"></i>
+                <input id="search-query" type="text" class="st-default-search-input docs text-sm transition" placeholder="Search..." />
+                <button type="submit" class="hidden md:block bg-blue-600 font-display font-normal text-lg text-white p-1.5 px-4 rounded-r">Search</button>
+            </form>
+            <div id="search-results" class="relative"></div>
         </div>
     </div>
 </div>
