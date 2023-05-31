@@ -20,6 +20,12 @@ function minifyCSS(filePath) {
         // https://purgecss.com/
         purgecss({
             content: [ "public/**/*.html", "public/js/bundle.*.js" ],
+            // PurgeCSS looks through all the built files but, making an exception here
+            // to skip the files in the azure-native-v2 package because it is causing
+            // out of memory errors with all the new files added from the package. This
+            // should not affect the minified bundle, since there isn't any new css being
+            // used for this package that wouldn't already be in the bundle.
+            skippedContentGlobs: ["public/registry/packages/azure-native-v2/**/*"],
             css: [
                 bundlePath,
             ],
