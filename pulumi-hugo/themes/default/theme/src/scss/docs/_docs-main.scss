@@ -408,6 +408,13 @@ body.section-registry {
             border-bottom: 1px solid #dcdcdc;
         }
 
+        .icon-heading-wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            align-items: center;
+        }
+
         div.heading {
             display: flex;
             gap: 8px;
@@ -509,6 +516,14 @@ body.section-registry {
             label {
                 margin-bottom: 24px;
             }
+        }
+    }
+}
+
+body.section-registry {
+    div#accordion-table-of-contents {
+        div.heading {
+            margin-bottom: 24px;
         }
     }
 }
