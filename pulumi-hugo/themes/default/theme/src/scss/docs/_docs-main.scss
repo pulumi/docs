@@ -246,7 +246,6 @@ body.section-registry {
 
     .docs-main-content-wrapper {
         display: flex;
-        flex-direction: column-reverse;
         gap: 0;
         justify-content: center;
         flex-grow: 2;
@@ -257,10 +256,15 @@ body.section-registry {
         .docs-main-content {
             min-width: 0;
             flex-shrink: 1;
-            max-width: 634px;
+            max-width: 700px;
             min-width: 0;
             margin: 32px 24px 0 16px;
             padding-bottom: 24px;
+
+            @media (min-width: 1024px) {
+                max-width: 634px;
+                flex-direction: column;
+            }
     
             @media (min-width: 1280px) {
                 margin-left: 24px;

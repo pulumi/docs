@@ -5,7 +5,7 @@
     background-color: $white;
     border-bottom: map-get($gray, 150) 1px solid;
     border-top: none;
-    border-width: 1px 0px;
+    border-width: 1px;
 
     .docs-type-nav {
         display: flex;
