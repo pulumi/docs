@@ -79,7 +79,7 @@ main:
     # A bullet point list containing what the user will learn during the webinar.
     learn:
         - How to get started with NoSQL using Redis Cloud.
-        - Defining and deploying Redis Cloud resources using popular programming langauges 
+        - Defining and deploying Redis Cloud resources using popular programming languages 
         - How to use Pulumi and Redis together.
 
 form:
