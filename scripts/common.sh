@@ -28,8 +28,7 @@ post_github_pr_comment() {
     local pr_comment_api_url=$2
     local pr_comment_body=$(printf '{ "body": "%s" }' "$pr_comment")
 
-    curl -s \
-         -X POST \
+    curl -X POST \
          -H "Authorization: token ${GITHUB_TOKEN}" \
          -d "$pr_comment_body" \
          $pr_comment_api_url > /dev/null
