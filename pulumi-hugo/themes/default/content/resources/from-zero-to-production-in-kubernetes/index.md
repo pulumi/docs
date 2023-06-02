@@ -1,13 +1,13 @@
 ---
 # Name of the webinar.
 title: "From Zero to Production in Kubernetes"
-meta_desc: "Go from Zero to Production on Kubernetes using Python to build abstractions and MARA - Modern Application Reference Architecture."
+meta_desc: "Explore how to leverage the power of Python with Pulumi, an infrastructure as code platform to define and manage your Kubernetes deployments."
 
 # A featured webinar will display first in the list.
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: true
+pre_recorded: false
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -48,37 +48,37 @@ main:
     # Webinar title.
     title: "From Zero to Production in Kubernetes"
     # URL for embedding a URL for ungated webinars.
-    youtube_url: "https://www.youtube.com/embed/DPp4veSBUr0?rel=0"
+    youtube_url: #"https://www.youtube.com/embed/DPp4veSBUr0?rel=0"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-01-18T09:00:00-08:00
+    sortable_date: 2023-07-20T09:00:00-07:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.
     datetime: ""
     # Description of the webinar.
     description: |
-        Setting up your production Kubernetes environment brings many benefits including scalability and portability for your applications. Before you reach production, It’s important to understand key Kubernetes concepts and architectures available to keep your clusters secure and scalable. Ingress controllers are vital parts of any Kubernetes platform and NGINX ingress controller provides the best in class traffic management solution for cloud native apps and containerized environments.
+      Setting up your production Kubernetes environment brings many benefits including scalability and portability for your applications. Before you reach production, It’s important to understand key Kubernetes concepts and architectures available to keep your clusters secure and scalable. Ingress controllers are vital parts of any Kubernetes platform and NGINX ingress controller provides the best-in-class traffic management solution for cloud native apps and containerized environments.
 
-        It’s important to use repeatable mechanisms to handle your ingress objects and controller deployments. Adopting infrastructure as code provides a mechanism to easily deploy production-ready applications in a repeatable manner. In this workshop, we’ll explore how to leverage the power of Python with Pulumi, an infrastructure as code platform to define and manage your Kubernetes deployments and build powerful abstractions that make getting to production easier than ever before.
+      It’s important to use repeatable mechanisms to handle your ingress objects and controller deployments. Adopting infrastructure as code provides a mechanism to easily deploy production-ready applications in a repeatable manner. In this livestream, we’ll explore how to leverage the power of Python with Pulumi, an infrastructure as code platform to define and manage your Kubernetes deployments and build powerful abstractions that make getting to production easier than ever before.
 
 
     # The webinar presenters
     presenters:
         - name: Josh Kodroff
           role: Senior Solutions Architect, Pulumi
-        - name: Javier Evans
-          role: Solutions Architect, F5/NGINX
+        - name: Damian Curry
+          role: Business Development Technical Director, F5/NGINX
         - name: Jason Schmidt
           role: Senior Solutions Architect, F5/NGINX
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - How to stand up Kubernetes including Amazon VPC, Amazon EKS and other dependencies.
+        - How to stand up Kubernetes including Amazon VPC, Amazon EKS, and other dependencies.
         - Setting up your ingress controller.
-        - Deploying an app to your cluster.
+        - Deploying an app into your cluster.
 
 # The right hand side form section.
 form:
-    salesforce_campaign_id: "701Du0000009YQcIAM"
-    hubspot_form_id: "2c4b8842-c297-425b-9123-32b694e85153"
+    salesforce_campaign_id: "701Du000000AXPXIA4"
+    hubspot_form_id: "56761901-9c1d-43c3-9f4b-bef5a524847b"
 ---
