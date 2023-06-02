@@ -32,6 +32,7 @@ authors:
 # Lowercase, hyphen-delimited is recommended.
 tags:
     - azure
+    - security
 
 ---
 
