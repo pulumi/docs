@@ -34,7 +34,7 @@ In order to follow along with this example you will need to have the following:
 * Access to an Azure account to provision the infrastructure
 * Static site to upload
 
-See our [getting started](/docs/clouds/azure/get-started/begin/) guide for information on how to configure Pulumi and Azure.
+See our [getting started](/docs/clouds/azure/get-started/) guide for information on how to configure Pulumi and Azure.
 
 We will provision a number of pieces of infrastructure in Azure to enable serving our static website. The main ones are a Storage Account to contain all of our website files and a CDN. Let’s start by creating a new Pulumi project. First, create a new directory on your machine where the Pulumi project will live. A common pattern is to include the infrastructure configuration in a directory alongside the website you will be deploying. You can create a directory called `infrastructure` to house the Pulumi program or you can use another name if you prefer. This allows us to easily reference the location of the contents of your site as well as keeps your infrastructure code along-side your application. Pulumi supports multiple programming languages such as TypeScript, Python, Go, .NET, and even markup languages like YAML. Once you have created the directory, run the following command for your language of choice inside the directory:
 

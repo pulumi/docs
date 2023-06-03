@@ -203,4 +203,4 @@ If you’re curious and want to learn more about Pulumi and the AWS Static Websi
 
 ## <a name="install"></a> Install Pulumi
 
-To install Pulumi for AWS, go to [Before You Begin](/docs/clouds/aws/get-started/begin/). There are instructions for macOS, Windows and Linux. You need to have an AWS account.
+To install Pulumi for AWS, go to [Before You Begin](/docs/clouds/aws/get-started/). There are instructions for macOS, Windows and Linux. You need to have an AWS account.

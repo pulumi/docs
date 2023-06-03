@@ -144,7 +144,7 @@ export const kubeconfig = cluster.kubeconfig;
 
 ## Build!
 
-Let’s put it all together for both ECS and EKS. To get started, follow the [Pulumi AWS documentation](/docs/clouds/aws/get-started/) to install Pulumi, [install AWS Client](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv1.html) set your [AWS environment variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html), and [create a new project](/docs/clouds/aws/get-started/create-project/) in Typescript.
+Let’s put it all together for both ECS and EKS. To get started, follow the [Pulumi AWS documentation](/docs/clouds/aws/get-started/) to install Pulumi, [install AWS Client](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv1.html) set your [AWS environment variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html), and [create a new project](/docs/clouds/aws/get-started/) in Typescript.
 
 ```bash
 $ mkdir quickstart && cd quickstart

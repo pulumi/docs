@@ -45,7 +45,7 @@ Plan in place, we can kick things off by creating a new Pulumi project.
 
 ## Create a new TypeScript project
 
-Start by creating a new AWS TypeScript project [in the usual way](/docs/clouds/aws/get-started/create-project?language=nodejs):
+Start by creating a new AWS TypeScript project [in the usual way](/docs/clouds/aws/get-started/):
 
 ```bash
 $ mkdir audichron-2022 && cd audichron-2022
