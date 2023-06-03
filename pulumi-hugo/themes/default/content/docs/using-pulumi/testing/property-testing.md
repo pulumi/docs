@@ -1,5 +1,5 @@
 ---
-title_tag: "Using Pulumi: Property Testing for Pulumi Programs"
+title_tag: "Property Testing for Pulumi Programs"
 meta_desc: "Guide to property testing of Pulumi programs with Policy as Code (CrossGuard)."
 title: Property testing
 h1: Property testing for Pulumi programs

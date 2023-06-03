@@ -1,5 +1,5 @@
 ---
-title_tag: "Pulumi Cloud: Self-hosted deployment options"
+title_tag: "Self-hosted Deployment Options for Pulumi Cloud"
 meta_desc: Self-hosted Pulumi Cloud deployment options for your every day needs.
 title: Deployment options
 h1: Pulumi Cloud self-hosting deployment options

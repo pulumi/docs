@@ -1,5 +1,5 @@
 ---
-title_tag: "Pulumi concepts: state and backends"
+title_tag: "State and Backends | Pulumi Concepts"
 meta_desc: Learn about how Pulumi handles your infrastructure state files and supported backend options for these state files.
 title: "State & backends"
 h1: Managing state & backend options

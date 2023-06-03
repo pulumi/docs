@@ -1,5 +1,5 @@
 ---
-title_tag: "Pulumi concepts: Projects"
+title_tag: "Projects | Pulumi Concepts"
 meta_desc: A Pulumi project is any folder which contains a Pulumi.yaml file. Learn about how to use Pulumi projects, as well as example use cases.
 title: Projects
 h1: Projects

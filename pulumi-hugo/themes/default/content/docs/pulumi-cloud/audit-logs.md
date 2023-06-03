@@ -1,5 +1,5 @@
 ---
-title_tag: "Pulumi Cloud audit logs"
+title_tag: "Pulumi Cloud: Audit Logs"
 meta_desc: Pulumi’s audit logs allow you to account for user activity within your organization. Learn how to view, interpret, and export audit logs here.
 title: "Audit Logs"
 h1: Pulumi Cloud audit logs

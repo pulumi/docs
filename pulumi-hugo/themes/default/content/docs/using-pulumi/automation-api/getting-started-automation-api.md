@@ -1,5 +1,5 @@
 ---
-title_tag: "Using Pulumi: Getting Started with Automation API"
+title_tag: "Getting Started with Automation API"
 meta_desc: This page contains a getting started guide for Automation API.
 title: Get started
 h1: Get started with Automation API

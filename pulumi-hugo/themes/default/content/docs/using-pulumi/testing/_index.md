@@ -1,5 +1,5 @@
 ---
-title_tag: "Using Pulumi: Testing Pulumi programs"
+title_tag: "Testing Pulumi Programs"
 meta_desc: "Guide to automated testing of Pulumi programs: unit testing, property testing, integration testing."
 title: Testing
 h1: Testing Pulumi programs

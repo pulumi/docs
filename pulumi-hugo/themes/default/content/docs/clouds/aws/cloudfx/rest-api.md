@@ -1,5 +1,6 @@
 ---
 title: "Serverless REST API"
+title_tag: "Build a Serverless REST API"
 meta_desc: "This tutorial will teach you how to build and deploy a Serverless REST API with DynamoDB on AWS that counts the number of times a route has hit."
 aliases:
 - /docs/quickstart/cloudfx/tutorial-rest-api/

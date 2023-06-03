@@ -1,5 +1,5 @@
 ---
-title_tag: "Using Pulumi: Understanding the Schema for Pulumi packages"
+title_tag: "Schema for Pulumi Packages"
 meta_desc: This page describes the schema for a Pulumi Package, describing the resources, functions and types
            that define a Pulumi Package.
 title: Schema

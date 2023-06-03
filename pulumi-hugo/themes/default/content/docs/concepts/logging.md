@@ -1,5 +1,5 @@
 ---
-title_tag: "Pulumi concepts: Logging"
+title_tag: "Logging | Pulumi Concepts"
 meta_desc: An overview of the Pulumi logging functionality used for debugging and diagnostics.
 title: "Logging"
 h1: "Logging"

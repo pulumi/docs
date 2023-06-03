@@ -1,5 +1,5 @@
 ---
-title_tag: "Pulumi concepts: transformations resource option"
+title_tag: "transformations | Resource Options"
 meta_desc: The transformations resource option provides a list of transformations to apply to a resource and all of its children.
 title: "transformations"
 h1: "Resource option: transformations"

@@ -1,5 +1,5 @@
 ---
-title_tag: "Pulumi languages & SDKs: Pulumi YAML reference"
+title_tag: "Pulumi YAML Reference | Languages & SDKs"
 meta_desc: Specification for the Pulumi YAML format and built-in functions
 title: Reference
 h1: Pulumi YAML reference

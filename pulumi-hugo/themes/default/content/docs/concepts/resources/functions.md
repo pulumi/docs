@@ -1,5 +1,5 @@
 ---
-title_tag: "Pulumi concepts: Provider Functions"
+title_tag: "Provider Functions"
 meta_desc: A provider may make functions ("provider functions") available in its SDK as well as resource types. Learn how these provider functions work in this guide.
 title: Provider functions
 h1: Provider functions

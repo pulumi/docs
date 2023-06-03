@@ -1,5 +1,5 @@
 ---
-title_tag: "Using Pulumi: Contributing to packages to Pulumi Registry"
+title_tag: "Contribute Packages to Pulumi Registry"
 meta_desc: Enable your customers to manage your cloud resources with Pulumi. Share opinionated cloud components that quickly stand up well-architected cloud architectures.
 title: Contribute packages
 h1: Contribute packages to Pulumi Registry

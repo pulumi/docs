@@ -1,5 +1,5 @@
 ---
-title_tag: "Adopting Pulumi: Importing resources"
+title_tag: "Import Existing Cloud Infrastructure"
 meta_desc: Learn how to import existing cloud infrastructure into Pulumi no matter how it was provisioned.
 title: "Import resources"
 h1: "Importing resources"

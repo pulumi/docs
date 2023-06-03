@@ -1,5 +1,5 @@
 ---
-title_tag: Accessing Created Kubernetes Cluster | Crosswalk
+title_tag: Access Created Kubernetes Cluster | Crosswalk
 meta_desc: This page provides a guide on how to try out a newly created Kubernetes cluster.
 title: Access clusters
 h1: Accessing Kubernetes clusters

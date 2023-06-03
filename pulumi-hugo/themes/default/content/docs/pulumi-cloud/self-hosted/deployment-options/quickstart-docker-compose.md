@@ -1,5 +1,5 @@
 ---
-title_tag: Quickstart Docker Compose Install | Self-Hosting Pulumi
+title_tag: Quickstart Docker Compose | Self-Hosting Pulumi 
 meta_desc: Quickstart Docker compose installer for testing of the self-hosted Pulumi Cloud.
 title: Docker Compose
 h1: Pulumi Cloud self-hosted Docker Compose install

@@ -1,5 +1,6 @@
 ---
 title: "Build a Container"
+title_tag: "Build & Deploy a Container"
 meta_desc: "This tutorial will teach you how to build and deploy a simple Dockerized application to AWS or Azure using Pulumi Cloud Framework."
 aliases:
 - /docs/quickstart/cloudfx/tutorial-service/

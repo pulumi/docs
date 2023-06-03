@@ -1,5 +1,5 @@
 ---
-title_tag: "Using Pulumi: Continuous Delivery for the cloud"
+title_tag: "Continuous Delivery for the Cloud"
 meta_desc: Pulumi's approach to infrastructure as code is great for CI/CD because it uses source code to model cloud resources and integrates into any CI/CD system.
 title: Continuous Delivery
 h1: Pulumi & Continuous delivery

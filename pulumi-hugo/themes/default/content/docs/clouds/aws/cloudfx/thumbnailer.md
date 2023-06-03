@@ -1,5 +1,6 @@
 ---
 title: "Video Thumbnail Extractor"
+title_tag: "Build a Video Thumbnail Extractor"
 meta_desc: "Learn how to build a video thumbnail extractor using serverless, containers, and cloud infrastructure in this tutorial."
 aliases:
 - /docs/quickstart/cloudfx/tutorial-thumbnailer/

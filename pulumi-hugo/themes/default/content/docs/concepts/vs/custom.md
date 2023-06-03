@@ -1,5 +1,5 @@
 ---
-title_tag: "Pulumi concepts: Pulumi vs. custom IaC solutions"
+title_tag: "Pulumi vs. Custom IaC Solutions"
 meta_desc: Learn about the major differences between Pulumi and custom infrastructure as code solutions.
 title: Custom Solutions
 h1: Pulumi vs custom infra-as-code solutions

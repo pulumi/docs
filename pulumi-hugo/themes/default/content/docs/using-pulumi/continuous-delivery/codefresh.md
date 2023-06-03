@@ -1,5 +1,5 @@
 ---
-title_tag: "Using Pulumi: Codefresh | CI/CD"
+title_tag: "Using Codefresh | CI/CD"
 meta_desc: This page will walk you through setting up Codefresh CI/CD with a Pulumi program.
 title: Codefresh
 h1: Pulumi CI/CD & Codefresh

@@ -1,5 +1,5 @@
 ---
-title_tag: "Pulumi languages & SDKs: Java"
+title_tag: "Java | Languages & SDKs"
 meta_desc: An overview of how to use the Java language with Pulumi for infrastructure as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
 title: Java
 h1: Pulumi & Java

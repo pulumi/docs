@@ -1,5 +1,5 @@
 ---
-title_tag: "Using Pulumi: Organizing projects & stacks"
+title_tag: "Organizing Projects & Stacks"
 meta_desc: An overview of best practices when organizing and structuring cloud projects and stacks.
 title: Organizing projects
 h1: Organizing Pulumi projects & stacks

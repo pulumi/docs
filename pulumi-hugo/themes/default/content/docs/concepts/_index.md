@@ -1,5 +1,5 @@
 ---
-title_tag: Pulumi concepts
+title_tag: Pulumi Concepts
 meta_desc: Learn about the basic overall structure and major components of Pulumi here, along with an example of how to create an AWS EC2 security group.
 title: Concepts
 h1: Pulumi concepts

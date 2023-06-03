@@ -1,5 +1,5 @@
 ---
-title_tag: "Pulumi concepts: Secrets"
+title_tag: "Secrets | Pulumi Concepts"
 meta_desc: This page provides an overview of how Pulumi manages sensitive configuration data using secrets.
 title: Secrets
 h1: Secrets

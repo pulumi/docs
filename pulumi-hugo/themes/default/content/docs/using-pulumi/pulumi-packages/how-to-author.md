@@ -1,5 +1,5 @@
 ---
-title_tag: "Using Pulumi: Authoring & Publishing Pulumi Packages"
+title_tag: "How to Author & Publish Pulumi Packages"
 meta_desc: "Learn how to create a Pulumi Package: create a Native Provider, author a Component, or bridge a Terraform provider into the Pulumi ecosystem."
 title: Author packages
 h1: Author packages in Pulumi Registry

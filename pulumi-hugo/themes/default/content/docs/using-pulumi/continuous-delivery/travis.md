@@ -1,5 +1,5 @@
 ---
-title_tag: "Using Pulumi: Travis CI | CI/CD"
+title_tag: "Using Travis CI | CI/CD"
 meta_desc: This page details how to use Travis CI to manage deploying
            staging and production stacks based on commits to specific Git branches.
 title: Travis CI

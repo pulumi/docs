@@ -1,5 +1,5 @@
 ---
-title_tag: "Using Pulumi: CircleCI | CI/CD"
+title_tag: "Using CircleCI | CI/CD"
 meta_desc: This page details how to use CircleCI CI/CD to deploy Pulumi stacks.
 title: CircleCI
 h1: Pulumi CI/CD & CircleCI

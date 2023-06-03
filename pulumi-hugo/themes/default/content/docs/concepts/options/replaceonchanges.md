@@ -1,5 +1,5 @@
 ---
-title_tag: "Pulumi concepts: replaceOnChanges resource option"
+title_tag: "replaceOnChanges | Resource Options"
 meta_desc: The replaceOnChanges resource option indicates that changes to properties on a resource should force a replacement instead of an in-place update.
 title: "replaceOnChanges"
 h1: "Resource option: replaceOnChanges"

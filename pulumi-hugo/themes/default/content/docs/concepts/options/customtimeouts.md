@@ -1,5 +1,5 @@
 ---
-title_tag: "Pulumi concepts: customTimeouts resource option"
+title_tag: "customTimeouts | Resource Options"
 meta_desc: The customTimeouts resource option specifies the default retry/timeout behavior for resource provisioning.
 title: "customTimeouts"
 h1: "Resource option: customTimeouts"

@@ -1,5 +1,5 @@
 ---
-title_tag: "Using Pulumi: Adopting Pulumi"
+title_tag: "Adopting Pulumi"
 meta_desc: Learn how Pulumi compares to other solutions, how to migrate to Pulumi, use converters to convert your code to Pulumi, and import resources to Pulumi.
 title: Adopting Pulumi
 h1: Adopting Pulumi

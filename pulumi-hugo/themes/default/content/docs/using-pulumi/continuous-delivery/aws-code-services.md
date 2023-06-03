@@ -1,5 +1,5 @@
 ---
-title_tag: "Using Pulumi: AWS Code Services | CI/CD"
+title_tag: "Using AWS Code Services | CI/CD"
 meta_desc: This page provides an overview of how to use Pulumi with Amazon Code
            Services CI/CD tools.
 title: AWS Code Services

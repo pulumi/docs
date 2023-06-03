@@ -1,5 +1,5 @@
 ---
-title_tag: "Using Pulumi: Integrating Google Cloud Build | CI/CD"
+title_tag: "Integrate Google Cloud Build | CI/CD"
 meta_desc: This page gives an overview of how to integrate Google Cloud Build with a Pulumi program.
 title: Google Cloud Build
 h1: Pulumi CI/CD & Google Cloud Build

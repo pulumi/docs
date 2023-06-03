@@ -1,5 +1,5 @@
 ---
-title_tag: Configuring OpenID Connect for AWS | OIDC
+title_tag: Configure OpenID Connect for AWS | OIDC
 meta_desc: This page describes how to configure OIDC token exchange in AWS for use with Pulumi Deployments
 title: AWS
 h1: Configuring OpenID Connect for AWS

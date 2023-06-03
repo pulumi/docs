@@ -1,5 +1,5 @@
 ---
-title_tag: "Using Pulumi: Troubleshooting CI | CI/CD"
+title_tag: "Troubleshooting CI | CI/CD"
 meta_desc: This page walks through the common failures encountered while running Pulumi in CI, as well as tips on how to fix them.
 title: Troubleshooting
 h1: Troubleshooting Pulumi CI/CD

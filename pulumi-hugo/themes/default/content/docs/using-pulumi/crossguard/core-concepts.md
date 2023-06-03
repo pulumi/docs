@@ -1,5 +1,5 @@
 ---
-title_tag: "Using Pulumi: Concepts | CrossGuard"
+title_tag: "Core Concepts | CrossGuard"
 meta_desc: This page contains an overview of core concepts when interacting with Pulumi CrossGuard and
            Policy Pack.
 title: Concepts

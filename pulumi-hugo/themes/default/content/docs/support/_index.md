@@ -1,5 +1,5 @@
 ---
-title_tag: Pulumi support overview
+title_tag: "Pulumi Support Overview"
 meta_desc: Pulumi is here to help! Try reviewing our troubleshooting or FAQ docs, or reach out to support.
 title: Support
 h1: Pulumi support overview

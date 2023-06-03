@@ -1,5 +1,5 @@
 ---
-title_tag: "Using Pulumi: GitHub Actions | CI/CD"
+title_tag: "Using Pulumi GitHub Actions | CI/CD"
 meta_desc: Pulumi's Github Actions help you deploy apps and infrastructure to your cloud of
            choice, using nothing but code in your favorite language and GitHub.
 title: GitHub Actions

@@ -1,5 +1,5 @@
 ---
-title_tag: "Adopting Pulumi: Migrating from Azure Resource Manager to Pulumi"
+title_tag: "Migrating from Azure Resource Manager"
 meta_desc: Migrate your existing Azure Resource Manager (ARM) templates and/or coexist with existing deployments.
 title: Azure Resource Manager
 h1: Migrating from Azure Resource Manager to Pulumi

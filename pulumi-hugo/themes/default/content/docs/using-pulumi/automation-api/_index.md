@@ -1,5 +1,5 @@
 ---
-title_tag: "Using Pulumi: Automation API Guides"
+title_tag: "Automation API Guides"
 meta_desc: The Pulumi Automation API is a programmatic interface for running Pulumi programs without the Pulumi CLI. View our Automation API guides here.
 title: Automation API
 h1: Automation API

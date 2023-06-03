@@ -1,5 +1,5 @@
 ---
-title_tag: "Using Pulumi: Automation API concepts & terminology"
+title_tag: "Automation API Concepts & Terminology"
 meta_desc: This page contains an overview of core concepts when using Automation API.
 title: Concepts
 h1: Automation API concepts & terminology

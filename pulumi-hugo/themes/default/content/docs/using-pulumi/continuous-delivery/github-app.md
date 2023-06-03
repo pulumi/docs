@@ -1,5 +1,5 @@
 ---
-title_tag: "Using Pulumi: GitHub App | CI/CD"
+title_tag: "Using Pulumi GitHub App | CI/CD"
 meta_desc: Pulumi's GitHub app integrates the results of Pulumi stack updates. It
            will show you any potential infrastructure changes on Pull Requests and commit Checks.
 title: Pulumi GitHub App

@@ -1,5 +1,5 @@
 ---
-title_tag: "Adopting Pulumi: Migrating to Pulumi"
+title_tag: "Migrating to Pulumi"
 meta_desc: Migrate from an existing infrastructure management solution to Pulumi.
 title: "Migrate from..."
 h1: Migrating from other solutions to Pulumi
