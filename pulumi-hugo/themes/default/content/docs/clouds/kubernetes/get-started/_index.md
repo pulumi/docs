@@ -11,6 +11,7 @@ menu:
 aliases:
 - /docs/quickstart/kubernetes/
 - /docs/get-started/kubernetes/
+- /docs/get-started/kubernetes/begin/
 - /docs/quickstart/kubernetes/create-project/
 - /docs/get-started/kubernetes/create-project/
 - /docs/quickstart/kubernetes/review-project/
