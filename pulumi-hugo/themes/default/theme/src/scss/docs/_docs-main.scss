@@ -113,6 +113,13 @@ body.section-registry {
                 background-size: 0 0.1em,100% 0.1em;
             }
         }
+
+        div.highlight pre,
+        code,
+        .font-mono {
+            font-family: 'Iosevka';
+            font-weight: 400;
+        }
     }
 }
 

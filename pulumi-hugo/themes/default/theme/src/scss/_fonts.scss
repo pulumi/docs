@@ -1,11 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap");
 
 @font-face {
-    font-family: "StarWars";
+    font-family: "Iosevka";
     font-weight: 400;
     font-style: normal;
-    src: url("/fonts/Starjhol.ttf") format("truetype");
+    src: url("/fonts/iosevka-fixed-extended.woff2") format("woff2");
 }
+
+@font-face {
+    font-family: "Iosevka";
+    font-weight: 500;
+    font-style: normal;
+    src: url("/fonts/iosevka-fixed-extendedmedium.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Iosevka";
+    font-weight: 600;
+    font-style: normal;
+    src: url("/fonts/iosevka-fixed-extendedbold.woff2") format("woff2");
+}
+
 
 @font-face {
     font-family: "Gilroy";
