@@ -865,7 +865,7 @@ Notice that your `index.html` file has been added to the bucket:
 2023-04-20 17:01:06        118 index.html
 ```
 
-## Update the program
+## Modify program again
 
 Update the `Bucket` declaration to add a `website` property and make `index.html` the home page of the website:
 
