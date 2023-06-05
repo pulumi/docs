@@ -34,6 +34,14 @@ aliases:
 - /docs/get-started/gcp/destroy-stack/
 - /docs/quickstart/gcp/next-steps/
 - /docs/get-started/gcp/next-steps/
+- /docs/clouds/gcp/get-started/begin/
+- /docs/clouds/gcp/get-started/create-project/
+- /docs/clouds/gcp/get-started/deploy-changes/
+- /docs/clouds/gcp/get-started/deploy-stack/
+- /docs/clouds/gcp/get-started/destroy-stack/
+- /docs/clouds/gcp/get-started/modify-program/
+- /docs/clouds/gcp/get-started/next-steps/
+- /docs/clouds/gcp/get-started/review-project/
 ---
 
 Pulumi's infrastructure-as-code SDK helps you create, deploy, and manage Google Cloud containers, serverless functions, and infrastructure using familiar programming languages.
