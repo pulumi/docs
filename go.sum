@@ -2236,6 +2236,8 @@ github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20230605002621-6cb67bef83a7 
 github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20230605002621-6cb67bef83a7/go.mod h1:081/gGTOxNFBjrLQ3QvsyP34iiWgmmKDtoi5falfsuo=
 github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20230605153938-49b03b59b2d4 h1:w0YvsqM8uMp71nWVZZCyHz/PsBkO4GusbuqYyjhQZwc=
 github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20230605153938-49b03b59b2d4/go.mod h1:081/gGTOxNFBjrLQ3QvsyP34iiWgmmKDtoi5falfsuo=
+github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20230605224854-17f8f7253815 h1:DAdrAuSWmudpV3BR7BpvkSQT36nKopQGCw5vYFbsgME=
+github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20230605224854-17f8f7253815/go.mod h1:081/gGTOxNFBjrLQ3QvsyP34iiWgmmKDtoi5falfsuo=
 github.com/pulumi/registry v0.0.0-20211018002248-032308df8c9b h1:cc9syvwwbJF8OOwiQA806f05ZPo8Y9i6MhQp+DyQ7Gk=
 github.com/pulumi/registry v0.0.0-20211018002248-032308df8c9b/go.mod h1:5njB00aDODdidTJgd4o+FiH7pM9YZ9cqAR0xHEPyq6s=
 github.com/pulumi/registry/themes/default v0.0.0-20210929002709-940e5a1d2c43/go.mod h1:QSvobZqmJMqVmn3BTfSiYkbRKtJHhSA8gotu/pD1a0w=
@@ -4608,6 +4610,8 @@ github.com/pulumi/registry/themes/default v0.0.0-20230605194206-0017c3a0d127 h1:
 github.com/pulumi/registry/themes/default v0.0.0-20230605194206-0017c3a0d127/go.mod h1:QSvobZqmJMqVmn3BTfSiYkbRKtJHhSA8gotu/pD1a0w=
 github.com/pulumi/registry/themes/default v0.0.0-20230605205134-89e4da5cf72f h1:PTO/Q9ngjAiigf36Xg9oe5RSqoRSKr+/pa2TtSgauQ4=
 github.com/pulumi/registry/themes/default v0.0.0-20230605205134-89e4da5cf72f/go.mod h1:QSvobZqmJMqVmn3BTfSiYkbRKtJHhSA8gotu/pD1a0w=
+github.com/pulumi/registry/themes/default v0.0.0-20230605221726-ebf97d0c2f73 h1:r4ucyiVxuUbOHL/3fZD6MwperrNI9BuR89n0aS+zH60=
+github.com/pulumi/registry/themes/default v0.0.0-20230605221726-ebf97d0c2f73/go.mod h1:QSvobZqmJMqVmn3BTfSiYkbRKtJHhSA8gotu/pD1a0w=
 github.com/pulumi/theme v0.0.0-20210927232844-820360db3296/go.mod h1:Ksr+ztEgwxDLYFRalb0SYu4WcGROgnF35iILealOMno=
 github.com/pulumi/theme v0.0.0-20211001214832-2c758d993730 h1:VuLvDZWGYg+9hlI5ph0AY7ryPZ1Q3INhdog79yhwqL4=
 github.com/pulumi/theme v0.0.0-20211001214832-2c758d993730/go.mod h1:Ksr+ztEgwxDLYFRalb0SYu4WcGROgnF35iILealOMno=
