@@ -234,6 +234,9 @@ schedule:
     description: |
       What happens when you combine the expressiveness and flexibility of programming with infrastructure as code automation? Magic. Join Matt as he demonstrates how Starburst uses Pulumi Automation API to increase the speed and accuracy of infrastructure operations (like blue-green deployments with Kubernetes clusters) with code. He will explain how Automation API has reduced complicated, unwieldy tasks into simpler tasks that are completely managed by code.
     time: "9:40 AM PT"
+  - title: Break
+    description:
+    time: "10:00 AM PT"
   - title: Engineering a Multi-cloud Platform
     description: |
       Many teams invest considerable time in defining architectures unique to a cloud service provider - only to discover the need to support a different cloud provider due to regional availability requirements, mergers, or new supply chain restrictions. In this session, Tim Holm, CTO at Nitric, will introduce key concepts and challenges that every team must consider when planning for cloud-agnostic delivery including:
@@ -242,20 +245,20 @@ schedule:
       - Self-service Infrastructure
       - Team productivity
       Tim will also share how his team leveraged the Pulumi platform to build a cloud-agnostic toolset for developers.
-    time: "11:10 AM PT"
+    time: "10:10 AM PT"
   - title: Using Monorepos to Level-up your Infrastructure as Code and Software Delivery
     description: |
       The way you structure your Pulumi projects and stacks in GitHub repositories can impact how well your organization ships infrastructure, especially when there are multiple teams of developers collaborating. Join Tyler as he shares best practices for using monorepos with Pulumi and how this pattern has supported his platform engineering team in delivering more efficient infrastructure deployments and updates, increased code sharing & reuse, and better collaboration.
-    time: "11:30 AM PT"
+    time: "10:30 AM PT"
   - title: Lessons Learned from Writing Thousands of Lines of IaC
     description: |
       Immutable architecture is the backbone of infrastructure as code, to ensure production environments cannot be changed during runtime.  While this has the benefits of its inherent safety measures, this can also be restrictive.  This talk will focus on some of the fundamentals of immutable architecture, best practices and recommended design patterns to work around its limitations, as well as what you most certainly should not be doing when running immutable architecture.
 
       This will be demonstrated through a real-world example of using Pulumi to deploy a single-tenant SaaS in an automated pipeline, typical challenges encountered, and what was learned on the way.
-    time: "11:50 AM PT"
+    time: "10:50 AM PT"
   - title: "Panel: AI and the Future of Cloud Development"
     description: 
-    time: "12:10 PM PT"
+    time: "11:10 AM PT"
 
 registration:
     items:
