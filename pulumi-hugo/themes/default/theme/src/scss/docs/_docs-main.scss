@@ -1,16 +1,16 @@
 .docs-list-main .docs-main-content,
 body.section-registry {
+    h1 {
+        font-family: Gilroy;
+        line-height: 1.5;
+        font-weight: 400;
+        font-size: 30px;
+        color: map-get($gray, 950);
+        margin: 16px 0;
+    }
+    
     div.special-h1 {
         display: inline-block;
-
-        h1 {
-            font-family: Gilroy;
-            line-height: 1.5;
-            font-weight: 400;
-            font-size: 30px;
-            color: map-get($gray, 950);
-            margin: 16px 0;
-        }
     }
 
     div.h1-gradient {
