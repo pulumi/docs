@@ -27,6 +27,19 @@ $(window).on("load", function() {
         docsNavToggleIcon.toggleClass("open-docs-main-nav");
         setTableOfContentsVisibility()
     });
+
+    let packageCardCheckbox = $("#accordion-checkbox-package-card");
+    let packageCardBackground = $("#accordion-package-card");
+
+    packageCardCheckbox.on("change", function () {
+        if (packageCardCheckbox.is(":checked")) {
+            packageCardBackground.css("background", "#fff");
+        }
+        else {
+            packageCardBackground.css("background", "#f9f9f9");
+        }
+
+    });
 })(document, jQuery);
 
 function setDocsMainNavPosition() {

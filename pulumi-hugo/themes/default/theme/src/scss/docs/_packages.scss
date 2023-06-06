@@ -140,48 +140,94 @@
         }
     }
 
-    .featured-package .content-container {
-        box-shadow: 0px 4px 4px rgba(230, 222, 243, 0.25);
-    }
-
     .package .content-container {
         box-shadow: 0px 4px 4px rgba(220, 220, 220, 0.25);
     }
 }
 
-.package-card {
-    box-shadow: 0px 4px 4px rgba(220, 220, 220, 0.25);
-    width: 346px;
-}
-
-.package-card-compact {
-    border-color: map-get($gray, 300);
-    box-shadow: 0px 4px 4px rgba(220, 220, 220, 0.25);
-    width: 346px;
-    @media (min-width: 768px) {
-        width: 320px;
-        top: 110px;
-        position: absolute;
-    }
-    @media (min-width: 1024px) {
-        width: 320px;
-        top: 110px;
-        position: absolute;
-    }
-
-    .caret-container {
-        color: map-get($gray, 400);
-    }
-
-    .package-header {
-        font-size: 12px;
-        color: map-get($gray, 600);
+div.packages {
+    section.featured-packages,
+    section.all-packages {
+        h2 {
+            font-family: Gilroy;
+            font-weight: 400;
+            font-size: 30px;
+            color: #131314;
+            margin-top: 16px;
+        }
     }
 }
 
-.package-card-compact-expanded {
-    border-color: map-get($gray, 300);
-    .caret-container {
-        color: map-get($gray, 300);
+div.packages section.featured-packages {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    div.featured-packages-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        gap: 24px;
+
+        div.featured-package {
+            background: rgba(230, 222, 243, 0.08);
+            border: 2px solid #e6def3;
+            box-shadow: 0px 4px 4px rgba(230, 222, 243, 0.25);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;;
+            align-items: center;
+            justify-content: stretch;
+            padding: 18px;
+
+            a {
+                display: flex;
+                gap: 12px;
+                flex-direction: column;
+                text-align: center;
+                flex: 1;
+            }
+        
+            .package-logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 32px;
+            }
+        
+            .package-title {
+                flex-grow: 1;
+                font-family: 'Gilroy';
+                font-weight: 500;
+                font-size: 24px;
+                color: #131314;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        
+            .package-version {
+                font-family: 'Gilroy';
+                font-weight: 500;
+                font-size: 14px;
+                text-align: center;
+                color: #131314;
+            }
+        }
+
+        @media (min-width: 768px) {
+            div.featured-package {
+                flex-basis: 48%;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            div.featured-package {
+                flex-basis: 25%;
+            }
+            flex-wrap: nowrap;
+        }
     }
 }

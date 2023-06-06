@@ -1,63 +1,80 @@
-{{ with .File }}
-    {{ if not $.Page.Params.no_on_this_page }}
-        <div class="table-of-contents">
-            <div id="accordion-table-of-contents" class="accordion flex-1-col">
-                <div>
-                    <input type="checkbox" id="accordion-checkbox-table-of-contents" />
-                    <label for="accordion-checkbox-table-of-contents" class="show">
-                        <div class="heading">
-                            <div class="icon-heading-wrapper">
-                                <div class="icon icon-12-12 icon-on-this-page"></div>
-                                <h2 class="no-anchor">On this page</h2>
-                            </div>
-                            <div class="icon icon-18-18 expand-more-18-18"></div>
+{{ if not $.Page.Params.no_on_this_page }}
+    <div class="table-of-contents">
+        {{ if strings.Contains $.Page.Permalink "registry/packages" }}
+            {{ partial "registry/package/package-card.html" . }}
+        {{ end }}
+        <div id="accordion-table-of-contents" class="accordion">
+            <div>
+                <input type="checkbox" id="accordion-checkbox-table-of-contents" />
+                <label for="accordion-checkbox-table-of-contents" class="show">
+                    <div class="heading">
+                        <div class="icon-heading-wrapper">
+                            <div class="icon icon-12-12 icon-on-this-page"></div>
+                            <h2 class="no-anchor">On this page</h2>
                         </div>
-                    </label>
-                    <label for="accordion-checkbox-table-of-contents" class="hide">
-                        <div class="heading">
-                            <div class="icon-heading-wrapper">
-                                <div class="icon icon-12-12 icon-on-this-page"></div>
-                                <h2 class="no-anchor">On this page</h2>
-                            </div>
-                            <div class="icon icon-18-18 expand-more-18-18"></div>
+                        <div class="icon icon-18-18 expand-more-18-18"></div>
+                    </div>
+                </label>
+                <label for="accordion-checkbox-table-of-contents" class="hide">
+                    <div class="heading">
+                        <div class="icon-heading-wrapper">
+                            <div class="icon icon-12-12 icon-on-this-page"></div>
+                            <h2 class="no-anchor">On this page</h2>
                         </div>
-                    </label>
-                    <div class="accordion-content flex">
-                        <div class="content">
-                            <ul class="table-of-contents-list">
-                                {{/* This will be populated dynamically with all H2s and H3s on the page; see ts/misc.ts */}}
-                            </ul>
-                        </div>
+                        <div class="icon icon-18-18 expand-more-18-18"></div>
+                    </div>
+                </label>
+                <div class="accordion-content flex">
+                    <div class="content">
+                        <ul class="table-of-contents-list">
+                            {{/* This will be populated dynamically with all H2s and H3s on the page; see ts/misc.ts */}}
+                        </ul>
+                        {{ if strings.Contains $.Page.Permalink "registry/packages" }}
+                            {{ $path := (split .Page.Params.title_tag ".") }}
+                            {{- if eq (len $path) 3 -}}
+                                {{ $packageName := index $path 0 }}
+                                {{ $moduleName := index $path 1 }}
+                                {{ $resourceName := index $path 2 }}
+                                <div class="mt-6">
+                                    <pulumi-resource-links
+                                        package-name="{{ $packageName }}"
+                                        module-name="{{ $moduleName }}"
+                                        resource-name="{{ $resourceName }}"
+                                    ></pulumi-resource-links>
+                                </div>
+                            {{ end }}
+                        {{ end }}
                     </div>
                 </div>
             </div>
         </div>
-    {{ end }}
-    <ul class="p-0 list-none table-of-contents-feedback">
-        <!-- Only show "Edit this Page" for pages that are not generated. -->
-        {{ $isCLICommand := hasPrefix .Path "docs/cli/commands" }}
-        {{ $isAPIDoc := and (hasPrefix .Path "docs/reference/pkg/") (ne .Path "docs/reference/pkg/_index.md") }}
-        {{ if not (or $isCLICommand $isAPIDoc $.Page.Params.no_edit_this_page) }}
-            <li>
-                <a
-                    data-track="edit-page"
-                    class="text-gray-600 hover:text-gray-700 text-xs"
-                    href="{{ $.Site.Params.contentRepositoryURL }}/edit/{{ $.Site.Params.contentRepositoryBaseBranch }}/{{ getenv "REPO_THEME_PATH" }}content/{{ .Path }}"
-                    target="_blank"
-                >
-                    <i class="fas fa-edit mr-2" style="width: 14px"></i>Edit this Page
-                </a>
-            </li>
-        {{ end }}
+    </div>
+{{ end }}
+<ul class="p-0 list-none table-of-contents-feedback">
+    <!-- Only show "Edit this Page" for pages that are not generated. -->
+    {{ $isCLICommand := hasPrefix .Path "docs/cli/commands" }}
+    {{ $isAPIDoc := and (hasPrefix .Path "docs/reference/pkg/") (ne .Path "docs/reference/pkg/_index.md") }}
+    {{ if not (or $isCLICommand $isAPIDoc $.Page.Params.no_edit_this_page) }}
         <li>
             <a
-                data-track="request-change"
+                data-track="edit-page"
                 class="text-gray-600 hover:text-gray-700 text-xs"
-                href="{{ $.Site.Params.contentRepositoryURL }}/issues/new?body=File: [{{ getenv "REPO_THEME_PATH" }}content/{{ .Path }}]({{ $.Page.Permalink }})"
+                href="{{ $.Site.Params.contentRepositoryURL }}/edit/{{ $.Site.Params.contentRepositoryBaseBranch }}/{{ getenv "REPO_THEME_PATH" }}content/{{ .Path }}"
                 target="_blank"
             >
-                <i class="far fa-check-square mr-2" style="width: 14px"></i>Request a Change
+                <i class="fas fa-edit mr-2" style="width: 14px"></i>Edit this Page
             </a>
         </li>
-    </ul>
-{{ end }} <pulumi-top-button></pulumi-top-button>
+    {{ end }}
+    <li>
+        <a
+            data-track="request-change"
+            class="text-gray-600 hover:text-gray-700 text-xs"
+            href="{{ $.Site.Params.contentRepositoryURL }}/issues/new?body=File: [{{ getenv "REPO_THEME_PATH" }}content/{{ .Path }}]({{ $.Page.Permalink }})"
+            target="_blank"
+        >
+            <i class="far fa-check-square mr-2" style="width: 14px"></i>Request a Change
+        </a>
+    </li>
+</ul>
+<pulumi-top-button></pulumi-top-button>
