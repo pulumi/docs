@@ -184,7 +184,7 @@ func main() {
 
 {{% /chooser %}}
 
-API documentation is available at [Azure NextGen API Reference](/docs/reference/pkg/azure-nextgen/) and includes more than 1,000 resource examples.
+API documentation is available at [Azure NextGen API Reference](/registry/packages/azure-native/api-docs/) and includes more than 1,000 resource examples.
 
 ## Integrated with Azure Ecosystem
 
@@ -252,4 +252,4 @@ Several larger examples are available in the Pulumi Examples repo:
 - Web Application with Azure Container Instances: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-aci), [C#](https://github.com/pulumi/examples/tree/master/azure-cs-aci), [Python](https://github.com/pulumi/examples/tree/master/azure-py-aci), [Go](https://github.com/pulumi/examples/tree/master/azure-go-aci)
 - Web Server Using Azure Virtual Machine: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-webserver), [Python](https://github.com/pulumi/examples/tree/master/azure-py-webserver)
 
-You can browse [API reference docs](https://www.pulumi.com/docs/reference/pkg/azure-nextgen/) with inline examples or explore the [Pulumi Azure NextGen SDKs](https://github.com/pulumi/pulumi-azure-nextgen) repository.
+You can browse [API reference docs](/registry/packages/azure-native/api-docs/) with inline examples or explore the [Pulumi Azure NextGen SDKs](https://github.com/pulumi/pulumi-azure-nextgen) repository.

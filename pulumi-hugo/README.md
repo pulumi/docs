@@ -73,10 +73,10 @@ This repository is a [Hugo module](https://gohugo.io/hugo-modules/) that doubles
 
 Because of this, many of the links you follow when browsing around on the development server (to paths underneath `/docs/reference` for example) will fail to resolve because they originate from another repository &mdash; most likely https://github.com/pulumi/docs or https://github.com/pulumi/registry. When we build the Pulumi website, we merge this module along with any others into a single build artifact, but when you're working within an individual module like this one, you may find you're unable to reach certain pages or verify the links you may want to make to them.
 
-If you want to link to a page that exists on https://pulumi.com but not in this repository, use the page's path **starting at the root** in a Markdown or HTML link. For example, in a Markdown file, to link to the [Digital Ocean Droplet](https://www.pulumi.com/docs/reference/pkg/digitalocean/droplet/) page (a page that doesn't exist in this repository, but that would exist in an integration build), you'd use:
+If you want to link to a page that exists on https://pulumi.com but not in this repository, use the page's path **starting at the root** in a Markdown or HTML link. For example, in a Markdown file, to link to the [Digital Ocean Droplet](https://www.pulumi.com/registry/packages/digitalocean/api-docs/droplet/) page (a page that doesn't exist in this repository, but that would exist in an integration build), you'd use:
 
 ```markdown
-[Digital Ocean Droplet](/docs/reference/pkg/digitalocean/droplet/)
+[Digital Ocean Droplet](/registry/packages/digitalocean/api-docs/droplet/)
 ```
 
 We used to recommend using `{{ relref }}` for these links, which are checked in the build for https://github.com/pulumi/docs; however, this often caused confusion because when a link was incorrect, the failure would not be obviously connected to a change here. For a detailed explanation see [#2701](https://github.com/pulumi/pulumi-hugo/pull/2071).

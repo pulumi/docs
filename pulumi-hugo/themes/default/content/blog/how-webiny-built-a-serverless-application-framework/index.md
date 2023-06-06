@@ -192,7 +192,7 @@ Furthermore, if we opened each of these `pulumi` folders, we’d see different c
 
 This code organization makes it much easier for developers to grasp the overall cloud infrastructure. It also makes it easier for them to adjust the code to their needs eventually.
 
-A more complex example is the cloud infrastructure code in the API project application ([`api/pulumi`](https://github.com/webiny/webiny-js/tree/v5.28.0/packages/cwp-template-aws/template/common/api)), which deploys many different cloud infrastructure resources, like [AWS Lambda functions](/docs/reference/pkg/aws/lambda/), [DynamoDB tables](/docs/reference/pkg/aws/dynamodb/), [ElasticSearch clusters](/docs/reference/pkg/aws/elasticsearch/), [VPCs](/docs/reference/pkg/aws/ec2/), and more.
+A more complex example is the cloud infrastructure code in the API project application ([`api/pulumi`](https://github.com/webiny/webiny-js/tree/v5.28.0/packages/cwp-template-aws/template/common/api)), which deploys many different cloud infrastructure resources, like [AWS Lambda functions](/registry/packages/aws/api-docs/lambda/), [DynamoDB tables](/registry/packages/aws/api-docs/lambda/), [ElasticSearch clusters](/registry/packages/aws/api-docs/elasticsearch/), [VPCs](/registry/packages/aws/api-docs/ec2/), and more.
 
 But I will leave this up to you to check out, as pasting multiple chunks of code here might not be that productive.
 

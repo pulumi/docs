@@ -15,7 +15,7 @@ Today, we’re excited to announce that this new provider is now the default way
 
 <!--more-->
 
-Already use the [classic Pulumi-Azure provider](https://www.pulumi.com/docs/reference/pkg/azure/)? You can migrate to Azure-Native now using the [migration guide](/registry/packages/azure-native/from-classic/). If you prefer to wait until general availability, stay tuned for updates: we expect to reach general availability in the spring of this year.
+Already use the [classic Pulumi-Azure provider](/registry/packages/azure/api-docs/)? You can migrate to Azure-Native now using the [migration guide](/registry/packages/azure-native/from-classic/). If you prefer to wait until general availability, stay tuned for updates: we expect to reach general availability in the spring of this year.
 
 Alongside this announcement, we’re also formalizing a new concept: a Pulumi “native provider”. A native provider provides functionality mapped directly from the underlying API; in the case of the new Azure Provider, functionality is mapped directly from the Azure Resource Manager API surface. Going forward, you’ll be able to find these next-generation Pulumi providers directly from the name by looking for the “-Native” suffix.
 
@@ -278,4 +278,4 @@ Several more extensive examples are available in the Pulumi Examples repo:
 - Web Application with Azure Container Instances: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-aci), [C#](https://github.com/pulumi/examples/tree/master/azure-cs-aci), [Python](https://github.com/pulumi/examples/tree/master/azure-py-aci), [Go](https://github.com/pulumi/examples/tree/master/azure-go-aci)
 - Web Server Using Azure Virtual Machine: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-webserver), [Python](https://github.com/pulumi/examples/tree/master/azure-py-webserver)
 
-You can browse [API reference docs](https://www.pulumi.com/docs/reference/pkg/azure-native/) with inline examples or explore the [Pulumi Azure-Native SDKs](https://github.com/pulumi/pulumi-azure-native) repository.
+You can browse [API reference docs](https://www.pulumi.com/registry/packages/azure-native/) with inline examples or explore the [Pulumi Azure-Native SDKs](https://github.com/pulumi/pulumi-azure-native) repository.

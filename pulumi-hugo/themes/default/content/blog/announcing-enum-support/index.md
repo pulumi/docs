@@ -93,7 +93,7 @@ func main() {
 
 In the above code, the S3 `Bucket` resource has a property called `acl`, where we pass in the string `private` to indicate that this is a private bucket.
 
-If we look at the [resource docs](https://www.pulumi.com/docs/reference/pkg/aws/s3/bucket/#acl_nodejs), we can see that the `acl` property can only be set to one of a few different values: `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. The `acl` property is the perfect candidate for an enum type and is emitted as one, so you can use the following code instead.
+If we look at the [resource docs](/registry/packages/aws/api-docs/s3/bucket/#acl_nodejs), we can see that the `acl` property can only be set to one of a few different values: `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. The `acl` property is the perfect candidate for an enum type and is emitted as one, so you can use the following code instead.
 
 {{< chooser language "typescript,python,csharp,go" >}}
 {{% choosable language typescript %}}
@@ -354,7 +354,7 @@ type BucketArgs struct {
 
 ## Try them out!
 
-You can find enum types integrated into `v3.19.0` of the [AWS provider](https://www.pulumi.com/docs/reference/pkg/aws/) and `v0.7.1` of the [Azure-Native provider](https://www.pulumi.com/docs/reference/pkg/azure-native/), and we will be adding enums to other providers in the coming weeks and months.
+You can find enum types integrated into `v3.19.0` of the [AWS provider](/registry/packages/aws/api-docs/) and `v0.7.1` of the [Azure-Native provider](/registry/packages/azure-native/api-docs/), and we will be adding enums to other providers in the coming weeks and months.
 
 **Azure-Native**: In the native Azure provider, all properties labeled as enums in the OpenAPI spec are represented as such. In all, there are over 1300 enums provided in the SDKs. The native Azure provider uses both "strict" and "relaxed" enums since the OpenAPI specification explicitly defines its properties as such.
 

@@ -52,7 +52,7 @@ I dug further to find Node.js packages for manipulating IAM Policy documents. No
 ## A simple identity-based policy
 
 Let us look at the code sample on `pulumi.com` for
-[`aws.iam.Policy`](https://www.pulumi.com/docs/reference/pkg/aws/iam/policy/).
+[`aws.iam.Policy`](/registry/packages/aws/api-docs/iam/policy/).
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
