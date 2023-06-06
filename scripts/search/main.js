@@ -44,7 +44,7 @@ const secondaryPageObjects = page.getSecondaryObjects(primaryPageObjects);
 
 // Generate a list of all Registry items -- modules, resources, functions, etc.
 console.log(" ↳ Building Registry resource objects...");
-const registryObjects = []; //registry.getObjects(pathToRegistryPackagesJSON, hugoPageItems);
+const registryObjects = registry.getObjects(pathToRegistryPackagesJSON, hugoPageItems);
 
 // Remove any objects from primaryPageObjects that also exist in registryObjects (to de-dupe).
 const filteredPageObjects = primaryPageObjects.filter(o => registryObjects.find(ro => ro.href === o.href) === undefined);

@@ -53,10 +53,10 @@ jobs:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_OPTIONS: "--max_old_space_size=4096"
           ALGOLIA_APP_ID: ${{ vars.ALGOLIA_APP_ID }}
           ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}
           ALGOLIA_APP_ADMIN_KEY: ${{  secrets.ALGOLIA_APP_ADMIN_KEY }}
+          NODE_OPTIONS: "--max_old_space_size=8192"
 
       - name: Archive test results
         uses: actions/upload-artifact@v2

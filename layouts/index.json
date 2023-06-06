@@ -10,7 +10,7 @@
         $index = $index | append (
             dict
                 "objectID" $page.File.UniqueID
-                "title" default $page.Title $page.Params.title_tag
+                "title" $page.Title
                 "section" $page.Section
                 "href" $page.RelPermalink
                 "params" $page.Params

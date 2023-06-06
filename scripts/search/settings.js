@@ -26,7 +26,7 @@ module.exports = {
             ["crosswalk", "awsx"],
             ["f#", "fsharp"],
             ["gcp", "google cloud"],
-            ["how to", "example"],
+            ["how-to guide", "how to guide", "example"],
             ["k8s", "kube", "kubernetes"],
             ["openid connect", "oidc"],
             ["org", "organization"],
@@ -88,6 +88,7 @@ module.exports = {
     // https://www.algolia.com/doc/guides/managing-results/rules/rules-overview/
     getRules() {
         return [
+            // When the query is for "cloud", deliver the Pulumi Cloud overview page as the top result.
             {
                 objectID: "is-cloud",
                 enabled: true,
@@ -102,6 +103,7 @@ module.exports = {
                     promote: [
                         {
                             objectIDs: [
+                                // The Pulumi Cloud overview page.
                                 "a2074d4bcd83fa3d347dc9da4b8aa822"
                             ],
                             position: 0,
