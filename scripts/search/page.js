@@ -40,23 +40,31 @@ module.exports = {
         // Assemble the local path to the file using its href.
         const filePath = path.join("public", href, "index.html");
 
+        // Read the file and parse it into a DOM tree.
         const content = fs.readFileSync(filePath, "utf-8");
         const { document } = new JSDOM(content).window;
         const subheads = [];
 
-        // For now, only bother with H2s, as the noise level goes way up with H3s and beyond.
-        for (let i = 2; i <= 2; i++) {
-            const level = `h${i}`;
-            const headings = document.querySelectorAll(`main ${level}`);
-            headings.forEach(h => subheads.push(
-                {
-                    [level] : h.textContent,
-                    anchor: h.getAttribute("id"),
-                    keywords: h.getAttribute("search.keywords"),
-                    content: h.nextElementSibling?.nodeName === "P" ? h.nextElementSibling.textContent : undefined,
+        // For now, only bother with H2s, as the noise level goes way up with H3s.
+        [2].forEach(level => {
+            const headings = document.querySelectorAll(`main h${level}`);
+            headings.forEach(h => {
+
+                // If a heading doesn't have an ID, it can't be linked to, so exclude it.
+                if (!h.getAttribute("id")) {
+                    return;
                 }
-            ));
-        }
+
+                subheads.push(
+                    {
+                        title : h.textContent,
+                        anchor: h.getAttribute("id") || undefined,
+                        keywords: h.getAttribute("search.keywords") || undefined,
+                        content: h.nextElementSibling?.nodeName === "P" ? h.nextElementSibling.textContent : undefined,
+                    },
+                );
+            });
+        })
 
         return {
             subheads,
@@ -125,19 +133,17 @@ module.exports = {
 
                 if (domContent.subheads) {
                     domContent.subheads.forEach(subhead => {
-                        if (subhead.h2) {
-                            const href = `${ pageObject.href }#${ subhead.anchor }`; // Looks like this sometimes comes back 'null'?
+                        const href = `${ pageObject.href }#${ subhead.anchor }`;
 
-                            secondaries.push({
-                                objectID: this.getObjectID({ href }),
-                                section: pageObject.section,
-                                ancestors: this.makeAncestorsList([ ...ancestors, pageObject.title ]),
-                                title: subhead.h2,
-                                description: (subhead.content || "").substr(0, 200),
-                                href,
-                                keywords: subhead.keywords || undefined,
-                            });
-                        }
+                        secondaries.push({
+                            objectID: this.getObjectID({ href }),
+                            section: pageObject.section,
+                            ancestors: this.makeAncestorsList([ ...ancestors, pageObject.title ]),
+                            title: subhead.title,
+                            description: (subhead.content || "").substr(0, 200),
+                            href,
+                            keywords: subhead.keywords || undefined,
+                        });
                     });
                 }
         });
