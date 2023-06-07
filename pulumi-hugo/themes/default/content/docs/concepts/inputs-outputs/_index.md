@@ -527,11 +527,11 @@ variables:
 
 Notice that [Output.all](/docs/reference/pkg/python/pulumi#pulumi.Output.all) works by returning an output that represents the combination of multiple outputs so that, within the callback, the raw values are available inside of a tuple.
 
-## Accessing Properties of an Output by Lifting {#lifting}
+## Accessing Nested Properties of an Output by Lifting {#lifting}
 
-If you just need to access a property of an {{< pulumi-output >}} value in order to pass that property’s value as an argument to another resource’s constructor, you can often just directly access it.
+While often, Outputs return asynchronous values that wrap primitive types like strings or integers, sometimes an output has an object with deeply nested values. These properties need to be passed to other inputs as well.
 
-For example, to read a domain record from an ACM certificate, you need to access a resource’s property value. Because that value is an output, we would normally need to use {{< pulumi-apply >}}:
+For example, to read a domain record from an ACM certificate, you need to access the domain validation options, which returns an array. Because that value is an output, we would normally need to use {{< pulumi-apply >}}:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java" >}}
 
