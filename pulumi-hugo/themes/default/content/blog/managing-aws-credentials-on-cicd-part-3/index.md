@@ -205,7 +205,7 @@ const websiteUpdaterPolicy = new aws.iam.Policy("WebsiteUpdaterRolePolicy", {
 ```
 
 To actually associate the IAM Policy document with the new IAM Role, we need to create a
-[PolicyAttachment](https://www.pulumi.com/registry/packages/aws/iam/policyattachment/#policyattachment)
+[PolicyAttachment](https://www.pulumi.com/registry/packages/aws/api-docs/iam/policyattachment/#policyattachment)
 associating the two.
 
 ```typescript

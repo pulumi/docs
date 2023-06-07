@@ -27,7 +27,7 @@ We'd love your feedback on the new docs either in #docs, in GitHub, or via the <
 
 Here are a few pointers:
 
-- An example resource, [SQS](https://www.pulumi.com/registry/packages/aws/sqs/queue/)
+- An example resource, [SQS](https://www.pulumi.com/registry/packages/aws/api-docs/sqs/queue/)
 - [AWS package](https://www.pulumi.com/registry/packages/aws/)
 - [Azure package](https://www.pulumi.com/registry/packages/azure/)
 - [GCP package](https://www.pulumi.com/registry/packages/gcp/api-docs/)

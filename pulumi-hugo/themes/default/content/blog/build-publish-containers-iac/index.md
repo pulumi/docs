@@ -1496,7 +1496,7 @@ var registryInfo = Output.All(
 
 #### Learn More About DigitalOcean Container Registry
 
-Each DigitalOcean account may have just a single registry, so you are likely to want to provision that in a separate stack for most "real world" examples. Also, this project uses the lowest subscription tier, `"starter"`, which is inexpensive but quite limited (you may only store a single repository of images). If you would like to use an advanced tier or configure any other options, please refer to [Pulumi's DigitalOcean API](https://www.pulumi.com/registry/packages/digitalocean/containerregistry/) or [DigitalOcean's product](https://www.digitalocean.com/products/container-registry/) documentation.
+Each DigitalOcean account may have just a single registry, so you are likely to want to provision that in a separate stack for most "real world" examples. Also, this project uses the lowest subscription tier, `"starter"`, which is inexpensive but quite limited (you may only store a single repository of images). If you would like to use an advanced tier or configure any other options, please refer to [Pulumi's DigitalOcean API](https://www.pulumi.com/registry/packages/digitalocean/api-docs/containerregistry/) or [DigitalOcean's product](https://www.digitalocean.com/products/container-registry/) documentation.
 
 > To view another cloud provider's registry details, [select a new cloud in the switcher above](#prepare-a-container-registry).
 

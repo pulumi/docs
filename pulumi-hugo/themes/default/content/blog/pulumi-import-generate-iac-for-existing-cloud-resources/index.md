@@ -430,4 +430,4 @@ Check out the video clip below for a demo.
 Full CLI Documentation is [available](https://www.pulumi.com/docs/cli/commands/pulumi_import/), showing all of the different
 import command flags. The flags include writing directly to a file and the ability to ensure
 a resource is not protected on import. Examples of importing resources can be found on their specifc resource documentation
-pages. Such an example for importing a VPC can be found in the [VPC import documentation](https://www.pulumi.com/registry/packages/aws/ec2/vpc/#import).
+pages. Such an example for importing a VPC can be found in the [VPC import documentation](https://www.pulumi.com/registry/packages/aws/api-docs/ec2/vpc/#import).

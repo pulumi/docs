@@ -115,7 +115,7 @@ I was then ready to start importing my existing resources. The general workflow 
 
 Since Pulumi starts out "empty" you can rewrite and import a piece at a time. I'd recommend doing this because you will most probably do some mistakes initially, and it's good to get early feedback.
 
-You can check the [API reference](https://www.pulumi.com/registry/packages/aws/s3/bucket/) for details on how to import each specific resource. The instructions on how to do it is usually at the bottom of the reference page for each resource type.
+You can check the [API reference](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucket/) for details on how to import each specific resource. The instructions on how to do it is usually at the bottom of the reference page for each resource type.
 
 Once I had everything migrated to Pulumi I set up a Gitlab CI/CD flow which allowed me to preview and apply the infrastructure changes. Up until then I'd been doing it locally from my own computer. If possible, I recommend doing it that way. The extra time taken by involving a separate CI/CD pipeline would make your migration take a lot longer. It's perfectly fine when everything is done and dusted, however when learning Pulumi you'll often need to use the `pulumi` command to look at the resources.
 
