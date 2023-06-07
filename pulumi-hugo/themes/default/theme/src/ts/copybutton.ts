@@ -122,7 +122,7 @@ function addCopyButton(e) {
     var buttonHtml =
         '<div class="copy-button-container">' +
         "    <pulumi-tooltip>" +
-        '        <button class="copy-button"><i class="far fa-copy copy text-xl"></i></button>' +
+        '        <button class="copy-button">Copy <i class="far fa-copy copy"></i></button>' +
         '        <span slot="content">' +
         tooltipText +
         "</span>" +

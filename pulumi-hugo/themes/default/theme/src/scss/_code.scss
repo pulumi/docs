@@ -1,8 +1,9 @@
-@import "pygments";
+@import "chroma";
 @import "colors";
 
 code {
-    @apply bg-gray-100 rounded py-1 px-2 text-sm break-words;
+    @apply rounded py-1 px-2 text-sm break-words leading-relaxed;
+    font-size: 14px;
 }
 
 h1,
@@ -12,7 +13,7 @@ h4,
 h5,
 h6 {
     code {
-        font-size: 0.9em;
+        font-size: 14px;
     }
 }
 
@@ -22,10 +23,12 @@ pre,
 }
 
 pre {
-    @apply bg-gray-100 py-4 px-5 pr-8 overflow-x-auto leading-normal;
+    background: #1F2557;
+    @apply text-gray-400 py-4 px-5 pr-8 overflow-x-auto leading-normal;
 
     .code-mode-dark & {
-        @apply bg-gray-900 border-none shadow-md;
+        background: #1f2557;
+        @apply border-none shadow-md;
     }
 
     .code-chrome & {
@@ -109,13 +112,15 @@ div.highlight.line-numbers {
     @apply shadow-lg;
 
     .code-tabbed-tabs {
-        @apply bg-black shadow-md p-0 flex items-center overflow-hidden;
+        background: #1f2557;
+        @apply shadow-md p-0 flex items-center overflow-hidden;
 
         .code-tabbed-tab {
             @apply p-2 my-0 flex items-center text-sm cursor-pointer;
 
             .code-tabbed-tab-label {
-                @apply mx-2 font-body text-gray-500;
+                font-size: 16px;
+                @apply mx-2 text-gray-500;
             }
 
             .code-tabbed-tab-indicator {
@@ -137,7 +142,7 @@ div.highlight.line-numbers {
             }
 
             &.active {
-                @apply bg-gray-900;
+                background: #1f2557;
 
                 .code-tabbed-tab-label {
                     @apply text-white;
@@ -156,7 +161,8 @@ div.highlight.line-numbers {
 
     .code-tabbed-content {
         height: 440px;
-        @apply bg-gray-900 overflow-auto relative p-4 text-sm;
+        background: #1f2557;
+        @apply overflow-auto relative p-4 text-sm;
 
         .code-tabbed-content-item {
             @apply hidden opacity-0 pointer-events-none;
@@ -173,7 +179,7 @@ div.highlight.line-numbers {
                     @apply p-0 border-none shadow-none overflow-visible;
 
                     code {
-                        @apply text-sm;
+                        font-size: 14px;
                     }
                 }
 
@@ -189,6 +195,7 @@ div.highlight.line-numbers {
     }
 
     .code-tabbed-status {
-        @apply h-3 bg-blue-800 rounded-b;
+        background: #1f2557;
+        @apply h-3 rounded-b;
     }
 }
