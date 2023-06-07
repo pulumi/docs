@@ -32,3 +32,7 @@ Use the chat widget to describe the infrastructure you'd like to build, making a
 ## Try the CLI {#cli}
 
 When you're ready to go further, [try the Pulumi AI CLI](https://github.com/pulumi/pulumi-ai), which lets you build cloud infrastructure interactively in real time.
+
+### Create an Issue {#issue}
+
+Notice a bug or have a feature request? Please open an issue in our <a href="https://github.com/pulumi/pulumi-ai/issues" target="_blank">GitHub repo!</a>
