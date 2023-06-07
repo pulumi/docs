@@ -1,8 +1,8 @@
 ---
-title_tag: Kubernetes get started
+title_tag: Kubernetes get started tutorial
 meta_desc: This page provides an overview and guide on how to get started with Kubernetes.
-title: Get started
-h1: Get Started with Kubernetes & Pulumi
+title: Get started tutorial
+h1: Kubernetes & Pulumi get started tutorial
 menu:
   clouds:
     identifier: kubernetes-get-started

@@ -1,8 +1,8 @@
 ---
-title_tag: Get started with Pulumi & AWS
-title: Get started
-h1: Get started with Pulumi & AWS
-meta_desc: This page provides a guide on how to get started with AWS & Pulumi.
+title_tag: Pulumi & AWS get started tutorial
+title: Get started tutorial
+h1: Pulumi & AWS get started tutorial
+meta_desc: This page provides a tutorial on how to get started with AWS & Pulumi.
 menu:
   clouds:
     parent: aws
