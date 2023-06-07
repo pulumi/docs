@@ -22,6 +22,7 @@ module.exports = {
             ["azuread", "azure ad", "azure active directory"],
             ["c#", "csharp"],
             ["cfn", "cloudformation"],
+            ["config", "configuration"],
             ["crossguard", "pac", "policy as code"],
             ["crosswalk", "awsx"],
             ["f#", "fsharp"],

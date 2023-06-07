@@ -32,7 +32,7 @@ module.exports = {
                         title: `${item.name} (${itemPath.concat(item.name).join(".")})`,
                         description: `API documentation for the ${item.name} ${item.type} of the ${providerTitle} provider, including examples, input and output properties, lookup functions, and supporting types.`,
                         type: item.type,
-                        href: `/registry/packages/${providerName.toLowerCase()}/api-docs/${itemPath.concat(item.link).slice(1).join("/")}/`,
+                        href: `/registry/packages/${providerName}/api-docs/${itemPath.concat(item.link).slice(1).join("/").toLowerCase()}/`,
                         keywords: [
                             item.name,
                             itemPath.concat(item.name).join("."),

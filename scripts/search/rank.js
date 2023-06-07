@@ -76,12 +76,22 @@ module.exports = {
         // Docs pages are next.
         if (page.href.startsWith("/docs")) {
 
-            // Top-level pages again rank highest.
-            if (page.kind === "section") {
-                return 890
+            // First concepts.
+            if (page.href.startsWith("/docs/concepts/")) {
+                return 890;
             }
 
-            return 880;
+            // Then using.
+            if (page.href.startsWith("/docs/using-pulumi/")) {
+                return 880;
+            }
+
+            // Top-level pages again rank highest.
+            if (page.kind === "section") {
+                return 870
+            }
+
+            return 860;
         }
 
         // Tier-1 provider pages are next.
