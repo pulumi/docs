@@ -3,6 +3,7 @@ title_tag: "Pulumi Languages & SDKs"
 meta_desc: An overview of how to use Node.js, Python, Go, .NET, Java, and YAML when writing cloud applications for AWS, Azure, Google Cloud, Kubernetes, etc.
 title: Languages & SDKs
 h1: Pulumi languages & SDKs
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   languages:
     name: Overview

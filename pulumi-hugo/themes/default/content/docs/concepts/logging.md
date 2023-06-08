@@ -3,6 +3,7 @@ title_tag: "Logging | Pulumi Concepts"
 meta_desc: An overview of the Pulumi logging functionality used for debugging and diagnostics.
 title: "Logging"
 h1: "Logging"
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
     weight: 9

@@ -5,6 +5,7 @@ meta_desc:
   (Security Assertion Markup Language) 2.0 identity provider.
 title: Using SAML
 h1: "SAML: Terminology & concepts"
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
     parent: saml

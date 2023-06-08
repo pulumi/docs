@@ -3,6 +3,7 @@ title_tag: SCIM 2.0 Integration Guides
 meta_desc: This page provides an overview of how to configure any SCIM 2.0 identity provider with the Pulumi Service.
 title: SCIM
 h1: Pulumi Cloud & SCIM
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     pulumicloud:
         weight: 6

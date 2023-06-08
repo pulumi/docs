@@ -4,6 +4,7 @@ meta_desc: This page provides an overview of how to configure OpenID Connect int
            Pulumi Deployments and supported cloud providers.
 title: OpenID Connect
 h1: OpenID Connect integration
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     pulumicloud:
         identifier: deployments-oidc

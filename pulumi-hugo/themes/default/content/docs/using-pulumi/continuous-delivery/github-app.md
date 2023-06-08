@@ -4,6 +4,7 @@ meta_desc: Pulumi's GitHub app integrates the results of Pulumi stack updates. I
            will show you any potential infrastructure changes on Pull Requests and commit Checks.
 title: Pulumi GitHub App
 h1: Pulumi Github App
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     usingpulumi:
         parent: cont_delivery

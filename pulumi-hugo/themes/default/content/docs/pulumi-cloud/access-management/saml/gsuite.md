@@ -4,6 +4,7 @@ meta_desc: This page provides a walkthrough important aspects of configuring
            Google Workspace as a SAML SSO identity provider (IDP).
 title: Google Workspace
 h1: "SAML: Configuring Google Workspace"
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
     parent: saml

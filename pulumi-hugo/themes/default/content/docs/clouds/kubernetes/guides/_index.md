@@ -4,6 +4,7 @@ meta_desc: Pulumi Crosswalk for Kubernetes is production-ready Kubernetes for te
            Kubernetes to AWS, Azure, Google Cloud, or private.
 title: Guides
 h1: Pulumi & Kubernetes guides
+meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 menu:
   clouds:
     parent: kube

@@ -3,6 +3,7 @@ title_tag: "Property Testing for Pulumi Programs"
 meta_desc: "Guide to property testing of Pulumi programs with Policy as Code (CrossGuard)."
 title: Property testing
 h1: Property testing for Pulumi programs
+meta_image: /images/docs/meta-images/docs-meta.png
 weight: 2
 menu:
   usingpulumi:

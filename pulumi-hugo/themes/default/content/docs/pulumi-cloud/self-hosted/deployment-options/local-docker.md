@@ -3,6 +3,7 @@ title_tag: Local-Docker Install | Self-Hosting Pulumi
 meta_desc: Installer and installation instructions for deploying the self-hosted Pulumi Cloud in docker.
 title: Local-Docker
 h1: Pulumi Cloud self-hosted local-Docker install
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     pulumicloud:
         parent: deployment-options

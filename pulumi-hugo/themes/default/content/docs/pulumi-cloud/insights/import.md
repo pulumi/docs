@@ -3,6 +3,7 @@ title_tag: "Pulumi Insights: Cloud import"
 meta_desc: Import resources from your cloud account into Pulumi Insights
 title: Cloud import
 h1: Cloud import
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
     parent: insights

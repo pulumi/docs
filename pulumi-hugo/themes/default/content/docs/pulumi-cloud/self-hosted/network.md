@@ -3,6 +3,7 @@ title_tag: Network Requirements | Self-Hosting Pulumi
 meta_desc: The Pulumi Cloud networking ingress and egress information.
 title: Network reqs
 h1: Pulumi Cloud self-hosted network requirements
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     pulumicloud:
         parent: self-hosted

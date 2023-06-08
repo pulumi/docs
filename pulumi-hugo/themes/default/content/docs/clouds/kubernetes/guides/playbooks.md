@@ -4,6 +4,7 @@ meta_desc: The Pulumi Crosswalk Playbooks for Kubernetes is a collection of
            industry standard best-practices for managing Kubernetes in production.
 title: Playbooks
 h1: Kubernetes playbooks
+meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 menu:
   clouds:
     parent: kubernetes-guides

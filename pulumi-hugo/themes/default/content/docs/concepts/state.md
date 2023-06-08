@@ -7,6 +7,7 @@ keywords:
  - IaC
  - infrastructure state
  - state backend
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
     weight: 8

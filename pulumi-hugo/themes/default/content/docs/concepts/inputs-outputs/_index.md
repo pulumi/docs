@@ -3,6 +3,7 @@ title_tag: "Inputs & Outputs | Pulumi Concepts"
 meta_desc: Resource properties are treated specially in Pulumi, both for purposes of input and output. Learn how to work with inputs and outputs in this guide.
 title: "Inputs & outputs"
 h1: "Inputs & outputs"
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
     identifier: inputs-outputs

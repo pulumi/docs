@@ -4,6 +4,7 @@ meta_desc: This page provides a walkthrough important aspects of configuring
            Azure Active Directory (Azure AD) as a SAML SSO identity provider (IDP).
 title: Azure AD
 h1: "SAML: Configuring Azure Active Directory"
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
       parent: saml

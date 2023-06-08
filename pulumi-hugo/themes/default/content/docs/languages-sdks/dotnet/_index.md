@@ -3,6 +3,7 @@ title_tag: "C#, VB, F# (.NET) | Languages & SDKs"
 meta_desc: An overview of how to use .NET languages like C# and F# with Pulumi for infrastructure as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
 title: C#, VB, F# (.NET)
 h1: Pulumi & C#, VB, F# (.NET)
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   languages:
     identifier: dotnet

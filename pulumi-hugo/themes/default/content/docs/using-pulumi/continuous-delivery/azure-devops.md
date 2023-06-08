@@ -4,6 +4,7 @@ meta_desc: This page details how to use Azure DevOps to manage deploying stacks 
            commits to specific Git branches, and based on the build reason.
 title: Azure DevOps
 h1: Pulumi CI/CD & Azure DevOps
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     usingpulumi:
         parent: cont_delivery

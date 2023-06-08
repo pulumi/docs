@@ -3,6 +3,7 @@ title_tag: "Download & Install Pulumi"
 meta_desc: This page contains detailed instructions for downloading and installing Pulumi.
 title: "Download & install"
 h1: Download & install Pulumi
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   install:
     name: Overview

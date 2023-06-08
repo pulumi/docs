@@ -3,6 +3,7 @@ title_tag: "Unit Testing Pulumi Programs"
 meta_desc: "Guide to unit testing of Pulumi programs: mock-based tests across Node.js, Python, Go, and .NET."
 title: Unit testing
 h1: Unit testing Pulumi programs
+meta_image: /images/docs/meta-images/docs-meta.png
 weight: 1
 menu:
   usingpulumi:

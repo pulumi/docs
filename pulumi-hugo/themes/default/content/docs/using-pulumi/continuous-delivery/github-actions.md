@@ -4,6 +4,7 @@ meta_desc: Pulumi's Github Actions help you deploy apps and infrastructure to yo
            choice, using nothing but code in your favorite language and GitHub.
 title: GitHub Actions
 h1: GitHub Actions for Pulumi
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     usingpulumi:
         parent: cont_delivery

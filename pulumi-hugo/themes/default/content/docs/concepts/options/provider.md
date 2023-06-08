@@ -3,6 +3,7 @@ title_tag: "provider | Resource Options"
 meta_desc: The provider resource option passes an explicitly configured provider to be used instead of the global or ambient provider.
 title: "provider"
 h1: "Resource option: provider"
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
     identifier: provider

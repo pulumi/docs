@@ -4,6 +4,7 @@ meta_desc: This page describes the schema for a Pulumi Package, describing the r
            that define a Pulumi Package.
 title: Schema
 h1: Pulumi package schema
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     usingpulumi:
         parent: pulumi-packages

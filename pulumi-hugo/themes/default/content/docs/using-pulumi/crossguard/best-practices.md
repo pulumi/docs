@@ -4,6 +4,7 @@ meta_desc: This page contains best practices for writing policy packs in Pulumi.
 title: Best practices
 h1: Policy pack best practices
 weight: 4
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   usingpulumi:
     parent: crossguard

@@ -3,6 +3,7 @@ title_tag: Get Started with Azure
 meta_desc: This page provides an overview and tutorial on how to get started with Azure.
 title: Get started tutorial
 h1: Pulumi & Azure get started tutorial
+meta_image: /images/docs/meta-images/docs-clouds-azure-meta-image.png
 menu:
   clouds:
     parent: azure

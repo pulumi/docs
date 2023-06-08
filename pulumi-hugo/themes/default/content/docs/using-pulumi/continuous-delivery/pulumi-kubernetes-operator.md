@@ -4,6 +4,7 @@ meta_desc: This page details how to use the Pulumi Kubernetes Operator to manage
            stacks based on commits in git, Kubernetes objects, or Flux sources.
 title: Pulumi Kubernetes Operator
 h1: Pulumi Kubernetes Operator
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     usingpulumi:
         parent: cont_delivery

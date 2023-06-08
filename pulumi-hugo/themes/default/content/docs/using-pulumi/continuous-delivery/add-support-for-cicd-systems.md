@@ -4,6 +4,7 @@ meta_desc: This guide walks you through how you can configure your CI/CD environ
            to surface data in the Pulumi Cloud.
 title: Adding CI/CD support
 h1: Adding Pulumi support for CI/CD systems
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     usingpulumi:
         parent: cont_delivery

@@ -5,6 +5,7 @@ meta_desc:
   with the Pulumi Cloud.
 title: SAML(SSO)
 h1: Pulumi Cloud SAML(SSO)
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
     weight: 5

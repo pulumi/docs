@@ -3,6 +3,7 @@ title_tag: "YAML | Languages & SDKs"
 meta_desc: An overview of how to use Pulumi YAML for infrastructure as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
 title: YAML
 h1: Pulumi & YAML
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   languages:
     identifier: yaml-language

@@ -3,6 +3,7 @@ title_tag: Kubernetes FAQ | Crosswalk
 meta_desc: A collection of common questions about Kubernetes usage with Pulumi.
 title: FAQ
 h1: Kubernetes FAQ
+meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 menu:
   clouds:
     parent: kubernetes-guides

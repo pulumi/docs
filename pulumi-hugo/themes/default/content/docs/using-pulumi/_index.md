@@ -3,6 +3,7 @@ title_tag: "Using Pulumi"
 meta_desc: Learn how to adopt Pulumi, organize projects & stacks, use the Automation API, continuous delivery, policy as code, pulumi packages, and test Pulumi code.
 title: Using Pulumi
 h1: Using Pulumi
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   usingpulumi:
     weight: 5

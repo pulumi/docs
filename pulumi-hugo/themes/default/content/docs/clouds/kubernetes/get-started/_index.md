@@ -3,6 +3,7 @@ title_tag: Kubernetes get started tutorial
 meta_desc: This page provides an overview and guide on how to get started with Kubernetes.
 title: Get started tutorial
 h1: Kubernetes & Pulumi get started tutorial
+meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 menu:
   clouds:
     identifier: kubernetes-get-started

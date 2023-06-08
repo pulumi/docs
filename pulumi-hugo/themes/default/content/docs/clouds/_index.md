@@ -3,6 +3,7 @@ title_tag: "Pulumi supported Clouds"
 meta_desc: Pulumi supports AWS, Azure, Google Cloud, Kubernetes, and over 100 other packages.
 title: "Clouds"
 no_on_this_page: true
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   clouds:
     name: Overview

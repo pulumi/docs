@@ -4,6 +4,7 @@ meta_desc: This page will walk you through how to configure Kubernetes
            access control on AWS, Azure, and Google Cloud.
 title: Access control
 h1: Kubernetes access control
+meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 menu:
   clouds:
     parent: kubernetes-guides

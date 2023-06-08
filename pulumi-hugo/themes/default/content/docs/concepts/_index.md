@@ -4,6 +4,7 @@ meta_desc: Learn about the basic overall structure and major components of Pulum
 title: Concepts
 h1: Pulumi concepts
 no_on_this_page: true
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
     name: Overview

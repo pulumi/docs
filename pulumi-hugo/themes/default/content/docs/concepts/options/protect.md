@@ -3,6 +3,7 @@ title_tag: "protect | Resource Options"
 meta_desc: The protect resource option prevents accidental deletion of a resource by marking it as protected.
 title: "protect"
 h1: "Resource option: protect"
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
     identifier: protect

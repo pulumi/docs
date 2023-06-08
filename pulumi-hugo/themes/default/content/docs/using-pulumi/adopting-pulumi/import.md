@@ -3,6 +3,7 @@ title_tag: "Import Existing Cloud Infrastructure"
 meta_desc: Learn how to import existing cloud infrastructure into Pulumi no matter how it was provisioned.
 title: "Import resources"
 h1: "Importing resources"
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   usingpulumi:
     parent: adopting-pulumi

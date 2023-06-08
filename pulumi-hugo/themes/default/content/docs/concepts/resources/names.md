@@ -3,6 +3,7 @@ title_tag: "Resource Names"
 meta_desc: A resource in Pulumi has a logical name (in Pulumi) and a physical name (in the cloud provider). Learn more about resource names and how to use them here.
 title: Names
 h1: Resource names
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
     parent: resources

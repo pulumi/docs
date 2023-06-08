@@ -3,6 +3,7 @@ title_tag: "dependsOn | Resource Options"
 meta_desc: The dependsOn resource option specifies additional resource dependencies in addition to those in the dependency graph.
 title: "dependsOn"
 h1: "Resource option: dependsOn"
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
     identifier: dependsOn

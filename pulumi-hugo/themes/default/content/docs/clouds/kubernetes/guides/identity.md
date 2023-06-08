@@ -3,6 +3,7 @@ title_tag: Kubernetes Identity & Access Management | Crosswalk
 meta_desc: An overview of cloud identity and access management providers when using Kubernetes.
 title: IAM
 h1: Kubernetes identity and access management (IAM)
+meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 menu:
   clouds:
     parent: kubernetes-guides

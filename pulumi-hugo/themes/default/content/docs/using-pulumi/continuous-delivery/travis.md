@@ -4,6 +4,7 @@ meta_desc: This page details how to use Travis CI to manage deploying
            staging and production stacks based on commits to specific Git branches.
 title: Travis CI
 h1: Pulumi CI/CD & Travis CI
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     usingpulumi:
         parent: cont_delivery

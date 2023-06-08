@@ -3,6 +3,7 @@ title_tag: Configuring Azure Active Directory | SCIM
 meta_desc: This page describes how to support SCIM 2.0 functionality between Pulumi and Azure AD.
 title: Azure AD
 h1: "SCIM: Configuring Azure Active Directory"
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     pulumicloud:
         identifier: azuread-scim

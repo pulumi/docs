@@ -3,6 +3,7 @@ title_tag: "additionalSecretOutputs | Resource Options"
 meta_desc: The additionalSecretOutputs resource option specifies a list of named output properties that should be treated as secrets.
 title: "additionalSecretOutputs"
 h1: "Resource option: additionalSecretOutputs"
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
     identifier: additionalSecretOutputs

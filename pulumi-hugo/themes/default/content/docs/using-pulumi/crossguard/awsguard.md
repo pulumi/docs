@@ -5,6 +5,7 @@ meta_desc: AWSGuard codifies best practices for AWS in a library that you can co
 title: AWSGuard
 h1: AWSGuard policies
 weight: 3
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   usingpulumi:
     parent: crossguard

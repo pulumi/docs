@@ -3,6 +3,7 @@ title_tag: "Pulumi Insights: Resource search"
 meta_desc: Documentation and query syntax for the Pulumi Insights search feature.
 title: Resource search
 h1: Resource search
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
     parent: insights

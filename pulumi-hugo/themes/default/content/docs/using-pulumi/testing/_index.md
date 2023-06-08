@@ -3,6 +3,7 @@ title_tag: "Testing Pulumi Programs"
 meta_desc: "Guide to automated testing of Pulumi programs: unit testing, property testing, integration testing."
 title: Testing
 h1: Testing Pulumi programs
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     usingpulumi:
         identifier: testing

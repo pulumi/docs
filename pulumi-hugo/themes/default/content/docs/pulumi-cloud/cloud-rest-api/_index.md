@@ -3,6 +3,7 @@ title_tag: "Pulumi Cloud: REST API"
 meta_desc: An overview of the Pulumi Cloud REST API for querying Organization, Stack, State, etc. information.
 title: "REST API docs"
 h1: Pulumi Cloud REST API docs
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
     weight: 11

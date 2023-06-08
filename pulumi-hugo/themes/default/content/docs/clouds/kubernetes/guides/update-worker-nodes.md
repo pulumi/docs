@@ -4,6 +4,7 @@ meta_desc: This page provides a guide on how to update Kubernetes Worker Nodes
            with Pulumi.
 title: Updating worker nodes
 h1: Updating Kubernetes worker nodes
+meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 menu:
   clouds:
     parent: kubernetes-guides

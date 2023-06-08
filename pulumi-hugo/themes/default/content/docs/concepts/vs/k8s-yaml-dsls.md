@@ -3,6 +3,7 @@ title_tag: "Pulumi vs. Kubernetes YAML and DSLs"
 meta_desc: Learn about the major differences between Pulumi and Kubernetes YAML & DSLs.
 title: Kubernetes YAML
 h1: Pulumi vs Kubernetes YAML, Helm Charts and DSLs
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
     parent: vs

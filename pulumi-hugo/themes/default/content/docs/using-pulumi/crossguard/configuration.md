@@ -4,6 +4,7 @@ meta_desc: Configuration allows you to write flexible policies that can be reuse
 title: Config
 h1: Configuring policy packs
 weight: 3
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   usingpulumi:
     parent: crossguard

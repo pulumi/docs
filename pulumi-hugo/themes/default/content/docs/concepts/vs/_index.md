@@ -3,6 +3,7 @@ title_tag: "Pulumi Compared to Alternatives"
 meta_desc: Learn how Pulumi compares with alternative infrastructure as code solutions that may share overlapping capabilities. 
 title: Compare to...
 h1: Compare Pulumi to other solutions
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
     identifier: vs

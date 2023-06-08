@@ -3,6 +3,7 @@ title_tag: "Get Functions"
 meta_desc: Each Pulumi resource has a `get` function to get a reference to an existing instance of the resource. Learn more about these `get` functions in this guide.
 title: Get functions
 h1: Get functions
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
     parent: resources

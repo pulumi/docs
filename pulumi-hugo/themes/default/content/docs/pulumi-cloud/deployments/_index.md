@@ -3,6 +3,7 @@ title_tag: "Pulumi Deployments"
 meta_desc: Pulumi Deployments is the fast way for individuals, teams, enterprises, and platforms to go from code to cloud.
 title: "Deployments"
 h1: "Pulumi Deployments"
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
     identifier: deployments

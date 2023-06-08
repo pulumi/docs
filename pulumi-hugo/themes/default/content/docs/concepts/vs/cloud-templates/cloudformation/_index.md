@@ -3,6 +3,7 @@ title_tag: "Pulumi vs. AWS CloudFormation"
 meta_desc: Pulumi and AWS CloudFormation share some similarities, but there are many key differences. Learn about these major differences here.
 title: AWS CloudFormation
 h1: Pulumi vs AWS CloudFormation
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
     parent: vs

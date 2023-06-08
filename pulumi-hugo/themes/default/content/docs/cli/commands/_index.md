@@ -3,6 +3,7 @@ title_tag: "Pulumi CLI commands"
 meta_desc: The Pulumi CLI offers many commands to execute from your command-line.
 title: Commands
 h1: Pulumi CLI commands
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   cli:
     weight: 1

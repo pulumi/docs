@@ -3,6 +3,7 @@ title_tag: "parent | Resource Options"
 meta_desc: The parent resource option establishes an explicit parent/child relationship between resources.
 title: "parent"
 h1: "Resource option: parent"
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
     identifier: parent

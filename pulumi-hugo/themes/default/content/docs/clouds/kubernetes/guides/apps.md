@@ -3,6 +3,7 @@ title_tag: Deploy Kubernetes Apps | Crosswalk
 meta_desc: This page gives you an overview on how to deploy Kubernetes applications to different cloud providers.
 title: Apps
 h1: Kubernetes Apps
+meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 menu:
   clouds:
     parent: kubernetes-guides

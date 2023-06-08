@@ -4,6 +4,7 @@ meta_desc: This page provides a walkthrough important aspects of configuring
            Okta as a SAML SSO identity provider (IdP).
 title: Okta
 h1: "SAML: Configuring Okta"
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
     parent: saml

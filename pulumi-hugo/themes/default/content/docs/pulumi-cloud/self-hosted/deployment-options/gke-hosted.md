@@ -3,6 +3,7 @@ title_tag: GKE-Hosted Install | Self-Hosting Pulumi
 meta_desc: Installer and installation instructions for deploying the self-hosted Pulumi Cloud on Google Kubernetes Engine (GKE).
 title: GKE
 h1: Pulumi Cloud self-hosted GKE install
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     pulumicloud:
         parent: deployment-options

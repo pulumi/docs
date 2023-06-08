@@ -3,6 +3,7 @@ title_tag: "Pulumi Support Overview"
 meta_desc: Pulumi is here to help! Try reviewing our troubleshooting or FAQ docs, or reach out to support.
 title: Support
 h1: Pulumi support overview
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   support:
     name: Overview

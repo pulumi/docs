@@ -3,6 +3,7 @@ title_tag: "Environment Variables | Pulumi CLI"
 meta_desc: A list of different environment variables the Pulumi CLI supports.
 title: Environment variables
 h1: Pulumi CLI environment variables
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   cli:
     weight: 2

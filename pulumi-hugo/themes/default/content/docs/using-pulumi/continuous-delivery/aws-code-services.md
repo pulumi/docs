@@ -4,6 +4,7 @@ meta_desc: This page provides an overview of how to use Pulumi with Amazon Code
            Services CI/CD tools.
 title: AWS Code Services
 h1: Pulumi CI/CD & AWS Code Services
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     usingpulumi:
         parent: cont_delivery

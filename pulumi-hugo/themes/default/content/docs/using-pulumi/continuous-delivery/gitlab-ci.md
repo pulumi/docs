@@ -4,6 +4,7 @@ meta_desc: This page details how to use GitLab CI to manage deploying staging an
            production stacks based on commits to specific Git branches.
 title: GitLab CI
 h1: Pulumi CI/CD & GitLab
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     usingpulumi:
         parent: cont_delivery

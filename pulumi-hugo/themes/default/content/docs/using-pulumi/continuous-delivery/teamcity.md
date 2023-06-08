@@ -3,6 +3,7 @@ title_tag: "Using JetBrains TeamCity | CI/CD"
 meta_desc: "This page provides an overview of how to use Pulumi with JetBrains TeamCity."
 title: JetBrains TeamCity
 h1: Pulumi CI/CD & JetBrains TeamCity
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     usingpulumi:
         parent: cont_delivery

@@ -3,6 +3,7 @@ title_tag: "Stacks | Pulumi Concepts"
 meta_desc: Every Pulumi program is deployed to a stack and a project can have as many stacks as you need. Learn more about Pulumi stacks and how to use them.
 title: Stacks
 h1: Stacks
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   concepts:
     weight: 2

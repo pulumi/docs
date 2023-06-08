@@ -4,6 +4,7 @@ meta_desc: This page provides a walkthrough important aspects of configuring
   OneLogin as a SAML SSO identity provider (IdP).
 title: OneLogin
 h1: "SAML: Configuring OneLogin"
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
     parent: saml

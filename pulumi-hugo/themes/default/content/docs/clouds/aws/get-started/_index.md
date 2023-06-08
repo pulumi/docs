@@ -3,6 +3,7 @@ title_tag: Pulumi & AWS get started tutorial
 title: Get started tutorial
 h1: Pulumi & AWS get started tutorial
 meta_desc: This page provides a tutorial on how to get started with AWS & Pulumi.
+meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   clouds:
     parent: aws

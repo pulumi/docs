@@ -4,6 +4,7 @@ meta_desc: Pulumi's Policy as Code offering, CrossGuard, allows you to set guard
            best practices and security compliance are always followed.
 title: Policy as code
 h1: Pulumi policy as code
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     usingpulumi:
         identifier: crossguard

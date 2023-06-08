@@ -5,6 +5,7 @@ meta_desc: This page contains an overview of core concepts when interacting with
 title: Concepts
 h1: Pulumi policy as code concepts
 weight: 2
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   usingpulumi:
     parent: crossguard
