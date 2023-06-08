@@ -88,7 +88,6 @@
             {{ end }}
         </ul>
     </div>
-    {{ .Page.RelPermalink }}
     {{ if or (eq .Page.RelPermalink "/") (strings.Contains .Page.RelPermalink "/pricing/") (strings.Contains .Page.RelPermalink "/product/")
         (strings.Contains .Page.RelPermalink "/resources/") (eq .Page.RelPermalink "/about/") (eq .Page.RelPermalink "/careers/")
         (eq .Page.RelPermalink "/why-pulumi/") (eq .Page.RelPermalink "/cloud-engineering/") (eq .Page.RelPermalink "/aws/")
