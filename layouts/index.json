@@ -1,0 +1,22 @@
+{{- $index := slice -}}
+{{- range $page := $.Site.Pages -}}
+    {{- $ancestors := slice -}}
+
+    {{- range $a := $page.Ancestors.Reverse -}}
+        {{ $ancestors = $ancestors | append $a.LinkTitle }}
+    {{- end -}}
+
+    {{-
+        $index = $index | append (
+            dict
+                "objectID" $page.File.UniqueID
+                "title" $page.Title
+                "section" $page.Section
+                "href" $page.RelPermalink
+                "params" $page.Params
+                "kind" $page.Kind
+                "ancestors" (after 1 $ancestors)
+        )
+    -}}
+{{- end -}}
+{{- $index | jsonify (dict "indent" "    ") -}}

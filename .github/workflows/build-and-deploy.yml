@@ -14,7 +14,7 @@ jobs:
     env:
       GOPATH: ${{ github.workspace }}/go
     name: Install deps and build site
-    runs-on: buildjet-8vcpu-ubuntu-2204	
+    runs-on: buildjet-8vcpu-ubuntu-2204
     steps:
 
       - uses: actions/checkout@v2
@@ -29,7 +29,7 @@ jobs:
 
       - uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.96.0'
+          hugo-version: '0.111.0'
           extended: true
 
       - name: Configure Git
@@ -53,7 +53,10 @@ jobs:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_OPTIONS: "--max_old_space_size=4096"
+          ALGOLIA_APP_ID: ${{ vars.ALGOLIA_APP_ID }}
+          ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}
+          ALGOLIA_APP_ADMIN_KEY: ${{  secrets.ALGOLIA_APP_ADMIN_KEY }}
+          NODE_OPTIONS: "--max_old_space_size=8192"
 
       - name: Archive test results
         uses: actions/upload-artifact@v2
