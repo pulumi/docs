@@ -10,10 +10,6 @@ pulumi-choosable {
     // override this behavior, just apply the local Tailwind utility class "inline".
     display: block;
 
-    pre.chroma {
-        @apply mt-0;
-    }
-
     .copy-button-container {
         .no-copy & {
             display: none;

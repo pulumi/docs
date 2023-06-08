@@ -1,50 +1,84 @@
 @import "mixins";
 
-.copy-button-container {
-    margin: 9px 7px 0 0;
-    background: #4d5bd9;
-    
-    box-shadow: 0px 0px 12px #364098;
-    border-radius: 4px;
-    padding: 3px 7px 5px 7px;
-    position: absolute;
-    top: 0;
-    right: 0;
+div.highlight {
+    display: flex;
 
-    &:hover {
-        background: #4552c3;
-        box-shadow: 0px 0px 12px #364098;
-    }
-
-    &:active {
-        background: #4d5bd9;
-        box-shadow: 0px 0px 12px #364098;
+    pre,
+    div.copy-button-container {
+        flex: 1;
     }
 
 
-    .code-mode-dark & {
-        background: #4d5bd9;
-    }
+    .copy-button-container {
+        display: none;
 
-    // Use a slightly narrower tooltip for these.
-    pulumi-tooltip {
-        .tooltip-content {
-            @apply w-auto whitespace-nowrap;
+        i.copy {
+            display: none;
         }
-    }
-}
 
-.copy-button {
-    @include transition;
-    color: #fff;
-    font-size: 12px;
-    font-family: 'Inter';
-
-    .code-mode-dark & {
-        @apply text-gray-600;
+        flex-direction: row;
+        width: fit-content;
+        margin: 5px 3px 0 0;
+        background: #4d5bd9;
+        
+        box-shadow: 0px 0px 12px #364098;
+        border-radius: 4px;
+        padding: 3px 7px 5px 7px;
+        position: absolute;
+        top: 0;
+        right: 0;
 
         &:hover {
-            @apply text-gray-500;
+            background: #4552c3;
+            box-shadow: 0px 0px 12px #364098;
+        }
+
+        &:active {
+            background: #4d5bd9;
+            box-shadow: 0px 0px 12px #364098;
+        }
+
+
+        .code-mode-dark & {
+            background: #4d5bd9;
+        }
+
+        button.copy-button {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        // Use a slightly narrower tooltip for these.
+        pulumi-tooltip {
+            .tooltip-content {
+                @apply w-auto whitespace-nowrap;
+            }
+        }
+
+        @media (min-width: 768px) {
+            display: flex;
+        }
+
+        @media(min-width: 1024px) {
+            i.copy {
+                display: flex;
+            }
+        }
+    }
+
+    .copy-button {
+        @include transition;
+        color: #fff;
+        font-size: 12px;
+        font-family: 'Inter';
+
+        .code-mode-dark & {
+            @apply text-gray-600;
+
+            &:hover {
+                @apply text-gray-500;
+            }
         }
     }
 }
