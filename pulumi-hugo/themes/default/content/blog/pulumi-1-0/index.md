@@ -85,7 +85,7 @@ The Pulumi 1.0 milestone signals completeness, stability, and compatibility, and
 
 If you're already a Pulumi user, simply upgrade in the usual ways.
 
-If this is your first time using Pulumi, [give it a try today](https://pulumi.com/docs/get-started). It is open source and free to use.
+If this is your first time using Pulumi, [give it a try today](https://pulumi.com/docs/quickstart). It is open source and free to use.
 
 For more information about Pulumi Team and Enterprise editions, visit [our products page](https://pulumi.com/product).
 

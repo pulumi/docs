@@ -94,4 +94,4 @@ As with all the other tests we’ve mentioned, security testing should be done a
 
 ## Learn More
 
-Pulumi lets you take advantage of the well-developed testing frameworks that support your favorite programming language. It also includes many features for helping you ensure that your infrastructure works the way it should, is reliable and is secure. Visit us at pulumi.com or [get started](/docs/get-started/) for free today.
+Pulumi lets you take advantage of the well-developed testing frameworks that support your favorite programming language. It also includes many features for helping you ensure that your infrastructure works the way it should, is reliable and is secure. Visit us at pulumi.com or [get started](/docs/quickstart/) for free today.

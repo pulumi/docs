@@ -454,7 +454,7 @@ language.
 
 You can get going with these resources:
 
-- [Getting Started with Pulumi](/docs/get-started/)
+- [Getting Started with Pulumi](/docs/quickstart/)
 - [Setup Pulumi to work with Azure](/docs/clouds/azure/get-started/)
 - [Walkthroughs and Examples](/docs/clouds/azure/get-started/)
 

@@ -73,7 +73,7 @@ examples:
 
           export let url = web.endpoint.hostname;
       cta:
-          url: /docs/get-started
+          url: /docs/quickstart
           label: GET STARTED
 
     - title: Deploying with a custom build
@@ -104,7 +104,7 @@ examples:
           FROM nginx
           COPY ./www /usr/share/nginx/html
       cta:
-          url: /docs/get-started
+          url: /docs/quickstart
           label: GET STARTED
 
     - title: Creating a Kubernetes cluster
@@ -134,7 +134,7 @@ examples:
           // Export the cluster's kubeconfig.
           export const kubeconfig = cluster.kubeconfig;
       cta:
-          url: /docs/get-started
+          url: /docs/quickstart
           label: GET STARTED
 
     - title: Deploy containers to Microsoft ACI
@@ -174,7 +174,7 @@ examples:
               restartPolicy: "always",
           });
       cta:
-          url: /docs/get-started
+          url: /docs/quickstart
           label: GET STARTED
 
     - title: Invoke a long-running container as a task
@@ -228,7 +228,7 @@ examples:
 
           exports.bucketName = videos.bucket;
       cta:
-          url: /docs/get-started
+          url: /docs/quickstart
           label: GET STARTED
 
 contact_us_form:

@@ -83,7 +83,7 @@ become just a few lines of very simple, understandable code.
 ## Reusing Infrastructure as Code
 
 To use this new package, head on over to a Pulumi program, or
-[create a new one](/docs/get-started/)
+[create a new one](/docs/quickstart/)
 (for instance, with `pulumi new aws-typescript`).
 Then just add a reference like any other dependency:
 

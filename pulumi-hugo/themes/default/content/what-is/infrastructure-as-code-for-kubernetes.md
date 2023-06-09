@@ -82,4 +82,4 @@ Your production environment should be separate from other environments. One way 
 
 ## Learn More
 
-[Pulumi](/) streamlines Kubernetes cluster configuration, management, and app workload deployments to your clusters. With Pulumi infrastructure as code for Kubernetes you can, for example, manage your Kubernetes clusters, automate Kubernetes deployments and increase your productivity by using standard programming languages, IDEs and test frameworks. [Get started for free today](/docs/get-started/), or check out our on-demand workshops for tutorials on [IaC and Kubernetes](/resources/from-zero-to-production-in-kubernetes/).
+[Pulumi](/) streamlines Kubernetes cluster configuration, management, and app workload deployments to your clusters. With Pulumi infrastructure as code for Kubernetes you can, for example, manage your Kubernetes clusters, automate Kubernetes deployments and increase your productivity by using standard programming languages, IDEs and test frameworks. [Get started for free today](/docs/quickstart/), or check out our on-demand workshops for tutorials on [IaC and Kubernetes](/resources/from-zero-to-production-in-kubernetes/).

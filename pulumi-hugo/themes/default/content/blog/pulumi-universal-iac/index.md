@@ -39,7 +39,7 @@ Pulumi now supports Java (in addition to existing support for TypeScript, Python
 
 ![IntelliJ IDE with Pulumi and Java Program](intellij.png)
 
-You can get started with Pulumi using Java today in the [Pulumi Getting Started guide](/docs/get-started/) and the [Pulumi and Java language docs](/docs/languages-sdks/java/).
+You can get started with Pulumi using Java today in the [Pulumi Getting Started guide](/docs/quickstart/) and the [Pulumi and Java language docs](/docs/languages-sdks/java/).
 
 👉 Read more in the [Pulumi and Java](/blog/announcing-infrastructure-as-code-with-java-and-pulumi/) blog post.
 
@@ -83,7 +83,7 @@ outputs:
 
 Access to Pulumi packages authored in other Pulumi languages means complexity can be pushed into reusable infrastructure components instead of copy-pasted in YAML. And when complexity does increase, Pulumi YAML supports a new `pulumi convert` command to eject into any other Pulumi programming language to manage the increased complexity via rich software engineering features in those languages.
 
-You can get started with Pulumi YAML today in the [Pulumi Getting Started](/docs/get-started/) guide and the [Pulumi YAML language docs](/docs/languages-sdks/yaml/).
+You can get started with Pulumi YAML today in the [Pulumi Getting Started](/docs/quickstart/) guide and the [Pulumi YAML language docs](/docs/languages-sdks/yaml/).
 
 👉 Read more in the [Pulumi YAML blog post](/blog/pulumi-yaml/).
 

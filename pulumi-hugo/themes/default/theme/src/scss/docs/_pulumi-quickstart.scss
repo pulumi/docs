@@ -1,0 +1,360 @@
+.docs-list-main .docs-main-content-wrapper .docs-main-content {
+    section.pulumi-quickstart {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        h2 {
+            &.accordion-heading {
+                font-family: 'Inter';
+                font-weight: 500;
+                font-size: 16px;
+                color: #131314;
+            }
+
+            &.step-heading {
+                font-family: 'Inter';
+                font-weight: 500;
+                font-size: 16px;
+                color: #131314;
+                margin: 0;
+            }
+        }
+
+        labels {
+            display: flex;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"] + div.content {
+            display: none;
+        }
+
+        p.intro {
+            margin: 0;
+        }
+
+        div.template {
+            display: flex;
+        }
+
+        div#accordion-template-learn-more,
+        div#accordion-deploy-learn-more {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 12px;
+
+            div.heading {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                cursor: pointer;
+
+                h2 {
+                    font-family: 'Inter';
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: #5f6065;
+                    margin: 0;
+                }
+            }
+
+            div.content p:first-of-type {
+                margin-top: 0;
+            }
+
+            div.accordion-content,
+            input#accordion-checkbox-template-learn-more,
+            input#accordion-checkbox-deploy-learn-more,
+            label.hide,
+            input#accordion-checkbox-template-learn-more:checked ~ label.show,
+            input#accordion-checkbox-deploy-learn-more:checked ~ label.show {
+                display: none;
+            }
+        
+            input#accordion-checkbox-template-learn-more:checked ~ div.accordion-content,
+            input#accordion-checkbox-template-learn-more:checked ~ label.hide,
+            input#accordion-checkbox-deploy-learn-more:checked ~ div.accordion-content,
+            input#accordion-checkbox-deploy-learn-more:checked ~ label.hide {
+                display: flex;
+            }
+        }
+
+        div#accordion-quickstart-customize {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border: 1px solid #bebfc9;
+            border-radius: 4px;
+            padding: 16px 24px;
+
+            div.accordion-content,
+            input#accordion-checkbox-quickstart-customize,
+            input#accordion-checkbox-template-learn-more,
+            label.hide,
+            input#accordion-checkbox-quickstart-customize:checked ~ label.show,
+            input#accordion-checkbox-template-learn-more ~ label.show {
+                display: none;
+            }
+        
+            input#accordion-checkbox-quickstart-customize:checked ~ div.accordion-content,
+            input#accordion-checkbox-quickstart-customize:checked ~ label.hide {
+                display: flex;
+            }
+
+            div.heading {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex: 1;
+                cursor: pointer;
+
+                h2 {
+                    margin-bottom: 0;
+                }
+            }
+
+            label.hide div.heading {
+                padding-bottom: 8px;
+                margin-bottom: 24px;
+                border-bottom: 1px solid #e5e5e9;
+            }
+
+            label.show div.heading {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding: 0;
+            }
+
+            div.customize-section {
+                display: flex;
+                gap: 36px;
+    
+                p {
+                    align-items: baseline;
+                    display: flex;
+                    flex-basis: 88px;
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    text-align: right;
+                    justify-content: right;
+                    font-family: 'Inter';
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #131314;
+                    vertical-align: top;
+                    margin: 14px 0;
+                    i {
+                        margin-left: 4px;
+                    }
+                }
+
+                label {
+                    cursor: pointer;
+                }
+    
+                div.labels {
+                    display: flex;
+                    gap: 8px;
+                    margin: 12px 0;
+                    flex-wrap: wrap;
+                
+                    label.radio-label {
+                        font-family: 'Inter';
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 14px;
+                        color: #5F6065;
+                        text-align: center;
+                        padding: 5px 12px 7px 12px;
+                        background: #f2f2f4;
+                        border: 1px solid #f2f2f4;
+                        border-radius: 4px;
+                        justify-content: center;
+                        height: 26px;
+                        display: flex;
+    
+                        &:hover {
+                            background: #e5e5e9;
+                        }
+                    }
+
+                    label.selected {
+                        background: #edeffb;
+                        border: 1px solid #a6adec;
+                        color: #131314;
+
+                        &:hover {
+                            background: #CACEF4;
+                        }
+                    }
+                }
+    
+                label.checkbox-label {
+                    font-family: 'Inter';
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #5f6065;
+                }
+            }
+
+            div.customize-section.cloud .checkbox {
+                margin-bottom: 14px;
+            }
+        }
+
+        ol.steps-counter {
+            list-style: none;
+            padding-left: 0;
+            counter-reset: steps-counter;
+            display: flex;
+            gap: 36px;
+            flex-direction: column;
+
+            > li {
+                display: flex;
+                flex-direction: row;
+                gap: 24px;
+                margin: 0;
+
+                &.install {
+                    input[type="radio"]:checked + div.content {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 18px;
+        
+                        h2.step-heading {
+                            margin: 0 0 18px 0;
+                        }
+                    }
+                }
+    
+                &.credentials {
+                    display: none;
+
+                    input[type="radio"]:checked + div.content {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    p:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+                div.code-block {
+                    width: fit-content;
+
+                    pre.chroma {
+                        padding-right: 20px;
+                        flex: none;
+                    }
+                }
+            
+
+                &::before {
+                    counter-increment: steps-counter;
+                    content: counter(steps-counter);
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    font-family: 'Gilroy';
+                    font-weight: 600;
+                    font-size: 16px;
+                    text-align: center;
+                    color: #5f6065;
+                    flex-shrink: 0;
+                }
+    
+                &.install::before {
+                    background: #fffaed;
+                }
+    
+                &.credentials::before {
+                    background: #fef1f2;
+                }
+    
+                &.directory::before {
+                    background: #f8edf3;
+                }
+    
+                &.template::before {
+                    background: #f3ebf4;
+                }
+    
+                &.deploy::before {
+                    background: #f2eff9;
+                }
+            }
+        }
+
+        a.next-steps {
+            display: none;
+            border-radius: 4px;
+            padding: 12px 24px 12px 24px;
+            border: 1px solid #A6ADEC;
+            background-color: linear-gradient(120.76deg, #F6F7FD 0%, #FFFFFF 22.11%, #FFFFFF 79.52%, #F6F7FD 100%), #FFFFFF;
+            margin-top: 32px;
+            cursor: pointer;
+            
+            &:hover {
+                background: #F5F6FD;
+            }
+
+            .header {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                
+                h2 {
+                    font-family: 'Gilroy';
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 32px;
+                    flex-grow: 1;
+                    margin: 0px;
+                }
+                
+                
+
+                p {
+                    font-family: 'Gilroy';
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+
+
+            }
+
+            &.aws {
+                // it's the default.
+                display: block;
+                img {
+                    width: 32px;
+                }
+            }
+
+            &.azure {
+                img {
+                    width: 56px;
+                }
+            }
+
+            &.gcp {
+                img {
+                    width: 100px;
+                }
+            }
+
+            &.kubernetes {
+                img {
+                    width: 100px;
+                }
+            }
+
+        }
+    }
+}

@@ -58,7 +58,7 @@ Based on feedback from customers, we've picked the following resources to suppor
 
 ## How do I get started?
 
-If you aren't already familiar with Pulumi, you'll want to head over to [Pulumi's getting started guide](/docs/get-started/) first.
+If you aren't already familiar with Pulumi, you'll want to head over to [Pulumi's getting started guide](/docs/quickstart/) first.
 
 The Pulumi Service Provider requires an access token to authenticate with the Pulumi Service. You can set it in a few ways:
 

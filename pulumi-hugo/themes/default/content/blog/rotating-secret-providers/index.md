@@ -77,7 +77,7 @@ values will be encrypted as per the new stack.
 ## Learn More
 
 If you’d like to learn about Pulumi and manage your infrastructure through code,
-[get started today](https://www.pulumi.com/docs/get-started/). Pulumi is open source and free to use.
+[get started today](https://www.pulumi.com/docs/quickstart/). Pulumi is open source and free to use.
 
 As always, you can check out our code on [GitHub](https://github.com/pulumi), follow us
 on [Twitter](https://twitter.com/pulumicorp), subscribe to our [YouTube channel](https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw),

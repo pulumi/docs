@@ -287,6 +287,6 @@ enable developers to get their code production ready faster.
 
 Get going with these resources:
 
-- [Getting Started](/docs/get-started/)
+- [Getting Started](/docs/quickstart/)
 - [Serverless REST API on AWS](https://github.com/pulumi/examples/tree/master/aws-ts-apigateway)
 - [Examples of Lambda authorizers in the AWSX repository](https://github.com/pulumi/pulumi-awsx/tree/master/awsx-classic/apigateway#lambda-authorizers)

@@ -178,7 +178,7 @@ Configuration allows organization administrators to quickly and easily tweak Pol
 
 We've invested in improving the user experience for authoring and managing policy. Whether you're an enterprise customer or an open source user, you can get started by taking CrossGuard for a spin.
 
-* [Getting Started with Pulumi](/docs/get-started/)
+* [Getting Started with Pulumi](/docs/quickstart/)
 * [Getting Started with CrossGuard](/docs/using-pulumi/crossguard/get-started/)
 * [Example Policy Packs](https://github.com/pulumi/examples/tree/master/policy-packs)
 

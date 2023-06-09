@@ -86,4 +86,4 @@ With IaS, you can use a common API to create an infrastructure that will work fo
 
 ## Learn More
 
-Pulumi is the leading platform for Infrastructure a Software. It supports multiple languages, multiple cloud providers, and has many other features such as built-in secrets management. Want to learn more? Visit [pulumi.com](/) or [get started](/docs/get-started/) for free today.
+Pulumi is the leading platform for Infrastructure a Software. It supports multiple languages, multiple cloud providers, and has many other features such as built-in secrets management. Want to learn more? Visit [pulumi.com](/) or [get started](/docs/quickstart/) for free today.

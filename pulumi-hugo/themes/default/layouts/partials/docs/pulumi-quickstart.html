@@ -1,0 +1,264 @@
+{{ $steps := .Params.steps }}
+{{ $install := $steps.install }}
+{{ $credentials := $steps.credentials }}
+{{ $customize := .Params.customize }}
+
+
+<section id="pulumi-quickstart" class="content pulumi-quickstart">
+    <p class="intro">{{ .Params.intro }}</p>
+
+    <div id="accordion-quickstart-customize">
+        <input type="checkbox" id="accordion-checkbox-quickstart-customize" checked />
+        <label for="accordion-checkbox-quickstart-customize" class="show">
+            <div class="heading">
+                <h2 class="accordion-heading">{{ $customize.heading }}</h2>
+                <div class="icon icon-18-18 customize-expand-more-18-18"></div>
+            </div>
+        </label>
+        <label for="accordion-checkbox-quickstart-customize" class="hide">
+            <div class="heading">
+                <h2 id="no-anchor" class="accordion-heading">{{ $customize.heading }}</h2>
+                <div class="icon icon-18-18 customize-expand-less-18-18"></div>
+            </div>
+        </label>
+        <div class="accordion-content">
+            <div class="content">
+                <div class="customize-section osx">
+                    <p>OS</p>
+                    <div class="labels">
+                        {{ range $index, $os := $customize.options.os }}
+                            <label class="radio-label {{ if $os.default }}selected{{ end }}" for="os-{{ $os.id }}-radio">{{ $os.displayName }}</label>
+                        {{ end }}
+                    </div>
+                </div>
+
+                <div class="customize-section cloud">
+                    <p>Cloud</p>
+                    <div class="labels-and-checkbox">
+                        <div class="labels">
+                            {{ range $index, $cloud := $customize.options.clouds }}
+                                <label class="radio-label {{ if $cloud.default }}selected{{ end }}" for="cloud-{{ $cloud.id }}-radio">{{ $cloud.displayName }}</label>
+                            {{ end }}
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="credentials-checkbox" name="credentials-checkbox" autocomplete="off" />
+                            <label class="checkbox-label" id="credentials-checkbox" for="credentials-checkbox">{{ $customize.options.credentials_label }}</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="customize-section language">
+                    <p>Language</p>
+                    <div class="labels">
+                        {{ range $index, $cloud := $customize.options.languages }}
+                            <label class="radio-label {{ if $cloud.default }}selected{{ end }}" for="language-{{ $cloud.id }}-radio">{{ $cloud.displayName }}</label>
+                        {{ end }}
+                    </div>
+                </div>
+
+                <div class="customize-section template">
+                    <p>
+                        Template
+                        <pulumi-tooltip>
+                            <span class="tooltip-target">
+                                <i class="far fa-question-circle"></i>
+                            </span>
+                            <span slot="content">Templates quickly deploy and modify common architectures. If you’re unsure which template to use, select "starter."</span>
+                        </pulumi-tooltip>
+                    </p>
+                    <div class="labels">
+                        {{ range $index, $temp := $customize.options.templates }}
+                            <label class="radio-label {{ if $temp.default }}selected{{ end }}" for="template-{{ $temp.id }}-radio">{{ $temp.displayName }}</label>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ol class="steps-counter">
+        <li class="install step">
+            {{ $install := $steps.install }}
+            <div class="content-block">
+                <h2 id="step-one" class="step-heading">{{ $install.heading }}</h2>
+                {{ range $os, $command := $install.command }}
+                    <input type="radio" id="os-{{ $os }}-radio" name="os-radio" checked />
+                    <div class="content code-block install-osx  highlight">
+                        <pre class="chroma"><code>{{ $command }}</code></pre>
+                    </div>
+                {{ end }}
+            </div>
+        </li>
+        <li id="credentials-step" class="credentials step">
+            {{ range $index, $cloud := $credentials.clouds }}
+                <input type="radio" id="cloud-{{ $cloud.cloud }}-radio" name="credentials-radio" value="{{ $cloud.cloud }}" {{ if $cloud.default }}checked{{ end }} />
+                <div class="content {{ $cloud }}">
+                    <h2 class="step-heading">{{ $cloud.heading }}</h2>
+                    {{ $cloud.content | safeHTML }}
+                </div>
+            {{ end }}
+        </li>
+        <li class="directory step">
+            <div class="content">
+                {{ $directory := $steps.directory }}
+                <h2 id="step-three" class="step-heading">{{ $directory.heading }}</h2>
+                <div class="content code-block directory highlight">
+                    <pre class="chroma"><code>{{ $directory.command }}</code></pre>
+                </div>
+            </div>
+        </li>
+        <li class="template step">
+            <div class="templates">
+                {{ $template := $steps.template }}
+                <h2 id="step-four" class="step-heading">{{ $template.heading }}</h2>
+
+                <!-- language radio group -->
+                {{ range $index, $lang := $customize.options.languages }}
+                    <input type="radio" id="language-{{ $lang.id }}-radio" name="language-radio" value="{{ $lang.id }}" {{ if $lang.default }}checked{{ end }} />
+                {{ end }}
+
+
+                <!-- template radio group -->
+                {{ range $index, $temp := $customize.options.templates }}
+                    <input type="radio" id="template-{{ $temp.id }}-radio" name="templates-radio" value="{{ $temp.cmdPrefix }}" {{ if $temp.default }}checked{{ end }} />
+                {{ end }}
+
+
+                <script>
+                    $(document).ready(function () {
+                        $('input[name="language-radio"], input[name="credentials-radio"], input[name="templates-radio"]').change(function () {
+                            if ($(this).is(":checked")) {
+                                const selectedValue = $(this).val();
+                                const cloud = $('input[name="credentials-radio"]:checked').val();
+                                const language = $('input[name="language-radio"]:checked').val();
+                                const template = $('input[name="templates-radio"]:checked').val();
+                                console.log("template", template);
+                                $("#template-command").html(`pulumi new ${template ? template + "-" : ""}${cloud}-${language}`);
+                                $("[id^=template-content]").css("display", "none");
+                                $(`#template-content-${language}`).css("display", "block");
+                                $("[id^=next-steps-]").css("display", "none");
+                                if (!template) {
+                                    $(`#next-steps-${cloud}`).css("display", "block");
+                                }
+                            }
+                        });
+
+                        const labelGroups = ["os", "cloud", "language", "template"];
+                        labelGroups.forEach(labelGroup => {
+                            $(`label[for^="${labelGroup}-"]`).click(function () {
+                                $(`label[for^="${labelGroup}-"]`).removeClass("selected");
+                                $(this).addClass("selected");
+                            });
+                        });
+
+                        $('input[id="credentials-checkbox"').change(function () {
+                            console.log("credentials checkbox changed");
+                            if ($(this).is(":checked")) {
+                                $("#credentials-step").css("display", "flex");
+                            } else {
+                                $("#credentials-step").css("display", "none");
+                            }
+                        });
+
+                        function setOS() {
+                            const userAgent = navigator.userAgent;
+                            let os = "osx";
+                            if (userAgent.indexOf("Win") !== -1) {
+                                os = "windows";
+                            } else if (userAgent.indexOf("Mac") !== -1) {
+                                os = "osx";
+                            } else if (userAgent.indexOf("Linux") !== -1) {
+                                os = "linux";
+                            }
+                            $(`#os-${os}-radio`).prop("checked", true);
+                            $(`label[for^="os-"]`).removeClass("selected");
+                            $(`label[for="os-${os}-radio"]`).addClass("selected");
+                        }
+
+                        function initQuickStart() {
+                            $("[id^=template-content]").css("display", "none");
+                            $("#template-content-typescript").css("display", "block");
+                            setOS();
+                        }
+
+                        initQuickStart();
+                    });
+                </script>
+
+                <div class="content code-block template highlight">
+                    <pre class="chroma"><code id="template-command">pulumi new aws-typescript</code></pre>
+                </div>
+                <div id="accordion-template-learn-more">
+                    <input type="checkbox" id="accordion-checkbox-template-learn-more" />
+                    <label for="accordion-checkbox-template-learn-more" class="show">
+                        <div class="heading">
+                            <div class="icon icon-16-16 lightbulb-16-16"></div>
+                            <h2 class="accordion-heading no-anchor">{{ $template.accordion.heading }}</h2>
+                            <div class="icon icon-18-18 customize-expand-more-18-18"></div>
+                        </div>
+                    </label>
+                    <label for="accordion-checkbox-template-learn-more" class="hide">
+                        <div class="heading">
+                            <div class="icon icon-16-16 lightbulb-16-16"></div>
+                            <h2 class="accordion-heading no-anchor">{{ $template.accordion.heading }}</h2>
+                            <div class="icon icon-18-18 customize-expand-less-18-18"></div>
+                        </div>
+                    </label>
+                    <div class="accordion-content">
+                        <div class="content">
+                            {{ $template.accordion.intro | safeHTML }}
+                            {{ range $lang, $content := $template.accordion.content }}
+                                <div id="template-content-{{ $lang }}">
+                                    {{ $content | safeHTML }}
+                                </div>
+                            {{ end }}
+                            {{ $template.accordion.closing | safeHTML }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="deploy step">
+            <div class="content">
+                {{ $deploy := $steps.deploy }}
+                <h2 id="step-five" class="step-heading">{{ $deploy.heading }}</h2>
+                <div class="content code-block deploy highlight">
+                    <pre class="chroma"><code>{{ $deploy.command }}</code></pre>
+                </div>
+                <div id="accordion-deploy-learn-more">
+                    <input type="checkbox" id="accordion-checkbox-deploy-learn-more" />
+                    <label for="accordion-checkbox-deploy-learn-more" class="show">
+                        <div class="heading">
+                            <div class="icon icon-16-16 lightbulb-16-16"></div>
+                            <h2 class="accordion-heading no-anchor">{{ $deploy.accordion.heading }}</h2>
+                            <div class="icon icon-18-18 customize-expand-more-18-18"></div>
+                        </div>
+                    </label>
+                    <label for="accordion-checkbox-deploy-learn-more" class="hide">
+                        <div class="heading">
+                            <div class="icon icon-16-16 lightbulb-16-16"></div>
+                            <h2 class="accordion-heading no-anchor">{{ $deploy.accordion.heading }}</h2>
+                            <div class="icon icon-18-18 customize-expand-less-18-18"></div>
+                        </div>
+                    </label>
+                    <div class="accordion-content">
+                        <div class="content">
+                            {{ $deploy.accordion.content | safeHTML }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ol>
+    {{ $nextSteps := .Params.next_steps }}
+    {{ range $index, $content := $nextSteps.content }}
+        <a id="next-steps-{{ $content.cloud }}" class="next-steps {{ $content.cloud }}" href="{{ $content.link }}">
+            <div class="header">
+                <div class="icon icon-18-18 grad-cap-18-18"></div>
+                <h2>{{ $nextSteps.heading }}</h2>
+                <img src="{{ $content.logo }}" alt="{{ $content.cloud }} logo" />
+            </div>
+            <p>{{ $content.body }}</p>
+        </a>
+    {{ end }}
+</section>

@@ -450,7 +450,7 @@ If you'd like to try `crd2pulumi` today, head to the [release page] and download
 operating system.
 
 If you'd like to learn about Pulumi and how to manage your
-infrastructure and Kubernetes through code, [get started today](/docs/get-started/). Pulumi is open
+infrastructure and Kubernetes through code, [get started today](/docs/quickstart/). Pulumi is open
 source and free to use.
 
 For further examples on how to use Pulumi to create Kubernetes

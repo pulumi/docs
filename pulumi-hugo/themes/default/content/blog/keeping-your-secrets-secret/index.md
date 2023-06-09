@@ -72,4 +72,4 @@ Security should be as much a part of your workflow as any other phase of the dev
 
 ## Learn More
 
-Pulumi takes security risks seriously. That’s why our platform is secure by default. It protects all secret data using Pulumi’s built-in secret storage, a secret store that “just works.” We also support all the major cloud-provided secret services. Want to learn more? Visit [pulumi.com](https://www.pulumi.com/) or [get started](/docs/get-started/) for free today.
+Pulumi takes security risks seriously. That’s why our platform is secure by default. It protects all secret data using Pulumi’s built-in secret storage, a secret store that “just works.” We also support all the major cloud-provided secret services. Want to learn more? Visit [pulumi.com](https://www.pulumi.com/) or [get started](/docs/quickstart/) for free today.

@@ -115,7 +115,7 @@ There you will find several instructions on installing and getting started with 
 
 - [Full example code](https://github.com/pulumi/examples/tree/master/gcp-java-gke-hello-world)
 
-- [Getting started with Pulumi](https://www.pulumi.com/docs/get-started/)
+- [Getting started with Pulumi](https://www.pulumi.com/docs/quickstart/)
 
 - [General Pulumi overview (concepts and architecture)](https://www.pulumi.com/docs/concepts/)
 

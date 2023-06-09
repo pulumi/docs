@@ -152,7 +152,7 @@ for more in the weeks to come. In the meantime, here are some follow up
 links in case you want to learn more about GitHub Actions and Pulumi:
 
 - To learn more, [install Pulumi](/docs/install/) and then
-  check out our [Getting Started guide](/docs/get-started/).
+  check out our [Getting Started guide](/docs/quickstart/).
 - In addition to [the keynote video](https://www.youtube.com/watch?v=59SxB2uY9E0), we have two
   other videos that you might enjoy watching to learn more:
     - In [this video](https://www.youtube.com/watch?v=MKbDVDBuKUA), we
@@ -171,7 +171,7 @@ about it is that *it's fun* in the same way programming is fun.
 
 If you're not yet in the GitHub Actions private beta, but want to try
 Pulumi, head on over to our
-[Pulumi Getting Started guide](/docs/get-started/). You'll be running CLI commands,
+[Pulumi Getting Started guide](/docs/quickstart/). You'll be running CLI commands,
 but we think that can be a lot of fun too!
 
 We want to thank our GitHub partners for the bold and innovative work

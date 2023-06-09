@@ -108,5 +108,5 @@ it easy to author and deploy these kinds of architectures, and Epsagon
 makes it easy to monitor them. Users get an application-centric view
 across their full serverless application infrastructure.
 
-Checkout the quickstart guides for [Pulumi](/docs/get-started/)
+Checkout the quickstart guides for [Pulumi](/docs/quickstart/)
 and [Epsagon](https://docs.epsagon.com/#/quick-start-guide) now!

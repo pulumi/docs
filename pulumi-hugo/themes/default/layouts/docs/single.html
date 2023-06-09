@@ -31,6 +31,8 @@
 
                 {{ if .Params.cloud_overview }}
                     {{ partial "docs/cloud-overview.html" . }}
+                {{ else if .Params.pulumi_quickstart }}
+                    {{ partial "docs/pulumi-quickstart.html" . }}
                 {{ end }}
 
 

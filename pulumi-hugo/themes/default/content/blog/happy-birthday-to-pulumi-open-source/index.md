@@ -18,7 +18,7 @@ since launching:
 
 - Over 100 [examples](https://github.com/pulumi/examples),
     [tutorials](/registry/), and a brand new
-    [Getting Started guide](/docs/get-started/).
+    [Getting Started guide](/docs/quickstart/).
 - [A native Kubernetes provider with 100% Kubernetes API/version coverage.](/blog/pulumi-a-better-way-to-kubernetes)
 - A steady stream of improvements across
     [AWS](/docs/clouds/aws/get-started/),

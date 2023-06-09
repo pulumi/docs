@@ -151,4 +151,4 @@ Duration: 2m30s
 
 Before jumping to the next thing, let's review what we've done. Using infrastructure as code enables changing your infrastructure as new technology becomes available. You can experiment rapidly to see if this configuration can meet your performance metrics and remain within your cloud spend budget. Blue/green deployment is straightforward because you are just swapping components on a known and proven infrastructure. These are just some of the advantages of using infrastructure as code.
 
-So what is the next step? In a future article, well demonstrate how to build your own ARM-based container images using Docker's `buildx` CLI plugin. Until then, you can learn more about Pulumi and infrastructure as code with our [Getting Started](/docs/get-started/) tutorials.
+So what is the next step? In a future article, well demonstrate how to build your own ARM-based container images using Docker's `buildx` CLI plugin. Until then, you can learn more about Pulumi and infrastructure as code with our [Getting Started](/docs/quickstart/) tutorials.

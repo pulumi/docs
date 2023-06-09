@@ -170,7 +170,7 @@ $ pulumi new serverless-azure-yaml
 
 ## Pulumi to the Cloud
 
-Each of these commands will generate some boilerplate for you, and includes defaults you can accept or modify (such as the name of the project, or the application directory). Run `pulumi up` from this directory, ensuring that you've connected the [Pulumi CLI](/docs/get-started/) to your preferred cloud provider, and your starting point is online, ready for you to sub in your own application code. For the purposes of this demonstration, I've accepted the defaults. I've also left the provided application and function code in place. Let's examine what Pulumi creates for us here, using Python for AWS, Go for GCP, and Typescript for Azure.
+Each of these commands will generate some boilerplate for you, and includes defaults you can accept or modify (such as the name of the project, or the application directory). Run `pulumi up` from this directory, ensuring that you've connected the [Pulumi CLI](/docs/quickstart/) to your preferred cloud provider, and your starting point is online, ready for you to sub in your own application code. For the purposes of this demonstration, I've accepted the defaults. I've also left the provided application and function code in place. Let's examine what Pulumi creates for us here, using Python for AWS, Go for GCP, and Typescript for Azure.
 
 {{% chooser cloud "aws,gcp,azure" / %}}
 

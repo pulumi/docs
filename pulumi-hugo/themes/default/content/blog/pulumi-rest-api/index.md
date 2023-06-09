@@ -143,6 +143,6 @@ Now all we need to do is generate a token, set our `PAPI_TOKEN` environment vari
 
 ## Give It a Try Today
 
-As we have seen, the Pulumi REST API gives us easy access to projects, stacks, cloud resources, teams, and more. It is now generally available to all users of the Pulumi Service, both free and paying customers. To give it a try today, [sign up for your free account now](https://app.pulumi.com/signup), give our [Getting Started guide](/docs/get-started/) a try, and then check out the [Pulumi REST API documentation](/docs/pulumi-cloud/cloud-rest-api/).
+As we have seen, the Pulumi REST API gives us easy access to projects, stacks, cloud resources, teams, and more. It is now generally available to all users of the Pulumi Service, both free and paying customers. To give it a try today, [sign up for your free account now](https://app.pulumi.com/signup), give our [Getting Started guide](/docs/quickstart/) a try, and then check out the [Pulumi REST API documentation](/docs/pulumi-cloud/cloud-rest-api/).
 
 We can't wait to see the powerful automation you build for your team using the Pulumi REST API! Have fun spelunking in the cloud.

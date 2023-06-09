@@ -73,4 +73,4 @@ Once you have your cluster provisioned, you can also deploy workloads into your 
 
 ### Conclusion
 
-This is just a sample of the many ways that Pulumi makes it easier than ever to manage containers and Kubernetes clusters in enterprise scenarios. [Give it a try](/docs/get-started/) for yourself and let us know what you think in our [Community Slack](https://slack.pulumi.com).
+This is just a sample of the many ways that Pulumi makes it easier than ever to manage containers and Kubernetes clusters in enterprise scenarios. [Give it a try](/docs/quickstart/) for yourself and let us know what you think in our [Community Slack](https://slack.pulumi.com).
