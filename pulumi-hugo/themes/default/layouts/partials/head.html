@@ -81,8 +81,9 @@
         <!-- Only use large-image Twitter cards where we've set meta_images. -->
         {{ $twitter_card_type = "summary_large_image" }}
     {{ end }}
-    <meta property="og:image" content="{{ $image | absURL }}" />
 
+
+    <meta property="og:image" content="{{ $image | absURL }}" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta property="og:site_name" content="pulumi" />
