@@ -99,14 +99,14 @@
         </div>
     </section>
 
-    <section id="dev-stories" class="yellow-blue-gradient">
+    <section id="dev-stories" style="background: linear-gradient(180deg, #7BDEFF, #DBF4E4 100%);">
         <div class="container mx-auto px-4 pb-16 text-center">
             <h2>DevStories and Demos</h2>
             <p class="text-lg">
                 PulumiUP isn't just another developer conference. Our brilliant speakers are engineers like you, who tackled challenges, successfully implemented solutions, and
                 some even founded their own companies. Listen to their stories, their ideas, be inspired and learn from the best.
             </p>
-            <div class="container flex flex-wrap">
+            <div class="container flex flex-wrap justify-center">
                 {{ range .Params.stories }}
                     <div class="p-2 w-full lg:w-1/2">
                         <div class="card mx-auto h-full bg-white p-4 flex">
@@ -132,6 +132,32 @@
                 event-sessions="{{ .Params.registration.items | jsonify }}"
             >
             </event-session-registration-modal>
+        </div>
+    </section>
+
+    <section id="workshops" style="background: linear-gradient(180deg, #DBF4E4 0%, #7BDEFF 100%);">
+        <div class="container mx-auto py-16">
+            <h2 class="px-4 pb-8">Workshops</h2>
+
+            <div class="flex flex-wrap justify-center items-stretch">
+                {{ range .Params.workshops }}
+                    <div class="w-full lg:w-1/2 p-3">
+                        <div class="card bg-white p-6 text-black h-full">
+                            <h5>{{ .title }}</h5>
+                            <span class="my-0 py-1 inline-block mr-3 text-gray-600">
+                                <i class="fas fa-calendar mr-2"></i>
+                                {{ .date }}
+                            </span>
+                            <p>{{ .description }}</p>
+                            <div class="my-8">
+                                <a href="{{ .url }}" class="btn-secondary">
+                                    <span class="text-violet-600">Register Now &#8594;</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
         </div>
     </section>
 

@@ -54,6 +54,25 @@ workshops:
       clusters on AWS through guided exercises using Pulumi.
     date: April 26, 2023
 
+  - title: Introduction to Redis and Pulumi
+    url: /resources/introduction-to-redis-and-pulumi/
+    description: |
+      Join the Redis and Pulumi team to learn how to deploy Redis Cloud resources on any cloud using any programming language with Pulumi.
+    date: July 13, 2023
+
+  - title: From Zero to Production in Kubernetes
+    url: /resources/from-zero-to-production-in-kubernetes/
+    description: |
+      Explore how to leverage the power of Python with Pulumi, an infrastructure as code platform to define and manage your Kubernetes deployments.
+    date:  July 20, 2023
+  
+  - title: Deploying a Kubernetes Cluster on Equinix Metal
+    url: /resources/deploying-a-kubernetes-cluster-on-equinix-metal/
+    description: |
+      In this code-centric session, you will learn how to manage Equinix Metal resources using Pulumi and the new Equinix Pulumi provider.
+    date: September 13, 2023
+  
+
 block_external_search_index: true
 
 ---
