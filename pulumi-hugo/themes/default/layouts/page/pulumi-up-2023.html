@@ -193,31 +193,8 @@
         </div>
     </section>
 
-    <section id="schedule" class="light-blue-background">
-        <div class="container mx-auto py-16 px-6 lg:px-0">
-            <h2 class="text-center">Schedule At A Glance</h2>
-            <p class="text-center mb-8">Get inspired! Dive into the stories and experiences of innovators and experts, from Startup Founders to Industry Leaders.</p>
-            <div class="mx-auto w-full lg:w-1/2 grid gap-2 lg:gap-4 grid-cols-3 lg:grid-cols-6">
-                {{ range .Params.schedule }}
-                    <div class="bg-white rounded-md col-span-1 px-2 flex items-center justify-center">
-                        <p class="text-xs">{{ .time }}</p>
-                    </div>
-                    <div class="bg-white rounded-md col-span-2 lg:col-span-5 px-2 flex items-center">
-                        <p class="text-xs">{{ .title }}</p>
-                    </div>
-                {{ end }}
-            </div>
-            <div class="mt-12 flex justify-center">
-                <event-session-registration-modal
-                    modal-title="Register for PulumiUP"
-                    button-text="Register Now"
-                    button-class="btn-primary btn-primary-blue-bg"
-                    event-sessions="{{ .Params.registration.items | jsonify }}"
-                >
-                </event-session-registration-modal>
-            </div>
-        </div>
-    </section>
+    {{ partial "event-schedule.html" (dict "schedule" .Params.schedule "background_color" "#7bdeff") }}
+
 
     <section id="speakers" class="relative mb-8">
         <div class="dot-background-container">

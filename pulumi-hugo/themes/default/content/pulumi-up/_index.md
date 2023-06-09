@@ -261,50 +261,63 @@ speakers:
     company: Pulumi
 
 schedule:
-  - title: Opening Keynote, followed by new product launches and demos
-    description: 
-    time: "8:00 AM PT"
-  - title: Keeping your Infrastructure Code DRY
-    description: |
-      Sam Cogan, Solution Architect at Willis Towers Watson, will show how you can build a library of reusable modules that you can reuse over and over in your IaC projects. This is not just about boilerplate code, but real, usable modules that provide value to your whole team, help you comply with standards, and build infrastructure faster.
-    time: "8:40 AM PT"
-  - title: How a Bank Modernized its Software Engineering with Infrastructure as Code Automation
-    description: |
-       At financial institutions, data privacy and security aren't just best practices, they're Federal requirements. Join Dennis as he shares how Washington Trust Bank has modernized its software development and infrastructure practices since migrating to Azure and adopting infrastructure as code. He will cover how his team enables developers with infrastructure components, prevents developers from deploying forbidden resources with CrossGuard policies, and uses automation to save time and effort.
-    time: "9:00 AM PT"
-  - title: Creating a ‘Cloud-Aware’ Code Solution
-    description: |
-       Ala will share how Pulumi enables a new category of “cloud-aware” developer tools that leverage familiar programming languages and can lower barriers to entry to deploying cloud infrastructure for small teams that lack dedicated infrastructure experts. He’ll show how developers can easily create infrastructure from code using familiar languages and without having expertise with a given cloud provider. This enables rapid iteration on cloud applications for early-stage teams who are prototyping and iterating on new products.
-    time: "9:20 AM PT"
-  - title: Creating Infrastructure Automation Magic with Code
-    description: |
-      What happens when you combine the expressiveness and flexibility of programming with infrastructure as code automation? Magic. Join Matt as he demonstrates how Starburst uses Pulumi Automation API to increase the speed and accuracy of infrastructure operations (like blue-green deployments with Kubernetes clusters) with code. He will explain how Automation API has reduced complicated, unwieldy tasks into simpler tasks that are completely managed by code.
-    time: "9:40 AM PT"
-  - title: Break
-    description:
-    time: "10:00 AM PT"
-  - title: Engineering a Multi-cloud Platform
-    description: |
-      Many teams invest considerable time in defining architectures unique to a cloud service provider - only to discover the need to support a different cloud provider due to regional availability requirements, mergers, or new supply chain restrictions. In this session, Tim Holm, CTO at Nitric, will introduce key concepts and challenges that every team must consider when planning for cloud-agnostic delivery including:
-      - Platform abstraction
-      - Developer experience
-      - Self-service Infrastructure
-      - Team productivity
-      Tim will also share how his team leveraged the Pulumi platform to build a cloud-agnostic toolset for developers.
-    time: "10:10 AM PT"
-  - title: Using Monorepos to Level-up your Infrastructure as Code and Software Delivery
-    description: |
-      The way you structure your Pulumi projects and stacks in GitHub repositories can impact how well your organization ships infrastructure, especially when there are multiple teams of developers collaborating. Join Tyler as he shares best practices for using monorepos with Pulumi and how this pattern has supported his platform engineering team in delivering more efficient infrastructure deployments and updates, increased code sharing & reuse, and better collaboration.
-    time: "10:30 AM PT"
-  - title: Lessons Learned from Writing Thousands of Lines of IaC
-    description: |
-      Immutable architecture is the backbone of infrastructure as code, to ensure production environments cannot be changed during runtime.  While this has the benefits of its inherent safety measures, this can also be restrictive.  This talk will focus on some of the fundamentals of immutable architecture, best practices and recommended design patterns to work around its limitations, as well as what you most certainly should not be doing when running immutable architecture.
+  heading: Schedule At A Glance
+  subheading: Get inspired! Dive into the stories and experiences of innovators and experts, from Startup Founders to Industry Leaders.
+  items:
+    - title: Opening Keynote, followed by new product launches and demos
+      description: |
+        Hear from Joe Duffy, co-founder and CEO of Pulumi, about the latest announcements in Pulumi and Infrastructure as Code. Watch demos by Luke Hoban, CTO & co-founder, Meagan Cojocar, Principal Product manager, and Evan Boyle, Engineering Manager.
+      time: "8:00 AM PT"
 
-      This will be demonstrated through a real-world example of using Pulumi to deploy a single-tenant SaaS in an automated pipeline, typical challenges encountered, and what was learned on the way.
-    time: "10:50 AM PT"
-  - title: "Panel: AI and the Future of Cloud Development"
-    description: 
-    time: "11:10 AM PT"
+    - title: Keeping your Infrastructure Code DRY
+      description: |
+        Sam Cogan, Solution Architect at Willis Towers Watson, will show how you can build a library of reusable modules that you can reuse over and over in your IaC projects. This is not just about boilerplate code, but real, usable modules that provide value to your whole team, help you comply with standards, and build infrastructure faster.
+      time: "8:40 AM PT"
+
+    - title: How a Bank Modernized its Software Engineering with Infrastructure as Code Automation
+      description: |
+        At financial institutions, data privacy and security aren't just best practices, they're Federal requirements. Join Dennis as he shares how Washington Trust Bank has modernized its software development and infrastructure practices since migrating to Azure and adopting infrastructure as code. He will cover how his team enables developers with infrastructure components, prevents developers from deploying forbidden resources with CrossGuard policies, and uses automation to save time and effort.
+      time: "9:00 AM PT"
+
+    - title: Creating a ‘Cloud-Aware’ Code Solution
+      description: |
+        Ala will share how Pulumi enables a new category of “cloud-aware” developer tools that leverage familiar programming languages and can lower barriers to entry to deploying cloud infrastructure for small teams that lack dedicated infrastructure experts. He’ll show how developers can easily create infrastructure from code using familiar languages and without having expertise with a given cloud provider. This enables rapid iteration on cloud applications for early-stage teams who are prototyping and iterating on new products.
+      time: "9:20 AM PT"
+
+    - title: Creating Infrastructure Automation Magic with Code
+      description: |
+        What happens when you combine the expressiveness and flexibility of programming with infrastructure as code automation? Magic. Join Matt as he demonstrates how Starburst uses Pulumi Automation API to increase the speed and accuracy of infrastructure operations (like blue-green deployments with Kubernetes clusters) with code. He will explain how Automation API has reduced complicated, unwieldy tasks into simpler tasks that are completely managed by code.
+      time: "9:40 AM PT"
+
+    - title: Break
+      description:
+      time: "10:00 AM PT"
+
+    - title: Engineering a Multi-cloud Platform
+      description: |
+        Many teams invest considerable time in defining architectures unique to a cloud service provider - only to discover the need to support a different cloud provider due to regional availability requirements, mergers, or new supply chain restrictions. In this session, Tim Holm, CTO at Nitric, will introduce key concepts and challenges that every team must consider when planning for cloud-agnostic delivery including:
+        - Platform abstraction
+        - Developer experience
+        - Self-service Infrastructure
+        - Team productivity
+        Tim will also share how his team leveraged the Pulumi platform to build a cloud-agnostic toolset for developers.
+      time: "10:10 AM PT"
+
+    - title: Using Monorepos to Level-up your Infrastructure as Code and Software Delivery
+      description: |
+        The way you structure your Pulumi projects and stacks in GitHub repositories can impact how well your organization ships infrastructure, especially when there are multiple teams of developers collaborating. Join Tyler as he shares best practices for using monorepos with Pulumi and how this pattern has supported his platform engineering team in delivering more efficient infrastructure deployments and updates, increased code sharing & reuse, and better collaboration.
+      time: "10:30 AM PT"
+      
+    - title: Lessons Learned from Writing Thousands of Lines of IaC
+      description: |
+        Immutable architecture is the backbone of infrastructure as code, to ensure production environments cannot be changed during runtime.  While this has the benefits of its inherent safety measures, this can also be restrictive.  This talk will focus on some of the fundamentals of immutable architecture, best practices and recommended design patterns to work around its limitations, as well as what you most certainly should not be doing when running immutable architecture.
+
+        This will be demonstrated through a real-world example of using Pulumi to deploy a single-tenant SaaS in an automated pipeline, typical challenges encountered, and what was learned on the way.
+      time: "10:50 AM PT"
+    - title: "Panel: AI and the Future of Cloud Development"
+      description: |
+        Prepare yourself for the future of cloud development! Amanda Silver, CVP Developer Tools at Microsoft, Beyang Liu, Co-Founder & CTO at  Sourcegraph and Luke Hoban, CTO at Pulumi, explore the transformative impact of AI on the cloud infrastructure and software engineering industries. This panel will discuss questions like “Where is the software development & infrastructure industry headed next with the rise of AI?” and “How will I benefit (or not) in a world where AI is more capable than ever.”
+      time: "11:10 AM PT"
 
 registration:
     items:

@@ -1,0 +1,64 @@
+.event-schedule {
+  input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  .schedule {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .schedule-item {
+    width: 100%;
+    overflow: hidden;
+    &-label {
+      display: flex;
+      justify-content: space-between;
+      padding: 1em;
+      background-color: #fff;
+      cursor: pointer;
+      &:hover {
+        background: darken(#fff, 2%);
+      }
+      &::after {
+        content: "\276F";
+        width: 1em;
+        height: 1em;
+        text-align: center;
+        transition: all .35s;
+      }
+    }
+    &-content {
+      display: none;
+      padding: 0 1em 1em 1em;
+      background: #fff;
+      transition: all .35s;
+    }
+    &-close {
+      display: flex;
+      justify-content: flex-end;
+      padding: 1em;
+      font-size: 0.75em;
+      background: #fff;
+      cursor: pointer;
+      &:hover {
+        background: darken(#fff, 2%);
+      }
+    }
+  }
+  
+  input:checked {
+    + .schedule-item-label {
+      background: #fff;
+      &::after {
+        transform: translateY(25%) rotate(90deg);
+      }
+    }
+    ~ .schedule-item-content {
+      display: block;
+      max-height: 100vh;
+      padding: 1em;
+    }
+  }  
+}
