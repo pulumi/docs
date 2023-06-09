@@ -54,11 +54,7 @@
         font-size: 14px;
         color: #131314;
         flex-direction: row;
-    }
-
-    code {
-        border-radius: 4px;
-        padding: 1px 6px 3px 6px;
+        min-width: 0;
     }
 
     &.note-info {
@@ -96,5 +92,9 @@
         code {
             background: #f9e6d4;
         }
+    }
+
+    div.highlight div.copy-button-container button.copy-button i {
+        color: #fff;
     }
 }
