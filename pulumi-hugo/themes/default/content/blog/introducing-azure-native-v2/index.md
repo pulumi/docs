@@ -32,7 +32,7 @@ We've listened to your feedback and have made significant optimizations to the A
 
 So, how did we accomplish this? For starters, we've removed all deprecated ARM API resources <!-- TODO: Link to list of deprecated resources --> up to the 2.0 release date. The bigger impact was made by identifying and removing all forward-compatible resource versions. That is to say we've exluded any redundant versions and kept the latest version until breaking changes. Where that version is not the current latest and new default, the explicit versions are still available.
 
-![version_squeeze_diagram](./version_squeeze_diagram.png)
+![version_squeeze_diagram](./azurev2-diagrams.png)
 
 ## Refreshed Default Resource Versions
 
