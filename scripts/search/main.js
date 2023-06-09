@@ -56,9 +56,20 @@ const allObjects = [
     ...registryObjects,
 ];
 
-// Write the result to a JSON file, just so we have it.
+// Gather up index settings, synonyms, and rules.
+const indexSettings = {
+    searchableAttributes: settings.getSearchableAttributes(),
+    attributesForFaceting: settings.getAttributesForFaceting(),
+    customRanking: settings.getCustomRanking(),
+    ignorePlurals: true,
+};
+const indexSynonyms = settings.getSynonyms();
+const indexRules = settings.getRules();
+
+// Write the results, just so we have them.
 console.log(" ↳ Writing results...");
-fs.writeFileSync(pathToFullSiteJSON.replace("index", "search"), JSON.stringify(allObjects, null, 4));
+fs.writeFileSync("./public/search-index.json", JSON.stringify(allObjects, null, 4));
+fs.writeFileSync("./public/search-index-settings.json", JSON.stringify({ indexSettings, indexSynonyms, indexRules }, null, 4));
 console.log(" ↳ Done. ✨\n");
 
 // Update the Algolia index, including all page objects and index settings (like searchable
@@ -72,18 +83,13 @@ async function updateIndex(objects) {
         console.log(`   ↳ ${result.objectIDs.length} records updated.`);
 
         console.log(` ↳ Updating index settings...`)
-        await algoliaIndex.setSettings({
-            searchableAttributes: settings.getSearchableAttributes(),
-            attributesForFaceting: settings.getAttributesForFaceting(),
-            customRanking: settings.getCustomRanking(),
-            ignorePlurals: true,
-        });
+        await algoliaIndex.setSettings(indexSettings);
 
         console.log(" ↳ Updating synonyms...")
-        await algoliaIndex.saveSynonyms(settings.getSynonyms(), { replaceExistingSynonyms: true });
+        await algoliaIndex.saveSynonyms(indexSynonyms, { replaceExistingSynonyms: true });
 
         console.log(" ↳ Updating rules...")
-        await algoliaIndex.replaceAllRules(settings.getRules());
+        await algoliaIndex.replaceAllRules(indexRules);
 
         console.log(" ↳ Done. ✨\n");
     }

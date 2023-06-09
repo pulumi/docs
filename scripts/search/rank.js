@@ -102,6 +102,14 @@ module.exports = {
             } else if (page.href.match(/installation-configuration/)) {
                 return 780;
             } else if (page.href.match(/api-docs/)) {
+
+                // Order Kubernetes API docs more recent first (e.g., v1 over v1beta1).
+                if (page.href.match(/\/kubernetes\/api-docs/)) {
+                    if (page.href.match(/\/v\d\//)) {
+                        return 775;
+                    }
+                }
+
                 return 770;
             } else if (page.href.match(/how-to-guides/)) {
                 return 760;

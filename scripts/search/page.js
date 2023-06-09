@@ -89,12 +89,13 @@ module.exports = {
             // (as this means they probably aren't actual Hugo pages), and those with explicit
             // rankings of zero.
             .filter(item => {
-                const draft = !!item.params.draft;
-                const blockedFromSearch = item.block_external_search_index === true;
-                const missingObjectID = item.objectID === "";
-                const zeroRanked = this.getRank(item) === 0;
+                const isDraft = !!item.params.draft;
+                const isBlockedFromExternalSearch = item.block_external_search_index === true;
+                const isMissingObjectID = item.objectID === "";
+                const isZeroRanked = this.getRank(item) === 0;
+                const isRedirect = (item.params.redirect_to && item.params.redirect_to !== "");
 
-                if (draft || blockedFromSearch || missingObjectID || zeroRanked) {
+                if (isDraft || isBlockedFromExternalSearch || isRedirect || isMissingObjectID || isZeroRanked) {
                     return false;
                 }
 
@@ -104,7 +105,7 @@ module.exports = {
             // Convert Hugo page items into Algolia index objects.
             .map(item => {
                 return {
-                    objectID: item.objectID,
+                    objectID: this.getObjectID(item),
                     section: this.getTopLevelSection(item),
                     title: item.title,
                     description: item.params.meta_desc,
@@ -169,6 +170,6 @@ module.exports = {
     // If, at some point, we find that we need to have two records pointing to the same URL, we can
     // add another parameter to the list and hash both.
     getObjectID({ href }) {
-        return crypto.createHash('md5').update(href).digest('hex');
+        return crypto.createHash("md5").update(href).digest("hex");
     }
 };

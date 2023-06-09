@@ -1,3 +1,5 @@
+const page = require("./page");
+
 // Algolia index settings.
 //
 // Changes to this file should be made with extreme care.
@@ -34,6 +36,7 @@ module.exports = {
             ["provider", "package"],
             ["pulumi service", "pulumi console", "pulumi cloud"],
             ["rbac", "role based access control"],
+            ["saml", "sso"],
             ["stack reference", "stackreference"],
             ["tf", "terraform"],
             ["vm", "virtual machine"],
@@ -57,10 +60,10 @@ module.exports = {
     // https://www.algolia.com/doc/guides/sending-and-managing-data/prepare-your-data/how-to/setting-searchable-attributes/#set-searchable-attributes-with-the-api
     getSearchableAttributes() {
         return [
-            "title",
+            "unordered(title)",
             "keywords",
             "href",
-            "tags",
+            "unordered(tags)",
             "ancestors",
             "description",
             "section",
@@ -89,6 +92,7 @@ module.exports = {
     // https://www.algolia.com/doc/guides/managing-results/rules/rules-overview/
     getRules() {
         return [
+
             // When the query is for "cloud", deliver the Pulumi Cloud overview page as the top result.
             {
                 objectID: "is-cloud",
@@ -104,8 +108,7 @@ module.exports = {
                     promote: [
                         {
                             objectIDs: [
-                                // The Pulumi Cloud overview page.
-                                "a2074d4bcd83fa3d347dc9da4b8aa822"
+                                page.getObjectID({ href: "/docs/pulumi-cloud/" }),
                             ],
                             position: 0,
                         },
