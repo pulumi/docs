@@ -88,7 +88,7 @@ If you would like to upgrade to 2.0, but continue using the same ARM API version
 
 We're excited to introduce [over 100 new Azure resources](link TODO) in this release, expanding the coverage of our Azure Native Provider bringing the total to over ### <!-- TODO get most recent number -->. With this extensive collection of resources at your disposal, you can now easily provision and manage an even broader range of Azure services using Pulumi. Whether you're working with virtual machines, databases, networking, or any other Azure service, the Azure Native Provider has you covered.
 
-## Resolved Tite Case Inconsistency
+## Resolved Title Case Inconsistency
 
 In our commitment to excellence, we have [resolved title case inconsistencies](https://github.com/pulumi/pulumi-azure-native/pull/2366) across resource types and properties in the Azure Native Provider. All previous resource names have been aliased, so no additional modifications are required for existng Pulumi programs. This enhancement ensures a unified and predictable experience while switching between Azure and Pulumi resource references, making it easier for you to navigate and understand the provider's capabilities.
 
