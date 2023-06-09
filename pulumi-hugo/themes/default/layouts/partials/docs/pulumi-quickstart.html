@@ -125,64 +125,90 @@
 
 
                 <script>
-                    $(document).ready(function () {
-                        $('input[name="language-radio"], input[name="credentials-radio"], input[name="templates-radio"]').change(function () {
-                            if ($(this).is(":checked")) {
-                                const selectedValue = $(this).val();
-                                const cloud = $('input[name="credentials-radio"]:checked').val();
-                                const language = $('input[name="language-radio"]:checked').val();
-                                const template = $('input[name="templates-radio"]:checked').val();
-                                console.log("template", template);
-                                $("#template-command").html(`pulumi new ${template ? template + "-" : ""}${cloud}-${language}`);
-                                $("[id^=template-content]").css("display", "none");
-                                $(`#template-content-${language}`).css("display", "block");
-                                $("[id^=next-steps-]").css("display", "none");
-                                if (!template) {
-                                    $(`#next-steps-${cloud}`).css("display", "block");
+                    (function (jq) {
+                        $(document).ready(function () {
+                            // respond to changes to the languages, clouds, and templates selections
+                            jq('input[name="language-radio"], input[name="credentials-radio"], input[name="templates-radio"]').change(function () {
+                                if (jq(this).is(":checked")) {
+                                    const selectedValue = jq(this).val();
+                                    const cloud = jq('input[name="credentials-radio"]:checked').val();
+                                    const language = jq('input[name="language-radio"]:checked').val();
+                                    const template = jq('input[name="templates-radio"]:checked').val();
+                                    jq("#template-command").html(`pulumi new ${template ? template + "-" : ""}${cloud}-${language}`);
+                                    jq("[id^=template-content]").css("display", "none");
+                                    jq(`#template-content-${language}`).css("display", "block");
+                                    jq("[id^=next-steps-]").css("display", "none");
+
+                                    if (!template) {
+                                        jq(`#next-steps-${cloud}`).css("display", "block");
+                                    }
+
+                                    // starter is the only template that exists for Java
+                                    if (language === "java") {
+                                        jq('label[for^="template"]').each(function () {
+                                            // if the template is not a starter template, hide it
+                                            if (!jq(this).attr("for").includes("starter")) {
+                                                jq(this).removeClass("selected");
+                                                jq(this).css("display", "none");
+                                            } else {
+                                                // auto select the starter template when user switches to Java
+                                                jq(this).addClass("selected");
+                                                jq("#template-starter-radio").prop("checked", true);
+                                                jq("#template-command").html(`pulumi new ${cloud}-${language}`);
+                                            }
+                                        });
+                                    } else {
+                                        jq('label[for^="template"][for$="radio"]').each(function () {
+                                            jq(this).css("display", "block");
+                                        });
+                                    }
                                 }
-                            }
-                        });
-
-                        const labelGroups = ["os", "cloud", "language", "template"];
-                        labelGroups.forEach(labelGroup => {
-                            $(`label[for^="${labelGroup}-"]`).click(function () {
-                                $(`label[for^="${labelGroup}-"]`).removeClass("selected");
-                                $(this).addClass("selected");
                             });
-                        });
 
-                        $('input[id="credentials-checkbox"').change(function () {
-                            console.log("credentials checkbox changed");
-                            if ($(this).is(":checked")) {
-                                $("#credentials-step").css("display", "flex");
-                            } else {
-                                $("#credentials-step").css("display", "none");
+                            // respond to changes to the os selection.
+                            const labelGroups = ["os", "cloud", "language", "template"];
+                            labelGroups.forEach(labelGroup => {
+                                jq(`label[for^="${labelGroup}-"]`).click(function () {
+                                    jq(`label[for^="${labelGroup}-"]`).removeClass("selected");
+                                    jq(this).addClass("selected");
+                                });
+                            });
+
+                            // respond to changes to credentials checkbox
+                            jq('input[id="credentials-checkbox"').change(function () {
+                                if (jq(this).is(":checked")) {
+                                    jq("#credentials-step").css("display", "flex");
+                                } else {
+                                    jq("#credentials-step").css("display", "none");
+                                }
+                            });
+
+                            // set the os to the user's operating system
+                            function setOS() {
+                                const userAgent = navigator.userAgent;
+                                let os = "osx";
+                                if (userAgent.indexOf("Win") !== -1) {
+                                    os = "windows";
+                                } else if (userAgent.indexOf("Mac") !== -1) {
+                                    os = "osx";
+                                } else if (userAgent.indexOf("Linux") !== -1) {
+                                    os = "linux";
+                                }
+                                jq(`#os-${os}-radio`).prop("checked", true);
+                                jq(`label[for^="os-"]`).removeClass("selected");
+                                jq(`label[for="os-${os}-radio"]`).addClass("selected");
                             }
-                        });
 
-                        function setOS() {
-                            const userAgent = navigator.userAgent;
-                            let os = "osx";
-                            if (userAgent.indexOf("Win") !== -1) {
-                                os = "windows";
-                            } else if (userAgent.indexOf("Mac") !== -1) {
-                                os = "osx";
-                            } else if (userAgent.indexOf("Linux") !== -1) {
-                                os = "linux";
+                            // init the quickstart config section
+                            function initQuickStart() {
+                                jq("[id^=template-content]").css("display", "none");
+                                jq("#template-content-typescript").css("display", "block");
+                                setOS();
                             }
-                            $(`#os-${os}-radio`).prop("checked", true);
-                            $(`label[for^="os-"]`).removeClass("selected");
-                            $(`label[for="os-${os}-radio"]`).addClass("selected");
-                        }
 
-                        function initQuickStart() {
-                            $("[id^=template-content]").css("display", "none");
-                            $("#template-content-typescript").css("display", "block");
-                            setOS();
-                        }
-
-                        initQuickStart();
-                    });
+                            initQuickStart();
+                        });
+                    })(args => $(args, $("#pulumi-quickstart")));
                 </script>
 
                 <div class="content code-block template highlight">
