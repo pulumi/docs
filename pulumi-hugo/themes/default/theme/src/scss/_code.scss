@@ -1,7 +1,7 @@
 @import "chroma";
 @import "colors";
 
-table tr td code {
+table tr td:not(:first-child) code {
     word-break: break-word;
 }
 
