@@ -2,8 +2,11 @@
 @import "colors";
 
 code {
-    @apply rounded py-1 px-2 text-sm break-words leading-relaxed;
+    background-color: map-get($gray, 125);
+    border-radius: 2px;
     font-size: 14px;
+    padding: 3px 6px;
+    overflow-wrap: break-word;
 }
 
 h1,
