@@ -1,6 +1,10 @@
 @import "chroma";
 @import "colors";
 
+table tr td code {
+    word-break: break-word;
+}
+
 code {
     background-color: map-get($gray, 125);
     border-radius: 2px;
