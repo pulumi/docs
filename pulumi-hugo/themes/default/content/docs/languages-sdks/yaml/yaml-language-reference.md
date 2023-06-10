@@ -16,12 +16,12 @@ Pulumi programs can be defined in many languages, and the Pulumi YAML dialect of
 
 The Pulumi YAML provider supports programs written in YAML or JSON.  In both cases, the programs (`.yaml` or `.json` files) follow a simple schema, including four top level sections:
 
-| Property        | Type | Required           | Expression  | Description |
-| ------------- |---|-------------| -----|---|
-| `config`      | [config options](/docs/reference/pulumi-yaml/#config-options) | No | No | Config specifies the [Pulumi config](/docs/concepts/config/) inputs to the deployment. |
-| `resources`      | map[string]Resource | No | No | Resources declares the [Pulumi resources](/docs/concepts/resources/) that will be deployed and managed by the program |
-| `variables`      | map[string]Expression | No | Yes | Variables specifies intermediate values of the program, the values of variables are expressions that can be re-used. |
-| `outputs`      | map[string]Expression | No | Yes | Outputs specifies the [Pulumi stack outputs](/docs/concepts/stack#outputs) of the program and how they are computed from the `resources` is a value of the appropriate type for the template to use if no value is specified. |
+| Property | Type | Required | Expression | Description |
+| - | - | - | - | - |
+| `config | [config options](/docs/reference/pulumi-yaml/#config-options) | No | No | Config specifies the [Pulumi config](/docs/concepts/config/) inputs to the deployment. |
+| `resources` | map[string]Resource | No | No | Resources declares the [Pulumi resources](/docs/concepts/resources/) that will be deployed and managed by the program |
+| `variables` | map[string]Expression | No | Yes | Variables specifies intermediate values of the program, the values of variables are expressions that can be re-used. |
+| `outputs` | map[string]Expression | No | Yes | Outputs specifies the [Pulumi stack outputs](/docs/concepts/stack#outputs) of the program and how they are computed from the `resources` is a value of the appropriate type for the template to use if no value is specified. |
 
 In many locations within this schema, values may be expressions which computed a value based on the `config`, `variables`, or outputs of `resources`.  These expressions can be provided in two ways:
 
@@ -38,23 +38,23 @@ In beta, Pulumi YAML projects used the `configuration` key. This will eventually
 
 The value of `configuration` is an object whose keys are logical names by which the config input will be referenced in expressions within the program, and whose values are elements of the schema below.  Each item in this object represents an independent config input. Either `type` or `default` is required.
 
-| Property        | Type | Required           | Expression  | Description |
-| ------------- |---|-------------| -----|---|
-| `type`      | string | No | No | Type is the (required) data type for the parameter. It can be one of: `String`, `Number`, `List<Number>`, or `List<String>`. |
-| `default`      | any | No | No | Default is a value of the appropriate type for the template to use if no value is specified. |
-| `secret`      | bool | No | No | Secret specifies if the config value should be encrypted as a secret. |
+| Property | Type | Required | Expression | Description |
+| - | - | - | - | - |
+| `type` | string | No | No | Type is the (required) data type for the parameter. It can be one of: `String`, `Number`, `List<Number>`, or `List<String>`. |
+| `default` | any | No | No | Default is a value of the appropriate type for the template to use if no value is specified. |
+| `secret` | bool | No | No | Secret specifies if the config value should be encrypted as a secret. |
 
 ### Resources
 
 The value of `resources` is an object whose keys are logical resource names by which the resource will be referenced in expressions within the program, and whose values which are elements of the schema below.  Each item in this object represents a resource which will be managed by the Pulumi program.
 
-| Property     		| Type                                  | Required | Expressions | Description                                                                                         								 |
-|-------------------|---------------------------------------|----------|-------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| `type`       		| string                                | Yes      | No          | Type is the Pulumi type token for this resource.                                                    								 |
-| `defaultProvider` | bool                					| No       | No          | DefaultProvider specifies if a provider should be used for resources without an explicit one set. Set only on provider resources. |
-| `properties` 		| map[string]Expression                 | No       | Yes         | Properties contains the primary resource-specific keys and values to initialize the resource state. 								 |
-| `options`    		| [Resource Options](#resource-options) | No       | No          | Options contains all resource options supported by Pulumi.                                          								 |
-| `get`        		| [Resource Getter](#resource-getter)   | No       | Yes         | A getter function for the resource. Supplying `get` is mutually exclusive to `properties`.          								 |
+| Property  |  Type | Required | Expressions | Description |
+|- | - | - | - | - |
+| `type` | string | Yes | No | Type is the Pulumi type token for this resource. |
+| `defaultProvider` | bool | No | No | DefaultProvider specifies if a provider should be used for resources without an explicit one set. Set only on provider resources. |
+| `properties` | `map[string]Expression` | No | Yes | Properties contains the primary resource-specific keys and values to initialize the resource state. |
+| `options` | [Resource Options](#resource-options) | No | No | Options contains all resource options supported by Pulumi. |
+| `get` | [Resource Getter](#resource-getter) | No | Yes | A getter function for the resource. Supplying `get` is mutually exclusive to `properties`. |
 
 #### Resource Options
 
@@ -72,42 +72,42 @@ The `dependsOn`, `parent`, `provider`, and `providers` values permit expressions
       parent: ${someParentResource}
 ```
 
-| Property                  | Type         | Description |
-| ------------------------- |--------------|-------------|
-| `additionalSecretOutputs` | string[]     | AdditionalSecretOutputs specifies properties that must be encrypted as secrets |
-| `aliases`                 | string[]     | Aliases specifies names that this resource used to have, so that renaming or refactoring doesn’t replace it |
-| `customTimeouts`          | [Custom Timeout](#custom-timeout) | CustomTimeouts overrides the default retry/timeout behavior for resource provisioning |
-| `deleteBeforeReplace`     | bool         | DeleteBeforeReplace  overrides the default create-before-delete behavior when replacing |
-| `dependsOn`               | Expression[] | DependsOn makes this resource explicitly depend on another resource, by name, so that it won't be created before the dependent finishes being created (and the reverse for destruction). Normally, Pulumi automatically tracks implicit dependencies through inputs/outputs, but this can be used when dependencies aren't captured purely from input/output edges.|
-| `ignoreChanges`           | string[]     | IgnoreChanges declares that changes to certain properties should be ignored during diffing |
-| `import`                  | string       | Import adopts an existing resource from your cloud account under the control of Pulumi |
-| `parent`                  | Expression   | Parent specifies a parent for the resource |
-| `protect`                 | bool         | Protect prevents accidental deletion of a resource |
-| `provider`                | Expression   | Provider specifies an explicitly configured provider, instead of using the default global provider |
-| `providers`               | map[string]Expression | Map of providers for a resource and its children. |
-| `version`                 | string       | Version specifies a provider plugin version that should be used when operating on a resource |
-| `pluginDownloadURL`                 | string       | PluginDownloadURL specifies a provider plugin download URL  |
-| `replaceOnChanges`                 | string[]       | ReplaceOnChanges specifies if changes to certain properties on a resource should force replacement instead of an in-place update. |
-| `retainOnDelete`                 | bool       | RetainOnDelete causes a resource to be preserved in the cloud even when it is deleted from the Pulumi state.  |
+| Property | Type | Description |
+| - | - | - |
+| `additionalSecretOutputs` | string[] | AdditionalSecretOutputs specifies properties that must be encrypted as secrets |
+| `aliases` | string[]  Aliases specifies names that this resource used to have, so that renaming or refactoring doesn’t replace it |
+| `customTimeouts` | [Custom Timeout](#custom-timeout) | CustomTimeouts overrides the default retry/timeout behavior for resource provisioning |
+| `deleteBeforeReplace` | bool | DeleteBeforeReplace  overrides the default create-before-delete behavior when replacing |
+| `dependsOn` | Expression[] | DependsOn makes this resource explicitly depend on another resource, by name, so that it won't be created before the dependent finishes being created (and the reverse for destruction). Normally, Pulumi automatically tracks implicit dependencies through inputs/outputs, but this can be used when dependencies aren't captured purely from input/output edges.|
+| `ignoreChanges` | string[] | IgnoreChanges declares that changes to certain properties should be ignored during diffing |
+| `import` | string | Import adopts an existing resource from your cloud account under the control of Pulumi |
+| `parent` | Expression | Parent specifies a parent for the resource |
+| `protect` | bool | Protect prevents accidental deletion of a resource |
+| `provider` | Expression | Provider specifies an explicitly configured provider, instead of using the default global provider |
+| `providers`  map[string]Expression | Map of providers for a resource and its children. |
+| `version` | string | Version specifies a provider plugin version that should be used when operating on a resource |
+| `pluginDownloadURL` | string | PluginDownloadURL specifies a provider plugin download URL  |
+| `replaceOnChanges` | string[] | ReplaceOnChanges specifies if changes to certain properties on a resource should force replacement instead of an in-place update. |
+| `retainOnDelete` | bool | RetainOnDelete causes a resource to be preserved in the cloud even when it is deleted from the Pulumi state. |
 
 #### Resource Getter
 
 Supplying a `get` key turns the resource declaration into a [Getter Function](/docs/concepts/resources/get/).
 
-| Property | Type                  | Required | Description                                                                                                        |
-|----------|-----------------------|----------|--------------------------------------------------------------------------------------------------------------------|
-| `id`     | string                | Yes      | The ID of the resource to import                                                                                   |
-| `state`  | map[string]Expression | No       | Known properties (input & output) of the resource. This assists the provider in figuring out the correct resource. |
+| Property | Type | Required | Description |
+| - | - | - | - |
+| `id` | string | Yes | The ID of the resource to import |
+| `state` | map[string]Expression | No | Known properties (input & output) of the resource. This assists the provider in figuring out the correct resource. |
 
 #### Custom Timeout
 
 The optional `customTimeouts` property of a resource is an object of the following schema:
 
-| Property | Type   | Required | Expression | Description                                         |
-|----------|--------|----------|------------|-----------------------------------------------------|
-| `create` | string | No       | No         | Create is the custom timeout for create operations. |
-| `delete` | string | No       | No         | Delete is the custom timeout for delete operations. |
-| `update` | string | No       | No         | Update is the custom timeout for update operations. |
+| Property | Type | Required | Expression | Description |
+| - | - | - | - | - |
+| `create` | string | No | No | Create is the custom timeout for create operations. |
+| `delete` | string | No | No | Delete is the custom timeout for delete operations. |
+| `update` | string | No | No | Update is the custom timeout for update operations. |
 
 ### Providers and provider versions
 
@@ -300,12 +300,12 @@ The expression `${item}` will return a JSON value `{ "key1": "value1", "key2": 1
 
 Calls a function from a package and returns either the whole object or a single field if given the `return` property. The schema is:
 
-| Property    | Type                              | Required | Expression | Description                                                        |
-|-------------|-----------------------------------|----------|------------|--------------------------------------------------------------------|
-| `function`  | string                            | Yes      | No         | Name of a function to call.                                        |
-| `arguments` | map[string]Expression             | Yes      | Yes        | Arguments to pass to the expression, each key is a named argument. |
-| `options`   | [Invoke Options](#invoke-options) | No       | No         | Options for the provider calling the function.                     |
-| `return`    | string                            | No       | No         | Return the value of the field with this name.                      |
+| Property | Type | Required | Expression | Description |
+| - | - | - | - | - |
+| `function` | string | Yes | No | Name of a function to call. |
+| `arguments` | map[string]Expression | Yes | Yes | Arguments to pass to the expression, each key is a named argument. |
+| `options` | [Invoke Options](#invoke-options) | No | No | Options for the provider calling the function. |
+| `return` | string | No | No | Return the value of the field with this name. |
 
 ```yaml
 variables:
@@ -337,12 +337,12 @@ The  `parent` and `provider` values permit expressions which must use interpolat
       parent: ${someParentResource}
 ```
 
-| Property                  | Type         | Description |
-| ------------------------- |--------------|-------------|
-| `parent`                  | Expression   | Parent specifies a parent for the resource |
-| `provider`                | Expression   | Provider specifies an explicitly configured provider, instead of using the default global provider |
-| `version`                 | string       | Version specifies a provider plugin version that should be used when operating on a resource |
-| `pluginDownloadURL`       | string       | Version specifies a URL that should be used when to download the provider plugin |
+| Property | Type | Description |
+| - | - | - |
+| `parent` | Expression | Parent specifies a parent for the resource |
+| `provider` | Expression  Provider specifies an explicitly configured provider, instead of using the default global provider |
+| `version` | string | Version specifies a provider plugin version that should be used when operating on a resource |
+| `pluginDownloadURL` | string | Version specifies a URL that should be used when to download the provider plugin |
 
 ##### `fn::join`
 
@@ -393,8 +393,8 @@ The expression `${policyVersion}` will have the value `v1.1`.
 
 [Assets and Archives](/docs/concepts/inputs-outputs/assets-archives/) are intrinsic types to Pulumi, like strings and numbers, and some resources may take these as inputs or return them as outputs. The built-ins create each kind of asset or archive. Each takes all take a single string value.
 
-| Built-In      | Argument Type | Description |
-| ------------- |---|------|
+| Built-In | Argument Type | Description |
+| - | - | - |
 | `fn::fileAsset` | string | The contents of the asset are read from a file on disk. |
 | `fn::stringAsset` | string | The contents of the asset are read from a string in memory. |
 | `fn::remoteAsset` | string | The contents of the asset are read from an http, https or file URI. |
