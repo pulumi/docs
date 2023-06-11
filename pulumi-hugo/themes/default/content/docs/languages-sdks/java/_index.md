@@ -42,7 +42,7 @@ $ pulumi new java
 {{% notes "info" %}}
 To write a Pulumi Java program using Gradle
 
-```
+```bash
 $ mkdir myproject && cd myproject
 $ pulumi new java-gradle
 ```
