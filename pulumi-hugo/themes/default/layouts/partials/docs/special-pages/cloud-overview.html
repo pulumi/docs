@@ -331,7 +331,11 @@
             <div class="flex">
                 {{ range $link := $cluster_management.links }}
                     <div class="flex-2-col">
-                        <a href="{{ $link.url }}">
+                        {{ $link_target := "" }}
+                        {{ if $link.external_link }}
+                            {{ $link_target = "_blank" }}
+                        {{ end }}
+                        <a href="{{ $link.url }}" target="{{ $link_target }}">
                             <div class="card-inner">
                                 <div class="card-inner-content-1">
                                     {{ if eq $link.icon "azure" }}
@@ -341,6 +345,9 @@
                                     {{ end }}
                                     <p>{{ $link.display_name }}</p>
                                 </div>
+                                {{ if $link.has_arrow }}
+                                    <div class="icon icon-24-24 icon-right-of-heading right-arrow-gray"></div>
+                                {{ end }}
                             </div>
                         </a>
                     </div>
@@ -360,7 +367,13 @@
             <div class="col">
                 {{ range $link := $operator.links }}
                     <div class="row">
-                        <a href="{{ $link.url }}">
+                        {{ $link_target := "" }}
+                        {{ if $link.external_link }}
+                            {{ $link_target = "_blank" }}
+                        {{ end }}
+
+
+                        <a href="{{ $link.url }}" target="{{ $link_target }}">
                             <div class="card-inner">
                                 <div class="card-inner-content-1">
                                     <div class="icon icon-18-18 icon-left-of-card-label {{ $link.icon }}"></div>

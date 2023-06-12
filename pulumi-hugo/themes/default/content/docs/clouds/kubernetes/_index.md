@@ -40,7 +40,7 @@ components:
 - display_name: Pulumi Kubernetes Extensions
   url: https://kubernetes.io/docs/concepts/extend-kubernetes/operator/
   description:
-  link_outside_registry: true
+  external_link: true
 convert:
 - heading: Convert Kubernetes YAML to Pulumi
   description: Convert or generate Kubernetes YAML manifests in the language of your choice with Pulumi's tools.
@@ -48,7 +48,7 @@ convert:
   - display_name: Convert Kubernetes YAML manifests to Pulumi
     url: /kube2pulumi/
   - display_name: Generate types in Pulumi for Custom Resources
-    url: https://www.pulumi.com/blog/introducing-crd2pulumi/
+    url: /blog/introducing-crd2pulumi/
 templates:
 - display_name: Kubernetes cluster on AWS
   url: kubernetes/aws/
@@ -95,17 +95,25 @@ kubernetes_cluster_management:
   description: The following SDKs are available to work with IaaS resources, and managed or self-managed Kubernetes clusters. The packages are available in Node.js (Javascript and Typescript), Python, Go, .NET and Java.
   links:
     - display_name: AWS
+      has_arrow: true
       url: https://github.com/pulumi/aws/
       icon: aws
+      external_link: true
     - display_name: Azure
+      has_arrow: true
       url: https://github.com/pulumi/pulumi-azure-native/
       icon: azure
+      external_link: true
     - display_name: DigitalOcean
+      has_arrow: true
       url: https://github.com/pulumi/pulumi-digitalocean/
       icon: digitalocean
+      external_link: true
     - display_name: Google Cloud
+      has_arrow: true
       url: https://github.com/pulumi/gcp/
       icon: google-cloud
+      external_link: true
 kubernetes_operator:
   heading: Pulumi Kubernetes Operator
   description_1: The Pulumi Kubernetes Operator is an extension pattern that enables Kubernetes users to create a Stack as a first-class API resource, and use the StackController to drive the updates of the Stack until success.
@@ -115,6 +123,7 @@ kubernetes_operator:
     has_arrow: true
     url: https://github.com/pulumi/pulumi-kubernetes-operator
     icon: github-small
+    external_link: true
   - display_name: Get started with Pulumi Kubernetes Operator
     url: /docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/
     icon: light-bulb-small-gray
