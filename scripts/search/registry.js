@@ -38,6 +38,7 @@ module.exports = {
                             itemPath.concat(item.name).join("."),
                             itemPath.concat(item.name).join(":"),
                             itemPath.concat(item.name).join(" "),
+                            itemPath.concat(item.name).slice(1).join(" "),
                             `${providerTitle} ${item.name}`
                         ],
                         ancestors: [ "Registry", providerTitle, "API Docs" ],
