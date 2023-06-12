@@ -8,13 +8,11 @@ meta_desc: |
 meta_image: /images/challenge/challenge_cta.png
 ---
 
-## Welcome to the Pulumi Challenge!
-
-### Startup in a Box
+<h1 class="font-display text-6xl">Startup in a Box!</h1>
 
 Thinking about turning that side project into a little something more? Follow along to stand up a website for your startup on an object store and a CDN from your favorite cloud provider (Google Cloud or AWS) and Checkly, all using Pulumi.
 
-### Prerequisites
+## Prerequisites
 
 In order to complete this challenge, you'll need a couple things set up in advance.
 
@@ -44,11 +42,11 @@ If you're new to Google Cloud, you can get $300 in free credits to run, test, an
 
 {{< /chooser >}}
 
-### Challenge
+## Challenge
 
 Follow along with the steps outlined on this page.
 
-#### Step 1. Your First Pulumi Program
+### Step 1. Your First Pulumi Program
 
 You will learn how to create a new Pulumi program using Pulumi templates, specifically for AWS or Google Cloud with TypeScript. Create a new directory called `pulumi-challenge` and run the following inside of it:
 
@@ -81,7 +79,7 @@ pulumi config set gcp:region europe-west1
 
 {{% /choosable %}}
 
-#### Step 2. Creating Your First Resource
+### Step 2. Creating Your First Resource
 
 {{% choosable cloud aws %}}
 
@@ -134,7 +132,7 @@ const bucketIamBinding = new gcp.storage.BucketIAMBinding("bucket-iam-binding", 
 
 {{% /chooser %}}
 
-#### Step 3. Working with Local Files
+### Step 3. Working with Local Files
 
 Pulumi lets you use your favourite programming language to define your infrastructure. Today, you're using TypeScript, which means you have access to the Node API. This includes discovering directories and files.
 
@@ -324,7 +322,7 @@ header li {
 
 To make sure styles display consistently across browsers, you also need to normalize some styles. [Copy normalize.css from GitHub](https://github.com/necolas/normalize.css/blob/master/normalize.css).
 
-#### Step 4. Creating a CDN
+### Step 4. Creating a CDN
 
 Next, you want to add a CDN to your website.
 
@@ -422,7 +420,7 @@ const httpForwardingRule = new gcp.compute.GlobalForwardingRule("http-forwarding
 
 {{% /chooser %}}
 
-#### Step 5. Introducing ComponentResources
+### Step 5. Introducing ComponentResources
 
 Now... you _could_ continue to add resource after resource, but Pulumi is more than that. You can build your own reusable components. To do that, refactor what you have above into a `CdnWebsite` component at `pulumi-challenge/cdn-website/index.ts`.
 
@@ -695,7 +693,7 @@ You'll also note the presence of some code to enable the Google Cloud service AP
 
 {{% /chooser %}}
 
-#### Step 6. Adding Another Provider
+### Step 6. Adding Another Provider
 
 {{% choosable cloud aws %}}
 

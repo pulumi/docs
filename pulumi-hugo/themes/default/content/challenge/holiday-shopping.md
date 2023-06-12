@@ -9,9 +9,9 @@ meta_image: /images/challenge/challenge-dec-meta.png
 banner_image: /images/challenge/challenge-dec-banner.png
 ---
 
-## Welcome to the Holiday Shopping Challenge!
+<h1 class="font-display text-6xl">Holiday Shopping Challenge!</h1>
 
-### What you will learn
+## What you will learn
 
 The holidays are upon us and mere anarchy has been loosed upon our psyches. More specifically how do you keep track of everything you need to buy for gifts or food?!? Surely some salvation is at hand? Lucky for you, our friend, The Pulumipus, has created a simple to-do list application to bring order to your life. In this challenge, you will build this simple to-do list application that has a React frontend, Express backend, and a MongoDB database. This frontend and backend of the app run in Fargate with an Application Load Balancer (ALB) in front and the database is running in a MongoDB Atlas cluster.
 
@@ -19,7 +19,7 @@ The holidays are upon us and mere anarchy has been loosed upon our psyches. More
 
 After completing this challenge and if you feel so inclined to thank The Pulumipus, please write a blog post or post a quick video about it. Tag us on social media or email us at [da@pulumi.com](mailto:da@pulumi.com), and we will help spread the word about your experience.
 
-### Prerequisites
+## Prerequisites
 
 In order to complete this challenge, you'll need a couple things set up in advance. The challenge utilizes the MongoDB Cloud free tier and incurs a small charge for using AWS Fargate.
 
@@ -32,9 +32,9 @@ In order to complete this challenge, you'll need a couple things set up in advan
 - A [MongoDB Cloud account](https://www.mongodb.com/cloud/atlas/signup)
 - A [GitHub account](https://github.com/signup)
 
-### Challenge
+## Challenge
 
-#### Step 1. Initialize a project
+### Step 1. Initialize a project
 
 You will first clone the base application and then the rest of the steps will take you through building the Pulumi program.
 
@@ -64,7 +64,7 @@ Lastly, you will need to set your AWS region (e.g., us-west-2) in your Pulumi co
 pulumi config set aws:region <YOUR_AWS_REGION>
 ```
 
-#### Step 2. Provision containers on AWS Fargate
+### Step 2. Provision containers on AWS Fargate
 
 Let's start by building and publishing our application from /app/frontend and /app/backend as container images to an ECR repository. The frontend app is a static website served by an nginx server. The backend app is an Express server that retrieves and stores data in a MongoDB database. Add the below into `__main__.py`.
 
@@ -141,7 +141,7 @@ pulumi.export("app_url", Output.concat("http://", lb.load_balancer.dns_name))
 
 Run `pulumi up` and select yes to perform the update (this can take up to 10 minutes). Pulumi will output the `app_url`. Go to the URL, and you will be presented with the Pulumipus' Grocery List web application. You can try to add some items, but nothing will happen because there is no database connected yet. You will do that in the next step.
 
-#### Step 3. Create a MongoDB Atlas database
+### Step 3. Create a MongoDB Atlas database
 
 The web app stores the grocery list items inside a MongoDB database. MongoDB Atlas is a fully managed cloud database that you will be using for this application. Add the below before the code from the previous steps (above the ECR repo declaration) in `__main__.py`. This code creates a MongoDB project, sets up the network access controls, creates a Free Tier cluster in `US_WEST_2` in AWS, and a database user that is scoped to the created cluster.
 
@@ -207,7 +207,7 @@ pulumi config set dbUser [value]
 pulumi config set dbPassword [value] --secret
 ```
 
-#### Step 4. Pass database URL as environment variable to backend container
+### Step 4. Pass database URL as environment variable to backend container
 
 Before you update the stack, you need to pass the URL of the database to the backend container so it can connect to it. Add the highlighted into the FargateService code.
 
@@ -250,20 +250,20 @@ service = awsx.ecs.FargateService(
 )
 ```
 
-#### Step 5. Validate endpoints
+### Step 5. Validate endpoints
 
 Run `pulumi up` and select yes to update the stack. Go to the `app_url` export to validate that the endpoints of your deployed infrastructure is working. You can now add, delete, and check off items because the application is now able to connect to your newly created Atlas database.
 
 ![A screenshot of the grocery list app](/images/challenge/grocery_list.png)
 
-### Congratulations
+## Congratulations
 
 Congratulations! You've completed this Pulumi Challenge. Tag us on social media or email us at [da@pulumi.com](mailto:da@pulumi.com) and tell us what you thought of this Pulumi Challenge!
 
-#### What you have learned
+### What you have learned
 
 In this challenge, you have learned how to build a web application as a container image and push it to Amazon Elastic Container Registry. You also learned how to deploy the containerized application on AWS Fargate with traffic load balanced through an Application Load Balancer. Lastly, you learned how to create a MongoDB Atlas cluster and database for your web application to store and retrieve data.
 
-#### Clean up
+### Clean up
 
 If you'd like to tear down all of these resources and delete your stack, run `pulumi destroy -rf --remove`. Otherwise, have fun playing around with your infrastructure stack and add whatever you like! 🙂

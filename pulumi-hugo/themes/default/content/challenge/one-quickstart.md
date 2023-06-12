@@ -8,11 +8,9 @@ meta_desc: |
 meta_image: /images/challenge/challenge_cta.png
 ---
 
-## Welcome to the Pulumi Challenge!
-
 <div class="flex flex-wrap md:mt-12">
   <div>
-    <h3>One Quickstart to Rule them All</h3>
+    <h1 class="font-display text-6xl">One Quickstart to Rule them All!</h1>
     <div class="flex justify-center rounded-md bg-violet-100">
             <p class="text-center">
                 ✨ The challenge is now over and no swag will be sent on completion, but feel free to continue testing your skills with this challenge ✨
@@ -21,7 +19,7 @@ meta_image: /images/challenge/challenge_cta.png
     <p class="pr-12">
       Pulumi Architecture Templates make it quick and easy to get started with a wide variety of clouds, tools, and technologies when you want to try something new but don't want to write boilerplate yourself. It's a great way to get started with Pulumi quickly, no matter what you need to build. Try it for yourself with serverless AWS templates and win some swag in the process!
     </p>
-    <h3>Prerequisites</h3>
+    <h2>Prerequisites</h2>
     <p>In order to complete this challenge, you'll need a couple things set up in advance.</p>
     <ul>
       <li>
@@ -43,9 +41,9 @@ meta_image: /images/challenge/challenge_cta.png
   </div>
 </div>
 
-### Challenge
+## Challenge
 
-#### Step 1. Pulumi Architecture Templates
+### Step 1. Pulumi Architecture Templates
 
 In this Challenge, you will learn how to create a new Pulumi program using [our new Pulumi Architecture Templates](/templates/), specifically for serverless blueprints for AWS with the language of your choice.
 
@@ -77,7 +75,7 @@ aws:region: The AWS region to deploy into: (us-west-2)
 Saved config
 ```
 
-#### Step 2. Exploring Blueprints
+### Step 2. Exploring Blueprints
 
 Run `pulumi up`. You will first be presented with a preview of the changes to occur.
 
@@ -109,7 +107,7 @@ Select `yes` and watch your resources come online! With a single command, Pulumi
 
 Let's get you some swag, though.
 
-#### Step 3. Working with Policy Packs
+### Step 3. Working with Policy Packs
 
 When you're using Python or Typescript, Pulumi allows you to enforce gated deployments with [Policy Packs](/docs/using-pulumi/crossguard/configuration/), which can be used locally with the free tier. These are a set of rules, expressed programmatically, that are executed against the resources being deployed. Any violation of those rules will block the deployment. Usually, Policy Packs are used to enforce security or cost optimization rules, but in this case we're going to use one to interact with our swag provider.
 
@@ -218,7 +216,7 @@ PolicyPack(
 )
 ```
 
-#### Step 4. Complying with Policies
+### Step 4. Complying with Policies
 
 The Policy Pack we've defined requires that your Pulumi program involve a JSON file containing specific data. In order to comply with it and get swag, we need to create this file.
 

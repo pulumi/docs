@@ -8,15 +8,13 @@ meta_desc: |
 meta_image: /images/challenge/challenge_cta.png
 ---
 
-## Welcome to the Pulumi Challenge!
-
 <div class="flex flex-wrap md:mt-12">
   <div>
-    <h3>Deployments Mini-Challenge</h3>
+    <h1 class="font-display text-6xl">Deployments Mini-Challenge!</h1>
     <p class="pr-12">
       <a href="/product/pulumi-deployments/" target="_blank" rel="noopener noreferrer">Pulumi Deployments</a> is a new Deployments-as-a-Service technology through which Pulumi fully manages the execution of infrastructure as code programs for users of the platform. One feature of Pulumi Deployments is "Git Push to Deploy", which allows you to connect a Git repo and drive deployments on any push. Pulumi Deployments helps you ship infrastructure faster and manage 10x the scale. <br><br>In this mini-challenge, you will create a project in the Pulumi Service console to select an <a href="/templates/" target="_blank" rel="noopener noreferrer">Architecture Template</a>, create a Pulumi program, connect GitHub to Pulumi Deployments, and initiate a stack update through the Pulumi Service. If you write a blog or post a quick video about it, then be sure to tag us on social media or email us at <a href=mailto:da@pulumi.com>da@pulumi.com</a> and we'll help amplify your post or video!
     </p>
-    <h3>Prerequisites</h3>
+    <h2>Prerequisites</h2>
     <p>In order to complete this challenge, you'll need a couple things set up in advance.</p>
     <ul>
       <li>
@@ -44,33 +42,33 @@ meta_image: /images/challenge/challenge_cta.png
   </div>
 </div>
 
-### Challenge
+## Challenge
 
-#### Step 1. Create a Project
+### Step 1. Create a Project
 
 We will first create a project in the Pulumi Service console. Navigate to [app.pulumi.com](https://app.pulumi.com/) and sign in. Select Stacks on the left navigation, and select the "Create project" button. Then select the cloud you want to deploy to, the language you want to use, and a template. Please select one of the templates other than the starter. Select next and provide in your project details:  project name, stack name, and configuration values for the template. Select Create project, and you will be brought to the Overview page of your new stack.
 
 ![alt_text](/images/challenge/Step1.gif "create new project")
 
-#### Step 2. Pull Down Your Project Locally
+### Step 2. Pull Down Your Project Locally
 
 Follow the Get Started commands on the Overview page of your new stack. Create a new directory for your project in your CLI, and then pull down your project. Don't run `pulumi up` just yet. Next, create a git repository in your project directory and push it to GitHub.
 
 ![alt_text](/images/challenge/Step2.gif "pull down project locally")
 
-#### Step 3. Set Up Pulumi Push to Deploy
+### Step 3. Set Up Pulumi Push to Deploy
 
 Return to the Pulumi Service console, select the Settings tab, and then select Deploy. To enable Pulumi Deployments, first install the [Pulumi GitHub App](https://github.com/apps/pulumi). Once installed, you will be presented with Deployment settings. Select your GitHub organization/repository, the branch, and the folder you want to connect. Scroll down to the Environment variable and provide your cloud credentials (e.g., for AWS, it would be AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SESSION_TOKEN).
 
 ![alt_text](/images/challenge/Step3.gif "set up push to deploy")
 
-#### Step 4. Deploy Stack with Pulumi Deployments
+### Step 4. Deploy Stack with Pulumi Deployments
 
 Select the Actions button, then select "Update", and Deploy to start a deployment. You will be brought over to the Activity tab. Select the new Deployment, and you will be presented with Deployment logs showing you the details of the deployment.
 
 ![alt_text](/images/challenge/Step4.gif "deploy stack")
 
-#### Step 5. Validate Endpoints
+### Step 5. Validate Endpoints
 
 Lastly, validate that the endpoints of your deployed infrastructure is working. You can copy out the endpoint URL string from the deployment logs or under the Outputs section of the Overview tab.
 
