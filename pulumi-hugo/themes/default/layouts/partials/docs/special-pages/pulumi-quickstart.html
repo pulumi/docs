@@ -143,8 +143,9 @@
                                         jq(`#next-steps-${cloud}`).css("display", "block");
                                     }
 
-                                    // starter is the only template that exists for Java
-                                    if (language === "java") {
+                                    // starter is the only template that exists for Java language and only template for
+                                    // kubernetes.
+                                    if (language === "java" || cloud === "kubernetes") {
                                         jq('label[for^="template"]').each(function () {
                                             // if the template is not a starter template, hide it
                                             if (!jq(this).attr("for").includes("starter")) {
