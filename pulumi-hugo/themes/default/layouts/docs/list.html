@@ -29,10 +29,12 @@
                     {{ partial "docs/table-of-contents.html" . }}
                 </div>
 
-                {{ if .Params.cloud_overview }}
-                    {{ partial "docs/cloud-overview.html" . }}
+                {{ if .Params.docs_home }}
+                    {{ partial "docs/special-pages/docs-home.html" . }}
                 {{ else if .Params.pulumi_quickstart }}
-                    {{ partial "docs/pulumi-quickstart.html" . }}
+                    {{ partial "docs/special-pages/pulumi-quickstart.html" . }}
+                {{ else if .Params.cloud_overview }}
+                    {{ partial "docs/special-pages/cloud-overview.html" . }}
                 {{ end }}
 
 
@@ -46,7 +48,7 @@
 
                 {{ partial "docs/feedback.html" . }}
 
-                {{ partial "right-nav-ad.html" }}
+                {{ partial "docs/right-nav-ad.html" }}
             </div>
         </div>
     </div>

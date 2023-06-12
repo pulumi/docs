@@ -41,6 +41,12 @@ div.icon-24-24 {
     background-size: 24px 24px;
 }
 
+div.icon-32-32 {
+    width: 32px;
+    height: 32px;
+    background-size: 32px 32px;
+}
+
 div.icon-35-35 {
     width: 35px;
     height: 35px;
@@ -229,4 +235,76 @@ div.lightbulb-16-16 {
 
 div.grad-cap-18-18 {
     background: url(/images/docs/icons/grad-cap-18-18.svg);
+}
+
+div.swap-blue-21-21 {
+    background: url(/images/docs/icons/swap-blue-21-21.svg);
+}
+
+div.terminal-blue-21-21 {
+    background: url(/images/docs/icons/terminal-blue-21-21.svg);
+}
+
+div.lightbulb-blue-21-21 {
+    background: url(/images/docs/icons/lightbulb-blue-21-21.svg);
+}
+
+div.code-tree-blue-21-21 {
+    background: url(/images/docs/icons/code-tree-blue-21-21.svg);
+}
+
+div.cloud-blue-21-21 {
+    background: url(/images/docs/icons/cloud-blue-21-21.svg);
+}
+
+div.aws-40 {
+    background: url(/images/docs/icons/clouds/aws-40.svg);
+    width: 68px;
+    height: 40px;
+    background-size: 68px 40px;
+}
+
+div.azure-40 {
+    background: url(/images/docs/icons/clouds/azure-40.svg);
+    width: 130px;
+    height: 40px;
+    background-size: 130px 40px;
+}
+
+div.google-cloud-40 {
+    background: url(/images/docs/icons/clouds/google-cloud-40.svg);
+    width: 253px;
+    height: 40px;
+    background-size: 253px 40px;
+}
+
+div.kubernetes-40 {
+    background: url(/images/docs/icons/clouds/kubernetes-40.svg);
+    width: 234px;
+    height: 40px;
+    background-size: 234px 40px;
+}
+
+div.dotnet-color-32-32 {
+    background: url(/images/docs/icons/languages/dotnet-color-32-32.svg);
+}
+
+div.go-color-32-32 {
+    background: url(/images/docs/icons/languages/go-color-32-32.svg);
+}
+
+div.java-color-32-32 {
+    background: url(/images/docs/icons/languages/java-color-32-32.svg);
+}
+
+div.node-color-32-32 {
+    background: url(/images/docs/icons/languages/node-color-32-32.svg);
+}
+
+div.python-color-32-32 {
+    background: url(/images/docs/icons/languages/python-color-32-32.svg);
+}
+
+div.yaml-color-32-32 {
+    background: url(/images/docs/icons/languages/yaml-color-32-32.svg);
 }

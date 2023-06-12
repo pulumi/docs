@@ -1,0 +1,64 @@
+{{ $primary_link_button := .Params.link_buttons.primary }}
+{{ $secondary_link_button := .Params.link_buttons.secondary }}
+
+
+<section class="content docs-home">
+    <div class="header">
+        {{ $h1 := split .Params.h1 " " }}
+        <h1>{{ index $h1 0 }}<strong> {{ index $h1 1 }}</strong></h1>
+        {{ .Params.description | safeHTML }}
+        <div class="link-buttons">
+            <a class="docs-primary-link-btn" href="{{ $primary_link_button.link }}">{{ $primary_link_button.label }}</a>
+            <a class="docs-secondary-link-btn" href="{{ $secondary_link_button.link }}">{{ $secondary_link_button.label }}</a>
+        </div>
+    </div>
+
+    {{ range .Params.sections }}
+        {{ if eq .type "cards-logo-label-link" }}
+            <div class="docs-home-section">
+                <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
+                {{ if .description }}
+                    {{ .description | safeHTML }}
+                {{ end }}
+                <div class="cards-logo-label-link {{ anchorize .heading }}">
+                    {{ range .cards }}
+                        <a href="{{ .link }}">
+                            <div>
+                                <div class="card-icon">
+                                    <div class="icon {{ .icon }}"></div>
+                                </div>
+                                <div class="label">{{ .label }}</div>
+                            </div>
+                        </a>
+                    {{ end }}
+                </div>
+            </div>
+        {{ else if eq .type "full-width-cards" }}
+            <div class="docs-home-section">
+                <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
+                {{ range .cards }}
+                    <a class="full-width-card" href="{{ .link }}">
+                        <div class="icon-heading">
+                            <div class="icon icon-21-21 {{ .icon }}"></div>
+                            <h3 id="{{ anchorize .heading }}">{{ .heading }}</h3>
+                        </div>
+                        <p>{{ .description }}</p>
+                    </a>
+                {{ end }}
+            </div>
+        {{ else if eq .type "blue-sparkle" }}
+            <div class="blue-sparkle docs-home-section">
+                <div class="heading">
+                    <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
+                    <div class="sparkle"></div>
+                </div>
+                <p>{{ .description }}</p>
+            </div>
+        {{ else if eq .type "flat" }}
+            <div class="docs-home-section">
+                <h2 id="{{ anchorize .heading }}">{{ .heading }}</h2>
+                {{ .description | safeHTML }}
+            </div>
+        {{ end }}
+    {{ end }}
+</section>
