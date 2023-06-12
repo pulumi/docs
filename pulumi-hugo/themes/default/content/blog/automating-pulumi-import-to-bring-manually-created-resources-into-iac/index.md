@@ -125,7 +125,7 @@ For projects with many resources, `pulumi import` also has an option that allows
 Because `pulumi import` gives us the full code for an imported resource with all attributes (as demonstrated in the previous section), and because `pulumi import` has an option for batch import from an external file source (both key differentiators between Pulumi and other IaC tools) we can use `pulumi import` to import existing resources at scale in an automated fashion.
 
 {{% notes %}}
-If you are looking to import resources that were created with a non-Pulumi IaC tool as opposed to manually in the console, the approach described in this article will still work, but you may also want to consider the tools tf2pulumi and cf2pulumi for resources created with Terraform and CloudFormation, respectively. For a comprehensive guide on the various options for importing existing resources into Pulumi, see [Migrating to Pulumi](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/).
+If you are looking to import resources that were created with a non-Pulumi IaC tool as opposed to manually in the console, the approach described in this article will still work, but you may also want to consider the `pulumi convert --from terraform` command and `cf2pulumi` tool for resources created with Terraform and CloudFormation, respectively. For a comprehensive guide on the various options for importing existing resources into Pulumi, see [Migrating to Pulumi](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/).
 {{% /notes %}}
 
 ## Designing an End-to-End Solution

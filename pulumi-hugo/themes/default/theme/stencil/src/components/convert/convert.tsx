@@ -172,8 +172,8 @@ export class Convert {
         switch (this.from) {
             case "tf":
                 return {
-                    name: "tf2pulumi",
-                    githubURL: "https://github.com/pulumi/tf2pulumi",
+                    name: "the Terraform converter",
+                    githubURL: "https://github.com/pulumi/pulumi",
                 };
             case "kube":
                 return {
@@ -442,6 +442,25 @@ export class Convert {
         return ["convert", this.from, source, this.selectedOutputLanguage.key].join("-");
     }
 
+    private renderToolDescription() {
+        let tool = this.conversionTool.githubURL ?
+            <a href={this.conversionTool.githubURL}>{this.conversionTool.name}</a> :
+            this.conversionTool.name;
+
+        if (this.from === "tf") {
+            tool = <code>pulumi convert --from terraform</code>;
+        }
+
+        return (
+            <p>
+                Your code will be converted with{" "}
+                {tool}, an open-source
+                command-line tool we built to make it as easy as possible for you to migrate your existing {this.sourceLanguageName} projects to Pulumi. The
+                resulting file can be copied or downloaded for use with <a href="https://pulumi.com/start">a new Pulumi project</a>.
+            </p>
+        );
+    }
+
     // Render the editor's "window" bar.
     private renderWindowBar() {
         return (
@@ -604,12 +623,7 @@ export class Convert {
                                 <span class="editor-step">2</span>
                                 Turn it into your language of choice.
                             </h3>
-                            <p>
-                                Your code will be converted with{" "}
-                                {this.conversionTool.githubURL ? <a href={this.conversionTool.githubURL}>{this.conversionTool.name}</a> : this.conversionTool.name}, an open-source
-                                command-line tool we built to make it as easy as possible for you to migrate your existing {this.sourceLanguageName} projects to Pulumi. The
-                                resulting file can be copied or downloaded for use with <a href="https://pulumi.com/start">a new Pulumi project</a>.
-                            </p>
+                            {this.renderToolDescription()}
                             <div>{this.renderConvertButton(false)}</div>
                         </div>
                         <div class="editor-container">

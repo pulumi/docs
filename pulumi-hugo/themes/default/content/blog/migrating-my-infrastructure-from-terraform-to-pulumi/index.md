@@ -107,6 +107,10 @@ There's also the fact that I can use the Pulumi Console (web interface) to check
 
 After reading the [migration guide](https://www.pulumi.com/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform//) I immediately tried out what seemed to be the obvious option - [tf2pulumi](https://www.pulumi.com/tf2pulumi/). This is supposed to be able to convert Terraform code directly to Pulumi. In my case it simply errored out and was not able to convert my Terraform code. To be fair my TF code was using slightly more "advanced" features like custom written modules, so it wasn't the easiest thing to handle for tf2pulumi. I recommend you try it out, because it sounds great in theory. However it wasn't an option for me, so I had to go for a more manual approach. In retrospect I'm actually quite happy I did, because it gave me the opportunity to organise my code in a way that I preferred.
 
+{{% notes type="info" %}}
+As of Pulumi CLI v3.71.0, `tf2pulumi` has been replaced with `pulumi convert --from terraform`. [Converting Full Terraform Programs to Pulumi blog](/blog/converting-full-terraform-programs-to-pulumi/) has more details.
+{{% /notes %}}
+
 Don't worry though - "manual" imports using Pulumi is still rather easy to perform, albeit a bit time consuming. Here's how I did it.
 
 I started by testing out the [AWS getting started guide](https://www.pulumi.com/docs/clouds/aws/get-started/) to get a feel for how Pulumi worked. This was a great move and I recommend everyone else to do the same.

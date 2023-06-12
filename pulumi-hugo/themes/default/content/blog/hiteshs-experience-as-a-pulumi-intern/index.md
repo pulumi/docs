@@ -18,6 +18,10 @@ Hi everyone, I’m [Hitesh Boinpally](https://www.linkedin.com/in/hitesh-boinpal
 
 My overall project was to build a test harness for Pulumi’s converter tools such as [`arm2pulumi`](https://github.com/pulumi/arm2pulumi) and [`tf2pulumi`](https://github.com/pulumi/tf2pulumi). The project involved several pieces, all of which meant learning about technologies I hadn’t encountered before.
 
+{{% notes type="info" %}}
+As of Pulumi CLI v3.71.0, `tf2pulumi` has been replaced with `pulumi convert --from terraform`. [Converting Full Terraform Programs to Pulumi blog](/blog/converting-full-terraform-programs-to-pulumi/) has more details.
+{{% /notes %}}
+
 1. A program that ran the test itself and generated results in a program readable way, which I wrote in Go.
 2. Running that program to  generate historical data over time through GitHub Actions consistently.
 3. The cloud infrastructure part, which was uploading the test results into an AWS Redshift table for human-accessible analysis. Here was where I got to utilize Pulumi and better understand infrastructure as code.

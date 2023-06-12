@@ -60,7 +60,7 @@ examples:
             name = "internal"
             resource_group_name = azurerm_resource_group.example.name
             virtual_network_name = azurerm_virtual_network.example.name
-            address_prefix = "10.0.2.0/24"
+            address_prefixes = ["10.0.2.0/24"]
         }
 
         resource "azurerm_network_interface" "example" {
@@ -114,9 +114,6 @@ examples:
             initial_node_count = 1
 
             master_auth {
-                username = ""
-                password = ""
-
                 client_certificate_config {
                     issue_client_certificate = false
                 }

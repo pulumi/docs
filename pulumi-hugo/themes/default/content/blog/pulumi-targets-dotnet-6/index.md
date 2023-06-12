@@ -97,7 +97,7 @@ Pulumi provides tools to translate from several IaC languages. These tools will 
 
 - Translating [Pulumi YAML](https://www.pulumi.com/docs/languages-sdks/yaml/) with the Pulumi CLI using `pulumi convert`
 - Translating [Azure Resource Manager (ARM)](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/overview) templates using [arm2pulumi](https://www.pulumi.com/arm2pulumi/)
-- Translating Terraform code using [tf2pulumi](https://www.pulumi.com/tf2pulumi/)
+- Translating [Terraform code](https://www.pulumi.com/tf2pulumi/) with the Pulumi CLI using `pulumi convert --from terraform`
 - Translating Kubernetes YAML using [kube2pulumi](https://www.pulumi.com/kube2pulumi/)
 
 These tools take their source language as input, convert it into the Pulumi intermediate language, then translate it into one of our supported languages. In the case of C#, the code generation has been updated to produce code that uses the latest features from .NET 6. We've also fixed minor issues that were present in the translation logic.

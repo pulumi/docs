@@ -8,15 +8,8 @@ tags: ["migration"]
 ---
 
 {{% notes %}}
-Migrate from Terraform to modern languages with tf2pulumi.  Supports Terraform 0.12 and generates TypeScript and Python.
+See [Migrating From Terraform to Pulumi](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/) for updated documentation on migrating from Terraform.
 {{% /notes %}}
-
-<div class="header-hero-actions mt-8 mb-4 text-center">
-    <a class="btn btn-lg mr-2" href="/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/">
-        Learn More
-    </a>
-</div>
-<br>
 
 Most cloud infrastructure projects involve working with existing cloud resources &mdash; either building on top of existing resources or adopting existing resources under management with a new and more robust infrastructure provisioning solution.
 
@@ -89,6 +82,10 @@ For our "existing" infrastructure, we'll use a small Azure deployment of a Virtu
 #### 2. Create a Pulumi program
 
 Next, we'll create a Pulumi program to describe the same infrastructure that exists in Azure.  We could write this by hand, but since we used Terraform to define the original infrastructure, we also have the option to use [`tf2pulumi`](https://github.com/pulumi/tf2pulumi) to automatically convert our `.tf` files to Pulumi.
+
+{{% notes type="info" %}}
+As of Pulumi CLI v3.71.0, `tf2pulumi` has been replaced with `pulumi convert --from terraform`. [Converting Full Terraform Programs to Pulumi blog](/blog/converting-full-terraform-programs-to-pulumi/) has more details.
+{{% /notes %}}
 
 ```bash
 $ pulumi new azure-typescript --force

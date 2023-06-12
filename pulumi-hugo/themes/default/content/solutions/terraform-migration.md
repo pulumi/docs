@@ -69,7 +69,7 @@ diagrams:
         - title: 3. Convert Terraform templates to Pulumi programs
           image: /images/solutions/terraform/terraform-diagram-three.svg
           content: |
-            There are two options to migrating the identified stacks. You can convert the code for each of the identified stacks or you can read the outputs from a Terraform state file and reference the existing stack from within your Pulumi program. The former allows you to fully take advantage of all the benefits of using Pulumi to manage all your infrastructure. You can either use the [tf2pulumi](/tf2pulumi/) tool to automatically translate HCL to a Pulumi program or you can translate manually. The latter allows you to use Pulumi with existing infrastructure agnostic to the choices other teams have already made.
+            There are two options to migrating the identified stacks. You can convert the code for each of the identified stacks or you can read the outputs from a Terraform state file and reference the existing stack from within your Pulumi program. The former allows you to fully take advantage of all the benefits of using Pulumi to manage all your infrastructure. You can either use the [Terraform converter](/tf2pulumi/) to automatically translate HCL to a Pulumi program or you can translate manually. The latter allows you to use Pulumi with existing infrastructure agnostic to the choices other teams have already made.
 
         - title: 4. Incorporate software development best practices
           image: /images/solutions/terraform/terraform-diagram-four.svg

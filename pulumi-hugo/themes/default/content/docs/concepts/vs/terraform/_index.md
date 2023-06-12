@@ -150,9 +150,9 @@ In the event you’d like to add new providers, or understand how this integrati
 
 #### Converting From Terraform to Pulumi {#providers-converting}
 
-Pulumi offers a tool called [tf2pulumi](https://github.com/pulumi/tf2pulumi) that converts Terraform HCL to Pulumi. It is open source on GitHub, and works well for most projects. (If you run into a snag, issues and pull requests are welcome!) To learn more, see [Converting Terraform HCL to Pulumi](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi) in our Adopting Pulumi user guide.
+The Pulumi CLI can be used to convert Terraform HCL to Pulumi via `pulumi convert --from terraform`. To learn more, see [Converting Terraform HCL to Pulumi](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi) in our Adopting Pulumi user guide.
 
-For an example of how to do a Terraform-to-Pulumi conversion, see our article, [From Terraform to Infrastructure as Software](/blog/from-terraform-to-infrastructure-as-software/).
+For an example of how to do a Terraform-to-Pulumi conversion, see our article, [Converting Full Terraform Programs to Pulumi](/blog/converting-full-terraform-programs-to-pulumi/).
 
 #### Using Pulumi and Terraform Side-by-Side {#providers-side-by-side}
 
@@ -172,7 +172,7 @@ Pulumi provides dynamic providers that allow you to extend your system by creati
 
 ### OSS License {#license}
 
-Terraform uses the weak copyleft [Mozilla Public License 2.0](https://github.com/HashiCorp/terraform/blob/main/LICENSE). Conversely, Pulumi open-source projects use the permissive and business-friendly [Apache License 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE). This includes the core [Pulumi repo](https://github.com/pulumi/pulumi), all of the open-source Pulumi resource providers (such as the [Azure Native provider](https://github.com/pulumi/pulumi-azure-native)), conversion utilities like [tf2pulumi](https://github.com/pulumi/tf2pulumi), and other useful projects.
+Terraform uses the weak copyleft [Mozilla Public License 2.0](https://github.com/HashiCorp/terraform/blob/main/LICENSE). Conversely, Pulumi open-source projects use the permissive and business-friendly [Apache License 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE). This includes the core [Pulumi repo](https://github.com/pulumi/pulumi), all of the open-source Pulumi resource providers (such as the [Azure Native provider](https://github.com/pulumi/pulumi-azure-native)), and other useful projects.
 
 ### Infrastructure Reuse and Modularity {#reuse}
 
