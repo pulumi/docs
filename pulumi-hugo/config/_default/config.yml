@@ -40,6 +40,8 @@ security:
       - PULUMI_CONVERT_URL
       - PULUMI_AI_WS_URL
       - GITHUB_TOKEN
+      - ALGOLIA_APP_ID
+      - ALGOLIA_APP_SEARCH_KEY
 
 disableKinds:
   - category

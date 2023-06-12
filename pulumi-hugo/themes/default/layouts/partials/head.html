@@ -122,28 +122,12 @@
         <meta property="og:description" content="{{ .Summary }}" />
     {{ end }}
 
-
-    <!-- For Registry package overview pages, add a swiftype meta tag to elevate the page in search results. -->
-    {{ if eq (.Params.layout) "overview" }}
-        <meta class="swiftype" name="package-overview-description" data-type="text" content="{{ .Params.meta_desc }}" />
-    {{ end }}
-
     {{ if .IsHome }}
         <title>{{ .Site.Title }}</title>
     {{ else if .Title }}
         {{ $title := .Title }}
         {{ if .Params.title_tag }}
             {{ $title = .Params.title_tag }}
-        {{ end }}
-
-
-        <!-- For blog posts that come up in Swiftype result sets, denote that the links are blog posts by adding a "Blog" prefix to the title. -->
-        {{ if and (eq .Type "blog") .IsPage }}
-            <meta class="swiftype" name="title" data-type="string" content="Blog: {{ $title }}" />
-        {{ else if and (eq .Type "registry") .IsPage }}
-            <meta class="swiftype" name="title" data-type="string" content="Registry: {{ $title }}" />
-        {{ else }}
-            <meta class="swiftype" name="title" data-type="string" content="{{ $title }}" />
         {{ end }}
 
 

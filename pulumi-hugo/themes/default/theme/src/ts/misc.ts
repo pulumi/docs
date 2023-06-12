@@ -210,10 +210,10 @@ function generateOnThisPage() {
 
     $(`#about-nav li[data-filter-name="who-we-are"]`).addClass("active-about-nav-item");
 
-    $(function () {                       
-        $("#about-nav li").click(function () { 
+    $(function () {
+        $("#about-nav li").click(function () {
             const activeClassName = "active-about-nav-item";
-            $(this).addClass(activeClassName); 
+            $(this).addClass(activeClassName);
 
             const activeLink = $(this).data("filter-name");
             const allLinks = ["who-we-are", "what-we-believe", "community", "history", "awards", "newsroom", "join-us"]

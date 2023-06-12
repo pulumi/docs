@@ -7,8 +7,23 @@
 // https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 
 const { global } = require("./tokens.json");
-
 const defaultTheme = require("tailwindcss/defaultTheme");
+
+const hexToRGB = (hexString) => {
+    let color = hexString.replace(/#/g, "");
+    var r = parseInt(color.substr(0, 2), 16);
+    var g = parseInt(color.substr(2, 2), 16);
+    var b = parseInt(color.substr(4, 2), 16);
+    return [ r, g, b];
+};
+
+const colorFamilyToRGB = (tailwindColorObject) => {
+    return Object.keys(tailwindColorObject)
+        .reduce((o, key) => {
+            o[key] = hexToRGB(tailwindColorObject[key]).join(",");
+            return o;
+        }, {});
+};
 
 const brand = {
     yellow: global.colors.brand.yellow.value,
@@ -156,6 +171,10 @@ module.exports = {
             boxShadow: {
                 "3xl": "0 35px 70px -20px rgba(0, 0, 0, 0.5)",
             },
+        },
+        rgbColors: {
+            gray: colorFamilyToRGB(gray),
+            blue: colorFamilyToRGB(blue),
         },
         colors: {
             white,

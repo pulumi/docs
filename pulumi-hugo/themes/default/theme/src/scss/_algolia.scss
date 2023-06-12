@@ -1,0 +1,162 @@
+@import "../../node_modules/@algolia/autocomplete-theme-classic/dist/theme.min.css";
+
+:root {
+    --aa-base-unit: 14;
+    --aa-primary-color-rgb: theme(rgbColors.blue.400);
+    --aa-font-family: theme(fontFamily.body);
+    --aa-input-icon-size: 16px;
+    --aa-icon-color-rgb: theme(rgbColors.gray.900);
+    --aa-input-border-color-rgb: theme(rgbColors.gray.500);
+    --aa-input-border-color-alpha: 1;
+    --aa-selected-color-rgb: theme(rgbColors.blue.100);
+    --aa-selected-color-alpha: 0.9;
+    --aa-description-highlight-background-color-rgb: theme(rgbColors.blue.200);
+    --aa-description-highlight-background-color-alpha: 0;
+    --aa-search-input-height: 42px;
+}
+
+.aa-Form, .aa-DetachedSearchButton {
+    @apply rounded;
+}
+
+.aa-List {
+    .result {
+
+        // The breadcrumb.
+        .ancestors {
+            @apply text-xs text-gray-700 mb-2;
+        }
+
+        // An individual result item.
+        .item {
+            @apply leading-relaxed;
+
+            .title {
+                @apply font-semibold text-gray-900 mb-2 inline-flex items-center;
+
+                .label {
+                    @apply absolute top-4 right-3 text-xs text-gray-700 ml-3 inline-flex items-center rounded px-1 py-0.5 font-normal border;
+
+                    &.docs {
+                        @apply border-salmon-300;
+                    }
+
+                    &.packages {
+                        @apply border-yellow-300;
+                    }
+                }
+            }
+
+            // The short description of the item.
+            .description {
+                @apply text-xs text-gray-800;
+            }
+        }
+    }
+
+    // The highlight indicator (i.e., the portion of item, if any, that matches the search query).
+    mark {
+        @apply bg-transparent border-b border-blue-600 border-opacity-50;
+    }
+}
+
+// What's the difference between this and the thing above?
+.aa-Item {
+    @apply bg-gray-100 bg-opacity-80 mb-2 px-2 relative;
+
+    .description {
+        @apply leading-loose;
+    }
+}
+
+.aa-Source {
+    @apply pt-12 pb-6 static;
+}
+
+.aa-DetachedContainer .aa-SourceHeader {
+    @apply my-0 py-2 px-2;
+}
+
+.aa-DetachedFormContainer {
+    @apply border-transparent;
+}
+
+.aa-SourceHeader {
+    @apply bg-white z-40 m-0 absolute top-0 right-0 left-0;
+
+    ul {
+        @apply p-0 m-0 flex items-center font-normal border-b border-gray-200;
+
+        li {
+            @apply border-b-2 border-transparent flex items-end transition-colors text-gray-700 mr-2;
+
+            button {
+                @apply px-3 py-2 flex items-center whitespace-nowrap;
+
+                img {
+                    @apply mr-1.5 opacity-70;
+                }
+
+                .label {
+                    @apply font-semibold;
+                    font-size: 0.9em;
+                }
+
+                .count {
+                    @apply ml-2 text-xs flex items-center rounded bg-violet-100 bg-opacity-60 text-gray-700 px-1.5 py-0.5;
+
+                    &.count-0 {
+                        @apply bg-transparent;
+                    }
+                }
+            }
+
+            &:hover:not(.disabled) {
+                @apply border-violet-300;
+            }
+
+            &.disabled {
+                @apply opacity-50;
+
+                button {
+                    @apply cursor-default;
+                }
+            }
+
+            &.active, &.active:hover:not(.disabled) {
+                @apply text-gray-900 border-violet-600;
+
+                button {
+
+                    img {
+                        @apply opacity-100;
+                    }
+
+                    .label {
+                        @apply text-gray-900;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.aa-SourceFooter {
+    @apply bg-white z-40 py-2 mt-2 px-2 absolute right-0 bottom-0 left-0 text-xs text-gray-600;
+
+    > div {
+        @apply pt-2 border-t border-gray-300 flex items-center justify-start;
+
+        > span {
+            @apply mr-4;
+        }
+    }
+}
+
+.aa-SourceNoResults {
+    @apply flex flex-col items-center justify-center px-4 py-8;
+
+    mark {
+        @apply bg-transparent font-semibold;
+    }
+}

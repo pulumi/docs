@@ -5,7 +5,12 @@
     "private": true,
     "license": "Apache-2.0",
     "dependencies": {
+        "@algolia/autocomplete-js": "^1.9.2",
+        "@algolia/autocomplete-plugin-recent-searches": "^1.9.2",
+        "@algolia/autocomplete-plugin-tags": "^1.9.2",
+        "@algolia/autocomplete-theme-classic": "^1.9.2",
         "@types/marked": "^4.0.8",
+        "algoliasearch": "^4.17.0",
         "clipboard-polyfill": "^3.0.3",
         "marked": "^4.3.0",
         "tailwindcss": "^2.2.9"

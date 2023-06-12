@@ -46,3 +46,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+          ALGOLIA_APP_ID: ${{ vars.ALGOLIA_APP_ID }}
+          ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}

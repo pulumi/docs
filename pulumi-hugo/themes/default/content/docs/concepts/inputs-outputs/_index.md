@@ -9,9 +9,13 @@ menu:
     identifier: inputs-outputs
     weight: 5
 aliases:
-- /docs/reference/inputs-outputs/
-- /docs/intro/concepts/inputs-outputs/
-
+    - /docs/reference/inputs-outputs/
+    - /docs/intro/concepts/inputs-outputs/
+search:
+    boost: true
+    keywords:
+        - output
+        - input
 ---
 
 Resource properties are treated specially in Pulumi, both for purposes of input and output.
@@ -104,7 +108,7 @@ The result of the call to {{< pulumi-apply >}} is a new Output<T>. So in this ex
 During some program executions, `apply` doesn’t run. For example, it won’t run during a preview, when resource output values may be unknown. Therefore, you should avoid side-effects within the callbacks. For this reason, you should not allocate new resources inside of your callbacks either, as it could lead to `pulumi preview` being wrong.
 {{% /notes %}}
 
-## All
+## All { search.keywords="pulumi.all" }
 
 If you have multiple outputs and need to join them, the `all` function acts like an `apply` over many resources. This function joins over an entire list of outputs. It waits for all of them to become available and then provides them to the supplied callback. This function can be used to compute an entirely new output value, such as by adding or concatenating outputs from two different resources together, or by creating a new data structure that uses them. Just like with `apply`, the result of [Output.all](/docs/reference/pkg/python/pulumi#pulumi.Output.all) is itself an Output<T>.
 
