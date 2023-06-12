@@ -18,4 +18,8 @@ form:
     - key: registry
       label: I need help publishing a package to Pulumi Registry
       hubspot_form_id: c7b19a90-319d-45c1-9a89-acaedd2a8945
+
+    - key: "tf-migration"
+      label: I want to redeem the Terraform Migration Offer
+      hubspot_form_id: 8c64aa2d-7c77-4d8e-9012-94d1acaefa74
 ---
