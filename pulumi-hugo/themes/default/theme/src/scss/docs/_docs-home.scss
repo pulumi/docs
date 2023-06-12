@@ -37,14 +37,11 @@ section.docs-home {
             margin: 0;
         }
 
-        p {
-            max-width: 436px;
-        }
-
         @media (min-width: 768px) {
             background-image: url("/images/docs/docs-home-header-background-tablet.svg");
             p {
                 font-size: 15px;
+                max-width: 436px;
             }
         }
 
@@ -158,18 +155,22 @@ section.docs-home {
         flex-direction: row;
 
         &.clouds a {
-            flex-basis: 344px;
+            flex-basis: 100%;
 
             div.label {
                 padding: 12px;
             }
+
+            @media (min-width: 768px) {
+                flex-basis: 49%;
+            }
         }
 
         &.languages a {
-            flex-basis: 150px;
+            flex-basis: 32%;
 
-            @media (min-width: 1368px) {
-                flex-basis: 106px;
+            @media (min-width: 1240px) {
+                flex-basis: 15%;
             }
 
             div.card-icon {
