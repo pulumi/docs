@@ -35,10 +35,10 @@ module.exports = {
                         href: `/registry/packages/${providerName}/api-docs/${itemPath.concat(item.link).slice(1).join("/").toLowerCase()}/`,
                         keywords: [
                             item.name,
+                            itemPath.concat(item.name).slice(1).join(" ").toLowerCase(),
                             itemPath.concat(item.name).join("."),
                             itemPath.concat(item.name).join(":"),
                             itemPath.concat(item.name).join(" "),
-                            itemPath.concat(item.name).slice(1).join(" "),
                             `${providerTitle} ${item.name}`
                         ],
                         ancestors: [ "Registry", providerTitle, "API Docs" ],

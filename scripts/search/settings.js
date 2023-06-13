@@ -60,14 +60,24 @@ module.exports = {
     // https://www.algolia.com/doc/guides/sending-and-managing-data/prepare-your-data/how-to/setting-searchable-attributes/#set-searchable-attributes-with-the-api
     getSearchableAttributes() {
         return [
-            "unordered(title)",
-            "keywords",
-            "href",
-            "unordered(tags)",
-            "ancestors",
+            "title,h1",            // Title and H1 are considered of equal relevance, so they're listed on the same level.
+            "keywords",            // Keywords are treated as ordered. Those higher up in the list are considered more relevant.
+            "href",                // Hrefs are considered searchable as well. (URLs often contain relevant keywords.)
+            "unordered(tags)",     // Tags are treated as unordered. Unlike keywords, their order has no significance.
+            "ancestors",           // Ancestors contains a list of the labels comprising a breadcrumb. (These often contain relevant keywords also.)
+            "description",         // Descriptions occasionally contain relevant keywords, but often don't, so we place them further down in the list.
+            "section",             // Section is the primary "facet" of a record -- Docs, Registry, Blog, Examples, etc.
+            "unordered(authors)",  // Blog-post authors are occasionally useful for searching, but their order is considered irrelevant.
+        ];
+    },
+
+    // Attributes to highlight contains the list of searchable attributes that might be used to highlight query matches in the UI.
+    // https://www.algolia.com/doc/api-reference/api-parameters/attributesToHighlight/
+    getAttributesToHighlight() {
+        return [
+            "title",
+            "h1",
             "description",
-            "section",
-            "authors",
         ];
     },
 

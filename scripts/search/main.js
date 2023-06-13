@@ -60,6 +60,7 @@ const allObjects = [
 const indexSettings = {
     searchableAttributes: settings.getSearchableAttributes(),
     attributesForFaceting: settings.getAttributesForFaceting(),
+    attributesToHighlight: settings.getAttributesToHighlight(),
     customRanking: settings.getCustomRanking(),
     ignorePlurals: true,
 };
