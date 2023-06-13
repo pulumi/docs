@@ -352,4 +352,6 @@ customer_logos:
         link: https://www.getport.io/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
       - logo: circleci.png
         link: https://circleci.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
+      - logo: nginx.png
+        link: https://www.nginx.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP
 ---

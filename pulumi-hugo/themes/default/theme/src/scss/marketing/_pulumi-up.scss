@@ -6,7 +6,7 @@ body.section-pulumi-up {
     }
 
     .banner-image {
-        background-image: url("/images/pulumiup-2023/banner-mid.png");
+        background-image: url("/images/pulumiup-2023/banner.png");
         background-position: center;
         background-repeat: no-repeat;
         width: 100%;
@@ -14,11 +14,11 @@ body.section-pulumi-up {
     }
 
     .banner-image-confirmation {
-        background-image: url("/images/pulumiup-2023/banner-thin.png");
+        background-image: url("/images/pulumiup-2023/banner.png");
         background-position: center;
         background-repeat: no-repeat;
         width: 100%;
-        height: 561px;
+        height: 740px;
     }
 
     .yellow-header-text {
@@ -27,8 +27,6 @@ body.section-pulumi-up {
         font-weight: 500;
         font-size: 48px;
         line-height: 48px;
-        color: #F7BF2A;
-        text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
     }
 
     .banner-description p {
@@ -50,7 +48,7 @@ body.section-pulumi-up {
         .banner-image, .banner-image-confirmation {
             background-image: none;
             height: auto;
-            background-color: #7bdeff;
+            background-color: #DBF4E4;
         }
 
         // move text off the banner
