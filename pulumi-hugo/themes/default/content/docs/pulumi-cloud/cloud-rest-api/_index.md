@@ -2712,16 +2712,17 @@ Search for resources belonging to the given organization.
 
 ### Parameters
 
-| Name     | In    | Type          | Required | Description                                                                                                                              |
-|----------|-------|---------------|----------|------------------------------------------------------------------------------------------------------------------------------------------|
-| org      | path  | string        | true     | Name of the organization to search.                                                                                                      |
-| query    | query | string        | false    | The search query to execute. If omitted all resources are returned (subject to any pagination limits).                                   |
-| sort     | query | array[string] | false    | Results are returned sorted by this field value.                                                                                         |
-| asc      | query | boolean       | false    | Whether to return results in ascending or descending sort order.                                                                         |
-| size     | query | integer       | false    | How many results to return at a time.                                                                                                    |
-| page     | query | number        | false    | The page of results to return.                                                                                                           |
-| continue | query | string        | false    | A continuation token for pagination.                                                                                                     |
-| facet    | query | array[string] | false    | If provided, an aggregation will be returned with the top-5 values for the given facet, along with how many resources have those values. |
+| Name       | In    | Type          | Required | Description                                                                                                                              |
+|------------|-------|---------------|----------|------------------------------------------------------------------------------------------------------------------------------------------|
+| org        | path  | string        | true     | Name of the organization to search.                                                                                                      |
+| query      | query | string        | false    | The search query to execute. If omitted all resources are returned (subject to any pagination limits).                                   |
+| sort       | query | array[string] | false    | Results are returned sorted by this field value.                                                                                         |
+| asc        | query | boolean       | false    | Whether to return results in ascending or descending sort order.                                                                         |
+| size       | query | integer       | false    | How many results to return at a time.                                                                                                    |
+| page       | query | number        | false    | The page of results to return.                                                                                                           |
+| continue   | query | string        | false    | A continuation token for pagination.                                                                                                     |
+| facet      | query | array[string] | false    | If provided, an aggregation will be returned with the top-5 values for the given facet, along with how many resources have those values. |
+| properties | query | boolean       | false    | Whether to include resource properties in results. Not supported for all subscriptions.                                                  |
 
 #### Detailed descriptions
 
@@ -2755,6 +2756,10 @@ This parameter can be provided multiple times to return aggregations for up to 5
 
 Allowed values: created, custom, delete, id, modified, module, name, package, parent.urn, pending, project, protected, provider.urn, stack, type, urn.
 
+**properties**: Whether to include resource properties in results. Not supported for all subscriptions.
+
+Attempting to set this on an unsupported subscription results in a 402 status code. [Contact us](/contact?form=sales) to upgrade your subscription.
+
 #### Example responses
 
 > 200 Response
@@ -2776,6 +2781,7 @@ Allowed values: created, custom, delete, id, modified, module, name, package, pa
       "parent.urn": "string",
       "pending": "creating",
       "project": "string",
+      "properties": {},
       "protected": true,
       "provider.urn": "string",
       "stack": "string",
@@ -2802,19 +2808,20 @@ Allowed values: created, custom, delete, id, modified, module, name, package, pa
 
 ### Responses
 
-| Status | Meaning                                                                    | Description                             | Schema                                        |
-|--------|----------------------------------------------------------------------------|-----------------------------------------|-----------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Successful search.                      | [ResourceSearchResult](#resourcesearchresult) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request. Not safe to retry.         | None                                          |
-| 422    | [Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)   | Unprocessable query. Not safe to retry. | None                                          |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error. Safe to retry.            | None                                          |
+| Status | Meaning                                                                    | Description                                                                                     | Schema                                        |
+|--------|----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|-----------------------------------------------|
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Successful search.                                                                              | [ResourceSearchResult](#resourcesearchresult) |
+| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request. Not safe to retry.                                                                 | None                                          |
+| 402    | Unsupported Query                                                          | You attempted to use functionality not included in your Pulumi subscription. Not safe to retry. | None                                       |
+| 422    | [Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)   | Unprocessable query. Not safe to retry.                                                         | None                                          |
+| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error. Safe to retry.                                                                    | None                                          |
 
 ## Data Export
 
 {{% notes "info" %}}
 The Data Export API is only available to organizations using the Enterprise and Business Critical editions.
 
-If you don't see it in your organization, [contact sales](/contact?form=sales).
+If you don't see it in your organization, [contact us](/contact?form=sales).
 {{% /notes %}}
 
 {{% notes "info" %}}
@@ -2992,12 +2999,13 @@ Export resources matching a given query in CSV format.
 
 ### Parameters
 
-| Name  | In    | Type          | Required | Description                                                         |
-|-------|-------|---------------|----------|---------------------------------------------------------------------|
-| org   | path  | string        | true     | Name of the organization to search.                                 |
-| query | query | string        | false    | The search query to execute. If omitted all resources are returned. |
-| sort  | query | array[string] | false    | Results are returned sorted by this field value.                    |
-| asc   | query | boolean       | false    | Whether to return results in ascending or descending sort order.    |
+| Name       | In    | Type          | Required | Description                                                         |
+|------------|-------|---------------|----------|---------------------------------------------------------------------|
+| org        | path  | string        | true     | Name of the organization to search.                                 |
+| query      | query | string        | false    | The search query to execute. If omitted all resources are returned. |
+| sort       | query | array[string] | false    | Results are returned sorted by this field value.                    |
+| asc        | query | boolean       | false    | Whether to return results in ascending or descending sort order.    |
+| properties | query | boolean       | false    | Whether to return properties with results.                          |
 
 #### Example responses
 
@@ -3015,11 +3023,13 @@ created,custom,delete,id,modified,module,name,package,parent_urn,pending,project
 
 ### Responses
 
-| Status | Meaning                                                                    | Description                     | Schema                                     |
-|--------|----------------------------------------------------------------------------|---------------------------------|--------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Successful export.              | [CSV](/docs/pulumi-cloud/insights/export/) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request. Not safe to retry. | None                                       |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error. Safe to retry.    | None                                       |
+| Status | Meaning                                                                    | Description                                                                                     | Schema                                     |
+|--------|----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|--------------------------------------------|
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Successful export.                                                                              | [CSV](/docs/pulumi-cloud/insights/export/) |
+| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request. Not safe to retry.                                                                 | None                                       |
+| 402    | Unsupported Query                                                          | You attempted to use functionality not included in your Pulumi subscription. Not safe to retry. | None                                       |
+| 422    | [Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)   | Unprocessable query. Not safe to retry.                                                         | None                                       |
+| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error. Safe to retry.                                                                    | None                                       |
 
 ## Schemas
 
@@ -3044,6 +3054,7 @@ The result of a Resource Search query.
       "parent.urn": "string",
       "pending": "creating",
       "project": "string",
+      "properties": {},
       "protected": true,
       "provider.urn": "string",
       "stack": "string",
@@ -3095,6 +3106,7 @@ An individual resource.
   "parent.urn": "string",
   "pending": "creating",
   "project": "string",
+  "properties": {},
   "protected": true,
   "provider.urn": "string",
   "stack": "string",
@@ -3117,8 +3129,9 @@ An individual resource.
 | name         | string\|null  | The logical name of the resource. <br><br>Typically the first parameter provided to the resource when it was instantiated.                                                                                                                                                                                                                                                       |
 | package      | string\|null  | The package component of the resource's [type][types].<br><br>This is `aws` for a resource of type `aws:s3/bucket:Bucket`.                                                                                                                                                                                                                                                       |
 | parent.urn   | string\|null  | The URN of the resource's parent, if it has one.                                                                                                                                                                                                                                                                                                                                 |
-| pending      | string\|null  | The state of the resource if it is pending. <br><br>Typically indicates an operation that was interrupted due to an error, possibly needing manual intervention to resolve.<br><br>Allowed values: `creating`, `deleting`, `updating`, `reading`, `importing`.                                                                                                                   |
-| project      | string\|null  | The project the resource belongs to.                                                                                                                                                                                                                                                                                                                                             |
+| pending      | string\|null   | The state of the resource if it is pending. <br><br>Typically indicates an operation that was interrupted due to an error, possibly needing manual intervention to resolve.<br><br>Allowed values: `creating`, `deleting`, `updating`, `reading`, `importing`.                                                                                                                   |
+| project      | string\|null | The project the resource belongs to.                                                                                                                                                                                                                                                                                                                                             |
+| properties   | object\|null | The resource's combined input and output values as recorded in Pulumi's state. Only available to certain Pulumi subscriptions.                                                                                                                                                                                                                                                   |
 | protected    | boolean\|null | Whether the resource is [protected](/docs/concepts/options/protect] from deletion.                                                                                                                                                                                                                                                                                               |
 | provider.urn | string\|null  | The URN of the resource's provider.                                                                                                                                                                                                                                                                                                                                              |
 | stack        | string\|null  | The Stack the resource belongs to.                                                                                                                                                                                                                                                                                                                                               |

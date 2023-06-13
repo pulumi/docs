@@ -76,7 +76,7 @@ Selecting **Clear filters** will remove all previously selected filters.
 
 {{% notes "info" %}}
 This feature is only available to organizations using the Enterprise and Business Critical editions.
-If you don't see it in your organization, [contact sales](/contact?form=sales).
+If you don't see it in your organization, [contact us](/contact?form=sales).
 {{% /notes %}}
 
 Organizations with Data Export enabled are able to export all resources matching a particular query in CSV format.

@@ -45,7 +45,7 @@ a resource named "foo" in the "bar" stack will be returned, but a resource only 
 ### Field Queries
 
 The default search behavior is helpful for preliminary exploration but is often too broad for finer analysis.
-To more precicesly control _how_ your queries match resources, you can explicitly limit part or all of your query to match specific fields.
+To more precisely control _how_ your queries match resources, you can explicitly limit part or all of your query to match specific fields.
 
 For example, searching `name:production` will only return resources that include "production" in their [logical name](/docs/concepts/resources/names/#logicalname).
 
@@ -220,9 +220,9 @@ Terms can be excluded from results by prefixing them with a `-`.
 
 For example, `-foo` will exclude all resources that would normally match a query for `foo`.
 
-Negation can be applied to exact matches and fields. All of `name:-foo`, `name:-"foo"`, and `-"foo bar"` are valid.
+Negation can be applied to exact matches and fields. All of `-name:foo`, `name:-foo`, `-name:"foo"`, `name:-"foo"`, and `-"foo bar"` are all valid and equivalent.
 
-Fields can be repeated for multiple exclusions: `name:-foo name:-bar` excludes all resources with names matching `foo` and `bar`.
+Fields can be repeated for multiple exclusions: `-name:foo -name:bar` excludes all resources with names matching `foo` and `bar`.
 
 ### Logical Combinations
 
@@ -233,7 +233,7 @@ Precedence is simple left-to-write, so `foo bar OR baz` is interpreted as `(foo 
 
 Parentheses and `OR` can be combined with negation, exact matches, and field queries like so:
 
-> "S3-bucket" (stack:prod OR stack:dev) project:-sandbox
+> "S3-bucket" -(stack:prod OR stack:dev) -project:sandbox
 
 ### Range Queries
 
@@ -248,9 +248,73 @@ Ranges can also be one-sided. For example, to query everything modified after Ja
 
 > modified:>=2023-01-01
 
+### Property Queries
+
+{{% notes "info" %}}
+Property search is only available to organizations using the Enterprise and Business Critical editions.
+
+If you would like to use it, [contact us](/contact?form=sales) to upgrade.
+{{% /notes %}}
+
+Property search allows you to query resources by their inputs and outputs.
+
+A property query is similar to a field query but it is triggered by a leading `.` followed by a _property path_:
+
+> .\<property path>:<value?>
+
+For example:
+
+> .instanceType:t3.large
+
+The specific syntax for property names matches the syntax used elsewhere in Pulumi, for example with [`ignoreChanges`](/docs/concepts/options/ignorechanges/). This makes it possible to refer to property values nested inside arrays or objects, or values with special characters.
+
+For example, to query for a key containing spaces inside of an output object named `tags` we can write:
+
+> .tags["name containing spaces"]:value
+
+To query properties nested within arrays, the index can be omitted from the property path or `[*]` can be used. Resources are returned if any element in the array matches. Querying a specific array index (like `[0]`) is not supported.
+
+An output of `{"foo": [{"bar": "baz"]}` can be queried with:
+
+> .foo[*].bar:baz
+
+Or, equivalently:
+
+> .foo.bar:baz
+
+Matching behavior is similar to field queries. Matching is non-exact by default, and surrounding a term with double quotes triggers exact matching.
+
+For example:
+
+- A query for `.instanceType:t3` will return resources with any `instanceType` containing "t3".
+
+- A query for `.instanceType:"t3.large"` will return resources with an `instanceType` matching "t3.large" exactly.
+
+In some cases a resource might have outputs that differ from its inputs, or inputs that are not also outputs. Precedence is given to outputs first when querying.
+
+### Existence Queries
+
+Omitting a value from a field name results in an existence query that returns all resources with a value set for that field.
+
+For example, to find all resources with a team defined, regardless of what that team is, you can write:
+
+> team:
+
+Existence queries can be combined with negation to achieve non-existence queries. These can also be combined with properties.
+
+For example, you would normally write something like `.tags.stack:production` to find resources with an output like `{"tags": {"stack": "production"}}`, but we can also find resources with _any_ tags:
+
+> .tags:
+
+If we want to refine this to resources with _some_ tags but no `"stack"` tag specifically, we can can write a query like so:
+
+> .tags: -.tags.stack:
+
+Existence queries do not return resources where the property is an empty object (`{}`), array (`[]`), or `null`. A resource with an output of `{"tags": {}}` would not be captured by an existence query for `.tags:`.
+
 ## Advanced Filtering
 
-Expanding the "Advanced filtering" menu shows your results broken down by type, pacakge, stack, and project.
+Expanding the "Advanced filtering" menu shows your results broken down by type, package, stack, and project.
 The values shown in each column and the top values for that particular dimension, along with a count of how many resources share that value.
 
 ![Resource Search Advanced Filters](../search-advanced.png)
@@ -266,10 +330,10 @@ Clicking "Clear filters" will remove all previously selected filters.
 {{% notes "info" %}}
 The CSV Export feature is only available to organizations using the Enterprise and Business Critical editions.
 
-If you don't see it in your organization, [contact sales](/contact?form=sales).
+If you don't see it in your organization, [contact us](/contact?form=sales).
 {{% /notes %}}
 
-You can download a CSV with all resources matching your query by clicking the "Download CSV" buttong.
+You can download a CSV with all resources matching your query by clicking the "Download CSV" button.
 
 For a complete description of the CSV format returned, see the [Data Export](/docs/pulumi-cloud/insights/export/) documentation.
 
@@ -282,7 +346,7 @@ Resources can also be queried programmatically. See the [Pulumi Cloud REST API](
 {{% notes "info" %}}
 AI Assist is an experimental feature that lets you use natural-language prompts to generate queries for use with Resource Search.
 
-If you don't see it in your organization, [contact sales](/contact?form=sales).
+If you don't see it in your organization, [contact us](/contact?form=sales).
 {{% /notes %}}
 
 Organizations with AI Assist enabled will see an "AI Assist" button to the right of their search bar.
@@ -305,7 +369,7 @@ or, if you're not sure which type is appropriate, you can use AI Assist again to
 
 > How many gcp buckets do I have?
 
-You may want to expand the "Advanced fitlering" menu if you are interested in specific resource counts.
+You may want to expand the "Advanced filtering" menu if you are interested in specific resource counts.
 
 You do not need to query AI Assist with English:
 
