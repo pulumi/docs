@@ -151,7 +151,7 @@
                 {{ if le $index 3 }}
                     <div class="flex-2-col">
                         {{ $url := print "/registry/packages/" $component.url }}
-                        {{ if $component.link_outside_registry }}
+                        {{ if $component.external_link }}
                             {{ $url =  $component.url }}
                         {{ end }}
                         <a href="{{ $url }}">
