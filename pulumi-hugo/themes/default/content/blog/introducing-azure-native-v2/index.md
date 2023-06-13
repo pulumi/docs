@@ -20,11 +20,11 @@ tags:
 The Pulumi Azure Native Provider 2.0 is currently available in beta.
 {{% /notes %}}
 
-We are thrilled to announce the highly anticipated beta release of the Pulumi Azure Native Provider 2.0, a significant upgrade to our infrastructure as code (IaC) solution for Microsoft Azure. This release brings a host of exciting features and improvements that will enhance your experience with managing Azure resources and empower you to build robust and scalable cloud infrastructure more efficiently.
+We are thrilled to announce the highly anticipated beta release of the Pulumi Azure Native Provider 2.0, a significant upgrade to our infrastructure as code (IaC) solution for Microsoft Azure. The native Azure provider implements the best possible support for the Azure platform in Pulumi. Every property of each module is always represented in the SDKs. This release brings a host of exciting features and improvements that will enhance your experience with managing Azure resources and empower you to build robust and scalable cloud infrastructure more efficiently.
 
 <!--more-->
 
-At Pulumi, we understand the importance of keeping up with the ever-evolving cloud landscape. The Pulumi Azure Native Provider 2.0 represents our commitment to providing you with the best tools to harness the full power of Microsoft Azure while providing you with same-day access to the entire [Azure API surface](https://docs.microsoft.com/en-us/rest/api/azure/). Let's dive into some of the key enhancements in this release:
+At Pulumi, we understand the importance of keeping up with the ever-evolving cloud landscape. The Pulumi Azure Native Provider 2.0 represents our commitment to providing you with the best tools to harness the full power of Microsoft Azure. With automatic generation from Azure API specs, we are able to provide you with same-day access to the entire [Azure API surface](https://docs.microsoft.com/en-us/rest/api/azure/) including all available properties. Let's dive into some of the key enhancements in this release:
 
 ## Reduced SDK Size for Faster Development
 
@@ -34,11 +34,11 @@ So, how did we accomplish this? For starters, we've removed all deprecated Azure
 
 You may be wondering about the significance between explicit and default versions. Well, when Azure releases new features they often create a new version of a service. These versions are named using dates such as "2021-01-02" or "2022-05-08-preview". There's many versions of each module in the SDK, so we pick a version of each module for the top-level default. To learn more about module versions, visit the [Azure Native Version Guide](https://www.pulumi.com/registry/packages/azure-native/version-guide/).
 
-![version_squeeze_diagram](./azurev2-diagrams.png)
+![sdk-size-version-diagram](./azurev2-diagrams.png)
 
 ## Refreshed Default Module Versions
 
-In the latest release, we have refreshed the default module versions to align with the latest ARM API versions from Microsoft. With our continued commitment to same-day access to Azure API surface, you always have access to the most up-to-date features and capabilities offered by Azure modules. By leveraging the latest module versions, you can take advantage of the latest and most desired features directly from Azure while building your infrastructure with Pulumi.
+In the latest release, we have refreshed the default module versions to align with the latest Azure API versions from Microsoft. With our continued commitment to same-day access to Azure API surface, you always have access to the most up-to-date features and capabilities offered by Azure modules. By leveraging the latest module versions, you can take advantage of the latest and most desired features directly from Azure while building your infrastructure with Pulumi.
 
 If you would like to upgrade to 2.0, but continue using the same ARM API version that was used in your 1.0, you can do that by specifying the compatible explicit version available in the 2.0 provider. Shown below are examples of how that change might look.
 
@@ -86,11 +86,11 @@ If you would like to upgrade to 2.0, but continue using the same ARM API version
 {{% /choosable %}}
 {{< /chooser >}}
 
-## Expanded Module Per Version Coverage
+## Expanded Top-Level Default Module Coverage
 
-We're excited to expand our top-level default version coverage by 226 resources and 274 functions in this release, bringing the total to over 1600 resources and 2000 functions. With this extensive collection of modules at your disposal, you can easily provision and manage the full range of Azure services using Pulumi. Whether you're working with virtual machines, databases, networking, or any other Azure service, the Azure Native Provider has you covered.
+We're excited to expand our top-level default version coverage by 226 resources, 274 functions, and 5526 input properties in this release, bringing the total to over 1600, 2000, and 30,000 respectively. With this extensive collection of modules at your disposal, you can easily provision and manage the full range of Azure services using Pulumi. Whether you're working with virtual machines, databases, networking, or any other Azure service, the Azure Native Provider has you covered.
 
-![version_squeeze_diagram](./azurev2-provider-coverage.png)
+![provider-coverage-by-version](./azurev2-provider-coverage.png)
 
 ## Resolved Title Case Inconsistency
 
@@ -100,13 +100,13 @@ In our commitment to excellence, we have [resolved title case inconsistencies](h
 
 We have simplified the representation of user assigned identity inputs by recognizing them as string arrays. This change provides a more intuitive and clear approach when configuring user assigned identities for your Azure modules. You can now reference these as `#TODO example reference` without jumping through any hoops.
 
-## Migrating from 1.0 to 2.0
+## Migrating from 1.x to 2.x
 
-We recommend you update to the [latest version of Azure Native 1.0](https://github.com/pulumi/pulumi-azure-native/releases/tag/v1.103.0) prior to moving to 2.0. This will enable you to address existing deprecations and see the recommended substitutions ahead of the major version upgrade. Head over to the [migration guide](link TODO) which outlines the necessary steps to update your existing Pulumi projects and ensuring a smooth migration experience.
+We recommend you update to the [latest version of Azure Native 1.x](https://github.com/pulumi/pulumi-azure-native/releases/tag/v1.103.0) prior to moving to 2.x. This will enable you to address existing deprecations and see the recommended substitutions ahead of the major version upgrade. Head over to the [migration guide](https://www.pulumi.com/registry/packages/azure-native/#migration) which outlines the necessary steps to update your existing Pulumi projects and ensuring a smooth migration experience.
 
 Current users of the Pulumi Azure Classic Provider can follow the [classic to native migration guide](https://www.pulumi.com/registry/packages/azure-native/from-classic/) to take advantage of all the latest and greatest features available in Pulumi the Azure Native Provider.
 
-While you can immediately start leveraging the improved performance, you may need to make some changes in order to continue using specific Azure API module versions or user assigned identity inputs. Use the Pulumi Azure Native Provider documentation within your IDE to determine the explicit version that is available and fully compatible.
+While you can immediately start leveraging the improved performance, you may need to make some changes in order to continue using specific Azure API module versions or user assigned identity inputs. Use the Pulumi Azure Native Provider documentation within your IDE to determine the explicit API version that is available and fully compatible with your existing deployment.
 
 <!-- TODO MAYBE Add code snippet of a before and after short program from default to calling an explicit verison and updating userassigned identities -->
 
