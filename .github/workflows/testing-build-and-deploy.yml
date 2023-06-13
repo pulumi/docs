@@ -6,6 +6,9 @@ on:
   pull_request:
       branches:
         - master
+permissions:
+      id-token: write   # This is required for requesting the JWT
+      contents: read    # This is required for actions/checkout
 jobs:
   buildSite:
     env:
@@ -34,14 +37,22 @@ jobs:
         run: |
           git config --global url."https://${{ secrets.PULUMI_BOT_TOKEN }}:x-oauth-basic@github.com/pulumi/pulumi-hugo-internal".insteadOf "https://github.com/pulumi/pulumi-hugo-internal"
 
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: arn:aws:iam::571684982431:role/ContinuousDelivery
+          role-session-name: docs-deploy
+          role-duration-seconds: 7200
+          aws-region: us-west-2
+
       - name: Install Pulumi CLI
         uses: pulumi/actions@v4
 
       - name: Build and deploy
         run: make ci_push
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.CI_AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.CI_AWS_SECRET_ACCESS_KEY }}
+          # AWS_ACCESS_KEY_ID: ${{ secrets.CI_AWS_ACCESS_KEY_ID }}
+          # AWS_SECRET_ACCESS_KEY: ${{ secrets.CI_AWS_SECRET_ACCESS_KEY }}
           CDN_PULUMI_URN: ${{ vars.CDN_PULUMI_URN }}
           DEPLOYMENT_ENVIRONMENT: ${{ vars.DEPLOYMENT_ENVIRONMENT }}
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
