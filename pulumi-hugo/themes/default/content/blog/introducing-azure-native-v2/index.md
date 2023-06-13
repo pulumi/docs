@@ -40,7 +40,7 @@ You may be wondering about the significance between explicit and default version
 
 In the latest release, we have refreshed the default module versions to align with the latest Azure API versions from Microsoft. With our continued commitment to same-day access to Azure API surface, you always have access to the most up-to-date features and capabilities offered by Azure modules. By leveraging the latest module versions, you can take advantage of the latest and most desired features directly from Azure while building your infrastructure with Pulumi.
 
-If you would like to upgrade to 2.0, but continue using the same ARM API version that was used in your 1.0, you can do that by specifying the compatible explicit version available in the 2.0 provider. Shown below are examples of how that change might look.
+If you would like to upgrade to 2.0, but continue using the same Azure API version that was used in your 1.x, you can do that by specifying the compatible explicit version available in the 2.x provider. Shown below are examples of how that change might look.
 
 {{< chooser language "typescript,python,csharp,go,yaml" >}}
 
@@ -98,7 +98,7 @@ In our commitment to excellence, we have [resolved title case inconsistencies](h
 
 ## Simplified User Assigned Identity Inputs
 
-We have simplified the representation of user assigned identity inputs by recognizing them as string arrays. This change provides a more intuitive and clear approach when configuring user assigned identities for your Azure modules. You can now reference these as `#TODO example reference` without jumping through any hoops.
+We have simplified the representation of user assigned identity inputs by recognizing them as string arrays. This change provides a more intuitive and clear approach when configuring user assigned identities for your Azure modules. You can now reference these as `UserAssignedIdentities: [exampleUserAssignedIdentity.id]` without jumping through any hoops.
 
 ## Migrating from 1.x to 2.x
 
@@ -107,8 +107,6 @@ We recommend you update to the [latest version of Azure Native 1.x](https://gith
 Current users of the Pulumi Azure Classic Provider can follow the [classic to native migration guide](https://www.pulumi.com/registry/packages/azure-native/from-classic/) to take advantage of all the latest and greatest features available in Pulumi the Azure Native Provider.
 
 While you can immediately start leveraging the improved performance, you may need to make some changes in order to continue using specific Azure API module versions or user assigned identity inputs. Use the Pulumi Azure Native Provider documentation within your IDE to determine the explicit API version that is available and fully compatible with your existing deployment.
-
-<!-- TODO MAYBE Add code snippet of a before and after short program from default to calling an explicit verison and updating userassigned identities -->
 
 The Pulumi Azure Native Provider 2.0 beta is available today for all supported Pulumi programming languages, including TypeScript, Python, .NET, Java, YAML, and Go. To learn more about the Pulumi Azure Native Provider 2.0 and explore its capabilities, check out our [updated documentation](https://www.pulumi.com/registry/packages/azure-native-v2/) and resources. We value your feedback and encourage you to reach out in community slack or [open an issue](https://github.com/pulumi/pulumi-azure-native) for any questions or suggestions.
 
