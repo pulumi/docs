@@ -20,7 +20,7 @@ tags:
 The Pulumi Azure Native Provider 2.0 is currently available in beta.
 {{% /notes %}}
 
-We are thrilled to announce the highly anticipated beta release of the Pulumi Azure Native Provider 2.0, a significant upgrade to our infrastructure as code (IaC) solution for Microsoft Azure. The native Azure provider implements the best possible support for the Azure platform in Pulumi. Every property of each module is always represented in the SDKs. This release brings a host of exciting features and improvements that will enhance your experience with managing Azure resources and empower you to build robust and scalable cloud infrastructure more efficiently.
+We are thrilled to announce the [beta release](https://github.com/pulumi/pulumi-azure-native/releases/tag/v2.0.0-beta.1) of the Pulumi Azure Native Provider 2.0, a significant upgrade to Pulumi's native provider for Microsoft Azure. The Azure Native provider offers the most complete support for Azure possible - with same day access to the entire surface area of the Azure features from Azure Resource Manager. Every property of each module is always represented in the SDKs. The 2.0 release brings a host of exciting features and improvements for performance and usability that will enhance your experience with managing Azure resources and empower you to build robust and scalable cloud infrastructure more efficiently.
 
 <!--more-->
 
@@ -28,7 +28,7 @@ At Pulumi, we understand the importance of keeping up with the ever-evolving clo
 
 ## Reduced SDK Size for Faster Development
 
-We've listened to your feedback and have made significant optimizations to the Azure Native Provider SDKs. With careful fine-tuning and restructuring, we have achieved a remarkable decrease in size over 50% in SDKs with multi-versioned modules. This improvement translates into faster development times, reduced resource consumption, and an overall smoother experience when working with the provider.
+We've listened to your feedback and have made significant optimizations to the Azure Native Provider SDKs. With careful fine-tuning and restructuring, we have achieved a significant decrease in size of over 50% for SDKs with multi-versioned modules. This improvement translates into faster development times, reduced resource consumption, and an overall smoother experience when working with the provider.
 
 So, how did we accomplish this? For starters, we've removed all deprecated Azure API modules up to the 2.0 release date. The bigger impact was made by identifying and removing all forward-compatible module versions. That is to say we've excluded any redundant versions and kept only the versions that introduce breaking changes. Where these versions are not the current latest and new default, they remain available as explicit versions.
 
@@ -94,11 +94,45 @@ We're excited to expand our top-level default version coverage by 226 resources,
 
 ## Resolved Title Case Inconsistency
 
-In our commitment to excellence, we have [resolved title case inconsistencies](https://github.com/pulumi/pulumi-azure-native/pull/2366) across module types and properties in the Azure Native Provider. All previous module names have been aliased, so no additional modifications are required for existing Pulumi programs. This enhancement ensures a unified and predictable experience while switching between Azure and Pulumi module references, making it easier for you to navigate and understand the provider's capabilities.
+For a consistent and predictable experience across the provider, we have resolved [an issue with title case inconsistencies](https://github.com/pulumi/pulumi-azure-native/pull/2366) across module types and properties. All previous module names have been aliased, so no additional modifications are required for existing Pulumi programs. This enhancement ensures a unified and predictable experience while switching between Azure and Pulumi module references, making it easier for you to navigate and understand the provider's capabilities.
 
 ## Simplified User Assigned Identity Inputs
 
 We have simplified the representation of user assigned identity inputs by recognizing them as string arrays. This change provides a more intuitive and clear approach when configuring user assigned identities for your Azure modules. You can now reference these as `UserAssignedIdentities: [exampleUserAssignedIdentity.id]` without jumping through any hoops.
+
+```typescript
+import * as resources from "@pulumi/azure-native/resources";
+import * as managedidentity from "@pulumi/azure-native/managedidentity";
+import * as storage from "@pulumi/azure-native/storage";
+
+// Create a resource group
+const resourceGroup = new resources.ResourceGroup("my-resource-group");
+
+// Create a user-assigned managed identity
+const userAssignedIdentity = new managedidentity.UserAssignedIdentity("my-user-assigned-identity", {
+    resourceGroupName: resourceGroup.name,
+});
+
+// Create a storage account that references the user-assigned managed identity
+const storageAccount = new storage.StorageAccount("mystorageaccount", {
+    resourceGroupName: resourceGroup.name,
+    kind: "StorageV2",
+    location: resourceGroup.location,
+    identity: {
+        type: "UserAssigned",
+        userAssignedIdentities: [userAssignedIdentity.id],
+    },
+    sku: {
+        name: "Standard_LRS",
+    },
+});
+```
+
+Before this change, the identity block would need to use an apply as follows:
+
+```
+user_assigned_identity.id.apply(lambda id: {id: {}})
+```
 
 ## Migrating from 1.x to 2.x
 
@@ -108,6 +142,6 @@ Current users of the Pulumi Azure Classic Provider can follow the [classic to na
 
 While you can immediately start leveraging the improved performance, you may need to make some changes in order to continue using specific Azure API module versions or user assigned identity inputs. Use the Pulumi Azure Native Provider documentation within your IDE to determine the explicit API version that is available and fully compatible with your existing deployment.
 
-The Pulumi Azure Native Provider 2.0 beta is available today for all supported Pulumi programming languages, including TypeScript, Python, .NET, Java, YAML, and Go. To learn more about the Pulumi Azure Native Provider 2.0 and explore its capabilities, check out our [updated documentation](https://www.pulumi.com/registry/packages/azure-native-v2/) and resources. We value your feedback and encourage you to reach out in community slack or [open an issue](https://github.com/pulumi/pulumi-azure-native) for any questions or suggestions.
+The Pulumi Azure Native Provider 2.0 beta is available today for Pulumi programs using TypeScript, Python, .NET, and Go. To learn more about the Pulumi Azure Native Provider 2.0 and explore its capabilities, check out our [updated documentation](https://www.pulumi.com/registry/packages/azure-native-v2/) and resources. We value your feedback and encourage you to reach out in community slack or [open an issue](https://github.com/pulumi/pulumi-azure-native) for any questions or suggestions.
 
 Try out the Pulumi Azure Native Provider 2.0 beta today and take the next step in your journey with infrastructure as code on Microsoft Azure!
