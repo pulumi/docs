@@ -21,7 +21,7 @@ customize:
   options:
     os:
       - id: osx
-        displayName: macOs
+        displayName: macOS
         default: true
       - id: windows
         displayName: Windows
