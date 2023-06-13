@@ -40,7 +40,7 @@ You may be wondering about the significance between explicit and default version
 
 In the latest release, we have refreshed the default module versions to align with the latest Azure API versions from Microsoft. With our continued commitment to same-day access to Azure API surface, you always have access to the most up-to-date features and capabilities offered by Azure modules. By leveraging the latest module versions, you can take advantage of the latest and most desired features directly from Azure while building your infrastructure with Pulumi.
 
-If you would like to upgrade to 2.0, but continue using the same Azure API version that was used in your 1.x, you can do that by specifying the compatible explicit version available in the 2.x provider. Shown below are examples of how that change might look.
+If you would like to upgrade to 2.x, but continue using the same Azure API version that was used in your 1.x, you can do that by specifying the compatible explicit version available in the 2.x provider. Shown below are examples of how that change might look.
 
 {{< chooser language "typescript,python,csharp,go,yaml" >}}
 
@@ -88,7 +88,7 @@ If you would like to upgrade to 2.0, but continue using the same Azure API versi
 
 ## Expanded Top-Level Default Module Coverage
 
-We're excited to expand our top-level default version coverage by 226 resources, 274 functions, and 5526 input properties in this release, bringing the total to over 1600, 2000, and 30,000 respectively. With this extensive collection of modules at your disposal, you can easily provision and manage the full range of Azure services using Pulumi. Whether you're working with virtual machines, databases, networking, or any other Azure service, the Azure Native Provider has you covered.
+We're excited to expand our top-level default version coverage by 226 resources, 274 functions, and 5526 input properties in this release, bringing the total to 1,637, 2,015, and 30,652 respectively. With this extensive collection of modules at your disposal, you can easily provision and manage the full range of Azure services using Pulumi. Whether you're working with virtual machines, databases, networking, or any other Azure service, the Azure Native Provider has you covered.
 
 ![provider-coverage-by-version](./azurev2-provider-coverage.png)
 
