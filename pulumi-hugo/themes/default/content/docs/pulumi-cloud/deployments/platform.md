@@ -1,20 +1,20 @@
 ---
 title_tag: "Platform Automation with Pulumi Deployments"
 meta_desc: Examples of common cloud deployment platforms built with Pulumi Deployments
-title: "Automation"
+title: "Platform Automation"
 h1: "Platform automation"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
     parent: deployments
-    weight: 1
+    weight: 4
 aliases:
   - /docs/intro/deployments/platform/
 ---
 
 ## Golden Path to Prod
 
-Without a well-defined path to deliver infrastructure in production, it is too easy for your team to end up with systems that are deployed manually, lack security best practices, or rely on workflows that are poorly documented and unmaintained. Pulumi Deployments offers a secure, and easy-to-configure CI/CD pipeline that can be consistently replicated across every environment in your organization without piles of GitHub Actions YAML.
+Without a well-defined path to deliver infrastructure in production, it is too easy for your team to end up with systems that are deployed manually, lack security best practices, or rely on workflows that are poorly documented and unmaintained. Pulumi Deployments offers a secure, and easy-to-configure CI/CD pipeline that can be consistently replicated across every environment in your organization without piles of GitHub Actions YAML. [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks) can be easily configured so that every pull request in your organization comes with a dedicated cloud environment, allowing engineers to ship with greater velocity, confidence, and collaboration.
 
 Git Push to Deploy, with security best practices like temporary credentials via OIDC, can be configured in minutes via the Pulumi Cloud UI. You can also write a Pulumi Program to centrally manage Deployment Settings with the Pulumi Service Provider and define all your deployment configurations as code.
 

@@ -20,7 +20,7 @@ It provides:
 
 - **Compute** - run infrastructure deployments and workloads (i.e. `pulumi up`) on fully managed, secure, and elastic compute.
 - **Configuration** - A simple, centralized format for specifying everything you need to deploy your infrastructure at the stack level. Source code, cloud credentials, OpenID Connect (OIDC), environment variables, build prerequisites, and dependencies are bundled in an atomic unit.
-- **Composition** - Trigger deployments via our REST API, click to deploy in the Pulumi Cloud UI, Git Push to Deploy, Remote Automation API, and other programmatic building blocks that you can compose to build custom cloud automation.
+- **Composition** - Trigger deployments via our REST API, click to deploy in the Pulumi Cloud UI, Git Push to Deploy, Review Stacks, Remote Automation API, and other programmatic building blocks that you can compose to build custom cloud automation.
 
 While Pulumi Deployments has some overlap in functionality offered by a traditional CI/CD system (such as GitHub Actions) it is far more flexible and does not have the constraints and limitations of a CI/CD system. When you configure your infrastructure for Deployments, you get to choose what triggers will cause your stack to update. You may choose a `git push` based workflow, as you get with many CI/CD systems, or trigger deployments via the REST API, or choose multiple triggers.
 
@@ -44,6 +44,7 @@ Pulumi Deployments offers several triggers that you can compose to build higher-
 
 - Deployments REST API - an endpoint available at api.pulumi.com that can trigger a variety of pulumi (`up/destroy/refresh/preview`) operations. Calls to this trigger can override individual settings to customize deployment behavior (i.e. - deploy a different branch, or override a particular environment variable).
 - `git push` to Deploy - Deep integration with the Pulumi GitHub App that enables automatic previews on every pull request, and an automated update whenever code is pushed to the target branch.
+- [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks) - dedicated cloud environments that get created automatically every time a pull request is opened.
 - Click to Deploy - trigger a deployment from the Pulumi Cloud Console with the push of a button. Very useful for day-to-day operational activities such as debugging a stuck stack, or rectifying drift via a refresh without having to pull a stack and its accompanying source code onto your machine.
 - Remote Automation API - Your favorite strongly typed Pulumi orchestration tool, Automation API, lets you offload update workloads into the cloud. Write deployment scripts that update thousands of environments simultaneously without worrying about compute.
 

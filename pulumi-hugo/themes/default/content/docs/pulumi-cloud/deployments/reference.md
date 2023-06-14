@@ -1,13 +1,13 @@
 ---
 title_tag: "Using Pulumi Deployments"
 meta_desc: Reference documentation for configuring and using Pulumi Deployments
-title: "Using deployments"
+title: "Using Deployments"
 h1: "Using Pulumi Deployments"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
     parent: deployments
-    weight: 2
+    weight: 1
 aliases:
   - /docs/intro/deployments/reference/
 ---
@@ -70,6 +70,8 @@ The [REST API documentation](../api) contains much more thorough information abo
 
 Finally, a stack's deployment settings may be defined as a resource within the stack itself using the Pulumi Service provider. This lets you securely store your settings in source control alongside your code.
 
+We recommend that a stack does not configure it's own Deployment Settings, as this would require two deployments for settings changes to take effect. Typically, users create a stack per cloud environment that defines Deployment Settings for all other stacks that deploy into that account or environment. This enables centralizing and sharing common configuration such as OIDC providers. Commonly, these stacks that manage Deployment Settings are themselves managed by Pulumi Deployments and benefit from the pull request and code review workflow.
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as service from "@pulumi/pulumiservice";
@@ -98,7 +100,7 @@ const settings = new service.DeploymentSettings("deployment_settings", {
 
 ## Deployment Triggers
 
-A deployment trigger refers to a method of initializing a deployment. Currently, a deployment may be triggered using the REST API, by clicking a button in the Pulumi Console, or via a `git push` if the GitHub application is installed.
+A deployment trigger refers to a method of initializing a deployment. Currently, a deployment may be triggered using the REST API, by clicking a button in the Pulumi Console, via a Review Stack, or via a `git push` if the GitHub application is installed.
 
 ### REST API
 
@@ -150,6 +152,12 @@ The `pulumi preview` on Pull Request capability requires that the Github user cr
 {{% /notes %}}
 
 ![Pulumi UI - Push to Deploy](../ui-push-to-deploy.png)
+
+### Review Stacks
+
+[Review Stacks](/docs/pulumi-cloud/deployments/review-stacks) are dedicated cloud environments that get created automatically every time a pull request is opened, all powered by Pulumi Deployments. Open a pull request, and Pulumi Deployments will stand up a stack with your changes and the Pulumi GitHub App will add a PR comment with the outputs from your deployment. Merge the PR and Pulumi Deployments will destroy the stack and free up the associated resources.
+
+![Review Stack Pull Request Comment](../comment.png)
 
 ## Configuring push-to-deploy from GitHub
 

@@ -9,7 +9,7 @@ menu:
     pulumicloud:
         identifier: deployments-oidc
         parent: deployments
-        weight: 3
+        weight: 5
 
 aliases:
 - /docs/guides/oidc/
