@@ -24,7 +24,7 @@ We are thrilled to announce the [beta release](https://github.com/pulumi/pulumi-
 
 <!--more-->
 
-At Pulumi, we understand the importance of keeping up with the ever-evolving cloud landscape. The Pulumi Azure Native Provider 2.0 represents our commitment to providing you with the best tools to harness the full power of Microsoft Azure. With automatic generation from Azure API specs, we are able to provide you with same-day access to the entire [Azure API surface](https://docs.microsoft.com/en-us/rest/api/azure/) including all available properties. Let's dive into some of the key enhancements in this release:
+At Pulumi, we understand the importance of keeping up with the ever-evolving cloud landscape. The Pulumi Azure Native Provider 2.0 represents our commitment to providing you with the best tools to harness the full power of Microsoft Azure. With automatic generation from Azure API specs, we are able to provide you with same-day access to the entire [Azure API surface](https://docs.microsoft.com/en-us/rest/api/azure/) including all available properties. Let's dive into some of the key enhancements in this release!
 
 ## Reduced SDK Size for Faster Development
 
@@ -32,13 +32,13 @@ We've listened to your feedback and have made significant optimizations to the A
 
 So, how did we accomplish this? For starters, we've removed all deprecated Azure API modules up to the 2.0 release date. The bigger impact was made by identifying and removing all forward-compatible module versions. That is to say we've excluded any redundant versions and kept only the versions that introduce breaking changes. Where these versions are not the current latest and new default, they remain available as explicit versions.
 
-You may be wondering about the significance between explicit and default versions. Well, when Azure releases new features they often create a new version of a service. These versions are named using dates such as "2021-01-02" or "2022-05-08-preview". There's many versions of each module in the SDK, so we pick a version of each module for the top-level default. To learn more about module versions, visit the [Azure Native Version Guide](https://www.pulumi.com/registry/packages/azure-native/version-guide/).
-
 ![sdk-size-version-diagram](./azurev2-diagrams.png)
+
+You may be wondering about the significance between explicit and default versions. Well, when Azure releases new features they often create a new version of a service API. These versions are named using dates such as "2021-01-02" or "2022-05-08-preview". There's many versions of each module in the SDK, so we pick a version of each module for the top-level default. To learn more about module versions, visit the [Azure Native Version Guide](https://www.pulumi.com/registry/packages/azure-native/version-guide/).
 
 ## Refreshed Default Module Versions
 
-In the latest release, we have refreshed the default module versions to align with the latest Azure API versions from Microsoft. With our continued commitment to same-day access to Azure API surface, you always have access to the most up-to-date features and capabilities offered by Azure modules. By leveraging the latest module versions, you can take advantage of the latest and most desired features directly from Azure while building your infrastructure with Pulumi.
+In the latest release, we have refreshed the default module versions to align with the latest Azure API versions from Microsoft. With our continued commitment to same-day access to Azure API surface, you always have access to the most up-to-date features and capabilities offered by Azure services. By leveraging the latest module versions, you can take advantage of the latest and most desired features directly from Azure while building your infrastructure with Pulumi.
 
 If you would like to upgrade to 2.x, but continue using the same Azure API version that was used in your 1.x, you can do that by specifying the compatible explicit version available in the 2.x provider. Shown below are examples of how that change might look.
 
