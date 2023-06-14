@@ -1,7 +1,7 @@
 ---
 title: "Introducing Azure Native 2.0"
 
-date: 2023-06-13T08:00:00-04:00
+date: 2023-06-14T14:00:00-04:00
 
 meta_desc: "Introducing Pulumi Azure Native Provider 2.0: Streamlined, Expanded, and More Powerful than Ever!"
 
@@ -94,7 +94,7 @@ We're excited to expand our top-level default version coverage by 226 resources,
 
 ## Resolved Title Case Inconsistency
 
-For a consistent and predictable experience across the provider, we have resolved [an issue with title case inconsistencies](https://github.com/pulumi/pulumi-azure-native/pull/2366) across module types and properties. All previous module names have been aliased, so no additional modifications are required for existing Pulumi programs. This enhancement ensures a unified and predictable experience while switching between Azure and Pulumi module references, making it easier for you to navigate and understand the provider's capabilities.
+For a consistent and predictable experience across the provider, we have resolved [an issue with title case inconsistencies](https://github.com/pulumi/pulumi-azure-native/pull/2366) across resources and functions. All previous resource names have been aliased, and do not require any changes to the Pulumi program. However, functions that have a corrected name will need to be updated. This enhancement ensures a unified and predictable experience while working across resource types, making it easier for you to navigate and understand the provider's capabilities.
 
 ## Simplified User Assigned Identity Inputs
 
