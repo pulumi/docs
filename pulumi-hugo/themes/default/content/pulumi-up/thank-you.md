@@ -27,33 +27,6 @@ templates:
           link: /templates/container-service
 
 workshops:
-  - title: Platform Engineering with AWS Proton and Pulumi
-    url: /resources/platform-with-aws-proton-and-pulumi/
-    description: |
-      In this workshop, you will learn how to enable self-service infrastructure for your organization using AWS Proton and Pulumi.
-    date: March 16, 2023
-
-  - title: Kubernetes on Google Cloud with Pulumi
-    url: /resources/kubernetes-on-google-cloud/
-    description: |
-      In this workshop, you will learn how to deploy a Kubernetes cluster
-      on Google Cloud and run containerized applications on the cluster.
-    date: March 22, 2023
-
-  - title: Getting Started with Infrastructure as Code on AWS
-    url: /resources/getting-started-with-iac-pulumi-aws/
-    description: |
-      This workshop is designed to help new users become familiar with the
-      core concepts needed to effectively deploy resources on AWS using Pulumi.
-    date: April 6, 2023
-
-  - title: Getting Started with Kubernetes on AWS
-    url: /resources/getting-started-with-kubernetes-aws/
-    description: |
-      In this workshop, you will learn the fundamentals of setting up EKS
-      clusters on AWS through guided exercises using Pulumi.
-    date: April 26, 2023
-
   - title: Introduction to Redis and Pulumi
     url: /resources/introduction-to-redis-and-pulumi/
     description: |
@@ -65,7 +38,26 @@ workshops:
     description: |
       Explore how to leverage the power of Python with Pulumi, an infrastructure as code platform to define and manage your Kubernetes deployments.
     date:  July 20, 2023
+
+  - title: Getting Started with Azure Infrastructure as Code and Review Stacks
+    url: /resources/azure-github-workshop/
+    description: |
+      In this workshop, we’ll explore the new Azure Native v2 provider and Pulumi Review Stacks on GitHub
+    date: July 27, 2023
+
+  - title: Getting Started with Infrastructure as Code on AWS
+    url: /resources/getting-started-with-iac-pulumi-aws/
+    description: |
+      This workshop is designed to help new users become familiar with the
+      core concepts needed to effectively deploy resources on AWS using Pulumi.
+    date: August 2, 2023
   
+  - title: Advanced Kubernetes Platforms on Google Cloud with Pulumi
+    url: /resources/kubernetes-platforms-on-google-cloud/
+    description: |
+      In this workshop, we’ll explore how to deliver and scale a Kubernetes platform on Google Cloud.
+    date: August 10, 2023
+
   - title: Deploying a Kubernetes Cluster on Equinix Metal
     url: /resources/deploying-a-kubernetes-cluster-on-equinix-metal/
     description: |
