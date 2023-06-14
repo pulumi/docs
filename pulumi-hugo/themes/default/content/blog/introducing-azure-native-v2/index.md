@@ -136,7 +136,7 @@ user_assigned_identity.id.apply(lambda id: {id: {}})
 
 ## Migrating from 1.x to 2.x
 
-We recommend you update to the [latest version of Azure Native 1.x](https://github.com/pulumi/pulumi-azure-native/releases/tag/v1.103.0) prior to moving to 2.x. This will enable you to address existing deprecations and see the recommended substitutions ahead of the major version upgrade. Head over to the [migration guide](https://www.pulumi.com/registry/packages/azure-native/#migration) which outlines the necessary steps to update your existing Pulumi projects and ensuring a smooth migration experience.
+We recommend you update to the [latest version of Azure Native 1.x](https://github.com/pulumi/pulumi-azure-native/releases/tag/v1.103.0) prior to moving to 2.x. This will enable you to address existing deprecations and see the recommended substitutions ahead of the major version upgrade. Head over to the [migration guide](https://www.pulumi.com/registry/packages/azure-native-v2/from-v1-to-v2) which outlines the necessary steps to update your existing Pulumi projects and ensuring a smooth migration experience.
 
 Current users of the Pulumi Azure Classic Provider can follow the [classic to native migration guide](https://www.pulumi.com/registry/packages/azure-native/from-classic/) to take advantage of all the latest and greatest features available in Pulumi the Azure Native Provider.
 
