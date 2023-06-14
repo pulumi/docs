@@ -31,21 +31,21 @@ notification, start running integration tests, or even update additional stacks.
 Webhooks can be used for pretty much anything you want, and are the foundation
 of most _ChatOps_ workflows.
 
-## Management
+## Overview
 
 Webhooks can be attached to either a stack or an organization. Stack webhooks
 will be notified of events specific to the stack. Organization
 webhooks will be notified for events happening within each of the organization's
 stacks.
 
-The Webhooks management page is on the Stack or Organization Settings tab.
+The Webhooks page is under the Stack or Organization Settings tab.
 
 ![Organization webhooks](/images/docs/reference/service/webhooks/org-webhooks.png)
 
 ### Create a Webhook
 
-Pulumi Webhooks may be created through the UI using the steps outlined below, or by using the
-[Webhook resource](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/webhook/) from the Pulumi provider,
+Pulumi Webhooks may be created through the UI using the steps outlined below, by using the
+[Webhook resource](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/webhook/) from the Pulumi provider
 or by [using the API](/docs/pulumi-cloud/cloud-rest-api/#create-webhook) directly.
 
 #### Create an Organization Webhook
