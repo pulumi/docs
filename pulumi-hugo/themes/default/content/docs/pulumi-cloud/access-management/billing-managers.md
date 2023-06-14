@@ -7,7 +7,7 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
     parent: access-management
-    weight: 4
+    weight: 3
 aliases:
 - /docs/intro/pulumi-service/billing-managers/
 - /docs/intro/pulumi-cloud/billing-managers/

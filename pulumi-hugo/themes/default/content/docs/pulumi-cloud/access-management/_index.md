@@ -6,16 +6,14 @@ h1: Pulumi Cloud access management
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   pulumicloud:
-    weight: 6
+    weight: 5
     identifier: access-management
 ---
 
 Pulumi Cloud offers a number of access management controls.
 
-- [Personal access tokens](/docs/pulumi-cloud/accounts/#personal-access-tokens)
-- [Organization access tokens](organization-access-tokens/)
-- [Team access tokens](team-access-tokens/)
-- [Billing managers](billing-managers/)
 - [Teams and Role-based access control](teams/)
+- [Access tokens](/docs/pulumi-cloud/access-tokens/)
+- [Billing managers](billing-managers/)
 - [SAML single sign-on (SSO)](saml/)
 - [SCIM](scim/)
