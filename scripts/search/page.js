@@ -108,6 +108,7 @@ module.exports = {
                     objectID: this.getObjectID(item),
                     section: this.getTopLevelSection(item),
                     title: item.title,
+                    h1: item.params.h1,
                     description: item.params.meta_desc,
                     href: item.href,
                     authors: item.params.authors,
