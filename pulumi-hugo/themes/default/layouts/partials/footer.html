@@ -88,13 +88,4 @@
             {{ end }}
         </ul>
     </div>
-    {{ if or (eq .Page.RelPermalink "/") (strings.Contains .Page.RelPermalink "/pricing/") (strings.Contains .Page.RelPermalink "/product/")
-        (strings.Contains .Page.RelPermalink "/resources/") (eq .Page.RelPermalink "/about/") (eq .Page.RelPermalink "/careers/")
-        (eq .Page.RelPermalink "/why-pulumi/") (eq .Page.RelPermalink "/cloud-engineering/") (eq .Page.RelPermalink "/aws/")
-        (eq .Page.RelPermalink "/terraform/") (eq .Page.RelPermalink "/kubernetes/") (eq .Page.RelPermalink "/tf2pulumi/")
-        (eq .Page.RelPermalink "/serverless/") (strings.Contains .Page.RelPermalink "/case-studies/") (eq .Page.RelPermalink "/contact/")
-        (eq .Page.RelPermalink "/azure/") (strings.Contains .Page.RelPermalink "/blog/")
-    }}
-        {{ partial "home/dismissible-banner.html" . }}
-    {{ end }}
 </nav>
