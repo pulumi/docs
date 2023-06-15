@@ -267,7 +267,13 @@ function initAutocomplete(container) {
                                 <div class="ancestors">${ ((item.ancestors || []) as string[]).join(" / ") }</div>
                                 <div class="item">
                                     <div class="title">
-                                        <span>${ components.Highlight({ hit: item, attribute: "title" }) }</span>
+                                        <span>
+                                            <!-- When there's an h1 param present, use that; otherwise, use the title. -->
+                                            ${ item.h1
+                                                ? components.Highlight({ hit: item, attribute: "h1" })
+                                                : components.Highlight({ hit: item, attribute: "title" })
+                                            }
+                                        </span>
                                         <span class="label ${ labelForTag(item.section).toLowerCase() } ${ getTags(state).length === 1 ? "hidden" : "" }">
                                             ${ labelForTag(item.section) }
                                         </span>
