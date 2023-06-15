@@ -195,9 +195,6 @@ function getDefaultExcludedKeywords() {
         "/registry/packages/*/api-docs",
         "/logos/pkg",
         "/docs/get-started/install/versions",
-        "/support",
-        "/confirmation",
-        "/whitepapers",
         "https://api.pulumi.com/",
         "https://github.com/pulls?",
         "https://github.com/pulumi/docs/edit/master",
@@ -243,6 +240,7 @@ function getDefaultExcludedKeywords() {
         "https://ceph.io",
         "https://www.pagerduty.com",
         "https://support.pulumi.com",
+        "https://support.pulumi.com/",
         "https://www.pulumi.com/support/",
         "https://pbs.twimg.com/profile_images/",
         "https://linen.dev/",
@@ -257,7 +255,6 @@ function getDefaultExcludedKeywords() {
         "https://thenewstack.io/",
         "https://rootly.com/",
         "https://www.vultr.com/",
-        "https://www.pulumi.com/support/",
     ];
 }
 
@@ -270,16 +267,16 @@ function excludeAcceptable(links) {
 
         // Ignore remote disconnects.
         .filter(b => b.reason !== "ERRNO_ECONNRESET")
-        
+
         // Ignore BLC_UNKNOWN's
         .filter(b => b.reason !== "BLC_UNKNOWN")
-            
+
         // Ignore BLC_INVALID's
         .filter(b => b.reason !== "BLC_INVALID")
 
         // Ignore HTTP 308s.
         .filter(b => b.reason !== "HTTP_308")
-            
+
         // Ignore HTTP 503s.
         .filter(b => b.reason !== "HTTP_503")
 
