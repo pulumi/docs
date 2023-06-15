@@ -18,30 +18,392 @@ search:
         - input
 ---
 
-Resource properties are treated specially in Pulumi, both for purposes of input and output.
+## Inputs
 
-All resource arguments accept *inputs*. Inputs are values of type {{< pulumi-input >}}, a type that permits either a raw value of a given type (such as string, integer, boolean, list, map, and so on), an asynchronously computed value (i.e., a `Promise` or `Task`), or an output read from another resource’s properties.
+All resources in Pulumi accept values that describe the way the resource behaves. We call these values *inputs*.
 
-All resource properties on the instance object itself are *outputs*. Outputs are values of type {{< pulumi-output >}}, which behave very much like [promises](https://en.wikipedia.org/wiki/Futures_and_promises). This is necessary because outputs are not fully known until the infrastructure resource has actually completed provisioning, which happens asynchronously. Outputs are also how Pulumi tracks dependencies between resources.
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
-Outputs, therefore, represent two things:
+{{% choosable language javascript %}}
 
-- The eventual raw value of the output
-- The dependency on the source(s) of the output value
+```javascript
+const myId = new random.RandomId("mine", {
+    byteLength: 8, // byteLength is an input
+});
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+const myId = new random.RandomId("mine", {
+    byteLength: 8, // byteLength is an input
+});
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+my_id = random.RandomId("mine",
+    byte_length=8 # byte_length is an input
+)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+
+myId, err := random.NewRandomId(ctx, "mine", &random.RandomIdArgs{
+	ByteLength: pulumi.Int(8), // ByteLength is an input
+})
+if err != nil {
+	return err
+}
+
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var myId = new Random.RandomId("mine", new()
+{
+    ByteLength = 8, // ByteLength is an input
+});
+
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var myId = new RandomId("mine", RandomIdArgs.builder()
+    .byteLength(8) // byteLength is an input
+    .build());
+
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  myId:
+    type: random:randomId
+    properties:
+      byteLength: 8 # byteLength is an input
+```
+
+{{% /choosable %}}
+{{< /chooser >}}
+
+_Inputs_ are generally representations of the parameters to the underlying API call of any resource that Pulumi is managing.
+
+The simplest way to create a resource with its required _inputs_ is to use a _plain value_.
+
+{{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+const key = new tls.PrivateKey("my-private-key", {
+    algorithm: "ECDSA", // ECDSA is a plain value
+});
+
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+const key = new tls.PrivateKey("my-private-key", {
+    algorithm: "ECDSA", // ECDSA is a plain value
+});
+
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+key = tls.PrivateKey("my-private-key",
+  algorithm="ECDSA", # ECDSA is a plain value
+)
+
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+
+key, err := tls.NewPrivateKey(ctx, "my-private-key", &tls.PrivateKeyArgs{
+	Algorithm:  pulumi.String("ECDSA"), // ECDSA is a plain value
+})
+if err != nil {
+	return err
+}
+
+
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var key = new PrivateKey("my-private-key", new PrivateKeyArgs{
+    Algorithm = "ECDSA", // ECDSA is a plain value
+});
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var key = new PrivateKey("my-private-key", PrivateKeyArgs.builder()
+    .algorithm("ECDSA") // ECDSA is a plain value
+    .build()
+)
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+resources:
+  key:
+    type: tls:PrivateKey
+    properties:
+      algorithm: "ECDSA" # ECDSA is a plain value
+```
+
+{{% /choosable %}}
+{{< /chooser >}}
+
+{{% notes %}}
+_Plain value_ in this document is used to describe a standard string, boolean, integer or other typed value or data structure in your language of choice. _Plain value_ is a way of differentiating these language specific values from Pulumi's asynchronous values.
+
+Once an {{< pulumi-output >}} value has returned (generally from an API) to Pulumi, it can be used as a _plain value_. For more information, see [apply](#apply).
+{{% /notes %}}
+
+However, in most Pulumi programs, the inputs to a resource will reference values from another resource:
+
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+let password = new random.RandomPassword("password", {
+    length: 16,
+    special: true,
+    overrideSpecial: "!#$%&*()-_=+[]{}<>:?",
+});
+let example = new aws.rds.Instance("example", {
+    instanceClass: "db.t3.micro",
+    allocatedStorage: 64,
+    engine: "mysql",
+    username: "someone",
+    password: password.result, // We pass the output from password as an input
+});
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+const password = new random.RandomPassword("password", {
+    length: 16,
+    special: true,
+    overrideSpecial: "!#$%&*()-_=+[]{}<>:?",
+});
+const example = new aws.rds.Instance("example", {
+    instanceClass: "db.t3.micro",
+    allocatedStorage: 64,
+    engine: "mysql",
+    username: "someone",
+    password: password.result, // We pass the output from password as an input
+});
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+password = random.RandomPassword(
+    "password",
+    length=16,
+    special=True,
+    override_special="!#$%&*()-_=+[]{}<>:?"
+)
+example = aws.rds.Instance(
+    "example",
+    instance_class="db.t3.micro",
+    allocated_storage=64,
+    engine="mysql",
+    username="someone",
+    password=password.result, # We pass the output from password as an input
+)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+password, err := random.NewRandomPassword(ctx, "password", &random.RandomPasswordArgs{
+	Length:          pulumi.Int(16),
+	Special:         pulumi.Bool(true),
+	OverrideSpecial: pulumi.String("!#$%&*()-_=+[]{}<>:?"),
+})
+if err != nil {
+	return err
+}
+_, err = rds.NewInstance(ctx, "example", &rds.InstanceArgs{
+	InstanceClass:    pulumi.String("db.t3.micro"),
+	AllocatedStorage: pulumi.Int(64),
+	Engine:           pulumi.String("mysql"),
+	Username:         pulumi.String("someone"),
+	Password:         password.Result, // We pass the output from password as an input
+})
+if err != nil {
+	return err
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var password = new Random.RandomPassword("password", new()
+{
+    Length = 16,
+    Special = true,
+    OverrideSpecial = "!#$%&*()-_=+[]{}<>:?",
+});
+
+var example = new Aws.Rds.Instance("example", new()
+{
+    InstanceClass = "db.t3.micro",
+    AllocatedStorage = 64,
+    Engine = "mysql",
+    Username = "someone",
+    Password = password.Result, // We pass the output from password as an input
+});
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var password = new RandomPassword("password", RandomPasswordArgs.builder()
+    .length(16)
+    .special(true)
+    .overrideSpecial("!#$%&*()-_=+[]{}<>:?")
+    .build());
+
+var example = new Instance("example", InstanceArgs.builder()
+    .instanceClass("db.t3.micro")
+    .allocatedStorage(64)
+    .engine("mysql")
+    .username("someone")
+    .password(password.result()) // We pass the output from password as an input
+    .build());
+```
+
+{{% /choosable %}}
+{{< /chooser >}}
+
+In this case, Pulumi is taking the _output_ from one resource and using it as the _input_ to another resource.
+
+## Outputs
+
+All resources created by Pulumi will have properties which are returned from the cloud provider API. These values are *outputs*.
+
+Outputs are values of type {{< pulumi-output >}}, which behave very much like [promises](https://en.wikipedia.org/wiki/Futures_and_promises) or [monads](https://en.wikipedia.org/wiki/Monad_(functional_programming)). This is necessary because outputs are not fully known until the infrastructure resource has actually completed provisioning, which happens *asynchronously*. Outputs are also how Pulumi tracks dependencies between resources. When an output from one resource has been returned from the cloud provider API, Pulumi can link the two resources together and pass it as the input to another resource.
 
 Pulumi automatically captures dependencies when you pass an output from one resource as an input to another resource. Capturing these dependencies ensures that the physical infrastructure resources are not created or updated until all their dependencies are available and up-to-date.
 
-Because outputs are asynchronous, their actual raw values are not immediately available. If you need to access an output’s raw value—for example, to compute a derived, new value, or because you want to log it—you have these options:
+Because outputs are asynchronous, their actual plain values are not immediately available. If you need to access an output’s plain value—for example, to compute a derived, new value, or because you want to log it—you have these options:
 
-- [Apply](#apply): a callback that receives the raw value, and computes a new output
+- [Apply](#apply): a callback that receives the plain value, and computes a new output
 - [Lifting](#lifting): directly read properties off an output value
 - [Interpolation](#outputs-and-strings): concatenate string outputs with other strings directly
 
 ## Apply
 
-To access the raw value of an output and transform that value into a new value, use {{< pulumi-apply >}}. This method accepts a callback that will be invoked with the raw value, once that value is available.
+To access the _plain_ (or returned) value of an output, use {{< pulumi-apply >}}. This method accepts a callback that will be invoked with the plain value, once that value is available.
 
-For example, the following code creates an HTTPS URL from the DNS name (the raw value) of a virtual machine:
+This example will wait for the value to be returned from the API and print it to stdout
+
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+let myPet = new random.RandomPet("my-pet")
+myPet.id.apply(id => console.log(`Hello, {id}!`))
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+const myPet = new random.RandomPet("my-pet")
+myPet.id.apply(id => console.log(`Hello, {id}!`))
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+my_pet = random.RandomPet("my-pet")
+my_pet.id.apply(lambda id: print(f"Hello, {id}!"))
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+myPet, err := random.NewRandomPet(ctx, "my-pet", &random.RandomPetArgs{})
+if err != nil {
+	return err
+}
+
+myPet.ID().ApplyT(func(id string) error {
+    fmt.Printf("Hello, %s!", id)
+	return nil
+})
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var myPet = new Pulumi.Random.RandomPet("my-pet", new(){});
+myPet.Id.Apply(id => { Console.WriteLine($"Hello, {id}!"); return id; });
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var myId = new RandomPet("my-pet", RandomPetArgs.builder()
+    .build());
+
+myId.id().applyValue(i -> {
+    System.out.println("Hello," + i + "!");
+    return null;
+});
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+You can use this same process to create new output values to pass as inputs to another resource, for example, the following code creates an HTTPS URL from the DNS name (the plain value) of a virtual machine:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
@@ -102,7 +464,7 @@ variables:
 
 {{< /chooser >}}
 
-The result of the call to {{< pulumi-apply >}} is a new Output<T>. So in this example, the url variable is also an {{< pulumi-output >}}. It will resolve to the new value returned from the callback, and carries the dependencies of the original Output<T>. If the callback itself returns an Output<T>, the dependencies of that output are also kept in the resulting Output<T>.
+The result of the call to {{< pulumi-apply >}} is a new Output<T>. So in this example, the url variable is also an {{< pulumi-output >}}. It will wait for the new value to be returned from the callback, and carries the dependencies of the original Output<T>. If the callback itself returns an Output<T>, the dependencies of that output are also kept in the resulting Output<T>.
 
 {{% notes %}}
 During some program executions, `apply` doesn’t run. For example, it won’t run during a preview, when resource output values may be unknown. Therefore, you should avoid side-effects within the callbacks. For this reason, you should not allocate new resources inside of your callbacks either, as it could lead to `pulumi preview` being wrong.
@@ -110,7 +472,7 @@ During some program executions, `apply` doesn’t run. For example, it won’t r
 
 ## All { search.keywords="pulumi.all" }
 
-If you have multiple outputs and need to join them, the `all` function acts like an `apply` over many resources. This function joins over an entire list of outputs. It waits for all of them to become available and then provides them to the supplied callback. This function can be used to compute an entirely new output value, such as by adding or concatenating outputs from two different resources together, or by creating a new data structure that uses them. Just like with `apply`, the result of [Output.all](/docs/reference/pkg/python/pulumi#pulumi.Output.all) is itself an Output<T>.
+If you have multiple outputs and need to use them together, the `all` function acts like an `apply` over many resources, allowing you to use multiple outputs when creating a new output. `all` waits for all output values to become available and then provides them as _plain values_ to the supplied callback. This function can be used to compute an entirely new output value, such as by adding or concatenating outputs from two different resources together, or by creating a new data structure that uses them. Just like with `apply`, the result of [Output.all](/docs/reference/pkg/python/pulumi#pulumi.Output.all) is itself an Output<T>.
 
 For example, let’s use a server and a database name to create a database connection string:
 
@@ -214,7 +576,7 @@ variables:
 
 {{< /chooser >}}
 
-Notice that [Output.all](/docs/reference/pkg/python/pulumi#pulumi.Output.all) works by returning an output that represents the combination of multiple outputs so that, within the callback, the raw values are available inside of a tuple.
+Notice that [Output.all](/docs/reference/pkg/python/pulumi#pulumi.Output.all) works by returning an output that represents the combination of multiple outputs so that, within the callback, the plain values are available inside of a tuple.
 
 ## Accessing Nested Properties of an Output by Lifting {#lifting}
 
@@ -514,7 +876,7 @@ let certValidation = new aws.route53.Record("cert_validation", {
 
 ## Working with Outputs and Strings {#outputs-and-strings}
 
-Outputs that contain strings cannot be used directly in operations such as string concatenation. String interpolation lets you more easily build a string out of various output values, without needing {{< pulumi-apply >}} or [Output.all](/docs/reference/pkg/python/pulumi#pulumi.Output.all). You can use string interpolation to export a stack output, provide a dynamically computed string as a new resource argument, or even for diagnostic purposes.
+Outputs that return to the engine as strings cannot be used directly in operations such as string concatenation until the output has returned to Pulumi. In these scenarios, you'll need to wait for the value to return using {{< pulumi-apply >}}.
 
 For example, say you want to create a URL from `hostname` and `port` output values. You can do this using `apply` and `all`.
 
@@ -594,7 +956,7 @@ var url = Output.tuple(hostname, port)
 
 {{< /chooser >}}
 
-However, this approach is verbose and unwieldy. To make this common task easier, Pulumi exposes helpers that allow you to create strings that contain outputs—internally hiding all of the messiness required to join them together:
+However, this approach is verbose and unwieldy. To make this common task easier, Pulumi exposes interpolation helpers that allow you to create strings that contain outputs. These interpolation methods wrap [all](#all) and [apply](#apply) with an interface that resembles your language's native string formatting functions.
 
 {{% choosable language javascript %}}
 
@@ -658,9 +1020,216 @@ variables:
 
 {{% /choosable %}}
 
+You can use string interpolation to export a stack output, provide a dynamically computed string as a new resource argument, or even for diagnostic purposes.
+
 ## Working with Outputs and JSON {#outputs-and-json}
 
-Often in the course of working with web technologies, you encounter JavaScript Object Notation (JSON) which is a popular specification for representing data. Pulumi provides first-class helper functions for deserializing JSON string outputs into your language's native objects and serializing your language's native objects to JSON string outputs.
+Often in the course of working with web technologies, you encounter JavaScript Object Notation (JSON) which is a popular specification for representing data. In many scenarios, you'll need to embed resource outputs into a JSON string. In these scenarios, you need to first _wait for the returned_ output, _then_ build the JSON string:
+
+{{< chooser language "typescript,python,go,csharp" >}}
+{{% choosable language typescript %}}
+
+```typescript
+const contentBucket = new aws.s3.Bucket("content-bucket", {
+  acl: "private",
+  website: {
+    indexDocument: "index.html",
+    errorDocument: "index.html",
+  },
+  forceDestroy: true,
+});
+
+const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity(
+  "cloudfront",
+  {
+    comment: pulumi.interpolate`OAI-${contentBucket.bucketDomainName}`,
+  }
+);
+
+// apply method
+new aws.s3.BucketPolicy("cloudfront-bucket-policy", {
+  bucket: contentBucket.bucket,
+  policy: pulumi
+    .all([contentBucket.bucket, originAccessIdentity.iamArn])
+    .apply(([bucketName, iamArn]) =>
+      JSON.stringify({
+        Version: "2012-10-17",
+        Statement: [
+          {
+            Sid: "CloudfrontAllow",
+            Effect: "Allow",
+            Principal: {
+              AWS: iamArn,
+            },
+            Action: "s3:GetObject",
+            Resource: `arn:aws:s3:::${bucketName}/*`,
+          },
+        ],
+      })
+    ),
+});
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+bucket = aws.s3.Bucket(
+    "content-bucket",
+    acl="private",
+    website=aws.s3.BucketWebsiteArgs(
+        index_document="index.html", error_document="404.html"
+    ),
+)
+
+origin_access_identity = aws.cloudfront.OriginAccessIdentity(
+    "cloudfront",
+    comment=pulumi.Output.concat("OAI-", bucket.id),
+)
+
+bucket_policy = aws.s3.BucketPolicy(
+    "cloudfront-bucket-policy",
+    bucket=bucket.bucket,
+    policy=pulumi.Output.all(
+        cloudfront_iam_arn=origin_access_identity.iam_arn,
+        bucket_arn=bucket.arn
+    ).apply(
+        lambda args: json.dumps(
+            {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Sid": "CloudfrontAllow",
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": args["cloudfront_iam_arn"],
+                        },
+                        "Action": "s3:GetObject",
+                        "Resource": f"{args['bucket_arn']}/*",
+                    }
+                ],
+            }
+        )
+    ),
+    opts=pulumi.ResourceOptions(parent=bucket)
+)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+{{% notes type="info" %}}
+The Pulumi Go SDK does not currently support serializing or deserializing maps with unknown values.
+It is tracked [here](https://github.com/pulumi/pulumi/issues/12460).
+
+The following is a simplified example of using `pulumi.JSONMarshal` in Go.
+{{% /notes %}}
+
+```go
+bucket, err := s3.NewBucket(ctx, "content-bucket", &s3.BucketArgs{
+	Acl: pulumi.String("private"),
+	Website: &s3.BucketWebsiteArgs{
+		IndexDocument: pulumi.String("index.html"),
+		ErrorDocument: pulumi.String("404.html"),
+	},
+})
+if err != nil {
+	return err
+}
+
+originAccessIdentity, err := cloudfront.NewOriginAccessIdentity(ctx, "cloudfront", &cloudfront.OriginAccessIdentityArgs{
+		Comment: pulumi.Sprintf("OAI-%s", bucket.ID()),
+})
+if err != nil {
+	return err
+}
+
+_, err = s3.NewBucketPolicy(ctx, "cloudfront-bucket-policy", &s3.BucketPolicyArgs{
+	Bucket: bucket.ID(),
+	Policy: pulumi.All(bucket.Arn, originAccessIdentity.IamArn).ApplyT(
+		func(args []interface{}) (pulumi.StringOutput, error) {
+			bucketArn := args[0].(string)
+			iamArn := args[1].(string)
+
+			policy, err := json.Marshal(map[string]interface{}{
+				"Version": "2012-10-17",
+				"Statement": []map[string]interface{}{
+					{
+						"Sid":    "CloudfrontAllow",
+						"Effect": "Allow",
+						"Principal": map[string]interface{}{
+							"AWS": iamArn,
+						},
+						"Action":   "s3:GetObject",
+						"Resource": bucketArn + "/*",
+					},
+				},
+			})
+
+			if err != nil {
+				return pulumi.String(""), err
+			}
+			return pulumi.String(policy), nil
+		}).(pulumi.StringOutput),
+}, pulumi.Parent(bucket))
+if err != nil {
+	return err
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var bucket = new Bucket("content-bucket", new BucketArgs
+{
+    Acl = "private",
+    Website = new BucketWebsiteArgs
+    {
+        IndexDocument = "index.html",
+        ErrorDocument = "404.html",
+    },
+});
+
+var originAccessIdentity = new OriginAccessIdentity("cloudfront", new OriginAccessIdentityArgs
+{
+    Comment = Output.Format($"OAI-{bucket.Id}"),
+});
+
+var bucketPolicy = new BucketPolicy("cloudfront-bucket-policy", new BucketPolicyArgs
+{
+    Bucket = bucket.Bucket,
+    Policy = Output.Tuple(bucket.Arn, originAccessIdentity.IamArn)
+    .Apply(t =>
+    {
+        string bucketArn = t.Item1;
+        string cloudfrontIamArn = t.Item2;
+
+        var policy = new
+        {
+            Version = "2012-10-17",
+            Statement = new object[]
+            {
+                new
+                {
+                    Sid = "CloudfrontAllow",
+                    Effect = "Allow",
+                    Principal = new { AWS = cloudfrontIamArn },
+                    Action = "s3:GetObject",
+                    Resource = $"{bucketArn}/*",
+                },
+            },
+        };
+
+        return JsonSerializer.Serialize(policy);
+    }),
+}, new CustomResourceOptions { Parent = bucket });
+```
+
+{{% /choosable %}}
+{{< /chooser >}}
+
+This operation is so common, Pulumi provides first-class helper functions for deserializing JSON string outputs into your language's native objects and serializing your language's native objects to JSON string outputs. These helper functions are designed to remove the process of manually resolving the output inside a {{< pulumi-apply >}}.
 
 ### Converting Outputs to JSON
 
@@ -993,7 +1562,7 @@ For more details [view the .NET documentation](/docs/reference/pkg/dotnet/Pulumi
 
 ## Convert Input to Output through Interpolation
 
-It is possible to turn an {{< pulumi-input >}} into an {{< pulumi-output >}} value. Resource arguments already accept outputs as input values however, in some cases you need to know that a value is definitely an {{< pulumi-output >}} at runtime. Knowing this can be helpful because, since {{< pulumi-input >}} values have many possible representations—a raw value, a promise, or an output—you would normally need to handle all possible cases. By first transforming that value into an {{< pulumi-output >}}, you can treat it uniformly instead.
+It is possible to turn an {{< pulumi-input >}} into an {{< pulumi-output >}} value. Resource arguments already accept outputs as input values however, in some cases you need to know that a value is definitely an {{< pulumi-output >}} at runtime. Knowing this can be helpful because, since {{< pulumi-input >}} values have many possible representations—a plain value, a promise, or an output—you would normally need to handle all possible cases. By first transforming that value into an {{< pulumi-output >}}, you can treat it uniformly instead.
 
 For example, this code transforms an {{< pulumi-input >}} into an {{< pulumi-output >}} so that it can use the `apply` function:
 
@@ -1061,3 +1630,348 @@ public static Output<List<String>> split(Output<String> str) {
 {{% /choosable %}}
 
 {{< /chooser >}}
+
+## Common Pitfalls
+
+### String Interpolation
+
+When working with outputs and apply, you may see an error message like so:
+
+```
+Calling __str__ on an Output[T] is not supported. To get the value of an Output[T] as an Output[str] consider: 1. o.apply(lambda v: f"prefix{v}suffix") See https://pulumi.io/help/outputs for more details.
+```
+
+The reason this is happening is because the _Output_ value is being used before it has returned ans is available from the API.
+
+A concrete example of this can be seen in the following code:
+
+{{% notes %}}
+The following code is an example of what NOT to do. Please do not copy this code into your Pulumi program
+{{% /notes %}}
+
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+// NOTE: This example is not correct
+let contentBucket = new aws.s3.Bucket("content-bucket", {
+  acl: "private",
+  website: {
+    indexDocument: "index.html",
+    errorDocument: "index.html",
+  },
+  forceDestroy: true,
+});
+
+let bucketPolicy = new aws.s3.BucketPolicy("cloudfront-bucket-policy", {
+  bucket: contentBucket.bucket,
+  policy: JSON.stringify({
+        Version: "2012-10-17",
+        Statement: [
+          {
+            Sid: "CloudfrontAllow",
+            Effect: "Allow",
+            Principal: {
+              AWS: iamArn,
+            },
+            Action: "s3:GetObject",
+            Resource: bucket.arn.apply(arn => arn),
+          },
+        ],
+      })
+});
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+// NOTE: This example is not correct
+const contentBucket = new aws.s3.Bucket("content-bucket", {
+  acl: "private",
+  website: {
+    indexDocument: "index.html",
+    errorDocument: "index.html",
+  },
+  forceDestroy: true,
+});
+
+const bucketPolicy = new aws.s3.BucketPolicy("cloudfront-bucket-policy", {
+  bucket: contentBucket.bucket,
+  policy: JSON.stringify({
+        Version: "2012-10-17",
+        Statement: [
+          {
+            Sid: "CloudfrontAllow",
+            Effect: "Allow",
+            Principal: {
+              AWS: iamArn,
+            },
+            Action: "s3:GetObject",
+            Resource: bucket.arn.apply(arn => arn),
+          },
+        ],
+      })
+});
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+# NOTE: This example is not correct
+bucket = aws.s3.Bucket(
+    "cloudfront",
+    acl="private",
+    website=aws.s3.BucketWebsiteArgs(
+        index_document="index.html", error_document="404.html"
+    ),
+)
+
+bucket_policy = aws.s3.BucketPolicy(
+    "cloudfrontAccess",
+    bucket=bucket.bucket,
+    policy=json.dumps(
+            {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Sid": "CloudfrontAllow",
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": "*",
+                        },
+                        "Action": "s3:GetObject",
+                        "Resource": bucket.arn.apply(lambda arn: arn),
+                    }
+                ],
+            }
+        )
+    ),
+    opts=pulumi.ResourceOptions(parent=bucket)
+)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+
+// NOTE: This example is not correct
+bucket, err := s3.NewBucket(ctx, "content-bucket", &s3.BucketArgs{
+	Acl: pulumi.String("private"),
+	Website: &s3.BucketWebsiteArgs{
+		IndexDocument: pulumi.String("index.html"),
+		ErrorDocument: pulumi.String("404.html"),
+	},
+})
+if err != nil {
+	return err
+}
+
+_, err = s3.NewBucketPolicy(ctx, "cloudfront-bucket-policy", &s3.BucketPolicyArgs{
+	Bucket: bucket.ID(),
+	Policy: json.Marshal(map[string]interface{}{
+				"Version": "2012-10-17",
+				"Statement": []map[string]interface{}{
+					{
+						"Sid":    "CloudfrontAllow",
+						"Effect": "Allow",
+						"Principal": map[string]interface{}{
+							"AWS": iamArn,
+						},
+						"Action":   "s3:GetObject",
+						"Resource": bucket.Arn.ApplyT(arn []interface{} (pulumi.StringOutput)),
+					},
+				},
+			})
+		}),
+if err != nil {
+	return err
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+// NOTE: this example is not correct
+var bucket = new Bucket("content-bucket", new BucketArgs
+{
+    Acl = "private",
+    Website = new BucketWebsiteArgs
+    {
+        IndexDocument = "index.html",
+        ErrorDocument = "404.html",
+    },
+});
+
+ var bucketPolicy = new BucketPolicy("cloudfront-bucket-policy", new BucketPolicyArgs
+    {
+        Bucket = bucket.Id,
+        Policy = JsonSerializer.Serialize(new
+        {
+            Version = "2012-10-17",
+            Statement = new[]
+             {
+                new
+                {
+                    Sid = "CloudfrontAllow",
+                    Effect = "Allow",
+                    Principal = new
+                    {
+                        AWS = "*"
+                    },
+                    Action = "s3:GetObject",
+                    Resource = bucket.Arn.Apply(arn => $"{arn}/*"),
+                }
+            }
+        })
+    });
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+// NOTE: this example is not correct
+var bucket = new Bucket("my-bucket", BucketArgs.builder()
+    .acl("private")
+    .website(BucketWebsiteArgs.builder()
+        .indexDocument("index.html")
+        .errorDocument("404.html")
+        .build())
+    .build());
+
+var policy = new JSONObject();
+            policy.put("Version", "2012-10-17");
+            policy.put("Statement", new JSONArray(new JSONObject[] {
+                new JSONObject()
+                    .put("Effect", "Allow")
+                    .put("Principal", "*")
+                    .put("Action", "s3:GetObject")
+                    .put("Resource", bucket.apply.arn(arn -> arn) + "/*")
+            }));
+
+            var bucketPolicy = new BucketPolicy("cloudfront-bucket-policy", BucketPolicyArgs.builder()
+                    .bucket(bucket.id())
+                    .policy(policy)
+                    .build());
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+Notice how the `apply` call is being used inside the JSON string. In this scenario, the `apply` call is happening during the build of the JSON string, which is too early in the Pulumi lifecycle. The value of the bucket ARN has not yet been returned from the cloud provider API, so the JSON string cannot be built yet.
+
+The correct way of handling this scenario is to wait for the bucket ARN to return, _then_ build the JSON string. You can see an example of this in the (#outputs-and-json) section.
+
+Notice in that example how the JSON string is being built _inside_ the `apply` call to Pulumi. In logical order, this happens as:
+
+- Wait for the the bucket ARN to be returned from the cloud provider
+- Then, build the JSON string with the "plain" value.
+
+### Resource Names
+
+When creating multiple resources, it can be tempting to use the output of one resource as the name to another:
+
+{{< chooser language "javascript,typescript,python,go,csharp,java" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+const bucket = new aws.s3.Bucket("my-bucket", {});
+
+const bucketPolicy = new aws.s3.BucketPolicy(bucket.name, {
+  // rest of bucket policy arguments go here
+});
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+// NOTE: This example is not correct
+const bucket = new aws.s3.Bucket("my-bucket", {});
+
+const bucketPolicy = new aws.s3.BucketPolicy(bucket.name, {
+  // rest of bucket policy arguments go here
+});
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+# NOTE: This example is not correct
+bucket = aws.s3.Bucket("my-bucket",)
+
+bucket_policy = aws.s3.BucketPolicy(
+    bucket.name,
+   # rest of bucket policy arguments go here
+)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+
+// NOTE: This example is not correct
+bucket, err := s3.NewBucket(ctx, "my-bucket", &s3.BucketArgs{})
+if err != nil {
+	return err
+}
+
+_, err = s3.NewBucketPolicy(ctx, bucket.Name, &s3.BucketPolicyArgs{
+	Bucket: bucket.ID(),
+	// rest of bucket policy arguments go here
+})
+if err != nil {
+	return err
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var bucket = new Bucket("my-bucket", new BucketArgs{});
+
+var bucketPolicy = new BucketPolicy(bucket.Name, new BucketPolicyArgs
+{
+    Bucket = bucket.Id,
+    // rest of the bucket policy arguments go here
+})
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var bucket = new Bucket("my-bucket")
+var bucketPolicy = new BucketPolicy(bucket.bucket(),
+    BucketPolicyArgs.builder()
+    // the rest of the bucket policy arguments go here);
+```
+
+{{% /choosable %}}
+{{< /chooser >}}
+
+However, this pattern isn't possible because resource names need to be available and known at runtime in order to construct the URN of the resource.
+
+If you really wish to pass an output from one resource as the resource name of another resource, you will need to use a {{< pulumi-apply >}}.
+
+{{% notes %}}
+This will lead to previews being inaccurate. Resources created inside an apply will only appear in the Pulumi output after an `up` operation is run, and is therefore strongly discouraged.
+{{% /notes %}}
+
+### JavaScript Promises
+
+If you're familiar with JavaScript, you might already be familiar with the mechanism of [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+
+Pulumi Output values are similar in some ways to JavaScript Promises, in that they are values that are not necessarily known until a future event. With that in mind, it can be tempting to try and use `Promise.resolve()` and to think of Outputs like Promises.
+
+However, Pulumi Outputs do not behave in the same way as JavaScript Promises. As such, it's not possible to block execution of a Pulumi program until a promise is resolved and you should not use JavaScript Promise mechanisms to handle Pulumi Outputs.
