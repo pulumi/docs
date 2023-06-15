@@ -1,5 +1,5 @@
 ---
-title_tag: "Pulumi Insights: Cloud import"
+title_tag: "Pulumi Insights: Cloud Import"
 meta_desc: Import resources from your cloud account into Pulumi Insights
 title: Cloud import
 h1: Cloud import
