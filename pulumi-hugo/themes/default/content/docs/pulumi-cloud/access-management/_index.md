@@ -13,7 +13,7 @@ menu:
 Pulumi Cloud offers a number of access management controls.
 
 - [Teams and Role-based access control](teams/)
-- [Access tokens](/docs/pulumi-cloud/access-tokens/)
+- [Access tokens](/docs/pulumi-cloud/access-management/access-tokens/)
 - [Billing managers](billing-managers/)
 - [SAML single sign-on (SSO)](saml/)
 - [SCIM](scim/)
