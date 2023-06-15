@@ -1,116 +1,52 @@
-import algoliasearch from "algoliasearch/lite";
+import algoliasearch, { SearchClient } from "algoliasearch/lite";
 import { autocomplete, getAlgoliaResults, getAlgoliaFacets } from "@algolia/autocomplete-js";
-import { createTagsPlugin } from "@algolia/autocomplete-plugin-tags";
+import { getTags, getTagsPlugin, setTags, Tag, iconForTag, labelForTag, mapTagsToFilters, groupBy, formatCount, debounce, listenForEvents } from "./utils";
 
+// CSS selector of the element to convert into an autocomplete control.
 const autocompleteContainer = "#search";
+
+// Algolia index settings. It's expected these are set as data-* attributes on the
+// `autocompleteContainer` element.
 let appID: string;
 let searchKey: string;
 let indexName: string;
-let searchClient;
-let baseTags: { label: string; facet: string; }[];
 
-window.addEventListener("DOMContentLoaded", () => {
-    if (document.querySelector(autocompleteContainer)) {
-        initAutocomplete(autocompleteContainer);
-    }
-});
+// The autocomplete search client.
+let searchClient: SearchClient;
 
-let wasKeyEvent = false;
-window.addEventListener("keydown", (event: KeyboardEvent) => {
-    if ((event.key.toLowerCase() === "k" && (event.metaKey || event.ctrlKey))) {
-        event.preventDefault();
+// The set of tags (or "facets"), that the autocomplete control should use for filtering. At least
+// one facet is required and must be set as a comma-delimited list on the `autocompleteContainer`
+// (e.g., data-facets="Docs,Registry").
+let baseTags: Tag[];
 
-        const searchButton = document.querySelector(`${autocompleteContainer} .aa-DetachedSearchButton`) as HTMLButtonElement;
-        searchButton.click();
-        return;
-    }
+// Initialize the autocomplete control.
+function initAutocomplete(el: HTMLElement) {
 
-    if ((event.key === "ArrowUp" || event.key === "ArrowDown") && event.target === document.querySelector(`.aa-DetachedFormContainer .aa-Input`)) {
-        wasKeyEvent = true;
-        return;
-    }
-});
-
-function mapTagsToAlgoliaFilters(tagsByFacet, operator = "AND") {
-    const result = Object
-        .keys(tagsByFacet)
-        .map(facet => {
-            return `(${tagsByFacet[facet]
-                .map(({ label }) => `${facet}:"${label}"`)
-                .join(' OR ')})`;
-        })
-        .join(` ${operator} `);
-
-    return result;
-}
-
-function groupBy(items, predicate) {
-    return items.reduce((acc, item) => {
-        const key = predicate(item);
-
-        if (!acc.hasOwnProperty(key)) {
-            acc[key] = [];
-        }
-
-        acc[key].push(item);
-        return acc;
-    }, {});
-}
-
-function getTags(state) {
-    return state.context?.tagsPlugin?.tags || [];
-}
-
-function setTags(state, tags) {
-    state.context?.tagsPlugin?.setTags(tags);
-}
-
-function debouncePromise(fn, time): any {
-    let timerId = undefined;
-
-    return (...args) => {
-        if (timerId) {
-            clearTimeout(timerId);
-        }
-
-        return new Promise((resolve) => {
-            timerId = setTimeout(() => resolve(fn(...args)), time);
-        });
-    };
-}
-
-const debounced = debouncePromise(items => Promise.resolve(items), 220);
-
-function initAutocomplete(container) {
-    const el = document.querySelector(autocompleteContainer);
-
+    // Read the index settings from the container element.
     appID = el.getAttribute("data-app-id");
     searchKey = el.getAttribute("data-search-key");
     indexName = el.getAttribute("data-index");
     baseTags = el.getAttribute("data-facets").split(",").map(f => ({ label: f, facet: "section" }));
+
+    if (!appID || !searchKey ||!indexName ||!baseTags) {
+        console.error(`Autocomplete element found, but one or more require attributes were missing.`)
+        return;
+    }
+
+    // Initialize the search client.
     searchClient = algoliasearch(appID, searchKey);
 
-    const tagsPlugin = createTagsPlugin({
-        initialTags: baseTags,
-        transformSource: ({ source }) => {
-            return undefined;
-        },
-        getTagsSubscribers: () => {
-            return [
-                {
-                    sourceId: "section",
-                    getTag: ({ item }) => {
-                        return item;
-                    },
-                },
-            ];
-        },
-    });
-
+    // Returns an autocomplete "source" consisting of a list of facets (e.g, "Docs", "Registry") and
+    // the number of results within that facet that match the query provided.
+    // https://www.algolia.com/doc/ui-libraries/autocomplete/core-concepts/sources/
     function getFacetsSource(query, state, setContext) {
         return {
             sourceId: "sections",
+
+            // https://www.algolia.com/doc/ui-libraries/autocomplete/core-concepts/sources/#param-getitems
             getItems: () => {
+
+                // https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/getAlgoliaFacets/
                 return getAlgoliaFacets({
                     searchClient,
                     queries: [
@@ -119,21 +55,24 @@ function initAutocomplete(container) {
                             facet: "section",
                             params: {
                                 query,
-                                filters: mapTagsToAlgoliaFilters(
-                                    groupBy(
-                                        baseTags,
-                                        (tag: any) => {
-                                            return tag.facet as string;
-                                        },
-                                    ),
+                                filters: mapTagsToFilters(
+                                    groupBy(baseTags, (tag: any) => tag.facet as string),
                                 ),
                             },
                         },
                     ],
+
+                    // Note that for this source, we deliberately drop the results on the floor (by
+                    // returning an empty array) because we only care about the number of results
+                    // per facet; we don't need the facets themselves because we already have them.
                     transformResponse({ facetHits }) {
+
+                        // Save the item counts on the autocomplete context (its internal state).
                         setContext({
                             facetHits,
                         });
+
+                        // Return an empty list.
                         return [];
                     }
                 })
@@ -144,37 +83,9 @@ function initAutocomplete(container) {
         };
     }
 
-    function formatResultCount(count: number) {
-        return count > 1000 ? `${Math.ceil(count / 1000)}K` : count.toString();
-    }
-
-    function labelForTag(label) {
-        if (label === "Registry") {
-            return "Packages";
-        }
-        return label;
-    }
-
-    function iconForTag(label: string) {
-        switch (label) {
-            case "Docs":
-                return "/icons/docs.svg";
-            case "Registry":
-                return "/icons/registry.svg";
-        }
-        return "/icons/list.svg";
-    }
-
+    // Returns an autocomplete source consisting of the list of actual search results.
+    // https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/getAlgoliaResults/
     function getResultsSource(query, state, refresh) {
-        const filters = mapTagsToAlgoliaFilters(
-            groupBy(
-                getTags(state),
-                (tag: any) => {
-                    return tag.facet as string;
-                },
-            ),
-        );
-
         return {
             sourceId: "results",
             getItems: ({ state }) => {
@@ -185,7 +96,11 @@ function initAutocomplete(container) {
                             indexName,
                             query,
                             params: {
-                                filters,
+                                filters: mapTagsToFilters(
+                                    groupBy(
+                                        getTags(state), (tag: any) => tag.facet as string,
+                                    ),
+                                ),
                                 // The existence of these params suggests that paging actually
                                 // *does* work in autocomplete (since this is the autocomplete API).
                                 // TODO: Make use of these, either with pagination or infinite scroll.
@@ -196,15 +111,23 @@ function initAutocomplete(container) {
                     ],
                 })
             },
+
+            // Tells the autocomplete control which URL to use for navigation (specifically keyboard navigation).
+            // https://www.algolia.com/doc/ui-libraries/autocomplete/core-concepts/sources/#param-getitemurl
             getItemUrl: ({ item }) => {
                 const url = new URL([document.location.origin, item.href].join(""));
                 return url.toString();
             },
+
+            // Templates are the snippets of HTML to use for rendering the autocomplete panel's header,
+            // item list, footer, and no-results view.
+            // https://www.algolia.com/doc/ui-libraries/autocomplete/core-concepts/templates/
             templates: {
                 header: ({ html, state }) => {
                     const facetHits = state.context.facetHits[0] as any[];
                     const allCount = facetHits.reduce((acc, f) => acc + f.count, 0);
 
+                    // If only one facet was specified, return a single, non-interactive tab for "all results".
                     if (baseTags.length === 1) {
                         return html`
                             <ul class="header">
@@ -213,18 +136,22 @@ function initAutocomplete(container) {
                                         <img src="${ iconForTag("all") }" />
                                         <span class="label">All results</span>
                                         <span class="count count-${allCount}">
-                                            ${ formatResultCount(allCount) }
+                                            ${ formatCount(allCount) }
                                         </span>
                                     </button>
                                 </li>
-                            </ul>`;
+                            </ul>
+                        `;
                     }
 
+                    // Otherwise, return a list of tabs -- one "all results" tab and then one tab per facet.
                     return html`
                         <ul class="header">
                             <li class="${ getTags(state).length === baseTags.length ? "active" : "" }">
                                 <button
                                     onclick="${ event => {
+                                        // When the "All results" tab is activated, reset the state
+                                        // to use all facets, then reload results.
                                         event.stopPropagation();
                                         setTags(state, baseTags);
                                         refresh();
@@ -232,12 +159,14 @@ function initAutocomplete(container) {
                                     <img src="${ iconForTag("all") }" />
                                     <span class="label">All results</span>
                                     <span class="count count-${allCount}">
-                                        ${ formatResultCount(allCount) }
+                                        ${ formatCount(allCount) }
                                     </span>
                                 </button>
                             </li>
 
                             ${ baseTags.map(tag => {
+
+                                // Make a tab for each facet, including item counts. Disable tabs with zero results.
                                 const facetHit = facetHits.find(f => f.label === tag.label);
                                 const isActive = getTags(state).length === 1 && getTags(state)[0].label === tag.label;
                                 const isDisabled = !facetHit || facetHit.count === 0;
@@ -247,13 +176,15 @@ function initAutocomplete(container) {
                                     <li class="${ isActive ? "active" : "" } ${ isDisabled ? "disabled" : ""}">
                                         <button disabled="${ isDisabled }"
                                             onclick="${ event => {
+                                                // When a regular tab is activated, reset the state
+                                                // to that facet and reload.
                                                 event.stopPropagation();
                                                 setTags(state, [ { label: tag.label, facet: "section" } ]);
                                                 refresh();
                                             }}">
                                             <img src="${ iconForTag(tag.label) }"/>
                                             <span class="label">${ labelForTag(tag.label) }</span>
-                                            <span class="count count-${ facetCount }">${ formatResultCount(facetCount) }</span>
+                                            <span class="count count-${ facetCount }">${ formatCount(facetCount) }</span>
                                         </button>
                                     </li>`
                             })}
@@ -309,46 +240,76 @@ function initAutocomplete(container) {
         };
     }
 
-    function maybeScrollTo(itemID) {
-        const items = document.querySelectorAll(`.aa-Item`);
+    // Start listening for keyboard events.
+    const keyEventsState = listenForEvents();
 
-        if (items) {
-            const item = items.item(itemID);
-
-            if (item && wasKeyEvent) {
-                item.scrollIntoView({ behavior: "smooth", block: "nearest" });
-            }
-
-            wasKeyEvent = false;
-        }
-    }
-
-    const ac = autocomplete({
-        container,
-        openOnFocus: false,
+    // Activate the autocomplete control. See the Algolia docs for configuration details.
+    // https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/autocomplete
+    autocomplete({
+        container: el,
         placeholder: "Search (⌘/ctrl-k)",
+
+        // Whether to open the panel when the input gets focus (i.e., before a query is submitted).
+        openOnFocus: false,
+
+        // Whether to render the control as a modal dialog or drop-down. Empty string means modal.
         detachedMediaQuery: "",
+
+        // The (zero-based) item that should be selected by default.
         defaultActiveItemId: 0,
+
+        // Handler for any change that occurs on the state of the autocomplete control.
         onStateChange: ({ state, prevState, setCollections }) => {
+
+            // When a query is "cleared out" by the user, reset the list of facets to "all" and drop
+            // any existing results to start fresh.
             if (prevState.query !== "" && state.query === "") {
                 setCollections([]);
                 setTags(state, baseTags);
             }
 
+            // When there's an active item, and an arrow key was just pressed, scroll the active
+            // item into view.
             if (state.activeItemId >= 0) {
-                maybeScrollTo(state.activeItemId);
+                const items = document.querySelectorAll(`.aa-Item`);
+
+                if (items) {
+                    const item = items.item(state.activeItemId);
+
+                    if (item && keyEventsState.upDownPressed) {
+                        item.scrollIntoView({ behavior: "smooth", block: "nearest" });
+                    }
+                }
+
+                // Reset the arrow-key flag.
+                keyEventsState.upDownPressed = false;
             }
         },
+
+        // Returns the list of autocomplete sources to use for each query. Our control uses two
+        // sources: one for obtaining query result counts by facet, another for obtaining actual
+        // query results.
         getSources: ({ query, state, refresh, setContext }) => {
             const sources = [];
 
             sources.push(getFacetsSource(query, state, setContext))
             sources.push(getResultsSource(query, state, refresh));
 
-            return debounced(sources);
+            // Debounce requests to keep from sending too many queries to Algolia.
+            return debounce(sources);
         },
+
+        // https://www.algolia.com/doc/ui-libraries/autocomplete/core-concepts/plugins/
         plugins: [
-            tagsPlugin,
+            getTagsPlugin(baseTags),
         ],
     });
 }
+
+// Wait until the DOM is ready before looking for any autocomplete controls on the page.
+window.addEventListener("DOMContentLoaded", () => {
+    const el = document.querySelector(autocompleteContainer) as HTMLElement;
+    if (el) {
+        initAutocomplete(el);
+    }
+});

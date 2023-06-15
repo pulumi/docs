@@ -20,7 +20,7 @@ import "./developer-advocates";
 import "./toc";
 import "./ai";
 import "./docs-main";
-import "./algolia";
+import "./algolia/autocomplete";
 
 // Register all Stencil components.
 defineCustomElements();
