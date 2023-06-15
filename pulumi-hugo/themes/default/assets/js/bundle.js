@@ -62,4 +62,4 @@
                     `,noResults:({html:e,state:t})=>{if(t.query)return e`
                         <img src="/images/search/no-results.svg"/>
                         <p>We couldn't find any results for <mark>${t.query}</mark>.</p>
-                    `}}}}(e,0,r)),pp(o)},plugins:[up(wp)]})}var Cp;window.addEventListener("DOMContentLoaded",(()=>{const e=document.querySelector("#search");e&&Sp(e)})),"undefined"!=typeof customElements&&[So,Co,Do,_o,Eo,ko,xo,Oo,$o,To,Ao,Po,jo,Io,Fo,Lo,Mo,No,Bo,Ro,zo,qo,Uo,Ho,Wo,Vo,Go,Ko,Yo,Jo,Xo,Qo,Zo,es,ts,ns,rs,is].forEach((e=>{customElements.get(e.is)||customElements.define(e.is,e,Cp)}))})()})();
+                    `}}}}(e,0,r)),pp(o)},insights:!0,plugins:[up(wp)]})}var Cp;window.addEventListener("DOMContentLoaded",(()=>{const e=document.querySelector("#search");e&&Sp(e)})),"undefined"!=typeof customElements&&[So,Co,Do,_o,Eo,ko,xo,Oo,$o,To,Ao,Po,jo,Io,Fo,Lo,Mo,No,Bo,Ro,zo,qo,Uo,Ho,Wo,Vo,Go,Ko,Yo,Jo,Xo,Qo,Zo,es,ts,ns,rs,is].forEach((e=>{customElements.get(e.is)||customElements.define(e.is,e,Cp)}))})()})();

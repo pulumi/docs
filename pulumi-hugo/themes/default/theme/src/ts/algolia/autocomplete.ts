@@ -299,6 +299,10 @@ function initAutocomplete(el: HTMLElement) {
             return debounce(sources);
         },
 
+        // Enable Algolia insights.
+        // https://www.algolia.com/doc/guides/building-search-ui/events/js/
+        insights: true,
+
         // https://www.algolia.com/doc/ui-libraries/autocomplete/core-concepts/plugins/
         plugins: [
             getTagsPlugin(baseTags),
