@@ -87,14 +87,6 @@ Install [Node.js](https://nodejs.org/en/download).
 
 {{< /chooser >}}
 
-### Configure Pulumi to access Google Cloud
-
-Pulumi requires cloud credentials to manage and provision resources. You must use an IAM user or service account that has **programmatic access** with rights to deploy and manage your Google Cloud resources.
-
-In this guide, you will need an IAM user account with permissions that can create and populate a Cloud Storage bucket, such as those in the predefined Storage Admin (`roles/storage.admin`) or the Storage Legacy Bucket Owner (`roles/storage.legacyBucketOwner`) roles.
-
-{{% configure-gcp %}}
-
 ## Create project
 
 Let's create your first Pulumi project, stack, and program. Pulumi [projects](/docs/concepts/projects/) and [stacks](/docs/concepts/stack/) organize Pulumi code. Projects are similar to GitHub repos and stacks are an instance of code with separate configuration. Projects can have multiple stacks for different development environments or for different cloud configurations.
@@ -194,6 +186,14 @@ Saved config
 
 After the command completes, the project and stack will be ready.
 
+### Configure Pulumi to access Google Cloud
+
+Pulumi requires cloud credentials to manage and provision resources. You must use an IAM user or service account that has **programmatic access** with rights to deploy and manage your Google Cloud resources.
+
+In this guide, you will need an IAM user account with permissions that can create and populate a Cloud Storage bucket, such as those in the predefined Storage Admin (`roles/storage.admin`) or the Storage Legacy Bucket Owner (`roles/storage.legacyBucketOwner`) roles.
+
+{{% configure-gcp %}}
+
 ## Review project
 
 Let's review some of the generated project files:
@@ -236,8 +236,10 @@ Let's examine {{< langfile >}}.
 const pulumi = require("@pulumi/pulumi");
 const gcp = require("@pulumi/gcp");
 
-// Create a Google Cloud resource (Storage Bucket)
-const bucket = new gcp.storage.Bucket("my-bucket");
+// Create a GCP resource (Storage Bucket)
+const bucket = new gcp.storage.Bucket("my-bucket", {
+    location: "US"
+});
 
 // Export the DNS name of the bucket
 exports.bucketName = bucket.url;
@@ -251,8 +253,10 @@ exports.bucketName = bucket.url;
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-// Create a Google Cloud resource (Storage Bucket)
-const bucket = new gcp.storage.Bucket("my-bucket");
+// Create a GCP resource (Storage Bucket)
+const bucket = new gcp.storage.Bucket("my-bucket", {
+    location: "US"
+});
 
 // Export the DNS name of the bucket
 export const bucketName = bucket.url;
@@ -267,7 +271,7 @@ import pulumi
 from pulumi_gcp import storage
 
 # Create a Google Cloud resource (Storage Bucket)
-bucket = storage.Bucket('my-bucket')
+bucket = storage.Bucket('my-bucket',location='US')
 
 # Export the DNS name of the bucket
 pulumi.export('bucket_name',  bucket.url)
@@ -932,6 +936,7 @@ First, set the `website` property on your bucket. And, to align with Google Clou
 
 ```python
 bucket = storage.Bucket('my-bucket',
+    location='US',
     website=storage.BucketWebsiteArgs(
         main_page_suffix='index.html'),
     uniform_bucket_level_access=True,
