@@ -131,7 +131,7 @@ Another fun example is
 ## Learn More
 
 If you'd like to learn about Pulumi and how to manage your
-infrastructure and Kubernetes through code, [click here to get started today](/docs/quickstart/). Pulumi is open source and free to
+infrastructure and Kubernetes through code, [click here to get started today](/docs/get-started/). Pulumi is open source and free to
 use.
 
 If you'd like to go deeper on certain topics, here are some additional

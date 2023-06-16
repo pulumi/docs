@@ -69,4 +69,4 @@ Autoscale is a built-in feature of Cloud Services, Mobile Services, Virtual Mach
 
 ## Learn More
 
-Ready to learn more? With Pulumi, you can create and manage infrastructure with the languages and tools you already know. To help you implement autoscaling on AWS, check out [Pulumi Crosswalk for AWS](/docs/clouds/aws/guides/), which enables easy definition of Auto Scaling Groups (ASGs) to configure scaling of EC2 instances. You can [get started](/docs/quickstart/) for free today.
+Ready to learn more? With Pulumi, you can create and manage infrastructure with the languages and tools you already know. To help you implement autoscaling on AWS, check out [Pulumi Crosswalk for AWS](/docs/clouds/aws/guides/), which enables easy definition of Auto Scaling Groups (ASGs) to configure scaling of EC2 instances. You can [get started](/docs/get-started/) for free today.

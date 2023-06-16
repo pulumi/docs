@@ -35,6 +35,6 @@ For smaller organizations, the secret storage built into Pulumi is usually suffi
 
 ## Next steps
 
-It’s easy to get started with secrets management in Pulumi, because there’s nothing extra you need to do. Begin with any one of our [get started tutorials](https://www.pulumi.com/docs/quickstart/) and Pulumi will automatically protect your secrets along the way.
+It’s easy to get started with secrets management in Pulumi, because there’s nothing extra you need to do. Begin with any one of our [get started tutorials](https://www.pulumi.com/docs/get-started/) and Pulumi will automatically protect your secrets along the way.
 
 [Learn more about Pulumi’s secret storage in our docs](https://www.pulumi.com/docs/concepts/secrets/)

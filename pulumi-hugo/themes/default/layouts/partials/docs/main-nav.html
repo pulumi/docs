@@ -2,8 +2,8 @@
     {{ if hasPrefix .RelPermalink "/docs/" }}
         {{/* Render a top-level menu for our major docs sections */}}
         {{ $toc_page := . }}
-        {{ $toc_sections := slice "Download & install" "Quickstart" "Clouds" "Concepts" "Pulumi Cloud" "Using Pulumi" "Languages & SDKs" "Pulumi CLI" "Support" }}
-        {{ $toc_menus := dict "Download & install" .Site.Menus.install "Quickstart" .Site.Menus.quickstart "Clouds" .Site.Menus.clouds "Concepts" .Site.Menus.concepts "Pulumi Cloud" .Site.Menus.pulumicloud "Using Pulumi" .Site.Menus.usingpulumi "Languages & SDKs" .Site.Menus.languages "Pulumi CLI" .Site.Menus.cli "Support" .Site.Menus.support }}
+        {{ $toc_sections := slice "Download & install" "Get started" "Clouds" "Concepts" "Pulumi Cloud" "Using Pulumi" "Languages & SDKs" "Pulumi CLI" "Support" }}
+        {{ $toc_menus := dict "Download & install" .Site.Menus.install "Get started" .Site.Menus.getstarted "Clouds" .Site.Menus.clouds "Concepts" .Site.Menus.concepts "Pulumi Cloud" .Site.Menus.pulumicloud "Using Pulumi" .Site.Menus.usingpulumi "Languages & SDKs" .Site.Menus.languages "Pulumi CLI" .Site.Menus.cli "Support" .Site.Menus.support }}
 
         {{ range $index, $element := $toc_sections }}
             {{ $sidenav_selected := "" }}
@@ -30,7 +30,7 @@
             {{ end }}
             <div id="toc-menu-{{ $toc_name }}" class="{{ $sidenav_selected }} no-anchor toc-header toggle-topLevel {{ $toggle_class }}" id="{{ $toc_name | urlize }}-toc-header">
                 <a href="{{ $toc_section_link }}">{{ $toc_name }}</a>
-                {{ if and ($toc_section_link) (ne $toc_name "Quickstart") }}
+                {{ if and ($toc_section_link) (ne $toc_name "Get started") }}
                     <span class="toggleButton-topLevel down">
                         <div class="icon icon-14-14 keyboard-arrow-down-gray-14-14"></div>
                     </span>

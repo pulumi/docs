@@ -7,7 +7,7 @@ hero:
   description: |
     Build infrastructure intuitively on any cloud using familiar languages.
   cta_text: Get Started
-  cta_link: /docs/quickstart
+  cta_link: /docs/get-started
   secondary_cta_text: Contact Sales
   secondary_cta_link: /contact/?form=sales
 

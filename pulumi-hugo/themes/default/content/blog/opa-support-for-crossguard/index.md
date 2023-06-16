@@ -224,4 +224,4 @@ With support in Visual Studio Code, authoring both your infrastructure and polic
 
 OPA support in Pulumi CrossGuard enables authoring cloud infrastructure policy using a familiar and popular policy authoring language while leveraging Pulumi's CrossGuard platform for policy enforcement from development to production. Along with existing support for TypeScript, JavaScript and Python - Pulumi CrossGuard offers a great breadth of authoring languages to meet the needs of any infrastructure team.
 
-Check out the open source [pulumi-policy-opa](https://github.com/pulumi/pulumi-policy-opa) project to learn more about the OPA integration with CrossGuard. And [get started](/docs/quickstart/) with Pulumi for your modern cloud infrastructure and policy today.
+Check out the open source [pulumi-policy-opa](https://github.com/pulumi/pulumi-policy-opa) project to learn more about the OPA integration with CrossGuard. And [get started](/docs/get-started/) with Pulumi for your modern cloud infrastructure and policy today.

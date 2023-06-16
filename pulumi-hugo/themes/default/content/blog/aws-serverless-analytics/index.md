@@ -15,7 +15,7 @@ Whether it’s an IoT installation, a website, or a mobile app, modern software 
 3. How to implement this architecture as code in a reusable library with Pulumi.
 4. How to automate the development loop when writing Pulumi libraries.
 
-If you’d like to follow along, you can clone and run [the reference implementation](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-datawarehouse). If you’re new to Pulumi, you can follow [this guide to get started](/docs/quickstart/).
+If you’d like to follow along, you can clone and run [the reference implementation](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-datawarehouse). If you’re new to Pulumi, you can follow [this guide to get started](/docs/get-started/).
 
 ## ACME E-Commerce
 
@@ -590,7 +590,7 @@ Here we’ve seen three different ways to use Pulumi to automate and improve the
 
 ACME re-evaluated their analytics architecture and shipped the next-generation serverless streaming solution that can take them to the next click-stop, and well through the next order of magnitude. Along the way, they learned how to reason about streaming data and examined the underlying assumptions about time and completeness of data in their existing system. ACME developed its streaming architecture using Pulumi and learned how to automate and create reproducible developer environments along the way. The outcome isn’t just an instance of the serverless streaming architecture, but a component library that implements best practices. That investment in time is bundled up and shipped in a format that the next generation of incubators at ACME can pick up and run with.
 
-If you’d like to get started delivering best practices in infrastructure across your organization, [get started with Pulumi free today](/docs/quickstart/). Clone and run [the reference implementation](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-datawarehouse) of the Serverless Data Warehouse to build your own serverless analytics stack.
+If you’d like to get started delivering best practices in infrastructure across your organization, [get started with Pulumi free today](/docs/get-started/). Clone and run [the reference implementation](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-datawarehouse) of the Serverless Data Warehouse to build your own serverless analytics stack.
 
 ## Architectural Caveats
 

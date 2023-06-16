@@ -147,7 +147,7 @@ export const kubeconfig = cluster.kubeconfig;
 Let’s put it all together for both ECS and EKS. To get started, follow the [Pulumi AWS documentation](/docs/clouds/aws/get-started/) to install Pulumi, [install AWS Client](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv1.html) set your [AWS environment variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html), and [create a new project](/docs/clouds/aws/get-started/) in Typescript.
 
 ```bash
-$ mkdir quickstart && cd quickstart
+$ mkdir get-started && cd get-started
 $ pulumi new aws-typescript
 ```
 
@@ -180,7 +180,7 @@ Create a `./content` director in the `./app` directory and add the HTML file bel
 Now that setup is complete you project directory should look similar to this:
 
 ```bash
-quickstart/
+get-started/
 ├── Pulumi.dev.yaml
 ├── Pulumi.yaml
 ├── app

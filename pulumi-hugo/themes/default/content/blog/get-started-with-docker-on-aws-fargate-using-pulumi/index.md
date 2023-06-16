@@ -250,4 +250,4 @@ but also Azure and GCP cloud providers, in addition to Kubernetes!
 Want to go deeper?
 
 - [Check out this example on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-hello-fargate)
-- [Get Started with your favorite cloud and scenario now](/docs/quickstart/)
+- [Get Started with your favorite cloud and scenario now](/docs/get-started/)

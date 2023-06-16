@@ -96,4 +96,4 @@ By teaching the next generation of programmers and developers how to get the mos
 
 From humble beginnings, Python has grown to play a vital role in the modern digital era. Developers around the world depend on Python for reliable, efficient, intuitive programming solutions. Why is Python so popular? Specifics aside, it’s popular because it makes life easier for programmers, and allows them to build effective applications for users and businesses.
 
-Pulumi has long maintained a positive relationship with Python, particularly when it comes to infrastructure automation within the cloud. To learn more, check out [Programming the Cloud with Python](/blog/programming-the-cloud-with-python/). And to get started with Pulumi, check out the [Get Started](/docs/quickstart/) page.
+Pulumi has long maintained a positive relationship with Python, particularly when it comes to infrastructure automation within the cloud. To learn more, check out [Programming the Cloud with Python](/blog/programming-the-cloud-with-python/). And to get started with Pulumi, check out the [Get Started](/docs/get-started/) page.

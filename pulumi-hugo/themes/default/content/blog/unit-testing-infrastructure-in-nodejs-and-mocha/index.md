@@ -521,4 +521,4 @@ can be used to enforce a wide array of team standards, best practices, and secur
 guidelines. If you can express it in your favorite test framework, you can check it!
 
 Everything we've seen in this article is open source and free to use --
-[give Pulumi a try today](/docs/quickstart/).
+[give Pulumi a try today](/docs/get-started/).

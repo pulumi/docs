@@ -29,7 +29,7 @@ Some of the most exciting new features in this release include:
 * **Improved Go and Python SDKs**: Updates to the core Go and Python SDKs make APIs simpler and more consistent, unlock more tooling support, and improve compile times - making it even easier to use all the benefits of your favorite programming language when building and managing cloud infrastructure.
 * **New Integrations and Features in the Pulumi Service**: Alongside Pulumi 3.0, users of the Pulumi Service also now have access to new dashboards for organization-level cloud infrastructure insights, a CI/CD Assistant for easy version control and CI/CD integration with just a few clicks, and new identity, access control, and auditing capabilities.
 
-👉 [Get started](/docs/quickstart/) with Pulumi 3.0 today or check out the [Pulumi 3.0 migration guide](/docs/install/migrating-3.0) to update your existing Pulumi projects to Pulumi 3.0.
+👉 [Get started](/docs/get-started/) with Pulumi 3.0 today or check out the [Pulumi 3.0 migration guide](/docs/install/migrating-3.0) to update your existing Pulumi projects to Pulumi 3.0.
 
 ## Pulumi Automation API
 
@@ -191,6 +191,6 @@ To learn more about each of the new areas - check out these blog posts with more
 * [Pulumi CI/CD Integration Assistant available for all plans](/blog/pulumiup-ci-cd-assistant-all-plans)
 * [Easily bring your team to Pulumi with SAML SSO and SCIM](/blog/pulumiup-bring-your-whole-team-to-pulumi/)
 
-You can [get started](/docs/quickstart/) with Pulumi 3.0 today, or check out the [Pulumi 3.0 migration guide](/docs/install/migrating-3.0) to update your existing Pulumi projects to Pulumi 3.0.
+You can [get started](/docs/get-started/) with Pulumi 3.0 today, or check out the [Pulumi 3.0 migration guide](/docs/install/migrating-3.0) to update your existing Pulumi projects to Pulumi 3.0.
 
 We can't wait to see what you build with Pulumi 3.0!

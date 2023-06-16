@@ -222,4 +222,4 @@ Check out these resources to get started with Pulumi YAML today:
 * [Pulumi YAML Overview Docs](https://www.pulumi.com/docs/languages-sdks/yaml/)
 * [Pulumi YAML Language Reference](https://www.pulumi.com/docs/languages-sdks/yaml/yaml-language-reference/)
 * [Pulumi Templates](https://www.pulumi.com/templates/)
-* [Pulumi Getting Started](https://www.pulumi.com/docs/quickstart/)
+* [Pulumi Getting Started](https://www.pulumi.com/docs/get-started/)

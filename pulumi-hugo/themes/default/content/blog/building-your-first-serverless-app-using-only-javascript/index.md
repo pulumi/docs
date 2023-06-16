@@ -79,7 +79,7 @@ This approach avoided significant amounts of configuration (YAML, or
 point-and-click). Pulumi also supports containers (including
 Kubernetes), managed services, infrastructure and everything else in
 between that you might need for building cloud applications.
-[Get started with Pulumi](/docs/quickstart/).
+[Get started with Pulumi](/docs/get-started/).
 
 ## Why JavaScript for serverless programming?
 
@@ -134,7 +134,7 @@ To learn more take a look at more tutorials and example code:
 - Our origin story: [Hello, Pulumi!](http://joeduffyblog.com/2018/06/18/hello-pulumi/)
 - Tutorial: [Deploying Containers with Pulumi](/blog/deploying-production-ready-containers-with-pulumi/)
 - Tutorial: [Build a video thumbnailer using AWS Lambda, Fargate, and S3 in JavaScript](/blog/build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws/)
-- [Pulumi Quickstart](/docs/quickstart/)
+- [Pulumi Quickstart](/docs/get-started/)
 - [Pulumi Community Slack](https://slack.pulumi.com)
 - [Pulumi Examples on GitHub](https://github.com/pulumi/examples)
 - [Node.js and Pulumi](/docs/languages-sdks/javascript/)

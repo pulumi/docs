@@ -47,7 +47,7 @@ Teams who are used to relational databases may find MongoDB difficult to get use
 
 Cosmos DB and MongoDB both have strengths and weaknesses that will benefit some teams but hinder others. If your infrastructure is already on Azure, or you need the flexibility of a database that supports multiple data models, Cosmos DB is the stronger offering. If you require support for larger documents and either use another cloud provider or simply want to avoid vendor lock-in, MongoDB is the best choice.
 
-Regardless of which database suits your needs, standing them up shouldn't be a chore. With Pulumi, provisioning either one is a breeze in the programming language of your choce. Try deploying an [AKS (Azure Kubernetes Service) application with Cosmos DB](/registry/packages/azure/how-to-guides/classic-azure-ts-aks-mean) or get started with [MongoDB Atlas](/docs/quickstart/)
+Regardless of which database suits your needs, standing them up shouldn't be a chore. With Pulumi, provisioning either one is a breeze in the programming language of your choce. Try deploying an [AKS (Azure Kubernetes Service) application with Cosmos DB](/registry/packages/azure/how-to-guides/classic-azure-ts-aks-mean) or get started with [MongoDB Atlas](/docs/get-started/)
 
 ## Pulumi Corporation
 

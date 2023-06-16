@@ -269,7 +269,7 @@ it and configure it with your CI system, please [read the documentation](/docs/u
 We're excited about all the new features in this release and the new
 scenarios they enable for the Pulumi community . If you are new to
 Pulumi, [download the tools and get started
-today](/docs/quickstart), or [join us in Slack](https://slack.pulumi.com). A big thanks to all the users and
+today](/docs/get-started), or [join us in Slack](https://slack.pulumi.com). A big thanks to all the users and
 contributors who have helped shape this release -- we can't wait to see
 what you build next !
 

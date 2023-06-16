@@ -75,4 +75,4 @@ Ready to dive into how this works in detail? Watch the demo in the video below s
 
 After watching the [demo](https://youtu.be/aoa_O-rh5KE?list=PLyy8Vx2ZoWlpcvhSsUXdT5CXjRwAaM_My&t=620) of a self-service infrastructure platform, you can try it out for yourself by checking out the [demo code](https://github.com/mastoj/pulumi-automation-demo). You can also learn more about [Pulumi Automation API](/automation/) in our [documentation](/docs/using-pulumi/automation-api/).
 
-If you’re new to Pulumi, then follow our [getting started guide](/docs/quickstart/).
+If you’re new to Pulumi, then follow our [getting started guide](/docs/get-started/).

@@ -50,4 +50,4 @@ When using `pulumi watch`, working with cloud infrastructure *feels* so differen
 
 The `pulumi watch` command is available in preview now when the `PULUMI_EXPERIMENTAL` environment variable is set to `true`.  We are just getting started - and see many more opportunities to tighten the iteration cycle further, to support more logging capabilities, to integrate more deeply with `query`, and to be applied to more modern infrastructure scenarios.
 
-[Give it a try](/docs/quickstart/) today and [drop us a note](https://github.com/pulumi/pulumi/issues/3448) about where you’d like to see this go for [Pulumi 2.0](/blog/pulumi-2-0-roadmap/)!
+[Give it a try](/docs/get-started/) today and [drop us a note](https://github.com/pulumi/pulumi/issues/3448) about where you’d like to see this go for [Pulumi 2.0](/blog/pulumi-2-0-roadmap/)!

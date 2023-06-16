@@ -131,7 +131,7 @@ the other already existing bucket objects!
 Don't take our word for it, though! We'd love for you to check it out and see for yourself how
 great it is to reclaim the “code” in “infrastructure as code”.
 
-If you want to know more about Pulumi and the things it can do for you, check out the [Getting Started](/docs/quickstart/) page and [Documentation](/docs/) for more information.
+If you want to know more about Pulumi and the things it can do for you, check out the [Getting Started](/docs/get-started/) page and [Documentation](/docs/) for more information.
 
 If you'd like to try the above example out for yourself, we've put the [full code on GitHub](https://github.com/pulumi/examples/tree/master/aws-py-s3-folder). There are also [dozens of other Python examples](https://github.com/pulumi/examples) across AWS, Azure, GCP, Kubernetes and more you can explore.
 

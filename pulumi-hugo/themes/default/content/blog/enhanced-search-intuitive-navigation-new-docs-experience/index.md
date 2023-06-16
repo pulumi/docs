@@ -36,7 +36,7 @@ In addition to search and navigation, folks must be able to discover new content
 
 ### Quickstart experience
 
-The [Pulumi quickstart](/docs/quickstart/) experience is for people new to Pulumi to get up and running quickly.
+The [Pulumi quickstart](/docs/get-started/) experience is for people new to Pulumi to get up and running quickly.
 
 ![Pulumi docs quickstart experience](imgs/quickstart.png)
 

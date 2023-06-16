@@ -827,7 +827,7 @@ these goodies ready to go, are thrilled to ship, and we look forward to
 hearing about your ideas and scenarios about where to take things from
 here.
 
-To get started, head over to the [Pulumi Quickstart](/docs/quickstart/),
+To get started, head over to the [Pulumi Quickstart](/docs/get-started/),
 meet us over on GitHub where all the goodies are open source <https://github.com/pulumi/pulumi>, and/or join our
 [Pulumi Community Slack](https://slack.pulumi.com). We can't wait to hear
 from you. Happy hacking!

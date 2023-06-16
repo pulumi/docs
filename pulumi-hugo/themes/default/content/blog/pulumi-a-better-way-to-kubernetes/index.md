@@ -136,7 +136,7 @@ scenarios.
 
 If you'd like to learn about Pulumi and how to manage your
 infrastructure and Kubernetes through code,
-[click here to get started today](/docs/quickstart/). Pulumi is open source and free to
+[click here to get started today](/docs/get-started/). Pulumi is open source and free to
 use.
 
 As always, you can check out our code on

@@ -89,7 +89,7 @@ operates in the various contexts.
 ## Learn More
 
 If you'd like to learn about Pulumi and how to manage your
-infrastructure and Kubernetes multi-cloud capabilities through code, [get started today](/docs/quickstart/). Pulumi is open source and free to
+infrastructure and Kubernetes multi-cloud capabilities through code, [get started today](/docs/get-started/). Pulumi is open source and free to
 use.
 
 For further examples on how to use Pulumi to create Kubernetes

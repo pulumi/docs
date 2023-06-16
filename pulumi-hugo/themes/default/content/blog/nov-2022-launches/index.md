@@ -24,7 +24,7 @@ As part of [Pulumi Cloud Engineering Days 2022](https://www.pulumi.com/cloud-eng
 
 * __Project Level Configuration__: As cloud infrastructure projects grow in complexity, Pulumi provides many tools to manage the complexity of the software that defines these projects. But the configuration of that software also grows in complexity.  New support for Project-Level Configuration across all Pulumi languages makes it easier to manage complex configuration as cloud projects scale up.
 
-You can check out the [Cloud Engineering Days 2022 Keynote](https://www.pulumi.com/cloud-engineering-days/) to learn more about all of these features, or [get started with Pulumi](https://www.pulumi.com/docs/quickstart/) today!
+You can check out the [Cloud Engineering Days 2022 Keynote](https://www.pulumi.com/cloud-engineering-days/) to learn more about all of these features, or [get started with Pulumi](https://www.pulumi.com/docs/get-started/) today!
 
 ## Pulumi Deployments
 
@@ -187,7 +187,7 @@ This is the first step in our broader goals to bring Hierarchical Configuration 
 
 Pulumi helps cloud engineering teams scale up what they can accomplish in the cloud.  Today, we announced a collection of new features and enhancements that advance that platform and help you scale your cloud infrastructure teams. These features give platform team new powers to scale up what they can accomplish.
 
-Check out the launch blog posts for each of the new features, [sign up](/product/pulumi-deployments) for access to Pulumi Deployments, or just dive right in and [get started with Pulumi](https://www.pulumi.com/docs/quickstart/) today!
+Check out the launch blog posts for each of the new features, [sign up](/product/pulumi-deployments) for access to Pulumi Deployments, or just dive right in and [get started with Pulumi](https://www.pulumi.com/docs/get-started/) today!
 
 * [Pulumi Deployments](https://www.pulumi.com/blog/pulumi-deployments/)
 * [Pulumi YAML GA](https://www.pulumi.com/blog/pulumi-yaml-ga/)
