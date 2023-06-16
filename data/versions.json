@@ -1,5 +1,18 @@
 [
   {
+    "version": "v3.72.0",
+    "date": "2023-06-15T23:23:12Z",
+    "downloads": {
+      "linux-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.72.0-linux-x64.tar.gz",
+      "linux-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v3.72.0-linux-arm64.tar.gz",
+      "darwin-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.72.0-darwin-x64.tar.gz",
+      "darwin-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v3.72.0-darwin-arm64.tar.gz",
+      "windows-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.72.0-windows-x64.zip"
+    },
+    "checksums": "https://get.pulumi.com/releases/sdk/pulumi-3.72.0-checksums.txt",
+    "latest": true
+  },
+  {
     "version": "v3.71.0",
     "date": "2023-06-12T13:40:46Z",
     "downloads": {
@@ -9,8 +22,7 @@
       "darwin-arm64": "https://get.pulumi.com/releases/sdk/pulumi-v3.71.0-darwin-arm64.tar.gz",
       "windows-x64": "https://get.pulumi.com/releases/sdk/pulumi-v3.71.0-windows-x64.zip"
     },
-    "checksums": "https://get.pulumi.com/releases/sdk/pulumi-3.71.0-checksums.txt",
-    "latest": true
+    "checksums": "https://get.pulumi.com/releases/sdk/pulumi-3.71.0-checksums.txt"
   },
   {
     "version": "v3.70.0",
