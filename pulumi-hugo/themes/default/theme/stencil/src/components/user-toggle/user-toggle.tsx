@@ -30,12 +30,15 @@ export class PulumiUserToggle {
     }
 
     // Consider the user signed in if there's a user ID set.
-    private get signedIn(): boolean {
-        return !!this.userId;
-    }
+    // Commented out becuase of this issue: https://github.com/pulumi/pulumi-hugo/issues/3089
+    // We may eventually want to return to dynamic content here, so
+    // just commenting this out for now instead of deleting it.
+    // private get signedIn(): boolean {
+    //     return !!this.userId;
+    // }
 
     render() {
-        return <span class={ this.signedIn ? "signed-in" : "signed-out" }>
+        return <span class="signed-out">
             <slot name="signed-in"></slot>
             <slot name="signed-out"></slot>
         </span>;
