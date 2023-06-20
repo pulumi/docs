@@ -1839,7 +1839,7 @@ POST /api/stacks/{organization}/{project}/{stack}/hooks
 | `payloadUrl`       | string        | body | URL to send request to                                                                                                                                                          |
 | `projectName`      | string        | body | **Optional.** project name (required for stack webhooks)                                                                                                                        |
 | `stackName`        | string        | body | **Optional.** stack name (required for stack webhooks)                                                                                                                          |
-| `format`           | string        | body | **Optional.** format of the payload. Possible values are `raw` or `slack`. Default is `raw`.                                                                                    |
+| `format`           | string        | body | **Optional.** format of the payload. Possible values are `raw`, `slack`, or `pulumi_deployments`. Default is `raw`.                                                             |
 | `filters`          | array[string] | body | **Optional.** list of filters for events the webhook should receive. See [webhook docs](/docs/pulumi-cloud/webhooks#filters) for more information on what filters are available |
 | `secret`           | string        | body | **Optional.** secret used as the HMAC key. See [webhook docs](/docs/pulumi-cloud/webhooks#headers) for more information                                                         |
 
@@ -1935,6 +1935,27 @@ curl \
       "payloadUrl":"https://hooks.slack.com/services/...",
       "format": "slack",
       "filters": ["preview_failed", "update_failed", "destroy_failed", "refresh_failed", "deployment_failed"],
+      "active":true
+  }' \
+  https://api.pulumi.com/api/orgs/{organization}/{project}/{stack}/hooks
+```
+
+###### Create a Deployment webhook
+
+```bash
+curl \
+  -H "Accept: application/vnd.pulumi+8" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  --request POST \
+  --data '{
+      "organizationName":"{organization}",
+      "projectName":"{project}",
+      "stackName":"{stack}",
+      "displayName":"deployDownstreamStack",
+      "payloadUrl":"{downstreamProject}/{downstreamStack}",
+      "format": "pulumi_deployments",
+      "filters": ["update_succeeded"],
       "active":true
   }' \
   https://api.pulumi.com/api/orgs/{organization}/{project}/{stack}/hooks

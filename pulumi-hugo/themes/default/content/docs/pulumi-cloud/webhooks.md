@@ -48,6 +48,82 @@ Pulumi Webhooks may be created through the UI using the steps outlined below, by
 [Webhook resource](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/webhook/) from the Pulumi provider
 or by [using the API](/docs/pulumi-cloud/cloud-rest-api/#create-webhook) directly.
 
+{{< chooser language "typescript,python,go,csharp" >}}
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as pulumiservice from "@pulumi/pulumiservice";
+const webhook = new pulumiservice.Webhook("example-webhook", {
+    active: true,
+    displayName: "webhook example",
+    organizationName: "example",
+    payloadUrl: "https://example.com/webhook",
+});
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_service
+webhook = pulumi_service.Webhook("example-webhook",
+    active: True,
+    display_name: "webhook example",
+    organization_name: "example",
+    payload_url: "https://example.com/webhook",
+)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+import (
+	"fmt"
+	"github.com/pulumi/pulumi-pulumiservice/sdk/go/pulumiservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		webhook, err := pulumiservice.NewWebhook(ctx, "example-webhook", &pulumiservice.WebhookArgs{
+			Active:           pulumi.Bool(true),
+			DisplayName:      pulumi.String("example webhook"),
+			OrganizationName: pulumi.String("example"),
+			PayloadURL:       pulumi.String("https://example.com/webhook"),
+		}, nil)
+		if err != nil {
+			return fmt.Errorf("error creating webhook: %v", err)
+		}
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using Pulumi.PulumiService;
+class PulumiServiceWebhook: Stack
+{
+    public PulumiServiceWebhook()
+    {
+        var webhook = new Webhook("example-webhook", new WebhookArgs{
+            Active = true,
+            DisplayName = "example webhook",
+            OrganizationName = "example",
+            PayloadUrl = "https://example.com/webhook"
+        })
+    }
+}
+```
+
+{{% /choosable %}}
+{{< /chooser >}}
+
 #### Create an Organization Webhook
 
 1. Navigate to **Settings** > **Webhooks**.
@@ -62,10 +138,13 @@ or by [using the API](/docs/pulumi-cloud/cloud-rest-api/#create-webhook) directl
 1. Navigate to the stack.
 2. Then navigate to **Settings** > **Webhooks**
 3. Select **Create webhook**.
-4. Select between a slack-formatted webhook or generic JSON webhooks.
+4. Select between a slack-formatted, Deployment, or generic JSON webhooks.
 5. If you selected `Slack`, you will be prompted to provide a Slack webhook URL and a display name.
-6. If you selected `Webhook`, provide a display name, payload URL, and optionally a secret.
-7. Choose between receiving all events or only receiving specific events using the filters menu.
+6. If you selected `Deployment`, you will need to specify the Stack to deploy in the format `project/stack`.
+7. If you selected `Webhook`, provide a display name, payload URL, and optionally a secret.
+8. Choose between receiving all events or only receiving specific events using the filters menu.
+
+![Stack webhooks form](../ui-webhooks.png)
 
 ## Event Filtering
 
@@ -105,6 +184,12 @@ You can either create your own Slack app (or use an existing one you may already
 follow the link below to quickly get started with a pre-defined Slack app manifest.
 
 <div class="btn btn-secondary"><a target="_blank" href="https://api.slack.com/apps?new_app=1&manifest_yaml=display_information%3A%0A%20%20name%3A%20pulumi-slack-notifications%0A%20%20description%3A%20Funnel%20Pulumi%20webhooks%20to%20Slack%0A%20%20background_color%3A%20%22%238a3391%22%0Afeatures%3A%0A%20%20bot_user%3A%0A%20%20%20%20display_name%3A%20pulumi-slack-notifications%0A%20%20%20%20always_online%3A%20false%0Aoauth_config%3A%0A%20%20scopes%3A%0A%20%20%20%20bot%3A%0A%20%20%20%20%20%20-%20incoming-webhook%0Asettings%3A%0A%20%20org_deploy_enabled%3A%20false%0A%20%20socket_mode_enabled%3A%20false%0A%20%20token_rotation_enabled%3A%20false" class="tile h-full">Create a Slack app from manifest</a></div>
+
+### Deployment Webhooks
+
+The Deployments webhook destination lets you trigger updates on other stacks via [Pulumi Deployments](/docs/pulumi-cloud/deployments/), usually in reponse to `update_succeeded` events. This enables you to keep dependent stacks up to date automatically which is often necessary when using [stack references](/docs/concepts/stack/#stackreferences).
+
+Deployment webhooks require that your stacks are configured with [Deployment Settings](/docs/pulumi-cloud/deployments/reference/#deployment-settings).
 
 ### Generic JSON Webhooks
 
