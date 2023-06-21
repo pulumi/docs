@@ -6,26 +6,12 @@ resources, so run `auth application-default login` command to obtain those crede
 
 <div class="highlight">
     <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="no-select">$ </span>gcloud auth application-default login</code></pre>
-    <div class="copy-button-container">
-        <pulumi-tooltip
-            ><span class="tooltip-target"
-                ><button class="copy-button"><i class="far fa-copy copy text-xl"></i></button></span
-            ><span class="tooltip-content" role="tooltip"><span slot="content">Copy</span></span></pulumi-tooltip
-        >
-    </div>
 </div>
 
 To configure Pulumi to interact with your Google Cloud project, set it with the `pulumi config` command using the project's ID:
 
 <div class="highlight">
     <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="no-select">$ </span>pulumi config set {{ $type }}:project your-gcp-project-id</code></pre>
-    <div class="copy-button-container">
-        <pulumi-tooltip
-            ><span class="tooltip-target"
-                ><button class="copy-button"><i class="far fa-copy copy text-xl"></i></button></span
-            ><span class="tooltip-content" role="tooltip"><span slot="content">Copy</span></span></pulumi-tooltip
-        >
-    </div>
 </div>
 
 You may also set your Google Cloud Project via environment variable (listed in order of precedence):
@@ -39,11 +25,4 @@ You may also set your Google Cloud Project via environment variable (listed in o
 
 <div class="highlight">
     <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="no-select">$ </span>export GOOGLE_PROJECT=your-gcp-project-id</code></pre>
-    <div class="copy-button-container">
-        <pulumi-tooltip
-            ><span class="tooltip-target"
-                ><button class="copy-button"><i class="far fa-copy copy text-xl"></i></button></span
-            ><span class="tooltip-content" role="tooltip"><span slot="content">Copy</span></span></pulumi-tooltip
-        >
-    </div>
 </div>

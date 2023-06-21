@@ -84,10 +84,12 @@ To start, open `__main__.py` and add the following right after the storage accou
 
 ```python
 # Enable static website support
-static_website = storage.StorageAccountStaticWebsite("staticWebsite",
+static_website = storage.StorageAccountStaticWebsite(
+    "staticWebsite",
     account_name=account.name,
     resource_group_name=resource_group.name,
-    index_document="index.html")
+    index_document="index.html",
+)
 ```
 
 {{% /choosable %}}
@@ -189,12 +191,14 @@ const indexHtml = new storage.Blob("index.html", {
 
 ```python
 # Upload the file
-index_html = storage.Blob("index.html",
+index_html = storage.Blob(
+    "index.html",
     resource_group_name=resource_group.name,
     account_name=account.name,
     container_name=static_website.container_name,
     source=pulumi.FileAsset("index.html"),
-    content_type="text/html")
+    content_type="text/html",
+)
 ```
 
 {{% /choosable %}}

@@ -38,8 +38,8 @@ Resources:
     3 unchanged
 
 Do you want to perform this update?
-  yes
-> no
+> yes
+  no
   details
 ```
 
@@ -115,7 +115,7 @@ $ curl $(pulumi stack output staticEndpoint)
 
 {{% /choosable %}}
 
-And you should see:
+And in a few moments, you should see:
 
 ```bash
 <html>
