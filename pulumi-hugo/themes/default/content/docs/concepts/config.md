@@ -588,7 +588,7 @@ packages.
 In the following example, the default providers for [aws](/registry/packages/aws/) and [kubernetes](/registry/packages/kubernetes/) are disabled.
 
 ```yaml
-- pulumi:disable-default-providers:
-    - aws
-    - kubernetes
+pulumi:disable-default-providers:
+  - aws
+  - kubernetes
 ```
