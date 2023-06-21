@@ -51,15 +51,16 @@ jobs:
       - name: Build and deploy
         run: make ci_push
         env:
-          # AWS_ACCESS_KEY_ID: ${{ secrets.CI_AWS_ACCESS_KEY_ID }}
-          # AWS_SECRET_ACCESS_KEY: ${{ secrets.CI_AWS_SECRET_ACCESS_KEY }}
           CDN_PULUMI_URN: ${{ vars.CDN_PULUMI_URN }}
           DEPLOYMENT_ENVIRONMENT: ${{ vars.DEPLOYMENT_ENVIRONMENT }}
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           PULUMI_STACK_NAME: ${{ vars.PULUMI_STACK_NAME }}
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_OPTIONS: "--max_old_space_size=4096"
+          ALGOLIA_APP_ID: ${{ vars.ALGOLIA_APP_ID }}
+          ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}
+          ALGOLIA_APP_ADMIN_KEY: ${{  secrets.ALGOLIA_APP_ADMIN_KEY }}
+          NODE_OPTIONS: "--max_old_space_size=8192"
 
       - name: Archive test results
         uses: actions/upload-artifact@v2
