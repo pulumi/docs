@@ -1,7 +1,6 @@
 ---
 title: "Programming Model"
-aliases:
-- /docs/reference/programming-model/
+url: /docs/intro/concepts/programming-model
 block_external_search_index: true
 ---
 
@@ -58,4 +57,4 @@ block_external_search_index: true
 -->
 <meta http-equiv="refresh" content="4; url=/docs/concepts">
 
-This content has moved. Redirecting to [Architecture &amp; Concepts](/docs/concepts)...
+This content has moved. Redirecting to [Pulumi Concepts](/docs/concepts)....
