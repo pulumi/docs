@@ -18,7 +18,7 @@ The Pulumi YAML provider supports programs written in YAML or JSON.  In both cas
 
 | Property | Type | Required | Expression | Description |
 | - | - | - | - | - |
-| `config | [config options](/docs/reference/pulumi-yaml/#config-options) | No | No | Config specifies the [Pulumi config](/docs/concepts/config/) inputs to the deployment. |
+| `config` | [config options](/docs/reference/pulumi-yaml/#config-options) | No | No | Config specifies the [Pulumi config](/docs/concepts/config/) inputs to the deployment. |
 | `resources` | map[string]Resource | No | No | Resources declares the [Pulumi resources](/docs/concepts/resources/) that will be deployed and managed by the program |
 | `variables` | map[string]Expression | No | Yes | Variables specifies intermediate values of the program, the values of variables are expressions that can be re-used. |
 | `outputs` | map[string]Expression | No | Yes | Outputs specifies the [Pulumi stack outputs](/docs/concepts/stack#outputs) of the program and how they are computed from the `resources` is a value of the appropriate type for the template to use if no value is specified. |
@@ -75,7 +75,7 @@ The `dependsOn`, `parent`, `provider`, and `providers` values permit expressions
 | Property | Type | Description |
 | - | - | - |
 | `additionalSecretOutputs` | string[] | AdditionalSecretOutputs specifies properties that must be encrypted as secrets |
-| `aliases` | string[]  Aliases specifies names that this resource used to have, so that renaming or refactoring doesn’t replace it |
+| `aliases` | string[] | Aliases specifies names that this resource used to have, so that renaming or refactoring doesn’t replace it |
 | `customTimeouts` | [Custom Timeout](#custom-timeout) | CustomTimeouts overrides the default retry/timeout behavior for resource provisioning |
 | `deleteBeforeReplace` | bool | DeleteBeforeReplace  overrides the default create-before-delete behavior when replacing |
 | `dependsOn` | Expression[] | DependsOn makes this resource explicitly depend on another resource, by name, so that it won't be created before the dependent finishes being created (and the reverse for destruction). Normally, Pulumi automatically tracks implicit dependencies through inputs/outputs, but this can be used when dependencies aren't captured purely from input/output edges.|
@@ -84,7 +84,7 @@ The `dependsOn`, `parent`, `provider`, and `providers` values permit expressions
 | `parent` | Expression | Parent specifies a parent for the resource |
 | `protect` | bool | Protect prevents accidental deletion of a resource |
 | `provider` | Expression | Provider specifies an explicitly configured provider, instead of using the default global provider |
-| `providers`  map[string]Expression | Map of providers for a resource and its children. |
+| `providers` |  map[string]Expression | Map of providers for a resource and its children. |
 | `version` | string | Version specifies a provider plugin version that should be used when operating on a resource |
 | `pluginDownloadURL` | string | PluginDownloadURL specifies a provider plugin download URL  |
 | `replaceOnChanges` | string[] | ReplaceOnChanges specifies if changes to certain properties on a resource should force replacement instead of an in-place update. |
@@ -340,7 +340,7 @@ The  `parent` and `provider` values permit expressions which must use interpolat
 | Property | Type | Description |
 | - | - | - |
 | `parent` | Expression | Parent specifies a parent for the resource |
-| `provider` | Expression  Provider specifies an explicitly configured provider, instead of using the default global provider |
+| `provider` | Expression | Provider specifies an explicitly configured provider, instead of using the default global provider |
 | `version` | string | Version specifies a provider plugin version that should be used when operating on a resource |
 | `pluginDownloadURL` | string | Version specifies a URL that should be used when to download the provider plugin |
 
