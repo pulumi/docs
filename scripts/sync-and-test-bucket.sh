@@ -71,12 +71,15 @@ echo "Synchronizing to $destination_bucket_uri..."
 aws s3 sync "$build_dir" "$destination_bucket_uri" --acl public-read --delete --quiet --region "$(aws_region)"
 
 if [[ "$1" == "update" ]]; then
-    # We host the CSS files in a separate bucket that `/css`` routes to to enable managing the bundles
-    # generated from both the docs and registry repos.
-    cssBucket=$(pulumi -C infrastructure stack output cssS3BucketName)
-    # Upload the CSS bundle files to the CSS bucket.
-    echo "Syncing CSS files to the CSS bucket"
-    aws s3 cp "${build_dir}/css/" "s3://${cssBucket}/css/" --acl public-read  --content-type "text/css" --region "$(aws_region)" --recursive
+    # We host the bundle files in a separate bucket that `/css` and `js` routes to to enable managing the bundles
+    # generated from both the docs and hugo repos.
+    bundleBucket=$(pulumi -C infrastructure stack output bundlesS3BucketName)
+    # Upload the CSS/JS bundle files to the bundles bucket.
+    echo "Syncing CSS files to the bundles bucket"
+    aws s3 cp "${build_dir}/css/" "s3://${bundleBucket}/css/" --acl public-read  --content-type "text/css" --region "$(aws_region)" --recursive
+
+    echo "Syncing JS files to the bundles bucket"
+    aws s3 cp "${build_dir}/js/" "s3://${bundleBucket}/js/" --acl public-read  --content-type "text/javascript" --region "$(aws_region)" --recursive
 fi
 
 echo "Sync complete."

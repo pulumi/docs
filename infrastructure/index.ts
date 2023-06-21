@@ -115,31 +115,31 @@ const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {
     }],
 });
 
-// Create a bucket to store css bundle files. These will be served under the /css route using a custom cloudfront behavior
+// Create a bucket to store  bundle files. These will be served under the /css, /js route using a custom cloudfront behavior
 // which will only be configured in the testing flow.
-const cssBucket = new aws.s3.Bucket("css-bucket", {
+const bundlesBucket = new aws.s3.Bucket("bundles-bucket", {
     website: {
         indexDocument: "index.html",
     },
 });
 
-const cssBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("css-public-access-block", {
-    bucket: cssBucket.id,
+const bundlesBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("bundles-public-access-block", {
+    bucket: bundlesBucket.id,
     blockPublicAcls: false,
 });
 
-const cssBucketOwnershipControls = new aws.s3.BucketOwnershipControls("css-bucket-ownership-controls", {
-    bucket: cssBucket.id,
+const bundlesBucketOwnershipControls = new aws.s3.BucketOwnershipControls("bundles-bucket-ownership-controls", {
+    bucket: bundlesBucket.id,
     rule: {
         objectOwnership: "ObjectWriter"
     }
 });
 
-const cssBucketAcl = new aws.s3.BucketAclV2("css-bucket-acl", {
-    bucket: cssBucket.id,
+const bundlesBucketAcl = new aws.s3.BucketAclV2("bundles-bucket-acl", {
+    bucket: bundlesBucket.id,
     acl: aws.s3.PublicReadAcl,
 }, {
-    dependsOn: [cssBucketPublicAccessBlock, cssBucketOwnershipControls],
+    dependsOn: [bundlesBucketPublicAccessBlock, bundlesBucketOwnershipControls],
 });
 
 // This needs to be set in order to allow the use of ACLs. This was added to update our infrastructure to be
@@ -296,9 +296,9 @@ const baseCacheBehavior = {
 };
 
 const registryOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
-const cssOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
+const bundleOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
 const registryBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
-const cssBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
+const bundleBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
 
 // Only provision additional cloudfront behavors and origins if we're in the testing flow as to not make
 // any changes to the production infrastructure at this point.
@@ -315,10 +315,10 @@ if (config.testingFlow && registryBucketName) {
             }
         }
     );
-    cssOrigins.push(
+    bundleOrigins.push(
         {
-            originId: cssBucket.arn,
-            domainName: cssBucket.websiteEndpoint,
+            originId: bundlesBucket.arn,
+            domainName: bundlesBucket.websiteEndpoint,
             customOriginConfig: {
                 originProtocolPolicy: "http-only",
                 httpPort: 80,
@@ -401,11 +401,29 @@ if (config.testingFlow && registryBucketName) {
             },
         },
     )
-    cssBehaviors.push(
+    bundleBehaviors.push(
         {
             ...baseCacheBehavior,
-            targetOriginId: cssBucket.arn,
+            targetOriginId: bundlesBucket.arn,
             pathPattern: "/css/*",
+            defaultTtl: oneHour,
+            maxTtl: oneHour,
+            forwardedValues: {
+                cookies: {
+                    forward: "none",
+                },
+                queryString: false,
+                headers: [
+                    "Origin",
+                    "Access-Control-Request-Headers",
+                    "Access-Control-Request-Method",
+                ],
+            },
+        },
+        {
+            ...baseCacheBehavior,
+            targetOriginId: bundlesBucket.arn,
+            pathPattern: "/js/*",
             defaultTtl: oneHour,
             maxTtl: oneHour,
             forwardedValues: {
@@ -476,7 +494,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         },
         // Add registry and css bucket origins. These will be empty in the current production flow.
         ...registryOrigins,
-        ...cssOrigins
+        ...bundleOrigins
     ],
 
     // Default object to serve when no path is given.
@@ -489,7 +507,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
 
     orderedCacheBehaviors: [
         ...registryBehaviors,
-        ...cssBehaviors,
+        ...bundleBehaviors,
         {
             ...baseCacheBehavior,
             targetOriginId: uploadsBucket.arn,
@@ -715,4 +733,4 @@ export const websiteDomain = config.websiteDomain;
 export const registryBucketWebsiteDomain = registryBucket.websiteEndpoint;
 export const registryS3BucketName = registryBucket.bucket;
 export const originS3BucketName = originBucket.bucket;
-export const cssS3BucketName = cssBucket.bucket;
+export const bundlesS3BucketName = bundlesBucket.bucket;
