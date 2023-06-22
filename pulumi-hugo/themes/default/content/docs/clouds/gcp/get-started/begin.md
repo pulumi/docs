@@ -70,7 +70,19 @@ Pulumi requires cloud credentials to manage and provision resources. You must us
 
 In this guide, you will need an IAM user account with permissions that can create and populate a Cloud Storage bucket, such as those in the predefined Storage Admin (`roles/storage.admin`) or the Storage Legacy Bucket Owner (`roles/storage.legacyBucketOwner`) roles.
 
-{{% configure-gcp %}}
+When developing locally, we recommend that you install the [Google Cloud SDK](https://cloud.google.com/sdk/install) and then [authorize access with a user account](https://cloud.google.com/sdk/docs/authorizing#authorizing_with_a_user_account).
+
+If `gcloud` is not configured to interact with your Google Cloud project, set it with the `config` command using the project's ID:
+
+```bash
+gcloud config set project <YOUR_GCP_PROJECT_ID>
+```
+
+Next, Pulumi requires default application credentials to interact with your Google Cloud resources, so run `auth application-default login` command to obtain those credentials.
+
+```bash
+gcloud auth application-default login
+```
 
 For additional information on setting and using Google Cloud credentials, see [Google Cloud Setup](/registry/packages/gcp/installation-configuration/).
 
