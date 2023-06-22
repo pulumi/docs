@@ -100,6 +100,7 @@ module.exports = {
 
     // Rules are explicit instructions that apply fine-grained control over how certain queries are handled.
     // https://www.algolia.com/doc/guides/managing-results/rules/rules-overview/
+    // https://www.algolia.com/doc/api-reference/api-methods/save-rule
     getRules() {
         return [
 
@@ -115,15 +116,95 @@ module.exports = {
                     },
                 ],
                 consequence: {
+                    filterPromotes: true,
                     promote: [
                         {
+                            position: 0,
                             objectIDs: [
                                 page.getObjectID({ href: "/docs/pulumi-cloud/" }),
                             ],
-                            position: 0,
                         },
                     ],
+                },
+            },
+
+            // When the query contains "awsx" and the section is Registry, return AWSx, API Gateway, and EKS as the top results.
+            {
+                objectID: "contains-awsx-and-is-registry",
+                enabled: true,
+                conditions: [
+                    {
+                        anchoring: "contains",
+                        pattern: "awsx",
+                        alternatives: true,
+                        filters: "(\"section\":\"Registry\")"
+                    }
+                ],
+                consequence: {
                     filterPromotes: true,
+                    promote: [
+                        {
+                            position: 0,
+                            objectIDs: [
+                                page.getObjectID({ href: "/registry/packages/awsx/" }),
+                                page.getObjectID({ href: "/registry/packages/aws-apigateway/" }),
+                                page.getObjectID({ href: "/registry/packages/eks/" }),
+                            ],
+                        },
+                    ],
+                },
+            },
+
+            // When the query contains "awsx" and the section is Docs, return the AWS Guides as the top result.
+            {
+                objectID: "contains-awsx-and-is-docs",
+                enabled: true,
+                conditions: [
+                    {
+                        anchoring: "contains",
+                        pattern: "awsx",
+                        alternatives: true,
+                        filters: "(\"section\":\"Docs\")"
+                    }
+                ],
+                consequence: {
+                    filterPromotes: true,
+                    promote: [
+                        {
+                            position: 0,
+                            objectIDs: [
+                                page.getObjectID({ href: "/docs/clouds/aws/guides/" }),
+                            ],
+                        },
+                    ],
+                },
+            },
+
+            // When the query contains "awsx" and the section is "Docs or Registry", return the Guides, AWSx, API Gateway, and EKS.
+            {
+                objectID: "contains-awsx-and-is-docs-or-registry",
+                enabled: true,
+                conditions: [
+                    {
+                        anchoring: "contains",
+                        pattern: "awsx",
+                        alternatives: true,
+                        filters: "(\"section\":\"Docs\" OR \"section\":\"Registry\")"
+                    }
+                ],
+                consequence: {
+                    filterPromotes: true,
+                    promote: [
+                        {
+                            position: 0,
+                            objectIDs: [
+                                page.getObjectID({ href: "/docs/clouds/aws/guides/" }),
+                                page.getObjectID({ href: "/registry/packages/awsx/" }),
+                                page.getObjectID({ href: "/registry/packages/aws-apigateway/" }),
+                                page.getObjectID({ href: "/registry/packages/eks/" }),
+                            ],
+                        },
+                    ],
                 },
             },
         ];
