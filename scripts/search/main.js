@@ -32,55 +32,71 @@ if (!config.appID || !config.searchAPIKey || !config.adminAPIKey || !config.inde
 const client = algoliasearch(config.appID, config.adminAPIKey);
 const algoliaIndex = client.initIndex(config.indexName);
 
-// Generate a list of primary page objects. This list contains one record for every page of the site.
-console.log("\nBuilding search index...");
-console.log(" ↳ Building primary page objects...");
-const primaryPageObjects = page.getPrimaryObjects(hugoPageItems);
+async function generateIndexData() {
 
-// Generate a list of secondary objects. This list contains additional records for things like H2
-// headings and other DOM-resident content that we can't get as easily by other means.
-console.log(" ↳ Building secondary page objects...");
-const secondaryPageObjects = page.getSecondaryObjects(primaryPageObjects);
+    // Generate a list of primary page objects. This list contains one record for every page of the site.
+    console.log("\nBuilding search index...");
+    console.log(" ↳ Building primary page objects...");
+    const primaryPageObjects = page.getPrimaryObjects(hugoPageItems);
 
-// Generate a list of all Registry items -- modules, resources, functions, etc.
-console.log(" ↳ Building Registry resource objects...");
-const registryObjects = registry.getObjects(pathToRegistryPackagesJSON, hugoPageItems);
+    // Generate a list of secondary objects. This list contains additional records for things like H2
+    // headings and other DOM-resident content that we can't get as easily by other means.
+    console.log(" ↳ Building secondary page objects...");
+    const secondaryPageObjects = page.getSecondaryObjects(primaryPageObjects);
 
-// Remove any objects from primaryPageObjects that also exist in registryObjects (to de-dupe).
-const filteredPageObjects = primaryPageObjects.filter(o => registryObjects.find(ro => ro.href === o.href) === undefined);
+    // Generate a list of all Registry items -- modules, resources, functions, etc.
+    console.log(" ↳ Building Registry resource objects...");
+    const registryObjects = registry.getObjects(pathToRegistryPackagesJSON, hugoPageItems);
 
-// Stitch these lists together into one tidy bundle.
-const allObjects = [
-    ...filteredPageObjects,
-    ...secondaryPageObjects,
-    ...registryObjects,
-];
+    // Remove any objects from primaryPageObjects that also exist in registryObjects (to de-dupe).
+    const filteredPageObjects = primaryPageObjects.filter(o => registryObjects.find(ro => ro.href === o.href) === undefined);
 
-// Gather up index settings, synonyms, and rules.
-const indexSettings = {
-    searchableAttributes: settings.getSearchableAttributes(),
-    attributesForFaceting: settings.getAttributesForFaceting(),
-    attributesToHighlight: settings.getAttributesToHighlight(),
-    customRanking: settings.getCustomRanking(),
-    ignorePlurals: true,
-};
-const indexSynonyms = settings.getSynonyms();
-const indexRules = settings.getRules();
+    // Generate a full snapshot of the Registry, including all packages, resources, and supporting types.
+    const resourcePropertiesObjects = await registry.getPropertiesObjects();
 
-// Write the results, just so we have them.
-console.log(" ↳ Writing results...");
-fs.writeFileSync("./public/search-index.json", JSON.stringify(allObjects, null, 4));
-fs.writeFileSync("./public/search-index-settings.json", JSON.stringify({ indexSettings, indexSynonyms, indexRules }, null, 4));
-console.log(" ↳ Done. ✨\n");
+    // Stitch these lists together into one tidy bundle.
+    const indexObjects = [
+        ...filteredPageObjects,
+        ...secondaryPageObjects,
+        ...registryObjects,
+        ...resourcePropertiesObjects,
+    ];
+
+    // Gather up index settings, synonyms, and rules.
+    const indexSettings = {
+        searchableAttributes: settings.getSearchableAttributes(),
+        attributesForFaceting: settings.getAttributesForFaceting(),
+        attributesToHighlight: settings.getAttributesToHighlight(),
+        customRanking: settings.getCustomRanking(),
+        ignorePlurals: true,
+    };
+
+    const indexSynonyms = settings.getSynonyms();
+    const indexRules = settings.getRules();
+
+    // Write the results, just so we have them.
+    console.log("Writing results...");
+    fs.writeFileSync("./public/search-index.json", JSON.stringify(indexObjects, null, 4));
+    fs.writeFileSync("./public/search-index-settings.json", JSON.stringify({ indexSettings, indexSynonyms, indexRules }, null, 4));
+    fs.writeFileSync(`./public/search-registry-snapshot.json`, JSON.stringify(resourcePropertiesObjects, null, 4));
+    console.log(" ↳ Done. ✨");
+
+    return {
+        indexObjects,
+        indexSettings,
+        indexSynonyms,
+        indexRules,
+    };
+}
 
 // Update the Algolia index, including all page objects and index settings (like searchable
 // attributes, custom ranking, synonyms, etc.).
-async function updateIndex(objects) {
-    console.log("Updating search index...");
+async function updateIndex({ indexObjects, indexSettings, indexSynonyms, indexRules }) {
+    console.log("\nUpdating search index...");
 
     try {
         console.log(` ↳ Replacing all records in the '${ config.indexName }' index...`);
-        const result = await algoliaIndex.replaceAllObjects(objects, { safe: true });
+        const result = await algoliaIndex.replaceAllObjects(indexObjects, { safe: true });
         console.log(`   ↳ ${result.objectIDs.length} records updated.`);
 
         console.log(` ↳ Updating index settings...`)
@@ -99,4 +115,5 @@ async function updateIndex(objects) {
     }
 }
 
-updateIndex(allObjects);
+generateIndexData()
+    .then(async results => await updateIndex(results));

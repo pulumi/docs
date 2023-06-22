@@ -20,6 +20,7 @@
     "http-server": "^0.12.1",
     "js-yaml": "^3.13.1",
     "jsdom": "^22.0.0",
+    "node-fetch": "2",
     "parse-diff": "^0.8.1",
     "postcss": "^8.3.7",
     "postcss-cli": "^8.3.1",
