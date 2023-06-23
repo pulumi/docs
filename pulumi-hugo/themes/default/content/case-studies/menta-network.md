@@ -45,9 +45,8 @@ services and applications.
 
 In Menta Network's local market, there are multiple 'Black Friday'-style retail events
 including El Buen Fin ("The Good Weekend") in November, and "Hot Sale" in May. Together,
-these events capture a significant share of the [$22.6B total e-commerce revenue in
-Mexico](https://www.jpmorgan.com/merchant-services/insights/reports/mexico) and drive
-extremely high traffic to retailers' websites during sale events.
+these events capture a significant share of the $22.6B total e-commerce revenue in
+Mexico and drive extremely high traffic to retailers' websites during sale events.
 
 For Menta Network's retail clients, having a responsive and performant digital experience
 is the key to success during these sales. This is especially critical as Mexico has one of
