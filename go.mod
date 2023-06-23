@@ -3,6 +3,6 @@ module github.com/pulumi/pulumi-docs
 go 1.16
 
 require (
-	github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20230622133731-0a9189d67060 // indirect
-	github.com/pulumi/registry/themes/default v0.0.0-20230623121100-b6c3925952cb // indirect
+	github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20230623143457-5594fd0111e6 // indirect
+	github.com/pulumi/registry/themes/default v0.0.0-20230623145933-3c5cfdb1ca05 // indirect
 )
