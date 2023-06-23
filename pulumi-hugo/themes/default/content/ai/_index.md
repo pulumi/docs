@@ -29,10 +29,12 @@ Use the chat widget to describe the infrastructure you'd like to build, making a
 
 1. Deploy with `pulumi up`
 
+Note: Submissions and results may be used to improve Pulumi AI.
+
 ## Try the CLI {#cli}
 
 When you're ready to go further, [try the Pulumi AI CLI](https://github.com/pulumi/pulumi-ai), which lets you build cloud infrastructure interactively in real time.
 
 ### Create an Issue {#issue}
 
-Notice a bug or have a feature request? Please open an issue in our <a href="https://github.com/pulumi/pulumi-ai/issues" target="_blank">GitHub repo!</a>
+Notice a bug or have a feature request? Open an issue <a href="https://github.com/pulumi/pulumi-ai/issues" target="_blank">on GitHub</a>!
