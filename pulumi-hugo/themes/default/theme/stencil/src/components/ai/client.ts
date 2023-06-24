@@ -19,7 +19,7 @@ import { parseCookie } from "../../util/util";
 export class PulumiAIClient {
     private socket: WebSocket;
 
-    public MAX_PROMPT_LENGTH = 1024;
+    public MAX_PROMPT_LENGTH = 10240;
     public MAX_PROGRAM_LENGTH = 204800;
 
     private ajsAnonymousID: string;

@@ -408,7 +408,7 @@ export class PulumiAI {
     }
 
     private get runnable() {
-        return this.connectionStatus === "Connected" && !this.running && this.input.value.trim() != "";
+        return this.connectionStatus === "Connected" && !this.running && this.input.value.trim() !== "";
     }
 
     private highlight(parentNode: HTMLElement): void {
@@ -502,6 +502,7 @@ export class PulumiAI {
     private clear() {
         requestAnimationFrame(() => {
             this.input.value = "";
+            this.input.rows = 1;
             this.prompt = "";
         });
     }
@@ -594,13 +595,17 @@ export class PulumiAI {
     private prepareInput() {
         this.input.addEventListener("keydown", (event: KeyboardEvent) => {
             if (event.key === "Enter") {
-                if (event.shiftKey) {
+
+                // If shift was pressed, add a row (up to the max number of rows).
+                if (event.shiftKey && this.input.rows <= MAX_INPUT_ROWS) {
                     this.input.rows++;
                     return;
                 }
 
                 event.preventDefault();
-                if (this.runnable) {
+
+                // If control or enter was pressed, or there's only one row, submit.
+                if (this.runnable && (this.input.rows === 1 || (event.ctrlKey || event.metaKey))) {
                     this.submit();
                 }
             }
