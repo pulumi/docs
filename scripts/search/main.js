@@ -16,6 +16,9 @@ const hugoPageItems = JSON.parse(fs.readFileSync(pathToFullSiteJSON, "utf-8").to
 // index to make them more findable by their type names and the like.
 const pathToRegistryPackagesJSON = "./public/registry/packages/navs";
 
+// Videos!
+const pathToYouTubeJSON = "./public/search-youtube.json";
+
 // Configuration values required for updating the Algolia index.
 const config = {
     appID: process.env.ALGOLIA_APP_ID,
@@ -49,11 +52,15 @@ const registryObjects = registry.getObjects(pathToRegistryPackagesJSON, hugoPage
 // Remove any objects from primaryPageObjects that also exist in registryObjects (to de-dupe).
 const filteredPageObjects = primaryPageObjects.filter(o => registryObjects.find(ro => ro.href === o.href) === undefined);
 
+// Load up YouTube JSON.
+const youTubeObjects = JSON.parse(fs.readFileSync(pathToYouTubeJSON, "utf-8").toString());
+
 // Stitch these lists together into one tidy bundle.
 const allObjects = [
     ...filteredPageObjects,
     ...secondaryPageObjects,
     ...registryObjects,
+    ...youTubeObjects,
 ];
 
 // Gather up index settings, synonyms, and rules.
