@@ -617,7 +617,8 @@ body.section-registry {
 
         div.package-card {
             display: none;
-
+            box-shadow: 0px 4px 4px 0px #DCDCDC40;
+            
             @media (min-width: 1024px) {
                 display: flex;
             }
