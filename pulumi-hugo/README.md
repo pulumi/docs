@@ -138,7 +138,7 @@ We currently index every page of the website, including the blog and the Registr
 
 Because of this, it's important to be thoughtful about the terms you use for these fields, especially titles, keywords, descriptions, and H2 headings. If you want your content to be findable by specific terms, you must make sure those terms exist in one or more of the fields listed above.
 
-For example, if you were writing a guide to building an ETL pipeline with Redshift, and you wanted to make sure the page page would be surfaced for queries like `redshift data warehouse etl`, you might construct the page's frontmatter in the following way:
+For example, if you were writing a guide to building an ETL pipeline with Redshift, and you wanted to make sure the page would be surfaced for queries like `redshift data warehouse etl`, you might construct the page's frontmatter in the following way:
 
 ```yaml
 title: Build an ETL pipeline with Redshift and AWS Glue
