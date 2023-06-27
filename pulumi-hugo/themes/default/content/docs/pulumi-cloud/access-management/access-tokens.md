@@ -45,7 +45,7 @@ Both organization and team token activities produce audit log events which are a
 | Get stack tags | ✅ | ✅ | ✅ |
 | Set stack yag | ✅ | ✅ | ✅ |
 | Delete stack yag | ✅ | ✅ | ✅ |
-| **Stack updates** | **Personal** | **Organziation** | **Team** |
+| **Stack updates** | **Personal** | **Organization** | **Team** |
 | List stack updates | ✅ | ✅ | ✅ |
 | Get update status | ✅ | ✅ | ✅ |
 | List update events | ✅ | ✅ | ✅ |
