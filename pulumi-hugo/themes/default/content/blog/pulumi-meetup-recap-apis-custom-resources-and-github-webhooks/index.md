@@ -8,7 +8,7 @@ meta_desc: "Pulumi's July meetup featured talks about how programming languages 
 meta_image: "meta.png"
 ---
 
-Last Wednesday, we invited members of our local Seattle community to Pulumi HQ for the [July Pulumi Up meetup](https://www.meetup.com/Pulumi-Seattle/events/262610954/). The evening began with some networking time wherein our guests met some Pulumi engineers and users they may have only ever interacted with over [Pulumi’s Community Slack](https://slack.pulumi.com/) while enjoying free pizza and beverages. This month’s meetup featured two talks by Pulumi engineers.
+Last Wednesday, we invited members of our local Seattle community to Pulumi HQ for the [July Pulumi Up meetup](https://www.meetup.com/pulumi-seattle/events/262610954/). The evening began with some networking time wherein our guests met some Pulumi engineers and users they may have only ever interacted with over [Pulumi’s Community Slack](https://slack.pulumi.com/) while enjoying free pizza and beverages. This month’s meetup featured two talks by Pulumi engineers.
 
 ## Application code isn’t the only code that can have APIs
 
@@ -24,4 +24,4 @@ Next up, [Matt Ellis](https://twitter.com/ellism) presented “Automating your t
 
 After the talks, there was time for more networking and a last chance to get one more slice of pizza. After some more discussions inspired by the speakers, we closed out the evening.
 
-If you’re in the Seattle area, be sure to join the [Pulumi - Seattle meetup group](https://www.meetup.com/Pulumi-Seattle) and join us for our next Pulumi Up. Otherwise, subscribe to the [Pulumi TV YouTube Channel](https://www.youtube.com/pulumitv) and watch the presentations at your leisure.
+If you’re in the Seattle area, be sure to join the [Pulumi - Seattle meetup group](https://www.meetup.com/pulumi-seattle) and join us for our next Pulumi Up. Otherwise, subscribe to the [Pulumi TV YouTube Channel](https://www.youtube.com/pulumitv) and watch the presentations at your leisure.
