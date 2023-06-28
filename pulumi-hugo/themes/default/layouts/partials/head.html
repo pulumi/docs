@@ -176,6 +176,17 @@
                 {{ if in "preview production" hugo.Environment }}
                     release: "{{ getenv "ASSET_BUNDLE_ID" }}",
                 {{ end }}
+
+                // Don't send Sentry events for browsers we don't support.
+                beforeSend(event) {
+                    const ua = event.request.headers["User-Agent"];
+
+                    if (ua && ua.match(/Linespider|Yeti/)) {
+                        return null;
+                    }
+
+                    return event;
+                }
             });
         });
     </script>
