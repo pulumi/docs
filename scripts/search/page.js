@@ -12,7 +12,14 @@ module.exports = {
     // faceting (i.e., filtering the results returned by Algolia as well as how they appear in the
     // autocomplete UI), so changes to this code should be made extra care. (Any change made here
     // without an accompanying change to the UI will likely break the UI.)
-    getTopLevelSection({ href }) {
+    getTopLevelSection(item) {
+        const href = item.href;
+        const isVideo = item.params.type === "webinars"
+            && !!item.params.main?.youtube_url
+            && !item.params.main?.presenters
+            && !item.params.main?.learn
+            && !item.params.layout;
+
         if (href.startsWith("/docs")) {
             return "Docs";
         } else if (href.startsWith("/blog")) {
@@ -21,6 +28,8 @@ module.exports = {
             return "Registry";
         } else if (href.startsWith("/templates")) {
             return "Templates";
+        } else if (href.startsWith("/resources") && isVideo) {
+            return "Videos";
         } else if (href.startsWith("/resources")) {
             return "Resources";
         }
