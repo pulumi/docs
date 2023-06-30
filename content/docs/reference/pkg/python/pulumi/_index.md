@@ -1010,12 +1010,18 @@ legal JSON string, an error is thrown.</p>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="pulumi.ConfigMissingError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi.</span></span><span class="sig-name descname"><span class="pre">ConfigMissingError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ConfigMissingError" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi.</span></span><span class="sig-name descname"><span class="pre">ConfigMissingError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">secret</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ConfigMissingError" title="Permalink to this definition"></a></dt>
 <dd><p>Indicates a configuration value is missing.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pulumi.ConfigMissingError.key">
 <span class="sig-name descname"><span class="pre">key</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pulumi.ConfigMissingError.key" title="Permalink to this definition"></a></dt>
 <dd><p>The name of the missing configuration key.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ConfigMissingError.secret">
+<span class="sig-name descname"><span class="pre">secret</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#pulumi.ConfigMissingError.secret" title="Permalink to this definition"></a></dt>
+<dd><p>If this is a secret configuration key.</p>
 </dd></dl>
 
 </dd></dl>
