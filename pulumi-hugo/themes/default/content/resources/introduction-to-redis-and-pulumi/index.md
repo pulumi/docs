@@ -2,6 +2,7 @@
 # Name of the webinar.
 title: "Introduction to Redis Cloud and Pulumi"
 meta_desc: "Join the Redis and Pulumi team to learn how to deploy Redis Cloud resources on any cloud using any programming language with Pulumi."
+meta_image: "/images/resources/intro-redis-workshop.png"
 
 # A featured webinar will display first in the list.
 featured: false
