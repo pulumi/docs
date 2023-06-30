@@ -1,0 +1,13 @@
+name: Add triage label to new issues
+on:
+  issues:
+    types:
+      - opened
+      - reopened
+jobs:
+  add-triage-label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: needs-triage
