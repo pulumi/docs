@@ -14,6 +14,8 @@ tags:
     - review stacks
 ---
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VvQcx51YL4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Today we’re excited to announce [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks) -- dedicated cloud environments that get created automatically every time a pull request is opened, all powered by [Pulumi Deployments](/docs/pulumi-cloud/deployments). Open a pull request, and Pulumi Deployments will stand up a stack with your changes and the Pulumi GitHub App will add a PR comment with the outputs from your deployment. Merge the PR and Pulumi Deployments will destroy the stack and free up the associated resources. It has never been simpler to pick up an unfamiliar codebase, make changes to **both** application *and* infrastructure code, and share a live environment for review with your teammates.
 
 ![Review Stacks Comment](comment.png)

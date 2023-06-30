@@ -26,6 +26,8 @@ We are thrilled to announce the [beta release](https://github.com/pulumi/pulumi-
 
 At Pulumi, we understand the importance of keeping up with the ever-evolving cloud landscape. The Pulumi Azure Native Provider 2.0 represents our commitment to providing you with the best tools to harness the full power of Microsoft Azure. With automatic generation from Azure API specs, we are able to provide you with same-day access to the entire [Azure API surface](https://docs.microsoft.com/en-us/rest/api/azure/) including all available properties. Let's dive into some of the key enhancements in this release!
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XfBTjYhb0G4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Reduced SDK Size for Faster Development
 
 We've listened to your feedback and have made significant optimizations to the Azure Native Provider SDKs. With careful fine-tuning and restructuring, we have achieved a significant decrease in size of over 50% for SDKs with multi-versioned modules. This improvement translates into faster development times, reduced resource consumption, and an overall smoother experience when working with the provider.

@@ -30,6 +30,8 @@ It provides:
 
 ## Resource Search
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pMEIX7LmXYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Resource Search can be accessed directly from the Pulumi Cloud dashboard or from the side navigation by navigating to **Resources**.
 
 By default, you will see a table with the resources you have access to, ordered by most recently updated.

@@ -25,6 +25,8 @@ Several common use cases are supported via the new `pulumi convert --from terraf
 * Converting your organization's existing Terraform modules to Pulumi, to be consumed as part of existing Pulumi projects
 * Converting 3rd party open source Terraform modules or projects which address a use case you want to incorporate into your existing Pulumi projects
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1MAhhNE9a3Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Supported Terraform Features
 
 The following major features are supported:

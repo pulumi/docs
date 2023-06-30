@@ -63,6 +63,17 @@
                 <div>
                     <h2 class="m-0 p-0">{{ .title }}</h2>
                     <h4 class="p-0 m-0 text-gray-800">{{ .subtitle }}</h4>
+                    <p align="center">
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/pMEIX7LmXYo"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                        ></iframe>
+                    </p>
                     <div class="max-w-4xl mx-auto my-8">{{ .description | markdownify }}</div>
                     <img class="mx-auto my-8 rounded shadow-lg" src="{{ .image }}" alt="Pulumi Insights Search" />
                 </div>
