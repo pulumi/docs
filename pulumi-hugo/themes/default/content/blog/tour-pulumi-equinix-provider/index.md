@@ -154,8 +154,6 @@ deployment = k8s.apps.v1.Deployment(
 
 Our cluster as configured will not be able to run stateful workloads due to the lack of a [StorageClass](https://kubernetes.io/docs/concepts/storage/storage-classes/) from which [PersistentVolumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) can be provisioned. Popular storage options for bare-metal/edge Kubernetes clusters include [Portworx](https://www.purestorage.com/products/cloud-native-applications/portworx.html), [Longhorn](https://longhorn.io/), [Rook](https://rook.io/), or (for non-production scenarios as data loss is likely if a node goes down) [NFS](https://kubernetes.io/docs/concepts/storage/storage-classes/#nfs).
 
-## Learning more
-
 ## Conclusion
 
 The Pulumi Equinix provider offers developers an intuitive and efficient way to interact with Equinix resources. By combining the power of Pulumi's infrastructure-as-code tooling and ecosystem along with the utility of Equinix's service offerings, you can create and manage networking and bare metal compute resources using a single tool, freeing practitioners from manual configuration so they can focus on value-driving innovation.
