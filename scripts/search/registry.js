@@ -28,6 +28,12 @@ module.exports = {
                 // For every resource in that file, generate an individual search record, including
                 // tokens as keywords to make them easier to find by copy/paste.
                 function getMember(itemPath, item) {
+
+                    // Some of the items in our registry nav files contain trailing slashes, which
+                    // don't play nicely with the string concatenation we do to build up our search
+                    // URLs. So we strip them out to avoid ending up with doubles (and thus 404s).
+                    item.link = item.link.replace(/\/+$/, "");
+
                     providerResults.push({
                         title: `${item.name} (${itemPath.concat(item.name).join(".")})`,
                         description: `API documentation for the ${item.name} ${item.type} of the ${providerTitle} provider, including examples, input and output properties, lookup functions, and supporting types.`,
