@@ -83,7 +83,11 @@ var widget = new Pulumi.Kubernetes.ApiExtensions.CustomResource("widget", new Wi
     {
         Input = "something",
     }
-}, pulumi.ReplaceOnChanges([]string{"spec.input"}));
+},
+new CustomResourceOptions
+{
+    ReplaceOnChanges = { "spec.input" },
+});
 ```
 
 {{% /choosable %}}
