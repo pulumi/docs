@@ -2,7 +2,7 @@
 
 set -o errexit -o pipefail
 
-echo "Selecting the pulumi/www-production stack"
+echo "Selecting the ${PULUMI_STACK_NAME} stack"
 pulumi login
-pulumi -C infrastructure stack select pulumi/www-production
+pulumi -C infrastructure stack select "${PULUMI_STACK_NAME}"
 

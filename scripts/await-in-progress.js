@@ -14,6 +14,8 @@ async function waitForInProgressRuns() {
     const currentRunID = parseInt(process.env.GITHUB_RUN_ID, 10);
     const workflowName = process.env.GITHUB_WORKFLOW;
     const [ owner, repo ] = process.env.GITHUB_REPOSITORY.split("/");
+    const hugoRepo = "pulumi-hugo";
+    const docsRepo = "docs";
     const branch = process.env.GITHUB_HEAD_REF || process.env.GITHUB_REF.replace("refs/heads/", "");
     const status = "in_progress";
 
@@ -22,29 +24,51 @@ async function waitForInProgressRuns() {
     });
 
     // Given the current workflow name, fetch its ID.
-    const workflows = await octokit.rest.actions.listRepoWorkflows({ owner, repo });
-    const workflow_id = workflows.data.workflows.find(workflow => workflow.name === workflowName).id;
+    const docsWorkflows = await octokit.rest.actions.listRepoWorkflows({ owner, repo: docsRepo });
+    const hugoWorkflows = await octokit.rest.actions.listRepoWorkflows({ owner, repo: hugoRepo });
 
-    // Fetch a paginated list of in-progress runs of the current workflow.
-    const runs = await octokit.paginate(
+    const docs_workflow_id = docsWorkflows.data.workflows.find(workflow => workflow.name === workflowName).id;
+    const hugo_workflow_id = hugoWorkflows.data.workflows.find(workflow => workflow.name === "Push testing").id;
+
+    // Fetch a paginated list of in-progress runs of the current workflow in docs.
+    const docsRuns = await octokit.paginate(
       octokit.rest.actions.listWorkflowRuns.endpoint.merge({
         owner,
-        repo,
+        repo: docsRepo,
         branch,
-        workflow_id,
+        workflow_id: docs_workflow_id,
         status,
       })
     );
 
+    // Fetch a paginated list of in-progress runs of the current workflow in pulumi-hugo.
+    const hugoRuns = await octokit.paginate(
+        octokit.rest.actions.listWorkflowRuns.endpoint.merge({
+          owner,
+          repo: hugoRepo,
+          branch,
+          workflow_id: hugo_workflow_id,
+          status,
+        })
+    );
+
+    const currentDocsRun = docsRuns.find(run => run.id === currentRunID);
+
     // Sort in-progress runs descendingly, excluding the current one.
-    const recent = runs
+    const recentDocs = docsRuns
         .sort((a, b) => b.id - a.id)
-        .filter(run => run.id < currentRunID);
+        .filter(run => run.run_started_at < currentDocsRun.created_at);
 
-    console.log(`Found ${recent.length} other ${workflowName} job(s) running on branch ${branch}.`);
+    console.log(`Found ${recentDocs.length} other ${workflowName} job(s) running on branch ${branch}.`);
 
-    if (recent.length > 0) {
-        const [ mostRecent ] = recent;
+    const recentHugo = hugoRuns
+        .sort((a, b) => b.id - a.id)
+        .filter(run => run.run_started_at < currentDocsRun.created_at);
+
+    console.log(`Found ${recentHugo.length} other ${workflowName} job(s) running on branch ${branch}.`);
+
+    if (recentDocs.length > 0 || recentHugo.length > 0) {
+        const [ mostRecent ] = [...recentDocs, ...recentHugo];
         console.log(`Waiting for ${mostRecent.html_url} to complete before continuing.`);
         await Promise.resolve(setTimeout(waitForInProgressRuns, 60000)); // One minute.
     } else {

@@ -115,7 +115,7 @@ export class LambdaEdge extends pulumi.ComponentResource {
                 memorySize: 128,
                 publish: true,
                 role: this.role,
-                runtime: "nodejs12.x",
+                runtime: "nodejs14.x",
                 // Note that Lambda@Edge functions have a different max timeout of 30 seconds
                 // than the regular Lambda functions.
                 timeout: 5,
