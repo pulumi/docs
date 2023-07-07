@@ -52,10 +52,10 @@
         color: #131314;
         width: 100%;
         position: relative;
-        
+
         &.is-pinned {
             box-shadow: 0 1px 12px 0 rgba(0,0,0,.06),0 1px 4px 0 rgba(0,0,0,.04);
-            
+
             @screen md {
                 @apply shadow-none;
             }
@@ -66,7 +66,7 @@
         }
 
         .logo-nav-menu {
-            
+
             @apply w-full bg-gray-850 pt-2 -ml-2 text-white font-display z-50;
             top: 44px; // Height of the nav bar at screens below large.
 
@@ -134,10 +134,10 @@
     }
 
     .logo-container {
-        @apply px-4 pb-2;
+        @apply px-3;
 
         @screen lg {
-            @apply flex items-center justify-start pl-0;
+            @apply px-0 flex items-center justify-start pl-0;
         }
     }
 
