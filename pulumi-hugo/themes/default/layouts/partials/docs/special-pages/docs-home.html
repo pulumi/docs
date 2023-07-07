@@ -3,7 +3,7 @@
 
 
 <section class="content docs-home">
-    <div class="header">
+    <div id="docs-home-banner" class="header">
         {{ $h1 := split .Params.h1 " " }}
         <h1>{{ index $h1 0 }}<strong> {{ index $h1 1 }}</strong></h1>
         {{ .Params.description | safeHTML }}

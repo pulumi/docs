@@ -38,8 +38,47 @@ $(window).on("load", function() {
         else {
             packageCardBackground.css("background", "#f9f9f9");
         }
-
+    
     });
+    
+
+    function loadContentWidthState() {
+        const contentWidthState = window.localStorage.getItem("content-width-state");
+        if (contentWidthState === "expanded") {
+            expandContentWidth();
+        } else {
+            collapseContentWidth();
+        }
+    }
+
+    let collapseContentButton = $("#collapse-content-button")
+    let expandContentButton = $("#expand-content-button")
+    
+    function expandContentWidth() {
+        $(".docs-main-content").addClass("docs-content-width-expanded");
+        if (window.location.pathname.startsWith("/registry")) {
+            $(".docs-main-content").addClass("expand-registry");
+        }
+        $("#docs-home-banner").find("p").addClass("wider");
+        $("#docs-home-banner").css("background-image", `url("/images/docs/docs-home-header-background-desktop-wide.svg")`);
+        collapseContentButton.removeClass("hide");
+        expandContentButton.addClass("hide");
+        window.localStorage.setItem("content-width-state", "expanded");
+    }
+
+    function collapseContentWidth() {
+        $(".docs-main-content").removeClass("docs-content-width-expanded");
+        $("#docs-home-banner").find("p").removeClass("wider");
+        $("#docs-home-banner").css("background-image", `url("/images/docs/docs-home-header-background-desktop.svg")`);
+        collapseContentButton.addClass("hide");
+        expandContentButton.removeClass("hide");
+        window.localStorage.setItem("content-width-state", "collaped");
+    }
+
+    expandContentButton.on("click", expandContentWidth);
+    collapseContentButton.on("click", collapseContentWidth);
+
+    loadContentWidthState();
 })(document, jQuery);
 
 function setDocsMainNavPosition() {

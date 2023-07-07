@@ -322,9 +322,26 @@ body.section-registry {
         position: relative;
         min-width: 0;
 
+        .docs-content-width-expanded {
+            @media (min-width: 1526px) {
+                max-width: 1200px !important;
+                &.expand-registry {
+                    width: 100%;
+                    max-width: 1200px !important;
+                }
+            }
+        }
+
+        .docs-content-width-collapsed {
+            @media (min-width: 1526px) {
+                max-width: 700px !important;
+            }
+        }
+
         .docs-main-content {
             min-width: 0;
             flex-shrink: 1;
+            flex-grow: 1;
             width: 700px;
             max-width: 700px;
             min-width: 0;
@@ -406,7 +423,7 @@ body.section-registry {
             }
 
             @media (min-width: 1280px) {
-                width: 340px;
+                min-width: 340px;
             }
         }
 
@@ -457,6 +474,7 @@ body.section-registry {
                 position: sticky;
                 top: 94px;
                 display: block;
+                margin-right: 10px;
 
                 .table-of-contents {
                     display: flex;

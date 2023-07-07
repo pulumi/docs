@@ -21,7 +21,8 @@ section.docs-home {
 
     div.header {
         background-image: url("/images/docs/docs-home-header-background-mobile.svg");
-        height: 197px;
+        background-repeat: no-repeat;
+        min-height: 197px;
         background-position: right 0;
         display: flex;
         flex-direction: column;
@@ -44,12 +45,18 @@ section.docs-home {
                 max-width: 436px;
             }
         }
-
+        
         @media (min-width: 1280px) {
             background-image: url("/images/docs/docs-home-header-background-desktop.svg");
             p {
                 font-size: 16px;
             }
+            
+            .wider {
+                max-width: 100%;
+                padding-right: 275px;
+            }
+            
         }
 
         div.link-buttons {

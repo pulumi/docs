@@ -5,7 +5,7 @@
     border-width: 1px;
 
     .docs-type-nav {
-        @apply flex flex-row;
+        @apply flex flex-row flex-grow;
 
         a {
             @apply flex gap-3 items-center font-display text-base;
@@ -38,6 +38,31 @@
 
         .docs-search {
             @apply m-0;
+        }
+    }
+
+    .content-width-controls {
+        width: 24px;
+        padding: 3px;
+        margin-left: 12px;
+        cursor: pointer;
+        .expand-content {
+            display: none;
+            @media (min-width: 1526px) {
+                display: block;
+            }
+            &.hide {
+                display: none;
+            }
+        }
+        .collapse-content {
+            display: none;
+            @media (min-width: 1526px) {
+                display: block;
+            }
+            &.hide {
+                display: none;
+            }
         }
     }
 }
