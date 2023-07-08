@@ -95,7 +95,7 @@ An example of the Pulumi Package Schema is below.  This schema describes a packa
 }
 ```
 
-Complete schema examples that include a much wider range of schema configuration styles are availble in these existing packages:
+Complete schema examples that include a much wider range of schema configuration styles are available in these existing packages:
 
 * [AWS](https://github.com/pulumi/pulumi-aws/blob/master/provider/cmd/pulumi-resource-aws/schema.json) - Bridged Provider Package
 * [Azure Native](https://github.com/pulumi/pulumi-azure-native/blob/master/provider/cmd/pulumi-resource-azure-native/schema.json) - Native Pulumi Provider Package
