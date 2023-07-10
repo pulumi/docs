@@ -50,6 +50,12 @@ check_links:
 	$(MAKE) ensure
 	./scripts/link-checker/check-links.sh "https://www.pulumi.com"
 
+.PHONY: check_search_urls
+check_search_urls:
+	$(MAKE) banner
+	$(MAKE) ensure
+	./scripts/search/check-urls.sh production "https://www.pulumi.com"
+
 .PHONY: new_learn_module
 new_learn_module:
 	./scripts/new-learn-module.sh
