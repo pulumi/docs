@@ -2,6 +2,7 @@
 # Name of the webinar.
 title: "From Zero to Production in Kubernetes"
 meta_desc: "Explore how to leverage the power of Python with Pulumi, an infrastructure as code platform to define and manage your Kubernetes deployments."
+meta_image: "/images/resources/zero-production-kubernetes.png"
 
 # A featured webinar will display first in the list.
 featured: false

@@ -3,6 +3,7 @@
 title: "Getting Started with Azure IaC and Review Stacks"
 title_tag: "Getting Started with Azure IaC and Review Stacks (July 2023 Workshop)"
 meta_desc: "In this workshop, we’ll explore the new Azure Native v2 provider and Pulumi Review Stacks on GitHub"
+meta_image: "/images/resources/azure-iac-review-stacks.png"
 
 # A featured webinar will display first in the list.
 featured: false
@@ -61,7 +62,7 @@ main:
     # Webinar title.
     title: "Getting Started with Azure IaC and Review Stacks"
     # URL for embedding a URL for ungated webinars.
-    youtube_url: 
+    youtube_url:
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2023-07-27T08:00:00.000-07:00
     # Duration of the webinar.
