@@ -67,27 +67,31 @@
         Metadata tags for OpenGraph and Twitter.
     -->
 
-    {{ $image := "/logos/brand/twitter-card.png" }}
-    {{ $twitter_card_type := "summary" }}
+    {{ $ogImage := "/logos/brand/og-default.png" }}
+    {{ $twitterImage := "/logos/brand/twitter-summary.png" }}
+    {{ $twitterCardType := "summary" }}
 
     {{ if .Params.meta_image }}
         {{ if in "blog templates" .Section }}
-            {{ $image = (.Resources.GetMatch .Params.meta_image).RelPermalink }}
+            {{ $ogImage = (.Resources.GetMatch .Params.meta_image).RelPermalink }}
         {{ else }}
-            {{ $image = .Params.meta_image }}
+            {{ $ogImage = .Params.meta_image }}
         {{ end }}
 
 
         <!-- Only use large-image Twitter cards where we've set meta_images. -->
-        {{ $twitter_card_type = "summary_large_image" }}
+        {{ $twitterImage = $ogImage }}
+        {{ $twitterCardType = "summary_large_image" }}
     {{ end }}
 
 
-    <meta property="og:image" content="{{ $image | absURL }}" />
+    <meta property="og:image" content="{{ $ogImage | absURL }}" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta property="og:site_name" content="pulumi" />
-    <meta name="twitter:card" content="{{ $twitter_card_type }}" />
+
+    <meta name="twitter:image" content="{{ $twitterImage | absURL }}" />
+    <meta name="twitter:card" content="{{ $twitterCardType }}" />
     <meta name="twitter:site" content="@PulumiCorp" />
 
     {{ if .Params.meta_twitter_creator }}
