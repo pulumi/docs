@@ -2737,11 +2737,11 @@ Search for resources belonging to the given organization.
 |------------|-------|---------------|----------|------------------------------------------------------------------------------------------------------------------------------------------|
 | org        | path  | string        | true     | Name of the organization to search.                                                                                                      |
 | query      | query | string        | false    | The search query to execute. If omitted all resources are returned (subject to any pagination limits).                                   |
-| sort       | query | array[string] | false    | Results are returned sorted by this field value.                                                                                         |
+| sort       | query | array[string] | false    | The field(s) by which to sort.                                                                                                           |
 | asc        | query | boolean       | false    | Whether to return results in ascending or descending sort order.                                                                         |
 | size       | query | integer       | false    | How many results to return at a time.                                                                                                    |
 | page       | query | number        | false    | The page of results to return.                                                                                                           |
-| continue   | query | string        | false    | A continuation token for pagination.                                                                                                     |
+| cursor     | query | string        | false    | A continuation token for pagination that allows fetching more than 10,000 resources.                                                     |
 | facet      | query | array[string] | false    | If provided, an aggregation will be returned with the top-5 values for the given facet, along with how many resources have those values. |
 | properties | query | boolean       | false    | Whether to include resource properties in results. Not supported for all subscriptions.                                                  |
 
@@ -2762,14 +2762,17 @@ If specified more than once, the first parameter is the primary sort order and s
 Allowed values: created, custom, delete, id, modified, module, name, package, parent.urn, pending, project, protected, provider.urn, stack, type, urn.
 
 **asc**: Whether to return results in ascending or descending sort order.
+Results are returned in descending order by default.
 
 **size**: How many results to return at a time.
 
 **page**: The page of results to return.
-The page parameter can only be used to fetch up 10,000 resources. If a query matches more than 10,000 resources, the "continue" parameter should be used instead.
+The `page` parameter can only be used to fetch up 10,000 resources. If a query matches more than 10,000 resources, the `cursor` parameter should be used instead.
+Paginating with the `page` parameter is not transactional. The order of results can be impacted if a stack update completes while paginating.
 
-**continue**: A continuation token for pagination.
+**cursor**: A continuation token for pagination that allows fetching more than 10,000 resources.
 Only available on Enterprise plans.
+Paginating with the `cursor` parameter is not transactional. The order of results can be impacted if a stack update completes while paginating.
 
 **facet**: If provided, an aggregation will be returned with the top-5 values for the given facet, along with how many resources have those values.
 
@@ -2822,7 +2825,7 @@ Attempting to set this on an unsupported subscription results in a 402 status co
   "pagination": {
     "previous": "string",
     "next": "string",
-    "continue": "string"
+    "cursor": "string"
   }
 }
 ```
