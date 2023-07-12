@@ -17,10 +17,10 @@ tags:
 ---
 
 {{% notes type="info" %}}
-The Pulumi Azure Native Provider 2.0 is currently available in beta.
+Update: this content was updated on July 11 2023 to reflect the general availability of the 2.0 release.
 {{% /notes %}}
 
-We are thrilled to announce the [beta release](https://github.com/pulumi/pulumi-azure-native/releases/tag/v2.0.0-beta.1) of the Pulumi Azure Native Provider 2.0, a significant upgrade to Pulumi's native provider for Microsoft Azure. The Azure Native provider offers the most complete support for Azure possible - with same day access to the entire surface area of the Azure features from Azure Resource Manager. Every property of each module is always represented in the SDKs. The 2.0 release brings a host of exciting features and improvements for performance and usability that will enhance your experience with managing Azure resources and empower you to build robust and scalable cloud infrastructure more efficiently.
+We are thrilled to announce the [release](https://github.com/pulumi/pulumi-azure-native/releases/tag/v2.0.0) of the Pulumi Azure Native Provider 2.0, a significant upgrade to Pulumi's native provider for Microsoft Azure. The Azure Native provider offers the most complete support for Azure possible - with same day access to the entire surface area of the Azure features from Azure Resource Manager. Every property of each module is always represented in the SDKs. The 2.0 release brings a host of exciting features and improvements for performance and usability that will enhance your experience with managing Azure resources and empower you to build robust and scalable cloud infrastructure more efficiently.
 
 <!--more-->
 
@@ -138,12 +138,12 @@ user_assigned_identity.id.apply(lambda id: {id: {}})
 
 ## Migrating from 1.x to 2.x
 
-We recommend you update to the [latest version of Azure Native 1.x](https://github.com/pulumi/pulumi-azure-native/releases/tag/v1.103.0) prior to moving to 2.x. This will enable you to address existing deprecations and see the recommended substitutions ahead of the major version upgrade. Head over to the [migration guide](https://www.pulumi.com/registry/packages/azure-native-v2/from-v1-to-v2) which outlines the necessary steps to update your existing Pulumi projects and ensuring a smooth migration experience.
+We recommend you update to the [latest version of Azure Native 1.x](https://github.com/pulumi/pulumi-azure-native/releases/tag/v1.104.0) prior to moving to 2.x. This will enable you to address existing deprecations and see the recommended substitutions ahead of the major version upgrade. Head over to the [migration guide](https://www.pulumi.com/registry/packages/azure-native-v2/from-v1-to-v2) which outlines the necessary steps to update your existing Pulumi projects and ensuring a smooth migration experience.
 
 Current users of the Pulumi Azure Classic Provider can follow the [classic to native migration guide](https://www.pulumi.com/registry/packages/azure-native/from-classic/) to take advantage of all the latest and greatest features available in Pulumi the Azure Native Provider.
 
 While you can immediately start leveraging the improved performance, you may need to make some changes in order to continue using specific Azure API module versions or user assigned identity inputs. Use the Pulumi Azure Native Provider documentation within your IDE to determine the explicit API version that is available and fully compatible with your existing deployment.
 
-The Pulumi Azure Native Provider 2.0 beta is available today for Pulumi programs using TypeScript, Python, .NET, and Go. To learn more about the Pulumi Azure Native Provider 2.0 and explore its capabilities, check out our [updated documentation](https://www.pulumi.com/registry/packages/azure-native-v2/) and resources. We value your feedback and encourage you to reach out in community slack or [open an issue](https://github.com/pulumi/pulumi-azure-native) for any questions or suggestions.
+The Pulumi Azure Native Provider 2.0 is available today for Pulumi programs using TypeScript, Python, .NET, and Go. To learn more about the Pulumi Azure Native Provider 2.0 and explore its capabilities, check out our [updated documentation](https://www.pulumi.com/registry/packages/azure-native-v2/) and resources. We value your feedback and encourage you to reach out in community slack or [open an issue](https://github.com/pulumi/pulumi-azure-native) for any questions or suggestions.
 
-Try out the Pulumi Azure Native Provider 2.0 beta today and take the next step in your journey with infrastructure as code on Microsoft Azure!
+Try out the Pulumi Azure Native Provider 2.0 today and take the next step in your journey with infrastructure as code on Microsoft Azure!
