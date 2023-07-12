@@ -67,27 +67,52 @@
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    {{ $code := `import * as gcp from "@pulumi/gcp";
-                        import * as k8s from "@pulumi/kubernetes";
+{{ $code := `import * as gcp from "@pulumi/gcp";
+import * as k8s from "@pulumi/kubernetes";
 
-                        // Create a GKE cluster.
-                        const cluster = new gcp.container.Cluster("gke-cluster");
+// Create a GKE cluster.
+const cluster = new gcp.container.Cluster("gke-cluster");
 
-                        // Create a performant node pool in the cluster.
-                        const performantNodes = new gcp.container.NodePool("performant-nodes", {
-                        cluster: cluster.name,
-                        nodeConfig: { machineType: "n1-standard-16"}
-                        });
+// Create a performant node pool in the cluster.
+const performantNodes = new gcp.container.NodePool("performant-nodes", {
+    cluster: cluster.name,
+    nodeConfig: {
+        machineType: "n1-standard-16"
+    }
+});
 
-                        // Create an Apps namespace.
-                        const appsNamespace = new k8s.core.v1.Namespace("apps");
+// Create an Apps namespace.
+const appsNamespace = new k8s.core.v1.Namespace("apps");
 
-                        // Create a quota.
-                        const quotaAppNamespace = new k8s.core.v1.ResourceQuota("apps", {
-                        spec: {hard: {cpu: "200", memory: "1Gi", pods: "10"
-                    }},
-                    }) // Create a restrictive PodSecurityPolicy. const restrictivePSP = new k8s.policy.v1beta1.PodSecurityPolicy("restrictive", { spec: { privileged: false,
-                    runAsUser: { rule: "RunAsAny" }, fsGroup: { rule: "RunAsAny" }, seLinux: { rule: "RunAsAny" }, supplementalGroups: { rule: "RunAsAny" }, } });` }}
+// Create a quota.
+const quotaAppNamespace = new k8s.core.v1.ResourceQuota("apps", {
+    spec: {
+        hard: {
+            cpu: "200",
+            memory: "1Gi",
+            pods: "10"
+        }
+    },
+})
+
+// Create a restrictive PodSecurityPolicy.
+const restrictivePSP = new k8s.policy.v1beta1.PodSecurityPolicy("restrictive", {
+    spec: {
+        privileged: false,
+        runAsUser: {
+            rule: "RunAsAny"
+        },
+        fsGroup: {
+            rule: "RunAsAny"
+        },
+        seLinux: {
+            rule: "RunAsAny"
+        },
+        supplementalGroups: {
+            rule: "RunAsAny"
+        },
+    }
+});` }}
                     {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
                 </div>
             </div>
@@ -112,23 +137,25 @@
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    {{ $code := `import * as kx from "@pulumi/kubernetesx";
+{{ $code := `import * as kx from "@pulumi/kubernetesx";
 
-                        // Define a Pod.
-                        const pb = new kx.PodBuilder({
-                        containers: [{ image: "nginx" }]
-                        });
+// Define a Pod.
+const pb = new kx.PodBuilder({
+    containers: [{
+        image: "nginx"
+    }]
+});
 
-                        // Create a Kubernetes Deployment using the previous Pod definition.
-                        const deployment = new kx.Deployment("nginx", {
-                        spec: pb.asDeploymentSpec()
-                        });
+// Create a Kubernetes Deployment using the previous Pod definition.
+const deployment = new kx.Deployment("nginx", {
+    spec: pb.asDeploymentSpec()
+});
 
-                        // Expose the Deployment using a load balanced Kubernetes Service.
-                        const service = deployment.createService({
-                        type: kx.types.ServiceType.LoadBalancer,
-                        });`
-                    }}
+// Expose the Deployment using a load balanced Kubernetes Service.
+const service = deployment.createService({
+    type: kx.types.ServiceType.LoadBalancer,
+});`
+}}
 
                     {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
                 </div>

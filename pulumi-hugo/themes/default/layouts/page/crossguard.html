@@ -5,7 +5,7 @@
 {{ define "main" }}
     <section id="overview" class="my-12">
         <div class="container mx-auto text-center flex-col">
-            <h2>Pulumi Crossguard</h2>
+            <h2>Pulumi CrossGuard</h2>
             <p>Continuously enforce your organization's cloud governance &mdash; security, compliance, cost controls, and more.</p>
             <div class="header-hero-actions mt-8">
                 <a class="btn-primary" href="{{ relref . "/docs/using-pulumi/crossguard/get-started" }}">Try CrossGuard</a>
@@ -95,51 +95,53 @@
                 <h4>Security</h4>
                 <p>Maintain security across all cloud infrastructure assets.</p>
                 <div class="md:ml:4">
-                    {{ $code := `new PolicyPack("acmecorp-security", {
-                        policies: [{
-                        name: "prohibited-public-internet",
-                        description: "Reject public internet access.",
-                        enforcementLevel: "mandatory",
-                        validateResource: validateResourceOfType(
-                        aws.ec2.SecurityGroup, (sg, args, reportViolation) => {
-                        const hasInternetAccess = sg.ingress.find(
-                        rule => rule.cidrBlocks.includes("0.0.0.0/0"));
-                        if (hasInternetAccess) {
-                        reportViolation("Illegal internet access");
-                        }
-                        }
-                        ),
-                        }],
-                        );`
-                    }}
+{{ $code := `new PolicyPack("acmecorp-security", {
+    policies: [{
+        name: "prohibited-public-internet",
+        description: "Reject public internet access.",
+        enforcementLevel: "mandatory",
+        validateResource: validateResourceOfType(
+            aws.ec2.SecurityGroup,
+            (sg, args, reportViolation) => {
+                const hasInternetAccess = sg.ingress.find(
+                    rule => rule.cidrBlocks.includes("0.0.0.0/0")
+                );
+                if (hasInternetAccess) {
+                    reportViolation("Illegal internet access");
+                }
+            },
+        ),
+    }],
+);`
+}}
 
-                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
+                    {{ partial "code" (dict "code" $code "lang" "js") }}
                 </div>
-                <p class="text-sm italic mt-0 ml-4">Prohibiting network access from the Internet.</p>
+                <p class="text-sm italic mt-0">Prohibiting network access from the Internet.</p>
             </div>
             <div class="md:w-1/2 flex-shrink-0 md:mr-8">
                 <h4>Compliance</h4>
                 <p>Meet, and stay meeting, compliance standards.</p>
                 <div class="md:ml:4">
-                    {{ $code := `new PolicyPack("acmecorp-compliance", {
-                        policies: [{
-                        name: "required-storage-region",
-                        description: "Data must be stored in the US.",
-                        enforcementLevel: "mandatory",
-                        validateResource: validateResourceOfType(
-                        aws.s3.Bucket, (bucket, args, reportViolation) => {
-                        if (!bucket.region.startsWith("us-")) {
-                        reportViolation("Non-US bucket detected");
-                        }
-                        }
-                        ),
-                        }],
-                        );`
-                    }}
+{{ $code := `new PolicyPack("acmecorp-compliance", {
+    policies: [{
+        name: "required-storage-region",
+        description: "Data must be stored in the US.",
+        enforcementLevel: "mandatory",
+        validateResource: validateResourceOfType(
+            aws.s3.Bucket, (bucket, args, reportViolation) => {
+                if (!bucket.region.startsWith("us-")) {
+                    reportViolation("Non-US bucket detected");
+                }
+            },
+        ),
+    }],
+);`
+}}
 
-                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
+                    {{ partial "code" (dict "code" $code "lang" "js") }}
                 </div>
-                <p class="text-sm italic mt-0 ml-4">Disallowing storage outside of specific regions.</p>
+                <p class="text-sm italic mt-0">Disallowing storage outside of specific regions.</p>
             </div>
         </div>
         <div class="container md:mx-auto md:flex">
@@ -147,30 +149,30 @@
                 <h4>Cost Controls</h4>
                 <p>Ensure cost conscious deployments.</p>
                 <div class="md:ml:4">
-                    {{ $code := `new PolicyPack("acmecorp-cost", {
-                        policies: [{
-                        name: "required-cost-tags",
-                        description: "Cost tags are required.",
-                        enforcementLevel: "mandatory",
-                        validateResource: (args, reportViolation) => {
-                        if (isTaggable(args.type) &&
-                        !args.resource["tags"]["Cost Center"]) {
-                        reportViolation("Resource missing tags");
-                        }
-                        ),
-                        }],
-                        );`
-                    }}
+{{ $code := `new PolicyPack("acmecorp-cost", {
+    policies: [{
+        name: "required-cost-tags",
+        description: "Cost tags are required.",
+        enforcementLevel: "mandatory",
+        validateResource: (args, reportViolation) => {
+            if (isTaggable(args.type) &&
+                !args.resource["tags"]["Cost Center"]) {
+                reportViolation("Resource missing tags");
+            }
+        ),
+    }],
+);`
+}}
 
-                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
+                    {{ partial "code" (dict "code" $code "lang" "js") }}
                 </div>
-                <p class="text-sm italic mt-0 ml-4">Requiring a specific cost allocation tags.</p>
+                <p class="text-sm italic mt-0">Requiring specific cost allocation tags.</p>
             </div>
             <div class="md:w-1/2 flex-shrink-0 md:mr-8">
                 <h4>Continuous Delivery</h4>
                 <p>Catch policy violations before they escape using CI/CD.</p>
-                <img class="block mx-auto" src="/images/screens/pac-in-action.png" alt="Policy as Code in CI/CD" />
-                <p class="text-sm italic mt-0 ml-4">A live dashboard of organizational violations in Pulumi Enterprise.</p>
+                <img class="block mx-auto rounded" src="/images/screens/pac-in-action.png" alt="Policy as Code in CI/CD" />
+                <p class="text-sm italic">A live dashboard of organizational violations in Pulumi Cloud.</p>
             </div>
         </div>
     </section>

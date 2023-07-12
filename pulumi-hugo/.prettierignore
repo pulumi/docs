@@ -11,6 +11,6 @@ yarn-error.log
 .hugo_build.lock
 *.md
 
-themes/default/layouts/partials/assets.html
 themes/default/theme
 themes/default/assets
+themes/default/layouts

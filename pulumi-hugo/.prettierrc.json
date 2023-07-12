@@ -11,12 +11,6 @@
     "useTabs": false,
     "overrides": [
         {
-            "files": ["*.html"],
-            "options": {
-                "parser": "go-template"
-            }
-        },
-        {
             "files": ["*.yml", "*.yaml"],
             "options": {
                 "tabWidth": 2
