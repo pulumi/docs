@@ -1,35 +1,35 @@
 ---
 title: "Pulumi Release Notes: Colorized Stack Traces, Output Methods for JSON, OIDC integration, and much more!"
 allow_long_title: true
- 
+
 # The date represents the post's publish date, and by default corresponds with
 # the date this file was generated. Posts with future dates are visible in development,
 # but excluded from production builds. Use the time and timezone-offset portions of
 # of this value to schedule posts for publishing later.
 date: 2023-03-22
- 
+
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
 meta_desc: The latest Pulumi updates include our providers updates, enhancements made in the CLI and any Pulumi Service features released in January and February 2023.
- 
+
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
 meta_image: meta.png
- 
+
 # At least one author is required. The values in this list correspond with the `id`
 # properties of the team member files at /data/team/team. Create a file for yourself
 # if you don't already have one.
 authors:
    - mikhail-shilkov
    - meagan-cojocar
- 
+
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
    - features
    - pulumi-releases
- 
+
 # See the blogging docs at https://github.com/pulumi/pulumi-hugo/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
 ---
@@ -117,7 +117,7 @@ We shipped an improvement where Pulumi CLI will ignore .git, .hg, and .bzr files
 
 Pulumi comes with a wealth of packages but users can also create and use custom providers and components. By default, Pulumi expects the binaries to be hosted on GitHub. On top of that, the CLI now supports GitLab as a first-class source of package downloads.
 
-If your package binary is hosted on GitLab, you can now set its `pluginDownloadURL` property (see [Publish your package](https://www.pulumi.com/docs/using-pulumi/pulumi-packages/how-to-author/#publish-your-package)) to point to your GitLab project, e.g. to `gitlab://gitlab.com/43429536`. 
+If your package binary is hosted on GitLab, you can now set its `pluginDownloadURL` property (see [Publish your package](https://www.pulumi.com/docs/using-pulumi/pulumi-packages/how-to-author/#publish-your-package)) to point to your GitLab project, e.g. to `gitlab://gitlab.com/43429536`.
 
 👉  Learn more in the [Support custom plugins from other sources issue](https://github.com/pulumi/pulumi/issues/9007).
 
@@ -234,7 +234,7 @@ Every week we keep shipping provider updates. Two highlights on our native provi
 - Azure Native shipped 20 new resources, including support for `networkcloud` and `voiceservices` ([changelog](https://github.com/pulumi/pulumi-azure-native/blob/master/CHANGELOG_OLD.md))
 - AWS Native shipped 30 new resources in `apigatewayv2`, `appflow`, `applicationautoscaling`, `cloudtrail`, `connect`, `directoryservice`, `ec2`, `fms`, `gamecast`, `gamelift`, `kendraranking`, `networkmanager`, `omics`, `organizations`, `sagemaker`, `secretsmanager`, `simspaceweaver`, and `systemsmanagersap` modules ([changelog](https://github.com/pulumi/pulumi-aws-native/blob/master/CHANGELOG.md))
 
-Five new community packages were added to the Registry: [Vultr](https://www.pulumi.com/registry/packages/vultr/), [Zscaler Private Access (ZPA)](https://www.pulumi.com/registry/packages/zpa/), [Zscaler Internet Access (ZIA)](https://www.pulumi.com/registry/packages/zia/), [Statuscake](https://www.pulumi.com/registry/packages/statuscake/), and [Nuage](https://www.pulumi.com/registry/packages/nuage/).
+Five new community packages were added to the Registry: [Vultr](https://www.pulumi.com/registry/packages/vultr/), Zscaler Private Access (ZPA), Zscaler Internet Access (ZIA), [Statuscake](https://www.pulumi.com/registry/packages/statuscake/), and [Nuage](https://www.pulumi.com/registry/packages/nuage/).
 
 ## Pulumi Service & Pulumi.com
 

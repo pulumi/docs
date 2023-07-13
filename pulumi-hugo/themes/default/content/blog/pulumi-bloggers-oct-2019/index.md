@@ -24,8 +24,6 @@ We are always excited when people join the Infrastructure as Code community and 
 >
 >You’d never hire that way. So why, when choosing DevOps tools, do people find it acceptable to have different languages, DSLs that only key individuals understand?”
 
-Download the whitepaper from [HATech](https://hatech.io/pulumi-v-terraform-whitepaper-lp/).
-
 ## VMWare VSphere and Pulumi
 
 ![peek definition](peek-definition.jpg)
