@@ -1,6 +1,6 @@
 ---
 title: "Programming Model"
-url: /docs/intro/concepts/programming-model
+url: /docs/reference/programming-model
 block_external_search_index: true
 ---
 
