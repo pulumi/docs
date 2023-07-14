@@ -39,6 +39,14 @@ search:
     description: |
         Ask any questions about your infrastructure across more than 100 clouds, using either structured search queries or natural language prompts. Search helps you find that needle in the haystack – locating a single resource across many clouds and environments – as well as running sophisticated queries such as tracking down untagged or expensive resources across the whole organization.
 
+quotes:
+    items:
+        - company: alkira
+          name: Santosh Dornal
+          name_title: Head of Software Test & DevOps at Alkira
+          quote: |
+            “I’m making developers at Alkira significantly more productive while also making my job easier using Pulumi’s IaC platform and features like Pulumi Insights and Deployments. I can get developers using IaC immediately with Pulumi Deployments and its GitHub integration, while Pulumi Insights makes it really easy to find idle developer environments that need to be shut down, which reduces our cloud costs.”
+
 analytics:
     title: Analytics
     subtitle: Gain deeper insights into infrastructure as code.

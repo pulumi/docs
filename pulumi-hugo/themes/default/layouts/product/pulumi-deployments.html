@@ -27,6 +27,29 @@
         <img class="card mx-auto bg-white" src="/images/product/pulumi-deployments-graphic.png" alt="Pulumi Deployments Architecture Screenshot" />
     </section>
 
+    <section id="quotes" class="w-full my-16">
+        <div class="w-full">
+            <div class="lg:flex lg:items-stretch justify-center">
+                {{ range $item := .Params.quotes.items }}
+                    <div class="lg:w-1/3 px-4 mb-12 lg:mb-0">
+                        <div class="flex flex-col h-full card p-6 bg-white relative">
+                            <p class="text-left mt-0 italic font-semibold text-black">{{ $item.quote }}</p>
+                            <div class="flex flex-grow items-end justify-between pb-4">
+                                <div class="w-2/3 text-left">
+                                    <p class="text-black mb-0 text-sm">{{ $item.name }}</p>
+                                    <p class="mt-0 text-sm">{{ $item.name_title }}</p>
+                                </div>
+                                <div class="my-4 h-16">
+                                    {{ partial "customer-logo.html" (dict "logo" $item.company) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
     <section id="benefits" class="max-w-5xl mx-auto text-center my-16 px-6">
         {{ with .Params.benefits }}
             <h2>{{ .title }}</h2>
