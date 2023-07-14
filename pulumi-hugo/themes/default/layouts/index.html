@@ -320,7 +320,7 @@
                     <pulumi-swipeable>
                         <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
                             {{ if $logo.link }}
-                                <a class="w-full h-full" href="{{ relref $pageContext $logo.link }}">
+                                <a class="w-full h-full" href="{{ $logo.link }}" target="_blank">
                                     {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
                                 </a>
                             {{ else }}
@@ -338,7 +338,7 @@
                     <pulumi-swipeable>
                         <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
                             {{ if $logo.link }}
-                                <a class="w-full h-full" href="{{ relref $pageContext $logo.link }}">
+                                <a class="w-full h-full" href="{{ $logo.link }}" target="_blank">
                                     {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
                                 </a>
                             {{ else }}

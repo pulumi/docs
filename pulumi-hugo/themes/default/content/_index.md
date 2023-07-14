@@ -59,10 +59,13 @@ customer_logos:
     - name: webflow
     - name: bluenile
     - name: dutchie
+      link: https://youtu.be/X1qetq7PjjY
     - name: panther-labs
       link: /case-studies/panther-labs
     - name: univision
     - name: washington-trust
+      link: https://youtu.be/Q63ZaX340M4
+    - name: nubank
 
 customer_quotes:
   panther:
