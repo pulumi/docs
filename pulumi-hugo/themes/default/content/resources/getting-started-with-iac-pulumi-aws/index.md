@@ -14,7 +14,7 @@ main:
   title: Getting Started with Infrastructure as Code on AWS
   description: |
     In this workshop, you will learn the fundamentals of infrastructure as code through guided exercises. You will be introduced to Pulumi, an infrastructure-as-code platform, where you can use familiar programming languages to provision modern cloud infrastructure.
-    
+
     This workshop is designed to help new users become familiar with the core concepts needed to effectively deploy resources on AWS. We will guide you through the Pulumi platform with diagrams and a series of labs to help accelerate your cloud projects.
   sortable_date: 2023-08-02T09:00:00.000-07:00
 event_data:
@@ -41,5 +41,6 @@ title: Getting Started with Infrastructure as Code on AWS
 title_tag: "Getting Started with IaC on AWS"
 meta_desc: This workshop is designed to help new users become familiar with the
   core concepts needed to effectively deploy resources on AWS using Pulumi.
+meta_image: "/images/resources/getting-started-aws-golang-engin.png"
 url_slug: getting-started-with-iac-pulumi-aws
 ---
