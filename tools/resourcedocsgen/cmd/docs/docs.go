@@ -54,12 +54,17 @@ func getPulumiPackageFromSchema(docsOutDir string) (*pschema.Package, error) {
 	}
 
 	// THIS IS A TEMPORARY HACK!!
-	// temporarily hacking this tool to accommodate the azure-native-v2 package, since both v1 and v2
-	// are techically the same package (just different versons) so the schema.json file will have
-	// `azure-native` as the package name. v2 is just a differentiaion we are temporarily adding
-	// to support both versions of the package until our registry officially has multi-version support.
+	// temporarily hacking this tool to accommodate multiple versions of the azure-native package,
+	// since both v1 and v2 are techically the same package (just different versons) so the
+	// schema.json file will have `azure-native` as the package name. Without this, the files genned
+	// will be overwritten by the second version of the package, since they will end up being written
+	// to the same azure-native directory.
 	if strings.Contains(docsOutDir, "azure-native-v2") {
 		pulPkg.Name = "azure-native-v2"
+	}
+
+	if strings.Contains(docsOutDir, "azure-native-v1") {
+		pulPkg.Name = "azure-native-v1"
 	}
 
 	docsgen.Initialize(tool, pulPkg)
