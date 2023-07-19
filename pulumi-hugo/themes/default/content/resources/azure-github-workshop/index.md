@@ -37,8 +37,8 @@ block_external_search_index: false
 # data for Google Events
 event_data:
   name: Pulumi - Getting Started with Azure IaC and Review Stacks
-  start_date: 2023-07-27T08:00:00.000-07:00
-  end_date: 2023-07-27T09:00:00.000-07:00
+  start_date: 2023-09-19T08:00:00.000-07:00
+  end_date: 2023-09-19T09:00:00.000-07:00
   url: "https://www.pulumi.com/resources/azure-github-workshop"
   description: |
     When managing cloud infrastructure, it’s important to establish a build-test-release process for your team. In this session, experts from the Azure, GitHub, and Pulumi teams will show you how to use Pulumi’s Azure Native v2 provider and your favorite programming languages to stand up new projects on Azure quickly. Then, we’ll show you how Pulumi’s new Review Stacks feature creates a temporary cloud environment for every Pull Request in GitHub automatically – making it easier than ever to validate both infrastructure and app code before release.
@@ -64,7 +64,7 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url:
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-07-27T08:00:00.000-07:00
+    sortable_date: 2023-09-19T08:00:00.000-07:00
     # Duration of the webinar.
     duration: "90 minutes"
     # Datetime of the webinar.
