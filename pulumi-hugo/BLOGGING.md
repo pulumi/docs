@@ -195,7 +195,7 @@ gifsicle ./my-animation.gif --resize-width=1200 --optimize=3 --batch
 
 ## Done? Submit!
 
-When you're ready to submit your post for review, issue a Pull Request against the `master` branch of the repo, and the team will have a look. Once merged &mdash; provided its `date` has passed the post will be deployed to https://www.pulumi.com/.
+When you're ready to submit your post for review, issue a Pull Request against the `master` branch of the repo, and the team will have a look. Once merged, the post will be deployed to https://www.pulumi.com/.
 
 ## Publicize your blog
 
