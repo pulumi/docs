@@ -211,6 +211,10 @@
 
                             .header-nav-one-col-drop-down {
                                 @apply pt-1;
+
+                                li {
+                                    @apply px-0;
+                                }
                             }
 
                             .header-nav-two-col-drop-down {
