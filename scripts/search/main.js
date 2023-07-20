@@ -50,11 +50,16 @@ const registryObjects = registry.getObjects(pathToRegistryPackagesJSON, hugoPage
 const filteredPageObjects = primaryPageObjects.filter(o => registryObjects.find(ro => ro.href === o.href) === undefined);
 
 // Stitch these lists together into one tidy bundle.
-const allObjects = [
+let allObjects = [
     ...filteredPageObjects,
     ...secondaryPageObjects,
     ...registryObjects,
 ];
+
+// Temporary hack: Remove any references to `azure-native-v1`. This line can be
+// removed once the azure-native-v1 package is removed from the Registry.
+// https://github.com/pulumi/registry/issues/2879
+allObjects = allObjects.filter(o => !o.href.includes("azure-native-v1"));
 
 // Gather up index settings, synonyms, and rules.
 const indexSettings = {
