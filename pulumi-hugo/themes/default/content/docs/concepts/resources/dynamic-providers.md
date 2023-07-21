@@ -655,18 +655,18 @@ exports.setAuth = function(token) { auth = token; }
 
 const githubLabelProvider = {
     async create(inputs) {
-        const ocktokit = new Ocktokit({auth});
-        const label = await ocktokit.issues.createLabel(inputs);
+        const octokit = new Octokit({auth});
+        const label = await octokit.issues.createLabel(inputs);
         return { id: label.data.id.toString(), outs: label.data };
     },
     async update(id, olds, news) {
-        const ocktokit = new Ocktokit({auth});
-        const label = await ocktokit.issues.updateLabel({ ...news, current_name: olds.name });
+        const octokit = new Octokit({auth});
+        const label = await octokit.issues.updateLabel({ ...news, current_name: olds.name });
         return { outs: label.data };
     },
     async delete(id, props) {
-        const ocktokit = new Ocktokit({auth});
-        await ocktokit.issues.deleteLabel(props);
+        const octokit = new Octokit({auth});
+        await octokit.issues.deleteLabel(props);
     }
 }
 
@@ -684,7 +684,7 @@ exports.Label = Label;
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as Ocktokit from "@octokit/rest";
+import { Octokit } from "@octokit/rest";
 
 // Set this value before creating an instance to configure the authentication token to use for deployments
 let auth = "token invalid";
@@ -708,18 +708,30 @@ interface LabelInputs {
 
 const githubLabelProvider: pulumi.dynamic.ResourceProvider = {
     async create(inputs: LabelInputs) {
-        const ocktokit = new Ocktokit({auth});
-        const label = await ocktokit.issues.createLabel(inputs);
+        const octokit = new Octokit({auth});
+        const label = await octokit.issues.createLabel({
+            owner: inputs.owner,
+            repo: inputs.repo,
+            name: inputs.name,
+            color: inputs.color
+        });
         return { id: label.data.id.toString(), outs: label.data };
     },
-    async update(id, olds: LabelInputs, news: LabelInputs) {
-        const ocktokit = new Ocktokit({auth});
-        const label = await ocktokit.issues.updateLabel({ ...news, current_name: olds.name });
-        return { outs: label.data };
+    async update(id: string, olds: LabelInputs, news: LabelInputs) {
+        const octokit = new Octokit({auth});
+        const label = await octokit.issues.updateLabel({
+            owner: news.owner,
+            repo: news.repo,
+            current_name: olds.name,
+            name: news.name,
+            color: news.color
+        });
+        return {outs: label.data};
     },
-    async delete(id, props: LabelInputs) {
-        const ocktokit = new Ocktokit({auth});
-        await ocktokit.issues.deleteLabel(props);
+
+    async delete(id: string, props: LabelInputs) {
+        const octokit = new Octokit({auth});
+        await octokit.issues.deleteLabel({owner: props.owner, repo: props.repo, name: props.name});
     }
 }
 
