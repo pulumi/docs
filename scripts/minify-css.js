@@ -26,7 +26,6 @@ function minifyCSS(filePath) {
             // should not affect the minified bundle, since there isn't any new css being
             // used for this package that wouldn't already be in the bundle.
             skippedContentGlobs: [
-                "public/registry/packages/azure-native-v2/**/*",
                 "public/registry/packages/azure-native-v1/**/*",
             ],
             css: [

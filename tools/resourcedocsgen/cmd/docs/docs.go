@@ -59,10 +59,6 @@ func getPulumiPackageFromSchema(docsOutDir string) (*pschema.Package, error) {
 	// schema.json file will have `azure-native` as the package name. Without this, the files genned
 	// will be overwritten by the second version of the package, since they will end up being written
 	// to the same azure-native directory.
-	if strings.Contains(docsOutDir, "azure-native-v2") {
-		pulPkg.Name = "azure-native-v2"
-	}
-
 	if strings.Contains(docsOutDir, "azure-native-v1") {
 		pulPkg.Name = "azure-native-v1"
 	}
