@@ -255,6 +255,8 @@ function getDefaultExcludedKeywords() {
         "https://thenewstack.io/",
         "https://rootly.com/",
         "https://www.vultr.com/",
+        "https://shell.azure.com/",
+        "https://portal.azure.com/",
     ];
 }
 
