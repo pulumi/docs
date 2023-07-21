@@ -51,7 +51,7 @@ If you are uncomfortable with downloading and running an online shell script (wi
 {{% /choosable %}}
 
 {{% choosable os windows %}}
-[Chocolatey](https://chocolatey.org/) is a popular package manager for Windows. It should be installed using an [administrative shell](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/).
+[Chocolatey](https://chocolatey.org/) is a popular package manager for Windows. It should be installed using an [administrative shell](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-10/).
 
 Make sure that [`Get-ExecutionPolicy`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.1) is not restricted.
 
