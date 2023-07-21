@@ -25,7 +25,10 @@ function minifyCSS(filePath) {
             // out of memory errors with all the new files added from the package. This
             // should not affect the minified bundle, since there isn't any new css being
             // used for this package that wouldn't already be in the bundle.
-            skippedContentGlobs: ["public/registry/packages/azure-native-v2/**/*"],
+            skippedContentGlobs: [
+                "public/registry/packages/azure-native-v2/**/*",
+                "public/registry/packages/azure-native-v1/**/*",
+            ],
             css: [
                 bundlePath,
             ],
