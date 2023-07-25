@@ -1,0 +1,39 @@
+{{ define "hero" }}
+    <header class="page-hero">
+        <div class="dot-background-container">
+            <div class="dot-background"></div>
+        </div>
+        <div class="dot-overlay"></div>
+        <div class="page-hero-title">
+            <h1 class="small-title">
+                <span class="rainbow-text" data-text="Resources">Resources</span>
+            </h1>
+        </div>
+    </header>
+{{ end }}
+
+{{ define "main" }}
+    <div class="container mx-auto max-w-3xl pt-16 pb-8 px-4 md:px-0">
+        <a class="bg-violet-100 inline-flex items-center text-gray-800 font-semibold rounded py-2 px-4" href="/resources/#ai-answers">
+            <span><i class="fas fa-comments mr-2"></i></span>
+            <span>Pulumi AI Answers</span>
+        </a>
+        <h1 class="text-3xl">{{ .Title }}</h1>
+        <div class="note note-info my-4">
+            <div class="icon-and-line">
+                <i class="fas fa-info-circle"></i>
+                <div class="line"></div>
+            </div>
+            <div class="content">
+                <a href="/ai">Pulumi AI</a> is an experimental experience that may produce inaccurate information.
+            </div>
+        </div>
+        <h2 class="text-2xl mt-0">Pulumi AI Answers</h2>
+        <div class="border-l-4 border-gray-200 pl-4">
+            <div>
+                {{ .Content }}
+            </div>
+        </div>
+        {{ partial "learnmore-ai.html" . }}
+    </div>
+{{ end }}

@@ -1,0 +1,28 @@
+<section class="text-gray-200 py-16 px-4 md:px-0">
+    <div class="container mx-auto md:flex justify-center">
+        <div class="flex md:w-1/2 mb-16 md:mb-0">
+            <div class="mr-6">
+                <div class="text-2xl py-2">
+                    {{ partial "icon" (dict "icon" "docs") }}
+                </div>
+            </div>
+            <div>
+                <h4>Learn more</h3>
+                <p class="mb-6">Discover the getting started guides and learn about Pulumi concepts.</p>
+                <a class="text-blue-600 hover:text-blue-700 transition-colors" href="{{ relref . "/docs/" }}">Explore the docs &rarr;</a>
+            </div>
+        </div>
+        <div class="md:w-1/2 flex md:ml-6">
+            <div class="mr-6">
+                <div class="text-2xl py-2">
+                    {{ partial "icon" (dict "icon" "bot") }}
+                </div>
+            </div>
+            <div>
+                <h4>Pulumi AI</h3>
+                <p class="mb-6">Generate Pulumi infrastructure-as-code programs in any language.</p>
+                <a class="text-blue-600 hover:text-blue-700 transition-colors" href="{{ relref . "/ai/" }}">Try Pulumi AI &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>

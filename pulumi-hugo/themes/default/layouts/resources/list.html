@@ -10,6 +10,7 @@
     <!-- Grab the webinar and event page data. -->
     {{ $webinars := (where $.Site.Pages "Type" "webinars") }}
     {{ $events := (where $.Site.Pages "Type" "events") }}
+    {{ $aiAnswers := (where $.Site.Pages "Type" "ai-answers") }}
 
 
     <!-- Create dicts so we can sort the resources by start/publish date. -->
@@ -42,6 +43,11 @@
         {{ end }}
     {{ end }}
 
+    <!-- Create the resource data dicts for AI answers. -->
+    {{ range $aiAnswers }}
+        {{ $resourcesWithDate = $resourcesWithDate | append (dict "date" .Date "data" .) }}
+    {{ end }}
+
 
     <div class="pulumi-event-list-container mt-5">
         <div class="container mx-auto pt-10">
@@ -51,6 +57,7 @@
             <span id="featured" class="hidden"></span>
             <span id="upcoming" class="hidden"></span>
             <span id="videos" class="hidden"></span>
+            <span id="ai-answers" class="hidden"></span>
             <span id="pulumitv" class="hidden"></span>
             <span id="whitepapers" class="hidden"></span>
 
@@ -62,7 +69,7 @@
                 <ul id="event-list-filter-nav">
                     {{ range $item := .Params.sections }}
                         <li data-filter-name="{{ $item.anchor }}">
-                            <a href="#{{ $item.anchor }}">
+                            <a class="whitespace-nowrap" href="#{{ $item.anchor }}">
                                 <i class="fas fa-{{ $item.icon }} mr-2"></i>
                                 <span>{{ $item.label }}</span>
                             </a>
@@ -79,6 +86,7 @@
             <h3 class="hidden ml-5 text-black" data-filter-title="featured"><i class="fas fa-star mr-8"></i>Featured</h3>
             <h3 class="hidden ml-5 text-black" data-filter-title="upcoming"><i class="fas fa-users mr-8"></i>Upcoming Sessions</h3>
             <h3 class="hidden ml-5 text-black" data-filter-title="videos"><i class="fas fa-video mr-8"></i>Videos</h3>
+            <h3 class="hidden ml-5 text-black" data-filter-title="ai-answers"><i class="fas fa-comments mr-8"></i>Pulumi AI Answers</h3>
             <h3 class="hidden ml-5 text-black" data-filter-title="pulumitv"><i class="fas fa-tv mr-8"></i>PulumiTV</h3>
             <h3 class="hidden ml-5 text-black" data-filter-title="whitepapers"><i class="fas fa-book mr-8"></i>Whitepapers</h3>
             <!-- Resources list. -->
@@ -146,7 +154,7 @@
                             {{ $filters = $filters | append "upcoming" }}
                         {{ end }}
 
-                    {{ else if eq $data.Type "events" }}
+                        {{ else if eq $data.Type "events" }}
                         <!-- Set the appropriate values for the event. -->
                         {{ $description = $data.Params.event.description }}
                         {{ $displayDate = dateFormat "January 2, 2006" $data.Params.event.start_date }}
@@ -164,6 +172,13 @@
                         {{ else }}
                             {{ $link = printf "/resources/%s" $data.Params.url_slug }}
                         {{ end }}
+
+                    {{ else if eq $data.Type "ai-answers" }}
+                        {{ $filters = $filters | append "ai-answers" }}
+                        {{ $icon = "comments" }}
+                        {{ $description = $data.Description }}
+                        {{ $displayDate = dateFormat "January 2, 2006" $data.Date }}
+                        {{ $link = $data.RelPermalink }}
                     {{ end }}
 
                     {{ $tileOptions := (dict "multiple" $data.Params.multiple "pageContext" $pageContext "external" $external "filters" $filters "link" $link "icon" $icon "description" $description "displayDate" $displayDate "data" $data) }}

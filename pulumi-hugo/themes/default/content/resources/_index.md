@@ -21,6 +21,9 @@ sections:
     - label: Videos
       anchor: videos
       icon: video
+    - label: Pulumi AI Answers
+      anchor: ai-answers
+      icon: comments
     - label: PulumiTV
       anchor: pulumitv
       icon: tv
