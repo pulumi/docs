@@ -111,6 +111,11 @@
             @apply block;
         }
     }
+
+    // Sort AI answers to the bottom of the list so they don't push dated events down the list.
+    li[data-filters~="ai-answers"]  {
+        @apply order-last;
+    }
 }
 
 .event-list-item {

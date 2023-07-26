@@ -176,7 +176,7 @@
                     {{ else if eq $data.Type "ai-answers" }}
                         {{ $filters = $filters | append "ai-answers" }}
                         {{ $icon = "comments" }}
-                        {{ $description = $data.Description }}
+                        {{ $description = $data.Params.meta_desc }}
                         {{ $displayDate = dateFormat "January 2, 2006" $data.Date }}
                         {{ $link = $data.RelPermalink }}
                     {{ end }}

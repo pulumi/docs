@@ -1,4 +1,9 @@
 {{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
+{{ $allResources := .Data.Pages }}
+
+{{/* Assume all resources that aren't AI Answers are events. */}}
+{{ $events := where $allResources "Type" "not in" "ai-answers" }}
+
 <rss version="2.0">
     <channel>
         <title>Pulumi Events</title>
@@ -6,7 +11,7 @@
         <description>Feed containing upcoming Pulumi events.</description>
         <language>{{ .Site.LanguageCode }}</language>
         <pubDate>{{ now | time.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-        {{ range (sort .Data.Pages ".Params.main.sortable_date").Reverse }}
+        {{ range sort $events }}
             <item>
                 {{ $eventLink := printf "%s%s" .Site.Params.canonicalURL .RelPermalink }}
                 <!--
