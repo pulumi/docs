@@ -2,8 +2,9 @@ id = "kat-morgan"
 name = "Kat Morgan"
 title = "Senior Developer Advocate | Community Engineer"
 company = "Pulumi"
+
 status = "active"
-role = "developer-advocate"
+
 [social]
 github = "usrbinkat"
 twitter = "usrbinkat"
