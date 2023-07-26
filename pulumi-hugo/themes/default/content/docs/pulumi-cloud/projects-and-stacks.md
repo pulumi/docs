@@ -297,9 +297,10 @@ To transfer an individual stack:
 To transfer stacks in bulk:
 
 1. Navigate to the **Stacks** page.
-1. Select **Transfer stacks**.
-1. Choose the **Transfer destination** from the dropdown.
-1. Tick the stacks you'd like to transfer and select **Transfer stacks**.
+2. Select the three dot menu beside **Create project**.
+3. Choose **Transfer stacks** from the dropdown.
+4. Choose the **Transfer destination** from the dropdown.
+5. Tick the stacks you'd like to transfer and select **Transfer stacks**.
 
 ## Deleting a Stack
 
@@ -307,9 +308,22 @@ Deleting a stack removes the stack entirely from the Pulumi Cloud, along with al
 
 To delete a stack:
 
-1. Navigate to **All stacks** and then a specific stack.
+1. Navigate to the **Stacks** page and then a specific stack.
 1. Navigate to the stack's **Settings** and then **Options**.
 1. If you have no resources in the stack use the **Delete stack** button, otherwise use the provided CLI commands.
+
+## Restoring a Stack
+
+{{% notes type="info" %}}
+The ability to restore a deleted stack is limited to Enterprise and Business Critical Editions. {{% /notes %}}
+Restoring a stack allows you to recover a previously deleted stack, either because it was accidentally deleted or because you want to restore its history. The last 10 stacks deleted in your organization can be restored by an organization admin. Stacks can only be restored if deleted within the last year.
+
+To restore a stack:
+
+1. Navigate to the **Stacks** page.
+2. Select the three dot menu beside **Create project**.
+3. Choose **Restore deleted stacks** from the dropdown.
+4. Use the three dot menu on the stack you want to restore and select **Restore stack**.
 
 ## Related Blogs
 
