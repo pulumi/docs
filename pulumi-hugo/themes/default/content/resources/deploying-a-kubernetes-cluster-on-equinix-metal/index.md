@@ -2,6 +2,7 @@
 # Name of the webinar.
 title: "Deploying a Kubernetes Cluster on Equinix Metal"
 meta_desc: "In this code-centric session, you will learn how to manage Equinix Metal resources using Pulumi and the new Equinix Pulumi provider."
+meta_image: "/images/resources/kubernetes-cluster-equinix-metal-oscar.png"
 
 # A featured webinar will display first in the list.
 featured: false

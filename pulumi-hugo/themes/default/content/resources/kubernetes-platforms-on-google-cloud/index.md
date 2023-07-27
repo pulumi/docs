@@ -3,6 +3,7 @@
 title: "Advanced Kubernetes Platforms on Google Cloud with Pulumi"
 title_tag: "Kubernetes Platforms on Google Cloud with Pulumi (Aug 2023 Workshop)"
 meta_desc: "In this workshop, we’ll explore how to deliver and scale a Kubernetes platform on Google Cloud."
+meta_image: "/images/resources/advanced-kubernetes-on-google-cloud.png"
 
 # A featured webinar will display first in the list.
 featured: false
