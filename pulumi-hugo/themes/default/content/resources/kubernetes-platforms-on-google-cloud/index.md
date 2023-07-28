@@ -37,8 +37,8 @@ block_external_search_index: false
 # data for Google Events
 event_data:
   name: Pulumi - Advanced Kubernetes Platforms on Google Cloud with Pulumi
-  start_date: 2023-08-10T11:00:00.000-07:00
-  end_date: 2023-08-10T12:30:00.000-07:00
+  start_date: 2023-08-10T08:00:00.000-04:00
+  end_date: 2023-08-10T09:30:00.000-04:00
   url: "https://www.pulumi.com/resources/kubernetes-platforms-on-google-cloud"
   description: |
     Platform engineering teams often need to help development teams stand up core platforms, build release automation, deploy applications, and scale resources to match customer demand. A best practice in these scenarios is to break up these services into multiple stacks to enable updates to infrastructure and processes that won’t disrupt production.
@@ -66,11 +66,11 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: 
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-08-10T11:00:00.000-07:00
+    sortable_date: 2023-08-10T08:00:00.000-04:00
     # Duration of the webinar.
     duration: "90 minutes"
     # Datetime of the webinar.
-    datetime: "8/10/2023 11:00am - 12:30pm PDT"
+    datetime: "8/10/2023 8:00am - 9:30am EDT"
     # Description of the webinar.
     description: |
         Platform engineering teams often need to help development teams stand up core platforms, build release automation, deploy applications, and scale resources to match customer demand. A best practice in these scenarios is to break up these services into multiple stacks to enable updates to infrastructure and processes that won’t disrupt production.
