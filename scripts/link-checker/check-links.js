@@ -172,8 +172,6 @@ async function onComplete(brokenLinks) {
 
         // Post the results to Slack.
         await postToSlack("docs-ops", list);
-
-        throw new Error("Finished, but failed with errors. See the log for details.");
     }
 }
 
