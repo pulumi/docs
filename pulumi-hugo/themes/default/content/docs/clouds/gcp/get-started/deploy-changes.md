@@ -154,6 +154,16 @@ const bucketIAMBinding = new gcp.storage.BucketIAMBinding("my-bucket-IAMBinding"
 });
 ```
 
+We need to give your account access to view the bucket it must change. Make sure to replace `youruser@email.com` with an actual user's email. 
+
+```javascript
+const bucketMember = new gcp.storage.BucketIAMMember("bucketIAMMember", {
+    bucket: bucket.name,
+    role: "roles/storage.objectViewer",
+    member: "user:youruser@email.com",
+});
+```
+
 Also, change the content type of your `index.html` object so that it is served as HTML.
 
 ```javascript
@@ -197,6 +207,16 @@ const bucketIAMBinding = new gcp.storage.BucketIAMBinding("my-bucket-IAMBinding"
 });
 ```
 
+We need to give your account access to view the bucket it must change. Make sure to replace `youruser@email.com` with an actual user's email. 
+
+```typescript
+const bucketMember = new gcp.storage.BucketIAMMember("bucketIAMMember", {
+    bucket: bucket.name,
+    role: "roles/storage.objectViewer",
+    member: "user:youruser@email.com",
+});
+```
+
 Also, change the content type of your `index.html` object so that it is served as HTML.
 
 ```typescript
@@ -236,6 +256,17 @@ bucketIAMBinding = storage.BucketIAMBinding('my-bucket-IAMBinding',
     bucket=bucket.name,
     role="roles/storage.objectViewer",
     members=["allUsers"]
+)
+```
+
+We need to give your account access to view the bucket it must change. Make sure to replace `youruser@email.com` with an actual user's email. 
+
+```python
+bucket_iam_member = storage.BucketIAMMember(
+    "bucketIAMMember",
+    bucket=bucket.name,
+    role="roles/storage.objectViewer",
+    member="user:youruser@email.com",
 )
 ```
 
@@ -284,6 +315,19 @@ _, err = storage.NewBucketIAMBinding(ctx, "my-bucket-IAMBinding", &storage.Bucke
     Members: pulumi.StringArray{
         pulumi.String("allUsers"),
     },
+})
+if err != nil {
+    return err
+}
+```
+
+We need to give your account access to view the bucket it must change. Make sure to replace `youruser@email.com` with an actual user's email. 
+
+```go
+bucketMember, err := storage.NewBucketIAMMember(ctx, "bucketIAMMember", &storage.BucketIAMMemberArgs{
+    Bucket: bucket.Name,
+    Role:   pulumi.String("roles/storage.objectViewer"),
+    Member: pulumi.String("user:youruser@email.com"),
 })
 if err != nil {
     return err
@@ -342,6 +386,17 @@ var bucketIAMBinding = new BucketIAMBinding("my-bucket-IAMBinding", new BucketIA
     Bucket = bucket.Name,
     Role = "roles/storage.objectViewer",
     Members = "allUsers"
+});
+```
+
+We need to give your account access to view the bucket it must change. Make sure to replace `youruser@email.com` with an actual user's email. 
+
+```csharp
+var bucketMember = new BucketIAMMember("bucketIAMMember", new BucketIAMMemberArgs
+{
+    Bucket = bucket.Name,
+    Role = "roles/storage.objectViewer",
+    Member = "user:youruser@email.com"
 });
 ```
 
@@ -418,6 +473,17 @@ public class App {
             // Create an S3 Bucket object ...
 ```
 
+We need to give your account access to view the bucket it must change. Make sure to replace `youruser@email.com` with an actual user's email. 
+
+```java
+var binding = new BucketIAMMember("bucketIAMMember",
+BucketIAMMemberArgs.builder()
+        .bucket(bucket.name())
+        .role("roles/storage.objectViewer")
+        .member("user:youruser@email.com")
+        .build());
+```
+
 Also, change the content type of your index.html object so that it is served as HTML.
 
 ```java
@@ -482,6 +548,17 @@ resources:
       bucket: ${my-bucket.name}
       role: "roles/storage.objectViewer"
       members: ["allUsers"]
+```
+
+We need to give your account access to view the bucket it must change. Make sure to replace `youruser@email.com` with an actual user's email. 
+
+```yaml
+bucket_iam_member:
+    type: gcp:storage:BucketIAMMember
+    properties:
+      bucket: ${my-bucket.name}
+      role: "roles/storage.objectViewer"
+      member: "user:youruser@email.com"
 ```
 
 Also, change the content type of your `index.html` object so that it is served as HTML.
