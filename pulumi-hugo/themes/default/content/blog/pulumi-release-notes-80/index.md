@@ -143,7 +143,7 @@ We have added a new experimental flag to improve performance for certain use cas
 
 ### Token Authentication in Go Providers
 
-Thank you to community member [@aohoy](https://github.com/aohoy) for adding support for token authentication in the Go providers that use Git. You can now authenticated requests by tokens such as `https://auth:token@gitlab.example.com/group/proj.git/tree/v0.0.0/path`.
+Thank you to community member @aohoy for adding support for token authentication in the Go providers that use Git. You can now authenticated requests by tokens such as `https://auth:token@gitlab.example.com/group/proj.git/tree/v0.0.0/path`.
 
 👉 Learn more by reviewing the [Add token to Git Go module pull request](https://github.com/pulumi/pulumi/pull/10628).
 
