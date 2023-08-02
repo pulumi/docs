@@ -10,6 +10,7 @@ const getInitialState = (): PreferencesState => {
         k8sLanguage: "typescript",
         os: guessOS(),
         cloud: "aws",
+        backend: "service",
     };
 };
 
@@ -42,6 +43,8 @@ export const preferences = (currentState = getInitialState(), action: Preference
             return { ...currentState, cloud: action.key };
         case TypeKeys.SET_PERSONA:
             return { ...currentState, persona: action.key };
+        case TypeKeys.SET_BACKEND:
+            return { ...currentState, backend: action.key };
         default:
             return currentState;
     }

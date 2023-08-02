@@ -1,19 +1,20 @@
 import { Component, Element, Host, h, Listen, Prop, State } from "@stencil/core";
 import { store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
-import { setLanguage, setK8sLanguage, setOS, setCloud, setPersona } from "../../store/actions/preferences";
+import { setLanguage, setK8sLanguage, setOS, setCloud, setPersona, setBackEnd } from "../../store/actions/preferences";
 
 export type LanguageKey = "javascript" | "typescript" | "python" | "go" | "csharp" | "fsharp" | "visualbasic" | "java" | "yaml";
 export type K8sLanguageKey = "typescript" | "yaml" | "typescript-kx";
 export type OSKey = "macos" | "linux" | "windows";
 export type CloudKey = "aws" | "azure" | "gcp" | "kubernetes" | "digitalocean" | "docker";
 export type PersonaKey = "developer" | "devops" | "security" | "leader";
+export type BackEndKey = "service" | "self-managed";
 
 export type ChooserMode = "local" | "global";
 export type ChooserOptionStyle = "tabbed" | "none";
-export type ChooserType = "language" | "k8s-language" | "os" | "cloud" | "persona";
-export type ChooserKey = LanguageKey | K8sLanguageKey | OSKey | CloudKey | PersonaKey;
-export type ChooserOption = SupportedLanguage | SupportedK8sLanguage | SupportedOS | SupportedCloud | SupportedPersona;
+export type ChooserType = "language" | "k8s-language" | "os" | "cloud" | "persona" | "backend";
+export type ChooserKey = LanguageKey | K8sLanguageKey | OSKey | CloudKey | PersonaKey | BackEndKey;
+export type ChooserOption = SupportedLanguage | SupportedK8sLanguage | SupportedOS | SupportedCloud | SupportedPersona | SupportedBackEnd;
 
 export interface SupportedLanguage {
     key: LanguageKey;
@@ -42,6 +43,12 @@ interface SupportedCloud {
 
 interface SupportedPersona {
     key: PersonaKey;
+    name: string;
+    preview: boolean;
+}
+
+interface SupportedBackEnd {
+    key: BackEndKey;
     name: string;
     preview: boolean;
 }
@@ -115,6 +122,7 @@ export class Chooser {
     setOS: typeof setOS;
     setCloud: typeof setCloud;
     setPersona: typeof setPersona;
+    setBackEnd: typeof setBackEnd;
 
     componentWillLoad() {
         // Translate the set of options provided into choices.
@@ -149,12 +157,13 @@ export class Chooser {
             setOS,
             setCloud,
             setPersona,
+            setBackEnd,
         });
 
         // Map currently selected values from the store, so we can use them in this component.
         this.storeUnsubscribe = store.mapStateToProps(this, (state: AppState) => {
             const {
-                preferences: { language, k8sLanguage, os, cloud, persona },
+                preferences: { language, k8sLanguage, os, cloud, persona, backend },
             } = state;
 
             // In some cases, the user's preferred (i.e., most recently selected) choice
@@ -197,6 +206,8 @@ export class Chooser {
                     return preferredOrDefault(cloud);
                 case "persona":
                     return preferredOrDefault(persona);
+                case "backend":
+                    return preferredOrDefault(backend);
                 default:
                     return {};
             }
@@ -204,6 +215,7 @@ export class Chooser {
     }
 
     render() {
+        console.log(this.currentOptions);
         return (
             <Host selection={this.selection}>
                 <ul>
@@ -270,6 +282,9 @@ export class Chooser {
             case "persona":
                 options = this.supportedPersonas;
                 break;
+            case "backend":
+                options = this.supportedBackEnds;
+                break;
         }
 
         this.currentOptions = options.filter(opt => keys.includes(opt.key));
@@ -326,6 +341,9 @@ export class Chooser {
                 case "persona":
                     this.setPersona(key as PersonaKey);
                     break;
+                case "backend":
+                    this.setBackEnd(key as BackEndKey);
+                    break;
             }
         }
     }
@@ -339,6 +357,20 @@ export class Chooser {
             });
         }
     }
+
+    // The list of supported backends.
+    private supportedBackEnds: SupportedBackEnd[] = [
+        {
+            key: "service",
+            name: "Service",
+            preview: false,
+        },
+        {
+            key: "self-managed",
+            name: "Self Managed",
+            preview: false,
+        },
+    ];
 
     // The list of supported personas.
     private supportedPersonas: SupportedPersona[] = [
