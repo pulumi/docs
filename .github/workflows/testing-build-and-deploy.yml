@@ -1,9 +1,6 @@
-name: Build and deploy
-on:
+name: Build and deploy testing
+on: 
   push:
-    branches:
-      - master
-  pull_request:
     branches:
       - master
 permissions:
@@ -15,7 +12,7 @@ jobs:
       GOPATH: ${{ github.workspace }}/go
     name: Install deps and build site
     runs-on: ubuntu-22.04-8core
-    environment: production
+    environment: testing
     steps:
 
       - uses: actions/checkout@v2
@@ -36,11 +33,10 @@ jobs:
       - name: Configure Git
         run: |
           git config --global url."https://${{ secrets.PULUMI_BOT_TOKEN }}:x-oauth-basic@github.com/pulumi/pulumi-hugo-internal".insteadOf "https://github.com/pulumi/pulumi-hugo-internal"
-
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-to-assume: arn:aws:iam::571684982431:role/ContinuousDelivery
           role-session-name: docs-deploy
           role-duration-seconds: 7200
           aws-region: us-west-2
@@ -49,12 +45,12 @@ jobs:
         uses: pulumi/actions@v4
 
       - name: Build and deploy
-        run: make ci_${GITHUB_EVENT_NAME}
+        run: make ci_push
         env:
           CDN_PULUMI_URN: ${{ vars.CDN_PULUMI_URN }}
+          DEPLOYMENT_ENVIRONMENT: ${{ vars.DEPLOYMENT_ENVIRONMENT }}
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           PULUMI_STACK_NAME: ${{ vars.PULUMI_STACK_NAME }}
-          DEPLOYMENT_ENVIRONMENT: ${{ vars.DEPLOYMENT_ENVIRONMENT }}
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ALGOLIA_APP_ID: ${{ vars.ALGOLIA_APP_ID }}
@@ -82,7 +78,7 @@ jobs:
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:
-          SLACK_CHANNEL: docs-ops
+          SLACK_CHANNEL: docs-ops-test
           SLACK_COLOR: "#F54242"
           SLACK_MESSAGE: "build and deploy failure in pulumi/docs repo :meow_sad:"
           SLACK_USERNAME: docsbot

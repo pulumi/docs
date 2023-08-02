@@ -8,6 +8,9 @@ import { getLambdaFunctionAssociations } from "./cloudfrontLambdaAssociations";
 
 const stackConfig = new pulumi.Config();
 
+const stackRef = new pulumi.StackReference(`pulumi/registry/registry-testing`)
+const registryCDN = stackRef.getOutput("cloudFrontDomain");
+
 const config = {
     // websiteDomain is the domain/host to serve content at.
     websiteDomain: stackConfig.require("websiteDomain"),
@@ -46,6 +49,10 @@ const config = {
     // (e.g. in dev environment) you may want to set this to false. This will then take the subdomain
     // of the `websiteDomain` rather than use the root of that zone.
     setRootRecord: stackConfig.get("setRootRecord") || undefined,
+     
+    // testingFlow is a flag set in the stack config and used to indicate which pieces of infrastructure
+    // should be created when run against the test environment.
+    testingFlow: stackConfig.getBoolean("testingFlow") || undefined,
 };
 
 const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
@@ -112,6 +119,33 @@ const uploadsBucketAcl = new aws.s3.BucketAclV2("uploads-bucket-acl", {
     acl: aws.s3.PublicReadAcl,
 }, {
     dependsOn: [uploadsBucketPublicAccessBlock, uploadsBucketOwnershipControls],
+});
+
+// Create a bucket to store  bundle files. These will be served under the /css, /js route using a custom cloudfront behavior
+// which will only be configured in the testing flow.
+const bundlesBucket = new aws.s3.Bucket("bundles-bucket", {
+    website: {
+        indexDocument: "index.html",
+    },
+});
+
+const bundlesBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("bundles-public-access-block", {
+    bucket: bundlesBucket.id,
+    blockPublicAcls: false,
+});
+
+const bundlesBucketOwnershipControls = new aws.s3.BucketOwnershipControls("bundles-bucket-ownership-controls", {
+    bucket: bundlesBucket.id,
+    rule: {
+        objectOwnership: "ObjectWriter"
+    }
+});
+
+const bundlesBucketAcl = new aws.s3.BucketAclV2("bundles-bucket-acl", {
+    bucket: bundlesBucket.id,
+    acl: aws.s3.PublicReadAcl,
+}, {
+    dependsOn: [bundlesBucketPublicAccessBlock, bundlesBucketOwnershipControls],
 });
 
 // Optionally create a fallback bucket for serving the website directly out of S3 when necessary.
@@ -223,15 +257,113 @@ const baseCacheBehavior = {
     responseHeadersPolicyId: "67f7725c-6f97-4210-82d7-5512b31e9d03", // SecurityHeadersPolicy
 };
 
+const bundleOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
+const bundleBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
+const registryOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
+const registryBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
+
+// Only provision additional cloudfront behavors and origins if we're in the testing flow as to not make
+// any changes to the production infrastructure at this point.
+if (config.testingFlow) {
+    bundleOrigins.push(
+        {
+            originId: bundlesBucket.arn,
+            domainName: bundlesBucket.websiteEndpoint,
+            customOriginConfig: {
+                originProtocolPolicy: "http-only",
+                httpPort: 80,
+                httpsPort: 443,
+                originSslProtocols: ["TLSv1.2"],
+            }
+        }
+    );
+    bundleBehaviors.push(
+        {
+            ...baseCacheBehavior,
+            targetOriginId: bundlesBucket.arn,
+            pathPattern: "/css/*",
+            defaultTtl: oneHour,
+            maxTtl: oneHour,
+            forwardedValues: {
+                cookies: {
+                    forward: "none",
+                },
+                queryString: false,
+                headers: [
+                    "Origin",
+                    "Access-Control-Request-Headers",
+                    "Access-Control-Request-Method",
+                ],
+            },
+        },
+        {
+            ...baseCacheBehavior,
+            targetOriginId: bundlesBucket.arn,
+            pathPattern: "/js/*",
+            defaultTtl: oneHour,
+            maxTtl: oneHour,
+            forwardedValues: {
+                cookies: {
+                    forward: "none",
+                },
+                queryString: false,
+                headers: [
+                    "Origin",
+                    "Access-Control-Request-Headers",
+                    "Access-Control-Request-Method",
+                ],
+            },
+        }
+    );
+    registryOrigins.push(
+        {
+            originId: registryCDN,
+            domainName: registryCDN,
+            customOriginConfig: {
+                originProtocolPolicy: "https-only",
+                httpPort: 80,
+                httpsPort: 443,
+                originSslProtocols: ["TLSv1.2"],
+            }
+        }
+    );
+    registryBehaviors.push(
+        {
+            ...baseCacheBehavior,
+            targetOriginId: registryCDN,
+            pathPattern: "/registry/*",
+            defaultTtl: 0,
+            maxTtl: 0,
+            forwardedValues: {
+                cookies: {
+                    forward: "none",
+                },
+                queryString: false,
+                headers: [
+                    "Origin",
+                    "Access-Control-Request-Headers",
+                    "Access-Control-Request-Method",
+                ],
+            },
+        },
+    )
+}
+
+
+
 // domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
 const domainAliases = [];
 
-// websiteDomain is the A record for the website bucket associated with the website.
-domainAliases.push(config.websiteDomain);
+// The testing flow does not have a configured domain, so we don't need to add any aliases
+// for the time being.
+if (!config.testingFlow) {
+    // websiteDomain is the A record for the website bucket associated with the website.
+    domainAliases.push(config.websiteDomain);
 
-// redirectDomain is the domain to use for fully-qualified 301 redirects.
-if (config.redirectDomain) {
-    domainAliases.push(config.redirectDomain);
+    // redirectDomain is the domain to use for fully-qualified 301 redirects.
+    if (config.redirectDomain) {
+        domainAliases.push(config.redirectDomain);
+    }
 }
 
 // AllViewerExceptHostHeader passes all cookies, querystrings, and headers except the Host header.
@@ -287,6 +419,9 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
                 originSslProtocols: ["TLSv1.2"],
             },
         },
+        ...registryOrigins,
+        // Add css bucket origins. These will be empty in the current production flow.
+        ...bundleOrigins
     ],
 
     // Default object to serve when no path is given.
@@ -298,6 +433,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     },
 
     orderedCacheBehaviors: [
+        ...bundleBehaviors,
+        ...registryBehaviors,
         {
             ...baseCacheBehavior,
             targetOriginId: uploadsBucket.arn,
@@ -468,7 +605,8 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
 
     // CloudFront certs must be in us-east-1, just like API Gateway.
     viewerCertificate: {
-        acmCertificateArn: config.certificateArn,
+        acmCertificateArn: config.testingFlow ? undefined : config.certificateArn,
+        cloudfrontDefaultCertificate: config.testingFlow,
         sslSupportMethod: "sni-only",
         minimumProtocolVersion: "TLSv1.2_2018",
     },
@@ -513,35 +651,39 @@ function getDomainAndSubdomain(domain: string): { subdomain: string, parentDomai
     };
 }
 
+if (!config.testingFlow) {
 // Creates a new Route53 DNS record pointing the domain to the CloudFront distribution.
-async function createAliasRecord(
-        targetDomain: string, distribution: aws.cloudfront.Distribution): Promise<aws.route53.Record> {
+    async function createAliasRecord(
+            targetDomain: string, distribution: aws.cloudfront.Distribution): Promise<aws.route53.Record> {
 
-    const domainParts = getDomainAndSubdomain(targetDomain);
-    const hostedZone = await aws.route53.getZone({ name: config.hostedZone || domainParts.parentDomain });
-    return new aws.route53.Record(
-        config.websiteDomain,
-        {
-            name: config.setRootRecord ? "" : domainParts.subdomain,
-            zoneId: hostedZone.zoneId,
-            type: "A",
-            aliases: [
-                {
-                    name: distribution.domainName,
-                    zoneId: distribution.hostedZoneId,
-                    evaluateTargetHealth: true,
-                },
-            ],
-        },
-        {
-            protect: true,
-        });
+        const domainParts = getDomainAndSubdomain(targetDomain);
+        const hostedZone = await aws.route53.getZone({ name: config.hostedZone || domainParts.parentDomain });
+        return new aws.route53.Record(
+            config.websiteDomain,
+            {
+                name: config.setRootRecord ? "" : domainParts.subdomain,
+                zoneId: hostedZone.zoneId,
+                type: "A",
+                aliases: [
+                    {
+                        name: distribution.domainName,
+                        zoneId: distribution.hostedZoneId,
+                        evaluateTargetHealth: true,
+                    },
+                ],
+            },
+            {
+                protect: true,
+            });
+    }
+
+    [...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
 }
-
-[...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
 
 export const uploadsBucketName = uploadsBucket.bucket;
 export const originBucketWebsiteDomain = originBucket.websiteDomain;
 export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
 export const websiteDomain = config.websiteDomain;
+export const originS3BucketName = originBucket.bucket;
+export const bundlesS3BucketName = bundlesBucket.bucket;
