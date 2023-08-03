@@ -82,7 +82,6 @@ const policy: aws.iam.PolicyDocument = {
                Service: "ec2.amazonaws.com"
             },
             Effect: "Allow",
-            Sid: "",
         },
     ],
 };
@@ -586,7 +585,6 @@ const role = new aws.iam.Role("my-role", {
                 Service: "ec2.amazonaws.com"
             },
             Effect: "Allow",
-            Sid: "",
         }]
     },
 });
@@ -613,7 +611,6 @@ role = aws.iam.Role('my-role',
                 'Service': 'ec2.amazonaws.com'
             },
             'Effect': 'Allow',
-            'Sid': '',
         }],
     }),
 )
@@ -645,8 +642,7 @@ func main() {
 		"Principal": {
 			"Service": "ec2.amazonaws.com"
 		},
-		"Effect": "Allow",
-		"Sid": ""
+		"Effect": "Allow"
 	}]
 }
 `),
@@ -690,8 +686,7 @@ class MyStack : Stack
         ""Principal"": {
             ""Service"": ""ec2.amazonaws.com""
         },
-        ""Effect"": ""Allow"",
-        ""Sid"": """"
+        ""Effect"": ""Allow""
     }]
 }
 ",
