@@ -19,6 +19,10 @@ This blog post walks you through the list of notable changes in the new major ve
 
 <!--more-->
 
+{{% notes type="info" %}}
+Join Pulumi on Thursday, September 7, 2023 for a live workshop on [getting started with infrastructure as code on AWS](/resources/getting-started-with-iac-pulumi-aws/), which will feature the new AWS v6 provider.
+{{% /notes %}}
+
 ### SDK Size Optimization
 
 The AWS Classic provider contains more than 1,200 resources with over 12,000 properties between them. As a result, it’s expected that the SDK size of the provider has grown to be fairly large. With that in mind, we invested in some key areas to reduce the size of generated files. Depending on the runtime, the SDK is now up to 90% smaller than it used to be in v5 of the provider!
@@ -57,4 +61,4 @@ You can see a full list of changes and learn more about migrating your existing 
 
 ### Get Started Today
 
-You can browse our [API reference docs](https://www.pulumi.com/registry/packages/aws/) with inline examples or explore the [Pulumi AWS Classic Provider](https://github.com/pulumi/pulumi-aws) repository to get started today!
+You can browse our [API reference docs](https://www.pulumi.com/registry/packages/aws/) with inline examples or explore the [Pulumi AWS Classic Provider](https://github.com/pulumi/pulumi-aws) repository to get started today! And don't forget [to register for the live workshop](/resources/getting-started-with-iac-pulumi-aws/) on September 7, 2023 to see AWS v6 in action!
