@@ -29,7 +29,7 @@ The AWS Classic provider contains more than 1,200 resources with over 12,000 pro
 
 ![aws_sdk](aws_sdk.png)
 
-One particular optimization is related to `wafv2` resources, that were particularly difficult to use in Pulumi AWS v5 (issue [one](https://github.com/pulumi/pulumi-aws/issues/2276), [two](https://github.com/pulumi/pulumi-aws/issues/1117[), [three](https://github.com/pulumi/pulumi-aws/issues/2250)). The new release includes refactored `wafv2` types to recursive shapes, which enabled us to remove a lot of excess generated code.
+One particular optimization is related to `wafv2` resources, that were particularly difficult to use in Pulumi AWS v5 (issue [one](https://github.com/pulumi/pulumi-aws/issues/2276), [two](https://github.com/pulumi/pulumi-aws/issues/1117[), [three](https://github.com/pulumi/pulumi-aws/issues/2250)). The new release includes the refactored `wafv2` module that properly define recursive types, which enabled us to remove a lot of excess generated code.
 
 Smaller SDK sizes mean faster downloads, snappier experience with editors and code completion tools, less time needed for `pulumi preview` and `pulumi up` operations, and smaller binaries, all of which contribute to a streamlined developer experience for Pulumi users.
 
@@ -41,7 +41,7 @@ More and more Terraform resources are migrating to the [Terraform Plugin Framewo
 
 The new major version of the AWS Classic provider brings 56 new resources and 23 new functions. Additions include resources for Audit Manager, Chime, Fin Space, Global Accelerator, Open Search, Quicksight, Resource Explorer, Route53, Transfer, and many other AWS services.
 
-You can see a full list of new resources and functions in [Release Notes](TODO).
+You can see a full list of new resources and functions in [Release Notes](https://github.com/pulumi/pulumi-aws/releases/tag/v6.0.0).
 
 ### Upstream Breaking Changes
 
@@ -57,7 +57,7 @@ The v6 release removed a few resources that have been deprecated for a long whil
 
 We also shipped a few, small breaking changes to properties that may allow one or many items. We aligned those with the capabilities of the upstream provider to maximize the user value and developer experience.
 
-You can see a full list of changes and learn more about migrating your existing programs in our [Migration Guide](TODO).
+You can see a full list of changes and learn more about migrating your existing programs in our [Migration Guide](https://www.pulumi.com/registry/packages/aws/how-to-guides/v6-migration).
 
 ### Get Started Today
 
