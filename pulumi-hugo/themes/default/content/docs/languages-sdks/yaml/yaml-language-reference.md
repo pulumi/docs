@@ -480,7 +480,7 @@ about your current workspace.
 ```yaml
     variables:
       cwd: ${pulumi.cwd}
-      project: ${pulumi.cwd}
+      project: ${pulumi.project}
       stack: ${pulumi.stack}
 ```
 
