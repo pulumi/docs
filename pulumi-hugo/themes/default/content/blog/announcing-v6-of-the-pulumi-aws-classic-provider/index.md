@@ -27,7 +27,7 @@ The AWS Classic provider contains more than 1,200 resources with over 12,000 pro
 
 One particular optimization is related to `wafv2` resources, that were particularly difficult to use in Pulumi AWS v5 (issue [one](https://github.com/pulumi/pulumi-aws/issues/2276), [two](https://github.com/pulumi/pulumi-aws/issues/1117[), [three](https://github.com/pulumi/pulumi-aws/issues/2250)). The new release includes refactored `wafv2` types to recursive shapes, which enabled us to remove a lot of excess generated code.
 
-Smaller SDK sizes mean faster downloads, snappier experience with editors and code completion tools, faster preview and up time, smaller binaries, all of which contribute to a streamlined developer experience for Pulumi users.
+Smaller SDK sizes mean faster downloads, snappier experience with editors and code completion tools, less time needed for `pulumi preview` and `pulumi up` operations, and smaller binaries, all of which contribute to a streamlined developer experience for Pulumi users.
 
 ### Terraform Plugin Framework Support
 
