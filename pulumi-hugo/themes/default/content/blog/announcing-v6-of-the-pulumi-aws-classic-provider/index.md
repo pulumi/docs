@@ -41,7 +41,7 @@ You can see a full list of new resources and functions in [Release Notes](TODO).
 
 ### Upstream Breaking Changes
 
-Pulumi AWS Classic v6 ships all improvements and bug fixes of upstream versions from 5.0.0 to 5.9.0. It also contains a number of upstream breaking changes. See [changelog](https://github.com/hashicorp/terraform-provider-aws/blob/main/CHANGELOG.md) to navigate the entire list.
+Pulumi AWS Classic v6 ships all improvements and bug fixes of upstream versions from 5.0.0 to 5.9.0. It also contains a number of upstream breaking changes. Please refer to the [changelog](https://github.com/hashicorp/terraform-provider-aws/blob/main/CHANGELOG.md) to navigate the entire list.
 
 ### Fixes for Highly Upvoted Issues
 
