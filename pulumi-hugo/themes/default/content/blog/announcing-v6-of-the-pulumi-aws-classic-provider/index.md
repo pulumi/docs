@@ -29,7 +29,7 @@ The AWS Classic provider contains more than 1,200 resources with over 12,000 pro
 
 ![aws_sdk](aws_sdk.png)
 
-One particular optimization is related to `wafv2` resources, that were particularly difficult to use in Pulumi AWS v5 (issue [one](https://github.com/pulumi/pulumi-aws/issues/2276), [two](https://github.com/pulumi/pulumi-aws/issues/1117[), [three](https://github.com/pulumi/pulumi-aws/issues/2250)). The new release includes the refactored `wafv2` module that properly define recursive types, which enabled us to remove a lot of excess generated code.
+One particular optimization is related to `wafv2` resources, that were particularly difficult to use in Pulumi AWS v5 (issue [one](https://github.com/pulumi/pulumi-aws/issues/2276), [two](https://github.com/pulumi/pulumi-aws/issues/1117[), [three](https://github.com/pulumi/pulumi-aws/issues/2250)). The new release includes a refactored `wafv2` module which uses recursive types. Using recursive types allowed us to remove a lot of excess generated code.
 
 Smaller SDK sizes mean faster downloads, snappier experience with editors and code completion tools, less time needed for `pulumi preview` and `pulumi up` operations, and smaller binaries, all of which contribute to a streamlined developer experience for Pulumi users.
 
