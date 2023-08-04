@@ -133,8 +133,8 @@ variables:
 
 Provider functions are exposed in each language as regular functions, in two variations:
 
- 1. a function that accepts plain arguments (strings and so on) and returns a Promise, or blocks until the result is available; and,
- 2. a function that accepts `Input` values and returns an [Output](/docs/concepts/inputs-outputs/).
+ 1. A function that accepts plain arguments (strings and so on) and returns a Promise, or blocks until the result is available.
+ 2. A function that accepts `Input` values and returns an [Output](/docs/concepts/inputs-outputs/).
 
 The documentation for a provider function will tell you the name and signature for each of the variations.
 
