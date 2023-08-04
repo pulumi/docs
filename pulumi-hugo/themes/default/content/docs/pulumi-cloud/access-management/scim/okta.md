@@ -147,7 +147,7 @@ To confirm that the groups were provisioned correctly, sign in to the Pulumi Clo
 
 ![SCIM teams](/images/docs/guides/scim/console.png)
 
-Select that group and verify its membership. Note that the team’s membership cannot be altered within the Pulumi Cloud. If any membership changes are needed, they must be done within Okta. This allows the membership to be managed using Okta, so your teams on the Pulumi side will always mirror the groups you have configured.
+Teams provisioned with SCIM will be marked with a blue SSO icon. Select the provisioned team and verify its membership. Note that the team’s membership cannot be altered within the Pulumi Cloud. If any membership changes are needed, they must be done within Okta. This allows the membership to be managed using Okta, so your teams on the Pulumi side will always mirror the groups you have configured.
 
 ## Known Limitations
 

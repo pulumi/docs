@@ -22,9 +22,6 @@ This guide walks you through configuring Okta as a SAML SSO identity provider (I
 
 - [Single Sign-On](/docs/pulumi-cloud/access-management/saml/sso/)
 
-> **Note:** The screen shots below are using the Okta _Classic UI_. You can switch to it by clicking the gear
-> icon on the upper right corner of the screen.
-
 ## Creating the Okta Application
 
 The first step is to create a new Okta Application Integration. Of the various "sign on methods"
@@ -80,8 +77,8 @@ The final step is to configure the Pulumi Cloud with details on your new Okta-ba
 SAML application. To do this, you need to obtain the IDP metadata document from Okta and then provide
 it to Pulumi.
 
-First, navigate to the **Sign On** tab on the application page and click the "View Setup Instructions"
-button.
+First, navigate to the **Sign On** tab on the application page and click the "View SAML Setup Instructions"
+button in the right column.
 
 ![View Setup Instructions](/images/docs/reference/service/saml-okta/view-setup-instructions.png)
 
