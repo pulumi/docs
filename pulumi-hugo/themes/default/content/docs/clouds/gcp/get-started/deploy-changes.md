@@ -20,18 +20,18 @@ Now let's deploy your changes.
 $ pulumi up
 ```
 
-Pulumi will run the `preview` step of the update, which computes the minimally disruptive change to achieve the desired state described by the program.
+Pulumi will run the `preview` step of the update, which computes the minimally disruptive change to achieve the desired state described by the program:
 
 ```
-Previewing update (dev):
+Previewing update (dev)
 
-     Type                         Name                   Plan
-     pulumi:pulumi:Stack          quickstart-dev
- +   └─ gcp:storage:BucketObject  index.html             create
-
+     Type                             Name               Plan
+     pulumi:pulumi:Stack              quickstart-dev
+ +   ├─ gcp:storage:BucketIAMBinding  my-bucket-binding  create
+ +   └─ gcp:storage:BucketObject      index.html         create
 
 Resources:
-    + 1 to create
+    + 2 to create
     2 unchanged
 
 Do you want to perform this update?
@@ -40,28 +40,27 @@ Do you want to perform this update?
   details
 ```
 
-Choosing `yes` will proceed with the update and upload your `index.html` file to your bucket.
+Choosing `yes` will proceed with the update and write the `index.html` file to the bucket:
 
 ```
-Do you want to perform this update? yes
-Updating (dev):
+Updating (dev)
 
-     Type                         Name                   Status
-     pulumi:pulumi:Stack          quickstart-dev
- +   └─ gcp:storage:BucketObject  index.html             created
-
+     Type                             Name               Status
+     pulumi:pulumi:Stack              quickstart-dev
+ +   ├─ gcp:storage:BucketIAMBinding  my-bucket-binding  created (5s)
+ +   └─ gcp:storage:BucketObject      index.html         created (0.76s)
 
 Outputs:
-    bucketName: "gs://my-bucket-11a9046"
+    bucketName: "gs://my-bucket-daa12be"
 
 Resources:
-    + 1 created
+    + 2 created
     2 unchanged
 
-Duration: 3s
+Duration: 8s
 ```
 
-Once the update has completed, you can verify the object was created in your bucket by checking the Google Cloud Console or by running the following `gsutil` command:
+Once the update has completed, you can verify the object was created by checking the Google Cloud Console or running the following `gsutil` command:
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" >}}
 
@@ -126,14 +125,14 @@ $ gsutil ls $(pulumi stack output bucketName)
 Notice that your `index.html` file has been added to the bucket:
 
 ```bash
-gs://my-bucket-11a9046/index.html-77a5d80
+gs://my-bucket-daa12be/index.html-a52debd
 ```
 
 {{% choosable language javascript %}}
 
-Now that `index.html` is in your bucket, modify the program file to have the bucket serve `index.html` as a static website.
+Now that `index.html` exists in the bucket, modify the program to have the bucket serve the file as a static website.
 
-First, set the `website` property on your bucket. And, to align with Google Cloud Storage recommendations, set uniform bucket-level access on the bucket to `true`.
+To do that, update the bucket definition to configure its `website` property. Then, to align with Google Cloud Storage recommendations, set its uniform bucket-level access property to `true`:
 
 ```javascript
 const bucket = new gcp.storage.Bucket("my-bucket", {
@@ -145,37 +144,7 @@ const bucket = new gcp.storage.Bucket("my-bucket", {
 });
 ```
 
-Next, allow the contents of your bucket to be viewed anonymously over the Internet.
-
-```javascript
-const bucketIAMBinding = new gcp.storage.BucketIAMBinding("my-bucket-IAMBinding", {
-    bucket: bucket.name,
-    role: "roles/storage.objectViewer",
-    members: ["allUsers"]
-});
-```
-
-We need to give your account access to view the bucket it must change. Make sure to replace `youruser@email.com` with an actual user's email.
-
-```javascript
-const bucketMember = new gcp.storage.BucketIAMMember("bucketIAMMember", {
-    bucket: bucket.name,
-    role: "roles/storage.objectViewer",
-    member: "user:youruser@email.com",
-});
-```
-
-Also, change the content type of your `index.html` object so that it is served as HTML.
-
-```javascript
-const bucketObject = new gcp.storage.BucketObject("index.html", {
-    bucket: bucket.name,
-    contentType: "text/html",
-    source: new pulumi.asset.FileAsset("index.html")
-});
-```
-
-Finally, at the end of the program file, export the resulting bucket’s endpoint URL so you can easily access it:
+Finally, at the end of the file, export the website's public URL to make it easy to access:
 
 ```javascript
 exports.bucketEndpoint = pulumi.concat("http://storage.googleapis.com/", bucket.name, "/", bucketObject.name);
@@ -185,9 +154,9 @@ exports.bucketEndpoint = pulumi.concat("http://storage.googleapis.com/", bucket.
 
 {{% choosable language typescript %}}
 
-Now that `index.html` is in your bucket, modify the program file to have the bucket serve `index.html` as a static website.
+Now that `index.html` exists in the bucket, modify the program to have the bucket serve the file as a static website.
 
-First, set the `website` property on your bucket. And, to align with Google Cloud Storage recommendations, set uniform bucket-level access on the bucket to `true`.
+To do that, update the bucket definition to configure its `website` property. Then, to align with Google Cloud Storage recommendations, set its uniform bucket-level access property to `true`:
 
 ```typescript
 const bucket = new gcp.storage.Bucket("my-bucket", {
@@ -199,37 +168,7 @@ const bucket = new gcp.storage.Bucket("my-bucket", {
 });
 ```
 
-Next, allow the contents of your bucket to be viewed anonymously over the Internet.
-
-```typescript
-const bucketIAMBinding = new gcp.storage.BucketIAMBinding("my-bucket-IAMBinding", {
-    bucket: bucket.name,
-    role: "roles/storage.objectViewer",
-    members: ["allUsers"]
-});
-```
-
-We need to give your account access to view the bucket it must change. Make sure to replace `youruser@email.com` with an actual user's email.
-
-```typescript
-const bucketMember = new gcp.storage.BucketIAMMember("bucketIAMMember", {
-    bucket: bucket.name,
-    role: "roles/storage.objectViewer",
-    member: "user:youruser@email.com",
-});
-```
-
-Also, change the content type of your `index.html` object so that it is served as HTML.
-
-```typescript
-const bucketObject = new gcp.storage.BucketObject("index.html", {
-    bucket: bucket.name,
-    contentType: "text/html",
-    source: new pulumi.asset.FileAsset("index.html")
-});
-```
-
-Finally, at the end of the program file, export the resulting bucket’s endpoint URL so you can easily access it:
+Finally, at the end of the file, export the website's public URL to make it easy to access:
 
 ```typescript
 export const bucketEndpoint = pulumi.concat("http://storage.googleapis.com/", bucket.name, "/", bucketObject.name);
@@ -239,63 +178,37 @@ export const bucketEndpoint = pulumi.concat("http://storage.googleapis.com/", bu
 
 {{% choosable language python %}}
 
-Now that `index.html` is in your bucket, modify the program file to have the bucket serve `index.html` as a static website.
+Now that `index.html` exists in the bucket, modify the program to have the bucket serve the file as a static website.
 
-First, set the `website` property on your bucket. And, to align with Google Cloud Storage recommendations, set uniform bucket-level access on the bucket to `True`.
+To do that, update the bucket definition to configure its `website` property. Then, to align with Google Cloud Storage recommendations, set its uniform bucket-level access property to `True`:
 
 ```python
-bucket = storage.Bucket('my-bucket',
+bucket = storage.Bucket(
+    "my-bucket",
     location="US",
-    website=storage.BucketWebsiteArgs(
-        main_page_suffix='index.html'),
+    website=storage.BucketWebsiteArgs(main_page_suffix="index.html"),
     uniform_bucket_level_access=True,
 )
 ```
 
-Next, allow the contents of your bucket to be viewed anonymously over the Internet.
+Finally, at the end of the file, export the website's public URL to make it easy to access:
 
 ```python
-bucketIAMBinding = storage.BucketIAMBinding('my-bucket-IAMBinding',
-    bucket=bucket.name,
-    role="roles/storage.objectViewer",
-    members=["allUsers"]
+pulumi.export(
+    "bucket_endpoint",
+    pulumi.Output.concat(
+        "http://storage.googleapis.com/", bucket.id, "/", bucket_object.name
+    ),
 )
-```
-
-We need to give your account access to view the bucket it must change. Make sure to replace `youruser@email.com` with an actual user's email.
-
-```python
-bucket_iam_member = storage.BucketIAMMember(
-    "bucketIAMMember",
-    bucket=bucket.name,
-    role="roles/storage.objectViewer",
-    member="user:youruser@email.com",
-)
-```
-
-Also, change the content type of your `index.html` object so that it is served as HTML.
-
-```python
-bucketObject = storage.BucketObject(
-    'index.html',
-    bucket=bucket.name,
-    content_type='text/html',
-    source=pulumi.FileAsset('index.html')
-)
-```
-
-Finally, at the end of the program file, export the resulting bucket’s endpoint URL so you can easily access it:
-
-```python
-pulumi.export('bucket_endpoint', pulumi.Output.concat('http://storage.googleapis.com/', bucket.id, "/", bucketObject.name))
 ```
 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-Now that `index.html` is in your bucket, modify the program file to have the bucket serve `index.html` as a static website.
 
-First, set the `website` property on your bucket. And, to align with Google Cloud Storage recommendations, set uniform bucket-level access on the bucket to `true`.
+Now that `index.html` exists in the bucket, modify the program to have the bucket serve the file as a static website.
+
+To do that, update the bucket definition to configure its `Website` property. Then, to align with Google Cloud Storage recommendations, set its uniform bucket-level access property to `true`:
 
 ```go
 bucket, err := storage.NewBucket(ctx, "my-bucket", &storage.BucketArgs{
@@ -310,61 +223,28 @@ if err != nil {
 }
 ```
 
-Next, allow the contents of your bucket to be viewed anonymously over the Internet.
+Finally, at the end of the file, export the website's public URL to make it easy to access.
 
 ```go
-_, err = storage.NewBucketIAMBinding(ctx, "my-bucket-IAMBinding", &storage.BucketIAMBindingArgs{
-    Bucket: bucket.Name,
-    Role:   pulumi.String("roles/storage.objectViewer"),
-    Members: pulumi.StringArray{
-        pulumi.String("allUsers"),
-    },
-})
-if err != nil {
-    return err
-}
+ctx.Export("bucketEndpoint", pulumi.Sprintf("http://storage.googleapis.com/%s/%s", bucket.Name, bucketObject.Name))
 ```
 
-We need to give your account access to view the bucket it must change. Make sure to replace `youruser@email.com` with an actual user's email.
-
-```go
-bucketMember, err := storage.NewBucketIAMMember(ctx, "bucketIAMMember", &storage.BucketIAMMemberArgs{
-    Bucket: bucket.Name,
-    Role:   pulumi.String("roles/storage.objectViewer"),
-    Member: pulumi.String("user:youruser@email.com"),
-})
-if err != nil {
-    return err
-}
-```
-
-Also, change the content type of your `index.html` object so that it is served as HTML.
+Be sure to change the variable name of the `BucketObject` from `_` to `bucketObject` in this step, or Go may fail to compile the program:
 
 ```go
 bucketObject, err := storage.NewBucketObject(ctx, "index.html", &storage.BucketObjectArgs{
-    Bucket:      bucket.Name,
-    ContentType: pulumi.String("text/html"),
-    Source:      pulumi.NewFileAsset("index.html"),
+    Bucket: bucket.Name,
+    Source: pulumi.NewFileAsset("index.html"),
 })
-if err != nil {
-    return err
-}
-```
-
-Finally, at the end of the program file, export the resulting bucket’s endpoint URL so you can easily access it:
-
-```go
-bucketEndpoint := pulumi.Sprintf("http://storage.googleapis.com/%s/%s", bucket.Name, bucketObject.Name)
-ctx.Export("bucketEndpoint", bucketEndpoint)
 ```
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-Now that `index.html` is in your bucket, modify the program file to have the bucket serve `index.html` as a static website.
+Now that `index.html` exists in the bucket, modify the program to have the bucket serve the file as a static website.
 
-First, set the `website` property on your bucket. And, to align with Google Cloud Storage recommendations, set uniform bucket-level access on the bucket to `true`.
+To do that, update the bucket definition to configure its `Website` property. Then, to align with Google Cloud Storage recommendations, set its uniform bucket-level access property to `true`:
 
 ```csharp
 // Add this using statement
@@ -383,40 +263,7 @@ var bucket = new Bucket("my-bucket", new BucketArgs
 });
 ```
 
-Next, allow the contents of your bucket to be viewed anonymously over the Internet.
-
-```csharp
-var bucketIAMBinding = new BucketIAMBinding("my-bucket-IAMBinding", new BucketIAMBindingArgs
-{
-    Bucket = bucket.Name,
-    Role = "roles/storage.objectViewer",
-    Members = "allUsers"
-});
-```
-
-We need to give your account access to view the bucket it must change. Make sure to replace `youruser@email.com` with an actual user's email.
-
-```csharp
-var bucketMember = new BucketIAMMember("bucketIAMMember", new BucketIAMMemberArgs
-{
-    Bucket = bucket.Name,
-    Role = "roles/storage.objectViewer",
-    Member = "user:youruser@email.com"
-});
-```
-
-Also, change the content type of your `index.html` object so that it is served as HTML.
-
-```csharp
-var bucketObject = new BucketObject("index.html", new BucketObjectArgs
-{
-    Bucket = bucket.Name,
-    ContentType = "text/html",
-    Source = new FileAsset("./index.html")
-});
-```
-
-Finally, at the end of the program file, export the resulting bucket’s endpoint URL so you can easily access it:
+Finally, at the end of the file, export the website's public URL to make it easy to access:
 
 ```csharp
 return new Dictionary<string, object?>
@@ -430,192 +277,84 @@ return new Dictionary<string, object?>
 
 {{% choosable language java %}}
 
-Now that your `index.html` is in your bucket, modify the program to have the bucket serve `index.html` as a static website.
+Now that `index.html` exists in the bucket, modify the program to have the bucket serve the file as a static website.
 
-First, add the `BucketArgs`,  `BucketWebsiteArgs`, `BucketIAMBinding`, and `BucketIAMBindingArgs` classes to the list of imports.
+To do that, add the `BucketWebsiteArgs` class to the list of imports, then update the bucket definition to configure its `website` property. To align with Google Cloud Storage recommendations, also set its uniform bucket-level access property to `true`:
 
 ```java
 // ...
-import com.pulumi.gcp.storage.BucketArgs;
 import com.pulumi.gcp.storage.inputs.BucketWebsiteArgs;
-import com.pulumi.gcp.storage.BucketIAMBinding;
-import com.pulumi.gcp.storage.BucketIAMBindingArgs;
-```
 
-Next, set the `website` property on your bucket. And, to align with Google Cloud Storage recommendations, set uniform bucket-level access on the bucket to `true`:
-
-```java
-// ...
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
             // Create an AWS resource (S3 Bucket)
-            var bucket = new Bucket("my-bucket",
-                    BucketArgs.builder()
-                            .location("US")
-                            .website(BucketWebsiteArgs.builder()
-                                    .mainPageSuffix("index.html")
-                                    .build())
-                            .uniformBucketLevelAccess(true)
-                            .build());
+            var bucket = new Bucket("my-bucket", BucketArgs.builder()
+                .location("US")
+                .website(BucketWebsiteArgs.builder()
+                    .mainPageSuffix("index.html")
+                    .build())
+                .build());
             //...
 ```
 
-Next, allow the contents of your bucket to be viewed anonymously over the Internet.
+Finally, at the end of the file, export the website's public URL to make it easy to access:
 
 ```java
-// ...
-public class App {
-    public static void main(String[] args) {
-        Pulumi.run(ctx -> {
-            // var bucket = ...
-            var binding = new BucketIAMBinding("my-bucket-IAMBinding",
-                    BucketIAMBindingArgs.builder()
-                            .bucket(bucket.name())
-                            .role("roles/storage.objectViewer")
-                            .members("allUsers")
-                            .build());
-            // Create an S3 Bucket object ...
-```
-
-We need to give your account access to view the bucket it must change. Make sure to replace `youruser@email.com` with an actual user's email.
-
-```java
-var binding = new BucketIAMMember("bucketIAMMember",
-BucketIAMMemberArgs.builder()
-        .bucket(bucket.name())
-        .role("roles/storage.objectViewer")
-        .member("user:youruser@email.com")
-        .build());
-```
-
-Also, change the content type of your index.html object so that it is served as HTML.
-
-```java
-// ...
-public class App {
-    public static void main(String[] args) {
-        Pulumi.run(ctx -> {
-            // var bucket = ...
-            // var binding = ...
-            // Create an S3 Bucket object
-            var bucketObject = new BucketObject("index.html", BucketObjectArgs.builder()
-                    .bucket(bucket.name())
-                    .contentType("text/html")
-                    .source(new FileAsset("index.html"))
-                    .build());
-```
-
-Finally, at the end of the program file, export the resulting bucket’s endpoint URL so you can access it easily. You can do that by importing the Pulumi `Output` class:
-
-```java
-// ...
-import com.pulumi.core.Output;
-```
-
-And adding a line to read the endpoint from the `Bucket` instance:
-
-```java
-// ...
-public class App {
-    public static void main(String[] args) {
-        Pulumi.run(ctx -> {
-            // ...
-            ctx.export("bucketEndpoint", Output.format("http://storage.googleapis.com/%s/%s", bucket.name(), bucketObject.name()));
-        });
+ctx.export("bucketEndpoint", Output.format("http://storage.googleapis.com/%s/%s", bucket.name(), bucketObject.name()));
 ```
 
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
 
-Now that your `index.html` is in your bucket, modify the program to have the bucket serve `index.html` as a static website. To do that, set the bucket's `website` property, passing the filename to use as an `mainPageSuffix`. And, to align with Google Cloud Storage recommendations, set uniform bucket-level access on the bucket to `true`.
+Now that `index.html` exists in the bucket, modify the program to have the bucket serve the file as a static website.
+
+To do that, update the bucket definition to configure its `Website` property. Then, to align with Google Cloud Storage recommendations, set its uniform bucket-level access setting to `true`:
 
 ```yaml
 resources:
   my-bucket:
     type: gcp:storage:Bucket
     properties:
+      location: US
       website:
         mainPageSuffix: index.html
-      location: US
       uniformBucketLevelAccess: true
 ```
 
-Next, allow the contents of your bucket to be viewed anonymously over the Internet.
-
-```yaml
-resources:
-  # ...
-  my-bucket-binding:
-    type: gcp:storage:BucketIAMBinding
-    properties:
-      bucket: ${my-bucket.name}
-      role: "roles/storage.objectViewer"
-      members: ["allUsers"]
-```
-
-We need to give your account access to view the bucket it must change. Make sure to replace `youruser@email.com` with an actual user's email.
-
-```yaml
-bucket_iam_member:
-    type: gcp:storage:BucketIAMMember
-    properties:
-      bucket: ${my-bucket.name}
-      role: "roles/storage.objectViewer"
-      member: "user:youruser@email.com"
-```
-
-Also, change the content type of your `index.html` object so that it is served as HTML.
-
-```yaml
-resources:
-  # ...
-  index-object:
-    type: gcp:storage:BucketObject
-    properties:
-      bucket: ${my-bucket}
-      contentType: "text/html"
-      source:
-        Fn::FileAsset: ./index.html
-```
-
-Finally, at the end of the file, export the resulting bucket’s endpoint URL so you can access it easily:
+Finally, at the end of the file, export the website's public URL to make it easy to access:
 
 ```yaml
 # ...
 outputs:
-  bucketName: ${my-bucket.url}
-  bucketEndpoint: http://storage.googleapis.com/${my-bucket.name}/${index-object.name}
+  # ...
+  bucketEndpoint: http://storage.googleapis.com/${my-bucket.name}/${index-html.name}
   ```
 
 {{% /choosable %}}
 
-Now update your stack to have your storage bucket serve your `index.html` file as a static website.
+Give the stack one final update to apply these changes:
 
 ```bash
 $ pulumi up
 ```
 
-First, you will see a preview of your changes:
+Again, you'll see a preview of the changes to be made:
 
 ```
-Previewing update (dev):
+Previewing update (dev)
 
-     Type                    Name            Plan       Info
-     pulumi:pulumi:Stack              quickstart-dev
- ~   ├─ gcp:storage:Bucket            my-bucket              update     [diff: +website]
- +   └─ gcp:storage:BucketIAMBinding  my-bucket-IAMBinding   create
- +-  └─ gcp:storage:BucketObject      index.html             replace    [diff: ~contentType]
+     Type                   Name            Plan       Info
+     pulumi:pulumi:Stack    quickstart-dev
+ ~   └─ gcp:storage:Bucket  my-bucket       update     [diff: +website~uniformBucketLevelAccess]
 
 Outputs:
-  + bucketEndpoint: "http://storage.googleapis.com/my-bucket-0167228/index.html-50b2ce9"
+  + bucketEndpoint: "http://storage.googleapis.com/my-bucket-daa12be/index.html-a52debd"
 
 Resources:
-    + 1 to create
     ~ 1 to update
-    +-1 to replace
-    3 changes. 1 unchanged
+    3 unchanged
 
 Do you want to perform this update?
 > yes
@@ -623,31 +362,27 @@ Do you want to perform this update?
   details
 ```
 
-Select `yes` to deploy the changes:
+Choose `yes` to deploy them:
 
 ```
-Do you want to perform this update? yes
-Updating (dev):
+Updating (dev)
 
-     Type                     Name            Status      Info
-    pulumi:pulumi:Stack              quickstart-dev
- ~   ├─ gcp:storage:Bucket            my-bucket              updated     [diff: +website]
- +   └─ gcp:storage:BucketIAMBinding  my-bucket-IAMBinding   created
- +-  └─ gcp:storage:BucketObject      index.html             replaced    [diff: ~contentType];
+     Type                   Name            Status           Info
+     pulumi:pulumi:Stack    quickstart-dev
+ ~   └─ gcp:storage:Bucket  my-bucket       updated (1s)     [diff: +website~uniformBucketLevelAccess]
+
 Outputs:
-  + bucketEndpoint: "http://storage.googleapis.com/my-bucket-0167228/index.html-50b2ce9"
-    bucketName    : "gs://my-bucket-0167228"
+  + bucketEndpoint: "http://storage.googleapis.com/my-bucket-daa12be/index.html-a52debd"
+    bucketName    : "gs://my-bucket-daa12be"
 
 Resources:
-    + 1 created
     ~ 1 updated
-    +-1 replaced
-    3 changes. 1 unchanged
+    3 unchanged
 
-Duration: 8s
+Duration: 4s
 ```
 
-Finally, you can check out your new static website at the URL in the `Outputs` section of your update or you can make a `curl` request and see the contents of your `index.html` object printed out in your terminal.
+When the deployment completes, you can check out your new static website at the URL under `Outputs`, or make a `curl` request and see the contents of `index.html` printed to the terminal:
 
 {{% choosable language javascript %}}
 

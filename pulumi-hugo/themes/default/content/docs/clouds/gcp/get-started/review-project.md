@@ -55,7 +55,9 @@ const pulumi = require("@pulumi/pulumi");
 const gcp = require("@pulumi/gcp");
 
 // Create a Google Cloud resource (Storage Bucket)
-const bucket = new gcp.storage.Bucket("my-bucket");
+const bucket = new gcp.storage.Bucket("my-bucket", {
+    location: "US"
+});
 
 // Export the DNS name of the bucket
 exports.bucketName = bucket.url;
@@ -70,7 +72,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 // Create a Google Cloud resource (Storage Bucket)
-const bucket = new gcp.storage.Bucket("my-bucket");
+const bucket = new gcp.storage.Bucket("my-bucket", {
+    location: "US",
+});
 
 // Export the DNS name of the bucket
 export const bucketName = bucket.url;
@@ -85,10 +89,10 @@ import pulumi
 from pulumi_gcp import storage
 
 # Create a Google Cloud resource (Storage Bucket)
-bucket = storage.Bucket('my-bucket')
+bucket = storage.Bucket("my-bucket", location="US")
 
 # Export the DNS name of the bucket
-pulumi.export('bucket_name',  bucket.url)
+pulumi.export("bucket_name", bucket.url)
 ```
 
 {{% /choosable %}}
@@ -99,24 +103,24 @@ pulumi.export('bucket_name',  bucket.url)
 package main
 
 import (
-    "github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/storage"
-    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v6/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
-    pulumi.Run(func(ctx *pulumi.Context) error {
-        // Create a Google Cloud resource (Storage Bucket)
-	bucket, err := storage.NewBucket(ctx, "my-bucket", &storage.BucketArgs{
-	    Location: pulumi.String("US"),
-	})
-	if err != nil {
-	    return err
-	}
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		// Create a Google Cloud resource (Storage Bucket)
+		bucket, err := storage.NewBucket(ctx, "my-bucket", &storage.BucketArgs{
+			Location: pulumi.String("US"),
+		})
+		if err != nil {
+			return err
+		}
 
-        // Export the DNS name of the bucket
-        ctx.Export("bucketName", bucket.Url)
-        return nil
-    })
+		// Export the DNS name of the bucket
+		ctx.Export("bucketName", bucket.Url)
+		return nil
+	})
 }
 ```
 
@@ -131,19 +135,18 @@ using System.Collections.Generic;
 
 return await Deployment.RunAsync(() =>
 {
-    // Create a Google Cloud resource (Storage Bucket)
+    // Create a Google Cloud resource (Storage Bucket).
     var bucket = new Bucket("my-bucket", new BucketArgs
     {
-        Location = "US"
+        Location = "US",
     });
 
-    // Export the DNS name of the bucket
+    // Export the DNS name of the bucket.
     return new Dictionary<string, object?>
     {
-        ["bucketName"] = bucket.Url
+        ["bucketName"] = bucket.Url,
     };
 });
-
 ```
 
 {{% /choosable %}}
@@ -161,10 +164,12 @@ import com.pulumi.gcp.storage.BucketArgs;
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
-            var bucket = new Bucket("my-bucket",
-                                    BucketArgs.builder()
-                                    .location("US")
-                                    .build());
+            // Create a Google Cloud resource (Storage Bucket)
+            var bucket = new Bucket("my-bucket", BucketArgs.builder()
+                .location("US")
+                .build());
+
+            // Export the DNS name of the bucket
             ctx.export("bucketName", bucket.url());
         });
     }
@@ -215,7 +220,7 @@ export const bucketName = bucket.url;
 {{% choosable language python %}}
 
 ```python
-pulumi.export('bucket_name',  bucket.url)
+pulumi.export("bucket_name", bucket.url)
 ```
 
 {{% /choosable %}}
@@ -233,7 +238,7 @@ ctx.Export("bucketName", bucket.Url)
 ```csharp
 return new Dictionary<string, object?>
 {
-    ["bucketName"] = bucket.Url
+    ["bucketName"] = bucket.Url,
 };
 ```
 

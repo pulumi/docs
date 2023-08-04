@@ -60,15 +60,15 @@ EOT
 
 {{% /choosable %}}
 
-Now that you have your new `index.html` with some content, open your program file and modify it to add the contents of your `index.html` file to your storage bucket.
+Now that you have an `index.html` file with some content, open {{< langfile >}} and modify it to add that file to your storage bucket.
 
-To accomplish this, you will use Pulumi's `FileAsset` class to assign the content of the file to a new  `BucketObject`.
+For this, you'll use Pulumi's `FileAsset` class to assign the content of the file to a new `BucketObject`.
 
 {{< chooser language "javascript,typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language javascript %}}
 
-In `index.js`, create the `BucketObject` right after creating the bucket itself.
+In `index.js`, create the `BucketObject` right after creating the bucket itself:
 
 ```javascript
 const bucketObject = new gcp.storage.BucketObject("index.html", {
@@ -81,7 +81,7 @@ const bucketObject = new gcp.storage.BucketObject("index.html", {
 
 {{% choosable language typescript %}}
 
-In `index.ts`, create the `BucketObject` right after creating the bucket itself.
+In `index.ts`, create the `BucketObject` right after creating the bucket itself:
 
 ```typescript
 const bucketObject = new gcp.storage.BucketObject("index.html", {
@@ -97,10 +97,8 @@ const bucketObject = new gcp.storage.BucketObject("index.html", {
 In `__main__.py`, create a new bucket object by adding the following right after creating the bucket itself:
 
 ```python
-bucketObject = storage.BucketObject(
-    'index.html',
-    bucket=bucket.name,
-    source=pulumi.FileAsset('index.html')
+bucket_object = storage.BucketObject(
+    "index.html", bucket=bucket.name, source=pulumi.FileAsset("index.html")
 )
 ```
 
@@ -108,10 +106,10 @@ bucketObject = storage.BucketObject(
 
 {{% choosable language go %}}
 
-In `main.go`, create the `BucketObject` right after creating the bucket itself.
+In `main.go`, create the `BucketObject` right after creating the bucket itself:
 
 ```go
-bucketObject, err := storage.NewBucketObject(ctx, "index.html", &storage.BucketObjectArgs{
+_, err = storage.NewBucketObject(ctx, "index.html", &storage.BucketObjectArgs{
     Bucket: bucket.Name,
     Source: pulumi.NewFileAsset("index.html"),
 })
@@ -124,7 +122,7 @@ if err != nil {
 
 {{% choosable language csharp %}}
 
-In `Program.cs`, create the `BucketObject` right after creating the bucket itself.
+In `Program.cs`, create the `BucketObject` right after creating the bucket itself:
 
 ```csharp
 var bucketObject = new BucketObject("index.html", new BucketObjectArgs
@@ -138,18 +136,20 @@ var bucketObject = new BucketObject("index.html", new BucketObjectArgs
 
 {{% choosable language java %}}
 
-In {{< langfile >}}, import the `FileAsset`, `BucketObject`, and `BucketObjectArgs` classes, then create the `BucketObject` right after creating the bucket itself.
+In {{< langfile >}}, import the following additional classes, then create the `BucketObject` right after creating the bucket itself:
 
 ```java
 // ...
 import com.pulumi.asset.FileAsset;
+import com.pulumi.gcp.storage.BucketIAMBinding;
+import com.pulumi.gcp.storage.BucketIAMBindingArgs;
 import com.pulumi.gcp.storage.BucketObject;
 import com.pulumi.gcp.storage.BucketObjectArgs;
 
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
-            // var bucket = ...
+            // ...
 
             // Create a Bucket object
             var bucketObject = new BucketObject("index.html", BucketObjectArgs.builder()
@@ -158,7 +158,7 @@ public class App {
                 .build()
             );
 
-            // ctx.export(...
+            // ...
         });
     }
 }
@@ -173,17 +173,115 @@ In {{< langfile >}}, create the `BucketObject` right below the bucket itself.
 ```yaml
 resources:
   # ...
-  index-object:
+  index-html:
     type: gcp:storage:BucketObject
     properties:
       bucket: ${my-bucket}
       source:
-        Fn::FileAsset: ./index.html
+        fn::fileAsset: ./index.html
 ```
 
 {{% /choosable %}}
 
-Notice how you provide the bucket you created earlier as an input to your new `BucketObject`. This is so Pulumi knows what storage bucket the object should live in.
+Notice how you provide the name of the bucket you created earlier as an input for the `BucketObject`. This tells Pulumi which bucket the object should live in.
+
+Below the `BucketObject`, add an IAM binding allowing the contents of the bucket to be viewed anonymously over the Internet:
+
+{{% choosable language typescript %}}
+
+```typescript
+const bucketBinding = new gcp.storage.BucketIAMBinding("my-bucket-binding", {
+    bucket: bucket.name,
+    role: "roles/storage.objectViewer",
+    members: ["allUsers"]
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language javascript %}}
+
+```javascript
+const bucketBinding = new gcp.storage.BucketIAMBinding("my-bucket-binding", {
+    bucket: bucket.name,
+    role: "roles/storage.objectViewer",
+    members: ["allUsers"]
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+bucket_iam_binding = storage.BucketIAMBinding(
+    "my-bucket-binding",
+    bucket=bucket.name,
+    role="roles/storage.objectViewer",
+    members=["allUsers"],
+)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+_, err = storage.NewBucketIAMBinding(ctx, "my-bucket-binding", &storage.BucketIAMBindingArgs{
+    Bucket: bucket.Name,
+    Role:   pulumi.String("roles/storage.objectViewer"),
+    Members: pulumi.StringArray{
+        pulumi.String("allUsers"),
+    },
+})
+if err != nil {
+    return err
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+var bucketBinding = new BucketIAMBinding("my-bucket-binding", new BucketIAMBindingArgs
+{
+    Bucket = bucket.Name,
+    Role = "roles/storage.objectViewer",
+    Members = new[]
+    {
+        "allUsers",
+    },
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+var bucketBinding = new BucketIAMBinding("my-bucket-binding", BucketIAMBindingArgs.builder()
+    .bucket(bucket.name())
+    .role("roles/storage.objectViewer")
+    .members("allUsers")
+    .build());
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+my-bucket-binding:
+  type: gcp:storage:BucketIAMBinding
+  properties:
+    bucket: ${my-bucket.name}
+    role: "roles/storage.objectViewer"
+    members:
+      - allUsers
+```
+
+{{% /choosable %}}
 
 Next, you'll deploy your changes.
 
