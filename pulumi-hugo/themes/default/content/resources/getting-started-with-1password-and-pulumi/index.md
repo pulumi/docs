@@ -2,7 +2,7 @@
 # Name of the webinar.
 title: Getting Started with 1Password and Pulumi
 meta_desc: Join us for a hands-on lab showing you how to integrate 1Password into your Pulumi workflow.
-meta_image: "/images/resources/kubernetes-cluster-equinix-metal-oscar.png"
+meta_image: "/images/resources/1password-pulumi.png"
 
 # A featured webinar will display first in the list.
 featured: false
@@ -51,7 +51,7 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url:
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2023-09-12T11:00:00-07:00
+    sortable_date: 2023-09-12T08:00:00-07:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.
@@ -65,7 +65,7 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Ringo de Smet
+        - name: Ringo De Smet
           role: Customer Experience Architect, Pulumi
         - name: Clarence Wong
           role: Senior Product Partnerships Manager, 1Password
