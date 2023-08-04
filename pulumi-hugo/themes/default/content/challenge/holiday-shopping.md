@@ -29,7 +29,7 @@ In order to complete this challenge, you'll need a couple things set up in advan
 - [Docker](https://docs.docker.com/get-docker/)
 - An [AWS account](https://portal.aws.amazon.com/)
 - The [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
-- A [MongoDB Cloud account](https://www.mongodb.com/cloud/atlas/signup)
+- A [MongoDB Cloud account](https://www.mongodb.com/cloud/atlas/register)
 - A [GitHub account](https://github.com/signup)
 
 ## Challenge
