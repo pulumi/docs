@@ -10,6 +10,7 @@ menu:
         parent: scim
         weight: 2
 aliases:
+  - /docs/reference/service/scim/okta/
   - /docs/guides/scim/okta/
 ---
 
@@ -29,7 +30,7 @@ In order to configure SCIM for your Okta organization, you may need to email [su
 
 Once the feature is enabled, navigate to the Pulumi application configured in your Okta org. Under the **General** tab, in the **App Settings** dialog box, locate the **Provisioning** section and select **SCIM**. Click **Save** to save your changes and close the **App Settings** dialog box.
 
-![Okta Enabling SCIM](/images/docs/guides/scim/okta-general-enable-scim.png)
+![Okta Enabling SCIM](/images/docs/reference/service/scim/okta/general-enable-scim.png)
 
 For more information on how to enable SCIM provisioning in Okta, see [How to Enable SCIM Provisioning in Custom App](https://support.okta.com/help/s/article/SCIM-Provisioning-Enabled-in-Custom-App) in the Okta documentation.
 
@@ -48,7 +49,7 @@ Depending on how you configured the application for SAML, you may need to adjust
 
 3. Click **Next** then click **Finish**.
 
-![Okta SCIM Attributes](/images/docs/guides/scim/okta-attributes-scim.png)
+![Okta SCIM Attributes](/images/docs/reference/service/scim/okta/attributes.png)
 
 ## Configuring the SCIM Connector
 
@@ -74,7 +75,7 @@ Once you generate the token, save it securely. Neither the Pulumi Cloud nor Pulu
 
 The following shows how your SCIM connection info should be filled in.
 
-![Okta SCIM provisioning](/images/docs/guides/scim/okta-scim-provisioning.png)
+![Okta SCIM provisioning](/images/docs/reference/service/scim/okta/provisioning.png)
 
 ## Enabling SCIM Provisioning Actions
 
@@ -104,7 +105,7 @@ Now that the SCIM connector knows how to connect to Pulumi, you need to adjust t
 4. Click **Save Mappings**.
 5. Click **Apply Updates**.
 
-![Okta Profile Mapping](/images/docs/guides/scim/okta-profile-mapping.png)
+![Okta Profile Mapping](/images/docs/reference/service/scim/okta/profile-mapping.png)
 
 ## Adjusting the Okta to Pulumi Username Mappings
 
@@ -114,7 +115,7 @@ Pulumi usernames are immutable and should not be changed after a user is associa
 2. Under **Credentials Details**, change **Update application username on** from **Create and update** to **Create only**.
 3. Select **Save**.
 
-![Okta Username Updates Create Only](/images/docs/guides/scim/okta-create-only.png)
+![Okta Usernames Set on Create Only](/images/docs/reference/service/scim/okta/usernames-set-on-create-only.png)
 
 ## Setting up Group Provisioning {#groupprovisioning}
 
@@ -124,14 +125,14 @@ To set this up, you need to enable Push Groups as a supported provisioning actio
 
 1. Navigate to the application that you created above by clicking the on the **Applications** tab and then selecting the application.
 
-    ![Okta application selection.](/images/docs/guides/scim/okta-application-selection-scim.png)
+    ![Okta application selection](/images/docs/reference/service/scim/okta/application-selection.png)
 
 2. Click on **Provisioning** tab, then click on the integrations menu option located on the left side navigation.
 3. Check the **Push Groups** box under **Supported provisioning actions**.
 4. Select the **Push Groups** tab.
 5. Select the **Push Groups** drop down menu. Here you will have the option to find groups either by name or rule.
 
-    ![Push Groups drop down menu in Okta](/images/docs/guides/scim/okta-pushgroups-menu-scim.png)
+    ![Push Groups drop down menu in Okta](/images/docs/reference/service/scim/okta/push-groups-menu.png)
 
 6. Select **Find groups by name**. This will take you to a screen where you can search groups by the group name. Once you find the group(s) that you are looking for, click **Save**.
 
@@ -147,7 +148,7 @@ If there are members in a group that are not yet assigned to the Pulumi Cloud ap
 
 To confirm that the groups were provisioned correctly, sign in to the Pulumi Cloud and select **Settings** > **Teams** from the left navigation.
 
-![SCIM teams](/images/docs/guides/scim/console.png)
+![SCIM teams](/images/docs/reference/service/scim/okta/view-teams.png)
 
 Teams provisioned with SCIM will be marked with a blue SSO icon. Select the provisioned team and verify its membership.
 
