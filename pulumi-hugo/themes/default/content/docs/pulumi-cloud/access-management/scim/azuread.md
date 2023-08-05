@@ -10,7 +10,7 @@ menu:
         parent: scim
         weight: 1
 aliases:
-  - /docs/reference/service/scim/azuread/
+  - /docs/guides/scim/azuread/
 ---
 
 This document outlines the steps required to configure automatic provisioning/deprovisioning of your users in Pulumi using SCIM 2.0.

@@ -10,7 +10,6 @@ menu:
         parent: scim
         weight: 2
 aliases:
-  - /docs/reference/service/scim/okta/
   - /docs/guides/scim/okta/
 ---
 
