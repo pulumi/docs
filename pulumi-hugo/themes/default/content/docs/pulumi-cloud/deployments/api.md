@@ -421,7 +421,7 @@ The final settings for the stack are calculated by merging the settings present 
     * Remove all properties that are explicitly set to `null` in the patch value
     * Merge all non-`null` properties from the patch value that exist in the current property value
     * Add all non-`null` properties from the patch value that do not exist in the current property value
-* For other propertries, replace the current value with the the patch value
+* For other propertries, replace the current value with the patch value
 
 For example, if the current settings for a stack are:
 

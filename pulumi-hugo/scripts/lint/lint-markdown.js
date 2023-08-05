@@ -4,7 +4,7 @@ const markdownlint = require("markdownlint");
 const path = require("path");
 
 /**
- * REGEX for grabbing the the front matter of a Hugo markdown file. Example:
+ * REGEX for grabbing the front matter of a Hugo markdown file. Example:
  *
  *     ---
  *     ...props

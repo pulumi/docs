@@ -1641,7 +1641,7 @@ When working with outputs and apply, you may see an error message like so:
 Calling __str__ on an Output[T] is not supported. To get the value of an Output[T] as an Output[str] consider: 1. o.apply(lambda v: f"prefix{v}suffix") See https://pulumi.io/help/outputs for more details.
 ```
 
-The reason this is happening is because the _Output_ value is being used before it has returned ans is available from the API.
+The reason this is happening is because the _Output_ value is being used before it has returned and is available from the API.
 
 A concrete example of this can be seen in the following code:
 
@@ -1870,7 +1870,7 @@ The correct way of handling this scenario is to wait for the bucket ARN to retur
 
 Notice in that example how the JSON string is being built _inside_ the `apply` call to Pulumi. In logical order, this happens as:
 
-- Wait for the the bucket ARN to be returned from the cloud provider
+- Wait for the bucket ARN to be returned from the cloud provider
 - Then, build the JSON string with the "plain" value.
 
 ### Resource Names

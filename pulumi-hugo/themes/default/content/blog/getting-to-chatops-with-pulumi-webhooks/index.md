@@ -60,7 +60,7 @@ Slack. You can find the full code in the
 [examples repo](https://github.com/pulumi/examples/), under
 [aws-ts-pulumi-webhooks](https://github.com/pulumi/examples/tree/master/aws-ts-pulumi-webhooks).
 
-The code is very straight forward, thanks to the the
+The code is very straight forward, thanks to the
 [@pulumi/cloud](https://github.com/pulumi/pulumi-cloud) package.
 
 ```typescript

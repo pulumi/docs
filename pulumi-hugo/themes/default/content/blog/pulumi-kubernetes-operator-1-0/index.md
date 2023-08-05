@@ -122,7 +122,7 @@ Full `Stack` Custom Resource [API documentation](https://github.com/pulumi/pulum
 The 1.0 release of the Pulumi Kubernetes Operator is an important milestone, but there is still lots more planned to further expand the capabilities and scalability of the Operator. Some upcoming areas we’ll be investing:
 
 * [Enable deployments to be run in separate Jobs](https://github.com/pulumi/pulumi-kubernetes-operator/issues/78)
-* [Adopt new features from the the latest Operator SDK](https://github.com/pulumi/pulumi-kubernetes-operator/issues/212)
+* [Adopt new features from the latest Operator SDK](https://github.com/pulumi/pulumi-kubernetes-operator/issues/212)
 * [Publish Kubernetes events from the Operator](https://github.com/pulumi/pulumi-kubernetes-operator/issues/73)
 
 ## Conclusion

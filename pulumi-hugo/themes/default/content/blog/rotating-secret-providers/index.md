@@ -24,7 +24,7 @@ pulumi stack change-secrets-provider "awskms://alias/ChangeSecretsProvider?regio
 ```
 
 This command will change the secrets provider *for the currently selected stack*. It will
-ensure that the the configuration values in `Pulumi.<stack>.yaml` are re-encrypted
+ensure that the configuration values in `Pulumi.<stack>.yaml` are re-encrypted
 with the new secrets provider and that the latest checkpoint (state file)
 also has any secrets held within are migrated with the new secrets provider.
 

@@ -29,7 +29,7 @@ In the next section, we will describe each of these components and see how they 
 
 The _language host_ is responsible for running a Pulumi program and setting up an environment where it can register resources with the _deployment engine_.  The language host is made up of two different pieces:
 
-1. A language executor, which is a binary named `pulumi-language-<language-name>`, that Pulumi uses to launch the runtime for the the language your program is written in (e.g. Node or Python). This binary is distributed with the Pulumi CLI.
+1. A language executor, which is a binary named `pulumi-language-<language-name>`, that Pulumi uses to launch the runtime for the language your program is written in (e.g. Node or Python). This binary is distributed with the Pulumi CLI.
 2. A language runtime, which is responsible for preparing your program to be executed and observes its execution in order to detect resource registrations.  When a resource is _registered_ (via `new Resource()` in JavaScript or `Resource(...)` in Python), the language runtime communicates the registration request back to the _deployment engine_. The language runtime is distributed as a regular package, just like any other code that might depend on your program.  For example, the Node runtime is contained in the [`@pulumi/pulumi`](https://www.npmjs.com/package/@pulumi/pulumi) package available on npm, and the Python runtime is contained in the [`pulumi`](https://pypi.org/project/pulumi/) package available on PyPI.
 
 ## Deployment Engine

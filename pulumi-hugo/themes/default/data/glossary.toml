@@ -55,7 +55,7 @@ link = "/docs/concepts/how-pulumi-works"
 
 [[entries]]
 term = "Language Executor"
-description = "A language executor is a binary named pulumi-language-<language-name>, that Pulumi uses to launch the runtime for the the language your program is written in (e.g. Node or Python). This binary is distributed with the Pulumi CLI."
+description = "A language executor is a binary named pulumi-language-<language-name>, that Pulumi uses to launch the runtime for the language your program is written in (e.g. Node or Python). This binary is distributed with the Pulumi CLI."
 link = "/docs/concepts/how-pulumi-works"
 
 [[entries]]

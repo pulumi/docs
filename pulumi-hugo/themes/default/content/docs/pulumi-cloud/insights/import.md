@@ -31,7 +31,7 @@ Cloud Import programs use `ReadResource` which marks the resource as `external`,
 
 Since these are just normal Pulumi programs, you can configure and run them on your own including with your own backends.
 
-Cloud Import programs are written in Go and require and Go 1.19+ to be installed on your system in addition the the Pulumi CLI.
+Cloud Import programs are written in Go and require and Go 1.19+ to be installed on your system in addition to the Pulumi CLI.
 
 ### AWS
 

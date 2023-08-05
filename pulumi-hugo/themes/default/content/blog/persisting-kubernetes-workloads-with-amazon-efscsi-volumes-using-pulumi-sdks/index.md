@@ -48,7 +48,7 @@ drwxr-xr-x   95 nishidavidson  staff   3040 Jun 18 18:22 node_modules
 
 ## Step 2: Create the EKS cluster, EFS endpoint and MountTargets:
 
-The code below first declares an EKS cluster attached to two public subnets in a new VPC. We then declare EFS endpoint and mount the same to both subnets so the the EKS worker nodes can access the filesystem. This code should be pasted into `index.ts`.
+The code below first declares an EKS cluster attached to two public subnets in a new VPC. We then declare EFS endpoint and mount the same to both subnets so that the EKS worker nodes can access the filesystem. This code should be pasted into `index.ts`.
 
 ```typescript
 import * as aws from "@pulumi/aws";

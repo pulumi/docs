@@ -196,7 +196,7 @@ Then Pulumi would need to serialize the entire object value, since `bar` itself 
 
 #### Capturing modules in a JavaScript function
 
-Capturing of most JavaScript values normally works by serializing the entire object graph to produce a representation which can then be rehydated into a replica instance. However, this process works differently when the value being dealt with is a JavaScript module. For example, consider the following code:
+Capturing of most JavaScript values normally works by serializing the entire object graph to produce a representation which can then be rehydrated into a replica instance. However, this process works differently when the value being dealt with is a JavaScript module. For example, consider the following code:
 
 ```typescript
 import * as fs from "fs";
