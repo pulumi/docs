@@ -15,7 +15,7 @@ aliases:
 
 The `dependsOn` resource option creates a list of explicit dependencies between resources.
 
-Pulumi automatically tracks dependencies between resources when you supply an input argument that came from another resource’s output properties. In some cases, however, you may need to explicitly specify additional dependencies that Pulumi doesn’t know about but must still respect. This might happen if a dependency is external to the infrastructure itself—such as an application dependency—or is implied due to an ordering or eventual consistency requirement. The `dependsOn` option ensures that resource creation, update, and deletion operations are done in the correct order.
+Pulumi automatically tracks dependencies between resources when you supply an input argument that came from another resource’s output properties. In some cases, however, you may need to explicitly specify additional dependencies that Pulumi doesn’t know about but must still respect. This might happen if a dependency is external to the infrastructure itself—such as an application dependency—or is implied due to an ordering or eventual consistency requirement. The `dependsOn` option ensures that resource creation, update, and deletion operations are executed in the correct order.
 
 This example demonstrates how to make `res2` dependent on `res1`, even if there is no property-level dependency:
 
@@ -49,7 +49,7 @@ res2 = MyResource("res2", opts=ResourceOptions(depends_on=[res1]))
 
 ```go
 res1, _ := NewMyResource(ctx, "res1", &MyResourceArgs{/*...*/})
-res2, _ := NewMyResource(ctx, "res2", &MyResourceArgs{/*...*/}, pulumi.DependsOn([]Resource{res1}))
+res2, _ := NewMyResource(ctx, "res2", &MyResourceArgs{/*...*/}, pulumi.DependsOn([]pulumi.Resource{res1}))
 ```
 
 {{% /choosable %}}
