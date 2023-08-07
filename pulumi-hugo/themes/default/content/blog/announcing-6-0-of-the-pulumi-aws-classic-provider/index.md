@@ -1,8 +1,8 @@
 ---
-title: "Announcing v6 of the Pulumi AWS Classic Provider"
+title: "Announcing 6.0 of the Pulumi AWS Classic Provider"
 date: 2023-08-08T09:00:00-04:00
 draft: false
-meta_desc: "Announcing v6 of the Pulumi AWS Classic Provider, including SDK size optimization, TF plugin framework support, new resources, and more."
+meta_desc: "Announcing 6.0 of the Pulumi AWS Classic Provider, including SDK size optimization, TF plugin framework support, new resources, and more."
 meta_image: meta.png
 authors:
     - mikhail-shilkov
@@ -13,14 +13,14 @@ tags:
 
 ---
 
-We are excited to announce v6.0 of the Pulumi AWS Classic provider. The AWS Classic provider is the most heavily used provider across the entire Pulumi ecosystem, and offers access to the full surface area of the upstream Terraform AWS Provider from within Pulumi projects in all supported Pulumi languages. The v6.0 release brings a substantial set of fixes and improvements to the provider, including a number of breaking changes as part of the major version release.
+We are excited to announce 6.0 of the Pulumi AWS Classic provider. The AWS Classic provider is the most heavily used provider across the entire Pulumi ecosystem, and offers access to the full surface area of the upstream Terraform AWS Provider from within Pulumi projects in all supported Pulumi languages. The 6.0 release brings a substantial set of fixes and improvements to the provider, including a number of breaking changes as part of the major version release.
 
 This blog post walks you through the list of notable changes in the new major version.
 
 <!--more-->
 
 {{% notes type="info" %}}
-Join Pulumi on Thursday, September 7, 2023 for a live workshop on [getting started with infrastructure as code on AWS](/resources/getting-started-with-iac-pulumi-aws/), which will feature the new AWS v6 provider.
+Join Pulumi on Thursday, September 7, 2023 for a live workshop on [getting started with infrastructure as code on AWS](/resources/getting-started-with-iac-pulumi-aws/), which will feature the new AWS 6.0 provider.
 {{% /notes %}}
 
 ### SDK Size Optimization
@@ -35,7 +35,7 @@ Smaller SDK sizes mean faster downloads, snappier experience with editors and co
 
 ### Terraform Plugin Framework Support
 
-More and more Terraform resources are migrating to the [Terraform Plugin Framework](https://developer.hashicorp.com/terraform/plugin/framework). We are excited to announce that v6 supports all resources implemented with both Plugin SDK and Plugin Framework technologies. This means that users get access to the entire API of the upstream provider.
+More and more Terraform resources are migrating to the [Terraform Plugin Framework](https://developer.hashicorp.com/terraform/plugin/framework). We are excited to announce that 6.0 supports all resources implemented with both Plugin SDK and Plugin Framework technologies. This means that users get access to the entire API of the upstream provider.
 
 ### New Resources and Functions
 
@@ -45,7 +45,7 @@ You can see a full list of new resources and functions in [Release Notes](https:
 
 ### Upstream Breaking Changes
 
-Pulumi AWS Classic v6 ships all improvements and bug fixes of upstream versions from 5.0.0 to 5.9.0. It also contains a number of upstream breaking changes. Please refer to the [changelog](https://github.com/hashicorp/terraform-provider-aws/blob/main/CHANGELOG.md) to navigate the entire list.
+Pulumi AWS Classic 6.0 ships all improvements and bug fixes of upstream versions from 5.0.0 to 5.11.0. It also contains a number of upstream breaking changes. Please refer to the [changelog](https://github.com/hashicorp/terraform-provider-aws/blob/main/CHANGELOG.md) to navigate the entire list.
 
 ### Fixes for Highly Upvoted Issues
 
@@ -53,12 +53,12 @@ The new release ships a few Pulumi-specific fixes as well. A good example is a h
 
 ### MaxItemsOne and Deprecations
 
-The v6 release removed a few resources that have been deprecated for a long while. All of those resources were replaced with newer versions containing a more logical organization of modules and resource names. The old resources have been deprecated for years, so it's unlikely that you were still using them. But in case you do, we applied automatic aliases to make migration as straightforward as possible.
+The 6.0 release removed a few resources that have been deprecated for a long while. All of those resources were replaced with newer versions containing a more logical organization of modules and resource names. The old resources have been deprecated for years, so it's unlikely that you were still using them. But in case you do, we applied automatic aliases to make migration as straightforward as possible.
 
 We also shipped a few, small breaking changes to properties that may allow one or many items. We aligned those with the capabilities of the upstream provider to maximize the user value and developer experience.
 
-You can see a full list of changes and learn more about migrating your existing programs in our [Migration Guide](https://www.pulumi.com/registry/packages/aws/how-to-guides/v6-migration).
+You can see a full list of changes and learn more about migrating your existing programs in our [Migration Guide](https://www.pulumi.com/registry/packages/aws/how-to-guides/6-0-migration).
 
 ### Get Started Today
 
-You can browse our [API reference docs](https://www.pulumi.com/registry/packages/aws/) with inline examples or explore the [Pulumi AWS Classic Provider](https://github.com/pulumi/pulumi-aws) repository to get started today! And don't forget [to register for the live workshop](/resources/getting-started-with-iac-pulumi-aws/) on September 7, 2023 to see AWS v6 in action!
+You can browse our [API reference docs](https://www.pulumi.com/registry/packages/aws/) with inline examples or explore the [Pulumi AWS Classic Provider](https://github.com/pulumi/pulumi-aws) repository to get started today! And don't forget [to register for the live workshop](/resources/getting-started-with-iac-pulumi-aws/) on September 7, 2023 to see AWS 6.0 in action!
