@@ -55,22 +55,57 @@ and for the nav tree it is `static/registry/packages/navs/<package name>.json`.
 ### Updating the API docs templates
 
 This tool depends on the `pulumi/pulumi` repo, namely the `pkg/codegen/docs` generator.
-The docs generator uses Go-based [templates](https://github.com/pulumi/pulumi/tree/master/pkg/codegen/docs/templates) to render the markdown files in-memory which this tool then writes to the filesystem.
+The docs generator uses Go-based [templates](https://github.com/pulumi/pulumi/tree/master/pkg/codegen/docs/templates) to render Markdown files to the filesystem.
 
-To make changes to the templates, make sure you have `pulumi/pulumi` cloned locally and override the `github.com/pulumi/pulumi/pkg/v3` dependency to point to
-your local repo for testing out the changes to the templates. Once done, you must submit a PR to the `pulumi/pulumi` repo.
+To make changes to these templates, make sure you've cloned `pulumi/pulumi` locally, then override this package's `github.com/pulumi/pulumi` dependencies to point to the local clone. To do that, add the following lines to the `go.mod` file in this folder. The paths below assume `pulumi/pulumi` and `pulumi/docs` belong to the same parent folder:
 
-Once your `pulumi/pulumi` PR is merged, you should update the pseudo-version that this tool uses by running:
+```go
+replace github.com/pulumi/pulumi/pkg/v3 => ../../../pulumi/pkg
+replace github.com/pulumi/pulumi/sdk/v3 => ../../../pulumi/sdk
+```
+
+Then, build and run `resourcedocsgen` to write the docs for the specified provider to a path on your local filesystem:
+
+```bash
+go mod tidy
+go build -o "${GOPATH}/bin/resourcedocsgen" .
+```
+
+```bash
+resourcedocsgen docs \
+    --schemaFile "../../../pulumi-aws/provider/cmd/pulumi-resource-aws/schema.json" \
+    --version "v5.42.0" \
+    --docsOutDir "../../../registry/themes/default/content/registry/packages/aws/api-docs" \
+    --packageTreeJSONOutDir "../../../registry/themes/default/static/registry/packages/navs" \
+    --logtostderr
+```
+
+To preview your changes in a browser, use a path that corresponds to the `content` folder of a local clone of either [`pulumi/hugo`](https://github.com/pulumi/pulumi-hugo) or [`pulumi/registry`](https://github.com/pulumi/registry). The example above writes `aws` docs to the content folder of `pulumi/registry`.
+
+Open a terminal tab in in that repo, then run `make serve` to start a local development server at <http://localhost:1313/registry>:
+
+```
+make serve
+```
+
+Remember to rebuild `resourcedocsgen` after any making any changes to `pulumi/pulumi`.
+
+When you're ready, submit a PR on`pulumi/pulumi`. [See the README there](https://github.com/pulumi/pulumi/tree/master/pkg/codegen/docs#modifying-templates-and-updating-tests) for details.
+
+Once your `pulumi/pulumi` PR is merged, update the pseudo-version used by this package to pick up your changes:
 
 ```
 go get -u github.com/pulumi/pulumi/pkg/v3@<commit hash>
 go get -u github.com/pulumi/pulumi/sdk/v3@<commit hash>
+go mod tidy
 ```
 
-To update to latest pulumi/pulumi use
+To update to latest pulumi/pulumi use:
 
 ```
 go get -u github.com/pulumi/pulumi/pkg/v3
 go get -u github.com/pulumi/pulumi/sdk/v3
 go mod tidy
 ```
+
+Commit, then submit a PR on this repo. Once merged, your changes will be published.
