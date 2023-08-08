@@ -165,4 +165,18 @@ messages:
       link: https://pulumi.slack.com/archives/C4PCU9XKN/p1683131107652869
       source: email
       featured: true
+    -
+      message: "I have been working on AWS for quite some time. But I never used IaC.
+      Pulumi is my first IaC framework and I am loving it. I have never been a fan of Cloudformation and its UI confuses me. Will be using Pulumi quite often."
+      author: Vidit
+      link: joe user email
+      source: email
+    -
+      message: "I find Pulumi to be quite enjoyable to use. As a developer who is new to Infrastructure as Code (IAC), my team wanted me to learn IAC so that we can move our entire infrastructure to code. After considering AWS CloudFormation and Terraform, we ultimately opted for Pulumi.
+
+      The only criticism I have is that I hadn't come across your platform before. Perhaps there's an opportunity to enhance your marketing efforts."
+      author: Nabil
+      link: joe user email
+      source: email
+      featured: true
 ---
