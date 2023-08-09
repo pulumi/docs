@@ -93,6 +93,8 @@ import pulumi_awsx as awsx
 vpc = awsx.ec2.DefaultVpc("default-vpc")
 
 pulumi.export("vpcId", vpc.vpc_id)
+pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
+pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
 ```
 
 {{% /choosable %}}
@@ -833,7 +835,7 @@ traffic. This will be used by default, however you may allocate and assign resou
 
 Here is a program that allocates a new group with a few rules:
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,csharp,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -990,6 +992,47 @@ class Program
 
 {{% /choosable %}}
 
+{{% choosable language yaml %}}
+
+```yaml
+name: awsx-vpc-yaml
+runtime: yaml
+description: A minimal AWS Pulumi YAML program
+outputs:
+  vpcId: ${custom.vpcId}
+  publicSubnetIds: ${custom.publicSubnetIds}
+  privateSubnetIds: ${custom.privateSubnetIds}
+resources:
+  custom:
+    type: awsx:ec2:Vpc
+  allowTls:
+    type: aws:ec2:SecurityGroup
+    properties:
+      description: Allow TLS inbound traffic
+      vpcId: ${custom.vpcId}
+      ingress:
+        - description: allow SSH access from 203.0.113.25
+          fromPort: 22
+          toPort: 22
+          protocol: tcp
+          cidrBlocks:
+            - "203.0.113.25/32"
+        - description: allow HTTPS access from anywhere
+          fromPort: 443
+          toPort: 443
+          protocol: tcp
+          cidrBlocks:
+            - "0.0.0.0/0"
+      egress:
+        - fromPort: 0
+          toPort: 0
+          protocol: '-1'
+          cidrBlocks:
+            - 0.0.0.0/0
+```
+
+{{% /choosable %}}
+
 For additional details about configuring security group rules, See the
 [Security Groups for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) documentation.
 
@@ -997,7 +1040,7 @@ For additional details about configuring security group rules, See the
 
 This example shows how to deploy an EC2 instance using a VPC and Security Group provisioned with the Crosswalk AWS component:
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,csharp,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -1132,6 +1175,47 @@ class Program
 {
     static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
 }
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: awsx-vpc-yaml
+runtime: yaml
+description: A minimal AWS Pulumi YAML program
+outputs:
+  vpcId: ${custom.vpcId}
+  publicSubnetIds: ${custom.publicSubnetIds}
+  privateSubnetIds: ${custom.privateSubnetIds}
+resources:
+  custom:
+    type: awsx:ec2:Vpc
+  webserver-sg:
+    type: aws:ec2:SecurityGroup
+    properties:
+      vpcId: ${custom.vpcId}
+  webserver-www:
+    type: aws:ec2:Instance
+    properties:
+      ami: ${ami.id}
+      instanceType: t2.micro
+      vpcSecurityGroupIds:
+        - ${webserver-sg.id}
+      subnetId: ${custom.publicSubnetIds[0]}
+variables:
+  ami:
+    fn::invoke:
+      Function: aws:ec2:getAmi
+      Arguments:
+        filters:
+          - name: name
+            values:
+              - amzn-ami-hvm-*
+        mostRecent: true
+        owners:
+          - "137112412989"
 ```
 
 {{% /choosable %}}
