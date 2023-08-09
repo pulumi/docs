@@ -323,7 +323,7 @@ error: Duplicate resource URN 'urn:pulumi:production::acmecorp-website::custom:r
 
 Any change to the URN of a resource causes the old and new resources to be treated as unrelated—the new one will be created (since it was not in the prior state) and the old one will be deleted (since it is not in the new desired state). This behavior happens when you change the `name` used to construct the resource or the structure of a resource’s parent hierarchy.
 
-Both of these operations will lead to a different URN, and thus require the `create` and `delete` operations instead of an `update` or `replace` operation that you would use for an existing resource. In other words, be careful when you change a resource’s name because **changing the name of a resource will create a brand new resource and delete the old/original resource**.
+Both of these operations will lead to a different URN, and thus require the `create` and `delete` operations instead of an `update` or `replace` operation that you would use for an existing resource. In other words, be careful when you change a resource’s name because changing the name of a resource will create a new resource and delete the old/original resource.
 
 {{% notes "info" %}}
 If you’d like to rename a resource without destroying the old one, refer to the [aliases](/docs/concepts/options/aliases/) resource option.
