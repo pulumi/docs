@@ -183,6 +183,18 @@ resources:
 
 {{< /chooser >}}
 
+{{% notes "warning" %}}
+
+Be careful when you change a resource’s name because changing the name of a resource will create a new resource and delete the old/original resource.
+
+{{% /notes %}}
+
+{{% notes "warning" %}}
+
+If you’d like to rename a resource without destroying the old one, refer to the [aliases](/docs/concepts/options/aliases/) resource option.
+
+{{% /notes %}}
+
 If the `name` property is not available on a resource, consult the [Registry](/registry/) for the specific resource you are creating. Some resources use a different property to override auto-naming. For instance, the `aws.s3.Bucket` type uses the property `bucket` instead of name. Other resources, such as `aws.kms.Key`, do not have physical names and use other auto-generated IDs to uniquely identify them.
 
 Overriding auto-naming makes your project susceptible to naming collisions. As a result, for resources that may need to be replaced, you should specify `deleteBeforeReplace: true` in the resource’s options. This option ensures that old resources are deleted before new ones are created, which will prevent those collisions.
@@ -323,10 +335,6 @@ error: Duplicate resource URN 'urn:pulumi:production::acmecorp-website::custom:r
 
 Any change to the URN of a resource causes the old and new resources to be treated as unrelated—the new one will be created (since it was not in the prior state) and the old one will be deleted (since it is not in the new desired state). This behavior happens when you change the `name` used to construct the resource or the structure of a resource’s parent hierarchy.
 
-Both of these operations will lead to a different URN, and thus require the `create` and `delete` operations instead of an `update` or `replace` operation that you would use for an existing resource. In other words, be careful when you change a resource’s name because changing the name of a resource will create a new resource and delete the old/original resource.
-
-{{% notes "info" %}}
-If you’d like to rename a resource without destroying the old one, refer to the [aliases](/docs/concepts/options/aliases/) resource option.
-{{% /notes %}}
+Both of these operations will lead to a different URN, and thus require the `create` and `delete` operations instead of an `update` or `replace` operation that you would use for an existing resource.
 
 Resources constructed as children of a component resource should ensure their names are unique across multiple instances of the component resource. In general, the name of the component resource instance itself (the `name` parameter passed into the component resource constructor) should be used as part of the name of the child resources.
