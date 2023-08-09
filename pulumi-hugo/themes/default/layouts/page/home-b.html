@@ -1,0 +1,380 @@
+{{ define "hero" }}
+    <header class="home-page-hero">
+        <div class="dot-background-container pointer-events-none">
+            <div class="dot-background"></div>
+        </div>
+        <div class="dot-overlay"></div>
+
+        <div class="lg:flex py-6 px-12">
+            <div class="lg:w-1/2">
+                <div class="home-page-hero-content pb-12">
+                    <h1 class="b-version text-5xl">
+                        <span data-text="{{ index (.Params.hero.title) 0 }}">Infrastructure as code</span><br/>
+                        <span class="rainbow-text" data-text="{{ index (.Params.hero.title) 1 }}">in any programming language</span>
+                    </h1>
+                    <p class="leading-7">{{ .Params.hero.description | markdownify }}</p>
+                    <div class="mt-8 flex">
+                        <a class="home-hero-btn-primary mr-0 md:mr-4 mb-3 md:mb-0" href="{{ .Params.hero.cta_link }}">{{ .Params.hero.cta_text }}</a>
+                        <a class="btn-secondary home-hero-btn-secondary rounded-full cursor-pointer mb-3 md:mb-0" href="{{ .Params.hero.secondary_cta_link }}">{{ .Params.hero.secondary_cta_text }}</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:w-1/2">
+                <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                    <pulumi-choosable type="language" class="highlight" value="typescript">
+                        <img
+                            class="mx-auto"
+                            src="/images/home/typescript.svg"
+                            alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket"
+                        />
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="python">
+                        <img class="mx-auto" src="/images/home/python.svg" alt="Pulumi code being written in Python showing autocomplete for creating a new S3 bucket" />
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="go">
+                        <img class="mx-auto" src="/images/home/go.svg" alt="Pulumi code being written in GO showing autocomplete for creating a new S3 bucket" />
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="csharp">
+                        <img class="mx-auto" src="/images/home/c-sharp.svg" alt="Pulumi code being written in C# showing autocomplete for creating a new S3 bucket" />
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="java">
+                        <img class="mx-auto" src="/images/home/java.svg" alt="Pulumi code being written in Java showing autocomplete for creating a new S3 bucket" />
+                    </pulumi-choosable>
+
+                    <pulumi-choosable type="language" class="highlight" value="yaml">
+                        <img class="mx-auto" src="/images/home/yaml.svg" alt="Pulumi code being written in YAML showing autocomplete for creating a new S3 bucket" />
+                    </pulumi-choosable>
+                </pulumi-chooser>
+            </div>
+        </div>
+    </header>
+{{ end }}
+
+{{ define "main" }}
+    {{ $pageContext := . }}
+    <!-- Built by engineers + tweets -->
+    <section class="mt-8 mb-16 lg:mb-48 relative flex flex-col">
+        <div class="container mx-auto px-3 overflow-hidden lg:overflow-visible">
+            <div class="w-full bg-violet-600 rounded-xl shadow p-16 lg:pb-56 align-top">
+                <h2 class="text-white text-center">Built by engineers for engineers. Open source.</h2>
+                <div class="flex flex-col lg:flex-row items-center justify-center mb-4">
+                    <a class="text-white text-lg bold underline flex self-start lg:self-auto mt-4 lg:mt-0 mx-auto lg:mx-0 lg:pr-1" href="https://slack.pulumi.com/"
+                        >Join our community,
+                    </a>
+                    <p class="text-white text-lg mx-auto my-0 lg:mx-0 lg:my-auto">and let’s build together.</p>
+                </div>
+            </div>
+
+            <div class="w-full order-first lg:hidden">
+                <pulumi-swiper slides="1" centered-slides="true" initial-slide="3" loop="true" autoplay="true" autoplay-delay="5000" speed="1000">
+                    {{ range $tweet := .Params.get_started.tweets }}
+                        <pulumi-swipeable>
+                            <div class="w-full px-4">
+                                <div class="flex flex-col card p-6 bg-white">
+                                    <p class="text-left mt-0 overflow-hidden">{{ $tweet.text }}</p>
+                                    <div class="flex flex-grow items-end">
+                                        <div>
+                                            <img class="rounded-full w-12 h-12" src="{{ $tweet.avatar }}" />
+                                        </div>
+                                        <p class="ml-4 text-gray-600">{{ $tweet.username }}</p>
+                                        <div class="flex-grow flex justify-end my-4">
+                                            <img src="/logos/tech/twitter.svg" alt="Twitter" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </pulumi-swipeable>
+                    {{ end }}
+                </pulumi-swiper>
+            </div>
+            <div class="large-container mx-auto absolute -bottom-12 left-0 pt-12 hidden lg:block">
+                <pulumi-swiper slides="3" centered-slides="true" initial-slide="3" loop="true" autoplay="true" autoplay-delay="4000" speed="1000">
+                    {{ range $tweet := .Params.get_started.tweets }}
+                        <pulumi-swipeable>
+                            <div class="w-full px-4 text-left">
+                                <div class="flex flex-col card p-6 bg-white h-60">
+                                    <p class="flex-grow mt-0">{{ $tweet.text }}</p>
+                                    <div class="flex items-center w-full pb-1">
+                                        <a href="{{ $tweet.link }}" target="_blank" rel="noopener noreferrer">
+                                            <!-- If the browser fails to load the Twitter avatar, just hide it. -->
+                                            <div class="rounded-full border-none w-12 h-12 mr-4 overflow-hidden">
+                                                <img src="{{ $tweet.avatar }}" onerror="$(this).hide();" />
+                                            </div>
+                                        </a>
+                                        <a href="{{ $tweet.link }}" class="flex-grow text-gray-600 hover:text-gray-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                                            {{ $tweet.username }}
+                                        </a>
+
+                                        {{ if eq $tweet.source "twitter" }}
+                                            <img class="w-8 h-8" src="/logos/tech/twitter.svg" alt="Twitter" />
+                                        {{ end }}
+
+                                        {{ if eq $tweet.source "reddit" }}
+                                            <img class="w-8 h-8" src="/logos/tech/reddit.svg" alt="Reddit" />
+                                        {{ end }}
+
+                                        {{ if eq $tweet.source "linkedin" }}
+                                            <img class="w-8 h-8" src="/logos/tech/linkedin.svg" alt="LinkedIn" />
+                                        {{ end }}
+
+                                        {{ if eq $tweet.source "blog" }}
+                                            <i class="fas fa-blog text-gray-500 text-2xl"></i>
+                                        {{ end }}
+                                    </div>
+                                </div>
+                            </div>
+                        </pulumi-swipeable>
+                    {{ end }}
+                </pulumi-swiper>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code and ship faster -->
+    <section class="mb-8 px-6 lg:px-0 relative">
+        <div class="shape-background home-background-yellow-left">
+            <div class="shape-container flex flex-row-reverse">
+                <div class="dot-background-container self-end">
+                    <div class="dot-background-overlay"></div>
+                    <div class="dot-background no-animate"></div>
+                </div>
+                <div class="circle-left"></div>
+                <div class="circle-right"></div>
+            </div>
+        </div>
+
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row">
+                <div class="w-full lg:w-1/2 lg:mr-32 z-10 p-8">
+                    <h3>{{ .Params.code_faster.title }}</h3>
+                    <p class="text-lg">{{ .Params.code_faster.description | markdownify }}</p>
+                    {{ range $item := .Params.code_faster.items }}
+                        <h6>{{ $item.title }}</h6>
+                        <p>{{ $item.description | markdownify }}</p>
+                    {{ end }}
+                </div>
+                <div class="w-full lg:w-1/2 block p-6 md:pl-24 xl:pl-0">
+                    <div class="w-full">
+                        <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                            {{ range $item := .Params.code_faster.code }}
+                                <pulumi-choosable type="language" class="highlight" value="{{ $item.language }}">
+                                    {{ partial "code" (dict "lang" $item.language "code" $item.code "mode" "dark" "chrome" "true") }}
+                                </pulumi-choosable>
+                            {{ end }}
+                        </pulumi-chooser>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Panther quote -->
+    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto">
+        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.panther) }}
+    </section>
+
+    <!-- Boost productivity with AI -->
+    <section class="py-12 px-6 lg:px-0 relative">
+        <div class="shape-background home-background-salmon-right">
+            <div class="shape-container flex">
+                <div class="dot-background-container self-end">
+                    <div class="dot-background-overlay"></div>
+                    <div class="dot-background no-animate"></div>
+                </div>
+                <div class="circle-left"></div>
+                <div class="circle-right"></div>
+            </div>
+        </div>
+
+        <div class="container mx-auto flex flex-col lg:flex-row">
+            <div class="w-full lg:w-1/2 block lg:flex lg:justify-center p-6 md:pl-24 xl:pl-0">
+                <div>
+                    <pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml">
+                        <pulumi-choosable type="language" class="highlight" value="typescript">
+                            <img
+                                class="mx-auto"
+                                src="/images/home/ai-ts.svg"
+                                alt="AI prompted to 'Give me an AWS static website behind a CloudFront CDN' and outputting Pulumi code in TypeScript"
+                            />
+                        </pulumi-choosable>
+
+                        <pulumi-choosable type="language" class="highlight" value="python">
+                            <img
+                                class="mx-auto"
+                                src="/images/home/ai-python.svg"
+                                alt="AI prompted to 'Give me an AWS static website behind a CloudFront CDN' and outputting Pulumi code in Python"
+                            />
+                        </pulumi-choosable>
+
+                        <pulumi-choosable type="language" class="highlight" value="go">
+                            <img
+                                class="mx-auto"
+                                src="/images/home/ai-go.svg"
+                                alt="AI prompted to 'Give me an AWS static website behind a CloudFront CDN' and outputting Pulumi code in GO"
+                            />
+                        </pulumi-choosable>
+
+                        <pulumi-choosable type="language" class="highlight" value="csharp">
+                            <img
+                                class="mx-auto"
+                                src="/images/home/ai-csharp.svg"
+                                alt="AI prompted to 'Give me an AWS static website behind a CloudFront CDN' and outputting Pulumi code in C#"
+                            />
+                        </pulumi-choosable>
+
+                        <pulumi-choosable type="language" class="highlight" value="java">
+                            <img
+                                class="mx-auto"
+                                src="/images/home/ai-java.svg"
+                                alt="AI prompted to 'Give me an AWS static website behind a CloudFront CDN' and outputting Pulumi code in Java"
+                            />
+                        </pulumi-choosable>
+
+                        <pulumi-choosable type="language" class="highlight" value="yaml">
+                            <img
+                                class="mx-auto"
+                                src="/images/home/ai-yaml.svg"
+                                alt="AI prompted to 'Give me an AWS static website behind a CloudFront CDN' and outputting Pulumi code in YAML"
+                            />
+                        </pulumi-choosable>
+                    </pulumi-chooser>
+                </div>
+            </div>
+            <div class="my-auto"></div>
+            <div class="w-full my-auto lg:w-1/2 order-first lg:order-last lg:ml-32 z-10 px-8">
+                <h3>{{ .Params.ai.title }}</h3>
+                <p class="text-lg">{{ .Params.ai.description | markdownify }}</p>
+                <div class="mt-8">
+                    <span class="text-lg text-gray-600">Try it out: </span>
+                    <a href="/ai" class="underline text-lg text-blue-600">Pulumi AI<i class="fa fa-arrow-right ml-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Starburst quote -->
+    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto">
+        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.starburst) }}
+    </section>
+
+    <!-- Embed IaC Anywhere -->
+    <section class="my-12 lg:py-12 px-6 lg:px-0 relative">
+        <div class="shape-background home-background-purple-left">
+            <div class="shape-container">
+                <div class="dot-background-container">
+                    <div class="dot-background-overlay"></div>
+                    <div class="dot-background no-animate"></div>
+                </div>
+                <div class="circle-left"></div>
+                <div class="circle-right"></div>
+            </div>
+        </div>
+
+        <div class="container mx-auto flex flex-col lg:flex-row">
+            <div class="my-auto w-full lg:w-1/2 lg:mr-32 z-10 px-8">
+                <h3>{{ .Params.embed.title }}</h3>
+                <p class="text-lg">{{ .Params.embed.description | markdownify }}</p>
+                <div class="mt-8">
+                    <span class="text-lg text-gray-600">Learn more: </span>
+                    <a href="/automation" class="underline text-lg text-blue-600">Automation API<i class="fa fa-arrow-right ml-2"></i></a>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-1/2 flex items-center justify-center mt-12 lg:mt-0">
+                <img src="{{ .Params.embed.image }}" alt="{{ .Params.embed.alt }}" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Snowflake quote -->
+    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto">
+        {{ partial "home/quote.html" (dict "quote" .Params.customer_quotes.snowflake) }}
+    </section>
+
+    <!-- Search every cloud -->
+    <section class="py-12 lg:my-12 px-6 lg:px-0 relative">
+        <div class="shape-background home-background-yellow-right">
+            <div class="shape-container">
+                <div class="dot-background-container">
+                    <div class="dot-background-overlay"></div>
+                    <div class="dot-background no-animate"></div>
+                </div>
+                <div class="circle-left"></div>
+                <div class="circle-right"></div>
+            </div>
+        </div>
+
+        <div class="container mx-auto flex flex-col lg:flex-row">
+            <div class="w-full lg:w-1/2 flex items-center justify-center mt-12 lg:mt-0">
+                <img src="{{ .Params.search.image }}" alt="{{ .Params.search.alt }}" />
+            </div>
+            <div class="my-auto"></div>
+            <div class="w-full my-auto lg:w-1/2 order-first lg:order-last lg:ml-32 z-10 px-8">
+                <h3>{{ .Params.search.title }}</h3>
+                <p class="text-lg">{{ .Params.search.description | markdownify }}</p>
+                <div class="mt-8">
+                    <span class="text-lg text-gray-600">Learn more: </span>
+                    <a href="/product/pulumi-insights" class="underline text-lg text-blue-600">Pulumi Insights<i class="fa fa-arrow-right ml-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logos carousel -->
+    <section class="container mx-auto text-center overflow-hidden px-3 mt-24">
+        <h3 class="text-center mb-10">{{ .Params.customer_logos.title }}</h3>
+
+        <div class="w-full order-first pb-16 items-center justify-center hidden lg:block">
+            <pulumi-swiper slides="6" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
+                {{ range $logo := .Params.customer_logos.logos }}
+                    <pulumi-swipeable>
+                        <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
+                            {{ if $logo.link }}
+                                <a class="w-full h-full" href="{{ $logo.link }}" target="_blank">
+                                    {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
+                                </a>
+                            {{ else }}
+                                {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
+                            {{ end }}
+                        </div>
+                    </pulumi-swipeable>
+                {{ end }}
+            </pulumi-swiper>
+        </div>
+
+        <div class="w-full order-first pb-16 items-center justify-center block lg:hidden">
+            <pulumi-swiper slides="3" centered-slides="true" loop="true" autoplay="true" autoplay-delay="500" speed="2000">
+                {{ range $logo := .Params.customer_logos.logos }}
+                    <pulumi-swipeable>
+                        <div class="p-6 flex flex-col flex-grow items-end h-24 justify-center">
+                            {{ if $logo.link }}
+                                <a class="w-full h-full" href="{{ $logo.link }}" target="_blank">
+                                    {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
+                                </a>
+                            {{ else }}
+                                {{ partial "customer-logo.html" (dict "logo" $logo.name) }}
+                            {{ end }}
+                        </div>
+                    </pulumi-swipeable>
+                {{ end }}
+            </pulumi-swiper>
+        </div>
+    </section>
+
+    <!-- CTAs -->
+    <section class="container mx-auto">
+        <div class="w-full lg:w-2/3 mx-auto mb-16 bg-violet-600 rounded-xl shadow p-16 flex flex-col items-center justify-center">
+            <h2 class="text-white font-light">Ready to deploy your first stack?</h2>
+            <p class="text-white text-xl description">See what Pulumi can do for you.</p>
+            <div class="mt-8 flex text-center justify-center items-center flex-col mx-auto lg:mx-0 md:flex-row">
+                <a class="btn-secondary mr-0 md:mr-4 mb-3 md:mb-0" href="https://app.pulumi.com/signup">{{ .Params.hero.cta_text }}</a>
+                <a class="btn-secondary-home-action" href="{{ relref . "/docs/install" }}">Download Open Source</a>
+            </div>
+        </div>
+    </section>
+{{ end }}

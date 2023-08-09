@@ -72,9 +72,8 @@
             background-color: rgba(255, 255, 255, 0.7);
         }
 
-        h1 {
+        h1:not(.b-version) {
             @apply text-center mx-auto;
-            //font-size: 2.375rem !important;
 
             @screen lg {
                 @apply text-left mx-0;
