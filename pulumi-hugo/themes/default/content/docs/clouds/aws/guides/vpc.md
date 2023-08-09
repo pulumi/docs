@@ -64,9 +64,9 @@ VPC is often the easiest path when you're just getting up and running or don't y
 requirements. Most resources will use this default VPC automatically if you leave it unspecified. In other cases,
 you may be required to pass it explicitly, in which case you'll need to get it programmatically.
 
-To get the default VPC, just call the `awsx.vpc.DefaultVpc("default-vpc");` function:
+To get the default VPC, just call the [`awsx.vpc.DefaultVpc` function](https://www.pulumi.com/registry/packages/awsx/api-docs/ec2/defaultvpc/):
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,csharp,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -123,6 +123,25 @@ class Program
 
 {{% /choosable %}}
 
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: project-name
+runtime: yaml
+description: Pulumi Crosswalk for AWS VPC
+outputs:
+  vpcId: ${default-vpc.vpcId}
+  publicSubnetIds: ${default-vpc.publicSubnetIds}
+  privateSubnetIds: ${default-vpc.privateSubnetIds}
+resources:
+  default-vpc:
+    type: awsx:ec2:DefaultVpc
+```
+
+{{% /choosable %}}
+
 This example reads the default VPC and exports some of its properties for easy consumption. `pulumi up` will show:
 
 ```bash
@@ -167,7 +186,7 @@ simple defaults that many will want to start with, to complete control over ever
 
 The following code creates a new VPC using all default settings:
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,csharp,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -227,6 +246,23 @@ class Program
 {
     static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
 }
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: awsx-vpc-yaml
+runtime: yaml
+description: A minimal AWS Pulumi YAML program
+outputs:
+  vpcId: ${custom.vpcId}
+  publicSubnetIds: ${custom.publicSubnetIds}
+  privateSubnetIds: ${custom.privateSubnetIds}
+resources:
+  custom:
+    type: awsx:ec2:Vpc
 ```
 
 {{% /choosable %}}
@@ -312,7 +348,7 @@ Although the default CIDR block of `10.0.0.0/16` is reasonable most of the time,
 
 To set our VPC's CIDR block, pass a custom `cidrBlock` argument to `awsx.ec2.Vpc`'s constructor:
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,csharp,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -380,6 +416,25 @@ class Program
 
 {{% /choosable %}}
 
+{{% choosable language yaml %}}
+
+```yaml
+name: awsx-vpc-yaml
+runtime: yaml
+description: A minimal AWS Pulumi YAML program
+outputs:
+  vpcId: ${custom.vpcId}
+  publicSubnetIds: ${custom.publicSubnetIds}
+  privateSubnetIds: ${custom.privateSubnetIds}
+resources:
+  custom:
+    type: awsx:ec2:Vpc
+    properties:
+      cidrBlock: "172.16.8.0/24"
+```
+
+{{% /choosable %}}
+
 This decreases the number of available IP addresses in our VPC from the default of 65,536 addresses (`/16` netmask) to
 256 addresses (`/24` netmask), in addition to changing the IP address prefix from `10.0.0.0` to `172.16.8.0`.
 
@@ -402,7 +457,7 @@ two zones at a reasonable cost.
 All regions support at least 3 availability zones, but many of them support more. If you'd like to improve the
 fault tolerance of your configuration, override this with the `numberOfAvailabilityZones` argument:
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,csharp,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -470,6 +525,25 @@ class Program
 
 {{% /choosable %}}
 
+{{% choosable language yaml %}}
+
+```yaml
+name: awsx-vpc-yaml
+runtime: yaml
+description: A minimal AWS Pulumi YAML program
+outputs:
+  vpcId: ${custom.vpcId}
+  publicSubnetIds: ${custom.publicSubnetIds}
+  privateSubnetIds: ${custom.privateSubnetIds}
+resources:
+  custom:
+    type: awsx:ec2:Vpc
+    properties:
+      numberOfAvailabilityZones: 4
+```
+
+{{% /choosable %}}
+
 The VPC resource will internally adjust to fully consume 4 availability zones and split traffic accordingly.
 
 For information about regional support for availability zones, refer to AWS's
@@ -486,7 +560,7 @@ the behavior using its constructor's `subnets` argument.
 
 For example, this program replicates the default behavior but with an explicit specification:
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,csharp,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -586,6 +660,29 @@ class Program
 
 {{% /choosable %}}
 
+{{% choosable language yaml %}}
+
+```yaml
+name: awsx-vpc-yaml
+runtime: yaml
+description: A minimal AWS Pulumi YAML program
+outputs:
+  vpcId: ${custom.vpcId}
+  publicSubnetIds: ${custom.publicSubnetIds}
+  privateSubnetIds: ${custom.privateSubnetIds}
+resources:
+  custom:
+    type: awsx:ec2:Vpc
+    properties:
+      subnetSpecs:
+        - type: "Private"
+          cidrMask: 20
+        - type: "Public"
+          cidrMask: 22
+```
+
+{{% /choosable %}}
+
 The `subnetSpecs` argument takes an array of subnet specifications. Each one can include this information:
 
 * `type`: A required type of subnet to create. There are three kinds available:
@@ -616,7 +713,7 @@ in a public subnet, NAT gateways will only be created if there is at least one p
 
 Fewer NAT gateways can be requested (e.g., to save on costs) using the `natGateways` property:
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,csharp,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -688,6 +785,26 @@ class Program
 {
     static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
 }
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: awsx-vpc-yaml
+runtime: yaml
+description: A minimal AWS Pulumi YAML program
+outputs:
+  vpcId: ${custom.vpcId}
+  publicSubnetIds: ${custom.publicSubnetIds}
+  privateSubnetIds: ${custom.privateSubnetIds}
+resources:
+  custom:
+    type: awsx:ec2:Vpc
+    properties:
+      natGateways:
+        strategy: "Single"
 ```
 
 {{% /choosable %}}
