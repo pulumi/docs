@@ -20,8 +20,7 @@ Each resource also has a [Uniform Resource Name (URN)](#urns) which is a unique 
 
 {{% notes type="warning" %}}
 
-Be careful when you change a resource’s name because changing the name of a resource will create a new resource and delete the old/original resource. 
-If you’d like to rename a resource without destroying the old one, refer to the [aliases](/docs/concepts/options/aliases/) resource option.
+Be careful when you change a resource’s name because changing the name of a resource will create a new resource and delete the old/original resource. If you’d like to rename a resource without destroying the old one, refer to the [aliases](/docs/concepts/options/aliases/) resource option.
 
 {{% /notes %}}
 
