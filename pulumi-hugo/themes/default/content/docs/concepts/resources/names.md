@@ -18,6 +18,13 @@ Pulumi [auto-names](#autonaming) most resources by default, using the logical na
 
 Each resource also has a [Uniform Resource Name (URN)](#urns) which is a unique name derived from both the logical name of the resource and the type of the resource and, in the case of components, its parents.
 
+{{% notes type="warning" %}}
+
+Be careful when you change a resource’s name because changing the name of a resource will create a new resource and delete the old/original resource. 
+If you’d like to rename a resource without destroying the old one, refer to the [aliases](/docs/concepts/options/aliases/) resource option.
+
+{{% /notes %}}
+
 ## Logical Names {#logicalname}
 
 Every resource managed by Pulumi has a logical name that you specify as an argument to its constructor. For instance, the logical name of this IAM role is `my-role`:
@@ -182,18 +189,6 @@ resources:
 {{% /choosable %}}
 
 {{< /chooser >}}
-
-{{% notes "warning" %}}
-
-Be careful when you change a resource’s name because changing the name of a resource will create a new resource and delete the old/original resource.
-
-{{% /notes %}}
-
-{{% notes "warning" %}}
-
-If you’d like to rename a resource without destroying the old one, refer to the [aliases](/docs/concepts/options/aliases/) resource option.
-
-{{% /notes %}}
 
 If the `name` property is not available on a resource, consult the [Registry](/registry/) for the specific resource you are creating. Some resources use a different property to override auto-naming. For instance, the `aws.s3.Bucket` type uses the property `bucket` instead of name. Other resources, such as `aws.kms.Key`, do not have physical names and use other auto-generated IDs to uniquely identify them.
 
