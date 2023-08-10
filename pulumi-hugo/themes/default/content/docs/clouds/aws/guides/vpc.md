@@ -66,7 +66,7 @@ you may be required to pass it explicitly, in which case you'll need to get it p
 
 To get the default VPC, just call the [`awsx.vpc.DefaultVpc` function](https://www.pulumi.com/registry/packages/awsx/api-docs/ec2/defaultvpc/):
 
-{{< chooser language "typescript,python,csharp,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -99,6 +99,33 @@ pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		vpc, err := ec2.NewDefaultVpc(ctx, "custom", nil)
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("vpcId", vpc.VpcId)
+		ctx.Export("privateSubnetIds", vpc.PrivateSubnetIds)
+		ctx.Export("publicSubnetIds", vpc.PublicSubnetIds)
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
 {{% choosable language csharp %}}
 
 ```csharp
@@ -122,8 +149,6 @@ class Program
     static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
 }
 ```
-
-{{% /choosable %}}
 
 {{% /choosable %}}
 
