@@ -155,25 +155,21 @@ class Program
 {{% choosable language java %}}
 
 ```java
-package main
+package myproject;
 
-import (
-	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
+import com.pulumi.Pulumi;
+import com.pulumi.awsx.ec2.DefaultVpc;
 
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		vpc, err := ec2.NewDefaultVpc(ctx, "custom", nil)
-		if err != nil {
-			return err
-		}
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var vpc = new DefaultVpc("custom-java");
 
-		ctx.Export("vpcId", vpc.VpcId)
-		ctx.Export("privateSubnetIds", vpc.PrivateSubnetIds)
-		ctx.Export("publicSubnetIds", vpc.PublicSubnetIds)
-		return nil
-	})
+            ctx.export("vpcId", vpc.vpcId());
+            ctx.export("privateSubnetIds", vpc.privateSubnetIds());
+            ctx.export("publicSubnetIds", vpc.publicSubnetIds());
+        });
+    }
 }
 ```
 
