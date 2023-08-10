@@ -339,7 +339,7 @@ import com.pulumi.awsx.ec2.Vpc;
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
-            var vpc = new Vpc("custom-java");
+            var vpc = new Vpc("custom");
 
             ctx.export("vpcId", vpc.vpcId());
             ctx.export("privateSubnetIds", vpc.privateSubnetIds());
@@ -549,6 +549,33 @@ class Program
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.awsx.ec2.Vpc;
+import com.pulumi.awsx.ec2.VpcArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var vpc = new Vpc("custom", VpcArgs.builder()
+                .cidrBlock("172.16.8.0/24")
+                .build()
+            );
+
+            ctx.export("vpcId", vpc.vpcId());
+            ctx.export("privateSubnetIds", vpc.privateSubnetIds());
+            ctx.export("publicSubnetIds", vpc.publicSubnetIds());
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
 {{% choosable language yaml %}}
 
 ```yaml
@@ -587,10 +614,9 @@ A VPC spans all of the availability zones in your region. By default, however, t
 only use 2 of them when allocating subnets and the associated gateways. This provides fault tolerance between
 two zones at a reasonable cost.
 
-All regions support at least 3 availability zones, but many of them support more. If you'd like to improve the
-fault tolerance of your configuration, override this with the `numberOfAvailabilityZones` argument:
+All regions support at least 3 availability zones, but many of them support more. If you'd like to improve the fault tolerance of your configuration, override this with the `numberOfAvailabilityZones` argument:
 
-{{< chooser language "typescript,python,csharp,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -621,6 +647,38 @@ vpc = awsx.ec2.Vpc("custom", number_of_availability_zones=4)
 pulumi.export("vpcId", vpc.vpc_id)
 pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
 pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		availabilityZones := 4
+
+		vpc, err := ec2.NewVpc(ctx, "custom", &ec2.VpcArgs{
+			NumberOfAvailabilityZones: &availabilityZones,
+		})
+
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("vpcId", vpc.VpcId)
+		ctx.Export("privateSubnetIds", vpc.PrivateSubnetIds)
+		ctx.Export("publicSubnetIds", vpc.PublicSubnetIds)
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}
@@ -658,6 +716,33 @@ class Program
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.awsx.ec2.Vpc;
+import com.pulumi.awsx.ec2.VpcArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var vpc = new Vpc("custom", VpcArgs.builder()
+                .numberOfAvailabilityZones(4)
+                .build()
+            );
+
+            ctx.export("vpcId", vpc.vpcId());
+            ctx.export("privateSubnetIds", vpc.privateSubnetIds());
+            ctx.export("publicSubnetIds", vpc.publicSubnetIds());
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
 {{% choosable language yaml %}}
 
 ```yaml
@@ -679,6 +764,12 @@ resources:
 
 The VPC resource will internally adjust to fully consume 4 availability zones and split traffic accordingly.
 
+{{% notes type="info" %}}
+
+If creating a VPC with the availability zone configuration set to 4 or higher, please ensure you are deploying in a region that supports more than 3 availability zones.
+
+{{% /notes %}}
+
 For information about regional support for availability zones, refer to AWS's
 [Global Infrastructures Regions and AZs](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/) help page.
 
@@ -693,7 +784,7 @@ the behavior using its constructor's `subnets` argument.
 
 For example, this program replicates the default behavior but with an explicit specification:
 
-{{< chooser language "typescript,python,csharp,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -746,6 +837,47 @@ pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		privateCidr := 20
+		publicCidr := 20
+		vpc, err := ec2.NewVpc(ctx, "custom", &ec2.VpcArgs{
+			SubnetSpecs: []ec2.SubnetSpecArgs{
+				{
+					Type:     ec2.SubnetTypePrivate,
+					CidrMask: &privateCidr,
+				},
+				{
+					Type:     ec2.SubnetTypePublic,
+					CidrMask: &publicCidr,
+				},
+			},
+		})
+
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("vpcId", vpc.VpcId)
+		ctx.Export("privateSubnetIds", vpc.PrivateSubnetIds)
+		ctx.Export("publicSubnetIds", vpc.PublicSubnetIds)
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
 {{% choosable language csharp %}}
 
 ```csharp
@@ -788,6 +920,47 @@ class MyStack : Stack
 class Program
 {
     static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import java.util.Arrays;
+
+import com.pulumi.Pulumi;
+import com.pulumi.awsx.ec2.Vpc;
+import com.pulumi.awsx.ec2.VpcArgs;
+import com.pulumi.awsx.ec2.enums.SubnetType;
+import com.pulumi.awsx.ec2.inputs.SubnetSpecArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var vpc = new Vpc("custom", VpcArgs.builder()
+                .subnetSpecs(Arrays.asList(
+                    SubnetSpecArgs.builder()
+                        .type(SubnetType.Private)
+                        .cidrMask(20)
+                        .build(),
+                    SubnetSpecArgs.builder()
+                        .type(SubnetType.Public)
+                        .cidrMask(22)
+                        .build()
+                    )
+                )
+                .build()
+            );
+
+            ctx.export("vpcId", vpc.vpcId());
+            ctx.export("privateSubnetIds", vpc.privateSubnetIds());
+            ctx.export("publicSubnetIds", vpc.publicSubnetIds());
+        });
+    }
 }
 ```
 
