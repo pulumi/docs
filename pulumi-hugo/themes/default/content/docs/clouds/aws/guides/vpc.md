@@ -66,7 +66,7 @@ you may be required to pass it explicitly, in which case you'll need to get it p
 
 To get the default VPC, just call the [`awsx.vpc.DefaultVpc` function](https://www.pulumi.com/registry/packages/awsx/api-docs/ec2/defaultvpc/):
 
-{{< chooser language "typescript,python,go,csharp,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -152,6 +152,33 @@ class Program
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```java
+package main
+
+import (
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		vpc, err := ec2.NewDefaultVpc(ctx, "custom", nil)
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("vpcId", vpc.VpcId)
+		ctx.Export("privateSubnetIds", vpc.PrivateSubnetIds)
+		ctx.Export("publicSubnetIds", vpc.PublicSubnetIds)
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
 {{% choosable language yaml %}}
 
 ```yaml
@@ -213,7 +240,7 @@ simple defaults that many will want to start with, to complete control over ever
 
 The following code creates a new VPC using all default settings:
 
-{{< chooser language "typescript,python,csharp,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -375,7 +402,7 @@ Although the default CIDR block of `10.0.0.0/16` is reasonable most of the time,
 
 To set our VPC's CIDR block, pass a custom `cidrBlock` argument to `awsx.ec2.Vpc`'s constructor:
 
-{{< chooser language "typescript,python,csharp,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -406,6 +433,38 @@ vpc = awsx.ec2.Vpc("custom", cidr_block="172.16.8.0/24")
 pulumi.export("vpcId", vpc.vpc_id)
 pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
 pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cidrBlock := "172.16.8.0/24"
+
+		vpc, err := ec2.NewVpc(ctx, "custom", &ec2.VpcArgs{
+			CidrBlock: &cidrBlock,
+		})
+
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("vpcId", vpc.VpcId)
+		ctx.Export("privateSubnetIds", vpc.PrivateSubnetIds)
+		ctx.Export("publicSubnetIds", vpc.PublicSubnetIds)
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}
