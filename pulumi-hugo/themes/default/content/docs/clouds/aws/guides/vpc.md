@@ -163,7 +163,7 @@ import com.pulumi.awsx.ec2.DefaultVpc;
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
-            var vpc = new DefaultVpc("custom-java");
+            var vpc = new DefaultVpc("custom");
 
             ctx.export("vpcId", vpc.vpcId());
             ctx.export("privateSubnetIds", vpc.privateSubnetIds());
@@ -269,6 +269,34 @@ pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		vpc, err := ec2.NewVpc(ctx, "custom", nil)
+
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("vpcId", vpc.VpcId)
+		ctx.Export("privateSubnetIds", vpc.PrivateSubnetIds)
+		ctx.Export("publicSubnetIds", vpc.PublicSubnetIds)
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
 {{% choosable language csharp %}}
 
 ```csharp
@@ -295,6 +323,29 @@ class MyStack : Stack
 class Program
 {
     static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.awsx.ec2.Vpc;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var vpc = new Vpc("custom-java");
+
+            ctx.export("vpcId", vpc.vpcId());
+            ctx.export("privateSubnetIds", vpc.privateSubnetIds());
+            ctx.export("publicSubnetIds", vpc.publicSubnetIds());
+        });
+    }
 }
 ```
 
