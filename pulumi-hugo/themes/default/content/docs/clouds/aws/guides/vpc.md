@@ -850,7 +850,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		privateCidr := 20
-		publicCidr := 20
+		publicCidr := 22
 		vpc, err := ec2.NewVpc(ctx, "custom", &ec2.VpcArgs{
 			SubnetSpecs: []ec2.SubnetSpecArgs{
 				{
@@ -1019,7 +1019,7 @@ in a public subnet, NAT gateways will only be created if there is at least one p
 
 Fewer NAT gateways can be requested (e.g., to save on costs) using the `natGateways` property:
 
-{{< chooser language "typescript,python,csharp,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -1057,6 +1057,38 @@ pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		vpc, err := ec2.NewVpc(ctx, "custom", &ec2.VpcArgs{
+			NatGateways: &ec2.NatGatewayConfigurationArgs{
+				Strategy: ec2.NatGatewayStrategySingle,
+			},
+		})
+
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("vpcId", vpc.VpcId)
+		ctx.Export("privateSubnetIds", vpc.PrivateSubnetIds)
+		ctx.Export("publicSubnetIds", vpc.PublicSubnetIds)
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
 {{% choosable language csharp %}}
 
 ```csharp
@@ -1090,6 +1122,39 @@ class MyStack : Stack
 class Program
 {
     static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.awsx.ec2.Vpc;
+import com.pulumi.awsx.ec2.VpcArgs;
+import com.pulumi.awsx.ec2.enums.NatGatewayStrategy;
+import com.pulumi.awsx.ec2.inputs.NatGatewayConfigurationArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var vpc = new Vpc("custom", VpcArgs.builder()
+                .natGateways(
+                    NatGatewayConfigurationArgs.builder()
+                        .strategy(NatGatewayStrategy.Single)
+                        .build()
+                )
+                .build()
+            );
+
+            ctx.export("vpcId", vpc.vpcId());
+            ctx.export("privateSubnetIds", vpc.privateSubnetIds());
+            ctx.export("publicSubnetIds", vpc.publicSubnetIds());
+        });
+    }
 }
 ```
 
@@ -1139,7 +1204,7 @@ traffic. This will be used by default, however you may allocate and assign resou
 
 Here is a program that allocates a new group with a few rules:
 
-{{< chooser language "typescript,python,csharp,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -1221,6 +1286,70 @@ pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	awsEc2 "github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		vpc, err := ec2.NewVpc(ctx, "custom", nil)
+
+		awsEc2.NewSecurityGroup(ctx, "allowTls", &awsEc2.SecurityGroupArgs{
+			Description: pulumi.String("Allow TLS inbound traffic"),
+			VpcId:       vpc.VpcId,
+			Ingress: awsEc2.SecurityGroupIngressArray{
+				&awsEc2.SecurityGroupIngressArgs{
+					Description: pulumi.String("allow SSH access from 203.0.113.25"),
+					FromPort:    pulumi.Int(22),
+					ToPort:      pulumi.Int(22),
+					Protocol:    pulumi.String("tcp"),
+					CidrBlocks: pulumi.StringArray{
+						pulumi.String("203.0.113.25/32"),
+					},
+				},
+				&awsEc2.SecurityGroupIngressArgs{
+					Description: pulumi.String("allow HTTPS access from anywhere"),
+					FromPort:    pulumi.Int(443),
+					ToPort:      pulumi.Int(443),
+					Protocol:    pulumi.String("tcp"),
+					CidrBlocks: pulumi.StringArray{
+						pulumi.String("0.0.0.0/0"),
+					},
+				},
+			},
+			Egress: awsEc2.SecurityGroupEgressArray{
+				&awsEc2.SecurityGroupEgressArgs{
+					FromPort: pulumi.Int(0),
+					ToPort:   pulumi.Int(0),
+					Protocol: pulumi.String("-1"),
+					CidrBlocks: pulumi.StringArray{
+						pulumi.String("0.0.0.0/0"),
+					},
+				},
+			},
+		})
+
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("vpcId", vpc.VpcId)
+		ctx.Export("privateSubnetIds", vpc.PrivateSubnetIds)
+		ctx.Export("publicSubnetIds", vpc.PublicSubnetIds)
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
 {{% choosable language csharp %}}
 
 ```csharp
@@ -1296,6 +1425,61 @@ class Program
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import java.util.Map;
+
+import com.pulumi.Pulumi;
+import com.pulumi.awsx.ec2.Vpc;
+import com.pulumi.aws.ec2.SecurityGroup;
+import com.pulumi.aws.ec2.SecurityGroupArgs;
+import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
+import com.pulumi.aws.ec2.inputs.SecurityGroupEgressArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var vpc = new Vpc("custom");
+
+            var allowTls = new SecurityGroup("allowTls", SecurityGroupArgs.builder()        
+                .description("Allow TLS inbound traffic")
+                .vpcId(vpc.vpcId())
+                .ingress(SecurityGroupIngressArgs.builder()
+                    .description("allow SSH access from 203.0.113.25")
+                    .fromPort(22)
+                    .toPort(22)
+                    .protocol("tcp")
+                    .cidrBlocks("203.0.113.25/32")
+                    .build())
+                .ingress(SecurityGroupIngressArgs.builder()
+                    .description("allow HTTPS access from anywhere")
+                    .fromPort(443)
+                    .toPort(443)
+                    .protocol("tcp")
+                    .cidrBlocks("0.0.0.0/0")
+                    .build())
+                .egress(SecurityGroupEgressArgs.builder()
+                    .fromPort(0)
+                    .toPort(0)
+                    .protocol("-1")
+                    .cidrBlocks("0.0.0.0/0")
+                    .build())
+                .build()
+            );
+
+            ctx.export("vpcId", vpc.vpcId());
+            ctx.export("privateSubnetIds", vpc.privateSubnetIds());
+            ctx.export("publicSubnetIds", vpc.publicSubnetIds());
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
 {{% choosable language yaml %}}
 
 ```yaml
@@ -1344,7 +1528,7 @@ For additional details about configuring security group rules, See the
 
 This example shows how to deploy an EC2 instance using a VPC and Security Group provisioned with the Crosswalk AWS component:
 
-{{< chooser language "typescript,python,csharp,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -1416,6 +1600,61 @@ pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	awsEc2 "github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		vpc, err := ec2.NewVpc(ctx, "custom", nil)
+
+		sg, err := awsEc2.NewSecurityGroup(ctx, "webserver-sg", &awsEc2.SecurityGroupArgs{
+			VpcId: vpc.VpcId,
+		})
+
+		ami, err := awsEc2.LookupAmi(ctx, &awsEc2.LookupAmiArgs{
+			Filters: []awsEc2.GetAmiFilter{
+				{
+					Name: "name",
+					Values: []string{
+						"amzn-ami-hvm-*",
+					},
+				},
+			},
+			MostRecent: pulumi.BoolRef(true),
+			Owners: []string{
+				"137112412989",
+			},
+		}, nil)
+
+		awsEc2.NewInstance(ctx, "webserver-www", &awsEc2.InstanceArgs{
+			InstanceType:        pulumi.String("t2.micro"),
+			VpcSecurityGroupIds: pulumi.StringArray{sg.ID()},
+			Ami:                 pulumi.String(ami.Id),
+			SubnetId:            vpc.PublicSubnetIds.Index(pulumi.Int(0)),
+		})
+
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("vpcId", vpc.VpcId)
+		ctx.Export("privateSubnetIds", vpc.PrivateSubnetIds)
+		ctx.Export("publicSubnetIds", vpc.PublicSubnetIds)
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
 {{% choosable language csharp %}}
 
 ```csharp
@@ -1479,6 +1718,14 @@ class Program
 {
     static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
 }
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+TBD
 ```
 
 {{% /choosable %}}
