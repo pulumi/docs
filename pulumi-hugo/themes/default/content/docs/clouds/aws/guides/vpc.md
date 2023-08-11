@@ -611,8 +611,8 @@ for information about the full range of IP address and CIDR configuration availa
 ## Configuring Availability Zones for an AWS VPC
 
 A VPC spans all of the availability zones in your region. By default, however, the `awsx.ec2.Vpc` resource will
-only use 2 of them when allocating subnets and the associated gateways. This provides fault tolerance between
-two zones at a reasonable cost.
+only use 3 of them when allocating subnets and the associated gateways. This provides fault tolerance between
+three zones at a reasonable cost.
 
 All regions support at least 3 availability zones, but many of them support more. If you'd like to improve the fault tolerance of your configuration, override this with the `numberOfAvailabilityZones` argument:
 
