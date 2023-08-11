@@ -1725,7 +1725,55 @@ class Program
 {{% choosable language java %}}
 
 ```java
-TBD
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.awsx.ec2.Vpc;
+import com.pulumi.core.Output;
+import com.pulumi.aws.ec2.SecurityGroup;
+import com.pulumi.aws.ec2.SecurityGroupArgs;
+import com.pulumi.aws.ec2.Ec2Functions;
+import com.pulumi.aws.ec2.inputs.GetAmiArgs;
+import com.pulumi.aws.ec2.outputs.GetAmiResult;
+import com.pulumi.aws.ec2.inputs.GetAmiFilter;
+import com.pulumi.aws.ec2.Instance;
+import com.pulumi.aws.ec2.InstanceArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var vpc = new Vpc("custom");
+
+            var sg = new SecurityGroup("webserver-sg", SecurityGroupArgs.builder()        
+                .vpcId(vpc.vpcId())
+                .build()
+            );
+
+            var ami = Ec2Functions.getAmi(GetAmiArgs.builder()
+                .filters(            
+                    GetAmiFilter.builder()
+                        .name("name")
+                        .values("amzn-ami-hvm-*")
+                        .build())
+                .mostRecent(true)
+                .owners("137112412989")
+                .build()
+                ).thenApply(GetAmiResult::id);
+            
+            var server = new Instance("web-server-www", InstanceArgs.builder()
+                .instanceType("t2.micro")
+                .vpcSecurityGroupIds(Output.all(sg.id()))
+                .ami(Output.of(ami))
+                .subnetId(vpc.publicSubnetIds().applyValue(x -> x.get(0)))
+                .build()
+            );
+
+            ctx.export("vpcId", vpc.vpcId());
+            ctx.export("privateSubnetIds", vpc.privateSubnetIds());
+            ctx.export("publicSubnetIds", vpc.publicSubnetIds());
+        });
+    }
+}
 ```
 
 {{% /choosable %}}
