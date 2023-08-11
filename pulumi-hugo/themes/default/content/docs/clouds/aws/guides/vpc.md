@@ -1444,7 +1444,7 @@ public class App {
         Pulumi.run(ctx -> {
             var vpc = new Vpc("custom");
 
-            var allowTls = new SecurityGroup("allowTls", SecurityGroupArgs.builder()        
+            var allowTls = new SecurityGroup("allowTls", SecurityGroupArgs.builder()
                 .description("Allow TLS inbound traffic")
                 .vpcId(vpc.vpcId())
                 .ingress(SecurityGroupIngressArgs.builder()
@@ -1744,13 +1744,13 @@ public class App {
         Pulumi.run(ctx -> {
             var vpc = new Vpc("custom");
 
-            var sg = new SecurityGroup("webserver-sg", SecurityGroupArgs.builder()        
+            var sg = new SecurityGroup("webserver-sg", SecurityGroupArgs.builder()
                 .vpcId(vpc.vpcId())
                 .build()
             );
 
             var ami = Ec2Functions.getAmi(GetAmiArgs.builder()
-                .filters(            
+                .filters(
                     GetAmiFilter.builder()
                         .name("name")
                         .values("amzn-ami-hvm-*")
@@ -1759,7 +1759,7 @@ public class App {
                 .owners("137112412989")
                 .build()
                 ).thenApply(GetAmiResult::id);
-            
+
             var server = new Instance("web-server-www", InstanceArgs.builder()
                 .instanceType("t2.micro")
                 .vpcSecurityGroupIds(Output.all(sg.id()))
