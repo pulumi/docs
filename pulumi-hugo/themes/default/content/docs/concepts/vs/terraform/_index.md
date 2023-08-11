@@ -96,7 +96,7 @@ Here is a summary of the key differences between Pulumi and Terraform:
 | [Provider Support](#providers) | Native cloud providers with 100% same-day resource coverage plus Terraform-based providers for additional coverage. | Support across multiple IaaS, SaaS, and PaaS providers. |
 | [Cloud Native Support](#cloud-native) | Richly typed. Includes CRDs & in-cluster operator support for GitOps delivery. | Core API typed. Generic support for CRD. |
 | [Dynamic Provider Support](#dynamic-providers) | Yes | No |
-| [OSS License](#license) | Apache License 2.0 | Mozilla Public License 2.0 |
+| [OSS License](#license) | Apache License 2.0 | Business Source License 1.1 |
 | [Infrastructure Reuse and Modularity](#reuse) | Flexible. Reuse functions, classes, packages, and Pulumi components. | Constrained. Can only reuse Terraform modules. |
 | [Testing and Validation](#testing) | Unit, property, and integration testing. Supports popular test frameworks. | Integration testing only |
 | [Modes of Execution](#modes) | Run CLI commands or initiate commands programmatically with Automation API. | Run CLI commands or perform remote runs with SaaS offering. |
@@ -172,7 +172,7 @@ Pulumi provides dynamic providers that allow you to extend your system by creati
 
 ### OSS License {#license}
 
-Terraform uses the weak copyleft [Mozilla Public License 2.0](https://github.com/HashiCorp/terraform/blob/main/LICENSE). Conversely, Pulumi open-source projects use the permissive and business-friendly [Apache License 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE). This includes the core [Pulumi repo](https://github.com/pulumi/pulumi), all of the open-source Pulumi resource providers (such as the [Azure Native provider](https://github.com/pulumi/pulumi-azure-native)), and other useful projects.
+Terraform uses the [Business Source License 1.1](https://github.com/HashiCorp/terraform/blob/main/LICENSE). Conversely, Pulumi open-source projects use the permissive and business-friendly [Apache License 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE). This includes the core [Pulumi repo](https://github.com/pulumi/pulumi), all of the open-source Pulumi resource providers (such as the [Azure Native provider](https://github.com/pulumi/pulumi-azure-native)), and other useful projects.
 
 ### Infrastructure Reuse and Modularity {#reuse}
 
