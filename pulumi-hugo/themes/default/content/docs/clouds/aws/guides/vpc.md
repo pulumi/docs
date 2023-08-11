@@ -64,7 +64,7 @@ VPC is often the easiest path when you're just getting up and running or don't y
 requirements. Most resources will use this default VPC automatically if you leave it unspecified. In other cases,
 you may be required to pass it explicitly, in which case you'll need to get it programmatically.
 
-The following example will read the default VPC and export some of its properties for easy consumption.
+The following example will [read the default VPC](https://www.pulumi.com/registry/packages/awsx/api-docs/ec2/defaultvpc/) and export some of its properties for easy consumption.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
