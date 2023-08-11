@@ -48,6 +48,14 @@ $fa-font-path: "/fonts/fontawesome";
     .icon-#{ $icon } {
         @apply rounded-full inline-block p-4 w-20 h-20;
 
+        &-small {
+            @apply p-2 w-10 h-10;
+            svg {
+                max-width: 24px;
+                max-height: 24px;
+            }
+        }
+
         &-black {
             @apply bg-white;
 
@@ -109,6 +117,14 @@ $fa-font-path: "/fonts/fontawesome";
 @each $icon in "clouds" "rocketship" {
     .icon-#{ $icon } {
         @apply rounded-full inline-block p-4 w-20 h-20;
+
+        &-small {
+            @apply p-2 w-10 h-10;
+            svg {
+                max-width: 24px;
+                max-height: 24px;
+            }
+        }
 
         &-black {
             @apply bg-white;
@@ -182,6 +198,14 @@ $fa-font-path: "/fonts/fontawesome";
 @each $icon in "code-window" {
     .icon-#{ $icon } {
         @apply rounded-full inline-block p-4 w-20 h-20;
+
+        &-small {
+            @apply p-2 w-10 h-10;
+            svg {
+                max-width: 24px;
+                max-height: 24px;
+            }
+        }
 
         &-black {
             @apply bg-white;
