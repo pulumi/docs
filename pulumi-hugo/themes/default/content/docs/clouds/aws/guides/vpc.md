@@ -64,9 +64,9 @@ VPC is often the easiest path when you're just getting up and running or don't y
 requirements. Most resources will use this default VPC automatically if you leave it unspecified. In other cases,
 you may be required to pass it explicitly, in which case you'll need to get it programmatically.
 
-To get the default VPC, just call the `awsx.vpc.DefaultVpc("default-vpc");` function:
+The following example will [read the default VPC](https://www.pulumi.com/registry/packages/awsx/api-docs/ec2/defaultvpc/) and export some of its properties for easy consumption.
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -93,6 +93,35 @@ import pulumi_awsx as awsx
 vpc = awsx.ec2.DefaultVpc("default-vpc")
 
 pulumi.export("vpcId", vpc.vpc_id)
+pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
+pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		vpc, err := ec2.NewDefaultVpc(ctx, "custom", nil)
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("vpcId", vpc.VpcId)
+		ctx.Export("privateSubnetIds", vpc.PrivateSubnetIds)
+		ctx.Export("publicSubnetIds", vpc.PublicSubnetIds)
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}
@@ -123,7 +152,47 @@ class Program
 
 {{% /choosable %}}
 
-This example reads the default VPC and exports some of its properties for easy consumption. `pulumi up` will show:
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.awsx.ec2.DefaultVpc;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var vpc = new DefaultVpc("custom");
+
+            ctx.export("vpcId", vpc.vpcId());
+            ctx.export("privateSubnetIds", vpc.privateSubnetIds());
+            ctx.export("publicSubnetIds", vpc.publicSubnetIds());
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: project-name
+runtime: yaml
+description: Pulumi Crosswalk for AWS VPC
+outputs:
+  vpcId: ${default-vpc.vpcId}
+  publicSubnetIds: ${default-vpc.publicSubnetIds}
+  privateSubnetIds: ${default-vpc.privateSubnetIds}
+resources:
+  default-vpc:
+    type: awsx:ec2:DefaultVpc
+```
+
+{{% /choosable %}}
+
+Once you have defined this function, running `pulumi up` will show:
 
 ```bash
 $ pulumi up
@@ -167,7 +236,7 @@ simple defaults that many will want to start with, to complete control over ever
 
 The following code creates a new VPC using all default settings:
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -200,6 +269,34 @@ pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		vpc, err := ec2.NewVpc(ctx, "custom", nil)
+
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("vpcId", vpc.VpcId)
+		ctx.Export("privateSubnetIds", vpc.PrivateSubnetIds)
+		ctx.Export("publicSubnetIds", vpc.PublicSubnetIds)
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
 {{% choosable language csharp %}}
 
 ```csharp
@@ -227,6 +324,46 @@ class Program
 {
     static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
 }
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.awsx.ec2.Vpc;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var vpc = new Vpc("custom");
+
+            ctx.export("vpcId", vpc.vpcId());
+            ctx.export("privateSubnetIds", vpc.privateSubnetIds());
+            ctx.export("publicSubnetIds", vpc.publicSubnetIds());
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: awsx-vpc-yaml
+runtime: yaml
+description: A minimal AWS Pulumi YAML program
+outputs:
+  vpcId: ${custom.vpcId}
+  publicSubnetIds: ${custom.publicSubnetIds}
+  privateSubnetIds: ${custom.privateSubnetIds}
+resources:
+  custom:
+    type: awsx:ec2:Vpc
 ```
 
 {{% /choosable %}}
@@ -312,7 +449,7 @@ Although the default CIDR block of `10.0.0.0/16` is reasonable most of the time,
 
 To set our VPC's CIDR block, pass a custom `cidrBlock` argument to `awsx.ec2.Vpc`'s constructor:
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -343,6 +480,38 @@ vpc = awsx.ec2.Vpc("custom", cidr_block="172.16.8.0/24")
 pulumi.export("vpcId", vpc.vpc_id)
 pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
 pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cidrBlock := "172.16.8.0/24"
+
+		vpc, err := ec2.NewVpc(ctx, "custom", &ec2.VpcArgs{
+			CidrBlock: &cidrBlock,
+		})
+
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("vpcId", vpc.VpcId)
+		ctx.Export("privateSubnetIds", vpc.PrivateSubnetIds)
+		ctx.Export("publicSubnetIds", vpc.PublicSubnetIds)
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}
@@ -380,6 +549,52 @@ class Program
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.awsx.ec2.Vpc;
+import com.pulumi.awsx.ec2.VpcArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var vpc = new Vpc("custom", VpcArgs.builder()
+                .cidrBlock("172.16.8.0/24")
+                .build()
+            );
+
+            ctx.export("vpcId", vpc.vpcId());
+            ctx.export("privateSubnetIds", vpc.privateSubnetIds());
+            ctx.export("publicSubnetIds", vpc.publicSubnetIds());
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: awsx-vpc-yaml
+runtime: yaml
+description: A minimal AWS Pulumi YAML program
+outputs:
+  vpcId: ${custom.vpcId}
+  publicSubnetIds: ${custom.publicSubnetIds}
+  privateSubnetIds: ${custom.privateSubnetIds}
+resources:
+  custom:
+    type: awsx:ec2:Vpc
+    properties:
+      cidrBlock: "172.16.8.0/24"
+```
+
+{{% /choosable %}}
+
 This decreases the number of available IP addresses in our VPC from the default of 65,536 addresses (`/16` netmask) to
 256 addresses (`/24` netmask), in addition to changing the IP address prefix from `10.0.0.0` to `172.16.8.0`.
 
@@ -396,13 +611,12 @@ for information about the full range of IP address and CIDR configuration availa
 ## Configuring Availability Zones for an AWS VPC
 
 A VPC spans all of the availability zones in your region. By default, however, the `awsx.ec2.Vpc` resource will
-only use 2 of them when allocating subnets and the associated gateways. This provides fault tolerance between
-two zones at a reasonable cost.
+only use 3 of them when allocating subnets and the associated gateways. This provides fault tolerance between
+three zones at a reasonable cost.
 
-All regions support at least 3 availability zones, but many of them support more. If you'd like to improve the
-fault tolerance of your configuration, override this with the `numberOfAvailabilityZones` argument:
+All regions support at least 3 availability zones, but many of them support more. If you'd like to improve the fault tolerance of your configuration, override this with the `numberOfAvailabilityZones` argument:
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -433,6 +647,38 @@ vpc = awsx.ec2.Vpc("custom", number_of_availability_zones=4)
 pulumi.export("vpcId", vpc.vpc_id)
 pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
 pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		availabilityZones := 4
+
+		vpc, err := ec2.NewVpc(ctx, "custom", &ec2.VpcArgs{
+			NumberOfAvailabilityZones: &availabilityZones,
+		})
+
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("vpcId", vpc.VpcId)
+		ctx.Export("privateSubnetIds", vpc.PrivateSubnetIds)
+		ctx.Export("publicSubnetIds", vpc.PublicSubnetIds)
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}
@@ -470,7 +716,59 @@ class Program
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.awsx.ec2.Vpc;
+import com.pulumi.awsx.ec2.VpcArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var vpc = new Vpc("custom", VpcArgs.builder()
+                .numberOfAvailabilityZones(4)
+                .build()
+            );
+
+            ctx.export("vpcId", vpc.vpcId());
+            ctx.export("privateSubnetIds", vpc.privateSubnetIds());
+            ctx.export("publicSubnetIds", vpc.publicSubnetIds());
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: awsx-vpc-yaml
+runtime: yaml
+description: A minimal AWS Pulumi YAML program
+outputs:
+  vpcId: ${custom.vpcId}
+  publicSubnetIds: ${custom.publicSubnetIds}
+  privateSubnetIds: ${custom.privateSubnetIds}
+resources:
+  custom:
+    type: awsx:ec2:Vpc
+    properties:
+      numberOfAvailabilityZones: 4
+```
+
+{{% /choosable %}}
+
 The VPC resource will internally adjust to fully consume 4 availability zones and split traffic accordingly.
+
+{{% notes type="info" %}}
+
+If creating a VPC with the availability zone configuration set to 4 or higher, please ensure you are deploying in a region that supports more than 3 availability zones.
+
+{{% /notes %}}
 
 For information about regional support for availability zones, refer to AWS's
 [Global Infrastructures Regions and AZs](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/) help page.
@@ -486,7 +784,7 @@ the behavior using its constructor's `subnets` argument.
 
 For example, this program replicates the default behavior but with an explicit specification:
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -539,6 +837,47 @@ pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		privateCidr := 20
+		publicCidr := 22
+		vpc, err := ec2.NewVpc(ctx, "custom", &ec2.VpcArgs{
+			SubnetSpecs: []ec2.SubnetSpecArgs{
+				{
+					Type:     ec2.SubnetTypePrivate,
+					CidrMask: &privateCidr,
+				},
+				{
+					Type:     ec2.SubnetTypePublic,
+					CidrMask: &publicCidr,
+				},
+			},
+		})
+
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("vpcId", vpc.VpcId)
+		ctx.Export("privateSubnetIds", vpc.PrivateSubnetIds)
+		ctx.Export("publicSubnetIds", vpc.PublicSubnetIds)
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
 {{% choosable language csharp %}}
 
 ```csharp
@@ -586,6 +925,70 @@ class Program
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import java.util.Arrays;
+
+import com.pulumi.Pulumi;
+import com.pulumi.awsx.ec2.Vpc;
+import com.pulumi.awsx.ec2.VpcArgs;
+import com.pulumi.awsx.ec2.enums.SubnetType;
+import com.pulumi.awsx.ec2.inputs.SubnetSpecArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var vpc = new Vpc("custom", VpcArgs.builder()
+                .subnetSpecs(Arrays.asList(
+                    SubnetSpecArgs.builder()
+                        .type(SubnetType.Private)
+                        .cidrMask(20)
+                        .build(),
+                    SubnetSpecArgs.builder()
+                        .type(SubnetType.Public)
+                        .cidrMask(22)
+                        .build()
+                    )
+                )
+                .build()
+            );
+
+            ctx.export("vpcId", vpc.vpcId());
+            ctx.export("privateSubnetIds", vpc.privateSubnetIds());
+            ctx.export("publicSubnetIds", vpc.publicSubnetIds());
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: awsx-vpc-yaml
+runtime: yaml
+description: A minimal AWS Pulumi YAML program
+outputs:
+  vpcId: ${custom.vpcId}
+  publicSubnetIds: ${custom.publicSubnetIds}
+  privateSubnetIds: ${custom.privateSubnetIds}
+resources:
+  custom:
+    type: awsx:ec2:Vpc
+    properties:
+      subnetSpecs:
+        - type: "Private"
+          cidrMask: 20
+        - type: "Public"
+          cidrMask: 22
+```
+
+{{% /choosable %}}
+
 The `subnetSpecs` argument takes an array of subnet specifications. Each one can include this information:
 
 * `type`: A required type of subnet to create. There are three kinds available:
@@ -616,7 +1019,7 @@ in a public subnet, NAT gateways will only be created if there is at least one p
 
 Fewer NAT gateways can be requested (e.g., to save on costs) using the `natGateways` property:
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -650,6 +1053,38 @@ vpc = awsx.ec2.Vpc("custom", nat_gateways=awsx.ec2.NatGatewayConfigurationArgs(
 pulumi.export("vpcId", vpc.vpc_id)
 pulumi.export("publicSubnetIds", vpc.public_subnet_ids)
 pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		vpc, err := ec2.NewVpc(ctx, "custom", &ec2.VpcArgs{
+			NatGateways: &ec2.NatGatewayConfigurationArgs{
+				Strategy: ec2.NatGatewayStrategySingle,
+			},
+		})
+
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("vpcId", vpc.VpcId)
+		ctx.Export("privateSubnetIds", vpc.PrivateSubnetIds)
+		ctx.Export("publicSubnetIds", vpc.PublicSubnetIds)
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}
@@ -692,6 +1127,59 @@ class Program
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.awsx.ec2.Vpc;
+import com.pulumi.awsx.ec2.VpcArgs;
+import com.pulumi.awsx.ec2.enums.NatGatewayStrategy;
+import com.pulumi.awsx.ec2.inputs.NatGatewayConfigurationArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var vpc = new Vpc("custom", VpcArgs.builder()
+                .natGateways(
+                    NatGatewayConfigurationArgs.builder()
+                        .strategy(NatGatewayStrategy.Single)
+                        .build()
+                )
+                .build()
+            );
+
+            ctx.export("vpcId", vpc.vpcId());
+            ctx.export("privateSubnetIds", vpc.privateSubnetIds());
+            ctx.export("publicSubnetIds", vpc.publicSubnetIds());
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: awsx-vpc-yaml
+runtime: yaml
+description: A minimal AWS Pulumi YAML program
+outputs:
+  vpcId: ${custom.vpcId}
+  publicSubnetIds: ${custom.publicSubnetIds}
+  privateSubnetIds: ${custom.privateSubnetIds}
+resources:
+  custom:
+    type: awsx:ec2:Vpc
+    properties:
+      natGateways:
+        strategy: "Single"
+```
+
+{{% /choosable %}}
+
 In the case where there is one NAT gateway per availability zone, then routing is very simple. Each private subnet
 will have have connections routed through gateway in that availability zone.
 
@@ -716,7 +1204,7 @@ traffic. This will be used by default, however you may allocate and assign resou
 
 Here is a program that allocates a new group with a few rules:
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -798,6 +1286,70 @@ pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	awsEc2 "github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		vpc, err := ec2.NewVpc(ctx, "custom", nil)
+
+		awsEc2.NewSecurityGroup(ctx, "allowTls", &awsEc2.SecurityGroupArgs{
+			Description: pulumi.String("Allow TLS inbound traffic"),
+			VpcId:       vpc.VpcId,
+			Ingress: awsEc2.SecurityGroupIngressArray{
+				&awsEc2.SecurityGroupIngressArgs{
+					Description: pulumi.String("allow SSH access from 203.0.113.25"),
+					FromPort:    pulumi.Int(22),
+					ToPort:      pulumi.Int(22),
+					Protocol:    pulumi.String("tcp"),
+					CidrBlocks: pulumi.StringArray{
+						pulumi.String("203.0.113.25/32"),
+					},
+				},
+				&awsEc2.SecurityGroupIngressArgs{
+					Description: pulumi.String("allow HTTPS access from anywhere"),
+					FromPort:    pulumi.Int(443),
+					ToPort:      pulumi.Int(443),
+					Protocol:    pulumi.String("tcp"),
+					CidrBlocks: pulumi.StringArray{
+						pulumi.String("0.0.0.0/0"),
+					},
+				},
+			},
+			Egress: awsEc2.SecurityGroupEgressArray{
+				&awsEc2.SecurityGroupEgressArgs{
+					FromPort: pulumi.Int(0),
+					ToPort:   pulumi.Int(0),
+					Protocol: pulumi.String("-1"),
+					CidrBlocks: pulumi.StringArray{
+						pulumi.String("0.0.0.0/0"),
+					},
+				},
+			},
+		})
+
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("vpcId", vpc.VpcId)
+		ctx.Export("privateSubnetIds", vpc.PrivateSubnetIds)
+		ctx.Export("publicSubnetIds", vpc.PublicSubnetIds)
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
 {{% choosable language csharp %}}
 
 ```csharp
@@ -873,6 +1425,102 @@ class Program
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import java.util.Map;
+
+import com.pulumi.Pulumi;
+import com.pulumi.awsx.ec2.Vpc;
+import com.pulumi.aws.ec2.SecurityGroup;
+import com.pulumi.aws.ec2.SecurityGroupArgs;
+import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
+import com.pulumi.aws.ec2.inputs.SecurityGroupEgressArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var vpc = new Vpc("custom");
+
+            var allowTls = new SecurityGroup("allowTls", SecurityGroupArgs.builder()
+                .description("Allow TLS inbound traffic")
+                .vpcId(vpc.vpcId())
+                .ingress(SecurityGroupIngressArgs.builder()
+                    .description("allow SSH access from 203.0.113.25")
+                    .fromPort(22)
+                    .toPort(22)
+                    .protocol("tcp")
+                    .cidrBlocks("203.0.113.25/32")
+                    .build())
+                .ingress(SecurityGroupIngressArgs.builder()
+                    .description("allow HTTPS access from anywhere")
+                    .fromPort(443)
+                    .toPort(443)
+                    .protocol("tcp")
+                    .cidrBlocks("0.0.0.0/0")
+                    .build())
+                .egress(SecurityGroupEgressArgs.builder()
+                    .fromPort(0)
+                    .toPort(0)
+                    .protocol("-1")
+                    .cidrBlocks("0.0.0.0/0")
+                    .build())
+                .build()
+            );
+
+            ctx.export("vpcId", vpc.vpcId());
+            ctx.export("privateSubnetIds", vpc.privateSubnetIds());
+            ctx.export("publicSubnetIds", vpc.publicSubnetIds());
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: awsx-vpc-yaml
+runtime: yaml
+description: A minimal AWS Pulumi YAML program
+outputs:
+  vpcId: ${custom.vpcId}
+  publicSubnetIds: ${custom.publicSubnetIds}
+  privateSubnetIds: ${custom.privateSubnetIds}
+resources:
+  custom:
+    type: awsx:ec2:Vpc
+  allowTls:
+    type: aws:ec2:SecurityGroup
+    properties:
+      description: Allow TLS inbound traffic
+      vpcId: ${custom.vpcId}
+      ingress:
+        - description: allow SSH access from 203.0.113.25
+          fromPort: 22
+          toPort: 22
+          protocol: tcp
+          cidrBlocks:
+            - "203.0.113.25/32"
+        - description: allow HTTPS access from anywhere
+          fromPort: 443
+          toPort: 443
+          protocol: tcp
+          cidrBlocks:
+            - "0.0.0.0/0"
+      egress:
+        - fromPort: 0
+          toPort: 0
+          protocol: '-1'
+          cidrBlocks:
+            - 0.0.0.0/0
+```
+
+{{% /choosable %}}
+
 For additional details about configuring security group rules, See the
 [Security Groups for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) documentation.
 
@@ -880,7 +1528,7 @@ For additional details about configuring security group rules, See the
 
 This example shows how to deploy an EC2 instance using a VPC and Security Group provisioned with the Crosswalk AWS component:
 
-{{< chooser language "typescript,python,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
 {{% choosable language typescript %}}
 
@@ -952,6 +1600,61 @@ pulumi.export("privateSubnetIds", vpc.private_subnet_ids)
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	awsEc2 "github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
+	"github.com/pulumi/pulumi-awsx/sdk/go/awsx/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		vpc, err := ec2.NewVpc(ctx, "custom", nil)
+
+		sg, err := awsEc2.NewSecurityGroup(ctx, "webserver-sg", &awsEc2.SecurityGroupArgs{
+			VpcId: vpc.VpcId,
+		})
+
+		ami, err := awsEc2.LookupAmi(ctx, &awsEc2.LookupAmiArgs{
+			Filters: []awsEc2.GetAmiFilter{
+				{
+					Name: "name",
+					Values: []string{
+						"amzn-ami-hvm-*",
+					},
+				},
+			},
+			MostRecent: pulumi.BoolRef(true),
+			Owners: []string{
+				"137112412989",
+			},
+		}, nil)
+
+		awsEc2.NewInstance(ctx, "webserver-www", &awsEc2.InstanceArgs{
+			InstanceType:        pulumi.String("t2.micro"),
+			VpcSecurityGroupIds: pulumi.StringArray{sg.ID()},
+			Ami:                 pulumi.String(ami.Id),
+			SubnetId:            vpc.PublicSubnetIds.Index(pulumi.Int(0)),
+		})
+
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("vpcId", vpc.VpcId)
+		ctx.Export("privateSubnetIds", vpc.PrivateSubnetIds)
+		ctx.Export("publicSubnetIds", vpc.PublicSubnetIds)
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
 {{% choosable language csharp %}}
 
 ```csharp
@@ -1015,6 +1718,103 @@ class Program
 {
     static Task<int> Main(string[] args) => Deployment.RunAsync<MyStack>();
 }
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.awsx.ec2.Vpc;
+import com.pulumi.core.Output;
+import com.pulumi.aws.ec2.SecurityGroup;
+import com.pulumi.aws.ec2.SecurityGroupArgs;
+import com.pulumi.aws.ec2.Ec2Functions;
+import com.pulumi.aws.ec2.inputs.GetAmiArgs;
+import com.pulumi.aws.ec2.outputs.GetAmiResult;
+import com.pulumi.aws.ec2.inputs.GetAmiFilter;
+import com.pulumi.aws.ec2.Instance;
+import com.pulumi.aws.ec2.InstanceArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var vpc = new Vpc("custom");
+
+            var sg = new SecurityGroup("webserver-sg", SecurityGroupArgs.builder()
+                .vpcId(vpc.vpcId())
+                .build()
+            );
+
+            var ami = Ec2Functions.getAmi(GetAmiArgs.builder()
+                .filters(
+                    GetAmiFilter.builder()
+                        .name("name")
+                        .values("amzn-ami-hvm-*")
+                        .build())
+                .mostRecent(true)
+                .owners("137112412989")
+                .build()
+                ).thenApply(GetAmiResult::id);
+
+            var server = new Instance("web-server-www", InstanceArgs.builder()
+                .instanceType("t2.micro")
+                .vpcSecurityGroupIds(Output.all(sg.id()))
+                .ami(Output.of(ami))
+                .subnetId(vpc.publicSubnetIds().applyValue(x -> x.get(0)))
+                .build()
+            );
+
+            ctx.export("vpcId", vpc.vpcId());
+            ctx.export("privateSubnetIds", vpc.privateSubnetIds());
+            ctx.export("publicSubnetIds", vpc.publicSubnetIds());
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: awsx-vpc-yaml
+runtime: yaml
+description: A minimal AWS Pulumi YAML program
+outputs:
+  vpcId: ${custom.vpcId}
+  publicSubnetIds: ${custom.publicSubnetIds}
+  privateSubnetIds: ${custom.privateSubnetIds}
+resources:
+  custom:
+    type: awsx:ec2:Vpc
+  webserver-sg:
+    type: aws:ec2:SecurityGroup
+    properties:
+      vpcId: ${custom.vpcId}
+  webserver-www:
+    type: aws:ec2:Instance
+    properties:
+      ami: ${ami.id}
+      instanceType: t2.micro
+      vpcSecurityGroupIds:
+        - ${webserver-sg.id}
+      subnetId: ${custom.publicSubnetIds[0]}
+variables:
+  ami:
+    fn::invoke:
+      Function: aws:ec2:getAmi
+      Arguments:
+        filters:
+          - name: name
+            values:
+              - amzn-ami-hvm-*
+        mostRecent: true
+        owners:
+          - "137112412989"
 ```
 
 {{% /choosable %}}
