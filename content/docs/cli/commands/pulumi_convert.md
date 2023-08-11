@@ -14,6 +14,13 @@ Convert Pulumi programs from a supported source program into other supported lan
 
 The source program to convert will default to the current working directory.
 
+### Supported Languages
+| - | Language |
+|--------------|-------------|
+| **Source Language** | `yaml \| terraform \| pcl` |
+| **Target Language** | `typescript \| python \| dotnet \| go \| java \| yaml \| pcl` |
+
+### Command
 
 ```
 pulumi convert [flags]
@@ -45,6 +52,14 @@ pulumi convert [flags]
       --profiling string             Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively
       --tracing file:                Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file
   -v, --verbose int                  Enable verbose logging (e.g., v=3); anything >3 is very verbose
+```
+
+### Example
+
+The following is an example of using the `pulumi convert` command to convert a program from YAML to Java in the current directory.
+
+```bash
+pulumi convert --from yaml --language java --out .
 ```
 
 ### SEE ALSO
