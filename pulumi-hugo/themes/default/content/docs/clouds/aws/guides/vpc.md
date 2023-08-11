@@ -64,7 +64,7 @@ VPC is often the easiest path when you're just getting up and running or don't y
 requirements. Most resources will use this default VPC automatically if you leave it unspecified. In other cases,
 you may be required to pass it explicitly, in which case you'll need to get it programmatically.
 
-To get the default VPC, just call the [`awsx.vpc.DefaultVpc` function](https://www.pulumi.com/registry/packages/awsx/api-docs/ec2/defaultvpc/):
+The following example will read the default VPC and export some of its properties for easy consumption.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
@@ -192,7 +192,7 @@ resources:
 
 {{% /choosable %}}
 
-This example reads the default VPC and exports some of its properties for easy consumption. `pulumi up` will show:
+Once you have defined this function, running `pulumi up` will show:
 
 ```bash
 $ pulumi up
