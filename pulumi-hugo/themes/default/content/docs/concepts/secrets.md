@@ -543,7 +543,7 @@ By default, this provider will use [Azure Environment Authentication](https://do
 
 #### Google Cloud Key Management Service (KMS)
 
-The `gcpkms` provider uses an existing Google Cloud KMS key for encryption. Specify the [key resource ID](https://cloud.google.com/kms/docs/object-hierarchy#key) for the key to use, which is a URL including your project, location, keyring, and key name: `gcpkms://projects/MYPROJECT/locations/MYLOCATION/keyRings/MYKEYRING/cryptoKeys/MYKEY`.
+The `gcpkms` provider uses an existing Google Cloud KMS key for encryption. Specify the [key resource ID](https://cloud.google.com/kms/docs/object-hierarchy#key) for the key to use, which is a URL including your project, location, keyring, and key name: `gcpkms://projects/MYPROJECT/locations/MYLOCATION/keyRings/MYKEYRING/cryptoKeys/MYKEY`. The key's [purpose](https://cloud.google.com/kms/docs/algorithms#key_purposes) needs to be `ENCRYPT_DECRYPT`.
 
 For example, this configures a stack to use a Google Cloud KMS key `payroll` in project `acmecorpsec`, location `us-west1`, and key ring named `prod`:
 
